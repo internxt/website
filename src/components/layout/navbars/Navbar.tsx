@@ -99,44 +99,22 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         <div className="flex items-center justify-between">
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
-              {/* Logo */}
               {props.hideLogoLink ? (
                 <Image
                   width={96}
                   height={10.5}
                   loading="lazy"
-                  className="select-none pl-4 lg:hidden"
+                  className="h-[10.5px] w-24 select-none pl-4 lg:h-3 lg:w-[110px]"
                   src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               ) : (
-                <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+                <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4">
                   <Image
                     width={96}
                     height={10.5}
                     loading="lazy"
-                    className="select-none"
-                    src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
-                    alt="Internxt logo"
-                  />
-                </Link>
-              )}
-              {props.hideLogoLink ? (
-                <Image
-                  width={110}
-                  height={12}
-                  loading="lazy"
-                  className="hidden flex-shrink-0 select-none lg:flex"
-                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
-                  alt="Internxt logo"
-                />
-              ) : (
-                <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
-                  <Image
-                    width={110}
-                    height={12}
-                    loading="lazy"
-                    className="select-none"
+                    className="h-[10.5px] w-24 select-none lg:h-3 lg:w-[110px]"
                     src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                   />
