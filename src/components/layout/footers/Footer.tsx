@@ -60,10 +60,10 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
-        <div className="flex w-full max-w-[1920px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
+        <div className="flex w-full max-w-[1920px] flex-col items-center justify-center space-y-8  pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
 
-          <div className="flex w-full max-w-[960px] flex-row items-center justify-center gap-6 space-y-3 lg:items-end">
+          <div className="flex w-1/3 flex-row items-center justify-center gap-6 space-y-3 lg:items-end">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col space-y-1">
                 <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
@@ -113,7 +113,7 @@ export default function Footer({
           <div
             className={`${
               hideNewsletter ? 'hidden' : 'flex'
-            } mb-10 max-w-[960px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
+            } mb-10 w-1/3 flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
           >
             <div className="flex w-full flex-col space-y-1 md:max-w-sm">
               <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
