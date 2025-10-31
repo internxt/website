@@ -165,6 +165,9 @@ export enum PromoCodeName {
   OFF75 = '75OFF',
   Xavier = 'XAVIER',
   Oscar = 'OSCAR',
+  Bevalk90 = 'BEVALK90',
+  TokinPrivacy90 = 'TOKINPRIVACY90',
+  GRABON90 = 'GRABON90',
 }
 
 export interface PromoCodeProps {
