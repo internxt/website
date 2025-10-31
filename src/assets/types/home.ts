@@ -4,13 +4,13 @@ export interface HomeText {
   FaqSection: FAQSection;
   TestimonialsSection: TestimonialsSection;
   ReviewSection: ReviewSection;
-  OfficalCloudProvider: AwardWinningSection;
-  AwardWinningSection: AwardWinningSection;
-  NextGenSection: AwardWinningSection;
+  OfficalCloudProvider: OfficalCloudProvider;
+  AwardWinningSection: Section;
+  NextGenSection: Section;
   TrustedBySection: TrustedBySection;
 }
 
-export interface AwardWinningSection {
+export interface Section {
   title: string;
   description: string;
   subtitle?: string;
@@ -104,6 +104,12 @@ export interface StartFrom {
   normal1: string;
   price: string;
   normal2: string;
+}
+
+export interface OfficalCloudProvider {
+  title: string;
+  description: string[];
+  cta: string;
 }
 
 export interface ReviewSection {

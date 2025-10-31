@@ -169,9 +169,12 @@
     "pcWorld": "\"El **acceso web intuitivo**, **sincronización de archivos** y **servicios de respaldo** de Internxt son **impresionantes**. Este servicio de almacenamiento y respaldo en línea cifrado es **fácil**, cubre todas las bases, y los **planes de por vida** actuales son una **ganga**.\""
   },
   "OfficalCloudProvider": {
-    "title": "Proveedor oficial de almacenamiento en la nube del Valencia CF",
-    "description": "El Valencia CF ha alcanzado un acuerdo con Internxt, donde Internxt se convierte en el proveedor oficial de almacenamiento en la nube del club. Internxt está consolidando su posición como líder europeo en privacidad digital con esta nueva alianza. Este acuerdo marca un hito en el enfoque innovador de Internxt que defiende la soberanía digital y la protección de datos.",
-    "cta": "Saber más"
+    "title": "Proveedor oficial de almacenamiento en la nube de Levante UD",
+    "description": [
+      "Levante UD se ha asociado con Internxt, convirtiéndose en el proveedor oficial del club de almacenamiento en la nube cifrado para mantener sus datos completamente privados. Esta colaboración une tecnología y deporte y destaca la creciente influencia de Internxt en el panorama tecnológico europeo.",
+      "A medida que Levante UD moderniza su infraestructura digital, se une a Internxt para impulsar un modelo de innovación basado en la privacidad, la confianza y la independencia digital. Este acuerdo marca un hito en el avance de la soberanía digital y la protección de datos."
+    ],
+    "cta": "Más información"
   },
   "AwardWinningSection": {
     "title": "Privacidad galardonada",

@@ -332,21 +332,17 @@
               "Premium": false,
               "Ultimate": true
             }
-          },
-          {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": {
-              "Essential": false,
-              "Premium": false,
-              "Ultimate": true
-            }
           }
         ]
       },
       {
         "name": "即将推出",
         "features": [
+          {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
           {
             "id": "file_versioning",
             "name": "文件版本控制",

@@ -332,21 +332,17 @@
               "Premium": false,
               "Ultimate": true
             }
-          },
-          {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": {
-              "Essential": false,
-              "Premium": false,
-              "Ultimate": true
-            }
           }
         ]
       },
       {
         "name": "Prossimamente",
         "features": [
+          {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
           {
             "id": "file_versioning",
             "name": "Versionamento dei file",
