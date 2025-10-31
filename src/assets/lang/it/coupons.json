@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "**Sconti** e **promozioni** Internxt",
-    "subtitle": "Hai sbloccato l'87% di sconto! Ottieni il tuo codice coupon Internxt qui",
+    "subtitle": "Hai sbloccato l'{{discount}}% di sconto! Ottieni il tuo codice coupon Internxt qui",
     "descriptionNormal": "tutti i piani",
     "features": ["Suite completa per la privacy", "Crittografia post-quantistica", "Open source e verificato"],
     "startFrom": {
@@ -105,11 +105,11 @@
   },
   "ctaSection": {
     "title": "Rivendica il tuo coupon Internxt esclusivo",
-    "description": "Ottieni la massima privacy con l'87% di sconto",
+    "description": "Ottieni la massima privacy con l'{{discount}}% di sconto",
     "cta": "Rivendica l'offerta"
   },
   "ctaSectionV2": {
-    "title": "Privacy completa con l'87% di sconto",
+    "title": "Privacy completa con l'{{discount}}% di sconto",
     "description": "Ottieni l'affare della tua vita con il tuo codice coupon Internxt",
     "cta": "Rivendica l'offerta"
   },

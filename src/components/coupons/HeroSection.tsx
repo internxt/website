@@ -96,7 +96,9 @@ export default function HeroSection({
             <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               <HighlightText text={textContent.title} />
             </p>
-            <p className="font-regular text-lg leading-tight text-gray-55 lg:text-2xl">{textContent.subtitle}</p>
+            <p className="font-regular text-lg leading-tight text-gray-55 lg:text-2xl">
+              {parsePercentText(textContent.subtitle)}
+            </p>
           </div>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
