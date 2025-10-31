@@ -60,18 +60,19 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
-        <div className="flex w-full max-w-[1200px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
+        <div className="flex w-full max-w-[1920px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
-          <div className="flex w-[900px] flex-row gap-6">
-            <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
-              <div className="flex flex-col space-y-1 ">
+
+          <div className="flex w-full max-w-[960px] flex-row items-center justify-center gap-6 space-y-3 lg:items-end">
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col space-y-1">
                 <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
-                <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} text-sm`}>
+                <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} w-[380px] text-sm`}>
                   {textContent.DownloadApp.description}
                 </p>
               </div>
               {/* Images */}
-              <div className="flex flex-col space-y-4  lg:flex-row lg:space-x-4 lg:space-y-0">
+              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="flex">
                   <Image
                     src={getImage('/images/footer/app-store.svg')}
@@ -99,11 +100,10 @@ export default function Footer({
                 </div>
               </div>
             </div>
-
             <Image
               src={getImage('/images/components/AppDownload.webp')}
-              width={130}
-              height={130}
+              width={100}
+              height={100}
               quality={100}
               className="cursor-pointer"
               alt="QR code for download Internxt APP"
@@ -113,7 +113,7 @@ export default function Footer({
           <div
             className={`${
               hideNewsletter ? 'hidden' : 'flex'
-            } mb-10 max-w-[384px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
+            } mb-10 max-w-[960px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
           >
             <div className="flex w-full flex-col space-y-1 md:max-w-sm">
               <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
@@ -221,6 +221,13 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
@@ -490,15 +497,43 @@ export default function Footer({
                     </Link>
                     <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                     <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.aiDetector}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileCompressor}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                   </div>
                 </div>
