@@ -52,7 +52,8 @@
         "Internxt是一個注重隱私的雲端存儲解決方案，提供客戶端加密、後量子安全性、開源軟體和位於歐盟的伺服器，以極具競爭力的價格提供安全合規的存儲。"
       ],
       "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
-    }
+    },
+    "readMore": "在 Trustpilot 上阅读更多评论"
   },
   "videoSection": {
     "company": "Cloudwards",

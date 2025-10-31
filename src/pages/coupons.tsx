@@ -109,6 +109,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
+        bgGradientColor="linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)"
       />
 
       <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
@@ -129,7 +130,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         bgGradientContainerColor="background: linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
       <FAQSection textContent={textContent.FaqSection} />
