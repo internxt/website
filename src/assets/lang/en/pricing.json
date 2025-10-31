@@ -215,6 +215,11 @@
         "name": "Comming soon",
         "features": [
           {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "File Versioning",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }

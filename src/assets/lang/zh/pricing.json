@@ -348,6 +348,11 @@
         "name": "即将推出",
         "features": [
           {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "文件版本控制",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }

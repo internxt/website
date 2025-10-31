@@ -348,6 +348,11 @@
         "name": "Próximamente",
         "features": [
           {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "Control de versiones ",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
