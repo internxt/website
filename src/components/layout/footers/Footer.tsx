@@ -60,50 +60,60 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
-        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
+        <div className="flex w-full max-w-[1920px] flex-col items-center justify-center space-y-8  pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
 
-          <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
-            <div className="flex flex-col space-y-1">
-              <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
-              <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} text-sm`}>
-                {textContent.DownloadApp.description}
-              </p>
-            </div>
-            {/* Images */}
-            <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
-              <div className="flex">
-                <Image
-                  src={getImage('/images/footer/app-store.svg')}
-                  width={148}
-                  height={44}
-                  quality={100}
-                  className="cursor-pointer"
-                  alt="Download on the App Store"
-                  onClick={() => {
-                    platforms && window.open(platforms.iPhone, '_blank');
-                  }}
-                />
+          <div className="flex w-1/2 flex-row items-center justify-center gap-6 space-y-3 lg:items-end 2xl:w-1/3">
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col space-y-1">
+                <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
+                <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} w-[380px] text-sm`}>
+                  {textContent.DownloadApp.description}
+                </p>
               </div>
-              <div className="flex">
-                <Image
-                  src={getImage('/images/footer/store-for-android.svg')}
-                  onClick={() => {
-                    platforms && window.open(platforms.Android, '_blank');
-                  }}
-                  width={148}
-                  height={44}
-                  className="cursor-pointer"
-                  alt="Get it on Google Play"
-                />
+              {/* Images */}
+              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+                <div className="flex">
+                  <Image
+                    src={getImage('/images/footer/app-store.svg')}
+                    width={148}
+                    height={44}
+                    quality={100}
+                    className="cursor-pointer"
+                    alt="Download on the App Store"
+                    onClick={() => {
+                      platforms && window.open(platforms.iPhone, '_blank');
+                    }}
+                  />
+                </div>
+                <div className="flex">
+                  <Image
+                    src={getImage('/images/footer/store-for-android.svg')}
+                    onClick={() => {
+                      platforms && window.open(platforms.Android, '_blank');
+                    }}
+                    width={148}
+                    height={44}
+                    className="cursor-pointer"
+                    alt="Get it on Google Play"
+                  />
+                </div>
               </div>
             </div>
+            <Image
+              src={getImage('/images/components/AppDownload.webp')}
+              width={100}
+              height={100}
+              quality={100}
+              className="cursor-pointer"
+              alt="QR code for download Internxt APP"
+            />
           </div>
 
           <div
             className={`${
               hideNewsletter ? 'hidden' : 'flex'
-            } mb-10 max-w-[384px] flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left `}
+            } mb-10 w-1/2 flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left 2xl:w-1/3 `}
           >
             <div className="flex w-full flex-col space-y-1 md:max-w-sm">
               <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
