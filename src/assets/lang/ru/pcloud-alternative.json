@@ -1,14 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Un'alternativa sicura a {{competitor}}",
-    "description": "Stai cercando un'alternativa sicura a pCloud? Internxt offre il primo cloud storage con crittografia post-quantistica e una suite completa di prodotti per la privacy per massima privacy e sicurezza.",
-    "features": [
-      "Archivia i tuoi video in privato",
-      "Crittografia post-quantistica e zero knowledge",
-      "Open source e verificato"
-    ],
-    "getPrivacy": "Ottieni privacy totale con il ${{percentage}}% di sconto",
-    "cta": "Seleziona piano"
+    "title": "Internxt: **безопасная** альтернатива {{competitor}}",
+    "description": "Ищете безопасную альтернативу pCloud? Internxt предлагает первое облачное хранилище с **постквантовым шифрованием** и полным набором продуктов для конфиденциальности, обеспечивающих максимальную приватность и безопасность.",
+    "getPrivacy": "Получите полную конфиденциальность со **скидкой {{percentage}}%**",
+    "cta": "Получить предложение"
   },
   "HeaderSection": {
     "title": "Confronto Internxt vs {{competitor}}",

@@ -1,9 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A Secure {{competitor}} Alternative",
-    "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you? Join Internxt for complete security and privacy, providing maximum protection against data breaches.",
-    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "title": "Internxt: a **secure** {{competitor}} alternative",
+    "description": "Dropbox once leaked 68M passwords. Protect your data with Internxt — privacy and security against breaches.",
+    "getPrivacy": "Get total privacy for ${{percentage}}% off",
     "cta": "Claim deal"
   },
   "HeaderSection": {

@@ -1,10 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt：{{competitor}}的安全替代方案",
-    "description": "MEGA加密技術的過往漏洞以及缺乏完全開源軟體可能會讓您的隱私和資料面臨風險。選擇Internxt獲得後量子加密、VPN、郵件、會議等功能。",
-    "features": ["私密儲存您的影片", "後量子和零知識加密", "開源且經過稽核"],
-    "getPrivacy": "享受${{percentage}}%折扣，獲得完全隱私保護",
-    "cta": "選擇方案"
+    "title": "Internxt：**安全的** {{competitor}} 替代方案",
+    "description": "MEGA 加密技術過去的漏洞以及缺乏完全開源的軟體可能會使您的隱私和數據面臨風險。選擇 Internxt，享受**後量子加密**、VPN、郵件、會議等服務。",
+    "getPrivacy": "享受完全隱私，${{percentage}}% 折扣",
+    "cta": "領取優惠"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}}概覽",

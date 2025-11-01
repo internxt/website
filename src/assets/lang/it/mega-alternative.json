@@ -1,14 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Un'alternativa sicura a {{competitor}}",
-    "description": "Le vulnerabilità passate nella crittografia di MEGA e la mancanza di software completamente open source potrebbero mettere a rischio la tua privacy e i tuoi dati. Scegli Internxt per la crittografia post-quantistica, VPN, Mail, Meet e molto altro.",
-    "features": [
-      "Memorizza i tuoi video in privacy",
-      "Crittografia post-quantistica e a conoscenza zero",
-      "Open source e controllato"
-    ],
-    "getPrivacy": "Ottieni privacy totale con il ${{percentage}}% di sconto",
-    "cta": "Seleziona piano"
+    "title": "Internxt: un'alternativa **sicura** a {{competitor}}",
+    "description": "Le vulnerabilità passate nella crittografia di MEGA e la mancanza di software completamente open source potrebbero mettere a rischio la tua privacy e i tuoi dati. Scegli Internxt per la **crittografia post-quantistica**, VPN, Mail, Meet e altro ancora.",
+    "getPrivacy": "Ottieni la massima privacy con uno sconto del ${{percentage}}%",
+    "cta": "Richiedi l'offerta"
   },
   "HeaderSection": {
     "title": "Panoramica Internxt vs {{competitor}}",

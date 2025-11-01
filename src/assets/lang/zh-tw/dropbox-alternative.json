@@ -1,10 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt：{{competitor}}的安全替代方案",
-    "description": "过去的Dropbox数据泄露事件导致6800万个密码泄露。想要避免这种情况发生在您身上吗？加入Internxt，获得完整的安全和隐私保护，提供针对数据泄露的最大防护。",
-    "features": ["私密存储您的视频", "后量子和零知识加密", "开源且经过审计"],
-    "getPrivacy": "以${{percentage}}%的折扣获得完全隐私保护",
-    "cta": "选择计划"
+    "title": "Internxt：**安全的** {{competitor}} 替代方案",
+    "description": "Dropbox 曾洩露 6800 萬個密碼。使用 Internxt 保護您的資料——隱私和安全防止洩露。",
+    "getPrivacy": "享受完全隱私，優惠 ${{percentage}} %",
+    "cta": "領取優惠"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}} 概览",

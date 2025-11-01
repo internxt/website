@@ -1,14 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Eine sichere {{competitor}}-Alternative",
-    "description": "Ein vergangener Dropbox-Datenleck hat 68 Millionen Passwörter preisgegeben. Möchten Sie verhindern, dass Ihnen das passiert? Schließen Sie sich Internxt für vollständige Sicherheit und Privatsphäre an und erhalten Sie maximalen Schutz vor Datenlecks.",
-    "features": [
-      "Speichern Sie Ihre Videos privat",
-      "Post-Quanten- und Zero-Knowledge-Verschlüsselung",
-      "Open Source und auditiert"
-    ],
-    "getPrivacy": "Erhalten Sie vollständige Privatsphäre für ${{percentage}}% Rabatt",
-    "cta": "Plan wählen"
+    "title": "Internxt: eine **sichere** {{competitor}} Alternative",
+    "description": "Dropbox hat einst 68 Millionen Passwörter verloren. Schützen Sie Ihre Daten mit Internxt — Privatsphäre und Sicherheit gegen Datenlecks.",
+    "getPrivacy": "Erhalten Sie vollständigen Datenschutz für ${{percentage}} % Rabatt",
+    "cta": "Angebot sichern"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}} Übersicht",

@@ -1,14 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  la alternativa segura a {{competitor}}",
-    "description": "Las vulnerabilidades pasadas en la criptografía de MEGA y la falta de software completamente de código abierto podrían poner en riesgo tu privacidad y datos. Elige Internxt para cifrado post-cuántico, VPN, Mail, Meet y más.",
-    "features": [
-      "Almacena tus videos con privacidad",
-      "Cifrado post-cuántico y de conocimiento cero",
-      "Código abierto y auditado"
-    ],
+    "title": "Internxt: una alternativa **segura** a {{competitor}}",
+    "description": "Las vulnerabilidades pasadas en la criptografía de MEGA y la falta de software completamente de código abierto podrían poner en riesgo tu privacidad y tus datos. Elige Internxt para **cifrado post-cuántico**, VPN, Mail, Meet y más.",
     "getPrivacy": "Obtén privacidad total con ${{percentage}}% de descuento",
-    "cta": "Seleccionar plan"
+    "cta": "Reclamar oferta"
   },
   "HeaderSection": {
     "title": "Comparativa Internxt vs {{competitor}}",

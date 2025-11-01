@@ -50,12 +50,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        redirectUrl={'/pricing'}
-        percentage={percentageDiscount}
-        competitor={'Dropbox'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" />
 

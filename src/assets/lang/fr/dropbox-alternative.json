@@ -1,14 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt : Une alternative sécurisée à {{competitor}}",
-    "description": "Une précédente violation de données de Dropbox a divulgué 68 millions de mots de passe. Voulez-vous éviter que cela vous arrive ? Rejoignez Internxt pour une sécurité et une confidentialité complètes, offrant une protection maximale contre les violations de données.",
-    "features": [
-      "Stockez vos vidéos en toute confidentialité",
-      "Chiffrement post-quantique et à connaissance nulle",
-      "Open source et audité"
-    ],
-    "getPrivacy": "Obtenez une confidentialité totale avec ${{percentage}}% de réduction",
-    "cta": "Choisir un plan"
+    "title": "Internxt : une alternative **sécurisée** à {{competitor}}",
+    "description": "Dropbox a autrefois divulgué 68M de mots de passe. Protégez vos données avec Internxt — confidentialité et sécurité contre les fuites.",
+    "getPrivacy": "Obtenez une confidentialité totale avec ${{percentage}} % de réduction",
+    "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
     "title": "Aperçu Internxt vs {{competitor}}",

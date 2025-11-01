@@ -45,12 +45,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        redirectUrl={'/pricing'}
-        percentage={percentageDiscount}
-        competitor={'Mega'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" />
 
