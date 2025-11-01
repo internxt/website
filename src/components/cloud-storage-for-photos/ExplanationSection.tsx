@@ -1,13 +1,13 @@
-import Image from 'next/legacy/image';
-import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
 
-const language = {
-  en: 'EN',
-  es: 'ES',
-};
-const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
-  const langUpperCase = language[lang] || 'EN';
+interface ExplanationSectionProps {
+  textContent: any;
+  ctaText: string;
+  ctaLink: string;
+  lang: string;
+}
+
+const ExplanationSection = ({ textContent, ctaText, ctaLink, lang }: ExplanationSectionProps) => {
   return (
     <section className="overflow-hidden bg-white">
       {/* Header Section */}
@@ -31,7 +31,6 @@ const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
           <p className="text-30 font-medium">{textContent.securityExp.title}</p>
           <p className="font-regular text-lg text-gray-80 lg:text-xl">{textContent.securityExp.description}</p>
         </div>
-
         <div className="flex w-[323px] flex-col space-y-3">
           <p className="text-30 font-medium">{textContent.extraFeaturesExp.title}</p>
           <p className="font-regular text-lg text-gray-80 lg:text-xl">{textContent.extraFeaturesExp.description}</p>

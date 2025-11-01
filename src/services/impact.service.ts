@@ -47,10 +47,12 @@ export const handleImpact = async ({
   };
 }) => {
   let ip: string | undefined;
+
   try {
     const { data } = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
     ip = data.ip;
   } catch (error) {
+    console.error('Error fetching IP address:', error);
     ip = undefined;
   }
 
@@ -69,6 +71,7 @@ export const handleImpact = async ({
   try {
     await sendImpactTrack({ randomUUID, ip, userAgent, page });
   } catch (error) {
-    //
+    console.error('Error sending impact track:', error);
+    // Impact tracking is non-critical, continue execution
   }
 };

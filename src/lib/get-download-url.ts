@@ -1,4 +1,3 @@
-import { isMobile } from 'react-device-detect';
 import { getLatestReleaseInfo } from './github';
 
 const iosURL = 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
@@ -9,19 +8,23 @@ const linuxURL = 'https://internxt.com/downloads/drive.deb';
 const lastReleaseURL = 'https://github.com/internxt/drive-desktop/releases';
 
 export function getOS() {
+  const userAgent = window.navigator.userAgent;
+  const platform = window.navigator.platform;
+  const isTouchDevice = 'maxTouchPoints' in navigator && navigator.maxTouchPoints > 0;
+
   const osList = [
-    { keyword: 'Android', name: 'Android' },
-    { keyword: 'iPad', name: 'iPad' },
-    { keyword: 'iPhone', name: 'iPhone' },
-    { keyword: 'Win', name: 'Windows' },
-    { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-    { keyword: 'X11', name: 'UNIX' },
-    { keyword: 'Linux', name: 'Linux' },
+    { test: () => /iPad/.test(userAgent), name: 'iPad' },
+    { test: () => /iPhone|iPod/.test(userAgent), name: 'iPhone' },
+    { test: () => /Android/.test(userAgent), name: 'Android' },
+    { test: () => (/Mac/.test(platform) || /Mac/.test(userAgent)) && isTouchDevice, name: 'iPad' },
+    { test: () => /Mac/.test(platform) || /Mac/.test(userAgent), name: 'MacOS' },
+    { test: () => /Win/.test(platform), name: 'Windows' },
+    { test: () => /Linux/.test(platform), name: 'Linux' },
+    { test: () => /X11/.test(userAgent), name: 'UNIX' },
   ];
 
-  const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
-
-  return res ? res.name : `Not known (${window.navigator.appVersion})`;
+  const detected = osList.find((os) => os.test());
+  return detected ? detected.name : `Not known (${userAgent})`;
 }
 
 export const downloadDriveLinks = async () => {

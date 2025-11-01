@@ -77,7 +77,7 @@ export const PricingSection = ({
   darkMode,
   differentRecommended = true,
   hideFeatures,
-  showPromo,
+
   isAffiliate,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');

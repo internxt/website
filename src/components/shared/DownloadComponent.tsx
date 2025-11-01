@@ -4,7 +4,13 @@ import { isMobile } from 'react-device-detect';
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
-const DownloadComponent = ({ textContent, lang, download }) => {
+interface DownloadComponentProps {
+  textContent: any;
+  lang: string;
+  download: any;
+}
+
+const DownloadComponent = ({ textContent, lang, download }: DownloadComponentProps) => {
   const router = useRouter();
   const language = router.locale;
 

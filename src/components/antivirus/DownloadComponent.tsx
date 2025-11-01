@@ -1,29 +1,16 @@
-import { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ArrowCircleRight } from '@phosphor-icons/react';
 
-const DownloadComponent = ({ textContent, lang, download }) => {
-  const [OS, setOS] = useState('');
+interface DownloadComponentProps {
+  textContent: any;
+  download: any;
+  lang: string;
+}
 
-  function getOS() {
-    const osList = [
-      { keyword: 'Win', name: 'Windows' },
-      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-      { keyword: 'Linux', name: 'Linux' },
-    ];
-
-    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
-    return res ? res.name : `Unknown (${window.navigator.appVersion})`;
-  }
-
-  useEffect(() => {
-    setOS(getOS());
-  }, []);
-
+const DownloadComponent = ({ textContent, download, lang }: DownloadComponentProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9 pb-6">
       <p className="text-center text-4xl font-semibold text-gray-100">{textContent.downloadTitle}</p>
-
       <div className="flex w-full flex-col items-center justify-center space-y-4 lg:flex-row lg:items-start lg:space-x-12">
         {/* Download for desktop */}
         {!isMobile && (
@@ -37,7 +24,6 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 <ArrowCircleRight size={18} weight="bold" />
               </a>
             )}
-
             {download.Windows && (
               <a
                 href={download.Windows}
@@ -47,7 +33,6 @@ const DownloadComponent = ({ textContent, lang, download }) => {
                 <ArrowCircleRight size={18} weight="bold" />
               </a>
             )}
-
             {download.Linux && (
               <a
                 href={download.Linux}

@@ -28,8 +28,8 @@ export default function pwnedpasswords(password, cb) {
   }
 
   const hashedPassword = hash(password);
-  const hashedPasswordPrefix = hashedPassword.substr(0, PREFIX_LENGTH);
-  const hashedPasswordSuffix = hashedPassword.substr(PREFIX_LENGTH);
+  const hashedPasswordPrefix = hashedPassword.substring(0, PREFIX_LENGTH);
+  const hashedPasswordSuffix = hashedPassword.substring(PREFIX_LENGTH);
 
   return get(hashedPasswordPrefix)
     .then((res) => {
@@ -53,7 +53,7 @@ export default function pwnedpasswords(password, cb) {
 }
 
 if (require.main === module) {
-  pwnedpasswords(process.argv[2], (err, res) => {
+  pwnedpasswords(process.argv[2], (err) => {
     /* eslint no-console: [ "error", { allow: ["log", "error"] } ] */
 
     if (err) {
