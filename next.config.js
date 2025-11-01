@@ -237,6 +237,16 @@ module.exports = {
         destination: '/deals/black-friday-internxt',
         permanent: false,
       },
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
     ];
   },
   images: {
