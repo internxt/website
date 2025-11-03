@@ -66,7 +66,19 @@ export default function ComparisonTableSection({
   };
 
   const isExclusiveCategory = (category: any) => {
-    if (category.name === 'Comming soon') return false;
+    const comingSoonTranslations = [
+      'Comming soon',
+      'Próximamente',
+      'Kommt bald',
+      'Prossimamente',
+      'Bientôt disponible',
+      'Скоро',
+      '即将推出',
+      '即將推出',
+    ];
+
+    if (comingSoonTranslations.includes(category.name)) return false;
+
     return category.features.every((feature: any) => Object.values(feature.avalability).filter(Boolean).length === 1);
   };
 

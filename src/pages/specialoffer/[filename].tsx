@@ -44,17 +44,16 @@ const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh'];
 const DARK_MODE_PATHS = ['baity'];
 
 const COUPON_CODES = {
-  bevalk: PromoCodeName.Bevalk,
+  bevalk: PromoCodeName.Bevalk90,
   securiters: PromoCodeName.Securiters,
   valencia: PromoCodeName.ValenciaCF,
-  tokinprivacy: PromoCodeName.TokinPrivacy,
+  tokinprivacy: PromoCodeName.TokinPrivacy90,
   trickyhash: PromoCodeName.Secure,
   reddit: PromoCodeName.Reddit,
-  toquederetoque: PromoCodeName.Toquederetoque,
   vipvlc: PromoCodeName.VIPVLC,
-  grabon: PromoCodeName.GRABON,
+  grabon: PromoCodeName.GRABON90,
   pcmag: PromoCodeName.PcmagCoupon,
-  nextjump: PromoCodeName.NextJump,
+  nextjump: PromoCodeName.BlackFriday,
   kripesh: PromoCodeName.Kripesh,
 };
 

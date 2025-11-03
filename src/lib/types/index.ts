@@ -94,7 +94,7 @@ export enum PromoCodeName {
   euro2024fiveTB = '75OFF5TB',
   euro2024TenTB = '75OFF10TB',
   freeUserCoupon = 'SPECIAL75',
-  PcmagCoupon = 'PGMAG90',
+  PcmagCoupon = 'PCMAG90',
   CloudwardsCoupon = 'CLOUDWARDS85',
   OnePlanCoupon = '5TBplan',
   AllPlansCoupon = 'SUMMER80',
@@ -162,8 +162,12 @@ export enum PromoCodeName {
   BaityBait = 'BAITY',
   NextJump = 'PERKS',
   Kripesh = 'KRIPESH',
+  OFF75 = '75OFF',
   Xavier = 'XAVIER',
   Oscar = 'OSCAR',
+  Bevalk90 = 'BEVALK90',
+  TokinPrivacy90 = 'TOKIN90',
+  GRABON90 = 'GRABON90',
 }
 
 export interface PromoCodeProps {

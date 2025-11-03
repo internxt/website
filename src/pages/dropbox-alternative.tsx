@@ -23,7 +23,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Dropbox87,
+    couponCode: PromoCodeName.BlackFriday,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {

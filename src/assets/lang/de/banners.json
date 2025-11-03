@@ -9,18 +9,12 @@
     "cancelCta": "Abbrechen"
   },
   "FreeCardPromoBanner": {
-    "title": "Erhalten Sie einen exklusiven Rabatt!",
-    "subtitle": {
-      "blue": "Sonderangebot:",
-      "normal": " Dateien privat speichern für weniger"
-    },
+    "title": "Sichern Sie sich Ihr spezielles Black Friday Angebot!",
+    "subtitle": "Der **größte** Rabatt für **maximale Privatsphäre**",
     "getDealCta": "Angebot erhalten",
-    "freePlanCta": "Mit kostenlosem Plan fortfahren",
-    "guarantee": "30-tägige Geld-zurück-Garantie",
-    "header": {
-      "primaryText": "Spare 87%",
-      "afterPrimaryText": "in allen Plänen"
-    },
+    "freePlanCta": "Mit kostenlosem Tarif fortfahren",
+    "guarantee": "30-Tage-Geld-zurück-Garantie",
+    "header": { "primaryText": "Erhalten Sie 90% Rabatt", "afterPrimaryText": "auf alle Tarife" },
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
@@ -150,7 +144,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Erhalten Sie jetzt 85% Rabatt auf alle Jahres- und Lebenszeitpläne! ",
+      "normalText": "Riesige Black Friday Ersparnisse — nur für begrenzte Zeit!",
       "cta": "Wähle deinen Tarif "
     }
   },

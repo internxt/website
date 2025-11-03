@@ -13,8 +13,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     {
       heroImage: '/images/deals/cloud-storage-lifetime.webp',
       metatagsId: 'free-cloud-storage-lifetime-deals',
-      couponCode: PromoCodeName.FreePlanUpsell,
-      couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
+      couponCode: PromoCodeName.BlackFriday,
+      couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,
