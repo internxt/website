@@ -58,15 +58,17 @@ export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobi
                 } max-h-48 space-y-2 overflow-y-auto p-4`}
               >
                 {filteredLanguages.map((language) => (
-                  <button
+                  <a
                     key={language.text}
-                    onClick={() => {
+                    href={`${language.lang === 'en' ? '' : `/${language.lang}`}${router.pathname}`}
+                    onClick={(e) => {
+                      e.preventDefault();
                       router.push(router.pathname, router.pathname, { locale: language.lang });
                     }}
-                    className="w-full py-2 text-center"
+                    className="block w-full py-2 text-center"
                   >
                     {language.text}
-                  </button>
+                  </a>
                 ))}
               </Disclosure.Panel>
             </Transition>
