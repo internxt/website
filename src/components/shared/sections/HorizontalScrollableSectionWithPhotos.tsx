@@ -3,8 +3,19 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 
+interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
+}
+
+interface TextContent {
+  title: string;
+  description: string;
+  scrollableSection: ScrollableSection;
+}
+
 interface HorizontalScrollableSectionWithPhotosProps {
-  textContent: any;
+  textContent: TextContent;
   bgColor?: string;
 }
 
