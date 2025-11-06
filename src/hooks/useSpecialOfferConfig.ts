@@ -4,7 +4,7 @@ import { PromoCodeName } from '@/lib/types';
 
 export const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>(['baity']);
+export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
