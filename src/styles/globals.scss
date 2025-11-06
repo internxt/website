@@ -233,3 +233,11 @@ input[type='number'] {
   scrollbar-color: #a0aec0 #f0f0f0;
   scrollbar-width: thin;
 }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

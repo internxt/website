@@ -2,7 +2,7 @@ export const formatText = (obj: any, replacements: Record<string, string>) => {
   if (typeof obj === 'string') {
     let replacedString = obj;
     Object.keys(replacements).forEach((key) => {
-      const regex = new RegExp(`\\$\\{\\{${key}\\}\\}`, 'g');
+      const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
       replacedString = replacedString.replace(regex, replacements[key]);
     });
     return replacedString;

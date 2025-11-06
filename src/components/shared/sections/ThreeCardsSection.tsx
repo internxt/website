@@ -4,9 +4,18 @@ import { useRef, useState, useEffect } from 'react';
 interface ThreeCardsProps {
   textContent: any;
   darkMode?: boolean;
+  bgColor?: string;
+  cardColor?: string;
+  bottomSeparationBar?: boolean;
 }
 
-export default function ThreeCardsSection({ textContent, darkMode }: Readonly<ThreeCardsProps>): JSX.Element {
+export default function ThreeCardsSection({
+  textContent,
+  darkMode,
+  bgColor,
+  cardColor,
+  bottomSeparationBar = false,
+}: Readonly<ThreeCardsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -72,14 +81,22 @@ export default function ThreeCardsSection({ textContent, darkMode }: Readonly<Th
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+        bgColor ? '' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
+      style={{ background: bgColor ? bgColor : '' }}
     >
       <div
         className={`absolute left-8 right-8 top-0 h-[1px] ${
           darkMode ? 'bg-gray-71' : 'bg-neutral-35'
         } lg:bottom-0 lg:left-32 lg:right-32`}
       ></div>
+      {bottomSeparationBar && (
+        <div
+          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        />
+      )}
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
         <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
           {textContent.title}
@@ -105,7 +122,7 @@ export default function ThreeCardsSection({ textContent, darkMode }: Readonly<Th
               <div
                 key={title}
                 className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                  darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+                  cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
                 } p-6 lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col">
@@ -170,7 +187,7 @@ export default function ThreeCardsSection({ textContent, darkMode }: Readonly<Th
           <div
             key={title}
             className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
-              darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+              cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
             } p-8`}
           >
             <div className="flex flex-col">

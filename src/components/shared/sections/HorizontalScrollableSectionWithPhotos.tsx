@@ -1,5 +1,7 @@
+import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface ScrollableSection {
   titles: string[];
@@ -9,33 +11,31 @@ interface ScrollableSection {
 interface TextContent {
   title: string;
   description: string;
-  cta?: string;
   scrollableSection: ScrollableSection;
 }
 
-interface HorizontalScrollableProps {
+interface HorizontalScrollableSectionWithPhotosProps {
   textContent: TextContent;
-  bgGradient?: string;
-  cardsWidth?: string;
-  cardsHeight?: string;
-  needsDivider?: boolean;
+  bgColor?: string;
 }
 
-export default function HorizontalScrollableSection({
+export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
-  bgGradient,
-  cardsWidth = '400px',
-  cardsHeight = 'auto',
-  needsDivider = true,
-}: Readonly<HorizontalScrollableProps>): JSX.Element {
+  bgColor,
+}: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+  const cardTitles = textContent?.scrollableSection.titles ?? [];
+  const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
+  const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
+
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
+  const cardWidth = 350;
   const mobileCardWidth = 320;
+  const gap = 24;
   const mobileGap = 32;
-  const desktopGap = 32;
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -49,11 +49,7 @@ export default function HorizontalScrollableSection({
   }, []);
 
   const getScrollAmount = () => {
-    if (isMobile) {
-      return mobileCardWidth + mobileGap;
-    }
-    const cardWidthNum = parseInt(cardsWidth);
-    return cardWidthNum + desktopGap;
+    return isMobile ? mobileCardWidth + mobileGap : cardWidth + gap;
   };
 
   const getPaddingRight = () => {
@@ -61,14 +57,13 @@ export default function HorizontalScrollableSection({
       const containerWidth = 345;
       const visibleWidth = mobileCardWidth;
       const paddingRight = containerWidth - visibleWidth;
-      return paddingRight;
+      return Math.max(0, paddingRight);
     }
 
-    const cardWidthNum = parseInt(cardsWidth);
     const containerWidth = 850;
-    const visibleWidth = 2 * cardWidthNum + desktopGap;
+    const visibleWidth = 2 * cardWidth + gap;
     const paddingRight = containerWidth - visibleWidth;
-    return paddingRight;
+    return Math.max(0, paddingRight);
   };
 
   const updateScrollButtons = () => {
@@ -82,6 +77,7 @@ export default function HorizontalScrollableSection({
 
   const scrollLeft = () => {
     if (!scrollContainerRef.current) return;
+
     const scrollAmount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: -scrollAmount,
@@ -91,6 +87,7 @@ export default function HorizontalScrollableSection({
 
   const scrollRight = () => {
     if (!scrollContainerRef.current) return;
+
     const scrollAmount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: scrollAmount,
@@ -101,10 +98,13 @@ export default function HorizontalScrollableSection({
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return;
+
     updateScrollButtons();
     scrollContainer.addEventListener('scroll', updateScrollButtons);
+
     const resizeObserver = new ResizeObserver(updateScrollButtons);
     resizeObserver.observe(scrollContainer);
+
     return () => {
       scrollContainer.removeEventListener('scroll', updateScrollButtons);
       resizeObserver.disconnect();
@@ -113,55 +113,52 @@ export default function HorizontalScrollableSection({
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : 'bg-neutral-17'
-      } py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{ background: bgGradient }}
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
+      style={{
+        background: bgColor || 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        {needsDivider && (
-          <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
-        )}
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-3xl">{textContent.title}</p>
+        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        {textContent.cta && (
-          <span
-            onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
-            className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
-          >
-            {textContent.cta}
-            <CaretRight className="pt-[2px] text-primary" size={24} />
-          </span>
-        )}
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex w-full flex-row gap-8 overflow-x-auto scroll-smooth"
+          className="scrollbar-hide flex w-full flex-row overflow-x-auto scroll-smooth"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
+            gap: isMobile ? `${mobileGap}px` : `${gap}px`,
             paddingLeft: isMobile ? '20px' : 'calc((100vw - 850px) / 2)',
             paddingRight: isMobile
               ? `calc(20px + ${getPaddingRight()}px)`
               : `calc((100vw - 850px) / 2 + ${getPaddingRight()}px)`,
           }}
         >
-          {textContent.scrollableSection.titles.map((title: string, index: number) => (
+          {cardTitles.map((title: string, index: number) => (
             <div
-              key={index}
+              key={title}
               className="flex-shrink-0"
-              style={{
-                width: isMobile ? `${mobileCardWidth}px` : cardsWidth,
-                height: cardsHeight,
-              }}
+              style={{ width: isMobile ? `${mobileCardWidth}px` : `${cardWidth}px` }}
             >
-              <div className="flex h-full flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8">
-                <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
-                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
-                  {textContent.scrollableSection.descriptions[index]}
-                </p>
+              <div className="flex h-full flex-col items-center justify-between">
+                <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
+                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
+                    {cardDescriptions[index]}
+                  </p>
+                </div>
+                <Image
+                  src={getImage(`/images/coupons/${images[index]}.webp`)}
+                  alt={`${title} Solution`}
+                  height={index === 2 ? 300 : 352}
+                  width={index === 2 ? 300 : 400}
+                  quality={100}
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
+                  className="rounded-t-16"
+                />
               </div>
             </div>
           ))}
@@ -172,8 +169,8 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
+                !canScrollLeft ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
               aria-label="Anterior"
             >
@@ -182,8 +179,8 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
+                !canScrollRight ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
               aria-label="Siguiente"
             >

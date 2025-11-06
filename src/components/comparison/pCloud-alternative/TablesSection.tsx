@@ -35,9 +35,10 @@ type TablesSectionProps = {
   };
   logo?: string;
   competitor: string;
+  bottomSeparationBar?: boolean;
 };
 
-export const TablesSection = ({ textContent, logo, competitor }: TablesSectionProps) => {
+export const TablesSection = ({ textContent, logo, competitor, bottomSeparationBar = false }: TablesSectionProps) => {
   const availableSections = [
     textContent.costAndValue
       ? {
@@ -80,6 +81,9 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
 
   return (
     <section className="flex flex-col items-center justify-center gap-8 overflow-hidden bg-white py-8 lg:py-20">
+      {bottomSeparationBar && (
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32" />
+      )}
       <div className="flex flex-col items-center justify-center gap-6 text-center">
         <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>
         <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{parseText(textContent.description)}</p>
