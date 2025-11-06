@@ -168,6 +168,7 @@ export enum PromoCodeName {
   Bevalk90 = 'BEVALK90',
   TokinPrivacy90 = 'TOKIN90',
   GRABON90 = 'GRABON90',
+  RIMEMBAH = 'RIMEMBAH',
 }
 
 export interface PromoCodeProps {
