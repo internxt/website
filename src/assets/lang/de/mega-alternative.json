@@ -1,14 +1,14 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Eine sichere {{competitor}}-Alternative",
-    "description": "Vergangene Schwachstellen in MEGAs Kryptographie und das Fehlen vollständig quelloffener Software könnten Ihre Privatsphäre und Daten gefährden. Wählen Sie Internxt für Post-Quanten-Verschlüsselung, VPN, Mail, Meet und mehr.",
+    "title": "Internxt, Eine **Sichere** {{competitor}}-Alternative",
+    "description": "Die früheren Sicherheitslücken von MEGA und das Closed-Source-Modell gefährden Ihre Privatsphäre. Wählen Sie Internxt für Post-Quanten-Verschlüsselung, VPN, Mail, Meet und mehr.",
     "features": [
       "Speichern Sie Ihre Videos privat",
       "Post-Quanten- und Zero-Knowledge-Verschlüsselung",
-      "Open Source und geprüft"
+      "Open Source und auditiert"
     ],
-    "getPrivacy": "Erhalten Sie vollständige Privatsphäre für ${{percentage}}% Rabatt",
-    "cta": "Plan auswählen"
+    "getPrivacy": "Erhalten Sie vollständigen Datenschutz mit {{percentage}} % Rabatt",
+    "cta": "Angebot sichern"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}} Überblick",

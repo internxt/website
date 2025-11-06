@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt : Une alternative sécurisée à {{competitor}}",
-    "description": "Vous cherchez une alternative sécurisée à pCloud ? Internxt offre le premier stockage cloud avec chiffrement post-quantique et une suite complète de produits de confidentialité pour un maximum de sécurité et de confidentialité.",
+    "title": "Internxt, Une Alternative **Sécurisée** à {{competitor}}",
+    "description": "Vous cherchez une alternative à pCloud ? Internxt propose le chiffrement post-quantique et une suite de confidentialité complète.",
     "features": [
       "Stockez vos vidéos en privé",
       "Chiffrement post-quantique et zéro connaissance",
       "Open source et audité"
     ],
-    "getPrivacy": "Obtenez une confidentialité totale avec ${{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}}% de réduction",
     "cta": "Sélectionner un forfait"
   },
   "HeaderSection": {

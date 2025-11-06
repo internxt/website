@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Eine sichere {{competitor}} Alternative",
-    "description": "Suchen Sie eine sichere Alternative zu pCloud? Internxt bietet den ersten Cloud-Speicher mit Post-Quanten-Verschlüsselung und einer vollständigen Datenschutz-Suite für maximalen Datenschutz und Sicherheit.",
+    "title": "Internxt, Eine **Sichere** {{competitor}}-Alternative",
+    "description": "Suchen Sie nach einer pCloud-Alternative? Internxt bietet Post-Quanten-Verschlüsselung und eine komplette Datenschutz-Suite.",
     "features": [
       "Speichern Sie Ihre Videos privat",
       "Post-Quanten- und Zero-Knowledge-Verschlüsselung",
       "Open Source und geprüft"
     ],
-    "getPrivacy": "Erhalten Sie vollständigen Datenschutz für ${{percentage}}% Rabatt",
+    "getPrivacy": "Erhalten Sie vollständigen Datenschutz für {{percentage}}% Rabatt",
     "cta": "Plan auswählen"
   },
   "HeaderSection": {

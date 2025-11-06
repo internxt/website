@@ -1,9 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A Secure {{competitor}} Alternative",
-    "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you? Join Internxt for complete security and privacy, providing maximum protection against data breaches.",
+    "title": "Internxt, Una Alternativa **Segura** a {{competitor}}",
+    "description": "Dropbox filtró 68 millones de contraseñas. Protege tus datos con Internxt — privacidad y seguridad contra filtraciones.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "getPrivacy": "Get total privacy for {{percentage}}% off",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
         "features": [
           {
             "title": "Reasonable plans",
-            "description": "87% exclusive offer, without any hidden charges."
+            "description": "{{percentage}}% exclusive offer, without any hidden charges."
           },
           {
             "title": "Full protection",
@@ -103,7 +103,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for 87% off."
+            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for {{percentage}}% off."
           }
         ]
       },
@@ -130,11 +130,6 @@
     "title": "Secure your files from data breaches with Internxt",
     "description": "Get 87% off with code DROPBOX87",
     "cta": "Get Internxt"
-  },
-  "CtaSection2": {
-    "title": "",
-    "description": "Use code DROPBOX87 for 87% off secure, encrypted cloud storage",
-    "cta": "Sign up for free"
   },
   "tableSection": {
     "title": "Internxt Plans",
