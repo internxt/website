@@ -1,8 +1,20 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 
+interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
+}
+
+interface TextContent {
+  title: string;
+  description: string;
+  cta?: string;
+  scrollableSection: ScrollableSection;
+}
+
 interface HorizontalScrollableProps {
-  textContent: any;
+  textContent: TextContent;
   bgGradient?: string;
   cardsWidth?: string;
   cardsHeight?: string;
