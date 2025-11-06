@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import { InxtTable } from './components/InxtTable';
-import { CompetitorTable } from './components/CompetitorTable';
+import { InxtTable } from './pCloud-alternative/components/InxtTable';
+import { CompetitorTable } from './pCloud-alternative/components/CompetitorTable';
 import { CaretDown, CaretUp } from '@phosphor-icons/react';
 
 type TablesSectionProps = {
