@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react';
 import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
-import { formatText } from '../utils/format-text';
 
 export default function FaqAccordion({
   question,
   answer,
   isQuestionBigger = false,
   textColor,
-  percentageDiscount = '70',
 }: {
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
   textColor?: string;
-  percentageDiscount?: string;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -58,11 +55,7 @@ export default function FaqAccordion({
         } transition-all ease-in-out`}
       >
         {answer.map((text) => {
-          return (
-            <ReactMarkdown key={text}>
-              {formatText(text, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </ReactMarkdown>
-          );
+          return <ReactMarkdown key={text}>{text}</ReactMarkdown>;
         })}
       </span>
     </div>

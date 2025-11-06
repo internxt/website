@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
@@ -29,6 +30,25 @@ export interface NavbarProps {
   hideCTA?: boolean;
   hideLoginButton?: boolean;
 }
+
+const EXCLUDED_PATHS_FOR_RIBBON = [
+  '/pricing',
+  '/pricing/b',
+  '/lifetime',
+  '/partner-discount',
+  '/techradar-discount',
+  '/stackcommerce',
+  '/dealfuel',
+  '/mightydeals',
+  '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
+  '/pccomponentes-products',
+  '/lifetime_special',
+  '/lifetime/celebration/[filename]',
+  '/affiliates/[filename]',
+];
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
@@ -75,7 +95,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
-      <div className="w-full px-5 lg:px-10 lg:pt-1 xl:px-32 3xl:px-80">
+      <div className=" w-full lg:px-10 lg:pt-1 xl:pl-32 3xl:pl-80">
         <div className="flex items-center justify-between">
           <div className="flex flex-row gap-8">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
@@ -84,12 +104,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                   width={96}
                   height={10.5}
                   loading="lazy"
-                  className="h-[10.5px] w-24 select-none lg:h-3 lg:w-[110px]"
+                  className="h-[10.5px] w-24 select-none pl-4 lg:h-3 lg:w-[110px]"
                   src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               ) : (
-                <Link href="/" locale={lang} passHref className="flex flex-shrink-0">
+                <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4">
                   <Image
                     width={96}
                     height={10.5}
@@ -113,7 +133,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
           {/* Left side of navbar: Logo / Hamburger menu */}
           {/* Login and CTA */}
-          <div className="relative flex h-full w-max flex-row items-center justify-center gap-2">
+          <div className="relative flex h-full w-max flex-row items-center justify-end space-x-2">
             <div
               className={`${shouldHideRibbon ? 'hidden' : 'flex'} ${
                 shouldModifyRibbonStyle ? '-left-24' : '-left-20'
@@ -216,8 +236,21 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 )}
               </>
             )}
-            <div className="hidden items-end justify-center bg-transparent lg:flex">
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
               {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
+            </div>
+
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
+              {props.isBlackfriday && scrolled ? (
+                <div className="flex flex-row items-center space-x-2 px-4 py-2">
+                  <p className="text-4xl font-bold text-white">85% OFF</p>
+                  <Button
+                    onClick={() => router.push('#billingButtons')}
+                    className="rounded-lg bg-primary px-4 py-1 text-sm font-semibold text-white"
+                    text={'Get the deal!'}
+                  />
+                </div>
+              ) : undefined}
             </div>
 
             {!props.isLinksHidden && (
@@ -233,7 +266,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`absolute right-0 top-10 overflow-hidden bg-white px-5 font-semibold transition-all duration-500 ${
+                    className={`absolute right-0 top-10 overflow-hidden bg-white font-semibold transition-all duration-500 ${
                       menuState ? 'h-screen w-screen pb-14' : 'h-0 '
                     }`}
                   >
@@ -292,23 +325,33 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
-                                <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.drive}</p>
+                                <Link href="/drive" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.drive}</p>
+                                  </div>
                                 </Link>
 
-                                <Link href="/vpn" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.vpn}</p>
+                                <Link href="/vpn" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.vpn}</p>
+                                  </div>
                                 </Link>
 
-                                <Link href="/antivirus" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.antivirus}</p>
+                                <Link href="/antivirus" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.antivirus}</p>
+                                  </div>
                                 </Link>
 
-                                <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.cleaner}</p>
+                                <Link href="/cleaner" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.cleaner}</p>
+                                  </div>
                                 </Link>
-                                <Link href="/meet" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.meet}</p>
+                                <Link href="/meet" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.meet}</p>
+                                  </div>
                                 </Link>
                               </Disclosure.Panel>
                             </Transition>
@@ -353,19 +396,21 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
-                                <Link href="/privacy" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.ourValues.privacy}</p>
+                                <Link href="/privacy" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.ourValues.privacy}</p>
+                                  </div>
                                 </Link>
 
-                                <Link href="/open-source" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.ourValues.openSource}</p>
+                                <Link href="/open-source" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.ourValues.openSource}</p>
+                                  </div>
                                 </Link>
-                                <Link
-                                  href="/green-cloud-computing"
-                                  locale={props.lang}
-                                  className="flex flex-row space-x-2"
-                                >
-                                  <p>{props.textContent.ourValues.sustainability}</p>
+                                <Link href="/green-cloud-computing" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.ourValues.sustainability}</p>
+                                  </div>
                                 </Link>
                               </Disclosure.Panel>
                             </Transition>

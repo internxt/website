@@ -52,7 +52,7 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
 
   return (
     <div
-      className={`group relative flex cursor-default space-x-1 rounded-lg bg-white px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out`}
+      className={`group relative flex cursor-default space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out`}
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
       <p className={darkMode ? 'text-white' : 'text-gray-60'}>{currentLangText}</p>
