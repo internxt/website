@@ -12,92 +12,86 @@ interface HorizontalScrollableProps {
 export default function HorizontalScrollableSection({
   textContent,
   bgGradient,
-  cardsWidth = '400px',
+  cardsWidth = '345px',
   cardsHeight = 'auto',
   needsDivider = true,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [cardWidth, setCardWidth] = useState(361);
+  const [maxCardHeight, setMaxCardHeight] = useState<number | null>(null);
 
-  const mobileCardWidth = 293;
-  const mobileGap = 32;
-  const desktopGap = 32;
+  const maxIndex = isMobile
+    ? textContent.scrollableSection.titles.length - 2
+    : textContent.scrollableSection.titles.length - 1;
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
+    const updateScreenSize = () => {
+      const isDesktop = window.innerWidth >= 1024;
+      setIsMobile(isDesktop);
+
+      if (cardsWidth && cardsWidth !== '345px' && cardsWidth !== '400px') {
+        const widthNumber = parseInt(cardsWidth.replace(/[^\d]/g, ''));
+        setCardWidth(widthNumber + 16);
+      } else {
+        setCardWidth(isDesktop ? 424 : 361);
+      }
     };
 
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, [cardsWidth]);
 
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
+  useEffect(() => {
+    if (cardsHeight === 'auto' && cardRefs.current.length > 0) {
+      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref!.offsetHeight);
 
-  const getScrollAmount = () => {
-    if (isMobile) {
-      return mobileCardWidth + mobileGap;
+      if (heights.length > 0) {
+        const max = Math.max(...heights);
+        setMaxCardHeight(max);
+      }
     }
-    const cardWidthNum = parseInt(cardsWidth);
-    return cardWidthNum + desktopGap;
-  };
-
-  const getPaddingRight = () => {
-    if (isMobile) {
-      const containerWidth = 345;
-      const visibleWidth = mobileCardWidth;
-      const paddingRight = containerWidth - visibleWidth;
-      return paddingRight;
-    }
-
-    const cardWidthNum = parseInt(cardsWidth);
-    const containerWidth = 850;
-    const visibleWidth = 2 * cardWidthNum + desktopGap;
-    const paddingRight = containerWidth - visibleWidth;
-    return paddingRight;
-  };
-
-  const updateScrollButtons = () => {
-    if (!scrollContainerRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
-  };
+  }, [textContent, cardsHeight]);
 
   const scrollLeft = () => {
-    if (!scrollContainerRef.current) return;
-    const scrollAmount = getScrollAmount();
-    scrollContainerRef.current.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth',
-    });
+    if (scrollContainerRef.current && currentIndex > 0) {
+      const newIndex = currentIndex - 1;
+      scrollContainerRef.current.scrollTo({
+        left: newIndex * cardWidth,
+        behavior: 'smooth',
+      });
+      setCurrentIndex(newIndex);
+    }
   };
 
   const scrollRight = () => {
-    if (!scrollContainerRef.current) return;
-    const scrollAmount = getScrollAmount();
-    scrollContainerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
+    if (scrollContainerRef.current && currentIndex < maxIndex) {
+      const newIndex = currentIndex + 1;
+      scrollContainerRef.current.scrollTo({
+        left: newIndex * cardWidth,
+        behavior: 'smooth',
+      });
+      setCurrentIndex(newIndex);
+    }
   };
 
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-    updateScrollButtons();
-    scrollContainer.addEventListener('scroll', updateScrollButtons);
-    const resizeObserver = new ResizeObserver(updateScrollButtons);
-    resizeObserver.observe(scrollContainer);
-    return () => {
-      scrollContainer.removeEventListener('scroll', updateScrollButtons);
-      resizeObserver.disconnect();
-    };
-  }, [isMobile]);
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const newIndex = Math.round(scrollLeft / cardWidth);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const getCardWidth = () => {
+    if (cardsWidth) {
+      return cardsWidth;
+    }
+    return window.innerWidth >= 1024 ? '400px' : '345px';
+  };
 
   return (
     <section
@@ -110,6 +104,7 @@ export default function HorizontalScrollableSection({
         {needsDivider && (
           <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
         )}
+
         <p className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         {textContent.cta && (
@@ -122,58 +117,60 @@ export default function HorizontalScrollableSection({
           </span>
         )}
       </div>
-
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex w-full flex-row gap-8 overflow-x-auto scroll-smooth"
+          onScroll={handleScroll}
+          className="w-full overflow-x-auto px-5 lg:px-20 [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
-            paddingLeft: isMobile ? '20px' : 'calc((100vw - 850px) / 2)',
-            paddingRight: isMobile
-              ? `calc(20px + ${getPaddingRight()}px)`
-              : `calc((100vw - 850px) / 2 + ${getPaddingRight()}px)`,
+            WebkitOverflowScrolling: 'touch',
           }}
         >
-          {textContent.scrollableSection.titles.map((title: string, index: number) => (
-            <div
-              key={index}
-              className="flex-shrink-0"
-              style={{
-                width: isMobile ? `${mobileCardWidth}px` : cardsWidth,
-                height: cardsHeight,
-              }}
-            >
-              <div className="flex h-full flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8">
-                <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
-                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
-                  {textContent.scrollableSection.descriptions[index]}
-                </p>
+          <div
+            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-72 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-64 2xl:pr-[288px]"
+            style={{
+              width: 'max-content',
+              alignItems: 'stretch',
+            }}
+          >
+            {textContent.scrollableSection.titles.map((title: string, index: number) => (
+              <div key={index} className="flex flex-shrink-0">
+                <div
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="flex flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
+                  style={{
+                    width: getCardWidth(),
+                    minHeight: cardsHeight === 'auto' ? 'auto' : cardsHeight,
+                  }}
+                >
+                  <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
+                    {textContent.scrollableSection.descriptions[index]}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
-              disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
+              disabled={currentIndex === 0}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
-              aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
-              disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
+              disabled={currentIndex === maxIndex}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
-              aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

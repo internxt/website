@@ -5,10 +5,9 @@ interface FAQSectionProps {
   bgColor?: string;
   cardColor?: string;
   textColor?: string;
-  percentageDiscount?: string;
 }
 
-const FAQSection = ({ textContent, bgColor, cardColor, textColor, percentageDiscount }: FAQSectionProps) => {
+const FAQSection = ({ textContent, bgColor, cardColor, textColor }: FAQSectionProps) => {
   return (
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`}>
       <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 lg:py-20">
@@ -24,7 +23,6 @@ const FAQSection = ({ textContent, bgColor, cardColor, textColor, percentageDisc
                 answer={item.answer}
                 isQuestionBigger
                 textColor={textColor}
-                percentageDiscount={percentageDiscount}
               />
             </div>
           ))}

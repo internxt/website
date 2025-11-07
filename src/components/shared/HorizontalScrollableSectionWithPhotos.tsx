@@ -2,29 +2,24 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 
-interface HorizontalScrollableSectionWithPhotosProps {
-  textContent: any;
-  bgColor?: string;
+interface HorizontalScrollableProps {
+  textContent: PrivateCloudStorageForVideoText['HorizontalScrollableSection'];
 }
 
-export default function HorizontalScrollableSectionWithPhotosSection({
-  textContent,
-  bgColor,
-}: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+export default function HorizontalScrollableSection({ textContent }: HorizontalScrollableProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
-  const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
-
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  const cardWidth = 350;
+  const cardWidth = 400;
   const mobileCardWidth = 345;
   const gap = 24;
-  const mobileGap = 64;
+  const scrollAmount = cardWidth + gap;
+  const mobileScrollAmount = mobileCardWidth + gap;
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -37,74 +32,62 @@ export default function HorizontalScrollableSectionWithPhotosSection({
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
-  const getScrollAmount = () => {
-    return isMobile ? mobileCardWidth + mobileGap : cardWidth + gap;
+  const getMaxIndex = () => {
+    if (isMobile) {
+      return Math.max(0, cardTitles.length - 1);
+    } else {
+      return Math.max(0, cardTitles.length - 2);
+    }
   };
 
-  const getPaddingRight = () => {
-    const currentCardWidth = isMobile ? mobileCardWidth : cardWidth;
-    const currentGap = isMobile ? mobileGap : gap;
-    const containerWidth = isMobile ? 345 : 850;
-
-    const visibleCards = isMobile ? 1 : 2;
-    const visibleWidth = visibleCards * currentCardWidth + (visibleCards - 1) * currentGap;
-    const paddingRight = containerWidth - visibleWidth;
-
-    return Math.max(0, paddingRight);
-  };
-
-  const updateScrollButtons = () => {
-    if (!scrollContainerRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const newIndex = Math.round(scrollLeft / amount);
+      setCurrentIndex(Math.min(newIndex, getMaxIndex()));
+    }
   };
 
   const scrollLeft = () => {
-    if (!scrollContainerRef.current) return;
-
-    const scrollAmount = getScrollAmount();
-    scrollContainerRef.current.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth',
-    });
+    if (currentIndex > 0 && scrollContainerRef.current) {
+      const newIndex = currentIndex - 1;
+      setCurrentIndex(newIndex);
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const element = scrollContainerRef.current;
+      if (element && 'scrollTo' in element) {
+        element.scrollTo({
+          left: newIndex * amount,
+          behavior: 'smooth',
+        });
+      }
+    }
   };
 
   const scrollRight = () => {
-    if (!scrollContainerRef.current) return;
-
-    const scrollAmount = getScrollAmount();
-    scrollContainerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
+    const maxIndex = getMaxIndex();
+    if (currentIndex < maxIndex && scrollContainerRef.current) {
+      const newIndex = currentIndex + 1;
+      setCurrentIndex(newIndex);
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const element = scrollContainerRef.current;
+      if (element && 'scrollTo' in element) {
+        element.scrollTo({
+          left: newIndex * amount,
+          behavior: 'smooth',
+        });
+      }
+    }
   };
 
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-
-    updateScrollButtons();
-    scrollContainer.addEventListener('scroll', updateScrollButtons);
-
-    const resizeObserver = new ResizeObserver(updateScrollButtons);
-    resizeObserver.observe(scrollContainer);
-
-    return () => {
-      scrollContainer.removeEventListener('scroll', updateScrollButtons);
-      resizeObserver.disconnect();
-    };
-  }, [isMobile]);
+  const maxIndex = getMaxIndex();
 
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{
-        background: bgColor || 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
@@ -113,62 +96,57 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex w-full flex-row gap-4 overflow-x-auto scroll-smooth lg:gap-6"
+          onScroll={handleScroll}
+          className="w-full overflow-x-auto px-5 lg:px-20 [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
-            paddingLeft: isMobile ? '16px' : 'calc((100vw - 850px) / 2)',
-            paddingRight: isMobile
-              ? `calc(16px + ${getPaddingRight()}px)`
-              : `calc((100vw - 850px) / 2 + ${getPaddingRight()}px)`,
+            WebkitOverflowScrolling: 'touch',
           }}
         >
-          {cardTitles.map((title: string, index: number) => (
-            <div
-              key={title}
-              className="flex-shrink-0"
-              style={{ width: isMobile ? `${mobileCardWidth}px` : `${cardWidth}px` }}
-            >
-              <div className="flex h-full flex-col items-center justify-between">
-                <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
-                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
-                    {cardDescriptions[index]}
-                  </p>
-                </div>
+          <div
+            className="flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            style={{
+              width: 'max-content',
+              alignItems: 'stretch',
+            }}
+          >
+            {cardTitles.map((title: string, index: number) => (
+              <div key={title} className="flex-shrink-0">
                 <Image
-                  src={getImage(`/images/coupons/${images[index]}.webp`)}
-                  alt={`${title} Solution`}
-                  height={index === 2 ? 300 : 352}
-                  width={index === 2 ? 300 : 400}
+                  src={getImage(`/images${textContent.scrollableSection.imagesPathname[index]}.webp`)}
+                  alt="Internxt B2B Business Solution"
+                  height={300}
+                  width={400}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
                   className="rounded-t-16"
                 />
+                <div className="flex h-min w-[345px] flex-col rounded-b-16 bg-white px-4 pb-8 pt-6 lg:w-[400px]">
+                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
-              disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              disabled={currentIndex === 0}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
-              aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
-              disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollRight ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              disabled={currentIndex === maxIndex}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
-              aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>
