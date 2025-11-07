@@ -1,0 +1,216 @@
+{
+  "HeroSection": {
+    "title": "Internxt: Wie Google Drive, aber **privat**",
+    "description": "DeGoogle dein Leben mit Internxt, der besten Alternative zu Google Drive, die deine Privatsphäre respektiert",
+    "getPrivacy": "Erhalte vollständige Privatsphäre mit ${{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} im Überblick",
+    "description": "Entdecke die wichtigsten Funktionen und Unterschiede, die Internxt ermöglichen, dir die Kontrolle über deine Daten zurückzugeben",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicherplatz",
+        "Funktionen",
+        "Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Auf deinem Gerät verschlüsselt",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, bis zu 5 TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheitsaudits",
+        "Ja",
+        "Kann niemals auf deine Dateien zugreifen",
+        "Volle Privatsphäre: DSGVO, Spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Von Google verschlüsselt",
+        "Nein",
+        "Teurere Pläne, bis zu 2 TB",
+        "Drive, Google Workspace, KI-Integration, Mail und Meet",
+        "Regelmäßige Sicherheitsaudits",
+        "Nein",
+        "Kann unter bestimmten Umständen auf Dateien zugreifen",
+        "Weniger Privatsphäre: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google zahlt Bußgelder für Datenschutzverletzungen. Internxt schützt deine Privatsphäre.",
+    "description": "Google mag sicher sein, aber es ist ein Albtraum für deine Privatsphäre. Wechsle zu Internxt für volle Sicherheit deiner Dateien, Videos und Fotos. Mit Internxt kann niemand außer dir auf deine Dateien zugreifen, nicht einmal wir.",
+    "scrollableSection": {
+      "titles": ["€90 Millionen", "€10 Millionen", "€325 Millionen", "€7 Millionen"],
+      "descriptions": [
+        "Am 31. Dezember 2021 verhängte die französische Datenschutzbehörde CNIL ein Bußgeld in Höhe von 90 Millionen Euro gegen Google, weil es den Nutzern erschwerte, Cookies abzulehnen, eine Praxis, die das auf Werbung und Tracking basierende Geschäftsmodell des Unternehmens unterstützte.",
+        "Die spanische Datenschutzbehörde verhängte ein Bußgeld gegen Google wegen Verstoßes gegen die DSGVO, indem sie identifizierende Informationen von Personen, die die Löschung beantragt hatten, ohne deren Zustimmung an Dritte weitergab.",
+        "Im Jahr 2025 verhängte die französische Datenschutzbehörde CNIL erneut ein Bußgeld gegen Google, weil das Unternehmen Werbung zwischen den E-Mails von Gmail-Nutzern anzeigte und Cookies während der Kontoerstellung ohne gültige Zustimmung der französischen Nutzer setzte.",
+        "Die schwedische Datenschutzbehörde verhängte ein Bußgeld gegen Google wegen Verletzungen des Rechts auf Vergessenwerden. Google wurde in Schweden mit einer Geldstrafe belegt, weil das Unternehmen Suchergebnisse, deren Löschung beantragt wurde, nicht entfernte und so die Identität der Personen, die um Privatsphäre baten, preisgab."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum du eine private Google Drive-Alternative brauchst",
+    "description": "Was Google in puncto Sicherheit demonstriert, scheitert in Bezug auf die Privatsphäre. Für vollständige Privatsphäre erhältst du bei Internxt volle Sicherheit kombiniert mit Zero-Knowledge-Verschlüsselung.",
+    "cards": {
+      "titles": ["Privatsphäre", "Fehlende Ende-zu-Ende-Verschlüsselung", "Datensammlung"],
+      "descriptions": [
+        "Google Drive und andere Cloud-Dienste können deine Dateien scannen oder analysieren. Bei Internxt gibt es keine Tracker, kein KI-Scanning und keine versteckten Hintertüren. Internxt kann deine Dateien nicht lesen, sodass deine Fotos, Dokumente und Videos privat bleiben. Du hast die volle Kontrolle über deine Cloud.",
+        "Google verwaltet Verschlüsselungsschlüssel auf seinen Servern, was dem Unternehmen die vollständige Kontrolle über deine Daten gibt. Daher birgt die Speicherung deiner Dateien bei Google ein enormes Risiko für deine Privatsphäre, da Google jederzeit auf deine Inhalte, Fotos oder Videos zugreifen könnte.",
+        "Bei Google werden dein Name, deine E-Mail-Adresse, die von dir besuchten Websites und andere Aktivitäten überwacht, analysiert und verwendet, um ein detailliertes Profil von dir zu erstellen und aus deinen Daten Profit zu schlagen. Mit Google werden du und deine Daten zum Produkt."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Internxt bietet unvergleichliche Sicherheit mit Funktionen, die Google Drive nicht bieten kann, wie Zero-Knowledge, Post-Quanten-Verschlüsselung und Schutz vor Hackern.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Volle Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Der Code von Internxt ist für jedermann auf GitHub einsehbar, um die Sicherheit zu gewährleisten. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Deine Daten werden auf Kundenseite verschlüsselt, was garantiert, dass nur du darauf zugreifen kannst."
+          },
+          {
+            "title": "Auditiert und konform",
+            "description": "Internxt wurde extern auditiert und entspricht der DSGVO, HIPAA, ISO 27001 und SOC 2."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Vermeide wiederholte Abonnements mit einer einmaligen Zahlung für Pläne bis zu 5 TB. Greife für immer mit {{percentage}}% Rabatt auf unsere Dienste zu."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Was ist mit deiner Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Google hält seinen Quellcode vor der Öffentlichkeit geheim. Ohne Transparenz gibt es keine Möglichkeit, genau zu wissen, wie Google mit deinen Daten umgeht oder sie schützt."
+          },
+          {
+            "title": "Von Google verschlüsselt",
+            "description": "Da Google die Verschlüsselungsschlüssel besitzt, kann das Unternehmen die Dateien theoretisch entschlüsseln und darauf zugreifen, wenn es eine rechtliche Anforderung (wie eine Vorladung) erhält."
+          },
+          {
+            "title": "Bußgelder wegen Nichteinhaltung",
+            "description": "Google hat eine Vorgeschichte von behördlichen Bußgeldern, weil es Kundendaten nicht geschützt hat."
+          },
+          {
+            "title": "Abonnement-basiert",
+            "description": "Bietet nur monatliche oder jährliche Abonnements mit einem maximalen Speicherplatz von 2 TB an."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Google Drive-Alternative ist",
+    "description": "Internxt Drive bietet eine umfassende Suite von Produkten, die entwickelt wurden, um dir die Kontrolle über deine Online-Privatsphäre zurückzugeben.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Drive verfügt über Post-Quanten- und Zero-Knowledge-Verschlüsselung, sodass niemand außer dir auf deine Dateien zugreifen kann. Erhalte verschlüsselten Cloud-Speicher und Backups für deine Fotos, Videos und Dateien. \n\n Zusätzlich bieten verschlüsselte Backups und passwortgeschütztes Teilen von Dateien maximalen Schutz vor Ransomware und Datenlecks.",
+        "Alle kostenpflichtigen Pläne beinhalten auch Internxt Antivirus für erhöhten Schutz vor den zunehmenden Bedrohungen, denen wir online ausgesetzt sind. \n\n Führe vollständige oder benutzerdefinierte Scans über die Internxt-App durch, um dich gegen Malware, Phishing und Ransomware zu verteidigen und dein Gerät vor Datenverlust oder -lecks zu schützen und zu reinigen.",
+        "Hol dir unser ultraschnelles, unbegrenztes VPN für bis zu 5 Standorte, um deine Verbindung mit unserem privaten VPN zu verschlüsseln und zu sichern. \n\n Verschlüssele deinen Traffic, um externes Ausspionieren deiner Verbindung zu verhindern, das deine persönlichen Informationen preisgeben könnte, und genieße totale Privatsphäre beim Surfen online.",
+        "Internxt Cleaner steigert die Leistung und Gesundheit deines Geräts, indem es Junk- oder doppelte Dateien von deinem Computer entfernt. \n\n Gib Speicherplatz frei, verbessere die Geräteleistung und schütze deine Privatsphäre, indem du unerwünschte Dateien mit einem Klick löschst.",
+        "Internxt Meet bietet vollständig private Videoanrufe, die durch Post-Quanten-Kryptographie geschützt sind und sicherstellen, dass deine Meetings sicher, vertraulich und frei von Trackern sind. \n\n Hosten und nimm an Videoanrufen mit Freunden, Familie oder Teamkollegen in völliger Privatsphäre teil, ohne dass externe Unternehmen deine Chats überwachen.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte, ermöglicht dir Internxt die volle Kontrolle über deinen Cloud-Speicher, indem du von überall und auf jedem Gerät auf deine Cloud zugreifst. \n\n Für fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS, und bietet alles, was du zur Verwaltung deiner Dateien in völliger Privatsphäre benötigst."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Deine Privatsphäre, deine Bedingungen",
+    "description": "Voller Schutz mit {{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Dein All-in-One-Privatsphäre-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Dein All-in-One-Privatsphäre-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalte 1 GB verschlüsselten Cloud-Speicher gratis",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Open-Source und auditiert",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1 TB",
+      "premium": "3 TB",
+      "ultimate": "5 TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Google Drive-Alternative?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer dir deine Dateien einsehen kann. Google Drive verwaltet die Verschlüsselungsschlüssel auf seinen eigenen Servern, was bedeutet, dass es auf deine Dateien zugreifen oder der Regierung oder den Strafverfolgungsbehörden Zugriff gewähren könnte.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Geräte-Reiniger (Device Cleaner), Dark Web Monitor, Meet und Mail bieten dir auch zusätzlichen Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung, und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standardverschlüsselung sind Post-Quanten-Verschlüsselungsalgorithmen darauf ausgelegt, mächtigen Quanten-Angriffen standzuhalten, was PQE zu einer sichereren Alternative zu Google Drive macht.",
+          "Diese kryptografische Methode wird von Internxt verwendet, um sicherzustellen, dass dein lebenslanger Cloud-Speicherplan dich gegen zukünftige Cyber-Bedrohungen schützt und ist für alle Pläne ohne zusätzliche Kosten verfügbar."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strengen Gesetzen folgt, um sicherzustellen, dass deine Daten und deine Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist Google Drive teurer als Internxt?",
+        "answer": [
+          "Mit deinem exklusiven {{percentage}}%-Rabatt sind alle unsere Pläne günstiger als die derzeit verfügbaren Preisoptionen von Google, mit dem Vorteil, dass sie viel mehr Funktionen und Privatsphäre bieten als Google Drive."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn du weitere Fragen, Wünsche hast oder Hilfe benötigst, kannst du dich an hello@internxt.com wenden und unser Kundenerfolgsteam hilft dir gerne weiter."
+        ]
+      },
+      {
+        "question": "Kann ich meinem lebenslangen Plan mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, du kannst deinen Plan über die Einstellungen deines Internxt-Kontos upgraden, wenn du mehr Speicherplatz benötigst. Oder kaufe einen neuen Plan auf internxt.com/pricing mit deinem aktuellen Internxt-Konto, und dein Speicherplatz wird automatisch gestapelt."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Du kannst auch über PayPal, iDEAL, Sofort, Kryptowährung und Klarna bezahlen."
+        ]
+      }
+    ]
+  }
+}

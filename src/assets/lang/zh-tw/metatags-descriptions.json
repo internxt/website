@@ -476,6 +476,26 @@
     "description": "Internxt雲端儲存是Mega的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
   },
   {
+    "id": "koofr-alternative",
+    "title": "Internxt — Koofr 的安全替代品，具备零知识加密",
+    "description": "切换到 Internxt，这是 Koofr 的替代品，具备后量子和零知识加密云存储，可完全保护您的文件隐私，无需依赖单独的保险库。"
+  },
+  {
+    "id": "icedrive-alternative",
+    "title": "Internxt — Icedrive 的开源替代品",
+    "description": "切换到 Internxt，这是 Icedrive 的开源替代品。获得后量子和零知识加密云存储，在所有计划中均可实现完全隐私。"
+  },
+  {
+    "id": "onedrive-alternative",
+    "title": "Internxt — OneDrive 的私密且安全的替代品",
+    "description": "切换到 Internxt，这是 OneDrive 的开源替代品。后量子和零知识加密保证您的文档和媒体文件的完全隐私。"
+  },
+  {
+    "id": "google-drive-alternative",
+    "title": "Internxt — 像 Google Drive 一样，但私密",
+    "description": "使用 Internxt 解除您的 Google 依赖，这是尊重您隐私的 Google Drive 最佳替代品。获得零知识加密和全面的数据控制。"
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – 安全私密的視訊通話",
     "description": "Meet 提供具有後量子和端到端加密的私人視訊通話，打造最安全的視訊會議體驗。"

@@ -290,6 +290,26 @@
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Mega. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
   },
   {
+    "id": "google-drive-alternative",
+    "title": "Internxt — Comme Google Drive, mais Privé",
+    "description": "Dé-Googlez votre vie avec Internxt, la meilleure alternative à Google Drive qui respecte votre vie privée. Obtenez le chiffrement à connaissance zéro et un contrôle total sur vos données."
+  },
+  {
+    "id": "koofr-alternative",
+    "title": "Internxt — Alternative Sécurisée à Koofr avec Chiffrement Zero-Knowledge",
+    "description": "Passez à Internxt, l'alternative à Koofr avec chiffrement post-quantique et à connaissance zéro pour la confidentialité totale de vos fichiers, sans dépendre de coffres-forts séparés."
+  },
+  {
+    "id": "icedrive-alternative",
+    "title": "Internxt — Alternative Open-Source à Icedrive",
+    "description": "Passez à Internxt, une alternative Open-Source à Icedrive. Obtenez un stockage cloud avec chiffrement post-quantique et à connaissance zéro pour une confidentialité totale, disponible dans tous les plans."
+  },
+  {
+    "id": "onedrive-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à OneDrive",
+    "description": "Passez à Internxt, une alternative Open-Source à OneDrive. Le chiffrement post-quantique et à connaissance zéro garantit la confidentialité complète de vos documents et fichiers multimédias."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Appels Vidéo Sécurisés et Privés",
     "description": "Meet offre des appels vidéo privés avec chiffrement post-quantique et de bout en bout pour les visioconférences les plus sécurisées."
