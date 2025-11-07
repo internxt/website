@@ -95,7 +95,7 @@
         "features": [
           {
             "title": "Forfaits raisonnables",
-            "description": "Offre exclusive de 87%, sans frais cachés."
+            "description": "Offre exclusive de 90%, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -189,7 +189,7 @@
     }
   },
   "CtaSection": {
-    "title": "Passez à Internxt avec 87% de réduction",
+    "title": "Passez à Internxt avec 90% de réduction",
     "description": "Le seul stockage cloud dont vous avez besoin pour une confidentialité complète en ligne",
     "cta": "Obtenir Internxt"
   },
@@ -285,7 +285,7 @@
       {
         "question": "La tarification de pCloud est-elle plus chère qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de 87%, tous nos forfaits sont moins chers que les options tarifaires de pCloud actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que pCloud."
+          "Avec votre réduction exclusive de 90%, tous nos forfaits sont moins chers que les options tarifaires de pCloud actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que pCloud."
         ]
       },
       {

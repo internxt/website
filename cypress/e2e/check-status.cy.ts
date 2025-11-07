@@ -30,6 +30,7 @@ const nameFiles = [
   'icedrive-alternative',
   'koofr-altertnative',
   'onedrive-alternative',
+  'pcloud-alternative',
 ];
 
 const langs = {
