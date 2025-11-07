@@ -1,0 +1,203 @@
+{
+  "HeroSection": {
+    "title": "Internxt：像 Koofr 一样，但**完全加密**",
+    "description": "Internxt 提供最先进、最现代的加密和隐私套件，以保护您的在线安全",
+    "getPrivacy": "选择您的计划，享受 {{percentage}}% 优惠 🔥",
+    "cta": "领取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Koofr 云存储概览",
+    "description": "Internxt 是 Koofr 的替代品，为所有文件提供零知识加密和完整的隐私套件",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密",
+        "后量子加密",
+        "定价和存储",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "具有竞争力，包括完整的套件产品，最高 5TB",
+        "Drive、VPN、Antivirus、Cleaner、Meet、Mail 等",
+        "定期安全审计",
+        "是",
+        "我们永远无法访问您的文件",
+        "完全隐私：GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "开源",
+        "AES-256",
+        "否",
+        "最高 20TB，仅限云存储",
+        "云存储",
+        "无已发布的安全审计",
+        "否",
+        "存储在 Koofr Vault 之外的文件隐私性较低",
+        "GDPR，总部位于斯洛文尼亚"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Koofr 的替代方案",
+    "description": "通过 Internxt 获取后量子加密云存储，外加 Antivirus、VPN、Cleaner、Meet 等。",
+    "scrollableSection": {
+      "titles": ["单独的私人加密", "受限的终身计划", "受技术限制的加密", "计划仅限于云存储"],
+      "descriptions": [
+        "您使用 Koofr 云存储存储的所有文件并非都受到零知识加密的保护。只有您手动移动到 Koofr Vault 中的文件才进行端到端加密，而您常规云存储中的所有其他内容仍然可以通过服务器端加密被提供商访问。",
+        "Koofr 的终身计划限制为 1TB，且无法叠加，或者年付计划最高 20TB，费用为 1,428.20 欧元/年。以与 Koofr 5TB 年付计划相同的成本，您可以获得 Internxt 5TB 终身存储，以及使用 Meet、Mail、文件版本控制、VPN 等的权限。为了实现全面的在线隐私，请将 Internxt 的完整隐私加密与其全面的产品套件相结合。",
+        "Koofr 使用行业标准 AES-256 加密。然而，随着后量子计算机的出现，这种加密模型可能很快就会过时，因为它可能破解 Koofr 和其他公司使用的现有加密模型。 Internxt 使用后量子加密（Kyber-512）。",
+        "Koofr 提供高达 20TB 的云存储，其中包括 10 个 Koofr 安全箱 (*safeboxes*)、版本控制和密码保护。但是，如果您需要云中所有文件的零知识加密，以及保护您的设备、互联网连接等的完整隐私套件，那么 Internxt 是一个更全面的 Koofr 替代方案。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Koofr：",
+    "description": "Internxt 提供无与伦比的安全性和隐私性，具备 Koofr 无法比拟的功能。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隐私、透明度和隐私套件",
+        "features": [
+          {
+            "title": "开源和已审计",
+            "description": "Internxt 的代码是开放的，任何人都可以通过我们的 GitHub 进行检查，以确保其安全性。这种透明度保证了不会隐藏任何漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的数据在客户端进行加密，保证只有您可以访问。适用于所有文件，而不仅仅是单独的保险库。"
+          },
+          {
+            "title": "多重合规标准",
+            "description": "Internxt 经过外部审计，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。"
+          },
+          {
+            "title": "终身计划",
+            "description": "多个终身计划，最高可达 5TB，包括 VPN、Meet、Cleaner 等的使用权限。以 {{discount}}% 的折扣永久使用这些服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr：您的隐私如何？",
+        "features": [
+          {
+            "title": "开源，无审计",
+            "description": "虽然 Koofr 是开源的，但没有外部和已发布的安全性审计记录。"
+          },
+          {
+            "title": "仅加密保险库",
+            "description": "零知识加密仅适用于手动移动到单独保险库的文件，这使得免费账户和常规存储的安全性及隐私性较低。"
+          },
+          {
+            "title": "合规记录",
+            "description": "没有独立的安全性审计记录来验证合规性标准。"
+          },
+          {
+            "title": "终身计划受限",
+            "description": "只有一个 1TB 的终身云存储计划，且无法叠加。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Internxt 是 Koofr 云存储的最佳替代品的原因",
+    "description": "有了 Internxt，您获得的不仅仅是云存储；您获得了保护您的数据、文件和在线隐私所需的一切。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus (防病毒)", "VPN", "Cleaner (清理工具)", "Meet (会议)", "高级工具"],
+      "descriptions": [
+        "Internxt Antivirus 直接内置于您的 Internxt Drive 应用程序中，可实现对恶意软件的全面控制和保护。运行完整或自定义的病毒扫描，以保持您的设备平稳运行，并防止勒索软件或间谍软件等病毒。",
+        "Internxt 的 VPN 保护您的浏览，阻止广告和跟踪器，并保护您的位置隐私。加密您的 Wi-Fi 连接，以防止窥探、黑客攻击和身份盗用。安全地上网冲浪，知道您的个人信息、密码和帐户都受到保护。",
+        "Internxt Cleaner 可帮助您识别、消除和管理设备上不需要的垃圾或重复文件。使用 Cleaner，您可以删除不需要的文件，以保持您的存储空间井井有条、整洁，并确保您的设备高效运行。",
+        "Internxt Meet 也可作为 Teams 的安全和私人替代品。使用 Meet，您可以举办没有跟踪器、广告和数据收集的私人视频通话。您的视频通话受后量子加密保护，让您可以完全私密地举办通话。",
+        "Internxt 可在 Windows、Mac、Linux 和移动设备上使用，让您可以从任何地方、在任何设备上访问云存储，从而完全控制您的云存储。\n\n对于高级用户，Internxt 提供对 WebDAV、Rclone 和 NAS 的支持，提供您以完全私密的方式管理文件所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "不仅仅是云存储",
+    "description": "使用 Internxt 获得全面的在线隐私",
+    "cta": "领取优惠"
+  },
+  "tableSection": {
+    "title": "您的多合一隐私盟友",
+    "hotLabel": "{{discount}}% 优惠 🔥",
+    "planTitles": {
+      "header": "您的多合一隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得 1GB 加密云存储",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源和已审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是一个更安全、更私密的 Koofr 替代品吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，保证除了您之外的任何人都无法查看您的文件。您的所有文件都受到此加密的保护，无需将它们存储在单独的保险库中，因为 Internxt Drive 可作为您的完整加密云存储保险库。",
+          "VPN、Antivirus、Device Cleaner、Dark Web Monitor、Meet 和 Mail 等附加功能还为您提供了额外的保护，防止黑客和数据泄露，作为您 Internxt 云存储计划的一部分。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密，它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵抗强大的量子攻击，使 PQE 成为 Koofr 更安全的替代方案。",
+          "Internxt 使用这种加密方法来确保您的终身云存储计划能够保护您免受未来的网络安全威胁，并且适用于所有计划，无需额外费用。"
+        ]
+      },
+      {
+        "question": "Internxt 的总部在哪里？",
+        "answer": [
+          "Internxt 总部位于西班牙巴伦西亚，使其成为符合 GDPR 的云存储解决方案，遵循严格的法律来确保您的数据和隐私受到保护。"
+        ]
+      },
+      {
+        "question": "Koofr 比 Internxt 贵吗？",
+        "answer": [
+          "Koofr 仅 1TB 终身云存储就需要 199 欧元。而 Internxt，您可以以 195 欧元获得相同的 1TB 后量子加密存储，外加 VPN 和 Antivirus。凭借您的专属 {{discount}}% 折扣，Internxt 提供的云存储和广泛的功能是任何其他云提供商（包括 Koofr）所不具备的。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "如果您有任何其他问题、请求或需要帮助，您可以联系 hello@internxt.com，我们的客户成功团队将很乐意为您提供帮助。"
+        ]
+      },
+      {
+        "question": "我可以为我的终身计划添加更多存储空间吗？",
+        "answer": [
+          "是的，如果您需要添加更多存储空间，可以从 Internxt 账户的设置中升级您的计划。或者使用您当前的 Internxt 账户在 internxt.com/pricing 购买一个新计划，您的存储空间将自动叠加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币支付吗？",
+        "answer": [
+          "Internxt 目前接受借记卡和信用卡（Mastercard、VISA、American Express 等）。您也可以通过 PayPal、iDEAL、Sofort、加密货币和 Klarna 进行支付。"
+        ]
+      }
+    ]
+  }
+}

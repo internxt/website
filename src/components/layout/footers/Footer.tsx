@@ -434,12 +434,29 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/koofr-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.koofrAlternative}
+                    </Link>
+
+                    <Link
                       href="/icedrive-alternative"
                       locale={lang}
                       passHref
                       className="w-full max-w-[160px] hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.icedriveAlternative}
+                    </Link>
+                    <Link
+                      href="/onedrive-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.onedriveAlternative}
                     </Link>
                     <Link
                       href="/google-drive-alternative"
@@ -971,12 +988,29 @@ export default function Footer({
                       </Link>
 
                       <Link
+                        href="/koofr-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.koofrAlternative}
+                      </Link>
+
+                      <Link
                         href="/icedrive-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.icedriveAlternative}
+                      </Link>
+                      <Link
+                        href="/onedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.onedriveAlternative}
                       </Link>
                       <Link
                         href="/what-does-google-know-about-me"
