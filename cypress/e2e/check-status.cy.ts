@@ -32,6 +32,7 @@ const nameFiles = [
   'onedrive-alternative',
   'pcloud-alternative',
   'dropbox-alternative',
+  'mega-alternative',
 ];
 
 const langs = {

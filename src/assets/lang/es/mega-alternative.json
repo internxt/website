@@ -96,7 +96,7 @@
         "features": [
           {
             "title": "Planes razonables",
-            "description": "Oferta exclusiva del 87%, sin cargos ocultos."
+            "description": "Oferta exclusiva del 90%, sin cargos ocultos."
           },
           {
             "title": "Protección completa",
@@ -104,7 +104,7 @@
           },
           {
             "title": "Planes de por vida",
-            "description": "Evita suscripciones repetidas con un pago único para acceder a nuestros servicios para siempre con 87% de descuento."
+            "description": "Evita suscripciones repetidas con un pago único para acceder a nuestros servicios para siempre con 90% de descuento."
           }
         ]
       },
@@ -129,7 +129,7 @@
   },
   "CtaSection": {
     "title": "Protege tus archivos de brechas de datos con Internxt",
-    "description": "Obtén 87% de descuento con el código MEGA87",
+    "description": "Obtén 90% de descuento con el código MEGA90",
     "cta": "Obtener Internxt"
   },
   "CtaSection2": {

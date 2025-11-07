@@ -96,7 +96,7 @@
         "features": [
           {
             "title": "Plans raisonnables",
-            "description": "Offre exclusive de 87%, sans frais cachés."
+            "description": "Offre exclusive de 90%, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -104,7 +104,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services à vie avec 87% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services à vie avec 90% de réduction."
           }
         ]
       },
@@ -129,7 +129,7 @@
   },
   "CtaSection": {
     "title": "Sécurisez vos fichiers contre les violations de données avec Internxt",
-    "description": "Obtenez 87% de réduction avec le code MEGA87",
+    "description": "Obtenez 90% de réduction avec le code MEGA90",
     "cta": "Obtenir Internxt"
   },
   "CtaSection2": {
