@@ -87,6 +87,7 @@ export interface Resources {
   pCloudAlternative: string;
   dropboxAlternative: string;
   megaAlternative: string;
+  koofrAlternative: string;
   icedriveAlternative: string;
   googleDriveAlternative: string;
   directoryOfPrivacyOrganizations: string;

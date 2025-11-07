@@ -28,6 +28,7 @@ const nameFiles = [
   'coupons',
   'google-drive-alternative',
   'icedrive-alternative',
+  'koofr-altertnative',
 ];
 
 const langs = {

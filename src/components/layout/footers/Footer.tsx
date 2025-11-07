@@ -434,6 +434,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/koofr-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.koofrAlternative}
+                    </Link>
+
+                    <Link
                       href="/icedrive-alternative"
                       locale={lang}
                       passHref
@@ -968,6 +977,15 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.megaAlternative}
+                      </Link>
+
+                      <Link
+                        href="/koofr-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.koofrAlternative}
                       </Link>
 
                       <Link
