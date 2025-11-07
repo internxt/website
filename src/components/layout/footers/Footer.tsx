@@ -434,6 +434,13 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/icedrive-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.icedriveAlternative}
+                    <Link
                       href="/google-drive-alternative"
                       locale={lang}
                       passHref
@@ -962,6 +969,14 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
 
+                      <Link
+                        href="/icedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.icedriveAlternative}
+                      </Link>
                       <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}
