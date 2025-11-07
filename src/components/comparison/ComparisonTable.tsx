@@ -14,11 +14,11 @@ interface ComparisonTableProps {
     };
   };
   logo?: string;
+  competitor: 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'Onedrive';
   hideTooltip?: boolean;
-  competitor: 'pCloud' | 'MEGA' | 'Dropbox';
 }
 
-export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: ComparisonTableProps) => {
+export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTableProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -47,6 +47,18 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
     },
     Dropbox: {
       defaultLogo: '/images/comparison/competitors/Dropbox_Letters.webp',
+    },
+    Drive: {
+      defaultLogo: '/images/comparison/competitors/Drive-Letters.webp',
+    },
+    Koofr: {
+      defaultLogo: '/images/comparison/Koofr-Letters.webp',
+    },
+    Icedrive: {
+      defaultLogo: '/images/comparison/Icedrive-Letters.webp',
+    },
+    Onedrive: {
+      defaultLogo: '/images/comparison/OneDrive-Letters.webp',
     },
   } as const;
 
