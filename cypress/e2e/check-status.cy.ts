@@ -31,6 +31,7 @@ const nameFiles = [
   'koofr-altertnative',
   'onedrive-alternative',
   'pcloud-alternative',
+  'dropbox-alternative',
 ];
 
 const langs = {
