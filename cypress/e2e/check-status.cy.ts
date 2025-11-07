@@ -26,6 +26,7 @@ const nameFiles = [
   'file-converter',
   'cleaner',
   'coupons',
+  'google-drive-alternative',
 ];
 
 const langs = {

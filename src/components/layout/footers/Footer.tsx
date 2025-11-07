@@ -434,6 +434,14 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/google-drive-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.googleDriveAlternative}
+                    </Link>
+                    <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
