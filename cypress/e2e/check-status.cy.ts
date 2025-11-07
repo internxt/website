@@ -29,6 +29,7 @@ const nameFiles = [
   'google-drive-alternative',
   'icedrive-alternative',
   'koofr-altertnative',
+  'onedrive-alternative',
 ];
 
 const langs = {

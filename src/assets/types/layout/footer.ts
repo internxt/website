@@ -89,6 +89,7 @@ export interface Resources {
   megaAlternative: string;
   koofrAlternative: string;
   icedriveAlternative: string;
+  onedriveAlternative: string;
   googleDriveAlternative: string;
   directoryOfPrivacyOrganizations: string;
   cyberAwareness: string;

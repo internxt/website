@@ -305,6 +305,11 @@
     "description": "Passez à Internxt, une alternative Open-Source à Icedrive. Obtenez un stockage cloud avec chiffrement post-quantique et à connaissance zéro pour une confidentialité totale, disponible dans tous les plans."
   },
   {
+    "id": "onedrive-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à OneDrive",
+    "description": "Passez à Internxt, une alternative Open-Source à OneDrive. Le chiffrement post-quantique et à connaissance zéro garantit la confidentialité complète de vos documents et fichiers multimédias."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Appels Vidéo Sécurisés et Privés",
     "description": "Meet offre des appels vidéo privés avec chiffrement post-quantique et de bout en bout pour les visioconférences les plus sécurisées."
