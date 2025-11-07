@@ -1,0 +1,215 @@
+{
+  "HeroSection": {
+    "title": "Internxt：像 OneDrive 一樣，但**私密**。",
+    "description": "切換到 Internxt，這個最尊重您隱私的 OneDrive 最佳替代方案",
+    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠 🔥",
+    "cta": "領取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. OneDrive 概覽",
+    "description": "探索 Internxt 讓您重新掌握資料控制權的關鍵功能與差異",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "定價和儲存",
+        "功能",
+        "安全稽核",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "在您的裝置上加密",
+        "是",
+        "具競爭力，無隱藏費用，最高 5TB",
+        "Drive、VPN、Antivirus、Cleaner、Meet、Mail 等",
+        "定期安全稽核",
+        "是",
+        "我們永遠無法存取您的檔案",
+        "完全隱私：GDPR、西班牙資料保護法"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "由 OneDrive 加密",
+        "否",
+        "較昂貴的計劃，最高 6TB",
+        "Drive、SharePoint、Outlook 和 Teams",
+        "定期安全稽核",
+        "否",
+        "在某些情況下可存取檔案。",
+        "隱私性較低：歐盟-美國資料隱私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "OneDrive 追蹤、分享和監控您的資料。Internxt 則保護它。",
+    "description": "OneDrive 可能安全，但對您的隱私來說是一場惡夢。切換到 Internxt，讓您的文件、影片和照片獲得完全安全。有了 Internxt，除了您之外，任何人都無法存取您的檔案，即使是我們也不行。",
+    "scrollableSection": {
+      "titles": ["廣泛的資料收集", "語音監控", "員工存取您的資料", "與 Microsoft 生態系統整合"],
+      "descriptions": [
+        "OneDrive 根據您與其服務互動的方式，收集廣泛的個人資料，包括平台上儲存的檔案、中繼資料和裝置資訊，遠遠超出營運服務所需。",
+        "來自 Cortana 或其他 Microsoft 服務的語音資料可能由人類員工審查，以訓練 AI 系統並改善識別模型，這造成了您的私人對話可能意外暴露的風險。",
+        "在某些情況下，例如調查政策違規、執法請求或系統維護，Microsoft 員工可以存取和審查使用者內容。您在 OneDrive 中儲存的任何內容都可能被這些員工查看或監控。",
+        "如果您使用 OneDrive，您的資料很可能也會被其其他產品（例如 Windows、Office、Outlook 和 Cortana）使用。這允許跨服務的資料收集和在您可能使用的其他平台上的使用者追蹤。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為何您需要 OneDrive 的私人替代方案",
+    "description": "OneDrive 在安全性上展現的，在隱私性方面卻失敗了。為了獲得完全的隱私，請選擇 Internxt 的全面安全性與零知識加密的結合。",
+    "cards": {
+      "titles": ["隱私", "缺乏端到端加密", "資料收集"],
+      "descriptions": [
+        "OneDrive 和其他雲端服務可能會掃描或分析您的檔案。在 Internxt，沒有追蹤器、沒有 AI 掃描，也沒有隱藏的後門。Internxt 無法讀取您的檔案，因此您的照片、文件和影片保持私密。您對您的雲端擁有完全的控制權。",
+        "OneDrive 在其伺服器上管理加密金鑰，賦予它們對您的資料的完全控制權。因此，將檔案儲存在 OneDrive 會對您的隱私構成巨大風險，因為 Microsoft 可能隨時存取您的內容、照片或影片。",
+        "OneDrive 在其條款和條件中聲明，它透過您與其產品的互動收集您的資料，以及從第三方收集資料。OneDrive 員工還可以監控您的語音資料，以訓練其 AI 並改善其語音識別。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. OneDrive",
+    "description": "Internxt 憑藉零知識、後量子加密提供無與倫比的隱私和安全性，為您提供最好的網路攻擊保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：完全隱私、透明度和信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼對所有人開放，可透過我們的 GitHub 進行檢查以確保其安全性。這種透明度保證了沒有任何漏洞被隱藏。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的資料在客戶端進行加密，保證只有您可以存取。"
+          },
+          {
+            "title": "歐洲雲端儲存",
+            "description": "Internxt 總部位於歐洲，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。該平台經過全面稽核，確保沒有外部存取您的資料。"
+          },
+          {
+            "title": "終身計劃",
+            "description": "透過一次性付款的計劃（最高 5TB）來避免重複訂閱。以 {{discount}}% 優惠永久存取我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "OneDrive：您的隱私如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "OneDrive 對公眾隱藏其原始碼。缺乏透明度，就無法確定 Dropbox [原文如此] 如何處理或保護您的資料。"
+          },
+          {
+            "title": "由 Microsoft 加密",
+            "description": "Microsoft 擁有您檔案的加密金鑰，這意味著如果他們收到法律要求（例如傳票），理論上可以解密和存取您的雲端。"
+          },
+          {
+            "title": "資料儲存在美國",
+            "description": "資料儲存在美國的伺服器上：儲存在 Microsoft 雲端中的資料受美國政府監控法律的約束，該法律允許在特定條件下存取您的資料。"
+          },
+          {
+            "title": "基於訂閱",
+            "description": "僅提供每月或每年的訂閱，最大儲存空間為 6TB，由 6 人共享。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為何 Internxt 是 OneDrive 的最佳替代方案",
+    "description": "Internxt Drive 提供一套全面的產品，旨在讓您重新掌握線上隱私的控制權。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus (防毒)", "VPN", "Cleaner (清理工具)", "Meet (會議)", "進階工具"],
+      "descriptions": [
+        "Internxt Antivirus 直接內建於您的 Internxt Drive 應用程式中，可提供全面的控制和保護，抵禦惡意軟體。運行完整或自定義的病毒掃描，以保持您的裝置平穩運行，並防止勒索軟體或間諜軟體等病毒。",
+        "Internxt 的 VPN 保護您的瀏覽，阻止廣告和追蹤器，並保持您的位置私密。加密您的 Wi-Fi 連線，以防止窺探、駭客和身份盜用。安全地上網沖浪，知道您的個人資訊、密碼和帳戶都受到保護。",
+        "Internxt Cleaner 可幫助您識別、消除和管理裝置上不需要的垃圾或重複檔案。使用 Cleaner，您可以刪除不需要的檔案，以保持您的儲存空間井然有序、整潔，並確保您的裝置高效運行。",
+        "Internxt Meet 也可作為 Teams 的安全和私人替代品。使用 Meet，您可以舉辦沒有追蹤器、廣告和資料收集的私人視訊通話。您的視訊通話受後量子加密保護，讓您可以完全私密地舉辦通話。",
+        "Internxt 可在 Windows、Mac、Linux 和行動裝置上使用，讓您可以從任何地方、在任何裝置上存取雲端儲存，從而完全控制您的雲端儲存。\n\n對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供您以完全私密的方式管理檔案所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "您的隱私，您作主",
+    "description": "全面保護，享 {{percentage}}% 優惠",
+    "cta": "領取優惠"
+  },
+  "tableSection": {
+    "title": "您的多合一隱私盟友",
+    "hotLabel": "{{discount}}% 優惠 🔥",
+    "planTitles": {
+      "header": "您的多合一隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存",
+      "cta": "選擇計劃"
+    },
+    "features": {
+      "openSource": "開源和已稽核",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑問？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是更安全、更私密的 OneDrive 替代方案嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除了您之外的任何人都無法查看您的檔案。Microsoft 在其自己的伺服器上管理加密金鑰，這意味著它可能存取您的檔案或向政府或執法部門提供存取權限。",
+          "VPN、Antivirus、Device Cleaner (裝置清理)、Dark Web Monitor、Meet 和 Mail 等附加功能也為您提供了額外的保護，防止駭客和資料洩露。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵抗強大的量子攻擊，使 PQE 成為更安全的 OneDrive 替代方案。",
+          "Internxt 使用這種加密方法來確保您的終身雲端儲存計劃能夠保護您免受未來的網路安全威脅，並且適用於所有計劃，無需額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙巴倫西亞，使其成為符合 GDPR 的雲端儲存解決方案，遵循嚴格的法律來確保您的資料和隱私受到保護。"
+        ]
+      },
+      {
+        "question": "OneDrive 比 Internxt 貴嗎？",
+        "answer": [
+          "憑藉您的專屬 {{percentage}}% 折扣，我們所有的計劃都比目前可用的 OneDrive 定價選項便宜，並且提供比 OneDrive 更多的功能和隱私優勢。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援？",
+        "answer": [
+          "如果您有任何其他問題、請求或需要幫助，您可以聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以為我的終身計劃添加更多儲存空間嗎？",
+        "answer": [
+          "是的，如果您需要添加更多儲存空間，可以從 Internxt 帳戶的設定中升級您的計劃。或者使用您目前的 Internxt 帳戶在 internxt.com/pricing 購買一個新計劃，您的儲存空間將自動疊加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "Internxt 目前接受借記卡和信用卡（Mastercard、VISA、American Express 等）。您也可以透過 PayPal、iDEAL、Sofort、加密貨幣和 Klarna 進行支付。"
+        ]
+      }
+    ]
+  }
+}

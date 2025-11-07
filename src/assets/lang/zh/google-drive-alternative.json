@@ -1,0 +1,216 @@
+{
+  "HeroSection": {
+    "title": "Internxt: 就像 Google Drive，但更加**私密**",
+    "description": "使用 Internxt 让您的生活摆脱 Google 的束缚，它是最尊重您隐私的 Google Drive 替代方案",
+    "getPrivacy": "立享 ${{percentage}}% 折扣，获得完全隐私",
+    "cta": "立即申领优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} 概览",
+    "description": "了解 Internxt 如何通过关键功能和差异，让您重新掌控自己的数据",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密技术",
+        "后量子加密",
+        "定价和存储空间",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "是",
+        "价格有竞争力，无隐藏费用，最高 5TB",
+        "云盘 (Drive)、VPN、防病毒、清理工具 (Cleaner)、会议 (Meet)、邮件 (Mail) 等",
+        "定期安全审计",
+        "是",
+        "绝不访问您的文件",
+        "完全隐私：符合 GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由 Google 加密",
+        "否",
+        "更贵的套餐，最高 2TB",
+        "云盘 (Drive)、Google Workspace、AI 集成、邮件 (Mail) 和会议 (Meet)",
+        "定期安全审计",
+        "否",
+        "在某些情况下可以访问文件",
+        "隐私性较低：符合欧盟-美国数据隐私框架 (EU-U.S. Data Privacy Framework)"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google 为侵犯隐私支付罚款。Internxt 保护您的隐私。",
+    "description": "Google 可能安全，但在隐私方面却是一场噩梦。切换到 Internxt，为您的文件、视频和照片提供全面安全保护。使用 Internxt，除了您之外，任何人都无法访问您的文件，包括我们。",
+    "scrollableSection": {
+      "titles": ["9000 万欧元", "1000 万欧元", "3.25 亿欧元", "700 万欧元"],
+      "descriptions": [
+        "2021 年 12 月 31 日，法国数据保护局 CNIL 对 Google 处以 9000 万欧元罚款，原因是 Google 让用户更难拒绝 cookie，而这种做法支持了该公司基于广告和跟踪的收入模式。",
+        "西班牙数据保护局对 Google 处以罚款，原因是 Google 违反了 GDPR，未经同意将请求删除数据的用户的身份信息传递给了第三方。",
+        "2025 年，法国数据保护局 CNIL 再次对 Google 处以罚款，原因是 Google 在 Gmail 用户邮件之间展示广告，并在法国用户创建账户时未经有效同意就放置了 cookie。",
+        "瑞典数据保护局因侵犯被遗忘权而对 Google 处以罚款。Google 在瑞典被罚款，因为它未能删除用户要求删除的搜索结果，暴露了那些要求隐私的人的身份。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 Google Drive 替代方案",
+    "description": "Google 在安全性方面的表现，在隐私方面却失败了。要获得完全隐私，请选择 Internxt 的全面安全性与零知识加密相结合。",
+    "cards": {
+      "titles": ["隐私", "缺乏端到端加密", "数据收集"],
+      "descriptions": [
+        "Google Drive 和其他云服务可能会扫描或分析您的文件。在 Internxt，没有跟踪器、没有 AI 扫描、没有隐藏的后门。Internxt 无法读取您的文件，因此您的照片、文档和视频保持私密。您可以完全控制您的云端。",
+        "Google 在其服务器上管理加密密钥，从而对您的数据拥有完全控制权。因此，将您的文件存储在 Google 上会对您的隐私构成巨大风险，因为 Google 可能随时访问您的内容、照片或视频。",
+        "使用 Google，您的姓名、电子邮件地址、您访问的网站以及其他活动都会被监控、分析和用于建立您的详细资料，并从您的数据中获利。使用 Google，您和您的数据成为了产品。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Internxt 提供无与伦比的安全性，具有 Google Drive 无法比拟的功能，例如零知识、后量子加密和防止黑客攻击。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "完全隐私、透明度和信任",
+        "features": [
+          {
+            "title": "开源 (Open source)",
+            "description": "Internxt 的代码对所有人开放，可以通过我们的 GitHub 进行检查和确保其安全性。这种透明度保证了不会隐藏任何漏洞。"
+          },
+          {
+            "title": "零知识加密 (Zero-knowledge encryption)",
+            "description": "您的数据在客户端加密，保证只有您才能访问。"
+          },
+          {
+            "title": "经过审计和合规",
+            "description": "Internxt 经过外部审计，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。"
+          },
+          {
+            "title": "终身套餐 (Lifetime plans)",
+            "description": "一次性付款即可获得高达 5TB 的套餐，避免重复订阅。立享 {{percentage}}% 折扣，永久使用我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隐私如何？",
+        "features": [
+          {
+            "title": "专有软件 (Proprietary software)",
+            "description": "Google 对公众隐藏其源代码。缺乏透明度，就无法确定 Google 如何处理或保护您的数据。"
+          },
+          {
+            "title": "由 Google 加密",
+            "description": "由于 Google 持有加密密钥，如果收到法律要求（例如传票），他们理论上可以解密和访问文件。"
+          },
+          {
+            "title": "合规罚款",
+            "description": "Google 有因未能保护客户数据而被处以监管罚款的记录。"
+          },
+          {
+            "title": "基于订阅",
+            "description": "仅提供每月或每年订阅，最大存储空间为 2TB。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是最好的 Google Drive 替代方案",
+    "description": "Internxt Drive 提供一整套旨在让您重新掌控在线隐私的产品。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["云盘 (Drive)", "防病毒 (Antivirus)", "VPN", "清理工具 (Cleaner)", "会议 (Meet)", "高级工具"],
+      "descriptions": [
+        "Internxt Drive 具有后量子和零知识加密功能，确保除了您之外，任何人都无法访问您的文件。为您的照片、视频和文件获取加密云存储和备份。 \n\n 此外，加密备份和受密码保护的文件共享提供最大程度地抵御勒索软件和数据泄露。",
+        "所有付费套餐还包括 Internxt Antivirus，可增强对我们在线面临的日益增长的威胁的保护。 \n\n  从 Internxt 应用程序运行完整或自定义扫描，以防御恶意软件、网络钓鱼和勒索软件，并清理和保护您的设备免受数据丢失或泄露。",
+        "获取我们超快速、无限制的 VPN，最多可用于 5 个位置，通过我们的私人 VPN 加密和保护您的连接。 \n\n  加密您的流量，防止外部对您的连接进行窥探（这可能泄露您的个人信息），并在上网时享受完全的隐私。",
+        "Internxt Cleaner 通过从您的计算机中删除垃圾或重复文件来提升您的设备性能和健康状况。 \n\n   释放存储空间，提高设备速度，并通过点击按钮删除不需要的文件来保护您的隐私。",
+        "Internxt Meet 提供由后量子密码学支持的完全私密的视频通话，确保您的会议安全、保密且没有跟踪器。 \n\n   与朋友、家人或队友主持和加入视频通话，享受完全的隐私，避免外部公司监控您的聊天记录。",
+        "Internxt 适用于 Windows、Mac、Linux 和移动设备，让您可以通过从任何地方、任何设备访问您的云端，完全控制您的云存储。 \n\n  对于高级用户，Internxt 提供对 WebDAV、Rclone 和 NAS 的支持，提供您以完全隐私管理文件所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "您的隐私，您做主",
+    "description": "立享 {{percentage}}% 折扣的全面保护",
+    "cta": "立即申领优惠"
+  },
+  "tableSection": {
+    "title": "您的多合一隐私盟友",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的多合一隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得 1GB 加密云存储",
+      "cta": "选择套餐"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是一个更安全、更私密的 Google Drive 替代方案吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，保证除了您之外，任何人都无法查看您的文件。Google Drive 在其服务器上管理加密密钥，这意味着它可能会访问您的文件或向政府或执法部门提供访问权限。",
+          "VPN、防病毒、设备清理工具、暗网监控、会议 (Meet) 和邮件 (Mail) 等附加功能也为您提供了额外的保护，以防黑客和数据泄露。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密，它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵抗强大的量子攻击，使 PQE 成为 Google Drive 更安全的替代方案。",
+          "Internxt 使用这种加密方法，以确保您的终身云存储计划能够保护您免受未来的网络安全威胁，并且所有套餐均可免费使用。"
+        ]
+      },
+      {
+        "question": "Internxt 总部设在哪里？",
+        "answer": [
+          "Internxt 总部设在西班牙瓦伦西亚，这使其成为符合 GDPR 的云存储解决方案，遵守严格的法律以确保您的数据和隐私得到保护。"
+        ]
+      },
+      {
+        "question": "Google Drive 比 Internxt 贵吗？",
+        "answer": [
+          "凭借您的独家 {{percentage}}% 折扣，我们所有的套餐都比 Google 目前提供的定价选项便宜，同时还提供了比 Google Drive 更多的功能和隐私。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "如果您有任何其他问题、请求或需要帮助，您可以联系 hello@internxt.com，我们的客户成功团队将很乐意为您提供帮助。"
+        ]
+      },
+      {
+        "question": "我可以为我的终身套餐添加更多存储空间吗？",
+        "answer": [
+          "是的，如果您需要添加更多存储空间，可以从您的 Internxt 账户设置中升级您的套餐。或者使用您当前的 Internxt 账户在 internxt.com/pricing 购买新套餐，您的存储空间将自动叠加。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密货币支付吗？",
+        "answer": [
+          "Internxt 目前接受借记卡和信用卡（Mastercard、VISA、American Express 等）。您也可以通过 PayPal、iDEAL、Sofort、加密货币和 Klarna 支付。"
+        ]
+      }
+    ]
+  }
+}

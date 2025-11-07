@@ -26,6 +26,10 @@ const nameFiles = [
   'file-converter',
   'cleaner',
   'coupons',
+  'google-drive-alternative',
+  'icedrive-alternative',
+  'koofr-altertnative',
+  'onedrive-alternative',
 ];
 
 const langs = {
