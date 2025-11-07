@@ -1,0 +1,215 @@
+{
+  "HeroSection": {
+    "title": "Internxt：像 Icedrive 一樣，但**完全加密**",
+    "description": "Internxt 提供最先進、最現代的加密和隱私套件，以保護您的線上安全",
+    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠 🔥",
+    "cta": "領取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Icedrive 概覽",
+    "description": "探索 Internxt 如何憑藉其完全加密的保險庫和私人生態系統，成為您的 Icedrive 替代方案。",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "定價和儲存",
+        "功能",
+        "安全稽核",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "具競爭力，包含完整的產品套件，最高 5TB",
+        "Drive、VPN、Antivirus、Cleaner、Meet、Mail 等",
+        "定期安全稽核",
+        "是",
+        "我們永遠無法存取您的檔案",
+        "完全隱私：GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "Twofish-256",
+        "否",
+        "最高 5TB，僅限雲端儲存",
+        "雲端儲存",
+        "無已發布的安全稽核",
+        "否",
+        "免費計劃的隱私性低於付費計劃",
+        "GDPR，總部位於直布羅陀"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "為何您應選擇 Icedrive 替代方案以獲得全面線上隱私",
+    "description": "Icedrive 提供儲存空間，但將隱私限制於付費使用者，讓免費帳戶暴露在外，並迫使用戶信任一個他們無法驗證的系統。",
+    "scrollableSection": {
+      "titles": ["付費購買隱私", "隱藏的原始碼", "加密顧慮", "計劃僅限於雲端儲存"],
+      "descriptions": [
+        "對於 Icedrive 而言，隱私成為一種付費功能，而非您雲端儲存的基本權利。免費帳戶變得更容易暴露，或者讓使用者誤以為他們的檔案是私密的。",
+        "專有軟體或閉源軟體意味著用於建構和運行您的雲端儲存的程式碼是保密的。因此，您必須相信 Icedrive 對安全和隱私的聲明，而無法驗證您的資料是如何被處理或保護的。",
+        "Icedrive 選擇使用 Twofish-256 加密，而非行業標準的 AES-256 加密。儘管 Twofish 在加密上是安全的，但它無法驗證資料是否被更改，可能使檔案容易受到修改。",
+        "Icedrive 提供高達 5TB 的雲端儲存，其中包括零知識加密、版本控制和密碼保護。儘管 Icedrive 可能為您的檔案提供基本保護，但它缺乏 Internxt 等公司在雲端儲存之外提供的、用於保護您的裝置、網路連線或線上隱私的進階功能。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Internxt vs. Icedrive",
+    "description": "Internxt 計劃包括最現代、最安全、最先進的零知識加密和一套完整的產品套件，以實現最大的線上隱私。",
+    "cards": {
+      "titles": ["開源透明度", "支援後量子運算", "全面的套件"],
+      "descriptions": [
+        "Internxt 的程式碼對所有人開放，可透過我們的 GitHub 進行檢查以確保其安全性。這種透明度保證了沒有任何漏洞被隱藏。",
+        "Internxt 使用 Kyber-512，這是一種專門為抵禦強大量子攻擊而設計的後量子加密演算法，使 Internxt 成為未來 Icedrive 的安全替代方案。",
+        "Internxt 為您提供的遠不止雲端儲存；您獲得了保護您的資料、檔案和線上隱私所需的一切，包括 VPN、Antivirus、Cleaner 和 Meet。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Icedrive",
+    "description": "Internxt 提供無與倫比的安全性和隱私性，具備 Icedrive 無法比擬的功能。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：完全隱私、透明度和隱私套件",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼是開放的，任何人都可以透過我們的 GitHub 進行檢查，以確保其安全性。這種透明度保證了沒有任何漏洞被隱藏。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的資料在客戶端進行加密，保證只有您可以存取。適用於所有檔案，而不僅僅是單獨的保險庫。"
+          },
+          {
+            "title": "已稽核且合規",
+            "description": "Internxt 經過外部稽核，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身計劃",
+            "description": "終身計劃最高可達 5TB，包括 VPN、Meet、Cleaner 等的使用權限。以 {{discount}}% 的折扣永久使用這些服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Icedrive：您的隱私如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "Icedrive 對公眾隱藏其原始碼。缺乏透明度，就無法確定 Icedrive 如何處理或保護您的資料。"
+          },
+          {
+            "title": "付費加密",
+            "description": "零知識加密僅適用於付費計劃，這使得免費帳戶的安全性及隱私性較低。"
+          },
+          {
+            "title": "無安全稽核",
+            "description": "沒有獨立安全稽核的記錄。"
+          },
+          {
+            "title": "終身計劃受限",
+            "description": "提供終身計劃，但僅限於雲端儲存。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Internxt 是 Icedrive 最佳替代方案的原因",
+    "description": "有了 Internxt，您獲得的不僅僅是雲端儲存；您獲得了保護您的資料、檔案和線上隱私所需的一切。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus (防病毒)", "VPN", "Cleaner (清理工具)", "Meet (會議)", "進階工具"],
+      "descriptions": [
+        "Internxt Antivirus 直接內建於您的 Internxt Drive 應用程式中，可實現對惡意軟體的全面控制和保護。運行完整或自定義的病毒掃描，以保持您的裝置平穩運行，並防止勒索軟體或間諜軟體等病毒。",
+        "Internxt 的 VPN 保護您的瀏覽，阻止廣告和追蹤器，並保護您的位置隱私。加密您的 Wi-Fi 連線，以防止窺探、駭客攻擊和身份盜用。安全地上網沖浪，知道您的個人資訊、密碼和帳戶都受到保護。",
+        "Internxt Cleaner 可幫助您識別、消除和管理裝置上不需要的垃圾或重複檔案。使用 Cleaner，您可以刪除不需要的檔案，以保持您的儲存空間井然有序、整潔，並確保您的裝置高效運行。",
+        "Internxt Meet 也可作為 Teams 的安全和私人替代品。使用 Meet，您可以舉辦沒有追蹤器、廣告和資料收集的私人視訊通話。您的視訊通話受後量子加密保護，讓您可以完全私密地舉辦通話。",
+        "Internxt 可在 Windows、Mac、Linux 和行動裝置上使用，讓您可以從任何地方、在任何裝置上存取雲端儲存，從而完全控制您的雲端儲存。\n\n對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供您以完全私密的方式管理檔案所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "使用 Internxt 獲得全面的隱私",
+    "description": "全面的加密、控制和安全性",
+    "cta": "領取優惠"
+  },
+  "tableSection": {
+    "title": "您的多合一隱私盟友",
+    "hotLabel": "{{discount}}% 優惠 🔥",
+    "planTitles": {
+      "header": "您的多合一隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存",
+      "cta": "選擇計劃"
+    },
+    "features": {
+      "openSource": "開源和已稽核",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑問？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是一個更安全、更私密的 Icedrive 替代品嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除了您之外的任何人都無法查看您的檔案。Icedrive 使用 Twofish 加密，且僅為付費計劃提供零知識加密，這使得免費帳戶更容易受到攻擊。",
+          "VPN、Antivirus、Device Cleaner、Dark Web Monitor、Meet 和 Mail 等附加功能還為您提供了額外的保護，防止駭客和資料洩露，作為您 Internxt 雲端儲存計劃的一部分。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵抗強大的量子攻擊，使 PQE 成為 Icedrive 更安全的替代方案。",
+          "Internxt 使用這種加密方法來確保您的終身雲端儲存計劃能夠保護您免受未來的網路安全威脅，並且適用於所有計劃，無需額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙巴倫西亞，使其成為符合 GDPR 的雲端儲存解決方案，遵循嚴格的法律來確保您的資料和隱私受到保護。"
+        ]
+      },
+      {
+        "question": "Icedrive 比 Internxt 貴嗎？",
+        "answer": [
+          "雖然 Icedrive 計劃較便宜，但它們只包括基本的雲端儲存。憑藉您的專屬 {{percentage}}% 折扣，Internxt 提供的雲端儲存和廣泛的功能是任何其他雲端提供商（包括 Icedrive）所不具備的。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援？",
+        "answer": [
+          "如果您有任何其他問題、請求或需要幫助，您可以聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以為我的終身計劃添加更多儲存空間嗎？",
+        "answer": [
+          "是的，如果您需要添加更多儲存空間，可以從 Internxt 帳戶的設定中升級您的計劃。或者使用您目前的 Internxt 帳戶在 internxt.com/pricing 購買一個新計劃，您的儲存空間將自動疊加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "Internxt 目前接受借記卡和信用卡（Mastercard、VISA、American Express 等）。您也可以透過 PayPal、iDEAL、Sofort、加密貨幣和 Klarna 進行支付。"
+        ]
+      }
+    ]
+  }
+}

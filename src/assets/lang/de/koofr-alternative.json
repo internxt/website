@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Internxt: wie Koofr, aber **vollständig verschlüsselt**",
+    "description": "Internxt bietet die modernste und fortschrittlichste Verschlüsselungs- und Datenschutz-Suite, um Sie online zu schützen",
+    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Koofr",
+    "description": "Internxt ist Ihre Alternative zu Koofr, mit Zero-Knowledge-Verschlüsselung für alle Dateien und einer vollständigen Datenschutz-Suite",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheits-Audits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "AES-256 und Kyber-512",
+        "Ja",
+        "Wettbewerbsfähig, beinhaltet die gesamte Produkt-Suite, bis zu 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheits-Audits",
+        "Ja",
+        "Wir können niemals auf Ihre Dateien zugreifen",
+        "Voller Datenschutz: DSGVO, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open Source",
+        "AES-256",
+        "Nein",
+        "Bis zu 20TB, nur Cloud-Speicher",
+        "Cloud-Speicher",
+        "Kein veröffentlichtes Sicherheits-Audit",
+        "Nein",
+        "Dateien außerhalb des Koofr Vault sind weniger privat",
+        "DSGVO, Sitz in Slowenien"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Alternative zu Koofr",
+    "description": "Holen Sie sich Post-Quanten-verschlüsselten Cloud-Speicher, plus Antivirus, VPN, Cleaner, Meet und mehr mit Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Separate private Verschlüsselung",
+        "Begrenzte Lifetime-Pläne",
+        "Technologisch begrenzte Verschlüsselung",
+        "Pläne sind auf Cloud-Speicher beschränkt"
+      ],
+      "descriptions": [
+        "Nicht alle Dateien, die Sie mit Koofr Cloud-Speicher speichern, sind mit Zero-Knowledge-Verschlüsselung geschützt. Nur Dateien, die Sie manuell in den Koofr Vault verschieben, sind Ende-zu-Ende verschlüsselt, während alles andere in Ihrem regulären Cloud-Speicher dem Anbieter über die serverseitige Verschlüsselung zugänglich ist.",
+        "Die Lifetime-Pläne von Koofr sind auf 1TB beschränkt, die nicht stapelbar sind, oder jährliche Pläne von bis zu 20TB zu 1.428,20 €/Jahr. Für die gleichen Kosten wie Koofrs jährlicher 5TB-Plan erhalten Sie 5TB Lifetime-Speicher mit Internxt, plus Zugang zu Meet, Mail, Dateiversionierung, VPN und mehr. Kombinieren Sie für vollständigen Online-Datenschutz die komplette Datenschutzausstattung von Internxt mit seiner umfassenden Produkt-Suite.",
+        "Koofr verwendet die Industriestandard-Verschlüsselung AES-256. Dieses Verschlüsselungsmodell könnte bald veraltet sein, da das Aufkommen von Post-Quanten-Computern aktuelle Verschlüsselungsmodelle, die von Koofr und anderen verwendet werden, brechen könnte. Internxt verwendet Post-Quanten-Verschlüsselung (Kyber-512).",
+        "Koofr bietet Cloud-Speicher für bis zu 20TB, der 10 Koofr-Safeboxen, Versionierung und Passwortschutz beinhaltet. Wenn Sie jedoch Zero-Knowledge-Verschlüsselung für alle Dateien in der Cloud sowie eine vollständige Datenschutz-Suite zum Schutz Ihres Geräts, Ihrer Internetverbindung und mehr wünschen, ist Internxt eine umfassendere Alternative zu Koofr."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Koofr:",
+    "description": "Internxt bietet unvergleichliche Sicherheit und Datenschutz mit Funktionen, die Koofr nicht erreichen kann.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Voller Datenschutz, Transparenz und Datenschutz-Suite",
+        "features": [
+          {
+            "title": "Open Source und auditiert",
+            "description": "Der Code von Internxt ist für jedermann zur Überprüfung und Gewährleistung der Sicherheit über unser GitHub offen. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Daten werden clientseitig verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können. Verfügbar für alle Dateien, nicht nur einen separaten Tresor."
+          },
+          {
+            "title": "Mehrere Compliance-Standards",
+            "description": "Internxt wurde extern auditiert und entspricht den Standards DSGVO, HIPAA, ISO 27001 und SOC 2."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Mehrere Lifetime-Pläne bis zu 5TB, einschließlich Zugang zu VPN, Meet, Cleaner und mehr. Nutzen Sie diese Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr: Was ist mit Ihrem Datenschutz?",
+        "features": [
+          {
+            "title": "Open Source, kein Audit",
+            "description": "Obwohl Koofr Open Source ist, gibt es keinen Nachweis über ein externes und veröffentlichtes Sicherheits-Audit."
+          },
+          {
+            "title": "Nur Tresor verschlüsselt",
+            "description": "Zero-Knowledge-Verschlüsselung wird für manuell in einen separaten Tresor verschobene Dateien angeboten, wodurch kostenlose Konten und regulärer Speicher weniger sicher und privat sind."
+          },
+          {
+            "title": "Compliance-Nachweis",
+            "description": "Kein Nachweis über ein unabhängiges Sicherheits-Audit zur Überprüfung der Compliance-Standards."
+          },
+          {
+            "title": "Lifetime-Pläne begrenzt",
+            "description": "Nur ein einziger Lifetime-Cloud-Speicherplan von 1TB, der nicht stapelbar ist."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Koofr Cloud-Speicher ist",
+    "description": "Mit Internxt erhalten Sie mehr als nur Cloud-Speicher; Sie erhalten alles, was Sie zum Schutz Ihrer Daten, Dateien und Online-Privatsphäre benötigen.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Antivirus ist direkt in Ihre Internxt Drive App integriert für volle Kontrolle und Schutz vor Malware. Führen Sie vollständige oder benutzerdefinierte Virenscans durch, um Ihr Gerät reibungslos am Laufen und vor Viren wie Ransomware oder Spyware geschützt zu halten.",
+        "Internxts VPN schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsseln Sie Ihre WLAN-Verbindung, um Spionage, Hacker und Identitätsdiebstahl zu verhindern. Surfen Sie sicher in dem Wissen, dass Ihre persönlichen Informationen, Passwörter und Konten geschützt sind.",
+        "Internxt Cleaner hilft Ihnen, unerwünschte Junk- oder doppelte Dateien auf Ihrem Gerät zu identifizieren, zu eliminieren und zu verwalten. Mit Cleaner können Sie unerwünschte Dateien löschen, um Ihren Speicher organisiert, aufgeräumt zu halten und sicherzustellen, dass Ihr Gerät effizient läuft.",
+        "Internxt Meet ist auch als Ihre sichere und private Alternative zu Teams verfügbar. Mit Meet können Sie private Videoanrufe frei von Trackern, Werbung und Datenerfassung hosten. Ihre Videoanrufe sind mit Post-Quanten-Verschlüsselung geschützt, sodass Sie Anrufe in völliger Privatsphäre abhalten können.",
+        "Verfügbar auf Windows, Mac, Linux und Mobilgeräten, lässt Internxt Sie die volle Kontrolle über Ihren Cloud-Speicher übernehmen, indem Sie von überall und auf jedem Gerät auf Ihre Cloud zugreifen.\n\nFür fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und bietet alles, was Sie benötigen, um Ihre Dateien in völliger Privatsphäre zu verwalten."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Mehr als nur Cloud-Speicher",
+    "description": "Holen Sie sich vollen Online-Datenschutz mit Internxt",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One Datenschutz-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One Datenschutz-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Holen Sie sich 1GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Open-Source und auditiert",
+      "premiumSupport": "Premium-Kunden-Support",
+      "guarantee": "30-Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere Alternative zu Koofr?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Dateien einsehen kann. Alle Ihre Dateien sind mit dieser Verschlüsselung geschützt, ohne dass Sie sie in einem separaten Tresor speichern müssen, da Internxt Drive als Ihr vollständiger verschlüsselter Cloud-Speicher-Tresor dient.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Geräte-Cleaner, Dark Web Monitor, Meet und Mail bieten Ihnen im Rahmen Ihres Cloud-Speicher-Plans mit Internxt auch zusätzlichen Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung sind Post-Quanten-Verschlüsselungsalgorithmen darauf ausgelegt, mächtigen Quantenangriffen zu widerstehen, was PQE zu einer sichereren Alternative zu Koofr macht.",
+          "Diese Kryptographie-Methode wird von Internxt verwendet, um sicherzustellen, dass Ihr Lifetime-Cloud-Speicher-Plan Sie vor zukünftigen Cybersicherheitsbedrohungen schützt und für alle Pläne ohne zusätzliche Kosten verfügbar ist."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strenge Gesetze befolgt, um sicherzustellen, dass Ihre Daten und Ihre Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist Koofr teurer als Internxt?",
+        "answer": [
+          "Koofr kostet 199 € nur für 1TB Lifetime-Cloud-Speicher. Mit Internxt erhalten Sie die gleichen 1TB Post-Quanten-verschlüsselten Speicher, plus VPN und Antivirus für 195 €. Mit Ihrem exklusiven {{discount}}% Rabatt bietet Internxt Cloud-Speicher und eine umfangreiche Palette von Funktionen, die bei keinem anderen Cloud-Anbieter, einschließlich Koofr, verfügbar sind."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen oder Anfragen haben oder Hilfe benötigen, können Sie sich an hello@internxt.com wenden, und unser Customer Success Team wird Ihnen gerne weiterhelfen."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicher hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, wenn Sie mehr Speicher benötigen. Oder kaufen Sie einen neuen Plan auf internxt.com/pricing mit Ihrem aktuellen Internxt-Konto, und Ihr Speicher wird automatisch gestapelt."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort, Kryptowährung und Klarna bezahlen."
+        ]
+      }
+    ]
+  }
+}

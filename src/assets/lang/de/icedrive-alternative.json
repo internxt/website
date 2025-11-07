@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt: wie Icedrive, aber **vollständig verschlüsselt**",
+    "description": "Internxt bietet die modernste und fortschrittlichste Verschlüsselungs- und Datenschutz-Suite, um Sie online zu schützen",
+    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Icedrive Überblick",
+    "description": "Entdecken Sie, wie Internxt mit seinem vollständig verschlüsselten Tresor und privaten Ökosystem zu Ihrer Alternative zu Icedrive werden kann.",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheits-Audits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "AES-256 und Kyber-512",
+        "Ja",
+        "Wettbewerbsfähig, beinhaltet die gesamte Produkt-Suite, bis zu 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheits-Audits",
+        "Ja",
+        "Wir können niemals auf Ihre Dateien zugreifen",
+        "Voller Datenschutz: DSGVO, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Closed-source (geschlossener Quellcode)",
+        "Twofish-256",
+        "Nein",
+        "Bis zu 5TB, nur Cloud-Speicher",
+        "Cloud-Speicher",
+        "Kein veröffentlichtes Sicherheits-Audit",
+        "Nein",
+        "Kostenlose Pläne sind weniger privat als bezahlte Pläne",
+        "DSGVO, Sitz in Gibraltar"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Warum Sie eine Icedrive-Alternative für vollen Online-Datenschutz wählen sollten",
+    "description": "Icedrive bietet Speicherplatz, beschränkt den Datenschutz jedoch auf zahlende Benutzer, wodurch kostenlose Konten offen liegen und Benutzer gezwungen sind, einem System zu vertrauen, das sie nicht überprüfen können.",
+    "scrollableSection": {
+      "titles": [
+        "Datenschutz bezahlen",
+        "Versteckter Quellcode",
+        "Bedenken hinsichtlich der Verschlüsselung",
+        "Pläne sind auf Cloud-Speicher beschränkt"
+      ],
+      "descriptions": [
+        "Bei Icedrive wird Datenschutz zu einer bezahlten Funktion statt zu einem Grundrecht für Ihren Cloud-Speicher. Kostenlose Konten sind anfälliger oder lassen Benutzer glauben, ihre Dateien seien privat, obwohl dies nicht der Fall ist.",
+        "Proprietäre Software oder Closed-Source-Software bedeutet, dass der Code, der zum Erstellen und Betreiben Ihres Cloud-Speichers verwendet wird, geheim gehalten wird. Infolgedessen müssen Sie den Behauptungen von Icedrive über Sicherheit und Datenschutz vertrauen, ohne überprüfen zu können, wie Ihre Daten behandelt oder geschützt werden.",
+        "Icedrive verwendet Twofish-256-Verschlüsselung anstelle des Industriestandards AES-256. Obwohl Twofish kryptografisch sicher ist, wird nicht überprüft, ob die Daten nicht verändert wurden, was Dateien potenziell anfällig für Modifikationen macht.",
+        "Icedrive bietet Cloud-Speicher für bis zu 5TB, der Zero-Knowledge-Verschlüsselung, Versionierung und Passwortschutz beinhaltet. Während Icedrive möglicherweise grundlegenden Schutz für Ihre Dateien bietet, fehlen ihm die erweiterten Funktionen, die Ihr Gerät, Ihre Internetverbindung oder Ihren Online-Datenschutz schützen, die Unternehmen wie Internxt zusätzlich zum Cloud-Speicher anbieten."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Internxt vs. Icedrive",
+    "description": "Internxt-Pläne beinhalten die modernste, sicherste und fortschrittlichste Zero-Knowledge-Verschlüsselung und eine vollständige Produkt-Suite für maximalen Online-Datenschutz.",
+    "cards": {
+      "titles": ["Open-Source-Transparenz", "Post-Quanten-bereit", "Umfassende Suite"],
+      "descriptions": [
+        "Der Code von Internxt ist für jedermann zur Überprüfung und Gewährleistung seiner Sicherheit über unser GitHub offen. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind.",
+        "Internxt verwendet Kyber-512, einen Post-Quanten-Verschlüsselungsalgorithmus, der entwickelt wurde, um mächtigen Quantenangriffen zu widerstehen, was Internxt zu einer sicheren Alternative zu Icedrive für die Zukunft macht.",
+        "Internxt bietet Ihnen mehr als nur Cloud-Speicher; Sie erhalten alles, was Sie zum Schutz Ihrer Daten, Dateien und Online-Privatsphäre benötigen, einschließlich VPN, Antivirus, Cleaner und Meet."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Icedrive",
+    "description": "Internxt bietet unvergleichliche Sicherheit und Datenschutz mit Funktionen, die Icedrive nicht erreichen kann.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Voller Datenschutz, Transparenz und Datenschutz-Suite",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Der Code von Internxt ist für jedermann zur Überprüfung und Gewährleistung seiner Sicherheit über unser GitHub offen. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Daten werden clientseitig verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können. Verfügbar für alle Dateien, nicht nur einen separaten Tresor."
+          },
+          {
+            "title": "Auditiert & konform",
+            "description": "Internxt wurde extern auditiert und entspricht den Standards DSGVO, HIPAA, ISO 27001 und SOC 2."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Lifetime-Pläne bis zu 5TB, einschließlich Zugang zu VPN, Meet, Cleaner und mehr. Nutzen Sie diese Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Icedrive: Was ist mit Ihrem Datenschutz?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Icedrive hält seinen Quellcode vor der Öffentlichkeit verborgen. Ohne Transparenz gibt es keine Möglichkeit, sicher zu wissen, wie Icedrive Ihre Daten behandelt oder schützt."
+          },
+          {
+            "title": "Bezahlte Verschlüsselung",
+            "description": "Zero-Knowledge-Verschlüsselung wird nur für bezahlte Pläne angeboten, wodurch kostenlose Konten weniger sicher und privat sind."
+          },
+          {
+            "title": "Kein Sicherheits-Audit",
+            "description": "Kein Nachweis über ein unabhängiges Sicherheits-Audit."
+          },
+          {
+            "title": "Lifetime-Pläne begrenzt",
+            "description": "Lifetime-Pläne sind verfügbar, beschränken sich jedoch allein auf den Cloud-Speicher."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Icedrive-Alternative ist",
+    "description": "Mit Internxt erhalten Sie mehr als nur Cloud-Speicher; Sie erhalten alles, was Sie zum Schutz Ihrer Daten, Dateien und Online-Privatsphäre benötigen.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Antivirus ist direkt in Ihre Internxt Drive App integriert für volle Kontrolle und Schutz vor Malware. Führen Sie vollständige oder benutzerdefinierte Virenscans durch, um Ihr Gerät reibungslos am Laufen und vor Viren wie Ransomware oder Spyware geschützt zu halten.",
+        "Internxts VPN schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsseln Sie Ihre WLAN-Verbindung, um Spionage, Hacker und Identitätsdiebstahl zu verhindern. Surfen Sie sicher in dem Wissen, dass Ihre persönlichen Informationen, Passwörter und Konten geschützt sind.",
+        "Internxt Cleaner hilft Ihnen, unerwünschte Junk- oder doppelte Dateien auf Ihrem Gerät zu identifizieren, zu eliminieren und zu verwalten. Mit Cleaner können Sie unerwünschte Dateien löschen, um Ihren Speicher organisiert, aufgeräumt zu halten und sicherzustellen, dass Ihr Gerät effizient läuft.",
+        "Internxt Meet ist auch als Ihre sichere und private Alternative zu Teams verfügbar. Mit Meet können Sie private Videoanrufe frei von Trackern, Werbung und Datenerfassung hosten. Ihre Videoanrufe sind mit Post-Quanten-Verschlüsselung geschützt, sodass Sie Anrufe in völliger Privatsphäre abhalten können.",
+        "Verfügbar auf Windows, Mac, Linux und Mobilgeräten, lässt Internxt Sie die volle Kontrolle über Ihren Cloud-Speicher übernehmen, indem Sie von überall und auf jedem Gerät auf Ihre Cloud zugreifen.\n\nFür fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und bietet alles, was Sie benötigen, um Ihre Dateien in völliger Privatsphäre zu verwalten."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Holen Sie sich vollen Datenschutz mit Internxt",
+    "description": "Totale Verschlüsselung, Kontrolle und Sicherheit",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One Datenschutz-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One Datenschutz-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Holen Sie sich 1GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Open-Source und auditiert",
+      "premiumSupport": "Premium-Kunden-Support",
+      "guarantee": "30-Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Icedrive-Alternative?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Dateien einsehen kann. Icedrive verwendet Twofish-Verschlüsselung und beinhaltet Zero-Knowledge-Verschlüsselung nur für bezahlte Pläne, wodurch kostenlose Konten anfälliger sind.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Geräte-Cleaner, Dark Web Monitor, Meet und Mail bieten Ihnen im Rahmen Ihres Cloud-Speicher-Plans mit Internxt auch zusätzlichen Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung sind Post-Quanten-Verschlüsselungsalgorithmen darauf ausgelegt, mächtigen Quantenangriffen zu widerstehen, was PQE zu einer sichereren Alternative zu Icedrive macht.",
+          "Diese Kryptographie-Methode wird von Internxt verwendet, um sicherzustellen, dass Ihr Lifetime-Cloud-Speicher-Plan Sie vor zukünftigen Cybersicherheitsbedrohungen schützt und für alle Pläne ohne zusätzliche Kosten verfügbar ist."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strenge Gesetze befolgt, um sicherzustellen, dass Ihre Daten und Ihre Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist Icedrive teurer als Internxt?",
+        "answer": [
+          "Obwohl Icedrive-Pläne günstiger sind, beinhalten sie nur grundlegenden Cloud-Speicher. Mit Ihrem exklusiven {{percentage}}% Rabatt bietet Internxt Cloud-Speicher und eine umfangreiche Palette von Funktionen, die bei keinem anderen Cloud-Anbieter, einschließlich Icedrive, verfügbar sind."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen oder Anfragen haben oder Hilfe benötigen, können Sie sich an hello@internxt.com wenden, und unser Customer Success Team wird Ihnen gerne weiterhelfen."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicher hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, wenn Sie mehr Speicher benötigen. Oder kaufen Sie einen neuen Plan auf internxt.com/pricing mit Ihrem aktuellen Internxt-Konto, und Ihr Speicher wird automatisch gestapelt."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort, Kryptowährung und Klarna bezahlen."
+        ]
+      }
+    ]
+  }
+}
