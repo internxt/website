@@ -83,6 +83,7 @@ export default function ThreeCardsSection({
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
         bgColor ? '' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
+      style={{ background: bgColor ? bgColor : '' }}
     >
       <div
         className={`absolute left-8 right-8 top-0 h-[1px] ${
