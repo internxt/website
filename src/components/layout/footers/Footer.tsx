@@ -440,6 +440,7 @@ export default function Footer({
                       className="w-full max-w-[160px] hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.icedriveAlternative}
+                    </Link>
                     <Link
                       href="/google-drive-alternative"
                       locale={lang}
