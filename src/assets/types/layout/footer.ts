@@ -87,6 +87,7 @@ export interface Resources {
   pCloudAlternative: string;
   dropboxAlternative: string;
   megaAlternative: string;
+  googleDriveAlternative: string;
   directoryOfPrivacyOrganizations: string;
   cyberAwareness: string;
   whatGoogleKnowsAboutMe: string;

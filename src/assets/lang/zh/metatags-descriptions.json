@@ -311,6 +311,11 @@
     "description": "Internxt云存储是Mega的安全替代方案。我们通过端到端加密、开源软件和注重隐私的功能保护您的文件。"
   },
   {
+    "id": "google-drive-alternative",
+    "title": "Internxt — 像 Google Drive 一樣，但私密",
+    "description": "使用 Internxt 解除您對 Google 的依賴，這是尊重您隱私的 Google Drive 最佳替代品。獲得零知識加密和全面的資料控制。"
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – 安全私密的视频通话",
     "description": "Meet 提供具有后量子和端到端加密的私人视频通话，打造最安全的视频会议体验。"

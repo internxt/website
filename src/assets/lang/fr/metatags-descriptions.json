@@ -290,6 +290,11 @@
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Mega. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
   },
   {
+    "id": "google-drive-alternative",
+    "title": "Internxt — Comme Google Drive, mais Privé",
+    "description": "Dé-Googlez votre vie avec Internxt, la meilleure alternative à Google Drive qui respecte votre vie privée. Obtenez le chiffrement à connaissance zéro et un contrôle total sur vos données."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Appels Vidéo Sécurisés et Privés",
     "description": "Meet offre des appels vidéo privés avec chiffrement post-quantique et de bout en bout pour les visioconférences les plus sécurisées."
