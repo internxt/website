@@ -74,7 +74,7 @@
             "description": "El código de Internxt está abierto para que cualquiera lo examine y garantice su seguridad a través de nuestro GitHub. Esta transparencia asegura que no se oculten vulnerabilidades."
           },
           {
-            "title": "Cifrado de conocimiento cero (*Zero-knowledge* Encryption)",
+            "title": "Cifrado de conocimiento cero ",
             "description": "Tus datos se cifran del lado del cliente, garantizando que solo tú puedas acceder a ellos. Disponible para todos los archivos, no solo para una bóveda separada."
           },
           {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Planes de por vida",
-            "description": "Múltiples planes de por vida de hasta 5TB, incluido el acceso a VPN, Meet, Cleaner y más. Accede a estos servicios para siempre con un {{discount}}% de descuento."
+            "description": "Múltiples planes de por vida de hasta 5TB, incluido el acceso a VPN, Meet, Cleaner y más. Accede a estos servicios para siempre con un 90% de descuento."
           }
         ]
       },

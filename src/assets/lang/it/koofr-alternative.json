@@ -74,7 +74,7 @@
             "description": "Il codice di Internxt è aperto a tutti per l'esame e la verifica della sua sicurezza tramite il nostro GitHub. Questa trasparenza garantisce che non ci siano vulnerabilità nascoste."
           },
           {
-            "title": "Crittografia a conoscenza zero (*Zero-knowledge* Encryption)",
+            "title": "Crittografia a conoscenza zero ",
             "description": "I tuoi dati vengono crittografati lato client, garantendo che solo tu possa accedervi. Disponibile per tutti i file, non solo per un vault separato."
           },
           {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Piani a vita",
-            "description": "Piani a vita multipli fino a 5TB, incluso l'accesso a VPN, Meet, Cleaner e altro. Accedi a questi servizi per sempre con uno sconto del {{discount}}%."
+            "description": "Piani a vita multipli fino a 5TB, incluso l'accesso a VPN, Meet, Cleaner e altro. Accedi a questi servizi per sempre con uno sconto del 90%."
           }
         ]
       },

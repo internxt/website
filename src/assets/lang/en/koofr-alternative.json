@@ -21,7 +21,7 @@
         "Privacy laws"
       ],
       "internxtFeatures": [
-        "Open-source",
+        "Open Source",
         "AES-256 and Kyber-512",
         "Yes",
         "Competitive, includes full product suite, up to 5TB",
@@ -32,7 +32,7 @@
         "Full privacy: GDPR, HIPAA, ISO 27001, SOC 2"
       ],
       "competitorFeatures": [
-        "Open source",
+        "Open Source",
         "AES-256",
         "No",
         "Up to 20TB, cloud storage only",
@@ -70,7 +70,7 @@
         "title": "Internxt: Total privacy, transparency, and privacy suite",
         "features": [
           {
-            "title": "Open source and audited",
+            "title": "Open Source and audited",
             "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
           },
           {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Multiple lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for {{discount}}% off."
+            "description": "Multiple lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for 90% off."
           }
         ]
       },
@@ -91,8 +91,8 @@
         "title": "Koofr: What about your privacy?",
         "features": [
           {
-            "title": "Open source, no audit",
-            "description": "While Koofr is open source, there is no record of an external and published security audit."
+            "title": "Open Source, no audit",
+            "description": "While Koofr is Open Source, there is no record of an external and published security audit."
           },
           {
             "title": "Encrypted vault only",

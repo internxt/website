@@ -67,14 +67,14 @@
     "description": "Internxt offre une sécurité et une confidentialité inégalées avec des fonctionnalités que Koofr ne peut pas égaler.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et suite de confidentialité",
+        "title": "Internxt : Confidentialité totale, transparence et suite ",
         "features": [
           {
             "title": "Open source et audité",
             "description": "Le code d'Internxt est ouvert à tous pour examen et vérification de sa sécurité via notre GitHub. Cette transparence garantit qu'aucune vulnérabilité n'est cachée."
           },
           {
-            "title": "Chiffrement à connaissance zéro (*Zero-knowledge* Encryption)",
+            "title": "Chiffrement à connaissance zéro ",
             "description": "Vos données sont chiffrées côté client, garantissant que vous seul pouvez y accéder. Disponible pour tous les fichiers, pas seulement un coffre-fort séparé."
           },
           {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Plusieurs plans à vie allant jusqu'à 5 To, y compris l'accès à VPN, Meet, Cleaner, et plus encore. Accédez à ces services pour toujours avec une réduction de {{discount}}%."
+            "description": "Plusieurs plans à vie allant jusqu'à 5 To, y compris l'accès à VPN, Meet, Cleaner, et plus encore. Accédez à ces services pour toujours avec une réduction de 90%."
           }
         ]
       },
@@ -95,7 +95,7 @@
             "description": "Bien que Koofr soit open source, il n'y a aucune trace d'un audit de sécurité externe et publié."
           },
           {
-            "title": "Seul le *Vault* est chiffré",
+            "title": "Seul le Vault est chiffré",
             "description": "Le chiffrement à connaissance zéro est proposé pour les fichiers déplacés manuellement vers un coffre-fort séparé, laissant les comptes gratuits et le stockage régulier moins sécurisés et privés."
           },
           {
