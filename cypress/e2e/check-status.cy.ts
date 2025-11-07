@@ -27,6 +27,7 @@ const nameFiles = [
   'cleaner',
   'coupons',
   'google-drive-alternative',
+  'icedrive-alternative',
 ];
 
 const langs = {
