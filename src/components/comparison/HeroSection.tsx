@@ -15,9 +15,10 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
 
   return (
     <div
-      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 py-8 pt-28 lg:h-min lg:flex-row lg:justify-center lg:p-20 lg:px-10 lg:pt-32 xl:px-32 3xl:px-80"
+      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 py-8 pt-28 lg:h-min lg:flex-row lg:justify-center lg:p-20 lg:px-10 lg:pt-40 xl:px-32 3xl:px-80"
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="hidden h-auto w-full justify-between lg:flex lg:h-min">
         <div className="flex h-full flex-col items-start justify-center gap-5 text-start lg:h-min lg:w-1/2 lg:text-start">
           <p className="text-30 font-semibold text-gray-95 lg:text-5xl">
