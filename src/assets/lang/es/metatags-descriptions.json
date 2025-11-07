@@ -395,6 +395,11 @@
     "description": "Cámbiate a Internxt, una alternativa a Icedrive de código abierto. Obtén almacenamiento en la nube con cifrado post-cuántico y de conocimiento cero para una privacidad total, disponible en todos los planes."
   },
   {
+    "id": "onedrive-alternative",
+    "title": "Internxt — Alternativa Privada y Segura a OneDrive",
+    "description": "Cámbiate a Internxt, una alternativa open-source a OneDrive. El cifrado post-cuántico y de conocimiento cero garantiza la total privacidad de tus documentos y archivos multimedia."
+  },
+  {
     "id": "google-drive-alternative",
     "title": "Internxt — Como Google Drive, pero Privado",
     "description": "DesGooglea tu vida con Internxt, la mejor alternativa a Google Drive que respeta tu privacidad. Obtén cifrado de conocimiento cero y control total de tus datos."
