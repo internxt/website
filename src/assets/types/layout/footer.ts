@@ -16,7 +16,7 @@ export interface FooterSection {
   comingSoon: string;
   new: string;
   sections: Sections;
-  financialProject: string;
+  financialProject?: string;
 }
 
 export interface Copyright {
