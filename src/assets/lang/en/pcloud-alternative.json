@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A **Secure** {{competitor}} Alternative",
+    "title": "Internxt,  a **secure** {{competitor}} alternative",
     "description": "Looking for a pCloud alternative? Internxt offers post-quantum encryption and a full privacy suite.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}} % off",

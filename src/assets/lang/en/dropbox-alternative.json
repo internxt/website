@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, Una Alternativa **Segura** a {{competitor}}",
+    "title": "Internxt, una alternativa **segura** a {{competitor}}",
     "description": "Dropbox filtró 68 millones de contraseñas. Protege tus datos con Internxt — privacidad y seguridad contra filtraciones.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}}% off",
