@@ -14,7 +14,7 @@ import { CouponPageText } from '@/assets/types/couponsPage';
 import HeroSection from '@/components/coupons/HeroSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
+import HorizontalScrollableSectionWithPhotosSection from '@/components/shared/sections/HorizontalScrollableSectionWithPhotos';
 import RedeemCouponsSection from '@/components/coupons/ReedeemCouponSection';
 
 interface HomeProps {
