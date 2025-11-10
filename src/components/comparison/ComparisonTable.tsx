@@ -14,11 +14,11 @@ interface ComparisonTableProps {
     };
   };
   logo?: string;
+  competitor: 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'Onedrive';
   hideTooltip?: boolean;
-  competitor: 'pCloud' | 'MEGA' | 'Dropbox';
 }
 
-export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: ComparisonTableProps) => {
+export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTableProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -48,6 +48,18 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
     Dropbox: {
       defaultLogo: '/images/comparison/competitors/Dropbox_Letters.webp',
     },
+    Drive: {
+      defaultLogo: '/images/comparison/competitors/Drive-Letters.webp',
+    },
+    Koofr: {
+      defaultLogo: '/images/comparison/Koofr-Letters.webp',
+    },
+    Icedrive: {
+      defaultLogo: '/images/comparison/Icedrive-Letters.webp',
+    },
+    Onedrive: {
+      defaultLogo: '/images/comparison/OneDrive-Letters.webp',
+    },
   } as const;
 
   const competitors = [
@@ -74,6 +86,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
 
   return (
     <section className="overflow-hidden bg-white px-4 py-12 lg:px-5 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-8 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center lg:gap-6">
           <h2 className="text-2xl font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>

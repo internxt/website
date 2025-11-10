@@ -1,7 +1,7 @@
 {
   "HeroSection": {
-    "title": "Internxt：{{competitor}}的安全替代方案",
-    "description": "过去的Dropbox数据泄露事件导致6800万个密码泄露。想要避免这种情况发生在您身上吗？加入Internxt，获得完整的安全和隐私保护，提供针对数据泄露的最大防护。",
+    "title": "Internxt，一个**安全**的 {{competitor}} 替代方案",
+    "description": "Dropbox 曾泄露 6800 万个密码。使用 Internxt 保护您的数据 — 防范数据泄露的隐私和安全。",
     "features": ["私密存储您的视频", "后量子和零知识加密", "开源且经过审计"],
     "getPrivacy": "以${{percentage}}%的折扣获得完全隐私保护",
     "cta": "选择计划"
@@ -93,7 +93,7 @@
         "features": [
           {
             "title": "合理计划",
-            "description": "87%独家优惠，没有任何隐藏费用。"
+            "description": "{{percentage}}%独家优惠，没有任何隐藏费用。"
           },
           {
             "title": "全面保护",
@@ -101,7 +101,7 @@
           },
           {
             "title": "终身计划",
-            "description": "通过一次性付款避免重复订阅，以87%的折扣永久访问我们的服务。"
+            "description": "通过一次性付款避免重复订阅，以{{percentage}}%的折扣永久访问我们的服务。"
           }
         ]
       },
@@ -125,11 +125,6 @@
     }
   },
   "CtaSection": {
-    "title": "使用Internxt保护您的文件免受数据泄露",
-    "description": "使用代码DROPBOX87获得87%折扣",
-    "cta": "获取Internxt"
-  },
-  "CtaSection2": {
     "title": "无跟踪器。无问题。",
     "description": "使用Internxt为您的文件获得完全隐私",
     "cta": "免费注册"

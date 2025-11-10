@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt,  la Alternativa Segura a {{competitor}}",
-    "description": "Una brecha de datos pasada de Dropbox filtró 68 millones de contraseñas. ¿Quieres evitar que esto te pase a ti? Únete a Internxt para obtener seguridad y privacidad completa, proporcionando máxima protección contra brechas de datos.",
+    "title": "Internxt, una alternativa **segura** a {{competitor}}",
+    "description": "Dropbox filtró 68 millones de contraseñas. Protege tus datos con Internxt — privacidad y seguridad contra filtraciones.",
     "features": [
       "Almacena tus vídeos en privado",
       "Cifrado post-cuántico y de conocimiento cero",
       "Código abierto y auditado"
     ],
-    "getPrivacy": "Obtén privacidad total con un ${{percentage}}% de descuento",
+    "getPrivacy": "Obtén privacidad total con un {{percentage}}% de descuento",
     "cta": "Seleccionar plan"
   },
   "HeaderSection": {
@@ -97,7 +97,7 @@
         "features": [
           {
             "title": "Planes razonables",
-            "description": "Oferta exclusiva del 87%, sin cargos ocultos."
+            "description": "Oferta exclusiva del {{percentage}}%, sin cargos ocultos."
           },
           {
             "title": "Protección completa",
@@ -105,7 +105,7 @@
           },
           {
             "title": "Planes de por vida",
-            "description": "Evita suscripciones repetidas con un pago único para acceder a nuestros servicios para siempre con 87% de descuento."
+            "description": "Evita suscripciones repetidas con un pago único para acceder a nuestros servicios para siempre con {{percentage}}% de descuento."
           }
         ]
       },
@@ -129,11 +129,6 @@
     }
   },
   "CtaSection": {
-    "title": "Protege tus archivos de brechas de datos con Internxt",
-    "description": "Obtén un 87% de descuento con el código DROPBOX87",
-    "cta": "Obtener Internxt"
-  },
-  "CtaSection2": {
     "title": "Sin rastreadores. Sin problemas.",
     "description": "Obtén privacidad completa para tus archivos con Internxt",
     "cta": "Regístrate gratis"

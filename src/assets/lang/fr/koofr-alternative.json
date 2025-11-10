@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Internxt : comme Koofr, mais **entièrement chiffré**",
+    "description": "Internxt propose la suite de confidentialité et de chiffrement la plus moderne et la plus avancée pour vous protéger en ligne",
+    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction 🔥",
+    "cta": "Profiter de l'offre"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Koofr",
+    "description": "Internxt est votre alternative à Koofr, avec un chiffrement à connaissance zéro pour tous les fichiers et une suite de confidentialité complète",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Chiffrement post-quantique",
+        "Tarification et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Assistance en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "AES-256 et Kyber-512",
+        "Oui",
+        "Compétitif, inclut la suite complète de produits, jusqu'à 5 To",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, et plus",
+        "Audits de sécurité réguliers",
+        "Oui",
+        "Nous ne pouvons jamais accéder à vos fichiers",
+        "Confidentialité totale : RGPD, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open source",
+        "AES-256",
+        "Non",
+        "Jusqu'à 20 To, stockage cloud uniquement",
+        "Stockage cloud",
+        "Aucun audit de sécurité publié",
+        "Non",
+        "Les fichiers stockés en dehors du *Koofr Vault* sont moins privés",
+        "RGPD, basé en Slovénie"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Alternative à Koofr",
+    "description": "Obtenez un stockage cloud avec chiffrement post-quantique, ainsi qu'un Antivirus, VPN, Cleaner, Meet, et plus encore avec Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Chiffrement privé séparé",
+        "Plans à vie limités",
+        "Chiffrement limité par la technologie",
+        "Les forfaits se limitent au stockage cloud"
+      ],
+      "descriptions": [
+        "Tous les fichiers que vous stockez avec Koofr ne sont pas protégés par un chiffrement à connaissance zéro. Seuls les fichiers que vous déplacez manuellement dans le *Koofr Vault* sont chiffrés de bout en bout, tandis que tout le reste de votre stockage cloud régulier reste accessible au fournisseur via un chiffrement côté serveur.",
+        "Les forfaits à vie de Koofr sont limités à 1 To, qui ne peuvent pas être cumulés, ou des forfaits annuels allant jusqu'à 20 To pour 1 428,20 €/an. Pour le même coût que le forfait annuel de 5 To de Koofr, vous pouvez obtenir 5 To de stockage à vie avec Internxt, plus l'accès à Meet, Mail, la gestion des versions de fichiers, VPN, et plus encore. Pour une confidentialité totale en ligne, combinez le chiffrement de confidentialité complet d'Internxt avec sa suite de produits exhaustive.",
+        "Koofr utilise le chiffrement standard de l'industrie AES-256. Ce modèle de chiffrement pourrait bientôt devenir obsolète, car l'émergence d'ordinateurs post-quantiques pourrait briser les modèles de chiffrement actuels utilisés par Koofr et d'autres. Internxt utilise le chiffrement post-quantique (Kyber-512).",
+        "Koofr propose un stockage cloud allant jusqu'à 20 To, qui comprend 10 coffres-forts Koofr (*safeboxes*), la gestion des versions et la protection par mot de passe. Cependant, si vous souhaitez un chiffrement à connaissance zéro pour tous les fichiers dans le cloud, ainsi qu'une suite de confidentialité complète pour protéger votre appareil, votre connexion Internet, et plus encore, Internxt est une alternative plus complète à Koofr."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Koofr :",
+    "description": "Internxt offre une sécurité et une confidentialité inégalées avec des fonctionnalités que Koofr ne peut pas égaler.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité totale, transparence et suite ",
+        "features": [
+          {
+            "title": "Open source et audité",
+            "description": "Le code d'Internxt est ouvert à tous pour examen et vérification de sa sécurité via notre GitHub. Cette transparence garantit qu'aucune vulnérabilité n'est cachée."
+          },
+          {
+            "title": "Chiffrement à connaissance zéro ",
+            "description": "Vos données sont chiffrées côté client, garantissant que vous seul pouvez y accéder. Disponible pour tous les fichiers, pas seulement un coffre-fort séparé."
+          },
+          {
+            "title": "Normes de conformité multiples",
+            "description": "Internxt a été audité en externe et est conforme aux normes RGPD, HIPAA, ISO 27001 et SOC 2."
+          },
+          {
+            "title": "Plans à vie",
+            "description": "Plusieurs plans à vie allant jusqu'à 5 To, y compris l'accès à VPN, Meet, Cleaner, et plus encore. Accédez à ces services pour toujours avec une réduction de 90%."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr : Qu'en est-il de votre confidentialité ?",
+        "features": [
+          {
+            "title": "Open source, sans audit",
+            "description": "Bien que Koofr soit open source, il n'y a aucune trace d'un audit de sécurité externe et publié."
+          },
+          {
+            "title": "Seul le Vault est chiffré",
+            "description": "Le chiffrement à connaissance zéro est proposé pour les fichiers déplacés manuellement vers un coffre-fort séparé, laissant les comptes gratuits et le stockage régulier moins sécurisés et privés."
+          },
+          {
+            "title": "Dossier de conformité",
+            "description": "Aucun enregistrement d'un audit de sécurité indépendant pour vérifier les normes de conformité."
+          },
+          {
+            "title": "Plans à vie limités",
+            "description": "Un seul plan de stockage cloud à vie de 1 To, qui ne peut pas être cumulé."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative au stockage cloud Koofr",
+    "description": "Avec Internxt, vous obtenez plus qu'un simple stockage cloud ; vous obtenez tout ce dont vous avez besoin pour protéger vos données, vos fichiers et votre confidentialité en ligne.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
+      "descriptions": [
+        "Internxt Antivirus est intégré directement dans votre application Internxt Drive pour un contrôle total et une protection contre les logiciels malveillants. Exécutez des analyses antivirus complètes ou personnalisées pour que votre appareil fonctionne correctement et soit protégé contre les virus tels que les ransomwares ou les logiciels espions.",
+        "Le VPN d'Internxt protège votre navigation, bloque les publicités et les traceurs, et garde votre emplacement privé. Chiffrez votre connexion Wi-Fi pour prévenir l'espionnage, les pirates et le vol d'identité. Naviguez en toute sécurité en sachant que vos informations personnelles, mots de passe et comptes sont protégés.",
+        "Internxt Cleaner vous aide à identifier, éliminer et gérer les fichiers indésirables ou en double sur votre appareil. Avec Cleaner, vous pouvez supprimer les fichiers non désirés pour garder votre espace de stockage organisé, sans encombrement, et vous assurer que votre appareil fonctionne efficacement.",
+        "Internxt Meet est également disponible en tant qu'alternative sécurisée et privée à Teams. Avec Meet, vous pouvez organiser des appels vidéo privés sans traceurs, publicités ou collecte de données. Vos appels vidéo sont protégés par un chiffrement post-quantique, vous permettant d'organiser des appels en toute confidentialité.",
+        "Disponible sur Windows, Mac, Linux et mobile, Internxt vous permet de prendre le contrôle total de votre stockage cloud en y accédant de n'importe où, sur n'importe quel appareil.\n\nPour les utilisateurs avancés, Internxt offre la prise en charge de WebDAV, Rclone et NAS, offrant tout ce dont vous avez besoin pour gérer vos fichiers en toute confidentialité."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Plus qu'un simple stockage cloud",
+    "description": "Obtenez une confidentialité totale en ligne avec Internxt",
+    "cta": "Profiter de l'offre"
+  },
+  "tableSection": {
+    "title": "Votre allié de confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction 🔥",
+    "planTitles": {
+      "header": "Votre allié de confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le plan"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Assistance client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sécurisée à Koofr ?",
+        "answer": [
+          "Oui, Internxt utilise un chiffrement post-quantique et à connaissance zéro qui garantit que personne d'autre que vous ne peut voir vos fichiers. Tous vos fichiers sont protégés par ce chiffrement, sans avoir besoin de les stocker dans un coffre-fort séparé, car Internxt Drive sert de votre propre coffre-fort de stockage cloud entièrement chiffré.",
+          "Des fonctionnalités supplémentaires telles que VPN, Antivirus, Nettoyeur d'Appareil (*Device Cleaner*), Moniteur Dark Web, Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les fuites de données dans le cadre de votre forfait de stockage cloud Internxt."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
+        "answer": [
+          "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, faisant du CPQ une alternative plus sécurisée à Koofr.",
+          "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre plan de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans coût supplémentaire."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre confidentialité."
+        ]
+      },
+      {
+        "question": "Koofr est-il plus cher qu'Internxt ?",
+        "answer": [
+          "Koofr coûte 199 € pour 1 To de stockage cloud à vie seulement. Avec Internxt, vous obtenez les mêmes 1 To de stockage chiffré post-quantique, plus VPN et Antivirus pour 195 €. Avec votre réduction exclusive de {{discount}}%, Internxt propose un stockage cloud et une vaste gamme de fonctionnalités non disponibles chez d'autres fournisseurs cloud, y compris Koofr."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "answer": [
+          "Oui, vous pouvez mettre à niveau votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau forfait sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Cryptomonnaie et Klarna."
+        ]
+      }
+    ]
+  }
+}

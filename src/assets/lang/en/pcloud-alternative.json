@@ -1,9 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A Secure {{competitor}} Alternative",
-    "description": "Looking for a secure alternative to pCloud? Internxt offers the first cloud storage with post quantum encryption and a full privacy suite of products for maximum privacy and security.",
+    "title": "Internxt,  a **secure** {{competitor}} alternative",
+    "description": "Looking for a pCloud alternative? Internxt offers post-quantum encryption and a full privacy suite.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "getPrivacy": "Get total privacy for {{percentage}} % off",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -91,7 +91,7 @@
         "features": [
           {
             "title": "Reasonable plans",
-            "description": "87% exclusive offer, without any hidden charges."
+            "description": "90% exclusive offer, without any hidden charges."
           },
           {
             "title": "Full protection",
@@ -185,7 +185,7 @@
     }
   },
   "CtaSection": {
-    "title": "Switch to Internxt with an 87% off",
+    "title": "Switch to Internxt with an 90% off",
     "description": "The only cloud storage you need for complete privacy online",
     "cta": "Get Internxt"
   },
@@ -281,7 +281,7 @@
       {
         "question": "Is pCloud pricing more expensive than Internxt?",
         "answer": [
-          "With your exclusive 87% discount, all our plans are cheaper than pCloud pricing options currently available, with the benefit of offering many more features and privacy than pCloud."
+          "With your exclusive 90% discount, all our plans are cheaper than pCloud pricing options currently available, with the benefit of offering many more features and privacy than pCloud."
         ]
       },
       {

@@ -1,10 +1,10 @@
 {
   "HeroSection": {
-    "title": "Internxt：{{competitor}}的安全替代方案",
-    "description": "MEGA加密技术的过往漏洞以及缺乏完全开源软件可能会让您的隐私和数据面临风险。选择Internxt获得后量子加密、VPN、邮件、会议等功能。",
-    "features": ["私密存储您的视频", "后量子和零知识加密", "开源且经过审计"],
-    "getPrivacy": "享受${{percentage}}%折扣，获得完全隐私保护",
-    "cta": "选择方案"
+    "title": "Internxt，一个**安全**的 {{competitor}} 替代方案",
+    "description": "MEGA 过去的安全漏洞和闭源模式危及您的隐私。选择 Internxt，获得后量子加密、VPN、Mail、Meet 等。",
+    "features": ["私密储存您的影片", "后量子和零知识加密", "开源且已审计"],
+    "getPrivacy": "享受 {{percentage}} % 优惠，获得全面隐私",
+    "cta": "领取优惠"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}}概览",
@@ -92,7 +92,7 @@
         "features": [
           {
             "title": "合理方案",
-            "description": "87%独家优惠，无任何隐藏费用。"
+            "description": "90%独家优惠，无任何隐藏费用。"
           },
           {
             "title": "全面保护",
@@ -100,7 +100,7 @@
           },
           {
             "title": "终身方案",
-            "description": "通过一次性付款享受87%折扣，永久访问我们的服务，避免重复订阅。"
+            "description": "通过一次性付款享受90%折扣，永久访问我们的服务，避免重复订阅。"
           }
         ]
       },
@@ -125,7 +125,7 @@
   },
   "CtaSection": {
     "title": "使用Internxt保护您的文件免受数据泄露",
-    "description": "使用代码MEGA87享受87%折扣",
+    "description": "使用代码MEGA90享受90%折扣",
     "cta": "获取Internxt"
   },
   "CtaSection2": {

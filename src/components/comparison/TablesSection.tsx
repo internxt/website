@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
-import { InxtTable } from './components/InxtTable';
-import { CompetitorTable } from './components/CompetitorTable';
+import { InxtTable } from './pCloud-alternative/components/InxtTable';
+import { CompetitorTable } from './pCloud-alternative/components/CompetitorTable';
 import { CaretDown, CaretUp } from '@phosphor-icons/react';
 
 type TablesSectionProps = {
@@ -80,6 +80,7 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
 
   return (
     <section className="flex flex-col items-center justify-center gap-8 overflow-hidden bg-white py-8 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-6 text-center">
         <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>
         <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{parseText(textContent.description)}</p>
@@ -111,7 +112,7 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
           {availableSections.map((section, index) => {
             const isOpen = !!openSections[index];
             return (
-              <div key={index} className="flex w-screen flex-col items-center gap-2 lg:gap-16">
+              <div key={index} className="flex w-screen flex-col items-center gap-2 lg:pt-16">
                 <div className="h-[1px] w-[360px] bg-green-120 lg:hidden" />
 
                 <button
@@ -129,7 +130,7 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
                 </button>
 
                 <div className="flex flex-col gap-6">
-                  <p className="hidden w-[330px] text-center text-3xl font-semibold text-gray-100 lg:block lg:w-full">
+                  <p className="hidden w-[330px] text-center text-3xl font-semibold text-gray-100 lg:block lg:w-full lg:pb-10">
                     {section.title}
                   </p>
 

@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt: Wie OneDrive, aber **privat**.",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu OneDrive, die Ihre Privatsphäre respektiert",
+    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. OneDrive Überblick",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, die Internxt ermöglichen, Ihnen die Kontrolle über Ihre Daten zurückzugeben",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheits-Audits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Auf Ihrem Gerät verschlüsselt",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, bis zu 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheits-Audits",
+        "Ja",
+        "Wir können niemals auf Ihre Dateien zugreifen",
+        "Voller Datenschutz: DSGVO, Spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-source (Geschlossener Quellcode)",
+        "Von OneDrive verschlüsselt",
+        "Nein",
+        "Teurere Pläne, bis zu 6TB",
+        "Drive, SharePoint, Outlook und Teams",
+        "Regelmäßige Sicherheits-Audits",
+        "Nein",
+        "Kann unter bestimmten Umständen auf Dateien zugreifen.",
+        "Weniger Datenschutz: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "OneDrive verfolgt, teilt und überwacht Ihre Daten. Internxt schützt sie.",
+    "description": "OneDrive mag sicher sein, aber es ist ein Albtraum für Ihre Privatsphäre. Wechseln Sie zu Internxt für vollständige Sicherheit Ihrer Dokumente, Videos und Fotos. Mit Internxt kann niemand außer Ihnen auf Ihre Dateien zugreifen, nicht einmal wir.",
+    "scrollableSection": {
+      "titles": [
+        "Umfassende Datenerfassung",
+        "Sprachüberwachung",
+        "Mitarbeiterzugriff auf Ihre Daten",
+        "Integration in das Microsoft-Ökosystem"
+      ],
+      "descriptions": [
+        "OneDrive sammelt eine breite Palette persönlicher Daten basierend darauf, wie Sie mit seinen Diensten interagieren, einschließlich auf der Plattform gespeicherter Dateien, Metadaten und Geräteinformationen, weit über das hinaus, was für den Betrieb des Dienstes erforderlich ist.",
+        "Sprachdaten von Cortana oder anderen Microsoft-Diensten können von menschlichen Mitarbeitern überprüft werden, um KI-Systeme zu trainieren und Erkennungsmodelle zu verbessern, was ein Risiko für die unbeabsichtigte Preisgabe Ihrer privaten Gespräche darstellt.",
+        "Microsoft-Mitarbeiter können unter bestimmten Umständen auf Benutzerinhalte zugreifen und diese überprüfen, z. B. bei der Untersuchung von Richtlinienverstößen, Anfragen von Strafverfolgungsbehörden oder bei Systemwartungen. Alles, was Sie in OneDrive speichern, könnte potenziell von diesen Mitarbeitern eingesehen oder überwacht werden.",
+        "Wenn Sie OneDrive verwenden, werden Ihre Daten wahrscheinlich auch von anderen Microsoft-Produkten wie Windows, Office, Outlook und Cortana verwendet. Dies ermöglicht die dienstübergreifende Datenerfassung und Benutzerverfolgung auf anderen Plattformen, die Sie möglicherweise nutzen."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private Alternative zu OneDrive benötigen",
+    "description": "Was OneDrive in puncto Sicherheit demonstriert, scheitert in Bezug auf den Datenschutz. Für vollständigen Datenschutz erhalten Sie vollständige Sicherheit kombiniert mit Zero-Knowledge-Verschlüsselung von Internxt.",
+    "cards": {
+      "titles": ["Datenschutz", "Mangel an Ende-zu-Ende-Verschlüsselung", "Datensammlung"],
+      "descriptions": [
+        "OneDrive und andere Cloud-Dienste können Ihre Dateien scannen oder analysieren. Bei Internxt gibt es keine Tracker, kein KI-Scanning und keine versteckten Backdoors. Internxt kann Ihre Dateien nicht lesen, sodass Ihre Fotos, Dokumente und Videos privat bleiben. Sie haben die volle Kontrolle über Ihre Cloud.",
+        "OneDrive verwaltet Verschlüsselungsschlüssel auf seinen Servern, was ihnen die vollständige Kontrolle über Ihre Daten gibt. Infolgedessen birgt das Speichern Ihrer Dateien bei OneDrive ein enormes Risiko für Ihre Privatsphäre, da Microsoft jederzeit auf Ihre Inhalte, Fotos oder Videos zugreifen könnte.",
+        "OneDrive gibt in seinen Allgemeinen Geschäftsbedingungen an, dass es Daten von Ihnen durch Ihre Interaktionen mit seinen Produkten sowie durch Datenerfassung von Dritten sammelt. OneDrive-Mitarbeiter können auch Ihre Sprachdaten überwachen, um ihre KI zu trainieren und die Spracherkennung zu verbessern."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. OneDrive",
+    "description": "Internxt bietet dank Zero-Knowledge- und Post-Quanten-Verschlüsselung unvergleichlichen Datenschutz und Sicherheit und schützt Sie optimal vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Voller Datenschutz, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Der Code von Internxt ist für jedermann zur Überprüfung und Gewährleistung seiner Sicherheit über unser GitHub offen. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Daten werden clientseitig verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Europäischer Cloud-Speicher",
+            "description": "Internxt hat seinen Sitz in Europa und entspricht DSGVO, HIPAA, ISO 27001 und SOC 2. Die Plattform ist vollständig auditiert, um sicherzustellen, dass kein externer Zugriff auf Ihre Daten möglich ist."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Vermeiden Sie wiederholte Abonnements mit einer einmaligen Zahlung für Pläne bis zu 5TB. Nutzen Sie unsere Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "OneDrive: Was ist mit Ihrem Datenschutz?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "OneDrive hält seinen Quellcode vor der Öffentlichkeit verborgen. Ohne Transparenz gibt es keine Möglichkeit, sicher zu wissen, wie Dropbox [sic] Ihre Daten behandelt oder schützt."
+          },
+          {
+            "title": "Von Microsoft verschlüsselt",
+            "description": "Microsoft besitzt die Verschlüsselungsschlüssel für Ihre Dateien, was bedeutet, dass sie Ihre Cloud theoretisch entschlüsseln und darauf zugreifen können, wenn sie eine rechtliche Anforderung erhalten (wie eine Vorladung)."
+          },
+          {
+            "title": "Daten in den USA gespeichert",
+            "description": "Daten, die auf US-basierten Servern gespeichert sind: Daten, die in der Microsoft-Cloud gespeichert sind, unterliegen den Überwachungsgesetzen der US-Regierung, die unter bestimmten Bedingungen Zugriff auf Ihre Daten erlauben."
+          },
+          {
+            "title": "Abonnement-basiert",
+            "description": "Bietet nur monatliche oder jährliche Abonnements mit maximal 6 TB Speicherplatz, der auf 6 Personen aufgeteilt wird."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu OneDrive ist",
+    "description": "Internxt Drive bietet eine umfassende Suite von Produkten, die darauf ausgelegt sind, Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückzugeben.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Erhöhen Sie Ihren Schutz mit Internxt Antivirus, das direkt in Ihre Internxt Drive App integriert ist, für vollständige Kontrolle und Schutz vor Malware. Führen Sie vollständige oder benutzerdefinierte Virenscans durch, um Ihr Gerät reibungslos am Laufen und vor Viren wie Ransomware oder Spyware geschützt zu halten.",
+        "Internxts VPN schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsseln Sie Ihre WLAN-Verbindung, um Spionage, Hacker und Identitätsdiebstahl zu verhindern. Surfen Sie sicher in dem Wissen, dass Ihre persönlichen Informationen, Passwörter und Konten geschützt sind.",
+        "Internxt Cleaner hilft Ihnen, unerwünschte Junk- oder doppelte Dateien auf Ihrem Gerät zu identifizieren, zu eliminieren und zu verwalten. Mit Cleaner können Sie unerwünschte Dateien löschen, um Ihren Speicher organisiert, aufgeräumt zu halten und sicherzustellen, dass Ihr Gerät effizient läuft.",
+        "Internxt Meet ist auch als Ihre sichere und private Alternative zu Teams verfügbar. Mit Meet können Sie private Videoanrufe frei von Trackern, Werbung und Datenerfassung hosten. Ihre Videoanrufe sind mit Post-Quanten-Verschlüsselung geschützt, sodass Sie Anrufe in völliger Privatsphäre abhalten können.",
+        "Verfügbar auf Windows, Mac, Linux und Mobilgeräten, lässt Internxt Sie die volle Kontrolle über Ihren Cloud-Speicher übernehmen, indem Sie von überall und auf jedem Gerät auf Ihre Cloud zugreifen.\n\nFür fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und bietet alles, was Sie benötigen, um Ihre Dateien in völliger Privatsphäre zu verwalten."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Ihre Privatsphäre, Ihre Bedingungen",
+    "description": "Voller Schutz mit {{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One Datenschutz-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One Datenschutz-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Holen Sie sich 1GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Open-Source und auditiert",
+      "premiumSupport": "Premium-Kunden-Support",
+      "guarantee": "30-Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu OneDrive?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Dateien einsehen kann. Microsoft verwaltet die Verschlüsselungsschlüssel auf seinen eigenen Servern, was bedeutet, dass es auf Ihre Dateien zugreifen oder den Regierungen oder Strafverfolgungsbehörden Zugriff gewähren könnte.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Geräte-Cleaner, Dark Web Monitor, Meet und Mail bieten Ihnen auch zusätzlichen Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung sind Post-Quanten-Verschlüsselungsalgorithmen darauf ausgelegt, mächtigen Quantenangriffen zu widerstehen, was PQE zu einer sichereren OneDrive-Alternative macht.",
+          "Diese Kryptographie-Methode wird von Internxt verwendet, um sicherzustellen, dass Ihr Lifetime-Cloud-Speicher-Plan Sie vor zukünftigen Cybersicherheitsbedrohungen schützt und für alle Pläne ohne zusätzliche Kosten verfügbar ist."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strenge Gesetze befolgt, um sicherzustellen, dass Ihre Daten und Ihre Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist OneDrive teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven {{percentage}}% Rabatt sind alle unsere Pläne günstiger als die derzeit verfügbaren Preisoptionen von OneDrive, mit dem Vorteil, weitaus mehr Funktionen und Datenschutz als OneDrive zu bieten."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen oder Anfragen haben oder Hilfe benötigen, können Sie sich an hello@internxt.com wenden, und unser Customer Success Team wird Ihnen gerne weiterhelfen."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicher hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, wenn Sie mehr Speicher benötigen. Oder kaufen Sie einen neuen Plan auf internxt.com/pricing mit Ihrem aktuellen Internxt-Konto, und Ihr Speicher wird automatisch gestapelt."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort, Kryptowährung und Klarna bezahlen."
+        ]
+      }
+    ]
+  }
+}

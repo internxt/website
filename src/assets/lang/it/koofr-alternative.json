@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Internxt: come Koofr, ma **crittografato**",
+    "description": "Internxt offre la suite di privacy e crittografia più moderna e avanzata per proteggerti online",
+    "getPrivacy": "Seleziona il tuo piano con il {{percentage}}% di sconto 🔥",
+    "cta": "Richiedi l'offerta"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Koofr ",
+    "description": "Internxt è la tua alternativa a Koofr, con crittografia a conoscenza zero per tutti i file e una suite di privacy completa",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Crittografia",
+        "Crittografia post-quantistica",
+        "Prezzi e spazio di archiviazione",
+        "Funzionalità",
+        "Audit di sicurezza",
+        "Supporto in tempo reale",
+        "Informativa sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "AES-256 e Kyber-512",
+        "Sì",
+        "Competitivo, include la suite completa di prodotti, fino a 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e altro",
+        "Audit di sicurezza regolari",
+        "Sì",
+        "Non possiamo mai accedere ai tuoi file",
+        "Privacy totale: GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open source",
+        "AES-256",
+        "No",
+        "Fino a 20TB, solo archiviazione cloud",
+        "Archiviazione cloud",
+        "Nessun audit di sicurezza pubblicato",
+        "No",
+        "I file archiviati al di fuori del *Koofr Vault* sono meno privati",
+        "GDPR, con sede in Slovenia"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Alternativa a Koofr",
+    "description": "Ottieni spazio di archiviazione cloud crittografato post-quantistico, oltre ad Antivirus, VPN, Cleaner, Meet e altro con Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Crittografia privata separata",
+        "Piani a vita limitati",
+        "Crittografia limitata dalla tecnologia",
+        "I piani sono limitati all'archiviazione cloud"
+      ],
+      "descriptions": [
+        "Non tutti i file che archivi con Koofr sono protetti con crittografia a conoscenza zero. Solo i file che sposti manualmente nel *Koofr Vault* sono crittografati end-to-end, mentre tutto il resto nella tua normale archiviazione cloud è ancora accessibile al provider tramite crittografia lato server.",
+        "I piani a vita di Koofr sono limitati a 1TB, che non è cumulabile, o piani annuali fino a 20TB a 1.428,20 €/anno. Per lo stesso costo del piano annuale da 5TB di Koofr, puoi ottenere 5TB di spazio di archiviazione a vita con Internxt, più l'accesso a Meet, Mail, versioning dei file, VPN e altro. Per una privacy totale online, combina la crittografia di privacy completa di Internxt con la sua suite di prodotti completa.",
+        "Koofr utilizza lo standard di crittografia industriale AES-256. Questo modello di crittografia potrebbe presto diventare obsoleto, poiché l'emergere di computer post-quantistici potrebbe violare gli attuali modelli di crittografia utilizzati da Koofr e altri. Internxt utilizza la crittografia post-quantistica (Kyber-512).",
+        "Koofr offre archiviazione cloud fino a 20TB, che include 10 *Koofr safeboxes*, versioning e protezione con password. Tuttavia, se desideri la crittografia a conoscenza zero per tutti i file nel cloud, oltre a una suite di privacy completa per proteggere il tuo dispositivo, la connessione Internet e altro, Internxt è un'alternativa più completa a Koofr."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Koofr:",
+    "description": "Internxt offre sicurezza e privacy senza pari con funzionalità che Koofr non è in grado di eguagliare.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e suite di privacy",
+        "features": [
+          {
+            "title": "Open source e sottoposto a audit",
+            "description": "Il codice di Internxt è aperto a tutti per l'esame e la verifica della sua sicurezza tramite il nostro GitHub. Questa trasparenza garantisce che non ci siano vulnerabilità nascoste."
+          },
+          {
+            "title": "Crittografia a conoscenza zero ",
+            "description": "I tuoi dati vengono crittografati lato client, garantendo che solo tu possa accedervi. Disponibile per tutti i file, non solo per un vault separato."
+          },
+          {
+            "title": "Standard di conformità multipli",
+            "description": "Internxt è stato sottoposto ad audit esterni ed è conforme a GDPR, HIPAA, ISO 27001 e SOC 2."
+          },
+          {
+            "title": "Piani a vita",
+            "description": "Piani a vita multipli fino a 5TB, incluso l'accesso a VPN, Meet, Cleaner e altro. Accedi a questi servizi per sempre con uno sconto del 90%."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr: E la tua privacy?",
+        "features": [
+          {
+            "title": "Open source, senza audit",
+            "description": "Sebbene Koofr sia open source, non risulta alcun audit di sicurezza esterno e pubblicato."
+          },
+          {
+            "title": "Solo vault crittografato",
+            "description": "La crittografia a conoscenza zero è offerta per i file spostati manualmente in un vault separato, lasciando gli account gratuiti e l'archiviazione regolare meno sicuri e privati."
+          },
+          {
+            "title": "Registro di conformità",
+            "description": "Nessuna traccia di un audit di sicurezza indipendente per verificare gli standard di conformità."
+          },
+          {
+            "title": "Piani a vita limitati",
+            "description": "Un solo piano di archiviazione cloud a vita di 1TB, che non è cumulabile."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa all'archiviazione cloud Koofr",
+    "description": "Con Internxt, ottieni più di una semplice archiviazione cloud; ottieni tutto ciò di cui hai bisogno per proteggere i tuoi dati, file e privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "Internxt Antivirus è integrato direttamente nell'app Internxt Drive per il controllo e la protezione completi dal malware. Esegui scansioni antivirus complete o personalizzate per mantenere il tuo dispositivo in funzione senza problemi e protetto da virus come ransomware o spyware.",
+        "La VPN di Internxt protegge la tua navigazione, blocca annunci e tracker e mantiene privata la tua posizione. Crittografa la tua connessione Wi-Fi per prevenire spionaggio, hacker e furto di identità. Naviga in sicurezza sapendo che le tue informazioni personali, password e account sono protetti.",
+        "Internxt Cleaner ti aiuta a identificare, eliminare e gestire file indesiderati o duplicati dal tuo dispositivo. Con Cleaner, puoi eliminare i file non desiderati per mantenere la tua archiviazione organizzata, priva di disordine e garantire che il tuo dispositivo funzioni in modo efficiente.",
+        "Internxt Meet è disponibile anche come alternativa sicura e privata a Teams. Con Meet, puoi ospitare videochiamate private senza tracker, pubblicità e raccolta dati. Le tue videochiamate sono protette con crittografia post-quantistica, permettendoti di ospitare chiamate in totale privacy.",
+        "Disponibile su Windows, Mac, Linux e dispositivi mobili, Internxt ti consente di assumere il controllo totale della tua archiviazione cloud accedendo ad essa da qualsiasi luogo, su qualsiasi dispositivo.\n\nPer gli utenti avanzati, Internxt offre supporto per WebDAV, Rclone e NAS, offrendo tutto il necessario per gestire i tuoi file in totale privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Più di una semplice archiviazione cloud",
+    "description": "Ottieni la privacy totale online con Internxt",
+    "cta": "Richiedi l'offerta"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato per la privacy tutto in uno",
+    "hotLabel": "{{discount}}% di sconto 🔥",
+    "planTitles": {
+      "header": "Il tuo alleato per la privacy tutto in uno"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open-source e sottoposto a audit",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa più sicura a Koofr?",
+        "answer": [
+          "Sì, Internxt utilizza crittografia post-quantistica e a conoscenza zero che garantisce che nessuno tranne te possa visualizzare i tuoi file. Tutti i tuoi file sono protetti con questa crittografia, senza bisogno di archiviarli in un vault separato, poiché Internxt Drive funge da tuo vault di archiviazione cloud completamente crittografato.",
+          "Funzionalità aggiuntive come VPN, Antivirus, Pulisci Dispositivo (Device Cleaner), Monitor Dark Web, Meet e Mail ti offrono anche una protezione aggiuntiva da hacker e violazioni dei dati come parte del tuo piano di archiviazione cloud Internxt."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica ed è più sicura?",
+        "answer": [
+          "A differenza della crittografia standard, gli algoritmi di crittografia post-quantistica sono costruiti per resistere a potenti attacchi quantistici, rendendo la CPQ un'alternativa più sicura a Koofr.",
+          "Questo metodo di crittografia viene utilizzato da Internxt per garantire che il tuo piano di archiviazione cloud a vita ti protegga dalle future minacce alla sicurezza informatica ed è disponibile per tutti i piani senza costi aggiuntivi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, il che la rende una soluzione di archiviazione cloud conforme al GDPR che segue leggi rigorose per garantire che i tuoi dati e la tua privacy siano protetti."
+        ]
+      },
+      {
+        "question": "Koofr è più costoso di Internxt?",
+        "answer": [
+          "Koofr costa 199 € solo per 1TB di archiviazione cloud a vita. Con Internxt, ottieni gli stessi 1TB di spazio di archiviazione crittografato post-quantistico, più VPN e Antivirus per 195 €. Con il tuo esclusivo sconto del {{discount}}%, Internxt offre archiviazione cloud e una vasta gamma di funzionalità non disponibili con nessun altro provider cloud, incluso Koofr."
+        ]
+      },
+      {
+        "question": "Come contatto l'assistenza?",
+        "answer": [
+          "Se hai altre domande, richieste o hai bisogno di assistenza, puoi contattare hello@internxt.com e il nostro Team di Successo del Cliente sarà lieto di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio di archiviazione al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il tuo piano dalle impostazioni del tuo account Internxt se hai bisogno di più spazio di archiviazione. Oppure acquista un nuovo piano su internxt.com/pricing con il tuo attuale account Internxt e il tuo spazio di archiviazione verrà automaticamente sommato."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e di credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort, Criptovaluta e Klarna."
+        ]
+      }
+    ]
+  }
+}

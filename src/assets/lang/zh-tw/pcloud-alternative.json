@@ -1,12 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt，{{competitor}}的安全替代方案",
-    "description": "正在尋找pCloud的安全替代方案？Internxt提供首個具有後量子加密的雲端儲存服務，以及完整的隱私產品套件，確保最大的隱私和安全性。",
-    "features": [
-      "私密儲存您的影片",
-      "後量子加密和零知識加密",
-      "開源且經過驗證"
-    ],
+    "title": "Internxt，一個**安全**的 {{competitor}} 替代方案",
+    "description": "正在尋找 pCloud 替代方案？Internxt 提供後量子加密和完整的隱私套件。",
+    "features": ["私密儲存您的影片", "後量子加密和零知識加密", "開源且經過驗證"],
     "getPrivacy": "享受{{percentage}}%的折扣，獲得完全隱私保護",
     "cta": "選擇方案"
   },
@@ -95,7 +91,7 @@
         "features": [
           {
             "title": "合理的方案",
-            "description": "87%的獨家優惠，無隱藏費用。"
+            "description": "90%的獨家優惠，無隱藏費用。"
           },
           {
             "title": "完整保護",
@@ -189,7 +185,7 @@
     }
   },
   "CtaSection": {
-    "title": "以87%的折扣切換到Internxt",
+    "title": "以90%的折扣切換到Internxt",
     "description": "您需要的唯一雲端儲存，實現完全線上隱私",
     "cta": "取得Internxt"
   },
@@ -241,14 +237,7 @@
     "title": "為什麼選擇Internxt作為pCloud的替代方案？",
     "description": "瞭解Internxt的功能，瞭解我們為什麼是比pCloud更安全和私密的替代方案",
     "scrollableSection": {
-      "titles": [
-        "開源且透明",
-        "安全驗證",
-        "零資料追蹤",
-        "GDPR合規",
-        "先進加密",
-        "彈性儲存方案"
-      ],
+      "titles": ["開源且透明", "安全驗證", "零資料追蹤", "GDPR合規", "先進加密", "彈性儲存方案"],
       "descriptions": [
         "Internxt是pCloud的開源替代方案，我們所有產品和服務的程式碼都在GitHub上可用。我們對資料安全的承諾確保您的資料如何處理和保護的透明度。",
         "Internxt的服務已經過歐洲領先滲透測試公司的安全專家審查。這確保您的資料對駭客和資料外洩等外部威脅保持安全。",
@@ -285,7 +274,7 @@
       {
         "question": "pCloud的價格比Internxt更貴嗎？",
         "answer": [
-          "憑藉您專享的87%折扣，我們所有方案都比pCloud目前提供的定價選項更便宜，優勢是提供比pCloud更多的功能和隱私。"
+          "憑藉您專享的90%折扣，我們所有方案都比pCloud目前提供的定價選項更便宜，優勢是提供比pCloud更多的功能和隱私。"
         ]
       },
       {
@@ -296,9 +285,7 @@
       },
       {
         "question": "我可以向終身方案新增更多儲存空間嗎？",
-        "answer": [
-          "是的，如果您需要新增更多儲存空間，可以從Internxt帳戶設定中升級您的方案。"
-        ]
+        "answer": ["是的，如果您需要新增更多儲存空間，可以從Internxt帳戶設定中升級您的方案。"]
       },
       {
         "question": "我可以用信用卡、PayPal或加密貨幣付款嗎？",

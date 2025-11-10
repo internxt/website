@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Un'alternativa sicura a {{competitor}}",
-    "description": "Stai cercando un'alternativa sicura a pCloud? Internxt offre il primo cloud storage con crittografia post-quantistica e una suite completa di prodotti per la privacy per massima privacy e sicurezza.",
+    "title": "Internxt, un'alternativa **sicura** a {{competitor}}",
+    "description": "Cerchi un'alternativa a pCloud? Internxt offre crittografia post-quantistica e una suite di privacy completa.",
     "features": [
       "Archivia i tuoi video in privato",
       "Crittografia post-quantistica e zero knowledge",
       "Open source e verificato"
     ],
-    "getPrivacy": "Ottieni privacy totale con il ${{percentage}}% di sconto",
+    "getPrivacy": "Ottieni privacy totale con il {{percentage}}% di sconto",
     "cta": "Seleziona piano"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
         "features": [
           {
             "title": "Piani ragionevoli",
-            "description": "Offerta esclusiva dell'87%, senza costi nascosti."
+            "description": "Offerta esclusiva dell'90%, senza costi nascosti."
           },
           {
             "title": "Protezione completa",
@@ -189,7 +189,7 @@
     }
   },
   "CtaSection": {
-    "title": "Passa a Internxt con l'87% di sconto",
+    "title": "Passa a Internxt con l'90% di sconto",
     "description": "L'unico cloud storage di cui hai bisogno per la privacy completa online",
     "cta": "Ottieni Internxt"
   },
@@ -285,7 +285,7 @@
       {
         "question": "I prezzi di pCloud sono più costosi di Internxt?",
         "answer": [
-          "Con il tuo sconto esclusivo dell'87%, tutti i nostri piani sono più economici delle opzioni di prezzo di pCloud attualmente disponibili, con il vantaggio di offrire molte più funzionalità e privacy rispetto a pCloud."
+          "Con il tuo sconto esclusivo dell'90%, tutti i nostri piani sono più economici delle opzioni di prezzo di pCloud attualmente disponibili, con il vantaggio di offrire molte più funzionalità e privacy rispetto a pCloud."
         ]
       },
       {

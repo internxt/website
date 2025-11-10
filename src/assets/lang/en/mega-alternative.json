@@ -1,9 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A Secure {{competitor}} Alternative",
-    "description": "Past vulnerabilities in MEGA’s cryptography and lack of full open source software could put your privacy and data at risk. Choose Internxt for post-quantum encryption, VPN, Mail, Meet, and more.",
+    "title": "Internxt, a **secure** {{competitor}} alternative",
+    "description": "MEGA’s past security flaws and closed-source model risk your privacy. Choose Internxt for post-quantum encryption, VPN, Mail, Meet, and more.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "getPrivacy": "Get total privacy for {{percentage}} % off",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -93,7 +93,7 @@
         "features": [
           {
             "title": "Reasonable plans",
-            "description": "87% exclusive offer, without any hidden charges."
+            "description": "90% exclusive offer, without any hidden charges."
           },
           {
             "title": "Full protection",
@@ -101,7 +101,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for 87% off."
+            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for 90% off."
           }
         ]
       },
@@ -126,7 +126,7 @@
   },
   "CtaSection": {
     "title": "Secure your files from data breaches with Internxt",
-    "description": "Get 87% off with code MEGA87",
+    "description": "Get 90% off with code MEGA90",
     "cta": "Get Internxt"
   },
   "CtaSection2": {

@@ -1,5 +1,4 @@
-import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
-import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
+import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -13,6 +12,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
+import { HeroSection } from '@/components/comparison/HeroSection';
 
 const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
@@ -45,12 +45,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        redirectUrl={'/pricing'}
-        percentage={percentageDiscount}
-        competitor={'Mega'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" />
 

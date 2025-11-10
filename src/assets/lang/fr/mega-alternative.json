@@ -1,14 +1,14 @@
 {
   "HeroSection": {
-    "title": "Internxt : Une alternative sécurisée à {{competitor}}",
-    "description": "Les vulnérabilités passées dans la cryptographie de MEGA et l'absence de logiciels entièrement open source pourraient mettre votre vie privée et vos données en danger. Choisissez Internxt pour le chiffrement post-quantique, VPN, Mail, Meet et plus encore.",
+    "title": "Internxt, une alternative **sécurisée** à {{competitor}}",
+    "description": "Les failles de sécurité passées de MEGA et son modèle de code fermé mettent votre vie privée en danger. Choisissez Internxt pour le chiffrement post-quantique, VPN, Mail, Meet, et plus.",
     "features": [
-      "Stockez vos vidéos en toute confidentialité",
+      "Stockez vos vidéos en privé",
       "Chiffrement post-quantique et à connaissance zéro",
       "Open source et audité"
     ],
-    "getPrivacy": "Obtenez une confidentialité totale pour ${{percentage}}% de réduction",
-    "cta": "Sélectionner un plan"
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}} % de réduction",
+    "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
     "title": "Aperçu Internxt vs {{competitor}}",
@@ -96,7 +96,7 @@
         "features": [
           {
             "title": "Plans raisonnables",
-            "description": "Offre exclusive de 87%, sans frais cachés."
+            "description": "Offre exclusive de 90%, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -104,7 +104,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services à vie avec 87% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services à vie avec 90% de réduction."
           }
         ]
       },
@@ -129,7 +129,7 @@
   },
   "CtaSection": {
     "title": "Sécurisez vos fichiers contre les violations de données avec Internxt",
-    "description": "Obtenez 87% de réduction avec le code MEGA87",
+    "description": "Obtenez 90% de réduction avec le code MEGA90",
     "cta": "Obtenir Internxt"
   },
   "CtaSection2": {

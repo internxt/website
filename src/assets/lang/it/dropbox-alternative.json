@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Eine sichere {{competitor}}-Alternative",
-    "description": "Ein vergangener Dropbox-Datenleck hat 68 Millionen Passwörter preisgegeben. Möchten Sie verhindern, dass Ihnen das passiert? Schließen Sie sich Internxt für vollständige Sicherheit und Privatsphäre an und erhalten Sie maximalen Schutz vor Datenlecks.",
+    "title": "Internxt, un'alternativa **sicura** a {{competitor}}",
+    "description": "Dropbox una volta ha fatto trapelare 68 milioni di password. Proteggi i tuoi dati con Internxt — privacy e sicurezza contro le violazioni.",
     "features": [
       "Speichern Sie Ihre Videos privat",
       "Post-Quanten- und Zero-Knowledge-Verschlüsselung",
       "Open Source und auditiert"
     ],
-    "getPrivacy": "Erhalten Sie vollständige Privatsphäre für ${{percentage}}% Rabatt",
+    "getPrivacy": "Erhalten Sie vollständige Privatsphäre für {{percentage}}% Rabatt",
     "cta": "Plan wählen"
   },
   "HeaderSection": {
@@ -97,7 +97,7 @@
         "features": [
           {
             "title": "Piani ragionevoli",
-            "description": "Offerta esclusiva dell'87%, senza costi nascosti."
+            "description": "Offerta esclusiva dell'{{percentage}}%, senza costi nascosti."
           },
           {
             "title": "Protezione completa",
@@ -105,7 +105,7 @@
           },
           {
             "title": "Piani a vita",
-            "description": "Evita abbonamenti ripetuti con un pagamento unico per accedere ai nostri servizi per sempre con l'87% di sconto."
+            "description": "Evita abbonamenti ripetuti con un pagamento unico per accedere ai nostri servizi per sempre con l'{{percentage}}% di sconto."
           }
         ]
       },
@@ -129,11 +129,6 @@
     }
   },
   "CtaSection": {
-    "title": "Sichern Sie Ihre Dateien vor Datenlecks mit Internxt",
-    "description": "Erhalten Sie 87% Rabatt mit Code DROPBOX87",
-    "cta": "Internxt holen"
-  },
-  "CtaSection2": {
     "title": "Keine Tracker. Keine Probleme.",
     "description": "Erhalten Sie vollständige Privatsphäre für Ihre Dateien mit Internxt",
     "cta": "Kostenlos anmelden"

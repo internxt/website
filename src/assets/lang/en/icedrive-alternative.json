@@ -1,0 +1,215 @@
+{
+  "HeroSection": {
+    "title": "Internxt: like Icedrive, but **fully encypted**",
+    "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
+    "getPrivacy": "Select your plan {{percentage}}% off 🔥",
+    "cta": "Claim deal"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Icedrive overview",
+    "description": "Discover how Internxt can become your alternative to Icedrive with its fully encrypted vault and private ecosystem.",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-quantum encryption",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "AES-256 and Kyber-512",
+        "Yes",
+        "Competitive, includes full product suite, up to 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, and more",
+        "Regular security audits",
+        "Yes",
+        "Can never access your files",
+        "Full privacy: GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "Twofish-256",
+        "No",
+        "Up to 5TB, cloud storage only",
+        "Cloud storage",
+        "No published security audit",
+        "No",
+        "Free plans are less private than paid plans",
+        "GDPR, based in Gibraltar"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Why you should choose an Icedrive alternative for full privacy online",
+    "description": "Icedrive provides storage space but limits privacy to paid users, leaving free accounts exposed and forcing users to trust a system they can’t verify.",
+    "scrollableSection": {
+      "titles": ["Pay for privacy", "Hidden source code", "Encryption concerns", "Plans are limited to cloud storage"],
+      "descriptions": [
+        "With Icedrive, privacy becomes a paid feature rather than a basic right for your cloud storage. Free accounts become more exposed or lead people to believe their files are private when it isn’t the case.",
+        "Proprietary software, or closed-source software, means the code used to build and run your cloud storage is kept secret. As a result, you must trust Icedrive’s claims about security and privacy without being able to verify how your data is handled or protected.",
+        "Icedrive chooses to use Twofish-256 encryption rather than the industry standard AES-256 encryption. Although Twofish is cryptographically secure, it does not verify that the data has not been altered, potentially leaving files vulnerable to modification.",
+        "Icedrive offers cloud storage for up to 5TB, which includes zero-knowledge encryption, versioning, and password protection. While Icedrive may provide basic protection for your files, it lacks the advanced features that protect your device, internet connection, or online privacy that companies like Internxt provide alongside cloud storage."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Internxt vs Icedrive",
+    "description": "Internxt plans include the most modern, secure, and advanced zero-knowledge encryption and a full product suite for maximum online privacy.",
+    "cards": {
+      "titles": ["Open-source transparency", "Post-quantum ready", "Comprehensive suite"],
+      "descriptions": [
+        "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees no vulnerabilities are hidden.",
+        "Internxt uses Kyber-512, a post-quantum encryption algorithm built to resist powerful quantum attacks, making Internxt a secure alternative to Icedrive for the future.",
+        "Internxt gives you more than just cloud storage; you get everything you need to protect your data, files, and privacy online, including VPN, Antivirus, Cleaner, and Meet."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Icedrive",
+    "description": "Internxt offers unparalleled security and privacy with features that Icedrive can't match.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and privacy suite",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Zero-knowledge Encryption",
+            "description": "Your data is encrypted on the client side, guaranteeing that only you can access it. Available for all files, not just a separate vault."
+          },
+          {
+            "title": "Audited & compliant",
+            "description": "Internxt has been externally audited and complies with GDPR, HIPAA, ISO 27001, and SOC 2."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for {{discount}}% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Icedrive: What about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "Icedrive keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Icedrive handles or protects your data."
+          },
+          {
+            "title": "Paid encryption",
+            "description": "Zero-knowledge encryption is offered for paid plans only, leaving free accounts less secure and private."
+          },
+          {
+            "title": "No security audit",
+            "description": "No record of an independent security audit."
+          },
+          {
+            "title": "Lifetime plans limited",
+            "description": "Lifetime plans are available but are limited to cloud storage alone."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best Icedrive alternative",
+    "description": "With Internxt, you get more than just cloud storage; you get everything you need to protect your data, files, and privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "descriptions": [
+        "Internxt Antivirus is built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
+        "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
+        "Internxt Cleaner helps you identify, eliminate, and manage unwanted junk or duplicate files from your device. With Cleaner, you can delete unwanted files to keep your storage organized, free from clutter, and ensure your device runs efficiently.",
+        "Internxt Meet is also available as your secure and private alternative to Teams. With Meet, you can host private video calls free from trackers, ads, and data collection. Your video calls are protected with post-quantum encryption, allowing you to host calls in total privacy.",
+        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device.\n\nFor advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Get full privacy with Internxt",
+    "description": "Total encryption, control, and security",
+    "cta": "Claim deal"
+  },
+  "tableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off 🔥",
+    "planTitles": {
+      "header": "Your all-in-one privacy ally"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private Icedrive alternative?",
+        "answer": [
+          "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files. Icedrive uses Twofish encryption and only includes zero-knowledge encryption for paid plans, leaving free accounts more vulnerable.",
+          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail also offer you additional protection from hackers and data breaches as part of your cloud storage plan with Internxt."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure alternative to Icedrive.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is Icedrive more expensive than Internxt?",
+        "answer": [
+          "While Icedrive plans are cheaper, they only include basic cloud storage. With your exclusive {{percentage}}% discount, Internxt offers cloud storage and an extensive range of features not available with any other cloud provider, including Icedrive."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
+        ]
+      }
+    ]
+  }
+}

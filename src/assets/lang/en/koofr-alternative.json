@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Internxt: like Koofr, but **fully encypted**",
+    "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
+    "getPrivacy": "Select your plan {{percentage}}% off 🔥",
+    "cta": "Claim deal"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Koofr cloud storage overview",
+    "description": "Internxt is your alternative to Koofr, with zero-knowledge encryption for all files and a full privacy suite",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-quantum encryption",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open Source",
+        "AES-256 and Kyber-512",
+        "Yes",
+        "Competitive, includes full product suite, up to 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, and more",
+        "Regular security audits",
+        "Yes",
+        "Can never access your files",
+        "Full privacy: GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open Source",
+        "AES-256",
+        "No",
+        "Up to 20TB, cloud storage only",
+        "Cloud storage",
+        "No published security audit",
+        "No",
+        "Files stored outside the Koofr Vault are less private",
+        "GDPR, based in Slovenia"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Alternative to Koofr",
+    "description": "Get post-quantum encrypted cloud storage, plus Antivirus, VPN, Cleaner, Meet, and more with Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Separate private encryption",
+        "Limited lifetime plans",
+        "Encryption limited by technology",
+        "Plans are limited to cloud storage"
+      ],
+      "descriptions": [
+        "Not all your files you store with Koofr cloud storage are protected with zero-knowledge encryption. Only files you manually move into the Koofr vault are encrypted end-to-end, while everything else in your regular cloud storage is still accessible to the provider through server-side encryption.",
+        "Koofr’s lifetime plans are limited to 1TB, which cannot be stacked, or annual plans of up to 20TB at €1,428.20 /year. For the same cost as Koofr’s 5TB annual plan, you can get 5TB of lifetime storage with Internxt, plus access to Meet, Mail, File versioning, VPN, and more. For total privacy online, combine Internxt’s full privacy encryption with its comprehensive product suite.",
+        "Koofr uses the industry standard AES-256 encryption. This encryption model may soon become outdated, as the emergence of post-quantum computers could break current encryption models used by Koofr and others. Internxt uses post-quantum encryption (Kyber-512).",
+        "Koofr offers cloud storage for up to 20TB, which includes 10 Koofr safeboxes, versioning, and password protection. However, if you want zero-knowledge encryption for all files in the cloud, plus a full privacy suite to protect your device, internet connection, and more, then Internxt is a more comprehensive alternative to Koofr."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Koofr:",
+    "description": "Internxt offers unparalleled security and privacy with features that Koofr can't match.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and privacy suite",
+        "features": [
+          {
+            "title": "Open Source and audited",
+            "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Zero-knowledge Encryption",
+            "description": "Your data is encrypted on the client side, guaranteeing that only you can access it. Available for all files, not just a separate vault."
+          },
+          {
+            "title": "Multiple compliance standards",
+            "description": "Internxt has been externally audited and complies with GDPR, HIPAA, ISO 27001, and SOC 2."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Multiple lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for 90% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr: What about your privacy?",
+        "features": [
+          {
+            "title": "Open Source, no audit",
+            "description": "While Koofr is Open Source, there is no record of an external and published security audit."
+          },
+          {
+            "title": "Encrypted vault only",
+            "description": "Zero-knowledge encryption is offered for files manually moved to a separate vault, leaving free accounts and regular storage less secure and private."
+          },
+          {
+            "title": "Compliance record",
+            "description": "No record of an independent security audit to verify compliance standards."
+          },
+          {
+            "title": "Lifetime plans limited",
+            "description": "Single lifetime cloud storage plan of 1TB only, which cannot be stacked."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best alternative to Koofr cloud storage",
+    "description": "With Internxt, you get more than just cloud storage; you get everything you need to protect your data, files, and privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "descriptions": [
+        "Internxt Antivirus is built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
+        "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
+        "Internxt Cleaner helps you identify, eliminate, and manage unwanted junk or duplicate files from your device. With Cleaner, you can delete unwanted files to keep your storage organized, free from clutter, and ensure your device runs efficiently.",
+        "Internxt Meet is also available as your secure and private alternative to Teams. With Meet, you can host private video calls free from trackers, ads, and data collection. Your video calls are protected with post-quantum encryption, allowing you to host calls in total privacy.",
+        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device.\n\nFor advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "More than just cloud storage",
+    "description": "Get total online privacy with Internxt",
+    "cta": "Claim deal"
+  },
+  "tableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off 🔥",
+    "planTitles": {
+      "header": "Your all-in-one privacy ally"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure alternative to Koofr?",
+        "answer": [
+          "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files. All your files are protected with this encryption, without the need to store them in a separate vault, as Internxt Drive serves as your full encrypted cloud storage vault.",
+          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail also offer you additional protection from hackers and data breaches as part of your cloud storage plan with Internxt."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure alternative to Koofr.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is Koofr more expensive than Internxt?",
+        "answer": [
+          "Koofr costs €199 for 1TB of lifetime cloud storage only. With Internxt, you get the same 1TB of post-quantum encrypted storage, plus VPN and Antivirus for €195. With your exclusive {{discount}}% discount, Internxt offers cloud storage and an extensive range of features not available with any other cloud provider, including Koofr."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
+        ]
+      }
+    ]
+  }
+}

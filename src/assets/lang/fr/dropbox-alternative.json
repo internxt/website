@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Internxt : Une alternative sécurisée à {{competitor}}",
-    "description": "Une précédente violation de données de Dropbox a divulgué 68 millions de mots de passe. Voulez-vous éviter que cela vous arrive ? Rejoignez Internxt pour une sécurité et une confidentialité complètes, offrant une protection maximale contre les violations de données.",
+    "title": "Internxt, une alternative **sécurisée** à {{competitor}}",
+    "description": "Dropbox a divulgué 68 millions de mots de passe. Protégez vos données avec Internxt — confidentialité et sécurité contre les fuites.",
     "features": [
       "Stockez vos vidéos en toute confidentialité",
       "Chiffrement post-quantique et à connaissance nulle",
       "Open source et audité"
     ],
-    "getPrivacy": "Obtenez une confidentialité totale avec ${{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}}% de réduction",
     "cta": "Choisir un plan"
   },
   "HeaderSection": {
@@ -97,7 +97,7 @@
         "features": [
           {
             "title": "Plans raisonnables",
-            "description": "Offre exclusive de 87%, sans frais cachés."
+            "description": "Offre exclusive de {{percentage}}%, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -105,7 +105,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services pour toujours avec 87% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services pour toujours avec {{percentage}}% de réduction."
           }
         ]
       },
@@ -129,11 +129,6 @@
     }
   },
   "CtaSection": {
-    "title": "Sécurisez vos fichiers contre les violations de données avec Internxt",
-    "description": "Obtenez 87% de réduction avec le code DROPBOX87",
-    "cta": "Obtenir Internxt"
-  },
-  "CtaSection2": {
     "title": "Aucun traqueur. Aucun problème.",
     "description": "Obtenez une confidentialité complète pour vos fichiers avec Internxt",
     "cta": "S'inscrire gratuitement"
