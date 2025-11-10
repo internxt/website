@@ -1,11 +1,12 @@
-export interface KoofrAlternativePageText {
+export interface AlternativePageText {
   HeroSection: Section;
   HeaderSection: HeaderSection;
   PrivacyViolationsSection: PrivacyViolationsSection;
+  WhyNeedAlternativeSection: WhyNeedAlternativeSection;
   VersusSection: VersusSection;
   WhyBestAlternativeSection: WhyBestAlternativeSection;
   CtaSection: Section;
-  tableSection: KoofrAlternativePageTextTableSection;
+  tableSection: IcedriveAlternativePageTextTableSection;
   FaqSection: FAQSection;
 }
 
@@ -41,10 +42,10 @@ export interface HeaderSectionTableSection {
 export interface PrivacyViolationsSection {
   title: string;
   description: string;
-  scrollableSection: PrivacyViolationsSectionScrollableSection;
+  scrollableSection: ScrollableSection;
 }
 
-export interface PrivacyViolationsSectionScrollableSection {
+export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
@@ -82,7 +83,13 @@ export interface WhyBestAlternativeSectionScrollableSection {
   descriptions: string[];
 }
 
-export interface KoofrAlternativePageTextTableSection {
+export interface WhyNeedAlternativeSection {
+  title: string;
+  description: string;
+  cards: ScrollableSection;
+}
+
+export interface IcedriveAlternativePageTextTableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
