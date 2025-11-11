@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt: Как Google Drive, но **приватный**",
     "description": "Дегуглизируйте свою жизнь с Internxt, лучшей альтернативой Google Drive, которая уважает вашу конфиденциальность",
-    "getPrivacy": "Получите полную конфиденциальность со скидкой ${{percentage}}%",
+    "getPrivacy": "Получите полную конфиденциальность со скидкой {{percentage}}%",
     "cta": "Забрать предложение"
   },
   "HeaderSection": {

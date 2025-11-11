@@ -5,10 +5,10 @@ import { GetServerSidePropsContext } from 'next';
 const OnedriveComparison = (props) => (
   <ComparisonPage
     {...props}
-    competitor="Onedrive"
+    competitor="OneDrive"
     metaTagId="onedrive-alternative"
     segmentName="Onedrive Comparison"
-    logo="/images/comparison/OneDrive-Letters.webp"
+    logo="/images/comparison/Internxt-OneDrive.webp"
   />
 );
 

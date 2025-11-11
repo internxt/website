@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt: Wie Google Drive, aber **privat**",
     "description": "DeGoogle dein Leben mit Internxt, der besten Alternative zu Google Drive, die deine Privatsphäre respektiert",
-    "getPrivacy": "Erhalte vollständige Privatsphäre mit ${{percentage}}% Rabatt",
+    "getPrivacy": "Erhalte vollständige Privatsphäre mit {{percentage}}% Rabatt",
     "cta": "Angebot sichern"
   },
   "HeaderSection": {
