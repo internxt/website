@@ -1,172 +1,27 @@
 {
   "HeroSection": {
-    "eyebrow": "Internxt Drive",
-    "title": {
-      "line1": "Der sicherste Cloud-Speicher für alle",
-      "line2": "deine Dateien, Fotos, und mehr."
-    },
-    "subtitle": {
-      "line1": "Das Synchronisieren, Sichern und Teilen deiner Dateien in absoluter Privatsphäre könnte nicht einfacher sein.",
-      "line2": "Bei Internxt Drive konzentrieren wir uns auf benutzerfreundliche, verschlüsselte Speicherung in Militärqualität",
-      "line3": "Verschlüsselung und File Sharding, sodass nur du die Kontrolle über deine Dateien und Daten hast."
-    },
-    "DownloadLinks": {
-      "or": "oder",
-      "downloadFor": "Download für",
-      "orDownloadFor": "Oder Download für",
-      "downloadOnThe": "Download bei",
-      "orDownloadOnThe": "Oder download bei",
-      "getOn": "Weiter",
-      "orGetOn": "Oder weiter",
-      "openDriveWeb": "Öffne Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
-    }
-  },
-  "CliCard": {
-    "new": "NEU",
-    "title": {
-      "bold": "Leistungstools",
-      "normal": "für Power-User"
-    },
-    "description": "Internxt CLI ist ein leistungsstarkes Befehlszeilentool, mit dem Sie auf Internxt Drive-Daten über Befehle und WebDAV zugreifen und sie verwalten können.",
-    "installCli": "Installieren Sie mit npm",
-    "command": "npm i -g @internxt/cli",
-    "available": "Verfügbar auf",
-    "feeds": [
-      {
-        "title": "WebDAV-Unterstützung",
-        "description": "Verwenden Sie Ihren bevorzugten WebDAV-Client mit der Internxt CLI."
-      },
-      {
-        "title": "Scriptable",
-        "description": "Führen Sie Skriptbefehle von Ihrer bevorzugten Shell auf jeder Plattform aus."
-      },
-      {
-        "title": "Verschlüsselte Synchronisierung",
-        "description": "Immer garantierte Zero-Knowledge- und End-to-End-Sicherheit."
-      }
+    "eyebrow": " Drive",
+    "title": "**Sicherer Cloud-Speicher** für alle Ihre Dateien",
+    "subtitle": "Preisgekrönter, Post-Quanten-verschlüsselter Cloud-Speicher zum Schutz Ihrer Privatsphäre.",
+    "features": [
+      "Post-Quanten-Verschlüsselung",
+      "Dateispeicherung, Synchronisierung und Backups",
+      "Open Source und geprüft"
     ],
-    "learnMore": "Erfahren Sie mehr über Internxt CLI:",
-    "readme": "GitHub ReadMe",
-    "userGuide": "Benutzerhandbuch"
-  },
-  "FeaturesSection": {
-    "section1": {
-      "title": {
-        "line1": "Alle Arten von Dateien.",
-        "line2": "Auf allen deiner Geräte."
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "Alle deine Dateien sind",
-        "line2": "auf allen deinen",
-        "line3": "Geräte verfügbar."
-      },
-      "subtitle": {
-        "line1": "Greifen Sie über die sicherste",
-        "line2": "Cloud-Speicher-App sicher auf alle ",
-        "line3": "Ihre Dateien von Ihrem Computer, Smartphone,",
-        "line4": "Tablet oder jedem anderen Gerät mit ",
-        "line5": "Internetverbindung zu."
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "Halte deine Dateien",
-        "line2": "geordnet und",
-        "line3": "erreichbar von",
-        "line4": "überall."
-      },
-      "subtitle": {
-        "line1": "Internxt Drive ermöglicht dir das Ordnen deiner",
-        "line2": "Dateien in Ordnern, umbenennen und filtern",
-        "line3": "Eine Liste von Dateien, um schneller zu finden, was du suchst.",
-        "line4": "Du kannst sogar ein Backup deines Computers erstellen",
-        "line5": "Ordner wie dein Dokumentenordner, so",
-        "line6": "hast du immer die neuesten",
-        "line7": "Änderungen deiner wichtigsten Dateien."
-      }
-    },
-    "section4": {
-      "title": {
-        "line1": "Teile deine Dateien",
-        "line2": "mit Leichtigkeit,",
-        "line3": "die Sicherheit liegt bei uns."
-      },
-      "subtitle": {
-        "line1": "Internxt Drive konzentriert sich auf Privatsphäre und",
-        "line2": "Sicherheit, sodass Sie sich nur darauf konzentrieren müssen",
-        "line3": "was dir wichtig ist, wie zum Beispiel das Teilen von Dateien",
-        "line4": "mit deinen Kollegen oder die Fotos von",
-        "line5": "deiner letzten Reise mit der Familie. Du",
-        "line6": "wählst aus, mit wem du teilen möchtest",
-        "line7": "und wie oft es",
-        "line8": "runtergeladen werden darf."
-      }
-    },
-    "section5": {
-      "eyebrow": "NEUE FUNKTION",
-      "title": {
-        "line1": "Sichere was",
-        "line2": "dir wichtig ist."
-      },
-      "subtitle": {
-        "line1": "Jetzt kannst du die letzte Version behalten",
-        "line2": "von diesem superwichtigen Projekt, an dem",
-        "line3": "du arbeitest, deinen Dokumenten-Ordner,",
-        "line4": "oder deine Uni-Hausaufgaben,",
-        "line5": "alle sicher auf deinem Internxt-Laufwerk."
-      }
-    },
-    "section6": {
-      "title": {
-        "line1": "Beginne mit der Synchronisierung deiner Dateien",
-        "line2": "in absoluter Privatsphäre."
-      }
-    },
-    "section7": {
-      "title": {
-        "line1": "Alle deine Dateien",
-        "line2": "Sicher und privat."
-      },
-      "subtitle": {
-        "line1": "Datenschutz und Sicherheit stehen bei uns im Mittelpunkt, unser Geschäft basiert nicht auf Daten oder Werbung, sondern",
-        "line2": "auf Vertrauen. Wir respektieren deine Rechte und entwickeln erstaunliche Tools um dich herum, nicht gegen dich."
-      },
-      "cta": "Unser Engagement für den Datenschutz",
-      "card1": {
-        "title": "Sicherheit der nächsten Generation",
-        "subtitle": "Internxt Drive schützt deine Dateien mit Ende-zu-Ende- und Post-Quantum-Kryptografie. Wir sind der erste Cloud-Speicher-Service, der Daten vor zukünftigen Bedrohungen durch Quantencomputer schützt."
-      },
-      "card2": {
-        "title": "Zero-Knowledge Technologie.",
-        "subtitle": "Wir speichern oder übertragen niemals Dateien, Benutzerkennwörter oder Schlüssel in unverschlüsselter oder nicht gehashter Form."
-      },
-      "card3": {
-        "title": "Datenschutz durch Design.",
-        "subtitle": "Wir entwickeln unsere Produkte mit Blick auf den Nutzer, und die Privatsphäre ist in der datengesteuerten Welt, in der wir leben, ein Muss."
-      },
-      "card4": {
-        "title": "Von Grund auf sicher.",
-        "subtitle": "Da Sicherheitslücken und Skandale an der Tagesordnung sind, stellen wir sicher, dass unsere Systeme deine Daten und Dateien vor Angreifern schützen."
-      }
-    },
-    "DownloadLinks": {
+    "cta": "Internxt erhalten",
+    "DownloadSection": {
+      "downloadTitle": "Internxt Drive herunterladen",
+      "Desktop": "Internxt Desktop",
+      "Web": "Internxt Web",
+      "Mobile": "Internxt Mobil",
       "or": "oder",
-      "downloadFor": "Download für",
-      "orDownloadFor": "Oder Download für",
-      "downloadOnThe": "Download bei",
-      "orDownloadOnThe": "Oder download bei",
-      "getOn": "Weiter",
-      "orGetOn": "Oder weiter",
-      "openDriveWeb": "Öffne Drive Web",
+      "downloadFor": "Herunterladen für",
+      "orDownloadFor": "Oder herunterladen für",
+      "downloadOnThe": "Herunterladen im",
+      "orDownloadOnThe": "Oder herunterladen aus dem",
+      "getOn": "Herunterladen von",
+      "orGetOn": "Oder verfügbar auf",
+      "openDriveWeb": "Drive Web öffnen",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -175,6 +30,161 @@
       "UNIX": "Linux",
       "MacOS": "Mac"
     }
+  },
+  "DriveSection": {
+    "title": "Internxt Drive",
+    "description": [
+      "Google Drive, iCloud, OneDrive, Dropbox und andere können Ihre Daten entschlüsseln, einsehen und an Regierungen und Dritte weitergeben.",
+      "Internxt Drive gibt Ihnen durch Zero-Knowledge- und Post-Quanten-Verschlüsselung die volle Kontrolle und Privatsphäre über Ihren Cloud-Speicher. Wir können nicht auf Ihre Dateien zugreifen; Sie behalten die volle Eigentümerschaft, den Zugriff und die Kontrolle über Ihre Daten."
+    ]
+  },
+  "EncryptedCloudStorageSection": {
+    "title": "Verschlüsselter Cloud-Speicher, der auf Privatsphäre basiert",
+    "description": "Internxt Drive verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, um Ihre Dateien und Daten im Ruhezustand und während der Übertragung zu verschlüsseln.",
+    "scrollableSection": {
+      "titles": [
+        "Ihr verschlüsseltes Tresorfach",
+        "Privatsphäre vor Profit",
+        "Konformität",
+        "Open Source und geprüft",
+        "Für die Freiheit gebaut",
+        "Keine Hintertüren"
+      ],
+      "descriptions": [
+        "Internxt ist der erste Cloud-Speicher, der Kyber 512 Post-Quanten- und AES-256-Verschlüsselung verwendet und so Datenschutz mit End-to-End-Sicherheit, europäischem Datenschutz und fortschrittlicher Technologie gewährleistet.",
+        "Im Gegensatz zu Big Tech kann Internxt Ihre Dateien nicht einsehen oder löschen. Ihre Dateien und Daten werden direkt auf Ihrem Gerät verschlüsselt. Niemand, nicht einmal wir, kann auf Ihre Dateien oder Daten zugreifen.",
+        "Internxt ist HIPAA-, ISO 27001- und SOC 2-konform. Egal, ob Sie Cloud-Speicher für das Gesundheitswesen, Finanzen oder den persönlichen Gebrauch benötigen, Internxt stellt sicher, dass Ihre Daten und Dateien die höchsten Standards des Datenschutzes erfüllen.",
+        "Unser gesamter Code ist öffentlich auf GitHub verfügbar und wurde von externen Cybersicherheitsexperten überprüft, um sicherzustellen, dass es sich um eine sichere Plattform für Ihre Daten handelt.",
+        "Wir geben Ihnen die vollständige Eigentümerschaft und Kontrolle über Ihre Privatsphäre. Mit unseren auf Datenschutz ausgerichteten Produkten liegt die Macht bei Ihnen, nicht bei Big Tech.",
+        "Wir haben keinen Zugriff auf Ihre Daten oder Dateien und geben sie an niemanden weiter. Unsere Apps sind vollständig Open Source und geprüft, was die Wahrung Ihrer Privatsphäre garantiert."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Kernfunktionen",
+    "description": "Vollständige Sicherheit für Ihre Daten, alles, was Sie brauchen, um Ihre Dateien sicher und privat zu halten",
+    "accordionCards": {
+      "titles": [
+        "Ein vollständig privates Ökosystem",
+        "Sichere Zusammenarbeit",
+        "Ihre Cloud, wie ein lokales Laufwerk"
+      ],
+      "descriptions": [
+        "Internxt bündelt verschlüsselten Speicher, Backups, VPN, Antivirus, Cleaner, Meet, Mail und mehr – alles, um sich von Big Tech zu befreien.",
+        "Senden Sie Dateien mit verschlüsselten Links, Passwörtern und Kontrollen. Arbeiten Sie in Echtzeit mit Ihrem Team zusammen und halten Sie die Daten privat.",
+        "Verwenden Sie Internxt als virtuelles Laufwerk, um Dateien nahtlos zu synchronisieren, hochzuladen und darauf zuzugreifen – genau wie auf Ihrem Computer, aber vollständig sicher und immer aktuell."
+      ]
+    },
+    "cards": {
+      "titles": ["End-to-End verschlüsselt", "Zugriffskontrollen", "Verschlüsselte Backups"],
+      "descriptions": [
+        "Alle Dateien werden mit Post-Quanten- und Zero-Knowledge-Verschlüsselung verschlüsselt. Niemand außer Ihnen oder denen, mit denen Sie Dateien teilen möchten, kann deren Inhalt sehen.",
+        "Sie kontrollieren genau, wer auf Ihre freigegebenen Dateien zugreifen kann, mit verschlüsselten, passwortgeschützten Links, die Sie jederzeit widerrufen können.",
+        "Stellen Sie sicher, dass Ihre Dateien vor Ransomware und versehentlichem Verlust geschützt sind, mit geplanten, verschlüsselten Backups, die zusätzlichen Schutz und Seelenfrieden bieten."
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "Ihre All-in-One-Lösung für die Privatsphäre",
+    "scrollableSection": {
+      "titles": ["Vollständige Privacy Suite", "Für Unternehmen", "Für Familien", "Unübertroffene Preise"],
+      "descriptions": [
+        "Gehen Sie über den Cloud-Speicher hinaus und nehmen Sie VPN, Antivirus, Cleaner, Meet und Mail in Ihr Privatsphäre-Paket auf.",
+        "Schützen Sie Ihr Unternehmen vor Ransomware und Datenlecks mit unserem Cloud-Speicher für Unternehmen.",
+        "Speichern und teilen Sie Ihre Familienfotos, Videos und Erinnerungen und bewahren Sie sie für immer sicher auf.",
+        "Keine versteckten Gebühren, wählen Sie Ihren Plan und genießen Sie dessen Funktionen und die vollständige Verschlüsselung zu einem Preis."
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Hergestellt in Europa",
+    "description": "Ihre Daten sind durch strenge europäische Compliance-Gesetze und -Vorschriften in Kombination mit preisgekrönter Verschlüsselung geschützt.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/redundancy2.webp",
+        "/images/drive/sustainability2.webp"
+      ],
+      "titles": ["Europäische Rechenzentren", "Redundanz", "Engagement für Nachhaltigkeit"],
+      "descriptions": [
+        "Internxt hat seinen Sitz in Valencia, Spanien, und unsere Rechenzentren befinden sich in Europa und an anderen Standorten weltweit, was Ihnen Sicherheit, Geschwindigkeit und Konformität bietet.",
+        "Ihre Dateien sind durch redundante Systeme, Umgebungskontrollen und 24/7-Sicherheitsüberwachung vor Ort geschützt. Egal, was passiert, Ihre Dateien bleiben immer sicher und zugänglich.",
+        "Internxt geht mit gutem Beispiel voran und arbeitet an einer nachhaltigeren Cloud-Speicherlösung durch energieeffiziente Praktiken für eine sauberere und nachhaltigere Cloud-Speicherlösung."
+      ],
+      "cta": ["Mehr erfahren", "", "Mehr erfahren"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "Offizieller Cloud-Anbieter des Valencia CF",
+    "description": [
+      "Der Valencia CF hat eine Vereinbarung mit Internxt getroffen, wonach Internxt der offizielle Cloud-Anbieter des Clubs wird. Internxt festigt mit dieser neuen Partnerschaft seine Position als europäischer Marktführer im Bereich der digitalen Privatsphäre. Diese Vereinbarung markiert einen Meilenstein in Internxts innovativem Ansatz, der digitale Souveränität und Datenschutz fördert."
+    ],
+    "cta": "Mehr erfahren"
+  },
+  "CtaSection": {
+    "title": "Lassen Sie Big Tech Ihre Dateien nicht ausspionieren",
+    "description": "Wechseln Sie zu Internxt Drive für den sichersten Cloud-Speicher",
+    "cta": "Internxt erhalten"
+  },
+  "DownloadSection": {
+    "downloadTitle": "Internxt Drive herunterladen",
+    "Desktop": "Internxt Desktop",
+    "Web": "Internxt Web",
+    "Mobile": "Internxt Mobil",
+    "or": "oder",
+    "downloadFor": "Herunterladen für",
+    "orDownloadFor": "Oder herunterladen für",
+    "downloadOnThe": "Herunterladen im",
+    "orDownloadOnThe": "Oder herunterladen aus dem",
+    "getOn": "Herunterladen von",
+    "orGetOn": "Oder verfügbar auf",
+    "openDriveWeb": "Drive Web öffnen",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "Erweiterte Tools für Experten",
+    "description": "Internxt funktioniert unter Windows, Mac, Linux und Mobile – mit erweiterten Tools für Entwickler und Unternehmen.",
+    "powerUsers": {
+      "title": "Power-Tools \n **für Power-User**",
+      "description": "Internxt CLI ist ein leistungsstarkes Befehlszeilentool, mit dem Sie \n über Befehle \n und WebDAV auf Internxt Drive-Daten zugreifen und diese verwalten können.",
+      "install": {
+        "title": "Mit npm installieren",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "Verfügbar auf",
+      "learnMore": {
+        "title": "Erfahren Sie mehr über Internxt CLI:",
+        "GitHub": "GitHub ReadMe",
+        "learnMore": "Mehr erfahren"
+      }
+    },
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "Führen Sie Internxt sicher auf jeder Plattform mit Ihrem bevorzugten WebDAV-Client und CLI aus – End-to-End verschlüsselt, Zero-Knowledge geschützt.",
+      "cta": "WebDAV erhalten"
+    },
+    "Rclone": {
+      "title": "Rclone",
+      "comingSoon": "Kommt bald",
+      "description": "Synchronisieren, sichern und verwalten Sie Ihre Dateien mühelos über mehrere Cloud-Dienste hinweg mit nativer Rclone-Unterstützung."
+    },
+    "NAS": {
+      "title": "NAS",
+      "comingSoon": "Kommt bald",
+      "description": "Verbinden Sie Ihr NAS-System direkt mit Internxt Drive, um Ihre Daten sicher zu sichern, zu synchronisieren und zu verwalten."
+    }
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt ist im **Mega-Sale**, hat **ausgezeichnete Nutzerbewertungen**, **End-to-End** und **Post-Quanten-Verschlüsselung**, und sie machen ihren Code komplett **Open Source** für totale Transparenz gegenüber ihren Kunden.\"",
+    "mashable": "\"Nehmen Sie die **Sicherung Ihrer wichtigen Daten** mit Internxt **ernst**. Sie machen **Privatsphäre** zu ihrem **obersten Anliegen**, sodass Sie beruhigt sein können, dass Ihre Dateien **sicher** sind und die Plattform **Transparenz** für ihre Nutzer schätzt.\"",
+    "pcWorld": "\"Internxts **intuitiver Webzugriff**, die **Dateisynchronisierung** und die **Backup-Dienste** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Dienst ist **einfach**, deckt alle Grundlagen ab und die aktuellen **Lebenszeit-Pläne** sind ein **Schnäppchen**.\""
   },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
@@ -182,57 +192,47 @@
       {
         "question": "Was ist Internxt Drive?",
         "answer": [
-          "Internxt Drive ist ein Zero-Knowledge Dateispeicherdienst, der auf absolute Privatsphäre und strenge Sicherheit ausgelegt ist. Unser Dienst greift nicht auf deine persönlichen Daten oder Dateien zu. Stattdessen soll es dir die Kontrolle über deine Dateien zurückgeben und dich vor Datensammlern schützen."
+          "Internxt Drive ist ein Zero-Knowledge-Dateispeicherdienst, der für absolute Privatsphäre und strikte Sicherheit entwickelt wurde. Unser Dienst greift nicht auf Ihre persönlichen Daten oder Dateien zu. Stattdessen wurde er entwickelt, um Ihnen die Kontrolle über Ihre Dateien zurückzugeben und Sie vor Datensammlern zu schützen."
         ]
       },
       {
         "question": "Ist Internxt eine nachhaltige und umweltfreundliche Cloud-Speicherlösung?",
         "answer": [
-          "Ja, Internxt engagiert sich für grünes Cloud-Computing und bietet umweltfreundliche Speicherlösungen, um eine sauberere und nachhaltigere Zukunft zu unterstützen. Unsere Rechenzentren werden zu 92 % mit erneuerbaren Energien betrieben und sind darauf ausgelegt, CO₂-Emissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
-          "Unsere Bemühungen tragen zu dem Ziel der Klimaneutralität bis 2050 bei. Erfahren Sie mehr"
+          "Ja, Internxt engagiert sich für umweltfreundliches Cloud Computing und bietet umweltfreundliche Speicherlösungen zur Unterstützung einer saubereren, nachhaltigen Zukunft. Unsere Rechenzentren werden zu 92 % mit erneuerbarer Energie betrieben und sind darauf ausgelegt, Kohlenstoffemissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
+          "Unsere Bemühungen tragen zu einem klimaneutralen Ziel bis 2050 bei. Mehr erfahren"
         ]
       },
       {
         "question": "Wie erstelle ich ein Internxt-Konto?",
         "answer": [
-          "Gehe auf unsere Website und klicke oben rechts auf „Erste Schritte“. Fülle das Registrierungsformular aus, indem du eine E-Mail-Adresse eingibst und dann dein Passwort erstellst. Für die Nutzung der Dienste von Internxt ist keine Identitäts- oder E-Mail-Verifizierung erforderlich."
+          "Gehen Sie auf unsere Website und klicken Sie oben rechts auf 'Loslegen'. Füllen Sie das Registrierungsformular aus, indem Sie eine E-Mail-Adresse eingeben, und erstellen Sie dann Ihr Passwort. Es ist keine Identitäts- oder E-Mail-Verifizierung erforderlich, um die Dienste von Internxt zu nutzen."
         ]
       },
       {
-        "question": "Wie werden Dateien auf Internxt Drive hochgeladen",
+        "question": "Wie lade ich Dateien auf Internxt Drive hoch?",
         "answer": [
-          "Besuche Drive Web und melde dich an. Ziehe die ausgewählten Dateien oder Fotos per Drag & Drop direkt in das Browserfenster. Du kannst auch in der rechten Ecke des Browsers auf „Neu“ klicken, um den Explorer oder Finder zu öffnen und die Dateien auszuwählen, die du hochladen möchtest."
+          "Besuchen Sie Drive Web und melden Sie sich an. Ziehen Sie Ihre ausgewählten Dateien oder Fotos direkt in das Browserfenster. Sie können auch oben rechts im Browser auf 'Neu' klicken, wodurch der Explorer oder Finder geöffnet wird, und die Dateien auswählen, die Sie hochladen möchten."
         ]
       },
       {
         "question": "Wie installiere ich die App von Internxt?",
         "answer": [
-          "Gehe zur Internxt-Website, scrolle auf der Startseite nach unten und wähle „Apps herunterladen“. Die Internxt-App ist auch im Play Store oder App Store erhältlich. Sobald der Downloadvorgang abgeschlossen ist, wirst du aufgefordert, die App auszuführen."
+          "Gehen Sie auf die Internxt-Website, scrollen Sie auf der Homepage nach unten und wählen Sie 'Apps herunterladen'. Die Internxt App ist auch im Play Store oder App Store erhältlich. Sobald der Download abgeschlossen ist, werden Sie aufgefordert, unsere Speicher-App auszuführen. Durch das Herunterladen unserer Drive-App können Sie das Ökosystem von Internxt besser nutzen."
         ]
       },
       {
         "question": "Kann ich 2FA mit Internxt konfigurieren?",
         "answer": [
-          "Ja. Du kannst die Zwei-Faktor-Authentifizierung (2FA) für dein Internxt-Konto über die Drive Web-App konfigurieren. Darüber hinaus kannst du Authy oder jedes andere 2FA-Tool verwenden, um deinen 2FA-Code mit Internxt zu generieren."
+          "Ja. Sie können die Zwei-Faktor-Authentifizierung (2FA) für Ihr Internxt-Konto über die Drive Web-App konfigurieren. Darüber hinaus können Sie Authy oder jedes andere 2FA-Tool verwenden, um Ihren 2FA-Code mit Internxt zu generieren, um sich bei unserer Online-Drive-App anzumelden."
         ]
       },
       {
         "question": "Ist Internxt eine nachhaltige und umweltfreundliche Cloud-Speicherlösung?",
         "answer": [
-          "Ja, Internxt engagiert sich für umweltfreundliches Cloud-Computing und bietet Speicherlösungen, die den Schutz der Umwelt fördern und eine nachhaltigere Zukunft unterstützen. Unsere Rechenzentren werden zu 92 % mit erneuerbarer Energie betrieben und sind darauf ausgelegt, CO2-Emissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
-          "Unsere Bemühungen tragen zu einem Ziel der Klimaneutralität bis 2050 bei. [Mehr erfahren](https://internxt.com/es/green-cloud-computing)"
+          "Ja, Internxt engagiert sich für umweltfreundliches Cloud Computing und bietet umweltfreundliche Speicherlösungen zur Unterstützung einer saubereren, nachhaltigen Zukunft. Unsere Rechenzentren werden zu 92 % mit erneuerbarer Energie betrieben und sind darauf ausgelegt, Kohlenstoffemissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
+          "Unsere Bemühungen tragen zu einem klimaneutralen Ziel bis 2050 bei. [Mehr erfahren](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]
-  },
-  "FeatureSection": {
-    "title": "Schütze deine Dateien mit Internxt Drive",
-    "description": "Mit Internxt bist du der Einzige, der Zugriff auf deine Dateien hat. Speicher, teile und sicher deine Daten in absoluter Privatsphäre.",
-    "cta": "Starte jetzt"
-  },
-  "CtaSection": {
-    "title": "Probiere Internxt risikofrei aus",
-    "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
-    "cta": "Wähle jetzt einen Plan aus"
   }
 }

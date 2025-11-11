@@ -11,7 +11,7 @@ interface FAQSectionProps {
 const FAQSection = ({ textContent, bgColor, cardColor, textColor, percentageDiscount }: FAQSectionProps) => {
   return (
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`}>
-      <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 lg:py-20">
+      <div className="flex flex-col items-center justify-center space-y-10 px-10 py-10 pb-16 lg:py-20">
         <p className={`text-center text-30 font-semibold ${textColor ? textColor : 'text- gray-100'} lg:text-3xl`}>
           {textContent.title}
         </p>

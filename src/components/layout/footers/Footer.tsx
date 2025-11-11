@@ -72,7 +72,7 @@ export default function Footer({
                 </p>
               </div>
               {/* Images */}
-              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+              <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="flex">
                   <Image
                     src={getImage('/images/footer/app-store.svg')}
@@ -981,7 +981,7 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
-                      
+
                       <Link
                         href="/google-drive-alternative"
                         locale={lang}
@@ -990,7 +990,7 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.googleDriveAlternative}
                       </Link>
-                      
+
                       <Link
                         href="/koofr-alternative"
                         locale={lang}

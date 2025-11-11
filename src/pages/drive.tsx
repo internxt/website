@@ -1,25 +1,23 @@
-import Script from 'next/script';
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import HeroSection from '@/components/drive/HeroSection';
-import FeaturesSection from '@/components/drive/FeaturesSection';
-import FeatureSection from '@/components/drive/FeatureSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
-
-import FileParallaxSection from '@/components/home/FileParallaxSection';
-import CtaSection from '@/components/drive/CtaSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-
-import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import { CliCard } from '@/components/drive/CliCard';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { CaretRight, Eye, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import Link from 'next/link';
+import ReviewsSection from '@/components/home/ReviewsSection';
+import FileParallaxSection from '@/components/home/FileParallaxSection';
+import DownloadComponent from '@/components/shared/DownloadComponent';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
+import AdvancedToolsSection from '@/components/drive/AdvancedToolsSection';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import DriveSection from '@/components/drive/Drivesection';
+import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
+import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 
 interface DriveProps {
   textContent: DriveText;
@@ -49,88 +47,63 @@ const Drive = ({
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
-  const Cards = [
-    {
-      icon: LockKey,
-      title: textContent.FeaturesSection.section7.card1.title,
-      description: textContent.FeaturesSection.section7.card1.subtitle,
-    },
-    {
-      icon: Key,
-      title: textContent.FeaturesSection.section7.card2.title,
-      description: textContent.FeaturesSection.section7.card2.subtitle,
-    },
-    {
-      icon: ShieldCheck,
-      title: textContent.FeaturesSection.section7.card3.title,
-      description: textContent.FeaturesSection.section7.card3.subtitle,
-    },
-    {
-      icon: Eye,
-      title: textContent.FeaturesSection.section7.card4.title,
-      description: textContent.FeaturesSection.section7.card4.subtitle,
-    },
-  ];
-
   return (
-    <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.FaqSection.faq)}
-      </Script>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Drive', 'drive')}
-      </Script>
+      <HeroSection textContent={textContent.HeroSection} download={download} />
 
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <DriveSection textContent={textContent.DriveSection} />
 
-        <HeroSection textContent={textContent.HeroSection} lang={lang} download={download} />
+      <HorizontalScrollableSection
+        textContent={textContent.EncryptedCloudStorageSection}
+        bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+      />
 
-        <div className="flex items-center justify-center px-2 pb-20">
-          <CliCard textContent={textContent.CliCard} />
-        </div>
+      <FileParallaxSection />
 
-        <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} download={download} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
 
-        <FileParallaxSection />
+      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} />
 
-        <TextAndCardsGroupColumnSection
-          TextComponent={
-            <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
-              <h3 className="text-center text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
-                {textContent.FeaturesSection.section7.title.line1}
-                <br />
-                {textContent.FeaturesSection.section7.title.line2}
-              </h3>
+      <ThreeCardsSection
+        textContent={textContent.MadeInEuropeSection}
+        bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+      />
 
-              <p className="mb-6 text-base leading-tight text-gray-80 lg:text-xl">
-                {textContent.FeaturesSection.section7.subtitle.line1} <br className="hidden sm:flex" />
-                {textContent.FeaturesSection.section7.subtitle.line2} <br className="hidden sm:flex" />
-              </p>
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} />
 
-              <Link
-                href={'/privacy'}
-                target="_blank"
-                className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
-              >
-                <span>{textContent.FeaturesSection.section7.cta}</span>
-                <CaretRight size={16} weight="bold" />
-              </Link>
-            </div>
-          }
-          cards={Cards}
-        />
+      <FloatingCtaSectionv2
+        textContent={textContent.CtaSection}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {textContent.CtaSection.title}
+            </p>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              {textContent.CtaSection.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20"
+      />
 
-        <FeatureSection textContent={textContent.FeatureSection} />
+      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
 
-        <FAQSection textContent={textContent.FaqSection} />
+      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
-        <CtaSection textContent={textContent.CtaSection} />
+      <ReviewsSection
+        textContent={textContent.ReviewSection}
+        bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+      />
 
-        <Footer textContent={footerLang} lang={lang} />
-      </Layout>
-    </>
+      <FAQSection textContent={textContent.FaqSection} />
+
+      <Footer textContent={footerLang} lang={lang} />
+    </Layout>
   );
 };
 

@@ -1,25 +1,23 @@
 {
   "HeroSection": {
-    "eyebrow": "Internxt Drive",
-    "title": {
-      "line1": "最安全的云存储 ",
-      "line2": "你的所有文件、照片和更多"
-    },
-    "subtitle": {
-      "line1": "在完全隐私的情况下存储、备份和共享您的文件再简单不过了。",
-      "line2": "通过Internxt Drive，我们专注于对用户友好的加密和军事级别的存储。",
-      "line3": "文件经过加密和拆分，所以只有你能控制你的文件和数据。"
-    },
-    "DownloadLinks": {
-      "downloadTitle": "下载Internxt Drive",
+    "eyebrow": " Drive",
+    "title": "适用于您所有文件的**安全云存储**",
+    "subtitle": "屡获殊荣的后量子加密云存储，保护您的隐私。",
+    "features": ["后量子加密", "文件存储、同步和备份", "开源且经过审计"],
+    "cta": "获取 Internxt",
+    "DownloadSection": {
+      "downloadTitle": "下载 Internxt Drive",
+      "Desktop": "Internxt 桌面版",
+      "Web": "Internxt 网页版",
+      "Mobile": "Internxt 移动版",
       "or": "或",
-      "downloadFor": "为<>下载",
-      "orDownloadFor": "或为<>下载",
-      "downloadOnThe": "在<>上下载",
-      "orDownloadOnThe": "或在<>上下载",
-      "getOn": "从<>上获取",
-      "orGetOn": "或从<>上获取",
-      "openDriveWeb": "打开 Drive Web",
+      "downloadFor": "下载适用于",
+      "orDownloadFor": "或下载适用于",
+      "downloadOnThe": "下载于",
+      "orDownloadOnThe": "或下载于",
+      "getOn": "从以下位置下载",
+      "orGetOn": "或在以下位置获取",
+      "openDriveWeb": "打开 Drive 网页版",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -29,210 +27,195 @@
       "MacOS": "Mac"
     }
   },
-  "CliCard": {
-    "new": "新",
-    "title": {
-      "bold": "强大工具",
-      "normal": "适用于高级用户"
-    },
-    "description": "Internxt CLI是一款强大的命令行工具，可以通过命令和WebDAV访问和管理Internxt Drive数据。",
-    "installCli": "使用npm安装",
-    "command": "npm i -g @internxt/cli",
-    "available": "可用于",
-    "feeds": [
-      {
-        "title": "WebDAV支持",
-        "description": "使用您喜欢的WebDAV客户端与Internxt CLI一起使用。"
-      },
-      {
-        "title": "可脚本化",
-        "description": "在任何平台上从您喜欢的shell运行脚本命令。"
-      },
-      {
-        "title": "加密同步",
-        "description": "始终保证零知识和端到端安全性。"
-      }
-    ],
-    "learnMore": "了解有关 Internxt CLI 的更多信息：",
-    "readme": "GitHub 自述文件",
-    "userGuide": "用户指南"
+  "DriveSection": {
+    "title": "Internxt Drive",
+    "description": [
+      "Google Drive、iCloud、OneDrive、Dropbox 等可以解密、查看并与政府和第三方共享您的数据。",
+      "Internxt Drive 通过零知识和后量子加密，为您提供对云存储的完全控制和隐私。我们无法访问您的文件；您保留对数据全部所有权、访问权限和控制权。"
+    ]
   },
-  "FeatureSection": {
-    "title": "使用 Internxt Drive 保护您的文件",
-    "description": "使用 Internxt，您绝对是唯一可以访问您的文件的人。 以完全隐私的方式存储、共享和备份您的数据。",
-    "cta": "开始吧"
+  "EncryptedCloudStorageSection": {
+    "title": "建立在隐私基础上的加密云存储",
+    "description": "Internxt Drive 使用后量子和零知识加密技术，对您静止和传输中的文件和数据进行加密。",
+    "scrollableSection": {
+      "titles": ["您的加密保险库", "隐私高于利润", "合规性", "开源且经过审计", "为自由而生", "无后门"],
+      "descriptions": [
+        "Internxt 是第一个使用 Kyber 512 后量子和 AES-256 加密的云存储，通过端到端安全、欧洲隐私和先进技术确保数据保护。",
+        "与大型科技公司不同，Internxt 无法查看或删除您的文件。您的文件和数据直接在您的设备上进行加密。没有人，甚至我们，都无法访问您的文件或数据。",
+        "Internxt 符合 HIPAA、ISO 27001 和 SOC 2 标准。无论您是需要云存储用于医疗、金融还是个人用途，Internxt 都能确保您的数据和文件符合最高数据保护标准。",
+        "我们所有的代码都在 GitHub 上公开，并经过外部网络安全专家的验证，以确保它是一个安全的数据平台。",
+        "我们为您提供对隐私的完全所有权和控制权。借助我们注重隐私的产品，您拥有权力，而不是大型科技公司。",
+        "我们无法访问您的数据或文件，也不会与任何人分享。我们的应用程序完全开源且经过审计，保证您的隐私受到尊重。"
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "核心功能",
+    "description": "为您的数据提供完整的安全性，您需要的一切都能让您的文件保持安全和私密",
+    "accordionCards": {
+      "titles": ["一个完全私密的生态系统", "安全协作", "您的云盘，就像本地驱动器"],
+      "descriptions": [
+        "Internxt 捆绑了加密存储、备份、VPN、杀毒软件、Cleaner、Meet、Mail 等——一切为了摆脱大型科技公司的束缚。",
+        "使用加密链接、密码和控制发送文件。与您的团队实时协作，同时保持数据私密。",
+        "使用 Internxt 作为虚拟驱动器，无缝同步、上传和访问文件——就像在您的计算机上一样，但完全安全并始终保持最新。"
+      ]
+    },
+    "cards": {
+      "titles": ["端到端加密", "访问控制", "加密备份"],
+      "descriptions": [
+        "所有文件均采用后量子和零知识加密技术进行加密。除了您或您选择共享文件的对象之外，任何人都无法查看其内容。",
+        "您可以精确控制谁可以访问您的共享文件，通过加密的、受密码保护的链接，您可以随时撤销。",
+        "通过定期的、加密的备份，确保您的文件免受勒索软件和意外丢失的影响，提供额外的保护和安心。"
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "您的多合一隐私解决方案",
+    "scrollableSection": {
+      "titles": ["完整的隐私套件", "适用于企业", "适用于家庭", "无与伦比的定价"],
+      "descriptions": [
+        "超越云存储，在您的隐私套餐中包含 VPN、杀毒软件、Cleaner、Meet 和 Mail。",
+        "使用我们面向企业的云存储，保护您的公司免受勒索软件和数据泄露的侵害。",
+        "存储和分享您的家庭照片、视频和回忆，并永久安全地保存它们。",
+        "没有隐藏费用，选择您的计划，以一个价格享受其功能和完整的加密。"
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "欧洲制造",
+    "description": "您的数据受到严格的欧洲合规法律和法规以及屡获殊荣的加密技术的保护。",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/redundancy2.webp",
+        "/images/drive/sustainability2.webp"
+      ],
+      "titles": ["欧洲数据中心", "冗余", "对可持续性的承诺"],
+      "descriptions": [
+        "Internxt 总部位于西班牙瓦伦西亚，我们的数据中心位于欧洲和世界其他地区，为您提供安全性、速度和合规性。",
+        "您的文件受到冗余系统、环境控制和 24/7 现场安全监控的保护。无论发生什么，您的文件始终保持安全且可访问。",
+        "Internxt 以身作则，通过节能实践致力于实现更可持续的云存储解决方案，以实现更清洁、更可持续的云存储解决方案。"
+      ],
+      "cta": ["了解更多", "", "了解更多"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "瓦伦西亚 CF 官方云提供商",
+    "description": [
+      "瓦伦西亚 CF 已与 Internxt 达成协议，Internxt 成为该俱乐部的官方云提供商。通过此次新的合作，Internxt 巩固了其作为欧洲数字隐私领域领导者的地位。该协议标志着 Internxt 在倡导数字主权和数据保护方面的创新方法迈出了里程碑式的一步。"
+    ],
+    "cta": "了解更多"
   },
   "CtaSection": {
-    "title": "无风险试用 Internxt",
-    "description": "使用 Internxt 的安全、私密和加密的云存储来保护真正重要的东西。",
-    "cta": "立即选择一个计划"
+    "title": "不要让大型科技公司监视您的文件",
+    "description": "切换到 Internxt Drive 以获得最安全的云存储",
+    "cta": "获取 Internxt"
   },
-  "FeaturesSection": {
-    "section1": {
-      "title": {
-        "line1": "各类文件",
-        "line2": "各类设备"
+  "DownloadSection": {
+    "downloadTitle": "下载 Internxt Drive",
+    "Desktop": "Internxt 桌面版",
+    "Web": "Internxt 网页版",
+    "Mobile": "Internxt 移动版",
+    "or": "或",
+    "downloadFor": "下载适用于",
+    "orDownloadFor": "或下载适用于",
+    "downloadOnThe": "下载于",
+    "orDownloadOnThe": "或下载于",
+    "getOn": "从以下位置下载",
+    "orGetOn": "或在以下位置获取",
+    "openDriveWeb": "打开 Drive 网页版",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "专家的先进工具",
+    "description": "Internxt 适用于 Windows、Mac、Linux 和移动设备——为开发人员和企业提供高级工具。",
+    "powerUsers": {
+      "title": "强大用户的 \n **强大工具**",
+      "description": "Internxt CLI 是一个强大的命令行工具，允许您 \n 通过命令 \n 和 WebDAV 访问和管理 Internxt Drive 数据。",
+      "install": {
+        "title": "使用 npm 安装",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "可用于",
+      "learnMore": {
+        "title": "了解有关 Internxt CLI 的更多信息：",
+        "GitHub": "GitHub ReadMe",
+        "learnMore": "了解更多"
       }
     },
-    "section2": {
-      "title": {
-        "line1": "你的所有文件",
-        "line2": "都可以在",
-        "line3": "您的所有设备"
-      },
-      "subtitle": {
-        "line1": "从你的电脑、智能手机和平板电脑安全地访问你的所有文件 ",
-        "line2": "你的电脑、智能手机、平板电脑 ",
-        "line3": "或任何连接互联网的设备 ",
-        "line4": "具备最安全的云存储应用 ",
-        "line5": "存储应用。"
-      }
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "使用您最喜欢的 WebDAV 客户端和 CLI 在任何平台上安全地运行 Internxt——端到端加密，零知识保护。",
+      "cta": "获取 WebDAV"
     },
-    "section3": {
-      "title": {
-        "line1": "让你的文件井井有条,",
-        "line2": "并可从任何地方访问。",
-        "line3": "",
-        "line4": ""
-      },
-      "subtitle": {
-        "line1": "Internxt Drive让你在文件夹中组织你的",
-        "line2": "文件夹中，重命名它们，并过滤",
-        "line3": "文件列表，以便更快地找到你想要的东西。",
-        "line4": "你甚至可以备份你的电脑",
-        "line5": "文件夹，比如你的文档文件夹，所以",
-        "line6": "你总是有最新的",
-        "line7": "你最重要的文件的最新变化。"
-      }
+    "Rclone": {
+      "title": "Rclone",
+      "comingSoon": "即将推出",
+      "description": "通过原生 Rclone 支持，轻松地在多个云服务之间同步、备份和管理您的文件。"
     },
-    "section4": {
-      "title": {
-        "line1": "轻松地分享你的文件、",
-        "line2": "我们负责",
-        "line3": "的安全问题"
-      },
-      "subtitle": {
-        "line1": "Internxt Drive专注于隐私和",
-        "line2": "安全性，所以你只需要关注",
-        "line3": "对你来说很重要的事情，比如与同事分享",
-        "line4": "与同事分享文件或飞机票",
-        "line5": "与你的家人分享文件或机票。你 ",
-        "line6": "你可以选择你想与谁分享",
-        "line7": "哪些人，以及你希望下载多少次",
-        "line8": "他们被下载的次数。"
-      }
-    },
-    "section5": {
-      "eyebrow": "新功能",
-      "title": {
-        "line1": "备份重要的东西",
-        "line2": "对你来说很重要"
-      },
-      "subtitle": {
-        "line1": "现在你可以保留你的那个超级重要的项目的最后一个版本",
-        "line2": "你正在进行的那个超级重要项目的",
-        "line3": "你正在进行的那个超级重要的项目的最后一个版本，你的文档文件夹、",
-        "line4": "或你的大学作业、",
-        "line5": "都安全地保存在你的Internxt Drive中。"
-      }
-    },
-    "section6": {
-      "title": {
-        "line1": "同步你的文件",
-        "line2": "在完全保密的情况下"
-      }
-    },
-    "section7": {
-      "title": {
-        "line1": "你的所有文件",
-        "line2": "安全和隐私"
-      },
-      "subtitle": {
-        "line1": "隐私和安全是我们一切工作的核心，我们的业务并不依赖于数据或广告，而是依赖于",
-        "line2": "于信任。我们尊重你的权利，并围绕它们建立惊人的工具，而不是反对它们。"
-      },
-      "cta": "我们对隐私的承诺",
-      "card1": {
-        "title": "下一代安全",
-        "subtitle": "Internxt Drive 使用端到端和后量子加密来保护您的文件。我们是第一个保护数据免受量子计算机未来威胁的云存储服务。"
-      },
-      "card2": {
-        "title": "零知识技术",
-        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
-      },
-      "card3": {
-        "title": "为隐私而生",
-        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
-      },
-      "card4": {
-        "title": "开源和透明化",
-        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
-      }
-    },
-    "DownloadLinks": {
-      "downloadTitle": "下载Internxt Drive",
-      "or": "或",
-      "downloadFor": "为<>下载",
-      "orDownloadFor": "或为<>下载",
-      "downloadOnThe": "在<>上下载",
-      "orDownloadOnThe": "或在<>上下载",
-      "getOn": "从<>上获取",
-      "orGetOn": "或从<>上获取",
-      "openDriveWeb": "打开 Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+    "NAS": {
+      "title": "NAS",
+      "comingSoon": "即将推出",
+      "description": "将您的 NAS 系统直接连接到 Internxt Drive，安全地备份、同步和管理您的数据。"
     }
   },
+  "ReviewSection": {
+    "pcMag": "\"Internxt 正在进行**大促销**，拥有**出色的用户评价**、**端到端**和**后量子加密**，并且他们使他们的代码完全**开源**，以便对客户完全透明。\"",
+    "mashable": "\"通过 Internxt **认真**对待**保护您的重要数据**。他们将**隐私**作为他们的**首要关注点**，因此您可以高枕无忧，因为您的文件是**安全**的，并且该平台重视对其用户的**透明度**。\"",
+    "pcWorld": "\"Internxt **直观的网页访问**、**文件同步**和**备份服务**令人**印象深刻**。这款加密的在线存储和备份服务**简单**，涵盖了所有基础，而且当前的**终身计划**是**物超所值**的。\""
+  },
   "FaqSection": {
-    "title": "问题？我们有答案",
+    "title": "有问题？我们有答案",
     "faq": [
       {
-        "question": "什么是Internxt Drive?",
+        "question": "什么是 Internxt Drive？",
         "answer": [
-          "Internxt Drive是一个零知识的文件存储服务，为绝对的隐私和严格的安全而建立。我们的服务不会访问你的个人数据或文件。相反，它的目的是让你重新控制你的文件，并保护你免受数据收集者的影响。"
+          "Internxt Drive 是一种零知识文件存储服务，专为绝对隐私和严格安全而构建。我们的服务不会访问您的个人数据或文件。相反，它旨在让您重新获得对文件的控制权，并保护您免受数据收集者的侵害。"
         ]
       },
       {
-        "question": "如何创建一个Internxt账户？",
+        "question": "Internxt 是一种可持续且环保的云存储解决方案吗？",
         "answer": [
-          "前往我们的网站，点击右上角的'开始'。通过输入电子邮件地址填写注册表，然后创建你的密码。开始使用Internxt的服务时，不需要身份或电子邮件验证。"
+          "是的，Internxt 致力于绿色云计算，提供环保存储解决方案，以支持更清洁、可持续的未来。我们的数据中心 92% 由可再生能源供电，旨在最大限度地减少碳排放、资源消耗和电子垃圾。",
+          "我们的努力有助于实现到 2050 年气候中和的目标。了解更多"
         ]
       },
       {
-        "question": "Internxt是一种可持续且环保的云存储解决方案吗？",
+        "question": "如何创建 Internxt 账户？",
         "answer": [
-          "是的，Internxt致力于绿色云计算，提供环保型存储解决方案，以支持更清洁、更可持续的未来。我们的数据中心采用92%的可再生能源，并致力于最大程度地减少碳排放、资源消耗和电子废弃物。",
-          "我们的努力有助于实现到2050年实现气候中和的目标。了解更多"
+          "前往我们的网站并点击右上角的“开始”。通过输入电子邮件地址填写注册表，然后创建您的密码。开始使用 Internxt 的服务不需要身份或电子邮件验证。"
         ]
       },
       {
-        "question": "如何上传文件到Internxt Drive",
+        "question": "如何将文件上传到 Internxt Drive？",
         "answer": [
-          "访问Drive Web并登录。把你选择的文件或照片直接拖到浏览器窗口。你也可以点击浏览器右上角的'新建'，这将打开资源管理器或查找器，并选择你想上传的文件。"
+          "访问 Drive 网页版并登录。将您选择的文件或照片直接拖放到浏览器窗口中。您也可以单击浏览器右侧的“新建”，这将打开资源管理器或 Finder，然后选择要上传的文件。"
         ]
       },
       {
-        "question": "如何安装Internxt的应用程序？",
+        "question": "如何安装 Internxt 的应用程序？",
         "answer": [
-          "进入Internxt网站，向下滚动主页，并选择'下载应用程序'。Internxt应用程序也可以在Play Store或App Store中找到。一旦下载过程完成，你将被要求运行该应用程序。"
+          "访问 Internxt 网站，向下滚动主页并选择“下载应用程序”。Internxt 应用程序也可在 Play Store 或 App Store 中获取。下载过程完成后，系统将要求您运行我们的存储应用程序。下载我们的 Drive 应用程序可让您更好地利用 Internxt 的生态系统。"
         ]
       },
       {
-        "question": "我可以用Internxt配置2FA吗？",
+        "question": "我可以使用 Internxt 配置 2FA 吗？",
         "answer": [
-          "是的，你可以为你的Internxt账户配置双因素认证（2FA），从Drive Web应用程序。此外，你可以使用Authy或任何其他2FA工具，用Internxt生成你的2FA代码。"
+          "是的。您可以从 Drive 网页版应用程序为您的 Internxt 账户配置双因素身份验证 (2FA)。此外，您可以使用 Authy 或任何其他 2FA 工具生成您的 2FA 代码，以便登录我们的在线 Drive 应用程序。"
         ]
       },
       {
-        "question": "Internxt 是可持续且环保的云存储解决方案吗？",
+        "question": "Internxt 是一种可持续且环保的云存储解决方案吗？",
         "answer": [
-          "是的，Internxt 致力于绿色云计算，提供环保的存储解决方案，支持更清洁、更可持续的未来。我们的数据中心使用 92% 的可再生能源运行，旨在最大程度地减少碳排放、资源消耗和电子垃圾。",
-          "我们的努力目标是在 2050 年实现碳中和。 [了解更多](https://internxt.com/es/green-cloud-computing)"
+          "是的，Internxt 致力于绿色云计算，提供环保存储解决方案，以支持更清洁、可持续的未来。我们的数据中心 92% 由可再生能源供电，旨在最大限度地减少碳排放、资源消耗和电子垃圾。",
+          "我们的努力有助于实现到 2050 年气候中和的目标。[了解更多](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

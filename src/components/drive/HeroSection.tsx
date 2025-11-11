@@ -1,40 +1,113 @@
-import DownloadComponent from '@/components/shared/DownloadComponent';
+'use client';
+
+import { useState, useEffect } from 'react';
+import { ArrowCircleDown } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import styles from '@/components/privacy/HeroSection.module.scss';
+import Link from 'next/link';
+import { Check } from '@phosphor-icons/react';
+import { HighlightText } from '../components/HighlightText';
 
-const HeroSection = ({ textContent, lang, download }) => (
-  <section className="flex w-full flex-col">
-    <div className="flex flex-col items-center pb-32 pt-32">
-      <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
-        <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
-          <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
+type OSType = 'Android' | 'iPhone' | 'Windows' | 'MacOS' | 'Linux';
+
+const detectOS = (): OSType => {
+  if (typeof window === 'undefined') return 'Windows';
+
+  const userAgent = navigator.userAgent.toLowerCase();
+
+  if (/iphone|ipad|ipod/.test(userAgent)) return 'iPhone';
+  if (/android/.test(userAgent)) return 'Android';
+  if (/mac/.test(userAgent)) return 'MacOS';
+  if (/win/.test(userAgent)) return 'Windows';
+  if (/linux/.test(userAgent)) return 'Linux';
+
+  return 'Windows';
+};
+
+const HeroSection = ({ textContent, download }) => {
+  const [OS, setOS] = useState<OSType>('Windows');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    setOS(detectOS());
+  }, []);
+
+  const downloadUrl = isClient ? download[OS] : download.Windows;
+  const osName = textContent.DownloadSection[OS] || 'your device';
+
+  return (
+    <section
+      className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80"
+      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
+    >
+      <div
+        className={`${styles.cleanerTitleAndOnePlan} z-20 flex w-full shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:w-1/2`}
+      >
+        <div className="z-10 flex flex-col justify-between gap-10 p-6 lg:p-8">
+          <div className="flex w-full flex-col justify-between gap-10">
+            <div className="flex w-full flex-col justify-center gap-8 ">
+              <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5">
+                <p className="text-lg font-semibold text-primary">{textContent.eyebrow}</p>
+              </div>
+              <HighlightText
+                text={textContent.title}
+                className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl"
+              />
+              <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
+            </div>
+            <div className="hidden w-full flex-col justify-between gap-2 lg:flex">
+              {textContent.features.map((feat) => (
+                <div key={feat} className="flex h-[24px] flex-row gap-2">
+                  <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
+                  <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
+                  <p className="mb-2 text-left text-sm font-normal text-gray-55 xs-md:text-lg">{feat}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex w-1/2 flex-row gap-3 lg:w-5/6">
+            <Link
+              href={'/pricing'}
+              className="flex h-[48px] w-min flex-1 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white transition-colors hover:bg-primary-dark"
+            >
+              {textContent.cta}
+            </Link>
+
+            <a
+              href={downloadUrl}
+              className="hidden h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary bg-white px-6 py-4 text-base font-medium text-primary transition-colors hover:bg-gray-1 lg:flex"
+            >
+              <ArrowCircleDown size={24} weight="bold" />
+              <span>
+                {textContent.DownloadSection.downloadFor} {osName}
+              </span>
+            </a>
+          </div>
         </div>
-        
-        <h1 className="text-4xl font-semibold text-gray-100 lg:text-5xl">
-          <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
-          {textContent.title.line2}
-        </h1>
-
-        <h3 className="px-2 text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
-          {textContent.subtitle.line1} <br className="hidden sm:flex" />
-          {textContent.subtitle.line2} <br className="hidden sm:flex" />
-          {textContent.subtitle.line3}
-        </h3>
       </div>
 
-      <div className="flex h-full flex-col px-5 py-16">
-        <Image
-          src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-          width={757}
-          height={419}
-          alt="Internxt secure cloud storage"
-          draggable="false"
-        />
-      </div>
+      <Image
+        src={getImage('/images/home/NewDesign/mockup.png')}
+        alt="Internxt Drive panel interface"
+        height={508}
+        width={508}
+        quality={100}
+      />
 
-      <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
-    </div>
-  </section>
-);
+      <a
+        href={downloadUrl}
+        className="flex h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary bg-white px-6 py-4 text-base font-medium text-primary transition-colors hover:bg-gray-1 lg:hidden"
+      >
+        <ArrowCircleDown size={24} weight="bold" />
+        <span>
+          {textContent.DownloadSection.downloadFor} {osName}
+        </span>
+      </a>
+    </section>
+  );
+};
 
 export default HeroSection;
