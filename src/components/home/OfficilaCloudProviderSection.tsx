@@ -8,6 +8,7 @@ interface OfficialCloudProviderProps {
   lang?: string;
   partner?: 'valencia' | 'levante';
   bgColor?: string;
+  bgGradientColor?: string;
 }
 
 const PARTNER_CONFIG = {
@@ -38,6 +39,7 @@ export default function OfficialCloudProviderSection({
   lang = 'en',
   partner = 'valencia',
   bgColor,
+  bgGradientColor,
 }: OfficialCloudProviderProps): JSX.Element {
   const config = PARTNER_CONFIG[partner];
   const blogUrl = config.blogUrl[lang as 'en' | 'es'] || config.blogUrl.en;
@@ -46,9 +48,9 @@ export default function OfficialCloudProviderSection({
   return (
     <section
       className={`${
-        bgColor ? '' : 'bg-white'
+        bgColor ? bgColor : 'bg-white'
       } flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{ background: bgColor ? bgColor : '' }}
+      style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
 
