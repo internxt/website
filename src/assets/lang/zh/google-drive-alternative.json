@@ -1,8 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt: 就像 Google Drive，但更加**私密**",
+    "title": "Internxt. 就像 Google Drive，但更加**私密**",
     "description": "使用 Internxt 让您的生活摆脱 Google 的束缚，它是最尊重您隐私的 Google Drive 替代方案",
-    "getPrivacy": "立享 ${{percentage}}% 折扣，获得完全隐私",
+    "getPrivacy": "立享 {{percentage}}% 折扣，获得完全隐私",
     "cta": "立即申领优惠"
   },
   "HeaderSection": {

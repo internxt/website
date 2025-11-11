@@ -1,17 +1,15 @@
 {
   "HeroSection": {
-    "eyebrow": "Internxt Drive",
-    "title": {
-      "line1": "The safest cloud storage",
-      "line2": "for your files, pictures, and more"
-    },
-    "subtitle": {
-      "line1": "Storing, backing up, and sharing your files in total privacy couldn’t be any easier. With Internxt Drive, you",
-      "line2": "get user-friendly storage, post-quantum encryption, and full control over your files and data.",
-      "line3": ""
-    },
-    "DownloadLinks": {
+    "eyebrow": " Drive",
+    "title": "**Safe cloud storage** for all your files",
+    "subtitle": "Award-winning post-quantum encrypted cloud storage to protect your privacy.",
+    "features": ["Post-quantum encryption", "File storage, syncing and backups", "Open source and audited"],
+    "cta": "Get Internxt",
+    "DownloadSection": {
       "downloadTitle": "Download Internxt Drive",
+      "Desktop": "Internxt Desktop",
+      "Web": "Internxt Web",
+      "Mobile": "Internxt Mobile",
       "or": "or",
       "downloadFor": "Download for",
       "orDownloadFor": "Or download for",
@@ -29,158 +27,157 @@
       "MacOS": "Mac"
     }
   },
-  "CliCard": {
-    "new": "NEW",
-    "title": {
-      "bold": "Power tools",
-      "normal": "for power users"
-    },
-    "description": "Internxt CLI is a powerful command line tool that lets you access and manage Internxt Drive data via commands and WebDAV.",
-    "installCli": "Install using npm",
-    "command": "npm i -g @internxt/cli",
-    "available": "Available on",
-    "feeds": [
-      {
-        "title": "WebDAV Support",
-        "description": "Use your preferred WebDAV client with the Internxt CLI."
-      },
-      {
-        "title": "Scriptable",
-        "description": "Run script commands from your favorite shell on any platform."
-      },
-      {
-        "title": "Encrypted syncing",
-        "description": "Zero-knowledge and end-to-end security always guaranteed."
-      }
-    ],
-    "learnMore": "Learn more about Internxt CLI:",
-    "readme": "GitHub ReadMe",
-    "userGuide": "User Guide"
+  "DriveSection": {
+    "title": "Interxnt Drive",
+    "description": [
+      "Google Drive, iCloud, OneDrive, Dropbox, and more can decrypt, view, and share your data with governments and third parties. ",
+      "Internxt Drive gives you full control and privacy of your cloud storage through zero-knowledge and post-quantum encryption. We can’t access your files; you keep full ownership, access, and control of your data."
+    ]
   },
-  "FeaturesSection": {
-    "section1": {
-      "title": {
-        "line1": "All kinds of files,",
-        "line2": "all kinds of devices"
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "Find your files",
-        "line2": "on all your",
-        "line3": "devices"
-      },
-      "subtitle": {
-        "line1": "Securely access all your files from ",
-        "line2": "your computer, smartphone, tablet, ",
-        "line3": "or any device with a connection to ",
-        "line4": "the internet via the most secure ",
-        "line5": "cloud storage app."
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "Keep your files",
-        "line2": "organized and",
-        "line3": "accessible from",
-        "line4": "anywhere"
-      },
-      "subtitle": {
-        "line1": "Internxt Drive lets you organize your",
-        "line2": "files in folders, rename them, and filter",
-        "line3": "a list of files to find what you want faster.",
-        "line4": "You can even backup your computer",
-        "line5": "folders so you always have the most",
-        "line6": "recent changes of your most important files",
-        "line7": ""
-      }
-    },
-    "section4": {
-      "title": {
-        "line1": "Share your files",
-        "line2": "with ease,",
-        "line3": "security is on us"
-      },
-      "subtitle": {
-        "line1": "Internxt Drive focuses on privacy and",
-        "line2": "security, so you only have to focus on",
-        "line3": "what matters to you, like sharing files",
-        "line4": "with your coworkers, or the plane tickets",
-        "line5": "for your next holiday with family. You",
-        "line6": "choose who you want to share them with",
-        "line7": "and how many times you want",
-        "line8": "them to be downloaded."
-      }
-    },
-    "section5": {
-      "eyebrow": "NEW FEATURE",
-      "title": {
-        "line1": "Back up what",
-        "line2": "matters to you"
-      },
-      "subtitle": {
-        "line1": "Now you can keep the latest draft",
-        "line2": "of that super important project",
-        "line3": "or your university homework you are",
-        "line4": "working on, safe and current in your",
-        "line5": "Internxt Drive."
-      }
-    },
-    "section6": {
-      "title": {
-        "line1": "Sync your files in total privacy",
-        "line2": ""
-      }
-    },
-    "section7": {
-      "title": {
-        "line1": "Keep your files secure",
-        "line2": "and private"
-      },
-      "subtitle": {
-        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
-        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
-      },
-      "cta": "Our commitment on privacy",
-      "card1": {
-        "title": "Next-generation security",
-        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
-      },
-      "card2": {
-        "title": "Zero-knowledge technology",
-        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
-      },
-      "card3": {
-        "title": "Privacy by design",
-        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
-      },
-      "card4": {
-        "title": "Open source and transparent",
-        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
-      }
-    },
-    "DownloadLinks": {
-      "or": "or",
-      "downloadFor": "Download for",
-      "orDownloadFor": "Or download for",
-      "downloadOnThe": "Download on the",
-      "orDownloadOnThe": "Or download on the",
-      "getOn": "Get on",
-      "orGetOn": "Or get on",
-      "openDriveWeb": "Open Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+  "EncryptedCloudStorageSection": {
+    "title": "Encrypted cloud storage built on privacy",
+    "description": "Internxt Drive uses post-quantum and zero-knowledge encryption to encrypt your files and data at rest and in transit.",
+    "scrollableSection": {
+      "titles": [
+        "Your encrypted vault",
+        "Privacy over profit",
+        "Compliance",
+        "Open source and audited",
+        "Built for freedom",
+        "No backdoors"
+      ],
+      "descriptions": [
+        "Internxt is the first cloud storage to use Kyber 512 post-quantum and AES-256 encryption, ensuring data protection with end-to-end security, European privacy, and advanced technology.",
+        "Unlike Big Tech, Internxt can’t view or delete your files. Your files and data are encrypted directly on your device.  Nobody, not even us, can access your files or data.",
+        "Internxt is HIPAA, ISO 27001, and SOC 2 compliant. Whether you need cloud storage for healthcare, finance, or personal use, Internxt ensures your data and files meet the highest standards of data protection.",
+        "All our code is publicly available on GitHub and has been verified by external cybersecurity experts to ensure it is a safe platform for your data.",
+        "We give you total ownership and control over your privacy. With our privacy-focused products, you hold the power, not Big Tech.",
+        "We have no access to your data or files and don’t share it with anyone. Our apps are fully open source and audited, guaranteeing your privacy is respected."
+      ]
     }
   },
-  "FeatureSection": {
-    "title": "Protect your files with Internxt Drive",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
-    "cta": "Get started"
+  "CoreFeatures": {
+    "title": "Core Features",
+    "description": "Complete security for your data, everything you need to keep your files secure and private",
+    "accordionCards": {
+      "titles": ["A fully private ecosystem", "Secure collaboration", "Your cloud, like a local drive"],
+      "descriptions": [
+        "Internxt bundles encrypted storage, backups, VPN, Antivirus, Cleaner, Meet, Mail & more—everything to break free from Big Tech.",
+        "Send files with encrypted links, passwords, and controls. Work with your team in real time while keeping data private.",
+        "Use Internxt as a virtual drive to sync, upload, and access files seamlessly—just like on your computer, but fully secure and always up to date."
+      ]
+    },
+    "cards": {
+      "titles": ["End-to-end encrypted", "Access controls", "Encrypted backups"],
+      "descriptions": [
+        "All files are encrypted with post-quantum and zero-knowledge encryption. Nobody but you, or those you choose to share files with, can see its contents.",
+        "You control exactly who can access your shared files with encrypted, password-protected links you can revoke anytime.",
+        "Ensure your files stay safe from ransomware and accidental loss with scheduled, encrypted backups that provide extra protection and peace of mind."
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "Your all-in-one privacy solution",
+    "scrollableSection": {
+      "titles": ["Full privacy suite", "For business", "For families", "Unmatched pricing"],
+      "descriptions": [
+        "Go beyond cloud storage and include VPN, Antivirus, Cleaner, Meet, and Mail in your privacy package.",
+        "Protect your company from ransomware and data breaches with our cloud storage for business.",
+        "Store and share your family photos, videos, and memories, and keep them safe forever.",
+        "No hidden fees, pick your plan and enjoy its features and full encryption at one price. "
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Made in Europe",
+    "description": "Your data is protected with strict European compliance laws and regulations combined with award-winning encryption.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/redundancy2.webp",
+        "/images/drive/sustainability2.webp"
+      ],
+      "titles": ["European data centers", "Redundancy", "Commitment to sustainability "],
+      "descriptions": [
+        "Internxt is based in Valencia, Spain, and our data centers are based in Europe and other locations worldwide, offering you security, speed, and compliance.",
+        "Your files are protected through redundant systems, environmental controls, and 24/7 onsite security monitoring. No matter what happens, your files always remain safe and accessible.",
+        "Internxt leads by example in working for a more sustainable cloud storage solution through energy-efficient practices for a cleaner and more sustainable cloud storage solution."
+      ],
+      "cta": ["Learn more", "", "Learn more"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "Levante UD official cloud provider",
+    "description": [
+      "Levante UD has partnered with Internxt, becoming the club's official provider of encrypted cloud storage to keep its data fully private. This collaboration unites technology and sport and highlights Internxt's growing influence in the European tech landscape.",
+      "As Levante UD modernizes its digital infrastructure, it joins Internxt in advancing a model of innovation rooted in privacy, trust, and digital independence. This agreement marks a milestone in advancing digital sovereignty and data protection."
+    ],
+    "cta": "Learn More"
+  },
+  "CtaSection": {
+    "title": "Don’t let Big Tech spy on your files",
+    "description": "Switch to Internxt Drive for the most secure cloud storage",
+    "cta": "Get Internxt"
+  },
+  "DownloadSection": {
+    "downloadTitle": "Download Internxt Drive",
+    "Desktop": "Internxt Desktop",
+    "Web": "Internxt Web",
+    "Mobile": "Internxt Mobile",
+    "or": "or",
+    "downloadFor": "Download for",
+    "orDownloadFor": "Or download for",
+    "downloadOnThe": "Download on the",
+    "orDownloadOnThe": "Or download from the",
+    "getOn": "Download from",
+    "orGetOn": "Or get on",
+    "openDriveWeb": "Open Drive Web",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "Advanced tools for experts",
+    "description": "Internxt works on Windows, Mac, Linux, and mobile—with advanced tools for developers and businesses.",
+    "powerUsers": {
+      "title": "Power tools \n **for power users**",
+      "description": "Internxt CLI is a powerful command line tool that lets you\n access and manage Internxt Drive data via commands\n and WebDAV.",
+      "install": {
+        "title": "Install using npm",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "Available on",
+      "learnMore": {
+        "title": "Learn more about Internxt CLI:",
+        "GitHub": "GitHub ReadMe",
+        "learnMore": "Learn More"
+      }
+    },
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "Run Internxt securely on any platform with your favorite WebDAV client and CLI—end-to-end encrypted, zero-knowledge protected.",
+      "cta": "Get WebDAV"
+    },
+    "Rclone": {
+      "title": "Rclone",
+      "comingSoon": "Comming soon",
+      "description": "Sync, backup, and manage your files across multiple cloud services effortlessly with native Rclone support."
+    },
+    "NAS": {
+      "title": "NAS",
+      "comingSoon": "Comming soon",
+      "description": "Connect your NAS system directly to Internxt Drive to back up, sync, and manage your data securely."
+    }
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt is on **mega-sale**, has **excellent user reviews**, **end-to-end** and **post-quantum encryption**, and they make their code completely **open source** for total transparency with their customers.\"",
+    "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
+    "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
   },
   "FaqSection": {
     "title": "Questions? We have answers",
@@ -230,10 +227,5 @@
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "Try Internxt risk-free",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Select a plan now"
   }
 }

@@ -18,7 +18,7 @@ import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 
-type CompetitorType = 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'Onedrive';
+type CompetitorType = 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'OneDrive';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;

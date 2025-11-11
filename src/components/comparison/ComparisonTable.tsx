@@ -14,7 +14,7 @@ interface ComparisonTableProps {
     };
   };
   logo?: string;
-  competitor: 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'Onedrive';
+  competitor: 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'OneDrive';
   hideTooltip?: boolean;
 }
 
@@ -57,7 +57,7 @@ export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTab
     Icedrive: {
       defaultLogo: '/images/comparison/Icedrive-Letters.webp',
     },
-    Onedrive: {
+    OneDrive: {
       defaultLogo: '/images/comparison/OneDrive-Letters.webp',
     },
   } as const;
