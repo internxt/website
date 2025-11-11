@@ -112,11 +112,12 @@
     }
   },
   "OfficalCloudProvider": {
-    "title": "Proveedor oficial de la nube del Valencia CF",
+    "title": "Proveedor oficial de almacenamiento en la nube de Levante UD",
     "description": [
-      "El Valencia CF ha llegado a un acuerdo con Internxt, por el cual Internxt se convierte en el proveedor oficial de la nube del club. Internxt consolida su posición como líder europeo en privacidad digital con esta nueva asociación. Este acuerdo marca un hito en el enfoque innovador de Internxt que defiende la soberanía digital y la protección de datos."
+      "Levante UD se ha asociado con Internxt, convirtiéndose en el proveedor oficial del club de almacenamiento en la nube cifrado para mantener sus datos completamente privados. Esta colaboración une tecnología y deporte y destaca la creciente influencia de Internxt en el panorama tecnológico europeo.",
+      "A medida que Levante UD moderniza su infraestructura digital, se une a Internxt para impulsar un modelo de innovación basado en la privacidad, la confianza y la independencia digital. Este acuerdo marca un hito en el avance de la soberanía digital y la protección de datos."
     ],
-    "cta": "Saber Más"
+    "cta": "Más información"
   },
   "CtaSection": {
     "title": "No permitas que las Grandes Tecnológicas espíen tus archivos",

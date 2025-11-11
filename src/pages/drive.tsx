@@ -71,7 +71,7 @@ const Drive = ({
         bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} />
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
