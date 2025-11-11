@@ -88,7 +88,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor="linear-gradient(180deg, #FF5733 0%, #C70039 100%)"
+        bgColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
