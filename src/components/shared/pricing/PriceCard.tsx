@@ -132,10 +132,10 @@ export const PriceCard = ({
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
-        ? contentText.businessLabels.family['1TB']
+        ? contentText.productFeatures.planTypes.standard
         : contentText.productFeatures.planTypes.standard
       : contentText.productFeatures.planTypes.essentials,
-    '2TB': isFamilyPage ? contentText.businessLabels.family['2TB'] : contentText.productFeatures.planTypes.pro,
+    '2TB': isFamilyPage ? contentText.productFeatures.planTypes.pro : contentText.productFeatures.planTypes.pro,
     '3TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
