@@ -19,8 +19,8 @@ export default function HorizontalScrollableSection({
 
   const mobileCardWidth = 345;
   const desktopCardWidth = 400;
-  const gap = 16; // gap-4 en mobile
-  const desktopGap = 24; // gap-6 en desktop
+  const gap = 16;
+  const desktopGap = 24;
 
   useEffect(() => {
     const checkIsMobile = () => {
