@@ -1,195 +1,289 @@
 {
-  "mostPopular": "Più popolari",
-  "mostPopularPlan": "Piano più popolare",
-  "save": "Risparmia ",
-  "valentines": "Offerta speciale di San Valentino!",
-  "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
-  "discount": "% off",
-  "commingSoon": "Prossimamente",
-  "planTitles": {
-    "individuals": "Piani annuale ",
-    "homePage": "Scegli il piano giusto per te",
-    "lifetime": "Piani a vita",
-    "business": "Piani aziendali",
-    "lifetimeCampaign": {
-      "blueText": "Sconto del 50%",
-      "normalText": "su tutti i nostri piani esclusivi a vita"
-    }
-  },
-  "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
-  "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
-  "changePlan": {
-    "toIndividuals": "Passa ai piani per individui",
-    "toBusiness": "Passa ai piani per le aziende"
-  },
-  "billingFrequency": {
-    "monthly": "Mensile",
-    "annually": "Annualmente",
-    "lifetime": "Vita",
-    "individual": "Individuale",
-    "business": "Business"
-  },
-  "businessLabels": {
-    "1TB": "Standard",
-    "2TB": "Pro",
-    "family": {
-      "1TB": "Family Essentials",
-      "2TB": "Family Premium"
-    }
-  },
-  "billingFrequencyLabel": {
-    "lifetime": "Pagamento unico",
-    "monthly": "Fatturato mensilmente",
-    "semiannually": "Fatturato semestralmente",
-    "annually": "Fatturato annualmente",
-    "afterMonth": "dopo 30 giorni"
-  },
-  "billingFrequencyLabelSmall": {
-    "monthly": "/mensile",
-    "semiannually": "/semestrale",
-    "annually": "/annuale"
-  },
-  "perUserSlash": "/Utente",
-  "perUser": "Per utente",
+  "mostPopular": "Consigliato",
+  "perUserSlash": "/utente",
   "perYear": "/anno",
-  "users": "utenti",
-  "freePlan": "Free",
-  "price": {
-    "freeForever": "Gratis per sempre",
-    "free": "Fino a "
-  },
-  "perMonth": "/mese",
-  "firstMonth": "Primi 30 giorni",
-  "cta": {
-    "getStarted": "Inizia",
-    "signUpNow": "Iscriviti ora",
-    "buy": "Acquista",
-    "get": "Ottieni",
-    "redeem": "Riscatta codice",
-    "selectPlan": "Seleziona piano",
-    "discount": "MIGLIOR VALORE!",
-    "claimTheDeal": "Claim the deal",
-    "freemonth": "Ottieni 30 giorni gratis"
-  },
-  "freePlanCard": {
-    "eyeBrow": "Gratuito",
-    "description": "Ottieni fino a 1GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato: VPN crittografata, CLI/WebDav/Rclone e molto altro.",
-    "cta": "Seleziona il piano"
-  },
-  "features": {
-    "enjoyForever": {
-      "enjoy": "Enjoy",
-      "enjoyUpTo": "Enjoy up to",
-      "forFree": "for free",
-      "forever": "per sempre"
-    },
-    "moneyBack": "Garanzia di rimborso di 30 giorni",
-    "encryptedFiles": "Archiviazione e condivisione di file criptati",
-    "accessFromAnywhere": "Accesso ai file da qualsiasi dispositivo",
-    "allServices": "Accedi a tutti i nostri servizi",
-    "dataAccess": "No unauthorized data access"
-  },
+  "cta": "Seleziona piano",
   "productFeatures": {
-    "promoFeatures": {
-      "title": "Regali di Internxt",
-      "features": ["Maglia Valencia CF autografata", "Tema anniversario gratis"]
-    },
-    "cheaperThan": {
-      "lifetime": {
-        "normal": "Fino a ",
-        "bold": "4 volte più economico ",
-        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
-      },
-      "year": {
-        "normal": "Fino a ",
-        "bold": "3 volte più economico ",
-        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
-      },
-      "month": {
-        "normal": "Fino a ",
-        "bold": "2 volte più economico ",
-        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
-      }
-    },
     "planTypes": {
-      "essentials": "Essenziali",
+      "essentials": "Essential",
       "standard": "Standard",
       "premium": "Premium",
-      "ultimate": "Definitivo",
-      "pro": "Pro"
+      "ultimate": "Ultimate",
+      "pro": "Pro",
+      "family": {
+        "1TB": "Family Essential",
+        "2TB": "Family Premium"
+      }
     },
-    "individuals": {
+    "comingSoonLabel": "Prossimamente",
+    "individualPlans": {
       "1TB": [
-        "**1TB** di archiviazione crittografata",
-        "Crittografia post-quantistica",
-        "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori ",
-        "Esegui il backup del tuo computer",
-        "Condivisione file protetta da password",
-        "VPN crittografata",
-        "Antivirus"
+        {
+          "name": "**1TB** di spazio di archiviazione crittografato",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia post-quantistica",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia a conoscenza zero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticazione a due fattori",
+          "status": "available"
+        },
+        {
+          "name": "Backup del computer",
+          "status": "available"
+        },
+        {
+          "name": "Condivisione file protetta da password",
+          "status": "available"
+        },
+        {
+          "name": "Versioning dei file",
+          "status": "Coming soon"
+        },
+        {
+          "name": "VPN crittografata",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        }
       ],
       "3TB": [
-        "**3TB** di archiviazione crittografata",
-        "Crittografia post-quantistica",
-        "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori ",
-        "Esegui il backup del tuo computer",
-        "Condivisione file protetta da password",
-        "VPN crittografata",
-        "Antivirus",
-        "Invita, condividi e collabora",
-        "Cleaner"
+        {
+          "name": "**3TB** di spazio di archiviazione crittografato",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia post-quantistica",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia a conoscenza zero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticazione a due fattori",
+          "status": "available"
+        },
+        {
+          "name": "Backup del computer",
+          "status": "available"
+        },
+        {
+          "name": "Condivisione file protetta da password",
+          "status": "available"
+        },
+        {
+          "name": "Invita, condividi e collabora",
+          "status": "available"
+        },
+        {
+          "name": "Versioning dei file",
+          "status": "Coming soon"
+        },
+        {
+          "name": "VPN crittografata",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "5TB": [
-        "**5TB** di archiviazione crittografata",
-        "Crittografia post-quantistica",
-        "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori ",
-        "Esegui il backup del tuo computer",
-        "Condivisione file protetta da password",
-        "VPN crittografata",
-        "Antivirus",
-        "Invita, condividi e collabora",
-        "Supporto CLI e WebDav",
-        "Supporto NAS e Rclone",
-        "Cleaner",
-        "Meet",
-        "Mail",
-        "Versionamento dei file"
+        {
+          "name": "**5TB** di spazio di archiviazione crittografato",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia post-quantistica",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia a conoscenza zero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticazione a due fattori",
+          "status": "available"
+        },
+        {
+          "name": "Backup del computer",
+          "status": "available"
+        },
+        {
+          "name": "Condivisione file protetta da password",
+          "status": "available"
+        },
+        {
+          "name": "Invita, condividi e collabora",
+          "status": "available"
+        },
+        {
+          "name": "Versioning dei file",
+          "status": "Coming soon"
+        },
+        {
+          "name": "Supporto CLI e WebDav",
+          "status": "available"
+        },
+        {
+          "name": "Supporto NAS e Rclone",
+          "status": "available"
+        },
+        {
+          "name": "VPN crittografata",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet",
+          "status": "available"
+        },
+        {
+          "name": "Mail",
+          "status": "Coming soon"
+        }
       ]
     },
     "business": {
       "1TB": [
-        "1TB di archiviazione crittografata per utente",
-        "Crittografia post-quantistica",
-        "VPN crittografata",
-        "Antivirus",
-        "Backup del tuo computer",
-        "Condivisione di file protetta da password",
-        "Invitare, condividere e collaborare",
-        "Conformità GDPR",
-        "Autenticazione a due fattori",
-        "CLI e WebDav",
-        "Gestione dell'organizzazione",
-        "Cleaner"
+        {
+          "name": "**1TB** di spazio di archiviazione crittografato per utente",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia post-quantistica",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia a conoscenza zero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticazione a due fattori",
+          "status": "available"
+        },
+        {
+          "name": "Backup del computer",
+          "status": "available"
+        },
+        {
+          "name": "Condivisione file protetta da password",
+          "status": "available"
+        },
+        {
+          "name": "Invita, condividi e collabora",
+          "status": "available"
+        },
+        {
+          "name": "Conformità GDPR",
+          "status": "available"
+        },
+        {
+          "name": "CLI e WebDav",
+          "status": "available"
+        },
+        {
+          "name": "Gestione dell'organizzazione",
+          "status": "available"
+        },
+        {
+          "name": "VPN crittografata",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "2TB": [
-        "2TB di archiviazione crittografata per utente",
-        "Crittografia post-quantistica",
-        "VPN crittografata",
-        "Antivirus",
-        "Backup del tuo computer",
-        "Condivisione di file protetta da password",
-        "Invitare, condividere e collaborare",
-        "Conformità GDPR",
-        "Autenticazione a due fattori",
-        "Supporto CLI, WebDav, Rclone e NAS",
-        "Gestione dell'organizzazione",
-        "Cleaner",
-        "Meet",
-        "Versionamento dei file",
-        "Mail"
+        {
+          "name": "**2TB** di spazio di archiviazione crittografato per utente",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia post-quantistica",
+          "status": "available"
+        },
+        {
+          "name": "Crittografia a conoscenza zero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticazione a due fattori",
+          "status": "available"
+        },
+        {
+          "name": "Backup del computer",
+          "status": "available"
+        },
+        {
+          "name": "Condivisione file protetta da password",
+          "status": "available"
+        },
+        {
+          "name": "Invita, condividi e collabora",
+          "status": "available"
+        },
+        {
+          "name": "Conformità GDPR",
+          "status": "available"
+        },
+        {
+          "name": "Supporto CLI, WebDav, Rclone e NAS",
+          "status": "available"
+        },
+        {
+          "name": "Gestione dell'organizzazione",
+          "status": "available"
+        },
+        {
+          "name": "VPN crittografata",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet",
+          "status": "available"
+        },
+        {
+          "name": "Versioning dei file",
+          "status": "available"
+        },
+        {
+          "name": "Mail",
+          "status": "available"
+        }
       ]
     }
   }

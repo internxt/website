@@ -9,6 +9,7 @@ import {
   Database,
   Envelope,
   File,
+  Files,
   Fingerprint,
   Gauge,
   Key,
@@ -16,6 +17,7 @@ import {
   Password,
   Shield,
   Sparkle,
+  VideoCamera,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
@@ -23,23 +25,19 @@ import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
-const NEW_FEATURE_THRESHOLDS = {
-  BUSINESS: 12,
-  INDIVIDUAL_FIRST_CARD: 9,
-  INDIVIDUAL_OTHER_CARDS: 12,
-};
-
 const ICON_MAPS = {
-  individuals: [
+  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, CellTower, Shield],
+  premium: [
     Database,
     Key,
     LockSimple,
     Fingerprint,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
+    Files,
     CellTower,
     Shield,
-    CirclesThreePlus,
     Sparkle,
   ],
   ultimate: [
@@ -49,26 +47,26 @@ const ICON_MAPS = {
     Fingerprint,
     ArrowsClockwise,
     Password,
-    CellTower,
-    Shield,
     CirclesThreePlus,
+    Files,
     CodeBlock,
     Code,
+    CellTower,
+    Shield,
     Sparkle,
-    VideoConference,
+    VideoCamera,
     Envelope,
-    File,
   ],
   business: [
     Database,
     Key,
-    Gauge,
-    Shield,
+    LockSimple,
+    Fingerprint,
     ArrowsClockwise,
     Password,
     CirclesThreePlus,
-    LockSimple,
-    Fingerprint,
+    Gauge,
+    Shield,
     CodeBlock,
     CreditCard,
     Broom,
@@ -104,10 +102,8 @@ export const PriceCard = ({
   productCardPlan = 'individuals',
   popular,
   lang,
-  redeemCodeCta,
   isFamilyPage,
   onCheckoutButtonClicked,
-  cardIndex = 0,
   darkMode,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -145,19 +141,26 @@ export const PriceCard = ({
   };
   const planLabel = planTypes[storage] || null;
 
-  const newFeatureThreshold = isBusiness
-    ? NEW_FEATURE_THRESHOLDS.BUSINESS
-    : cardIndex === 1
-    ? NEW_FEATURE_THRESHOLDS.INDIVIDUAL_FIRST_CARD
-    : NEW_FEATURE_THRESHOLDS.INDIVIDUAL_OTHER_CARDS;
+  const ctaText = contentText.cta;
 
-  const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
-  const features = contentText.productFeatures[productCardPlan][storage];
+  const features = isBusiness
+    ? contentText.productFeatures.business[storage]
+    : contentText.productFeatures.individualPlans[storage];
+
   const getIconMap = () => {
-    if (storage === '5TB') return ICON_MAPS.ultimate;
-    return ICON_MAPS[productCardPlan] || ICON_MAPS.individuals;
+    if (isBusiness) {
+      return ICON_MAPS.business;
+    }
+    if (storage === '3TB') {
+      return ICON_MAPS.premium;
+    }
+    if (storage === '5TB') {
+      return ICON_MAPS.ultimate;
+    }
+    return ICON_MAPS.individuals;
   };
-  const icons = getIconMap();
+
+  const iconMap = getIconMap();
 
   return (
     <div
@@ -299,60 +302,31 @@ export const PriceCard = ({
               <p className={`$ text-base font-medium`}>{ctaText}</p>
             </button>
 
-            <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
-              {features.map((feature, index) => {
-                const getAdjustedIndex = () => {
-                  return index;
-                };
+            <div className="flex w-full flex-col justify-start gap-4 pt-4">
+              {features?.map((feature, index) => {
+                const Icon = iconMap[index];
+                const isComingSoon = feature.status === 'Coming soon';
 
-                const adjustedIndex = getAdjustedIndex();
-
-                const renderText = () => {
-                  if (index === 0 && feature.includes('**')) {
-                    return feature
-                      .split(/(\*\*.*?\*\*)/)
-                      .map((part, i) =>
-                        part.startsWith('**') && part.endsWith('**') ? (
-                          <strong key={i}>{part.slice(2, -2)}&nbsp;</strong>
-                        ) : (
-                          part
-                        ),
-                      );
-                  }
-                  return feature;
-                };
-
-                const Icon = icons[adjustedIndex];
+                const formattedName = feature.name.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
                 return (
-                  <div className="flex flex-col items-start" key={feature}>
-                    <div
-                      className={`flex min-h-[24px] flex-row items-start gap-2 lg:items-center ${
-                        index === 0 ? '' : ''
-                      }`}
-                    >
-                      {Icon && <Icon className={`h-6 w-6 ${darkMode ? 'text-blue-55' : 'text-primary'}`} />}
-                      <span
-                        className={`flex flex-row pt-[2px] text-base font-normal ${
-                          darkMode ? 'text-gray-20' : 'text-gray-80'
-                        }`}
-                      >
-                        {renderText()}
-                        {index > newFeatureThreshold && (
-                          <p
-                            className={`ml-2 flex h-min items-center rounded-2 ${
-                              darkMode ? 'bg-purple-50 text-purple-5' : 'bg-purple-1 text-purple-10'
-                            } px-2 py-0.5 text-center font-semibold  lg:px-1`}
-                          >
-                            {contentText.commingSoon}
-                          </p>
+                  <>
+                    <div key={index} className="flex items-start gap-3 px-4 lg:px-0">
+                      {Icon && <Icon size={24} className={`shrink-0 ${darkMode ? 'text-primary' : 'text-primary'}`} />}
+                      <div className="flex flex-row items-center gap-2">
+                        <p
+                          className={`text-base ${darkMode ? 'text-white' : 'text-gray-80'}`}
+                          dangerouslySetInnerHTML={{ __html: formattedName }}
+                        />
+                        {isComingSoon && (
+                          <span className={`rounded-2 bg-purple-1 px-1 py-0.5 text-base font-semibold text-purple-10`}>
+                            {contentText.productFeatures.comingSoonLabel}
+                          </span>
                         )}
-                      </span>
+                      </div>
                     </div>
-                    {index === 0 && (
-                      <div className={`mt-4 h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-25'}`} />
-                    )}
-                  </div>
+                    {index === 0 && <div className={`h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-25'}`} />}
+                  </>
                 );
               })}
             </div>

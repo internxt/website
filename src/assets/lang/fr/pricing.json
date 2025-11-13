@@ -339,13 +339,13 @@
         "name": "Bientôt disponible",
         "features": [
           {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
-          },
-          {
             "id": "file_versioning",
             "name": "Gestion des versions de fichiers",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]

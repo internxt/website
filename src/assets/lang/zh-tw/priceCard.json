@@ -1,194 +1,289 @@
 {
-  "mostPopular": "受欢迎 ",
-  "mostPopularPlan": "最受歡迎的計劃",
-  "save": "節省",
-  "valentines": "情人節特別優惠！",
-  "onlyForNewClients": "僅適用於新訂閱者或免費計劃用戶",
-  "redeemCode": "兌換代碼",
-  "discount": "% off",
-  "commingSoon": "即將推出",
-  "planTitles": {
-    "individuals": "個人計劃",
-    "lifetime": "終身計劃",
-    "homePage": "選擇適合您的計劃",
-    "business": "商業計劃",
-    "lifetimeCampaign": {
-      "blueText": "獲得 50% 折扣",
-      "normalText": "所有我們的獨家終身計劃"
-    }
-  },
-  "lifetimeDescription": "一次購買，永久享受隱私和安全。",
-  "planDescription": "所有 Internxt 計劃都具有完整的功能，完全訪問我們的所有隱私服務。適用於各種規模的安全保障。",
-  "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
-  "billingFrequency": {
-    "monthly": "每月",
-    "annually": "每年",
-    "individual": "個人",
-    "lifetime": "終身",
-    "business": "商業"
-  },
-  "businessLabels": {
-    "1TB": "Standard",
-    "2TB": "Pro",
-    "family": {
-      "1TB": "Family Essentials",
-      "2TB": "Family Premium"
-    }
-  },
-  "billingFrequencyLabel": {
-    "lifetime": "終身訪問",
-    "monthly": "按月計費",
-    "semiannually": "每半年計費",
-    "annually": "每年計費",
-    "afterMonth": "30 天後"
-  },
-  "billingFrequencyLabelSmall": {
-    "monthly": "/每月",
-    "semiannually": "/每半年",
-    "annually": "/每年"
-  },
-  "perUserSlash": "/每",
-  "perUser": "每用戶",
-  "users": "用戶",
-  "freePlan": "免費",
+  "mostPopular": "推薦",
+  "perUserSlash": "/使用者",
   "perYear": "/年",
-  "price": {
-    "freeForever": "永遠免費",
-    "free": "高達"
-  },
-  "perMonth": "/月",
-  "firstMonth": "前 30 天",
-  "cta": {
-    "getStarted": "開始使用",
-    "signUpNow": "立即註冊",
-    "buy": "購買",
-    "get": "獲取",
-    "selectPlan": "選擇計劃",
-    "redeem": "兌換代碼",
-    "discount": "最佳價值！",
-    "claimTheDeal": "領取優惠",
-    "freemonth": "獲取 30 天免費"
-  },
-  "freePlanCard": {
-    "eyeBrow": "Internxt 免费",
-    "description": "获取高达 1GB 的加密云存储，并享受我们的私人生态系统：VPN（法国）、CLI/WebDav/Rclone 等更多功能。",
-    "cta": "选择计划"
-  },
-  "features": {
-    "enjoyForever": {
-      "enjoy": "享受",
-      "enjoyUpTo": "享受高達",
-      "forFree": "免費",
-      "forever": "永遠"
-    },
-    "moneyBack": "30 天退款保證",
-    "encryptedFiles": "加密文件存儲與分享",
-    "accessFromAnywhere": "從任何設備訪問您的文件",
-    "allServices": "訪問我們的所有服務",
-    "dataAccess": "無未授權的數據訪問"
-  },
+  "cta": "選擇方案",
   "productFeatures": {
-    "promoFeatures": {
-      "title": "Internxt 的禮物",
-      "features": ["瓦倫西亞簽名球衣抽獎", "免費週年主題"]
-    },
-    "cheaperThan": {
-      "lifetime": {
-        "normal": "最多 ",
-        "bold": "便宜4倍 ",
-        "normal2": "比其他安全的雲端存儲替代品"
-      },
-      "year": {
-        "normal": "最多 ",
-        "bold": "便宜3倍 ",
-        "normal2": "比其他安全的雲端存儲替代品"
-      },
-      "month": {
-        "normal": "最多 ",
-        "bold": "便宜2倍 ",
-        "normal2": "比其他安全的雲端存儲替代品"
+    "planTypes": {
+      "essentials": "基本",
+      "standard": "標準",
+      "premium": "進階",
+      "ultimate": "旗艦",
+      "pro": "專業版",
+      "family": {
+        "1TB": "家庭基本版",
+        "2TB": "家庭進階版"
       }
     },
-    "planTypes": {
-      "essentials": "基础版",
-      "standard": "标准版",
-      "premium": "高级版",
-      "ultimate": "终极版",
-      "pro": "专业版"
-    },
-    "individuals": {
+    "comingSoonLabel": "即將推出",
+    "individualPlans": {
       "1TB": [
-        "**1TB** 加密儲存空間",
-        "後量子加密",
-        "零知識加密",
-        "雙重身分驗證",
-        "檔案備份",
-        "密碼保護檔案分享",
-        "加密VPN",
-        "防毒軟體"
+        {
+          "name": "**1TB** 加密儲存空間",
+          "status": "available"
+        },
+        {
+          "name": "後量子密碼技術",
+          "status": "available"
+        },
+        {
+          "name": "零知識加密",
+          "status": "available"
+        },
+        {
+          "name": "雙重身份驗證",
+          "status": "available"
+        },
+        {
+          "name": "電腦備份",
+          "status": "available"
+        },
+        {
+          "name": "密碼保護的檔案共享",
+          "status": "available"
+        },
+        {
+          "name": "檔案版本控制",
+          "status": "Coming soon"
+        },
+        {
+          "name": "加密 VPN",
+          "status": "available"
+        },
+        {
+          "name": "防毒軟體",
+          "status": "available"
+        }
       ],
       "3TB": [
-        "**3TB** 加密儲存空間",
-        "後量子加密",
-        "零知識加密",
-        "雙重身分驗證 ",
-        "檔案備份",
-        "密碼保護檔案分享",
-        "加密VPN",
-        "防毒軟體",
-        "邀請、分享與協作",
-        "Cleaner"
+        {
+          "name": "**3TB** 加密儲存空間",
+          "status": "available"
+        },
+        {
+          "name": "後量子密碼技術",
+          "status": "available"
+        },
+        {
+          "name": "零知識加密",
+          "status": "available"
+        },
+        {
+          "name": "雙重身份驗證",
+          "status": "available"
+        },
+        {
+          "name": "電腦備份",
+          "status": "available"
+        },
+        {
+          "name": "密碼保護的檔案共享",
+          "status": "available"
+        },
+        {
+          "name": "邀請、共享和協作",
+          "status": "available"
+        },
+        {
+          "name": "檔案版本控制",
+          "status": "Coming soon"
+        },
+        {
+          "name": "加密 VPN",
+          "status": "available"
+        },
+        {
+          "name": "防毒軟體",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "5TB": [
-        "**5TB** 加密儲存空間",
-        "後量子加密",
-        "零知識加密",
-        "雙重身分驗證 ",
-        "檔案備份",
-        "密碼保護檔案分享",
-        "加密VPN",
-        "防毒軟體",
-        "邀請、分享與協作",
-        "CLI 與 WebDav 支援",
-        "NAS 與 Rclone 支援",
-        "Cleaner",
-        "Meet",
-
-        "Mail",
-        "文件版本控制"
+        {
+          "name": "**5TB** 加密儲存空間",
+          "status": "available"
+        },
+        {
+          "name": "後量子密碼技術",
+          "status": "available"
+        },
+        {
+          "name": "零知識加密",
+          "status": "available"
+        },
+        {
+          "name": "雙重身份驗證",
+          "status": "available"
+        },
+        {
+          "name": "電腦備份",
+          "status": "available"
+        },
+        {
+          "name": "密碼保護的檔案共享",
+          "status": "available"
+        },
+        {
+          "name": "邀請、共享和協作",
+          "status": "available"
+        },
+        {
+          "name": "檔案版本控制",
+          "status": "Coming soon"
+        },
+        {
+          "name": "支援 CLI 和 WebDav",
+          "status": "available"
+        },
+        {
+          "name": "支援 NAS 和 Rclone",
+          "status": "available"
+        },
+        {
+          "name": "加密 VPN",
+          "status": "available"
+        },
+        {
+          "name": "防毒軟體",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet",
+          "status": "available"
+        },
+        {
+          "name": "Mail",
+          "status": "Coming soon"
+        }
       ]
     },
     "business": {
       "1TB": [
-        "每位使用者1TB加密儲存空間",
-        "後量子加密",
-        "加密VPN",
-        "防毒軟體",
-        "備份您的電腦",
-        "密碼保護檔案分享",
-        "邀請、分享與協作",
-        "符合GDPR規範",
-        "雙因素身份驗證",
-        "CLI與WebDav",
-        "組織管理",
-        "清理工具"
+        {
+          "name": "每使用者 **1TB** 加密儲存空間",
+          "status": "available"
+        },
+        {
+          "name": "後量子密碼技術",
+          "status": "available"
+        },
+        {
+          "name": "零知識加密",
+          "status": "available"
+        },
+        {
+          "name": "雙重身份驗證",
+          "status": "available"
+        },
+        {
+          "name": "電腦備份",
+          "status": "available"
+        },
+        {
+          "name": "密碼保護的檔案共享",
+          "status": "available"
+        },
+        {
+          "name": "邀請、共享和協作",
+          "status": "available"
+        },
+        {
+          "name": "符合 GDPR 規範",
+          "status": "available"
+        },
+        {
+          "name": "CLI 和 WebDav",
+          "status": "available"
+        },
+        {
+          "name": "組織管理",
+          "status": "available"
+        },
+        {
+          "name": "加密 VPN",
+          "status": "available"
+        },
+        {
+          "name": "防毒軟體",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "2TB": [
-        "每位使用者2TB加密儲存空間",
-        "後量子加密",
-        "加密VPN",
-        "防毒軟體",
-        "備份您的電腦",
-        "密碼保護檔案分享",
-        "邀請、分享與協作",
-        "符合GDPR規範",
-        "雙因素身份驗證",
-        "支援CLI、WebDav、Rclone與NAS",
-        "組織管理",
-        "清理工具",
-        "Meet",
-        "檔案版本控制",
-        "Mail"
+        {
+          "name": "每使用者 **2TB** 加密儲存空間",
+          "status": "available"
+        },
+        {
+          "name": "後量子密碼技術",
+          "status": "available"
+        },
+        {
+          "name": "零知識加密",
+          "status": "available"
+        },
+        {
+          "name": "雙重身份驗證",
+          "status": "available"
+        },
+        {
+          "name": "電腦備份",
+          "status": "available"
+        },
+        {
+          "name": "密碼保護的檔案共享",
+          "status": "available"
+        },
+        {
+          "name": "邀請、共享和協作",
+          "status": "available"
+        },
+        {
+          "name": "符合 GDPR 規範",
+          "status": "available"
+        },
+        {
+          "name": "支援 CLI、WebDav、Rclone 和 NAS",
+          "status": "available"
+        },
+        {
+          "name": "組織管理",
+          "status": "available"
+        },
+        {
+          "name": "加密 VPN",
+          "status": "available"
+        },
+        {
+          "name": "防毒軟體",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet",
+          "status": "available"
+        },
+        {
+          "name": "檔案版本控制",
+          "status": "available"
+        },
+        {
+          "name": "Mail",
+          "status": "available"
+        }
       ]
     }
   }

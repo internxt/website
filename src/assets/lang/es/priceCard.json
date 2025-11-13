@@ -1,193 +1,289 @@
 {
   "mostPopular": "Recomendado",
-  "mostPopularPlan": "Plan más popular",
-  "save": "Ahorra ",
-  "valentines": "¡Oferta especial de San Valentín!",
-  "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
-  "discount": "% off",
-  "commingSoon": "Próximamente",
-  "planTitles": {
-    "individuals": "Planes Anuales",
-    "homePage": "Elige el plan adecuado para ti",
-    "lifetime": "Planes de por vida",
-    "business": "Planes para empresas",
-    "lifetimeCampaign": {
-      "blueText": "50% de descuento",
-      "normalText": "en todos nuestros planes exclusivos de por vida"
-    }
-  },
-  "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
-  "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
-  "changePlan": {
-    "toIndividuals": "Cambiar a planes para particulares",
-    "toBusiness": "Cambiar a planes para empresas"
-  },
-  "billingFrequency": {
-    "monthly": "Mensual",
-    "annually": "Anual",
-    "lifetime": "Lifetime",
-    "individual": "Individual",
-    "business": "Empresa"
-  },
+  "perUserSlash": "/usuario",
   "perYear": "/año",
-  "businessLabels": {
-    "1TB": "Standard",
-    "2TB": "Pro",
-    "family": {
-      "1TB": "Family Essentials",
-      "2TB": "Family Premium"
-    }
-  },
-  "billingFrequencyLabel": {
-    "lifetime": "Pago único",
-    "monthly": "Facturado mensualmente",
-    "semiannually": "Facturado cada 6 meses",
-    "annually": "Facturado anualmente",
-    "afterMonth": "después de 30 días"
-  },
-  "billingFrequencyLabelSmall": {
-    "monthly": "/mes",
-    "semiannually": "/6 meses",
-    "annually": "/año"
-  },
-  "perUserSlash": "/Usuario",
-  "perUser": "Por usuario",
-  "users": "usuarios",
-  "freePlan": "Gratis",
-  "price": {
-    "freeForever": "Gratis para siempre",
-    "free": "Hasta "
-  },
-  "perMonth": "/mes",
-  "firstMonth": "Los primeros 30 días",
-  "cta": {
-    "getStarted": "Empezar ahora",
-    "signUpNow": "Consigue Internxt gratis",
-    "buy": "Conseguir",
-    "get": "Obtener",
-    "selectPlan": "Seleccionar plan",
-    "redeem": "Canjear código",
-    "discount": "EL MEJOR VALORADO!",
-    "claimTheDeal": "Obtener descuento",
-    "freemonth": "Consigue 30 días gratis"
-  },
-  "freePlanCard": {
-    "eyeBrow": "Gratis",
-    "description": "Obtén hasta 1GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado: VPN (FR), CLI/WebDav/Rclone y mucho más.",
-    "cta": "Seleccionar plan"
-  },
-  "features": {
-    "enjoyForever": {
-      "enjoy": "Disfruta de",
-      "enjoyUpTo": "Disfruta de hasta",
-      "forFree": "gratis",
-      "forever": "para siempre"
-    },
-    "moneyBack": "30 días de garantía o te devolvemos el dinero",
-    "encryptedFiles": "Almacenamiento encriptado",
-    "accessFromAnywhere": "Todos tus dispositivos",
-    "allServices": "Todos nuestros servicios"
-  },
+  "cta": "Seleccionar plan",
   "productFeatures": {
-    "promoFeatures": {
-      "title": "Regalitos de Internxt",
-      "features": ["Sorteo de una camiseta firmada del Valencia CF", "Tema de aniversario gratis para WebApp"]
-    },
-    "cheaperThan": {
-      "lifetime": {
-        "normal": "Hasta ",
-        "bold": "4 veces más barato ",
-        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
-      },
-      "year": {
-        "normal": "Hasta ",
-        "bold": "3 veces más barato ",
-        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
-      },
-      "month": {
-        "normal": "Hasta ",
-        "bold": "2 veces más barato ",
-        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
-      }
-    },
     "planTypes": {
-      "essentials": "Essential",
-      "standard": "Standard",
+      "essentials": "Esencial",
+      "standard": "Estándar",
       "premium": "Premium",
       "ultimate": "Ultimate",
-      "pro": "Pro"
+      "pro": "Pro",
+      "family": {
+        "1TB": "Esencial Familiar",
+        "2TB": "Premium Familiar"
+      }
     },
-    "individuals": {
+    "comingSoonLabel": "Próximamente",
+    "individualPlans": {
       "1TB": [
-        "**1TB** de almacenamiento cifrado",
-        "Criptografía postcuántica",
-        "Cifrado de conocimiento cero",
-        "Autenticación de dos factores ",
-        "Copias de seguridad",
-        "Comparte archivos con contraseña",
-        "VPN cifrada",
-        "Antivirus"
+        {
+          "name": "**1TB** de almacenamiento cifrado",
+          "status": "available"
+        },
+        {
+          "name": "Criptografía postcuántica",
+          "status": "available"
+        },
+        {
+          "name": "Cifrado de conocimiento cero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticación de dos factores",
+          "status": "available"
+        },
+        {
+          "name": "Copia de seguridad ",
+          "status": "available"
+        },
+        {
+          "name": "Comparte archivos con contraseña",
+          "status": "available"
+        },
+        {
+          "name": "Versionado de archivos",
+          "status": "Coming soon"
+        },
+        {
+          "name": "VPN cifrada",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        }
       ],
       "3TB": [
-        "**3TB** de almacenamiento cifrado",
-        "Criptografía postcuántica",
-        "Cifrado de conocimiento cero",
-        "Autenticación de dos factores ",
-        "Copias de seguridad",
-        "Comparte archivos con contraseña",
-        "VPN cifrada",
-        "Antivirus",
-        "Invita, comparte y colabora",
-        "Limpiador"
+        {
+          "name": "**3TB** de almacenamiento cifrado",
+          "status": "available"
+        },
+        {
+          "name": "Criptografía postcuántica",
+          "status": "available"
+        },
+        {
+          "name": "Cifrado de conocimiento cero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticación de dos factores",
+          "status": "available"
+        },
+        {
+          "name": "Copia de seguridad ",
+          "status": "available"
+        },
+        {
+          "name": "Comparte archivos con contraseña",
+          "status": "available"
+        },
+        {
+          "name": "Invitar, compartir y colaborar",
+          "status": "available"
+        },
+        {
+          "name": "Versionado de archivos",
+          "status": "Coming soon"
+        },
+        {
+          "name": "VPN cifrada",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "5TB": [
-        "**5TB** de almacenamiento cifrado",
-        "Criptografía postcuántica",
-        "Cifrado de conocimiento cero",
-        "Autenticación de dos factores ",
-        "Copias de seguridad",
-        "Comparte archivos con contraseña",
-        "VPN cifrada",
-        "Antivirus",
-        "Invita, comparte y colabora",
-        "CLI y soporte WebDav",
-        "Soporte NAS y Rclone",
-        "Limpiador",
-        "Meet",
-        "Mail",
-        "Versionado archivos"
+        {
+          "name": "**5TB** de almacenamiento cifrado",
+          "status": "available"
+        },
+        {
+          "name": "Criptografía postcuántica",
+          "status": "available"
+        },
+        {
+          "name": "Cifrado de conocimiento cero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticación de dos factores",
+          "status": "available"
+        },
+        {
+          "name": "Copia de seguridad ",
+          "status": "available"
+        },
+        {
+          "name": "Comparte archivos con contraseña",
+          "status": "available"
+        },
+        {
+          "name": "Invitar, compartir y colaborar",
+          "status": "available"
+        },
+        {
+          "name": "Versionado de archivos",
+          "status": "Coming soon"
+        },
+        {
+          "name": "Soporte CLI y WebDav",
+          "status": "available"
+        },
+        {
+          "name": "Soporte NAS y Rclone",
+          "status": "available"
+        },
+        {
+          "name": "VPN cifrada",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet ",
+          "status": "available"
+        },
+        {
+          "name": "Mail ",
+          "status": "Coming soon"
+        }
       ]
     },
     "business": {
       "1TB": [
-        "1TB de almacenamiento",
-        "Cifrado postcuántico y conocimiento cero",
-        "VPN cifrada",
-        "Antivirus",
-        "Copias de seguridad",
-        "Comparte archivos con contraseña",
-        "Invita, comparte y colabora",
-        "Cumple con RGPD",
-        "Autenticación de dos factores ",
-        "Gestion de la empresa",
-        "Limpiador"
+        {
+          "name": "**1TB** de almacenamiento cifrado por usuario",
+          "status": "available"
+        },
+        {
+          "name": "Criptografía postcuántica",
+          "status": "available"
+        },
+        {
+          "name": "Cifrado de conocimiento cero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticación de dos factores",
+          "status": "available"
+        },
+        {
+          "name": "Copia de seguridad ",
+          "status": "available"
+        },
+        {
+          "name": "Comparte archivos con contraseña",
+          "status": "available"
+        },
+        {
+          "name": "Invitar, compartir y colaborar",
+          "status": "available"
+        },
+        {
+          "name": "Cumplimiento con GDPR",
+          "status": "available"
+        },
+        {
+          "name": "CLI y WebDav",
+          "status": "available"
+        },
+        {
+          "name": "Gestión de la organización",
+          "status": "available"
+        },
+        {
+          "name": "VPN cifrada",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        }
       ],
       "2TB": [
-        "2TB de almacenamiento",
-        "Cifrado postcuántico y conocimiento cero",
-        "VPN cifrada",
-        "Antivirus",
-        "Copias de seguridad",
-        "Comparte archivos con contraseña",
-        "Invita, comparte y colabora",
-        "Cumple con RGPD",
-        "Autenticación de dos factores ",
-        "CLI/WebDav/Rclone",
-        "Gestion de la empresa",
-        "Limpiador",
-        "Meet ",
-        "Versionado archivos",
-        "Mail "
+        {
+          "name": "**2TB** de almacenamiento cifrado por usuario",
+          "status": "available"
+        },
+        {
+          "name": "Criptografía postcuántica",
+          "status": "available"
+        },
+        {
+          "name": "Cifrado de conocimiento cero",
+          "status": "available"
+        },
+        {
+          "name": "Autenticación de dos factores",
+          "status": "available"
+        },
+        {
+          "name": "Copia de seguridad ",
+          "status": "available"
+        },
+        {
+          "name": "Comparte archivos con contraseña",
+          "status": "available"
+        },
+        {
+          "name": "Invitar, compartir y colaborar",
+          "status": "available"
+        },
+        {
+          "name": "Cumplimiento con GDPR",
+          "status": "available"
+        },
+        {
+          "name": "Soporte CLI, WebDav, Rclone y NAS",
+          "status": "available"
+        },
+        {
+          "name": "Gestión de la organización",
+          "status": "available"
+        },
+        {
+          "name": "VPN cifrada",
+          "status": "available"
+        },
+        {
+          "name": "Antivirus",
+          "status": "available"
+        },
+        {
+          "name": "Cleaner",
+          "status": "available"
+        },
+        {
+          "name": "Meet ",
+          "status": "available"
+        },
+        {
+          "name": "Versionado de archivos",
+          "status": "available"
+        },
+        {
+          "name": "Mail ",
+          "status": "available"
+        }
       ]
     }
   }
