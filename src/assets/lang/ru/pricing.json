@@ -339,13 +339,13 @@
         "name": "Скоро",
         "features": [
           {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
-          },
-          {
             "id": "file_versioning",
             "name": "Управление версиями файлов",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]

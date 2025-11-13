@@ -339,13 +339,13 @@
         "name": "即將推出",
         "features": [
           {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
-          },
-          {
             "id": "file_versioning",
             "name": "檔案版本控制",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]
