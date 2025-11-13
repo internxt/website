@@ -11,8 +11,10 @@ export default function HorizontalScrollableSection({
   darkMode = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [scrollState, setScrollState] = useState({
+    canGoLeft: false,
+    canGoRight: true,
+  });
   const [isMobile, setIsMobile] = useState(false);
 
   const mobileCardWidth = 345;
@@ -51,16 +53,21 @@ export default function HorizontalScrollableSection({
   };
 
   const updateScrollButtons = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
 
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    const hasScrolledFromStart = scrollLeft > 0;
+    const hasReachedEnd = scrollLeft >= scrollWidth - clientWidth - 1;
+
+    setScrollState({
+      canGoLeft: hasScrolledFromStart,
+      canGoRight: hasReachedEnd === false,
+    });
   };
 
   const scrollLeft = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
     const amount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: -amount,
@@ -69,7 +76,7 @@ export default function HorizontalScrollableSection({
   };
 
   const scrollRight = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
     const amount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: amount,
@@ -77,9 +84,22 @@ export default function HorizontalScrollableSection({
     });
   };
 
+  const getButtonClasses = (isDisabled: boolean) => {
+    const baseClasses = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+    } transition-all`;
+
+    if (isDisabled) {
+      return `${baseClasses} cursor-not-allowed opacity-30`;
+    }
+
+    const hoverClasses = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+    return `${baseClasses} cursor-pointer ${hoverClasses}`;
+  };
+
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
+    if (scrollContainer === null) return;
 
     updateScrollButtons();
     scrollContainer.addEventListener('scroll', updateScrollButtons);
@@ -130,56 +150,48 @@ export default function HorizontalScrollableSection({
               : `calc((100vw - 850px) / 2 + ${getPaddingRight()}px)`,
           }}
         >
-          {textContent.cardDescriptions.titles.map((title: string, index: number) => (
-            <div
-              key={index}
-              className="flex-shrink-0"
-              style={{
-                width: isMobile ? `${mobileCardWidth}px` : `${desktopCardWidth}px`,
-              }}
-            >
-              <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white'} p-6`}>
-                <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
-                  {title}
-                </p>
-                <p
-                  className={`${
-                    darkMode ? 'text-green-120' : 'text-gray-55'
-                  } flex-1 text-sm font-normal leading-tight lg:text-base`}
-                >
-                  {textContent.cardDescriptions.descriptions[index]}
-                </p>
+          {textContent.cardDescriptions.titles.map((title: string, index: number) => {
+            const uniqueKey = `${title.toLowerCase().replace(/\s+/g, '-')}-${index}`;
+
+            return (
+              <div
+                key={uniqueKey}
+                className="flex-shrink-0"
+                style={{
+                  width: isMobile ? `${mobileCardWidth}px` : `${desktopCardWidth}px`,
+                }}
+              >
+                <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white'} p-6`}>
+                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                    {title}
+                  </p>
+                  <p
+                    className={`${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    } flex-1 text-sm font-normal leading-tight lg:text-base`}
+                  >
+                    {textContent.cardDescriptions.descriptions[index]}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
-              disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-all ${
-                !canScrollLeft
-                  ? 'cursor-not-allowed opacity-30'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-              }`}
+              disabled={scrollState.canGoLeft === false}
+              className={getButtonClasses(scrollState.canGoLeft === false)}
               aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
-              disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-all ${
-                !canScrollRight
-                  ? 'cursor-not-allowed opacity-30'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-              }`}
+              disabled={scrollState.canGoRight === false}
+              className={getButtonClasses(scrollState.canGoRight === false)}
               aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

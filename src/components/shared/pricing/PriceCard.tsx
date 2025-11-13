@@ -127,15 +127,25 @@ export const PriceCard = ({
   const showCents = priceNumber < 1;
 
   const currentPrice = showCents ? priceNumber.toFixed(2) : priceNumber.toFixed(0);
-  const originalPrice = hasDiscount ? (showCents ? Number(price).toFixed(2) : Number(price).toFixed(0)) : undefined;
+  const getOriginalPrice = () => {
+    if (hasDiscount === false) {
+      return undefined;
+    }
+
+    if (showCents) {
+      return Number(price).toFixed(2);
+    }
+
+    return Number(price).toFixed(0);
+  };
+
+  const originalPrice = getOriginalPrice();
 
   const planTypes = {
     '1TB': isBusiness
-      ? isFamilyPage
-        ? contentText.productFeatures.planTypes.standard
-        : contentText.productFeatures.planTypes.standard
+      ? contentText.productFeatures.planTypes.standard
       : contentText.productFeatures.planTypes.essentials,
-    '2TB': isFamilyPage ? contentText.productFeatures.planTypes.pro : contentText.productFeatures.planTypes.pro,
+    '2TB': contentText.productFeatures.planTypes.pro,
     '3TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };

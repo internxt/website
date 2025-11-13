@@ -27,8 +27,10 @@ export default function HorizontalScrollableSectionWithImages({
   const cardDescriptions = textContent?.scrollableSection.descriptions;
   const cardImages = textContent?.scrollableSection?.imagesPathname || [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [scrollState, setScrollState] = useState({
+    canGoLeft: false,
+    canGoRight: true,
+  });
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 400;
@@ -67,16 +69,21 @@ export default function HorizontalScrollableSectionWithImages({
   };
 
   const updateScrollButtons = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
 
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    const hasScrolledFromStart = scrollLeft > 0;
+    const hasReachedEnd = scrollLeft >= scrollWidth - clientWidth - 1;
+
+    setScrollState({
+      canGoLeft: hasScrolledFromStart,
+      canGoRight: hasReachedEnd === false,
+    });
   };
 
   const scrollLeft = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
     const amount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: -amount,
@@ -85,7 +92,7 @@ export default function HorizontalScrollableSectionWithImages({
   };
 
   const scrollRight = () => {
-    if (!scrollContainerRef.current) return;
+    if (scrollContainerRef.current === null) return;
     const amount = getScrollAmount();
     scrollContainerRef.current.scrollBy({
       left: amount,
@@ -93,9 +100,16 @@ export default function HorizontalScrollableSectionWithImages({
     });
   };
 
+  const getButtonClasses = (isDisabled: boolean) => {
+    const baseClasses =
+      'flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-all hover:bg-primary/10';
+    const stateClasses = isDisabled ? 'cursor-not-allowed opacity-30' : 'cursor-pointer';
+    return `${baseClasses} ${stateClasses}`;
+  };
+
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
+    if (scrollContainer === null) return;
 
     updateScrollButtons();
     scrollContainer.addEventListener('scroll', updateScrollButtons);
@@ -192,20 +206,16 @@ export default function HorizontalScrollableSectionWithImages({
             <div className="flex w-[120px] justify-between">
               <button
                 onClick={scrollLeft}
-                disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-                }`}
+                disabled={scrollState.canGoLeft === false}
+                className={getButtonClasses(scrollState.canGoLeft === false)}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
               </button>
               <button
                 onClick={scrollRight}
-                disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-                }`}
+                disabled={scrollState.canGoRight === false}
+                className={getButtonClasses(scrollState.canGoRight === false)}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />
