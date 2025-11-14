@@ -1,0 +1,119 @@
+{
+  "HeroSection": {
+    "title": "**Rechenzentren**\n und **Zertifizierungen**",
+    "description": "Wir bieten Compliance, Sicherheit und europäischen\n Cloud-Speicher zum Schutz Ihrer Daten.",
+    "features": ["GDPR, ISO, SOC 2 und HIPAA konform", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"]
+  },
+  "WhatIsDataCenterSection": {
+    "title": "Was ist ein Rechenzentrum?",
+    "description": [
+      "Ein Rechenzentrum wird von einem Cloud-Service-Provider verwaltet und betrieben, um Daten zu speichern, zu verarbeiten und über das Internet an Benutzer zu liefern. Kunden können die Infrastruktur von Rechenzentren mieten oder erwerben, wodurch die Notwendigkeit entfällt, eigene Hardware, Platz oder Sicherheit zu beschaffen, zu kaufen oder zu warten.",
+      "Internxt profitiert von der Zusammenarbeit mit Cloud-Rechenzentren auf der ganzen Welt und speichert mehrere Kopien Ihrer Dateien an verschiedenen Standorten, um zusätzliche Redundanz und Zugänglichkeit zu gewährleisten."
+    ]
+  },
+  "HorizontalScrllableSection": {
+    "title": "Sicherheit unserer \n Rechenzentren",
+    "description": "Unsere Rechenzentren bieten erweiterten\n Schutz für Ihre Daten und Dateien,\n kombiniert mit einer sicheren Infrastruktur.",
+    "cards": {
+      "titles": ["Sicherheit vor Ort", "Infrastrukturschutz", "Langlebigkeit und Verfügbarkeit", "Nachhaltigkeit"],
+      "description": [
+        "Mit Internxt Drive werden Ihre Dateien auf Ihrem Gerät verschlüsselt, bevor sie unsere sicheren Rechenzentren erreichen. Nur autorisiertes Personal hat Zugang zu den physischen Servern, wobei strenge Kontrollen und eine 24/7-Überwachung maximalen Schutz gewährleisten.",
+        "Die Rechenzentren von Internxt sind mit redundanter Stromversorgung, Notstromgeneratoren und Brandschutzsystemen ausgestattet, um die Betriebszeit zu sichern und Ihre Dateien auch bei unerwarteten Ereignissen oder Umweltrisiken zu schützen.",
+        "Internxt verwendet fortschrittliches Datenmanagement, um eine Langlebigkeit (Durability) von 99,999999999% für Ihre Dateien zu gewährleisten. Alle Zentren verfügen über duale Stromversorgung und Notstromgeneratoren, um Ihre Cloud auch bei Ausfällen zugänglich zu halten.",
+        "Die Cloud von Internxt läuft mit erneuerbaren Energien und fortschrittlichen Wasserkühlsystemen, um Emissionen und Abfall zu reduzieren. Alle Rechenzentren sind nach ISO 50001 für nachhaltiges Energiemanagement zertifiziert."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Erweiterte Sicherheit und zuverlässige Infrastruktur",
+    "description": "Verschlüsselter Cloud-Speicher, der auf Datenschutz ausgelegt ist",
+    "cta": "Internxt nutzen"
+  },
+  "CompilanceAndCertificationsSection": {
+    "title": "Compliance und Zertifizierungen",
+    "description": "Fordern Sie Ihren Internxt-Gutscheincode in drei einfachen Schritten an:",
+    "features": {
+      "titles": ["Globale Sicherheit", "Lokale und regionale Vorschriften", "Spezialisierte Compliance"],
+      "description": [
+        "Die Cloud-Rechenzentren von Internxt werden unabhängig geprüft und zertifiziert, um einen sicheren, vertraulichen und konformen Schutz Ihrer Dateien zu gewährleisten.",
+        "Die europäischen Rechenzentren von Internxt mit Sitz in Valencia, Spanien, sind vollständig GDPR-konform und halten sich an weltweite regionale Vorschriften.",
+        "Unsere Rechenzentren erfüllen branchenspezifische Compliance-Standards und helfen Sektoren wie dem Gesundheitswesen und dem Finanzwesen, sich gegen Verstöße zu verteidigen und den Datenschutz nachzuweisen."
+      ]
+    },
+    "cards": {
+      "images": ["GDPR", "ISO", "SOC", "PCI", "HD", "HIPAA", "ENS", "EBA"],
+      "titles": ["GDPR", "ISO 27001", "SOC 2", "PCI DSS", "Gesundheitsdaten in Europa", "HIPAA", "ENS", "EBA"],
+      "description": [
+        "Einhaltung der Verordnung (EU) 2016/679, bekannt als Datenschutz-Grundverordnung (DSGVO/GDPR).",
+        "Einhaltung internationaler Standards für Informationssicherheits-Managementsysteme.",
+        "Einhaltung von Standards für die Verwaltung und den Schutz von Kundendaten und die Finanzberichterstattung.",
+        "Schutz von Zahlungsinformationen der Stufe 1 (Payment Card Information).",
+        "Compliance für das Hosting von Gesundheitsdaten französischer, britischer, italienischer, deutscher und polnischer Bürger.",
+        "Einhaltung des US-Gesetzes Health Insurance Portability and Accountability Act.",
+        "Definiert Sicherheitsstandards für Regierungsbehörden und öffentliche Organisationen in Spanien.",
+        "Einhaltung der Outsourcing-Richtlinien der Europäischen Bankenaufsichtsbehörde (EBA) in Europa."
+      ]
+    }
+  },
+  "SecureCloudStorgaeSection": {
+    "title": "Sicherer Cloud-Speicher in \n Weltklasse-Rechenzentren",
+    "description": "Internxt Drive bietet alles, was Sie benötigen, um die\n Privatsphäre Ihrer Dateien und Daten mit sicherem\n Cloud-Speicher und mehr zu gewährleisten.",
+    "card": {
+      "title": "Internxt Drive",
+      "description": [
+        "Internxt Drive bietet Ende-zu-Ende Post-Quanten-verschlüsselten Speicher in europäischen Rechenzentren, die die strengsten Datenschutzstandards erfüllen. Ihre Dateien werden durch redundante Systeme, Umweltkontrollen und 24/7-Sicherheit geschützt.",
+        "Erweitern Sie Ihren Speicher mit Antivirus, VPN, Cleaner, Meet und Mail – Ihrer All-in-One-Privatsphäre-Suite für vollständigen Online-Schutz."
+      ],
+      "cta": "Internxt nutzen"
+    }
+  },
+  "CtaSection2": {
+    "title": "Stellen Sie sicher, dass Ihre Dateien die höchsten Compliance-Standards erfüllen",
+    "description": "Verschlüsselter Speicher, der für GDPR und Branchenvorschriften entwickelt wurde",
+    "cta": "Angebot sichern"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben die Antworten",
+    "faq": [
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien. Internxt verfügt über zahlreiche europäische Cloud-Rechenzentren, um Ihre Daten gemäß der DSGVO und anderen Compliance-Vorschriften zu speichern."
+        ]
+      },
+      {
+        "question": "Wo befinden sich die Cloud-Rechenzentren von Internxt?",
+        "answer": [
+          "Internxt nutzt eine Multi-Cloud-Netzwerkstrategie, die gewährleistet, dass Dateien in mehreren europäischen Cloud-Rechenzentren gespeichert werden, um Ihnen die beste Leistung, Sicherheit und Schutz für Ihre Dateien zu bieten."
+        ]
+      },
+      {
+        "question": "Wie funktionieren die Rechenzentren von Internxt?",
+        "answer": [
+          "Internxt arbeitet mit OVHcloud zusammen, die europäische Cloud-Rechenzentren und mehrere Standorte auf der ganzen Welt besitzen, um Ihre Cloud-Daten zu speichern.",
+          "Diese Rechenzentrumsinfrastrukturen hosten Tausende von Servern, um Verfügbarkeit, Leistung und Redundanz zu gewährleisten, um einen schnellen und sicheren Zugriff auf Dateien zu gewährleisten und gleichzeitig Ihre Dateien sicher zu halten."
+        ]
+      },
+      {
+        "question": "Was ist eine Verfügbarkeitszone?",
+        "answer": [
+          "Verfügbarkeitszonen sind eine Reihe von einem oder mehreren Rechenzentren, die sich in einer Region befinden. Jede Verfügbarkeitszone arbeitet unabhängig und verfügt über eigene Strom-, Kühlungs- und Netzwerksysteme, um Stromausfälle oder andere Ereignisse wie Infrastrukturausfälle zu verhindern.",
+          "Zonen innerhalb einer Region sind miteinander verbunden, um eine höhere Verfügbarkeit und Verbindungen mit geringer Latenz zu gewährleisten, sodass Anwendungen online bleiben können, selbst wenn eine Zone einen Ausfall erlebt."
+        ]
+      },
+      {
+        "question": "Kann Internxt auf meine Dateien zugreifen?",
+        "answer": [
+          "Nein, niemand, einschließlich Internxt, kann auf Ihre Dateien zugreifen. Alle Ihre Dateien und Daten werden auf Ihrem Gerät mit Post-Quanten-Verschlüsselung verschlüsselt. Da die Schlüssel auf Ihrem Gerät gespeichert und verwaltet werden und nicht von uns oder unseren Dienstanbietern, können nur Sie oder Personen, mit denen Sie Dateien teilen möchten, diese entschlüsseln.",
+          "Alle in unseren Rechenzentren gespeicherten Dateien sind verschlüsselt, sodass keine Mitarbeiter oder Hacker deren Inhalt einsehen können."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Finden Sie nicht, wonach Sie suchen? Sie können unser technisches Support-Team über den Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
+        ]
+      }
+    ]
+  }
+}
