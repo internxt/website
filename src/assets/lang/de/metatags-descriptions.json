@@ -354,5 +354,10 @@
     "id": "reviews",
     "title": "Internxt — Kundenbewertungen von Internxt lesen",
     "description": "Lesen Sie ehrliche Internxt-Bewertungen von Tech-Experten und Nutzern. Erfahren Sie, was Internxt zum vertrauenswürdigsten Service für Ihre Online-Privatsphäre macht."
+  },
+  {
+    "id": "cloud-data-centers",
+    "title": "Internxt — Rechenzentren und Zertifizierungen",
+    "description": "Bewahren Sie Ihre Daten sicher auf mit Internxt. Ende-zu-Ende-Verschlüsselung, zuverlässige Cloud-Rechenzentren und Einhaltung der DSGVO und anderer Standards."
   }
 ]

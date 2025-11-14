@@ -33,6 +33,7 @@ const nameFiles = [
   'pcloud-alternative',
   'dropbox-alternative',
   'mega-alternative',
+  'cloud-data-centers',
 ];
 
 const langs = {

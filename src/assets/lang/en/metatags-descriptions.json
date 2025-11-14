@@ -548,5 +548,10 @@
     "id": "reviews",
     "title": "Internxt — Read Customer Reviews of Internxt",
     "description": "Read honest Internxt reviews according to reviews from tech experts and users. Find out what makes Internxt the most trusted service for your online privacy."
+  },
+  {
+    "id": "cloud-data-centers",
+    "title": "Internxt — Data Centers and Certifications",
+    "description": "Keep your data safe with Internxt. End-to-end encryption, reliable cloud data centers, and compliance with GDPR and other standards."
   }
 ]

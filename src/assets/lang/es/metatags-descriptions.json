@@ -443,5 +443,10 @@
     "id": "reviews",
     "title": "Internxt — Lee las opiniones de clientes sobre Internxt",
     "description": "Lee opiniones honestas sobre Internxt según reseñas de expertos en tecnología y usuarios. Descubre qué hace de Internxt el servicio más confiable para tu privacidad en línea."
+  },
+  {
+    "id": "cloud-data-centers",
+    "title": "Internxt — Centros de Datos y Certificaciones",
+    "description": "Mantén tus datos seguros con Internxt. Cifrado de extremo a extremo, centros de datos en la nube fiables y cumplimiento con el RGPD y otras normativas."
   }
 ]

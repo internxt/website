@@ -1,0 +1,119 @@
+{
+  "HeroSection": {
+    "title": "Internxt's **data centers**\n and **certifications**",
+    "description": "We offer compliance, security, and European\n cloud storage to protect your data.",
+    "features": ["GDPR, ISO, SOC 2, and HIPAA compliant", "Post-quantum encryption", "Open source and audited"]
+  },
+  "WhatIsDataCenterSection": {
+    "title": "What is a data center?",
+    "description": [
+      "A data center is managed and operated by a cloud service provider to store, process, and deliver data to users over the internet. Customers can rent or acquire the infrastructure from data centers, eliminating the need to source, buy, or maintain their own hardware, space, or security. ",
+      "Internxt benefits from working with cloud data centers across the world, and keeps multiple copies of your files secure across different locations for extra redundancy and accessibility."
+    ]
+  },
+  "HorizontalScrllableSection": {
+    "title": "Security of our \n cloud data centers",
+    "description": "Our data centers offer advanced\n protection for your data and files,\n combined with a secure infrastructure.",
+    "cards": {
+      "titles": ["On-site security", "Infrastructure protection", "Durability and availability", "Sustainability"],
+      "description": [
+        "With Internxt Drive, your files are encrypted on your device before reaching our secure data centers. Only authorized staff can access physical servers, with strict controls and 24/7 surveillance ensuring maximum protection.",
+        "Internxt data centers are built with redundant power, backup generators, and fire suppression to ensure uptime and protect your files, even during unexpected events or environmental risks.",
+        "Internxt uses advanced data management to ensure 99.999999999% durability for your files. All centers have dual power and backup generators, keeping your cloud accessible even during outages.",
+        "Internxt’s cloud runs on renewable energy with advanced water-cooling systems to cut emissions and waste. All data centers are ISO 50001 certified for sustainable energy management."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Advanced security and reliable infrastructure",
+    "description": "Encrypted cloud storage built for privacy",
+    "cta": "Get Internxt"
+  },
+  "CompilanceAndCertificationsSection": {
+    "title": "Compliance and certifications",
+    "description": "Claim your Internxt coupon code by following these three easy steps:",
+    "features": {
+      "titles": ["Global security", "Local and regional regulations", "Specialist compliance"],
+      "description": [
+        "Internxt’s cloud data centers are independently audited and certified, ensuring secure, confidential, and compliant protection for your files.",
+        "Based in Valencia, Spain, Internxt’s European data centers are fully GDPR compliant and adhere to regional regulations worldwide.",
+        "Our data centers meet industry-specific compliance standards, helping sectors like healthcare and finance defend against breaches and prove data protection."
+      ]
+    },
+    "cards": {
+      "images": ["GDPR", "ISO", "SOC", "PCI", "HD", "HIPAA", "ENS", "EBA"],
+      "titles": ["GDPR", "ISO 27001", "SOC 2", "PCI DSS", "Healthcare data in Europe", "HIPAA", "ENS", "EBA"],
+      "description": [
+        "Compliance with Regulation (EU) 2016/679, known as the General Data Protection Regulation (GDPR)",
+        "Compliance with international standards for information security management systems.",
+        "Compliance with standards for managing and protecting customer data and financial reporting.",
+        "Protect level 1 payment card information.",
+        "Compliance for hosting healthcare data for French, British, Italian, German, and Polish citizens.",
+        "Compliance with the United States Health Insurance Portability and Accountability Act.",
+        "Defines security standards for government agencies and public organisations in Spain.",
+        "Compliance with the European Banking Authority (EBA) Outsourcing Guidelines in Europe."
+      ]
+    }
+  },
+  "SecureCloudStorgaeSection": {
+    "title": "Secure cloud storage in \n world-class data centers",
+    "description": "Internxt Drive offers everything you need to ensure\n your files and data remain private with secure cloud\n storage and more.",
+    "card": {
+      "title": "Internxt Drive",
+      "description": [
+        "Internxt Drive provides end-to-end post-quantum encrypted storage in European data centers that meet the strictest privacy standards. Your files are safeguarded with redundant systems, environmental controls, and 24/7 security.",
+        "Enhance your storage with Antivirus, VPN, Cleaner, Meet, and Mail—your all-in-one privacy suite for total online protection."
+      ],
+      "cta": "Get Internxt"
+    }
+  },
+  "CtaSection2": {
+    "title": "Ensure your files meet the highest compliance standards",
+    "description": "Encrypted storage built for GDPR and industry regulations",
+    "cta": "Claim deal"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain. Internxt has numerous European cloud data centers to store your data in line with GDPR and other compliance regulations."
+        ]
+      },
+      {
+        "question": "Where are Internxt’s cloud data centers located?",
+        "answer": [
+          "Internxt makes use of a multi-cloud network strategy, ensuring files are stored across multiple European cloud data centers to ensure you get the best performance, security, and protection for your files."
+        ]
+      },
+      {
+        "question": "How do Internxt’s data centers work?",
+        "answer": [
+          "Internxt partners with OVHcloud, who own European cloud data centers and multiple locations across the globe to store your cloud data.",
+          "These data center infrastructures host thousands of servers to guarantee availability, performance, and redundancy to ensure quick and secure access to files while keeping your files secure."
+        ]
+      },
+      {
+        "question": "What is an availability zone?",
+        "answer": [
+          "Availability zones are a set of one or more data centers located in a region. Each availability zone works independently and has its own power, cooling, and network to prevent power outages or other events such as infrastructure failure.",
+          "Zones within a region are linked to provide higher availability and low-latency connections, ensuring applications can stay online even if one zone experiences a failure."
+        ]
+      },
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No, nobody, including Internxt, can access your files. All your files and data are encrypted on your device with post-quantum encryption. As the keys are stored and managed on your device and not by us or our service providers, only you or people you choose to share files with can decrypt them.",
+          "All files stored in our data centres are encrypted, so no employees or hackers can view their contents."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}

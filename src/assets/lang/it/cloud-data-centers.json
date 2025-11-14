@@ -1,0 +1,119 @@
+{
+  "HeroSection": {
+    "title": "**Data center**\n e **certificazioni**",
+    "description": "Offriamo compliance, sicurezza e cloud storage\n europeo per proteggere i tuoi dati.",
+    "features": ["Conforme a GDPR, ISO, SOC 2 e HIPAA", "Crittografia post-quantistica", "Open source e revisionato"]
+  },
+  "WhatIsDataCenterSection": {
+    "title": "Cos'è un data center?",
+    "description": [
+      "Un data center è gestito e operato da un fornitore di servizi cloud per archiviare, elaborare e consegnare dati agli utenti tramite Internet. I clienti possono noleggiare o acquisire l'infrastruttura dai data center, eliminando la necessità di procurarsi, acquistare o mantenere il proprio hardware, spazio o sicurezza.",
+      "Internxt trae vantaggio dal lavorare con data center cloud in tutto il mondo e conserva più copie dei tuoi file al sicuro in diverse località per una maggiore ridondanza e accessibilità."
+    ]
+  },
+  "HorizontalScrllableSection": {
+    "title": "Sicurezza dei nostri \n data center",
+    "description": "I nostri data center offrono una protezione\n avanzata per i tuoi dati e file,\n combinata con un'infrastruttura sicura.",
+    "cards": {
+      "titles": ["Sicurezza in loco", "Protezione dell'infrastruttura", "Durabilità e disponibilità", "Sostenibilità"],
+      "description": [
+        "Con Internxt Drive, i tuoi file vengono crittografati sul tuo dispositivo prima di raggiungere i nostri data center sicuri. Solo il personale autorizzato può accedere ai server fisici, con controlli rigorosi e sorveglianza 24/7 che garantiscono la massima protezione.",
+        "I data center di Internxt sono costruiti con alimentazione ridondante, generatori di backup e sistemi antincendio per garantire l'uptime e proteggere i tuoi file, anche durante eventi imprevisti o rischi ambientali.",
+        "Internxt utilizza una gestione avanzata dei dati per garantire una durabilità del 99,999999999% per i tuoi file. Tutti i centri dispongono di doppia alimentazione e generatori di backup, mantenendo il tuo cloud accessibile anche durante le interruzioni.",
+        "Il cloud di Internxt funziona con energia rinnovabile e sistemi avanzati di raffreddamento ad acqua per ridurre le emissioni e i rifiuti. Tutti i data center sono certificati ISO 50001 per la gestione energetica sostenibile."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Sicurezza avanzata e infrastruttura affidabile",
+    "description": "Cloud storage crittografato e progettato per la privacy",
+    "cta": "Ottieni Internxt"
+  },
+  "CompilanceAndCertificationsSection": {
+    "title": "Compliance e certificazioni",
+    "description": "Richiedi il tuo codice coupon Internxt seguendo questi tre semplici passaggi:",
+    "features": {
+      "titles": ["Sicurezza globale", "Normative locali e regionali", "Compliance specialistica"],
+      "description": [
+        "I data center cloud di Internxt sono revisionati e certificati in modo indipendente, garantendo una protezione sicura, confidenziale e conforme per i tuoi file.",
+        "Con sede a Valencia, Spagna, i data center europei di Internxt sono pienamente conformi al GDPR e aderiscono alle normative regionali in tutto il mondo.",
+        "I nostri data center soddisfano gli standard di compliance specifici del settore, aiutando settori come la sanità e la finanza a difendersi dalle violazioni e a dimostrare la protezione dei dati."
+      ]
+    },
+    "cards": {
+      "images": ["GDPR", "ISO", "SOC", "PCI", "HD", "HIPAA", "ENS", "EBA"],
+      "titles": ["GDPR", "ISO 27001", "SOC 2", "PCI DSS", "Dati sanitari in Europa", "HIPAA", "ENS", "EBA"],
+      "description": [
+        "Conformità al Regolamento (UE) 2016/679, noto come Regolamento Generale sulla Protezione dei Dati (GDPR).",
+        "Conformità agli standard internazionali per i sistemi di gestione della sicurezza delle informazioni.",
+        "Conformità agli standard per la gestione e la protezione dei dati dei clienti e la rendicontazione finanziaria.",
+        "Protezione delle informazioni sulle carte di pagamento di livello 1.",
+        "Conformità per l'hosting di dati sanitari per cittadini francesi, britannici, italiani, tedeschi e polacchi.",
+        "Conformità all'Health Insurance Portability and Accountability Act degli Stati Uniti.",
+        "Definisce gli standard di sicurezza per le agenzie governative e le organizzazioni pubbliche in Spagna.",
+        "Conformità alle Linee Guida sull'Outsourcing dell'Autorità Bancaria Europea (EBA) in Europa."
+      ]
+    }
+  },
+  "SecureCloudStorgaeSection": {
+    "title": "Cloud storage sicuro in data center \n di classe mondiale",
+    "description": "Internxt Drive offre tutto il necessario per garantire\n che i tuoi file e dati rimangano privati con cloud\n storage sicuro e altro ancora.",
+    "card": {
+      "title": "Internxt Drive",
+      "description": [
+        "Internxt Drive fornisce cloud storage crittografato post-quantistico end-to-end in data center europei che soddisfano i più severi standard di privacy. I tuoi file sono protetti da sistemi ridondanti, controlli ambientali e sicurezza 24/7.",
+        "Migliora il tuo storage con Antivirus, VPN, Cleaner, Meet e Mail: la tua suite di privacy all-in-one per una protezione totale online."
+      ],
+      "cta": "Ottieni Internxt"
+    }
+  },
+  "CtaSection2": {
+    "title": "Assicurati che i tuoi file soddisfino gli standard più elevati",
+    "description": "Storage crittografato costruito per GDPR e normative di settore",
+    "cta": "Richiedi l'offerta"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, Spagna. Internxt dispone di numerosi data center cloud europei per archiviare i tuoi dati in linea con il GDPR e altre normative di compliance."
+        ]
+      },
+      {
+        "question": "Dove si trovano i data center cloud di Internxt?",
+        "answer": [
+          "Internxt utilizza una strategia di rete multi-cloud, garantendo che i file siano archiviati in più data center cloud europei per assicurarti le migliori prestazioni, sicurezza e protezione per i tuoi file."
+        ]
+      },
+      {
+        "question": "Come funzionano i data center di Internxt?",
+        "answer": [
+          "Internxt collabora con OVHcloud, che possiede data center cloud europei e più sedi in tutto il mondo per archiviare i tuoi dati cloud.",
+          "Queste infrastrutture di data center ospitano migliaia di server per garantire disponibilità, prestazioni e ridondanza, assicurando un accesso rapido e sicuro ai file pur mantenendoli al sicuro."
+        ]
+      },
+      {
+        "question": "Cos'è una zona di disponibilità?",
+        "answer": [
+          "Le zone di disponibilità sono un insieme di uno o più data center situati in una regione. Ogni zona di disponibilità opera in modo indipendente e dispone di alimentazione, raffreddamento e rete propri per prevenire interruzioni di corrente o altri eventi come guasti all'infrastruttura.",
+          "Le zone all'interno di una regione sono collegate per fornire maggiore disponibilità e connessioni a bassa latenza, garantendo che le applicazioni possano rimanere online anche se una zona subisce un guasto."
+        ]
+      },
+      {
+        "question": "Internxt può accedere ai miei file?",
+        "answer": [
+          "No, nessuno, incluso Internxt, può accedere ai tuoi file. Tutti i tuoi file e dati vengono crittografati sul tuo dispositivo con crittografia post-quantistica. Poiché le chiavi sono archiviate e gestite sul tuo dispositivo e non da noi o dai nostri fornitori di servizi, solo tu o le persone con cui scegli di condividere i file potete decifrarli.",
+          "Tutti i file archiviati nei nostri data center sono crittografati, in modo che nessun dipendente o hacker possa visualizzarne il contenuto."
+        ]
+      },
+      {
+        "question": "Come contatto l'assistenza?",
+        "answer": [
+          "Non riesci a trovare quello che cerchi? Puoi contattare il nostro team di supporto tecnico tramite chat dal vivo o inviando un'e-mail a hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}

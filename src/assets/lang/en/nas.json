@@ -75,31 +75,47 @@
     "description": "Manage your NAS with Internxt",
     "cta": "Get Internxt"
   },
+
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "How do I set up my NAS system with Internxt?",
+        "question": "Where is Internxt based?",
         "answer": [
-          "First, you must install the Docker app, then connect it to Internxt. Once set up, you can manage and sync your files securely on NAS devices, servers, or any environment where Docker is supported."
+          "Internxt is based in Valencia, Spain. Internxt has numerous European cloud data centers to store your data in line with GDPR and other compliance regulations."
         ]
       },
       {
-        "question": "Do I need Docker to run Internxt on my NAS?",
+        "question": "Where are Internxt’s cloud data centers located?",
         "answer": [
-          "Yes, Internxt runs through Docker, which makes setup simple and ensures compatibility on popular NAS devices like QNAP or Synology."
+          "Internxt makes use of a multi-cloud network strategy, ensuring files are stored across multiple European cloud data centers to ensure you get the best performance, security, and protection for your files."
         ]
       },
       {
-        "question": "Which plan includes NAS support?",
+        "question": "How do Internxt’s data centers work?",
         "answer": [
-          "NAS support is included with the Ultimate plan, available as either a lifetime or annual subscription. If you already have an Internxt plan, you can upgrade your current lifetime plan to get more storage, access to NAS support, and enjoy all the other features of an Ultimate plan."
+          "Internxt partners with OVHcloud, who own European cloud data centers and multiple locations across the globe to store your cloud data.",
+          "These data center infrastructures host thousands of servers to guarantee availability, performance, and redundancy to ensure quick and secure access to files while keeping your files secure."
+        ]
+      },
+      {
+        "question": "What is an availability zone?",
+        "answer": [
+          "Availability zones are a set of one or more data centers located in a region. Each availability zone works independently and has its own power, cooling, and network to prevent power outages or other events such as infrastructure failure.",
+          "Zones within a region are linked to provide higher availability and low-latency connections, ensuring applications can stay online even if one zone experiences a failure."
+        ]
+      },
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No, nobody, including Internxt, can access your files. All your files and data are encrypted on your device with post-quantum encryption. As the keys are stored and managed on your device and not by us or our service providers, only you or people you choose to share files with can decrypt them.",
+          "All files stored in our data centres are encrypted, so no employees or hackers can view their contents."
         ]
       },
       {
         "question": "How do I contact support?",
         "answer": [
-          "You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com"
+          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing hello@internxt.com"
         ]
       }
     ]
