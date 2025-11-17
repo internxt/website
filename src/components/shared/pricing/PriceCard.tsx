@@ -8,7 +8,6 @@ import {
   CreditCard,
   Database,
   Envelope,
-  File,
   Files,
   Fingerprint,
   Gauge,
@@ -18,7 +17,6 @@ import {
   Shield,
   Sparkle,
   VideoCamera,
-  VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -66,12 +64,13 @@ const ICON_MAPS = {
     Password,
     CirclesThreePlus,
     Gauge,
-    Shield,
     CodeBlock,
     CreditCard,
+    CellTower,
+    Shield,
     Broom,
-    VideoConference,
-    File,
+    VideoCamera,
+    Files,
     Envelope,
   ],
 };
@@ -124,18 +123,29 @@ export const PriceCard = ({
   }, []);
 
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
-  const currentPrice = hasDiscount
-    ? ((Number(price) * decimalDiscountValue) / 100).toFixed(0)
-    : Number(price).toFixed(0);
-  const originalPrice = hasDiscount ? Number(price).toFixed(0) : undefined;
+  const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
+  const showCents = priceNumber < 1;
+
+  const currentPrice = showCents ? priceNumber.toFixed(2) : priceNumber.toFixed(0);
+  const getOriginalPrice = () => {
+    if (hasDiscount === false) {
+      return undefined;
+    }
+
+    if (showCents) {
+      return Number(price).toFixed(2);
+    }
+
+    return Number(price).toFixed(0);
+  };
+
+  const originalPrice = getOriginalPrice();
 
   const planTypes = {
     '1TB': isBusiness
-      ? isFamilyPage
-        ? contentText.businessLabels.family['1TB']
-        : contentText.productFeatures.planTypes.standard
+      ? contentText.productFeatures.planTypes.standard
       : contentText.productFeatures.planTypes.essentials,
-    '2TB': isFamilyPage ? contentText.businessLabels.family['2TB'] : contentText.productFeatures.planTypes.pro,
+    '2TB': contentText.productFeatures.planTypes.pro,
     '3TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
