@@ -97,10 +97,8 @@ export default function ReviewSection({
 
   return (
     <section
-      className={`${
-        bgColor ? '' : darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      }} relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{ background: bgColor ? bgColor : '' }}
+      className={`relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+      style={{ background: bgColor ? bgColor : darkMode ? '#1C1C1C' : 'white' }}
     >
       {reverseDivider ? (
         <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
