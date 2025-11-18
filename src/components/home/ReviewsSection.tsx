@@ -101,9 +101,15 @@ export default function ReviewSection({
       style={{ background: bgColor ? bgColor : darkMode ? '#1C1C1C' : 'white' }}
     >
       {reverseDivider ? (
-        <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
+        <div
+          className={`${
+            darkMode ? 'bg-gray-55' : 'bg-neutral-35'
+          } absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]`}
+        />
       ) : (
-        <div className="absolute bg-neutral-35 lg:left-32 lg:right-32 lg:top-0 lg:h-[1px]" />
+        <div
+          className={`absolute ${darkMode ? 'bg-gray-55' : 'bg-neutral-35'} lg:left-32 lg:right-32 lg:top-0 lg:h-[1px]`}
+        />
       )}
       <div className="flex w-[345px] flex-col gap-8 lg:hidden lg:w-full ">
         <div
