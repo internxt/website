@@ -11,7 +11,7 @@ const onButtonClick = () => (window.location.href = '#priceTable');
 export default function AwardWinningSection({ textContent }: Readonly<AwardWinningSectionProps>): JSX.Element {
   return (
     <section
-      className={`flex h-[641px] w-full items-center justify-center overflow-hidden px-6 py-10 lg:h-min lg:p-10 xl:p-32 3xl:p-80 `}
+      className={`flex h-[641px] w-full items-center justify-center overflow-hidden px-6 py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80 `}
       style={{ background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
