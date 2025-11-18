@@ -100,7 +100,7 @@ export default function HorizontalScrollableSection({
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
-          className="w-full overflow-x-auto px-5 lg:px-28 [&::-webkit-scrollbar]:hidden"
+          className="w-full overflow-x-auto px-5 lg:px-28 2xl:px-60 [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -136,7 +136,7 @@ export default function HorizontalScrollableSection({
             ))}
           </div>
         </div>
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
+        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px] 2xl:hidden">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}

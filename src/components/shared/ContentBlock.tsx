@@ -7,9 +7,9 @@ interface ContentBlockSectionProps {
 
 export const ContentBlockSection = ({ textContent }: ContentBlockSectionProps) => {
   return (
-    <section className="flex items-center justify-center gap-6 bg-neutral-17 px-5 py-20 lg:px-10 xl:p-32 3xl:px-80">
+    <section className="flex items-center justify-between gap-6 bg-neutral-17 px-5 py-20 lg:px-10 xl:p-32 3xl:px-80">
       <div
-        className="flex flex-row gap-8 rounded-16 p-4 lg:py-10 lg:pl-10"
+        className="flex flex-row justify-between gap-8 rounded-16 p-4 lg:p-0 lg:py-10 lg:pl-10"
         style={{ background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%' }}
       >
         <div className="flex flex-col gap-6 lg:w-1/2 lg:gap-12">
