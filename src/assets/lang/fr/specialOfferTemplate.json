@@ -31,7 +31,7 @@
     "cta": "Apprenez à mieux nous connaître",
     "cardDescriptions": {
       "titles": [
-        "Données inviolables et infuites",
+        "Données inviolables et sans fuite",
         "Sécurité de nouvelle génération",
         "Open source et transparent",
         "Vérifié indépendamment"
@@ -133,7 +133,7 @@
         "line3": "de filtrer une liste de fichiers pour trouver ce",
         "line4": "que vous voulez plus rapidement. Vous pouvez même",
         "line5": "sauvegarder les dossiers de votre ordinateur, afin",
-        "line6": "de toujours avoi es dernières modifications",
+        "line6": "de toujours avoir les dernières modifications",
         "line7": "de vos fichiers les plus importants."
       }
     },
