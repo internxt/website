@@ -60,7 +60,7 @@ const FeaturesSection = ({
           )}
         />
 
-        {/* Feature #1 - All your files available in all your devices */}
+        {/* Feature #1 - All your files available in all your devices 
         <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-10 lg:grid-cols-2 lg:pb-20 lg:pt-20">
           <RevealX
             className="hidden w-full max-w-[713px] flex-col object-contain object-right lg:right-0 lg:flex"
@@ -108,7 +108,7 @@ const FeaturesSection = ({
               </p>
             </div>
           </div>
-        </div>
+        </div>*/}
 
         {/* Feature #2 - Keep your files organized and accessible from anywhere */}
         <div className="grid w-full grid-cols-1 justify-center pt-10 lg:grid-cols-2 lg:gap-20 lg:pb-20">
