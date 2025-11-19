@@ -34,7 +34,7 @@ export const ContentBlockSection = ({ textContent }: ContentBlockSectionProps) =
         </div>
         <Image
           loading="lazy"
-          src={getImage(`/images/datacenters-and-certifications/internxt.webp`)}
+          src={getImage(`/images/datacenters-and-certifications/datacenters.webp`)}
           draggable="false"
           alt={'Internxt data centers and certifications'}
           width={600}
