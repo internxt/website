@@ -2,9 +2,9 @@ import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
 
-export const ALLOWED_PATHS = ['baity', 'xavier', 'oscar', 'rimembah', 'believemy'];
+export const ALLOWED_PATHS = ['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb'];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy']);
+export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
@@ -12,6 +12,7 @@ export const COUPON_CODES = {
   oscar: PromoCodeName.Oscar,
   rimembah: PromoCodeName.RIMEMBAH,
   believemy: PromoCodeName.BELIEVEMY,
+  ghareeb: PromoCodeName.GHAREEB,
 };
 
 interface OfferConfig {
