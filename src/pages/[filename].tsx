@@ -199,8 +199,11 @@ export async function getServerSideProps(ctx) {
     lang = 'fr';
   }
 
+  if (pathname === 'ghareeb') {
+    lang = 'en';
+  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
