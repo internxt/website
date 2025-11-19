@@ -103,6 +103,7 @@ export interface OurValues {
   privacy: string;
   openSource: string;
   sustainability: string;
+  certifications: string;
 }
 
 export interface Products {

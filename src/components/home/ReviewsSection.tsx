@@ -1,18 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { useState, useRef } from 'react';
-
-interface ReviewSectionProps {
-  textContent: {
-    pcMag: string;
-    mashable: string;
-    pcWorld: string;
-  };
-  darkMode?: boolean;
-  bgColor?: string;
-  reverseDivider?: boolean;
-}
+import { useState, useRef, useCallback } from 'react';
 
 const ReviewText = ({ text, darkMode }: { text: string; darkMode?: boolean }) => {
   const formatText = (text: string) => {
@@ -40,6 +29,24 @@ const ReviewText = ({ text, darkMode }: { text: string; darkMode?: boolean }) =>
       {formatText(text)}
     </p>
   );
+};
+
+interface ReviewSectionProps {
+  textContent: {
+    pcMag: string;
+    mashable: string;
+    pcWorld: string;
+  };
+  darkMode?: boolean;
+  bgColor?: string;
+  reverseDivider?: boolean;
+}
+
+const HorizontalDivider = ({ darkMode, reverseDivider }: { darkMode: boolean; reverseDivider: boolean }) => {
+  const colorClass = darkMode ? 'bg-gray-55' : 'bg-neutral-35';
+  const positionClass = reverseDivider ? 'lg:bottom-0' : 'lg:top-0';
+
+  return <div className={`absolute ${colorClass} lg:left-32 lg:right-32 ${positionClass} lg:h-[1px]`} />;
 };
 
 export default function ReviewSection({
@@ -71,40 +78,59 @@ export default function ReviewSection({
 
   const maxIndex = reviews.length - 1;
 
-  const scrollLeft = () => {
-    if (currentIndex > 0 && scrollContainerRef.current) {
-      const newIndex = currentIndex - 1;
-      setCurrentIndex(newIndex);
-      const scrollAmount = scrollContainerRef.current.scrollWidth / reviews.length;
-      scrollContainerRef.current.scrollTo({
-        left: scrollAmount * newIndex,
-        behavior: 'smooth',
-      });
-    }
+  const handleScroll = useCallback(
+    (direction: 'left' | 'right') => {
+      if (!scrollContainerRef.current) return;
+
+      let newIndex = currentIndex;
+      if (direction === 'left' && currentIndex > 0) {
+        newIndex = currentIndex - 1;
+      } else if (direction === 'right' && currentIndex < maxIndex) {
+        newIndex = currentIndex + 1;
+      }
+
+      if (newIndex !== currentIndex) {
+        setCurrentIndex(newIndex);
+        const scrollAmount = scrollContainerRef.current.scrollWidth / reviews.length;
+        scrollContainerRef.current.scrollTo({
+          left: scrollAmount * newIndex,
+          behavior: 'smooth',
+        });
+      }
+    },
+    [currentIndex, maxIndex, reviews.length],
+  );
+
+  const scrollLeft = () => handleScroll('left');
+  const scrollRight = () => handleScroll('right');
+
+  const sectionStyle = {
+    background: bgColor ? bgColor : darkMode ? '#1C1C1C' : 'white',
   };
 
-  const scrollRight = () => {
-    if (currentIndex < maxIndex && scrollContainerRef.current) {
-      const newIndex = currentIndex + 1;
-      setCurrentIndex(newIndex);
-      const scrollAmount = scrollContainerRef.current.scrollWidth / reviews.length;
-      scrollContainerRef.current.scrollTo({
-        left: scrollAmount * newIndex,
-        behavior: 'smooth',
-      });
-    }
-  };
+  const buttonBaseClass = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-opacity ${
+    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+  }`;
+
+  const leftButtonClass = `${buttonBaseClass} ${
+    currentIndex === 0
+      ? 'cursor-not-allowed opacity-50'
+      : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+  }`;
+
+  const rightButtonClass = `${buttonBaseClass} ${
+    currentIndex === maxIndex
+      ? 'cursor-not-allowed opacity-50'
+      : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+  }`;
 
   return (
     <section
       className={`relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{ background: bgColor ? bgColor : darkMode ? '#1C1C1C' : 'white' }}
+      style={sectionStyle}
     >
-      {reverseDivider ? (
-        <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
-      ) : (
-        <div className="absolute bg-neutral-35 lg:left-32 lg:right-32 lg:top-0 lg:h-[1px]" />
-      )}
+      <HorizontalDivider darkMode={darkMode} reverseDivider={reverseDivider} />
+
       <div className="flex w-[345px] flex-col gap-8 lg:hidden lg:w-full ">
         <div
           ref={scrollContainerRef}
@@ -129,30 +155,10 @@ export default function ReviewSection({
         </div>
         <div className="flex h-[48px] w-[345px] flex-row items-end justify-end ">
           <div className="flex w-[120px] justify-between">
-            <button
-              onClick={scrollLeft}
-              disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-              }`}
-            >
+            <button onClick={scrollLeft} disabled={currentIndex === 0} className={leftButtonClass}>
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
-            <button
-              onClick={scrollRight}
-              disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-              }`}
-            >
+            <button onClick={scrollRight} disabled={currentIndex === maxIndex} className={rightButtonClass}>
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>
           </div>
