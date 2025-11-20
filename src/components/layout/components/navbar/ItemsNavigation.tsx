@@ -142,6 +142,7 @@ export const ItemsNavigation = ({
             { href: '/privacy', text: textContent.ourValues.privacy },
             { href: '/open-source', text: textContent.ourValues.openSource },
             { href: '/green-cloud-computing', text: textContent.ourValues.sustainability },
+            { href: '/cloud-data-centers', text: textContent.ourValues.certifications },
           ]}
           darkMode={darkMode}
           lang={lang}

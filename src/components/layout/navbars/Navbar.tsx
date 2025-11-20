@@ -367,6 +367,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 >
                                   <p>{props.textContent.ourValues.sustainability}</p>
                                 </Link>
+                                <Link
+                                  href="/cloud-data-centers"
+                                  locale={props.lang}
+                                  className="flex flex-row space-x-2"
+                                >
+                                  <p>{props.textContent.ourValues.certifications}</p>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>

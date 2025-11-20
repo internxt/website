@@ -1,0 +1,124 @@
+{
+  "HeroSection": {
+    "title": "**Centres de données**\n et **certifications**",
+    "description": "Nous offrons conformité, sécurité et stockage cloud\n européen pour protéger vos données.",
+    "features": ["Conforme aux normes GDPR, ISO, SOC 2 et HIPAA", "Chiffrement post-quantique", "Open source et audité"]
+  },
+  "WhatIsDataCenterSection": {
+    "title": "Qu'est-ce qu'un centre de données ?",
+    "description": [
+      "Un centre de données est géré et exploité par un fournisseur de services cloud pour stocker, traiter et livrer des données aux utilisateurs via Internet. Les clients peuvent louer ou acquérir l'infrastructure auprès de ces centres, éliminant ainsi le besoin de se procurer, d'acheter ou de maintenir leur propre matériel, espace ou sécurité.",
+      "Internxt bénéficie de travailler avec des centres de données cloud à travers le monde et conserve plusieurs copies de vos fichiers en toute sécurité dans différents emplacements pour une redondance et une accessibilité accrues."
+    ]
+  },
+  "HorizontalScrllableSection": {
+    "title": "Sécurité de nos \n centres de données",
+    "description": "Nos centres de données offrent une protection\n avancée pour vos données et fichiers,\n combinée à une infrastructure sécurisée.",
+    "cards": {
+      "titles": [
+        "Sécurité sur site",
+        "Protection de l'infrastructure",
+        "Durabilité et disponibilité",
+        "Durabilité (Sustainability)"
+      ],
+      "description": [
+        "Avec Internxt Drive, vos fichiers sont chiffrés sur votre appareil avant d'atteindre nos centres de données sécurisés. Seul le personnel autorisé peut accéder aux serveurs physiques, avec des contrôles stricts et une surveillance 24/7 assurant une protection maximale.",
+        "Les centres de données d'Internxt sont construits avec une alimentation électrique redondante, des générateurs de secours et des systèmes d'extinction d'incendie pour garantir le temps de disponibilité et protéger vos fichiers, même lors d'événements inattendus ou de risques environnementaux.",
+        "Internxt utilise une gestion des données avancée pour garantir une durabilité de 99,999999999 % pour vos fichiers. Tous les centres disposent d'une double alimentation et de générateurs de secours, gardant votre cloud accessible même en cas de panne.",
+        "Le cloud d'Internxt fonctionne à l'énergie renouvelable avec des systèmes de refroidissement par eau avancés pour réduire les émissions et les déchets. Tous les centres de données sont certifiés ISO 50001 pour la gestion durable de l'énergie."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Sécurité avancée et infrastructure fiable",
+    "description": "Stockage cloud chiffré et conçu pour la confidentialité",
+    "cta": "Obtenir Internxt"
+  },
+  "CompilanceAndCertificationsSection": {
+    "title": "Conformité et certifications",
+    "description": "Réclamez votre code de coupon Internxt en suivant ces trois étapes simples :",
+    "features": {
+      "titles": ["Sécurité mondiale", "Réglementations locales et régionales", "Conformité spécialisée"],
+      "description": [
+        "Les centres de données cloud d'Internxt sont audités et certifiés de manière indépendante, garantissant une protection sécurisée, confidentielle et conforme pour vos fichiers.",
+        "Basés à Valence, en Espagne, les centres de données européens d'Internxt sont entièrement conformes au GDPR et adhèrent aux réglementations régionales dans le monde entier.",
+        "Nos centres de données respectent les normes de conformité spécifiques à l'industrie, aidant des secteurs tels que la santé et la finance à se défendre contre les violations et à prouver la protection des données."
+      ]
+    },
+    "cards": {
+      "images": ["GDPR", "ISO", "SOC", "PCI", "HD", "HIPAA", "ENS", "EBA"],
+      "titles": ["GDPR", "ISO 27001", "SOC 2", "PCI DSS", "Données de santé en Europe", "HIPAA", "ENS", "EBA"],
+      "description": [
+        "Conformité au Règlement (UE) 2016/679, connu sous le nom de Règlement Général sur la Protection des Données (GDPR).",
+        "Conformité aux normes internationales pour les systèmes de gestion de la sécurité de l'information.",
+        "Conformité aux normes de gestion et de protection des données clients et des rapports financiers.",
+        "Protection des informations de cartes de paiement de niveau 1.",
+        "Conformité pour l'hébergement des données de santé des citoyens français, britanniques, italiens, allemands et polonais.",
+        "Conformité à la loi américaine Health Insurance Portability and Accountability Act.",
+        "Définit les normes de sécurité pour les agences gouvernementales et les organisations publiques en Espagne.",
+        "Conformité aux Lignes Directrices sur l'Externalisation de l'Autorité Bancaire Européenne (EBA) en Europe."
+      ]
+    }
+  },
+  "SecureCloudStorgaeSection": {
+    "title": "Stockage cloud sécurisé dans des \n centres de données de classe mondiale",
+    "description": "Internxt Drive offre tout ce dont vous avez besoin pour garantir\n que vos fichiers et données restent privés avec un stockage\n cloud sécurisé et plus encore.",
+    "card": {
+      "title": "Internxt Drive",
+      "description": [
+        "Internxt Drive fournit un stockage chiffré post-quantique de bout en bout dans des centres de données européens qui répondent aux normes de confidentialité les plus strictes. Vos fichiers sont protégés par des systèmes redondants, des contrôles environnementaux et une sécurité 24/7.",
+        "Améliorez votre stockage avec Antivirus, VPN, Cleaner, Meet et Mail – votre suite de confidentialité tout-en-un pour une protection totale en ligne."
+      ],
+      "cta": "Obtenir Internxt"
+    }
+  },
+  "CtaSection2": {
+    "title": "Assurez-vous que vos fichiers respectent les normes les plus strictes",
+    "description": "Stockage chiffré conçu pour le GDPR et les réglementations sectorielles",
+    "cta": "Réclamer l'offre"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne. Internxt dispose de nombreux centres de données cloud européens pour stocker vos données conformément au GDPR et aux autres réglementations de conformité."
+        ]
+      },
+      {
+        "question": "Où se trouvent les centres de données cloud d'Internxt ?",
+        "answer": [
+          "Internxt utilise une stratégie de réseau multi-cloud, garantissant que les fichiers sont stockés dans plusieurs centres de données cloud européens pour vous assurer la meilleure performance, sécurité et protection pour vos fichiers."
+        ]
+      },
+      {
+        "question": "Comment fonctionnent les centres de données d'Internxt ?",
+        "answer": [
+          "Internxt est partenaire d'OVHcloud, qui possède des centres de données cloud européens et plusieurs emplacements à travers le monde pour stocker vos données cloud.",
+          "Ces infrastructures de centres de données hébergent des milliers de serveurs pour garantir la disponibilité, la performance et la redondance, assurant un accès rapide et sécurisé aux fichiers tout en les gardant en sécurité."
+        ]
+      },
+      {
+        "question": "Qu'est-ce qu'une zone de disponibilité ?",
+        "answer": [
+          "Les zones de disponibilité sont un ensemble d'un ou plusieurs centres de données situés dans une région. Chaque zone de disponibilité fonctionne indépendamment et dispose de sa propre alimentation, de son propre refroidissement et de son propre réseau pour prévenir les pannes de courant ou d'autres événements tels que les défaillances d'infrastructure.",
+          "Les zones au sein d'une région sont liées pour offrir une disponibilité accrue et des connexions à faible latence, garantissant que les applications peuvent rester en ligne même si une zone subit une défaillance."
+        ]
+      },
+      {
+        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "answer": [
+          "Non, personne, y compris Internxt, ne peut accéder à vos fichiers. Tous vos fichiers et données sont chiffrés sur votre appareil avec un chiffrement post-quantique. Étant donné que les clés sont stockées et gérées sur votre appareil et non par nous ou nos fournisseurs de services, seuls vous ou les personnes avec qui vous choisissez de partager des fichiers pouvez les déchiffrer.",
+          "Tous les fichiers stockés dans nos centres de données sont chiffrés, de sorte qu'aucun employé ou pirate ne peut en voir le contenu."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique par chat en direct ou par e-mail à hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}
