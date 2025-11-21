@@ -337,18 +337,18 @@ var injectScripts = function () {
         config.cookieTypesTitle +
         '</h5><ul>' +
         n +
-        '</ul></div></div><div class="btn-wrap"></button><button id="cookieAccept" style="color:' +
-        config.primaryColor +
-        ';border: 1px solid ' +
-        config.primaryColor +
-        ';" type="button">' +
-        config.acceptBtnLabel +
-        '</button><button id="cookieReject" style="color:' +
+        '</ul></div></div><div class="btn-wrap"><button id="cookieReject" style="color:' +
         config.primaryColor +
         ';border: 1px solid ' +
         config.primaryColor +
         ';" type="button">' +
         config.declineInfoBtnLabel +
+        '</button></button><button id="cookieAccept" style="color:' +
+        config.primaryColor +
+        ';border: 1px solid ' +
+        config.primaryColor +
+        ';" type="button">' +
+        config.acceptBtnLabel +
         '</button></div>';
       setTimeout(function () {
         e('body').append(p),
