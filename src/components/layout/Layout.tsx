@@ -123,17 +123,6 @@ export default function Layout({
         ></style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 
-        {/*Internxt GTM*/}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-P7N7LW5G');`,
-          }}
-        ></script>
-
         {/*Internxt Pixel 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB"></script>
         <script
@@ -158,24 +147,7 @@ export default function Layout({
           }}
         />
         <script async src="/js/cookiebanner.script.js" />
-
-        {/*Klaviyo Pixel */}
-        <script
-          async
-          type="text/javascript"
-          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VBJnZ5"
-        ></script>
       </Head>
-
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-P7N7LW5G"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-          title="Google Tag Manager iframe"
-        ></iframe>
-      </noscript>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {`{

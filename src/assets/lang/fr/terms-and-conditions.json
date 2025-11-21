@@ -101,9 +101,7 @@
 
   "title27": "Privacy Policy overview",
 
-  "privacy_policy_intro_part1": "The Privacy Policy is part of the Legal Notice that governs the Web Page: www.internxt.com together with the Cookies Usage Policy.",
-  "privacy_policy_intro_part2": "The Web page www.internxt.com is owned by Internxt Universal Technologies, S.L. and complies with the requirements derived from Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, and current regulations relating to the protection of personal data and, in particular, Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and the free movement of such data and Organic Law 3/2018, of 5 December, on the Protection of Personal Data and guarantee of digital rights.",
-  "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. reserves the right to modify or adapt this Privacy Policy at any time. Therefore, we recommend that you review it every time you access the Website. In the event that you have registered on the website and access your account or profile, upon accessing it, you will be informed in the event that there have been substantial changes in relation to the processing of your personal ",
+  "privacy_policy_intro_part1": "Cette politique de confidentialité a été rédigée conformément aux dispositions du RÈGLEMENT (UE) 2016/679 DU PARLEMENT EUROPÉEN ET DU CONSEIL du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (RGPD) et de la Loi Organique 3/2018 du 5 décembre, relative à la protection des données et à la garantie des droits numériques (LOPDGDD).",
 
   "privacy_policy_person_responsible_title": "Who is the person responsible for the treatment?",
 
@@ -452,115 +450,140 @@
   "title31": "Transfer of information to governing authorities",
   "subtitle31": "Internxt is based in Spain and the information we collect is governed by Spanish law. By accessing or using our Services or otherwise providing information to us, you consent to the processing and transfer of information in and to Spain and other countries, where you may not have the same rights as you do under your local law. Where this is the case, we will take appropriate measures to protect information about you in accordance with this Privacy Policy. Since Internxt uses client-side end-to-end encryption, it cannot know the content a user has under his Drive account.",
 
-  "cookies_title": "Cookies",
-  "cookies_subtitle1": "Regulations on the use of cookies",
-  "cookies_data_part1": "This Cookies Policy is an integral part of the Legal Notice and Privacy Policy of Internxt Universal Technologies, S.L.. Accessing and browsing the site, or the use of its services, implies acceptance of the General Conditions set out in our Legal Notice (and therefore of the Privacy Policy and Cookies Policy). Please read these carefully.",
-  "cookies_data_part2": "Thank you for deciding to visit us. We want your experience on the site to be the best possible, and for that reason we have drafted, in compliance with the second paragraph of Article 22 of Law 34/2002, of July 11, 2002, of services of the information society and electronic commerce (hereinafter, LSSI), this Cookies Policy in the clearest, most transparent, complete and understandable way possible.",
+  "title32": "Politique de Cookies",
+  "cookies_data_part1": "Chez INTERNXT, nous utilisons des cookies et/ou des technologies similaires qui stockent et récupèrent des informations lorsque vous naviguez. En général, ces technologies peuvent servir à des fins très diverses, comme par exemple, vous reconnaître en tant qu'utilisateur, obtenir des informations sur vos habitudes de navigation ou personnaliser la façon dont le contenu est affiché.",
+  "cookies_data_part2": "Les utilisations spécifiques que nous faisons de ces technologies sont décrites ci-dessous. Nous souhaitons vous informer de manière claire et précise sur les cookies que nous utilisons, en détaillant ci-dessous ce qu'est un cookie, à quoi il sert, quels types de cookies nous utilisons, quel est leur objectif et comment vous pouvez les configurer ou les désactiver si vous le souhaitez.",
 
-  "cookies_subtitle2": "What is a Cookie?",
-  "cookies_data_part3": "This website uses cookies and/or similar technologies that store and retrieve information when you browse. In general, these technologies can serve a variety of purposes, such as, for example, recognizing you as a user, obtaining information about your browsing habits, or customizing the way content is displayed.",
-  "cookies_data_part4": "Cookies are files containing small amounts of information that are downloaded to the user's browser or device being used (smartphone, tablet or connected TV) when visiting a website. Their main purpose is to store information about your visit and recognize the user each time you access the website. It also allows us to improve the quality and usability of our website.",
-  "cookies_data_part5": "Cookies are essential to the functioning of the Internet; they cannot harm the user's computer/device and, if enabled in your browser settings, help us to identify and resolve possible malfunctions of www.internxt.com.",
-  "cookies_data_part6": "Like most sites on the internet, this website uses Cookies to ensure that the website functions correctly, to store preferences, such as, for example, the language you have selected or the font size, to learn about the user's browsing experience, to collect anonymous statistical information, such as, for example, which pages the user has visited or how long the user has stayed on the website.",
+  "cookies_subtitle2": "Qu'est-ce qu'un cookie et à quoi sert-il ?",
+  "cookies_data_part3": "Un Cookie est un petit fichier qui est stocké sur l'ordinateur de l'utilisateur, sa tablette, son smartphone ou tout autre appareil avec des informations sur la navigation. L'ensemble des cookies de tous nos utilisateurs nous aide à améliorer la qualité de notre site web, nous permettant de contrôler quelles pages sont utiles, lesquelles ne le sont pas et lesquelles sont susceptibles d'amélioration.",
+  "cookies_data_part5": "Les cookies sont essentiels au fonctionnement d'internet, apportant d'innombrables avantages dans la fourniture de services interactifs, facilitant votre navigation et l'utilisation de notre site web. En aucun cas les cookies ne pourraient endommager votre appareil. Au contraire, le fait qu'ils soient actifs nous aide à identifier et à résoudre les erreurs.",
 
-  "cookies_subtitle3": "Types of Cookies",
-  "cookies_data_part7": "There are different types of cookies. They all work in the same way, but have small differences:",
-  "cookies_data_part8": "Session Cookies: are those designed to collect and store data while the user accesses a web page. They are usually used to store information that is only interesting to keep for the provision of the service requested by the user on a single occasion (for example, a list of products, a list of products acquired) and disappear at the end of the session.",
+  "cookies_subtitle3": "Quels types de cookies utilisons-nous ?",
+  "cookies_subsubtitle3": "Selon l'entité qui les gère",
+  "cookies_data_part8": "Cookies propres",
+  "cookies_data_part8_2": "Ce sont ceux qui sont envoyés à votre appareil depuis nos propres équipements ou domaines et depuis lesquels nous fournissons le service que vous nous demandez.",
+  "cookies_data_part9": "Cookies tiers",
+  "cookies_data_part9_2": "Ce sont ceux qui sont envoyés à votre appareil depuis un équipement ou un domaine qui n'est pas géré par nous, mais par une autre entité collaboratrice. Comme par exemple, ceux utilisés par les réseaux sociaux, ou par du contenu externe comme Google Maps.",
 
-  "cookies_data_part9": "Session cookies last only for the duration of your visit and are deleted when you close your browser. Their main purpose is to identify the type of device, support the security of the website or its basic functionality. They do not contain personal information that would allow us to identify an individual.",
+  "cookies_sub2subtitle3": "Selon la période de temps pendant laquelle ils restent actifs",
+  "cookies_data_part11": "Cookies de session",
+  "cookies_data_part11_2": "Ce sont des cookies temporaires qui restent dans le fichier de cookies de votre navigateur jusqu'à ce que vous quittiez le site web, de sorte qu'aucun n'est enregistré sur le disque dur de votre ordinateur. Les informations obtenues par ces cookies servent à analyser les modèles de trafic web. À long terme, cela nous permet de fournir une meilleure expérience pour améliorer le contenu et faciliter son utilisation.",
+  "cookies_data_part12": "Cookies persistants",
+  "cookies_data_part12_2": "Ils sont stockés sur le disque dur et notre site web les lit à chaque nouvelle visite. Un site web persistant a une date d'expiration déterminée. Le cookie cessera de fonctionner après cette date.",
 
-  "cookies_data_part10": "Persistent or Permanent Cookies: are those in which the data remain stored in the terminal and can be accessed and processed for a period defined by the person responsible for the cookie, which can range from a few minutes to several years.",
+  "cookies_sub3subtitle3": "Selon leur finalité",
+  "cookies_data_part14": "Cookies techniques",
+  "cookies_data_part14_2": "Ce sont ceux nécessaires à la navigation et au bon fonctionnement de notre site web. Ils permettent par exemple de contrôler le trafic et la communication de données, d'accéder à des zones d'accès restreint, de réaliser le processus d'achat d'une commande, d'utiliser des éléments de sécurité, de stocker du contenu pour pouvoir diffuser des vidéos ou partager du contenu via les réseaux sociaux.",
+  "cookies_data_part15": "Cookies d'analyse",
+  "cookies_data_part15_2": "Ce sont ceux qui nous permettent de quantifier le nombre d'utilisateurs et ainsi de réaliser la mesure et l'analyse statistique de l'utilisation que les utilisateurs font des services fournis. Pour cela, votre navigation sur notre site web est analysée afin d'améliorer l'offre de produits et services que nous proposons.",
+  "cookies_data_part16": "Cookies de préférence ou de personnalisation",
+  "cookies_data_part16_2": "Ce sont ceux qui permettent de mémoriser des informations pour que l'utilisateur accède au service avec certaines caractéristiques qui peuvent différencier son expérience de celle d'autres utilisateurs, comme par exemple, la langue, le nombre de résultats à afficher lorsque l'utilisateur effectue une recherche, l'apparence ou le contenu du service en fonction du type de navigateur par lequel l'utilisateur accède au service ou de la région depuis laquelle il accède au service, etc.",
+  "cookies_data_part17": "Cookies de publicité comportementale",
+  "cookies_data_part17_2": "Ce sont ceux qui stockent des informations sur le comportement des utilisateurs obtenues par l'observation continue de leurs habitudes de navigation, ce qui permet de développer un profil spécifique pour afficher de la publicité en fonction de celui-ci.",
 
-  "cookies_data_part11": "They are stored on the hard drive of the device and our website reads them every time you make a new visit to the website; they have a specific expiration date, after which the cookie stops working. They allow us to identify your actions and preferences; analyze visits and help us understand how users reach our site and improve our services.",
+  "cookies_subtitle4": "Finalité de chacun des cookies utilisés :",
+  "cookies_data_part19": "Ci-dessous, nous détaillons les cookies utilisés sur notre site web et leur finalité.",
 
-  "cookies_data_part12": "Technical Cookies, strictly necessary: (exempted from compliance with the obligations established in Article 22.2 of the LSSI when they allow to provide the service requested by the user). They are those that allow the user to navigate through a website, platform or application and the use of the different options or services that exist in it, including those that the publisher uses to enable the management and operation of the website and enable its functions and services, such as, for example, control traffic and data communication, identify the session, access restricted parts, remember the elements that make up an order, make the buying process of an order, manage the payment, control fraud linked to the security of the service, make the request for registration or participation in an event, count visits for the purpose of billing licenses of the software with which the service works (website, platform or application), use security features during navigation, store content for broadcasting videos or sound, enable dynamic content (for example, animation of loading a text or image) or share content through social networks.",
+  "cookies_table_row1_column1": "Cookie",
+  "cookies_table_row1_column2": "Finalité ou service associé",
+  "cookies_table_row1_column3": "Durée",
+  "cookies_table_row1_column4": "Tiers",
 
-  "cookies_data_part13": "Preference or personalization cookies: these are cookies that allow information to be remembered so that the user can access the service with certain characteristics that may differentiate their experience from that of other users, such as, for example, the language, the number of results to be displayed when the user performs a search, the appearance or content of the service depending on the type of browser through which the user accesses the service or the region from which the user accesses the service, etc.",
+  "cookies_table_row2_column1": "_ga",
+  "cookies_table_row2_column2": "Contient un identifiant unique utilisé par Google Analytics pour déterminer que deux visites distinctes appartiennent au même utilisateur dans toutes les sessions de navigation.",
+  "cookies_table_row2_column3": "2 ans",
+  "cookies_table_row2_column4": "Google Analytics",
 
-  "cookies_data_part14": "Geo-location cookies: these are used to find out in which country or region the user is located when accessing a website service in order to offer content or services appropriate to the user's location.",
+  "cookies_table_row3_column1": "_ga_*",
+  "cookies_table_row3_column2": "Utilisé par Google Analytics pour maintenir l'état de la session et collecter des données sur le comportement de l'utilisateur.",
+  "cookies_table_row3_column3": "2 ans",
+  "cookies_table_row3_column4": "Google Analytics",
 
-  "cookies_data_part15": "Analysis or measurement cookies: are those that allow the party responsible for them to monitor and analyze the behavior of users of the websites to which they are linked, including the quantification of the impacts of advertisements. The information collected through this type of cookies is used in the measurement of the activity of the websites, application or platform, in order to make improvements based on the analysis of the usage data made by users of the service.",
+  "cookies_table_row4_column1": "_gid",
+  "cookies_table_row4_column2": "Enregistre un identifiant unique qui est utilisé pour générer des données statistiques sur la façon dont le visiteur utilise le site web.",
+  "cookies_table_row4_column3": "24 heures",
+  "cookies_table_row4_column4": "Google Analytics",
 
-  "cookies_data_part16": "Behavioral advertising cookies: are those that store information on user behavior obtained through the continuous observation of their browsing habits, allowing the development of a specific profile to display advertising based on the same.",
+  "cookies_table_row5_column1": "_gcl_au",
+  "cookies_table_row5_column2": "Utilisé par Google AdSense pour expérimenter l'efficacité publicitaire sur les sites web utilisant leurs services.",
+  "cookies_table_row5_column3": "3 mois",
+  "cookies_table_row5_column4": "Google Ads",
 
-  "cookies_data_part17": "Anonymous: they only collect information about the advertising spaces displayed on the website, regardless of the user accessing the website, i.e. without expressly identifying the user..",
+  "cookies_table_row6_column1": "_gcl_aw",
+  "cookies_table_row6_column2": "Utilisé par Google Ads pour suivre les conversions et mesurer l'efficacité des campagnes publicitaires.",
+  "cookies_table_row6_column3": "90 jours",
+  "cookies_table_row6_column4": "Google Ads",
 
-  "cookies_data_part18": "Personalized: they collect personal information of the user of the website by a third party, for the personalization of such advertising spaces.",
+  "cookies_table_row7_column1": "_gcl_gs",
+  "cookies_table_row7_column2": "Utilisé par Google pour suivre les conversions publicitaires et attribuer correctement les ventes.",
+  "cookies_table_row7_column3": "90 jours",
+  "cookies_table_row7_column4": "Google Ads",
 
-  "cookies_data_part19": "Functionality Cookies: allow to remember decisions made by the user, such as login or identifier.",
+  "cookies_table_row8_column1": "_fbp",
+  "cookies_table_row8_column2": "Utilisé par Facebook pour diffuser de la publicité lorsqu'ils sont sur Facebook ou sur une plateforme numérique alimentée par la publicité Facebook après avoir visité le site web.",
+  "cookies_table_row8_column3": "3 mois",
+  "cookies_table_row8_column4": "Facebook Pixel",
 
-  "cookies_data_part20": "The information these cookies collect is anonymized (i.e., it does not contain your name, address, or other data).",
+  "cookies_table_row9_column1": "_fbc",
+  "cookies_table_row9_column2": "Stocke l'identifiant de clic Facebook (fbclid) pour attribuer les visites au site web provenant des annonces Facebook.",
+  "cookies_table_row9_column3": "90 jours",
+  "cookies_table_row9_column4": "Facebook Pixel",
 
-  "cookies_data_part21": "Own Cookies: those that are sent to the user's terminal equipment from a computer or domain managed by the editor itself and from which the service requested by the user is provided.",
+  "cookies_table_row10_column1": "__kla_id",
+  "cookies_table_row10_column2": "Utilisé par Klaviyo pour suivre le comportement de l'utilisateur et personnaliser les communications par e-mail.",
+  "cookies_table_row10_column3": "2 ans",
+  "cookies_table_row10_column4": "Klaviyo",
 
-  "cookies_data_part22": "Third-party cookies: third-party cookies are cookies installed by a website that is not the one you are visiting; for example, those used by social networks (such as Facebook) or by external content plugins (such as Google Maps). In addition, some advertising companies use this type of file to track your visits on each site on which they advertise.",
+  "cookies_table_row11_column1": "_cq_duid",
+  "cookies_table_row11_column2": "Utilisé par Criteo pour le suivi des utilisateurs et la personnalisation des annonces de retargeting.",
+  "cookies_table_row11_column3": "13 mois",
+  "cookies_table_row11_column4": "Criteo",
 
-  "cookies_subtitle4": "Use of Cookies by www.internxt.com",
+  "cookies_table_row12_column1": "_cq_suid",
+  "cookies_table_row12_column2": "Cookie de session utilisé par Criteo pour suivre l'activité de l'utilisateur pendant la session en cours.",
+  "cookies_table_row12_column3": "Session",
+  "cookies_table_row12_column4": "Criteo",
 
-  "cookies_data_part23": "By accessing www.internxt.com, you expressly agree that we can use this type of cookies on your devices. If you disable cookies, your browsing may not be optimal and some of the utilities available may not work properly.",
+  "cookies_table_row13_column1": "rdt_uuid",
+  "cookies_table_row13_column2": "Utilisé par Reddit pour suivre les utilisateurs et afficher des annonces pertinentes.",
+  "cookies_table_row13_column3": "3 mois",
+  "cookies_table_row13_column4": "Reddit Pixel",
 
-  "cookies_data_part24": "Own cookies. In order to recognize you and provide you with a better service, our site uses its own cookies (small text files that your browser stores. The advantages of accepting our cookies translate into time savings.",
+  "cookies_table_row14_column1": "rdt_em",
+  "cookies_table_row14_column2": "Utilisé par Reddit pour faire correspondre l'utilisateur avec son profil Reddit pour la publicité personnalisée.",
+  "cookies_table_row14_column3": "3 mois",
+  "cookies_table_row14_column4": "Reddit Pixel",
 
-  "cookies_data_part25": "They can also be used to recognize you between successive visits and thus adapt the content shown to you, to obtain information about the date and time of your last visit, to measure some traffic parameters within the site itself, and to estimate the number of visits made, so that we can focus and adjust services and promotions more effectively.",
+  "cookies_table_row15_column1": "pin_unauth",
+  "cookies_table_row15_column2": "Utilisé par Pinterest pour suivre l'utilisation des services Pinterest et afficher de la publicité pertinente.",
+  "cookies_table_row15_column3": "1 an",
+  "cookies_table_row15_column4": "Pinterest",
 
-  "cookies_data_part26": "No cookie allows us to contact you with your phone number, email address or any other means of contact. No cookie can extract information from your hard drive or steal personal information.",
+  "cookies_table_row16_column1": "__cs_id",
+  "cookies_table_row16_column2": "Utilisé pour identifier l'utilisateur de manière unique et suivre son comportement sur le site web.",
+  "cookies_table_row16_column3": "13 mois",
+  "cookies_table_row16_column4": "Contentsquare / Analytics",
 
-  "cookies_data_part27": "Third Party Cookies. These cookies are those that are sent to the user's terminal equipment from a computer or domain that is not managed by the editor, but by another entity that processes the data obtained through the cookies.",
+  "cookies_table_row17_column1": "__cs_c",
+  "cookies_table_row17_column2": "Utilisé pour stocker le consentement de l'utilisateur concernant l'utilisation de cookies d'analyse.",
+  "cookies_table_row17_column3": "13 mois",
+  "cookies_table_row17_column4": "Contentsquare / Analytics",
 
-  "cookies_data_part28": "Cookies by Google Analytics",
+  "cookies_subtitle5": "Comment pouvez-vous configurer ou désactiver vos cookies ?",
 
-  "cookies_data_part29": "The site uses the Google Analytics service, which is provided by Google, Inc., an entity whose main office is located at 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, United States (\"Google\").",
+  "cookies_data_part20": "Vous pouvez autoriser, bloquer ou supprimer les cookies installés sur votre appareil en configurant les options de votre navigateur Internet. Si vous n'autorisez pas l'installation de cookies dans votre navigateur, il se peut que vous ne puissiez pas accéder à certains des services et que votre expérience sur notre site web puisse être moins satisfaisante. Dans les liens suivants, vous avez à votre disposition toutes les informations pour configurer ou désactiver vos cookies dans chaque navigateur :",
 
-  "cookies_data_part30": "Google Analytics uses cookies to help us analyze how users use the website. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information on our behalf for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google.",
+  "cookies_data_part21": "Google Chrome",
 
-  "cookies_data_part31": "If you wish, you may refuse the processing of data or information by rejecting the use of cookies by selecting the appropriate settings on your browser. However, if you do so, you may not be able to use the full functionality of this site. By using this site you consent to the processing of data about you by Google in the manner and for the purposes set out above. ",
+  "cookies_data_part22": "Mozilla Firefox",
 
-  "cookies_data_part32": "Learn more at https://www.google.es/intl/es/policies/technologies/cookies/. Google has developed a plug-in that you can install on your browser if you do not want to be tracked by its cookies: https://tools.google.com/dlpage/gaoptout.",
+  "cookies_subtitle41": "Internet Explorer",
 
-  "cookies_table_row1_column1": "Name",
-  "cookies_table_row1_column2": "Purpose",
+  "cookies_data_part23": "Safari",
 
-  "cookies_table_row2_column1": "_utma",
-  "cookies_table_row2_column2": "It is used to distinguish users and sessions. The cookie is created when the JavaScript library is executed and there is no __utma cookie. The cookie is updated each time data is sent to Google ANALYTICAL COOKIES.",
+  "cookies_data_part24": "Safari pour iOS (iPhone et iPad)",
 
-  "cookies_table_row3_column1": "_utmt",
-  "cookies_table_row3_column2": "It is used to limit the percentage of requests.",
+  "cookies_data_part25": "Chrome pour Android",
 
-  "cookies_table_row4_column1": "_utmb",
-  "cookies_table_row4_column2": "It is used to determine new sessions or visits. The cookie is created when the JavaScript library is executed and there is no __utmb cookie. The cookie is updated each time data is sent to Google Analytics.",
-
-  "cookies_table_row5_column1": "_utmc",
-  "cookies_table_row5_column2": "It is not used in ga.js. It is set to interact with urchin.js. Previously, this cookie acted in conjunction with the __utmb cookie to determine if the user was in a new session or visit.",
-
-  "cookies_table_row6_column1": "_utmz",
-  "cookies_table_row6_column2": "Stores the traffic source or campaign that explains how the user reached the site. The cookie is created when the JavaScript library is executed and is updated each time data is sent to Google Analytics.",
-
-  "cookies_table_row7_column1": "_utmv:",
-  "cookies_table_row7_column2": "Used to store visitor custom variable data. This cookie is created when a programmer uses the _setCustomVar method with a visitor custom variable. It was also used for the retired _setVar method. The cookie is updated each time data is sent to Google Analytics",
-
-  "cookies_table_row8_column1": "_ga",
-  "cookies_table_row8_column2": "It is used to differentiate between users and sessions. The cookie is created when loading the javascript library and there is no previous version of the _ga cookie. The cookie is updated every time you send data to Google Analytics.",
-
-  "cookies_table_row9_column1": "_gat",
-  "cookies_table_row9_column2": "It is used to differentiate between the different tracking objects created in the session. The cookie is created when loading the javascript library and there is no previous version of the _gat cookie. The cookie is updated each time you send data to Google Analytics.",
-
-  "cookies_subtitle5": "User configuration to avoid Cookies.",
-  "cookies_data_part33": "From www.internxt.com and in compliance with current legislation, we provide you with information that allows you to configure your browser / Internet browsers to maintain your privacy and security in relation to cookies. Therefore, we provide you with information and links to the official support sites of the main browsers so that you can decide whether or not to accept the use of cookies.",
-  "cookies_data_part34": "Thus, you can block cookies through your browser's configuration tools (all modern browsers allow you to change the Cookie settings. These settings are usually found in the \"Options\" or \"Preferences\" of the browser menu) or you can set your browser to warn you when a server wants to save a cookie: ",
-
-  "cookies_data_part35": "If you use Microsoft Internet Explorer, under the menu option Tools > Internet Options > Privacy > Settings. To learn more visit https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies",
-
-  "cookies_data_part36": "If you use Mozilla Firefox, in the menu option Tools > Options > Privacy > Cookies. To learn more visit https://support.mozilla.org/es/kb/Deshabilitar%20cookies%20de%20terceros",
-
-  "cookies_data_part37": "If you use Google Chrome, under Options > Advanced > Privacy. To learn more visit http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647 ",
-
-  "cookies_data_part38": "If you use Opera, in the Security and Privacy option, you can configure the browser. To learn more visit http://www.opera.com/help/tutorials/security/cookies/",
-
-  "cookies_data_part39": "If you use Apple Safari, in the Preferences > Security or Privacy option, you can configure Browser settings. To learn more visit https://support.apple.com/kb/PH21411?viewlocale=es_ES&locale=es_ES",
-
-  "cookies_data_part40": "If you want to disable Google Universal Analytics, you can install the following extension provided by Google: https://tools.google.com/dlpage/gaoptout",
-
-  "cookies_data_part41": "Some features and services may be disabled or have a different behavior than expected such as, for example, remain identified, keep purchases in the \"shopping cart\" in an e-commerce service or receive information targeted to your location, among others.",
-
-  "cookies_data_part42": "If you disable the use of Cookies on this website, it is likely that you will no longer be able to access certain areas of the site or that the browsing experience on the site will be significantly degraded."
+  "cookies_data_part26": "Ou vous pouvez également utiliser le bouton au début de cette politique de cookies pour ouvrir le configurateur et rejeter les cookies que vous avez acceptés."
 }
