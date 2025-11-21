@@ -19,8 +19,8 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
 
-      <div className="relative w-full ">
-        <div className="absolute inset-0 z-10 translate-x-96 transform lg:w-full">
+      <div className="relative w-full py-20 ">
+        <div className="absolute inset-0 z-10 translate-x-96 translate-y-20 transform lg:w-full">
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters-hero.webp`)}
             alt="Internxt data centers and certifications"

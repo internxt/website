@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": "**Centros de datos**\n y **certificaciones**",
-    "description": "Ofrecemos cumplimiento, seguridad y almacenamiento en la nube europeo para proteger tus datos.",
+    "description": "Ofrecemos cumplimiento, seguridad y almacenamiento\n en la nube europeo para proteger tus datos.",
     "features": ["Cumplimiento con GDPR, ISO, SOC 2 y HIPAA", "Cifrado post-cuántico", "Código abierto y auditado"]
   },
   "WhatIsDataCenterSection": {
