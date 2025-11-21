@@ -99,7 +99,6 @@
   "subtitle26": "El acuerdo constituye el acuerdo completo entre usted e Internxt en relación con su acceso y uso de nuestros servicios. Nosotros podemos asignar nuestros derechos y obligaciones bajo el Acuerdo. El hecho de que Internxt no ejerza o haga cumplir cualquier derecho o provisión del Acuerdo no operará como una renuncia a tal derecho o provisión. No seremos responsables por cualquier retraso o falla en el cumplimiento de cualquier obligación bajo el Acuerdo, cuando el retraso o falla resulte de cualquier causa más allá de nuestro control razonable. Salvo que se disponga lo contrario en el presente documento, el Acuerdo está destinado exclusivamente al beneficio de las partes y no tiene por objeto conferir derechos de beneficiario de terceros a ninguna otra persona o entidad.",
 
   "title27": "Política de privacidad",
-
   "privacy_policy_intro_part1": "Esta política de privacidad ha sido redactada al amparo de lo dispuesto en el REGLAMENTO (UE) 2016/679 DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de abril de 2016 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD) y en la Ley Orgánica 3/2018 de 5 de diciembre, de Protección de Datos y garantía de los derechos digitales (LOPDGDD).",
 
   "privacy_policy_person_responsible_title": "Identificación del responsable del Tratamiento",
@@ -360,13 +359,38 @@
 
   "cookies_table_row2_column1": "_ga",
   "cookies_table_row2_column2": "Contiene un identificador único utilizado por Google Analytics para determinar que dos visitas distintas pertenecen al mismo usuario en todas las sesiones de navegación.",
-  "cookies_table_row2_column3": "1 año",
+  "cookies_table_row2_column3": "2 años",
   "cookies_table_row2_column4": "Google Analytics",
 
-  "cookies_table_row3_column1": "_ga*",
-  "cookies_table_row3_column2": "Contiene un identificador único utilizado por Google Analytics para determinar que dos visitas distintas pertenecen al mismo usuario en todas las sesiones de navegación.",
-  "cookies_table_row3_column3": "1 año",
+  "cookies_table_row3_column1": "_ga_*",
+  "cookies_table_row3_column2": "Utilizada por Google Analytics para mantener el estado de la sesión y recopilar datos sobre el comportamiento del usuario.",
+  "cookies_table_row3_column3": "2 años",
   "cookies_table_row3_column4": "Google Analytics",
+
+  "cookies_table_row4_column1": "__kla_id",
+  "cookies_table_row4_column2": "Utilizada por Klaviyo para rastrear el comportamiento del usuario y personalizar las comunicaciones por email.",
+  "cookies_table_row4_column3": "2 años",
+  "cookies_table_row4_column4": "Klaviyo",
+
+  "cookies_table_row5_column1": "_gcl_au",
+  "cookies_table_row5_column2": "Utilizada por Google AdSense para experimentar con la eficiencia publicitaria a través de las webs que usan sus servicios.",
+  "cookies_table_row5_column3": "3 meses",
+  "cookies_table_row5_column4": "Google Ads",
+
+  "cookies_table_row6_column1": "_fbp",
+  "cookies_table_row6_column2": "Utilizada por Facebook para ofrecer publicidad cuando están en Facebook o en una plataforma digital impulsada por publicidad de Facebook después de visitar el sitio web.",
+  "cookies_table_row6_column3": "3 meses",
+  "cookies_table_row6_column4": "Facebook Pixel",
+
+  "cookies_table_row8_column1": "cookieConsent",
+  "cookies_table_row8_column2": "Utilizada para almacenar el consentimiento del usuario respecto al uso de cookies en el sitio web.",
+  "cookies_table_row8_column3": "1 año",
+  "cookies_table_row8_column4": "Internxt (Propia)",
+
+  "cookies_table_row9_column1": "cookieConsentPrefs",
+  "cookies_table_row9_column2": "Almacena las preferencias específicas del usuario sobre qué categorías de cookies ha aceptado o rechazado.",
+  "cookies_table_row9_column3": "1 año",
+  "cookies_table_row9_column4": "Internxt (Propia)",
 
   "cookies_subtitle5": "¿Como puedes configurar o deshabilitar tus cookies?",
 
@@ -384,9 +408,5 @@
 
   "cookies_data_part25": "Chrome para Android",
 
-  "cookies_data_part26": "O también puedes utilizar el botón al comienzo de esta política de cookies para abrir el configurador y rechazar las cookies que hayas aceptado.",
-
-  "cookies_subtitle6": "Más información",
-
-  "cookies_data_part28": "Para más información acude a nuestra política de privacidad."
+  "cookies_data_part26": "O también puedes utilizar el botón al comienzo de esta política de cookies para abrir el configurador y rechazar las cookies que hayas aceptado."
 }

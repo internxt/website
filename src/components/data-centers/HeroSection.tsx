@@ -19,7 +19,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
 
-      <div className="relative w-full ">
+      <div className="relative hidden w-full lg:flex">
         <div className="absolute inset-0 z-10 translate-x-96 transform lg:w-full">
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters-hero.webp`)}
@@ -27,7 +27,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
             width={841}
             height={200}
             quality={100}
-            className="h-[393px] w-full"
+            className="h-[475px] w-full"
           />
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters.webp`)}
@@ -35,10 +35,10 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
             width={433}
             height={200}
             quality={100}
-            className="absolute right-96 top-2 h-[433px] w-[433px]"
+            className="absolute right-96 top-20 h-[369px] w-[433px]"
           />
         </div>
-        <div className="relative z-10 flex flex-col gap-8 self-start p-4 lg:w-1/2">
+        <div className="relative z-10 flex flex-col gap-8 self-start p-4 lg:w-1/2 lg:py-20">
           <h1 className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95 lg:text-5xl">
             <HighlightText text={textContent.title} />
           </h1>

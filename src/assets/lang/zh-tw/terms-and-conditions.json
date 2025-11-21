@@ -101,9 +101,7 @@
 
   "title27": "隱私政策概述",
 
-  "privacy_policy_intro_part1": "隱私政策是管理網頁：www.internxt.com 的法律聲明的一部分，連同 Cookies 使用政策。",
-  "privacy_policy_intro_part2": "網頁 www.internxt.com 為 Internxt Universal Technologies, S.L. 擁有，符合衍生自2002年7月11日第34/2002號法案《關於信息社會服務和電子商務的法律》及與個人數據保護相關的現行法規，特別是2016年4月27日歐洲議會和理事會關於自然人有關個人數據的處理及此類數據自由流動的保護的規則（EU）2016/679 及2018年12月5日《關於個人數據保護和數字權利保證的法律》。",
-  "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. 保留隨時修改或適應本隱私政策的權利。因此，建議您每次訪問網站時都重新查看。如果您在網站上註冊並訪問您的帳戶或個人資料，在訪問時，如果對於處理您個人資料的相關變更存在重大變化，將會通知您。",
+  "privacy_policy_intro_part1": "本隱私政策根據**歐洲議會和理事會2016年4月27日關於個人數據處理和此類數據自由流動的第2016/679號條例（一般數據保護條例，GDPR）以及12月5日第3/2018號組織法（數據保護和數字權利保障組織法，LOPDGDD）**的規定起草。",
 
   "privacy_policy_person_responsible_title": "誰是負責處理的人？",
 
@@ -453,80 +451,95 @@
   "title31": "向監管機構轉移信息",
   "subtitle31": "Internxt位於西班牙，我們收集的信息受西班牙法律管轄。通過訪問或使用我們的服務或向我們提供信息，您同意在西班牙和其他國家處理和轉移信息，您在這些國家可能沒有與在本地法律下相同的權利。在這種情況下，我們將採取適當的措施來保護關於您的信息，符合本隱私政策。由於Internxt使用客戶端端到端加密，因此無法知道用戶在其Drive帳戶下擁有的內容。",
 
-  "cookies_title": "Cookies",
-  "cookies_subtitle1": "關於使用Cookies的規定",
-  "cookies_data_part1": "本Cookies政策是Internxt Universal Technologies, S.L.的法律聲明和隱私政策的組成部分。訪問和瀏覽本網站，或使用其服務，即表示接受我們法律聲明中所述的一般條件（因此也接受隱私政策和Cookies政策）。請仔細閱讀這些內容。",
-  "cookies_data_part2": "感謝您決定訪問我們。我們希望您在本網站上的體驗是最佳的，出於此原因，我們根據2002年7月11日第34/2002號法律《信息社會服務和電子商務法》（以下簡稱LSSI）第22條第二款的規定，以最清晰、透明、完整和易於理解的方式編寫了這個Cookies政策。",
+  "title32": "Cookie政策",
+  "cookies_data_part1": "在INTERNXT，我們使用cookie和/或類似技術，在您瀏覽時儲存和檢索資訊。一般來說，這些技術可以用於多種不同的目的，例如識別您作為用戶、獲取有關您瀏覽習慣的資訊或個性化內容顯示方式。",
+  "cookies_data_part2": "我們對這些技術的具體使用如下所述。我們希望清晰準確地告知您我們使用的cookie，詳細說明什麼是cookie、它的用途、我們使用哪些類型的cookie、它們的目的以及如果您願意，如何配置或禁用它們。",
 
-  "cookies_subtitle2": "什麼是Cookie？",
-  "cookies_data_part3": "本網站使用Cookies和/或類似技術在您瀏覽時存儲和檢索信息。一般來說，這些技術可以用於各種目的，例如，識別您為用戶、獲取有關您的瀏覽習慣的信息，或自定義內容顯示的方式。",
-  "cookies_data_part4": "Cookies是包含少量信息的文件，在訪問網站時下載到用戶的瀏覽器或正在使用的設備（智能手機、平板電腦或連接電視）中。它們的主要目的是存儲有關您的訪問的信息，並在您每次訪問網站時識別用戶。它還使我們能夠提高我們網站的質量和可用性。",
-  "cookies_data_part5": "Cookies對於互聯網的運作至關重要；它們不會損壞用戶的計算機/設備，並且如果在您的瀏覽器設置中啟用，有助於識別和解決www.internxt.com可能出現的故障。",
-  "cookies_data_part6": "與互聯網上大多數站點一樣，本網站使用Cookies來確保網站正常運行，存儲偏好設置，例如您選擇的語言或字體大小，瞭解用戶的瀏覽體驗，收集匿名統計信息，例如用戶訪問過哪些頁面或用戶在網站上停留了多長時間。",
+  "cookies_subtitle2": "什麼是cookie，它有什麼用途？",
+  "cookies_data_part3": "Cookie是儲存在用戶電腦、平板電腦、智慧型手機或任何其他裝置上的小檔案，包含有關瀏覽的資訊。來自所有用戶的cookie集合幫助我們提高網站質量，使我們能夠控制哪些頁面有用、哪些沒用以及哪些可以改進。",
+  "cookies_data_part5": "Cookie對互聯網的運作至關重要，在提供互動服務方面提供了無數優勢，促進了您對我們網站的瀏覽和可用性。在任何情況下，cookie都不會損害您的裝置。相反，啟動它們可以幫助我們識別和解決錯誤。",
 
-  "cookies_subtitle3": "Cookies的類型",
-  "cookies_data_part7": "有不同類型的Cookies。它們的工作方式都相同，但有細微差異：",
-  "cookies_data_part8": "會話Cookies：這些設計用於在用戶訪問網頁時收集和存儲數據。通常用於存儲僅在用戶單次訪問時保留的信息（例如產品列表、已購買的產品列表），並在會話結束時消失。",
+  "cookies_subtitle3": "我們使用哪些類型的cookie？",
+  "cookies_subsubtitle3": "根據管理實體",
+  "cookies_data_part8": "自有cookie",
+  "cookies_data_part8_2": "這些是從我們自己的裝置或網域發送到您裝置的cookie，我們透過它們提供您請求的服務。",
+  "cookies_data_part9": "第三方cookie",
+  "cookies_data_part9_2": "這些是從不由我們管理而是由另一個合作實體管理的裝置或網域發送到您裝置的cookie。例如，社群網路使用的cookie，或外部內容（如Google地圖）使用的cookie。",
 
-  "cookies_data_part9": "會話Cookies僅在您訪問期間存在，並在關閉瀏覽器時刪除。它們的主要目的是識別設備類型，支持網站的安全性或其基本功能。它們不包含可用於識別個人的個人信息。",
+  "cookies_sub2subtitle3": "根據它們保持活動的時間段",
+  "cookies_data_part11": "會話cookie",
+  "cookies_data_part11_2": "這些是臨時cookie，在您離開網站之前保留在瀏覽器的cookie檔案中，因此不會記錄在電腦硬碟上。透過這些cookie獲得的資訊用於分析網路流量模式。從長遠來看，這使我們能夠提供更好的體驗，改進內容並促進其使用。",
+  "cookies_data_part12": "持久性cookie",
+  "cookies_data_part12_2": "這些cookie儲存在硬碟上，我們的網站在您每次新訪問時都會讀取它們。持久性網站有確定的到期日期。cookie將在該日期後停止工作。",
 
-  "cookies_data_part10": "持久性或永久性Cookies：這些Cookies中的數據在終端上保留並可在由Cookie的負責人定義的時間段內訪問和處理，該時間段可從幾分鐘到幾年不等。",
+  "cookies_sub3subtitle3": "根據其目的",
+  "cookies_data_part14": "技術cookie",
+  "cookies_data_part14_2": "這些是導航和我們網站正常運作所必需的cookie。例如，它們允許控制流量和資料通訊、訪問受限訪問區域、執行訂單的購買流程、使用安全元素、儲存內容以便傳播影片或透過社群網路分享內容。",
+  "cookies_data_part15": "分析cookie",
+  "cookies_data_part15_2": "這些cookie使我們能夠量化用戶數量，從而對用戶使用所提供服務的情況進行測量和統計分析。為此，分析您在我們網站上的瀏覽，以改進我們提供的產品和服務範圍。",
+  "cookies_data_part16": "偏好或個性化cookie",
+  "cookies_data_part16_2": "這些cookie允許記住資訊，以便用戶以某些特徵訪問服務，這些特徵可以使其體驗與其他用戶不同，例如語言、用戶執行搜尋時要顯示的結果數量、根據用戶訪問服務的瀏覽器類型或用戶訪問服務的地區的服務外觀或內容等。",
+  "cookies_data_part17": "行為廣告cookie",
+  "cookies_data_part17_2": "這些cookie儲存透過持續觀察用戶瀏覽習慣獲得的用戶行為資訊，從而能夠開發特定的檔案以基於此顯示廣告。",
 
-  "cookies_data_part11": "它們存儲在設備的硬盤驅動器上，並且我們的網站每次您訪問網站時都會讀取它們；它們具有特定的到期日期，到期後，Cookie停止工作。它們允許我們識別您的操作和偏好；分析訪問量並幫助我們瞭解用戶如何訪問我們的網站並改進我們的服務。",
+  "cookies_subtitle4": "每個使用的cookie的目的：",
+  "cookies_data_part19": "以下詳細說明了我們網站上使用的cookie及其目的。",
 
-  "cookies_data_part12": "技術Cookies，嚴格必要：（當它們允許提供用戶請求的服務時，不需要遵守LSSI第22.2條所規定的義務）。它們允許用戶通過網站、平台或應用程序進行導航，並使用其中存在的不同選項或服務，包括出版商用於啟用網站的管理和運作以及啟用其功能和服務的選項，例如，控制流量和數據通信，識別會話，訪問受限部分，記住構成訂單的元素，進行訂單的購買過程，管理付款，控制與服務安全性相關的欺詐，發送註冊或參加活動的請求，計算用於與服務運作的軟件（網站、平台或應用程序）授權的訪問量，瀏覽期間使用安全功能，存儲用於廣播視頻或聲音的內容，啟用動態內容（例如，加載文本或圖像的動畫）或通過社交網絡分享內容。",
+  "cookies_table_row1_column1": "Cookie",
+  "cookies_table_row1_column2": "目的或相關服務",
+  "cookies_table_row1_column3": "持續時間",
+  "cookies_table_row1_column4": "第三方",
 
-  "cookies_data_part13": "偏好或個性化Cookies：這些Cookies允許記住信息，以便用戶可以訪問具有某些特徵的服務，這些特徵可能與其他用戶的體驗有所不同，例如，語言、用戶執行搜索時要顯示的結果數量、用戶通過其訪問服務的瀏覽器類型或用戶訪問服務的地區等。",
+  "cookies_table_row2_column1": "_ga",
+  "cookies_table_row2_column2": "包含Google Analytics使用的唯一識別碼，用於確定兩次不同的訪問在所有瀏覽會話中屬於同一用戶。",
+  "cookies_table_row2_column3": "2年",
+  "cookies_table_row2_column4": "Google Analytics",
 
-  "cookies_data_part14": "地理位置Cookies：這些Cookies用於確定用戶在訪問網站服務時所處的國家或地區，以便根據用戶的位置提供相應的內容或服務。",
+  "cookies_table_row3_column1": "_ga_*",
+  "cookies_table_row3_column2": "Google Analytics用於維護會話狀態並收集有關用戶行為的資料。",
+  "cookies_table_row3_column3": "2年",
+  "cookies_table_row3_column4": "Google Analytics",
 
-  "cookies_data_part15": "分析或測量Cookies：這些Cookies允許負責它們的一方監控和分析與它們相連接的網站的用戶行為，包括廣告影響的量化。通過這類Cookies收集的信息用於測量網站、應用程序或平台的活動，以便根據用戶對服務的使用數據分析來進行改進。",
+  "cookies_table_row4_column1": "__kla_id",
+  "cookies_table_row4_column2": "Klaviyo用於追蹤用戶行為並個性化電子郵件通訊。",
+  "cookies_table_row4_column3": "2年",
+  "cookies_table_row4_column4": "Klaviyo",
 
-  "cookies_data_part16": "行為廣告Cookies：這些Cookies存儲通過持續觀察用戶瀏覽習慣獲得的用戶行為信息，從而允許根據這些行為開發特定檔案以顯示基於它們的廣告。",
+  "cookies_table_row5_column1": "_gcl_au",
+  "cookies_table_row5_column2": "Google AdSense用於在使用其服務的網站上試驗廣告效率。",
+  "cookies_table_row5_column3": "3個月",
+  "cookies_table_row5_column4": "Google Ads",
 
-  "cookies_data_part17": "匿名：它們僅收集有關網站上顯示的廣告空間的信息，而不考慮訪問網站的用戶，即不明確識別用戶。",
+  "cookies_table_row6_column1": "_fbp",
+  "cookies_table_row6_column2": "Facebook用於在訪問網站後，當用戶在Facebook或由Facebook廣告驅動的數位平台上時提供廣告。",
+  "cookies_table_row6_column3": "3個月",
+  "cookies_table_row6_column4": "Facebook Pixel",
 
-  "cookies_data_part18": "個性化：它們由第三方收集用戶的個人信息，用於個性化這些廣告空間。",
+  "cookies_table_row8_column1": "cookieConsent",
+  "cookies_table_row8_column2": "用於儲存用戶關於在網站上使用cookie的同意。",
+  "cookies_table_row8_column3": "1年",
+  "cookies_table_row8_column4": "Internxt（自有）",
 
-  "cookies_data_part19": "功能性Cookies：允許記住用戶所做的決定，例如登錄或標識符。",
+  "cookies_table_row9_column1": "cookieConsentPrefs",
+  "cookies_table_row9_column2": "儲存用戶關於接受或拒絕哪些cookie類別的具體偏好。",
+  "cookies_table_row9_column3": "1年",
+  "cookies_table_row9_column4": "Internxt（自有）",
 
-  "cookies_data_part20": "這些Cookies收集的信息已匿名化（即不包含您的姓名、地址或其他數據）。",
+  "cookies_subtitle5": "如何配置或禁用您的cookie？",
 
-  "cookies_data_part21": "自有Cookies：這些是從編輯器自身管理的計算機或域發送到用戶終端設備上的Cookies，並提供用戶請求的服務。",
+  "cookies_data_part20": "您可以透過配置Internet瀏覽器的選項來允許、阻止或刪除裝置上安裝的cookie。如果您不允許在瀏覽器中安裝cookie，您可能無法訪問某些服務，並且您在我們網站上的體驗可能不太令人滿意。在以下連結中，您可以獲得在每個瀏覽器中配置或禁用cookie的所有資訊：",
 
-  "cookies_data_part22": "第三方Cookies：第三方Cookies是由您所訪問的網站安裝的Cookies；例如，社交網絡（如Facebook）或外部內容插件（如Google Maps）所使用的Cookies。此外，一些廣告公司使用此類文件來追蹤您在每個廣告所在的網站上的訪問情況。",
+  "cookies_data_part21": "Google Chrome",
 
-  "cookies_subtitle4": "www.internxt.com使用Cookies的情況",
+  "cookies_data_part22": "Mozilla Firefox",
 
-  "cookies_data_part23": "通過訪問www.internxt.com，您明確同意我們可以在您的設備上使用此類Cookies。如果禁用Cookies，您的瀏覽可能不夠優化，並且某些可用的工具可能無法正常工作。",
+  "cookies_subtitle41": "Internet Explorer",
 
-  "cookies_data_part24": "自有Cookies：為了識別您並為您提供更好的服務，我們的網站使用自有Cookies（您的瀏覽器存儲的小型文本文件）。接受我們的Cookies的好處轉化為節省時間。",
+  "cookies_data_part23": "Safari",
 
-  "cookies_data_part25": "它們還可用於識別您在連續訪問之間，並因此使顯示給您的內容適應，獲取有關您上次訪問的日期和時間的信息，測量站點內部的一些流量參數，並估算訪問次數，以便我們能夠更有效地聚焦和調整服務和促銷。",
+  "cookies_data_part24": "Safari iOS版（iPhone和iPad）",
 
-  "cookies_data_part26": "沒有任何Cookie可以通過您的電話號碼、電子郵件地址或任何其他聯繫方式與您聯繫。沒有任何Cookie可以從您的硬盤驅動器中提取信息或竊取個人信息。",
+  "cookies_data_part25": "Chrome Android版",
 
-  "cookies_data_part27": "第三方Cookies：這些Cookies是從未由編輯器管理，而是由另一個處理通過Cookies獲得的數據的實體管理的計算機或域發送到用戶終端設備上的。",
-
-  "cookies_subtitle5": "用戶配置以避免Cookies。",
-
-  "cookies_data_part33": "根據當前法律，從www.internxt.com提供讓您配置瀏覽器/互聯網瀏覽器以保持與Cookies相關的隱私和安全性的信息。因此，我們向您提供信息和指向主要瀏覽器的官方支持站點的鏈接，以便您可以決定是否接受使用Cookies。",
-
-  "cookies_data_part34": "因此，您可以通過瀏覽器的配置工具阻止Cookies（所有現代瀏覽器都允許更改Cookie設置。這些設置通常在瀏覽器菜單的“選項”或“首選項”中找到），或者您可以設置瀏覽器以在服務器要求保存Cookie時通知您：",
-
-  "cookies_data_part35": "如果您使用Microsoft Internet Explorer，請在菜單選項工具 > Internet選項 > 隱私 > 設置中進行配置。要獲取更多信息，請訪問https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies",
-
-  "cookies_data_part36": "如果您使用Mozilla Firefox，請在菜單選項工具 > 選項 > 隱私 > Cookies中進行配置。要獲取更多信息，請訪問https://support.mozilla.org/es/kb/Deshabilitar%20cookies%20de%20terceros",
-
-  "cookies_data_part37": "如果您使用Google Chrome，請在選項 > 進階 > 隱私中進行配置。要獲取更多信息，請訪問http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647 ",
-
-  "cookies_data_part38": "如果您使用Opera，請在“安全性和隱私”選項中，您可以配置瀏覽器。要獲取更多信息，請訪問http://www.opera.com/help/tutorials/security/cookies/",
-
-  "cookies_data_part39": "如果您使用Apple Safari，可以在“偏好設置 > 安全性或隱私”選項中配置瀏覽器設置。欲了解更多，請訪問https://support.apple.com/kb/PH21411?viewlocale=es_ES&locale=es_ES",
-
-  "cookies_data_part40": "如果您想要禁用Google通用分析，您可以安裝由Google提供的以下擴展：https://tools.google.com/dlpage/gaoptout",
-
-  "cookies_data_part41": "某些功能和服務可能會被禁用或表現出與預期不同的行為，例如保持識別、在電子商務服務中保留“購物車”中的購買項目或接收針對您位置的信息等。",
-
-  "cookies_data_part42": "如果您在本網站上禁用Cookies的使用，您可能無法再訪問該網站的某些區域，或者網站上的瀏覽體驗將明顯降低。"
+  "cookies_data_part26": "或者您也可以使用此cookie政策開頭的按鈕打開配置器並拒絕您已接受的cookie。"
 }

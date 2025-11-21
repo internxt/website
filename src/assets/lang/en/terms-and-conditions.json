@@ -96,13 +96,9 @@
   "subtitle26": "The Agreement constitutes the entire agreement between you and Internxt relating to your access to and use of our Services. We may assign our rights and obligations under the Agreement. The failure of Internxt to exercise or enforce any right or provision of the Agreement will not operate as a waiver of such right or provision. We will not be liable for any delay or failure to perform any obligation under the Agreement where the delay or failure results from any cause beyond our reasonable control. Except as otherwise provided in herein, the Agreement is intended solely for the benefit of the parties and are not intended to confer third-party beneficiary rights upon any other person or entity. Where Customer intends to process PHI via Internxt Services, a separate Business Associate Agreement (BAA) shall be executed between Internxt and Customer. The BAA governs permitted uses and disclosures of PHI, safeguards, breach notification, subcontractor compliance, termination, and data return/destruction. This BAA is required by the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”), as amended by HITECH. It governs Internxt’s use and disclosure of Protected Health Information (“PHI”) created, received, maintained, or transmitted on behalf of Customer. PHI: Protected Health Information as defined at 45 CFR §160.103. Business Associate: Internxt, when performing services involving PHI. Covered Entity: The Customer. Security Incident, Breach, Minimum Necessary Rule: As defined in HIPAA/HITECH. Internxt shall: Use or disclose PHI only as permitted by this BAA or as required by law. Implement administrative, physical, and technical safeguards to protect PHI in compliance with 45 CFR §§164.308, 164.310, and 164.312. Ensure subcontractors who access PHI agree in writing to the same restrictions and safeguards. Report to Customer any Breach of Unsecured PHI or Security Incident without undue delay, and no later than 60 calendar days of discovery. Make PHI available for access, amendment, or accounting of disclosures in accordance with 45 CFR §§164.524, 164.526, 164.528. Make internal practices and records relating to PHI available to the Secretary of HHS upon request. Apply the Minimum Necessary Rule when using, disclosing, or requesting PHI. Upon termination of the Agreement, return or securely destroy all PHI. If return/destruction is infeasible, extend protections to the retained PHI. Internxt may use or disclose PHI: To perform services under the Agreement for Customer. For proper management and administration, provided disclosures are required by law or made with assurances of confidentiality. To de-identify PHI in accordance with 45 CFR §164.514(b). Customer shall: Not request Internxt to use or disclose PHI in a way not permitted under HIPAA. Provide Internxt with any notice of privacy practices, restrictions, or consents relevant to PHI handling. Obtain any necessary consents, authorizations, or legal permissions for Internxt’s processing of PHI. Term: This BAA remains in effect as long as Internxt creates, receives, maintains, or transmits PHI on behalf of Customer. Termination for Cause: Customer may terminate if Internxt has materially breached this BAA and failed to cure within 30 days. Return/Destruction: Upon termination, Internxt shall return or destroy PHI as specified in Section 3.8. This BAA does not alter the liability limitations in the Agreement except with respect to HIPAA compliance, where Internxt remains directly liable. In the event of a conflict between this BAA and the Agreement, the BAA prevails with respect to PHI. Governing law: Spain",
 
   "title27": "Privacy Policy Overview",
-
-  "privacy_policy_intro_part1": "The Privacy Policy is part of the Legal Notice that governs the Web Page: www.internxt.com together with the Cookies Usage Policy.",
-  "privacy_policy_intro_part2": "The Web page www.internxt.com is owned by Internxt Universal Technologies, S.L. and complies with the requirements derived from Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, and current regulations relating to the protection of personal data and, in particular, Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and the free movement of such data and Organic Law 3/2018, of 5 December, on the Protection of Personal Data and guarantee of digital rights.",
-  "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. reserves the right to modify or adapt this Privacy Policy at any time. Therefore, we recommend that you review it every time you access the Website. In the event that you have registered on the website and access your account or profile, upon accessing it, you will be informed in the event that there have been substantial changes in relation to the processing of your personal ",
+  "privacy_policy_intro_part1": "This privacy policy has been drafted under the provisions of REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (GDPR) and Organic Law 3/2018 of 5 December, on Data Protection and Guarantee of Digital Rights (LOPDGDD).",
 
   "privacy_policy_person_responsible_title": "Who is the Person Responsible for the Treatment?",
-
   "privacy_policy_person_responsible_part1": "The data collected or provided voluntarily through the Web Page, either by browsing it, as well as all those who can provide us in the contact forms, via email or telephone, will be collected and processed by the File Manager, whose data are indicated below:",
 
   "privacy_policy_table_row1_column1": "Identity",
@@ -448,78 +444,94 @@
   "title31": "Transfer of information to governing authorities",
   "subtitle31": "Internxt is based in Spain and the information we collect is governed by Spanish law. By accessing or using our Services or otherwise providing information to us, you consent to the processing and transfer of information in and to Spain and other countries, where you may not have the same rights as you do under your local law. Where this is the case, we will take appropriate measures to protect information about you in accordance with this Privacy Policy. Since Internxt uses client-side end-to-end encryption, it cannot know the content a user has under his Drive account.",
 
-  "cookies_title": "Cookies",
-  "cookies_subtitle1": "Regulations on the Use of Cookies",
-  "cookies_data_part1": "This Cookies Policy is an integral part of the Legal Notice and Privacy Policy of Internxt Universal Technologies, S.L.. Accessing and browsing the site, or the use of its services, implies acceptance of the General Conditions set out in our Legal Notice (and therefore of the Privacy Policy and Cookies Policy). Please read these carefully.",
-  "cookies_data_part2": "Thank you for deciding to visit us. We want your experience on the site to be the best possible, and for that reason we have drafted, in compliance with the second paragraph of Article 22 of Law 34/2002, of July 11, 2002, of services of the information society and electronic commerce (hereinafter, LSSI), this Cookies Policy in the clearest, most transparent, complete and understandable way possible.",
+  "title32": "Cookie Policy",
+  "cookies_data_part1": "At INTERNXT we use cookies and/or similar technologies that store and retrieve information when you browse. In general, these technologies can serve very diverse purposes, such as, for example, recognizing you as a user, obtaining information about your browsing habits, or personalizing the way content is displayed.",
+  "cookies_data_part2": "The specific uses we make of these technologies are described below. We want to inform you clearly and precisely about the cookies we use, detailing below what a cookie is, what it is used for, what types of cookies we use, what their purpose is and how you can configure or disable them if you wish.",
 
-  "cookies_subtitle2": "What is a Cookie?",
-  "cookies_data_part3": "This website uses cookies and/or similar technologies that store and retrieve information when you browse. In general, these technologies can serve a variety of purposes, such as, for example, recognizing you as a user, obtaining information about your browsing habits, or customizing the way content is displayed.",
-  "cookies_data_part4": "Cookies are files containing small amounts of information that are downloaded to the user's browser or device being used (smartphone, tablet or connected TV) when visiting a website. Their main purpose is to store information about your visit and recognize the user each time you access the website. It also allows us to improve the quality and usability of our website.",
-  "cookies_data_part5": "Cookies are essential to the functioning of the Internet; they cannot harm the user's computer/device and, if enabled in your browser settings, help us to identify and resolve possible malfunctions of www.internxt.com.",
-  "cookies_data_part6": "Like most sites on the internet, this website uses Cookies to ensure that the website functions correctly, to store preferences, such as, for example, the language you have selected or the font size, to learn about the user's browsing experience, to collect anonymous statistical information, such as, for example, which pages the user has visited or how long the user has stayed on the website.",
+  "cookies_subtitle2": "What is a cookie and what is it used for?",
+  "cookies_data_part3": "A Cookie is a small file that is stored on the user's computer, tablet, smartphone or any other device with information about browsing. The set of cookies from all our users helps us improve the quality of our website, allowing us to control which pages are useful, which are not and which are susceptible to improvement.",
+  "cookies_data_part5": "Cookies are essential for the functioning of the internet, providing innumerable advantages in the provision of interactive services, facilitating your navigation and usability of our website. Under no circumstances could cookies damage your device. On the contrary, having them active helps us identify and resolve errors.",
 
-  "cookies_subtitle3": "Types of Cookies",
-  "cookies_data_part7": "There are different types of cookies. They all work in the same way, but have small differences:",
-  "cookies_data_part8": "Session Cookies: are those designed to collect and store data while the user accesses a web page. They are usually used to store information that is only interesting to keep for the provision of the service requested by the user on a single occasion (for example, a list of products, a list of products acquired) and disappear at the end of the session.",
+  "cookies_subtitle3": "What types of cookies do we use?",
+  "cookies_subsubtitle3": "According to the entity that manages them",
+  "cookies_data_part8": "Own cookies",
+  "cookies_data_part8_2": "These are those that are sent to your device from our own equipment or domains and from which we provide the service you request from us.",
+  "cookies_data_part9": "Third-party cookies",
+  "cookies_data_part9_2": "These are those that are sent to your device from equipment or a domain that is not managed by us, but by another collaborating entity. Such as those used by social networks, or by external content such as Google Maps.",
 
-  "cookies_data_part9": "Session cookies last only for the duration of your visit and are deleted when you close your browser. Their main purpose is to identify the type of device, support the security of the website or its basic functionality. They do not contain personal information that would allow us to identify an individual.",
+  "cookies_sub2subtitle3": "According to the period of time they remain active",
+  "cookies_data_part11": "Session cookies",
+  "cookies_data_part11_2": "These are temporary cookies that remain in your browser's cookie file until you leave the website, so none are recorded on your computer's hard drive. The information obtained through these cookies is used to analyze web traffic patterns. In the long run, this allows us to provide a better experience to improve content and facilitate its use.",
+  "cookies_data_part12": "Persistent cookies",
+  "cookies_data_part12_2": "These are stored on the hard drive and our website reads them each time you make a new visit. A persistent website has a determined expiration date. The cookie will stop working after that date.",
 
-  "cookies_data_part10": "Persistent or Permanent Cookies: are those in which the data remain stored in the terminal and can be accessed and processed for a period defined by the person responsible for the cookie, which can range from a few minutes to several years.",
+  "cookies_sub3subtitle3": "According to their purpose",
+  "cookies_data_part14": "Technical cookies",
+  "cookies_data_part14_2": "These are necessary for navigation and the proper functioning of our website. They allow, for example, controlling traffic and data communication, accessing restricted access areas, carrying out the purchase process of an order, using security elements, storing content to be able to broadcast videos or share content through social networks.",
+  "cookies_data_part15": "Analytics cookies",
+  "cookies_data_part15_2": "These are those that allow us to quantify the number of users and thus perform the measurement and statistical analysis of the use that users make of the services provided. To do this, your browsing on our website is analyzed in order to improve the range of products and services we offer.",
+  "cookies_data_part16": "Preference or personalization cookies",
+  "cookies_data_part16_2": "These are those that allow information to be remembered so that the user accesses the service with certain characteristics that can differentiate their experience from that of other users, such as, for example, the language, the number of results to be displayed when the user performs a search, the appearance or content of the service depending on the type of browser through which the user accesses the service or the region from which they access the service, etc.",
+  "cookies_data_part17": "Behavioral advertising cookies",
+  "cookies_data_part17_2": "These are those that store information on user behavior obtained through continuous observation of their browsing habits, which allows the development of a specific profile to display advertising based on it.",
 
-  "cookies_data_part11": "They are stored on the hard drive of the device and our website reads them every time you make a new visit to the website; they have a specific expiration date, after which the cookie stops working. They allow us to identify your actions and preferences; analyze visits and help us understand how users reach our site and improve our services.",
+  "cookies_subtitle4": "Purpose of each of the cookies used:",
+  "cookies_data_part19": "Below, we detail the cookies used on our website and their purpose.",
+  "cookies_table_row1_column1": "Cookie",
+  "cookies_table_row1_column2": "Purpose or associated service",
+  "cookies_table_row1_column3": "Duration",
+  "cookies_table_row1_column4": "Third parties",
 
-  "cookies_data_part12": "Technical Cookies, strictly necessary: (exempted from compliance with the obligations established in Article 22.2 of the LSSI when they allow to provide the service requested by the user). They are those that allow the user to navigate through a website, platform or application and the use of the different options or services that exist in it, including those that the publisher uses to enable the management and operation of the website and enable its functions and services, such as, for example, control traffic and data communication, identify the session, access restricted parts, remember the elements that make up an order, make the buying process of an order, manage the payment, control fraud linked to the security of the service, make the request for registration or participation in an event, count visits for the purpose of billing licenses of the software with which the service works (website, platform or application), use security features during navigation, store content for broadcasting videos or sound, enable dynamic content (for example, animation of loading a text or image) or share content through social networks.",
+  "cookies_table_row2_column1": "_ga",
+  "cookies_table_row2_column2": "Contains a unique identifier used by Google Analytics to determine that two distinct visits belong to the same user across all browsing sessions.",
+  "cookies_table_row2_column3": "2 years",
+  "cookies_table_row2_column4": "Google Analytics",
 
-  "cookies_data_part13": "Preference or personalization cookies: these are cookies that allow information to be remembered so that the user can access the service with certain characteristics that may differentiate their experience from that of other users, such as, for example, the language, the number of results to be displayed when the user performs a search, the appearance or content of the service depending on the type of browser through which the user accesses the service or the region from which the user accesses the service, etc.",
+  "cookies_table_row3_column1": "_ga_*",
+  "cookies_table_row3_column2": "Used by Google Analytics to maintain session state and collect data about user behavior.",
+  "cookies_table_row3_column3": "2 years",
+  "cookies_table_row3_column4": "Google Analytics",
 
-  "cookies_data_part14": "Geo-location cookies: these are used to find out in which country or region the user is located when accessing a website service in order to offer content or services appropriate to the user's location.",
+  "cookies_table_row4_column1": "__kla_id",
+  "cookies_table_row4_column2": "Used by Klaviyo to track user behavior and personalize email communications.",
+  "cookies_table_row4_column3": "2 years",
+  "cookies_table_row4_column4": "Klaviyo",
 
-  "cookies_data_part15": "Analysis or measurement cookies: are those that allow the party responsible for them to monitor and analyze the behavior of users of the websites to which they are linked, including the quantification of the impacts of advertisements. The information collected through this type of cookies is used in the measurement of the activity of the websites, application or platform, in order to make improvements based on the analysis of the usage data made by users of the service.",
+  "cookies_table_row5_column1": "_gcl_au",
+  "cookies_table_row5_column2": "Used by Google AdSense to experiment with advertising efficiency across websites using their services.",
+  "cookies_table_row5_column3": "3 months",
+  "cookies_table_row5_column4": "Google Ads",
 
-  "cookies_data_part16": "Behavioral advertising cookies: are those that store information on user behavior obtained through the continuous observation of their browsing habits, allowing the development of a specific profile to display advertising based on the same.",
+  "cookies_table_row6_column1": "_fbp",
+  "cookies_table_row6_column2": "Used by Facebook to deliver advertising when they are on Facebook or a digital platform powered by Facebook advertising after visiting the website.",
+  "cookies_table_row6_column3": "3 months",
+  "cookies_table_row6_column4": "Facebook Pixel",
 
-  "cookies_data_part17": "Anonymous: they only collect information about the advertising spaces displayed on the website, regardless of the user accessing the website, i.e. without expressly identifying the user..",
+  "cookies_table_row8_column1": "cookieConsent",
+  "cookies_table_row8_column2": "Used to store the user's consent regarding the use of cookies on the website.",
+  "cookies_table_row8_column3": "1 year",
+  "cookies_table_row8_column4": "Internxt (Own)",
 
-  "cookies_data_part18": "Personalized: they collect personal information of the user of the website by a third party, for the personalization of such advertising spaces.",
+  "cookies_table_row9_column1": "cookieConsentPrefs",
+  "cookies_table_row9_column2": "Stores the user's specific preferences about which cookie categories they have accepted or rejected.",
+  "cookies_table_row9_column3": "1 year",
+  "cookies_table_row9_column4": "Internxt (Own)",
 
-  "cookies_data_part19": "Functionality Cookies: allow to remember decisions made by the user, such as login or identifier.",
+  "cookies_subtitle5": "How can you configure or disable your cookies?",
 
-  "cookies_data_part20": "The information these cookies collect is anonymized (i.e., it does not contain your name, address, or other data).",
+  "cookies_data_part20": "You can allow, block or delete the cookies installed on your device by configuring the options of your Internet browser. If you do not allow the installation of cookies in your browser, you may not be able to access some of the services and your experience on our website may be less satisfactory. In the following links you have at your disposal all the information to configure or disable your cookies in each browser:",
 
-  "cookies_data_part21": "Own Cookies: those that are sent to the user's terminal equipment from a computer or domain managed by the editor itself and from which the service requested by the user is provided.",
+  "cookies_data_part21": "Google Chrome",
 
-  "cookies_data_part22": "Third-party cookies: third-party cookies are cookies installed by a website that is not the one you are visiting; for example, those used by social networks (such as Facebook) or by external content plugins (such as Google Maps). In addition, some advertising companies use this type of file to track your visits on each site on which they advertise.",
+  "cookies_data_part22": "Mozilla Firefox",
 
-  "cookies_subtitle4": "Use of Cookies by www.internxt.com",
+  "cookies_subtitle41": "Internet Explorer",
 
-  "cookies_data_part23": "By accessing www.internxt.com, you expressly agree that we can use this type of cookies on your devices. If you disable cookies, your browsing may not be optimal and some of the utilities available may not work properly.",
+  "cookies_data_part23": "Safari",
 
-  "cookies_data_part24": "Own cookies. In order to recognize you and provide you with a better service, our site uses its own cookies (small text files that your browser stores. The advantages of accepting our cookies translate into time savings.",
+  "cookies_data_part24": "Safari for IOS (iPhone and iPad)",
 
-  "cookies_data_part25": "They can also be used to recognize you between successive visits and thus adapt the content shown to you, to obtain information about the date and time of your last visit, to measure some traffic parameters within the site itself, and to estimate the number of visits made, so that we can focus and adjust services and promotions more effectively.",
+  "cookies_data_part25": "Chrome for Android",
 
-  "cookies_data_part26": "No cookie allows us to contact you with your phone number, email address or any other means of contact. No cookie can extract information from your hard drive or steal personal information.",
-
-  "cookies_data_part27": "Third Party Cookies. These cookies are those that are sent to the user's terminal equipment from a computer or domain that is not managed by the editor, but by another entity that processes the data obtained through the cookies.",
-
-  "cookies_subtitle5": "User configuration to avoid Cookies.",
-  "cookies_data_part33": "From www.internxt.com and in compliance with current legislation, we provide you with information that allows you to configure your browser / Internet browsers to maintain your privacy and security in relation to cookies. Therefore, we provide you with information and links to the official support sites of the main browsers so that you can decide whether or not to accept the use of cookies.",
-  "cookies_data_part34": "Thus, you can block cookies through your browser's configuration tools (all modern browsers allow you to change the Cookie settings. These settings are usually found in the \"Options\" or \"Preferences\" of the browser menu) or you can set your browser to warn you when a server wants to save a cookie: ",
-
-  "cookies_data_part35": "If you use Microsoft Internet Explorer, under the menu option Tools > Internet Options > Privacy > Settings. To learn more visit https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies",
-
-  "cookies_data_part36": "If you use Mozilla Firefox, in the menu option Tools > Options > Privacy > Cookies. To learn more visit https://support.mozilla.org/es/kb/Deshabilitar%20cookies%20de%20terceros",
-
-  "cookies_data_part37": "If you use Google Chrome, under Options > Advanced > Privacy. To learn more visit http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647 ",
-
-  "cookies_data_part38": "If you use Opera, in the Security and Privacy option, you can configure the browser. To learn more visit http://www.opera.com/help/tutorials/security/cookies/",
-
-  "cookies_data_part39": "If you use Apple Safari, in the Preferences > Security or Privacy option, you can configure Browser settings. To learn more visit https://support.apple.com/kb/PH21411?viewlocale=es_ES&locale=es_ES",
-
-  "cookies_data_part40": "If you want to disable Google Universal Analytics, you can install the following extension provided by Google: https://tools.google.com/dlpage/gaoptout",
-
-  "cookies_data_part41": "Some features and services may be disabled or have a different behavior than expected such as, for example, remain identified, keep purchases in the \"shopping cart\" in an e-commerce service or receive information targeted to your location, among others.",
-
-  "cookies_data_part42": "If you disable the use of Cookies on this website, it is likely that you will no longer be able to access certain areas of the site or that the browsing experience on the site will be significantly degraded."
+  "cookies_data_part26": "Or you can also use the button at the beginning of this cookie policy to open the configurator and reject the cookies you have accepted."
 }
