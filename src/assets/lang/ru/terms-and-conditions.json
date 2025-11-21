@@ -514,11 +514,6 @@
   "cookies_table_row6_column3": "3 месяца",
   "cookies_table_row6_column4": "Facebook Pixel",
 
-  "cookies_table_row7_column1": "_rdt_uuid",
-  "cookies_table_row7_column2": "Используется Reddit для отслеживания пользователей и показа релевантных объявлений.",
-  "cookies_table_row7_column3": "3 месяца",
-  "cookies_table_row7_column4": "Reddit Pixel",
-
   "cookies_table_row8_column1": "cookieConsent",
   "cookies_table_row8_column2": "Используется для хранения согласия пользователя на использование файлов cookie на веб-сайте.",
   "cookies_table_row8_column3": "1 год",

@@ -112,12 +112,6 @@ const CookiesSection = ({ textContent, lang }) => {
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row6_column4}</td>
             </tr>
             <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row7_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row7_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row7_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row7_column4}</td>
-            </tr>
-            <tr>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row8_column1}</td>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row8_column2}</td>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row8_column3}</td>
