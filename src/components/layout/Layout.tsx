@@ -123,6 +123,7 @@ export default function Layout({
         ></style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 
+        {/*Internxt GTM*/}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -133,59 +134,8 @@ export default function Layout({
           }}
         ></script>
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5GWZKXKB');`,
-          }}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-P44DHDHK');`,
-          }}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
-              (function(){
-                  var t = document.createElement("script");
-                  t.type = "text/javascript";
-                  t.async = true;
-                  t.id = "AddShoppers";
-                  t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
-                  document.getElementsByTagName("head")[0].appendChild(t);
-              })();
-            `,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-      (function(){
-        var s = document.createElement("script");
-        s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//trkwwtarget.com/track/code.js";
-        var a = document.getElementsByTagName("script")[0];
-        a.parentNode.insertBefore(s, a);
-      })();
-    `,
-          }}
-        />
-
-        <script src="https://retarglow.com/pixel"></script>
-
+        {/*Internxt Pixel 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB"></script>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -195,30 +145,26 @@ export default function Layout({
               gtag('config', 'G-CHHGLQTHSB');
             `,
           }}
-        />
+        />*/}
 
-        {lang === 'es' && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+        {/*Cookies Banner */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
           $(document).ready(function() {
             cookieBanner.init();
         });
           `,
-            }}
-          />
-        )}
+          }}
+        />
+        <script async src="/js/cookiebanner.script.js" />
 
+        {/*Klaviyo Pixel */}
         <script
           async
           type="text/javascript"
           src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VBJnZ5"
         ></script>
-
-        <script async src="/js/cookiebanner.script.js" />
-
-        {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
-        {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
 
       <noscript>
@@ -228,26 +174,6 @@ export default function Layout({
           width="0"
           style={{ display: 'none', visibility: 'hidden' }}
           title="Google Tag Manager iframe"
-        ></iframe>
-      </noscript>
-
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5GWZKXKB"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-          title="Google Tag Manager two"
-        ></iframe>
-      </noscript>
-
-      <noscript>
-        <iframe
-          src="https://track.adsynergix.com/adsy.js?noscript=1"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-          title="AdSynergix Pixel"
         ></iframe>
       </noscript>
 
