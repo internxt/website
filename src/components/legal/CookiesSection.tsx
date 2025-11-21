@@ -129,54 +129,6 @@ const CookiesSection = ({ textContent, lang }) => {
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row9_column3}</td>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row9_column4}</td>
             </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row10_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row10_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row10_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row10_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row11_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row11_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row11_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row11_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row12_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row12_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row12_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row12_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row13_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row13_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row13_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row13_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row14_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row14_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row14_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row14_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row15_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row15_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row15_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row15_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row16_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row16_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row16_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row16_column4}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row17_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row17_column2}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row17_column3}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.cookies_table_row17_column4}</td>
-            </tr>
           </tbody>
         </table>
 

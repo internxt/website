@@ -477,7 +477,6 @@
 
   "cookies_subtitle4": "Purpose of each of the cookies used:",
   "cookies_data_part19": "Below, we detail the cookies used on our website and their purpose.",
-
   "cookies_table_row1_column1": "Cookie",
   "cookies_table_row1_column2": "Purpose or associated service",
   "cookies_table_row1_column3": "Duration",
@@ -493,75 +492,35 @@
   "cookies_table_row3_column3": "2 years",
   "cookies_table_row3_column4": "Google Analytics",
 
-  "cookies_table_row4_column1": "_gid",
-  "cookies_table_row4_column2": "Registers a unique identifier that is used to generate statistical data on how the visitor uses the website.",
-  "cookies_table_row4_column3": "24 hours",
-  "cookies_table_row4_column4": "Google Analytics",
+  "cookies_table_row4_column1": "__kla_id",
+  "cookies_table_row4_column2": "Used by Klaviyo to track user behavior and personalize email communications.",
+  "cookies_table_row4_column3": "2 years",
+  "cookies_table_row4_column4": "Klaviyo",
 
   "cookies_table_row5_column1": "_gcl_au",
   "cookies_table_row5_column2": "Used by Google AdSense to experiment with advertising efficiency across websites using their services.",
   "cookies_table_row5_column3": "3 months",
   "cookies_table_row5_column4": "Google Ads",
 
-  "cookies_table_row6_column1": "_gcl_aw",
-  "cookies_table_row6_column2": "Used by Google Ads to track conversions and measure the effectiveness of advertising campaigns.",
-  "cookies_table_row6_column3": "90 days",
-  "cookies_table_row6_column4": "Google Ads",
+  "cookies_table_row6_column1": "_fbp",
+  "cookies_table_row6_column2": "Used by Facebook to deliver advertising when they are on Facebook or a digital platform powered by Facebook advertising after visiting the website.",
+  "cookies_table_row6_column3": "3 months",
+  "cookies_table_row6_column4": "Facebook Pixel",
 
-  "cookies_table_row7_column1": "_gcl_gs",
-  "cookies_table_row7_column2": "Used by Google to track ad conversions and properly attribute sales.",
-  "cookies_table_row7_column3": "90 days",
-  "cookies_table_row7_column4": "Google Ads",
+  "cookies_table_row7_column1": "_rdt_uuid",
+  "cookies_table_row7_column2": "Used by Reddit to track users and display relevant ads.",
+  "cookies_table_row7_column3": "3 months",
+  "cookies_table_row7_column4": "Reddit Pixel",
 
-  "cookies_table_row8_column1": "_fbp",
-  "cookies_table_row8_column2": "Used by Facebook to deliver advertising when they are on Facebook or a digital platform powered by Facebook advertising after visiting the website.",
-  "cookies_table_row8_column3": "3 months",
-  "cookies_table_row8_column4": "Facebook Pixel",
+  "cookies_table_row8_column1": "cookieConsent",
+  "cookies_table_row8_column2": "Used to store the user's consent regarding the use of cookies on the website.",
+  "cookies_table_row8_column3": "1 year",
+  "cookies_table_row8_column4": "Internxt (Own)",
 
-  "cookies_table_row9_column1": "_fbc",
-  "cookies_table_row9_column2": "Stores the Facebook click identifier (fbclid) to attribute website visits from Facebook ads.",
-  "cookies_table_row9_column3": "90 days",
-  "cookies_table_row9_column4": "Facebook Pixel",
-
-  "cookies_table_row10_column1": "__kla_id",
-  "cookies_table_row10_column2": "Used by Klaviyo to track user behavior and personalize email communications.",
-  "cookies_table_row10_column3": "2 years",
-  "cookies_table_row10_column4": "Klaviyo",
-
-  "cookies_table_row11_column1": "_cq_duid",
-  "cookies_table_row11_column2": "Used by Criteo for user tracking and personalization of retargeting ads.",
-  "cookies_table_row11_column3": "13 months",
-  "cookies_table_row11_column4": "Criteo",
-
-  "cookies_table_row12_column1": "_cq_suid",
-  "cookies_table_row12_column2": "Session cookie used by Criteo to track user activity during the current session.",
-  "cookies_table_row12_column3": "Session",
-  "cookies_table_row12_column4": "Criteo",
-
-  "cookies_table_row13_column1": "rdt_uuid",
-  "cookies_table_row13_column2": "Used by Reddit to track users and display relevant ads.",
-  "cookies_table_row13_column3": "3 months",
-  "cookies_table_row13_column4": "Reddit Pixel",
-
-  "cookies_table_row14_column1": "rdt_em",
-  "cookies_table_row14_column2": "Used by Reddit to match the user with their Reddit profile for personalized advertising.",
-  "cookies_table_row14_column3": "3 months",
-  "cookies_table_row14_column4": "Reddit Pixel",
-
-  "cookies_table_row15_column1": "pin_unauth",
-  "cookies_table_row15_column2": "Used by Pinterest to track the use of Pinterest services and display relevant advertising.",
-  "cookies_table_row15_column3": "1 year",
-  "cookies_table_row15_column4": "Pinterest",
-
-  "cookies_table_row16_column1": "__cs_id",
-  "cookies_table_row16_column2": "Used to uniquely identify the user and track their behavior on the website.",
-  "cookies_table_row16_column3": "13 months",
-  "cookies_table_row16_column4": "Contentsquare / Analytics",
-
-  "cookies_table_row17_column1": "__cs_c",
-  "cookies_table_row17_column2": "Used to store the user's consent regarding the use of analytics cookies.",
-  "cookies_table_row17_column3": "13 months",
-  "cookies_table_row17_column4": "Contentsquare / Analytics",
+  "cookies_table_row9_column1": "cookieConsentPrefs",
+  "cookies_table_row9_column2": "Stores the user's specific preferences about which cookie categories they have accepted or rejected.",
+  "cookies_table_row9_column3": "1 year",
+  "cookies_table_row9_column4": "Internxt (Own)",
 
   "cookies_subtitle5": "How can you configure or disable your cookies?",
 
