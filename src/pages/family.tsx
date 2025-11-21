@@ -204,10 +204,10 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/family.json`);
-  const navbarText = require(`@/assets/lang/${lang}/navbar.json`);
-  const footerText = require(`@/assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/en/family.json`);
+  const navbarText = require(`@/assets/lang/en/navbar.json`);
+  const footerText = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {
