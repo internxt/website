@@ -1,11 +1,181 @@
 'use strict';
 
+var supportedLangs = ['en', 'es', 'fr', 'de', 'it', 'ru', 'zh', 'zh-tw'];
+var userLang = (navigator.language || navigator.userLanguage).toLowerCase();
+var lang = supportedLangs.includes(userLang) ? userLang : userLang.substring(0, 2);
+if (!supportedLangs.includes(lang)) lang = 'en';
+
+var translations = {
+  en: {
+    title: 'Cookie Consent',
+    description:
+      'This website uses its own and third-party cookies for strictly functional purposes, allowing navigation on the web, as well as for analytical purposes.',
+    acceptBtnLabel: 'Accept',
+    declineInfoBtnLabel: 'Reject',
+    settingsBtnLabel: 'Customize',
+    moreInfoBtnLabel: 'Privacy Policy',
+    cookieTypesTitle: 'Select cookies to accept',
+    necessaryCookieTypeLabel: 'Necessary',
+    necessaryCookieTypeDesc:
+      'These cookies are necessary for the website to function and cannot be switched off in our systems.',
+    analyticsType: 'Analytics',
+    analyticsDesc:
+      'Analytics cookies allow us to count visits and traffic sources, so we can measure and improve the performance of our site.',
+    marketingType: 'Marketing',
+    marketingDesc:
+      'Marketing cookies are used to track visitors across websites for advertising and email marketing purposes.',
+  },
+  es: {
+    title: 'Consentimiento de Cookies',
+    description:
+      'Este sitio web utiliza cookies propias y de terceros para fines estrictamente funcionales, permitiendo la navegación en la web, así como para fines analíticos.',
+    acceptBtnLabel: 'Aceptar',
+    declineInfoBtnLabel: 'Rechazar',
+    settingsBtnLabel: 'Personalizar',
+    moreInfoBtnLabel: 'Política de privacidad',
+    cookieTypesTitle: 'Selecciona las cookies a aceptar',
+    necessaryCookieTypeLabel: 'Necesarias',
+    necessaryCookieTypeDesc:
+      'Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar en nuestros sistemas.',
+    analyticsType: 'Analíticas',
+    analyticsDesc:
+      'Las cookies analíticas nos permiten contar las visitas y fuentes de tráfico para medir y mejorar el rendimiento de nuestro sitio.',
+    marketingType: 'Marketing',
+    marketingDesc:
+      'Las cookies de marketing se utilizan para rastrear visitantes en sitios web con fines publicitarios y de email marketing.',
+  },
+  fr: {
+    title: 'Consentement aux Cookies',
+    description:
+      "Ce site web utilise ses propres cookies et ceux de tiers à des fins strictement fonctionnelles, permettant la navigation sur le web, ainsi qu'à des fins analytiques.",
+    acceptBtnLabel: 'Accepter',
+    declineInfoBtnLabel: 'Rejeter',
+    settingsBtnLabel: 'Personnaliser',
+    moreInfoBtnLabel: 'Politique de confidentialité',
+    cookieTypesTitle: 'Sélectionner les cookies à accepter',
+    necessaryCookieTypeLabel: 'Nécessaires',
+    necessaryCookieTypeDesc:
+      'Ces cookies sont nécessaires au fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes.',
+    analyticsType: 'Analytiques',
+    analyticsDesc:
+      'Les cookies analytiques nous permettent de compter les visites et les sources de trafic pour mesurer et améliorer les performances de notre site.',
+    marketingType: 'Marketing',
+    marketingDesc:
+      'Les cookies marketing sont utilisés pour suivre les visiteurs sur les sites web à des fins publicitaires et de marketing par email.',
+  },
+  de: {
+    title: 'Cookie-Einwilligung',
+    description:
+      'Diese Website verwendet eigene Cookies und Cookies von Drittanbietern zu rein funktionalen Zwecken, um die Navigation auf der Website zu ermöglichen, sowie zu Analysezwecken.',
+    acceptBtnLabel: 'Akzeptieren',
+    declineInfoBtnLabel: 'Ablehnen',
+    settingsBtnLabel: 'Anpassen',
+    moreInfoBtnLabel: 'Datenschutzrichtlinie',
+    cookieTypesTitle: 'Cookies zum Akzeptieren auswählen',
+    necessaryCookieTypeLabel: 'Notwendig',
+    necessaryCookieTypeDesc:
+      'Diese Cookies sind für die Funktion der Website erforderlich und können in unseren Systemen nicht deaktiviert werden.',
+    analyticsType: 'Analytik',
+    analyticsDesc:
+      'Analytik-Cookies ermöglichen es uns, Besuche und Verkehrsquellen zu zählen, damit wir die Leistung unserer Website messen und verbessern können.',
+    marketingType: 'Marketing',
+    marketingDesc:
+      'Marketing-Cookies werden verwendet, um Besucher auf Websites für Werbe- und E-Mail-Marketing-Zwecke zu verfolgen.',
+  },
+  it: {
+    title: 'Consenso ai Cookie',
+    description:
+      'Questo sito web utilizza cookie propri e di terze parti per scopi strettamente funzionali, consentendo la navigazione sul web, nonché per scopi analitici.',
+    acceptBtnLabel: 'Accetta',
+    declineInfoBtnLabel: 'Rifiuta',
+    settingsBtnLabel: 'Personalizza',
+    moreInfoBtnLabel: 'Informativa sulla privacy',
+    cookieTypesTitle: 'Seleziona i cookie da accettare',
+    necessaryCookieTypeLabel: 'Necessari',
+    necessaryCookieTypeDesc:
+      'Questi cookie sono necessari per il funzionamento del sito web e non possono essere disattivati nei nostri sistemi.',
+    analyticsType: 'Analitici',
+    analyticsDesc:
+      'I cookie analitici ci consentono di contare le visite e le fonti di traffico per misurare e migliorare le prestazioni del nostro sito.',
+    marketingType: 'Marketing',
+    marketingDesc:
+      'I cookie di marketing vengono utilizzati per tracciare i visitatori sui siti web a scopi pubblicitari e di email marketing.',
+  },
+  ru: {
+    title: 'Согласие на использование файлов cookie',
+    description:
+      'Этот веб-сайт использует собственные файлы cookie и файлы cookie третьих лиц для строго функциональных целей, обеспечивая навигацию по сайту, а также в аналитических целях.',
+    acceptBtnLabel: 'Принять',
+    declineInfoBtnLabel: 'Отклонить',
+    settingsBtnLabel: 'Настроить',
+    moreInfoBtnLabel: 'Политика конфиденциальности',
+    cookieTypesTitle: 'Выберите файлы cookie для принятия',
+    necessaryCookieTypeLabel: 'Необходимые',
+    necessaryCookieTypeDesc:
+      'Эти файлы cookie необходимы для работы веб-сайта и не могут быть отключены в наших системах.',
+    analyticsType: 'Аналитические',
+    analyticsDesc:
+      'Аналитические файлы cookie позволяют нам подсчитывать посещения и источники трафика, чтобы мы могли измерять и улучшать производительность нашего сайта.',
+    marketingType: 'Маркетинговые',
+    marketingDesc:
+      'Маркетинговые файлы cookie используются для отслеживания посетителей на веб-сайтах в рекламных целях и целях email-маркетинга.',
+  },
+  zh: {
+    title: 'Cookie 同意声明',
+    description: '本网站使用自有和第三方 Cookie，用于严格的功能目的，允许在网络上导航，以及用于分析目的。',
+    acceptBtnLabel: '接受',
+    declineInfoBtnLabel: '拒绝',
+    settingsBtnLabel: '自定义',
+    moreInfoBtnLabel: '隐私政策',
+    cookieTypesTitle: '选择要接受的 Cookie',
+    necessaryCookieTypeLabel: '必需',
+    necessaryCookieTypeDesc: '这些 Cookie 是网站运行所必需的，无法在我们的系统中关闭。',
+    analyticsType: '分析',
+    analyticsDesc: '分析 Cookie 使我们能够统计访问量和流量来源，以便我们可以衡量和改进我们网站的性能。',
+    marketingType: '营销',
+    marketingDesc: '营销 Cookie 用于跟踪网站访问者，以进行广告和电子邮件营销。',
+  },
+  'zh-tw': {
+    title: 'Cookie 同意聲明',
+    description: '本網站使用自有和第三方 Cookie，用於嚴格的功能目的，允許在網路上導航，以及用於分析目的。',
+    acceptBtnLabel: '接受',
+    declineInfoBtnLabel: '拒絕',
+    settingsBtnLabel: '自訂',
+    moreInfoBtnLabel: '隱私權政策',
+    cookieTypesTitle: '選擇要接受的 Cookie',
+    necessaryCookieTypeLabel: '必需',
+    necessaryCookieTypeDesc: '這些 Cookie 是網站運作所必需的，無法在我們的系統中關閉。',
+    analyticsType: '分析',
+    analyticsDesc: '分析 Cookie 使我們能夠統計訪問量和流量來源，以便我們可以衡量和改進我們網站的效能。',
+    marketingType: '行銷',
+    marketingDesc: '行銷 Cookie 用於追蹤網站訪客，以進行廣告和電子郵件行銷。',
+  },
+};
+
+var t = translations[lang];
+
 var headerScripts = [
+  {
+    title: 'Google Tag Manager',
+    type: 'analytics',
+    value:
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n" +
+      "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n" +
+      "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n" +
+      "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n" +
+      "})(window,document,'script','dataLayer','GTM-P7N7LW5G');</script>",
+  },
   {
     title: 'Google Analytics',
     type: 'analytics',
     value:
       "<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-CHHGLQTHSB');\n</script>",
+  },
+  {
+    title: 'Klaviyo',
+    type: 'marketing',
+    value:
+      '<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VBJnZ5"></script>',
   },
 ];
 
@@ -19,26 +189,28 @@ var config = {
   showDeclineBtn: true,
   fullWidth: false,
   displayPosition: 'left',
-  settingsBtnLabel: 'Personalizar',
+  settingsBtnLabel: t.settingsBtnLabel,
   delay: 2000,
   expires: 365,
-  title: 'Consentimiento de Cookies',
-  description:
-    'Este sitio web utiliza cookies propias y de terceros para fines estrictamente funcionales, permitiendo la navegación en la web, así como para fines analíticos.',
-  acceptBtnLabel: 'Aceptar',
-  declineInfoBtnLabel: 'Rechazar',
-  moreInfoBtnLink: '/es/legal',
-  moreInfoBtnLabel: 'Política de privacidad',
-  cookieTypesTitle: 'Select cookies to accept',
-  necessaryCookieTypeLabel: 'Necesarias',
-  necessaryCookieTypeDesc:
-    'These cookies are necessary for the website to function and cannot be switched off in our systems.',
+  title: t.title,
+  description: t.description,
+  acceptBtnLabel: t.acceptBtnLabel,
+  declineInfoBtnLabel: t.declineInfoBtnLabel,
+  moreInfoBtnLink: '/' + lang + '/legal',
+  moreInfoBtnLabel: t.moreInfoBtnLabel,
+  cookieTypesTitle: t.cookieTypesTitle,
+  necessaryCookieTypeLabel: t.necessaryCookieTypeLabel,
+  necessaryCookieTypeDesc: t.necessaryCookieTypeDesc,
   cookieTypes: [
     {
-      type: 'Analytics',
+      type: t.analyticsType,
       value: 'analytics',
-      description:
-        'Analytics cookies allow us to count visits and traffic sources, so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site.',
+      description: t.analyticsDesc,
+    },
+    {
+      type: t.marketingType,
+      value: 'marketing',
+      description: t.marketingDesc,
     },
   ],
 };
@@ -165,9 +337,7 @@ var injectScripts = function () {
         config.cookieTypesTitle +
         '</h5><ul>' +
         n +
-        '</ul></div></div><div class="btn-wrap"><button id="cookieAccept" style="color:' +
-        config.lightColor +
-        ';background:' +
+        '</ul></div></div><div class="btn-wrap"></button><button id="cookieAccept" style="color:' +
         config.primaryColor +
         ';border: 1px solid ' +
         config.primaryColor +

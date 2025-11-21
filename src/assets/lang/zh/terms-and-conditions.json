@@ -101,9 +101,7 @@
 
   "title27": "Privacy Policy overview",
 
-  "privacy_policy_intro_part1": "The Privacy Policy is part of the Legal Notice that governs the Web Page: www.internxt.com together with the Cookies Usage Policy.",
-  "privacy_policy_intro_part2": "The Web page www.internxt.com is owned by Internxt Universal Technologies, S.L. and complies with the requirements derived from Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, and current regulations relating to the protection of personal data and, in particular, Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and the free movement of such data and Organic Law 3/2018, of 5 December, on the Protection of Personal Data and guarantee of digital rights.",
-  "privacy_policy_intro_part3": "Internxt Universal Technologies, S.L. reserves the right to modify or adapt this Privacy Policy at any time. Therefore, we recommend that you review it every time you access the Website. In the event that you have registered on the website and access your account or profile, upon accessing it, you will be informed in the event that there have been substantial changes in relation to the processing of your personal ",
+  "privacy_policy_intro_part1": "本隐私政策根据**欧洲议会和理事会2016年4月27日关于个人数据处理和此类数据自由流动的第2016/679号条例（通用数据保护条例，GDPR）以及12月5日第3/2018号组织法（数据保护和数字权利保障组织法，LOPDGDD）**的规定起草。",
 
   "privacy_policy_person_responsible_title": "Who is the person responsible for the treatment?",
 
@@ -452,115 +450,140 @@
   "title31": "Transfer of information to governing authorities",
   "subtitle31": "Internxt is based in Spain and the information we collect is governed by Spanish law. By accessing or using our Services or otherwise providing information to us, you consent to the processing and transfer of information in and to Spain and other countries, where you may not have the same rights as you do under your local law. Where this is the case, we will take appropriate measures to protect information about you in accordance with this Privacy Policy. Since Internxt uses client-side end-to-end encryption, it cannot know the content a user has under his Drive account.",
 
-  "cookies_title": "Cookies",
-  "cookies_subtitle1": "Regulations on the use of cookies",
-  "cookies_data_part1": "This Cookies Policy is an integral part of the Legal Notice and Privacy Policy of Internxt Universal Technologies, S.L.. Accessing and browsing the site, or the use of its services, implies acceptance of the General Conditions set out in our Legal Notice (and therefore of the Privacy Policy and Cookies Policy). Please read these carefully.",
-  "cookies_data_part2": "Thank you for deciding to visit us. We want your experience on the site to be the best possible, and for that reason we have drafted, in compliance with the second paragraph of Article 22 of Law 34/2002, of July 11, 2002, of services of the information society and electronic commerce (hereinafter, LSSI), this Cookies Policy in the clearest, most transparent, complete and understandable way possible.",
+  "title32": "Cookie政策",
+  "cookies_data_part1": "在INTERNXT，我们使用cookie和/或类似技术，在您浏览时存储和检索信息。一般来说，这些技术可以用于多种不同的目的，例如识别您作为用户、获取有关您浏览习惯的信息或个性化内容显示方式。",
+  "cookies_data_part2": "我们对这些技术的具体使用如下所述。我们希望清晰准确地告知您我们使用的cookie，详细说明什么是cookie、它的用途、我们使用哪些类型的cookie、它们的目的以及如果您愿意，如何配置或禁用它们。",
 
-  "cookies_subtitle2": "What is a Cookie?",
-  "cookies_data_part3": "This website uses cookies and/or similar technologies that store and retrieve information when you browse. In general, these technologies can serve a variety of purposes, such as, for example, recognizing you as a user, obtaining information about your browsing habits, or customizing the way content is displayed.",
-  "cookies_data_part4": "Cookies are files containing small amounts of information that are downloaded to the user's browser or device being used (smartphone, tablet or connected TV) when visiting a website. Their main purpose is to store information about your visit and recognize the user each time you access the website. It also allows us to improve the quality and usability of our website.",
-  "cookies_data_part5": "Cookies are essential to the functioning of the Internet; they cannot harm the user's computer/device and, if enabled in your browser settings, help us to identify and resolve possible malfunctions of www.internxt.com.",
-  "cookies_data_part6": "Like most sites on the internet, this website uses Cookies to ensure that the website functions correctly, to store preferences, such as, for example, the language you have selected or the font size, to learn about the user's browsing experience, to collect anonymous statistical information, such as, for example, which pages the user has visited or how long the user has stayed on the website.",
+  "cookies_subtitle2": "什么是cookie，它有什么用途？",
+  "cookies_data_part3": "Cookie是存储在用户计算机、平板电脑、智能手机或任何其他设备上的小文件，包含有关浏览的信息。来自所有用户的cookie集合帮助我们提高网站质量，使我们能够控制哪些页面有用、哪些没用以及哪些可以改进。",
+  "cookies_data_part5": "Cookie对互联网的运行至关重要，在提供互动服务方面提供了无数优势，促进了您对我们网站的浏览和可用性。在任何情况下，cookie都不会损害您的设备。相反，激活它们可以帮助我们识别和解决错误。",
 
-  "cookies_subtitle3": "Types of Cookies",
-  "cookies_data_part7": "There are different types of cookies. They all work in the same way, but have small differences:",
-  "cookies_data_part8": "Session Cookies: are those designed to collect and store data while the user accesses a web page. They are usually used to store information that is only interesting to keep for the provision of the service requested by the user on a single occasion (for example, a list of products, a list of products acquired) and disappear at the end of the session.",
+  "cookies_subtitle3": "我们使用哪些类型的cookie？",
+  "cookies_subsubtitle3": "根据管理实体",
+  "cookies_data_part8": "自有cookie",
+  "cookies_data_part8_2": "这些是从我们自己的设备或域发送到您设备的cookie，我们通过它们提供您请求的服务。",
+  "cookies_data_part9": "第三方cookie",
+  "cookies_data_part9_2": "这些是从不由我们管理而是由另一个合作实体管理的设备或域发送到您设备的cookie。例如，社交网络使用的cookie，或外部内容（如Google地图）使用的cookie。",
 
-  "cookies_data_part9": "Session cookies last only for the duration of your visit and are deleted when you close your browser. Their main purpose is to identify the type of device, support the security of the website or its basic functionality. They do not contain personal information that would allow us to identify an individual.",
+  "cookies_sub2subtitle3": "根据它们保持活动的时间段",
+  "cookies_data_part11": "会话cookie",
+  "cookies_data_part11_2": "这些是临时cookie，在您离开网站之前保留在浏览器的cookie文件中，因此不会记录在计算机硬盘上。通过这些cookie获得的信息用于分析网络流量模式。从长远来看，这使我们能够提供更好的体验，改进内容并促进其使用。",
+  "cookies_data_part12": "持久性cookie",
+  "cookies_data_part12_2": "这些cookie存储在硬盘上，我们的网站在您每次新访问时都会读取它们。持久性网站有确定的到期日期。cookie将在该日期后停止工作。",
 
-  "cookies_data_part10": "Persistent or Permanent Cookies: are those in which the data remain stored in the terminal and can be accessed and processed for a period defined by the person responsible for the cookie, which can range from a few minutes to several years.",
+  "cookies_sub3subtitle3": "根据其目的",
+  "cookies_data_part14": "技术cookie",
+  "cookies_data_part14_2": "这些是导航和我们网站正常运行所必需的cookie。例如，它们允许控制流量和数据通信、访问受限访问区域、执行订单的购买流程、使用安全元素、存储内容以便传播视频或通过社交网络共享内容。",
+  "cookies_data_part15": "分析cookie",
+  "cookies_data_part15_2": "这些cookie使我们能够量化用户数量，从而对用户使用所提供服务的情况进行测量和统计分析。为此，分析您在我们网站上的浏览，以改进我们提供的产品和服务范围。",
+  "cookies_data_part16": "偏好或个性化cookie",
+  "cookies_data_part16_2": "这些cookie允许记住信息，以便用户以某些特征访问服务，这些特征可以使其体验与其他用户不同，例如语言、用户执行搜索时要显示的结果数量、根据用户访问服务的浏览器类型或用户访问服务的地区的服务外观或内容等。",
+  "cookies_data_part17": "行为广告cookie",
+  "cookies_data_part17_2": "这些cookie存储通过持续观察用户浏览习惯获得的用户行为信息，从而能够开发特定的档案以基于此显示广告。",
 
-  "cookies_data_part11": "They are stored on the hard drive of the device and our website reads them every time you make a new visit to the website; they have a specific expiration date, after which the cookie stops working. They allow us to identify your actions and preferences; analyze visits and help us understand how users reach our site and improve our services.",
+  "cookies_subtitle4": "每个使用的cookie的目的：",
+  "cookies_data_part19": "以下详细说明了我们网站上使用的cookie及其目的。",
 
-  "cookies_data_part12": "Technical Cookies, strictly necessary: (exempted from compliance with the obligations established in Article 22.2 of the LSSI when they allow to provide the service requested by the user). They are those that allow the user to navigate through a website, platform or application and the use of the different options or services that exist in it, including those that the publisher uses to enable the management and operation of the website and enable its functions and services, such as, for example, control traffic and data communication, identify the session, access restricted parts, remember the elements that make up an order, make the buying process of an order, manage the payment, control fraud linked to the security of the service, make the request for registration or participation in an event, count visits for the purpose of billing licenses of the software with which the service works (website, platform or application), use security features during navigation, store content for broadcasting videos or sound, enable dynamic content (for example, animation of loading a text or image) or share content through social networks.",
+  "cookies_table_row1_column1": "Cookie",
+  "cookies_table_row1_column2": "目的或相关服务",
+  "cookies_table_row1_column3": "持续时间",
+  "cookies_table_row1_column4": "第三方",
 
-  "cookies_data_part13": "Preference or personalization cookies: these are cookies that allow information to be remembered so that the user can access the service with certain characteristics that may differentiate their experience from that of other users, such as, for example, the language, the number of results to be displayed when the user performs a search, the appearance or content of the service depending on the type of browser through which the user accesses the service or the region from which the user accesses the service, etc.",
+  "cookies_table_row2_column1": "_ga",
+  "cookies_table_row2_column2": "包含Google Analytics使用的唯一标识符，用于确定两次不同的访问在所有浏览会话中属于同一用户。",
+  "cookies_table_row2_column3": "2年",
+  "cookies_table_row2_column4": "Google Analytics",
 
-  "cookies_data_part14": "Geo-location cookies: these are used to find out in which country or region the user is located when accessing a website service in order to offer content or services appropriate to the user's location.",
+  "cookies_table_row3_column1": "_ga_*",
+  "cookies_table_row3_column2": "Google Analytics用于维护会话状态并收集有关用户行为的数据。",
+  "cookies_table_row3_column3": "2年",
+  "cookies_table_row3_column4": "Google Analytics",
 
-  "cookies_data_part15": "Analysis or measurement cookies: are those that allow the party responsible for them to monitor and analyze the behavior of users of the websites to which they are linked, including the quantification of the impacts of advertisements. The information collected through this type of cookies is used in the measurement of the activity of the websites, application or platform, in order to make improvements based on the analysis of the usage data made by users of the service.",
+  "cookies_table_row4_column1": "_gid",
+  "cookies_table_row4_column2": "注册用于生成有关访问者如何使用网站的统计数据的唯一标识符。",
+  "cookies_table_row4_column3": "24小时",
+  "cookies_table_row4_column4": "Google Analytics",
 
-  "cookies_data_part16": "Behavioral advertising cookies: are those that store information on user behavior obtained through the continuous observation of their browsing habits, allowing the development of a specific profile to display advertising based on the same.",
+  "cookies_table_row5_column1": "_gcl_au",
+  "cookies_table_row5_column2": "Google AdSense用于在使用其服务的网站上试验广告效率。",
+  "cookies_table_row5_column3": "3个月",
+  "cookies_table_row5_column4": "Google Ads",
 
-  "cookies_data_part17": "Anonymous: they only collect information about the advertising spaces displayed on the website, regardless of the user accessing the website, i.e. without expressly identifying the user..",
+  "cookies_table_row6_column1": "_gcl_aw",
+  "cookies_table_row6_column2": "Google Ads用于跟踪转化并衡量广告活动的有效性。",
+  "cookies_table_row6_column3": "90天",
+  "cookies_table_row6_column4": "Google Ads",
 
-  "cookies_data_part18": "Personalized: they collect personal information of the user of the website by a third party, for the personalization of such advertising spaces.",
+  "cookies_table_row7_column1": "_gcl_gs",
+  "cookies_table_row7_column2": "Google用于跟踪广告转化并正确归因销售。",
+  "cookies_table_row7_column3": "90天",
+  "cookies_table_row7_column4": "Google Ads",
 
-  "cookies_data_part19": "Functionality Cookies: allow to remember decisions made by the user, such as login or identifier.",
+  "cookies_table_row8_column1": "_fbp",
+  "cookies_table_row8_column2": "Facebook用于在访问网站后，当用户在Facebook或由Facebook广告驱动的数字平台上时提供广告。",
+  "cookies_table_row8_column3": "3个月",
+  "cookies_table_row8_column4": "Facebook Pixel",
 
-  "cookies_data_part20": "The information these cookies collect is anonymized (i.e., it does not contain your name, address, or other data).",
+  "cookies_table_row9_column1": "_fbc",
+  "cookies_table_row9_column2": "存储Facebook点击标识符（fbclid）以归因来自Facebook广告的网站访问。",
+  "cookies_table_row9_column3": "90天",
+  "cookies_table_row9_column4": "Facebook Pixel",
 
-  "cookies_data_part21": "Own Cookies: those that are sent to the user's terminal equipment from a computer or domain managed by the editor itself and from which the service requested by the user is provided.",
+  "cookies_table_row10_column1": "__kla_id",
+  "cookies_table_row10_column2": "Klaviyo用于跟踪用户行为并个性化电子邮件通信。",
+  "cookies_table_row10_column3": "2年",
+  "cookies_table_row10_column4": "Klaviyo",
 
-  "cookies_data_part22": "Third-party cookies: third-party cookies are cookies installed by a website that is not the one you are visiting; for example, those used by social networks (such as Facebook) or by external content plugins (such as Google Maps). In addition, some advertising companies use this type of file to track your visits on each site on which they advertise.",
+  "cookies_table_row11_column1": "_cq_duid",
+  "cookies_table_row11_column2": "Criteo用于用户跟踪和重定向广告的个性化。",
+  "cookies_table_row11_column3": "13个月",
+  "cookies_table_row11_column4": "Criteo",
 
-  "cookies_subtitle4": "Use of Cookies by www.internxt.com",
+  "cookies_table_row12_column1": "_cq_suid",
+  "cookies_table_row12_column2": "Criteo使用的会话cookie，用于跟踪当前会话期间的用户活动。",
+  "cookies_table_row12_column3": "会话",
+  "cookies_table_row12_column4": "Criteo",
 
-  "cookies_data_part23": "By accessing www.internxt.com, you expressly agree that we can use this type of cookies on your devices. If you disable cookies, your browsing may not be optimal and some of the utilities available may not work properly.",
+  "cookies_table_row13_column1": "rdt_uuid",
+  "cookies_table_row13_column2": "Reddit用于跟踪用户并显示相关广告。",
+  "cookies_table_row13_column3": "3个月",
+  "cookies_table_row13_column4": "Reddit Pixel",
 
-  "cookies_data_part24": "Own cookies. In order to recognize you and provide you with a better service, our site uses its own cookies (small text files that your browser stores. The advantages of accepting our cookies translate into time savings.",
+  "cookies_table_row14_column1": "rdt_em",
+  "cookies_table_row14_column2": "Reddit用于将用户与其Reddit个人资料匹配以进行个性化广告。",
+  "cookies_table_row14_column3": "3个月",
+  "cookies_table_row14_column4": "Reddit Pixel",
 
-  "cookies_data_part25": "They can also be used to recognize you between successive visits and thus adapt the content shown to you, to obtain information about the date and time of your last visit, to measure some traffic parameters within the site itself, and to estimate the number of visits made, so that we can focus and adjust services and promotions more effectively.",
+  "cookies_table_row15_column1": "pin_unauth",
+  "cookies_table_row15_column2": "Pinterest用于跟踪Pinterest服务的使用并显示相关广告。",
+  "cookies_table_row15_column3": "1年",
+  "cookies_table_row15_column4": "Pinterest",
 
-  "cookies_data_part26": "No cookie allows us to contact you with your phone number, email address or any other means of contact. No cookie can extract information from your hard drive or steal personal information.",
+  "cookies_table_row16_column1": "__cs_id",
+  "cookies_table_row16_column2": "用于唯一标识用户并跟踪其在网站上的行为。",
+  "cookies_table_row16_column3": "13个月",
+  "cookies_table_row16_column4": "Contentsquare / Analytics",
 
-  "cookies_data_part27": "Third Party Cookies. These cookies are those that are sent to the user's terminal equipment from a computer or domain that is not managed by the editor, but by another entity that processes the data obtained through the cookies.",
+  "cookies_table_row17_column1": "__cs_c",
+  "cookies_table_row17_column2": "用于存储用户关于使用分析cookie的同意。",
+  "cookies_table_row17_column3": "13个月",
+  "cookies_table_row17_column4": "Contentsquare / Analytics",
 
-  "cookies_data_part28": "Cookies by Google Analytics",
+  "cookies_subtitle5": "如何配置或禁用您的cookie？",
 
-  "cookies_data_part29": "The site uses the Google Analytics service, which is provided by Google, Inc., an entity whose main office is located at 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, United States (\"Google\").",
+  "cookies_data_part20": "您可以通过配置Internet浏览器的选项来允许、阻止或删除设备上安装的cookie。如果您不允许在浏览器中安装cookie，您可能无法访问某些服务，并且您在我们网站上的体验可能不太令人满意。在以下链接中，您可以获得在每个浏览器中配置或禁用cookie的所有信息：",
 
-  "cookies_data_part30": "Google Analytics uses cookies to help us analyze how users use the website. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information on our behalf for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google.",
+  "cookies_data_part21": "Google Chrome",
 
-  "cookies_data_part31": "If you wish, you may refuse the processing of data or information by rejecting the use of cookies by selecting the appropriate settings on your browser. However, if you do so, you may not be able to use the full functionality of this site. By using this site you consent to the processing of data about you by Google in the manner and for the purposes set out above. ",
+  "cookies_data_part22": "Mozilla Firefox",
 
-  "cookies_data_part32": "Learn more at https://www.google.es/intl/es/policies/technologies/cookies/. Google has developed a plug-in that you can install on your browser if you do not want to be tracked by its cookies: https://tools.google.com/dlpage/gaoptout.",
+  "cookies_subtitle41": "Internet Explorer",
 
-  "cookies_table_row1_column1": "Name",
-  "cookies_table_row1_column2": "Purpose",
+  "cookies_data_part23": "Safari",
 
-  "cookies_table_row2_column1": "_utma",
-  "cookies_table_row2_column2": "It is used to distinguish users and sessions. The cookie is created when the JavaScript library is executed and there is no __utma cookie. The cookie is updated each time data is sent to Google ANALYTICAL COOKIES.",
+  "cookies_data_part24": "Safari iOS版（iPhone和iPad）",
 
-  "cookies_table_row3_column1": "_utmt",
-  "cookies_table_row3_column2": "It is used to limit the percentage of requests.",
+  "cookies_data_part25": "Chrome Android版",
 
-  "cookies_table_row4_column1": "_utmb",
-  "cookies_table_row4_column2": "It is used to determine new sessions or visits. The cookie is created when the JavaScript library is executed and there is no __utmb cookie. The cookie is updated each time data is sent to Google Analytics.",
-
-  "cookies_table_row5_column1": "_utmc",
-  "cookies_table_row5_column2": "It is not used in ga.js. It is set to interact with urchin.js. Previously, this cookie acted in conjunction with the __utmb cookie to determine if the user was in a new session or visit.",
-
-  "cookies_table_row6_column1": "_utmz",
-  "cookies_table_row6_column2": "Stores the traffic source or campaign that explains how the user reached the site. The cookie is created when the JavaScript library is executed and is updated each time data is sent to Google Analytics.",
-
-  "cookies_table_row7_column1": "_utmv:",
-  "cookies_table_row7_column2": "Used to store visitor custom variable data. This cookie is created when a programmer uses the _setCustomVar method with a visitor custom variable. It was also used for the retired _setVar method. The cookie is updated each time data is sent to Google Analytics",
-
-  "cookies_table_row8_column1": "_ga",
-  "cookies_table_row8_column2": "It is used to differentiate between users and sessions. The cookie is created when loading the javascript library and there is no previous version of the _ga cookie. The cookie is updated every time you send data to Google Analytics.",
-
-  "cookies_table_row9_column1": "_gat",
-  "cookies_table_row9_column2": "It is used to differentiate between the different tracking objects created in the session. The cookie is created when loading the javascript library and there is no previous version of the _gat cookie. The cookie is updated each time you send data to Google Analytics.",
-
-  "cookies_subtitle5": "User configuration to avoid Cookies.",
-  "cookies_data_part33": "From www.internxt.com and in compliance with current legislation, we provide you with information that allows you to configure your browser / Internet browsers to maintain your privacy and security in relation to cookies. Therefore, we provide you with information and links to the official support sites of the main browsers so that you can decide whether or not to accept the use of cookies.",
-  "cookies_data_part34": "Thus, you can block cookies through your browser's configuration tools (all modern browsers allow you to change the Cookie settings. These settings are usually found in the \"Options\" or \"Preferences\" of the browser menu) or you can set your browser to warn you when a server wants to save a cookie: ",
-
-  "cookies_data_part35": "If you use Microsoft Internet Explorer, under the menu option Tools > Internet Options > Privacy > Settings. To learn more visit https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies",
-
-  "cookies_data_part36": "If you use Mozilla Firefox, in the menu option Tools > Options > Privacy > Cookies. To learn more visit https://support.mozilla.org/es/kb/Deshabilitar%20cookies%20de%20terceros",
-
-  "cookies_data_part37": "If you use Google Chrome, under Options > Advanced > Privacy. To learn more visit http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647 ",
-
-  "cookies_data_part38": "If you use Opera, in the Security and Privacy option, you can configure the browser. To learn more visit http://www.opera.com/help/tutorials/security/cookies/",
-
-  "cookies_data_part39": "If you use Apple Safari, in the Preferences > Security or Privacy option, you can configure Browser settings. To learn more visit https://support.apple.com/kb/PH21411?viewlocale=es_ES&locale=es_ES",
-
-  "cookies_data_part40": "If you want to disable Google Universal Analytics, you can install the following extension provided by Google: https://tools.google.com/dlpage/gaoptout",
-
-  "cookies_data_part41": "Some features and services may be disabled or have a different behavior than expected such as, for example, remain identified, keep purchases in the \"shopping cart\" in an e-commerce service or receive information targeted to your location, among others.",
-
-  "cookies_data_part42": "If you disable the use of Cookies on this website, it is likely that you will no longer be able to access certain areas of the site or that the browsing experience on the site will be significantly degraded."
+  "cookies_data_part26": "或者您也可以使用此cookie政策开头的按钮打开配置器并拒绝您已接受的cookie。"
 }
