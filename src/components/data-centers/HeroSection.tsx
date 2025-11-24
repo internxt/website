@@ -27,7 +27,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
             width={841}
             height={200}
             quality={100}
-            className="h-[475px] w-full"
+            className="h-[475px] w-full scale-110"
           />
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters.webp`)}
@@ -61,11 +61,16 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
           <h1 className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95">
             <HighlightText text={textContent.title} />
           </h1>
-
-          <p className="whitespace-pre-line text-lg font-normal leading-tight text-gray-55">
-            {textContent.description}
-          </p>
+          <p className=" text-lg font-normal leading-tight text-gray-55">{textContent.description}</p>
         </div>
+        <Image
+          src={getImage(`/images/datacenters-and-certifications/cryptography_terms-mobile.webp`)}
+          alt="Internxt data centers and certifications"
+          width={420}
+          height={126}
+          quality={100}
+          className=" h-[196px] w-[420px]"
+        />
       </div>
     </section>
   );
