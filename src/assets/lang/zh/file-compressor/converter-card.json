@@ -1,24 +1,24 @@
 {
-  "title": "压缩 ${{pathFrom}} 文件",
+  "title": "压缩 {{pathFrom}} 文件",
   "secureUpload": "由 Internxt 的隐私保护保障上传安全。我们不会存储任何信息。",
   "dragNDropArea": {
     "maxFileSize": "最大文件大小为 1GB",
-    "dragYourFile": "将您的 ${{pathFrom}} 文件拖放至此",
-    "cta": "选择 ${{pathFrom}} 文件",
+    "dragYourFile": "将您的 {{pathFrom}} 文件拖放至此",
+    "cta": "选择 {{pathFrom}} 文件",
     "draggingFile": "在此处释放文件"
   },
   "fileSelected": {
     "title": "已选择要压缩的文件",
     "cancel": "取消",
-    "convert": "压缩 ${{pathFrom}} 文件"
+    "convert": "压缩 {{pathFrom}} 文件"
   },
   "converting": "正在压缩您的文件",
   "fileConverted": {
-    "label": "您的 ${{pathFrom}} 文件已成功压缩",
+    "label": "您的 {{pathFrom}} 文件已成功压缩",
     "title": "下载将很快自动开始",
     "description": "如果没有，请点击下面的按钮。",
     "goHome": "主页",
     "convertAnother": "压缩另一个文件",
-    "downloadFile": "下载 ${{pathFrom}} 文件"
+    "downloadFile": "下载 {{pathFrom}} 文件"
   }
 }

@@ -1,24 +1,24 @@
 {
-  "title": "Convertidor de Internxt de ${{pathFrom}} a ${{pathTo}}",
+  "title": "Convertidor de Internxt de {{pathFrom}} a {{pathTo}}",
   "secureUpload": "Cargas seguras garantizadas por la protección de la privacidad de Internxt. No almacenamos ninguna información.",
   "dragNDropArea": {
     "maxFileSize": "Tamaño máximo del archivo de 1GB",
-    "dragYourFile": "Arrastra y suelta tu archivo ${{pathFrom}} aquí",
-    "cta": "Selecciona el archivo ${{pathFrom}}",
+    "dragYourFile": "Arrastra y suelta tu archivo {{pathFrom}} aquí",
+    "cta": "Selecciona el archivo {{pathFrom}}",
     "draggingFile": "Suelta el archivo aquí"
   },
   "fileSelected": {
     "title": "Archivo seleccionado para convertir",
     "cancel": "Cancelar",
-    "convert": "Convertir a archivo ${{pathTo}}"
+    "convert": "Convertir a archivo {{pathTo}}"
   },
   "converting": "Convirtiendo tu archivo",
   "fileConverted": {
-    "label": "Tu archivo ${{pathFrom}} se ha convertido exitosamente a ${{pathTo}}",
+    "label": "Tu archivo {{pathFrom}} se ha convertido exitosamente a {{pathTo}}",
     "title": "Tu descarga comenzará automáticamente en breve",
     "description": "Si no, haz clic en el botón a continuación.",
     "goHome": "Inicio",
     "convertAnother": "Convertir otro archivo",
-    "downloadFile": "Descargar archivo ${{pathTo}}"
+    "downloadFile": "Descargar archivo {{pathTo}}"
   }
 }
