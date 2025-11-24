@@ -27,7 +27,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
             width={841}
             height={200}
             quality={100}
-            className="h-[475px] w-full"
+            className="h-[475px] w-full scale-110"
           />
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters.webp`)}
