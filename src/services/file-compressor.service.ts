@@ -55,13 +55,6 @@ const compressPDF = async (file: File): Promise<{ blob: Blob; info: any }> => {
       maxWidth: 1920,
     });
 
-    console.log('📊 PDF Compression Results:');
-    console.log(`   Original: ${formatBytes(result.originalSize)}`);
-    console.log(`   Compressed: ${formatBytes(result.compressedSize)}`);
-    console.log(`   Saved: ${result.compressionRatio.toFixed(2)}%`);
-    console.log(`   Method: ${result.method}`);
-    console.log(`   Pages: ${result.pageCount}`);
-
     return {
       blob: result.compressedBlob,
       info: result,
@@ -178,7 +171,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
 
       return compressedPpt;
     } else if (fileExtension.toLowerCase() === 'ppt') {
-      console.warn('Legacy PPT compression is limited, returning optimized version');
       return file;
     }
 
@@ -330,7 +322,6 @@ const handleFileCompression = async (
     const compressionRatio = ((originalSize - compressedSize) / originalSize) * 100;
 
     if (compressedSize >= originalSize) {
-      console.warn('⚠️ Compressed file is larger, using original');
       compressedBlob = file;
     }
 
@@ -350,7 +341,6 @@ const handleFileCompression = async (
     };
   } catch (err) {
     const error = err as Error;
-    onProgress?.(0, `Error: ${error.message}`);
 
     return {
       success: false,
