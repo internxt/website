@@ -1,25 +1,24 @@
 {
-  "title": "Internxt ${{pathFrom}} 到 ${{pathTo}} 轉換器",
+  "title": "Internxt {{pathFrom}} 到 {{pathTo}} 轉換器",
   "secureUpload": "由 Internxt 隱私保護保證的安全上傳。我們不存儲任何信息。",
   "dragNDropArea": {
     "maxFileSize": "最大文件大小 1GB",
-    "dragYourFile": "拖放您的 ${{pathFrom}} 文件到這裡",
-    "cta": "選擇 ${{pathFrom}} 文件",
+    "dragYourFile": "拖放您的 {{pathFrom}} 文件到這裡",
+    "cta": "選擇 {{pathFrom}} 文件",
     "draggingFile": "將文件放在這裡"
   },
   "fileSelected": {
     "title": "已選擇文件進行轉換",
     "cancel": "取消",
-    "convert": "轉換為 ${{pathTo}} 文件"
+    "convert": "轉換為 {{pathTo}} 文件"
   },
   "converting": "正在轉換您的文件",
   "fileConverted": {
-    "label": "您的 ${{pathFrom}} 文件已成功轉換為 ${{pathTo}}",
+    "label": "您的 {{pathFrom}} 文件已成功轉換為 {{pathTo}}",
     "title": "您的下載將很快自動開始",
     "description": "如果沒有，請點擊下面的按鈕。",
     "goHome": "首頁",
     "convertAnother": "轉換另一個文件",
-    "downloadFile": "下載 ${{pathTo}} 文件"
+    "downloadFile": "下載 {{pathTo}} 文件"
   }
 }
-

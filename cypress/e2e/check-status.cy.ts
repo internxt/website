@@ -34,6 +34,7 @@ const nameFiles = [
   'dropbox-alternative',
   'mega-alternative',
   'cloud-data-centers',
+  'file-compressor',
 ];
 
 const langs = {

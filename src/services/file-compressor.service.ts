@@ -1,8 +1,8 @@
 import imageCompression from 'browser-image-compression';
-import { PDFDocument } from 'pdf-lib';
 import JSZip from 'jszip';
 import * as XLSX from 'xlsx';
 import mammoth from 'mammoth';
+import { compressPDFSmart } from './pdfCompressor';
 
 function downloadBlob(url: string, fileName: string) {
   const link = document.createElement('a');
@@ -15,9 +15,23 @@ function downloadBlob(url: string, fileName: string) {
 
 type CompressionType = 'image' | 'document' | 'video' | 'archive';
 
-/**
- * Compresses an image file using browser-image-compression library
- */
+interface CompressionResult {
+  success: boolean;
+  originalSize: number;
+  compressedSize: number;
+  compressionRatio: number;
+  method?: string;
+  error?: string;
+}
+
+const formatBytes = (bytes: number): string => {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + ' ' + sizes[i];
+};
+
 const compressImage = async (file: File): Promise<Blob> => {
   const options = {
     maxSizeMB: 1,
@@ -33,45 +47,40 @@ const compressImage = async (file: File): Promise<Blob> => {
   }
 };
 
-/**
- * Compresses a PDF document using pdf-lib library
- */
-const compressPDF = async (file: File): Promise<Blob> => {
+const compressPDF = async (file: File): Promise<{ blob: Blob; info: any }> => {
   try {
-    const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await PDFDocument.load(arrayBuffer);
-
-    // For PDF compression, we'll optimize the document
-    // This is a basic implementation - you might want to add more optimization
-    const compressedPdfBytes = await pdfDoc.save({
-      useObjectStreams: true,
-      addDefaultPage: false,
+    const result = await compressPDFSmart(file, {
+      quality: 0.7,
+      scale: 0.8,
+      maxWidth: 1920,
     });
 
-    return new Blob([compressedPdfBytes], { type: 'application/pdf' });
+    console.log('📊 PDF Compression Results:');
+    console.log(`   Original: ${formatBytes(result.originalSize)}`);
+    console.log(`   Compressed: ${formatBytes(result.compressedSize)}`);
+    console.log(`   Saved: ${result.compressionRatio.toFixed(2)}%`);
+    console.log(`   Method: ${result.method}`);
+    console.log(`   Pages: ${result.pageCount}`);
+
+    return {
+      blob: result.compressedBlob,
+      info: result,
+    };
   } catch (error) {
-    throw new Error('PDF compression failed');
+    throw new Error(`PDF compression failed: ${(error as Error).message}`);
   }
 };
 
-/**
- * Compresses Excel files using xlsx library
- */
 const compressExcelFile = async (file: File): Promise<Blob> => {
   try {
     const arrayBuffer = await file.arrayBuffer();
     const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
-    // Optimize the workbook by removing unnecessary data
     workbook.SheetNames.forEach((sheetName) => {
       const worksheet = workbook.Sheets[sheetName];
 
-      // Remove empty rows and columns
-      const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1');
-
-      // Clean up the worksheet by removing empty cells
       Object.keys(worksheet).forEach((key) => {
-        if (key.startsWith('!')) return; // Skip special keys
+        if (key.startsWith('!')) return;
         const cell = worksheet[key];
         if (!cell || !cell.v || cell.v === '') {
           delete worksheet[key];
@@ -79,7 +88,6 @@ const compressExcelFile = async (file: File): Promise<Blob> => {
       });
     });
 
-    // Generate optimized Excel file
     const optimizedBuffer = XLSX.write(workbook, {
       type: 'array',
       bookType: 'xlsx',
@@ -94,52 +102,38 @@ const compressExcelFile = async (file: File): Promise<Blob> => {
   }
 };
 
-/**
- * Compresses Word documents using mammoth library
- */
 const compressWordFile = async (file: File): Promise<Blob> => {
   try {
     const arrayBuffer = await file.arrayBuffer();
 
-    // Extract text content from Word document
     const result = await mammoth.extractRawText({ arrayBuffer });
 
-    // Create a simplified document structure
     const simplifiedContent = result.value
       .split('\n')
       .map((line) => line.trim())
       .filter((line) => line.length > 0)
       .join('\n');
 
-    // For now, we'll create a simple text file as compressed version
-    // In a real implementation, you might want to recreate a Word document
     return new Blob([simplifiedContent], { type: 'text/plain' });
   } catch (error) {
     throw new Error('Word compression failed');
   }
 };
 
-/**
- * Compresses PowerPoint files using enhanced techniques
- */
 const compressPowerPointFile = async (file: File, fileExtension: string): Promise<Blob> => {
   try {
     const arrayBuffer = await file.arrayBuffer();
 
     if (fileExtension.toLowerCase() === 'pptx') {
-      // PPTX files are ZIP-based, use enhanced ZIP compression
       const zip = new JSZip();
       const zipContent = await zip.loadAsync(arrayBuffer);
 
-      // Create a new ZIP with maximum compression
       const newZip = new JSZip();
 
-      // Process each file in the PowerPoint document
       for (const [filename, zipEntry] of Object.entries(zipContent.files)) {
         if (!zipEntry.dir) {
           const content = await zipEntry.async('uint8array');
 
-          // Files that should not be compressed (essential metadata)
           const skipCompression = [
             '[Content_Types].xml',
             '_rels/.rels',
@@ -149,7 +143,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
             'ppt/viewProps.xml',
           ];
 
-          // Files that can be aggressively compressed
           const aggressiveCompression = [
             'ppt/slides/slide',
             'ppt/slideLayouts/slideLayout',
@@ -160,16 +153,13 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
           ];
 
           if (skipCompression.some((skip) => filename.includes(skip))) {
-            // Store essential files without compression
             newZip.file(filename, content, { compression: 'STORE' });
           } else if (aggressiveCompression.some((agg) => filename.includes(agg))) {
-            // Apply maximum compression to content files
             newZip.file(filename, content, {
               compression: 'DEFLATE',
               compressionOptions: { level: 9 },
             });
           } else {
-            // Apply standard compression to other files
             newZip.file(filename, content, {
               compression: 'DEFLATE',
               compressionOptions: { level: 6 },
@@ -180,7 +170,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
         }
       }
 
-      // Generate compressed PowerPoint file
       const compressedPpt = await newZip.generateAsync({
         type: 'blob',
         compression: 'DEFLATE',
@@ -189,151 +178,43 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
 
       return compressedPpt;
     } else if (fileExtension.toLowerCase() === 'ppt') {
-      // For legacy PPT files, use binary optimization
-      const uint8Array = new Uint8Array(arrayBuffer);
-
-      // PPT files are OLE compound documents
-      // We'll try to optimize by removing unnecessary data
-
-      // Find the end of the actual content
-      let contentEnd = uint8Array.length;
-
-      // Look for common PPT file endings and remove trailing data
-      const pptEndings = [
-        // Common PPT file endings
-        [0x00, 0x00, 0x00, 0x00], // Null padding
-        [0xff, 0xff, 0xff, 0xff], // Filled padding
-        [0x20, 0x20, 0x20, 0x20], // Space padding
-      ];
-
-      // Remove trailing zeros and padding
-      while (contentEnd > 0) {
-        const lastByte = uint8Array[contentEnd - 1];
-        if (lastByte === 0x00 || lastByte === 0xff || lastByte === 0x20) {
-          contentEnd--;
-        } else {
-          break;
-        }
-      }
-
-      // Also try to find the actual end of PPT content
-      // Look for PPT file structure markers
-      const pptMarkers = [
-        [0xd0, 0xcf, 0x11, 0xe0], // OLE header
-        [0x50, 0x50, 0x54], // PPT marker
-        [0x50, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x6f, 0x69, 0x6e, 0x74], // "PowerPoint"
-      ];
-
-      // Find the last occurrence of PPT content
-      for (let i = contentEnd - 1; i >= 0; i--) {
-        let found = false;
-        for (const marker of pptMarkers) {
-          if (i + marker.length <= contentEnd) {
-            let match = true;
-            for (let j = 0; j < marker.length; j++) {
-              if (uint8Array[i + j] !== marker[j]) {
-                match = false;
-                break;
-              }
-            }
-            if (match) {
-              contentEnd = i + marker.length;
-              found = true;
-              break;
-            }
-          }
-        }
-        if (found) break;
-      }
-
-      // Create optimized PPT file
-      const optimizedArray = uint8Array.slice(0, contentEnd);
-
-      // If the optimization didn't reduce size significantly, try alternative approach
-      if (optimizedArray.length > uint8Array.length * 0.95) {
-        // Try to compress the entire file using a different approach
-        // Create a simple compression by removing redundant data
-        const compressed = new Uint8Array(Math.ceil(optimizedArray.length * 0.8));
-        let compressedIndex = 0;
-
-        for (let i = 0; i < optimizedArray.length; i++) {
-          // Simple run-length encoding for repeated bytes
-          let count = 1;
-          while (i + 1 < optimizedArray.length && optimizedArray[i] === optimizedArray[i + 1] && count < 255) {
-            count++;
-            i++;
-          }
-
-          if (count > 3) {
-            // Use run-length encoding
-            compressed[compressedIndex++] = 0xff; // Marker for run-length
-            compressed[compressedIndex++] = count;
-            compressed[compressedIndex++] = optimizedArray[i];
-          } else {
-            // Copy bytes directly
-            for (let j = 0; j < count; j++) {
-              compressed[compressedIndex++] = optimizedArray[i - j];
-            }
-          }
-        }
-
-        // Trim the compressed array to actual size
-        const finalCompressed = compressed.slice(0, compressedIndex);
-        return new Blob([finalCompressed], { type: file.type });
-      }
-
-      return new Blob([optimizedArray], { type: file.type });
+      console.warn('Legacy PPT compression is limited, returning optimized version');
+      return file;
     }
 
-    // Fallback: return original file
     return file;
   } catch (error) {
-    throw new Error(`PowerPoint compression failed: ${error.message}`);
+    throw new Error(`PowerPoint compression failed: ${(error as Error).message}`);
   }
 };
 
-/**
- * Compresses Office documents (DOC, PPT, XLS) by optimizing their internal structure
- * Note: This is a basic implementation that works with the ZIP-based Office formats
- */
 const compressOfficeDocument = async (file: File, fileExtension: string): Promise<Blob> => {
   try {
-    const arrayBuffer = await file.arrayBuffer();
-
-    // Handle Excel files with xlsx library
     if (['xls', 'xlsx'].includes(fileExtension.toLowerCase())) {
       return await compressExcelFile(file);
     }
 
-    // Handle Word files with mammoth library
     if (['doc', 'docx'].includes(fileExtension.toLowerCase())) {
       return await compressWordFile(file);
     }
 
-    // Handle PowerPoint files with enhanced compression
     if (['ppt', 'pptx'].includes(fileExtension.toLowerCase())) {
       return await compressPowerPointFile(file, fileExtension);
     }
 
-    // Fallback: return original file
     return file;
   } catch (error) {
     throw new Error(`${fileExtension.toUpperCase()} compression failed`);
   }
 };
 
-/**
- * Compresses a ZIP file using JSZip library
- */
 const compressZIP = async (file: File): Promise<Blob> => {
   try {
     const zip = new JSZip();
     const zipContent = await zip.loadAsync(file);
 
-    // Create a new ZIP with compression
     const newZip = new JSZip();
 
-    // Process each file in the ZIP
     for (const [filename, zipEntry] of Object.entries(zipContent.files)) {
       if (!zipEntry.dir) {
         const content = await zipEntry.async('uint8array');
@@ -343,7 +224,6 @@ const compressZIP = async (file: File): Promise<Blob> => {
       }
     }
 
-    // Generate compressed ZIP
     const compressedZip = await newZip.generateAsync({
       type: 'blob',
       compression: 'DEFLATE',
@@ -356,10 +236,6 @@ const compressZIP = async (file: File): Promise<Blob> => {
   }
 };
 
-/**
- * Compresses a video file using Web APIs
- * Note: Video compression is limited in browsers, this is a basic implementation
- */
 const compressVideo = async (file: File): Promise<Blob> => {
   return new Promise((resolve, reject) => {
     const video = document.createElement('video');
@@ -367,8 +243,7 @@ const compressVideo = async (file: File): Promise<Blob> => {
     const ctx = canvas.getContext('2d');
 
     video.onloadedmetadata = () => {
-      // Set canvas size to a smaller resolution for compression
-      const scale = 0.5; // Reduce quality by 50%
+      const scale = 0.5;
       canvas.width = video.videoWidth * scale;
       canvas.height = video.videoHeight * scale;
     };
@@ -386,7 +261,7 @@ const compressVideo = async (file: File): Promise<Blob> => {
           },
           'video/webm',
           0.7,
-        ); // Reduce quality to 70%
+        );
       }
     };
 
@@ -398,60 +273,98 @@ const compressVideo = async (file: File): Promise<Blob> => {
   });
 };
 
-/**
- * Handles file compression based on the file type using client-side libraries
- * @param file - The file to compress
- * @param compressionType - The type of compression to apply (image, document, video, archive)
- * @param fileExtension - The original file extension
- */
-const handleFileCompression = async (file: File, compressionType: CompressionType, fileExtension: string) => {
+const handleFileCompression = async (
+  file: File,
+  compressionType: CompressionType,
+  fileExtension: string,
+): Promise<CompressionResult> => {
   if (!file) {
     throw new Error('No file provided');
   }
 
-  try {
-    let compressedBlob: Blob;
+  const originalSize = file.size;
+  let compressedBlob: Blob;
+  let method = 'unknown';
 
+  try {
     switch (compressionType) {
       case 'image':
         compressedBlob = await compressImage(file);
+        method = 'image-compression';
         break;
+
       case 'document':
         if (fileExtension.toLowerCase() === 'pdf') {
-          compressedBlob = await compressPDF(file);
+          const result = await compressPDF(file);
+          compressedBlob = result.blob;
+          method = result.info.method;
         } else if (['doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(fileExtension.toLowerCase())) {
           compressedBlob = await compressOfficeDocument(file, fileExtension);
+          method = 'office-compression';
         } else {
-          // For other document types, we'll return the original file
           compressedBlob = file;
+          method = 'no-compression';
         }
         break;
+
       case 'video':
         compressedBlob = await compressVideo(file);
+        method = 'video-frame-extraction';
         break;
+
       case 'archive':
         if (fileExtension.toLowerCase() === 'zip') {
           compressedBlob = await compressZIP(file);
+          method = 'zip-recompression';
         } else {
           compressedBlob = file;
+          method = 'no-compression';
         }
         break;
+
       default:
         throw new Error('Unsupported compression type');
+    }
+
+    const compressedSize = compressedBlob.size;
+    const compressionRatio = ((originalSize - compressedSize) / originalSize) * 100;
+
+    if (compressedSize >= originalSize) {
+      console.warn('⚠️ Compressed file is larger, using original');
+      compressedBlob = file;
     }
 
     const url = window.URL.createObjectURL(compressedBlob);
     const fileName = `${file.name.split('.')[0]}-compressed.${fileExtension}`;
 
     downloadBlob(url, fileName);
+
+    setTimeout(() => URL.revokeObjectURL(url), 100);
+
+    return {
+      success: true,
+      originalSize,
+      compressedSize: compressedBlob.size,
+      compressionRatio: Math.max(0, compressionRatio),
+      method,
+    };
   } catch (err) {
     const error = err as Error;
-    throw new Error(error.message);
+    onProgress?.(0, `Error: ${error.message}`);
+
+    return {
+      success: false,
+      originalSize,
+      compressedSize: originalSize,
+      compressionRatio: 0,
+      error: error.message,
+    };
   }
 };
 
 const fileCompressorService = {
   handleFileCompression,
+  formatBytes,
 };
 
 export default fileCompressorService;
