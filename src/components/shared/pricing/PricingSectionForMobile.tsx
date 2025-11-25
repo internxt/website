@@ -61,7 +61,7 @@ export const PricingSectionForMobile = ({
   hideBusinessCards,
   hideBusinessSelector,
   lang,
-  popularPlanBySize = '5TB',
+  popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,
