@@ -120,7 +120,7 @@ export const PricingSectionForMobile = ({
     }
   };
 
-  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '3TB';
+  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
   const businessPlanStorage = businessStorageSelected === 'Standard' ? '1TB' : '2TB';
 
   return (
