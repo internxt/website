@@ -20,14 +20,14 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
 
       <div className="relative hidden w-full lg:flex">
-        <div className="absolute inset-0 z-10 translate-x-96 transform lg:w-full">
+        <div className="absolute inset-0 z-10 translate-x-0 transform lg:w-full">
           <Image
-            src={getImage(`/images/datacenters-and-certifications/datacenters-hero.webp`)}
+            src={getImage('/images/home/header/bg.svg')}
             alt="Internxt data centers and certifications"
             width={841}
             height={200}
             quality={100}
-            className="h-[475px] w-full scale-110"
+            className="h-full w-full  blur-[55px]"
           />
           <Image
             src={getImage(`/images/datacenters-and-certifications/datacenters.webp`)}
@@ -35,7 +35,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps) => {
             width={433}
             height={200}
             quality={100}
-            className="absolute right-96 top-20 h-[369px] w-[433px]"
+            className="absolute right-0 top-20 h-[369px] w-[433px]"
           />
         </div>
         <div className="relative z-10 flex flex-col gap-8 self-start p-4 lg:w-1/2 lg:py-20">
