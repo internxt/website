@@ -102,6 +102,7 @@ const BlackFridayDealsTemplate = ({
         popularPlanBySize={config.popularPlanSize || '5TB'}
         sectionDetails="bg-[#1C1C1C] lg:py-20"
         darkMode
+        hideFreeCard
       />
 
       <ThreeCardsSection textContent={textContent.WhyChooseSection} darkMode />
