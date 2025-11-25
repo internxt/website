@@ -135,7 +135,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}

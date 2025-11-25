@@ -61,7 +61,7 @@ export const PricingSectionForMobile = ({
   hideBusinessCards,
   hideBusinessSelector,
   lang,
-  popularPlanBySize = '5TB',
+  popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,
@@ -120,7 +120,7 @@ export const PricingSectionForMobile = ({
     }
   };
 
-  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
+  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '3TB';
   const businessPlanStorage = businessStorageSelected === 'Standard' ? '1TB' : '2TB';
 
   return (
