@@ -1,4 +1,4 @@
-import { Cookies, DownloadApp, FooterSection, NewsletterSection } from './footer';
+import { DownloadApp, FooterSection, NewsletterSection } from './footer';
 import { Auth, Links, OurValues, Products } from './navbar';
 
 export interface MetatagsDescription {
@@ -18,5 +18,4 @@ export interface FooterText {
   DownloadApp: DownloadApp;
   NewsletterSection: NewsletterSection;
   FooterSection: FooterSection;
-  Cookies: Cookies;
 }

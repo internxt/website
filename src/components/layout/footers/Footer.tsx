@@ -1045,9 +1045,6 @@ export default function Footer({
                       <Link href="/ai-detector" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.aiDetector}
                       </Link>
-                      <Link href="/vpn" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.vpn}
-                      </Link>
                       <Link href="/business" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.business}
                       </Link>
