@@ -55,6 +55,10 @@ export default function ComparisonTableSection({
     return products?.individuals?.[billingFrequency]?.[planOrder]?.priceId ?? '';
   };
 
+  const getPlanStorage = (planOrder: number) => {
+    return products?.individuals?.[billingFrequency]?.[planOrder]?.storage ?? '';
+  };
+
   const getPlanByIdAndGetPrice = (planId: string) => {
     const plan = textContent.plans.find((p) => p.id === planId);
     return plan ? getPlanPrice(plan.order) : '0.00';
@@ -229,7 +233,14 @@ export default function ComparisonTableSection({
                       <p className="text-lg font-normal text-gray-55">{billingText}</p>
                     </span>
                     <button
-                      onClick={() => onCheckoutButtonClicked(getPlanPriceId(plan.order), isLifetime)}
+                      onClick={() =>
+                        onCheckoutButtonClicked(
+                          getPlanPriceId(plan.order),
+                          isLifetime,
+                          billingFrequency,
+                          getPlanStorage(plan.order),
+                        )
+                      }
                       className={getButtonStyles(planIndex)}
                     >
                       <p className="text-base font-medium">{textContent.cta}</p>
@@ -296,7 +307,16 @@ export default function ComparisonTableSection({
             getPlanPrice={getPlanByIdAndGetPrice}
             billingText={billingText}
             ctaText={textContent.cta}
-            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanA), isLifetime)}
+            onCheckoutClick={() => {
+              const plan = textContent.plans.find((p) => p.id === selectedPlanA);
+              const order = plan?.order ?? 0;
+              onCheckoutButtonClicked(
+                getPlanByIdAndGetPriceId(selectedPlanA),
+                isLifetime,
+                billingFrequency,
+                getPlanStorage(order),
+              );
+            }}
             isLeftColumn={true}
             customBackgroundClass={getMobilePlanStyles(selectedPlanA)}
           />
@@ -309,7 +329,16 @@ export default function ComparisonTableSection({
             getPlanPrice={getPlanByIdAndGetPrice}
             billingText={billingText}
             ctaText={textContent.cta}
-            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanB), isLifetime)}
+            onCheckoutClick={() => {
+              const plan = textContent.plans.find((p) => p.id === selectedPlanB);
+              const order = plan?.order ?? 0;
+              onCheckoutButtonClicked(
+                getPlanByIdAndGetPriceId(selectedPlanB),
+                isLifetime,
+                billingFrequency,
+                getPlanStorage(order),
+              );
+            }}
             isLeftColumn={false}
             customBackgroundClass={getMobilePlanStyles(selectedPlanB)}
           />
