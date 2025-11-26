@@ -43,8 +43,21 @@ export const BusinessPage = ({
 
   const locale = lang as string;
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
+  const onCheckoutButtonClicked = (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'business',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      PromoCodeName.PcComponentesCoupon,
+    );
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
   const scrollToTop = () => {

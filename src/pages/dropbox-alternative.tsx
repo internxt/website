@@ -25,15 +25,21 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     couponCode: PromoCodeName.BlackFriday,
   });
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
-
+  const onCheckoutButtonClicked = (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
     );
   };
 

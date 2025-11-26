@@ -17,12 +17,19 @@ const PCComponentesBusiness = ({ metatagsDescriptions, textContent, lang }): JSX
     couponCodeForBusiness: PromoCodeName.PcComponentesCoupon,
   });
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'business',
       isCheckoutForLifetime,
+      interval,
+      storage,
       PromoCodeName.PcComponentesCoupon,
     );
   };

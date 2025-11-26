@@ -47,7 +47,7 @@ interface PricingSectionWrapperProps {
   };
   hideDescription?: boolean;
   couponCodeName?: string;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;

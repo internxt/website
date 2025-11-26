@@ -166,17 +166,60 @@ async function getLifetimeCoupons() {
   return data;
 }
 
-const redirectToCheckout = (
+const redirectToCheckout = async (
   planId: string,
   currencyValue: string,
   planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
+  interval: string,
+  storage: string,
   promoCodeId?: PromoCodeProps['name'],
 ) => {
   const gclid = getGclidFromURL();
 
   if (gclid) {
     saveGclidToCookie(gclid);
+  }
+  const prices = await getPrices(currencyValue);
+  const planTypeKey = planType === 'individual' ? 'individuals' : 'business';
+
+  const selectedPrice = prices?.[planTypeKey]?.[interval]?.find((plan: TransformedProduct) => plan.priceId === planId);
+
+  let planPrice = selectedPrice ? parseFloat(selectedPrice.price.toString()) : 0;
+
+  if (promoCodeId && planPrice > 0) {
+    try {
+      const coupon = await getCoupon(promoCodeId);
+
+      if (coupon.percentOff) {
+        planPrice = planPrice * (1 - coupon.percentOff / 100);
+      } else if (coupon.amountOff) {
+        planPrice = Math.max(0, planPrice - coupon.amountOff / 100);
+      }
+    } catch (error) {
+      console.error('Error applying coupon:', error);
+    }
+  }
+
+  if (typeof window.dataLayer !== 'undefined') {
+    window.dataLayer.push({
+      event: 'begin_checkout',
+      ecommerce: {
+        value: planPrice,
+        currency: currencyValue ?? 'eur',
+        items: [
+          {
+            item_id: planId,
+            item_name: planId,
+            affiliation: 'website',
+            coupon: promoCodeId,
+            currency: currencyValue ?? 'eur',
+            price: planPrice,
+            quantity: 1,
+          },
+        ],
+      },
+    });
   }
 
   checkout({

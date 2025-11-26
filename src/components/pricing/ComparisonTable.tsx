@@ -7,7 +7,7 @@ import CustomPlanSelector from './CustomPlanSelector';
 interface ComparisonTableProps {
   textContent: PricingText['ComparisonTable'];
   products: ProductsDataProps | undefined;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   billingFrequency: Interval;
   decimalDiscount: any;
   currencyValue: any;
