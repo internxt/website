@@ -442,6 +442,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.googleDriveAlternative}
                     </Link>
+                    <Link
+                      href="/degoo-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.degooAlternative}
+                    </Link>
 
                     <Link
                       href="/what-does-google-know-about-me"
@@ -966,6 +974,14 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.onedriveAlternative}
+                      </Link>
+                      <Link
+                        href="/degoo-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.degooAlternative}
                       </Link>
                       <Link
                         href="/what-does-google-know-about-me"
