@@ -1,0 +1,222 @@
+{
+  "HeroSection": {
+    "title": "Internxt, una alternativa \n **segura**  a ElephantDrive",
+    "description": "Cámbiate a Internxt para una alternativa totalmente privada a ElephantDrive. \n con cifrado post-cuántico y conocimiento cero.",
+    "getPrivacy": "Obtén privacidad total con un {{percentage}}% de descuento",
+    "cta": "Reclamar oferta"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs ElephantDrive",
+    "description": "Descubre las características clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos.",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Cifrado",
+        "Cifrado Post-Cuántico",
+        "Precios y almacenamiento",
+        "Funcionalidades",
+        "Auditorías de seguridad",
+        "Soporte en vivo",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "AES-256 y Kyber-512",
+        "Sí",
+        "Competitivo, sin costes ocultos, hasta 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail y más",
+        "Auditorías de seguridad regulares",
+        "Sí",
+        "Nunca puede acceder a tus archivos",
+        "Cumple con GDPR, HIPAA, ISO 27001, SOC 2, con sede en España"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "AES-256",
+        "No",
+        "Planes más caros y menos almacenamiento, hasta 2TB",
+        "Solo almacenamiento en la nube",
+        "Sin auditoría de seguridad publicada",
+        "No",
+        "Los archivos no están completamente cifrados de extremo a extremo",
+        "Con sede en Estados Unidos, por lo que se aplica el Marco de Escudo de Privacidad UE-EE. UU."
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "ElephantDrive carece de transparencia. Internxt protege tu privacidad.",
+    "description": "ElephantDrive mantiene oculto su código fuente y no tiene auditorías de seguridad publicadas. No todos los archivos están protegidos con cifrado de extremo a extremo por defecto. Cámbiate a Internxt para obtener total seguridad y transparencia para tus archivos, vídeos y fotos. Con Internxt, nadie más que tú puede acceder a tus archivos, ni siquiera nosotros.",
+    "scrollableSection": {
+      "titles": [
+        "Código cerrado",
+        "Sin auditoría publicada",
+        "No totalmente cifrado",
+        "Servidores con sede en EE. UU."
+      ],
+      "descriptions": [
+        "ElephantDrive mantiene su código fuente oculto al público. Sin transparencia ni auditoría de seguridad independiente, no hay forma de saber con certeza cómo ElephantDrive maneja o protege tus datos.",
+        "A diferencia de Internxt, ElephantDrive no ha publicado ninguna auditoría de seguridad independiente, dejando a los usuarios en la incertidumbre sobre la seguridad de su plataforma.",
+        "El cifrado predeterminado deja los archivos accesibles al servicio y vulnerables a solicitudes legales. El cifrado opcional con clave personal puede proteger tus archivos, pero el predeterminado puede ser accedido por la empresa y las autoridades gubernamentales.",
+        "Los servidores de ElephantDrive se encuentran en EE. UU., lo que lo sujeta a la vigilancia y las solicitudes de acceso legal de EE. UU. Elegir un proveedor de almacenamiento en la nube europeo como Internxt te da protección verificada y tranquilidad."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "¿Por qué necesitas una alternativa privada a ElephantDrive?",
+    "description": "Lo que ElephantDrive demuestra en seguridad básica falla en términos de privacidad y transparencia completas. Para una privacidad total, obtén seguridad completa combinada con cifrado de conocimiento cero para todos tus archivos de Internxt.",
+    "cards": {
+      "titles": ["Privacidad", "No totalmente cifrado por defecto", "Falta de transparencia"],
+      "descriptions": [
+        "No todos los archivos almacenados en ElephantDrive están protegidos con cifrado de extremo a extremo. ElephantDrive separa el almacenamiento de archivos de la gestión de claves, ofreciendo cifrado de extremo a extremo solo si habilitas una clave personal. En Internxt, todos tus archivos están protegidos con cifrado de conocimiento cero por defecto, sin rastreadores, sin escaneo por IA y sin puertas traseras ocultas.",
+        "Tienes que configurar tú mismo el proceso de cifrado eligiendo entre tres opciones con ElephantDrive. Internxt proporciona cifrado post-cuántico y de conocimiento cero automático para todos los archivos por defecto, garantizando que tus datos estén siempre protegidos sin configuración manual.",
+        "Sin código abierto ni auditorías, no puedes estar seguro de cómo ElephantDrive maneja tus datos, si existen puertas traseras a tus datos o si existen vulnerabilidades de seguridad. El código de Internxt es de código abierto y se audita regularmente para una transparencia total."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs ElephantDrive",
+    "description": "Internxt ofrece una seguridad inigualable con características que ElephantDrive no puede igualar, como el cifrado de conocimiento cero automático para todos los archivos, el cifrado post-cuántico y la transparencia de código abierto.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Privacidad, transparencia y confianza totales",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "El código de Internxt está abierto para que todos lo examinen y garanticen su seguridad a través de nuestro GitHub. Esta transparencia garantiza que no se oculten vulnerabilidades."
+          },
+          {
+            "title": "Cifrado de conocimiento cero",
+            "description": "Tus datos se cifran automáticamente en el lado del cliente, garantizando que solo tú puedas acceder a ellos."
+          },
+          {
+            "title": "Auditado y conforme",
+            "description": "Internxt ha sido auditado externamente y cumple con GDPR, HIPAA, ISO 27001 y SOC 2."
+          },
+          {
+            "title": "Planes de por vida",
+            "description": "Evita suscripciones repetidas con un pago único para planes de hasta 5TB. Accede a nuestros servicios para siempre con un {{percentage}}% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Código cerrado",
+            "description": "ElephantDrive mantiene su código fuente oculto al público. Sin transparencia ni auditoría de seguridad independiente, no hay forma de saber con certeza cómo ElephantDrive maneja o protege tus datos."
+          },
+          {
+            "title": "Configuración de cifrado manual",
+            "description": "Tienes que configurar tú mismo el proceso de cifrado eligiendo entre tres opciones. El cifrado predeterminado deja los archivos accesibles al servicio y vulnerables a solicitudes legales."
+          },
+          {
+            "title": "Sin auditorías publicadas",
+            "description": "ElephantDrive no ha publicado ninguna auditoría de seguridad independiente, a diferencia de Internxt, que se somete a auditorías externas periódicas."
+          },
+          {
+            "title": "Sin planes de por vida",
+            "description": "No hay planes de por vida disponibles. Los planes de 2TB están disponibles para suscripciones mensuales, anuales o bianuales a costes más altos que Internxt."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a ElephantDrive",
+    "description": "Internxt Drive ofrece un conjunto completo de productos diseñados para devolverte el control de tu privacidad en línea.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
+      "descriptions": [
+        "Internxt Drive viene con cifrado post-cuántico y de conocimiento cero, por lo que nadie más que tú puede acceder a tus archivos. Obtén almacenamiento en la nube y copias de seguridad cifradas para tus fotos, vídeos y archivos. \n\n Además, las copias de seguridad cifradas y el uso compartido de archivos protegido con contraseña ofrecen la máxima protección contra el ransomware y las filtraciones de datos.",
+        "Internxt Antivirus está integrado directamente en tu aplicación Internxt Drive para un control y protección total contra el malware. Ejecuta escaneos de virus completos o personalizados para mantener tu dispositivo funcionando sin problemas y protegido contra virus como el ransomware o el spyware.",
+        "La VPN de Internxt protege tu navegación, bloquea anuncios y rastreadores, y mantiene tu ubicación privada. Cifra tu conexión wifi para evitar espionaje, hackers y el robo de identidad. Navega de forma segura sabiendo que tu información personal, contraseñas y cuentas están protegidas.",
+        "Internxt Cleaner te ayuda a identificar, eliminar y gestionar archivos basura o duplicados no deseados de tu dispositivo. Con Cleaner, puedes eliminar archivos no deseados para mantener tu almacenamiento organizado, libre de desorden y asegurarte de que tu dispositivo funcione de manera eficiente.",
+        "Internxt Meet también está disponible como tu alternativa segura y privada para videoconferencias. Con Meet, puedes organizar videollamadas privadas libres de rastreadores, anuncios y recopilación de datos. Tus videollamadas están protegidas con cifrado post-cuántico, lo que te permite organizar llamadas con total privacidad.",
+        "Disponible en Windows, Mac, Linux y móvil, Internxt te permite tomar el control total de tu almacenamiento en la nube accediendo a tu nube desde cualquier lugar y en cualquier dispositivo. Para usuarios avanzados, Internxt ofrece soporte para WebDAV, Rclone y NAS, ofreciendo todo lo que necesitas para gestionar tus archivos con total privacidad."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tu privacidad, tus términos",
+    "description": "Protección total con un {{percentage}}% de descuento",
+    "cta": "Reclamar oferta"
+  },
+  "tableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "{{discount}}% de descuento 🔥",
+    "planTitles": {
+      "header": "Tu aliado de privacidad todo en uno"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Obtén 1GB de almacenamiento en la nube cifrado gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Soporte al cliente premium",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt una alternativa más segura que ElephantDrive?",
+        "answer": [
+          "Sí, Internxt utiliza cifrado post-cuántico y de conocimiento cero que garantiza que nadie más que tú pueda ver tus archivos. Todos tus archivos están protegidos con este cifrado, sin la necesidad de almacenarlos en una bóveda separada, ya que Internxt Drive sirve como tu bóveda completa de almacenamiento en la nube cifrado.",
+          "Funcionalidades adicionales como VPN, Antivirus, Limpiador de Dispositivos (Device Cleaner), soporte NAS, Meet y Mail también te ofrecen protección adicional contra hackers y filtraciones de datos como parte de tu plan de almacenamiento en la nube con Internxt."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado post-cuántico y es más seguro?",
+        "answer": [
+          "A diferencia del cifrado estándar, los algoritmos de cifrado post-cuántico están diseñados para resistir potentes ataques cuánticos, lo que convierte al EPC en una alternativa más segura a ElephantDrive.",
+          "Este método de criptografía es utilizado por Internxt para garantizar que tu plan de almacenamiento en la nube de por vida te proteja contra futuras amenazas de ciberseguridad y está disponible para todos los planes sin coste adicional."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, lo que la convierte en una solución de almacenamiento en la nube que cumple con el GDPR y que sigue leyes estrictas para garantizar que tus datos y privacidad estén protegidos."
+        ]
+      },
+      {
+        "question": "¿Es ElephantDrive más caro que Internxt?",
+        "answer": [
+          "ElephantDrive cuesta hasta 400€ al año por 1TB de almacenamiento en la nube. Con Internxt, puedes obtener 5TB de almacenamiento cifrado post-cuántico, además de VPN, Antivirus, Meet, Mail y más por 56,62€ durante el primer año. También puedes evitar los costes de suscripción eligiendo un plan Internxt de por vida para obtener privacidad total para siempre.",
+          "Con tu descuento exclusivo del {{percentage}}%, Internxt ofrece almacenamiento en la nube y una amplia gama de funciones no disponibles con ningún otro proveedor de nube, incluido ElephantDrive."
+        ]
+      },
+      {
+        "question": "¿Cómo me pongo en contacto con el soporte?",
+        "answer": [
+          "Si tienes más preguntas, solicitudes o necesitas ayuda, puedes ponerte en contacto con hello@internxt.com y nuestro Equipo de Éxito del Cliente estará encantado de ayudarte."
+        ]
+      },
+      {
+        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, puedes actualizar tu plan desde la configuración de tu cuenta de Internxt si necesitas añadir más almacenamiento. O compra un nuevo plan en internxt.com/pricing con tu cuenta actual de Internxt, y tu almacenamiento se acumulará automáticamente."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Sí, Internxt actualmente acepta tarjetas de débito y crédito Mastercard, VISA, American Express, etc. También puedes pagar a través de PayPal, iDEAL, Sofort, Criptomoneda y Klarna."
+        ]
+      }
+    ]
+  }
+}
