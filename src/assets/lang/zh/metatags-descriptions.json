@@ -331,9 +331,24 @@
     "description": "切換到 Internxt，這是 OneDrive 的開源替代品。後量子和零知識加密保證您的文件和媒體檔案的完全隱私。"
   },
   {
+    "id": "elephantdrive-alternative",
+    "title": "Internxt — ElephantDrive 的私密安全替代方案",
+    "description": "切换到 Internxt，获取 ElephantDrive 的开源替代方案。后量子和零知识加密的云存储保证了您的文档和媒体文件的完全隐私。"
+  },
+  {
     "id": "degoo-alternative",
     "title": "Internxt — Degoo 的私密安全替代方案",
     "description": "切换到 Internxt，获取 Degoo 的开源替代方案。后量子和零知识加密的云存储保证了您的文档和媒体文件的完全隐私。"
+  },
+  {
+    "id": "drime-alternative",
+    "title": "Internxt — Drime 的私密安全替代方案",
+    "description": "切换到 Internxt，获取 Drime 的开源替代方案。后量子和零知识加密的云存储保证了您的文档和媒体文件的完全隐私。"
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "Internxt — FileJump 的私密安全替代方案",
+    "description": "切换到 Internxt，获取 FileJump 的开源替代方案。后量子和零知识加密的云存储保证了您的文档和媒体文件的完全隐私。"
   },
   {
     "id": "meet",
