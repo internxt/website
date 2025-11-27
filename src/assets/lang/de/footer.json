@@ -7,89 +7,73 @@
     "title": "Newsletter",
     "description": "Möchtest du von uns hören, wenn wir neue Produkte auf den Markt bringen oder ein neues Update veröffentlichen? Gib deine E-Mail-Adresse ein und wir erledigen den Rest!",
     "input": "Deine E-Mail Adresse",
-    "info": "Du kannst dich jederzeit abmelden",
     "cta": "Abonnieren",
     "privacy": "Mit deiner Anmeldung stimmst du unserer",
     "privacyLink": "Privacy-Policy."
   },
   "FooterSection": {
-    "description": "Die Mission von Internxt ist es, eine Welt zu gestalten, die die Privatsphäre der Menschheit respektiert. Zu diesem Zweck veröffentlichen wir eine Reihe von Diensten, die alle das gemeinsame Ziel haben, der Menschheit beim Schutz dieses Grundrechts zu helfen.",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
-    "independentPromotion": "Diese Promotion wird von Internxt unabhängig angeboten und es besteht keine direkte Partnerschaft mit der Walt Disney Company",
     "comingSoon": "Demnächst",
     "new": "Neu",
+    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
     "sections": {
       "products": {
         "title": "Produkte",
         "drive": "Internxt Drive",
-        "photos": "Internxt Photos",
-        "send": "Internxt Send",
         "objStorage": "Internxt S3",
-        "vpn": "VPN-Erweiterung",
         "antivirus": "Internxt Antivirus",
+        "send": "Internxt Send",
+        "vpn": "Internxt VPN",
         "cleaner": "Internxt Cleaner",
         "meet": "Internxt Meet",
-        "token": "Token",
-        "pricing": "Preise",
         "business": "Internxt für Unternehmen",
-        "family": "Internxt für Familien"
+        "family": "Internxt für Familien",
+        "pricing": "Preise"
       },
       "company": {
         "title": "Firma",
         "about": "Über uns",
         "privacy": "Privatsphäre",
-        "openSource": "Open Source",
         "security": "Sicherheit",
+        "openSource": "Open Source",
         "legal": "Legal",
-        "whyInternxt": "Warum Internxt?",
-        "comparison": "Vergleich",
-        "mediaArea": "Medienbereich",
         "sustainability": "Nachhaltigkeit"
       },
       "join": {
         "title": "Mach mit",
-        "newsletter": "Newsletter",
         "signup": "Erstelle ein Konto",
-        "storageForEducation": "Internxt für Bildung",
-        "support": "Support",
         "login": "Log in",
-        "community": "Community",
-        "github": "GitHub",
+        "support": "Support",
         "whitePaper": "White Paper",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
-        "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "github": "GitHub",
+        "affiliates": "Affiliates"
       },
       "resources": {
         "title": "Ressourcen",
         "blog": "Blog",
-        "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
-        "writeForUs": "Schreibe für uns",
-        "pCloudAlternative": "pCloud-Alternative",
-        "dropboxAlternative": "Dropbox-Alternative",
-        "megaAlternative": "Mega-Alternative",
+        "comparison": "Vergleich von Cloud-Diensten",
+        "pCloudAlternative": "pCloud Alternative",
+        "dropboxAlternative": "Dropbox Alternative",
+        "megaAlternative": "Mega Alternative",
         "koofrAlternative": "Koofr Alternative",
         "icedriveAlternative": "Icedrive Alternative",
         "onedriveAlternative": "OneDrive Alternative",
         "googleDriveAlternative": "Google Drive Alternative",
-        "cyberSecurityGlossary": "Cyber Security Glossary",
-        "cyberAwareness": "Cyber Awareness",
+        "drimeAlternative": "Drime Alternative",
+        "degooAlternative": "Degoo Alternative",
+        "fileJumpAlternative": "FileJump Alternative",
+        "elephantDriveAlternative": "ElephantDrive Alternative",
         "whatGoogleKnowsAboutMe": "Was Google weiß",
         "WebDAV": "CLI & WebDAV",
         "nas": "NAS",
         "coupons": "Gutscheine",
-        "reviews": "Bewertungen",
-        "deals": "Angebote"
+        "reviews": "Bewertungen"
       },
       "tools": {
         "title": "Kostenlose Tools",
-        "temporaryEmail": "Temporäre E-Mail",
-        "fileVirusScan": "Datei Virus Scanner",
-        "passwordChecker": "Passwort Checker",
         "byteConverter": "Byte Konverter",
+        "temporaryEmail": "Temporäre E-Mail",
+        "passwordChecker": "Passwort Checker",
+        "fileVirusScan": "Datei Virus Scanner",
         "passwordGenerator": "Passwort Generator",
         "fileConverter": "Dateikonverter",
         "haveIBeenPwned": "Internxt Monitor",
@@ -105,11 +89,7 @@
         "cloudPhotos": "Fotos in der Cloud",
         "cloudVideo": "Videos in der Cloud"
       }
-    }
-  },
-  "Cookies": {
-    "title": "Internxt verwendet Cookies, um die Nutzung dieser Website zu vereinfachen",
-    "link": "Erfahre mehr über Cookies",
-    "close": "Ok, schließen"
+    },
+    "financialProject": "Projekt finanziert durch CDTI und EU-FEDER-Fonds. Internxt Mail und Internxt Meet: Sicherer E-Mail-Dienst Internxt Mail und sicherer Videoanruf-Dienst Internxt Meet, unter Verwendung von Post-Quanten-Verschlüsselung und künstlicher Intelligenz."
   }
 }
