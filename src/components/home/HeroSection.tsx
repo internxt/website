@@ -8,6 +8,7 @@ import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
+import Snowfall from '../shared/Snowfall';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -81,6 +82,8 @@ export default function HeroSection({
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
+      <Snowfall count={60} />
+
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[566px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
