@@ -405,6 +405,11 @@
     "description": "DesGooglea tu vida con Internxt, la mejor alternativa a Google Drive que respeta tu privacidad. Obtén cifrado de conocimiento cero y control total de tus datos."
   },
   {
+    "id": "elephantdrive-alternative",
+    "title": "Internxt — Private & Secure ElephantDrive Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
+  },
+  {
     "id": "degoo-alternative",
     "title": "Internxt — Private & Secure Degoo Alternative",
     "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
@@ -412,6 +417,11 @@
   {
     "id": "drime-alternative",
     "title": "Internxt — Private & Secure Drime Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "Internxt — Private & Secure FileJump Alternative",
     "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
   },
   {

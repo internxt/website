@@ -1,0 +1,222 @@
+{
+  "HeroSection": {
+    "title": "Internxt, un'alternativa \n **sicura**  a FileJump",
+    "description": "Passa a Internxt per un'alternativa totalmente privata a FileJump\n con crittografia post-quantistica e conoscenza zeroper.",
+    "getPrivacy": "Ottieni la privacy totale con il {{percentage}}% di sconto",
+    "cta": "Richiedi l'offerta"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs FileJump: Panoramica",
+    "description": "Scopri le caratteristiche chiave e le differenze che consentono a Internxt di restituirti il controllo sui tuoi dati.",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Crittografia",
+        "Crittografia Post-Quantistica",
+        "Prezzi e archiviazione",
+        "Funzionalità",
+        "Audit di sicurezza",
+        "Supporto live",
+        "Politica sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "AES-256 e Kyber-512",
+        "Sì",
+        "Competitivo, senza costi nascosti, fino a 5 TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e altro",
+        "Audit di sicurezza regolari",
+        "Sì",
+        "Non può mai accedere ai tuoi file",
+        "Conforme a GDPR, HIPAA, ISO 27001, SOC 2, con sede in Spagna"
+      ],
+      "competitorFeatures": [
+        "Codice sorgente chiuso",
+        "AES-256",
+        "No",
+        "Piani più costosi e meno archiviazione, fino a 2 TB",
+        "Solo archiviazione cloud",
+        "Nessun audit di sicurezza pubblicato",
+        "No",
+        "I file non sono completamente crittografati end-to-end",
+        "Con sede in India, si applicano le leggi indiane sulla conformità"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "A FileJump manca la trasparenza. Internxt protegge la tua privacy.",
+    "description": "FileJump mantiene nascosto il suo codice sorgente e non ha audit di sicurezza pubblicati. Gli utenti segnalano che i nomi dei file e il contenuto dei file possono essere restituiti in chiaro. Passa a Internxt per una sicurezza e una trasparenza totali per i tuoi file, video e foto. Con Internxt, nessuno tranne te può accedere ai tuoi file, nemmeno noi.",
+    "scrollableSection": {
+      "titles": [
+        "Codice sorgente chiuso",
+        "Nessun audit pubblicato",
+        "Non totalmente crittografato",
+        "Conformità con sede in India"
+      ],
+      "descriptions": [
+        "FileJump mantiene il suo codice sorgente nascosto al pubblico. Senza trasparenza o audit di sicurezza indipendente, non c'è modo di sapere con certezza come FileJump gestisce o protegge i tuoi dati.",
+        "A differenza di Internxt, FileJump non ha pubblicato alcun audit di sicurezza indipendente, lasciando gli utenti nell'incertezza sulla sicurezza della sua piattaforma.",
+        "Non tutti i file in FileJump sono protetti con crittografia end-to-end. Gli utenti che ispezionano il codice segnalano che i nomi dei file e persino il contenuto dei file possono essere restituiti in chiaro, rendendo difficile fidarsi completamente del provider.",
+        "Avendo sede in India, FileJump deve seguire le leggi locali, comprese le normative sull'accesso e l'archiviazione dei dati. Ciò ha sollevato preoccupazioni tra gli utenti riguardo alla sorveglianza, alle richieste governative e alla trasparenza limitata."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Perché hai bisogno di un'alternativa privata a FileJump?",
+    "description": "Ciò che FileJump dimostra in sicurezza di base fallisce in termini di privacy e trasparenza complete. Per una privacy totale, ottieni sicurezza completa combinata con crittografia a conoscenza zero per tutti i tuoi file da Internxt.",
+    "cards": {
+      "titles": ["Privacy", "Non totalmente crittografato", "Mancanza di trasparenza"],
+      "descriptions": [
+        "Non tutti i file in FileJump sono protetti con crittografia end-to-end. Gli utenti segnalano che i nomi dei file e il contenuto dei file possono essere restituiti in chiaro. In Internxt, tutti i tuoi file sono protetti con crittografia a conoscenza zero per impostazione predefinita, senza tracker, senza scansione AI e senza backdoor nascoste.",
+        "Gli utenti hanno espresso preoccupazioni sul fatto che i file potrebbero non essere completamente crittografati con FileJump, contraddicendo ciò che il servizio afferma. Internxt fornisce crittografia post-quantistica e a conoscenza zero automatica per tutti i file, garantendo che i tuoi dati siano sempre protetti.",
+        "Senza codice open source o audit, non puoi essere sicuro di come FileJump gestisce i tuoi dati, se ci sono backdoor ai tuoi dati o se esistono vulnerabilità di sicurezza. Scegliere un servizio completamente open source e sottoposto ad audit come Internxt ti offre protezione verificata e tranquillità."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs FileJump",
+    "description": "Internxt offre una sicurezza senza pari con funzionalità che FileJump non può eguagliare, come la crittografia a conoscenza zero verificata per tutti i file, la crittografia post-quantistica e la trasparenza open-source.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Privacy, trasparenza e fiducia totali",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Il codice di Internxt è aperto a tutti per l'esame e per garantirne la sicurezza tramite il nostro GitHub. Questa trasparenza garantisce che nessuna vulnerabilità sia nascosta."
+          },
+          {
+            "title": "Crittografia a conoscenza zero",
+            "description": "I tuoi dati vengono crittografati sul lato client, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Auditi e conformi",
+            "description": "Internxt è stato verificato esternamente ed è conforme a GDPR, HIPAA, ISO 27001 e SOC 2."
+          },
+          {
+            "title": "Piani a vita",
+            "description": "Evita abbonamenti ripetuti con un pagamento una tantum per piani fino a 5 TB. Accedi ai nostri servizi per sempre con il {{percentage}}% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Che dire della tua privacy?",
+        "features": [
+          {
+            "title": "Codice sorgente chiuso",
+            "description": "FileJump mantiene il suo codice sorgente nascosto al pubblico. Senza trasparenza o audit di sicurezza indipendente, non c'è modo di sapere con certezza come FileJump gestisce o protegge i tuoi dati."
+          },
+          {
+            "title": "Preoccupazioni sulla privacy",
+            "description": "Gli utenti hanno espresso preoccupazioni sul fatto che i file potrebbero non essere completamente crittografati. Gli utenti che ispezionano il codice segnalano che i nomi dei file e persino il contenuto dei file possono essere restituiti in chiaro."
+          },
+          {
+            "title": "Nessun audit pubblicato",
+            "description": "FileJump non ha pubblicato alcun audit di sicurezza indipendente, a differenza di Internxt che si sottopone a regolari audit esterni."
+          },
+          {
+            "title": "Piani a vita limitati",
+            "description": "I piani a vita fino a 2 TB sono disponibili a 99,99€ all'anno, con meno archiviazione e costi più alti di Internxt."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a FileJump",
+    "description": "Internxt Drive offre una suite completa di prodotti progettati per restituirti il controllo della tua privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "Internxt Drive viene con crittografia post-quantistica e a conoscenza zero, in modo che nessuno tranne te possa accedere ai tuoi file. Ottieni archiviazione cloud e backup crittografati per le tue foto, video e file. \n\n Inoltre, i backup crittografati e la condivisione di file protetta da password offrono la massima protezione contro ransomware e violazioni dei dati.",
+        "Internxt Antivirus è integrato direttamente nell'app Internxt Drive per il controllo e la protezione totali contro il malware. Esegui scansioni antivirus complete o personalizzate per mantenere il tuo dispositivo in funzione senza problemi e protetto da virus come ransomware o spyware.",
+        "La VPN di Internxt protegge la tua navigazione, blocca annunci e tracker e mantiene la tua posizione privata. Crittografa la tua connessione Wi-Fi per prevenire spionaggio, hacker e furto di identità. Naviga in sicurezza sapendo che le tue informazioni personali, password e account sono protetti.",
+        "Internxt Cleaner ti aiuta a identificare, eliminare e gestire file indesiderati o duplicati dal tuo dispositivo. Con Cleaner, puoi eliminare file non necessari per mantenere la tua archiviazione organizzata, priva di disordine e garantire che il tuo dispositivo funzioni in modo efficiente.",
+        "Internxt Meet è disponibile anche come alternativa sicura e privata per le videoconferenze. Con Meet, puoi ospitare videochiamate private libere da tracker, annunci e raccolta di dati. Le tue videochiamate sono protette con crittografia post-quantistica, permettendoti di ospitare chiamate in totale privacy.",
+        "Disponibile su Windows, Mac, Linux e mobile, Internxt ti permette di prendere il controllo totale della tua archiviazione cloud accedendo al tuo cloud da qualsiasi luogo e su qualsiasi dispositivo. Per gli utenti avanzati, Internxt offre supporto per WebDAV, Rclone e NAS, offrendo tutto il necessario per gestire i tuoi file in totale privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "La tua privacy, i tuoi termini",
+    "description": "Protezione totale con un {{percentage}}% di sconto",
+    "cta": "Richiedi l'offerta"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato di privacy all-in-one",
+    "hotLabel": "{{discount}}% di sconto 🔥",
+    "planTitles": {
+      "header": "Il tuo alleato di privacy all-in-one"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1GB di archiviazione cloud crittografata gratis",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open-source e sottoposto ad audit",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "È Internxt un'alternativa più sicura a FileJump?",
+        "answer": [
+          "Sì, Internxt utilizza la crittografia post-quantistica e a conoscenza zero che garantisce che nessuno tranne te possa visualizzare i tuoi file. Tutti i tuoi file sono protetti con questa crittografia, senza la necessità di archiviarli in un vault separato, poiché Internxt Drive funge da tuo vault completo di archiviazione cloud crittografata.",
+          "Funzionalità aggiuntive come VPN, Antivirus, Pulisci Dispositivo (Device Cleaner), supporto NAS, Meet e Mail ti offrono anche una protezione aggiuntiva da hacker e violazioni dei dati come parte del tuo piano di archiviazione cloud con Internxt."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica ed è più sicura?",
+        "answer": [
+          "A differenza della crittografia standard, gli algoritmi di crittografia post-quantistica sono costruiti per resistere a potenti attacchi quantistici, rendendo la CPQ un'alternativa più sicura a FileJump.",
+          "Questo metodo di crittografia è utilizzato da Internxt per garantire che il tuo piano di archiviazione cloud a vita ti protegga dalle future minacce alla sicurezza informatica ed è disponibile per tutti i piani senza costi aggiuntivi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, il che la rende una soluzione di archiviazione cloud conforme al GDPR che segue leggi rigorose per garantire che i tuoi dati e la tua privacy siano protetti."
+        ]
+      },
+      {
+        "question": "È FileJump più caro di Internxt?",
+        "answer": [
+          "FileJump costa 99,99€ all'anno per 2TB di archiviazione cloud. Con Internxt, puoi ottenere 5TB di archiviazione crittografata post-quantistica, più VPN, Antivirus, Meet, Mail e altro per 56,62€ durante il primo anno. Puoi anche evitare i costi di abbonamento scegliendo un piano Internxt a vita per ottenere privacy totale per sempre.",
+          "Con il tuo sconto esclusivo del {{percentage}}%, Internxt offre archiviazione cloud e una vasta gamma di funzionalità non disponibili con nessun altro provider cloud, incluso FileJump."
+        ]
+      },
+      {
+        "question": "Come posso contattare l'assistenza?",
+        "answer": [
+          "Se hai altre domande, richieste o hai bisogno di assistenza, puoi contattare hello@internxt.com e il nostro Team di Successo del Cliente sarà lieto di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio di archiviazione al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il tuo piano dalle impostazioni del tuo account Internxt se hai bisogno di aggiungere più spazio di archiviazione. Oppure acquista un nuovo piano su internxt.com/pricing con il tuo account Internxt attuale e il tuo spazio di archiviazione verrà automaticamente aggiunto."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Sì, Internxt accetta attualmente carte di debito e di credito Mastercard, VISA, American Express, ecc. Puoi anche pagare tramite PayPal, iDEAL, Sofort, Criptovaluta e Klarna."
+        ]
+      }
+    ]
+  }
+}
