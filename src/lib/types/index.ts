@@ -172,6 +172,9 @@ export enum PromoCodeName {
   BELIEVEMY = 'BELIEVEMY',
   GHAREEB = 'GHAREEB',
   JON = 'JON',
+  APFELCAST = 'apfelcast',
+  MADROZ = 'madroz',
+  JUSTIN = 'justin',
 }
 
 export interface PromoCodeProps {

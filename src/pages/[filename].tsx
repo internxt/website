@@ -135,7 +135,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
@@ -195,12 +195,16 @@ export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
   let lang = 'es';
 
-  if (pathname === 'believemy') {
+  if (pathname === 'believemy' || pathname === 'madroz' || pathname === 'justin') {
     lang = 'fr';
   }
 
   if (pathname === 'ghareeb') {
     lang = 'en';
+  }
+
+  if (pathname === 'apfelcast') {
+    lang = 'de';
   }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
