@@ -1,0 +1,210 @@
+{
+  "HeroSection": {
+    "title": "Internxt, une alternative \n **sécurisée** à Degoo",
+    "description": "Passez à Internxt pour une alternative totalement privée à Degoo. \nStockage cloud crypté post-quantique et zéro-connaissance.",
+    "getPrivacy": "Obtenez une confidentialité avec {{percentage}}% de réduction",
+    "cta": "Profiter de l'offre"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs Degoo",
+    "description": "Découvrez les principales caractéristiques et différences qui permettent à Internxt de vous redonner le contrôle de vos données.",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Chiffrement Post-Quantique",
+        "Tarification et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Support en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open source",
+        "AES-256 et Kyber-512",
+        "Oui",
+        "Compétitif, pas de coûts cachés, jusqu'à 5 To",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail et plus",
+        "Audits de sécurité réguliers",
+        "Oui",
+        "Impossible d'accéder à vos fichiers",
+        "Conforme aux normes RGPD, HIPAA, ISO 27001, SOC 2, basé en Espagne"
+      ],
+      "competitorFeatures": [
+        "Code source fermé",
+        "AES-256",
+        "Non",
+        "Plans de base, mensuels jusqu'à 5 To",
+        "Stockage cloud",
+        "Aucun audit de sécurité publié",
+        "Non",
+        "Les fichiers stockés en dehors du 'Vault' sont moins privés",
+        "RGPD, basé en Suède"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Degoo manque de transparence. Internxt protège votre vie privée.",
+    "description": "Degoo garde son code source caché et n'a pas d'audits de sécurité publiés. Passez à Internxt pour une sécurité et une transparence totales pour vos fichiers, vidéos et photos. Avec Internxt, personne d'autre que vous ne peut accéder à vos fichiers, pas même nous.",
+    "scrollableSection": {
+      "titles": ["Code source fermé", "Aucun audit publié", "Suppressions de compte", "Confidentialité payante"],
+      "descriptions": [
+        "Degoo garde son code source caché du public. Sans transparence, il n'y a aucun moyen de savoir avec certitude comment Degoo gère ou protège vos données.",
+        "Contrairement à Internxt, Degoo n'a publié aucun audit de sécurité indépendant, laissant les utilisateurs incertains quant à la sécurité de leur plateforme.",
+        "De nombreux utilisateurs de Degoo ont signalé la suppression de leurs comptes sans avertissement, ce qui leur a fait perdre l'accès aux fichiers qu'ils pensaient en sécurité dans le cloud. La suppression soudaine met en évidence un manque de gouvernance fiable des données.",
+        "Avec le stockage cloud Degoo, la confidentialité devient une fonctionnalité payante plutôt qu'un droit fondamental. Le chiffrement zéro-connaissance n'est disponible qu'avec les plans payants, laissant les fichiers sur un plan gratuit moins sécurisés et à risque."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Pourquoi vous avez besoin d'une alternative privée à Degoo",
+    "description": "Ce que Degoo démontre en sécurité de base échoue en termes de confidentialité et de transparence. Pour une confidentialité totale, obtenez une sécurité complète combinée à un chiffrement zéro-connaissance avec Internxt.",
+    "cards": {
+      "titles": ["Confidentialité", "Zéro-connaissance uniquement pour les plans payants", "Fiabilité du compte"],
+      "descriptions": [
+        "Les plans gratuits de Degoo ne disposent pas du chiffrement zéro-connaissance, ce qui signifie que vos fichiers sont moins privés. Chez Internxt, tous les plans incluent le chiffrement zéro-connaissance sans trackers, sans scan par IA et sans portes dérobées cachées. Internxt ne peut pas lire vos fichiers, de sorte que vos photos, documents et vidéos restent privés.",
+        "Avec Degoo, le chiffrement zéro-connaissance n'est disponible qu'avec les plans payants, laissant les utilisateurs gratuits exposés. Internxt fournit un chiffrement post-quantique et zéro-connaissance pour tous les utilisateurs, y compris les comptes gratuits, garantissant que vos données sont toujours protégées.",
+        "De nombreux utilisateurs signalent que Degoo supprime des comptes sans avertissement, entraînant une perte de données permanente. Internxt fournit un stockage cloud fiable avec des politiques transparentes, des audits réguliers et un support client pour garantir que vos fichiers sont en sécurité et accessibles."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Degoo",
+    "description": "Internxt offre une sécurité inégalée avec des fonctionnalités que Degoo ne peut égaler, telles que le chiffrement zéro-connaissance pour tous les plans, le chiffrement post-quantique et la transparence open source.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Confidentialité, transparence et confiance totales",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Le code d'Internxt est ouvert à tous pour examen et pour garantir sa sécurité via notre GitHub. Cette transparence garantit qu'aucune vulnérabilité n'est cachée."
+          },
+          {
+            "title": "Chiffrement zéro-connaissance",
+            "description": "Vos données sont cryptées côté client, garantissant que vous seul pouvez y accéder. Disponible pour tous les plans, y compris les plans gratuits."
+          },
+          {
+            "title": "Audité et conforme",
+            "description": "Internxt a été audité en externe et est conforme aux normes RGPD, HIPAA, ISO 27001 et SOC 2."
+          },
+          {
+            "title": "Plans à vie",
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Qu'en est-il de votre vie privée ?",
+        "features": [
+          {
+            "title": "Code source fermé",
+            "description": "Degoo garde son code source caché du public. Sans transparence ni audit de sécurité indépendant, il n'y a aucun moyen de savoir avec certitude comment Degoo gère ou protège vos données."
+          },
+          {
+            "title": "Fonction de confidentialité payante",
+            "description": "Le chiffrement zéro-connaissance n'est disponible qu'avec les plans payants, laissant les fichiers sur un plan gratuit moins sécurisés et à risque d'être supprimés."
+          },
+          {
+            "title": "Aucun audit publié",
+            "description": "Degoo n'a publié aucun audit de sécurité indépendant, contrairement à Internxt qui subit des audits externes réguliers."
+          },
+          {
+            "title": "Basé sur abonnement",
+            "description": "Abonnements mensuels uniquement. Aucun plan annuel ou à vie disponible."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à Degoo",
+    "description": "Internxt Drive offre une suite complète de produits conçus pour vous redonner le contrôle de votre confidentialité en ligne.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
+      "descriptions": [
+        "Internxt Drive est livré avec un chiffrement post-quantique et zéro-connaissance, de sorte que personne d'autre que vous ne peut accéder à vos fichiers. Obtenez un stockage cloud et des sauvegardes cryptées pour vos photos, vidéos et fichiers. \n\n De plus, les sauvegardes cryptées et le partage de fichiers protégé par mot de passe offrent une protection maximale contre les rançongiciels et les violations de données.",
+        "Internxt Antivirus est intégré directement dans votre application Internxt Drive pour un contrôle et une protection totale contre les logiciels malveillants. Effectuez des analyses de virus complètes ou personnalisées pour que votre appareil fonctionne correctement et soit protégé contre les virus tels que les rançongiciels ou les logiciels espions.",
+        "Le VPN d'Internxt protège votre navigation, bloque les publicités et les trackers, et garde votre emplacement privé. Cryptez votre connexion Wi-Fi pour prévenir l'espionnage, les pirates et le vol d'identité.",
+        "Internxt Cleaner vous aide à identifier, éliminer et gérer les fichiers indésirables ou en double sur votre appareil. Avec Cleaner, vous pouvez supprimer les fichiers non désirés pour garder votre espace de stockage organisé, sans encombrement et garantir le fonctionnement efficace de votre appareil.",
+        "Internxt Meet est également disponible comme alternative sécurisée et privée pour les vidéoconférences. Avec Meet, vous pouvez organiser des appels vidéo privés sans trackers, publicités et collecte de données. Vos appels vidéo sont protégés par un chiffrement post-quantique.",
+        "Disponible sur Windows, Mac, Linux et mobile. Pour les utilisateurs avancés, Internxt offre un support pour WebDAV, Rclone et NAS, offrant tout ce dont vous avez besoin pour gérer vos fichiers en toute confidentialité."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Votre vie privée, vos conditions",
+    "description": "Protection complète avec {{percentage}}% de réduction",
+    "cta": "Profiter de l'offre"
+  },
+  "tableSection": {
+    "title": "Votre allié de confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction 🔥",
+    "planTitles": {
+      "header": "Votre allié de confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud crypté gratuitement",
+      "cta": "Sélectionner le plan"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1To",
+      "premium": "3To",
+      "ultimate": "5To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sécurisée à Degoo ?",
+        "answer": [
+          "Oui, Internxt utilise un chiffrement post-quantique et zéro-connaissance qui garantit que personne d'autre que vous ne peut consulter vos fichiers. Tous vos fichiers sont protégés par ce chiffrement, même sur un compte gratuit.",
+          "Des fonctionnalités supplémentaires telles que VPN, Antivirus, Nettoyeur d'Appareil (Device Cleaner), support NAS, Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les violations de données dans le cadre de votre plan de stockage cloud avec Internxt."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
+        "answer": [
+          "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, ce qui fait du CPQ une alternative plus sécurisée au stockage cloud Degoo.",
+          "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre plan de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les plans sans frais supplémentaires."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre vie privée."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou besoin d'assistance, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "answer": [
+          "Oui, vous pouvez mettre à niveau votre plan à partir des paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau plan sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Oui, Internxt accepte actuellement les cartes de débit et de crédit Mastercard, VISA, American Express, etc.. Vous pouvez également payer via PayPal, iDEAL, Sofort, Cryptomonnaie et Klarna."
+        ]
+      }
+    ]
+  }
+}

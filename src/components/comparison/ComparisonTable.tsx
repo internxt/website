@@ -14,7 +14,18 @@ interface ComparisonTableProps {
     };
   };
   logo?: string;
-  competitor: 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'OneDrive';
+  competitor:
+    | 'pCloud'
+    | 'MEGA'
+    | 'Dropbox'
+    | 'Drive'
+    | 'Koofr'
+    | 'Icedrive'
+    | 'OneDrive'
+    | 'Degoo'
+    | 'Elephantdrive'
+    | 'FileJump'
+    | 'Drime';
   hideTooltip?: boolean;
 }
 
@@ -59,6 +70,18 @@ export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTab
     },
     OneDrive: {
       defaultLogo: '/images/comparison/OneDrive-Letters.webp',
+    },
+    Drime: {
+      defaultLogo: '/images/comparison/Drime_Letters.webp',
+    },
+    Degoo: {
+      defaultLogo: '/images/comparison/Degoo_Letters.webp',
+    },
+    FileJump: {
+      defaultLogo: '/images/comparison/FileJump_Letters.webp',
+    },
+    Elephantdrive: {
+      defaultLogo: '/images/comparison/Elephantdrive_Letters.webp',
     },
   } as const;
 
