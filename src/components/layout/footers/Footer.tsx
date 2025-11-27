@@ -459,6 +459,14 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.degooAlternative}
                     </Link>
                     <Link
+                      href="/filejump-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.fileJumpAlternative}
+                    </Link>
+                    <Link
                       href="/elephantdrive-alternative"
                       locale={lang}
                       passHref
@@ -714,15 +722,6 @@ export default function Footer({
                         </div>
                       </Link>
                       <Link
-                        href="/antivirus"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
-                      </Link>
-
-                      <Link
                         href="/cloud-object-storage"
                         target="_blank"
                         rel="noreferrer"
@@ -730,7 +729,14 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.products.objStorage}
                       </Link>
-
+                      <Link
+                        href="/antivirus"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
+                      </Link>
                       <a
                         href="https://send.internxt.com"
                         target="_blank"
@@ -741,7 +747,6 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.send}</p>
                         </div>
                       </a>
-
                       <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
                       </Link>
@@ -1006,6 +1011,14 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.degooAlternative}
+                      </Link>
+                      <Link
+                        href="/filejump-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.fileJumpAlternative}
                       </Link>
                       <Link
                         href="/elephantdrive-alternative"
