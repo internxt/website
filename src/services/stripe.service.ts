@@ -4,6 +4,7 @@ import { currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
+import { analyticsService } from './ga.services';
 
 const CURRENCY_MAP = {
   eur: '€',
@@ -165,9 +166,38 @@ async function getLifetimeCoupons() {
 
   return data;
 }
+const calculateFinalPrice = async (
+  priceId: string,
+  interval: string,
+  currencyValue: string,
+  planType: 'individuals' | 'business' = 'individuals',
+  coupon?: { name: PromoCodeName },
+): Promise<number> => {
+  const prices = await getPrices(currencyValue);
+  const selectedPrice = prices?.[planType]?.[interval]?.find((plan) => plan.priceId === priceId);
+
+  let finalPrice = selectedPrice?.price ?? 0;
+
+  if (coupon && finalPrice > 0) {
+    try {
+      const couponData = await getCoupon(coupon.name);
+
+      if (couponData.percentOff) {
+        finalPrice = finalPrice * (1 - couponData.percentOff / 100);
+      } else if (couponData.amountOff) {
+        finalPrice = Math.max(0, finalPrice - couponData.amountOff / 100);
+      }
+    } catch (error) {
+      console.error('Error applying coupon:', error);
+    }
+  }
+
+  return finalPrice;
+};
 
 const redirectToCheckout = async (
   planId: string,
+  planPrice: number,
   currencyValue: string,
   planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
@@ -180,47 +210,16 @@ const redirectToCheckout = async (
   if (gclid) {
     saveGclidToCookie(gclid);
   }
-  const prices = await getPrices(currencyValue);
-  const planTypeKey = planType === 'individual' ? 'individuals' : 'business';
 
-  const selectedPrice = prices?.[planTypeKey]?.[interval]?.find((plan: TransformedProduct) => plan.priceId === planId);
-
-  let planPrice = selectedPrice ? parseFloat(selectedPrice.price.toString()) : 0;
-
-  if (promoCodeId && planPrice > 0) {
-    try {
-      const coupon = await getCoupon(promoCodeId);
-
-      if (coupon.percentOff) {
-        planPrice = planPrice * (1 - coupon.percentOff / 100);
-      } else if (coupon.amountOff) {
-        planPrice = Math.max(0, planPrice - coupon.amountOff / 100);
-      }
-    } catch (error) {
-      console.error('Error applying coupon:', error);
-    }
-  }
-
-  if (typeof window.dataLayer !== 'undefined') {
-    window.dataLayer.push({
-      event: 'begin_checkout',
-      ecommerce: {
-        value: planPrice,
-        currency: currencyValue ?? 'eur',
-        items: [
-          {
-            item_id: planId,
-            item_name: planId,
-            affiliation: 'website',
-            coupon: promoCodeId,
-            currency: currencyValue ?? 'eur',
-            price: planPrice,
-            quantity: 1,
-          },
-        ],
-      },
-    });
-  }
+  analyticsService.beginCheckout({
+    planId,
+    planPrice,
+    currency: currencyValue,
+    planType,
+    interval,
+    storage,
+    promoCodeId,
+  });
 
   checkout({
     planId,
@@ -255,4 +254,5 @@ export const stripeService = {
   getLifetimeCoupons,
   redirectToCheckout,
   redirectToCheckoutForPcComponentes,
+  calculateFinalPrice,
 };

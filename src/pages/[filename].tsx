@@ -95,15 +95,25 @@ function CombinedSpecialOffer({
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
-  const onCheckoutButtonClicked = (
+  const onCheckoutButtonClicked = async (
     priceId: string,
     isCheckoutForLifetime: boolean,
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
+
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,

@@ -43,14 +43,19 @@ export const BusinessPage = ({
 
   const locale = lang as string;
 
-  const onCheckoutButtonClicked = (
+  const onCheckoutButtonClicked = async (
     priceId: string,
     isCheckoutForLifetime: boolean,
     interval: string,
     storage: string,
   ) => {
+    const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
+      name: PromoCodeName.PcComponentesCoupon,
+    });
+
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'business',
       isCheckoutForLifetime,
