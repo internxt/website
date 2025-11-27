@@ -90,32 +90,25 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       description: cardsForGroupCardText.cards[3].description,
     },
   ];
-
   const onCheckoutButtonClicked = async (
     priceId: string,
     isCheckoutForLifetime: boolean,
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
+    const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
+      name: PromoCodeName.BlackFriday,
+    });
 
     stripeService.redirectToCheckout(
       priceId,
       finalPrice,
       currencyValue,
-      'individual',
+      'business',
       isCheckoutForLifetime,
       interval,
       storage,
-      couponCodeForCheckout?.name,
+      PromoCodeName.PcComponentesCoupon,
     );
   };
 

@@ -50,7 +50,7 @@ export const BusinessPage = ({
     storage: string,
   ) => {
     const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
-      name: PromoCodeName.PcComponentesCoupon,
+      name: PromoCodeName.BlackFriday,
     });
 
     stripeService.redirectToCheckout(
@@ -61,7 +61,7 @@ export const BusinessPage = ({
       isCheckoutForLifetime,
       interval,
       storage,
-      PromoCodeName.PcComponentesCoupon,
+      PromoCodeName.BlackFriday,
     );
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
