@@ -31,7 +31,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
       priceId,
