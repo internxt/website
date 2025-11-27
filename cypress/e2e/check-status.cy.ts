@@ -34,6 +34,10 @@ const nameFiles = [
   'dropbox-alternative',
   'mega-alternative',
   'cloud-data-centers',
+  'degoo-alternative',
+  'elephantdrive-alternative',
+  'drime-alternative',
+  'filejump-alternative',
 ];
 
 const langs = {

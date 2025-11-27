@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable max-len */
 import { useEffect, useState } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
@@ -55,131 +56,114 @@ export default function Footer({
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col overflow-hidden lg:pb-10 ${
-        darkMode ? 'bg-[#1C1C1C] text-white' : 'bg-gray-5 bg-opacity-50'
-      }`}
+      className={`flex w-full flex-col overflow-hidden lg:pb-10 ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
+      style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
     >
-      <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
-        <div className="flex w-full max-w-[1920px] flex-col items-center justify-center space-y-8  pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
-          {/* Download app for iOS and Android */}
+      <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
 
-          <div className="flex w-1/2 flex-row items-center justify-center gap-6 space-y-3 lg:items-end 2xl:w-1/3">
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col space-y-1">
-                <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
-                <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} w-[380px] text-sm`}>
+        <div className="flex w-full flex-col gap-6 lg:flex-row lg:justify-between lg:gap-8">
+          <div className="flex w-full flex-row items-end gap-6 lg:w-1/2 2xl:w-1/3">
+            <div className="flex flex-col items-start justify-between gap-9">
+              <div className="flex flex-col gap-2">
+                <h2 className="text-lg font-medium">{textContent.DownloadApp.title}</h2>
+                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
                   {textContent.DownloadApp.description}
                 </p>
               </div>
-              {/* Images */}
-              <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
-                <div className="flex">
+
+              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                <div className="flex gap-4">
                   <Image
                     src={getImage('/images/footer/app-store.svg')}
                     width={148}
                     height={44}
-                    quality={100}
                     className="cursor-pointer"
                     alt="Download on the App Store"
-                    onClick={() => {
-                      platforms && window.open(platforms.iPhone, '_blank');
-                    }}
+                    onClick={() => platforms && window.open(platforms.iPhone, '_blank')}
                   />
-                </div>
-                <div className="flex">
                   <Image
                     src={getImage('/images/footer/store-for-android.svg')}
-                    onClick={() => {
-                      platforms && window.open(platforms.Android, '_blank');
-                    }}
                     width={148}
                     height={44}
                     className="cursor-pointer"
                     alt="Get it on Google Play"
+                    onClick={() => platforms && window.open(platforms.Android, '_blank')}
                   />
                 </div>
               </div>
             </div>
             <Image
               src={getImage('/images/components/AppDownload.webp')}
-              width={100}
-              height={100}
-              quality={100}
+              width={125}
+              height={125}
               className="cursor-pointer"
               alt="QR code for download Internxt APP"
             />
           </div>
 
-          <div
-            className={`${
-              hideNewsletter ? 'hidden' : 'flex'
-            } mb-10 w-1/2 flex-col items-center justify-center space-y-3 text-center md:items-start md:text-left 2xl:w-1/3 `}
-          >
-            <div className="flex w-full flex-col space-y-1 md:max-w-sm">
-              <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
-              <p className={`text-base sm:text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
-                {textContent.NewsletterSection.description}
-              </p>
-            </div>
+          {!hideNewsletter && (
+            <div className="flex w-full flex-col gap-3 lg:w-1/3 2xl:w-1/3">
+              <div className="flex flex-col gap-1">
+                <h2 className="text-lg font-medium">{textContent.NewsletterSection.title}</h2>
+                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  {textContent.NewsletterSection.description}
+                </p>
+              </div>
 
-            <form
-              data-code="Frjj25"
-              method="post"
-              target="_blank"
-              rel="noopener"
-              onSubmit={handleSubmit}
-              className="flex w-full flex-col items-center justify-center md:flex-row"
-            >
-              <input type="hidden" name="ml-submit" value="1" />
-              <input
-                name="fields[email]"
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={`${textContent.NewsletterSection.input}`}
-                className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
-                  darkMode
-                    ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary focus:ring-opacity-30'
-                    : 'border-cool-gray-20 bg-white focus:border-blue-50 focus:ring-opacity-20'
-                } mb-2 appearance-none border text-left transition-all duration-150 focus:ring focus:ring-primary`}
-                required
-              />
-              <input
-                name="signup"
-                type="submit"
-                value={`${textContent.NewsletterSection.cta}`}
-                className="ml-2 flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent bg-primary px-4 py-3 text-lg font-medium text-white transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:mb-2 sm:py-2 sm:text-base"
-              />
-            </form>
-            <span className="text-sm text-gray-40">
-              {textContent.NewsletterSection.privacy}{' '}
-              <Link href="/legal" locale={lang} legacyBehavior>
-                <span className="cursor-pointer underline">{textContent.NewsletterSection.privacyLink}</span>
-              </Link>
-            </span>
-          </div>
+              <form
+                data-code="Frjj25"
+                method="post"
+                target="_blank"
+                rel="noopener"
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-2 sm:flex-row"
+              >
+                <input type="hidden" name="ml-submit" value="1" />
+                <input
+                  name="fields[email]"
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={textContent.NewsletterSection.input}
+                  className={`flex-1 rounded-lg border px-4 py-2.5 text-base outline-none transition-all
+            ${
+              darkMode
+                ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary'
+                : 'border-cool-gray-20 bg-white focus:border-blue-50'
+            } focus:ring focus:ring-primary focus:ring-opacity-20`}
+                  required
+                />
+                <button
+                  type="submit"
+                  className="rounded-lg bg-primary px-4 py-2.5 text-base font-medium text-white 
+            transition-all hover:bg-primary-dark active:bg-primary-dark"
+                >
+                  {textContent.NewsletterSection.cta}
+                </button>
+              </form>
+
+              <span className="text-sm text-gray-40">
+                {textContent.NewsletterSection.privacy}{' '}
+                <Link href="/legal" locale={lang} className="underline hover:text-gray-30">
+                  {textContent.NewsletterSection.privacyLink}
+                </Link>
+              </span>
+            </div>
+          )}
         </div>
 
-        {/* Separator */}
-        <div
-          className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full max-w-[896px] ${
-            darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
-          } lg:mb-10`}
-        />
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:my-10`} />
 
-        {/* Footer content */}
-        <footer className="flex max-w-[1920px] items-center justify-center">
-          {/* Desktop version */}
+        <footer className="flex w-full items-center justify-center">
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
-            <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
+            <div className="flex w-full flex-row justify-between md:justify-between">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.products.title}
                   </h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
@@ -202,9 +186,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.products.antivirus}
                       <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
                           darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
                       </span>
@@ -222,9 +206,9 @@ export default function Footer({
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
                       <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
                           darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
                       </span>
@@ -232,9 +216,9 @@ export default function Footer({
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
                       <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
                           darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
                       </span>
@@ -242,9 +226,9 @@ export default function Footer({
                     <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
                       <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
                           darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
                       </span>
@@ -276,13 +260,11 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.company.title}
                   </h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <Link href="/about" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.company.about}
@@ -330,13 +312,11 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.join.title}
                   </h3>
                   <div
-                    className={`flex flex-col items-start space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
@@ -381,13 +361,11 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.resources.title}
                   </h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <a
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -465,6 +443,39 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.googleDriveAlternative}
                     </Link>
                     <Link
+                      href="/drime-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.drimeAlternative}
+                    </Link>
+                    <Link
+                      href="/degoo-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.degooAlternative}
+                    </Link>
+                    <Link
+                      href="/filejump-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.fileJumpAlternative}
+                    </Link>
+                    <Link
+                      href="/elephantdrive-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                    </Link>
+
+                    <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
@@ -484,84 +495,46 @@ export default function Footer({
                     <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.reviews}
                     </Link>
-                    <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
                   </div>
                 </div>
               </div>
               <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.tools.title}
                   </h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.byteConverter}
                     </Link>
-
                     <Link href="/temporary-email" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.temporaryEmail}
                     </Link>
-
                     <Link href="/password-checker" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.passwordChecker}
                     </Link>
-
                     <Link href="/virus-scanner" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileVirusScan}
                     </Link>
-
                     <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.passwordGenerator}
                     </Link>
-
                     <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
                     <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.aiDetector}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileCompressor}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                   </div>
                 </div>
@@ -569,13 +542,11 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.features.title}
                   </h3>
                   <div
-                    className={`flex flex-col space-y-1.5 text-base ${
-                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                    }`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
                     <Link
                       href="/private-cloud-storage-solutions"
@@ -617,15 +588,12 @@ export default function Footer({
               </div>
             </div>
 
-            {/* Separator */}
             <div
-              className={`${hideNewsletter ? 'hidden' : 'flex'} h-px w-full ${
-                darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'
-              } mb-10`}
+              className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`}
             />
 
             {/* Logos */}
-            <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
+            <div className="flex w-full flex-row justify-between">
               <div className="flex flex-row gap-10">
                 <Image
                   src={getImage('/icons/social/ISO-27001-logo-eturia.png')}
@@ -754,15 +722,6 @@ export default function Footer({
                         </div>
                       </Link>
                       <Link
-                        href="/antivirus"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
-                      </Link>
-
-                      <Link
                         href="/cloud-object-storage"
                         target="_blank"
                         rel="noreferrer"
@@ -770,7 +729,14 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.products.objStorage}
                       </Link>
-
+                      <Link
+                        href="/antivirus"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
+                      </Link>
                       <a
                         href="https://send.internxt.com"
                         target="_blank"
@@ -781,9 +747,23 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.send}</p>
                         </div>
                       </a>
-
                       <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
+                      </Link>
+                      <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.cleaner}
+                      </Link>
+                      <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.meet}
+                      </Link>
+                      <Link href="/business" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.business}
+                      </Link>
+                      <Link href="/family" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.family}
+                      </Link>
+                      <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.pricing}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
@@ -1017,6 +997,38 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.onedriveAlternative}
                       </Link>
                       <Link
+                        href="/drime-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.drimeAlternative}
+                      </Link>
+                      <Link
+                        href="/degoo-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.degooAlternative}
+                      </Link>
+                      <Link
+                        href="/filejump-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.fileJumpAlternative}
+                      </Link>
+                      <Link
+                        href="/elephantdrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                      </Link>
+                      <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}
                         passHref
@@ -1093,9 +1105,6 @@ export default function Footer({
                       </Link>
                       <Link href="/ai-detector" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.aiDetector}
-                      </Link>
-                      <Link href="/vpn" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.vpn}
                       </Link>
                       <Link href="/business" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.business}

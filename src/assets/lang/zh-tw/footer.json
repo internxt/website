@@ -1,115 +1,94 @@
 {
   "DownloadApp": {
     "title": "下載 Internxt",
-    "description": "使用 Internxt iOS 或 Android 移動應用程序，隨時隨地輕鬆管理文件並安全存儲在雲端。"
+    "description": "使用適用於 iOS 或 Android 的 Internxt 行動應用程式，在安全的雲端儲存中管理您的檔案。"
   },
   "NewsletterSection": {
-    "title": "通訊",
-    "description": "想要在我們推出新產品或發布新更新時收到我們的消息嗎？輸入您的郵件地址，其餘就交給我們吧！",
-    "input": "您的電子郵件地址",
-    "info": "您隨時可以取消訂閱",
+    "title": "電子報 (Newsletter)",
+    "description": "想在我們推出新產品時收到我們的消息嗎？請輸入您的電子郵件，剩下的交給我們！",
+    "input": "您的電子郵件",
     "cta": "訂閱",
     "privacy": "訂閱即表示您同意我們的",
-    "privacyLink": "隱私政策。"
+    "privacyLink": "隱私權政策。"
   },
   "FooterSection": {
-    "description": "Internxt 的使命是幫助塑造尊重人權隱私的世界。為此，我們正在推出一系列服務，所有這些服務都有一個共同目標，那就是幫助人類保護這一基本權利。",
-    "copyright": { "line1": "版權所有 © ", "line2": "，Internxt Universal Technologies SL" },
-    "independentPromotion": "此促銷活動由 Internxt 獨立提供，與華特迪士尼公司無直接合作關係",
     "comingSoon": "即將推出",
-    "new": "新",
+    "new": "新品",
+    "copyright": { "line1": "版權所有 © ", "line2": ", Internxt Universal Technologies SL" },
     "sections": {
       "products": {
         "title": "產品",
-        "drive": "Internxt Drive",
-        "photos": "Internxt Photos",
-        "send": "Internxt Send",
-        "objStorage": "Internxt S3",
-        "vpn": "Internxt VPN",
-        "cleaner": "Internxt Cleaner",
-        "meet": "Internxt Meet",
-        "token": "Token",
-        "antivirus": "Internxt Antivirus",
-        "pricing": "價格",
+        "drive": "Internxt Drive (雲碟)",
+        "objStorage": "Internxt S3 (物件儲存)",
+        "antivirus": "Internxt Antivirus (防毒軟體)",
+        "send": "Internxt Send (發送)",
+        "vpn": "Internxt VPN (虛擬私人網路)",
+        "cleaner": "Internxt Cleaner (清理工具)",
+        "meet": "Internxt Meet (會議)",
         "business": "Internxt 企業版",
-        "family": "Internxt 為家庭"
+        "family": "Internxt 家庭版",
+        "pricing": "價格"
       },
       "company": {
         "title": "公司",
         "about": "關於我們",
-        "privacy": "隱私",
-        "openSource": "開源",
-        "mediaArea": "媒體區",
+        "privacy": "隱私權",
         "security": "安全",
-        "legal": "法律",
-        "whyInternxt": "為何選擇 Internxt？",
-        "sustainability": "可持續發展"
+        "openSource": "開源",
+        "legal": "法律資訊",
+        "sustainability": "永續性"
       },
       "join": {
         "title": "加入我們",
-        "newsletter": "通訊",
-        "affiliates": "聯盟",
-        "storageForEducation": "教育存儲",
-        "signup": "創建帳戶",
+        "signup": "建立帳戶",
+        "login": "登入",
         "support": "支援",
-        "login": "登錄",
-        "community": "社區",
-        "github": "GitHub",
         "whitePaper": "白皮書",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
-        "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "github": "GitHub",
+        "affiliates": "聯盟計畫 (Affiliates)"
       },
       "resources": {
         "title": "資源",
-        "blog": "博客",
-        "comparison": "雲存儲比較",
-        "directoryOfPrivacyOrganizations": "隱私組織目錄",
+        "blog": "部落格",
+        "comparison": "雲端儲存比較",
         "pCloudAlternative": "pCloud 替代方案",
-        "dropboxAlternative": "Dropbox 替代品",
-        "megaAlternative": "Mega 替代品",
+        "dropboxAlternative": "Dropbox 替代方案",
+        "megaAlternative": "Mega 替代方案",
         "koofrAlternative": "Koofr 替代方案",
         "icedriveAlternative": "Icedrive 替代方案",
         "onedriveAlternative": "OneDrive 替代方案",
         "googleDriveAlternative": "Google Drive 替代方案",
-        "cyberAwareness": "網絡安全意識",
-        "whatGoogleKnowsAboutMe": "Google 了解我什麼",
-        "WebDAV": "CLI & WebDAV",
+        "drimeAlternative": "Drime 替代方案",
+        "degooAlternative": "Degoo 替代方案",
+        "fileJumpAlternative": "FileJump 替代方案",
+        "elephantDriveAlternative": "ElephantDrive 替代方案",
+        "whatGoogleKnowsAboutMe": "Google 對您的了解",
+        "WebDAV": "CLI 和 WebDAV",
+        "nas": "NAS (網路儲存)",
         "coupons": "優惠券",
-        "nas": "NAS",
-        "reviews": "评论",
-        "deals": "優惠"
+        "reviews": "評論"
       },
       "tools": {
         "title": "免費工具",
-        "temporaryEmail": "臨時郵件",
-        "fileVirusScan": "文件病毒掃描",
+        "byteConverter": "位元組轉換器",
+        "temporaryEmail": "臨時信箱",
         "passwordChecker": "密碼檢查器",
-        "byteConverter": "字節轉換器",
+        "fileVirusScan": "檔案病毒掃描器",
         "passwordGenerator": "密碼生成器",
-        "fileConverter": "文件轉換器",
-        "vpn": "VPN 擴展",
-        "haveIBeenPwned": "我被駭客入侵了嗎",
-        "metadataRemover": "元數據刪除器",
-        "aiDetector": "AI 檢測器",
+        "fileConverter": "檔案轉換器",
+        "haveIBeenPwned": "Internxt 監控",
+        "metadataRemover": "元數據移除工具",
+        "aiDetector": "AI 偵測器",
         "fileCompressor": "檔案壓縮器"
       },
       "features": {
         "title": "功能",
-        "privateCloud": "私有雲解決方案",
+        "privateCloud": "私有雲端儲存解決方案",
         "cloudBakcup": "雲端備份解決方案",
-        "GDPRCloud": "GDPR儲存",
-        "cloudPhotos": "雲端照片",
-        "cloudVideo": "雲端照片"
+        "GDPRCloud": "GDPR 雲端儲存",
+        "cloudPhotos": "雲端照片儲存",
+        "cloudVideo": "雲端影片儲存"
       }
     }
-  },
-  "Cookies": {
-    "title": "Internxt 使用 cookie 使本網站更易於使用",
-    "link": "了解更多關於 cookie",
-    "close": "好的，關閉"
   }
 }

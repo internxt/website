@@ -1,116 +1,94 @@
 {
   "DownloadApp": {
-    "title": "Загрузить Internxt",
-    "description": "Храните файлы в безопасном облачном хранилище, используя мобильные приложения для iOS и Android."
+    "title": "Скачать Internxt",
+    "description": "Управляйте своими файлами в безопасном облачном хранилище с помощью мобильного приложения для iOS или Android."
   },
   "NewsletterSection": {
-    "title": "Новостная рассылка",
-    "description": "Хотите получать новости о наших обновлениях и новых инструментах?",
-    "input": "Электронная почта",
-    "info": "Вы можете отказаться от рассылки в любое время",
+    "title": "Новостная рассылка (Newsletter)",
+    "description": "Хотите получать новости от нас, когда мы запускаем новые продукты? Введите свою электронную почту, и мы позаботимся об остальном.",
+    "input": "Ваша эл. почта",
     "cta": "Подписаться",
     "privacy": "Подписываясь, вы соглашаетесь с нашей",
-    "privacyLink": "политикой конфиденциальности"
+    "privacyLink": "политикой конфиденциальности."
   },
   "FooterSection": {
-    "description": "Цель Internxt заключается в том, чтобы сделать свой вклад в создание приложений, уважающих права человека на конфиденциальность. Для этого мы выпускаем ряд сервисов, общая цель которых - помочь человечеству защитить это фундаментальное право.",
+    "comingSoon": "Скоро",
+    "new": "Новое",
     "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
-    "independentPromotion": "Эта акция предлагается компанией Internxt независимо, и нет прямого партнерства с компанией The Walt Disney Company",
-    "comingSoon": "В разработке",
-    "new": "Новые",
     "sections": {
       "products": {
         "title": "Продукты",
         "drive": "Internxt Drive",
-        "photos": "Internxt Photos",
-        "send": "Internxt Send",
         "objStorage": "Internxt S3",
+        "antivirus": "Internxt Antivirus",
+        "send": "Internxt Send",
         "vpn": "Internxt VPN",
         "cleaner": "Internxt Cleaner",
-        "antivirus": "Internxt Antivirus",
-        "token": "Токен",
-        "pricing": "Тарифные планы",
-        "business": "Internxt для Бизнеса",
-        "family": "Internxt для Семей"
+        "meet": "Internxt Meet",
+        "business": "Internxt для бизнеса",
+        "family": "Internxt для семьи",
+        "pricing": "Цены"
       },
       "company": {
         "title": "Компания",
         "about": "О нас",
         "privacy": "Конфиденциальность",
-        "openSource": "открытого исходного кода",
         "security": "Безопасность",
-        "legal": "Условия и положения",
-        "WhyInternxt": "Почему Internxt?",
-        "mediaArea": "Медиа-зона",
-        "sustainability": "Устойчивость"
+        "openSource": "Открытый исходный код (Open Source)",
+        "legal": "Правовая информация",
+        "sustainability": "Устойчивое развитие"
       },
       "join": {
-        "title": "Присоединяйтесь к нам",
-        "newsletter": "Newsletter",
-        "affiliates": "Аффилированные лица",
-        "storageForEducation": "Internxt для образования",
+        "title": "Присоединяйтесь",
         "signup": "Создать аккаунт",
-        "support": "Служба поддержки",
         "login": "Войти",
-        "community": "Сообщество",
+        "support": "Поддержка",
+        "whitePaper": "White Paper (Белая книга)",
         "github": "GitHub",
-        "whitePaper": "White Paper",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
-        "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "affiliates": "Партнеры (Affiliates)"
       },
       "resources": {
         "title": "Ресурсы",
         "blog": "Блог",
-        "comparison": "Сравнение",
-        "directoryOfPrivacyOrganizations": "Oрганизации по вопросам конфиденциальности",
+        "comparison": "Сравнение облачных сервисов",
         "pCloudAlternative": "Альтернатива pCloud",
         "dropboxAlternative": "Альтернатива Dropbox",
-        "megalternative": "Альтернатива Mega",
+        "megaAlternative": "Альтернатива Mega",
         "koofrAlternative": "Альтернатива Koofr",
         "icedriveAlternative": "Альтернатива Icedrive",
         "onedriveAlternative": "Альтернатива OneDrive",
         "googleDriveAlternative": "Альтернатива Google Drive",
-        "writeForUs": "Написать нам",
-        "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
-        "cyberAwareness": "Осведомленность о кибербезопасности",
-        "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
-        "WebDAV": "CLI & WebDAV",
-        "coupons": "Купоны",
+        "drimeAlternative": "Альтернатива Drime",
+        "degooAlternative": "Альтернатива Degoo",
+        "fileJumpAlternative": "Альтернатива FileJump",
+        "elephantDriveAlternative": "Альтернатива ElephantDrive",
+        "whatGoogleKnowsAboutMe": "Что Google знает о вас",
+        "WebDAV": "CLI и WebDAV",
         "nas": "NAS",
-        "reviews": "Oтзывы",
-        "deals": "Offerte"
+        "coupons": "Купоны",
+        "reviews": "Отзывы"
       },
       "tools": {
         "title": "Бесплатные инструменты",
-        "temporaryEmail": "Временная почта",
-        "fileVirusScan": "Сканер файлов на наличие вирусов",
-        "passwordChecker": "Программа проверки паролей",
-        "byteConverter": "Конвертер байтов",
+        "byteConverter": "Конвертер единиц",
+        "temporaryEmail": "Временная эл. почта",
+        "passwordChecker": "Проверка пароля",
+        "fileVirusScan": "Сканер вирусов файлов",
         "passwordGenerator": "Генератор паролей",
-        "fileConverter": "Преобразователь файлов",
-        "vpn": "Расширение VPN",
+        "fileConverter": "Конвертер файлов",
         "haveIBeenPwned": "Internxt Monitor",
-        "metadataRemover": "Очиститель метаданных",
+        "metadataRemover": "Удаление метаданных",
         "aiDetector": "Детектор ИИ",
-        "fileCompressor": "Архиватор файлов"
+        "fileCompressor": "Компрессор файлов"
       },
       "features": {
         "title": "Функции",
         "privateCloud": "Решение для частного облака",
-        "cloudBakcup": "Решение для облачного резерва",
-        "GDPRCloud": "Хранение GDPR",
-        "cloudPhotos": "Фотографии в облаке",
-        "cloudVideo": "云端视频"
+        "cloudBakcup": "Решение для облачного резервного копирования",
+        "GDPRCloud": "Облачное хранилище GDPR",
+        "cloudPhotos": "Фото в облаке",
+        "cloudVideo": "Видео в облаке"
       }
     }
-  },
-  "Cookies": {
-    "title": "Internxt использует файлы cookie, чтобы ускорить загрузку сайта",
-    "link": "Подробнее о файлах cookie",
-    "close": "Понятно, закрыть"
   }
 }

@@ -1,20 +1,12 @@
-export interface Cookies {
-  title: string;
-  link: string;
-  close: string;
-}
-
 export interface DownloadApp {
   title: string;
   description: string;
 }
 
 export interface FooterSection {
-  description: string;
-  copyright: Copyright;
-  independentPromotion: string;
   comingSoon: string;
   new: string;
+  copyright: Copyright;
   sections: Sections;
   financialProject: string;
 }
@@ -37,47 +29,43 @@ export interface Company {
   title: string;
   about: string;
   privacy: string;
-  openSource: string;
-  mediaArea: string;
   security: string;
+  openSource: string;
   legal: string;
-  whyInternxt: string;
   sustainability: string;
+}
+
+export interface Features {
+  title: string;
+  privateCloud: string;
+  cloudBakcup: string;
+  GDPRCloud: string;
+  cloudPhotos: string;
+  cloudVideo: string;
 }
 
 export interface Join {
   title: string;
-  newsletter: string;
-  affiliates: string;
-  storageForEducation: string;
   signup: string;
-  support: string;
   login: string;
-  community: string;
-  github: string;
+  support: string;
   whitePaper: string;
-  twitter: string;
-  facebook: string;
-  linkedin: string;
-  youtube: string;
-  instagram: string;
-  mastodon: string;
+  github: string;
+  affiliates: string;
 }
 
 export interface Products {
   title: string;
   drive: string;
-  photos: string;
-  send: string;
   objStorage: string;
+  antivirus: string;
+  send: string;
   vpn: string;
   cleaner: string;
   meet: string;
-  antivirus: string;
-  token: string;
   business: string;
-  pricing: string;
   family: string;
+  pricing: string;
 }
 
 export interface Resources {
@@ -91,45 +79,35 @@ export interface Resources {
   icedriveAlternative: string;
   onedriveAlternative: string;
   googleDriveAlternative: string;
-  directoryOfPrivacyOrganizations: string;
-  cyberAwareness: string;
+  drimeAlternative: string;
+  degooAlternative: string;
+  fileJumpAlternative: string;
+  elephantDriveAlternative: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
-  coupons: string;
   nas: string;
+  coupons: string;
   reviews: string;
-  deals: string;
 }
 
 export interface Tools {
   title: string;
-  temporaryEmail: string;
-  fileVirusScan: string;
-  passwordChecker: string;
   byteConverter: string;
+  temporaryEmail: string;
+  passwordChecker: string;
+  fileVirusScan: string;
   passwordGenerator: string;
   fileConverter: string;
-  vpn: string;
   haveIBeenPwned: string;
   metadataRemover: string;
   aiDetector: string;
   fileCompressor: string;
 }
 
-export interface Features {
-  title: string;
-  privateCloud: string;
-  cloudBakcup: string;
-  GDPRCloud: string;
-  cloudPhotos: string;
-  cloudVideo: string;
-}
-
 export interface NewsletterSection {
   title: string;
   description: string;
   input: string;
-  info: string;
   cta: string;
   privacy: string;
   privacyLink: string;
