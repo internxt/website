@@ -55,9 +55,7 @@ interface DataLayerEvent {
   checkout_step?: number;
 }
 
-const SEND_TO = [process.env.NEXT_PUBLIC_GA_ID, process.env.NEXT_PUBLIC_GA_CONTAINER].filter((id): id is string =>
-  Boolean(id),
-);
+const SEND_TO = [process.env.NEXT_PUBLIC_GA_ID, process.env.NEXT_PUBLIC_GA_CONTAINER].filter(Boolean) as string[];
 
 const DEFAULT_CURRENCY = 'eur';
 const DEFAULT_QUANTITY = 1;
@@ -76,18 +74,25 @@ const getPlanCategory = (planType: 'individual' | 'business'): string => {
   return planType === 'individual' ? 'Individual' : 'Business';
 };
 
+const normalizeSendTo = (sendTo?: string | string[]): string[] => {
+  if (Array.isArray(sendTo)) {
+    return sendTo.filter(Boolean) as string[];
+  }
+  return sendTo ? [sendTo] : [];
+};
+
 class AnalyticsService {
   private readonly sendTo: string[];
   private readonly defaultCurrency: string;
 
   constructor(sendTo?: string | string[], defaultCurrency: string = DEFAULT_CURRENCY) {
-    this.sendTo = Array.isArray(sendTo) ? (sendTo.filter(Boolean) as string[]) : sendTo ? [sendTo] : [];
+    this.sendTo = normalizeSendTo(sendTo);
     this.defaultCurrency = defaultCurrency;
   }
 
   private pushToDataLayer(data: DataLayerEvent): void {
     if (this.isClientSide() && globalThis.window.dataLayer) {
-      window.dataLayer.push(data);
+      globalThis.window.dataLayer.push(data);
     }
   }
 
@@ -145,13 +150,13 @@ class AnalyticsService {
 
     const callback = () => {
       if (url) {
-        window.location.href = url;
+        globalThis.window.location.href = url;
       }
     };
 
-    if (this.isClientSide() && window.gtag && this.sendTo.length > 0) {
+    if (this.isClientSide() && globalThis.window.gtag && this.sendTo.length > 0) {
       this.sendTo.forEach((target) => {
-        window.gtag('event', elementConversion, {
+        globalThis.window.gtag('event', elementConversion, {
           send_to: `${target}/${tag}`,
           value,
           currency,
