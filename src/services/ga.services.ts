@@ -14,6 +14,16 @@ export interface AdsConversionParams {
   tag: string;
   value: number;
   currency: string;
+  items?: Array<{
+    item_id: string;
+    item_name: string;
+    item_brand?: string;
+    item_category: string;
+    item_variant: string;
+    price: number;
+    quantity: number;
+    coupon?: string;
+  }>;
 }
 
 export interface PurchaseParams extends PlanDetails {
@@ -23,6 +33,7 @@ export interface PurchaseParams extends PlanDetails {
 interface EcommerceItem {
   item_id: string;
   item_name: string;
+  item_brand?: string;
   item_category: string;
   item_variant: string;
   affiliation?: string;
@@ -48,6 +59,7 @@ const SEND_TO = process.env.NEXT_PUBLIC_GA_ID;
 const DEFAULT_CURRENCY = 'eur';
 const DEFAULT_QUANTITY = 1;
 const AFFILIATION = 'website';
+const BRAND = 'Internxt';
 
 const capitalizeFirstLetter = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -71,13 +83,13 @@ class AnalyticsService {
   }
 
   private pushToDataLayer(data: DataLayerEvent): void {
-    if (this.isClientSide() && window.dataLayer) {
+    if (this.isClientSide() && globalThis.window.dataLayer) {
       window.dataLayer.push(data);
     }
   }
 
   private isClientSide(): boolean {
-    return typeof window !== 'undefined';
+    return typeof globalThis.window !== 'undefined';
   }
 
   private createBaseItemProperties(params: PlanDetails): Omit<EcommerceItem, 'affiliation' | 'coupon'> {
@@ -86,6 +98,7 @@ class AnalyticsService {
     return {
       item_id: planId,
       item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
+      item_brand: BRAND,
       item_category: getPlanCategory(planType),
       item_variant: interval,
       currency: currency ?? this.defaultCurrency,
@@ -125,7 +138,7 @@ class AnalyticsService {
   }
 
   handleAdsConversion(params: AdsConversionParams): void {
-    const { url, elementConversion, tag, value, currency } = params;
+    const { url, elementConversion, tag, value, currency, items } = params;
 
     const callback = () => {
       if (url) {
@@ -138,6 +151,7 @@ class AnalyticsService {
         send_to: `${this.sendTo}/${tag}`,
         value,
         currency,
+        ...(items && { items }),
         event_callback: callback,
       });
     } else {
@@ -151,23 +165,24 @@ class AnalyticsService {
   }
 
   addToCart(params: PlanDetails): void {
-    const event = this.createEcommerceEvent('add_to_cart', params);
-    this.pushToDataLayer(event);
-  }
-
-  beginCheckout(params: PlanDetails): void {
-    const event = this.createEcommerceEvent('begin_checkout', params, true, {
-      user_type: params.planType,
-      checkout_step: 1,
-    });
-
-    this.pushToDataLayer(event);
+    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
 
     this.handleAdsConversion({
-      elementConversion: 'begin_checkout',
-      tag: 'YOUR_BEGIN_CHECKOUT_TAG',
-      value: params.planPrice,
-      currency: params.currency ?? this.defaultCurrency,
+      elementConversion: 'add_to_cart',
+      tag: '',
+      value: planPrice,
+      currency: currency ?? this.defaultCurrency,
+      items: [
+        {
+          item_id: planId,
+          item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
+          item_brand: BRAND,
+          item_category: getPlanCategory(planType),
+          item_variant: interval,
+          price: formatPrice(planPrice),
+          quantity: DEFAULT_QUANTITY,
+        },
+      ],
     });
   }
 
@@ -184,7 +199,7 @@ class AnalyticsService {
 
     this.handleAdsConversion({
       elementConversion: 'purchase',
-      tag: 'YOUR_PURCHASE_TAG',
+      tag: '',
       value: planDetails.planPrice,
       currency: planDetails.currency ?? this.defaultCurrency,
     });
