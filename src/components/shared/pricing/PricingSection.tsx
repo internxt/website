@@ -66,7 +66,7 @@ export const PricingSection = ({
   hideSwitchSelector,
   businessStorageSelected,
   lang,
-  popularPlanBySize = '5TB',
+  popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onBusinessStorageChange,

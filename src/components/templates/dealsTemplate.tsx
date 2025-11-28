@@ -127,7 +127,7 @@ const DealsTemplate = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards={config.hideBusinessCards ?? true}
         hideBusinessSelector={config.hideBusinessSelector ?? true}
-        popularPlanBySize={config.popularPlanSize || '5TB'}
+        popularPlanBySize={config.popularPlanSize || '3TB'}
         sectionDetails="lg:py-20"
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />

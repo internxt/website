@@ -96,7 +96,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
