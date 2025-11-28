@@ -4,6 +4,7 @@ import { currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
+import { analyticsService } from './ga.services';
 
 const CURRENCY_MAP = {
   eur: '€',
@@ -165,12 +166,43 @@ async function getLifetimeCoupons() {
 
   return data;
 }
+const calculateFinalPrice = async (
+  priceId: string,
+  interval: string,
+  currencyValue: string,
+  planType: 'individuals' | 'business' = 'individuals',
+  coupon?: { name: PromoCodeName },
+): Promise<number> => {
+  const prices = await getPrices(currencyValue);
+  const selectedPrice = prices?.[planType]?.[interval]?.find((plan) => plan.priceId === priceId);
 
-const redirectToCheckout = (
+  let finalPrice = selectedPrice?.price ?? 0;
+
+  if (coupon && finalPrice > 0) {
+    try {
+      const couponData = await getCoupon(coupon.name);
+
+      if (couponData.percentOff) {
+        finalPrice = finalPrice * (1 - couponData.percentOff / 100);
+      } else if (couponData.amountOff) {
+        finalPrice = Math.max(0, finalPrice - couponData.amountOff / 100);
+      }
+    } catch (error) {
+      console.error('Error applying coupon:', error);
+    }
+  }
+
+  return finalPrice;
+};
+
+const redirectToCheckout = async (
   planId: string,
+  planPrice: number,
   currencyValue: string,
   planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
+  interval: string,
+  storage: string,
   promoCodeId?: PromoCodeProps['name'],
 ) => {
   const gclid = getGclidFromURL();
@@ -178,6 +210,16 @@ const redirectToCheckout = (
   if (gclid) {
     saveGclidToCookie(gclid);
   }
+
+  analyticsService.beginCheckout({
+    planId,
+    planPrice,
+    currency: currencyValue,
+    planType,
+    interval,
+    storage,
+    promoCodeId,
+  });
 
   checkout({
     planId,
@@ -212,4 +254,5 @@ export const stripeService = {
   getLifetimeCoupons,
   redirectToCheckout,
   redirectToCheckoutForPcComponentes,
+  calculateFinalPrice,
 };

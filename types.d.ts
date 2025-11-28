@@ -7,4 +7,5 @@ interface Window {
     ready: (cb: () => void) => void;
     execute: (siteKey: string, { action: string }) => Promise<string>;
   };
+  dataLayer: Record<string, any>[];
 }

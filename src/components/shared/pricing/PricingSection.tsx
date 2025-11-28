@@ -44,7 +44,7 @@ interface PriceTableProps {
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onBusinessStorageChange: (businessStorageSelected: string) => void;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   differentRecommended?: boolean;

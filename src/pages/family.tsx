@@ -90,9 +90,26 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       description: cardsForGroupCardText.cards[3].description,
     },
   ];
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
+      name: PromoCodeName.BlackFriday,
+    });
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'business',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      PromoCodeName.BlackFriday,
+    );
   };
 
   return (
