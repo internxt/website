@@ -55,7 +55,10 @@ interface DataLayerEvent {
   checkout_step?: number;
 }
 
-const SEND_TO = process.env.NEXT_PUBLIC_GA_ID;
+const SEND_TO = [process.env.NEXT_PUBLIC_GA_ID, process.env.NEXT_PUBLIC_GA_CONTAINER].filter((id): id is string =>
+  Boolean(id),
+);
+
 const DEFAULT_CURRENCY = 'eur';
 const DEFAULT_QUANTITY = 1;
 const AFFILIATION = 'website';
@@ -74,11 +77,11 @@ const getPlanCategory = (planType: 'individual' | 'business'): string => {
 };
 
 class AnalyticsService {
-  private readonly sendTo: string | undefined;
+  private readonly sendTo: string[];
   private readonly defaultCurrency: string;
 
-  constructor(sendTo?: string, defaultCurrency: string = DEFAULT_CURRENCY) {
-    this.sendTo = sendTo;
+  constructor(sendTo?: string | string[], defaultCurrency: string = DEFAULT_CURRENCY) {
+    this.sendTo = Array.isArray(sendTo) ? (sendTo.filter(Boolean) as string[]) : sendTo ? [sendTo] : [];
     this.defaultCurrency = defaultCurrency;
   }
 
@@ -146,13 +149,15 @@ class AnalyticsService {
       }
     };
 
-    if (this.isClientSide() && window.gtag && this.sendTo) {
-      window.gtag('event', elementConversion, {
-        send_to: `${this.sendTo}/${tag}`,
-        value,
-        currency,
-        ...(items && { items }),
-        event_callback: callback,
+    if (this.isClientSide() && window.gtag && this.sendTo.length > 0) {
+      this.sendTo.forEach((target) => {
+        window.gtag('event', elementConversion, {
+          send_to: `${target}/${tag}`,
+          value,
+          currency,
+          ...(items && { items }),
+          event_callback: callback,
+        });
       });
     } else {
       callback();
@@ -165,7 +170,7 @@ class AnalyticsService {
   }
 
   addToCart(params: PlanDetails): void {
-    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
+    const { planId, planPrice, currency, planType, interval, storage } = params;
 
     this.handleAdsConversion({
       elementConversion: 'add_to_cart',
