@@ -211,7 +211,7 @@ const redirectToCheckout = async (
     saveGclidToCookie(gclid);
   }
 
-  analyticsService.beginCheckout({
+  analyticsService.addToCart({
     planId,
     planPrice,
     currency: currencyValue,
