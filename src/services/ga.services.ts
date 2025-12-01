@@ -11,7 +11,7 @@ export interface PlanDetails {
 export interface AdsConversionParams {
   url?: string;
   elementConversion: string;
-  tag: string;
+  tag?: string;
   value: number;
   currency: string;
   items?: Array<{
@@ -55,12 +55,16 @@ interface DataLayerEvent {
   checkout_step?: number;
 }
 
-const SEND_TO = [process.env.NEXT_PUBLIC_GA_ID, process.env.NEXT_PUBLIC_GA_CONTAINER].filter(Boolean) as string[];
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_CONTAINER = process.env.NEXT_PUBLIC_GA_CONTAINER;
+const SEND_TO = [GA_ID, GA_CONTAINER].filter(Boolean) as string[];
 
 const DEFAULT_CURRENCY = 'eur';
 const DEFAULT_QUANTITY = 1;
 const AFFILIATION = 'website';
 const BRAND = 'Internxt';
+
+const CONVERSION_TAG = 'NyyXCLj9z4caEOf1ydsC';
 
 const capitalizeFirstLetter = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -155,14 +159,16 @@ class AnalyticsService {
     };
 
     if (this.isClientSide() && globalThis.window.gtag && this.sendTo.length > 0) {
-      this.sendTo.forEach((target) => {
-        globalThis.window.gtag('event', elementConversion, {
-          send_to: `${target}/${tag}`,
-          value,
-          currency,
-          ...(items && { items }),
-          event_callback: callback,
-        });
+      const sendToTargets = this.sendTo.map((target) => {
+        return target === GA_ID && tag ? `${target}/${tag}` : target;
+      });
+
+      globalThis.window.gtag('event', elementConversion, {
+        send_to: sendToTargets,
+        value,
+        currency,
+        ...(items && { items }),
+        event_callback: callback,
       });
     } else {
       callback();
@@ -173,27 +179,36 @@ class AnalyticsService {
     const event = this.createEcommerceEvent('view_item', params);
     this.pushToDataLayer(event);
   }
-
   addToCart(params: PlanDetails): void {
-    const { planId, planPrice, currency, planType, interval, storage } = params;
+    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
 
-    this.handleAdsConversion({
-      elementConversion: 'add_to_cart',
-      tag: '',
-      value: planPrice,
-      currency: currency ?? this.defaultCurrency,
-      items: [
-        {
-          item_id: planId,
-          item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
-          item_brand: BRAND,
-          item_category: getPlanCategory(planType),
-          item_variant: interval,
-          price: formatPrice(planPrice),
-          quantity: DEFAULT_QUANTITY,
-        },
-      ],
+    const sendToTargets = this.sendTo.map((target) => {
+      return target === GA_ID ? `${target}/${CONVERSION_TAG}` : target;
     });
+
+    const event = {
+      event: 'add_to_cart',
+      send_to: sendToTargets,
+      ecommerce: {
+        value: formatPrice(planPrice),
+        currency: currency ?? this.defaultCurrency,
+        items: [
+          {
+            item_id: planId,
+            item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
+            item_brand: BRAND,
+            item_category: getPlanCategory(planType),
+            item_variant: interval,
+            currency: currency ?? this.defaultCurrency,
+            price: formatPrice(planPrice),
+            quantity: DEFAULT_QUANTITY,
+            ...(promoCodeId && { coupon: promoCodeId }),
+          },
+        ],
+      },
+    };
+
+    this.pushToDataLayer(event);
   }
 
   purchase(params: PurchaseParams): void {
@@ -209,7 +224,7 @@ class AnalyticsService {
 
     this.handleAdsConversion({
       elementConversion: 'purchase',
-      tag: '',
+      tag: CONVERSION_TAG,
       value: planDetails.planPrice,
       currency: planDetails.currency ?? this.defaultCurrency,
     });
