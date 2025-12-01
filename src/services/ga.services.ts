@@ -76,7 +76,7 @@ const getPlanCategory = (planType: 'individual' | 'business'): string => {
 
 const normalizeSendTo = (sendTo?: string | string[]): string[] => {
   if (Array.isArray(sendTo)) {
-    return sendTo.filter(Boolean) as string[];
+    return sendTo.filter(Boolean);
   }
   return sendTo ? [sendTo] : [];
 };
