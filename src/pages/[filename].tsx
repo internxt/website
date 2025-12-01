@@ -95,14 +95,30 @@ function CombinedSpecialOffer({
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
@@ -135,7 +151,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
@@ -195,12 +211,16 @@ export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
   let lang = 'es';
 
-  if (pathname === 'believemy') {
+  if (pathname === 'believemy' || pathname === 'madroz' || pathname === 'justin') {
     lang = 'fr';
   }
 
   if (pathname === 'ghareeb') {
     lang = 'en';
+  }
+
+  if (pathname === 'apfelcast') {
+    lang = 'de';
   }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);

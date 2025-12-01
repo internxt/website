@@ -88,7 +88,7 @@ export interface PriceCardProps {
   redeemCodeCta?: LifetimeMode;
   monthlyProductPrice?: number;
   darkMode?: boolean;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   isFamilyPage?: boolean;
   isAffiliate?: boolean;
   cardIndex?: number;
@@ -296,7 +296,7 @@ export const PriceCard = ({
 
             <button
               id={`planButton${storage}`}
-              onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
+              onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime, interval, storage)}
               className={`${
                 popular
                   ? darkMode
@@ -309,7 +309,7 @@ export const PriceCard = ({
                   : 'border-primary bg-transparent text-primary hover:bg-gray-1'
               } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[340px]`}
             >
-              <p className={`$ text-base font-medium`}>{ctaText}</p>
+              <p className={`text-base font-medium`}>{ctaText}</p>
             </button>
 
             <div className="flex w-full flex-col justify-start gap-4 pt-4">

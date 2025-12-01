@@ -42,7 +42,7 @@ interface PriceTableProps {
   onStorageChange: (storageSelected: string) => void;
   onBusinessStorageChange: (businessStorageSelected: string) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
@@ -61,7 +61,7 @@ export const PricingSectionForMobile = ({
   hideBusinessCards,
   hideBusinessSelector,
   lang,
-  popularPlanBySize = '5TB',
+  popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,
