@@ -55,7 +55,8 @@ interface DataLayerEvent {
   checkout_step?: number;
 }
 
-const SEND_TO = process.env.NEXT_PUBLIC_GA_ID;
+const SEND_TO = [process.env.NEXT_PUBLIC_GA_ID, process.env.NEXT_PUBLIC_GA_CONTAINER].filter(Boolean) as string[];
+
 const DEFAULT_CURRENCY = 'eur';
 const DEFAULT_QUANTITY = 1;
 const AFFILIATION = 'website';
@@ -73,18 +74,25 @@ const getPlanCategory = (planType: 'individual' | 'business'): string => {
   return planType === 'individual' ? 'Individual' : 'Business';
 };
 
+const normalizeSendTo = (sendTo?: string | string[]): string[] => {
+  if (Array.isArray(sendTo)) {
+    return sendTo.filter(Boolean);
+  }
+  return sendTo ? [sendTo] : [];
+};
+
 class AnalyticsService {
-  private readonly sendTo: string | undefined;
+  private readonly sendTo: string[];
   private readonly defaultCurrency: string;
 
-  constructor(sendTo?: string, defaultCurrency: string = DEFAULT_CURRENCY) {
-    this.sendTo = sendTo;
+  constructor(sendTo?: string | string[], defaultCurrency: string = DEFAULT_CURRENCY) {
+    this.sendTo = normalizeSendTo(sendTo);
     this.defaultCurrency = defaultCurrency;
   }
 
   private pushToDataLayer(data: DataLayerEvent): void {
     if (this.isClientSide() && globalThis.window.dataLayer) {
-      window.dataLayer.push(data);
+      globalThis.window.dataLayer.push(data);
     }
   }
 
@@ -142,17 +150,19 @@ class AnalyticsService {
 
     const callback = () => {
       if (url) {
-        window.location.href = url;
+        globalThis.window.location.href = url;
       }
     };
 
-    if (this.isClientSide() && window.gtag && this.sendTo) {
-      window.gtag('event', elementConversion, {
-        send_to: `${this.sendTo}/${tag}`,
-        value,
-        currency,
-        ...(items && { items }),
-        event_callback: callback,
+    if (this.isClientSide() && globalThis.window.gtag && this.sendTo.length > 0) {
+      this.sendTo.forEach((target) => {
+        globalThis.window.gtag('event', elementConversion, {
+          send_to: `${target}/${tag}`,
+          value,
+          currency,
+          ...(items && { items }),
+          event_callback: callback,
+        });
       });
     } else {
       callback();
@@ -165,7 +175,7 @@ class AnalyticsService {
   }
 
   addToCart(params: PlanDetails): void {
-    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
+    const { planId, planPrice, currency, planType, interval, storage } = params;
 
     this.handleAdsConversion({
       elementConversion: 'add_to_cart',
