@@ -179,27 +179,36 @@ class AnalyticsService {
     const event = this.createEcommerceEvent('view_item', params);
     this.pushToDataLayer(event);
   }
-
   addToCart(params: PlanDetails): void {
-    const { planId, planPrice, currency, planType, interval, storage } = params;
+    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
 
-    this.handleAdsConversion({
-      elementConversion: 'add_to_cart',
-      tag: CONVERSION_TAG,
-      value: planPrice,
-      currency: currency ?? this.defaultCurrency,
-      items: [
-        {
-          item_id: planId,
-          item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
-          item_brand: BRAND,
-          item_category: getPlanCategory(planType),
-          item_variant: interval,
-          price: formatPrice(planPrice),
-          quantity: DEFAULT_QUANTITY,
-        },
-      ],
+    const sendToTargets = this.sendTo.map((target) => {
+      return target === GA_ID ? `${target}/${CONVERSION_TAG}` : target;
     });
+
+    const event = {
+      event: 'add_to_cart',
+      send_to: sendToTargets,
+      ecommerce: {
+        value: formatPrice(planPrice),
+        currency: currency ?? this.defaultCurrency,
+        items: [
+          {
+            item_id: planId,
+            item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
+            item_brand: BRAND,
+            item_category: getPlanCategory(planType),
+            item_variant: interval,
+            currency: currency ?? this.defaultCurrency,
+            price: formatPrice(planPrice),
+            quantity: DEFAULT_QUANTITY,
+            ...(promoCodeId && { coupon: promoCodeId }),
+          },
+        ],
+      },
+    };
+
+    this.pushToDataLayer(event);
   }
 
   purchase(params: PurchaseParams): void {
