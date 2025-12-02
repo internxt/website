@@ -15,6 +15,7 @@ export default function Snowfall({ count = 50 }: { count?: number }) {
   const [snowflakes, setSnowflakes] = useState<SnowflakeItem[]>([]);
 
   useEffect(() => {
+    // NOSONAR - Math.random() is safe for decorative animations
     const flakes = Array.from({ length: count }, (_, i) => ({
       id: i,
       left: Math.random() * 100,

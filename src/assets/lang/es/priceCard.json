@@ -3,6 +3,16 @@
   "perUserSlash": "/usuario",
   "perYear": "/año",
   "cta": "Seleccionar plan",
+  "gifts": {
+    "line1": "Acceso a nuestro sorteo navideño",
+    "outCard": "*Canjeable en Amazon, Apple y más ",
+    "prices": {
+      "essentials": "Gana una tarjeta de 100€*",
+      "standard": "Estándar",
+      "premium": "Gana una tarjeta de 200€*",
+      "ultimate": "Gana una tarjeta de 300€*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Esencial",

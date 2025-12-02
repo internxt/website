@@ -41,7 +41,11 @@
     "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
     "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
     "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
-    "descriptionNormal": "auf alle Pläne",
+    "descriptionNormal": "plus ein besonderes Weihnachtsgeschenk 🎅🏻",
+    "giftDescription": {
+      "line1": "Sichern Sie sich einen Gutschein im Wert von bis zu 1.000€ zur freien Verfügung!",
+      "line2": "Kommen Sie diese Saison zu Internxt und nehmen Sie an unserer Weihnachtsverlosung teil"
+    },
     "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {
       "normal1": "Ab ",

@@ -3,6 +3,16 @@
   "perUserSlash": "/пользователь",
   "perYear": "/год",
   "cta": "Выбрать план",
+  "gifts": {
+    "line1": "Доступ к нашему рождественскому розыгрышу",
+    "outCard": "*Можно использовать в Amazon, Apple и др. ",
+    "prices": {
+      "essentials": "Шанс выиграть подарочную карту на 100€*",
+      "standard": "Стандарт",
+      "premium": "Шанс выиграть подарочную карту на 200€*",
+      "ultimate": "Шанс выиграть подарочную карту на 300€*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

@@ -2,7 +2,16 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import dynamic from 'next/dynamic';
-import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import {
+  CellTower,
+  Check,
+  CloudArrowUp,
+  Envelope,
+  Gift,
+  ShieldPlus,
+  Sparkle,
+  VideoConference,
+} from '@phosphor-icons/react';
 import Link from 'next/link';
 import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
@@ -107,7 +116,7 @@ export default function HeroSection({
           <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
             <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
 
-            <p className="bg-transparent">{textContent.descriptionNormal}</p>
+            <p className="bg-neutral-37">{textContent.descriptionNormal}</p>
           </span>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
@@ -117,6 +126,18 @@ export default function HeroSection({
                 <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
               </div>
             ))}
+          </div>
+          <div className="flex flex-col justify-center gap-4">
+            <span className="flex flex-row gap-1">
+              <Gift className="text-primary" height={28} width={28} />
+              <p className="w-full text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+                {textContent.giftDescription.line1}
+              </p>
+            </span>
+
+            <p className="font-regular text-lg leading-tight text-gray-100 lg:text-lg">
+              {textContent.giftDescription.line2}
+            </p>
           </div>
         </div>
 

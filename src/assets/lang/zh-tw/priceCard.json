@@ -3,6 +3,16 @@
   "perUserSlash": "/使用者",
   "perYear": "/年",
   "cta": "選擇方案",
+  "gifts": {
+    "line1": "參與我們的聖誕抽獎",
+    "outCard": "*可在 Amazon、Apple 等平台兌換 ",
+    "prices": {
+      "essentials": "有機會贏取 100 歐元禮品卡*",
+      "standard": "標準",
+      "premium": "有機會贏取 200 歐元禮品卡*",
+      "ultimate": "有機會贏取 300 歐元禮品卡*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

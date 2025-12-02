@@ -3,6 +3,16 @@
   "perUserSlash": "/utilisateur",
   "perYear": "/an",
   "cta": "Sélectionner le plan",
+  "gifts": {
+    "line1": "Accès à notre sort de Noël",
+    "outCard": "*Échangeable sur Amazon, Apple et plus ",
+    "prices": {
+      "essentials": "Ganger une carte cadeau de 100€*",
+      "standard": "Standard",
+      "premium": "Ganger une carte cadeau de 200€*",
+      "ultimate": "Ganger une carte cadeau de 300€*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

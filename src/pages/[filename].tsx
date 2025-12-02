@@ -156,6 +156,7 @@ function CombinedSpecialOffer({
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
+        showPromo
       />
 
       <FeaturesSection

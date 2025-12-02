@@ -3,6 +3,17 @@
   "perUserSlash": "/user",
   "perYear": "/year",
   "cta": "Select plan",
+  "gifts": {
+    "line1": "Access to our holiday raffle",
+    "line2": "Chance to win a €{{price}} gift card*",
+    "outCard": "*Exchangeable on Amazon, Apple and more ",
+    "prices": {
+      "essentials": "Chance to win a €100 gift card*",
+      "standard": "Standard",
+      "premium": "Chance to win a €200 gift card*",
+      "ultimate": "Chance to win a €300 gift card*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

@@ -197,6 +197,7 @@ export const PricingSectionForMobile = ({
                     darkMode={darkMode}
                     isAffiliate={isAffiliate}
                     cardIndex={cardIndex}
+                    showGift={showPromo}
                   />
                 ))
             : undefined}
@@ -239,6 +240,7 @@ export const PricingSectionForMobile = ({
                         lang={lang}
                         darkMode={darkMode}
                         cardIndex={cardIndex}
+                        showGift={showPromo}
                       />
                     ))
                 : undefined}

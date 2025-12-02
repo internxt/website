@@ -3,6 +3,16 @@
   "perUserSlash": "/benutzer",
   "perYear": "/jahr",
   "cta": "Plan auswählen",
+  "gifts": {
+    "line1": "Zugang zu unserer Weihnachtsverlosung",
+    "outCard": "*Einlösbar bei Amazon, Apple und mehr ",
+    "prices": {
+      "essentials": "Chance auf einen 100€ Gutschein*",
+      "standard": "Standard",
+      "premium": "Chance auf einen 200€ Gutschein*",
+      "ultimate": "Chance auf einen 300€ Gutschein*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
