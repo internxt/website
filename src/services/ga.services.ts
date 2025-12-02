@@ -179,36 +179,23 @@ class AnalyticsService {
     const event = this.createEcommerceEvent('view_item', params);
     this.pushToDataLayer(event);
   }
+
   addToCart(params: PlanDetails): void {
-    const { planId, planPrice, currency, planType, interval, storage, promoCodeId } = params;
+    const standardEvent = this.createEcommerceEvent('add_to_cart', params);
+    this.pushToDataLayer(standardEvent);
 
-    const sendToTargets = this.sendTo.map((target) => {
-      return target === GA_ID ? `${target}/${CONVERSION_TAG}` : target;
-    });
+    if (this.isClientSide() && globalThis.window.gtag) {
+      const item = this.createEcommerceItem(params);
 
-    const event = {
-      event: 'add_to_cart',
-      send_to: sendToTargets,
-      ecommerce: {
-        value: formatPrice(planPrice),
-        currency: currency ?? this.defaultCurrency,
-        items: [
-          {
-            item_id: planId,
-            item_name: `${storage} ${capitalizeFirstLetter(interval)} Plan`,
-            item_brand: BRAND,
-            item_category: getPlanCategory(planType),
-            item_variant: interval,
-            currency: currency ?? this.defaultCurrency,
-            price: formatPrice(planPrice),
-            quantity: DEFAULT_QUANTITY,
-            ...(promoCodeId && { coupon: promoCodeId }),
-          },
-        ],
-      },
-    };
+      const sendToTargets = [GA_CONTAINER, `${GA_ID}/${CONVERSION_TAG}`];
 
-    this.pushToDataLayer(event);
+      globalThis.window.gtag('event', 'add_to_cart', {
+        send_to: sendToTargets,
+        value: formatPrice(params.planPrice),
+        currency: params.currency ?? this.defaultCurrency,
+        items: [item],
+      });
+    }
   }
 
   purchase(params: PurchaseParams): void {
