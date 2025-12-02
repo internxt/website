@@ -184,12 +184,13 @@ class AnalyticsService {
     const standardEvent = this.createEcommerceEvent('add_to_cart', params);
     this.pushToDataLayer(standardEvent);
 
-    if (this.isClientSide() && globalThis.window.gtag && GA_ID) {
+    if (this.isClientSide() && globalThis.window.gtag) {
       const item = this.createEcommerceItem(params);
-      const conversionTarget = `${GA_ID}/${CONVERSION_TAG}`;
+
+      const sendToTargets = [GA_ID, `AW-728922855/${CONVERSION_TAG}`];
 
       globalThis.window.gtag('event', 'add_to_cart', {
-        send_to: conversionTarget,
+        send_to: sendToTargets,
         value: formatPrice(params.planPrice),
         currency: params.currency ?? this.defaultCurrency,
         items: [item],
