@@ -187,7 +187,7 @@ class AnalyticsService {
     if (this.isClientSide() && globalThis.window.gtag) {
       const item = this.createEcommerceItem(params);
 
-      const sendToTargets = [GA_ID, `AW-728922855/${CONVERSION_TAG}`];
+      const sendToTargets = [GA_CONTAINER, `${GA_ID}/${CONVERSION_TAG}`];
 
       globalThis.window.gtag('event', 'add_to_cart', {
         send_to: sendToTargets,
