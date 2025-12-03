@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const IcedriveComparison = (props) => (
@@ -9,6 +10,7 @@ const IcedriveComparison = (props) => (
     metaTagId="icedrive-alternative"
     segmentName="Icedrive Comparison"
     logo="/images/comparison/Icedrive-Letters.webp"
+    couponCodeName={PromoCodeName.Ice}
   />
 );
 

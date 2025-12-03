@@ -20,9 +20,11 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.Dropbox87,
+    couponCodeForLifetime: PromoCodeName.Dropbox87,
   });
 
   const onCheckoutButtonClicked = async (
@@ -31,7 +33,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
       priceId,

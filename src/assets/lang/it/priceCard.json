@@ -3,6 +3,16 @@
   "perUserSlash": "/utente",
   "perYear": "/anno",
   "cta": "Seleziona piano",
+  "gifts": {
+    "line1": "Partecipa ora!",
+    "outCard": "Vinci Carta Regalo (Amazon, Apple...) o Visa.",
+    "prices": {
+      "essentials": "Vinci Carta Regalo 100€",
+      "standard": "Standard",
+      "premium": "Vinci Carta Regalo 300€",
+      "ultimate": "Vinci Carta Regalo 1.000€"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

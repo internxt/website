@@ -41,7 +41,11 @@
     "title": "Pásate a un **internet** más **ético**, **privado** y **seguro**",
     "subtitle": "Así es Internxt - Tu aliado digital fiable",
     "description": "{{discount}}% de descuento",
-    "descriptionNormal": "en todos los planes",
+    "descriptionNormal": "más un regalo especial de Navidad 🎅🏻",
+    "giftDescription": {
+      "line1": "¡Gana una tarjeta regalo de hasta 1.000€!",
+      "line2": "Únete a Internxt y participa en nuestro sorteo"
+    },
     "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "startFrom": {
       "normal1": "Desde ",

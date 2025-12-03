@@ -13,7 +13,6 @@ const MINIMUM_DISCOUNT = 0;
 
 const DEFAULTS = {
   sectionDetails: 'bg-white',
-  showPromo: false,
   hideBillingController: false,
 };
 
@@ -95,7 +94,7 @@ const HotLabel = ({ textContent, discountValue, darkMode }) => {
         darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
       } px-1 py-0.5 text-xl font-semibold `}
     >
-      {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
+      {formatDiscountLabel(textContent.hotLabel, discountValue)} ❄️
     </span>
   );
 };
@@ -142,7 +141,7 @@ export const PricingSectionWrapper = ({
   onBusinessPlansSelected,
   darkMode,
   isAnnual,
-  showPromo = DEFAULTS.showPromo,
+  showPromo,
   isAffiliate,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
@@ -245,6 +244,7 @@ export const PricingSectionWrapper = ({
           isMonthly
           darkMode={darkMode}
           differentRecommended={differentRecommended}
+          showPromo={showPromo}
         />
       </div>
 
@@ -267,6 +267,7 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           darkMode={darkMode}
+          showPromo={showPromo}
         />
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const OnedriveComparison = (props) => (
@@ -9,6 +10,7 @@ const OnedriveComparison = (props) => (
     metaTagId="onedrive-alternative"
     segmentName="Onedrive Comparison"
     logo="/images/comparison/OneDrive-Letters.webp"
+    couponCodeName={PromoCodeName.ONEDRIVE}
   />
 );
 

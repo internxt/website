@@ -40,8 +40,8 @@ function SpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
-    couponCodeForLifetime: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.FreePlanUpsell,
+    couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';

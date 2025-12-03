@@ -11,6 +11,7 @@ import {
   Files,
   Fingerprint,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -92,6 +93,7 @@ export interface PriceCardProps {
   isFamilyPage?: boolean;
   isAffiliate?: boolean;
   cardIndex?: number;
+  showGift?: boolean;
 }
 
 export const PriceCard = ({
@@ -104,6 +106,7 @@ export const PriceCard = ({
   isFamilyPage,
   onCheckoutButtonClicked,
   darkMode,
+  showGift,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { interval, price, storage, priceId } = product;
@@ -151,6 +154,14 @@ export const PriceCard = ({
   };
   const planLabel = planTypes[storage] || null;
 
+  const planGifts = {
+    '1TB': isBusiness ? contentText.gifts.prices.essential : contentText.gifts.prices.essentials,
+    '2TB': contentText.gifts.prices.pro,
+    '3TB': contentText.gifts.prices.premium,
+    '5TB': contentText.gifts.prices.ultimate,
+  };
+  const planGift = planGifts[storage] || null;
+
   const ctaText = contentText.cta;
 
   const features = isBusiness
@@ -171,6 +182,22 @@ export const PriceCard = ({
   };
 
   const iconMap = getIconMap();
+  const renderGiftText = (text) => {
+    const regex = /([$€£¥]\s?\d+(?:[.,]\d+)*|\d+(?:[.,]\d+)*\s?[$€£¥])/g;
+
+    const parts = text.split(regex);
+
+    return parts.map((part, index) => {
+      if (regex.test(part)) {
+        return (
+          <span key={index} className="font-medium">
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
 
   return (
     <div
@@ -307,11 +334,25 @@ export const PriceCard = ({
                   : darkMode
                   ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                   : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[340px]`}
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]`}
             >
               <p className={`text-base font-medium`}>{ctaText}</p>
             </button>
-
+            {!showGift && (
+              <div className="flex w-full flex-col gap-2 px-6 lg:w-full lg:px-0 lg:pt-6">
+                <div
+                  className="flex flex-col gap-2 rounded-lg border-[1px] border-blue-10 p-5"
+                  style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 100%)' }}
+                >
+                  <span className="flex flex-row gap-1">
+                    <Gift className="text-primary" height={24} width={24} />
+                    <p className="text-base font-semibold text-gray-95 lg:text-lg">{contentText.gifts.line1}</p>
+                  </span>
+                  <p className="text-base text-gray-95 lg:text-lg">{renderGiftText(planGift)}</p>
+                </div>
+                <p className="text-xs text-gray-35 lg:text-sm">{contentText.gifts.outCard}</p>
+              </div>
+            )}
             <div className="flex w-full flex-col justify-start gap-4 pt-4">
               {features?.map((feature, index) => {
                 const Icon = iconMap[index];

@@ -108,7 +108,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       isCheckoutForLifetime,
       interval,
       storage,
-      PromoCodeName.BlackFriday,
+      PromoCodeName.SoftSales85,
     );
   };
 

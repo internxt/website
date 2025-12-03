@@ -38,7 +38,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.BlackFriday,
+    couponCodeForBusiness: PromoCodeName.FreePlanUpsell,
   });
 
   const locale = lang as string;
@@ -50,7 +50,7 @@ export const BusinessPage = ({
     storage: string,
   ) => {
     const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
-      name: PromoCodeName.BlackFriday,
+      name: PromoCodeName.SoftSales85,
     });
 
     stripeService.redirectToCheckout(

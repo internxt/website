@@ -41,6 +41,7 @@ export interface HeroSection {
   description: string;
   descriptionNormal: string;
   features: string[];
+  giftDescription: GiftDescription;
   startFrom: StartFrom;
   claimDeal: string;
   guarantee: string;
@@ -89,6 +90,11 @@ export interface Strength {
 export interface Submit {
   get: string;
   free: string;
+}
+
+export interface GiftDescription {
+  line1: string;
+  line2: string;
 }
 
 export interface Products {

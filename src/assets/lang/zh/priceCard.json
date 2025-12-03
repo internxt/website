@@ -3,6 +3,16 @@
   "perUserSlash": "/用户",
   "perYear": "/年",
   "cta": "选择计划",
+  "gifts": {
+    "line1": "参与我们的圣诞抽奖",
+    "outCard": "*可在亚马逊、Apple 等平台兑换 ",
+    "prices": {
+      "essentials": "有机会赢取 100 欧元礼品卡*",
+      "standard": "标准",
+      "premium": "有机会赢取 300 欧元礼品卡*",
+      "ultimate": "有机会赢取 1000 欧元礼品卡*"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

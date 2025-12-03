@@ -175,6 +175,14 @@ export enum PromoCodeName {
   APFELCAST = 'apfelcast',
   MADROZ = 'madroz',
   JUSTIN = 'justin',
+  DEGOO = 'DEGOO87',
+  DRIME = 'DRIME87',
+  ELEPHANT = 'ELEPHANT87',
+  FILEJUMP = 'FILEJUMP87',
+  GOOGLEDRIVE = 'DEGOOGLE87',
+  Ice = 'ICEDRIVE87',
+  KOOFR = 'KOOFR87',
+  ONEDRIVE = 'ONEDRIVE87',
 }
 
 export interface PromoCodeProps {

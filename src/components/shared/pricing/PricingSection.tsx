@@ -199,6 +199,7 @@ export const PricingSection = ({
                   darkMode={darkMode}
                   isAffiliate={isAffiliate}
                   cardIndex={cardIndex}
+                  showGift={showPromo}
                 />
               ))
             : undefined}
@@ -238,6 +239,7 @@ export const PricingSection = ({
                       lang={lang}
                       darkMode={darkMode}
                       cardIndex={cardIndex}
+                      showGift={showPromo}
                     />
                   ))
                 : undefined}
@@ -260,7 +262,7 @@ export const PricingSection = ({
         </div>
       )}
 
-      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} darkMode={darkMode} />}
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
     </>
   );
 };

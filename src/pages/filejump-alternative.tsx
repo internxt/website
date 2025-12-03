@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const FilejumpComparison = (props) => (
@@ -9,6 +10,7 @@ const FilejumpComparison = (props) => (
     metaTagId="filejump-alternative"
     segmentName="Filejump Comparison"
     logo="/images/comparison/FileJump_Letters.webp"
+    couponCodeName={PromoCodeName.FILEJUMP}
   />
 );
 

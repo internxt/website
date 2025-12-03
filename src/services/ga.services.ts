@@ -71,7 +71,7 @@ const capitalizeFirstLetter = (str: string): string => {
 };
 
 const formatPrice = (price: number): number => {
-  return parseFloat(price.toFixed(2));
+  return Math.round(price * 100) / 100;
 };
 
 const getPlanCategory = (planType: 'individual' | 'business'): string => {

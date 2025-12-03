@@ -3,6 +3,16 @@
   "perUserSlash": "/user",
   "perYear": "/year",
   "cta": "Select plan",
+  "gifts": {
+    "line1": "Enter our holiday raffle!",
+    "outCard": "Win a gift card redeemable in your favorite merchants (Amazon, Steam, Apple...) or as a Visa prepaid card",
+    "prices": {
+      "essentials": "Chance to win a €100 gift card",
+      "standard": "Standard",
+      "premium": "Chance to win a €300 gift card",
+      "ultimate": "Chance to win a €1000 gift card"
+    }
+  },
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

@@ -21,9 +21,11 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.Mega87,
+    couponCodeForLifetime: PromoCodeName.Mega87,
   });
 
   const onCheckoutButtonClicked = async (
@@ -32,7 +34,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
       priceId,

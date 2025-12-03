@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt：像 Koofr 一样，但**完全加密**",
     "description": "Internxt 提供最先进、最现代的加密和隐私套件，以保护您的在线安全",
-    "getPrivacy": "选择您的计划，享受 {{percentage}}% 优惠 🔥",
+    "getPrivacy": "选择您的计划，享受 {{percentage}}% 优惠 ❄️",
     "cta": "领取优惠"
   },
   "HeaderSection": {
@@ -127,7 +127,7 @@
   },
   "tableSection": {
     "title": "您的多合一隐私盟友",
-    "hotLabel": "{{discount}}% 优惠 🔥",
+    "hotLabel": "{{discount}}% 优惠 ❄️",
     "planTitles": {
       "header": "您的多合一隐私盟友"
     },
