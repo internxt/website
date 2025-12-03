@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Wie OneDrive, aber **privat**.",
     "description": "Wechseln Sie zu Internxt, der besten Alternative zu OneDrive, die Ihre Privatsphäre respektiert",
-    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt ❄️",
+    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt  ",
     "cta": "Angebot sichern"
   },
   "HeaderSection": {
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Ihr All-in-One Datenschutz-Verbündeter",
-    "hotLabel": "{{discount}}% Rabatt ❄️",
+    "hotLabel": "{{discount}}% Rabatt  ",
     "planTitles": {
       "header": "Ihr All-in-One Datenschutz-Verbündeter"
     },

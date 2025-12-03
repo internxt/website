@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. come Icedrive, ma **completamente crittografato**",
     "description": "Internxt offre la suite di privacy e crittografia più moderna e avanzata per proteggerti online",
-    "getPrivacy": "Seleziona il tuo piano con il {{percentage}}% di sconto ❄️",
+    "getPrivacy": "Seleziona il tuo piano con il {{percentage}}% di sconto  ",
     "cta": "Richiedi l'offerta"
   },
   "HeaderSection": {
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Il tuo alleato per la privacy tutto in uno",
-    "hotLabel": "{{discount}}% di sconto ❄️",
+    "hotLabel": "{{discount}}% di sconto  ",
     "planTitles": {
       "header": "Il tuo alleato per la privacy tutto in uno"
     },

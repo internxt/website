@@ -133,10 +133,6 @@ export default function HeroSection({
                 {textContent.giftDescription.line1}
               </p>
             </span>
-
-            <p className="font-regular text-base leading-tight text-gray-100 lg:text-lg">
-              {textContent.giftDescription.line2}
-            </p>
           </div>
         </div>
 
