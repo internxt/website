@@ -5,7 +5,6 @@
   "cta": "Select plan",
   "gifts": {
     "line1": "Access to our holiday raffle",
-    "line2": "Chance to win a €{{price}} gift card*",
     "outCard": "*Exchangeable on Amazon, Apple and more ",
     "prices": {
       "essentials": "Chance to win a €100 gift card*",

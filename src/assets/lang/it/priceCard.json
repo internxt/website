@@ -4,13 +4,13 @@
   "perYear": "/anno",
   "cta": "Seleziona piano",
   "gifts": {
-    "line1": "Accesso alla nostra estrazione natalizia",
+    "line1": "Partecipa all'estrazione",
     "outCard": "*Utilizzabile su Amazon, Apple e altro ",
     "prices": {
-      "essentials": "Possibilità di vincere una carta regalo da 100€*",
+      "essentials": "Vinci una carta regalo da 100€*",
       "standard": "Standard",
-      "premium": "Possibilità di vincere una carta regalo da 200€*",
-      "ultimate": "Possibilità di vincere una carta regalo da 300€*"
+      "premium": "Vinci una carta regalo da 200€*",
+      "ultimate": "Vinci una carta regalo da 300€*"
     }
   },
   "productFeatures": {
