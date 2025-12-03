@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt：像 OneDrive 一樣，但**私密**。",
     "description": "切換到 Internxt，這個最尊重您隱私的 OneDrive 最佳替代方案",
-    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠 ❄️",
+    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠  ",
     "cta": "領取優惠"
   },
   "HeaderSection": {
@@ -139,7 +139,7 @@
   },
   "tableSection": {
     "title": "您的多合一隱私盟友",
-    "hotLabel": "{{discount}}% 優惠 ❄️",
+    "hotLabel": "{{discount}}% 優惠  ",
     "planTitles": {
       "header": "您的多合一隱私盟友"
     },

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Как OneDrive, но **приватно**.",
     "description": "Переходите на Internxt – лучшую альтернативу OneDrive, которая уважает вашу конфиденциальность",
-    "getPrivacy": "Выберите свой план со скидкой {{percentage}}% ❄️",
+    "getPrivacy": "Выберите свой план со скидкой {{percentage}}%  ",
     "cta": "Получить предложение"
   },
   "HeaderSection": {
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Ваш универсальный союзник по конфиденциальности",
-    "hotLabel": "Скидка {{discount}}% ❄️",
+    "hotLabel": "Скидка {{discount}}%  ",
     "planTitles": {
       "header": "Ваш универсальный союзник по конфиденциальности"
     },

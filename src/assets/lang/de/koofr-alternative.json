@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. wie Koofr, aber **vollständig verschlüsselt**",
     "description": "Internxt bietet die modernste und fortschrittlichste Verschlüsselungs- und Datenschutz-Suite, um Sie online zu schützen",
-    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt ❄️",
+    "getPrivacy": "Wählen Sie Ihren Plan mit {{percentage}}% Rabatt  ",
     "cta": "Angebot sichern"
   },
   "HeaderSection": {
@@ -132,7 +132,7 @@
   },
   "tableSection": {
     "title": "Ihr All-in-One Datenschutz-Verbündeter",
-    "hotLabel": "{{discount}}% Rabatt ❄️",
+    "hotLabel": "{{discount}}% Rabatt  ",
     "planTitles": {
       "header": "Ihr All-in-One Datenschutz-Verbündeter"
     },

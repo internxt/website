@@ -182,22 +182,6 @@ export const PriceCard = ({
   };
 
   const iconMap = getIconMap();
-  const renderGiftText = (text) => {
-    const regex = /([$€£¥]\s?\d+(?:[.,]\d+)*|\d+(?:[.,]\d+)*\s?[$€£¥])/g;
-
-    const parts = text.split(regex);
-
-    return parts.map((part, index) => {
-      if (regex.test(part)) {
-        return (
-          <span key={index} className="font-medium">
-            {part}
-          </span>
-        );
-      }
-      return part;
-    });
-  };
 
   return (
     <div
@@ -348,7 +332,7 @@ export const PriceCard = ({
                     <Gift className="text-primary" height={24} width={24} />
                     <p className="text-base font-semibold text-gray-95 lg:text-lg">{contentText.gifts.line1}</p>
                   </span>
-                  <p className="text-base text-gray-95 lg:text-lg">{renderGiftText(planGift)}</p>
+                  <p className="text-base text-gray-95 lg:text-lg">{planGift}</p>
                 </div>
                 <p className="text-xs text-gray-35 lg:text-sm">{contentText.gifts.outCard}</p>
               </div>

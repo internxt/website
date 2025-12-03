@@ -23,7 +23,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               {textContent.title.normalText} <span className="pl-3"> {textContent.title.boldText}</span>
             </p>
           </div>
-          <Link href={'/deals/black-friday-internxt'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center">
+          <Link href={'/pricing'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center">
             <p className="font-semibold hover:underline">{textContent.title.cta}</p>
             <CaretRight size={16} />
           </Link>
@@ -31,7 +31,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       </div>
 
       <Link
-        href={'/deals/black-friday-internxt'}
+        href={'/pricing'}
         className={`group fixed left-0 top-0 z-50 flex h-[64px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className=" w-full  overflow-hidden px-3 text-center">
@@ -39,7 +39,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             <p className="mx-1 flex items-center justify-center gap-1 text-base font-semibold">
               <span>{textContent.title.normalText}</span>
             </p>
-            <Link href={'/deals/black-friday-internxt'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
+            <Link href={'/pricing'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
               <p className="text-base font-medium underline hover:no-underline">{textContent.title.cta}</p>
               <CaretRight size={16} />
             </Link>
