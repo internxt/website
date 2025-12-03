@@ -34,8 +34,8 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
-    couponCodeForLifetime: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.CLOUDWARDS87,
+    couponCodeForLifetime: PromoCodeName.CLOUDWARDS87,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';

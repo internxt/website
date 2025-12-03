@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const ElephantdriveComparison = (props) => (
@@ -9,6 +10,7 @@ const ElephantdriveComparison = (props) => (
     metaTagId="elephantdrive-alternative"
     segmentName="Elephantdrive Comparison"
     logo="/images/comparison/Elephantdrive_Letters.webp"
+    couponCodeName={PromoCodeName.ELEPHANT}
   />
 );
 

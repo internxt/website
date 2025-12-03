@@ -334,23 +334,23 @@ export const PriceCard = ({
                   : darkMode
                   ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                   : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[260px]`}
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]`}
             >
               <p className={`text-base font-medium`}>{ctaText}</p>
             </button>
             {!showGift && (
-              <div className="flex w-full flex-col gap-2 pt-3">
+              <div className="flex w-full flex-col gap-2 px-6 lg:w-full lg:px-0 lg:pt-6">
                 <div
                   className="flex flex-col gap-2 rounded-lg border-[1px] border-blue-10 p-5"
                   style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 100%)' }}
                 >
                   <span className="flex flex-row gap-1">
                     <Gift className="text-primary" height={24} width={24} />
-                    <p className="text-lg font-semibold text-gray-95">{contentText.gifts.line1}</p>
+                    <p className="text-base font-semibold text-gray-95 lg:text-lg">{contentText.gifts.line1}</p>
                   </span>
-                  <p className="text-lg text-gray-95">{renderGiftText(planGift)}</p>
+                  <p className="text-base text-gray-95 lg:text-lg">{renderGiftText(planGift)}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-35">{contentText.gifts.outCard}</p>
+                <p className="text-xs font-medium text-gray-35 lg:text-sm">{contentText.gifts.outCard}</p>
               </div>
             )}
             <div className="flex w-full flex-col justify-start gap-4 pt-4">

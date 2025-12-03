@@ -43,8 +43,8 @@
     "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
     "descriptionNormal": "plus ein besonderes Weihnachtsgeschenk 🎅🏻",
     "giftDescription": {
-      "line1": "Sichern Sie sich einen Gutschein im Wert von bis zu 1.000€ zur freien Verfügung!",
-      "line2": "Kommen Sie diese Saison zu Internxt und nehmen Sie an unserer Weihnachtsverlosung teil"
+      "line1": "Gewinne einen Gutschein bis zu 1.000 €!",
+      "line2": "Mach mit beim Internxt-Weihnachtsgewinnspiel"
     },
     "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {

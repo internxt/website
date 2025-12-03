@@ -88,7 +88,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:my-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <Snowfall count={100} />
@@ -113,10 +113,9 @@ export default function HeroSection({
             </p>
             <p className="font-regular text-lg leading-tight text-gray-100 lg:text-2xl">{textContent.subtitle}</p>
           </div>
-          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+          <span className="flex w-min flex-col items-start gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:flex-row lg:flex-nowrap lg:items-center lg:text-xl">
             <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
-
-            <p className="bg-neutral-37">{textContent.descriptionNormal}</p>
+            {textContent.descriptionNormal}
           </span>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
@@ -127,15 +126,15 @@ export default function HeroSection({
               </div>
             ))}
           </div>
-          <div className="flex flex-col justify-center gap-4">
-            <span className="flex flex-row gap-1">
+          <div className="flex flex-col justify-center gap-2 lg:gap-4">
+            <span className="flex flex-row items-center gap-1">
               <Gift className="text-primary" height={28} width={28} />
               <p className="w-full text-base font-semibold leading-tight text-gray-100 lg:text-xl">
                 {textContent.giftDescription.line1}
               </p>
             </span>
 
-            <p className="font-regular text-lg leading-tight text-gray-100 lg:text-lg">
+            <p className="font-regular text-base leading-tight text-gray-100 lg:text-lg">
               {textContent.giftDescription.line2}
             </p>
           </div>

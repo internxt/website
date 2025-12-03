@@ -15,7 +15,6 @@ export default function Snowfall({ count = 50 }: { count?: number }) {
   const [snowflakes, setSnowflakes] = useState<SnowflakeItem[]>([]);
 
   useEffect(() => {
-    // NOSONAR - Math.random() is safe for decorative animations
     const flakes = Array.from({ length: count }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
@@ -36,9 +35,13 @@ export default function Snowfall({ count = 50 }: { count?: number }) {
           className="absolute animate-sleigh-vertical-snow"
           style={{
             left: `${flake.left}%`,
+
+            top: `-${flake.size + 10}px`,
             opacity: flake.opacity,
             animationDuration: `${flake.animationDuration}s`,
             animationDelay: `${flake.delay}s`,
+
+            animationFillMode: 'both',
             transform: `rotate(${flake.rotation}deg)`,
           }}
         >

@@ -262,7 +262,7 @@ export const PricingSection = ({
         </div>
       )}
 
-      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} darkMode={darkMode} />}
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
     </>
   );
 };

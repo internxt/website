@@ -4,13 +4,13 @@
   "perYear": "/anno",
   "cta": "Seleziona piano",
   "gifts": {
-    "line1": "Partecipa all'estrazione",
-    "outCard": "*Utilizzabile su Amazon, Apple e altro ",
+    "line1": "Partecipa ora!",
+    "outCard": "Vinci Carta Regalo (Amazon, Apple...) o Visa.",
     "prices": {
-      "essentials": "Vinci una carta regalo da 100€*",
+      "essentials": "Vinci Carta Regalo 100€",
       "standard": "Standard",
-      "premium": "Vinci una carta regalo da 200€*",
-      "ultimate": "Vinci una carta regalo da 300€*"
+      "premium": "Vinci Carta Regalo 300€",
+      "ultimate": "Vinci Carta Regalo 1.000€"
     }
   },
   "productFeatures": {

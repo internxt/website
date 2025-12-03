@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const KoofrComparison = (props) => (
@@ -9,6 +10,7 @@ const KoofrComparison = (props) => (
     metaTagId="koofr-alternative"
     segmentName="Koofr Comparison"
     logo="/images/comparison/Koofr-Letters.webp"
+    couponCodeName={PromoCodeName.KOOFR}
   />
 );
 

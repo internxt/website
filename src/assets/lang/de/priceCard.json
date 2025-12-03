@@ -4,13 +4,13 @@
   "perYear": "/jahr",
   "cta": "Plan auswählen",
   "gifts": {
-    "line1": "Jetzt teilnehmen",
-    "outCard": "*Einlösbar bei Amazon, Apple und mehr ",
+    "line1": "Jetzt teilnehmen!",
+    "outCard": "Geschenkkarte (Amazon, Apple...) oder Visa-Prepaid gewinnen.",
     "prices": {
-      "essentials": "Chance auf einen 100€ Gutschein*",
+      "essentials": "100€ Geschenkkarte gewinnen",
       "standard": "Standard",
-      "premium": "Chance auf einen 200€ Gutschein*",
-      "ultimate": "Chance auf einen 300€ Gutschein*"
+      "premium": "300€ Geschenkkarte gewinnen",
+      "ultimate": "1.000€ Geschenkkarte gewinnen"
     }
   },
   "productFeatures": {

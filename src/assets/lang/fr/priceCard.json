@@ -4,13 +4,13 @@
   "perYear": "/an",
   "cta": "Sélectionner le plan",
   "gifts": {
-    "line1": "Accès à notre sort de Noël",
-    "outCard": "*Échangeable sur Amazon, Apple et plus ",
+    "line1": "Participez maintenant !",
+    "outCard": "Gagnez une carte cadeau (Amazon, Apple...) ou Visa.",
     "prices": {
-      "essentials": "Ganger une carte cadeau de 100€*",
+      "essentials": "Gagnez une carte de 100€",
       "standard": "Standard",
-      "premium": "Ganger une carte cadeau de 200€*",
-      "ultimate": "Ganger une carte cadeau de 300€*"
+      "premium": "Gagnez une carte de 300€",
+      "ultimate": "Gagnez une carte de 1 000€"
     }
   },
   "productFeatures": {

@@ -43,8 +43,8 @@
     "description": "Obtenez {{discount}}% de réduction ",
     "descriptionNormal": "plus un cadeau de Noël spécial 🎅🏻",
     "giftDescription": {
-      "line1": "Recevez une carte cadeau jusqu'à 1.000€ à dépenser où vous voulez !",
-      "line2": "Rejoignez Internxt cette saison et accédez à notre tirage au sort de Noël"
+      "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
+      "line2": "Rejoignez Internxt et participez au tirage de Noël"
     },
     "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {

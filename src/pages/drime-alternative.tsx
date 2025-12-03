@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const DrimeComparison = (props) => (
@@ -9,6 +10,7 @@ const DrimeComparison = (props) => (
     metaTagId="drime-alternative"
     segmentName="Drime Comparison"
     logo="/images/comparison/Drime_Letters.webp"
+    couponCodeName={PromoCodeName.DRIME}
   />
 );
 

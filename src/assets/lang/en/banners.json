@@ -22,20 +22,14 @@
     }
   },
   "FreeCardPromoBanner": {
-    "title": "Claim your special Black Friday offer!",
-    "subtitle": "The **biggest** discount for **maximum privacy**",
+    "title": "Get an exclusive discount!",
+    "subtitle": {
+      "blue": "Special offer: ",
+      "normal": "store files in privacy for less."
+    },
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
-    "guarantee": "30-day money-back guarantee",
-    "header": { "primaryText": "Get 90% off", "afterPrimaryText": "in all Plans" },
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail"
-    }
+    "guarantee": "30-day money-back guarantee"
   },
   "AndroidSmartBanner": {
     "title": "Download Internxt Drive for Android"
@@ -165,7 +159,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Massive Black Friday savings — only for a limited time!",
+      "normalText": "Celebrate 5 years of Internxt with 85% off",
       "cta": " Claim deal"
     }
   },

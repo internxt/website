@@ -9,20 +9,11 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "领取您的黑色星期五特别优惠!",
-    "subtitle": "**最大**折扣享受**最高隐私**",
+    "title": "获取独家折扣！",
+    "subtitle": { "blue": "特别优惠：", "normal": "更便宜地私人存储文件" },
     "getDealCta": "获取优惠",
     "freePlanCta": "继续使用免费计划",
-    "guarantee": "30天退款保证",
-    "header": { "primaryText": "享受90%折扣", "afterPrimaryText": "所有套餐" },
-    "products": {
-      "drive": "云盘",
-      "antivirus": "杀毒软件",
-      "cleaner": "清理工具",
-      "vpn": "VPN",
-      "meet": "会议",
-      "mail": "邮箱"
-    }
+    "guarantee": "30天退款保证"
   },
   "LoginBanner": {
     "head": "Try before you buy.",
@@ -141,7 +132,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "黑色星期五大优惠——仅限时供应！",
+      "normalText": "Internxt 五周年！所有套餐享受85%折扣 ",
       "cta": "选择你的套餐 "
     }
   },

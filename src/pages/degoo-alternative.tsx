@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const DegooComparison = (props) => (
@@ -9,6 +10,7 @@ const DegooComparison = (props) => (
     metaTagId="degoo-alternative"
     segmentName="Degoo Comparison"
     logo="/images/comparison/Degoo_Letters.webp"
+    couponCodeName={PromoCodeName.DEGOO}
   />
 );
 

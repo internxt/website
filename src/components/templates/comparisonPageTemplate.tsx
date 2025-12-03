@@ -46,6 +46,7 @@ interface ComparisonPageProps {
     privacyBgGradient?: string;
     alternativeBgColor?: string;
   };
+  couponCodeName: PromoCodeName;
 }
 
 export const ComparisonPage = ({
@@ -59,6 +60,7 @@ export const ComparisonPage = ({
   langJson,
   footerLang,
   customSections = {},
+  couponCodeName,
 }: ComparisonPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === metaTagId);
   const {
@@ -66,9 +68,11 @@ export const ComparisonPage = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: couponCodeName,
+    couponCodeForLifetime: couponCodeName,
   });
 
   const onCheckoutButtonClicked = async (
@@ -77,7 +81,7 @@ export const ComparisonPage = ({
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
       priceId,

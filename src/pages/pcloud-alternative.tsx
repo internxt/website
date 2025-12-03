@@ -21,9 +21,11 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.PCLOUD87,
+    couponCodeForLifetime: PromoCodeName.PCLOUD87,
   });
 
   const onCheckoutButtonClicked = async (
@@ -32,7 +34,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     interval: string,
     storage: string,
   ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupons : individualCoupon;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
       priceId,

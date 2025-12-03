@@ -4,13 +4,13 @@
   "perYear": "/año",
   "cta": "Seleccionar plan",
   "gifts": {
-    "line1": "Accede al sorteo navideño",
-    "outCard": "*Canjeable en Amazon, Apple y más ",
+    "line1": "¡Participa en nuestro sorteo!",
+    "outCard": "Gana una tarjeta regalo para tus tiendas favoritas (Amazon, Apple...) o una tarjeta prepago Visa.",
     "prices": {
-      "essentials": "Gana una tarjeta de 100€*",
+      "essentials": "Gana una tarjeta regalo de 100 €",
       "standard": "Estándar",
-      "premium": "Gana una tarjeta de 200€*",
-      "ultimate": "Gana una tarjeta de 300€*"
+      "premium": "Gana una tarjeta regalo de 300 €",
+      "ultimate": "Gana una tarjeta regalo de 1000 €"
     }
   },
   "productFeatures": {
