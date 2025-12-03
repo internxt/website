@@ -94,7 +94,7 @@ const HotLabel = ({ textContent, discountValue, darkMode }) => {
         darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
       } px-1 py-0.5 text-xl font-semibold `}
     >
-      {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
+      {formatDiscountLabel(textContent.hotLabel, discountValue)} ❄️
     </span>
   );
 };

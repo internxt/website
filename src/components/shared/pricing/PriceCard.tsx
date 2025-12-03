@@ -350,7 +350,7 @@ export const PriceCard = ({
                   </span>
                   <p className="text-base text-gray-95 lg:text-lg">{renderGiftText(planGift)}</p>
                 </div>
-                <p className="text-xs font-medium text-gray-35 lg:text-sm">{contentText.gifts.outCard}</p>
+                <p className="text-xs text-gray-35 lg:text-sm">{contentText.gifts.outCard}</p>
               </div>
             )}
             <div className="flex w-full flex-col justify-start gap-4 pt-4">

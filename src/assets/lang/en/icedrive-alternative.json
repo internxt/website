@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. like Icedrive, but **fully encypted**",
     "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
-    "getPrivacy": "Select your plan {{percentage}}% off 🔥",
+    "getPrivacy": "Select your plan {{percentage}}% off ❄️",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -139,7 +139,7 @@
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",
-    "hotLabel": "{{discount}}% off 🔥",
+    "hotLabel": "{{discount}}% off ❄️",
     "planTitles": {
       "header": "Your all-in-one privacy ally"
     },
