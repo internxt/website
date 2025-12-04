@@ -159,9 +159,9 @@ export default function Footer({
             <div className="flex w-full flex-row justify-between md:justify-between">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.products.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
@@ -260,9 +260,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.company.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
@@ -312,9 +312,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.join.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
@@ -361,9 +361,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.resources.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
@@ -500,9 +500,9 @@ export default function Footer({
               </div>
               <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.tools.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
@@ -542,9 +542,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.features.title}
-                  </h3>
+                  </p>
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
