@@ -7,11 +7,7 @@
         "textAfterBlueText": "您的資料"
       },
       "description": "Internxt Drive 讓您備份檔案，並保護它們免受遺失和勒索軟體的侵害",
-      "features": [
-        "安排備份",
-        "在多個伺服器上備份",
-        "開源和稽核"
-      ],
+      "features": ["安排備份", "在多個伺服器上備份", "開源和稽核"],
       "claimDeal": "查看方案"
     },
     "TitleAndOnePlanV2": {
@@ -33,7 +29,7 @@
     },
     "square2": {
       "title": "Internxt S3",
-      "description": "Internxt S3 是一項可擴展的端到端加密物件儲存服務，供企業或中小企業以更低的成本管理大量資料。我們的物件儲存方案沒有進出費用，比其他供應商便宜 90%。",
+      "description": "Internxt S3 是一項可擴展的端到端加密物件儲存服務，供企業或中小企業以更低的成本管理大量資料。我們的物件儲存方案沒有進出費用，比其他供應商便宜 87%。",
       "cta": "取得 Internxt S3"
     }
   },
@@ -109,9 +105,7 @@
       },
       {
         "question": "如何聯絡支援？",
-        "answer": [
-          "找不到您要找的東西？您可以透過線上聊天或傳送電子郵件至 hello@internxt.com 聯絡我們的客戶支援團隊。"
-        ]
+        "answer": ["找不到您要找的東西？您可以透過線上聊天或傳送電子郵件至 hello@internxt.com 聯絡我們的客戶支援團隊。"]
       },
       {
         "question": "我可以用信用卡、PayPal 或加密貨幣支付嗎？",

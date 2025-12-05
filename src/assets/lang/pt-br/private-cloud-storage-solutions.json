@@ -34,7 +34,7 @@
     },
     "square3": {
       "title": "Internxt S3",
-      "description": "A Internxt S3 é um serviço de armazenamento de objetos escalável e criptografado de ponta a ponta para empresas ou PMEs gerenciarem grandes quantidades de dados a custos mais baixos. Sem taxas de entrada e saída, nossos planos de armazenamento de objetos são até 90% mais baratos que outros provedores.",
+      "description": "A Internxt S3 é um serviço de armazenamento de objetos escalável e criptografado de ponta a ponta para empresas ou PMEs gerenciarem grandes quantidades de dados a custos mais baixos. Sem taxas de entrada e saída, nossos planos de armazenamento de objetos são até 87% mais baratos que outros provedores.",
       "cta": "Obtenha a Internxt S3"
     }
   },
@@ -100,7 +100,7 @@
         "answer": [
           "A Internxt para Empresas é uma solução de armazenamento em nuvem projetada para empresas e PMEs, oferecendo colaboração em equipe, controles administrativos e outros recursos para proteger as empresas contra vazamentos de dados.",
           "A Internxt S3 é um sistema de armazenamento baseado em nuvem que segue o protocolo Amazon S3. É ideal para desenvolvedores e empresas que precisam dimensionar e integrar o armazenamento em seus aplicativos ou serviços e armazenar data lakes ou data warehouses.",
-          "A principal diferença é que a Internxt para Empresas se concentra em recursos voltados para a equipe, enquanto a Internxt S3 fornece uma solução de armazenamento escalável até 90% mais barata que AWS, Azure ou Google Cloud."
+          "A principal diferença é que a Internxt para Empresas se concentra em recursos voltados para a equipe, enquanto a Internxt S3 fornece uma solução de armazenamento escalável até 87% mais barata que AWS, Azure ou Google Cloud."
         ]
       },
       {
