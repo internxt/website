@@ -223,7 +223,22 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
-                    <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="https://ai.internxt.com/"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.products.ai}
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
+                    <Link href="" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
@@ -755,6 +770,14 @@ export default function Footer({
                       </Link>
                       <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.meet}
+                      </Link>
+                      <Link
+                        href="https://ai.internxt.com/"
+                        locale={lang}
+                        passHref
+                        className="items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.products.ai}
                       </Link>
                       <Link href="/business" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.business}
