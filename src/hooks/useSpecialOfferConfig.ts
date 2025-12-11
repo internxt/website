@@ -15,6 +15,8 @@ export const ALLOWED_PATHS = [
   'justin',
   'qinhui',
   'ct3003',
+  'benjamin',
+  'payette',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -32,6 +34,8 @@ export const COUPON_CODES = {
   justin: PromoCodeName.JUSTIN,
   qinhui: PromoCodeName.QINHUI,
   CT3003: PromoCodeName.CT3003,
+  benjamin: PromoCodeName.benjamin,
+  payette: PromoCodeName.payette,
 };
 
 interface OfferConfig {

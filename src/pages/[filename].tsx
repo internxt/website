@@ -57,6 +57,8 @@ const LANG_MAP = {
   believemy: 'fr',
   madroz: 'fr',
   justin: 'fr',
+  benjamin: 'fr',
+  payette: 'en',
   ghareeb: 'en',
   apfelcast: 'de',
 };
@@ -130,8 +132,6 @@ function CombinedSpecialOffer({
       couponCodeForCheckout?.name,
     );
   };
-
-  const navbarCta = 'priceTable';
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>

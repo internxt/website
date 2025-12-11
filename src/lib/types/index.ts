@@ -185,6 +185,8 @@ export enum PromoCodeName {
   ONEDRIVE = 'ONEDRIVE87',
   QINHUI = 'QINHUI',
   CT3003 = 'CT3003',
+  benjamin = 'BEMJAMIN',
+  payette = 'PAYETTE',
 }
 
 export interface PromoCodeProps {
