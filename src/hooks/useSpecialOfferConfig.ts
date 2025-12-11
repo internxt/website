@@ -13,6 +13,8 @@ export const ALLOWED_PATHS = [
   'apfelcast',
   'madroz',
   'justin',
+  'qinhui',
+  'ct3003',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -28,6 +30,8 @@ export const COUPON_CODES = {
   apfelcast: PromoCodeName.APFELCAST,
   madroz: PromoCodeName.MADROZ,
   justin: PromoCodeName.JUSTIN,
+  qinhui: PromoCodeName.QINHUI,
+  CT3003: PromoCodeName.CT3003,
 };
 
 interface OfferConfig {

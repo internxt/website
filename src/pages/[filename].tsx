@@ -211,7 +211,7 @@ export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
   let lang = 'es';
 
-  if (pathname === 'believemy' || pathname === 'madroz' || pathname === 'justin') {
+  if (pathname === 'believemy' || pathname === 'madroz' || pathname === 'justin' || pathname === 'qinhui') {
     lang = 'fr';
   }
 
@@ -219,7 +219,7 @@ export async function getServerSideProps(ctx) {
     lang = 'en';
   }
 
-  if (pathname === 'apfelcast') {
+  if (pathname === 'apfelcast' || pathname === 'ct3003') {
     lang = 'de';
   }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
