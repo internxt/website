@@ -53,6 +53,16 @@ const renderCtaContent = (
   </div>
 );
 
+const LANG_MAP = {
+  believemy: 'fr',
+  madroz: 'fr',
+  justin: 'fr',
+  benjamin: 'fr',
+  payette: 'en',
+  ghareeb: 'en',
+  apfelcast: 'de',
+};
+
 function CombinedSpecialOffer({
   langJson,
   lang,
@@ -122,8 +132,6 @@ function CombinedSpecialOffer({
       couponCodeForCheckout?.name,
     );
   };
-
-  const navbarCta = 'priceTable';
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
@@ -209,19 +217,8 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
-  let lang = 'es';
+  const lang = LANG_MAP[pathname] || 'es';
 
-  if (pathname === 'believemy' || pathname === 'madroz' || pathname === 'justin') {
-    lang = 'fr';
-  }
-
-  if (pathname === 'ghareeb') {
-    lang = 'en';
-  }
-
-  if (pathname === 'apfelcast') {
-    lang = 'de';
-  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);

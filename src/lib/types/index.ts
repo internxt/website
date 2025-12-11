@@ -183,6 +183,10 @@ export enum PromoCodeName {
   Ice = 'ICEDRIVE87',
   KOOFR = 'KOOFR87',
   ONEDRIVE = 'ONEDRIVE87',
+  QINHUI = 'QINHUI',
+  CT3003 = 'CT3003',
+  benjamin = 'BEMJAMIN',
+  payette = 'PAYETTE',
 }
 
 export interface PromoCodeProps {
