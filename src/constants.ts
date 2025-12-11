@@ -54,6 +54,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/google-drive-alternative',
   '/filejump-alternative',
   '/elephantdrive-alternative',
+  '/coupons',
 ];
 
 export const SNIGEL_BANNERS = {
