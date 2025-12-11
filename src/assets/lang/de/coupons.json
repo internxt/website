@@ -105,11 +105,11 @@
   },
   "ctaSection": {
     "title": "Fordern Sie Ihren exklusiven Internxt-Gutschein an",
-    "description": "Erhalten Sie maximale Privatsphäre für {{discount}}% weniger",
+    "description": "Erhalten Sie maximale Privatsphäre für {{percentage}}% weniger",
     "cta": "Angebot einlösen"
   },
   "ctaSectionV2": {
-    "title": "Vollständige Privatsphäre für {{discount}}% weniger",
+    "title": "Vollständige Privatsphäre für {{percentage}}% weniger",
     "description": "Holen Sie sich das Angebot Ihres Lebens mit Ihrem Internxt-Gutscheincode",
     "cta": "Angebot einlösen"
   },
