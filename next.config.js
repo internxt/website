@@ -234,22 +234,12 @@ module.exports = {
       },
       {
         source: '/black-friday',
-        destination: '/specialoffer',
+        destination: '/deals/black-friday-internxt',
         permanent: false,
       },
       {
-        source: '/deals/black-friday-internxt',
-        destination: '/specialoffer',
-        permanent: false,
-      },
-      {
-        source: '/deals/black-friday-internxt/bf-cloud-storage-deals',
-        destination: '/specialoffer',
-        permanent: false,
-      },
-      {
-        source: '/deals/black-friday-internxt/bf-personal-cloud-storage-deals',
-        destination: '/specialoffer',
+        source: '/black-friday-internxt',
+        destination: '/deals/black-friday-internxt',
         permanent: false,
       },
       {

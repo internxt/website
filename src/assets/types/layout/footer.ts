@@ -63,6 +63,7 @@ export interface Products {
   vpn: string;
   cleaner: string;
   meet: string;
+  ai: string;
   business: string;
   family: string;
   pricing: string;

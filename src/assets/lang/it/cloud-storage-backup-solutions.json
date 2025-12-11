@@ -7,11 +7,7 @@
         "textAfterBlueText": "i tuoi dati"
       },
       "description": "Internxt Drive ti permette di eseguire il backup dei tuoi file e proteggerli da perdite e ransomware",
-      "features": [
-        "Pianifica i tuoi backup",
-        "Backup su più server",
-        "Open source e controllato"
-      ],
+      "features": ["Pianifica i tuoi backup", "Backup su più server", "Open source e controllato"],
       "claimDeal": "Vedi i piani"
     },
     "TitleAndOnePlanV2": {
@@ -33,7 +29,7 @@
     },
     "square2": {
       "title": "Internxt S3",
-      "description": "Internxt S3 è un servizio di archiviazione oggetti scalabile e crittografato end-to-end per aziende o PMI per gestire grandi quantità di dati a costi inferiori. Senza costi di ingresso e uscita, i nostri piani di archiviazione oggetti sono fino al 90% più economici rispetto ad altri fornitori.",
+      "description": "Internxt S3 è un servizio di archiviazione oggetti scalabile e crittografato end-to-end per aziende o PMI per gestire grandi quantità di dati a costi inferiori. Senza costi di ingresso e uscita, i nostri piani di archiviazione oggetti sono fino al 87% più economici rispetto ad altri fornitori.",
       "cta": "Ottieni Internxt S3"
     }
   },
