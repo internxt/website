@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
-
 export {};
-// THe first item is empty because it is the home page
+
 const nameFiles = [
   '',
   'about',
@@ -52,10 +51,10 @@ const langs = {
 };
 
 describe('Verify that pages do not produce a 500 error', () => {
-  Object.keys(langs).forEach((lang, index) => {
+  Object.keys(langs).forEach((lang) => {
     describe(`Verify that pages do not produce a 500 error for ${langs[lang]} version`, () => {
       nameFiles.forEach((route) => {
-        it(`${route} page`, () => {
+        it(`${route || 'home'} page`, () => {
           cy.request({
             url: `/${lang}/${route}`,
           }).then((response) => {
