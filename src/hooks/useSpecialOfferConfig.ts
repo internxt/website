@@ -33,7 +33,7 @@ export const COUPON_CODES = {
   madroz: PromoCodeName.MADROZ,
   justin: PromoCodeName.JUSTIN,
   qinhui: PromoCodeName.QINHUI,
-  CT3003: PromoCodeName.CT3003,
+  ct3003: PromoCodeName.CT3003,
   benjamin: PromoCodeName.benjamin,
   payette: PromoCodeName.payette,
 };

@@ -58,9 +58,11 @@ const LANG_MAP = {
   madroz: 'fr',
   justin: 'fr',
   benjamin: 'fr',
+  qinhui: 'fr',
   payette: 'en',
   ghareeb: 'en',
   apfelcast: 'de',
+  ct3003: 'de',
 };
 
 function CombinedSpecialOffer({
