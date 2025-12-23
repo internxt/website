@@ -25,15 +25,23 @@ import { getImage } from '@/lib/getImage';
 import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatureInfoSection';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { PromoCodeName } from '@/lib/types';
+import { GetServerSidePropsContext } from 'next';
 
 interface FamilyProps {
+  lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: FamilyText;
   footerText: FooterText;
 }
 
-export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
+export const FamilyLP = ({
+  metatagsDescriptions,
+  navbarText,
+  textContent,
+  footerText,
+  lang,
+}: FamilyProps): JSX.Element => {
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
     couponCodeForBusiness: PromoCodeName.BlackFriday,
   });
@@ -44,6 +52,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
   const maxSecuritySection = textContent.MaximumSecuritySection;
   const selectInfoCard = textContent.WhatMakesInternxtPerfectSection.features;
   const cardsForGroupCardText = textContent.WhyChooseInternxt;
+  const locale = lang as string;
 
   const selectInfoCards = [
     {
@@ -114,7 +123,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 
   return (
     <Layout title={metatag.title} description={metatag.description}>
-      <Navbar fixed cta={['default']} lang="en" textContent={navbarText} />
+      <Navbar fixed cta={['default']} lang={locale} textContent={navbarText} />
 
       <HeroSection
         TextComponent={
@@ -159,7 +168,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 
       <PricingSectionWrapper
         loadingCards={loadingCards}
-        lang={'en'}
+        lang={locale}
         products={products}
         decimalDiscount={{
           business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
@@ -175,7 +184,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       <SelectFeatureInfoSection
         textContent={textContent.WhatMakesInternxtPerfectSection}
         cards={selectInfoCards}
-        lang="en"
+        lang={locale}
       />
 
       <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
@@ -213,7 +222,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
-      <Footer lang="en" textContent={footerText} />
+      <Footer lang={locale} textContent={footerText} />
     </Layout>
   );
 };
@@ -221,10 +230,10 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/en/family.json`);
-  const navbarText = require(`@/assets/lang/en/navbar.json`);
-  const footerText = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/family.json`);
+  const navbarText = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerText = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

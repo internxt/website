@@ -194,8 +194,8 @@
           },
           {
             "id": "Dark_Web_Monitor",
-            "name": "File Versioning",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "name": "Dark Web Monitor",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "cli_webdav_support",
@@ -214,9 +214,19 @@
         "name": "Comming soon",
         "features": [
           {
+            "id": "upload_empty_files",
+            "name": "Upload empty files",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "trash_limits",
+            "name": "Trash limits",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "File Versioning",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",
@@ -267,8 +277,8 @@
       {
         "question": "What is Internxt’s refund policy?",
         "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+          "All paid subscriptions include a 30-day money-back guarantee starting from the date of purchase.",
+          "If for any reason you are not fully satisfied within those first 30 days, just reach out to [hello@internxt.com](mailto:hello@internxt.com) and we will process your refund."
         ]
       },
       {

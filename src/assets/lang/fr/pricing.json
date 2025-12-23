@@ -339,9 +339,19 @@
         "name": "Bientôt disponible",
         "features": [
           {
-            "id": "file_versioning",
-            "name": "Gestion des versions de fichiers",
+            "id": "upload_empty_files",
+            "name": "Télécharger des fichiers vides",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "trash_limits",
+            "name": "Limites de la corbeille",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "file_versioning",
+            "name": "Versionnage de fichiers",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",

@@ -339,9 +339,19 @@
         "name": "即将推出",
         "features": [
           {
+            "id": "upload_empty_files",
+            "name": "上传空文件",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "trash_limits",
+            "name": "回收站限制",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "文件版本控制",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",
