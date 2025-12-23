@@ -194,8 +194,8 @@
           },
           {
             "id": "Dark_Web_Monitor",
-            "name": "File Versioning",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "name": "Dark Web Monitor",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "cli_webdav_support",
@@ -214,9 +214,19 @@
         "name": "Comming soon",
         "features": [
           {
+            "id": "upload_empty_files",
+            "name": "Upload empty files",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "trash_limits",
+            "name": "Trash limits",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "file_versioning",
             "name": "File Versioning",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",

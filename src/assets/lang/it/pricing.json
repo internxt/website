@@ -339,9 +339,19 @@
         "name": "Prossimamente",
         "features": [
           {
-            "id": "file_versioning",
-            "name": "Versionamento dei file",
+            "id": "upload_empty_files",
+            "name": "Carica file vuoti",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "trash_limits",
+            "name": "Limiti del cestino",
+            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "file_versioning",
+            "name": "Versionamento file",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",
