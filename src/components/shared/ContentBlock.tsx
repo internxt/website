@@ -9,14 +9,14 @@ export const ContentBlockSection = ({ textContent }: ContentBlockSectionProps) =
   return (
     <section className="flex items-center justify-between gap-6 bg-neutral-17 px-5 py-10 lg:px-10 lg:py-20 xl:p-32 3xl:px-80">
       <div
-        className="flex flex-col items-center justify-between gap-8 rounded-16 p-4 lg:p-0 lg:py-10 lg:pl-10"
+        className="flex flex-col items-center justify-between gap-10 rounded-16 p-4 lg:p-0 lg:py-10 lg:pl-10"
         style={{ background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%' }}
       >
-        <p className="flex items-center text-center text-30  font-bold leading-tight text-gray-100 lg:pr-10 lg:text-4xl">
+        <p className="flex items-center text-center text-30 font-bold leading-tight text-gray-100 lg:pr-10 lg:text-4xl">
           {textContent.title}
         </p>
         <div className="flex flex-row items-center justify-between gap-10">
-          <div className="flex flex-col gap-6 lg:w-1/2 lg:gap-12">
+          <div className="flex flex-col gap-6 lg:w-1/2 lg:gap-6">
             <p className="flex text-base font-normal leading-tight text-gray-55 lg:whitespace-pre-line lg:text-xl">
               {textContent.description}
             </p>
