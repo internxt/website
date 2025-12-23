@@ -61,13 +61,13 @@
     }
   },
   "SecureCloudStorgaeSection": {
-    "title": "Almacenamiento seguro en la nube en centros de datos de clase mundial",
+    "title": "Almacenamiento en la nube en centros de datos de clase mundial",
     "description": "Internxt Drive ofrece todo lo que necesitas para asegurar\n que tus archivos y datos se mantengan privados con un\n almacenamiento en la nube seguro y más.",
     "card": {
       "title": "Internxt Drive",
       "description": [
         "Internxt Drive proporciona almacenamiento cifrado post-cuántico de extremo a extremo en centros de datos europeos que cumplen con los estándares de privacidad más estrictos. Tus archivos están protegidos con sistemas redundantes, controles ambientales y seguridad 24/7.",
-        "Mejora tu almacenamiento con Antivirus, VPN, Cleaner, Meet y Mail: tu *suite* de privacidad todo en uno para una protección total en línea."
+        "Mejora tu almacenamiento con Antivirus, VPN, Cleaner, Meet y Mail, suite de privacidad todo en uno para una protección total en línea."
       ],
       "cta": "Obtener Internxt"
     }

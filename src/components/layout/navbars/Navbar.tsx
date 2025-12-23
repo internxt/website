@@ -307,20 +307,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           </>
                         )}
                       </Disclosure>
-                      <Link
-                        href="/business"
-                        locale={props.lang}
-                        role="link"
-                        tabIndex={0}
-                        onClick={() => {
-                          setMenuState(false);
-                        }}
-                        className={`flex w-full translate-y-0 px-8 py-4 outline-none transition delay-100 duration-300 ${
-                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}
-                      >
-                        {props.textContent.links.business}
-                      </Link>
                       <Disclosure
                         as="div"
                         className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
