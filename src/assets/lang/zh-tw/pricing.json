@@ -298,15 +298,6 @@
             }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "暗網監控",
-            "avalability": {
-              "Essential": false,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "CLI 和 WebDAV 支援",
             "avalability": {
