@@ -1,0 +1,217 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Like Filen, \n but **private**",
+    "description": "Switch to Internxt, the best alternative to Filen that respects your privacy with post-quantum security",
+    "getPrivacy": " Select your plan and get {{percentage}}% off  ",
+    "cta": "Claim deal"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Filen overview",
+    "description": "Discover the key features and differences that allow Internxt to give you back control over your data.",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-quantum encryption",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source & verified",
+        "Zero-knowledge (AES-256)",
+        "Yes (Kyber-512)",
+        "Competitive, Lifetime plans available",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail",
+        "Regular independent security audits",
+        "Yes (Live Support)",
+        "Can never access your files",
+        "GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open-source",
+        "Zero-knowledge (AES-256)",
+        "No",
+        "Monthly/Annual (Pro Lifetime retired)",
+        "Cloud storage & basic syncing",
+        "No recent published independent audit",
+        "No",
+        "Can never access your files",
+        "GDPR, based in Germany"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Why you should consider an alternative to Filen",
+    "description": "Choose Internxt for full security for your files and personal data. Zero-knowledge and audited security, with a full product suite.",
+    "scrollableSection": {
+      "titles": [
+        "Unverified security",
+        "Limited privacy suite",
+        "Deleted accounts for inactivity",
+        "Personal use only"
+      ],
+      "descriptions": [
+        "The absence of a recent independent security audit for Filen limits confidence. Users face uncertainty about key management and architecture reliability, which is concerning for sensitive files.",
+        "Filen offers only basic cloud storage. Internxt’s full suite includes Antivirus, VPN, Cleaner, and private Meet, all designed to secure your entire digital presence from Big Tech.",
+        "Filen's policy of deleting accounts for inactivity puts users at risk of losing data forever if they don't log in regularly. Internxt offers more robust long-term access for casual users.",
+        "Without proper business or family plans, Filen fails to support collaborative needs. Teams cannot share storage efficiently or manage users, making it unsuitable for professional organizations."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Go beyond cloud storage and get full privacy",
+    "description": "For full privacy, get total security combined with zero-knowledge and post-quantum encryption from Internxt.",
+    "cards": {
+      "titles": ["Post-quantum ready", "Full online protection", "Pay once, use forever"],
+      "descriptions": [
+        "Internxt is the first cloud to implement post-quantum encryption (Kyber-512), future-proofing your data against quantum computer attacks that will break standard AES-256.",
+        "Internxt goes beyond storage, offering a full ecosystem (VPN, Antivirus, Meet) to protect your device and online identity in one single secure subscription.",
+        "Unlike Filen, which has retired most Pro Lifetime plans, Internxt continues to offer affordable lifetime access for up to 5TB with a 30-day money-back guarantee."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Filen",
+    "description": "Internxt offers unrivaled privacy thanks to post-quantum encryption, giving you the best protection from future cyberattacks.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and trust",
+        "features": [
+          {
+            "title": "Audited Open Source",
+            "description": "Internxt's code is public and independently audited by Securitum, ensuring no hidden backdoors or vulnerabilities."
+          },
+          {
+            "title": "Zero-knowledge & PQE",
+            "description": "Your data is encrypted on your device with post-quantum algorithms, ensuring security against current and future threats."
+          },
+          {
+            "title": "Enterprise Compliance",
+            "description": "Complies with GDPR, HIPAA, ISO 27001, and SOC 2, meeting the highest global security standards."
+          },
+          {
+            "title": "Flexible Lifetime Plans",
+            "description": "One-time payment for lifetime access up to 5TB. Stackable plans to expand storage as needed for {{percentage}}% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Filen: What about your privacy?",
+        "features": [
+          {
+            "title": "Open source, no audit",
+            "description": "Filen is open source, but lacks recent independent third-party audits to verify its security claims."
+          },
+          {
+            "title": "Standard encryption",
+            "description": "Uses industry-standard AES-256, which may become vulnerable as quantum computing technology evolves."
+          },
+          {
+            "title": "German Compliance",
+            "description": "Based in Germany and compliant with GDPR, but lacks the broader compliance certifications of Internxt."
+          },
+          {
+            "title": "Subscription focus",
+            "description": "Moving away from lifetime models; Pro Lifetime plans are increasingly restricted or retired."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best alternative to Filen",
+    "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "descriptions": [
+        "Built-in protection against malware, ransomware, and spyware directly within your secure drive app.",
+        "Encrypt your internet connection, block trackers, and browse privately from anywhere in the world.",
+        "Identify and eliminate duplicate or junk files to keep your storage efficient and your device running smoothly.",
+        "Private video calls with post-quantum encryption, free from the tracking and data collection of Big Tech.",
+        "Take control with WebDAV, Rclone, and NAS support. Available on Windows, Mac, Linux, and mobile."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "European cloud storage",
+    "description": "Full data protection for {{percentage}}% off",
+    "cta": "Claim deal"
+  },
+  "tableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off  ",
+    "planTitles": {
+      "header": "Your all-in-one privacy ally"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to Filen?",
+        "answer": [
+          "Yes, Internxt is the first to offer post-quantum encryption alongside zero-knowledge policies, and it is independently audited by security firms.",
+          "While Filen is secure, Internxt offers a broader privacy suite including VPN, Antivirus, and private Meet calls."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard AES-256 used by Filen, post-quantum encryption (PQE) resists attacks from quantum computers, future-proofing your data for the next decade."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": ["Internxt is based in Valencia, Spain, complying with strict GDPR and EU data protection laws."]
+      },
+      {
+        "question": "Is Filen more expensive than Internxt?",
+        "answer": [
+          "With our exclusive {{percentage}}% discount, Internxt lifetime and annual plans are highly competitive and offer more features than Filen's storage-only model."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "You can reach us at hello@internxt.com. Our Customer Success Team offers live support, unlike many smaller providers."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, storage is stackable. You can upgrade or add new plans at any time from your account settings."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt accepts debit/credit cards, PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna for maximum flexibility."
+        ]
+      }
+    ]
+  }
+}

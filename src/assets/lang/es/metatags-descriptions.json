@@ -425,6 +425,41 @@
     "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
   },
   {
+    "id": "zoom-alternative",
+    "title": "Internxt — Alternativa a Zoom",
+    "description": "Cámbiate a Internxt, una alternativa de código abierto a Zoom. Incluye almacenamiento en la nube post-cuántico y más para una privacidad total en línea."
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "Internxt — Alternativa a IDrive",
+    "description": "Pásate a Internxt para una alternativa totalmente privada a IDrive. Almacenamiento en la nube con cifrado post-cuántico y de conocimiento cero para la total privacidad de tus archivos."
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "Internxt — Alternativa a Proton Drive",
+    "description": "Cámbiate a Internxt para disfrutar de una suite de privacidad completa y una alternativa a Proton Drive. Almacenamiento en la nube post-cuántico y con cifrado de conocimiento cero."
+  },
+  {
+    "id": "sync-alternative",
+    "title": "Internxt — Alternativa a Sync",
+    "description": "Pásate a Internxt, una alternativa de código abierto a Sync. Almacenamiento en la nube post-cuántico y con cifrado de conocimiento cero para la total privacidad de tus archivos."
+  },
+  {
+    "id": "filen-alternative",
+    "title": "Internxt — Alternativa a Filen",
+    "description": "Cámbiate a Internxt para una alternativa a Filen. Almacenamiento en la nube post-cuántico y con cifrado de conocimiento cero para la total privacidad de tus archivos."
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Alternativa a Google Meet",
+    "description": "Pásate a Internxt para una alternativa de código abierto a Google Meet. Videollamadas post-cuánticas y con cifrado de conocimiento cero para una privacidad total en tus llamadas."
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "Internxt — Alternativa a Terabox",
+    "description": "Cámbiate a Internxt, una alternativa de código abierto a Terabox. Almacenamiento en la nube post-cuántico y con cifrado de conocimiento cero para la total privacidad de tus archivos."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Videollamadas Seguras y Privadas",
     "description": "Meet ofrece videollamadas privadas con cifrado post-cuántico y de extremo a extremo para las videoconferencias más seguras."

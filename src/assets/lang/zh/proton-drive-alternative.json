@@ -1,0 +1,210 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 Proton Drive 一样，但更**私密**",
+    "description": "切换到 Internxt：尊重您隐私的 Proton Drive 最佳替代方案",
+    "getPrivacy": " 选择您的方案，享 {{percentage}}% 折扣 🔥 ",
+    "cta": "获取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Proton Drive 对比概览",
+    "description": "探索 Internxt 让您重新掌控数据的关键功能与差异",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密方式",
+        "后量子加密",
+        "价格与存储",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "是",
+        "极具竞争力，无隐藏费用，提供终身方案",
+        "云盘、VPN、杀毒、清理器、会议、邮件等",
+        "定期安全检查并发布审计报告",
+        "是",
+        "永远无法访问您的文件",
+        "全方位隐私：符合 GDPR、西班牙数据保护法、ISO 27001、SOC 2、HIPAA 规范"
+      ],
+      "competitorFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "否",
+        "月度或年度方案",
+        "云盘、VPN、邮件等",
+        "是",
+        "否",
+        "永远无法访问您的文件",
+        "瑞士隐私法"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "为什么您应该考虑 Proton Drive 的替代方案",
+    "description": "通过 Internxt 获得内置的零知识加密和全方位的设备保护",
+    "scrollableSection": {
+      "titles": ["有限的设备保护", "存储空间较小", "缺乏后量子加密", "缺乏 Linux 支持"],
+      "descriptions": [
+        "Internxt 提供杀毒软件和清理器，确保您的设备免受恶意软件侵害并优化性能。这些核心安全功能目前在 Proton 账户中并不可用。",
+        "Proton Drive 个人用途最高仅提供 500GB。相比之下，Internxt 的方案最高可达 5TB，更适合大型项目或媒体库。",
+        "Proton Drive 尚未实施后量子加密。如果没有 PQE，随着量子计算的发展，用户数据在未来可能无法抵御标准算法的破解。",
+        "Proton Drive 缺乏原生的 Linux 支持。Internxt 为 Linux、WebDAV、Rclone 和 NAS 提供全面支持，为高级用户提供更多灵活性。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Proton Drive 的替代选择",
+    "description": "了解为什么您需要 Proton Drive 的替代方案，并获得一个完整的隐私至上生态系统。",
+    "cards": {
+      "titles": ["后量子加密", "全方位在线保护", "一次付费，终身使用"],
+      "descriptions": [
+        "Internxt 是首个采用后量子加密的云存储。Proton Drive 仍在使用标准加密，面对量子计算机时可能变得脆弱。",
+        "Internxt 不仅仅是云存储，还提供杀毒软件和清理器，为您提供保护文件和设备安全私密所需的一切。",
+        "Internxt 终身方案消除了后续订阅费。只需一次性支付即可获得长期访问权，这是 Proton Drive 不提供的选项。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 对比 Proton Drive",
+    "description": "得益于零知识、后量子加密和更灵活的存储选项，Internxt 提供无可比拟的隐私和安全保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全方位隐私、透明与信任",
+        "features": [
+          {
+            "title": "开源且经过审计",
+            "description": "Internxt 的代码公开透明，并在 GitHub 上经过独立审计，确保无隐藏漏洞。"
+          },
+          {
+            "title": "零知识与 PQE",
+            "description": "数据在客户端通过后量子算法加密，确保防御当前及未来的网络威胁。"
+          },
+          {
+            "title": "多重合规",
+            "description": "总部位于西班牙，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。经过全面审计，确保无外部访问。"
+          },
+          {
+            "title": "终身方案",
+            "description": "通过一次性支付最高 5TB 的方案来避免重复订阅。以 {{discount}}% 的折扣永久享受服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Proton Drive：您的隐私安全吗？",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Proton Drive 也是开源并经过审计的，为用户提供了良好的透明度。"
+          },
+          {
+            "title": "行业标准",
+            "description": "Proton Drive 使用标准加密，随着量子计算威胁的发展，其安全性可能会降低。"
+          },
+          {
+            "title": "合规性",
+            "description": "总部位于瑞士，遵循瑞士隐私法，这与欧盟的 GDPR 框架有所不同。"
+          },
+          {
+            "title": "基于订阅制",
+            "description": "仅提供月度或年度订阅。Proton Drive 不提供终身方案，这意味着会产生持续的订阅费用。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Proton Drive 的最佳替代方案",
+    "description": "Internxt Drive 提供一系列完整产品，旨在让您重新掌控在线隐私。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["杀毒软件", "VPN", "清理器", "会议", "高级工具"],
+      "descriptions": [
+        "直接内置于应用中，扫描并防御恶意软件、勒索软件或间谍软件。",
+        "加密您的连接，拦截广告和追踪器，并在上网时保持位置私密。",
+        "识别并清除垃圾或重复文件，保持存储空间井然有序且高效。",
+        "举办受后量子加密保护的私人视频通话，无追踪、无数据收集。",
+        "支持 Windows、Mac、Linux 和移动端。为高级用户提供 WebDAV、Rclone 和 NAS 的全面支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为 Proton Drive 的最佳替代方案",
+    "description": "Internxt 提供默认的全私密加密、透明的开源软件和全套隐私工具，确保您的数据安全。",
+    "cta": "获取优惠"
+  },
+  "tableSection": {
+    "title": "您的全能隐私盟友",
+    "hotLabel": "{{discount}}% 折扣",
+    "planTitles": {
+      "header": "您的全能隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "终身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费版",
+      "description": "免费获得 1GB 加密云存储空间",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "Internxt 是比 Proton Drive 更安全、更私密的替代方案吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密。Proton Drive 在其服务器上管理加密密钥，理论上在特定法律要求下可能允许访问文件。",
+          "杀毒软件、设备清理器和暗网监控等额外功能提供了 Proton Drive 所不具备的保护。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密？它更安全吗？",
+        "answer": [
+          "与 Proton Drive 使用的标准加密不同，PQE 算法旨在抵抗强大量子计算攻击，确保您的数据在未来依然安全。",
+          "Internxt 的所有方案（包括终身方案）均包含此功能，无需额外费用。"
+        ]
+      },
+      {
+        "question": "Internxt 的总部在哪里？",
+        "answer": ["Internxt 总部位于西班牙巴伦西亚，属于符合 GDPR 规范的云存储解决方案，遵循严苛的欧盟隐私法律。"]
+      },
+      {
+        "question": "Proton Drive 比 Internxt 更贵吗？",
+        "answer": [
+          "凭借您的专属 {{percentage}}% 折扣，Internxt 的方案比 Proton Drive 目前的价格更便宜。此外，Proton Drive 个人用途最高仅限 500GB。",
+          "您还可以通过选择 Internxt 终身方案来避免重复的订阅费用，而 Proton Drive 不提供这一选项。"
+        ]
+      },
+      {
+        "question": "如何联系支持团队？",
+        "answer": [
+          "您可以发送邮件至 hello@internxt.com。Internxt 提供实时支持，而 Proton Drive 对基础用户不提供此项服务。"
+        ]
+      },
+      {
+        "question": "我可以为终身方案增加存储空间吗？",
+        "answer": ["可以，您可以在 Internxt 账户设置中升级方案，空间将自动叠加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币支付吗？",
+        "answer": ["Internxt 目前支持借记卡、信用卡、PayPal、iDEAL、Sofort、加密货币和 Klarna。"]
+      }
+    ]
+  }
+}
