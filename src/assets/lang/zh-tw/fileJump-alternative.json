@@ -1,0 +1,217 @@
+{
+  "HeroSection": {
+    "title": "Internxt，FileJump 的 **安全** \n 替代方案",
+    "description": "改用 Internxt，獲得 FileJump 的完全私密替代方案。具備後量子和零知識加密的雲端儲存空間，\n 為您的檔案提供完全的隱私。",
+    "getPrivacy": "享有 {{percentage}}% 折扣，獲得完全的隱私",
+    "cta": "領取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 對比 FileJump 概覽",
+    "description": "探索 Internxt 助您重獲資料控制權的關鍵功能與差異。",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "定價與儲存空間",
+        "功能",
+        "安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "具競爭力，無隱藏費用，高達 5TB",
+        "雲端硬碟 (Drive), VPN, 防毒軟體 (Antivirus), 清理工具 (Cleaner), 會議 (Meet), 郵件 (Mail) 等",
+        "定期安全審計",
+        "是",
+        "永遠無法存取您的檔案",
+        "符合 GDPR, HIPAA, ISO 27001, SOC 2，總部位於西班牙"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "AES-256",
+        "否",
+        "計劃更昂貴且儲存空間更少，高達 2TB",
+        "僅雲端儲存",
+        "無已發布的安全審計",
+        "否",
+        "檔案未完全進行端到端加密",
+        "總部位於印度，適用印度合規法律"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "FileJump 缺乏透明度。 Internxt 保護您的隱私。",
+    "description": "FileJump 隱藏其原始碼，並未發布安全審計報告。使用者回報稱，檔名和檔案內容可能以明文形式返回。切換到 Internxt，為您的檔案、視訊和照片提供全面的安全性和透明度。使用 Internxt，除了您之外，沒有人可以存取您的檔案，包括我們。",
+    "scrollableSection": {
+      "titles": ["閉源", "未發布審計", "未完全加密", "印度合規性"],
+      "descriptions": [
+        "FileJump 對公眾隱藏其原始碼。沒有透明度或獨立的安全審計，就無法確定 FileJump 如何處理或保護您的資料。",
+        "與 Internxt 不同，FileJump 沒有發布任何獨立的安全審計報告，讓使用者對其平台的安全性感到不確定。",
+        "FileJump 中的並非所有檔案都受端到端加密保護。檢查程式碼的使用者回報稱，檔名甚至檔案內容可能以明文形式返回，這使得完全信任該提供商變得困難。",
+        "由於總部設在印度，FileJump 必須遵守當地法律，包括資料存取和儲存法規。這引發了使用者對監控、政府請求和有限透明度的擔憂。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼您需要 FileJump 的私密替代方案？",
+    "description": "FileJump 在基本安全方面所展示的，在完整的隱私和透明度方面卻失敗了。為了完全的隱私，請獲得全面的安全性，並結合 Internxt 對所有檔案進行的零知識加密。",
+    "cards": {
+      "titles": ["隱私", "未完全加密", "缺乏透明度"],
+      "descriptions": [
+        "FileJump 中的並非所有檔案都受端到端加密保護。使用者回報稱檔名和檔案內容可能以明文形式返回。在 Internxt 中，您的所有檔案預設受零知識加密保護，沒有追蹤器、沒有 AI 掃描，也沒有隱藏的後門。",
+        "使用者對 FileJump 的檔案可能未完全加密表示擔憂，這與服務聲稱的相矛盾。Internxt 為所有檔案提供自動後量子和零知識加密，確保您的資料始終受到保護。",
+        "沒有開源程式碼或審計，您無法確定 FileJump 如何處理您的資料、是否存在存取您資料的後門或是否存在安全漏洞。選擇像 Internxt 這樣完全開源且經過審計的服務，可為您提供經過驗證的保護和安心。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 對比 FileJump",
+    "description": "Internxt 提供了無與倫比的安全性，具備 FileJump 無法匹敵的功能，例如所有檔案的經過驗證的零知識加密、後量子加密和開源透明度。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "完全的隱私、透明度和信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼對所有人開放，可透過我們的 GitHub 進行檢查和確保其安全性。這種透明度保證了不會隱藏任何漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的資料在客戶端加密，確保只有您可以存取它。"
+          },
+          {
+            "title": "經過審計且合規",
+            "description": "Internxt 經過外部審計，符合 GDPR, HIPAA, ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身計劃",
+            "description": "透過一次性付款獲得高達 5TB 的計劃，避免重複訂閱。享有 {{percentage}}% 折扣，永久使用我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隱私如何？",
+        "features": [
+          {
+            "title": "閉源",
+            "description": "FileJump 對公眾隱藏其原始碼。沒有透明度或獨立的安全審計，就無法確定 FileJump 如何處理或保護您的資料。"
+          },
+          {
+            "title": "隱私問題",
+            "description": "使用者對檔案可能未完全加密表示擔憂。檢查程式碼的使用者回報稱檔名甚至檔案內容可能以明文形式返回。"
+          },
+          {
+            "title": "未發布審計",
+            "description": "FileJump 未發布任何獨立的安全審計報告，與 Internxt 定期進行外部審計不同。"
+          },
+          {
+            "title": "有限的終身計劃",
+            "description": "終身計劃最高 2TB，年費為 99.99 歐元，儲存空間更少，成本高於 Internxt。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 FileJump 的最佳替代方案",
+    "description": "Internxt Drive 提供了一套完整的產品，旨在讓您重新獲得線上隱私的控制權。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["雲端硬碟 (Drive)", "防毒軟體 (Antivirus)", "VPN", "清理工具 (Cleaner)", "會議 (Meet)", "進階工具"],
+      "descriptions": [
+        "Internxt Drive 具備後量子和零知識加密，因此除了您之外，沒有人可以存取您的檔案。獲得加密的雲端儲存空間和備份，用於您的照片、視訊和檔案。 \n\n 此外，加密備份和密碼保護的檔案共享提供了針對勒索軟體和資料外洩的最高保護。",
+        "Internxt Antivirus 直接內建在您的 Internxt Drive 應用程式中，可實現對惡意軟體的全面控制和保護。執行完整或自訂的病毒掃描，以確保您的設備運作順暢，並受到保護，免受勒索軟體或間諜軟體等病毒的侵害。",
+        "Internxt 的 VPN 可保護您的瀏覽，阻止廣告和追蹤器，並保持您的位置私密。加密您的 Wi-Fi 連線，以防止竊聽、駭客攻擊和身份盜用。安全瀏覽，因為您的個人資訊、密碼和帳戶受到保護。",
+        "Internxt Cleaner 可幫助您識別、消除和管理設備上不需要的垃圾或重複檔案。使用 Cleaner，您可以刪除不需要的檔案，以保持您的儲存空間有條理、整潔，並確保您的設備高效運行。",
+        "Internxt Meet 也可作為您的安全和私密的視訊會議替代方案。使用 Meet，您可以主持私人視訊通話，沒有追蹤器、廣告和資料收集。您的視訊通話受後量子加密保護，允許您在完全私密的情況下主持通話。",
+        "Internxt 可在 Windows、Mac、Linux 和行動裝置上使用，讓您可以從任何地方、在任何設備上存取您的雲端，從而完全控制您的雲端儲存空間。對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供您以完全隱私管理檔案所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "您的隱私，您做主",
+    "description": "享有 {{percentage}}% 折扣，獲得全面保護",
+    "cta": "領取優惠"
+  },
+  "tableSection": {
+    "title": "您的一體化隱私盟友",
+    "hotLabel": "{{discount}}% 折扣  ",
+    "planTitles": {
+      "header": "您的一體化隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源和經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是 FileJump 更安全的替代方案嗎？",
+        "answer": [
+          "是，Internxt 使用後量子和零知識加密，確保除了您之外，沒有人可以查看您的檔案。您的所有檔案都受此加密保護，無需將它們儲存在單獨的保險庫中，因為 Internxt Drive 可作為您的完整加密雲端儲存保險庫。",
+          "額外的功能，如 VPN、Antivirus、裝置清理工具 (Device Cleaner)、NAS 支援、Meet 和 Mail，作為您的 Internxt 雲端儲存方案的一部分，也為您提供針對駭客和資料外洩的額外保護。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵禦強大的量子攻擊，使 PQE 成為 FileJump 更安全的替代方案。",
+          "Internxt 使用這種密碼學方法來確保您的終身雲端儲存方案保護您免受未來的網路安全威脅，並且所有方案均可免費使用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部位於何處？",
+        "answer": [
+          "Internxt 的總部位於西班牙瓦倫西亞，這使其成為符合 GDPR 的雲端儲存解決方案，遵循嚴格的法律來確保您的資料和隱私受到保護。"
+        ]
+      },
+      {
+        "question": "FileJump 比 Internxt 更貴嗎？",
+        "answer": [
+          "FileJump 2TB 雲端儲存的年費為 99.99 歐元。使用 Internxt，您可以在第一年以 56.62 歐元的價格獲得 5TB 後量子加密儲存空間，外加 VPN、Antivirus、會議、郵件等。您還可以選擇 Internxt 終身方案，以永久獲得完全隱私，從而避免訂閱費用。",
+          "憑藉您的 {{percentage}}% 獨家折扣，Internxt 提供了雲端儲存空間和一系列廣泛的功能，這些功能是包括 FileJump 在內的任何其他雲端提供商所不具備的。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援人員？",
+        "answer": [
+          "如果您有任何其他問題、請求或需要協助，您可以聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以向我的終身方案添加更多儲存空間嗎？",
+        "answer": [
+          "是的，如果您需要添加更多儲存空間，可以從您的 Internxt 帳戶設定中升級您的方案。或者使用您目前的 Internxt 帳戶在 internxt.com/pricing 上購買新方案，您的儲存空間將自動累加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "是的，Internxt 目前接受簽帳卡和信用卡 Mastercard、VISA、American Express 等。您也可以透過 PayPal、iDEAL、Sofort、加密貨幣和 Klarna 付款。"
+        ]
+      }
+    ]
+  }
+}

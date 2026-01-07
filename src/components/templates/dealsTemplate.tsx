@@ -61,14 +61,30 @@ const DealsTemplate = ({
 
   const navbarCta = 'chooseStorage';
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
@@ -111,7 +127,7 @@ const DealsTemplate = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards={config.hideBusinessCards ?? true}
         hideBusinessSelector={config.hideBusinessSelector ?? true}
-        popularPlanBySize={config.popularPlanSize || '5TB'}
+        popularPlanBySize={config.popularPlanSize || '3TB'}
         sectionDetails="lg:py-20"
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt : comme Icedrive, mais **complètement chiffré**",
     "description": "Internxt propose la suite de confidentialité et de chiffrement la plus moderne et la plus avancée pour vous protéger en ligne",
-    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction 🔥",
+    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction  ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}}% de réduction  ",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },

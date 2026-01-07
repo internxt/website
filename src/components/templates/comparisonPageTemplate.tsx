@@ -18,7 +18,18 @@ import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 
-type CompetitorType = 'pCloud' | 'MEGA' | 'Dropbox' | 'Drive' | 'Koofr' | 'Icedrive' | 'OneDrive';
+type CompetitorType =
+  | 'pCloud'
+  | 'MEGA'
+  | 'Dropbox'
+  | 'Drive'
+  | 'Koofr'
+  | 'Icedrive'
+  | 'OneDrive'
+  | 'Degoo'
+  | 'Drime'
+  | 'Elephantdrive'
+  | 'FileJump';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;
@@ -35,6 +46,7 @@ interface ComparisonPageProps {
     privacyBgGradient?: string;
     alternativeBgColor?: string;
   };
+  couponCodeName: PromoCodeName;
 }
 
 export const ComparisonPage = ({
@@ -48,6 +60,7 @@ export const ComparisonPage = ({
   langJson,
   footerLang,
   customSections = {},
+  couponCodeName,
 }: ComparisonPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === metaTagId);
   const {
@@ -55,19 +68,38 @@ export const ComparisonPage = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: couponCodeName,
+    couponCodeForLifetime: couponCodeName,
   });
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
+
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
     );
   };
 

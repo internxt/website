@@ -21,20 +21,38 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.Mega87,
+    couponCodeForLifetime: PromoCodeName.Mega87,
   });
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
     );
   };
 

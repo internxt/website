@@ -42,6 +42,7 @@ module.exports = {
         20: 'rgb(209,209,215)',
         25: 'rgb(204, 204, 204)',
         30: 'rgb(199,199,205)',
+        35: 'rgb(178,178,178)',
         40: 'rgb(174,174,179)',
         50: 'rgb(142,142,148)',
         55: 'rgb(115, 115, 115)',
@@ -364,6 +365,22 @@ module.exports = {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        'sleigh-vertical-snow': {
+          '0%': {
+            transform: 'translateY(-10vh) translateX(0)',
+            opacity: '0',
+          },
+          '10%': {
+            opacity: '1',
+          },
+          '90%': {
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'translateY(100vh) translateX(20px)',
+            opacity: '0',
+          },
         },
       },
 

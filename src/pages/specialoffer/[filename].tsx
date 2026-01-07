@@ -27,8 +27,6 @@ interface CombinedSpecialOfferProps {
 
 const ALLOWED_PATHS = [
   'bevalk',
-  'securiters',
-  'valencia',
   'tokinprivacy',
   'reddit',
   'trickyhash',
@@ -44,17 +42,14 @@ const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh'];
 const DARK_MODE_PATHS = ['baity'];
 
 const COUPON_CODES = {
-  bevalk: PromoCodeName.Bevalk90,
-  securiters: PromoCodeName.Securiters,
-  valencia: PromoCodeName.ValenciaCF,
-  tokinprivacy: PromoCodeName.TokinPrivacy90,
+  bevalk: PromoCodeName.Bevalk,
+  tokinprivacy: PromoCodeName.TokinPrivacy,
   trickyhash: PromoCodeName.Secure,
   reddit: PromoCodeName.Reddit,
   vipvlc: PromoCodeName.VIPVLC,
-  grabon: PromoCodeName.GRABON90,
+  grabon: PromoCodeName.GRABON,
   pcmag: PromoCodeName.PcmagCoupon,
-  nextjump: PromoCodeName.BlackFriday,
-  kripesh: PromoCodeName.Kripesh,
+  kripesh: PromoCodeName.FreePlanUpsell,
 };
 
 function CombinedSpecialOffer({
@@ -106,14 +101,30 @@ function CombinedSpecialOffer({
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
@@ -148,11 +159,12 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
+        showPromo
       />
 
       <FloatingCtaSectionv2

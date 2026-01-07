@@ -40,9 +40,13 @@
     },
     "title": "**Private** by default, **secure** by design, **free** as in freedom",
     "subtitle": "That's Internxt - secure cloud storage & more",
-    "description": "Get {{discount}}% off ",
-    "descriptionNormal": "all plans",
+    "description": "Get {{discount}}% off now,",
+    "descriptionNormal": "plus a special Christmas gift 🎅🏻",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
+    "giftDescription": {
+      "line1": "Enter our Christmas raffle to win up to €1000!",
+      "line2": "Join Internxt this season and access our Christmas gift card raffle"
+    },
     "startFrom": {
       "normal1": "Starting from ",
       "price": " {{minimumPrice}}",
@@ -128,8 +132,8 @@
       {
         "question": "What is Internxt's refund policy?",
         "answer": [
-          "Internxt offers a standard 30-day money-back guarantee on all paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, contact us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+          "All paid subscriptions include a 30-day money-back guarantee starting from the date of purchase.",
+          "If for any reason you are not fully satisfied within those first 30 days, just reach out to [hello@internxt.com](mailto:hello@internxt.com) and we will process your refund."
         ]
       },
       {

@@ -1,67 +1,52 @@
 {
   "DownloadApp": {
     "title": "Download Internxt",
-    "description": "Seamless file management and secure cloud storage on the go with the Internxt mobile app for iOS or Android."
+    "description": "Get seamless file management and secure cloud storage on the go with the Internxt mobile app for iOS or Android."
   },
   "NewsletterSection": {
     "title": "Newsletter",
     "description": "Want to hear from us when we launch new products or release a new update? Type your mail address and we’ll do the rest!",
     "input": "Your email address",
-    "info": "You can unsubscribe at any time",
     "cta": "Subscribe",
     "privacy": "By subscribing you agree to our",
     "privacyLink": "privacy policy."
   },
   "FooterSection": {
-    "description": "Internxt’s mission is to help shape a world that respects humanity’s privacy rights. To do so, we are releasing a series of services, which all have the common goal of helping humanity protect this fundamental right.",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
-    "independentPromotion": "This promotion is offered by Internxt independently and there is no direct partnership with The Walt Disney Company",
     "comingSoon": "Coming soon",
     "new": "New",
+    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
     "sections": {
       "products": {
         "title": "Products",
         "drive": "Internxt Drive",
-        "photos": "Internxt Photos",
-        "send": "Internxt Send",
         "objStorage": "Internxt S3",
+        "antivirus": "Internxt Antivirus",
+        "send": "Internxt Send",
         "vpn": "Internxt VPN",
         "cleaner": "Internxt Cleaner",
         "meet": "Internxt Meet",
-        "antivirus": "Internxt Antivirus",
-        "token": "Token",
-        "pricing": "Pricing",
+        "ai": "Internxt AI",
         "business": "Internxt for Business",
-        "family": "Internxt for Families"
+        "family": "Internxt for Families",
+        "pricing": "Pricing"
       },
       "company": {
         "title": "Company",
         "about": "About Us",
         "privacy": "Privacy",
-        "openSource": "Open Source",
-        "mediaArea": "Media Area",
         "security": "Security",
+        "openSource": "Open Source",
         "legal": "Legal",
-        "whyInternxt": "Why Internxt?",
         "sustainability": "Sustainability"
       },
       "join": {
         "title": "Join Us",
-        "newsletter": "Newsletter",
-        "affiliates": "Affiliates",
-        "storageForEducation": "Internxt for Education",
         "signup": "Create Account",
-        "support": "Support",
         "login": "Log In",
-        "community": "Community",
-        "github": "GitHub",
+        "support": "Support",
         "whitePaper": "White Paper",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
-        "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "github": "GitHub",
+        "affiliates": "Affiliates"
       },
       "resources": {
         "title": "Resources",
@@ -74,21 +59,22 @@
         "icedriveAlternative": "Icedrive Alternative",
         "onedriveAlternative": "OneDrive Alternative",
         "googleDriveAlternative": "Google Drive Alternative",
-        "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
-        "cyberAwareness": "Cyber Awareness",
+        "drimeAlternative": "Drime Alternative",
+        "degooAlternative": "Degoo Alternative",
+        "fileJumpAlternative": "FileJump Alternative",
+        "elephantDriveAlternative": "ElephantDrive Alternative",
         "whatGoogleKnowsAboutMe": "What Google Knows",
         "WebDAV": "CLI & WebDAV",
         "nas": "NAS",
         "coupons": "Coupons",
-        "reviews": "Reviews",
-        "deals": "Deals"
+        "reviews": "Reviews"
       },
       "tools": {
         "title": "Free Tools",
-        "temporaryEmail": "Temporary Email",
-        "fileVirusScan": "File Virus Scanner",
-        "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
+        "temporaryEmail": "Temporary Email",
+        "passwordChecker": "Password Checker",
+        "fileVirusScan": "File Virus Scanner",
         "passwordGenerator": "Password Generator",
         "fileConverter": "File Converter",
         "haveIBeenPwned": "Internxt Monitor",
@@ -105,10 +91,5 @@
         "cloudVideo": "Storage for videos"
       }
     }
-  },
-  "Cookies": {
-    "title": "Internxt uses cookies to make this website easier to use",
-    "link": "Learn more about cookies",
-    "close": "Ok, close"
   }
 }

@@ -9,20 +9,11 @@
     "cancelCta": "Annulla"
   },
   "FreeCardPromoBanner": {
-    "title": "Richiedi la tua offerta speciale del Black Friday!",
-    "subtitle": "Lo sconto **più grande** per la **massima privacy**",
+    "title": "Ottieni uno sconto esclusivo!",
+    "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
-    "guarantee": "Garanzia di rimborso di 30 giorni",
-    "header": { "primaryText": "Ottieni il 90% di sconto", "afterPrimaryText": "su tutti i Piani" },
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail"
-    }
+    "guarantee": "Garanzia di rimborso di 30 giorni"
   },
   "LoginBanner": {
     "head": "Try before you buy.",
@@ -147,7 +138,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Enormi risparmi del Black Friday — solo per un periodo limitato!",
+      "normalText": "Unisciti a Internxt durante le feste con l'85% di sconto e partecipa alla nostra estrazione di carte regalo natalizie. ",
       "cta": "Scegli il tuo piano "
     }
   },

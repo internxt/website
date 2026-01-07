@@ -2,12 +2,22 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import dynamic from 'next/dynamic';
-import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import {
+  CellTower,
+  Check,
+  CloudArrowUp,
+  Envelope,
+  Gift,
+  ShieldPlus,
+  Sparkle,
+  VideoConference,
+} from '@phosphor-icons/react';
 import Link from 'next/link';
 import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
+import Snowfall from '../shared/Snowfall';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -78,9 +88,11 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:my-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
+      <Snowfall count={100} />
+
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[566px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
@@ -101,10 +113,9 @@ export default function HeroSection({
             </p>
             <p className="font-regular text-lg leading-tight text-gray-100 lg:text-2xl">{textContent.subtitle}</p>
           </div>
-          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+          <span className="flex w-min flex-col items-start gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:flex-row lg:flex-nowrap lg:items-center lg:text-xl">
             <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
-
-            <p className="bg-transparent">{textContent.descriptionNormal}</p>
+            {textContent.descriptionNormal}
           </span>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
@@ -114,6 +125,14 @@ export default function HeroSection({
                 <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
               </div>
             ))}
+          </div>
+          <div className="flex flex-col justify-center gap-2 lg:gap-4">
+            <span className="flex flex-row items-center gap-1">
+              <Gift className="text-primary" height={28} width={28} />
+              <p className="w-full text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+                {textContent.giftDescription.line1}
+              </p>
+            </span>
           </div>
         </div>
 

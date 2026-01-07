@@ -222,13 +222,6 @@
         "answer": [
           "Sì. Puoi configurare l'autenticazione a due fattori (2FA) per il tuo account Internxt dall'app Drive Web. Inoltre, puoi utilizzare Authy o qualsiasi altro strumento 2FA per generare il tuo codice 2FA con Internxt, per accedere alla nostra app drive online."
         ]
-      },
-      {
-        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
-        "answer": [
-          "Sì, Internxt è impegnato nel cloud computing verde, offrendo soluzioni di archiviazione ecocompatibili per sostenere un futuro più pulito e sostenibile. I nostri data center sono alimentati al 92% da energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
-          "I nostri sforzi contribuiscono all'obiettivo di neutralità climatica entro il 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
-        ]
       }
     ]
   }

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt : comme Koofr, mais **entièrement chiffré**",
     "description": "Internxt propose la suite de confidentialité et de chiffrement la plus moderne et la plus avancée pour vous protéger en ligne",
-    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction 🔥",
+    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction  ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Plusieurs plans à vie allant jusqu'à 5 To, y compris l'accès à VPN, Meet, Cleaner, et plus encore. Accédez à ces services pour toujours avec une réduction de 90%."
+            "description": "Plusieurs plans à vie allant jusqu'à 5 To, y compris l'accès à VPN, Meet, Cleaner, et plus encore. Accédez à ces services pour toujours avec une réduction de 87%."
           }
         ]
       },
@@ -132,7 +132,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}}% de réduction  ",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },

@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "eyebrow": " Drive",
-    "title": "**Almacenamiento en la nube seguro** para todos tus archivos",
+    "title": "**Almacenamiento seguro** en nube para tus archivos",
     "subtitle": "Almacenamiento en la nube con cifrado post-cuántico galardonado para proteger tu privacidad.",
     "features": [
       "Cifrado post-cuántico",
@@ -221,13 +221,6 @@
         "question": "¿Puedo configurar 2FA con Internxt?",
         "answer": [
           "Sí. Puedes configurar la autenticación de dos factores (2FA) para tu cuenta de Internxt desde la aplicación Drive Web. Además, puedes usar Authy o cualquier otra herramienta 2FA para generar tu código 2FA con Internxt, para iniciar sesión en nuestra aplicación de disco online."
-        ]
-      },
-      {
-        "question": "¿Es Internxt una solución de almacenamiento en la nube sostenible y ecológica?",
-        "answer": [
-          "Sí, Internxt está comprometido con la computación en la nube ecológica, ofreciendo soluciones de almacenamiento eco-amigables para apoyar un futuro más limpio y sostenible. Nuestros centros de datos son alimentados por un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los desechos electrónicos.",
-          "Nuestros esfuerzos contribuyen a un objetivo de neutralidad climática para 2050. [Saber más](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

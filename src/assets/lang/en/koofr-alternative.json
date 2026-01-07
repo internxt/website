@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. like Koofr, but **fully encypted**",
     "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
-    "getPrivacy": "Select your plan {{percentage}}% off 🔥",
+    "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -83,7 +83,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Multiple lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for 90% off."
+            "description": "Multiple lifetime plans for up to 5TB, including access to VPN, Meet, Cleaner, and more. Access these services forever for 87% off."
           }
         ]
       },
@@ -132,7 +132,7 @@
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",
-    "hotLabel": "{{discount}}% off 🔥",
+    "hotLabel": "{{discount}}% off  ",
     "planTitles": {
       "header": "Your all-in-one privacy ally"
     },

@@ -39,8 +39,8 @@
       {
         "question": "What is Internxt’s refund policy?",
         "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
+          "All paid subscriptions include a 30-day money-back guarantee starting from the date of purchase.",
+          "If for any reason you are not fully satisfied within those first 30 days, just reach out to [hello@internxt.com](mailto:hello@internxt.com) and we will process your refund."
         ]
       },
       {
@@ -112,7 +112,7 @@
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "We’ve worked nonstop to give you the Internxt you deserve since you left. As a thanks for giving us another chance, we’re giving you a massive 90% discount to see these new improvements and features.",
+    "planDescription": "We’ve worked nonstop to give you the Internxt you deserve since you left. As a thanks for giving us another chance, we’re giving you a massive 87% discount to see these new improvements and features.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -148,7 +148,7 @@
   },
   "WhyComebackToInternxt": {
     "title": "Why come back to Internxt? New features, updates, and fixes",
-    "description": "Internxt Drive has had significant upgrades for all our Mac, Windows, and Linux apps. Now’s your perfect chance to try our new and improved product before your 90% discount expires. ",
+    "description": "Internxt Drive has had significant upgrades for all our Mac, Windows, and Linux apps. Now’s your perfect chance to try our new and improved product before your 87% discount expires. ",
     "features": [
       {
         "title": "Updated, improved apps",
@@ -156,7 +156,7 @@
       },
       {
         "title": "New products",
-        "description": "Internxt VPN and Antivirus are included with your 90% discount, offering you everything you need for a more private experience online and protection from malware, ransomware, and other cyberattacks."
+        "description": "Internxt VPN and Antivirus are included with your 87% discount, offering you everything you need for a more private experience online and protection from malware, ransomware, and other cyberattacks."
       },
       {
         "title": "Future access to Meet and Mail",
@@ -176,11 +176,11 @@
       "Post-quantum zero-knowledge encryption",
       "Open source and audited"
     ],
-    "cta1": "Claim 90% OFF"
+    "cta1": "Claim 87% OFF"
   },
   "CtaSection": {
     "title": "One more chance?",
     "description": "Try the new Drive, VPN, and Antivirus. Save on all annual and lifetime plans.",
-    "cta": "Get 90% OFF"
+    "cta": "Get 87% OFF"
   }
 }

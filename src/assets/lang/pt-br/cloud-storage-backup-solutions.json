@@ -7,11 +7,7 @@
         "textAfterBlueText": "seus dados"
       },
       "description": "O Internxt Drive permite que você faça backup de seus arquivos e os proteja contra perdas e ransomware",
-      "features": [
-        "Agende seus backups",
-        "Backup em vários servidores",
-        "Código aberto e auditado"
-      ],
+      "features": ["Agende seus backups", "Backup em vários servidores", "Código aberto e auditado"],
       "claimDeal": "Ver planos"
     },
     "TitleAndOnePlanV2": {
@@ -33,7 +29,7 @@
     },
     "square2": {
       "title": "Internxt S3",
-      "description": "O Internxt S3 é um serviço de armazenamento de objetos escalável e criptografado de ponta a ponta para empresas ou PMEs gerenciarem grandes quantidades de dados a custos mais baixos. Sem taxas de entrada e saída, nossos planos de armazenamento de objetos são até 90% mais baratos do que outros provedores.",
+      "description": "O Internxt S3 é um serviço de armazenamento de objetos escalável e criptografado de ponta a ponta para empresas ou PMEs gerenciarem grandes quantidades de dados a custos mais baixos. Sem taxas de entrada e saída, nossos planos de armazenamento de objetos são até 87% mais baratos do que outros provedores.",
       "cta": "Obtenha Internxt S3"
     }
   },

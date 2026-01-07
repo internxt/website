@@ -92,17 +92,17 @@
   {
     "id": "black-friday",
     "title": "Ofertas de Black Friday 2025 - Almacenamiento en la Nube y Ofertas de Nube Personal",
-    "description": "Internxt Black Friday 2025: ¡90% de descuento en almacenamiento seguro en la nube y tu paquete de privacidad completo! Obtén VPN, Antivirus, Cleaner, Meet y Mail."
+    "description": "Internxt Black Friday 2025: ¡87% de descuento en almacenamiento seguro en la nube y tu paquete de privacidad completo! Obtén VPN, Antivirus, Cleaner, Meet y Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Oferta Black Friday Almacenamiento en la Nube 2025",
-    "description": "Black Friday Internxt 2025 — 90% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
+    "description": "Black Friday Internxt 2025 — 87% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Ofertas de Almacenamiento Personal en la Nube Black Friday 2025",
-    "description": "Black Friday Internxt 2025 — 90% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
+    "description": "Black Friday Internxt 2025 — 87% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
   },
   {
     "id": "cloudwards",
@@ -403,6 +403,26 @@
     "id": "google-drive-alternative",
     "title": "Internxt — Como Google Drive, pero Privado",
     "description": "DesGooglea tu vida con Internxt, la mejor alternativa a Google Drive que respeta tu privacidad. Obtén cifrado de conocimiento cero y control total de tus datos."
+  },
+  {
+    "id": "elephantdrive-alternative",
+    "title": "Internxt — Private & Secure ElephantDrive Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
+  },
+  {
+    "id": "degoo-alternative",
+    "title": "Internxt — Private & Secure Degoo Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
+  },
+  {
+    "id": "drime-alternative",
+    "title": "Internxt — Private & Secure Drime Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "Internxt — Private & Secure FileJump Alternative",
+    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
   },
   {
     "id": "meet",

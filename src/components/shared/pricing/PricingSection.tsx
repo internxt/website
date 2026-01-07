@@ -44,7 +44,7 @@ interface PriceTableProps {
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onBusinessStorageChange: (businessStorageSelected: string) => void;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   differentRecommended?: boolean;
@@ -66,7 +66,7 @@ export const PricingSection = ({
   hideSwitchSelector,
   businessStorageSelected,
   lang,
-  popularPlanBySize = '5TB',
+  popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onBusinessStorageChange,
@@ -199,6 +199,7 @@ export const PricingSection = ({
                   darkMode={darkMode}
                   isAffiliate={isAffiliate}
                   cardIndex={cardIndex}
+                  showGift={showPromo}
                 />
               ))
             : undefined}
@@ -238,6 +239,7 @@ export const PricingSection = ({
                       lang={lang}
                       darkMode={darkMode}
                       cardIndex={cardIndex}
+                      showGift={showPromo}
                     />
                   ))
                 : undefined}
@@ -260,7 +262,7 @@ export const PricingSection = ({
         </div>
       )}
 
-      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} darkMode={darkMode} />}
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
     </>
   );
 };

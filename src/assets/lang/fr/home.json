@@ -41,7 +41,11 @@
     "title": "Passez à un **internet** plus **éthique**, **privé** et **sécurisé**",
     "subtitle": "Voici Internxt - Votre allié numérique de confiance",
     "description": "Obtenez {{discount}}% de réduction ",
-    "descriptionNormal": "sur tous les plans",
+    "descriptionNormal": "plus un cadeau de Noël spécial 🎅🏻",
+    "giftDescription": {
+      "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
+      "line2": "Rejoignez Internxt et participez au tirage de Noël"
+    },
     "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {
       "normal1": "À partir de ",

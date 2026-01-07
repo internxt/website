@@ -1,72 +1,57 @@
 {
   "DownloadApp": {
-    "title": "Téléchargez Internxt",
-    "description": "Gérez vos fichiers dans un stockage sécurisé en utilisant l'application mobile pour iOS ou Android."
+    "title": "Télécharger Internxt",
+    "description": "Gérez vos fichiers dans un espace de stockage cloud sécurisé grâce à l'application mobile pour iOS ou Android."
   },
   "NewsletterSection": {
     "title": "Newsletter",
-    "description": "Vous voulez être tenu au courant du lancement de nouveaux produits ou de nouvelles mises à jour? Saisissez votre adresse électronique et nous nous occuperons du reste.",
-    "input": "Adresse électronique",
-    "info": "Puedes cancelar tu suscripción en cualquier momento",
-    "cta": "S’àbonner",
-    "privacy": "En vous abonnant, vous acceptez",
-    "privacyLink": "notre politique de confidentialité."
+    "description": "Souhaitez-vous être informé(e) lorsque nous lançons de nouveaux produits ? Entrez votre e-mail et nous nous en occuperons.",
+    "input": "Votre e-mail",
+    "cta": "S'abonner",
+    "privacy": "En vous abonnant, vous acceptez notre",
+    "privacyLink": "politique de confidentialité."
   },
   "FooterSection": {
-    "description": "La misión de Internxt es ayudar a dar forma a un mundo que respete el derecho a la privacidad. Para ello, desarrollamos una serie de servicios, que tienen el objetivo común de ayudar a la humanidad a proteger este derecho fundamental.",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
-    "independentPromotion": "Cette promotion est proposée par Internxt de manière indépendante et il n'y a pas de partenariat direct avec The Walt Disney Company",
-    "comingSoon": "Próximamente",
+    "comingSoon": "Bientôt disponible",
     "new": "Nouveau",
+    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
     "sections": {
       "products": {
         "title": "Produits",
         "drive": "Internxt Drive",
-        "photos": "Internxt Photos",
-        "send": "Internxt Send",
         "objStorage": "Internxt S3",
+        "antivirus": "Internxt Antivirus",
+        "send": "Internxt Send",
         "vpn": "Internxt VPN",
         "cleaner": "Internxt Cleaner",
         "meet": "Internxt Meet",
-        "antivirus": "Internxt Antivirus",
-        "token": "Token",
-        "pricing": "Tarifs",
+        "ai": "Internxt AI",
         "business": "Internxt pour les Entreprises",
-        "family": "Internxt pour les Familles"
+        "family": "Internxt pour les Familles",
+        "pricing": "Tarifs"
       },
       "company": {
-        "title": "Enterprise",
-        "about": "À propos",
+        "title": "Entreprise",
+        "about": "À Propos",
         "privacy": "Confidentialité",
-        "security": "Securité",
+        "security": "Sécurité",
         "openSource": "Open Source",
-        "legal": "Mentions légales",
-        "whyInternxt": "¿Por qué Internxt?",
-        "mediaArea": "Espace Médias",
+        "legal": "Légal",
         "sustainability": "Durabilité"
       },
       "join": {
-        "title": "Rejoindre",
-        "newsletter": "Newsletter",
-        "affiliates": "Affiliés",
-        "storageForEducation": "Internxt pour l'éducation",
+        "title": "Rejoignez-nous",
         "signup": "Créer un compte",
+        "login": "Se connecter",
         "support": "Support",
-        "login": "Connexion",
-        "community": "Communauté",
+        "whitePaper": "Livre Blanc (White Paper)",
         "github": "GitHub",
-        "whitePaper": "White Paper",
-        "twitter": "Twitter",
-        "facebook": "Facebook",
-        "linkedin": "LinkedIn",
-        "youtube": "Youtube",
-        "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "affiliates": "Affiliés"
       },
       "resources": {
         "title": "Ressources",
         "blog": "Blog",
-        "directoryOfPrivacyOrganizations": "Organismes de protection de la vie privée",
+        "comparison": "Comparaison de services Cloud",
         "pCloudAlternative": "Alternative à pCloud",
         "dropboxAlternative": "Alternative à Dropbox",
         "megaAlternative": "Alternative à Mega",
@@ -74,44 +59,37 @@
         "icedriveAlternative": "Alternative à Icedrive",
         "onedriveAlternative": "Alternative à OneDrive",
         "googleDriveAlternative": "Alternative à Google Drive",
-        "writeForUs": "Escribe para nosotros",
-        "cyberSecurityGlossary": "Glosario de ciberseguridad",
-        "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "Comparaison des services en nuage",
+        "drimeAlternative": "Alternative à Drime",
+        "degooAlternative": "Alternative à Degoo",
+        "fileJumpAlternative": "Alternative à FileJump",
+        "elephantDriveAlternative": "Alternative à ElephantDrive",
+        "whatGoogleKnowsAboutMe": "Ce que Google sait de vous",
         "WebDAV": "CLI & WebDAV",
-        "coupons": "Coupons",
         "nas": "NAS",
-        "reviews": "Avis",
-        "deals": "Ofertas"
+        "coupons": "Coupons",
+        "reviews": "Avis"
       },
       "tools": {
-        "title": "Free tools",
-        "temporaryEmail": "Courriel Temporaire",
-        "fileVirusScan": "Scanner de Virus",
-        "passwordChecker": "Vérifier Mot de Passe",
-        "byteConverter": "Convertisseur d'Octets",
-        "passwordGenerator": "Générateur de Mot de Passe",
+        "title": "Outils gratuits",
+        "byteConverter": "Convertisseur d'unités",
+        "temporaryEmail": "E-mail temporaire",
+        "passwordChecker": "Vérificateur de mots de passe",
+        "fileVirusScan": "Scanner de virus de fichiers",
+        "passwordGenerator": "Générateur de mots de passe",
         "fileConverter": "Convertisseur de fichiers",
         "haveIBeenPwned": "Internxt Monitor",
-        "metadataRemover": "Supprimer les métadonnées",
-        "aiDetector": "Détecteur de IA",
-        "fileCompressor": "Compresseur de Fichiers"
+        "metadataRemover": "Suppresseur de métadonnées",
+        "aiDetector": "Détecteur d'IA",
+        "fileCompressor": "Compresseur de fichiers"
       },
       "features": {
         "title": "Fonctionnalités",
-        "privateCloud": "Solution de cloud privé",
+        "privateCloud": "Solution cloud privé",
         "cloudBakcup": "Solution de sauvegarde cloud",
-        "GDPRCloud": "Stockage RGPD",
+        "GDPRCloud": "Stockage conforme au RGPD",
         "cloudPhotos": "Photos dans le cloud",
-        "cloudVideo": "Videos dans le cloud"
-      },
-      "language": "Langue"
+        "cloudVideo": "Vidéos dans le cloud"
+      }
     }
-  },
-  "Cookies": {
-    "title": "Internxt utilise des cookies pour améliorer l'expérience de navigation",
-    "link": "Plus d'informations sur nos cookies",
-    "close": "D'accord, fermer"
   }
 }

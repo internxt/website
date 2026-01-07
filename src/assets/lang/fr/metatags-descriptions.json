@@ -87,17 +87,17 @@
   {
     "id": "black-friday",
     "title": "Offres Black Friday 2025 - Offres de Stockage Cloud et de Cloud Personnel",
-    "description": "Internxt Black Friday 2025 : 90% DE RÉDUCTION sur le stockage cloud sécurisé et votre suite complète de confidentialité ! Obtenez VPN, Antivirus, Cleaner, Meet et Mail."
+    "description": "Internxt Black Friday 2025 : 87% DE RÉDUCTION sur le stockage cloud sécurisé et votre suite complète de confidentialité ! Obtenez VPN, Antivirus, Cleaner, Meet et Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Offre Black Friday Stockage Cloud 2025",
-    "description": "Black Friday Internxt 2025 — 90% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
+    "description": "Black Friday Internxt 2025 — 87% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Offres Black Friday de Stockage Cloud Personnel 2025",
-    "description": "Black Friday Internxt 2025 — 90% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
+    "description": "Black Friday Internxt 2025 — 87% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
   },
   {
     "id": "cloudwards",
@@ -308,6 +308,26 @@
     "id": "onedrive-alternative",
     "title": "Internxt — Alternative Privée et Sécurisée à OneDrive",
     "description": "Passez à Internxt, une alternative Open-Source à OneDrive. Le chiffrement post-quantique et à connaissance zéro garantit la confidentialité complète de vos documents et fichiers multimédias."
+  },
+  {
+    "id": "elephantdrive-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à ElephantDrive",
+    "description": "Passez à Internxt pour une alternative open source à ElephantDrive. Le stockage cloud crypté post-quantique et sans connaissance (zero-knowledge) garantit la confidentialité totale de vos documents et médias."
+  },
+  {
+    "id": "degoo-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à Degoo",
+    "description": "Passez à Internxt pour une alternative open source à Degoo. Le stockage cloud crypté post-quantique et sans connaissance (zero-knowledge) garantit la confidentialité totale de vos documents et médias."
+  },
+  {
+    "id": "drime-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à Drime",
+    "description": "Passez à Internxt pour une alternative open source à Drime. Le stockage cloud crypté post-quantique et sans connaissance (zero-knowledge) garantit la confidentialité totale de vos documents et médias."
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "Internxt — Alternative Privée et Sécurisée à FileJump",
+    "description": "Passez à Internxt pour une alternative open source à FileJump. Le stockage cloud crypté post-quantique et sans connaissance (zero-knowledge) garantit la confidentialité totale de vos documents et médias."
   },
   {
     "id": "meet",

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt：像 Koofr 一樣，但**完全加密**",
     "description": "Internxt 提供最先進、最現代的加密和隱私套件，以保護您的線上安全",
-    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠 🔥",
+    "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠  ",
     "cta": "領取優惠"
   },
   "HeaderSection": {
@@ -78,7 +78,7 @@
           },
           {
             "title": "終身計劃",
-            "description": "多個終身計劃，最高可達 5TB，包括 VPN、Meet、Cleaner 等的使用權限。以 90% 的折扣永久使用這些服務。"
+            "description": "多個終身計劃，最高可達 5TB，包括 VPN、Meet、Cleaner 等的使用權限。以 87% 的折扣永久使用這些服務。"
           }
         ]
       },
@@ -127,7 +127,7 @@
   },
   "tableSection": {
     "title": "您的多合一隱私盟友",
-    "hotLabel": "{{discount}}% 優惠 🔥",
+    "hotLabel": "{{discount}}% 優惠  ",
     "planTitles": {
       "header": "您的多合一隱私盟友"
     },

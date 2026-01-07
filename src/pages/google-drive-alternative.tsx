@@ -1,5 +1,6 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
 const GoogleDriveComparison = (props) => (
@@ -13,6 +14,7 @@ const GoogleDriveComparison = (props) => (
       showThreeCards: true,
       privacyBgGradient: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
     }}
+    couponCodeName={PromoCodeName.GOOGLEDRIVE}
   />
 );
 

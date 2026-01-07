@@ -40,8 +40,8 @@ function SpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
-    couponCodeForLifetime: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.FreePlanUpsell,
+    couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
@@ -54,14 +54,30 @@ function SpecialOffer({
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
@@ -87,7 +103,7 @@ function SpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />

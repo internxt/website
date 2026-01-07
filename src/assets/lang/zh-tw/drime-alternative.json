@@ -1,0 +1,216 @@
+{
+  "HeroSection": {
+    "title": "Internxt，Drime 的一個 \n **安全** 替代方案",
+    "description": "切換到 Internxt，獲得一個完全私密的 Drime 替代品。 \n 採用後量子和零知識加密的雲端儲存。",
+    "getPrivacy": "以 {{percentage}}% 的折扣獲得全面的隱私保護",
+    "cta": "領取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 對比 Drime",
+    "description": "了解 Internxt 能夠讓您重新掌控數據的關鍵特性和差異。",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密技術",
+        "後量子加密",
+        "價格和儲存空間",
+        "功能",
+        "安全稽核",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "具有競爭力，無隱藏費用，最高可達 5TB",
+        "雲端硬碟、VPN、防毒軟體、清理工具、會議、郵件等",
+        "定期安全稽核",
+        "是",
+        "絕不會存取您的檔案",
+        "符合 GDPR、HIPAA、ISO 27001、SOC 2 標準，總部位於西班牙"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "AES-256",
+        "否",
+        "更昂貴的方案，最高可達 6TB",
+        "雲端硬碟、檔案共享、發送和簽署文件",
+        "沒有公開的安全稽核報告",
+        "否",
+        "儲存在 Drime Vault 之外的檔案隱私性較低",
+        "GDPR，總部位於法國"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Drime 缺乏透明度。Internxt 保護您的隱私。",
+    "description": "Drime 隱藏其原始碼且沒有公開的安全稽核報告。只有 Drime Vault 中的檔案是端到端加密的。切換到 Internxt，為您的檔案、影片和照片提供全面的安全和透明度。使用 Internxt，除了您，任何人都無法存取您的檔案，包括我們。",
+    "scrollableSection": {
+      "titles": ["閉源", "未發布稽核報告", "獨立儲存庫加密", "有限的隱私功能"],
+      "descriptions": [
+        "Drime 對公眾隱藏其原始碼。缺乏透明度或獨立的安全性稽核，就無法確定 Drime 如何處理或保護您的數據。",
+        "與 Internxt 不同，Drime 沒有發布任何獨立的安全性稽核報告，使用戶對其平台的安全性感到不確定。",
+        "只有您手動移動到 Drime Vault 中的檔案才是端到端加密的，而您常規雲端儲存中的所有其他內容仍然可以透過伺服器端加密被提供商存取。",
+        "Drime 專注於雲端儲存、協作和文件簽署。Internxt 的全套產品專注於保護您的數據免受大型科技公司的侵害。Internxt 將後量子加密與包括防毒軟體、VPN、清理工具、會議、郵件等在內的全面產品套件結合在一起。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼您需要一個私密的 Drime 替代方案",
+    "description": "Drime 在基本安全性方面表現出的能力，在全面的隱私和透明度方面卻有所欠缺。為了獲得全面的隱私保護，請選擇 Internxt，它結合了全面的安全性和零知識加密（適用於您的所有檔案）。",
+    "cards": {
+      "titles": ["隱私保護", "獨立儲存庫加密", "缺乏透明度"],
+      "descriptions": [
+        "並非所有儲存在 Drime 中的檔案都受到零知識加密的保護。只有 Drime Vault 中的檔案是端到端加密的。在 Internxt，您的所有檔案都受到零知識加密的保護，沒有追蹤器、沒有 AI 掃描、沒有隱藏後門。您的照片、文件和影片保持私密。",
+        "Drime 要求您手動將檔案移動到一個獨立的儲存庫進行零知識加密，而所有其他檔案則使用伺服器端加密。Internxt 預設對所有檔案提供後量子和零知識加密，確保您的數據始終受到保護。",
+        "如果沒有開源程式碼或稽核，您就無法確定 Drime 如何處理您的數據、是否存在存取您數據的後門或是否存在任何安全漏洞。Internxt 的程式碼是開源的，並定期進行稽核，以實現完全透明。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 對比 Drime",
+    "description": "Internxt 提供無與倫比的安全性，具有 Drime 無法比擬的功能，例如所有檔案都提供零知識加密、後量子加密和開源透明度。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "全面的隱私、透明度和信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼是公開的，每個人都可以透過我們的 GitHub 進行檢查以確保其安全性。這種透明度保證了不會隱藏任何漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的數據在客戶端進行加密，保證只有您可以存取。所有檔案都受到保護，而不僅僅是獨立儲存庫中的檔案。"
+          },
+          {
+            "title": "經過稽核和合規",
+            "description": "Internxt 已通過外部稽核，並符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身方案",
+            "description": "一次性付款即可獲得高達 5TB 的方案，避免重複訂閱。以 {{percentage}}% 的折扣永久使用我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隱私如何？",
+        "features": [
+          {
+            "title": "閉源",
+            "description": "Drime 對公眾隱藏其原始碼。缺乏透明度或獨立的安全性稽核，就無法確定 Drime 如何處理或保護您的數據。"
+          },
+          {
+            "title": "僅限加密儲存庫",
+            "description": "零知識加密是一個獨立的儲存選項，使得儲存在儲存庫之外的檔案安全性較低，並且透過伺服器端加密保持私密性。"
+          },
+          {
+            "title": "未發布稽核報告",
+            "description": "與接受定期外部稽核的 Internxt 不同，Drime 沒有發布任何獨立的安全性稽核報告。"
+          },
+          {
+            "title": "訂閱和終身方案",
+            "description": "Drime 提供月度、年度和終身方案，最高可達 6TB，價格高於 Internxt。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Drime 的最佳替代方案",
+    "description": "Internxt Drive 提供一整套產品，旨在讓您重新掌控您的線上隱私。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["雲端硬碟", "防毒軟體", "VPN", "清理工具", "會議", "進階工具"],
+      "descriptions": [
+        "Internxt Drive 帶有後量子和零知識加密，因此除了您之外，任何人都無法存取您的檔案。為您的照片、影片和檔案獲取加密的雲端儲存和備份。 \n\n 此外，加密備份和受密碼保護的檔案共享提供了針對勒索軟體和數據洩露的最大保護。",
+        "Internxt Antivirus 直接內建在您的 Internxt Drive 應用程式中，可提供對惡意軟體的全面控制和保護。執行全面或自定義的病毒掃描，以確保您的設備執行順暢並免受勒索軟體或間諜軟體等病毒的侵害。",
+        "Internxt 的 VPN 保護您的瀏覽，阻止廣告和追蹤器，並保持您的位置私密。加密您的 Wi-Fi 連線，以防止窺探、駭客和身份盜用。安全瀏覽，因為您的個人資訊、密碼和帳戶受到保護。",
+        "Internxt Cleaner 可幫助您識別、消除和管理設備上不需要的垃圾或重複檔案。使用 Cleaner，您可以刪除不需要的檔案，以保持您的儲存空間井然有序、整潔，並確保您的設備高效運行。",
+        "Internxt Meet 也可用作您安全私密的視訊會議替代方案。使用 Meet，您可以主持沒有追蹤器、廣告和數據收集的私人視訊通話。您的視訊通話受到後量子加密的保護，讓您可以在完全隱私的情況下主持通話。",
+        "適用於 Windows、Mac、Linux 和行動裝置。對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供您在完全隱私下管理檔案所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "您的隱私，您做主",
+    "description": "全面保護，享受 {{percentage}}% 折扣",
+    "cta": "領取優惠"
+  },
+  "tableSection": {
+    "title": "您的多功能隱私盟友",
+    "hotLabel": "{{discount}}% 折扣  ",
+    "planTitles": {
+      "header": "您的多功能隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過稽核",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是 Drime 更安全的替代方案嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除了您之外，任何人都無法檢視您的檔案。您的所有檔案都受到此加密的保護，無需將其儲存在獨立的儲存庫中，因為 Internxt Drive 可作為您的完整加密雲端儲存儲存庫。",
+          "作為您 Internxt 雲端儲存方案的一部分，VPN、防毒軟體、裝置清理工具 (Device Cleaner)、NAS 支援、會議和郵件等附加功能也為您提供額外的保護，防止駭客和數據洩露。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵抗強大的量子攻擊，這使得 PQC 成為 Drime 更安全的替代方案。",
+          "Internxt 使用這種加密方法，以確保您的終身雲端儲存方案能夠保護您免受未來的網路安全威脅，並且適用於所有方案，無需額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部位在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙瓦倫西亞，使其成為符合 GDPR 的雲端儲存解決方案，遵循嚴格的法律來確保您的數據和隱私受到保護。"
+        ]
+      },
+      {
+        "question": "Drime 比 Internxt 貴嗎？",
+        "answer": [
+          "Drime 1TB 雲端儲存的年費為 105 歐元。使用 Internxt，您可以在第一年以 36 歐元的價格獲得 5TB 的後量子加密儲存，以及 VPN、防毒軟體、會議、郵件等。透過您的專屬 {{percentage}}% 折扣，Internxt 提供了雲端儲存和一系列其他雲端提供商（包括 Drime）無法提供的廣泛功能。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援？",
+        "answer": [
+          "如果您有任何其他問題、請求或需要協助，您可以聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意提供協助。"
+        ]
+      },
+      {
+        "question": "我可以為我的終身方案添加更多儲存空間嗎？",
+        "answer": [
+          "是的，如果您需要添加更多儲存空間，可以從 Internxt 帳戶的設定中升級您的方案。或者使用您目前的 Internxt 帳戶在 internxt.com/pricing 購買新方案，您的儲存空間將自動累加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "是的，Internxt 目前接受借記卡和信用卡 Mastercard、VISA、American Express 等。您還可以透過 PayPal、iDEAL、Sofort、加密貨幣和 Klarna 付款。"
+        ]
+      }
+    ]
+  }
+}

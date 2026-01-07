@@ -36,20 +36,36 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFF75,
-    couponCodeForLifetime: PromoCodeName.OFF75,
+    couponCode: PromoCodeName.SoftSales85,
+    couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
@@ -80,7 +96,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20 xl:py-32"
       />
 

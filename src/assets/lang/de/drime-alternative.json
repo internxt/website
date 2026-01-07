@@ -1,0 +1,221 @@
+{
+  "HeroSection": {
+    "title": "Internxt, eine **sichere** \nAlternative zu Drime",
+    "description": "Wechseln Sie zu Internxt für eine vollständig private Alternative zu Drime. \n Cloud-Speicher mit Post-Quanten- und Zero-Knowledge-Verschlüsselung.",
+    "getPrivacy": "Erhalten Sie vollständige Privatsphäre mit {{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Drime",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt.",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Quelloffen",
+        "AES-256 und Kyber-512",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, bis zu 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheitsaudits",
+        "Ja",
+        "Niemals Zugriff auf Ihre Dateien möglich",
+        "DSGVO, HIPAA, ISO 27001, SOC 2 konform, mit Sitz in Spanien"
+      ],
+      "competitorFeatures": [
+        "Geschlossener Quellcode",
+        "AES-256",
+        "Nein",
+        "Teurere Pläne, bis zu 6TB",
+        "Drive, Dateifreigabe, Dokumente senden & unterschreiben",
+        "Kein veröffentlichtes Sicherheitsaudit",
+        "Nein",
+        "Dateien, die außerhalb des Drime Vault gespeichert sind, sind weniger privat",
+        "DSGVO, mit Sitz in Frankreich"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Drime mangelt es an Transparenz. Internxt schützt Ihre Privatsphäre.",
+    "description": "Drime hält seinen Quellcode geheim und hat keine veröffentlichten Sicherheitsaudits. Nur Dateien im Drime Vault sind Ende-zu-Ende verschlüsselt. Wechseln Sie zu Internxt für vollständige Sicherheit und Transparenz für Ihre Dateien, Videos und Fotos. Mit Internxt kann niemand außer Ihnen auf Ihre Dateien zugreifen, nicht einmal wir.",
+    "scrollableSection": {
+      "titles": [
+        "Geschlossener Quellcode",
+        "Kein Audit veröffentlicht",
+        "Separate Tresor-Verschlüsselung",
+        "Eingeschränkte Datenschutzfunktionen"
+      ],
+      "descriptions": [
+        "Drime hält seinen Quellcode vor der Öffentlichkeit geheim. Ohne Transparenz oder unabhängiges Sicherheitsaudit gibt es keine Möglichkeit, sicher zu wissen, wie Drime Ihre Daten handhabt oder schützt.",
+        "Im Gegensatz zu Internxt hat Drime keine unabhängigen Sicherheitsaudits veröffentlicht, was Benutzer über die Sicherheit ihrer Plattform im Ungewissen lässt.",
+        "Nur Dateien, die Sie manuell in den Drime Vault verschieben, sind Ende-zu-Ende verschlüsselt, während alles andere in Ihrem regulären Cloud-Speicher durch serverseitige Verschlüsselung weiterhin für den Anbieter zugänglich ist.",
+        "Drime konzentriert sich auf Cloud-Speicher, Zusammenarbeit und Dokumentenunterzeichnung. Bei Internxt konzentriert sich unsere gesamte Produktsuite darauf, Ihre Daten vor Big-Tech-Unternehmen zu schützen und zu sichern. Mit Antivirus, VPN, Cleaner, Meet, Mail und mehr kombiniert Internxt Post-Quanten-Verschlüsselung mit einer umfassenden Produktsuite."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private Drime-Alternative benötigen",
+    "description": "Was Drime an grundlegender Sicherheit demonstriert, scheitert in Bezug auf vollständige Privatsphäre und Transparenz. Für vollständige Privatsphäre erhalten Sie bei Internxt totale Sicherheit kombiniert mit Zero-Knowledge-Verschlüsselung für alle Ihre Dateien.",
+    "cards": {
+      "titles": ["Privatsphäre", "Separate Tresor-Verschlüsselung", "Mangelnde Transparenz"],
+      "descriptions": [
+        "Nicht alle Ihre bei Drime gespeicherten Dateien sind mit Zero-Knowledge-Verschlüsselung geschützt. Nur Dateien im Drime Vault sind Ende-zu-Ende verschlüsselt. Bei Internxt sind alle Ihre Dateien mit Zero-Knowledge-Verschlüsselung geschützt, ohne Tracker, ohne KI-Scans und ohne versteckte Hintertüren. Ihre Fotos, Dokumente und Videos bleiben privat.",
+        "Drime erfordert, dass Sie Dateien manuell in einen separaten Tresor verschieben, um Zero-Knowledge-Verschlüsselung zu erhalten, während alles andere serverseitige Verschlüsselung verwendet. Internxt bietet standardmäßig Post-Quanten- und Zero-Knowledge-Verschlüsselung für alle Dateien und stellt sicher, dass Ihre Daten immer geschützt sind.",
+        "Ohne Open-Source-Code oder Audits können Sie nicht sicher sein, wie Drime mit Ihren Daten umgeht, ob es Hintertüren zu Ihren Daten gibt oder ob Sicherheitslücken existieren. Der Code von Internxt ist Open-Source und wird regelmäßig für vollständige Transparenz auditiert."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Drime",
+    "description": "Internxt bietet unvergleichliche Sicherheit mit Funktionen, die Drime nicht bieten kann, wie Zero-Knowledge-Verschlüsselung für alle Dateien, Post-Quanten-Verschlüsselung und Quelloffen-Transparenz.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Vollständige Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Quelloffen",
+            "description": "Der Code von Internxt ist für jedermann zur Überprüfung und Gewährleistung seiner Sicherheit über unser GitHub zugänglich. Diese Transparenz garantiert, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Daten werden clientseitig verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können. Alle Dateien sind geschützt, nicht nur die in einem separaten Tresor."
+          },
+          {
+            "title": "Auditiert und konform",
+            "description": "Internxt wurde extern auditiert und entspricht der DSGVO, HIPAA, ISO 27001 und SOC 2."
+          },
+          {
+            "title": "Lebenslange Pläne",
+            "description": "Vermeiden Sie wiederholte Abonnements mit einer einmaligen Zahlung für Pläne bis zu 5TB. Erhalten Sie dauerhaften Zugriff auf unsere Dienste mit einem {{percentage}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Geschlossener Quellcode",
+            "description": "Drime hält seinen Quellcode vor der Öffentlichkeit geheim. Ohne Transparenz oder unabhängiges Sicherheitsaudit gibt es keine Möglichkeit, sicher zu wissen, wie Drime Ihre Daten handhabt oder schützt."
+          },
+          {
+            "title": "Nur verschlüsselter Tresor",
+            "description": "Zero-Knowledge-Verschlüsselung ist eine separate Speicheroption, wodurch außerhalb des Tresors gespeicherte Dateien weniger sicher und privat sind da sie serverseitige Verschlüsselung nutzen."
+          },
+          {
+            "title": "Keine veröffentlichten Audits",
+            "description": "Drime hat keine unabhängigen Sicherheitsaudits veröffentlicht, im Gegensatz zu Internxt, das regelmäßige externe Audits durchführt."
+          },
+          {
+            "title": "Abonnement und lebenslang",
+            "description": "Drime bietet Monats-, Jahres- und lebenslange Pläne bis zu 6TB zu höheren Preisen als Internxt."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Drime-Alternative ist",
+    "description": "Internxt Drive bietet eine umfassende Suite von Produkten, die Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückgeben sollen.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Drive verfügt über Post-Quanten- und Zero-Knowledge-Verschlüsselung, sodass niemand außer Ihnen auf Ihre Dateien zugreifen kann. Erhalten Sie verschlüsselten Cloud-Speicher und Backups für Ihre Fotos, Videos und Dateien. \n\n Darüber hinaus bieten verschlüsselte Backups und passwortgeschütztes Teilen von Dateien maximalen Schutz vor Ransomware und Datenlecks.",
+        "Internxt Antivirus ist direkt in Ihre Internxt Drive App integriert, um vollständige Kontrolle und Schutz vor Malware zu gewährleisten. Führen Sie vollständige oder benutzerdefinierte Virenscans durch, um sicherzustellen, dass Ihr Gerät reibungslos läuft und vor Viren wie Ransomware oder Spyware geschützt ist.",
+        "Das VPN von Internxt schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsseln Sie Ihre WLAN-Verbindung, um Spionage, Hackerangriffe und Identitätsdiebstahl zu verhindern. Surfen Sie sicher in dem Wissen, dass Ihre persönlichen Daten, Passwörter und Konten geschützt sind.",
+        "Internxt Cleaner hilft Ihnen, unerwünschte Junk- oder doppelte Dateien auf Ihrem Gerät zu identifizieren, zu eliminieren und zu verwalten. Mit Cleaner können Sie unerwünschte Dateien löschen, um Ihren Speicher organisiert, aufgeräumt und die Effizienz Ihres Geräts zu gewährleisten.",
+        "Internxt Meet ist auch als Ihre sichere und private Alternative für Videokonferenzen verfügbar. Mit Meet können Sie private Videoanrufe ohne Tracker, Werbung und Datenerfassung hosten. Ihre Videoanrufe sind mit Post-Quanten-Verschlüsselung geschützt, sodass Sie Anrufe in völliger Privatsphäre abhalten können.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte. Für fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und damit alles, was Sie benötigen, um Ihre Dateien in völliger Privatsphäre zu verwalten."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Ihre Privatsphäre, Ihre Bedingungen",
+    "description": "Vollständiger Schutz mit einem {{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Privatsphäre-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt  ",
+    "planTitles": {
+      "header": "Ihr All-in-One-Privatsphäre-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Quelloffen und auditiert",
+      "premiumSupport": "Premium-Kunden-Support",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere Alternative zu Drime?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Dateien einsehen kann. Alle Ihre Dateien sind mit dieser Verschlüsselung geschützt, ohne dass sie in einem separaten Tresor gespeichert werden müssen, da Internxt Drive als Ihr vollständiger verschlüsselter Cloud-Speicher-Tresor dient.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Gerätebereiniger (Device Cleaner), NAS-Unterstützung, Meet und Mail bieten Ihnen im Rahmen Ihres Cloud-Speicherplans mit Internxt zusätzlichen Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standardverschlüsselung sind Post-Quanten-Verschlüsselungsalgorithmen so konzipiert, dass sie leistungsstarken Quantenangriffen standhalten, was PQE zu einer sichereren Alternative zu Drime macht.",
+          "Diese Kryptografiemethode wird von Internxt verwendet, um sicherzustellen, dass Ihr lebenslanger Cloud-Speicherplan Sie vor zukünftigen Cybersicherheitsbedrohungen schützt, und ist für alle Pläne ohne zusätzliche Kosten verfügbar."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strenge Gesetze befolgt, um den Schutz Ihrer Daten und Ihrer Privatsphäre zu gewährleisten."
+        ]
+      },
+      {
+        "question": "Ist Drime teurer als Internxt?",
+        "answer": [
+          "Drime kostet 105€ jährlich für 1TB Cloud-Speicher. Mit Internxt erhalten Sie 5TB Post-Quanten-verschlüsselten Speicher plus VPN, Antivirus, Meet, Mail und mehr für 36€ im ersten Jahr. Mit Ihrem exklusiven {{percentage}}% Rabatt bietet Internxt Cloud-Speicher und eine umfangreiche Palette von Funktionen, die bei keinem anderen Cloud-Anbieter, einschließlich Drime, verfügbar sind."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen, Anfragen haben oder Hilfe benötigen, können Sie sich an hello@internxt.com wenden, und unser Customer Success Team hilft Ihnen gerne weiter."
+        ]
+      },
+      {
+        "question": "Kann ich meinem lebenslangen Plan mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, wenn Sie mehr Speicherplatz benötigen. Oder erwerben Sie einen neuen Plan unter internxt.com/pricing mit Ihrem aktuellen Internxt-Konto, und Ihr Speicherplatz wird automatisch gestapelt."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Ja, Internxt akzeptiert derzeit Debit- und Kreditkarten Mastercard, VISA, American Express, usw.. Sie können auch über PayPal, iDEAL, Sofort, Kryptowährung und Klarna bezahlen."
+        ]
+      }
+    ]
+  }
+}

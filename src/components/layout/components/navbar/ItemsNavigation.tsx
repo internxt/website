@@ -30,7 +30,6 @@ interface ItemsNavigationProps {
     links: {
       pricing: string;
       about: string;
-      business: string;
     };
   };
   textContent: NavigationBarText;
@@ -109,13 +108,6 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
-        <NavigationLink
-          href="/deals/black-friday-internxt"
-          text={textContent.links.blackFriday}
-          isDarkMode={darkMode}
-          lang={lang}
-          isActive
-        />
 
         <DropdownMenu
           label={textContent.links.products}
@@ -125,15 +117,9 @@ export const ItemsNavigation = ({
             { href: '/vpn', text: textContent.products.vpn },
             { href: '/cleaner', text: textContent.products.cleaner },
             { href: '/meet', text: textContent.products.meet },
+            { href: 'https://ai.internxt.com/', text: textContent.products.ai },
           ]}
           darkMode={darkMode}
-          lang={lang}
-        />
-        <NavigationLink
-          href="/business"
-          text={textContent.links.business}
-          isActive={currentPath === getTitles.links.business.trim().toLowerCase()}
-          isDarkMode={darkMode}
           lang={lang}
         />
         <DropdownMenu

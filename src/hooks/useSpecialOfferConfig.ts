@@ -2,7 +2,22 @@ import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
 
-export const ALLOWED_PATHS = ['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb', 'jon'];
+export const ALLOWED_PATHS = [
+  'baity',
+  'xavier',
+  'oscar',
+  'rimembah',
+  'believemy',
+  'ghareeb',
+  'jon',
+  'apfelcast',
+  'madroz',
+  'justin',
+  'qinhui',
+  'ct3003',
+  'benjamin',
+  'payette',
+];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
@@ -14,6 +29,13 @@ export const COUPON_CODES = {
   believemy: PromoCodeName.BELIEVEMY,
   ghareeb: PromoCodeName.GHAREEB,
   jon: PromoCodeName.JON,
+  apfelcast: PromoCodeName.APFELCAST,
+  madroz: PromoCodeName.MADROZ,
+  justin: PromoCodeName.JUSTIN,
+  qinhui: PromoCodeName.QINHUI,
+  ct3003: PromoCodeName.CT3003,
+  benjamin: PromoCodeName.benjamin,
+  payette: PromoCodeName.payette,
 };
 
 interface OfferConfig {

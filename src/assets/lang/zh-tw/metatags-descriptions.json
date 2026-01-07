@@ -108,17 +108,17 @@
   {
     "id": "black-friday",
     "title": "2025 年黑色星期五優惠 — 雲端儲存和個人雲端儲存優惠",
-    "description": "Internxt 2025 年黑色星期五：安全雲端儲存和完整隱私套件可享 90% 折扣！取得 VPN、Antivirus、Cleaner、Meet 和 Mail。"
+    "description": "Internxt 2025 年黑色星期五：安全雲端儲存和完整隱私套件可享 87% 折扣！取得 VPN、Antivirus、Cleaner、Meet 和 Mail。"
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — 2025 黑色星期五雲端儲存優惠",
-    "description": "Internxt 2025 黑色星期五 — 雲端儲存、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 90% 折扣。"
+    "description": "Internxt 2025 黑色星期五 — 雲端儲存、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 87% 折扣。"
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — 2025黑色星期五個人雲端儲存優惠",
-    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受90%折扣。"
+    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受87%折扣。"
   },
   {
     "id": "cloudwards",
@@ -494,6 +494,26 @@
     "id": "google-drive-alternative",
     "title": "Internxt — 像 Google Drive 一样，但私密",
     "description": "使用 Internxt 解除您的 Google 依赖，这是尊重您隐私的 Google Drive 最佳替代品。获得零知识加密和全面的数据控制。"
+  },
+  {
+    "id": "elephantdrive-alternative",
+    "title": "Internxt — ElephantDrive 的私密安全替代方案",
+    "description": "切換到 Internxt，獲取 ElephantDrive 的開源替代方案。後量子和零知識加密的雲端儲存保證了您的文件和媒體檔案的完全隱私。"
+  },
+  {
+    "id": "degoo-alternative",
+    "title": "Internxt — Degoo 的私密安全替代方案",
+    "description": "切換到 Internxt，獲取 Degoo 的開源替代方案。後量子和零知識加密的雲端儲存保證了您的文件和媒體檔案的完全隱私。"
+  },
+  {
+    "id": "drime-alternative",
+    "title": "Internxt — Drime 的私密安全替代方案",
+    "description": "切換到 Internxt，獲取 Drime 的開源替代方案。後量子和零知識加密的雲端儲存保證了您的文件和媒體檔案的完全隱私。"
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "Internxt — FileJump 的私密安全替代方案",
+    "description": "切換到 Internxt，獲取 FileJump 的開源替代方案。後量子和零知識加密的雲端儲存保證了您的文件和媒體檔案的完全隱私。"
   },
   {
     "id": "meet",

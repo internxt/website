@@ -13,8 +13,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     {
       heroImage: '/images/black-friday/bf-general.webp',
       metatagsId: 'black-friday',
-      couponCode: PromoCodeName.BlackFriday,
-      couponCodeForLifetime: PromoCodeName.BlackFriday,
+      couponCode: PromoCodeName.FreePlanUpsell,
+      couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,

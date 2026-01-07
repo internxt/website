@@ -1,0 +1,210 @@
+{
+  "HeroSection": {
+    "title": "Internxt，Degoo 的一个 \n **安全** 替代方案",
+    "description": "切换到 Internxt，获得一个完全私密的 Degoo \n 替代品。采用后量子和零知识加密的云存储。",
+    "getPrivacy": "以 {{percentage}}% 的折扣获得全面的隐私保护",
+    "cta": "领取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 对比 Degoo 概述",
+    "description": "了解 Internxt 能够让您重新掌控数据的关键特性和差异。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密技术",
+        "后量子加密",
+        "价格和存储空间",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "具有竞争力，无隐藏费用，最高可达 5TB",
+        "云盘、VPN、杀毒软件、清理工具、会议、邮件等",
+        "定期安全审计",
+        "是",
+        "绝不会访问您的文件",
+        "符合 GDPR、HIPAA、ISO 27001、SOC 2 标准，总部位于西班牙"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "AES-256",
+        "否",
+        "基本月度计划，最高可达 5TB",
+        "云存储",
+        "没有公开的安全审计报告",
+        "否",
+        "存储在 'Vault' 之外的文件隐私性较低",
+        "GDPR，总部位于瑞典"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Degoo 缺乏透明度。Internxt 保护您的隐私。",
+    "description": "Degoo 隐藏其源代码且没有公开的安全审计报告。切换到 Internxt，为您的文件、视频和照片提供全面的安全和透明度。使用 Internxt，除了您，任何人都无法访问您的文件，包括我们。",
+    "scrollableSection": {
+      "titles": ["闭源", "未发布审计报告", "账户删除", "付费隐私"],
+      "descriptions": [
+        "Degoo 对公众隐藏其源代码。缺乏透明度，就无法确定 Degoo 如何处理或保护您的数据。",
+        "与 Internxt 不同，Degoo 没有发布任何独立的安全性审计报告，使用户对其平台的安全性感到不确定。",
+        "许多 Degoo 用户报告他们的账户在没有警告的情况下被删除，导致他们失去了对那些他们信任地保存在云端的文件。突然删除凸显了数据治理缺乏可靠性。",
+        "使用 Degoo 云存储，隐私成为一种付费功能，而不是一项基本权利。零知识加密仅适用于付费计划，这使得免费计划中的文件安全性较低，面临风险。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 Degoo 替代方案",
+    "description": "Degoo 在基本安全性方面表现出的能力，在隐私和透明度方面却有所欠缺。为了获得全面的隐私保护，请选择 Internxt，它结合了全面的安全性和零知识加密。",
+    "cards": {
+      "titles": ["隐私保护", "零知识加密仅适用于付费计划", "账户可靠性"],
+      "descriptions": [
+        "Degoo 的免费计划缺乏零知识加密，这意味着您的文件隐私性较低。在 Internxt，所有计划都包含零知识加密，没有跟踪器、没有 AI 扫描、没有隐藏后门。Internxt 无法读取您的文件，因此您的照片、文档和视频保持私密。",
+        "使用 Degoo，零知识加密仅适用于付费计划，使免费用户面临风险。Internxt 为所有用户（包括免费账户）提供后量子和零知识加密，确保您的数据始终受到保护。",
+        "许多用户报告 Degoo 在没有警告的情况下删除账户，导致永久性数据丢失。Internxt 提供可靠的云存储，具有透明的政策、定期审计和客户支持，以确保您的文件安全且可访问。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 对比 Degoo",
+    "description": "Internxt 提供无与伦比的安全性，具有 Degoo 无法比拟的功能，例如所有计划都提供零知识加密、后量子加密和开源透明度。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "全面的隐私、透明度和信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt 的代码是公开的，每个人都可以通过我们的 GitHub 进行检查以确保其安全性。这种透明度保证了不会隐藏任何漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的数据在客户端进行加密，保证只有您可以访问。适用于所有计划，包括免费计划。"
+          },
+          {
+            "title": "经过审计和合规",
+            "description": "Internxt 已通过外部审计，并符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。"
+          },
+          {
+            "title": "终身计划",
+            "description": "一次性付款即可获得高达 5TB 的计划，避免重复订阅。以 {{percentage}}% 的折扣永久使用我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隐私如何？",
+        "features": [
+          {
+            "title": "闭源",
+            "description": "Degoo 对公众隐藏其源代码。缺乏透明度或独立的安全性审计，就无法确定 Degoo 如何处理或保护您的数据。"
+          },
+          {
+            "title": "付费隐私功能",
+            "description": "零知识加密仅适用于付费计划，这使得免费计划中的文件安全性较低，面临被删除的风险。"
+          },
+          {
+            "title": "未发布审计报告",
+            "description": "与接受定期外部审计的 Internxt 不同，Degoo 没有发布任何独立的安全性审计报告。"
+          },
+          {
+            "title": "基于订阅",
+            "description": "仅提供月度订阅。没有年度或终身计划。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Degoo 的最佳替代方案",
+    "description": "Internxt Drive 提供一整套产品，旨在让您重新掌控您的在线隐私。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["云盘", "杀毒软件", "VPN", "清理工具", "会议", "高级工具"],
+      "descriptions": [
+        "Internxt Drive 带有后量子和零知识加密，因此除了您之外，任何人都无法访问您的文件。为您的照片、视频和文件获取加密的云存储和备份。\n\n 此外，加密备份和受密码保护的文件共享提供了针对勒索软件和数据泄露的最大保护。",
+        "Internxt Antivirus 直接内置在您的 Internxt Drive 应用程序中，可提供对恶意软件的全面控制和保护。运行全面或自定义的病毒扫描，以确保您的设备运行顺畅并免受勒索软件或间谍软件等病毒的侵害。",
+        "Internxt 的 VPN 保护您的浏览，阻止广告和跟踪器，并保持您的位置私密。加密您的 Wi-Fi 连接，以防止窥探、黑客和身份盗用。",
+        "Internxt Cleaner 可帮助您识别、消除和管理设备上不需要的垃圾或重复文件。使用 Cleaner，您可以删除不需要的文件，以保持您的存储空间井然有序、整洁，并确保您的设备高效运行。",
+        "Internxt Meet 也可用作您安全私密的视频会议替代方案。使用 Meet，您可以主持没有跟踪器、广告和数据收集的私人视频通话。您的视频通话受到后量子加密的保护。",
+        "适用于 Windows、Mac、Linux 和移动设备。对于高级用户，Internxt 提供对 WebDAV、Rclone 和 NAS 的支持，提供您在完全隐私下管理文件所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "您的隐私，您做主",
+    "description": "全面保护，享受 {{percentage}}% 折扣",
+    "cta": "领取优惠"
+  },
+  "tableSection": {
+    "title": "您的多功能隐私盟友",
+    "hotLabel": "{{discount}}% 折扣  ",
+    "planTitles": {
+      "header": "您的多功能隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得 1GB 加密云存储空间",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是 Degoo 更安全的替代方案吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，保证除了您之外，任何人都无法查看您的文件。所有文件都受到此加密的保护，即使是免费账户。",
+          "作为您 Internxt 云存储计划的一部分，VPN、杀毒软件、设备清理工具、NAS 支持、会议和邮件等附加功能也为您提供额外的保护，防止黑客和数据泄露。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密，它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵抗强大的量子攻击，这使得 PQC 成为 Degoo 云存储更安全的替代方案。",
+          "Internxt 使用这种加密方法，以确保您的终身云存储计划能够保护您免受未来的网络安全威胁，并且适用于所有计划，无需额外费用。"
+        ]
+      },
+      {
+        "question": "Internxt 的总部在哪里？",
+        "answer": [
+          "Internxt 总部位于西班牙瓦伦西亚，使其成为符合 GDPR 的云存储解决方案，遵循严格的法律来确保您的数据和隐私受到保护。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "如果您有任何其他问题、请求或需要帮助，您可以联系 hello@internxt.com，我们的客户成功团队将很乐意提供帮助。"
+        ]
+      },
+      {
+        "question": "我可以为我的终身计划添加更多存储空间吗？",
+        "answer": [
+          "是的，如果您需要添加更多存储空间，可以从 Internxt 账户的设置中升级您的计划。或者使用您当前的 Internxt 账户在 internxt.com/pricing 购买新计划，您的存储空间将自动累加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币支付吗？",
+        "answer": [
+          "是的，Internxt 目前接受借记卡和信用卡 Mastercard、VISA、American Express 等。您还可以通过 PayPal、iDEAL、Sofort、加密货币和 Klarna 付款。"
+        ]
+      }
+    ]
+  }
+}

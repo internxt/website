@@ -25,15 +25,23 @@ import { getImage } from '@/lib/getImage';
 import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatureInfoSection';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { PromoCodeName } from '@/lib/types';
+import { GetServerSidePropsContext } from 'next';
 
 interface FamilyProps {
+  lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: FamilyText;
   footerText: FooterText;
 }
 
-export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
+export const FamilyLP = ({
+  metatagsDescriptions,
+  navbarText,
+  textContent,
+  footerText,
+  lang,
+}: FamilyProps): JSX.Element => {
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
     couponCodeForBusiness: PromoCodeName.BlackFriday,
   });
@@ -44,6 +52,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
   const maxSecuritySection = textContent.MaximumSecuritySection;
   const selectInfoCard = textContent.WhatMakesInternxtPerfectSection.features;
   const cardsForGroupCardText = textContent.WhyChooseInternxt;
+  const locale = lang as string;
 
   const selectInfoCards = [
     {
@@ -90,14 +99,31 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       description: cardsForGroupCardText.cards[3].description,
     },
   ];
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
+      name: PromoCodeName.BlackFriday,
+    });
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'business',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      PromoCodeName.SoftSales85,
+    );
   };
 
   return (
     <Layout title={metatag.title} description={metatag.description}>
-      <Navbar fixed cta={['default']} lang="en" textContent={navbarText} />
+      <Navbar fixed cta={['default']} lang={locale} textContent={navbarText} />
 
       <HeroSection
         TextComponent={
@@ -142,7 +168,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 
       <PricingSectionWrapper
         loadingCards={loadingCards}
-        lang={'en'}
+        lang={locale}
         products={products}
         decimalDiscount={{
           business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
@@ -158,7 +184,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       <SelectFeatureInfoSection
         textContent={textContent.WhatMakesInternxtPerfectSection}
         cards={selectInfoCards}
-        lang="en"
+        lang={locale}
       />
 
       <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
@@ -196,7 +222,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
-      <Footer lang="en" textContent={footerText} />
+      <Footer lang={locale} textContent={footerText} />
     </Layout>
   );
 };

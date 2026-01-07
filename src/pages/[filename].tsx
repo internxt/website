@@ -53,6 +53,18 @@ const renderCtaContent = (
   </div>
 );
 
+const LANG_MAP = {
+  believemy: 'fr',
+  madroz: 'fr',
+  justin: 'fr',
+  benjamin: 'fr',
+  qinhui: 'fr',
+  payette: 'en',
+  ghareeb: 'en',
+  apfelcast: 'de',
+  ct3003: 'de',
+};
+
 function CombinedSpecialOffer({
   langJson,
   lang,
@@ -95,19 +107,33 @@ function CombinedSpecialOffer({
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
     stripeService.redirectToCheckout(
       priceId,
+      finalPrice,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
+      interval,
+      storage,
       couponCodeForCheckout?.name,
     );
   };
-
-  const navbarCta = 'priceTable';
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
@@ -135,7 +161,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
@@ -193,15 +219,8 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
-  let lang = 'es';
+  const lang = LANG_MAP[pathname] || 'es';
 
-  if (pathname === 'believemy') {
-    lang = 'fr';
-  }
-
-  if (pathname === 'ghareeb') {
-    lang = 'en';
-  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);

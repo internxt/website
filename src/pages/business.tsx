@@ -38,13 +38,31 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.BlackFriday,
+    couponCodeForBusiness: PromoCodeName.FreePlanUpsell,
   });
 
   const locale = lang as string;
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const finalPrice = await stripeService.calculateFinalPrice(priceId, interval, currencyValue, 'business', {
+      name: PromoCodeName.SoftSales85,
+    });
+
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'business',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      PromoCodeName.BlackFriday,
+    );
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
   const scrollToTop = () => {

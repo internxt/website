@@ -43,6 +43,18 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/specialoffer/[filename]',
   '/redeem/[filename]',
   '/[filename]',
+  '/pcloud-alternative',
+  '/mega-alternative',
+  '/dropbox-alternative',
+  '/degoo-alternative',
+  '/onedrive-alternative',
+  '/icedrive-alternative',
+  '/drime-alternative',
+  '/koofr-alternative',
+  '/google-drive-alternative',
+  '/filejump-alternative',
+  '/elephantdrive-alternative',
+  '/coupons',
 ];
 
 export const SNIGEL_BANNERS = {

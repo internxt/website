@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { PricingText } from '@/assets/types/pricing';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
@@ -7,7 +9,7 @@ import CustomPlanSelector from './CustomPlanSelector';
 interface ComparisonTableProps {
   textContent: PricingText['ComparisonTable'];
   products: ProductsDataProps | undefined;
-  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   billingFrequency: Interval;
   decimalDiscount: any;
   currencyValue: any;
@@ -55,6 +57,10 @@ export default function ComparisonTableSection({
     return products?.individuals?.[billingFrequency]?.[planOrder]?.priceId ?? '';
   };
 
+  const getPlanStorage = (planOrder: number) => {
+    return products?.individuals?.[billingFrequency]?.[planOrder]?.storage ?? '';
+  };
+
   const getPlanByIdAndGetPrice = (planId: string) => {
     const plan = textContent.plans.find((p) => p.id === planId);
     return plan ? getPlanPrice(plan.order) : '0.00';
@@ -82,14 +88,14 @@ export default function ComparisonTableSection({
     return category.features.every((feature: any) => Object.values(feature.avalability).filter(Boolean).length === 1);
   };
 
-  const isLastColumn = (index: number) => index === textContent.plans.length - 1;
+  const isRecommendedPlan = (index: number) => index === textContent.plans.length - 2;
   const isSecondToLastColumn = (index: number) => index === textContent.plans.length - 2;
   const isLastCategory = (index: number) => index === textContent.categories.length - 1;
   const isLastFeature = (categoryFeatures: any[], featureIndex: number) => featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
     return `items-start p-6 text-start  ${
-      isLastColumn(planIndex)
+      isRecommendedPlan(planIndex)
         ? 'flex rounded-t-2xl ring-[1px] ring-neutral-25 bg-neutral-17'
         : 'bg-neutral-16 ring-[1px] ring-neutral-25'
     }`;
@@ -97,15 +103,15 @@ export default function ComparisonTableSection({
 
   const getButtonStyles = (planIndex: number) => {
     return `${
-      isLastColumn(planIndex)
+      isRecommendedPlan(planIndex)
         ? 'bg-primary text-white hover:bg-primary-dark'
         : 'border-primary bg-transparent text-primary hover:bg-gray-1'
     } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`;
   };
 
-  const getCategoryRowStyles = (planIndex: number, categoryIndex: number) => {
+  const getCategoryRowStyles = (planIndex: number) => {
     return `h-[72px] ${
-      isLastColumn(planIndex)
+      isRecommendedPlan(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
         : 'border-y-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
@@ -114,7 +120,7 @@ export default function ComparisonTableSection({
   const getSpecialFeatureStyles = (planIndex: number, categoryIndex: number) => {
     let baseStyles = 'px-6 py-4';
 
-    if (isLastColumn(planIndex)) {
+    if (isRecommendedPlan(planIndex)) {
       baseStyles += ' bg-neutral-17 outline outline-1 outline-neutral-25';
       if (isLastCategory(categoryIndex)) {
         baseStyles += 'outline outline-1 outline-neutral-25 rounded-br-16';
@@ -129,7 +135,7 @@ export default function ComparisonTableSection({
   const getRegularFeatureStyles = (planIndex: number, categoryIndex: number, category: any, featureIndex: number) => {
     let baseStyles = 'px-6 py-4';
 
-    if (isLastColumn(planIndex)) {
+    if (isRecommendedPlan(planIndex)) {
       baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 shadow-lg  outline outline-1 outline-neutral-25';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
         baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
@@ -229,7 +235,14 @@ export default function ComparisonTableSection({
                       <p className="text-lg font-normal text-gray-55">{billingText}</p>
                     </span>
                     <button
-                      onClick={() => onCheckoutButtonClicked(getPlanPriceId(plan.order), isLifetime)}
+                      onClick={() =>
+                        onCheckoutButtonClicked(
+                          getPlanPriceId(plan.order),
+                          isLifetime,
+                          billingFrequency,
+                          getPlanStorage(plan.order),
+                        )
+                      }
                       className={getButtonStyles(planIndex)}
                     >
                       <p className="text-base font-medium">{textContent.cta}</p>
@@ -245,7 +258,7 @@ export default function ComparisonTableSection({
               <>
                 <tr key={`category-${categoryIndex}`}>
                   {textContent.plans.map((plan, planIndex) => (
-                    <td key={`category-${plan.id}`} className={getCategoryRowStyles(planIndex, categoryIndex)}>
+                    <td key={`category-${plan.id}`} className={getCategoryRowStyles(planIndex)}>
                       {planIndex === 0 ? category.name : undefined}
                     </td>
                   ))}
@@ -296,7 +309,16 @@ export default function ComparisonTableSection({
             getPlanPrice={getPlanByIdAndGetPrice}
             billingText={billingText}
             ctaText={textContent.cta}
-            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanA), isLifetime)}
+            onCheckoutClick={() => {
+              const plan = textContent.plans.find((p) => p.id === selectedPlanA);
+              const order = plan?.order ?? 0;
+              onCheckoutButtonClicked(
+                getPlanByIdAndGetPriceId(selectedPlanA),
+                isLifetime,
+                billingFrequency,
+                getPlanStorage(order),
+              );
+            }}
             isLeftColumn={true}
             customBackgroundClass={getMobilePlanStyles(selectedPlanA)}
           />
@@ -309,7 +331,16 @@ export default function ComparisonTableSection({
             getPlanPrice={getPlanByIdAndGetPrice}
             billingText={billingText}
             ctaText={textContent.cta}
-            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanB), isLifetime)}
+            onCheckoutClick={() => {
+              const plan = textContent.plans.find((p) => p.id === selectedPlanB);
+              const order = plan?.order ?? 0;
+              onCheckoutButtonClicked(
+                getPlanByIdAndGetPriceId(selectedPlanB),
+                isLifetime,
+                billingFrequency,
+                getPlanStorage(order),
+              );
+            }}
             isLeftColumn={false}
             customBackgroundClass={getMobilePlanStyles(selectedPlanB)}
           />

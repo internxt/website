@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Oferta de **Black Friday**",
-    "subtitle": "Consigue la mejor oferta de Black Friday 2025 con un 90% de descuento en todos los planes de Internxt",
+    "subtitle": "Consigue la mejor oferta de Black Friday 2025 con un 87% de descuento en todos los planes de Internxt",
     "description": "¡Obtén un {{discount}}% de descuento ahora!",
     "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "claimDeal": "Reclamar oferta"
@@ -18,7 +18,7 @@
     "title": "¡No te pierdas tu oferta de Black Friday!",
     "description": [
       "Protege tus datos online con Internxt gracias a nuestra suite de privacidad totalmente equipada que incluye copias de seguridad, Antivirus, VPN, Cleaner, Meet, Mail y mucho más.",
-      "Consigue la mejor privacidad y seguridad online con el descuento del 90% de Black Friday de Internxt."
+      "Consigue la mejor privacidad y seguridad online con el descuento del 87% de Black Friday de Internxt."
     ]
   },
   "MoreDealsSection": {
@@ -73,13 +73,13 @@
       "descriptions": [
         "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
         "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
-        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo del 90%, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo del 87%, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
       ]
     }
   },
   "CtaSection": {
     "title": "Descubre enormes descuentos de Black Friday",
-    "description": "90% de descuento en todos nuestros planes premium",
+    "description": "87% de descuento en todos nuestros planes premium",
     "cta": "Reclamar oferta"
   },
   "HorizontalScrollableSection": {
@@ -109,7 +109,7 @@
   },
   "CtaSectionV2": {
     "title": "Las mejores ofertas de Black Friday",
-    "description": "90% de descuento en todos los planes",
+    "description": "87% de descuento en todos los planes",
     "cta": "Reclamar oferta"
   },
   "FaqSection": {
@@ -118,7 +118,7 @@
       {
         "question": "¿Cómo obtengo el descuento de Black Friday de Internxt?",
         "answer": [
-          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 90% se aplica automáticamente al finalizar la compra."
+          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 87% se aplica automáticamente al finalizar la compra."
         ]
       },
       {
