@@ -341,6 +341,41 @@
     "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu FileJump. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher garantiert die vollständige Privatsphäre Ihrer Dokumente und Medien."
   },
   {
+    "id": "zoom-alternative",
+    "title": "Internxt — Alternative zu Zoom",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Zoom. Inklusive Post-Quanten-Cloud-Speicher und mehr für volle Online-Privatsphäre."
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "Internxt — Alternative zu IDrive",
+    "description": "Wechseln Sie zu Internxt für eine absolut private Alternative zu IDrive. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher für die volle Privatsphäre Ihrer Dateien."
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "Internxt — Alternative zu Proton Drive",
+    "description": "Wechseln Sie zu Internxt für eine komplette Privacy-Suite und eine Alternative zu Proton Drive. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher."
+  },
+  {
+    "id": "sync-alternative",
+    "title": "Internxt — Alternative zu Sync",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Sync. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher für die volle Privatsphäre Ihrer Dateien."
+  },
+  {
+    "id": "filen-alternative",
+    "title": "Internxt — Alternative zu Filen",
+    "description": "Wechseln Sie zu Internxt für eine Alternative zu Filen. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher für die volle Privatsphäre Ihrer Dateien."
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Alternative zu Google Meet",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Google Meet. Post-Quanten- und Zero-Knowledge-Videokonferenzen für volle Privatsphäre bei Ihren Anrufen."
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "Internxt — Alternative zu Terabox",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Terabox. Post-Quanten- und Zero-Knowledge-verschlüsselter Cloud-Speicher für die volle Privatsphäre Ihrer Dateien."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Sichere und Private Videoanrufe",
     "description": "Meet bietet private Videoanrufe mit Post-Quantum- und Ende-zu-Ende-Verschlüsselung für die sichersten Videokonferenzen."

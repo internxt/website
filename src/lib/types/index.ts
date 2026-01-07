@@ -187,6 +187,13 @@ export enum PromoCodeName {
   CT3003 = 'CT3003',
   benjamin = 'BENJAMIN',
   payette = 'PAYETTE',
+  ZOOM87 = 'ZOOM87',
+  FILEN87 = 'FILEN87',
+  GOOGLEMEET = 'GOOGLEMEET87',
+  IDRIVE87 = 'IDRIVE87',
+  PROTONDRIVE = 'PROTONDRIVE87',
+  SYNC = 'SYNC87',
+  TERABOX87 = 'TERABOX87',
 }
 
 export interface PromoCodeProps {

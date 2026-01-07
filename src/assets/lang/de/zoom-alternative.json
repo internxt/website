@@ -1,0 +1,221 @@
+{
+  "HeroSection": {
+    "title": "Internxt Meet. Wie Zoom, aber **privat**",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu Zoom, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥 ",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Zoom Übersicht",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Verschlüsselt auf Ihrem Gerät",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, bis zu 5TB",
+        "Private Videoanrufe, Drive, Mail, VPN, Antivirus und mehr",
+        "Regelmäßige Sicherheitsaudits",
+        "Ja",
+        "Kann niemals auf Ihre Video-, Audio-, Chat- oder Dateiinhalte zugreifen",
+        "Voller Datenschutz: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Verschlüsselt durch Zoom",
+        "Nein",
+        "Teurere Pläne, 10GB Cloud-Speicher",
+        "Videoanrufe hosten, Cloud-Speicher, Mail",
+        "Regelmäßige Sicherheitsaudits",
+        "Kostenpflichtiges Feature",
+        "Unter bestimmten Umständen zugänglich",
+        "Unterliegt US-Datenschutzgesetzen"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Zoom verfolgt, teilt und überwacht Ihre Daten. Internxt Meet schützt sie.",
+    "description": "Zoom mag sicher sein, aber es ist ein Albtraum für Ihre Privatsphäre. Wechseln Sie für volle Sicherheit zu Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Umfangreiche Datensammlung",
+        "Tracker von Drittanbietern",
+        "Mitarbeiterzugriff auf Ihre Daten",
+        "Big-Tech-Integrationen"
+      ],
+      "descriptions": [
+        "Zoom sammelt Metadaten wie Teilnehmer, Dauer, IP-Adressen und Gerätedetails. Wenn Cloud-Aufzeichnungen verwendet werden, speichern sie Ihre tatsächlichen Audio-, Video- und Chatinhalte auf ihren Servern.",
+        "Zoom teilt Nutzerdaten mit Drittanbietern für Analyse und Marketing. Seine KI-Funktionen verarbeiten Meeting-Daten mit externen Modellen, was sensible Informationen gefährden kann.",
+        "Zoom-Mitarbeiter können Ihre Anrufe und Chats unter bestimmten Umständen einsehen, etwa bei Strafverfolgungsanfragen. Ihre Daten sind nicht vollständig vor dem Unternehmen selbst geschützt.",
+        "Die Verknüpfung von Zoom mit Outlook oder Gmail gibt ihnen noch mehr Zugriff auf Ihre persönlichen Daten über Unternehmen, die keinen Wert auf den Schutz sensibler Daten legen."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private Alternative zu Zoom brauchen",
+    "description": "Was Zoom an Sicherheit zeigt, fehlt an Privatsphäre. Erhalten Sie totale Sicherheit kombiniert mit Zero-Knowledge-Verschlüsselung.",
+    "cards": {
+      "titles": ["Privatsphäre ohne Hintertüren", "Ende-zu-Ende-Kontrolle", "Kein Data-Harvesting"],
+      "descriptions": [
+        "Bei Internxt gibt es keine Tracker, kein KI-Scanning und keine versteckten Hintertüren. Wir haben keinen Zugriff auf Ihre Anrufe, Chats oder persönlichen Informationen.",
+        "Zoom verwaltet die Verschlüsselungsschlüssel auf seinen Servern und hat so die totale Kontrolle. Internxt stellt sicher, dass Sie die Schlüssel halten.",
+        "Zoom kann Ihre Nutzungsdaten bis zu 24 Monate lang aufbewahren. Internxt minimiert die Datensammlung, damit Ihr digitaler Fußabdruck Ihnen gehört."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Zoom",
+    "description": "Internxt bietet unübertroffene private Videoanrufe und eine vollständige Suite von Privacy-Diensten – die beste Alternative zu Zoom.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Totale Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Der Code von Internxt ist für jeden offen einsehbar, um die Sicherheit via GitHub zu gewährleisten. Diese Transparenz garantiert, dass keine Schwachstellen verborgen bleiben."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Daten werden auf der Client-Seite verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Europäischer Cloud-Speicher",
+            "description": "Sitz in Europa und konform mit DSGVO, HIPAA, ISO 27001 und SOC 2. Die Plattform ist vollständig geprüft."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Vermeiden Sie Abos mit einer Einmalzahlung für Pläne bis zu 5TB. Nutzen Sie unsere Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Zoom: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Zoom hält seinen Quellcode verborgen. Ohne Transparenz gibt es keine Möglichkeit sicher zu wissen, wie privat Ihre Anrufe wirklich sind."
+          },
+          {
+            "title": "Verschlüsselt durch Zoom",
+            "description": "Zoom hält die Verschlüsselungsschlüssel auf seinen Servern. Mitarbeiter könnten Ihre Cloud theoretisch entschlüsseln, wenn sie eine rechtliche Anfrage erhalten."
+          },
+          {
+            "title": "Daten in den USA gespeichert",
+            "description": "Unterliegt den Überwachungsgesetzen der US-Regierung, die unter bestimmten Bedingungen auf Ihre Daten zugreifen kann."
+          },
+          {
+            "title": "Abonnementbasiert",
+            "description": "Bietet nur monatliche oder jährliche Abonnements mit begrenzten Cloud-Speicheroptionen an."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Zoom ist",
+    "description": "Internxt Drive bietet eine umfassende Produktsuite, die Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückgibt.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Direkt in die App integriert für Schutz vor Malware, Ransomware und Spyware mit benutzerdefinierten Scans.",
+        "Verschlüsselt Ihre Verbindung, blockiert Werbung und Tracker und hält Ihren Standort vor neugierigen Blicken privat.",
+        "Identifizieren und eliminieren Sie unerwünschten Müll oder Dateidubletten, um Ihr Gerät organisiert zu halten.",
+        "Sichere und private Alternative zu Zoom. Videoanrufe frei von Trackern, Werbung und Datensammlung dank Post-Quanten-Verschlüsselung.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte. Volle Unterstützung für WebDAV, Rclone und NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt als beste Alternative zu Zoom",
+    "description": "Internxt bietet standardmäßig volle private Verschlüsselung, transparente Open-Source-Software und eine komplette Privacy-Suite für Ihre Datensicherheit.",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Privatsphäre-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Ihr All-in-One-Privatsphäre-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1GB verschlüsselten Cloud-Speicher gratis",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu Zoom?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Anrufe sehen kann. Zoom verwaltet die Schlüssel selbst.",
+          "Zusätzliche Funktionen wie VPN, Antivirus und Cleaner bieten Ihnen zudem Schutz vor Hackern und Datenlecks."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung sind Post-Quanten-Algorithmen so konzipiert, dass sie Angriffen durch Quantencomputer widerstehen, was Internxt sicherer macht.",
+          "Diese Methode wird von Internxt verwendet, um Ihre Daten vor zukünftigen Cyber-Bedrohungen zu schützen, und ist in allen Plänen ohne Aufpreis enthalten."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Lösung macht, die den strengen EU-Gesetzen zum Schutz Ihrer Daten folgt."
+        ]
+      },
+      {
+        "question": "Ist Zoom teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven 87% Rabatt sind alle unsere Pläne günstiger als die derzeitigen Zoom-Preise, während wir deutlich mehr Datenschutzfunktionen bieten.",
+          "Sie können zudem wiederkehrende Abokosten vermeiden, indem Sie einen Lifetime-Plan von Internxt wählen."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen haben oder Hilfe benötigen, kontaktieren Sie hello@internxt.com. Unser Customer Success Team hilft Ihnen gerne weiter."
+        ]
+      },
+      {
+        "question": "Kann ich mehr Speicherplatz zu meinem Lifetime-Plan hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden. Ihr Speicherplatz wird automatisch addiert."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express etc.), PayPal, iDEAL, Sofort, Kryptowährungen und Klarna."
+        ]
+      }
+    ]
+  }
+}

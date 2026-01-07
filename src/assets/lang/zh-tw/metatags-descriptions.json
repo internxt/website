@@ -516,6 +516,41 @@
     "description": "切換到 Internxt，獲取 FileJump 的開源替代方案。後量子和零知識加密的雲端儲存保證了您的文件和媒體檔案的完全隱私。"
   },
   {
+    "id": "zoom-alternative",
+    "title": "Internxt — Zoom 的替代方案",
+    "description": "切換到 Internxt，體驗 Zoom 的開源替代方案。包含後量子雲端儲存等功能，全方位保護您的線上隱私。"
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "Internxt — IDrive 的替代方案",
+    "description": "選擇 Internxt 作為 IDrive 的完全私密替代方案。採用後量子和零知識加密雲端儲存，確保您檔案的絕對隱私。"
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "Internxt — Proton Drive 的替代方案",
+    "description": "切換到 Internxt，享受完整的隱私套件和 Proton Drive 的替代方案。提供後量子及零知識加密雲端儲存。"
+  },
+  {
+    "id": "sync-alternative",
+    "title": "Internxt — Sync 的替代方案",
+    "description": "切換到 Internxt，體驗 Sync 的開源替代方案。後量子和零知識加密雲端儲存，為您提供全方位的檔案隱私保護。"
+  },
+  {
+    "id": "filen-alternative",
+    "title": "Internxt — Filen 的替代方案",
+    "description": "切換到 Internxt 作為 Filen 的替代方案。後量子和零知識加密雲端儲存，確保您檔案的完整隱私。"
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Google Meet 的替代方案",
+    "description": "切換到 Internxt，體驗 Google Meet 的開源替代方案。後量子和零知識加密視訊會議，確保通話的絕對隱私。"
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "Internxt — Terabox 的替代方案",
+    "description": "切換到 Internxt，體驗 Terabox 的開源替代方案。後量子和零知識加密雲端儲存，確保您檔案的絕對隱私。"
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – 安全私密的視訊通話",
     "description": "Meet 提供具有後量子和端到端加密的私人視訊通話，打造最安全的視訊會議體驗。"

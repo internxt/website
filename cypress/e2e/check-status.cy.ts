@@ -38,6 +38,13 @@ const nameFiles = [
   'elephantdrive-alternative',
   'drime-alternative',
   'filejump-alternative',
+  'alternative-to-filen',
+  'alternative-to-google-meet',
+  'alternative-to-idrive',
+  'alternative-to-proton-drive',
+  'alternative-to-sync',
+  'alternative-to-terabox',
+  'alternative-to-zoom',
 ];
 
 const langs = {

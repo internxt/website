@@ -1,6 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
@@ -12,6 +11,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
+import Footer from '@/components/layout/footers/Footer';
 
 const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
@@ -105,7 +105,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <FAQSection textContent={langJson.FaqSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 };

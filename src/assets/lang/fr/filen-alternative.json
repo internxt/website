@@ -1,0 +1,219 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Comme Filen, \n mais **privé**",
+    "description": "Passez à Internxt, la meilleure alternative à Filen qui respecte votre vie privée avec une sécurité post-quantique",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction ",
+    "cta": "Profiter de l'offre"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs Filen",
+    "description": "Découvrez les fonctionnalités clés et les différences qui permettent à Internxt de vous redonner le contrôle de vos données.",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Chiffrement post-quantique",
+        "Tarification et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Support en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open-source & vérifié",
+        "Zéro-knowledge (AES-256)",
+        "Oui (Kyber-512)",
+        "Compétitif, plans à vie disponibles",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail",
+        "Audits de sécurité indépendants réguliers",
+        "Oui (Support en direct)",
+        "Ne peut jamais accéder à vos fichiers",
+        "RGPD, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Open-source",
+        "Zéro-knowledge (AES-256)",
+        "Non",
+        "Mensuel/Annuel (Pro Lifetime retiré)",
+        "Stockage cloud & synchro basique",
+        "Aucun audit indépendant publié récemment",
+        "Non",
+        "Ne peut jamais accéder à vos fichiers",
+        "RGPD, basé en Allemagne"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Pourquoi vous devriez envisager une alternative à Filen",
+    "description": "Choisissez Internxt pour une sécurité totale de vos fichiers et données personnelles. Sécurité auditée et zéro-knowledge, avec une suite complète de produits.",
+    "scrollableSection": {
+      "titles": [
+        "Sécurité non vérifiée",
+        "Suite de confidentialité limitée",
+        "Comptes supprimés pour inactivité",
+        "Usage personnel uniquement"
+      ],
+      "descriptions": [
+        "L'absence d'audit de sécurité indépendant récent pour Filen limite la confiance. Les utilisateurs font face à une incertitude concernant la gestion des clés, ce qui est préoccupant pour les fichiers sensibles.",
+        "Filen n'offre que du stockage cloud basique. La suite complète d'Internxt inclut Antivirus, VPN, Cleaner et Meet privé, tous conçus pour sécuriser votre présence numérique face aux Big Tech.",
+        "La politique de Filen consistant à supprimer les comptes pour inactivité fait courir le risque de perdre ses données à jamais. Internxt offre un accès à long terme plus robuste.",
+        "Sans plans adaptés aux entreprises ou aux familles, Filen ne répond pas aux besoins collaboratifs. Les équipes ne peuvent pas gérer les utilisateurs efficacement, ce qui le rend inadapté aux organisations professionnelles."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Allez au-delà du stockage cloud et obtenez une confidentialité totale",
+    "description": "Pour une confidentialité totale, optez pour une sécurité complète combinée au chiffrement zéro-knowledge et post-quantique d'Internxt.",
+    "cards": {
+      "titles": ["Prêt pour le post-quantique", "Protection en ligne complète", "Payez une fois, utilisez à vie"],
+      "descriptions": [
+        "Internxt est le premier cloud à implémenter le chiffrement post-quantique (Kyber-512), protégeant vos données contre les futures attaques d'ordinateurs quantiques qui briseront le standard AES-256.",
+        "Internxt va au-delà du stockage, offrant un écosystème complet (VPN, Antivirus, Meet) pour protéger votre appareil et votre identité en ligne avec un seul abonnement sécurisé.",
+        "Contrairement à Filen, qui a retiré la plupart de ses plans Pro à vie, Internxt continue de proposer un accès vitalice abordable jusqu'à 5To avec une garantie de remboursement de 30 jours."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Filen",
+    "description": "Internxt offre une confidentialité inégalée grâce au chiffrement post-quantique, vous offrant la meilleure protection contre les futures cyberattaques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "features": [
+          {
+            "title": "Open Source Audité",
+            "description": "Le code d'Internxt est public et audité indépendamment par Securitum, garantissant l'absence de portes dérobées ou de vulnérabilités."
+          },
+          {
+            "title": "Zéro-knowledge & PQE",
+            "description": "Vos données sont chiffrées sur votre appareil avec des algorithmes post-quantiques, assurant une sécurité contre les menaces actuelles et futures."
+          },
+          {
+            "title": "Conformité Entreprise",
+            "description": "Conforme au RGPD, HIPAA, ISO 27001 et SOC 2, répondant aux normes de sécurité mondiales les plus strictes."
+          },
+          {
+            "title": "Plans à Vie Flexibles",
+            "description": "Paiement unique pour un accès à vie jusqu'à 5To. Plans cumulables pour étendre votre stockage à tout moment avec {{percentage}}% de réduction."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Filen : Qu'en est-il de votre vie privée ?",
+        "features": [
+          {
+            "title": "Open source, sans audit",
+            "description": "Filen est open source, mais manque d'audits indépendants récents par des tiers pour vérifier ses affirmations en matière de sécurité."
+          },
+          {
+            "title": "Chiffrement standard",
+            "description": "Utilise le standard AES-256, qui pourrait devenir vulnérable à mesure que la technologie de l'informatique quantique évolue."
+          },
+          {
+            "title": "Conformité Allemande",
+            "description": "Basé en Allemagne et conforme au RGPD, mais ne dispose pas des certifications de conformité plus larges d'Internxt."
+          },
+          {
+            "title": "Focus sur l'abonnement",
+            "description": "S'éloigne des modèles à vie ; les plans Pro Lifetime sont de plus en plus restreints ou retirés."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à Filen",
+    "description": "Internxt Drive propose une suite complète de produits conçus pour vous redonner le contrôle de votre confidentialité en ligne.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
+      "descriptions": [
+        "Protection intégrée contre les logiciels malveillants, ransomwares et spywares directement dans votre application de stockage sécurisé.",
+        "Chiffrez votre connexion Internet, bloquez les traqueurs et naviguez de manière privée depuis n'importe où dans le monde.",
+        "Identifiez et éliminez les fichiers doublons ou inutiles pour optimiser votre stockage et assurer la fluidité de votre appareil.",
+        "Appels vidéo privés avec chiffrement post-quantique, loin du traçage et de la collecte de données des Big Tech.",
+        "Prenez le contrôle avec le support WebDAV, Rclone et NAS. Disponible sur Windows, Mac, Linux et mobile."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Stockage cloud européen",
+    "description": "Protection totale des données avec {{percentage}}% de réduction",
+    "cta": "Profiter de l'offre"
+  },
+  "tableSection": {
+    "title": "Votre allié confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction ",
+    "planTitles": {
+      "header": "Votre allié confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Choisir ce plan"
+    },
+    "features": {
+      "openSource": "Open-source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1To",
+      "premium": "3To",
+      "ultimate": "5To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sûre et plus privée que Filen ?",
+        "answer": [
+          "Oui, Internxt est le premier à proposer le chiffrement post-quantique en plus des politiques zéro-knowledge, et il est audité par des firmes de sécurité indépendantes.",
+          "Alors que Filen est sûr, Internxt offre une suite de confidentialité plus large incluant VPN, Antivirus et appels Meet privés."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sûr ?",
+        "answer": [
+          "Contrairement à l'AES-256 standard utilisé par Filen, le chiffrement post-quantique (PQE) résiste aux attaques des ordinateurs quantiques, pérennisant vos données pour la prochaine décennie."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, respectant les lois strictes du RGPD et de l'UE sur la protection des données."
+        ]
+      },
+      {
+        "question": "Filen est-il plus cher qu'Internxt ?",
+        "answer": [
+          "Avec notre remise exclusive de {{percentage}}%, les plans annuels et à vie d'Internxt sont très compétitifs et offrent plus de fonctionnalités que le modèle de stockage seul de Filen."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Vous pouvez nous joindre à hello@internxt.com. Notre équipe Success offre un support en direct, contrairement à de nombreux petits fournisseurs."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
+        "answer": [
+          "Oui, le stockage est cumulable. Vous pouvez mettre à jour ou ajouter de nouveaux plans à tout moment depuis vos paramètres."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte les cartes de débit/crédit, PayPal, iDEAL, Sofort, les cryptomonnaies et Klarna pour une flexibilité maximale."
+        ]
+      }
+    ]
+  }
+}

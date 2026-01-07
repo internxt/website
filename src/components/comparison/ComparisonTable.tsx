@@ -25,7 +25,16 @@ interface ComparisonTableProps {
     | 'Degoo'
     | 'Elephantdrive'
     | 'FileJump'
-    | 'Drime';
+    | 'Drime'
+    | 'GoogleMeet'
+    | 'TeraBox'
+    | 'Filen'
+    | 'idrive'
+    | 'Terabox'
+    | 'sync'
+    | 'proton-drive'
+    | 'zoom'
+    | 'Teams';
   hideTooltip?: boolean;
 }
 
@@ -81,6 +90,30 @@ export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTab
       defaultLogo: '/images/comparison/FileJump_Letters.webp',
     },
     Elephantdrive: {
+      defaultLogo: '/images/comparison/Elephantdrive_Letters.webp',
+    },
+    GoogleMeet: {
+      defaultLogo: '/images/comparison/google-meet-Letters.webp',
+    },
+    Terabox: {
+      defaultLogo: '/images/comparison/terabox-Letters.webp',
+    },
+    Filen: {
+      defaultLogo: '/images/comparison/filen-Letters.webp',
+    },
+    idrive: {
+      defaultLogo: '/images/comparison/idrive-Letters.webp',
+    },
+    sync: {
+      defaultLogo: '/images/comparison/sync-Letters.webp',
+    },
+    'proton-drive': {
+      defaultLogo: '/images/comparison/proton-drive-Letters.webp',
+    },
+    zoom: {
+      defaultLogo: '/images/comparison/zoom-Letters.webp',
+    },
+    Teams: {
       defaultLogo: '/images/comparison/Elephantdrive_Letters.webp',
     },
   } as const;
