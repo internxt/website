@@ -16,12 +16,15 @@ const FeatureSection = ({ textContent }) => {
             className="rounded-2xl"
             autoPlay
             loop
+            muted
             playsInline
             style={{ objectFit: 'cover' }}
           >
             <source src={getImage('/videos/about/INTRNXT_ANIM_MAIN_INGLES_1-1.mp4')} type="video/mp4" />
+            <track kind="captions" srcLang="en" label="English" />
           </video>
         </RevealX>
+
         <RevealX direction="right" className="flex lg:hidden">
           <video
             width={345}
@@ -34,6 +37,7 @@ const FeatureSection = ({ textContent }) => {
             style={{ objectFit: 'cover' }}
           >
             <source src={getImage('/videos/about/INTRNXT_ANIM_MAIN_INGLES_1-1.mp4')} type="video/mp4" />
+            <track kind="captions" srcLang="en" label="English" />
           </video>
         </RevealX>
         <div className="flex w-[554px] flex-col items-center justify-center space-y-6 md:items-start">
