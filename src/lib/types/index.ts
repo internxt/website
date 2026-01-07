@@ -187,6 +187,7 @@ export enum PromoCodeName {
   CT3003 = 'CT3003',
   benjamin = 'BENJAMIN',
   payette = 'PAYETTE',
+  christian = 'CHRISTIAN',
 }
 
 export interface PromoCodeProps {
