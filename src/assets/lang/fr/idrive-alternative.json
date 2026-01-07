@@ -1,0 +1,221 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Comme IDrive, mais **privé**",
+    "description": "Passez à Internxt, votre coffre-fort de stockage cloud entièrement chiffré et l'alternative à IDrive",
+    "getPrivacy": " Sélectionnez votre forfait à {{percentage}}% de réduction 🔥 ",
+    "cta": "Profiter de l'offre"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs IDrive",
+    "description": "Découvrez les fonctionnalités clés et les différences qui permettent à Internxt de vous redonner le contrôle sur vos données",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Chiffrement post-quantique",
+        "Tarification et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité indépendants",
+        "Support en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "AES-256 et Kyber-512",
+        "Oui",
+        "Compétitif, pas de frais cachés, jusqu'à 5 To",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, et plus encore",
+        "Oui",
+        "Oui",
+        "Ne peut jamais accéder à vos fichiers",
+        "Conforme RGPD, HIPAA, ISO 27001, SOC 2, basé en Espagne"
+      ],
+      "competitorFeatures": [
+        "Code propriétaire (fermé)",
+        "AES-256",
+        "Non",
+        "Forfaits annuels plus chers et moins de stockage, jusqu'à 5 To",
+        "Stockage cloud, axé sur les sauvegardes",
+        "Aucun audit de sécurité publié",
+        "Oui",
+        "Les fichiers ne sont pas entièrement chiffrés de bout en bout",
+        "Basé aux États-Unis, le cadre du Privacy Shield UE-États-Unis s'applique"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Besoin d'une alternative à IDrive ?",
+    "description": "Bénéficiez du chiffrement zero-knowledge intégré avec Internxt",
+    "scrollableSection": {
+      "titles": [
+        "Pas entièrement chiffré",
+        "Fonctions de confidentialité limitées",
+        "Risques pour vos données",
+        "Manque de transparence"
+      ],
+      "descriptions": [
+        "Tous les fichiers sur IDrive ne sont pas protégés par un chiffrement de bout en bout. IDrive sépare le stockage des fichiers de la gestion des clés, offrant le chiffrement de bout en bout uniquement si vous activez une clé personnelle. Le chiffrement par défaut laisse les fichiers accessibles au service.",
+        "IDrive se concentre sur les sauvegardes et le versioning. La suite complète d'Internxt se concentre sur la sécurisation de vos fichiers contre les Big Tech, incluant Antivirus, VPN, Cleaner, Meet et Mail, tous protégés par un chiffrement post-quantique.",
+        "Les serveurs d'IDrive sont situés aux États-Unis, ce qui les soumet à la surveillance américaine et aux demandes d'accès légal. Le chiffrement par défaut peut être accédé par l'entreprise et les autorités gouvernementales.",
+        "Sans code open-source ni audits, vous ne pouvez pas être sûr de la manière dont IDrive gère vos données. Choisir un fournisseur européen de stockage cloud entièrement open-source comme Internxt vous offre une protection vérifiée."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Alternative à IDrive",
+    "description": "Découvrez pourquoi vous avez besoin d'une alternative à IDrive, et obtenez un stockage cloud chiffré post-quantique, plus Antivirus, VPN, Cleaner, Meet, et plus encore avec Internxt.",
+    "cards": {
+      "titles": ["Chiffrement complet par défaut", "Écosystème axé sur la vie privée", "Transparence de l'open-source"],
+      "descriptions": [
+        "Contrairement à IDrive, Internxt fournit automatiquement un chiffrement zero-knowledge pour chaque fichier, garantissant que vous seul détenez les clés de vos données.",
+        "Internxt vous offre plus que de simples sauvegardes ; vous bénéficiez d'une suite d'outils comme un VPN et un Antivirus conçus pour protéger toute votre vie numérique.",
+        "Le code d'Internxt est ouvert à l'examen de tous sur GitHub. Cette transparence garantit qu'aucune vulnérabilité ou porte dérobée n'est cachée."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs IDrive",
+    "description": "Les forfaits Internxt incluent le chiffrement zero-knowledge le plus moderne, sécurisé et avancé pour tous les fichiers ainsi qu'une suite de produits étendue.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité totale, transparence et suite de protection",
+        "features": [
+          {
+            "title": "Open source et audité",
+            "description": "Le code d'Internxt est ouvert à tous pour examen et vérification de sa sécurité via notre GitHub. Cette transparence garantit qu'aucune vulnérabilité n'est cachée."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Vos données sont automatiquement chiffrées côté client, garantissant que vous seul pouvez y accéder."
+          },
+          {
+            "title": "Multiples normes de conformité",
+            "description": "Internxt a été audité en externe et respecte le RGPD, HIPAA, ISO 27001 et SOC 2."
+          },
+          {
+            "title": "Forfaits à vie",
+            "description": "Plusieurs forfaits à vie jusqu'à 5 To, incluant l'accès au VPN, Meet, Cleaner, et plus. Accédez à ces services pour toujours avec {{discount}}% de réduction."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "IDrive : Qu'en est-il de votre vie privée ?",
+        "features": [
+          {
+            "title": "Code fermé, pas d'audit",
+            "description": "IDrive garde son code source caché du public. Sans transparence ni audit de sécurité indépendant, il est impossible de savoir avec certitude comment vos données sont traitées."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Vous devez configurer le processus de chiffrement vous-même en choisissant parmi trois options, ce qui signifie qu'il n'est pas toujours privé par défaut."
+          },
+          {
+            "title": "Conformité",
+            "description": "Les lois de conformité des États-Unis s'appliquent, ce qui pourrait donner aux gouvernements l'accès à vos fichiers si une citation à comparaître est demandée."
+          },
+          {
+            "title": "Forfaits à vie",
+            "description": "Aucun forfait à vie disponible. Des forfaits de 2 To sont disponibles uniquement en abonnement mensuel, annuel ou bisannuel."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à IDrive",
+    "description": "Avec Internxt, vous obtenez plus qu'un simple stockage cloud ; vous avez tout ce dont vous avez besoin pour protéger vos données, vos fichiers et votre vie privée en ligne.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
+      "descriptions": [
+        "Internxt Antivirus est intégré directement dans votre application Internxt Drive pour un contrôle total et une protection contre les logiciels malveillants, ransomwares et spywares.",
+        "Le VPN d'Internxt protège votre navigation, bloque les publicités et les trackers, et garde votre localisation privée. Surfez en toute sécurité en sachant que vos informations personnelles sont protégées.",
+        "Internxt Cleaner vous aide à identifier et éliminer les fichiers inutiles ou en double de votre appareil pour garder votre stockage organisé et efficace.",
+        "Internxt Meet est votre alternative sécurisée à Teams. Organisez des appels vidéo privés protégés par un chiffrement post-quantique, sans trackers ni collecte de données.",
+        "Disponible sur Windows, Mac, Linux et mobile. Internxt propose également des forfaits de stockage S3 à bas coût (7 €/To/mois) et le support pour WebDAV, Rclone et NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choisissez Internxt pour la meilleure alternative à IDrive",
+    "description": "Internxt vous offre un chiffrement privé complet par défaut, un logiciel open-source transparent et une suite complète de protection de la vie privée pour sécuriser vos données en ligne.",
+    "cta": "Profiter de l'offre"
+  },
+  "tableSection": {
+    "title": "Votre allié de confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction ",
+    "planTitles": {
+      "header": "Votre allié de confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Choisir le forfait"
+    },
+    "features": {
+      "openSource": "Open-source et audité",
+      "premiumSupport": "Support client Premium",
+      "guarantee": "Garantie satisfait ou remboursé de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sécurisée à IDrive ?",
+        "answer": [
+          "Oui, Internxt utilise un chiffrement post-quantique et zero-knowledge qui garantit que personne d'autre que vous ne peut consulter vos fichiers. Tous vos fichiers sont protégés par défaut sans avoir besoin de coffres-forts séparés.",
+          "Des fonctionnalités supplémentaires telles que le VPN, l'Antivirus, le Cleaner, le support NAS, Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les violations de données."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sécurisé ?",
+        "answer": [
+          "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux attaques quantiques puissantes, faisant d'Internxt une alternative plus sûre à IDrive.",
+          "Cette méthode de cryptographie est utilisée par Internxt pour garantir que vos données vous protègent contre les futures cybermenaces et est disponible pour tous les forfaits sans frais supplémentaires."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit les lois strictes de l'UE pour garantir la protection de vos données et de votre vie privée."
+        ]
+      },
+      {
+        "question": "IDrive est-il plus cher qu'Internxt ?",
+        "answer": [
+          "IDrive coûte jusqu'à 69,95 € par an pour 5 To. Avec Internxt, vous pouvez obtenir 5 To de stockage chiffré post-quantique plus la suite de confidentialité complète avec {{percentage}}% de réduction pour la première année.",
+          "Vous pouvez également éviter les frais d'abonnement en choisissant un forfait à vie Internxt pour bénéficier d'une confidentialité totale à jamais, une option qu'IDrive ne propose pas."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou besoin d'assistance, vous pouvez contacter hello@internxt.com et notre équipe Customer Success se fera un plaisir de vous aider."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "answer": [
+          "Oui, vous pouvez mettre à jour votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Votre stockage sera automatiquement cumulé."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit, PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."
+        ]
+      }
+    ]
+  }
+}

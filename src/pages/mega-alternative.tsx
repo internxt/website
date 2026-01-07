@@ -1,6 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
@@ -13,6 +12,7 @@ import HorizontalScrollableSection from '@/components/comparison/HorizontalScrol
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
+import Footer from '@/components/layout/footers/Footer';
 
 const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
@@ -131,7 +131,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
 
       <FAQSection textContent={langJson.FaqSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 };

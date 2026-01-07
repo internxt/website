@@ -1,0 +1,210 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 IDrive 一樣，但更**私密**",
+    "description": "切換到 Internxt：您的全加密雲端儲存庫，IDrive 的真實替代方案",
+    "getPrivacy": " 選擇您的方案，享 {{percentage}}% 折扣 🔥 ",
+    "cta": "獲取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 IDrive 對比概覽",
+    "description": "探索 Internxt 讓您重新掌控數據的關鍵功能與差異",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "加密方式",
+        "後量子加密",
+        "價格與儲存",
+        "功能",
+        "獨立安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源 (Open-source)",
+        "AES-256 和 Kyber-512",
+        "是",
+        "極具競爭力，無隱藏費用，最高 5TB",
+        "雲碟、VPN、防毒、清理器、會議、郵件等",
+        "是",
+        "是",
+        "永遠無法存取您的檔案",
+        "符合 GDPR、HIPAA、ISO 27001、SOC 2 規範，總部位於西班牙"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "AES-256",
+        "否",
+        "年度方案較貴且儲存空間較小，最高 5TB",
+        "雲端儲存，側重於備份",
+        "未發佈安全審計報告",
+        "是",
+        "檔案未完全端到端加密",
+        "總部位於美國，適用歐盟-美國隱私護盾框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "需要 IDrive 的替代方案？",
+    "description": "透過 Internxt 獲得內建的零知識加密保護",
+    "scrollableSection": {
+      "titles": ["非完全加密", "有限的隱私功能", "數據風險", "缺乏透明度"],
+      "descriptions": [
+        "IDrive 上的所有檔案並非都受到端到端加密保護。IDrive 將檔案儲存與金鑰管理分離，僅在您啟用個人金鑰時提供端到端加密。預設加密模式下，服務商可以存取檔案。",
+        "IDrive 側重於備份和版本控制。Internxt 的全線產品旨在保護您的檔案免受大科技公司的侵害，包括防毒、VPN、清理器、會議和郵件，均受後量子加密保護。",
+        "IDrive 的伺服器位於美國，受美國監控和法律存取請求的管轄。預設加密可能被公司和政府部門存取。",
+        "沒有開原始碼或審計，您無法確定 IDrive 如何處理您的數據。選擇像 Internxt 這樣完全開源的歐洲雲端儲存供應商，可獲得經過驗證的保護。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "IDrive 的替代選擇",
+    "description": "了解為什麼您需要 IDrive 的替代方案，並透過 Internxt 獲得後量子加密雲端儲存，以及防毒、VPN、清理器、會議等功能。",
+    "cards": {
+      "titles": ["預設全量加密", "隱私至上的生態系統", "開源透明"],
+      "descriptions": [
+        "與 IDrive 不同，Internxt 自動為每個檔案提供零知識加密，確保只有您擁有數據的金鑰。",
+        "Internxt 不僅僅提供備份；您還將獲得 VPN 和防毒軟體等一套旨在保護您整個數位生活的工具。",
+        "Internxt 的代碼在 GitHub 上公開供所有人檢查。這種透明度保證了沒有隱藏的漏洞或後門。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 對比 IDrive",
+    "description": "Internxt 方案為所有檔案提供最現代、安全且先進的零知識加密，並擁有廣泛的產品套件。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全方位隱私、透明度和隱私套件",
+        "features": [
+          {
+            "title": "開源且經過審計",
+            "description": "Internxt 的代碼公開透明，任何人都可以透過 GitHub 檢查其安全性。這確保了沒有任何隱藏漏洞。"
+          },
+          {
+            "title": "加密",
+            "description": "您的數據在用戶端自動加密，確保只有您可以存取。"
+          },
+          {
+            "title": "多項合規標準",
+            "description": "Internxt 已通過外部審計，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身方案",
+            "description": "提供多種最高 5TB 的終身方案，包括 VPN、會議、清理器等存取權限。以 {{discount}}% 的折扣永久享受這些服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "IDrive：您的隱私安全嗎？",
+        "features": [
+          {
+            "title": "閉源且無審計",
+            "description": "IDrive 的原始碼不對外公開。由於缺乏透明度和獨立的安全審計，無法確切知道它如何處理您的數據。"
+          },
+          {
+            "title": "加密",
+            "description": "您必須從三種選項中自行設定加密過程，這意味著它並非預設私密。"
+          },
+          {
+            "title": "合規性",
+            "description": "適用美國合規法律，政府在獲得傳票的情況下可能會存取您的檔案。"
+          },
+          {
+            "title": "終身方案",
+            "description": "不提供終身方案。2TB 方案僅提供按月、按年或兩年的訂閱模式。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 IDrive 的最佳替代方案",
+    "description": "透過 Internxt，您不僅獲得了雲端儲存，還獲得了保護線上數據、檔案和隱私所需的一切工具。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["防毒軟體", "VPN", "清理器", "會議", "高級工具"],
+      "descriptions": [
+        "Internxt 防毒軟體直接內建在 Drive 應用中，全面控制並防禦惡意軟體、勒索軟體和間諜軟體。",
+        "Internxt VPN 保護您的瀏覽記錄，攔截廣告和追蹤器，並隱藏您的位置，確保個人資訊安全。",
+        "Internxt 清理器幫助您識別並刪除設備上的垃圾或重複檔案，保持儲存空間井然有序。",
+        "Internxt 會議是您更安全的 Teams 替代方案。舉辦受後量子加密保護的私人視訊通話，無追蹤、無數據收集。",
+        "支援 Windows、Mac、Linux 和行動端。Internxt 還提供低至 7 歐元/TB/月的 S3 儲存方案，並支援 WebDAV、Rclone 和 NAS。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 IDrive 的最佳替代方案",
+    "description": "Internxt 提供預設的全私密加密、透明的開源軟體和全套隱私工具，確保您的線上數據和檔案安全。",
+    "cta": "獲取優惠"
+  },
+  "tableSection": {
+    "title": "您的全能隱私盟友",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "planTitles": {
+      "header": "您的全能隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天無理由退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常見問題解答",
+    "faq": [
+      {
+        "question": "Internxt 是比 IDrive 更安全的替代方案嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除了您之外沒人能查看您的檔案。所有檔案預設受保護，無需額外設置私密保險庫。",
+          "VPN、防毒軟體、清理器、NAS 支援、會議和郵件等額外功能為您提供防禦駭客和數據洩漏的多重保護。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密？它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵抗強大的量子計算攻擊，使 Internxt 成為比 IDrive 更具前瞻性的安全選擇。",
+          "Internxt 使用這種加密方法來確保您的數據免受未來網絡威脅，且所有方案均包含此功能，無額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙巴倫西亞，屬於符合 GDPR 規範的雲端儲存解決方案，遵循嚴苛的歐盟法律以保護您的數據和隱私。"
+        ]
+      },
+      {
+        "question": "IDrive 比 Internxt 更貴吗？",
+        "answer": [
+          "IDrive 5TB 的年度費用高達 69.95 歐元。而 Internxt 首年可以 {{percentage}}% 的折扣獲得 5TB 後量子加密儲存及全套隱私工具。",
+          "您還可以選擇 Internxt 的終身方案來避免後續訂閱費用，這是 IDrive 所不提供的選項。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援團隊？",
+        "answer": ["如果您有更多疑問或需要幫助，請發送郵件至 hello@internxt.com，我們的客戶成功團隊將竭誠為您服務。"]
+      },
+      {
+        "question": "我可以為終身方案增加儲存空間嗎？",
+        "answer": ["可以，如果您需要更多空間，可以在 Internxt 帳戶設置中升級方案。您的儲存空間將自動疊加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": ["Internxt 目前支援簽帳卡、信用卡、PayPal、iDEAL、Sofort、加密貨幣和 Klarna。"]
+      }
+    ]
+  }
+}

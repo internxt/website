@@ -1,0 +1,213 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Come Terabox,\n ma **privato**",
+    "description": "Passa a Internxt, la migliore alternativa a Terabox che rispetta la tua privacy",
+    "getPrivacy": " Seleziona il tuo piano e ottieni il {{percentage}}% di sconto ",
+    "cta": "Approfitta dell'offerta"
+  },
+  "HeaderSection": {
+    "title": "Panoramica Internxt vs Terabox",
+    "description": "Scopri le caratteristiche principali e le differenze che permettono a Internxt di restituirti il controllo sui tuoi dati.",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Crittografia",
+        "Crittografia post-quantistica",
+        "Prezzi e archiviazione",
+        "Funzionalità",
+        "Audit di sicurezza",
+        "Supporto live",
+        "Informativa sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Crittografato sul tuo dispositivo",
+        "Sì",
+        "Competitivo, senza costi nascosti, fino a 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e altro",
+        "Audit di sicurezza regolari",
+        "Sì",
+        "Non può mai accedere ai tuoi file",
+        "Privacy totale: GDPR, leggi spagnole sulla protezione dei dati"
+      ],
+      "competitorFeatures": [
+        "Codice proprietario",
+        "Crittografato da Terabox",
+        "No",
+        "Piani limitati a 2TB",
+        "Archiviazione cloud e strumenti AI",
+        "Nessun audit pubblicato",
+        "No",
+        "Può accedere ai file in determinate circostanze",
+        "Sede a Tokyo, si applicano le leggi giapponesi sulla privacy"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Terabox traccia e monitora i tuoi dati. Internxt li protegge.",
+    "description": "Terabox può essere sicuro, ma è un incubo per la tua privacy. Passa a Internxt per la massima sicurezza dei tuoi documenti.",
+    "scrollableSection": {
+      "titles": ["Raccolta dati massiva", "Annunci integrati", "Account utenti eliminati", "Velocità limitata"],
+      "descriptions": [
+        "TeraBox raccoglie dati sensibili, inclusi i metadati dei file. Poiché gestiscono le chiavi di crittografia, possono tecnicamente accedere ai tuoi dati per scopi di servizio o conformità legale.",
+        "Terabox impone annunci agli utenti gratuiti, il che richiede la raccolta di dati. Le tue abitudini di utilizzo possono essere tracciate e condivise con inserzionisti a scopo di lucro.",
+        "Poiché Terabox gestisce le chiavi, i dipendenti potrebbero scansionare i tuoi file. Gli utenti hanno segnalato account eliminati senza preavviso, con perdita permanente dei dati.",
+        "Nel piano gratuito, le velocità sono pesantemente limitate. Anche dopo l'upgrade, alcuni utenti segnalano scarsi miglioramenti, rimanendo bloccati con trasferimenti lenti."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Perché hai bisogno di un'alternativa privata a Terabox",
+    "description": "Ciò che Terabox dimostra in sicurezza, lo perde in privacy. Per una privacy totale, scegli la crittografia zero-knowledge.",
+    "cards": {
+      "titles": ["Vera Privacy", "Crittografia Zero-Knowledge", "Nessuna raccolta dati"],
+      "descriptions": [
+        "Terabox può scansionare o analizzare i tuoi file. Internxt non ha tracker, né scansioni AI, né backdoor. I tuoi file rimangono privati al 100%.",
+        "Terabox gestisce le chiavi sui propri server, mantenendo il controllo totale. Internxt usa la crittografia lato client: solo tu possiedi le chiavi.",
+        "Terabox raccoglie dati tramite interazioni e terze parti. Le loro funzioni AI analizzano i tuoi file, processando i tuoi dati direttamente nei loro sistemi."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Terabox",
+    "description": "Internxt offre una privacy e sicurezza senza pari grazie alla crittografia post-quantistica e zero-knowledge.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e fiducia",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Il codice di Internxt è pubblico su GitHub. Questa trasparenza garantisce che non vi siano vulnerabilità nascoste."
+          },
+          {
+            "title": "Crittografia Zero-Knowledge",
+            "description": "I tuoi dati sono crittografati sul tuo dispositivo, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Cloud storage europeo",
+            "description": "Sede in Europa e conforme a GDPR, HIPAA, ISO 27001 e SOC 2. Auditato per escludere accessi esterni."
+          },
+          {
+            "title": "Piani a vita",
+            "description": "Evita abbonamenti ricorrenti con un pagamento unico per piani fino a 5TB. Accesso illimitato con il {{percentage}}% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Terabox: E la tua privacy?",
+        "features": [
+          {
+            "title": "Software proprietario",
+            "description": "Terabox tiene il codice segreto. Senza trasparenza, non c'è modo di verificare come vengono protetti i tuoi dati."
+          },
+          {
+            "title": "Crittografato da Terabox",
+            "description": "Terabox possiede le chiavi dei tuoi file, quindi può tecnicamente decrittografare il tuo cloud in caso di richieste legali."
+          },
+          {
+            "title": "Dati archiviati in Giappone",
+            "description": "I dati archiviati in Giappone sono soggetti a leggi locali che differiscono dai rigorosi standard europei sulla privacy."
+          },
+          {
+            "title": "Basato su abbonamento",
+            "description": "Offre solo abbonamenti mensili o annuali con massimo 2TB, senza opzioni per il possesso a vita."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a Terabox",
+    "description": "Internxt offre una suite completa di prodotti progettati per restituirti il controllo della tua privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "L'Antivirus Internxt è integrato per una protezione totale contro malware, ransomware e spyware.",
+        "La VPN di Internxt protegge la tua navigazione, blocca gli annunci e maschera la tua posizione dai pirati informatici.",
+        "Internxt Cleaner ti aiuta a eliminare i file inutili o duplicati per mantenere lo spazio organizzato.",
+        "Internxt Meet è l'alternativa sicura per le videochiamate. Protetto da crittografia post-quantistica.",
+        "Disponibile su Windows, Mac, Linux e mobile. Supporto WebDAV, Rclone e NAS per esperti."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Cloud storage europeo",
+    "description": "Protezione totale dei dati al {{percentage}}% di sconto",
+    "cta": "Approfitta dell'offerta"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato per la privacy tutto in uno",
+    "hotLabel": "{{percentage}}% di sconto",
+    "planTitles": {
+      "header": "Il tuo alleato per la privacy tutto in uno"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1GB di cloud storage crittografato gratis",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open-source e auditato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "30 giorni di garanzia di rimborso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa a Terabox più sicura?",
+        "answer": [
+          "Sì, Internxt usa crittografia post-quantistica e zero-knowledge che garantisce che nessuno tranne te veda i tuoi file.",
+          "Terabox gestisce le chiavi sui propri server, quindi potrebbe accedere ai tuoi dati o consegnarli alle autorità."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica?",
+        "answer": [
+          "A differenza della crittografia standard, questi algoritmi resistono agli attacchi dei potenti computer quantistici del futuro.",
+          "Questo metodo assicura che il tuo piano a vita ti protegga dalle minacce future senza costi aggiuntivi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, il che la rende una soluzione conforme al GDPR soggetta alle rigide leggi UE."
+        ]
+      },
+      {
+        "question": "Terabox è più costoso di Internxt?",
+        "answer": [
+          "Con il tuo sconto esclusivo del {{percentage}}%, i nostri piani sono più convenienti di quelli di Terabox, con molta più privacy."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": [
+          "Per qualsiasi domanda, contatta hello@internxt.com. Il nostro team di Customer Success sarà felice di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere spazio al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il piano dalle impostazioni o acquistare un nuovo piano che si sommerà automaticamente."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta, PayPal o cripto?",
+        "answer": ["Internxt accetta carte (Mastercard, VISA, ecc.), PayPal, iDEAL, Sofort, Criptovalute e Klarna."]
+      }
+    ]
+  }
+}

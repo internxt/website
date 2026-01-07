@@ -1,0 +1,205 @@
+{
+  "HeroSection": {
+    "title": "Internxt。类似 Terabox，但**完全私密**",
+    "description": "切换到 Internxt，这是最尊重您隐私的 Terabox 最佳替代方案",
+    "getPrivacy": " 选择您的方案并享受 {{percentage}}% 的折扣 ",
+    "cta": "获取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Terabox 概览",
+    "description": "了解 Internxt 的关键功能与差异，重新掌控您的数据。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密技术",
+        "后量子加密",
+        "价格与存储",
+        "功能特性",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "是",
+        "极具竞争力，无隐藏费用，最高 5TB",
+        "网盘、VPN、杀毒、清理器、会议、邮件等",
+        "定期的安全审计",
+        "是",
+        "永远无法访问您的文件",
+        "全面隐私：符合 GDPR，受西班牙数据保护法保护"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由 Terabox 加密",
+        "否",
+        "方案上限为 2TB",
+        "云存储和 AI 工具",
+        "无公开审计",
+        "否",
+        "在特定情况下可以访问文件",
+        "总部位于东京，适用日本隐私法"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Terabox 追踪并监控您的数据。Internxt 保护数据。",
+    "description": "Terabox 也许安全，但对您的隐私来说却是一场噩梦。切换到 Internxt，全面保护您的文档、视频和照片。",
+    "scrollableSection": {
+      "titles": ["广泛的数据收集", "内置广告", "删除用户账户", "限制速度"],
+      "descriptions": [
+        "TeraBox 收集包括文件元数据在内的敏感数据。由于他们管理加密密钥，他们在技术上可以访问您的数据以提供服务或配合法律监管。",
+        "Terabox 向免费用户强制展示广告，这需要收集数据。这意味着您的活动模式可能会被追踪并与广告商共享以牟利。",
+        "由于 Terabox 管理密钥，员工可能会扫描您的文件。此外，有用户报告账户在未通知的情况下被删除，导致重要数据永久丢失。",
+        "在免费方案中，速度受到严格限制。即使升级后，用户仍经常报告改善有限，尽管付费却依然面临缓慢的传输速度。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 Terabox 替代方案",
+    "description": "Terabox 在安全方面的表现掩盖了其隐私弊端。为了全面保护隐私，请选择 Internxt 的零知识加密技术。",
+    "cards": {
+      "titles": ["真正的隐私", "零知识加密", "无数据抓取"],
+      "descriptions": [
+        "Terabox 可能会扫描或分析您的文件。Internxt 无追踪器、无 AI 扫描或隐藏后门。您的照片和文档是 100% 私密的。",
+        "Terabox 在其服务器上管理密钥，拥有完全控制权。Internxt 采用客户端加密：只有您持有自己内容的密钥。",
+        "Terabox 通过交互和第三方收集数据。他们的 AI 功能会分析您的文件，这意味着您的数据会被其系统直接处理。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Terabox",
+    "description": "Internxt 凭借后量子加密和零知识技术，提供无与伦比的隐私和安全性。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隐私、透明与信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt 的代码在 GitHub 上公开。这种透明度确保没有隐藏的漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的数据在您的设备上加密，确保只有您可以访问。"
+          },
+          {
+            "title": "欧洲云存储",
+            "description": "总部位于欧洲，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。经过全面审计。"
+          },
+          {
+            "title": "终身方案",
+            "description": "一次性支付方案最高 5TB。享受 {{percentage}}% 折扣，永久使用我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Terabox：您的隐私安全吗？",
+        "features": [
+          {
+            "title": "私有软件",
+            "description": "Terabox 隐藏其源代码。缺乏透明度，无法验证他们如何保护您的数据。"
+          },
+          {
+            "title": "由 Terabox 加密",
+            "description": "Terabox 持有加密密钥，这意味着他们可以在收到法律要求时解密并访问您的云端内容。"
+          },
+          {
+            "title": "数据存储在日本",
+            "description": "存储在日本服务器的数据受当地法律管辖，这与欧洲严格的隐私标准不同。"
+          },
+          {
+            "title": "订阅制",
+            "description": "仅提供月付或年付，且存储上限为 2TB，无终身拥有方案。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Terabox 的最佳替代方案",
+    "description": "Internxt Drive 提供一整套产品，旨在重新夺回您的在线隐私权。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["杀毒软件", "VPN", "清理器", "Meet 会议", "高级工具"],
+      "descriptions": [
+        "Internxt 杀毒功能直接集成在应用中，防范恶意软件、勒索软件和间谍软件。",
+        "Internxt VPN 保护您的浏览记录，拦截广告和追踪器，防止位置信息被盗。",
+        "Internxt 清理器帮助识别并删除垃圾文件或重复文件，保持存储空间井井有条。",
+        "Internxt Meet 是您的私密视讯替代方案。受后量子加密保护，无数据收集。",
+        "支持 Windows、Mac、Linux 和移动端。为高级用户提供 WebDAV、Rclone 和 NAS 支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "欧洲云存储",
+    "description": "以 {{percentage}}% 的折扣获取全面数据保护",
+    "cta": "获取优惠"
+  },
+  "tableSection": {
+    "title": "您的全方位隐私盟友",
+    "hotLabel": "{{percentage}}% 折扣 ",
+    "planTitles": {
+      "header": "您的全方位隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获取 1GB 加密云存储空间",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "Internxt 比 Terabox 更安全、更私密吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，确保只有您能查看文件。",
+          "Terabox 在其服务器上管理密钥，这意味着他们可以访问您的文件或将其提供给政府。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密？",
+        "answer": [
+          "这是一种能够抵抗未来强大量子计算机攻击的算法。",
+          "这种方法确保您的终身计划能抵御未来的威胁，且无需额外费用。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": ["Internxt 总部位于西班牙瓦伦西亚，符合欧盟严格的 GDPR 标准。"]
+      },
+      {
+        "question": "Terabox 比 Internxt 更贵吗？",
+        "answer": ["凭借您专属的 {{percentage}}% 折扣，我们所有的方案都比 Terabox 便宜，且更私密。"]
+      },
+      {
+        "question": "如何联系支持团队？",
+        "answer": ["如有疑问，请联系 hello@internxt.com，我们的团队将竭诚为您服务。"]
+      },
+      {
+        "question": "终身计划可以增加存储吗？",
+        "answer": ["可以，您可以在设置中升级或购买新方案，空间将自动累加。"]
+      },
+      {
+        "question": "支持哪些支付方式？",
+        "answer": ["支持信用卡（Mastercard, VISA 等）、PayPal、加密货币等方式。"]
+      }
+    ]
+  }
+}
