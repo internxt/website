@@ -1,5 +1,4 @@
 import { CaretRight } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import HorizontalScrollableSection from './HorizontalScrollableSection';
