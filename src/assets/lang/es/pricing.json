@@ -339,11 +339,6 @@
         "name": "Próximamente",
         "features": [
           {
-            "id": "upload_empty_files",
-            "name": "Subir archivos vacíos",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-          {
             "id": "trash_limits",
             "name": "Límites de la papelera",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }

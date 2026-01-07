@@ -187,6 +187,7 @@ export enum PromoCodeName {
   CT3003 = 'CT3003',
   benjamin = 'BENJAMIN',
   payette = 'PAYETTE',
+  christian = 'CHRISTIAN',
   ZOOM87 = 'ZOOM87',
   FILEN87 = 'FILEN87',
   GOOGLEMEET = 'GOOGLEMEET87',
