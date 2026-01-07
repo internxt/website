@@ -339,11 +339,6 @@
         "name": "即將推出",
         "features": [
           {
-            "id": "upload_empty_files",
-            "name": "上傳空檔案",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-          {
             "id": "trash_limits",
             "name": "回收筒限制",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }

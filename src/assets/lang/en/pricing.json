@@ -214,11 +214,6 @@
         "name": "Comming soon",
         "features": [
           {
-            "id": "upload_empty_files",
-            "name": "Upload empty files",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-          {
             "id": "trash_limits",
             "name": "Trash limits",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
