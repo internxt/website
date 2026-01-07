@@ -351,6 +351,41 @@
     "description": "切换到 Internxt，获取 FileJump 的开源替代方案。后量子和零知识加密的云存储保证了您的文档和媒体文件的完全隐私。"
   },
   {
+    "id": "zoom-alternative",
+    "title": "Internxt — Zoom 的替代方案",
+    "description": "切换到 Internxt，体验 Zoom 的开源替代方案。包含后量子云存储等功能，全方位保护您的在线隐私。"
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "Internxt — IDrive 的替代方案",
+    "description": "选择 Internxt 作为 IDrive 的完全私密替代方案。采用后量子和零知识加密云存储，确保您文件的绝对隐私。"
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "Internxt — Proton Drive 的替代方案",
+    "description": "切换到 Internxt，享受完整的隐私套件和 Proton Drive 的替代方案。提供后量子及零知识加密云存储。"
+  },
+  {
+    "id": "sync-alternative",
+    "title": "Internxt — Sync 的替代方案",
+    "description": "切换到 Internxt，体验 Sync 的开源替代方案。后量子和零知识加密云存储，为您提供全方位的档案隐私保护。"
+  },
+  {
+    "id": "filen-alternative",
+    "title": "Internxt — Filen 的替代方案",
+    "description": "切换到 Internxt 作为 Filen 的替代方案。后量子和零知识加密云存储，确保您文件的完整隐私。"
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Google Meet 的替代方案",
+    "description": "切换到 Internxt，体验 Google Meet 的开源替代方案。后量子和零知识加密视频会议，确保通话的绝对隐私。"
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "Internxt — альтернатива Terabox",
+    "description": "Переходите на Internxt — альтернативу Terabox с открытым исходным кодом. Постквантовое облачное хранилище с шифрованием с нулевым разглашением для полной защиты ваших файлов."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – 安全私密的视频通话",
     "description": "Meet 提供具有后量子和端到端加密的私人视频通话，打造最安全的视频会议体验。"

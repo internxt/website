@@ -1,0 +1,213 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Come Google Meet, ma **privato**",
+    "description": "DeGooglizza la tua vita con Internxt, la migliore alternativa a Google Meet che rispetta la tua privacy",
+    "getPrivacy": " Seleziona il tuo piano e ottieni il {{percentage}}% di sconto ",
+    "cta": "Approfitta dell'offerta"
+  },
+  "HeaderSection": {
+    "title": "Panoramica Internxt vs Google Meet",
+    "description": "Scopri le caratteristiche principali e le differenze che permettono a Internxt di restituirti il controllo sui tuoi dati.",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Crittografia",
+        "Crittografia post-quantistica",
+        "Prezzi e archiviazione",
+        "Funzionalità",
+        "Audit di sicurezza",
+        "Supporto live",
+        "Informativa sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Video crittografati sul tuo dispositivo",
+        "Sì",
+        "Competitivo, senza costi nascosti, fino a 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e altro",
+        "Audit di sicurezza regolari",
+        "Sì",
+        "Non può mai accedere ai tuoi video o chat",
+        "Privacy totale: GDPR, leggi spagnole sulla protezione dei dati"
+      ],
+      "competitorFeatures": [
+        "Codice chiuso",
+        "Video crittografati da Google",
+        "No",
+        "Piani più costosi, fino a 2TB",
+        "Drive, Google Workspace, integrazione AI, Mail e Meet",
+        "Audit di sicurezza regolari",
+        "No",
+        "Può accedere a video e chat in determinate circostanze",
+        "Meno privacy: Quadro UE-USA per la protezione dei dati"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google paga multe per violazioni della privacy. Internxt protegge la tua intimità.",
+    "description": "Google può essere sicuro, ma è un incubo per la tua privacy. Passa a Internxt per la massima sicurezza nelle tue videochiamate e nel cloud.",
+    "scrollableSection": {
+      "titles": ["Violazioni GDPR", "Scandalo Gmail e annunci", "Diritto all'oblio", "Dark pattern"],
+      "descriptions": [
+        "10 milioni di euro: L'autorità spagnola ha multato Google per aver violato il GDPR cedendo dati identificativi a terzi senza consenso.",
+        "325 milioni di euro: Nel 2025, la CNIL (Francia) ha multato nuovamente Google per aver inserito annunci tra le email di Gmail e usato cookie senza consenso.",
+        "7 milioni di euro: L'autorità svedese ha multato Google per non aver rimosso risultati di ricerca richiesti dagli utenti, esponendo la loro identità.",
+        "90 milioni di euro: La CNIL ha multato Google per aver reso difficile il rifiuto dei cookie, favorendo il proprio modello pubblicitario basato sul tracciamento."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Perché hai bisogno di un'alternativa privata a Google Meet",
+    "description": "Ciò che Google dimostra in sicurezza, lo perde in privacy. Per una privacy totale, scegli la crittografia zero-knowledge.",
+    "cards": {
+      "titles": ["La privacy prima di tutto", "Crittografia end-to-end", "Nessuna raccolta dati"],
+      "descriptions": [
+        "Google Meet collega metadati, con chi ti incontri e per quanto tempo. Internxt non ha tracker, né scansioni AI, né backdoor nascoste.",
+        "Google gestisce le chiavi sui propri server, mantenendo il controllo totale. Internxt usa lo zero-knowledge: solo tu accedi ai tuoi dati.",
+        "Con Google, le tue attività sono monitorate per creare un profilo e trarre profitto. Con Internxt, tu sei il proprietario, non il prodotto."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Google Meet",
+    "description": "Internxt offre una sicurezza senza pari con funzioni che Google Meet non può eguagliare, come la crittografia post-quantistica.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e fiducia",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Il codice di Internxt è pubblico su GitHub. Questa trasparenza garantisce che non vi siano vulnerabilità nascoste."
+          },
+          {
+            "title": "Crittografia Zero-Knowledge",
+            "description": "I tuoi dati sono crittografati lato client, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Audit e conformità",
+            "description": "Internxt è stato auditato esternamente e rispetta GDPR, HIPAA, ISO 27001 e SOC 2."
+          },
+          {
+            "title": "Piani a vita",
+            "description": "Evita abbonamenti ricorrenti con un pagamento unico per piani fino a 5TB. Accesso illimitato con il {{discount}}% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Google Meet: E la tua privacy?",
+        "features": [
+          {
+            "title": "Software proprietario",
+            "description": "Google tiene il codice segreto. Senza trasparenza, non c'è modo di sapere come vengono gestiti i tuoi dati."
+          },
+          {
+            "title": "Crittografato da Google",
+            "description": "Poiché Google possiede le chiavi, può tecnicamente decrittografare le tue riunioni in caso di richieste legali."
+          },
+          {
+            "title": "Multe di conformità",
+            "description": "Google ha uno storico di sanzioni per non aver protetto i dati dei clienti o violato il consenso."
+          },
+          {
+            "title": "Basato su abbonamento",
+            "description": "Offre solo abbonamenti mensili o annuali con archiviazione limitata rispetto alle opzioni di Internxt."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a Google Meet",
+    "description": "Internxt offre una suite completa di prodotti progettati per restituirti il controllo della tua privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "L'Antivirus Internxt è integrato nella tua app per una protezione totale contro malware, ransomware e spyware.",
+        "La VPN di Internxt protegge la tua navigazione e maschera la tua posizione per prevenire il furto di identità.",
+        "Internxt Cleaner ti aiuta a eliminare file inutili o duplicati per far correre il tuo dispositivo al meglio.",
+        "Internxt Meet è l'alternativa sicura a Google Meet. Videochiamate private protette da crittografia post-quantistica.",
+        "Disponibile su Windows, Mac, Linux e mobile. Per esperti, supportiamo WebDAV, Rclone e NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "DeGooglizza la tua vita con Internxt",
+    "description": "Privacy totale per le tue videochiamate",
+    "cta": "Approfitta dell'offerta"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato per la privacy tutto in uno",
+    "hotLabel": "{{discount}}% di sconto ",
+    "planTitles": {
+      "header": "Il tuo alleato per la privacy tutto in uno"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1GB di archiviazione cloud crittografata gratis",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open-source e auditato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa a Google Meet più sicura?",
+        "answer": [
+          "Sì, Internxt usa crittografia post-quantistica e zero-knowledge che garantisce che nessuno tranne te veda i tuoi file.",
+          "Google gestisce le chiavi sui propri server, il che significa che potrebbe accedere ai tuoi dati o consegnarli alle autorità."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica?",
+        "answer": [
+          "A differenza della crittografia standard, questi algoritmi resistono agli attacchi dei potenti computer quantistici del futuro.",
+          "Questo metodo assicura che il tuo piano a vita ti protegga dalle minacce future senza costi aggiuntivi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, il che la rende una soluzione conforme al GDPR soggetta alle rigide leggi UE."
+        ]
+      },
+      {
+        "question": "Google Meet è più costoso di Internxt?",
+        "answer": [
+          "Google Meet ha una versione gratuita, ma per funzioni professionali Internxt è più conveniente grazie allo sconto del {{percentage}}% e ai piani a vita."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": [
+          "Per qualsiasi domanda, contatta hello@internxt.com. Il nostro team di Customer Success sarà felice di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere spazio al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il piano dalle impostazioni o acquistare un nuovo piano per sommare lo spazio automaticamente."
+        ]
+      },
+      {
+        "question": "Quali sono i metodi di pagamento?",
+        "answer": ["Accettiamo carte (Mastercard, VISA, ecc.), PayPal, iDEAL, Sofort, Criptovalute e Klarna."]
+      }
+    ]
+  }
+}

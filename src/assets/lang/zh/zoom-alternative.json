@@ -1,0 +1,212 @@
+{
+  "HeroSection": {
+    "title": "Internxt Meet。像 Zoom 一样，但更**私密**",
+    "description": "切换到 Internxt：尊重您隐私的 Zoom 最佳替代方案",
+    "getPrivacy": " 选择您的方案，享 {{percentage}}% 折扣 🔥 ",
+    "cta": "获取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Zoom 对比概览",
+    "description": "探索 Internxt 让您重新掌控数据的关键功能与差异",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密方式",
+        "后量子加密",
+        "价格与存储",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源 (Open-source)",
+        "在您的设备上加密",
+        "是",
+        "极具竞争力，无隐藏费用，最高 5TB",
+        "私密视频通话、云盘、邮件、VPN、杀毒软件等",
+        "定期安全审计",
+        "是",
+        "永远无法访问您的视频、音频、聊天或文件内容",
+        "全方位隐私保护：符合 GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由 Zoom 加密",
+        "否",
+        "更昂贵的方案，仅 10GB 云存储",
+        "视频通话、云存储、邮件",
+        "定期安全审计",
+        "付费功能",
+        "在特定情况下可被访问",
+        "受美国隐私法管辖"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Zoom 追踪、共享并监控您的数据。Internxt Meet 则保护数据。",
+    "description": "Zoom 或许安全，但它是隐私的噩梦。为了全方位安全，请切换至 Internxt。",
+    "scrollableSection": {
+      "titles": ["广泛的数据收集", "第三方追踪器", "员工可访问您的数据", "大科技公司集成"],
+      "descriptions": [
+        "Zoom 收集包括参与者、时长、IP 地址和设备详情在内的元数据。如果使用云端录制，他们会在服务器上存储您的实际音频、视频和聊天内容。",
+        "Zoom 与第三方分析和营销供应商共享用户数据。其 AI 功能通过外部模型处理会议数据，可能暴露敏感信息。",
+        "在某些情况下（如执法请求或政策调查），Zoom 员工可以查看您的通话和聊天记录。您的数据并未对该公司本身完全屏蔽。",
+        "将 Zoom 连接到 Outlook 或 Gmail 会让那些不重视隐私的公司通过集成进一步获取您的个人数据。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要 Zoom 的私密替代方案",
+    "description": "Zoom 在安全方面的表现掩盖了其隐私方面的失败。获得结合零知识加密的全方位安全性。",
+    "cards": {
+      "titles": ["无后门隐私", "端到端掌控", "无数据采撷"],
+      "descriptions": [
+        "在 Internxt，没有追踪器、没有 AI 扫描，也没有隐藏后门。我们无法访问您的通话、聊天或个人信息。",
+        "Zoom 在其服务器上管理加密密钥，拥有绝对控制权。Internxt 确保密钥由您掌握，意味着只有您可以访问音视频内容。",
+        "Zoom 最长可保留 24 个月的通过数据。Internxt 将数据收集降至最低，确保您的数字足迹仅属于您自己。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 对比 Zoom",
+    "description": "Internxt 提供无与伦比的私密视频通话和全套隐私服务，是 Zoom 的最佳替代方案。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全方位隐私、透明与信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt 的代码公开透明，任何人都可以通过 GitHub 检查其安全性。这种透明度保证了没有任何隐藏漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的数据在客户端加密，确保只有您可以访问。"
+          },
+          {
+            "title": "欧洲云存储",
+            "description": "总部位于欧洲，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。平台经过全面审计。"
+          },
+          {
+            "title": "终身方案",
+            "description": "通过一次性支付最高 5TB 的方案来避免重复订阅。以 {{discount}}% 的折扣永久享受服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Zoom：您的隐私安全吗？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "Zoom 隐藏其源代码。缺乏透明度，您无法确定您的通话内容是否真正私密。"
+          },
+          {
+            "title": "由 Zoom 加密",
+            "description": "Zoom 在服务器上持有加密密钥。理论上，员工在收到法律请求时可以解密您的云端数据。"
+          },
+          {
+            "title": "数据存储在美国",
+            "description": "受美国政府监控法律管辖，相关部门在特定条件下可访问您的数据。"
+          },
+          {
+            "title": "基于订阅制",
+            "description": "仅提供月度或年度订阅，且云存储选项有限。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Zoom 的最佳替代方案",
+    "description": "Internxt Drive 提供一系列完整产品，旨在让您重新掌控在线隐私。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["杀毒软件", "VPN", "清理器", "会议", "高级工具"],
+      "descriptions": [
+        "直接内置于应用中，通过自定义扫描防御恶意软件、勒索软件和间谍软件。",
+        "加密您的连接，拦截广告和追踪器，保护您的位置不被窥视。",
+        "识别并清除垃圾或重复文件，保持您的设备井然有序且高效运行。",
+        "Zoom 的安全私密替代方案。举办受后量子加密保护的视频通话，无追踪、无广告、无数据收集。",
+        "支持 Windows、Mac、Linux 和移动端。为高级用户提供 WebDAV、Rclone 和 NAS 的全面支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为 Zoom 的最佳替代方案",
+    "description": "Internxt 提供默认的全私密加密、透明的开源软件和全套隐私工具，确保您的在线数据安全。",
+    "cta": "获取优惠"
+  },
+  "tableSection": {
+    "title": "您的全能隐私盟友",
+    "hotLabel": "{{discount}}% 折扣",
+    "planTitles": {
+      "header": "您的全能隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度方案",
+      "lifetime": "终身方案"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费版",
+      "description": "免费获得 1GB 加密云存储空间",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天无理由退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "Internxt 是比 Zoom 更安全、更私密的替代方案吗？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，保证除了您之外没人能查看通话。Zoom 在其服务器上管理密钥，这意味着他们可以访问数据或向执法部门提供权限。",
+          "VPN、杀毒软件和清理器等额外功能还为您提供防御黑客和数据泄露的多重保护。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密？它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵抗强大量子计算的攻击，使 Internxt 成为更安全的 Zoom 替代品。",
+          "Internxt 使用此方法确保您的数据防御未来的网络安全威胁，所有方案均包含此功能，无额外费用。"
+        ]
+      },
+      {
+        "question": "Internxt 的总部在哪里？",
+        "answer": [
+          "Internxt 总部位于西班牙巴伦西亚，属于符合 GDPR 规范的云存储解决方案，遵循严苛的欧盟法律以保护您的数据。"
+        ]
+      },
+      {
+        "question": "Zoom 比 Internxt 更贵吗？",
+        "answer": [
+          "凭借您的专属 87% 折扣，我们的所有方案均比 Zoom 目前的价格更便宜，同时提供更多的隐私保护功能。",
+          "您还可以通过选择 Internxt 终身方案来永久避免后续订阅费用。"
+        ]
+      },
+      {
+        "question": "如何联系支持团队？",
+        "answer": ["如果您有任何疑问或需要帮助，请联系 hello@internxt.com，我们的客户成功团队将竭诚为您服务。"]
+      },
+      {
+        "question": "我可以为终身方案增加存储空间吗？",
+        "answer": ["可以，如果您需要更多空间，可以在 Internxt 账户设置中升级方案，空间将自动叠加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币支付吗？",
+        "answer": [
+          "Internxt 目前支持借记卡和信用卡（Mastercard、VISA、美国运通等）、PayPal、iDEAL、Sofort、加密货币和 Klarna。"
+        ]
+      }
+    ]
+  }
+}

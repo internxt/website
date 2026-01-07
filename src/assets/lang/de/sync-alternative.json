@@ -1,0 +1,219 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Wie Sync, \naber **privat**",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu Sync, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥 ",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Sync Übersicht",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Unabhängige Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "AES-256 und Kyber-512",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, Lifetime-Pläne",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheitsaudits und veröffentlichte Berichte",
+        "Ja",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "DSGVO, spanische Datenschutzgesetze, ISO 27001, SOC 2, HIPAA-konform"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Verschlüsselt auf Ihrem Gerät",
+        "Nein",
+        "Monatliche oder jährliche Pläne",
+        "Cloud-Speicher",
+        "Ja, aber unveröffentlicht",
+        "Ja, kostenpflichtige Funktionen",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "Folgt kanadischen Gesetzen und Compliance-Vorschriften"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Benötigen Sie eine Alternative zu Sync?",
+    "description": "Wählen Sie Internxt für volle Sicherheit Ihrer Dateien und persönlichen Daten",
+    "scrollableSection": {
+      "titles": [
+        "Mangelnde Transparenz",
+        "Eingeschränkte Datenschutzfunktionen",
+        "Keine Post-Quanten-Verschlüsselung",
+        "Risiken durch Datenjurisdiktion"
+      ],
+      "descriptions": [
+        "Ohne Open-Source-Code oder Audits können Sie nicht sicher sein, wie Sync mit Ihren Daten umgeht. Internxt ist vollständig Open-Source und geprüft für Ihre Sicherheit.",
+        "Sync bietet grundlegenden Cloud-Speicher und Backups. Die Internxt-Suite umfasst Antivirus, VPN, Cleaner, Meet und Mail, um Sie vor Big Tech zu schützen.",
+        "Sync verwendet herkömmliche Algorithmen wie AES-256 und RSA-2048. Ohne PQE sind Nutzerdaten möglicherweise nicht vor den künftigen Auswirkungen des Quantencomputings sicher.",
+        "Sync hat seinen Sitz in Kanada und unterliegt kanadischen Gesetzen. Internxt sitzt in der EU (Spanien) und folgt den weltweit strengsten Datenschutzregeln wie der DSGVO."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Internxt als Alternative zu Sync wählen",
+    "description": "Erhalten Sie totale Sicherheit kombiniert mit Zero-Knowledge-Verschlüsselung und einer vollständigen Produktsuite zum Online-Schutz.",
+    "cards": {
+      "titles": ["Post-Quanten-Verschlüsselung", "Vollständiger Online-Schutz", "Einmal zahlen, für immer nutzen"],
+      "descriptions": [
+        "Internxt ist der erste Cloud-Speicher mit Post-Quanten-Verschlüsselung, der Sie vor Bedrohungen schützt, die Standard-Verschlüsselungen knacken können.",
+        "Über Cloud-Speicher hinaus bietet Internxt eine vollständige Suite (VPN, Antivirus, Meet), um Ihre Geräte und Online-Präsenz sicher zu halten.",
+        "Die Lifetime-Pläne von Internxt machen wiederkehrende Gebühren überflüssig und bieten langfristigen Zugang mit einer Einmalzahlung – etwas, das Sync nicht anbietet."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Sync",
+    "description": "Internxt bietet unübertroffene Privatsphäre dank Zero-Knowledge- und Post-Quanten-Verschlüsselung für besten Schutz vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Totale Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source und geprüft",
+            "description": "Der Code von Internxt ist für alle offen und wird unabhängig über GitHub geprüft, um sicherzustellen, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge & PQE",
+            "description": "Ihre Daten werden auf der Client-Seite verschlüsselt, was Sicherheit gegen aktuelle und zukünftige Cyber-Bedrohungen garantiert."
+          },
+          {
+            "title": "Vielfältige Compliance",
+            "description": "Sitz in Spanien und konform mit DSGVO, HIPAA, ISO 27001 und SOC 2. Vollständig geprüft, um externen Zugriff auszuschließen."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Vermeiden Sie Abos mit einer Einmalzahlung für Pläne bis zu 5TB. Nutzen Sie unsere Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Sync: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Closed-Source",
+            "description": "Der Code von Sync ist nicht öffentlich, was bedeutet, dass Sie deren Sicherheitsversprechen ohne unabhängige Überprüfung vertrauen müssen."
+          },
+          {
+            "title": "Industriestandard",
+            "description": "Sync verwendet Standard-Verschlüsselung, die mit der Entwicklung von Quantencomputern unsicherer werden könnte."
+          },
+          {
+            "title": "Compliance",
+            "description": "Sitz in Kanada, was bedeutet, dass kanadische Datengesetze und Compliance-Vorschriften für Ihre gespeicherten Daten gelten."
+          },
+          {
+            "title": "Abonnement-basiert",
+            "description": "Sync bietet nur monatliche oder jährliche Abos an. Es gibt keine Optionen für lebenslangen Zugang."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Sync ist",
+    "description": "Internxt Drive bietet eine umfassende Produktsuite, um Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückzugeben.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Direkt in die App integriert für volle Kontrolle und Schutz vor Malware, Ransomware und Spyware.",
+        "Schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat und sicher.",
+        "Hilft Ihnen, unerwünschten Müll oder Dateidubletten zu finden und zu löschen, um Ihren Speicher zu organisieren.",
+        "Sichere und private Alternative zu Teams. Videoanrufe geschützt mit Post-Quanten-Verschlüsselung und ohne Tracker.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte. Bietet Unterstützung für WebDAV, Rclone und NAS für fortgeschrittene Nutzer."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt als beste Alternative zu Sync",
+    "description": "Internxt bietet standardmäßig volle private Verschlüsselung, transparente Open-Source-Software und eine komplette Privacy-Suite für Ihre Datensicherheit.",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Verbündeter für Privatsphäre",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Ihr All-in-One-Verbündeter für Privatsphäre"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1GB verschlüsselten Cloud-Speicher gratis",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu Sync?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, die garantiert, dass niemand außer Ihnen Ihre Dateien sehen kann.",
+          "Sync verwaltet die Verschlüsselungskeys auf den eigenen Servern, was bedeutet, dass sie potenziell auf Ihre Dateien zugreifen könnten."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung von Sync sind Post-Quanten-Verschlüsselungsalgorithmen (PQE) darauf ausgelegt, Angriffen von Quantencomputern zu widerstehen.",
+          "Dies stellt sicher, dass Ihre Daten gegen zukünftige Cyber-Bedrohungen sicher bleiben. Verfügbar in allen Internxt-Plänen ohne Aufpreis."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien. Damit ist es eine DSGVO-konforme Lösung, die strengen EU-Gesetzen zum Schutz Ihrer Privatsphäre folgt."
+        ]
+      },
+      {
+        "question": "Ist Sync teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven {{percentage}}% Rabatt sind die Internxt-Pläne günstiger als die aktuellen Preise von Sync, bei deutlich mehr Funktionen.",
+          "Zudem bietet Internxt Lifetime-Pläne an, um Abo-Kosten für immer zu vermeiden – was Sync nicht anbietet."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Sie können uns unter hello@internxt.com kontaktieren. Unser Customer Success Team hilft Ihnen gerne bei allen Fragen weiter."
+        ]
+      },
+      {
+        "question": "Kann ich mehr Speicher zu meinem Lifetime-Plan hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen upgraden oder einen neuen kaufen, um Ihren Speicher automatisch zu stacken."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": ["Internxt akzeptiert Debit-/Kreditkarten, PayPal, iDEAL, Sofort, Kryptowährungen und Klarna."]
+      }
+    ]
+  }
+}

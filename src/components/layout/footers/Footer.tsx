@@ -7,7 +7,7 @@ import setUTM from '@/lib/conversions';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 import Image from 'next/legacy/image';
 import axios from 'axios';
-import { CaretDown, CaretUp } from '@phosphor-icons/react';
+import { CaretDown, CaretRight, CaretUp } from '@phosphor-icons/react';
 import moment from 'moment';
 import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
@@ -26,6 +26,8 @@ export default function Footer({
 }>) {
   const [email, setEmail] = useState('');
   const [platforms, setPlatforms] = useState<any>();
+  const [isAlternativesOpen, setIsAlternativesOpen] = useState(false);
+  const [isVideocallsOpen, setIsVideocallsOpen] = useState(false);
 
   const year = moment().format('YYYY');
 
@@ -62,7 +64,7 @@ export default function Footer({
       <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
         <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
 
-        <div className="flex w-full flex-col gap-6 lg:flex-row lg:justify-between lg:gap-8">
+        <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
           <div className="flex w-full flex-row items-end gap-6 lg:w-1/2 2xl:w-1/3">
             <div className="flex flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
@@ -376,7 +378,7 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}>
                     {textContent.FooterSection.sections.resources.title}
                   </p>
                   <div
@@ -398,98 +400,189 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.comparison}
                     </Link>
+                    <p className="w-full max-w-[160px] hover:text-primary">
+                      {textContent.FooterSection.sections.resources.alternatives}
+                    </p>
+                    <button
+                      onClick={() => setIsAlternativesOpen(!isAlternativesOpen)}
+                      className="flex w-full max-w-[160px] flex-row items-center gap-1 pl-3 text-left hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.cloudStorage}
+                      {isAlternativesOpen ? (
+                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                      ) : (
+                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                      )}
+                    </button>
 
-                    <Link
-                      href="/pcloud-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isAlternativesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                     >
-                      {textContent.FooterSection.sections.resources.pCloudAlternative}
-                    </Link>
-                    <Link
-                      href="/dropbox-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
+                      <Link
+                        href="/pcloud-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.pCloudAlternative}
+                      </Link>
+                      <Link
+                        href="/dropbox-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.dropboxAlternative}
+                      </Link>
+                      <Link
+                        href="/mega-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.megaAlternative}
+                      </Link>
+                      <Link
+                        href="/koofr-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.koofrAlternative}
+                      </Link>
+                      <Link
+                        href="/icedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.icedriveAlternative}
+                      </Link>
+                      <Link
+                        href="/onedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.onedriveAlternative}
+                      </Link>
+                      <Link
+                        href="/google-drive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.googleDriveAlternative}
+                      </Link>
+                      <Link
+                        href="/drime-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.drimeAlternative}
+                      </Link>
+                      <Link
+                        href="/degoo-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.degooAlternative}
+                      </Link>
+                      <Link
+                        href="/filejump-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.fileJumpAlternative}
+                      </Link>
+                      <Link
+                        href="/elephantdrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-sync"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.syncAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-filen"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.filenAlternatice}
+                      </Link>
+                      <Link
+                        href="/alternative-to-idrive"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.iDriveAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-terabox"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.teraboxAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-proton-drive"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.protonAlternative}
+                      </Link>
+                    </div>
+                    <button
+                      onClick={() => setIsVideocallsOpen(!isVideocallsOpen)}
+                      className="flex w-full max-w-[160px] flex-row items-center gap-1 pl-3 text-left hover:text-primary"
                     >
-                      {textContent.FooterSection.sections.resources.dropboxAlternative}
-                    </Link>
-                    <Link
-                      href="/mega-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.megaAlternative}
-                    </Link>
+                      {textContent.FooterSection.sections.resources.videoCalls}
+                      {isVideocallsOpen ? (
+                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                      ) : (
+                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                      )}
+                    </button>
 
-                    <Link
-                      href="/koofr-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isVideocallsOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                     >
-                      {textContent.FooterSection.sections.resources.koofrAlternative}
-                    </Link>
-
-                    <Link
-                      href="/icedrive-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.icedriveAlternative}
-                    </Link>
-                    <Link
-                      href="/onedrive-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.onedriveAlternative}
-                    </Link>
-                    <Link
-                      href="/google-drive-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.googleDriveAlternative}
-                    </Link>
-                    <Link
-                      href="/drime-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.drimeAlternative}
-                    </Link>
-                    <Link
-                      href="/degoo-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.degooAlternative}
-                    </Link>
-                    <Link
-                      href="/filejump-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.fileJumpAlternative}
-                    </Link>
-                    <Link
-                      href="/elephantdrive-alternative"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.elephantDriveAlternative}
-                    </Link>
-
+                      <Link
+                        href="/alternative-to-google-meet"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.googleMeet}
+                      </Link>
+                      <Link
+                        href="/alternative-to-zoom"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.zoom}
+                      </Link>
+                    </div>
                     <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
@@ -958,99 +1051,196 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.comparison}
                       </Link>
 
-                      <Link
-                        href="/pcloud-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.pCloudAlternative}
-                      </Link>
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsAlternativesOpen(!isAlternativesOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.alternatives}
+                          {isAlternativesOpen ? (
+                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                          ) : (
+                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                          )}
+                        </button>
 
-                      <Link
-                        href="/dropbox-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.dropboxAlternative}
-                      </Link>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isAlternativesOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                            <Link
+                              href="/pcloud-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.pCloudAlternative}
+                            </Link>
+                            <Link
+                              href="/dropbox-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.dropboxAlternative}
+                            </Link>
+                            <Link
+                              href="/mega-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.megaAlternative}
+                            </Link>
+                            <Link
+                              href="/google-drive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.googleDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/koofr-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.koofrAlternative}
+                            </Link>
+                            <Link
+                              href="/icedrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.icedriveAlternative}
+                            </Link>
+                            <Link
+                              href="/onedrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.onedriveAlternative}
+                            </Link>
+                            <Link
+                              href="/drime-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.drimeAlternative}
+                            </Link>
+                            <Link
+                              href="/degoo-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.degooAlternative}
+                            </Link>
+                            <Link
+                              href="/filejump-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.fileJumpAlternative}
+                            </Link>
+                            <Link
+                              href="/elephantdrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-sync"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/filen-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-idrive"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-terabox"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-proton"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.elephantDriveAlternative}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
 
-                      <Link
-                        href="/mega-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.megaAlternative}
-                      </Link>
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsVideocallsOpen(!isVideocallsOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.videoCalls}
+                          {isVideocallsOpen ? (
+                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                          ) : (
+                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                          )}
+                        </button>
 
-                      <Link
-                        href="/google-drive-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.googleDriveAlternative}
-                      </Link>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isVideocallsOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                            <Link
+                              href="/alternative-to-google-meet"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.googleMeet}
+                            </Link>
+                            <Link
+                              href="/alternative-to-zoom"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.zoom}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
 
-                      <Link
-                        href="/koofr-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.koofrAlternative}
-                      </Link>
-
-                      <Link
-                        href="/icedrive-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.icedriveAlternative}
-                      </Link>
-                      <Link
-                        href="/onedrive-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.onedriveAlternative}
-                      </Link>
-                      <Link
-                        href="/drime-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.drimeAlternative}
-                      </Link>
-                      <Link
-                        href="/degoo-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.degooAlternative}
-                      </Link>
-                      <Link
-                        href="/filejump-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.fileJumpAlternative}
-                      </Link>
-                      <Link
-                        href="/elephantdrive-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.elephantDriveAlternative}
-                      </Link>
                       <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}

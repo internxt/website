@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 Sync 一樣，但更**私密**",
+    "description": "切換到 Internxt：尊重您隱私的 Sync 最佳替代方案",
+    "getPrivacy": " 選擇您的方案，享 {{percentage}}% 折扣 🔥 ",
+    "cta": "獲取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 Sync 對比概覽",
+    "description": "探索 Internxt 讓您重新掌控數據的關鍵功能與差異",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "加密方式",
+        "後量子加密",
+        "價格與儲存",
+        "功能",
+        "獨立安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "AES-256 和 Kyber-512",
+        "是",
+        "極具競爭力，無隱藏費用，提供終身方案",
+        "雲碟、VPN、防毒、清理器、會議、郵件等",
+        "定期安全檢查並發佈審計報告",
+        "是",
+        "永遠無法存取您的檔案",
+        "符合 GDPR、西班牙數據保護法、ISO 27001、SOC 2、HIPAA 規範"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "在您的裝置上加密",
+        "否",
+        "月度或年度方案",
+        "雲端儲存",
+        "是，但未公開",
+        "是，付費功能",
+        "永遠無法存取您的檔案",
+        "遵循加拿大法律和合規條例"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "需要 Sync 的替代方案？",
+    "description": "選擇 Internxt，為您的檔案和個人數據提供全面安全保護",
+    "scrollableSection": {
+      "titles": ["缺乏透明度", "有限的隱私功能", "缺乏後量子加密", "數據管轄權風險"],
+      "descriptions": [
+        "沒有開原始碼或審計，您無法確定 Sync 如何處理您的數據。Internxt 完全開源並經過審計，讓您安心。",
+        "Sync 僅提供基礎雲端儲存。Internxt 套件包含防毒、VPN、清理器、會議和郵件，旨在抵禦大科技公司的侵害。",
+        "Sync 使用 AES-256 等傳統演算法。如果沒有 PQE，面對未來量子計算的衝擊，用戶數據可能不再安全。",
+        "Sync 總部位於加拿大。Internxt 總部位於歐盟（西班牙），遵循全球最嚴苛的隱私條例（如 GDPR）。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼選擇 Internxt 作為 Sync 的替代方案",
+    "description": "獲得結合了零知識加密的全面安全性以及全線保護產品。",
+    "cards": {
+      "titles": ["後量子加密", "全方位線上保護", "一次付費，終身使用"],
+      "descriptions": [
+        "Internxt 是首個採用後量子加密的雲端儲存，保護您免受能夠破解標準行業加密的威脅。",
+        "除了雲端儲存，Internxt 還提供完整套件（VPN、防毒、會議）來確保您的裝置和線上活動安全。",
+        "Internxt 終身方案消除了後續訂閱費用，只需一次性支付即可長期存取，而 Sync 並不提供此項選擇。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 對比 Sync",
+    "description": "得益於零知識和後量子加密，Internxt 提供無與倫比的隱私和安全保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全方位隱私、透明與信任",
+        "features": [
+          {
+            "title": "開源且經過審計",
+            "description": "Internxt 的代碼公開透明，並在 GitHub 上經過獨立審計，確保無隱藏漏洞。"
+          },
+          {
+            "title": "零知識與 PQE",
+            "description": "您的數據在用戶端加密，確保防禦當前及未來的網絡威脅。"
+          },
+          {
+            "title": "多重合規",
+            "description": "總部位於西班牙，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。經過全面審計，確保無外部存取。"
+          },
+          {
+            "title": "終身方案",
+            "description": "透過一次性支付最高 5TB 的方案來避免重複訂閱。以 {{discount}}% 的折扣永久享受服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Sync：您的隱私安全嗎？",
+        "features": [
+          {
+            "title": "閉源",
+            "description": "Sync 的代碼不公開，這意味著您必須在沒有獨立驗證的情況下信任其安全聲明。"
+          },
+          {
+            "title": "行業標準",
+            "description": "Sync 使用標準加密，隨著量子計算技術的發展，其安全性可能會降低。"
+          },
+          {
+            "title": "合規性",
+            "description": "總部位於加拿大，這意味著加拿大數據法和合規條例適用於您的存儲數據。"
+          },
+          {
+            "title": "基於訂閱制",
+            "description": "Sync 僅提供月度或年度訂閱，不提供終身存取選項。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Sync 的最佳替代方案",
+    "description": "Internxt Drive 提供一系列完整產品，旨在讓您重新掌控線上隱私。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["防毒軟體", "VPN", "清理器", "會議", "高級工具"],
+      "descriptions": [
+        "直接內建於應用中，全面防禦惡意軟體、勒索軟體和間諜軟體。",
+        "保護您的瀏覽，攔截廣告和追蹤器，並確保位置私密安全。",
+        "幫助您識別並清除垃圾或重複檔案，保持儲存空間整潔。",
+        "Teams 的安全私密替代方案。視訊通話受後量子加密保護且無追蹤器。",
+        "支援 Windows、Mac、Linux 和行動端。為高級用戶提供 WebDAV、Rclone 和 NAS 支援。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 Sync 的最佳替代方案",
+    "description": "Internxt 提供預設的全私密加密、透明的開源軟體和全套隱私工具，確保數據安全。",
+    "cta": "獲取優惠"
+  },
+  "tableSection": {
+    "title": "您的全能隱私盟友",
+    "hotLabel": "{{discount}}% 折扣",
+    "planTitles": {
+      "header": "您的全能隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常見問題解答",
+    "faq": [
+      {
+        "question": "Internxt 是比 Sync 更安全、更私密的替代方案嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證只有您能查看檔案。",
+          "Sync 在其伺服器上管理加密金鑰，這意味著他們理論上可以存取檔案或應政府要求提供存取權限。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密？它更安全嗎？",
+        "answer": [
+          "與 Sync 使用的標準加密不同，後量子加密 (PQE) 旨在抵抗強大量子計算機的攻擊。",
+          "這確保了數據在面對未來網絡威脅時的安全性，所有方案均包含此功能，無額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部在哪裡？",
+        "answer": ["Internxt 總部位於西班牙巴倫西亞，屬於符合 GDPR 規範的解決方案，遵循嚴苛的歐盟法律。"]
+      },
+      {
+        "question": "Sync 比 Internxt 更貴嗎？",
+        "answer": [
+          "憑藉 {{percentage}}% 的專屬折扣，Internxt 方案比 Sync 現行價格更便宜，且功能更豐富。",
+          "此外，Internxt 提供終身方案以永久避免訂閱費，而 Sync 不提供此類方案。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援團隊？",
+        "answer": ["您可以發送郵件至 hello@internxt.com，我們的客戶成功團隊將樂意為您解答任何問題。"]
+      },
+      {
+        "question": "我可以為終身方案增加儲存空間嗎？",
+        "answer": ["可以，您可以在設置中升級方案或購買新方案，空間將自動疊加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": ["Internxt 接受簽帳卡/信用卡、PayPal、iDEAL、Sofort、加密貨幣和 Klarna。"]
+      }
+    ]
+  }
+}
