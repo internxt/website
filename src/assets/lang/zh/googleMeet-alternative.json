@@ -1,0 +1,209 @@
+{
+  "HeroSection": {
+    "title": "Internxt。類似 Google Meet，但**完全私密**",
+    "description": "擺脫 Google 生態系，選擇 Internxt，這是最尊重您隱私的 Google Meet 最佳替代方案",
+    "getPrivacy": " 選擇您的方案並享 {{percentage}}% 折扣 ",
+    "cta": "獲取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 Google Meet 概覽",
+    "description": "了解 Internxt 的關鍵功能與差異，讓您重新掌控自己的數據。",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密技術",
+        "後量子加密",
+        "價格與儲存",
+        "功能特性",
+        "安全稽核",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源 (Open-source)",
+        "影片在您的裝置上加密",
+        "是",
+        "具競爭力，無隱藏費用，最高 5TB",
+        "網碟、VPN、防毒、清理器、會議、郵件等",
+        "定期的安全稽核",
+        "是",
+        "永遠無法存取您的影片或聊天內容",
+        "全面隱私：符合 GDPR，受西班牙數據保護法保障"
+      ],
+      "competitorFeatures": [
+        "閉源 (Closed-source)",
+        "影片由 Google 加密",
+        "否",
+        "方案較貴，最高 2TB",
+        "網碟、Google Workspace、AI 整合、郵件與會議",
+        "定期的安全稽核",
+        "否",
+        "在特定情況下可以存取影片和聊天內容",
+        "隱私保護較弱：受歐美數據隱私框架管轄"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google 為侵犯隱私支付罰金。Internxt 則在保護隱私。",
+    "description": "Google 或许安全，但對您的隱私來說卻是一場噩夢。切換到 Internxt，為您的視訊通話、雲端儲存和在線隱私提供全面保障。",
+    "scrollableSection": {
+      "titles": ["違反 GDPR", "Gmail 與廣告醜聞", "被遺忘權", "欺騙性設計"],
+      "descriptions": [
+        "1000 萬歐元：西班牙數據保護局因 Google 違反 GDPR，在未經同意的情況下將用戶資訊洩露給第三方而對其開罚。",
+        "3.25 億歐元：2025 年，法國 CNIL 再次因 Google 在 Gmail 郵件間展示廣告並在建立帳戶時濫用 Cookie 而對其處以罰款。",
+        "700 萬歐元：瑞典數據保護局因 Google 違反「被遺忘權」而對其罰款。Google 未能移除用戶請求刪除的搜尋結果，導致隱私外洩。",
+        "9000 萬歐元：法國 CNIL 罰款 Google 9000 萬歐元，原因是其刻意讓用戶難以拒絕 Cookie，從而支撐其基於追蹤的廣告模式。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼您需要一個私密的 Google Meet 替代方案",
+    "description": "Google 在安全方面的表現掩蓋了其隱私漏洞。為了全面保護隱私，請選擇 Internxt 的零知識加密技術。",
+    "cards": {
+      "titles": ["隱私至上", "端到端加密", "無數據抓取"],
+      "descriptions": [
+        "Google Meet 會關聯視訊通話的元數據，包括聯絡人、頻率及持續時間。Internxt 無追蹤器、無 AI 掃描、無隱藏後門。",
+        "Google 在其伺服器上管理加密金鑰，擁有完全控制權。Internxt 採用零知識技術：只有您能存取自己的數據。",
+        "在 Google，您的活動會被監控並用於構建頭像以營利。在 Internxt，您是數據的主人，而不是產品。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Google Meet",
+    "description": "Internxt 提供無與倫比的安全性能，擁有 Google Meet 無法提供的功能，如後量子加密。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隱私、透明與信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼在 GitHub 上公開，任何人都可以檢查。這種透明度確保沒有隱藏的漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的數據在客戶端加密，確保只有您可以存取。"
+          },
+          {
+            "title": "稽核與合規",
+            "description": "Internxt 經過外部稽核，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身方案",
+            "description": "透過一次性支付免去續費煩惱，儲存空間高達 5TB。享受 {{discount}}% 的折扣，永久使用我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Google Meet：您的隱私安全嗎？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "Google 隱藏其原始碼。缺乏透明度，無法確定其如何处理或保護您的數據。"
+          },
+          {
+            "title": "由 Google 加密",
+            "description": "由於 Google 持有加密金鑰，他們可以在收到法律要求時（如傳票）解密並存取您的會議。"
+          },
+          {
+            "title": "合規罰金記錄",
+            "description": "Google 在保護客戶數據和遵守用戶許可方面有多項監管罰款記錄。"
+          },
+          {
+            "title": "訂閱制模式",
+            "description": "僅提供月付或年付訂閱，且儲存空間上限低於 Internxt 的靈活選項。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Google Meet 的最佳替代方案",
+    "description": "Internxt 網碟提供一整套產品，旨在讓您重新掌控在線隱私。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["防毒軟體", "VPN", "清理器", "Meet 會議", "進階工具"],
+      "descriptions": [
+        "Internxt 防毒功能直接集成在應用中，全面防範惡意軟體、勒索軟體或間諜軟體。",
+        "Internxt VPN 保護您的瀏覽記錄，攔截廣告和追蹤器，防止身份盜用。",
+        "Internxt 清理器幫助您識別並刪除垃圾文件或重複文件，確保裝置運作高效。",
+        "Internxt Meet 是 Google Meet 的安全私密替代品。視訊通話受後量子加密保護。",
+        "支援 Windows、Mac、Linux 和行動端。針對進階用戶，我們支援 WebDAV、Rclone 和 NAS。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "擺脫 Google，選擇 Internxt",
+    "description": "為您的視訊通話提供全方位隱私保護",
+    "cta": "獲取優惠"
+  },
+  "tableSection": {
+    "title": "您的全方位隱私盟友",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "planTitles": {
+      "header": "您的全方位隱私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲取 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過稽核",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常見問題解答",
+    "faq": [
+      {
+        "question": "Internxt 是更安全、更私密的 Google Meet 替代方案吗？",
+        "answer": [
+          "是的，Internxt 使用後量子加密和零知識加密，確保除您之外沒人能查看您的內容。",
+          "Google 在其伺服器上管理金鑰，這意味著它可以存取您的文件，或者將其提供給政府或執法部門。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它為什麼更安全？",
+        "answer": [
+          "與標準加密不同，後量子加密算法旨在抵抗未來強大的量子計算機攻擊。",
+          "這種加密方法確保您的終身方案能抵禦未來的網絡安全威脅，且無需額外付費。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部設在哪裡？",
+        "answer": ["Internxt 總部位於西班牙瓦倫西亞，符合歐盟 GDPR 標準，遵循嚴格的法律保護您的數據隱私。"]
+      },
+      {
+        "question": "Google Meet 比 Internxt 更貴吗？",
+        "answer": [
+          "雖然 Google Meet 有免費版，但對於專業儲存和功能，Internxt 憑藉 {{percentage}}% 的折扣和終身方案更具性價比。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援團隊？",
+        "answer": ["如有任何疑問，請聯繫 hello@internxt.com，我們的客戶成功團隊將竭诚為您服務。"]
+      },
+      {
+        "question": "我可以在終身方案中添加更多儲存空間吗？",
+        "answer": ["可以，您可以在帳戶設置中升級方案，或者直接購買新方案，儲存空間將自動累加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付吗？",
+        "answer": [
+          "Internxt 目前支持信用卡和簽帳卡（Mastercard, VISA 等）、PayPal、iDEAL、Sofort、加密貨幣以及 Klarna。"
+        ]
+      }
+    ]
+  }
+}

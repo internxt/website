@@ -1,0 +1,221 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Wie Proton Drive, aber **privat**",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu Proton Drive, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan mit {{percentage}}% Rabatt 🔥 ",
+    "cta": "Angebot sichern"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Proton Drive Übersicht",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Post-Quanten-Verschlüsselung",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open Source",
+        "Verschlüsselt auf Ihrem Gerät",
+        "Ja",
+        "Wettbewerbsfähig, keine versteckten Kosten, Lifetime-Pläne",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail und mehr",
+        "Regelmäßige Sicherheits- und veröffentlichte Audits",
+        "Ja",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "Voller Datenschutz: DSGVO, spanische Datenschutzgesetze, ISO 27001, SOC 2, HIPAA-konform"
+      ],
+      "competitorFeatures": [
+        "Open Source",
+        "Verschlüsselt auf Ihrem Gerät",
+        "Nein",
+        "Monatliche oder jährliche Pläne",
+        "Drive, VPN, Mail und mehr",
+        "Ja",
+        "Nein",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "Schweizer Datenschutzgesetze"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Warum Sie eine Alternative zu Proton Drive in Betracht ziehen sollten",
+    "description": "Erhalten Sie integrierte Zero-Knowledge-Verschlüsselung mit Internxt und vollen Geräteschutz",
+    "scrollableSection": {
+      "titles": [
+        "Begrenzter Geräteschutz",
+        "Geringe Speicherkapazität",
+        "Keine Post-Quanten-Verschlüsselung",
+        "Mangelnde Linux-Unterstützung"
+      ],
+      "descriptions": [
+        "Internxt bietet Antivirus und Cleaner, um Ihr Gerät frei von Malware zu halten und die Leistung zu optimieren. Diese wesentlichen Sicherheitsfunktionen sind derzeit mit einem Proton-Konto nicht verfügbar.",
+        "Proton Drive bietet maximal 500 GB für den persönlichen Gebrauch. Dies ist begrenzt für große Projekte oder Mediatheken im Vergleich zu den Plänen von Internxt, die bis zu 5 TB reichen.",
+        "Proton Drive hat noch keine Post-Quanten-Verschlüsselung implementiert. Ohne PQE sind Nutzerdaten möglicherweise nicht ewig sicher, da sich Quantencomputing weiterentwickelt, um Standardalgorithmen zu knacken.",
+        "Proton Drive fehlt die native Linux-Unterstützung. Internxt bietet volle Unterstützung für Linux, WebDAV, Rclone und NAS und damit mehr Flexibilität für fortgeschrittene Nutzer."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Alternative zu Proton Drive",
+    "description": "Finden Sie heraus, warum Sie eine Alternative zu Proton Drive benötigen und erhalten Sie ein vollständiges Privacy-First-Ökosystem.",
+    "cards": {
+      "titles": ["Post-Quanten-Verschlüsselung", "Vollständiger Online-Schutz", "Einmal zahlen, für immer nutzen"],
+      "descriptions": [
+        "Internxt ist der erste Cloud-Speicher mit Post-Quanten-Verschlüsselung. Proton Drive verwendet weiterhin Standardverschlüsselung, die anfällig für Quantencomputer werden könnte.",
+        "Internxt geht mit Antivirus und Cleaner über Cloud-Speicher hinaus und bietet alles, was Sie brauchen, um Ihre Dateien und Geräte sicher und privat zu halten.",
+        "Internxt Lifetime-Pläne machen wiederkehrende Gebühren überflüssig. Zahlen Sie einmal und erhalten Sie langfristigen Zugang mit vorhersehbaren Kosten – eine Option, die Proton Drive nicht bietet."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Proton Drive",
+    "description": "Internxt bietet unübertroffene Privatsphäre und Sicherheit dank Zero-Knowledge- und Post-Quanten-Verschlüsselung sowie flexibleren Speicheroptionen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Totale Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open Source und geprüft",
+            "description": "Der Code von Internxt ist für alle offen und wird unabhängig über GitHub geprüft, um sicherzustellen, dass keine Schwachstellen verborgen sind."
+          },
+          {
+            "title": "Zero-Knowledge & PQE",
+            "description": "Daten werden auf der Client-Seite mit Post-Quanten-Algorithmen verschlüsselt, was Sicherheit gegen aktuelle und zukünftige Bedrohungen garantiert."
+          },
+          {
+            "title": "Vielfältige Compliance",
+            "description": "Sitz in Spanien und konform mit DSGVO, HIPAA, ISO 27001 und SOC 2. Vollständig geprüft, um externen Zugriff auszuschließen."
+          },
+          {
+            "title": "Lifetime-Pläne",
+            "description": "Vermeiden Sie Abos mit einer Einmalzahlung für Pläne bis zu 5 TB. Nutzen Sie unsere Dienste für immer mit {{discount}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Proton Drive: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Proton Drive ist ebenfalls Open Source und geprüft, was seinen Nutzern ein hohes Maß an Transparenz bietet."
+          },
+          {
+            "title": "Industriestandard",
+            "description": "Proton Drive verwendet Standardverschlüsselung, die mit der Entwicklung von Post-Quanten-Bedrohungen unsicherer werden könnte."
+          },
+          {
+            "title": "Compliance",
+            "description": "Sitz in der Schweiz und folgt den Schweizer Datenschutzgesetzen, die sich vom DSGVO-Rahmen der EU unterscheiden."
+          },
+          {
+            "title": "Abonnementbasiert",
+            "description": "Nur monatliche oder jährliche Abonnements. Proton Drive bietet keine Lifetime-Pläne an, was zu wiederkehrenden Kosten führt."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Proton Drive ist",
+    "description": "Internxt Drive bietet eine umfassende Produktsuite, die Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückgibt.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Erhalten Sie erhöhten Schutz direkt in Ihrer App, um nach Malware, Ransomware oder Spyware zu suchen.",
+        "Verschlüsseln Sie Ihre Verbindung, blockieren Sie Werbung und Tracker und halten Sie Ihren Standort beim Surfen privat.",
+        "Identifizieren und eliminieren Sie unerwünschten Müll oder Dateidubletten, um Ihren Speicher organisiert und effizient zu halten.",
+        "Hosten Sie private Videoanrufe ohne Tracker und Datensammlung, geschützt durch Post-Quanten-Verschlüsselung.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte. Volle Unterstützung für WebDAV, Rclone und NAS für fortgeschrittene Verwaltung."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt als beste Alternative zu Proton Drive",
+    "description": "Internxt bietet standardmäßig volle private Verschlüsselung, transparente Open-Source-Software und eine komplette Privacy-Suite für Ihre Datensicherheit.",
+    "cta": "Angebot sichern"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Privatsphäre-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Ihr All-in-One-Privatsphäre-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher gratis",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1 TB",
+      "premium": "3 TB",
+      "ultimate": "5 TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu Proton Drive?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung. Proton Drive verwaltet die Verschlüsselungsschlüssel auf eigenen Servern, was theoretisch den Zugriff auf Dateien bei spezifischen rechtlichen Anfragen ermöglichen könnte.",
+          "Zusätzliche Funktionen wie Antivirus, Device Cleaner und Dark Web Monitor bieten Schutz, der bei Proton Drive nicht verfügbar ist."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standardverschlüsselung von Proton Drive sind PQE-Algorithmen so konzipiert, dass sie leistungsstarken Quantenangriffen widerstehen und Ihre Daten für die Zukunft sicher halten.",
+          "Diese Methode ist für alle Internxt-Pläne ohne Aufpreis verfügbar, einschließlich der Lifetime-Pläne."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die den strengen EU-Datenschutzgesetzen folgt."
+        ]
+      },
+      {
+        "question": "Ist Proton Drive teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven {{percentage}}% Rabatt sind die Internxt-Pläne günstiger als die aktuellen Preise von Proton Drive. Zudem bietet Proton Drive nur bis zu 500 GB für den persönlichen Gebrauch an.",
+          "Sie können zudem wiederkehrende Abonnementkosten vermeiden, indem Sie einen Internxt Lifetime-Plan wählen – eine Option, die Proton Drive nicht bietet."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Sie können hello@internxt.com kontaktieren, und unser Customer Success Team hilft Ihnen gerne weiter. Internxt bietet Live-Support an, der Proton Drive für Basisnutzer fehlt."
+        ]
+      },
+      {
+        "question": "Kann ich mehr Speicherplatz zu meinem Lifetime-Plan hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, und Ihr Speicherplatz wird automatisch addiert."
+        ]
+      },
+      {
+        "question": "Kann I mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten, PayPal, iDEAL, Sofort, Kryptowährungen und Klarna."
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,4 @@
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
@@ -17,6 +16,7 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
+import Footer from '../layout/footers/Footer';
 
 type CompetitorType =
   | 'pCloud'
@@ -27,9 +27,18 @@ type CompetitorType =
   | 'Icedrive'
   | 'OneDrive'
   | 'Degoo'
-  | 'Drime'
   | 'Elephantdrive'
-  | 'FileJump';
+  | 'FileJump'
+  | 'Drime'
+  | 'GoogleMeet'
+  | 'Terabox'
+  | 'Filen'
+  | 'idrive'
+  | 'TeraBox'
+  | 'sync'
+  | 'proton-drive'
+  | 'zoom'
+  | 'Teams';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;
@@ -175,7 +184,7 @@ export const ComparisonPage = ({
 
       <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} bgColor="bg-gray-1" />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

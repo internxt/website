@@ -73,6 +73,8 @@ export interface Resources {
   title: string;
   blog: string;
   comparison: string;
+  alternatives: string;
+  cloudStorage: string;
   pCloudAlternative: string;
   dropboxAlternative: string;
   megaAlternative: string;
@@ -84,6 +86,15 @@ export interface Resources {
   degooAlternative: string;
   fileJumpAlternative: string;
   elephantDriveAlternative: string;
+  syncAlternative: string;
+  filenAlternatice: string;
+  iDriveAlternative: string;
+  teraboxAlternative: string;
+  protonAlternative: string;
+  videoCalls: string;
+  googleMeet: string;
+  zoom: string;
+  teams: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
   nas: string;

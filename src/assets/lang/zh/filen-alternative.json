@@ -1,0 +1,202 @@
+{
+  "HeroSection": {
+    "title": "Internxt。类似 Filen，\n 但更**私密**",
+    "description": "切换到 Internxt，最尊重您隐私的 Filen 替代方案，具备后量子安全技术",
+    "getPrivacy": " 选择您的方案并享受 {{percentage}}% 的折扣  ",
+    "cta": "获取优惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Filen 概览",
+    "description": "了解 Internxt 的核心功能及差异，重新掌控您的数据。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密技术",
+        "后量子加密",
+        "价格与存储",
+        "功能特性",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源且经过验证",
+        "零知识 (AES-256)",
+        "是 (Kyber-512)",
+        "极具竞争力，提供终身方案",
+        "网盘、VPN、杀毒、清理器、会议、邮件",
+        "定期的独立安全审计",
+        "是 (在线客服)",
+        "永远无法访问您的文件",
+        "GDPR, HIPAA, ISO 27001, SOC 2"
+      ],
+      "competitorFeatures": [
+        "开源",
+        "零知识 (AES-256)",
+        "否",
+        "月付/年付 (Pro 终身版已取消)",
+        "云存储与基础同步",
+        "近期无公开的独立审计",
+        "否",
+        "永远无法访问您的文件",
+        "GDPR，总部位于德国"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "为什么您应该考虑 Filen 的替代方案",
+    "description": "选择 Internxt，为您的文件和个人数据提供全方位安全保障。零知识审计安全及全套产品线。",
+    "scrollableSection": {
+      "titles": ["未经证实的安全性", "隐私套件功能有限", "因闲置删除账户", "仅限个人使用"],
+      "descriptions": [
+        "Filen 缺乏近期独立安全审计，这限制了用户的信任。用户对其密钥管理和架构可靠性存在不确定性。",
+        "Filen 仅提供基础云存储。Internxt 全套工具包含杀毒、VPN、清理器和私密会议，旨在全方位防御 Big Tech。",
+        "Filen 因闲置而删除账户的政策让不常登录的用户面临永久丢失数据的风险。Internxt 提供更可靠的长期访问。",
+        "缺乏完善的企业或家庭计划，Filen 无法支持团队协作。团队无法高效分配存储空间，不适合专业组织。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "超越云存储，获取真正的全方位隐私",
+    "description": "通过 Internxt 的零知识和后量子加密技术，获得顶级的安全性。",
+    "cards": {
+      "titles": ["后量子准备就绪", "全方位在线保护", "一次付费，终身使用"],
+      "descriptions": [
+        "Internxt 是首个部署后量子加密 (Kyber-512) 的云盘，防止未来量子计算机破解标准 AES-256 加密。",
+        "我们不仅提供存储，还提供完整的生态系统（VPN、杀毒、会议），通过一个安全订阅保护您的设备和身份。",
+        "不同于已取消 Pro 终身版的 Filen，Internxt 持续提供高达 5TB 的高性价比终身访问，并有 30 天退款保证。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Filen",
+    "description": "Internxt 凭借后量子加密提供无与伦比的隐私保护，助您抵御未来的网络攻击。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全方位隐私、透明与信任",
+        "features": [
+          {
+            "title": "经审计的开源代码",
+            "description": "Internxt 代码公开并经过 Securitum 审计，确保无任何隐藏后门或漏洞。"
+          },
+          {
+            "title": "零知识与后量子加密",
+            "description": "数据在您的设备上通过后量子算法加密，确保能抵御当前和未来的安全威胁。"
+          },
+          {
+            "title": "企业级合规",
+            "description": "符合 GDPR、HIPAA、ISO 27001 和 SOC 2，达到全球最高的安全标准。"
+          },
+          {
+            "title": "灵活的终身计划",
+            "description": "最高 5TB 的终身访问权。支持叠加方案以扩容，并享受 {{percentage}}% 的折扣。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Filen：您的隐私安全吗？",
+        "features": [
+          {
+            "title": "开源但无审计",
+            "description": "Filen 虽开源，但缺乏近期独立的第三方审计来证实其安全性声明。"
+          },
+          {
+            "title": "行业标准加密",
+            "description": "使用标准 AES-256，随着量子计算技术的发展，安全性可能受到挑战。"
+          },
+          {
+            "title": "德国合规",
+            "description": "总部位于德国且符合 GDPR，但缺乏 Internxt 拥有的更广泛的合规认证。"
+          },
+          {
+            "title": "侧重订阅模式",
+            "description": "逐渐放弃终身模式；Pro 终身计划受到越来越多的限制或已停售。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Filen 的最佳替代方案",
+    "description": "Internxt 网盘提供全方位的产品套件，助您夺回在线隐私的掌控权。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["杀毒软件", "VPN", "清理器", "Meet 会议", "高级工具"],
+      "descriptions": [
+        "在安全网盘应用中直接内置针对恶意软件、勒索软件和间谍软件的防护功能。",
+        "加密您的互联网连接，拦截追踪器，并在世界任何地方进行私密浏览。",
+        "识别并清理重复或垃圾文件，保持存储高效并让您的设备运行顺畅。",
+        "具备后量子加密的私密视频通话，远离 Big Tech 的追踪和数据搜集。",
+        "通过 WebDAV、Rclone 和 NAS 支持全面掌控。支持 Windows、Mac、Linux 和移动端。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "欧洲云存储",
+    "description": "享受 {{percentage}}% 折扣的全方位数据保护",
+    "cta": "获取优惠"
+  },
+  "tableSection": {
+    "title": "您的全能隐私盟友",
+    "hotLabel": "{{discount}}% 折扣  ",
+    "planTitles": {
+      "header": "您的全能隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度方案",
+      "lifetime": "终身方案"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费版",
+      "description": "免费获取 1GB 加密云存储空间",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "Internxt 是比 Filen 更安全和私密的替代方案吗？",
+        "answer": [
+          "是的，Internxt 是首个在零知识政策外提供后量子加密的厂商，并经过独立安全机构审计。",
+          "虽然 Filen 很安全，但 Internxt 提供了更广泛的套件，包括 VPN、杀毒和私密会议。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密？",
+        "answer": ["不同于 Filen 使用的标准 AES-256，后量子加密 (PQE) 可抵御量子计算机攻击，确保您未来十年的数据安全。"]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": ["Internxt 总部位于西班牙巴伦西亚，遵循严格的 GDPR 和欧盟数据保护法。"]
+      },
+      {
+        "question": "Filen 比 Internxt 更贵吗？",
+        "answer": ["凭借专享的 {{percentage}}% 折扣，Internxt 的终身和年度方案比 Filen 仅存储的模式更具性价比。"]
+      },
+      {
+        "question": "如何联系客户支持？",
+        "answer": ["您可以发送邮件至 hello@internxt.com。我们提供实时在线支持，不同于许多小型提供商。"]
+      },
+      {
+        "question": "我可以给终身方案增加容量吗？",
+        "answer": ["可以，存储空间是可叠加的。您可以随时在设置中升级或添加新方案。"]
+      },
+      {
+        "question": "支持哪些支付方式？",
+        "answer": ["Internxt 支持借记卡/信用卡、PayPal、加密货币和 Klarna，提供最大的支付灵活性。"]
+      }
+    ]
+  }
+}

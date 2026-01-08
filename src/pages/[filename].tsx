@@ -61,6 +61,7 @@ const LANG_MAP = {
   qinhui: 'fr',
   payette: 'en',
   ghareeb: 'en',
+  christian: 'en',
   apfelcast: 'de',
   ct3003: 'de',
 };

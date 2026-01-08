@@ -356,6 +356,41 @@
     "description": "Passa a Internxt per un'alternativa open-source a FileJump. L'archiviazione cloud crittografata post-quantistica e a conoscenza zero garantisce la piena privacy dei tuoi documenti e file multimediali."
   },
   {
+    "id": "zoom-alternative",
+    "title": "Internxt — Alternativa a Zoom",
+    "description": "Passa a Internxt per un'alternativa open-source a Zoom. Include archiviazione cloud post-quantistica e altro per la massima privacy online."
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "Internxt — Alternativa a IDrive",
+    "description": "Passa a Internxt per un'alternativa a IDrive completamente privata. Archiviazione cloud post-quantistica e con crittografia zero-knowledge per la massima privacy dei tuoi file."
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "Internxt — Alternativa a Proton Drive",
+    "description": "Passa a Internxt per una suite completa per la privacy e un'alternativa a Proton Drive. Archiviazione cloud post-quantistica e con crittografia zero-knowledge."
+  },
+  {
+    "id": "sync-alternative",
+    "title": "Internxt — Alternativa a Sync",
+    "description": "Passa a Internxt per un'alternativa open-source a Sync. Archiviazione cloud post-quantistica e con crittografia zero-knowledge per la massima privacy dei tuoi file."
+  },
+  {
+    "id": "filen-alternative",
+    "title": "Internxt — Alternativa a Filen",
+    "description": "Passa a Internxt per un'alternativa a Filen. Archiviazione cloud post-quantistica e con crittografia zero-knowledge per la massima privacy dei tuoi file."
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Alternativa a Google Meet",
+    "description": "Passa a Internxt per un'alternativa open-source a Google Meet. Video riunioni post-quantistiche e con crittografia zero-knowledge per la massima privacy delle tue chiamate."
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "Internxt — Alternativa a Terabox",
+    "description": "Passa a Internxt per un'alternativa open-source a Terabox. Archiviazione cloud post-quantistica e con crittografia zero-knowledge per la massima privacy dei tuoi file."
+  },
+  {
     "id": "meet",
     "title": "Internxt Meet – Videochiamate Sicure e Private",
     "description": "Meet offre videochiamate private con crittografia post-quantistica e end-to-end per le videoconferenze più sicure."
