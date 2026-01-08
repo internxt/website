@@ -331,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Лимиты корзины",
+            "name": "Автоматическая очистка корзины",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

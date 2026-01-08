@@ -331,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Limites de la corbeille",
+            "name": "Vidage automatique de la corbeille",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

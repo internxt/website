@@ -331,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Papierkorb-Limits",
+            "name": "Papierkorb automatisch leeren",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

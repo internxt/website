@@ -331,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "回收站限制",
+            "name": "自动清空回收站",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {
