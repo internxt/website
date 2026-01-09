@@ -18,7 +18,7 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 
 const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'google-drive-alternative');
   const {
     products,
     loadingCards,
