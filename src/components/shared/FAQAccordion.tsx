@@ -9,12 +9,14 @@ export default function FaqAccordion({
   isQuestionBigger = false,
   textColor,
   percentageDiscount = '70',
+  needsH3,
 }: {
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
   textColor?: string;
   percentageDiscount?: string;
+  needsH3?: boolean;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -31,6 +33,7 @@ export default function FaqAccordion({
     });
   }, []);
 
+  const QuestionTag = needsH3 ? 'h3' : 'p';
   return (
     <div className="flex flex-col items-stretch justify-start">
       <button
@@ -40,13 +43,13 @@ export default function FaqAccordion({
         }}
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
-        <h3
+        <QuestionTag
           className={`w-full text-lg font-medium ${textColor ? textColor : 'text-gray-100'} ${
             isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'
           }`}
         >
           {question}
-        </h3>
+        </QuestionTag>
         <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out`} />
       </button>
 

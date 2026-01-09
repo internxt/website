@@ -36,9 +36,10 @@ interface ComparisonTableProps {
     | 'zoom'
     | 'Teams';
   hideTooltip?: boolean;
+  needH2?: boolean;
 }
 
-export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTableProps) => {
+export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false }: ComparisonTableProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -139,13 +140,16 @@ export const ComparisonTable = ({ textContent, logo, competitor }: ComparisonTab
   };
 
   const tableRows = createTableRows();
+  const TitleTag = needH2 ? 'h2' : 'p';
 
   return (
     <section className="overflow-hidden bg-white px-4 py-12 lg:px-5 lg:py-20">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-8 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center lg:gap-6">
-          <h2 className="text-2xl font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>
+          <TitleTag className="text-2xl font-semibold text-gray-100 lg:text-3xl">
+            {parseText(textContent.title)}
+          </TitleTag>
           <p className="max-w-[345px] text-sm leading-tight text-gray-80 lg:max-w-[774px] lg:text-xl">
             {parseText(textContent.description)}
           </p>
