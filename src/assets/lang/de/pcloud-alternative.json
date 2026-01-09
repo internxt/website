@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, a **secure** pCloud alternative",
+    "title": "Internxt, eine **sichere** {{competitor}} Alternative",
     "description": "Suchen Sie nach einer pCloud-Alternative? Internxt bietet Post-Quanten-Verschlüsselung und eine komplette Datenschutz-Suite.",
     "features": [
       "Speichern Sie Ihre Videos privat",
@@ -194,8 +194,8 @@
     "cta": "Internxt erhalten"
   },
   "CtaSection2": {
-    "title": "Die beste Alternative zu pCloud ist Internxt",
-    "description": "Erhalten Sie mit Internxt absolute Privatsphäre für Ihre Dateien",
+    "title": "Keine Tracker. Keine Probleme.",
+    "description": "Erhalten Sie vollständigen Datenschutz für Ihre Dateien mit Internxt",
     "cta": "Kostenlos anmelden"
   },
   "tableSection": {
