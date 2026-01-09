@@ -298,15 +298,6 @@
             }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "Мониторинг Dark Web",
-            "avalability": {
-              "Essential": false,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "Поддержка CLI и WebDAV",
             "avalability": {
@@ -340,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Лимиты корзины",
+            "name": "Автоматическая очистка корзины",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

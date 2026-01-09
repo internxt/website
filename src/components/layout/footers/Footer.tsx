@@ -379,7 +379,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div className="flex max-w-[34%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}>
                     {textContent.FooterSection.sections.resources.title}
@@ -403,12 +403,10 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.comparison}
                     </Link>
-                    <p className="w-full max-w-[160px] hover:text-primary">
-                      {textContent.FooterSection.sections.resources.alternatives}
-                    </p>
+
                     <button
                       onClick={() => setIsAlternativesOpen(!isAlternativesOpen)}
-                      className="flex w-full max-w-[160px] flex-row items-center gap-1 pl-3 text-left hover:text-primary"
+                      className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.cloudStorage}
                       {isAlternativesOpen ? (
@@ -420,14 +418,15 @@ export default function Footer({
 
                     <div
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isAlternativesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                        isAlternativesOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
                       }`}
+                      style={!isAlternativesOpen ? { display: 'none' } : {}}
                     >
                       <Link
                         href="/pcloud-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.pCloudAlternative}
                       </Link>
@@ -435,7 +434,7 @@ export default function Footer({
                         href="/dropbox-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
                       </Link>
@@ -443,7 +442,7 @@ export default function Footer({
                         href="/mega-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
@@ -451,7 +450,7 @@ export default function Footer({
                         href="/koofr-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.koofrAlternative}
                       </Link>
@@ -459,7 +458,7 @@ export default function Footer({
                         href="/icedrive-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.icedriveAlternative}
                       </Link>
@@ -467,7 +466,7 @@ export default function Footer({
                         href="/onedrive-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.onedriveAlternative}
                       </Link>
@@ -475,7 +474,7 @@ export default function Footer({
                         href="/google-drive-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.googleDriveAlternative}
                       </Link>
@@ -483,7 +482,7 @@ export default function Footer({
                         href="/drime-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.drimeAlternative}
                       </Link>
@@ -491,7 +490,7 @@ export default function Footer({
                         href="/degoo-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.degooAlternative}
                       </Link>
@@ -499,7 +498,7 @@ export default function Footer({
                         href="/filejump-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.fileJumpAlternative}
                       </Link>
@@ -507,7 +506,7 @@ export default function Footer({
                         href="/elephantdrive-alternative"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                       </Link>
@@ -515,7 +514,7 @@ export default function Footer({
                         href="/alternative-to-sync"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.syncAlternative}
                       </Link>
@@ -523,7 +522,7 @@ export default function Footer({
                         href="/alternative-to-filen"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.filenAlternatice}
                       </Link>
@@ -531,7 +530,7 @@ export default function Footer({
                         href="/alternative-to-idrive"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.iDriveAlternative}
                       </Link>
@@ -539,7 +538,7 @@ export default function Footer({
                         href="/alternative-to-terabox"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.teraboxAlternative}
                       </Link>
@@ -547,14 +546,15 @@ export default function Footer({
                         href="/alternative-to-proton-drive"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.protonAlternative}
                       </Link>
                     </div>
+
                     <button
                       onClick={() => setIsVideocallsOpen(!isVideocallsOpen)}
-                      className="flex w-full max-w-[160px] flex-row items-center gap-1 pl-3 text-left hover:text-primary"
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.videoCalls}
                       {isVideocallsOpen ? (
@@ -566,14 +566,15 @@ export default function Footer({
 
                     <div
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isVideocallsOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                        isVideocallsOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
                       }`}
+                      style={!isVideocallsOpen ? { display: 'none' } : {}}
                     >
                       <Link
                         href="/alternative-to-google-meet"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.googleMeet}
                       </Link>
@@ -581,7 +582,7 @@ export default function Footer({
                         href="/alternative-to-zoom"
                         locale={lang}
                         passHref
-                        className="w-full max-w-[160px] pl-6 hover:text-primary"
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.zoom}
                       </Link>
