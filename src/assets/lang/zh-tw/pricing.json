@@ -298,15 +298,6 @@
             }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "暗網監控",
-            "avalability": {
-              "Essential": false,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "CLI 和 WebDAV 支援",
             "avalability": {
@@ -340,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "回收筒限制",
+            "name": "自動清空回收站",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

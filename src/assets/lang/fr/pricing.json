@@ -298,15 +298,6 @@
             }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "Surveillance du Dark Web",
-            "avalability": {
-              "Essential": false,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "Support CLI et WebDAV",
             "avalability": {
@@ -340,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Limites de la corbeille",
+            "name": "Vidage automatique de la corbeille",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

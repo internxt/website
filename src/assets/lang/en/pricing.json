@@ -193,11 +193,6 @@
             "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "Dark Web Monitor",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "CLI & WebDAV support",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
@@ -215,7 +210,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Trash limits",
+            "name": "Self-emptying bin",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {

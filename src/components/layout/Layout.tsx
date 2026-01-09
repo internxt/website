@@ -172,8 +172,7 @@ export default function Layout({
       </Script>
       {shouldShowBanner ? (
         <>
-          <TopBanner isBannerFixed={isBannerFixed} />
-          <div className="flex flex-col overflow-hidden pt-[64px] lg:pt-[54px]">{children}</div>
+          <div className="flex flex-col overflow-hidden">{children}</div>
         </>
       ) : (
         children

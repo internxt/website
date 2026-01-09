@@ -298,15 +298,6 @@
             }
           },
           {
-            "id": "Dark_Web_Monitor",
-            "name": "Monitor de la Dark Web",
-            "avalability": {
-              "Essential": false,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
-          {
             "id": "cli_webdav_support",
             "name": "Soporte CLI y WebDAV",
             "avalability": {
@@ -340,7 +331,7 @@
         "features": [
           {
             "id": "trash_limits",
-            "name": "Límites de la papelera",
+            "name": "Autovaciado de papeleras",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {
