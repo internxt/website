@@ -67,9 +67,9 @@ export const FreeCardPromoBanner = () => {
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
             <div className="flex w-full max-w-[500px] flex-col items-center gap-12 text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-4 text-center lg:text-left">
-                <h2 className="text-3xl font-bold leading-tight text-gray-100 md:text-5xl">
+                <p className="text-3xl font-bold leading-tight text-gray-100 md:text-5xl">
                   {bannerText.FreeCardPromoBanner.title}
-                </h2>
+                </p>
                 <p className="text-xl font-semibold leading-tight text-gray-100 md:text-2xl">
                   <span className="text-primary">{bannerText.FreeCardPromoBanner.subtitle.blue}</span>
                   {bannerText.FreeCardPromoBanner.subtitle.normal}
