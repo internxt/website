@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt，一個**安全**的 {{competitor}} 替代方案",
+    "title": "Internxt，一個**安全**的 pCloud 替代方案",
     "description": "正在尋找 pCloud 替代方案？Internxt 提供後量子加密和完整的隱私套件。",
     "features": ["私密儲存您的影片", "後量子加密和零知識加密", "開源且經過驗證"],
     "getPrivacy": "享受{{percentage}}%的折扣，獲得完全隱私保護",
@@ -190,8 +190,8 @@
     "cta": "取得Internxt"
   },
   "CtaSection2": {
-    "title": "無追蹤器。無問題。",
-    "description": "使用Internxt為您的檔案獲得完全隱私",
+    "title": "pCloud 的最佳替代品是 Internxt",
+    "description": "使用 Internxt 為您的文件提供完整的隱私保護",
     "cta": "免費註冊"
   },
   "tableSection": {
