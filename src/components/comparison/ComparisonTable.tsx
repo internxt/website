@@ -76,7 +76,7 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
       defaultLogo: '/images/comparison/Koofr-Letters.webp',
     },
     Icedrive: {
-      defaultLogo: '/images/comparison/Icedrive-Letters.webp',
+      defaultLogo: '/images/comparison/icedrive-Letters.webp',
     },
     OneDrive: {
       defaultLogo: '/images/comparison/OneDrive-Letters.webp',

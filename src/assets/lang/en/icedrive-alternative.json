@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. like Icedrive, but **fully encypted**",
+    "title": "Internxt, a **secure** \nIceDrive alternative",
     "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
     "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Claim deal"
@@ -118,7 +118,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best Icedrive alternative",
+    "title": "The best alternative to IceDrive is Internxt",
     "description": "With Internxt, you get more than just cloud storage; you get everything you need to protect your data, files, and privacy online.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
