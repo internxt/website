@@ -37,6 +37,8 @@ type TablesSectionProps = {
   competitor: string;
   sectionNeedsH2?: boolean;
   TableTitleTag?: React.ElementType;
+  darkMode?: boolean;
+  bottomSeparationBar?: boolean;
 };
 
 export const TablesSection = ({
@@ -45,6 +47,8 @@ export const TablesSection = ({
   competitor,
   sectionNeedsH2 = false,
   TableTitleTag = 'p',
+  darkMode,
+  bottomSeparationBar = false,
 }: TablesSectionProps) => {
   const availableSections = [
     textContent.costAndValue
@@ -90,6 +94,13 @@ export const TablesSection = ({
   return (
     <section className="flex flex-col items-center justify-center gap-8 overflow-hidden bg-white py-8 lg:py-20">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      {bottomSeparationBar && (
+        <div
+          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        />
+      )}
       <div className="flex flex-col items-center justify-center gap-6 text-center">
         <SectionTitleTag className="text-30 font-semibold text-gray-100 lg:text-3xl">
           {parseText(textContent.title)}
@@ -110,8 +121,12 @@ export const TablesSection = ({
                 </p>
               )}
               <div className="flex h-full w-screen flex-row items-center justify-center pb-6 pt-6">
-                <InxtTable textContent={textContent.mainTable.inxtTable} />
-                <CompetitorTable textContent={textContent.mainTable.competitorTable} logo={logo} />
+                <InxtTable textContent={textContent.mainTable.inxtTable} TableTitleTag={TableTitleTag} />
+                <CompetitorTable
+                  textContent={textContent.mainTable.competitorTable}
+                  logo={logo}
+                  TableTitleTag={TableTitleTag}
+                />
               </div>
             </div>
           </>
@@ -158,8 +173,12 @@ export const TablesSection = ({
                   } lg:block lg:max-h-none lg:opacity-100`}
                 >
                   <div className="flex h-full w-screen flex-row justify-center sm:min-w-full">
-                    <InxtTable textContent={section.data.inxtTable} />
-                    <CompetitorTable textContent={section.data.competitorTable} logo={logo} />
+                    <InxtTable textContent={section.data.inxtTable} TableTitleTag={TableTitleTag} />
+                    <CompetitorTable
+                      textContent={section.data.competitorTable}
+                      logo={logo}
+                      TableTitleTag={TableTitleTag}
+                    />
                   </div>
                 </div>
               </div>

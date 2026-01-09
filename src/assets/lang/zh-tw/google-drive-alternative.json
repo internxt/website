@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. 就像 Google Drive，但更加**私密**",
+    "title": "Internxt，Google 雲端硬碟的安全替代方案",
     "description": "使用 Internxt 讓您的生活擺脫 Google 的束縛，它是最尊重您隱私的 Google Drive 替代方案",
     "getPrivacy": "立享 {{percentage}}% 折扣，獲得完全隱私",
     "cta": "立即申領優惠"
@@ -163,6 +163,11 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "CtaSection2": {
+    "title": "Google Drive 的最佳替代方案是 Internxt",
+    "description": "Internxt 預設提供全方位的私密加密和完整的隱私套件，確保您的數據和文件在線安全。",
+    "cta": "切換到 Internxt"
   },
   "FaqSection": {
     "title": "有問題？我們有答案",

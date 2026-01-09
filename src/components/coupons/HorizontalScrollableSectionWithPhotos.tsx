@@ -6,11 +6,15 @@ import Image from 'next/image';
 interface HorizontalScrollableSectionWithPhotosProps {
   textContent: any;
   bgColor?: any;
+  TitleTag?: React.ElementType;
+  TitleCardTag?: React.ElementType;
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
   bgColor,
+  TitleTag = 'p',
+  TitleCardTag = 'p',
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
@@ -95,7 +99,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <TitleTag className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
 
@@ -120,7 +124,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             {cardTitles.map((title: string, index: number) => (
               <div key={title} className="flex-1 flex-shrink-0 flex-col items-center justify-between">
                 <div className="flex h-min w-[345px] flex-col px-6 pb-2 pt-6 lg:w-[350px] lg:px-0 lg:pb-8">
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <TitleCardTag className="pb-6 text-xl font-medium text-gray-95">{title}</TitleCardTag>
                   <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
                     {cardDescriptions[index]}
                   </p>

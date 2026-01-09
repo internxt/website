@@ -7,6 +7,7 @@ interface ThreeCardsProps {
   bgColor?: string;
   cardColor?: string;
   bottomSeparationBar?: boolean;
+  TitleTag?: React.ElementType;
 }
 
 export default function ThreeCardsSection({
@@ -15,6 +16,7 @@ export default function ThreeCardsSection({
   bgColor,
   cardColor,
   bottomSeparationBar = false,
+  TitleTag = 'p',
 }: Readonly<ThreeCardsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -192,14 +194,14 @@ export default function ThreeCardsSection({
             } p-8`}
           >
             <div className="flex flex-col">
-              <h3
+              <p
                 className={`flex items-center justify-start gap-4 text-xl font-medium  ${
                   darkMode ? 'text-white-95' : 'text-gray-100'
                 }`}
               >
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
                 {title}
-              </h3>
+              </p>
               <p
                 className={`${darkMode ? 'text-green-120' : 'text-gray-55'} pt-6 text-base font-normal
                 leading-tight`}

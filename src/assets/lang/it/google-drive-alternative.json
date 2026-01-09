@@ -1,12 +1,12 @@
 {
   "HeroSection": {
-    "title": "Internxt. Come Google Drive, ma **privato**",
+    "title": "Internxt, un'alternativa sicura a Google Drive",
     "description": "DeGoogleizza la tua vita con Internxt, la migliore alternativa a Google Drive che rispetta la tua privacy",
     "getPrivacy": "Ottieni privacy totale con il {{percentage}}% di sconto",
     "cta": "Richiedi l'offerta"
   },
   "HeaderSection": {
-    "title": "Internxt vs {{competitor}} - Panoramica",
+    "title": "Internxt vs Google Drive Panoramica",
     "description": "Scopri le caratteristiche chiave e le differenze che permettono a Internxt di restituirti il controllo sui tuoi dati",
     "tableSection": {
       "comparisons": [
@@ -95,7 +95,7 @@
         ]
       },
       "competitorTable": {
-        "title": "E la tua privacy?",
+        "title": "Google Drive: E la tua privacy?",
         "features": [
           {
             "title": "Software proprietario",
@@ -163,6 +163,11 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "CtaSection2": {
+    "title": "La migliore alternativa a Drive è Internxt",
+    "description": "Internxt ti offre crittografia privata completa di default e una suite completa per la privacy per mantenere i tuoi dati e file al sicuro online.",
+    "cta": "Passa a Internxt"
   },
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
