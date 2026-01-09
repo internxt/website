@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. como Koofr, pero **completamente cifrado**",
+    "title": "Internxt, una alternativa\n a Koofr **segura**",
     "description": "Internxt ofrece la suite de privacidad y cifrado más moderna y avanzada para protegerte en línea",
     "getPrivacy": "Selecciona tu plan con un {{percentage}}% de descuento  ",
     "cta": "Reclamar oferta"
@@ -111,7 +111,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "¿Por qué Internxt es la mejor alternativa al almacenamiento en la nube de Koofr?",
+    "title": "¿Por qué deberías elegir Internxt como tu alternativa a Koofr?",
     "description": "Con Internxt, obtienes más que solo almacenamiento en la nube; obtienes todo lo que necesitas para proteger tus datos, archivos y privacidad en línea.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -126,8 +126,8 @@
     }
   },
   "CtaSection": {
-    "title": "Más que solo almacenamiento en la nube",
-    "description": "Obtén privacidad total en línea con Internxt",
+    "title": "La mejor alternativa a Koofr es Internxt",
+    "description": "Internxt te ofrece cifrado privado completo por defecto y una suite de privacidad integral para mantener tus datos y archivos seguros en línea.",
     "cta": "Reclamar oferta"
   },
   "tableSection": {

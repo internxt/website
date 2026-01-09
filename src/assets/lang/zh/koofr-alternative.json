@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt：像 Koofr 一样，但**完全加密**",
+    "title": "Internxt，一个**安全**的\n Koofr 替代方案",
     "description": "Internxt 提供最先进、最现代的加密和隐私套件，以保护您的在线安全",
     "getPrivacy": "选择您的计划，享受 {{percentage}}% 优惠  ",
     "cta": "领取优惠"
@@ -106,7 +106,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Internxt 是 Koofr 云存储的最佳替代品的原因",
+    "title": "为什么您应该选择 Internxt 作为您的 Koofr 替代方案？",
     "description": "有了 Internxt，您获得的不仅仅是云存储；您获得了保护您的数据、文件和在线隐私所需的一切。",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -121,8 +121,8 @@
     }
   },
   "CtaSection": {
-    "title": "不仅仅是云存储",
-    "description": "使用 Internxt 获得全面的在线隐私",
+    "title": "Koofr 的最佳替代方案是 Internxt",
+    "description": "Internxt 默认提供完整的私有加密和全套隐私工具，确保您的数据和文件在线安全。",
     "cta": "领取优惠"
   },
   "tableSection": {
