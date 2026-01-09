@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. Come Proton Drive, ma **privato**",
+    "title": "Internxt, un'alternativa **sicura** a Proton",
     "description": "Passa a Internxt, la migliore alternativa a Proton Drive che rispetta la tua privacy",
     "getPrivacy": " Seleziona il tuo piano con il {{percentage}}% di sconto 🔥 ",
     "cta": "Riscatta offerta"
@@ -45,7 +45,7 @@
     }
   },
   "PrivacyViolationsSection": {
-    "title": "Perché dovresti considerare un'alternativa a Proton Drive",
+    "title": "Perché hai bisogno di un'alternativa privata a Proton?",
     "description": "Ottieni la crittografia zero-knowledge integrata con Internxt e una protezione completa per i tuoi dispositivi",
     "scrollableSection": {
       "titles": [
@@ -141,6 +141,11 @@
     "title": "Scegli Internxt come migliore alternativa a Proton Drive",
     "description": "Internxt ti offre crittografia privata completa per impostazione predefinita, software open source trasparente e una suite completa per la privacy.",
     "cta": "Riscatta offerta"
+  },
+  "CtaSection2": {
+    "title": "La migliore alternativa a Proton è Internxt",
+    "description": "Ottieni la completa privacy per i tuoi file con Internxt",
+    "cta": "Riscatta l'offerta"
   },
   "tableSection": {
     "title": "Il tuo alleato per la privacy tutto in uno",

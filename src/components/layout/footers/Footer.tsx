@@ -543,7 +543,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.teraboxAlternative}
                       </Link>
                       <Link
-                        href="/alternative-to-proton-drive"
+                        href="/proton-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
@@ -1195,7 +1195,7 @@ export default function Footer({
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
                             <Link
-                              href="/alternative-to-proton"
+                              href="/proton-alternative"
                               locale={lang}
                               passHref
                               className="w-full max-w-[160px] hover:text-primary"
