@@ -129,14 +129,14 @@ export default function ThreeCardsSection({
                 } p-6 lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col">
-                  <h3
+                  <TitleTag
                     className={`flex items-center justify-start gap-4 text-lg font-medium ${
                       darkMode ? 'text-white-95' : 'text-gray-100'
                     }`}
                   >
                     {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
                     {title}
-                  </h3>
+                  </TitleTag>
                   <p
                     className={`pt-[16px] text-sm font-normal leading-tight ${
                       darkMode ? 'text-green-120' : 'text-gray-55'

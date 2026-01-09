@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt：像 OneDrive 一樣，但**私密**。",
+    "title": "Internxt，一款安全的 \nOneDrive 替代方案",
     "description": "切換到 Internxt，這個最尊重您隱私的 OneDrive 最佳替代方案",
     "getPrivacy": "選擇您的計劃，享受 {{percentage}}% 優惠  ",
     "cta": "領取優惠"
@@ -118,7 +118,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "為何 Internxt 是 OneDrive 的最佳替代方案",
+    "title": "为什么选择 Internxt 作为 Microsoft OneDrive 的替代方案？",
     "description": "Internxt Drive 提供一套全面的產品，旨在讓您重新掌握線上隱私的控制權。",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -136,6 +136,11 @@
     "title": "您的隱私，您作主",
     "description": "全面保護，享 {{percentage}}% 優惠",
     "cta": "領取優惠"
+  },
+  "CtaSection2": {
+    "title": "OneDrive 的最佳替代方案是 Internxt",
+    "description": "Internxt 默认提供全方位的私密加密和完整的隐私套件，确保您的数据和文件在线安全。",
+    "cta": "切换到 Internxt"
   },
   "tableSection": {
     "title": "您的多合一隱私盟友",

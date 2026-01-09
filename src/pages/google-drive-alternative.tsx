@@ -109,6 +109,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         textContent={langJson.WhyNeedAlternativeSection}
         bgColor={privacyBgGradient}
         cardColor="bg-white"
+        TitleTag={'h3'}
       />
 
       <FloatingCtaSectionv2
