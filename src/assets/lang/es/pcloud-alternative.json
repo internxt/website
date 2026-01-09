@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, una alternativa **segura** a pCloud",
+    "title": "Internxt, una alternativa **segura** a {{competitor}}",
     "description": "¿Buscas una alternativa a pCloud? Internxt ofrece cifrado post-cuántico y una suite de privacidad completa.",
     "features": [
       "Almacena tus archivos en privado",
@@ -194,8 +194,8 @@
     "cta": "Obtener Internxt"
   },
   "CtaSection2": {
-    "title": "La mejor alternativa a pCloud es Internxt",
-    "description": "Consigue privacidad total para tus archivos con Internxt",
+    "title": "Sin rastreadores. Sin problemas.",
+    "description": "Obtén privacidad completa para tus archivos con Internxt",
     "cta": "Regístrate gratis"
   },
   "tableSection": {

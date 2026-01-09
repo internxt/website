@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt，一個**安全**的 Proton 替代方案",
+    "title": "Internxt。像 Proton Drive 一樣，但更**私密**",
     "description": "切換到 Internxt：尊重您隱私的 Proton Drive 最佳替代方案",
     "getPrivacy": " 選擇您的方案，享 {{percentage}}% 折扣 🔥 ",
     "cta": "獲取優惠"
@@ -45,7 +45,7 @@
     }
   },
   "PrivacyViolationsSection": {
-    "title": "為什麼你需要一個私密的 Proton 替代方案？",
+    "title": "為什麼您應該考慮 Proton Drive 的替代方案",
     "description": "透過 Internxt 獲得內建的零知識加密和全方位的裝置保護",
     "scrollableSection": {
       "titles": ["有限的裝置保護", "儲存空間較小", "缺乏後量子加密", "缺乏 Linux 支援"],
@@ -136,11 +136,6 @@
     "title": "選擇 Internxt 作為 Proton Drive 的最佳替代方案",
     "description": "Internxt 提供預設的全私密加密、透明的開源軟體和全套隱私工具，確保您的數據安全。",
     "cta": "獲取優惠"
-  },
-  "CtaSection2": {
-    "title": "Proton 的最佳替代方案是 Internxt",
-    "description": "使用 Internxt 為您的文件獲得完全的隱私保護",
-    "cta": "領取優惠"
   },
   "tableSection": {
     "title": "您的全能隱私盟友",

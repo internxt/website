@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt — **безопасная** альтернатива pCloud",
+    "title": "Internxt, **Надежная** Альтернатива {{competitor}}",
     "description": "Ищете альтернативу pCloud? Internxt предлагает постквантовое шифрование и полный набор средств для конфиденциальности.",
     "features": [
       "Archivia i tuoi video in privato",
@@ -194,8 +194,8 @@
     "cta": "Ottieni Internxt"
   },
   "CtaSection2": {
-    "title": "Лучшая альтернатива pCloud — это Internxt",
-    "description": "Обеспечьте полную конфиденциальность ваших файлов с Internxt",
+    "title": "Nessun tracker. Nessun problema.",
+    "description": "Ottieni privacy completa per i tuoi file con Internxt",
     "cta": "Registrati gratis"
   },
   "tableSection": {
