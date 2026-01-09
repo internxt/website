@@ -17,8 +17,8 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/H
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 
-const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'google-drive-alternative');
+const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'proton-drive-alternative');
   const {
     products,
     loadingCards,
@@ -27,8 +27,8 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE87,
-    couponCodeForLifetime: PromoCodeName.DRIVE87,
+    couponCode: PromoCodeName.PROTONDRIVE,
+    couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
   });
 
   const onCheckoutButtonClicked = async (
@@ -74,14 +74,14 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} needH2 />
 
       <TablesSection
         textContent={langJson.VersusSection}
         competitor={'Drive'}
-        logo={'/images/comparison/competitors/Drive-Letters.webp'}
+        logo={'/images/comparison/competitors/proton-drive-Letters.webp'}
         TableTitleTag={'h3'}
         sectionNeedsH2
         bottomSeparationBar
@@ -103,13 +103,18 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         sectionDetails="bg-white lg:py-20 py-10"
       />
 
-      <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
+      <HorizontalScrollableSection
+        textContent={langJson.PrivacyViolationsSection}
+        bgGradient={privacyBgGradient}
+        needsH2
+        needsH3
+      />
 
       <ThreeCardsSection
         textContent={langJson.WhyNeedAlternativeSection}
         bgColor={privacyBgGradient}
         cardColor="bg-white"
-        TitleTag={'h3'}
+        needsH2={false}
       />
 
       <FloatingCtaSectionv2
@@ -169,7 +174,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/google-drive-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/proton-drive-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -186,4 +191,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default GoogleDriveComparison;
+export default ProtonComparison;

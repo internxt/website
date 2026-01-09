@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. Like OneDrive, \nbut **private.**",
+    "title": "Internxt, a secure \nOneDrive alternative",
     "description": "Switch to Internxt, the best alternative to OneDrive that respects your privacy",
     "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Claim deal"
@@ -63,7 +63,7 @@
     }
   },
   "WhyNeedAlternativeSection": {
-    "title": "Why you need a private alternative to OneDrive",
+    "title": "Why should you choose Internxt as your Microsoft OneDrive alternative?",
     "description": "What OneDrive demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
     "cards": {
       "titles": ["Privacy", "Lack of end-to-end encryption", "Data harvesting"],
@@ -95,7 +95,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for {{discount}}% off."
+            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for 87% off."
           }
         ]
       },
@@ -141,6 +141,11 @@
     "title": "Your privacy, your terms",
     "description": "Full protection for {{percentage}}% off",
     "cta": "Claim deal"
+  },
+  "CtaSection2": {
+    "title": "The best alternative to OneDrive is Internxt",
+    "description": "Internxt gives you full private encryption by default and a full privacy suite to keep your data and files secure online.",
+    "cta": "Switch to Internxt"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

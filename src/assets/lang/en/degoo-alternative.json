@@ -6,7 +6,7 @@
     "cta": "Claim deal"
   },
   "HeaderSection": {
-    "title": "Internxt vs Degoo overview",
+    "title": "Internxt vs Degoo cloud storage overview",
     "description": "Discover the key features and differences that allow Internxt to give you back control over your data.",
     "tableSection": {
       "comparisons": [
@@ -74,7 +74,7 @@
     "description": "Internxt offers unparalleled security with features that Degoo can't match, such as zero-knowledge encryption for all plans, post-quantum encryption, and open-source transparency.",
     "mainTable": {
       "inxtTable": {
-        "title": "Total privacy, transparency, and trust",
+        "title": "Total privacy, transparency and trust",
         "features": [
           {
             "title": "Open source",
@@ -95,7 +95,7 @@
         ]
       },
       "competitorTable": {
-        "title": "What about your privacy?",
+        "title": "Degoo: What about your privacy?",
         "features": [
           {
             "title": "Closed source",
@@ -118,7 +118,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best Degoo alternative",
+    "title": "The best alternative to Degoo is Internxt",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -134,9 +134,9 @@
     }
   },
   "CtaSection": {
-    "title": "Your privacy, your terms",
-    "description": "Full protection for {{percentage}}% off",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Degoo alternative",
+    "description": "Internxt gives you full private encryption by default, transparent open source software, and a full privacy suite to keep your data and files secure online.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

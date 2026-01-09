@@ -5,7 +5,6 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
-import TopBanner from '@/components/banners/TopBanner';
 import { INTERNXT_URL, EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
@@ -38,11 +37,8 @@ export default function Layout({
   title = 'Internxt',
   description = 'Internxt',
   segmentName = null,
-  disableMailerlite = false,
   specialOffer,
   pathnameForSEO,
-  disableDrift = true,
-  isBannerFixed,
 }: LayoutProps) {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();

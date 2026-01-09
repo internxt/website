@@ -7,6 +7,8 @@ interface ThreeCardsProps {
   bgColor?: string;
   cardColor?: string;
   bottomSeparationBar?: boolean;
+  TitleTag?: React.ElementType;
+  needsH2?: boolean;
 }
 
 export default function ThreeCardsSection({
@@ -15,6 +17,8 @@ export default function ThreeCardsSection({
   bgColor,
   cardColor,
   bottomSeparationBar = false,
+  TitleTag = 'p',
+  needsH2 = true,
 }: Readonly<ThreeCardsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,7 +81,7 @@ export default function ThreeCardsSection({
 
   const maxIndex = getMaxIndex();
   const hasCta = textContent.cards.cta;
-
+  const SectionTitleTag = needsH2 ? 'h2' : 'p';
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
@@ -99,9 +103,11 @@ export default function ThreeCardsSection({
       )}
 
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
+        <SectionTitleTag
+          className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}
+        >
           {textContent.title}
-        </h2>
+        </SectionTitleTag>
         {textContent.description && (
           <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         )}
@@ -127,14 +133,14 @@ export default function ThreeCardsSection({
                 } p-6 lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col">
-                  <h3
+                  <TitleTag
                     className={`flex items-center justify-start gap-4 text-lg font-medium ${
                       darkMode ? 'text-white-95' : 'text-gray-100'
                     }`}
                   >
                     {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
                     {title}
-                  </h3>
+                  </TitleTag>
                   <p
                     className={`pt-[16px] text-sm font-normal leading-tight ${
                       darkMode ? 'text-green-120' : 'text-gray-55'
@@ -192,14 +198,14 @@ export default function ThreeCardsSection({
             } p-8`}
           >
             <div className="flex flex-col">
-              <h3
+              <p
                 className={`flex items-center justify-start gap-4 text-xl font-medium  ${
                   darkMode ? 'text-white-95' : 'text-gray-100'
                 }`}
               >
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
                 {title}
-              </h3>
+              </p>
               <p
                 className={`${darkMode ? 'text-green-120' : 'text-gray-55'} pt-6 text-base font-normal
                 leading-tight`}

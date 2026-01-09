@@ -6,6 +6,8 @@ interface HorizontalScrollableProps {
   bgGradient?: string;
   competitor?: string;
   hideDivider?: boolean;
+  needsH2?: boolean;
+  needsH3?: boolean;
 }
 
 export default function HorizontalScrollableSection({
@@ -13,6 +15,8 @@ export default function HorizontalScrollableSection({
   bgGradient,
   competitor,
   hideDivider = false,
+  needsH2 = false,
+  needsH3 = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const cardTitles = textContent.scrollableSection?.titles ?? [];
   const cardDescriptions = textContent.scrollableSection?.descriptions ?? [];
@@ -88,6 +92,8 @@ export default function HorizontalScrollableSection({
   };
 
   const maxIndex = getMaxIndex();
+  const TagTitle = needsH2 ? 'h2' : 'p';
+  const TagMiniTitle = needsH3 ? 'h3' : 'p';
 
   return (
     <section
@@ -103,7 +109,7 @@ export default function HorizontalScrollableSection({
         </>
       )}
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <TagTitle className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</TagTitle>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         {textContent.cta && !competitor && (
           <span
@@ -136,7 +142,7 @@ export default function HorizontalScrollableSection({
             {cardTitles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
                 <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <TagMiniTitle className="pb-6 text-xl font-medium text-gray-95">{title}</TagMiniTitle>
                   <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
                 </div>
               </div>
