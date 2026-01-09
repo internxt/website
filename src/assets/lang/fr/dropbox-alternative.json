@@ -199,6 +199,11 @@
       ]
     }
   },
+  "CtaSection2": {
+    "title": "La meilleure alternative à Dropbox est Internxt",
+    "description": "Internxt vous offre un chiffrement privé complet par défaut et une suite de confidentialité complète pour garder vos données et fichiers en sécurité en ligne.",
+    "cta": "Passer à Internxt"
+  },
   "FaqSection": {
     "title": "Des questions ? Nous avons les réponses",
     "faq": [

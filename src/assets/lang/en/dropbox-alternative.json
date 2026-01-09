@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, a **secure** alternative to {{competitor}}",
+    "title": "Internxt, a **secure** \nDropbox alternative",
     "description": "Dropbox leaked 68 million passwords. Protect your data with Internxt — privacy and security against leaks.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}}% off",
@@ -196,6 +196,11 @@
         "Internxt Drive offers more paid plans and greater storage options than Dropbox. If you need a Dropbox alternative that offers annual and lifetime plans, choose the right plan for you to get access to VPN, Antivirus, Mail, Meet, and more."
       ]
     }
+  },
+  "CtaSection2": {
+    "title": "The best alternative to Dropbox is Internxt",
+    "description": "Internxt gives you full private encryption by default and a full privacy suite to keep your data and files secure online.",
+    "cta": "Switch to Internxt"
   },
   "FaqSection": {
     "title": "Questions? We have answers",
