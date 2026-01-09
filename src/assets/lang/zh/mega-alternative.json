@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt，一个**安全**的 {{competitor}} 替代方案",
+    "title": "Internxt，一款安全的 MEGA 替代方案",
     "description": "MEGA 过去的安全漏洞和闭源模式危及您的隐私。选择 Internxt，获得后量子加密、VPN、Mail、Meet 等。",
     "features": ["私密储存您的影片", "后量子和零知识加密", "开源且已审计"],
     "getPrivacy": "享受 {{percentage}} % 优惠，获得全面隐私",
@@ -129,8 +129,8 @@
     "cta": "获取Internxt"
   },
   "CtaSection2": {
-    "title": "无追踪器。无问题。",
-    "description": "使用Internxt为您的文件获得完全隐私",
+    "title": "MEGA.io 的最佳替代方案是 Internxt",
+    "description": "Internxt 默认提供全方位的私密加密和完整的隐私套件，确保您的数据和文件在线安全。",
     "cta": "免费注册"
   },
   "tableSection": {

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, une alternative **sécurisée** à {{competitor}}",
+    "title": "Internxt, une alternative sécurisée à MEGA",
     "description": "Les failles de sécurité passées de MEGA et son modèle de code fermé mettent votre vie privée en danger. Choisissez Internxt pour le chiffrement post-quantique, VPN, Mail, Meet, et plus.",
     "features": [
       "Stockez vos vidéos en privé",
@@ -133,8 +133,8 @@
     "cta": "Obtenir Internxt"
   },
   "CtaSection2": {
-    "title": "Pas de trackers. Pas de problèmes.",
-    "description": "Obtenez une confidentialité complète pour vos fichiers avec Internxt",
+    "title": "La meilleure alternative à MEGA.io est Internxt",
+    "description": "Internxt vous offre un chiffrement privé complet par défaut et une suite de confidentialité intégrale pour protéger vos données et fichiers en ligne.",
     "cta": "S'inscrire gratuitement"
   },
   "tableSection": {
