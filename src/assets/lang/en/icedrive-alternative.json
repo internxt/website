@@ -58,7 +58,7 @@
     }
   },
   "WhyNeedAlternativeSection": {
-    "title": "Internxt vs Icedrive",
+    "title": "Alternative to Icedrive",
     "description": "Internxt plans include the most modern, secure, and advanced zero-knowledge encryption and a full product suite for maximum online privacy.",
     "cards": {
       "titles": ["Open-source transparency", "Post-quantum ready", "Comprehensive suite"],
@@ -133,9 +133,9 @@
     }
   },
   "CtaSection": {
-    "title": "Get full privacy with Internxt",
-    "description": "Total encryption, control, and security",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Icedrive alternative",
+    "description": "Internxt offers full zero-knowledge encryption by default and open-source transparency, ensuring your files aren't just accessible via a virtual drive, but are fundamentally private and secure.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",
