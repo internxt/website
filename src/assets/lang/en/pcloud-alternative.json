@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt,  a **secure**\n alternative to {{competitor}}",
+    "title": "Internxt, a **secure**\n pCloud alternative",
     "description": "Looking for a pCloud alternative? Internxt offers post-quantum encryption and a full privacy suite.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}}% off",
@@ -190,7 +190,7 @@
     "cta": "Get Internxt"
   },
   "CtaSection2": {
-    "title": "No trackers. No problems.",
+    "title": "The best alternative to pCloud is Internxt",
     "description": "Get complete privacy for your files with Internxt",
     "cta": "Sign up for free"
   },

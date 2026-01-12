@@ -12,6 +12,7 @@ import HorizontalScrollableSection from '@/components/comparison/HorizontalScrol
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 
 const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
@@ -69,7 +70,15 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" needH2 />
+
+      <TablesSection
+        textContent={langJson.VersusSection}
+        competitor={'Dropbox'}
+        logo="/images/comparison/competitors/Dropbox_Letters.webp"
+        sectionNeedsH2
+        TableNameTag={'h3'}
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -88,24 +97,37 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
       />
 
       <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSection}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
-      />
-
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Dropbox'}
-        logo="/images/comparison/competitors/Dropbox_Letters.webp"
+        textContent={langJson.HorizontalScrollableSectionV2}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+        needsH2
+        needsH3
       />
 
       <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSectionV2}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+        textContent={langJson.HorizontalScrollableSection}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+        needsH2
       />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+              {langJson.CtaSection.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:pb-20 pb-20"
+      />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+
+      <Footer textContent={footerLang} lang={lang} needsH2={false} />
     </Layout>
   );
 };

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, a **secure** alternative to {{competitor}}",
+    "title": "Internxt, a **secure** \nDropbox alternative",
     "description": "Dropbox leaked 68 million passwords. Protect your data with Internxt — privacy and security against leaks.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}}% off",
@@ -127,9 +127,9 @@
     }
   },
   "CtaSection": {
-    "title": "Secure your files from data breaches with Internxt",
-    "description": "Get 87% off with code DROPBOX87",
-    "cta": "Get Internxt"
+    "title": "Choose Internxt for the best Dropbox alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike Dropbox, where your files are accessible to the service provider, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Internxt Plans",
@@ -158,7 +158,7 @@
     }
   },
   "HorizontalScrollableSection": {
-    "title": "Is Dropbox safe?",
+    "title": "The best alternative to Dropbox is Internxt",
     "description": "Since 2011, Dropbox has faced numerous security breaches. Don’t risk your data; secure it with Internxt Drive and protect your online privacy.",
     "scrollableSection": {
       "titles": [
@@ -197,6 +197,7 @@
       ]
     }
   },
+
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [

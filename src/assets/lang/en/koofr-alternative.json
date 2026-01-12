@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. like Koofr, but \n**fully encypted**",
+    "title": "Internxt, a **secure**\n Koofr alternative",
     "description": "Internxt offers the most modern and advanced encryption and privacy suite to protect you online",
     "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Claim deal"
@@ -45,7 +45,7 @@
     }
   },
   "PrivacyViolationsSection": {
-    "title": "Alternative to Koofr",
+    "title": "The best alternative to Koofr is Internxt",
     "description": "Get post-quantum encrypted cloud storage, plus Antivirus, VPN, Cleaner, Meet, and more with Internxt.",
     "scrollableSection": {
       "titles": [
@@ -111,7 +111,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best alternative to Koofr cloud storage",
+    "title": "Why should you choose Internxt as your Koofr alternative?",
     "description": "With Internxt, you get more than just cloud storage; you get everything you need to protect your data, files, and privacy online.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -126,9 +126,9 @@
     }
   },
   "CtaSection": {
-    "title": "More than just cloud storage",
-    "description": "Get total online privacy with Internxt",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Koofr alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike other services where privacy is limited to a separate vault, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

@@ -1,139 +1,138 @@
 export interface DropboxAlternativeText {
-  HeaderSection: Section;
   HeroSection: HeroSection;
-  IsDropboxSafeSection: IsDropboxSafeSection;
-  CtaSection: Section;
-  TablesSection: TablesSection;
-  UseCodeSection: UseCodeSection;
-  WhyChooseInxtSection: WhyChooseInxtSection;
+  HeaderSection: HeaderSection;
+  VersusSection: VersusSection;
+  CtaSection: CtaSection;
   tableSection: DropboxAlternativeTextTableSection;
+  HorizontalScrollableSection: HorizontalScrollableSection;
+  HorizontalScrollableSectionV2: HorizontalScrollableSection;
+  CtaSection2: CtaSection2;
+  FaqSection: FAQSection;
 }
 
-export interface Section {
+export interface CtaSection {
   title: string;
   description: string;
   cta: string;
-  useCode?: UseCode;
 }
 
-export interface UseCode {
-  line1: string;
-  code: string;
-  line2: string;
+export interface CtaSection2 {
+  title: string;
+  description: string;
+  cta: string;
+}
+
+export interface FAQSection {
+  title: string;
+  faq: FAQ[];
+}
+
+export interface FAQ {
+  question: string;
+  answer: string[];
+}
+
+export interface HeaderSection {
+  title: string;
+  description: string;
+  tableSection: HeaderSectionTableSection;
+}
+
+export interface HeaderSectionTableSection {
+  comparisons: string[];
+  internxtFeatures: string[];
+  competitorFeatures: string[];
 }
 
 export interface HeroSection {
   title: string;
   description: string;
-  tableSection: HeroSectionTableSection;
-}
-
-export interface HeroSectionTableSection {
-  comparisons: Comparisons;
-  internxtFeatures: Comparisons;
-  features: Comparisons;
-  drag: Drag;
-}
-
-export interface Comparisons {
-  codeTransparency: string;
-  encryption: string;
-  postQuantumEncryption: string;
-  pricing: string;
-  securityAudits: string;
-  liveSupport: string;
-  dataTrackers: string;
-  privacyLaws: string;
-}
-
-export interface Drag {
-  line1: string;
-  line2: string;
-}
-
-export interface IsDropboxSafeSection {
-  title: string;
-  description: string;
-  breaches: Breach[];
-}
-
-export interface Breach {
-  title: string;
-  description: string;
-}
-
-export interface TablesSection {
-  title: string;
-  description: string;
-  tables: TableElement[];
-}
-
-export interface TableElement {
-  title: string;
-  inxtTable: InxtTableClass;
-  table: InxtTableClass;
-}
-
-export interface InxtTableClass {
-  title: string;
-  features: Breach[];
-}
-
-export interface UseCodeSection {
-  title: UseCode;
+  features: string[];
+  getPrivacy: string;
   cta: string;
 }
 
-export interface WhyChooseInxtSection {
+export interface HorizontalScrollableSection {
   title: string;
   description: string;
-  cards: Breach[];
+  scrollableSection: ScrollableSection;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
+}
+
+export interface VersusSection {
+  title: string;
+  description: string;
+  mainTable: MainTable;
+  costAndValue: CostAndValue;
+}
+
+export interface CostAndValue {
+  title: string;
+  description: string;
+  inxtTable: Table;
+  competitorTable: Table;
+}
+
+export interface Table {
+  title: string;
+  features: Feature[];
+}
+
+export interface Feature {
+  title: string;
+  description: string;
+}
+
+export interface MainTable {
+  title: string;
+  description: string;
+  inxtTable: InxtTable;
+  competitorTable: Table;
+}
+
+export interface InxtTable {
+  title: string;
+  description: string;
+  features: Feature[];
 }
 
 export interface DropboxAlternativeTextTableSection {
+  title: string;
+  hotLabel: string;
   planTitles: PlanTitles;
-  lifetimeDescription: string;
-  planDescription: string;
-  businessDescription: string;
-  businessDescription2: string;
   billingFrequency: BillingFrequency;
   freePlanCard: FreePlanCard;
   features: Features;
+  planStorage: PlanStorage;
 }
 
 export interface BillingFrequency {
-  monthly: string;
   annually: string;
-  individual: string;
   lifetime: string;
-  business: string;
 }
 
 export interface Features {
-  endToEnd: string;
   openSource: string;
-  anonymousAccount: string;
   premiumSupport: string;
   guarantee: string;
 }
 
 export interface FreePlanCard {
-  getStarted: string;
-  enjoy10gb: string;
-  upTo: string;
-  freeForever: string;
+  eyeBrow: string;
+  description: string;
   cta: string;
 }
 
-export interface PlanTitles {
-  individuals: string;
-  homePage: string;
-  lifetime: string;
-  business: string;
-  lifetimeCampaign: LifetimeCampaign;
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
 }
 
-export interface LifetimeCampaign {
-  blueText: string;
-  normalText: string;
+export interface PlanTitles {
+  header: string;
 }

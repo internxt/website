@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt. Like OneDrive, \nbut **private.**",
+    "title": "Internxt, a secure \nOneDrive alternative",
     "description": "Switch to Internxt, the best alternative to OneDrive that respects your privacy",
     "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Claim deal"
@@ -63,7 +63,7 @@
     }
   },
   "WhyNeedAlternativeSection": {
-    "title": "Why you need a private alternative to OneDrive",
+    "title": "The best alternative to OneDrive is Internxt",
     "description": "What OneDrive demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
     "cards": {
       "titles": ["Privacy", "Lack of end-to-end encryption", "Data harvesting"],
@@ -95,7 +95,7 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for {{discount}}% off."
+            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for 87% off."
           }
         ]
       },
@@ -123,7 +123,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best alternative to OneDrive",
+    "title": "Why should you choose Internxt as your Microsoft OneDrive alternative?",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -138,9 +138,14 @@
     }
   },
   "CtaSection": {
-    "title": "Your privacy, your terms",
-    "description": "Full protection for {{percentage}}% off",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Koofr alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike other services where privacy is limited to a separate vault, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
+  },
+  "CtaSection2": {
+    "title": "Choose Internxt for the best Koofr alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike other services where privacy is limited to a separate vault, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

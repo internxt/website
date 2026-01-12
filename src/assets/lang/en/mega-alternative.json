@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, a **secure**\n alternative to {{competitor}}",
+    "title": "Internxt, a **secure** MEGA alternative",
     "description": "MEGA’s past security flaws and closed-source model risk your privacy. Choose Internxt for post-quantum encryption, VPN, Mail, Meet, and more.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for {{percentage}}% off",
@@ -125,14 +125,19 @@
     }
   },
   "CtaSection": {
-    "title": "Secure your files from data breaches with Internxt",
-    "description": "Get 87% off with code MEGA90",
-    "cta": "Get Internxt"
-  },
-  "CtaSection2": {
-    "title": "No trackers. No problems.",
+    "title": "The best alternative to MEGA.io is Internxt",
     "description": "Get complete privacy for your files with Internxt",
     "cta": "Sign up for free"
+  },
+  "CtaSection2": {
+    "title": "The best alternative to MEGA.io is Internxt",
+    "description": "Get complete privacy for your files with Internxt",
+    "cta": "Sign up for free"
+  },
+  "CtaSection3": {
+    "title": "Choose Internxt for the best MEGA alternative",
+    "description": "Internxt offers total transparency with a fully open-source architecture. Move beyond the vulnerabilities of legacy providers with post-quantum encryption and a privacy suite designed to be 100% verifiable.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Internxt Plans",
@@ -161,7 +166,7 @@
     }
   },
   "HorizontalScrollableSection": {
-    "title": "Is MEGA safe?",
+    "title": "The best alternative to MEGA.io is Internxt",
     "description": "After a research study, vulnerabilities in MEGA's encryption methods were found by experts in cryptography, which put the data and privacy of millions of their users at risk.",
     "tile2": "MEGA: Malleable Encryption Goes Awry",
     "description2": "Researchers from ETH Zurich discovered major cryptographic flaws in MEGA, affecting 250M+ users and over 1,000 Petabytes of data. Four key vulnerabilities were identified:",

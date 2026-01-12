@@ -64,6 +64,7 @@ const LANG_MAP = {
   christian: 'en',
   apfelcast: 'de',
   ct3003: 'de',
+  ition: 'de',
 };
 
 function CombinedSpecialOffer({

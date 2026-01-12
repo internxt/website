@@ -17,8 +17,8 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/H
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 
-const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'icedrive-alternative');
+const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'proton-drive-alternative');
   const {
     products,
     loadingCards,
@@ -27,8 +27,8 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Ice,
-    couponCodeForLifetime: PromoCodeName.Ice,
+    couponCode: PromoCodeName.PROTONDRIVE,
+    couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
   });
 
   const onCheckoutButtonClicked = async (
@@ -69,22 +69,22 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName={'Icedrive Comparison'}
+      segmentName={'Drive Comparison'}
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Icedrive'} />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'Icedrive'} needH2 />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} needH2 />
 
       <TablesSection
         textContent={langJson.VersusSection}
-        competitor={'Icedrive'}
-        logo={'/images/comparison/icedrive-Letters.webp'}
+        competitor={'Drive'}
+        logo={'/images/comparison/competitors/proton-drive-Letters.webp'}
+        TableTitleTag={'h3'}
         sectionNeedsH2
         bottomSeparationBar
-        TableTitleTag={'h3'}
       />
 
       <PricingSectionWrapper
@@ -102,6 +102,7 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         hideBusinessSelector
         sectionDetails="bg-white lg:py-20 py-10"
       />
+
       <HorizontalScrollableSection
         textContent={langJson.PrivacyViolationsSection}
         bgGradient={privacyBgGradient}
@@ -109,27 +110,26 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         needsH3
       />
 
-      {langJson.WhyNeedAlternativeSection && (
-        <ThreeCardsSection
-          textContent={langJson.WhyNeedAlternativeSection}
-          bgColor={alternativeBgColor}
-          cardColor="bg-white"
-          bottomSeparationBar={true}
-          needsH2={false}
-        />
-      )}
+      <ThreeCardsSection
+        textContent={langJson.WhyNeedAlternativeSection}
+        bgColor={privacyBgGradient}
+        cardColor="bg-white"
+        needsH2={false}
+        bottomSeparationBar
+      />
 
       <HorizontalScrollableSectionWithPhotosSection
         textContent={langJson.WhyBestAlternativeSection}
         bgColor={alternativeBgColor}
+        TitleCardTag={'h3'}
         TitleTag={'h2'}
       />
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
-        url={'/drive'}
+        url={'#pricingTable'}
         customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-40">
+          <div className="flex flex-col gap-4 px-10 lg:px-32">
             <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
               {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
             </p>
@@ -158,7 +158,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/icedrive-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/proton-drive-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -175,4 +175,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default IcedriveComparison;
+export default ProtonComparison;

@@ -65,7 +65,14 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
+
+      <TablesSection
+        textContent={langJson.VersusSection}
+        competitor={'Mega'}
+        logo="/images/comparison/competitors/Mega_Letters.webp"
+        sectionNeedsH2
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -84,54 +91,34 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
       />
 
       <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSection}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
-      />
-
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'/pricing'}
-        customText={
-          <>
-            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
-            </div>
-          </>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-      />
-
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Mega'}
-        logo="/images/comparison/competitors/Mega_Letters.webp"
-      />
-
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'/pricing'}
-        customText={
-          <>
-            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
-            </div>
-          </>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        textContent={langJson.HorizontalScrollableSectionV2}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+        needsH2
+        needsH3
       />
 
       <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSectionV2}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+        textContent={langJson.HorizontalScrollableSection}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+        needsH2
       />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url="#billingButtons"
+        customText={
+          <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
+            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+            <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
+          </div>
+        }
+        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+      />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+
+      <Footer textContent={footerLang} lang={lang} needsH2={false} />
     </Layout>
   );
 };
