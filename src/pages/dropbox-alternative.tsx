@@ -110,15 +110,13 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
       />
 
       <FloatingCtaSectionv2
-        textContent={langJson.CtaSection2}
+        textContent={langJson.CtaSection}
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {langJson.CtaSection2.title}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
             <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
-              {langJson.CtaSection2.description}
+              {langJson.CtaSection.description}
             </p>
           </div>
         }
