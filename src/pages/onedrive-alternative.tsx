@@ -123,26 +123,27 @@ const OneDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         bgPadding="px-20 py-10"
       />
 
-      <ThreeCardsSection
-        textContent={langJson.WhyNeedAlternativeSection}
-        bgColor={privacyBgGradient}
-        cardColor="bg-white"
-      />
-
       <HorizontalScrollableSectionWithPhotosSection
         textContent={langJson.WhyBestAlternativeSection}
         bgColor={alternativeBgColor}
         TitleCardTag={'h3'}
       />
 
+      <ThreeCardsSection
+        textContent={langJson.WhyNeedAlternativeSection}
+        bgColor={privacyBgGradient}
+        cardColor="bg-white"
+        topSeparationBar={false}
+      />
+
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection2}
         url={'#pricingTable'}
         customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-0">
-            <h2 className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+          <div className="flex flex-col gap-4 px-10 lg:px-32">
+            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
               {formatText(langJson.CtaSection2.title, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </h2>
+            </p>
             <p className="text-base font-normal text-gray-55 lg:text-xl">
               {formatText(langJson.CtaSection2.description, { percentage: percentageDiscount?.toString() ?? '70' })}
             </p>

@@ -115,37 +115,21 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         bgColor={privacyBgGradient}
         cardColor="bg-white"
         needsH2={false}
-      />
-
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection2}
-        url={'#pricingTable'}
-        customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-0">
-            <h2 className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-              {formatText(langJson.CtaSection2.title, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">
-              {formatText(langJson.CtaSection2.description, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="px-20 py-10"
+        bottomSeparationBar
       />
 
       <HorizontalScrollableSectionWithPhotosSection
         textContent={langJson.WhyBestAlternativeSection}
         bgColor={alternativeBgColor}
         TitleCardTag={'h3'}
+        TitleTag={'h2'}
       />
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
         url={'#pricingTable'}
         customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-0">
+          <div className="flex flex-col gap-4 px-10 lg:px-32">
             <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
               {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
             </p>

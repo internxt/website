@@ -158,7 +158,7 @@
     }
   },
   "HorizontalScrollableSection": {
-    "title": "Is Dropbox safe?",
+    "title": "The best alternative to Dropbox is Internxt",
     "description": "Since 2011, Dropbox has faced numerous security breaches. Don’t risk your data; secure it with Internxt Drive and protect your online privacy.",
     "scrollableSection": {
       "titles": [
@@ -198,9 +198,9 @@
     }
   },
   "CtaSection2": {
-    "title": "The best alternative to Dropbox is Internxt",
-    "description": "Internxt gives you full private encryption by default and a full privacy suite to keep your data and files secure online.",
-    "cta": "Switch to Internxt"
+    "title": "Choose Internxt for the best Dropbox alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike Dropbox, where your files are accessible to the service provider, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "FaqSection": {
     "title": "Questions? We have answers",

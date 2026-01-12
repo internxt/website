@@ -171,7 +171,7 @@ export default function Layout({
           <div className="flex flex-col overflow-hidden">{children}</div>
         </>
       ) : (
-        children
+        <div className="flex flex-col overflow-hidden">{children}</div>
       )}
 
       {/* <BFBanner /> */}

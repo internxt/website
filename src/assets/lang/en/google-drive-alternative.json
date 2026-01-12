@@ -118,7 +118,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best Google Drive alternative",
+    "title": "The best alternative to Drive is Internxt",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
@@ -134,9 +134,9 @@
     }
   },
   "CtaSection": {
-    "title": "Your privacy, your terms",
-    "description": "Full protection for {{percentage}}% off",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Google Drive alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike Google Drive, which lacks end-to-end encryption and monitors your data, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

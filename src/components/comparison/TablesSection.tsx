@@ -37,6 +37,7 @@ type TablesSectionProps = {
   competitor: string;
   sectionNeedsH2?: boolean;
   TableTitleTag?: React.ElementType;
+  TableNameTag?: React.ElementType;
   darkMode?: boolean;
   bottomSeparationBar?: boolean;
 };
@@ -47,6 +48,7 @@ export const TablesSection = ({
   competitor,
   sectionNeedsH2 = false,
   TableTitleTag = 'p',
+  TableNameTag = 'p',
   darkMode,
   bottomSeparationBar = false,
 }: TablesSectionProps) => {
@@ -111,9 +113,9 @@ export const TablesSection = ({
           <>
             <div className="flex flex-col items-center justify-center">
               {textContent.mainTable.title && (
-                <TableTitleTag className="pb-6 pt-8 text-30 font-semibold text-gray-100 lg:text-3xl">
+                <TableNameTag className="pb-6 pt-8 text-30 font-semibold text-gray-100 lg:text-3xl">
                   {textContent.mainTable.title}
-                </TableTitleTag>
+                </TableNameTag>
               )}
               {textContent.mainTable.description && (
                 <p className="w-[330px]  text-base text-gray-80 lg:w-[832px] lg:text-xl">

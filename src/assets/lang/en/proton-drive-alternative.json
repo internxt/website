@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt, a **secure** Proton alternative",
+    "title": "Internxt, a **secure** \nProton alternative",
     "description": "Switch to Internxt, the best alternative to Proton Drive that respects your privacy",
     "getPrivacy": " Select your plan {{percentage}}% off 🔥 ",
     "cta": "Claim deal"
@@ -63,7 +63,7 @@
     }
   },
   "WhyNeedAlternativeSection": {
-    "title": "Alternative to Proton Drive",
+    "title": "Alternative to Proton",
     "description": "Find out why you need an alternative to Proton Drive and get a full privacy-first ecosystem.",
     "cards": {
       "titles": ["Post-quantum encryption", "Full protection online", "Pay once, use forever"],
@@ -75,7 +75,7 @@
     }
   },
   "VersusSection": {
-    "title": "Internxt vs Proton Drive",
+    "title": "Internxt vs Proton",
     "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption and more flexible storage options.",
     "mainTable": {
       "inxtTable": {
@@ -123,7 +123,7 @@
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best alternative to Proton Drive",
+    "title": "The best alternative to Proton is Internxt",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
       "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
@@ -143,9 +143,9 @@
     "cta": "Claim deal"
   },
   "CtaSection2": {
-    "title": "The best alternative to Proton is Internxt",
-    "description": "Get complete privacy for your files with Internxt",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Proton Drive alternative",
+    "description": "Internxt takes security further with post-quantum encryption and native Linux support. Secure your digital life with a full privacy suite, flexible lifetime plans, and total open-source transparency.",
+    "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",

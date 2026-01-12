@@ -7,6 +7,7 @@ interface ThreeCardsProps {
   bgColor?: string;
   cardColor?: string;
   bottomSeparationBar?: boolean;
+  topSeparationBar?: boolean;
   TitleTag?: React.ElementType;
   needsH2?: boolean;
 }
@@ -17,6 +18,7 @@ export default function ThreeCardsSection({
   bgColor,
   cardColor,
   bottomSeparationBar = false,
+  topSeparationBar = true,
   TitleTag = 'p',
   needsH2 = true,
 }: Readonly<ThreeCardsProps>): JSX.Element {
@@ -89,11 +91,13 @@ export default function ThreeCardsSection({
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgColor ? bgColor : '' }}
     >
-      <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
-      ></div>
+      {topSeparationBar && (
+        <div
+          className={`absolute left-8 right-8 top-0 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        ></div>
+      )}
       {bottomSeparationBar && (
         <div
           className={`absolute bottom-0 left-8 right-8 h-[1px] ${

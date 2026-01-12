@@ -72,6 +72,14 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" needH2 />
 
+      <TablesSection
+        textContent={langJson.VersusSection}
+        competitor={'Dropbox'}
+        logo="/images/comparison/competitors/Dropbox_Letters.webp"
+        sectionNeedsH2
+        TableNameTag={'h3'}
+      />
+
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
@@ -89,33 +97,27 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
       />
 
       <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSection}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
-      />
-
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Dropbox'}
-        logo="/images/comparison/competitors/Dropbox_Letters.webp"
-        sectionNeedsH2
-        TableTitleTag="h3"
-      />
-
-      <HorizontalScrollableSection
         textContent={langJson.HorizontalScrollableSectionV2}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
         needsH2
         needsH3
       />
+
+      <HorizontalScrollableSection
+        textContent={langJson.HorizontalScrollableSection}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+        needsH2
+      />
+
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection2}
         url={'/pricing'}
         customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {langJson.CtaSection2.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            </p>
+            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
               {langJson.CtaSection2.description}
             </p>
           </div>
