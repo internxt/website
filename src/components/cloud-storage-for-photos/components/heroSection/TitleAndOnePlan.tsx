@@ -15,21 +15,21 @@ const TitleAndOnePlan = ({ textContent, header }: TitleAndOnePlanProps): JSX.Ele
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <h1 className="text-3xl font-semibold leading-tight text-gray-100 lg:text-5xl">
+            <h1 className="text-3xl font-semibold leading-tight text-white lg:text-5xl">
               {textContent.title.textBeforeBlueText}
               <span className="text-primary"> {textContent.title.blueText} </span>
               {textContent.title.textAfterBlueText}
             </h1>
 
-            <p className="pt-4 text-xl leading-tight text-gray-100">
-              <span className="text-gray-100">{textContent.description}</span>
+            <p className="pt-4 text-xl leading-tight text-white">
+              <span className="text-white">{textContent.description}</span>
             </p>
           </div>
           <div className="flex w-full flex-col border lg:mx-0">
             {textContent.features.map((feat) => (
-              <div key={feat} className="flex flex-row items-start justify-start gap-2 lg:justify-center">
+              <div key={feat} className="flex flex-row items-start justify-start gap-2 lg:justify-start">
                 <Check className=" text-green-1 lg:pt-0" weight="light" size={24} />
-                <p className="text-left text-base font-semibold text-gray-100 lg:text-lg ">{feat}</p>
+                <p className="text-left text-base font-semibold text-white lg:text-lg ">{feat}</p>
               </div>
             ))}
           </div>
