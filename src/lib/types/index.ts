@@ -195,6 +195,7 @@ export enum PromoCodeName {
   PROTONDRIVE = 'PROTONDRIVE87',
   SYNC = 'SYNC87',
   TERABOX87 = 'TERABOX87',
+  ition = 'ITION',
 }
 
 export interface PromoCodeProps {
