@@ -138,9 +138,9 @@
     }
   },
   "CtaSection": {
-    "title": "Your privacy, your terms",
-    "description": "Full protection for {{percentage}}% off",
-    "cta": "Claim deal"
+    "title": "Choose Internxt for the best Koofr alternative",
+    "description": "Internxt provides full zero-knowledge encryption for your entire drive by default. Unlike other services where privacy is limited to a separate vault, we ensure every file you store is private, open-source, and secure.",
+    "cta": "Make the switch"
   },
   "CtaSection2": {
     "title": "Choose Internxt for the best Koofr alternative",

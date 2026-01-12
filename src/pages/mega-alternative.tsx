@@ -97,23 +97,6 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         needsH3
       />
 
-      {lang !== 'en' && (
-        <FloatingCtaSectionv2
-          textContent={langJson.CtaSection}
-          url={'#billingButtons'}
-          customText={
-            <>
-              <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-                <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</p>
-                <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSectio2.description}</p>
-              </div>
-            </>
-          }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        />
-      )}
-
       <HorizontalScrollableSection
         textContent={langJson.HorizontalScrollableSection}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
