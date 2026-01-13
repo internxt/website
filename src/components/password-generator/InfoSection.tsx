@@ -79,7 +79,16 @@ const InfoSection = ({
       </div>
       {hideLast2Sections ? null : (
         <>
-          <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
+          <CtaSection
+            textContent={textContent.ctaSection}
+            url={'http://internxt.com/drive'}
+            maxWidth="max-w-2xl"
+            customDescription={
+              <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.ctaSection.description}
+              </p>
+            }
+          />
           <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">

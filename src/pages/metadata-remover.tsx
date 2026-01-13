@@ -119,7 +119,7 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
 
       <CtaSection
         textContent={langJson.CtaSection1}
-        url={CTA_URL}
+        url={'http://internxt.com/drive'}
         customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection1.description}</p>}
       />
       <FeaturesSlider textContent={langJson.FeaturesSlider} cardInfo={cardInfo} />
