@@ -145,9 +145,9 @@
     ]
   },
   "SignupSection": {
-    "title": "Man kann nicht immer einfach eine E-Mail schicken ...",
-    "description": "Schütze die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
-    "createAccount": "Erstelle Konto"
+    "title": "Internxt Drive",
+    "description": "Der sicherste Ort für Ihre Fotos, Dokumente und Dateien.",
+    "cta": "Sicherer Cloud-Speicher"
   },
   "SchemaMarkupQuestions": {
     "faq": [
