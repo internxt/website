@@ -54,6 +54,7 @@ const HeroSection = ({ textContent, download }) => {
               <HighlightText
                 text={textContent.title}
                 className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl"
+                TitleTag={'h1'}
               />
               <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
             </div>

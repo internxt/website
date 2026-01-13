@@ -58,13 +58,15 @@ const Drive = ({
       <HorizontalScrollableSection
         textContent={textContent.EncryptedCloudStorageSection}
         bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+        needsH2
+        needsH3
       />
 
       <FileParallaxSection />
 
       <CoreFeaturesSection textContent={textContent.CoreFeatures} />
 
-      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} />
+      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
       <ThreeCardsSection
         textContent={textContent.MadeInEuropeSection}
@@ -78,9 +80,9 @@ const Drive = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {textContent.CtaSection.title}
-            </p>
+            </h2>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSection.description}
             </p>
@@ -100,7 +102,7 @@ const Drive = ({
         bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

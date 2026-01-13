@@ -123,7 +123,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
-                <p className="text-xl font-medium text-gray-100">{title}</p>
+                <h3 className="text-xl font-medium text-gray-100">{title}</h3>
               </span>
               <div
                 className={`grid transition-all duration-300 ${

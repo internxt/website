@@ -118,9 +118,9 @@ export default function ThreeCardsWithImagesSection({
       )}
 
       <div className="flex min-h-0 w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
+        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
           {textContent.title}
-        </h2>
+        </p>
         {textContent.description && (
           <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         )}
@@ -155,14 +155,14 @@ export default function ThreeCardsWithImagesSection({
                     />
                   </div>
 
-                  <h3
+                  <p
                     className={`flex items-center justify-start gap-4 text-lg font-medium ${
                       darkMode ? 'text-white-95' : 'text-gray-100'
                     }`}
                   >
                     {hasCta && <span className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</span>}
                     {title}
-                  </h3>
+                  </p>
                   <p
                     className={`text-sm font-normal leading-tight ${
                       darkMode ? 'text-green-120' : 'text-gray-55'
@@ -226,14 +226,14 @@ export default function ThreeCardsWithImagesSection({
                 <Image src={getImage(textContent.cards.images[index])} alt={title} fill className="object-cover" />
               </div>
 
-              <h3
+              <p
                 className={`flex items-center justify-start gap-4 text-xl font-medium ${
                   darkMode ? 'text-white-95' : 'text-gray-100'
                 }`}
               >
                 {hasCta && <span className="text-2xl font-medium text-primary">{index + 1}</span>}
                 {title}
-              </h3>
+              </p>
               <p className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight`}>
                 {textContent.cards.descriptions[index]}
               </p>
