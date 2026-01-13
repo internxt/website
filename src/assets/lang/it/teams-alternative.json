@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Come **Microsoft Teams**, ma privato.",
+    "description": "Ottieni videochiamate completamente private con Internxt Meet, la migliore alternativa a Microsoft Teams che rispetta la tua privacy",
+    "getPrivacy": " Scegli il tuo piano con il {{percentage}}% di sconto 🔥 ",
+    "cta": "Ottieni offerta"
+  },
+  "HeaderSection": {
+    "title": "Panoramica Internxt vs Microsoft Teams",
+    "description": "Scopri le funzionalità chiave e le differenze che permettono a Internxt di restituirti il controllo sui tuoi dati",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Crittografia",
+        "Crittografia post-quantistica",
+        "Prezzi e archiviazione",
+        "Funzionalità",
+        "Audit di sicurezza",
+        "Supporto live",
+        "Informativa sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Video crittografati sul tuo dispositivo",
+        "Sì",
+        "Competitivo, nessun costo nascosto, fino a 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e altro",
+        "Audit di sicurezza regolari",
+        "Sì",
+        "Non può mai accedere ai tuoi video o chat",
+        "Privacy totale: GDPR, Leggi spagnole sulla protezione dei dati"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "Video crittografati da Microsoft",
+        "No",
+        "Piani più costosi, fino a 6TB",
+        "Drive, Microsoft 365, CoPilot, Outlook e Teams",
+        "Audit di sicurezza regolari",
+        "No",
+        "Può accedere a video e chat in determinate circostanze",
+        "Meno privacy: Quadro sulla privacy dei dati UE-USA"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Perché hai bisogno di un'alternativa privata a Microsoft Teams",
+    "description": "Ciò che Microsoft dimostra in sicurezza, fallisce in termini di privacy. Per una privacy totale, ottieni una sicurezza completa combinata con la crittografia zero-knowledge di Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Raccolta dati estensiva",
+        "Riunioni registrate",
+        "Privacy dell'IA",
+        "Integrazione con l'ecosistema Microsoft"
+      ],
+      "descriptions": [
+        "Microsoft raccoglie dati estesi sui tuoi modelli di utilizzo, informazioni sul dispositivo e interazioni attraverso una vasta gamma dei suoi servizi. Poiché Teams si integra con il più ampio ecosistema Microsoft 365, crea una gamma più ampia di dati che Microsoft può utilizzare per tracciarti o profilarti.",
+        "Quando tieni una riunione con Teams, Microsoft archivia le trascrizioni e le registrazioni della riunione nel cloud. Poiché Microsoft possiede i server per il suo cloud, questo aumenta l'esposizione delle tue riunioni e trascrizioni, poiché Microsoft potrebbe accedere a queste informazioni.",
+        "Quando si utilizza Teams, Copilot e il riepilogo intelligente analizzano l'audio della riunione, i messaggi di chat, i file condivisi e le interazioni degli utenti per creare riepiloghi automatizzati. Di conseguenza, i contenuti sensibili vengono elaborati attraverso i sistemi cloud di Microsoft, esponendo dettagli riservati discussi durante la riunione.",
+        "Se usi Teams, è probabile che i tuoi dati vengano utilizzati anche dagli altri suoi prodotti, come Windows, Office, OneDrive, Outlook e Cortana. Questo consente la raccolta dati tra servizi e il tracciamento degli utenti su altre piattaforme che potresti utilizzare."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Microsoft Teams",
+    "description": "Internxt offre una sicurezza senza pari con funzionalità che Microsoft Teams non può eguagliare, come zero-knowledge, crittografia post-quantistica e protezione dagli hacker.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e fiducia",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Il codice di Internxt è aperto a tutti per essere esaminato e garantirne la sicurezza tramite il nostro GitHub. Questa trasparenza garantisce che nessuna vulnerabilità sia nascosta."
+          },
+          {
+            "title": "Crittografia Zero-Knowledge",
+            "description": "I tuoi dati sono crittografati lato client, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Auditato e conforme",
+            "description": "Internxt è stato auditato esternamente e rispetta GDPR, HIPAA, ISO 27001 e SOC 2."
+          },
+          {
+            "title": "Piani a vita",
+            "description": "Evita abbonamenti ripetuti con un pagamento unico per piani fino a 5TB. Accedi ai nostri servizi per sempre con l'87% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Microsoft Teams: E la tua privacy?",
+        "features": [
+          {
+            "title": "Software proprietario",
+            "description": "Microsoft mantiene il suo codice sorgente nascosto al pubblico. Senza trasparenza, non c'è modo di sapere con certezza come Microsoft gestisce o protegge i tuoi dati."
+          },
+          {
+            "title": "Crittografato da Microsoft",
+            "description": "Poiché Microsoft detiene le chiavi di crittografia, possono teoricamente decrittografare e accedere alle tue riunioni se ricevono una richiesta legale (come un mandato di comparizione)."
+          },
+          {
+            "title": "Multe per conformità",
+            "description": "Microsoft ha un record di multe normative per non aver protetto i dati dei clienti."
+          },
+          {
+            "title": "Basato su abbonamento",
+            "description": "Offre solo abbonamenti mensili o annuali con un'archiviazione massima di 6TB."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a Microsoft Teams",
+    "description": "Internxt Drive offre una suite completa di prodotti progettati per restituirti il controllo della tua privacy online.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "Ottieni una maggiore protezione con Internxt Antivirus integrato direttamente nella tua app Internxt Drive per un controllo completo e protezione contro i malware. Esegui scansioni antivirus complete o personalizzate per mantenere il tuo dispositivo funzionante senza intoppi e protetto da virus come ransomware o spyware.",
+        "La VPN di Internxt protegge la tua navigazione, blocca annunci e tracker e mantiene privata la tua posizione. Crittografa la tua connessione wifi per prevenire spionaggio, hacker e furto di identità. Naviga in sicurezza sapendo che le tue informazioni personali, password e account sono protetti.",
+        "Internxt Cleaner ti aiuta a identificare, eliminare e gestire file spazzatura o duplicati indesiderati dal tuo dispositivo. Con Cleaner, puoi eliminare file indesiderati per mantenere la tua archiviazione organizzata, libera da disordine e garantire che il tuo dispositivo funzioni in modo efficiente.",
+        "Internxt Meet è disponibile anche come la tua alternativa sicura e privata a Microsoft Teams. Con Meet, puoi ospitare videochiamate private libere da tracker, pubblicità e raccolta dati. Le tue videochiamate sono protette con crittografia post-quantistica, permettendoti di ospitare chiamate in totale privacy.",
+        "Disponibile su Windows, Mac, Linux e mobile, Internxt ti permette di prendere il controllo totale del tuo cloud storage accedendo al tuo cloud da qualsiasi luogo, su qualsiasi dispositivo.\n\nPer gli utenti avanzati, Internxt offre supporto per WebDAV, Rclone e NAS, offrendo tutto ciò di cui hai bisogno per gestire i tuoi file in totale privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Scegli Internxt come migliore alternativa a Microsoft Teams",
+    "description": "Internxt ti offre crittografia privata completa per impostazione predefinita, software open source trasparente e una suite completa per la privacy per mantenere i tuoi dati e file sicuri online.",
+    "cta": "Effettua il passaggio"
+  },
+  "tableSection": {
+    "title": "La tua privacy, alle tue condizioni",
+    "hotLabel": "{{discount}}% di sconto ",
+    "planTitles": {
+      "header": "La tua privacy, alle tue condizioni"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1GB di cloud storage crittografato gratis",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open-source e auditato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa più sicura e privata a Microsoft Teams?",
+        "answer": [
+          "Sì, Internxt utilizza crittografia post-quantistica e zero-knowledge che garantisce che nessuno tranne te possa visualizzare i tuoi file. Microsoft gestisce le chiavi di crittografia sui propri server per OneDrive, Outlook e Teams, il che significa che potrebbe accedere ai tuoi file o dare accesso al governo o alle forze dell'ordine.",
+          "Internxt offre anche VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet e Mail nei suoi piani, offrendoti una privacy migliorata e una protezione aggiuntiva da hacker e violazioni dei dati."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica, ed è più sicura?",
+        "answer": [
+          "A differenza della crittografia standard, gli algoritmi di crittografia post-quantistica sono costruiti per resistere a potenti attacchi quantistici, rendendo la PQE un'alternativa più sicura a Microsoft Teams.",
+          "Questo metodo crittografico è utilizzato da Internxt per garantire che il tuo piano di cloud storage a vita ti protegga dalle future minacce alla sicurezza informatica ed è disponibile per tutti i piani senza costi aggiuntivi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, Spagna, rendendola una soluzione di cloud storage conforme al GDPR che segue leggi severe per garantire che i tuoi dati e la tua privacy siano protetti."
+        ]
+      },
+      {
+        "question": "Microsoft Teams è più costoso di Internxt?",
+        "answer": [
+          "Microsoft Teams è gratuito, ma con il tuo sconto esclusivo del {{discount}}%, tutti i nostri piani sono più economici delle opzioni di prezzo di Microsoft attualmente disponibili, con il vantaggio di offrire molte più funzionalità e privacy rispetto a OneDrive, Teams e Outlook."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": [
+          "Se hai altre domande, richieste o hai bisogno di assistenza, puoi contattare hello@internxt.com e il nostro Customer Success Team sarà felice di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il tuo piano dalle impostazioni del tuo account Internxt se hai bisogno di aggiungere più spazio. Oppure acquista un nuovo piano su internxt.com/pricing con il tuo attuale account Internxt, e il tuo spazio verrà automaticamente accumulato."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc). Puoi anche pagare tramite PayPal, iDEAL, Sofort, Criptovaluta e Klarna."
+        ]
+      }
+    ]
+  }
+}

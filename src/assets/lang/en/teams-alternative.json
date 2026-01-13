@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Like **Microsoft Teams**, but private.",
+    "description": "Get fully private video calls with Internxt Meet, the best alternative to Microsoft Teams that respects your privacy",
+    "getPrivacy": " Select your plan {{percentage}}% off 🔥 ",
+    "cta": "Claim deal"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Microsoft Teams overview",
+    "description": "Discover the key features and differences that allow Internxt to give you back control over your data",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-quantum encryption",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Videos encrypted on your device",
+        "Yes",
+        "Competitive, no hidden costs, up to 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, and more",
+        "Regular security audits",
+        "Yes",
+        "Can never access your videos or chats",
+        "Full privacy: GDPR, Spanish Data Protection Laws"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "Videos encrypted by Microsoft",
+        "No",
+        "More expensive plans, up to 6TB",
+        "Drive, Microsoft 365, CoPilot, Outlook, and Teams",
+        "Regular security audits",
+        "No",
+        "Can access videos and chats under certain circumstances",
+        "Less privacy: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Why you need a private Microsoft Teams alternative",
+    "description": "What Microsoft demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Extensive data collection",
+        "Recorded meetings",
+        "AI privacy",
+        "Integration with the Microsoft ecosystem"
+      ],
+      "descriptions": [
+        "Microsoft collects extensive data about your usage patterns, device information, and interactions across a wide range of its services. As Teams integrates with the wider Microsoft 365 ecosystem, it creates a broader range of data that Microsoft can use to track or profile you.",
+        "When you hold a Meeting with Teams, Microsoft stores the meeting transcripts and recordings in the cloud. As Microsoft owns the servers for its cloud, this increases the exposure of your meetings and transcripts, as Microsoft could access this information.",
+        "When using Teams, Copilot and intelligent recap analyze meeting audio, chat messages, shared files, and user interactions to create automated summaries. As a result, sensitive content is processed through Microsoft’s cloud systems, exposing confidential details discussed during the meeting.",
+        "If you use Teams, your data is likely also being used by its other products, such as Windows, Office, OneDrive, Outlook, and Cortana. This allows for cross-service data collection and user tracking across other platforms you may use."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Microsoft Teams",
+    "description": "Internxt offers unparalleled security with features that Microsoft Teams can’t match, such as zero-knowledge, post-quantum encryption, and protection from hackers.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and trust",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Zero-knowledge Encryption",
+            "description": "Your data is encrypted on the client side, guaranteeing that only you can access it."
+          },
+          {
+            "title": "Audited & compliant",
+            "description": "Internxt has been externally audited and complies with GDPR, HIPAA, ISO 27001, and SOC 2."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for 87% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Microsoft Teams: What about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "Microsoft keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Microsoft handles or protects your data."
+          },
+          {
+            "title": "Encrypted by Microsoft",
+            "description": "As Microsoft holds the encryption keys, they can theoretically decrypt and access your meetings if they receive a legal request (such as a subpoena)."
+          },
+          {
+            "title": "Compliance fines",
+            "description": "Microsoft has a record of regulatory fines for failing to protect customer data."
+          },
+          {
+            "title": "Subscription based",
+            "description": "Only offers monthly or annual subscriptions with a maximum storage of 6TB."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best Microsoft Teams alternative",
+    "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "descriptions": [
+        "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
+        "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
+        "Internxt Cleaner helps you identify, eliminate, and manage unwanted junk or duplicate files from your device. With Cleaner, you can delete unwanted files to keep your storage organized, free from clutter, and ensure your device runs efficiently.",
+        "Internxt Meet is also available as your secure and private alternative to Microsoft Teams. With Meet, you can host private video calls free from trackers, ads, and data collection. Your video calls are protected with post-quantum encryption, allowing you to host calls in total privacy.",
+        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device.\n\nFor advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choose Internxt for the best alternative to Microsoft Teams",
+    "description": "Internxt gives you full private encryption by default, transparent open source software, and a full privacy suite to keep your data and files secure online.",
+    "cta": "Make the switch"
+  },
+  "tableSection": {
+    "title": "Your privacy, your terms",
+    "hotLabel": "{{discount}}% off  ",
+    "planTitles": {
+      "header": "Your privacy, your terms"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private Microsoft Teams alternative?",
+        "answer": [
+          "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files. Microsoft manages the encryption keys on its own servers for OneDrive, Outlook, and Teams, meaning it could access your files or give access to the government or law enforcement.",
+          "Internxt also offers VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail for its plans, giving you enhanced privacy and additional protection from hackers and data breaches."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure alternative to Microsoft Teams.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is Microsoft Teams more expensive than Internxt?",
+        "answer": [
+          "Microsoft Teams is free, but with your exclusive {{discount}}% discount, all our plans are cheaper than Microsoft’s pricing options currently available, with the benefit of offering many more features and privacy than OneDrive, Teams, and Outlook."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
+        ]
+      }
+    ]
+  }
+}
