@@ -17,8 +17,8 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/H
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 
-const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'filejump-alternative');
+const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'idrive-alternative');
   const {
     products,
     loadingCards,
@@ -26,9 +26,10 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
+    // eslint-disable-next-line react-hooks/rules-of-hooks
   } = usePricing({
-    couponCode: PromoCodeName.FILEJUMP,
-    couponCodeForLifetime: PromoCodeName.FILEJUMP,
+    couponCode: PromoCodeName.IDRIVE87,
+    couponCodeForLifetime: PromoCodeName.IDRIVE87,
   });
 
   const onCheckoutButtonClicked = async (
@@ -74,14 +75,14 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'FileJump'} />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'idrive'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} needH2 />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor={'idrive'} needH2 />
 
       <TablesSection
         textContent={langJson.VersusSection}
         competitor={'Drive'}
-        logo={'/images/comparison/FileJump_Letters.webp'}
+        logo={'/images/comparison/idrive-Letters.webp'}
         sectionNeedsH2
         bottomSeparationBar
         TableTitleTag={'h3'}
@@ -158,7 +159,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/fileJump-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/idrive-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -175,4 +176,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default FilejumpComparison;
+export default iDriveComparison;

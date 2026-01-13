@@ -38,12 +38,12 @@ const nameFiles = [
   'elephantdrive-alternative',
   'drime-alternative',
   'filejump-alternative',
-  'alternative-to-filen',
+  'filen-alternative',
   'alternative-to-google-meet',
-  'alternative-to-idrive',
+  'idrive-alternative',
   'alternative-to-proton-drive',
-  'alternative-to-sync',
-  'alternative-to-terabox',
+  'sync-alternative',
+  'terabox-alternative',
   'alternative-to-zoom',
 ];
 

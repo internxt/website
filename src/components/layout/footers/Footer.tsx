@@ -510,7 +510,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                       </Link>
                       <Link
-                        href="/alternative-to-sync"
+                        href="/sync-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
@@ -518,7 +518,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.syncAlternative}
                       </Link>
                       <Link
-                        href="/alternative-to-filen"
+                        href="/filen-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
@@ -526,7 +526,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.filenAlternatice}
                       </Link>
                       <Link
-                        href="/alternative-to-idrive"
+                        href="/idrive-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
@@ -534,7 +534,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.iDriveAlternative}
                       </Link>
                       <Link
-                        href="/alternative-to-terabox"
+                        href="/terabox-alternative"
                         locale={lang}
                         passHref
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
@@ -1162,7 +1162,7 @@ export default function Footer({
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
                             <Link
-                              href="/alternative-to-sync"
+                              href="/sync-alternative"
                               locale={lang}
                               passHref
                               className="w-full max-w-[160px] hover:text-primary"
@@ -1178,7 +1178,7 @@ export default function Footer({
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
                             <Link
-                              href="/alternative-to-idrive"
+                              href="/idrive-alternative"
                               locale={lang}
                               passHref
                               className="w-full max-w-[160px] hover:text-primary"
@@ -1186,7 +1186,7 @@ export default function Footer({
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
                             <Link
-                              href="/alternative-to-terabox"
+                              href="/terabox-alternative"
                               locale={lang}
                               passHref
                               className="w-full max-w-[160px] hover:text-primary"

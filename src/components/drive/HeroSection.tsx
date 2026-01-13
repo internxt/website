@@ -60,7 +60,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
               </div>
               <HighlightText
                 text={textContent.title}
-                className="inline text-30 font-semibold text-gray-100 lg:text-5xl"
+                className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl"
                 TitleTag={'h1'}
               />
               <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
