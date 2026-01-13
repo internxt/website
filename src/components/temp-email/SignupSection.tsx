@@ -11,7 +11,7 @@ export const SignupSection = ({ textContent }) => (
       <button
         className="flex cursor-pointer rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
         onClick={() => {
-          window.open('http://internxt.com/drive', '_blank', 'noopener noreferrer');
+          window.open('https://internxt.com/drive', '_blank', 'noopener noreferrer');
         }}
       >
         <p className="text-base font-semibold text-primary">{textContent.createAccount}</p>
