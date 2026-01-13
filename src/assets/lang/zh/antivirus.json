@@ -17,9 +17,9 @@
     "cta": "购买您的订阅"
   },
   "cta2": {
-    "title": "Internxt Antivirus",
-    "subtitle": "为您的文件提供最高级别的保护",
-    "cta": "获取 Internxt"
+    "title": "Internxt Drive",
+    "description": "通过军用级加密掌控您的数据。",
+    "cta": "安全的基于云的存储"
   },
   "FaqSection": {
     "title": "有问题？我们有答案",
