@@ -17,8 +17,8 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/H
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 
-const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'filejump-alternative');
+const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'sync-alternative');
   const {
     products,
     loadingCards,
@@ -27,8 +27,8 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.FILEJUMP,
-    couponCodeForLifetime: PromoCodeName.FILEJUMP,
+    couponCode: PromoCodeName.SYNC,
+    couponCodeForLifetime: PromoCodeName.SYNC,
   });
 
   const onCheckoutButtonClicked = async (
@@ -74,14 +74,14 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'FileJump'} />
+      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'sync'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} needH2 />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor={'sync'} needH2 />
 
       <TablesSection
         textContent={langJson.VersusSection}
         competitor={'Drive'}
-        logo={'/images/comparison/FileJump_Letters.webp'}
+        logo={'/images/comparison/sync-Letters.webp'}
         sectionNeedsH2
         bottomSeparationBar
         TableTitleTag={'h3'}
@@ -158,7 +158,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/fileJump-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/sync-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -175,4 +175,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default FilejumpComparison;
+export default SyncComparison;

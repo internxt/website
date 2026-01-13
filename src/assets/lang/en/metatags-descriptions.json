@@ -165,39 +165,14 @@
     "description": "Need a truly secure alternative to Degoo? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Degoo alternatives."
   },
   {
-    "id": "drime-alternative",
-    "title": "Internxt — Private & Secure Drime Alternative",
-    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
-  },
-  {
-    "id": "filejump-alternative",
-    "title": "Internxt — Private & Secure FileJump Alternative",
-    "description": "Switch to Internxt for an open-source alternative to OneDrive. Post-quantum and zero-knowledge encrypted cloud storage guarantees full privacy of your documents and media."
-  },
-  {
     "id": "zoom-alternative",
     "title": "Internxt — Alternative to Zoom",
     "description": "Switch to Internxt for an open-source alternative to Zoom. Includes post-quantum cloud storage, and more for full privacy online."
   },
   {
-    "id": "idrive-alternative",
-    "title": "Internxt — Alternative to IDrive",
-    "description": "Switch to Internxt for a fully private alternative to IDrive. Post-quantum and zero-knowledge encrypted cloud storage for full privacy of your files."
-  },
-  {
     "id": "proton-drive-alternative",
     "title": "The Best Secure Alternative to Proton",
     "description": "Need a truly secure alternative to Proton? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
-  },
-  {
-    "id": "sync-alternative",
-    "title": "Internxt — Alternative to Sync",
-    "description": "Switch to Internxt for an open source alternative to Sync. Post-quantum and zero-knowledge encrypted cloud storage for full privacy of your files."
-  },
-  {
-    "id": "filen-alternative",
-    "title": "Internxt — Alternative to Filen",
-    "description": "Switch to Internxt for an alternative to Filen. Post-quantum and zero-knowledge encrypted cloud storage for full privacy of your files."
   },
   {
     "id": "google-meet-alternative",
@@ -206,8 +181,33 @@
   },
   {
     "id": "terabox-alternative",
-    "title": "Internxt — Alternative to Terabox",
-    "description": "Switch to Internxt for an open-source alternative to Terabox. Post-quantum and zero-knowledge encrypted cloud storage for full privacy of your files."
+    "title": "The Best Secure Alternative to TeraBox",
+    "description": "Need a truly secure alternative to TeraBox? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
+  },
+  {
+    "id": "filen-alternative",
+    "title": "The Best Secure Alternative to Filen",
+    "description": "Need a truly secure alternative to Filen? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "The Best Secure Alternative to IDrive",
+    "description": "Need a truly secure alternative to IDrive? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
+  },
+  {
+    "id": "sync-alternative",
+    "title": "The Best Secure Alternative to Sync",
+    "description": "Need a truly secure alternative to Sync? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
+  },
+  {
+    "id": "drime-alternative",
+    "title": "The Best Secure Alternative to Drime",
+    "description": "Need a truly secure alternative to Drime? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "The Best Secure Alternative to Filejump",
+    "description": "Need a truly secure alternative to Filejump? Choose Internxt. We offer end-to-end encrypted storage that prioritizes your privacy above all other Proton alternatives."
   },
   {
     "id": "black-friday",
