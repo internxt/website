@@ -84,7 +84,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
 
   return (
     <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
-      <h2 className="text-4xl font-bold text-gray-100">{textContent.title}</h2>
+      <h2 className="flex text-4xl font-bold leading-tight text-gray-100">{textContent.title}</h2>
       <p className="text-lg font-normal text-gray-55">{textContent.description}</p>
 
       <div className="flex w-full flex-row gap-8">

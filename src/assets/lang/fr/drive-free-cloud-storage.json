@@ -1,0 +1,233 @@
+{
+  "HeroSection": {
+    "eyebrow": "Drive",
+    "title": "**Stockage cloud gratuit** pour tous vos fichiers",
+    "subtitle": "Un stockage cloud chiffré post-quantique primé pour protéger votre vie privée.",
+    "features": [
+      "Stockage cloud sécurisé et gratuit pour tous vos fichiers",
+      "Internxt Drive gratuit",
+      "Stockage gratuit basé sur le cloud"
+    ],
+    "cta": "Obtenir Internxt Drive",
+    "DownloadSection": {
+      "downloadTitle": "Télécharger Internxt Drive",
+      "Desktop": "Internxt Bureau",
+      "Web": "Internxt Web",
+      "Mobile": "Internxt Mobile",
+      "or": "ou",
+      "downloadFor": "Télécharger pour",
+      "orDownloadFor": "Ou télécharger pour",
+      "downloadOnThe": "Télécharger sur l'",
+      "orDownloadOnThe": "Ou télécharger sur l'",
+      "getOn": "Disponible sur",
+      "orGetOn": "Ou disponible sur",
+      "openDriveWeb": "Ouvrir Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "DriveSection": {
+    "title": "Internxt Drive",
+    "description": [
+      "Google Drive, iCloud, OneDrive, Dropbox et consorts peuvent décrypter, consulter et partager vos données avec des gouvernements et des tiers.",
+      "Internxt Drive vous offre un contrôle total et une confidentialité absolue sur votre stockage cloud grâce au chiffrement zero-knowledge et post-quantique. Nous ne pouvons pas accéder à vos fichiers ; vous conservez la pleine propriété, l'accès et le contrôle de vos données."
+    ]
+  },
+  "EncryptedCloudStorageSection": {
+    "title": "Un stockage cloud chiffré fondé sur la vie privée",
+    "description": "Internxt Drive utilise le chiffrement post-quantique et zero-knowledge pour protéger vos fichiers et vos données, au repos comme en transit.",
+    "scrollableSection": {
+      "titles": [
+        "Votre coffre-fort chiffré",
+        "La vie privée avant le profit",
+        "Conformité",
+        "Open source et audité",
+        "Conçu pour la liberté",
+        "Aucune porte dérobée"
+      ],
+      "descriptions": [
+        "Internxt est le premier service de stockage cloud à utiliser le chiffrement post-quantique Kyber 512 et AES-256, garantissant la protection des données avec une sécurité de bout en bout, la confidentialité européenne et une technologie de pointe.",
+        "Contrairement aux Big Tech, Internxt ne peut ni consulter ni supprimer vos fichiers. Vos fichiers et données sont chiffrés directement sur votre appareil. Personne, pas même nous, ne peut y accéder.",
+        "Internxt est conforme aux normes HIPAA, ISO 27001 et SOC 2. Que vous ayez besoin d'un stockage cloud pour la santé, la finance ou un usage personnel, Internxt garantit que vos données répondent aux normes les plus strictes.",
+        "Tout notre code est disponible publiquement sur GitHub et a été vérifié par des experts externes en cybersécurité pour garantir une plateforme sûre pour vos données.",
+        "Nous vous donnons la propriété et le contrôle total de votre vie privée. Avec nos produits axés sur la confidentialité, c'est vous qui détenez le pouvoir, pas les Big Tech.",
+        "Nous n'avons aucun accès à vos données ou fichiers et ne les partageons avec personne. Nos applications sont entièrement open source et auditées, garantissant le respect de votre vie privée."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Fonctionnalités clés de notre stockage cloud en ligne gratuit",
+    "description": "Une sécurité complète pour vos données, tout ce dont vous avez besoin pour garder vos fichiers sécurisés et privés",
+    "accordionCards": {
+      "titles": ["Un écosystème entièrement privé", "Collaboration sécurisée", "Votre cloud, comme un disque local"],
+      "descriptions": [
+        "Internxt regroupe stockage chiffré, sauvegardes, VPN, Antivirus, Cleaner, Meet, Mail et plus encore — tout pour s'affranchir des Big Tech.",
+        "Envoyez des fichiers avec des liens chiffrés, des mots de passe et des contrôles d'accès. Travaillez avec votre équipe en temps réel tout en protégeant vos données.",
+        "Utilisez Internxt comme un disque virtuel pour synchroniser, importer et accéder à vos fichiers de manière fluide — comme sur votre ordinateur, mais entièrement sécurisé."
+      ]
+    },
+    "cards": {
+      "titles": ["Chiffré de bout en bout", "Contrôles d'accès", "Sauvegardes chiffrées"],
+      "descriptions": [
+        "Tous les fichiers sont chiffrés avec les technologies post-quantique et zero-knowledge. Personne d'autre que vous, ou ceux avec qui vous choisissez de partager, ne peut voir le contenu.",
+        "Vous contrôlez exactement qui peut accéder à vos fichiers partagés grâce à des liens chiffrés et protégés par mot de passe que vous pouvez révoquer à tout moment.",
+        "Protégez vos fichiers contre les rançongiciels et les pertes accidentelles grâce à des sauvegardes chiffrées programmées pour une tranquillité d'esprit totale."
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "Votre solution de confidentialité tout-en-un",
+    "scrollableSection": {
+      "titles": [
+        "Suite complète de confidentialité",
+        "Pour les entreprises",
+        "Pour les familles",
+        "Tarification inégalée"
+      ],
+      "descriptions": [
+        "Allez au-delà du stockage cloud et intégrez VPN, Antivirus, Cleaner, Meet et Mail dans votre pack de confidentialité.",
+        "Protégez votre entreprise contre les rançongiciels et les violations de données avec notre stockage cloud pour professionnels.",
+        "Stockez et partagez vos photos, vidéos et souvenirs de famille, et gardez-les en sécurité pour toujours.",
+        "Pas de frais cachés : choisissez votre forfait et profitez de toutes ses fonctionnalités et du chiffrement complet à un prix fixe."
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Fabriqué en Europe",
+    "description": "Vos données sont protégées par les lois et réglementations européennes strictes en matière de conformité, combinées à un chiffrement primé.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/redundancy2.webp",
+        "/images/drive/sustainability2.webp"
+      ],
+      "titles": ["Centres de données européens", "Redondance", "Engagement pour la durabilité"],
+      "descriptions": [
+        "Internxt est basé à Valence, en Espagne, et nos centres de données sont situés en Europe et dans d'autres lieux stratégiques mondiaux pour garantir sécurité et vitesse.",
+        "Vos fichiers sont protégés par des systèmes redondants, des contrôles environnementaux et une surveillance de sécurité 24h/24. Quoi qu'il arrive, vos fichiers restent accessibles.",
+        "Internxt montre l'exemple en œuvrant pour une solution de stockage cloud plus durable grâce à des pratiques écoénergétiques pour un cloud plus propre."
+      ],
+      "cta": ["En savoir plus", "", "En savoir plus"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "Fournisseur cloud officiel de l'UD Levante",
+    "description": [
+      "L'UD Levante s'est associé à Internxt, qui devient le fournisseur officiel du club pour le stockage cloud chiffré afin de garantir la confidentialité de ses données. Cette collaboration unit technologie et sport et souligne l'influence croissante d'Internxt en Europe.",
+      "Alors que l'UD Levante modernise son infrastructure numérique, il rejoint Internxt pour promouvoir un modèle d'innovation fondé sur la vie privée, la confiance et l'indépendance numérique. Cet accord marque une étape clé pour la souveraineté numérique."
+    ],
+    "cta": "En savoir plus"
+  },
+  "CtaSection": {
+    "title": "Stockage cloud gratuit",
+    "description": "Passez à Internxt Drive pour le stockage cloud le plus sécurisé",
+    "cta": "Stockage cloud sécurisé"
+  },
+  "DownloadSection": {
+    "downloadTitle": "Télécharger Internxt Drive",
+    "Desktop": "Internxt Bureau",
+    "Web": "Internxt Web",
+    "Mobile": "Internxt Mobile",
+    "or": "ou",
+    "downloadFor": "Télécharger pour",
+    "orDownloadFor": "Ou télécharger pour",
+    "downloadOnThe": "Télécharger sur l'",
+    "orDownloadOnThe": "Ou télécharger sur l'",
+    "getOn": "Disponible sur",
+    "orGetOn": "Ou disponible sur",
+    "openDriveWeb": "Ouvrir Drive Web",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "Outils avancés pour experts",
+    "description": "Internxt fonctionne sur Windows, Mac, Linux et mobile — avec des outils avancés pour les développeurs et les entreprises.",
+    "powerUsers": {
+      "title": "Outils de puissance \n **pour utilisateurs avertis**",
+      "description": "L'interface CLI d'Internxt est un outil en ligne de commande puissant qui vous permet de\n gérer vos données Internxt Drive via des commandes\n et WebDAV.",
+      "install": {
+        "title": "Installer via npm",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "Disponible sur",
+      "learnMore": {
+        "title": "En savoir plus sur l'interface CLI d'Internxt :",
+        "GitHub": "GitHub ReadMe",
+        "learnMore": "En savoir plus"
+      }
+    },
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "Utilisez Internxt en toute sécurité sur n'importe quelle plateforme avec votre client WebDAV préféré — chiffré de bout en bout et protégé par zero-knowledge.",
+      "cta": "Obtenir WebDAV"
+    },
+    "Rclone": {
+      "title": "Rclone",
+      "comingSoon": "Prochainement",
+      "description": "Synchronisez, sauvegardez et gérez vos fichiers sur plusieurs services cloud sans effort grâce au support natif de Rclone."
+    },
+    "NAS": {
+      "title": "NAS",
+      "comingSoon": "Prochainement",
+      "description": "Connectez votre système NAS directement à Internxt Drive pour sauvegarder, synchroniser et gérer vos données en toute sécurité."
+    }
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt est en **méga-promotion**, bénéficie d'**excellents avis utilisateurs**, d'un **chiffrement de bout en bout** et **post-quantique**, et propose son code en **open source** pour une transparence totale.\"",
+    "mashable": "\"Prenez au **sérieux** la **sécurisation de vos données importantes** avec Internxt. La **vie privée** est leur **priorité absolue**, vous pouvez donc être serein en sachant que vos fichiers sont en **lieu sûr**.\"",
+    "pcWorld": "\"L'**accès web intuitif**, la **synchronisation de fichiers** et les **services de sauvegarde** d'Internxt sont **impressionnants**. Ce service est **simple**, couvre tous les besoins, et les **plans à vie** actuels sont une **aubaine**.\""
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'Internxt Drive ?",
+        "answer": [
+          "Internxt Drive est un service de stockage de fichiers zero-knowledge conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données. Il est conçu pour vous redonner le contrôle et vous protéger des collecteurs de données."
+        ]
+      },
+      {
+        "question": "Comment créer un compte Internxt ?",
+        "answer": [
+          "Rendez-vous sur notre site et cliquez sur 'Commencer' en haut à droite. Remplissez le formulaire avec une adresse e-mail et créez votre mot de passe. Aucune vérification d'identité n'est requise pour commencer à utiliser nos services."
+        ]
+      },
+      {
+        "question": "Comment importer des fichiers sur Internxt Drive ?",
+        "answer": [
+          "Connectez-vous sur Drive Web. Glissez-déposez vos fichiers ou photos directement dans le navigateur. Vous pouvez aussi cliquer sur 'Nouveau' pour ouvrir votre explorateur de fichiers et sélectionner les éléments à importer."
+        ]
+      },
+      {
+        "question": "Comment installer l'application Internxt ?",
+        "answer": [
+          "Allez sur le site d'Internxt, descendez en bas de page et sélectionnez 'Télécharger les applications'. L'app est aussi sur le Play Store et l'App Store. Une fois téléchargée, lancez-la pour profiter pleinement de l'écosystème Internxt."
+        ]
+      },
+      {
+        "question": "Puis-je configurer la 2FA avec Internxt ?",
+        "answer": [
+          "Oui. Vous pouvez configurer l'authentification à deux facteurs (2FA) depuis l'application web Drive. Vous pouvez utiliser Authy ou tout autre outil 2FA pour générer votre code de connexion."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable ?",
+        "answer": [
+          "Oui, Internxt s'engage pour un cloud écologique. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et conçus pour minimiser les émissions de carbone et les déchets électroniques.",
+          "Nos efforts contribuent à l'objectif de neutralité carbone d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -25,7 +26,13 @@ const detectOS = (): OSType => {
   return 'Windows';
 };
 
-const HeroSection = ({ textContent, download }) => {
+interface HeroSectionProps {
+  textContent: any;
+  download: Record<OSType, string>;
+  ChecksTag?: keyof JSX.IntrinsicElements;
+}
+
+const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProps) => {
   const [OS, setOS] = useState<OSType>('Windows');
   const [isClient, setIsClient] = useState(false);
 
@@ -53,7 +60,7 @@ const HeroSection = ({ textContent, download }) => {
               </div>
               <HighlightText
                 text={textContent.title}
-                className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl"
+                className="inline text-30 font-semibold text-gray-100 lg:text-5xl"
                 TitleTag={'h1'}
               />
               <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
@@ -63,7 +70,9 @@ const HeroSection = ({ textContent, download }) => {
                 <div key={feat} className="flex h-[24px] flex-row gap-2">
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
-                  <p className="mb-2 text-left text-sm font-normal text-gray-55 xs-md:text-lg">{feat}</p>
+                  <ChecksTag className="mb-2 text-left text-sm font-normal text-gray-55 xs-md:text-lg">
+                    {feat}
+                  </ChecksTag>
                 </div>
               ))}
             </div>
