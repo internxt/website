@@ -300,6 +300,11 @@
     "description": "Passez à Internxt, l'alternative à Koofr avec chiffrement post-quantique et à connaissance zéro pour la confidentialité totale de vos fichiers, sans dépendre de coffres-forts séparés."
   },
   {
+    "id": "teams-alternative",
+    "title": "La meilleure alternative sécurisée à Teams",
+    "description": "Passez à Internxt pour une alternative open-source à Teams. Des visioconférences post-quantiques et zero-knowledge pour une confidentialité totale de vos appels."
+  },
+  {
     "id": "icedrive-alternative",
     "title": "Internxt — Alternative Open-Source à Icedrive",
     "description": "Passez à Internxt, une alternative Open-Source à Icedrive. Obtenez un stockage cloud avec chiffrement post-quantique et à connaissance zéro pour une confidentialité totale, disponible dans tous les plans."
