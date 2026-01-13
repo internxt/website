@@ -81,7 +81,7 @@ const InfoSection = ({
         <>
           <CtaSection
             textContent={textContent.ctaSection}
-            url={'http://internxt.com/drive'}
+            url={'https://internxt.com/drive'}
             maxWidth="max-w-2xl"
             customDescription={
               <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">

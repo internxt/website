@@ -11,7 +11,7 @@ const CtaSection = ({ textContent }) => {
         </div>
         <button
           onClick={() => {
-            window.open('http://internxt.com/drive', '_blank', 'noopener noreferrer');
+            window.open('https://internxt.com/drive', '_blank', 'noopener noreferrer');
           }}
           className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
         >

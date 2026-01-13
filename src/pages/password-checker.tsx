@@ -62,7 +62,7 @@ const PasswordChecker = ({
 
         <CtaSection
           textContent={langJson.CtaSection}
-          url={'http://internxt.com/drive'}
+          url={'https://internxt.com/drive'}
           maxWidth="max-w-lg"
           customDescription={
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
