@@ -30,9 +30,9 @@
     "aiDetectorDescription": "La herramienta de detector de AI de Internxt escanea con precisión y rapidez el contenido generado por herramientas de inteligencia artificial populares, como ChatGPT y Gemini, entre otras. Una vez escaneado, proporciona retroalimentación y diferenciación entre texto generado por humanos y texto generado por IA, brindándote un análisis detallado del texto.\n\nNuestro detector de IA avanzado y gratuito detecta los últimos modelos de IA, como GPT-4, con alta precisión. Ten en cuenta que ningún verificador de IA es 100% preciso debido al desarrollo de modelos de lenguaje de IA, pero tratamos de ofrecerte un análisis lo más avanzado y preciso posible."
   },
   "CtaSection": {
-    "title": "Verifica y detecta texto AI",
-    "description": "Asegúrate de que tu texto es único y original",
-    "cta": "Obtén Internxt"
+    "title": "Internxt Drive",
+    "description": "Accede a tus archivos desde cualquier lugar con total privacidad.",
+    "cta": "Almacenamiento seguro en la nube"
   },
   "CtaSection2": {
     "title": "No dejes que la IA escriba tu historia",

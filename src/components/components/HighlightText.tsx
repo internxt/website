@@ -14,7 +14,7 @@ export const HighlightText: React.FC<HighlightTextProps> = ({ text, className = 
       {parts.map((part, index) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return (
-            <Tag key={`highlight-${index}`} className="text-primary">
+            <Tag key={`highlight-${index}`} className="inline-block text-primary">
               {part.slice(2, -2)}
             </Tag>
           );

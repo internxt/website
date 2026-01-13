@@ -1,0 +1,224 @@
+{
+  "HeroSection": {
+    "eyebrow": "Drive",
+    "title": "**Free cloud storage** for all your files",
+    "subtitle": "Award-winning post-quantum encrypted cloud storage to protect your privacy.",
+    "features": ["Free Safe cloud storage for all your files", "Free Internxt Drive", "Free cloud based storage"],
+    "cta": "Get Internxt Drive",
+    "DownloadSection": {
+      "downloadTitle": "Download Internxt Drive",
+      "Desktop": "Internxt Desktop",
+      "Web": "Internxt Web",
+      "Mobile": "Internxt Mobile",
+      "or": "or",
+      "downloadFor": "Download for",
+      "orDownloadFor": "Or download for",
+      "downloadOnThe": "Download on the",
+      "orDownloadOnThe": "Or download from the",
+      "getOn": "Download from",
+      "orGetOn": "Or get on",
+      "openDriveWeb": "Open Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "DriveSection": {
+    "title": "Internxt Drive",
+    "description": [
+      "Google Drive, iCloud, OneDrive, Dropbox, and more can decrypt, view, and share your data with governments and third parties. ",
+      "Internxt Drive gives you full control and privacy of your cloud storage through zero-knowledge and post-quantum encryption. We can’t access your files; you keep full ownership, access, and control of your data."
+    ]
+  },
+  "EncryptedCloudStorageSection": {
+    "title": "Encrypted cloud storage built on privacy",
+    "description": "Internxt Drive uses post-quantum and zero-knowledge encryption to encrypt your files and data at rest and in transit.",
+    "scrollableSection": {
+      "titles": [
+        "Your encrypted vault",
+        "Privacy over profit",
+        "Compliance",
+        "Open source and audited",
+        "Built for freedom",
+        "No backdoors"
+      ],
+      "descriptions": [
+        "Internxt is the first cloud storage to use Kyber 512 post-quantum and AES-256 encryption, ensuring data protection with end-to-end security, European privacy, and advanced technology.",
+        "Unlike Big Tech, Internxt can’t view or delete your files. Your files and data are encrypted directly on your device.  Nobody, not even us, can access your files or data.",
+        "Internxt is HIPAA, ISO 27001, and SOC 2 compliant. Whether you need cloud storage for healthcare, finance, or personal use, Internxt ensures your data and files meet the highest standards of data protection.",
+        "All our code is publicly available on GitHub and has been verified by external cybersecurity experts to ensure it is a safe platform for your data.",
+        "We give you total ownership and control over your privacy. With our privacy-focused products, you hold the power, not Big Tech.",
+        "We have no access to your data or files and don’t share it with anyone. Our apps are fully open source and audited, guaranteeing your privacy is respected."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Core Features of our free online cloud storage",
+    "description": "Complete security for your data, everything you need to keep your files secure and private",
+    "accordionCards": {
+      "titles": ["A fully private ecosystem", "Secure collaboration", "Your cloud, like a local drive"],
+      "descriptions": [
+        "Internxt bundles encrypted storage, backups, VPN, Antivirus, Cleaner, Meet, Mail & more—everything to break free from Big Tech.",
+        "Send files with encrypted links, passwords, and controls. Work with your team in real time while keeping data private.",
+        "Use Internxt as a virtual drive to sync, upload, and access files seamlessly—just like on your computer, but fully secure and always up to date."
+      ]
+    },
+    "cards": {
+      "titles": ["End-to-end encrypted", "Access controls", "Encrypted backups"],
+      "descriptions": [
+        "All files are encrypted with post-quantum and zero-knowledge encryption. Nobody but you, or those you choose to share files with, can see its contents.",
+        "You control exactly who can access your shared files with encrypted, password-protected links you can revoke anytime.",
+        "Ensure your files stay safe from ransomware and accidental loss with scheduled, encrypted backups that provide extra protection and peace of mind."
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "Your all-in-one privacy solution",
+    "scrollableSection": {
+      "titles": ["Full privacy suite", "For business", "For families", "Unmatched pricing"],
+      "descriptions": [
+        "Go beyond cloud storage and include VPN, Antivirus, Cleaner, Meet, and Mail in your privacy package.",
+        "Protect your company from ransomware and data breaches with our cloud storage for business.",
+        "Store and share your family photos, videos, and memories, and keep them safe forever.",
+        "No hidden fees, pick your plan and enjoy its features and full encryption at one price. "
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Made in Europe",
+    "description": "Your data is protected with strict European compliance laws and regulations combined with award-winning encryption.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/redundancy2.webp",
+        "/images/drive/sustainability2.webp"
+      ],
+      "titles": ["European data centers", "Redundancy", "Commitment to sustainability "],
+      "descriptions": [
+        "Internxt is based in Valencia, Spain, and our data centers are based in Europe and other locations worldwide, offering you security, speed, and compliance.",
+        "Your files are protected through redundant systems, environmental controls, and 24/7 onsite security monitoring. No matter what happens, your files always remain safe and accessible.",
+        "Internxt leads by example in working for a more sustainable cloud storage solution through energy-efficient practices for a cleaner and more sustainable cloud storage solution."
+      ],
+      "cta": ["Learn more", "", "Learn more"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "Levante UD official cloud provider",
+    "description": [
+      "Levante UD has partnered with Internxt, becoming the club's official provider of encrypted cloud storage to keep its data fully private. This collaboration unites technology and sport and highlights Internxt's growing influence in the European tech landscape.",
+      "As Levante UD modernizes its digital infrastructure, it joins Internxt in advancing a model of innovation rooted in privacy, trust, and digital independence. This agreement marks a milestone in advancing digital sovereignty and data protection."
+    ],
+    "cta": "Learn More"
+  },
+  "CtaSection": {
+    "title": "Free cloud drive storage",
+    "description": "Switch to Internxt Drive for the most secure cloud storage",
+    "cta": "Secure cloud storage"
+  },
+  "DownloadSection": {
+    "downloadTitle": "Download Internxt Drive",
+    "Desktop": "Internxt Desktop",
+    "Web": "Internxt Web",
+    "Mobile": "Internxt Mobile",
+    "or": "or",
+    "downloadFor": "Download for",
+    "orDownloadFor": "Or download for",
+    "downloadOnThe": "Download on the",
+    "orDownloadOnThe": "Or download from the",
+    "getOn": "Download from",
+    "orGetOn": "Or get on",
+    "openDriveWeb": "Open Drive Web",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "Advanced tools for experts",
+    "description": "Internxt works on Windows, Mac, Linux, and mobile—with advanced tools for developers and businesses.",
+    "powerUsers": {
+      "title": "Power tools \n **for power users**",
+      "description": "Internxt CLI is a powerful command line tool that lets you\n access and manage Internxt Drive data via commands\n and WebDAV.",
+      "install": {
+        "title": "Install using npm",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "Available on",
+      "learnMore": {
+        "title": "Learn more about Internxt CLI:",
+        "GitHub": "GitHub ReadMe",
+        "learnMore": "Learn More"
+      }
+    },
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "Run Internxt securely on any platform with your favorite WebDAV client and CLI—end-to-end encrypted, zero-knowledge protected.",
+      "cta": "Get WebDAV"
+    },
+    "Rclone": {
+      "title": "Rclone",
+      "comingSoon": "Comming soon",
+      "description": "Sync, backup, and manage your files across multiple cloud services effortlessly with native Rclone support."
+    },
+    "NAS": {
+      "title": "NAS",
+      "comingSoon": "Comming soon",
+      "description": "Connect your NAS system directly to Internxt Drive to back up, sync, and manage your data securely."
+    }
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt is on **mega-sale**, has **excellent user reviews**, **end-to-end** and **post-quantum encryption**, and they make their code completely **open source** for total transparency with their customers.\"",
+    "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
+    "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Internxt Drive?",
+        "answer": [
+          "Internxt Drive is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Our service doesn’t access your personal data or files. Instead, it is designed to give you back control over your files and protect you from data collectors."
+        ]
+      },
+      {
+        "question": "How to create an Internxt account?",
+        "answer": [
+          "Head to our website and click 'Get started' in the upper right-hand corner. Fill out the registration form by entering an email address, then create your password. No identity or email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "How to upload files to Internxt Drive?",
+        "answer": [
+          "Visit Drive Web and log in. Drag and drop your chosen files or photos directly into the browser window. You can also click 'New' in the right-hand corner of the browser, which will open Explorer or Finder, and select the files you wish to upload."
+        ]
+      },
+      {
+        "question": "How to install Internxt's app?",
+        "answer": [
+          "Go to the Internxt website, scroll down the home page, and select 'Download apps.' Internxt App is also available Play Store or App Store. Once the downloading process is completed, you will be asked to run our storage app. Downloading our Drive app allows you to make better use of Internxt's ecosystem."
+        ]
+      },
+      {
+        "question": "Can I configure 2FA with Internxt?",
+        "answer": [
+          "Yes. You can configure two-factor authentication (2FA) for your Internxt account from the Drive Web app. Moreover, you can use Authy or any other 2FA tool to generate your 2FA code with Internxt, to log into our online drive app."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}

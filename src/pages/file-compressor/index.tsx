@@ -5,9 +5,9 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/file-compressor/main-state/HeroSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { FeaturesSection } from '@/components/file-compressor/main-state/FeaturesSection';
-import CtaSection from '@/components/shared/FutureCtaSection';
 import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
+import CtaSection from '@/components/shared/CtaSection';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -34,8 +34,8 @@ const FileConverter = ({
 
       <CtaSection
         textContent={textContent.CtaSection}
-        url="https://internxt.com"
-        customText={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
+        url={'https://internxt.com/drive'}
+        customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
       />
 
       <ToolsSection textContent={toolsContent} lang={lang} />

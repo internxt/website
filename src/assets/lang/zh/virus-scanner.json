@@ -66,9 +66,9 @@
     }
   },
   "CtaSection": {
-    "title": "安全只需点击一下",
-    "description": "使用 Internxt 的隐私套件保护您的个人数据。",
-    "cta": "创建账户"
+    "title": "Internxt Drive",
+    "description": "通过军用级加密掌控您的数据。",
+    "cta": "安全的云端存储"
   },
   "FaqSection": {
     "title": "问题？ 我们有答案",

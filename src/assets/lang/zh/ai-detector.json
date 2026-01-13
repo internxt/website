@@ -30,9 +30,9 @@
     "aiDetectorDescription": "Internxt的AI检测工具能够快速准确地扫描由ChatGPT、Gemini等流行AI工具生成的内容。扫描后，它会反馈并区分人类与AI生成的文本，为您提供详细的文本分析。\n\n我们先进且免费的AI检测器能够高精度检测最新的AI模型，如GPT-4。请注意，由于AI语言模型的发展，没有任何AI检测器能做到100%准确，但我们致力于为您提供最先进、最准确的分析。"
   },
   "CtaSection": {
-    "title": "验证并检测AI文本",
-    "description": "确保您的文本独特且原创",
-    "cta": "获取Internxt"
+    "title": "Internxt Drive",
+    "description": "随时随地访问您的文件，享有完全的隐私保护。",
+    "cta": "安全的云存储"
   },
   "CtaSection2": {
     "title": "不要让AI书写你的故事",

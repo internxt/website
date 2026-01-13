@@ -17,9 +17,9 @@
     "cta": "Plan kaufen"
   },
   "cta2": {
-    "title": "Internxt Antivirus",
-    "subtitle": "Maximaler Schutz für Ihre Dateien",
-    "cta": "Internxt holen"
+    "title": "Internxt Drive",
+    "description": "Behalten Sie die Kontrolle über Ihre Daten mit Militärstandard-Verschlüsselung.",
+    "cta": "Sicherer Cloud-basierter Speicher"
   },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",

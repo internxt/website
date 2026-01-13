@@ -72,7 +72,7 @@ const Monitor = ({
       <CtaSection
         textContent={langJson.CtaSection}
         customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
-        url={''}
+        url="https://internxt.com/drive"
       />
 
       <ComponentsInColumnSection

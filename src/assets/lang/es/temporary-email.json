@@ -148,9 +148,9 @@
     ]
   },
   "SignupSection": {
-    "title": "No siempre se puede enviar un correo electrónico...",
-    "description": "Protege lo realmente importante con la nube segura, privada y cifrada de Internxt",
-    "createAccount": "Crear cuenta"
+    "title": "Internxt Drive",
+    "description": "El lugar más seguro para tus fotos, documentos y archivos.",
+    "cta": "Almacenamiento en la nube seguro"
   },
   "SchemaMarkupQuestions": {
     "faq": [

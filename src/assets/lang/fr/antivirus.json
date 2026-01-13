@@ -17,9 +17,9 @@
     "cta": "Achetez votre plan"
   },
   "cta2": {
-    "title": "Internxt Antivirus",
-    "subtitle": "Protection maximale pour vos fichiers",
-    "cta": "Obtenez Internxt"
+    "title": "Internxt Drive",
+    "description": "Stockez vos informations sensibles sans suivi ni fuites.",
+    "cta": "Stockage cloud sûr"
   },
   "FaqSection": {
     "title": "Des questions ? Nous avons des réponses",
