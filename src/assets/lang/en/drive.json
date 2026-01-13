@@ -1,10 +1,10 @@
 {
   "HeroSection": {
-    "eyebrow": " Drive",
-    "title": "**Safe cloud storage** for all your files",
+    "eyebrow": "Drive",
+    "title": "**Secure cloud storage** for all your files",
     "subtitle": "Award-winning post-quantum encrypted cloud storage to protect your privacy.",
     "features": ["Post-quantum encryption", "File storage, syncing and backups", "Open source and audited"],
-    "cta": "Get Internxt",
+    "cta": "Get Internxt Drive",
     "DownloadSection": {
       "downloadTitle": "Download Internxt Drive",
       "Desktop": "Internxt Desktop",
@@ -57,7 +57,7 @@
     }
   },
   "CoreFeatures": {
-    "title": "Core Features",
+    "title": "Core Features of our cloud secure storage",
     "description": "Complete security for your data, everything you need to keep your files secure and private",
     "accordionCards": {
       "titles": ["A fully private ecosystem", "Secure collaboration", "Your cloud, like a local drive"],
@@ -116,7 +116,7 @@
     "cta": "Learn More"
   },
   "CtaSection": {
-    "title": "Don’t let Big Tech spy on your files",
+    "title": "Secure cloud based storage",
     "description": "Switch to Internxt Drive for the most secure cloud storage",
     "cta": "Get Internxt"
   },

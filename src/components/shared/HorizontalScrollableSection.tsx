@@ -7,6 +7,8 @@ interface HorizontalScrollableProps {
   cardsWidth?: string;
   cardsHeight?: string;
   needsDivider?: boolean;
+  needsH2?: boolean;
+  needsH3?: boolean;
 }
 
 export default function HorizontalScrollableSection({
@@ -15,6 +17,8 @@ export default function HorizontalScrollableSection({
   cardsWidth = '400px',
   cardsHeight = 'auto',
   needsDivider = true,
+  needsH2 = false,
+  needsH3 = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -99,6 +103,8 @@ export default function HorizontalScrollableSection({
     };
   }, [isMobile]);
 
+  const TitleTag = needsH2 ? 'h2' : 'p';
+  const CardTag = needsH3 ? 'h3' : 'p';
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
@@ -110,7 +116,9 @@ export default function HorizontalScrollableSection({
         {needsDivider && (
           <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
         )}
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-3xl">{textContent.title}</p>
+        <TitleTag className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-3xl">
+          {textContent.title}
+        </TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         {textContent.cta && (
           <span
@@ -146,7 +154,7 @@ export default function HorizontalScrollableSection({
               }}
             >
               <div className="flex h-full flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8">
-                <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
+                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</CardTag>
                 <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
                   {textContent.scrollableSection.descriptions[index]}
                 </p>

@@ -56,7 +56,7 @@ export default function Footer({
         notificationService.openErrorToast('Something went wrong!');
       });
   };
-  const TitlesTag = needsH2 ? 'h2' : 'p';
+  const TitlesTag = needsH2 ? 'p' : 'p';
 
   return (
     <section
