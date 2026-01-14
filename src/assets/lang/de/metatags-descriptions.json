@@ -35,6 +35,11 @@
     "description": "Speichere, teile und sichere deine Dateien und Fotos mit Internxt Drive in der Cloud. Open-Source- und end-to-end verschlüsselte Dateispeicherung und Online-Sicherung."
   },
   {
+    "id": "free-cloud-storage",
+    "title": "Kostenloses Internxt Drive – Sicherer & verschlüsselter Cloud-Speicher",
+    "description": "Holen Sie sich kostenlosen sicheren Cloud-Speicher mit Internxt Drive. Speichern, teilen und sichern Sie Ihre Dateien und Fotos ganz einfach mit unserer Open-Source-Plattform mit Ende-zu-Ende-Verschlüsselung für garantierte Privatsphäre."
+  },
+  {
     "id": "open-source",
     "title": "Internxt – Open Source und sicherer Cloud-Speicher",
     "description": "Lernen Sie die Vorteile von Open-Source-Software (OSS) kennen und erfahren Sie, warum Internxt sie nutzt, um Cloud-Speicher bereitzustellen, der Ihre Daten sichert und schützt."
@@ -304,6 +309,11 @@
     "id": "koofr-alternative",
     "title": "Internxt — Sichere Koofr-Alternative mit Zero-Knowledge-Verschlüsselung",
     "description": "Wechseln Sie zu Internxt, der Koofr-Alternative mit Post-Quanten- und Zero-Knowledge-Verschlüsselung für vollen Datenschutz Ihrer Dateien, ohne auf separate Tresore angewiesen zu sein."
+  },
+  {
+    "id": "teams-alternative",
+    "title": "Die beste sichere Alternative zu Teams",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Teams. Post-Quanten- und Zero-Knowledge-Videomeetings für den vollen Schutz Ihrer Anrufe."
   },
   {
     "id": "icedrive-alternative",

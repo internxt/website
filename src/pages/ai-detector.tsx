@@ -116,7 +116,7 @@ const AIDetector = ({
 
         <CtaSection
           textContent={langJson.CtaSection}
-          url={CTA_URL}
+          url={'https://internxt.com/drive'}
           customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection.description}</p>}
         />
 

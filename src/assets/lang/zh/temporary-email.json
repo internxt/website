@@ -139,9 +139,9 @@
     ]
   },
   "SignupSection": {
-    "title": "您不能总是只发送电子邮件...",
-    "description": "使用 Internxt 的安全、私密和加密的云存储来保护真正重要的东西。",
-    "createAccount": "创建账户"
+    "title": "Internxt Drive",
+    "description": "存放照片、文档和文件最安全的地方。",
+    "cta": "安全的云存储"
   },
   "SchemaMarkupQuestions": {
     "faq": [

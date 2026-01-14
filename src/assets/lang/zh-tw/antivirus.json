@@ -17,9 +17,9 @@
     "cta": "购买您的订阅"
   },
   "cta2": {
-    "title": "Internxt Antivirus",
-    "subtitle": "为您的文件提供最高级别的保护",
-    "cta": "获取 Internxt"
+    "title": "Internxt Drive",
+    "description": "儲存敏感資訊，無追蹤，無洩漏。",
+    "cta": "可靠的雲端儲存"
   },
   "FaqSection": {
     "title": "有问题？我们有答案",

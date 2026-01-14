@@ -115,7 +115,7 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
       defaultLogo: '/images/comparison/zoom-Letters.webp',
     },
     Teams: {
-      defaultLogo: '/images/comparison/Elephantdrive_Letters.webp',
+      defaultLogo: '/images/comparison/Teams_Letters.webp',
     },
   } as const;
 

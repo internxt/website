@@ -60,7 +60,16 @@ const PasswordChecker = ({
           lang={lang}
         />
 
-        <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
+        <CtaSection
+          textContent={langJson.CtaSection}
+          url={'https://internxt.com/drive'}
+          maxWidth="max-w-lg"
+          customDescription={
+            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
+              {langJson.CtaSection.description}
+            </p>
+          }
+        />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}

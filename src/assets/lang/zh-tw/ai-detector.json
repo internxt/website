@@ -30,9 +30,9 @@
     "aiDetectorDescription": "Internxt 的 AI 偵測工具能快速且精確地掃描由 ChatGPT、Gemini 等熱門 AI 工具生成的內容。掃描後，會提供人類與 AI 生成文字的區分與詳細分析。\n\n我們先進且免費的 AI 偵測器能高精度偵測最新的 AI 模型，如 GPT-4。請注意，沒有任何 AI 偵測工具能達到 100% 準確率，但我們致力於為您提供最先進且精確的分析。"
   },
   "CtaSection": {
-    "title": "檢查並偵測 AI 文字",
-    "description": "確保您的文字獨特且原創",
-    "cta": "取得 Internxt"
+    "title": "Internxt Drive",
+    "description": "隨時隨地存取您的檔案，享有完全的隱私保護。",
+    "cta": "安全的雲端儲存"
   },
   "CtaSection2": {
     "title": "別讓 AI 替你寫故事",

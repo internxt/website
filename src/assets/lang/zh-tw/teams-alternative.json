@@ -1,0 +1,203 @@
+{
+  "HeroSection": {
+    "title": "就像 **Microsoft Teams**，但更私密。",
+    "description": "使用 Internxt Meet 進行完全私密的視訊通話，這是尊重您隱私的最佳 Microsoft Teams 替代方案",
+    "getPrivacy": " 選擇您的方案，立享 {{percentage}}% 折扣 🔥 ",
+    "cta": "獲取優惠"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 Microsoft Teams 總覽",
+    "description": "探索 Internxt 的主要功能和差異，這些功能讓您可以重新掌控自己的數據",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "價格和儲存空間",
+        "功能",
+        "安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "影片在您的裝置上加密",
+        "是",
+        "具競爭力，無隱藏費用，高達 5TB",
+        "Drive, VPN, 防毒軟體, 清理工具, Meet, Mail 等",
+        "定期安全審計",
+        "是",
+        "永遠無法存取您的影片或聊天",
+        "完全隱私：GDPR，西班牙資料保護法"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "影片由 Microsoft 加密",
+        "否",
+        "更昂貴的方案，高達 6TB",
+        "Drive, Microsoft 365, CoPilot, Outlook 和 Teams",
+        "定期安全審計",
+        "否",
+        "在某些情況下可以存取影片和聊天",
+        "隱私較少：歐盟-美國資料隱私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "為什麼您需要一個私密的 Microsoft Teams 替代方案",
+    "description": "Microsoft 在安全性方面展示的內容，在隱私方面卻失敗了。為了獲得完全的隱私，請選擇 Internxt 的全面安全性結合零知識加密。",
+    "scrollableSection": {
+      "titles": ["廣泛的數據收集", "會議錄影", "AI 隱私", "與 Microsoft 生態系統的整合"],
+      "descriptions": [
+        "Microsoft 會收集有關您的使用模式、裝置資訊以及在其廣泛服務中的互動的大量數據。隨著 Teams 與更廣泛的 Microsoft 365 生態系統整合，它創造了更廣泛的數據範圍，Microsoft 可以利用這些數據來追蹤或分析您。",
+        "當您使用 Teams 舉行會議時，Microsoft 會將會議記錄和錄影儲存在雲端。由於 Microsoft 擁有其雲端伺服器，這增加了您的會議和記錄洩露的風險，因為 Microsoft 可能會存取這些資訊。",
+        "在使用 Teams 時，Copilot 和智慧回顧會分析會議音訊、聊天訊息、共享檔案和使用者互動，以建立自動摘要。結果是，敏感內容通過 Microsoft 的雲端系統處理，暴露了會議期間討論的機密細節。",
+        "如果您使用 Teams，您的數據很可能也會被其其他產品使用，如 Windows, Office, OneDrive, Outlook 和 Cortana。這允許跨服務的數據收集和在您可能使用的其他平台上進行使用者追蹤。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 對比 Microsoft Teams",
+    "description": "Internxt 提供無與倫比的安全性，具備 Microsoft Teams 無法比擬的功能，例如零知識加密、後量子加密和防駭客保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：完全隱私、透明和信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼對所有人開放，可以通過我們的 GitHub 進行檢查以確保其安全性。這種透明度保證了沒有任何隱藏的漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的數據在客戶端進行加密，保證只有您可以存取它。"
+          },
+          {
+            "title": "審計與合規",
+            "description": "Internxt 已通過外部審計，並符合 GDPR, HIPAA, ISO 27001 和 SOC 2 標準。"
+          },
+          {
+            "title": "終身方案",
+            "description": "通過一次性付款獲得高達 5TB 的方案，避免重複訂閱。以 87% 的折扣永久使用我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Microsoft Teams：您的隱私如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "Microsoft 將其原始碼對公眾隱藏。由於缺乏透明度，無法確切知道 Microsoft 如何處理或保護您的數據。"
+          },
+          {
+            "title": "由 Microsoft 加密",
+            "description": "由於 Microsoft 持有加密金鑰，如果他們收到法律請求（如傳票），理論上他們可以解密並存取您的會議。"
+          },
+          {
+            "title": "合規罰款",
+            "description": "Microsoft 有因未能保護客戶數據而被監管機構罰款的記錄。"
+          },
+          {
+            "title": "基於訂閱",
+            "description": "僅提供按月或按年訂閱，最大儲存空間為 6TB。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Microsoft Teams 的最佳替代方案",
+    "description": "Internxt Drive 提供了一套全面的產品，旨在讓您重新掌控線上隱私。",
+    "scrollableSection": {
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["防毒軟體", "VPN", "清理工具", "Meet", "進階工具"],
+      "descriptions": [
+        "通過直接內建於 Internxt Drive 應用程式中的 Internxt 防毒軟體獲得增強的保護，實現全面控制並防禦惡意軟體。執行全面或自訂病毒掃描，保持您的裝置運作順暢並免受勒索軟體或間諜軟體等病毒的侵害。",
+        "Internxt 的 VPN 保護您的瀏覽，阻止廣告和追蹤器，並保持您的位置私密。加密您的 WiFi 連線以防止間諜、駭客和身份盜竊。安全上網，確信您的個人資訊、密碼和帳戶受到保護。",
+        "Internxt Cleaner 幫助您識別、消除和管理裝置上不需要的垃圾檔案或重複檔案。使用 Cleaner，您可以刪除不需要的檔案，保持儲存空間井井有條，沒有雜亂，並確保您的裝置高效運作。",
+        "Internxt Meet 也可以作為您安全私密的 Microsoft Teams 替代方案。使用 Meet，您可以主持沒有追蹤器、廣告和數據收集的私密視訊通話。您的視訊通話受到後量子加密的保護，讓您在完全隱私的情況下進行通話。",
+        "Internxt 可在 Windows, Mac, Linux 和行動裝置上使用，讓您通過在任何裝置上隨地存取雲端，完全掌控您的雲端儲存。\n\n對於進階使用者，Internxt 提供對 WebDAV, Rclone 和 NAS 的支援，提供您在完全隱私中管理檔案所需的一切。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 Microsoft Teams 的最佳替代方案",
+    "description": "Internxt 預設提供完全的私密加密、透明的開源軟體和完整的隱私套件，以確保您的數據和檔案線上安全。",
+    "cta": "立即切換"
+  },
+  "tableSection": {
+    "title": "您的隱私，由您做主",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "planTitles": {
+      "header": "您的隱私，由您做主"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是比 Microsoft Teams 更安全私密的替代方案嗎？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除了您之外沒有人可以查看您的檔案。Microsoft 在其自己的伺服器上管理 OneDrive, Outlook 和 Teams 的加密金鑰，這意味著它可以存取您的檔案或將其存取權限提供給政府或執法部門。",
+          "Internxt 還為其方案提供 VPN, 防毒軟體, 裝置清理器, 暗網監控, Meet 和 Mail，為您提供增強的隱私和針對駭客及數據洩露的額外保護。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密演算法旨在抵禦強大的量子攻擊，使 PQE 成為比 Microsoft Teams 更安全的替代方案。",
+          "Internxt 使用這種加密方法來確保您的終身雲端儲存方案保護您免受未來的網路安全威脅，並且適用於所有方案，無需額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt 總部位於哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙瓦倫西亞，這使其成為符合 GDPR 的雲端儲存解決方案，遵循嚴格的法律以確保您的數據和隱私受到保護。"
+        ]
+      },
+      {
+        "question": "Microsoft Teams 比 Internxt 更貴嗎？",
+        "answer": [
+          "Microsoft Teams 是免費的，但憑藉您獨享的 {{discount}}% 折扣，我們所有的方案都比 Microsoft 目前提供的定價選項更便宜，而且比 OneDrive, Teams 和 Outlook 提供更多的功能和隱私。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援團隊？",
+        "answer": [
+          "如果您有更多問題、請求或需要幫助，可以聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以為我的終身方案增加更多儲存空間嗎？",
+        "answer": [
+          "是的，如果您需要增加更多儲存空間，可以從 Internxt 帳戶的設定中升級您的方案。或者使用您目前的 Internxt 帳戶在 internxt.com/pricing 購買新方案，您的儲存空間將自動疊加。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "Internxt 目前接受簽帳金融卡和信用卡（Mastercard, VISA, American Express 等）。您也可以通過 PayPal, iDEAL, Sofort, 加密貨幣和 Klarna 支付。"
+        ]
+      }
+    ]
+  }
+}

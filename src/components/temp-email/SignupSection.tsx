@@ -11,14 +11,14 @@ export const SignupSection = ({ textContent }) => (
       <button
         className="flex cursor-pointer rounded-lg bg-white px-6 py-2 hover:bg-blue-10"
         onClick={() => {
-          window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+          window.open('https://internxt.com/drive', '_blank', 'noopener noreferrer');
         }}
       >
         <p className="text-base font-semibold text-primary">{textContent.createAccount}</p>
       </button>
     </div>
     <div
-      className={`absolute top-0 left-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}
+      className={`absolute left-0 top-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}
     />
   </section>
 );

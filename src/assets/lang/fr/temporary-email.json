@@ -149,9 +149,9 @@
     ]
   },
   "SignupSection": {
-    "title": "Vous ne pouvez pas toujours utiliser un email...",
-    "description": "Protégez les choses qui comptent vraiment avec le stockage en nuage sécurisé, privé et chiffré d'Internxt.",
-    "createAccount": "Créer un compte"
+    "title": "Internxt Drive",
+    "description": "L'endroit le plus sûr pour vos photos, documents et fichiers.",
+    "cta": "Stockage cloud sécurisé"
   },
   "SchemaMarkupQuestions": {
     "faq": [

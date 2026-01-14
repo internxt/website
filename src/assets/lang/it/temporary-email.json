@@ -148,9 +148,9 @@
     ]
   },
   "SignupSection": {
-    "title": "Non sempre è sufficiente inviare una e-mail...",
-    "description": "Proteggi i tuoi file veramente importanti con l'archiviazione cloud sicura, privata e crittografata di Internxt.",
-    "createAccount": "Crea un account"
+    "title": "Internxt Drive",
+    "description": "Il luogo più sicuro per le tue foto, i tuoi documenti e i tuoi file.",
+    "cta": "Archiviazione cloud sicura"
   },
   "SchemaMarkupQuestions": {
     "faq": [

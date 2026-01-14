@@ -10,6 +10,11 @@
     "description": "使用 Internxt Drive 将您的文件和照片存储、共享和备份到云端。 开源和端到端的加密文件存储和在线备份。"
   },
   {
+    "id": "free-cloud-storage",
+    "title": "免费 Internxt Drive – 安全加密的云存储",
+    "description": "使用 Internxt Drive 获取免费的安全云存储。利用我们的开源端到端加密平台，轻松存储、共享和备份您的文件和照片，确保隐私安全。"
+  },
+  {
     "id": "business",
     "title": "Internxt — 私密加密的企业云存储",
     "description": "使用 Internxt 的加密企业云存储防止数据丢失—注册以受益于行业领先的云数据保护。"
@@ -324,6 +329,11 @@
     "id": "icedrive-alternative",
     "title": "Internxt — Icedrive 的開源替代品",
     "description": "切換到 Internxt，這是 Icedrive 的開源替代品。獲得後量子和零知識加密雲端儲存，在所有計劃中均可實現完全隱私。"
+  },
+  {
+    "id": "teams-alternative",
+    "title": "Teams 的最佳安全替代方案",
+    "description": "切换到 Internxt，体验 Teams 的开源替代方案。后量子和零知识视频会议，确保您的通话完全私密。"
   },
   {
     "id": "onedrive-alternative",

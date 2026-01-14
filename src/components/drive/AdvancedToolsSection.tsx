@@ -73,7 +73,7 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
   return (
     <section className="flex min-h-0 w-full flex-col gap-12 p-20 px-5 lg:px-10 xl:px-32 3xl:px-80">
       <div className="flex w-full flex-col gap-12">
-        <h2 className="text-4xl font-bold text-gray-95">{textContent.title}</h2>
+        <p className="text-4xl font-bold text-gray-95">{textContent.title}</p>
         <p className="text-xl font-normal text-gray-55">{textContent.description}</p>
       </div>
 
@@ -160,7 +160,7 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
             className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
-            <h3 className="text-xl font-medium text-gray-100">{textContent.webDAV.title}</h3>
+            <p className="text-xl font-medium text-gray-100">{textContent.webDAV.title}</p>
             <p className="text-base font-normal text-gray-55">{textContent.webDAV.description}</p>
             <span className="flex flex-row items-center text-base font-medium text-primary">
               {textContent.webDAV.cta}
@@ -173,7 +173,7 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
-              <h3 className="text-xl font-medium text-gray-100">{textContent.Rclone.title}</h3>
+              <p className="text-xl font-medium text-gray-100">{textContent.Rclone.title}</p>
               <span className="rounded-2 bg-purple-1 px-1 py-0.5 text-primary-dark">
                 {textContent.Rclone.comingSoon}
               </span>
@@ -186,7 +186,7 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
-              <h3 className="text-xl font-medium text-gray-100">{textContent.NAS.title}</h3>
+              <p className="text-xl font-medium text-gray-100">{textContent.NAS.title}</p>
               <span className="rounded-2 bg-purple-1 px-1 py-0.5 text-primary-dark">{textContent.NAS.comingSoon}</span>
             </div>
             <p className="text-base font-normal text-gray-55">{textContent.NAS.description}</p>
