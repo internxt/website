@@ -4,7 +4,7 @@ module.exports = {
     defaultLocale: 'en',
   },
   experimental: {
-    swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
+    //swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
     scrollRestoration: true,
   },
   webpack(config) {

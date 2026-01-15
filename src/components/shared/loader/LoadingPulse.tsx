@@ -1,4 +1,4 @@
-import './LoadingPulse.scss';
+import { JSX } from 'react';
 
 export default function LoadingPulse(): JSX.Element {
   return (

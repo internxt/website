@@ -18,6 +18,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import { JSX } from 'react';
 
 interface DriveProps {
   textContent: DriveText;

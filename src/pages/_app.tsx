@@ -11,6 +11,9 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
+import '../components/shared/PasswordInput/PasswordInput.scss';
+import '../components/shared/TextInput/TextInput.scss';
+import '../components/shared/loader/LoadingPulse.scss';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
