@@ -1,4 +1,4 @@
-import { CircleWavyCheck } from '@phosphor-icons/react';
+import { CircleWavyCheckIcon } from '@phosphor-icons/react';
 import React from 'react';
 
 const FeaturesSection = ({ textContent }) => {
@@ -10,7 +10,7 @@ const FeaturesSection = ({ textContent }) => {
             key={feature.id} // Usar un identificador único
             className="flex w-full max-w-[170px] flex-col items-center space-y-4 text-center md:w-auto lg:mx-4 lg:min-h-[140px]"
           >
-            <CircleWavyCheck size={32} className="text-primary" weight="fill" />
+            <CircleWavyCheckIcon size={32} className="text-primary" weight="fill" />
             <p className="text-lg font-semibold text-white">{feature}</p>
           </div>
         ))}
