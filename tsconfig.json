@@ -31,9 +31,9 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "types": ["cypress", "node"]
   },
-  "types": ["cypress", "node"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/convert/route.ts"],
   "exclude": ["node_modules"]
 }
