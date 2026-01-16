@@ -13,6 +13,7 @@
       "ultimate": "有机会赢取 1000 欧元礼品卡*"
     }
   },
+  "renewsInfo": "*以 {{price}}/年 续订",
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

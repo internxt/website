@@ -13,6 +13,7 @@
       "ultimate": "Gana una tarjeta regalo de 1000 €"
     }
   },
+  "renewsInfo": "*Se renueva a {{price}}/año",
   "productFeatures": {
     "planTypes": {
       "essentials": "Esencial",
