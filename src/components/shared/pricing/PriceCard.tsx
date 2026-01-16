@@ -335,9 +335,7 @@ export const PriceCard = ({
                   return (
                     <>
                       <div key={index} className="flex items-start gap-3 px-4 lg:px-0">
-                        {Icon && (
-                          <Icon size={24} className={`shrink-0 ${darkMode ? 'text-primary' : 'text-primary'}`} />
-                        )}
+                        {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
                         <div className="flex flex-row items-center gap-2">
                           <p
                             className={`text-base ${darkMode ? 'text-white' : 'text-gray-80'}`}
