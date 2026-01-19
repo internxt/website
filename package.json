@@ -63,7 +63,7 @@
     "pptxgenjs": "^4.0.0",
     "prettysize": "^2.0.0",
     "random-words": "^2.0.0",
-    "react": "^18",
+    "react": "^18.2.0",
     "react-bootstrap": "^1.4.0",
     "react-device-detect": "^1.17.0",
     "react-dom": "^18",
