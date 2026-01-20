@@ -31,6 +31,48 @@
       "MacOS": "Mac"
     }
   },
+  "tableSection": {
+    "title": "Тарифы Internxt",
+    "hotLabel": "{{discount}}% скидка ",
+    "planTitles": {
+      "header": " Выберите свой план",
+      "homePage": "Выберите подходящий тариф",
+      "lifetime": "Пожизненные тарифы",
+      "business": "Бизнес-тарифы",
+      "lifetimeCampaign": {
+        "blueText": "50% скидка",
+        "normalText": "на все наши эксклюзивные пожизненные тарифы"
+      }
+    },
+    "lifetimeDescription": "Заплатите один раз и наслаждайтесь конфиденциальностью и безопасностью навсегда",
+    "planDescription": "Все тарифы предоставляют полный доступ к нашему набору приватных решений с новейшими технологиями безопасности: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet и Mail. ",
+    "businessDescription": "В настоящее время мы работаем над новыми тарифами Internxt, разработанными исключительно для защиты вашего бизнеса, защиты ваших сотрудников и обеспечения вашей прибыльности.",
+    "businessDescription2": "Обеспечьте безопасность корпоративных данных с помощью зашифрованных тарифов облачного хранилища Internxt.",
+    "billingFrequency": {
+      "monthly": "Ежемесячно",
+      "annually": "Ежегодно",
+      "lifetime": "Пожизненно",
+      "individual": "Индивидуальный",
+      "business": "Бизнес"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Бесплатно",
+      "description": "Получите 1 ГБ зашифрованного облачного хранилища бесплатно",
+      "cta": "Выбрать тариф"
+    },
+    "features": {
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый исходный код и проверенный",
+      "anonymousAccount": "Анонимное создание аккаунта",
+      "premiumSupport": "Премиум поддержка клиентов",
+      "guarantee": "30-дневная гарантия возврата денег"
+    },
+    "planStorage": {
+      "essential": "1ТБ",
+      "premium": "3ТБ",
+      "ultimate": "5ТБ"
+    }
+  },
   "DriveSection": {
     "title": "Internxt Drive",
     "description": [

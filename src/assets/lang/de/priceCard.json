@@ -13,6 +13,7 @@
       "ultimate": "1.000€ Geschenkkarte gewinnen"
     }
   },
+  "renewsInfo": "*Se renouvelle à {{price}}/an",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

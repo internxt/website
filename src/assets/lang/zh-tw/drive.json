@@ -27,6 +27,48 @@
       "MacOS": "Mac"
     }
   },
+  "tableSection": {
+    "title": "Internxt 方案",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
+      "lifetimeCampaign": {
+        "blueText": "5 折優惠",
+        "normalText": "所有專屬終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付費，終身享受隱私和安全保護",
+    "planDescription": "所有 Internxt 方案都可完整存取我們的私密解決方案套件，配備最新安全技術：Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor,Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的事業、保護員工和確保獲利而設計的全新 Internxt 企業方案。",
+    "businessDescription2": "使用 Internxt 加密雲端儲存方案確保企業資料安全。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費版",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "DriveSection": {
     "title": "Internxt Drive",
     "description": [

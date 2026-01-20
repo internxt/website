@@ -243,6 +243,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/lifetime_special',
+        destination: '/lifetime',
+        permanent: false,
+      },
+      {
         source: '/en',
         destination: '/',
         permanent: true,

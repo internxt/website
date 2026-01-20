@@ -120,9 +120,9 @@ export default function HorizontalScrollableSection({
       } pb-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
           {textContent.title}
-        </p>
+        </h2>
         <p className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight lg:text-xl`}>
           {textContent.description}
         </p>
@@ -165,13 +165,13 @@ export default function HorizontalScrollableSection({
                   <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
                     {title}
                   </p>
-                  <p
+                  <h3
                     className={`${
                       darkMode ? 'text-green-120' : 'text-gray-55'
                     } flex-1 text-sm font-normal leading-tight lg:text-base`}
                   >
                     {textContent.cardDescriptions.descriptions[index]}
-                  </p>
+                  </h3>
                 </div>
               </div>
             );

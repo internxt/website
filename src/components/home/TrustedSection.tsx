@@ -58,7 +58,7 @@ export default function TrustedSection({
           </div>
         )}
 
-        <div className="flex h-full flex-col justify-center gap-3 lg:max-w-[400px] lg:justify-center lg:gap-3">
+        <div className="flex h-full flex-col justify-center gap-3 pb-8 lg:max-w-[400px] lg:justify-center lg:gap-3 lg:pb-0">
           <Quotes className="text-primary" height={24} width={24} weight="fill" />
           <p
             className={`${darkMode ? 'text-white-95' : 'text-gray-55'} text-sm font-normal italic

@@ -62,9 +62,11 @@ const LANG_MAP = {
   payette: 'en',
   ghareeb: 'en',
   christian: 'en',
+  foci: 'en',
   apfelcast: 'de',
   ct3003: 'de',
   ition: 'de',
+  neumanndigital: 'de',
 };
 
 function CombinedSpecialOffer({

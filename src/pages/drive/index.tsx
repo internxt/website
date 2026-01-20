@@ -18,6 +18,10 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import usePricing from '@/hooks/usePricing';
+import { PromoCodeName } from '@/lib/types';
+import { stripeService } from '@/services/stripe.service';
 
 interface DriveProps {
   textContent: DriveText;
@@ -46,6 +50,48 @@ const Drive = ({
   lang,
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.SoftSales85,
+    couponCodeForLifetime: PromoCodeName.SoftSales85,
+  });
+
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
+
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
@@ -54,6 +100,23 @@ const Drive = ({
       <HeroSection textContent={textContent.HeroSection} download={download} />
 
       <DriveSection textContent={textContent.DriveSection} />
+
+      <PricingSectionWrapper
+        textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
+        popularPlanBySize="3TB"
+        sectionDetails="bg-white lg:py-20 xl:py-32"
+      />
 
       <HorizontalScrollableSection
         textContent={textContent.EncryptedCloudStorageSection}

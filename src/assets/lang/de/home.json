@@ -6,7 +6,8 @@
       "cleaner": "Cleaner",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Mail"
+      "mail": "Mail",
+      "ai": "AI"
     },
     "SignUp": {
       "cta": {
@@ -41,7 +42,7 @@
     "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
     "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
     "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
-    "descriptionNormal": "auf alle Lifetime-Pläne",
+    "descriptionNormal": "auf alle Pläne",
     "giftDescription": {
       "line1": "Gewinne einen Gutschein bis zu 1.000 €!",
       "line2": "Mach mit beim Internxt-Weihnachtsgewinnspiel"
