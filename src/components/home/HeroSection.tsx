@@ -165,10 +165,6 @@ export default function HeroSection({
             >
               {textContent.claimDeal}
             </Link>
-
-            <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 py-5 text-primary shadow-soft lg:w-[177px]">
-              <Countdown textFont="font-medium" textHeight="text-base text-gray-100" />
-            </div>
           </div>
           <span className="flex flex-row items-center gap-2 text-xs font-normal leading-tight text-gray-100 lg:text-lg">
             <Image
