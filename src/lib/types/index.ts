@@ -197,6 +197,8 @@ export enum PromoCodeName {
   TERABOX87 = 'TERABOX87',
   ition = 'ITION',
   TEAMS = 'TEAMS87',
+  FOCI = 'FOCI',
+  NEUMANNDIGITAL = ' NEUMANNDIGITAL',
 }
 
 export interface PromoCodeProps {
