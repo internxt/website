@@ -42,7 +42,7 @@
     "title": "**Private** by default, **secure** by design, **free** as in freedom",
     "subtitle": "That's Internxt - secure cloud storage & more",
     "description": "Get {{discount}}% off now,",
-    "descriptionNormal": "in all lifetime plans",
+    "descriptionNormal": "on all plans",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "giftDescription": {
       "line1": "Enter our Christmas raffle to win up to €1000!",
