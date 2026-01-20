@@ -21,22 +21,6 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/lifetime/celebration/[filename]',
 ];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
-  '/affiliates/[filename]',
-  '/cloudwards',
-  '/lifetime/celebration/[filename]',
-  '/lifetime/security82',
-  '/pccomponentes-products',
-  '/pccomponentes-business',
-  '/pccomponentes-products-b2b',
-  '/cloud-object-storage',
-  '/cloud-object-storage/checkout',
-  '/',
-  '/pricing',
-  '/family',
-  '/business',
-];
-
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;

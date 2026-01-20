@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+import crypto from 'crypto';
 
 // Number of characters from the hash that API expects
 const PREFIX_LENGTH = 5;
@@ -15,7 +15,6 @@ function get(hashedPasswordPrefix) {
   const opts = {
     timeout: API_TIMEOUT,
   };
-
   return fetch(API_URL + hashedPasswordPrefix, opts).then((res) => res.text());
 }
 
@@ -47,19 +46,6 @@ export default function pwnedpasswords(password, cb) {
       if (hasCallback) {
         return cb(err);
       }
-
       throw err;
     });
 }
-
-if (require.main === module) {
-  pwnedpasswords(process.argv[2], (err, res) => {
-    /* eslint no-console: [ "error", { allow: ["log", "error"] } ] */
-
-    if (err) {
-      process.exit(1);
-    }
-  });
-}
-
-module.exports = pwnedpasswords;

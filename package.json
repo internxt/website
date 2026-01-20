@@ -55,12 +55,12 @@
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "music-metadata": "^11.2.3",
-    "next": "13",
+    "next": "14.2.35",
     "next-csrf": "^0.2.1",
     "next-share": "^0.18.1",
     "pdf-lib": "^1.17.1",
-    "pptxgenjs": "^4.0.0",
     "pdfjs-dist": "4.2.67",
+    "pptxgenjs": "^4.0.0",
     "prettysize": "^2.0.0",
     "random-words": "^2.0.0",
     "react": "^18.2.0",
@@ -84,7 +84,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.12.39",
+    "@cypress/code-coverage": "^3.14.7",
     "@svgr/webpack": "^6.5.1",
     "@types/browser-image-compression": "^1.0.13",
     "@types/jest": "^29.4.0",
@@ -93,7 +93,7 @@
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-istanbul": "^7.0.1",
     "cypress": "^13.12.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^9.1.0",
@@ -103,7 +103,6 @@
     "prettier-plugin-tailwindcss": "0.1.13",
     "reset-css": "5.0.1",
     "sass": "1.41.0",
-    "swc-plugin-coverage-instrument": "^0.0.20",
     "tailwindcss": "^3.4.10",
     "typescript": "^4.1.5"
   },
@@ -111,7 +110,6 @@
     "child_process": false
   },
   "resolutions": {
-    "glob": "10.5.0",
     "**/js-yaml": "^4.1.1",
     "nyc": "^17.1.0"
   },
