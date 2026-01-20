@@ -14,6 +14,7 @@ const MINIMUM_DISCOUNT = 0;
 const DEFAULTS = {
   sectionDetails: 'bg-white',
   hideBillingController: false,
+  SectionTag: 'p' as React.ElementType,
 };
 
 interface PricingSectionWrapperProps {
@@ -67,6 +68,7 @@ interface PricingSectionWrapperProps {
   overrideOnIndividualSwitchToggled?: (interval: Interval) => void;
   overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
   differentRecommended?: boolean;
+  SectionTag?: React.ElementType;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -98,11 +100,12 @@ const HotLabel = ({ textContent, discountValue, darkMode }) => {
     </span>
   );
 };
-const PricingHeader = ({ textContent, discountValue, className = '', couponCodeName, darkMode }) => (
+
+const PricingHeader = ({ textContent, discountValue, className = '', couponCodeName, darkMode, SectionTag }) => (
   <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
-    <p className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+    <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
       {textContent.planTitles.header}
-    </p>
+    </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
       <HotLabel textContent={textContent} discountValue={discountValue} darkMode={darkMode} />
     </div>
@@ -163,6 +166,7 @@ export const PricingSectionWrapper = ({
   overrideOnIndividualSwitchToggled,
   overrideOnBusinessSwitchToggled,
   differentRecommended,
+  SectionTag = DEFAULTS.SectionTag,
 }: PricingSectionWrapperProps): JSX.Element => {
   const localPlanSelection = usePlanSelection(
     startFromPlan,
@@ -232,6 +236,7 @@ export const PricingSectionWrapper = ({
             discountValue={actualDiscountValue}
             couponCodeName={couponCodeName}
             darkMode={darkMode}
+            SectionTag={SectionTag}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -255,6 +260,7 @@ export const PricingSectionWrapper = ({
             discountValue={actualDiscountValue}
             couponCodeName={couponCodeName}
             darkMode={darkMode}
+            SectionTag={'p'}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>

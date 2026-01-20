@@ -6,7 +6,8 @@
       "cleaner": "Pulitore",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Mail"
+      "mail": "Mail",
+      "ai": "AI"
     },
     "SignUp": {
       "cta": {
@@ -41,7 +42,7 @@
     "title": "Passa a un **internet** più **etico**, **privato** e **sicuro**",
     "subtitle": "Questo è Internxt - Il tuo alleato digitale di fiducia",
     "description": "Ottieni il {{discount}}% di sconto ora",
-    "descriptionNormal": "su tutti i piani a vita",
+    "descriptionNormal": "su tutti i piani",
     "giftDescription": {
       "line1": "Vinci una carta regalo fino a 1.000€!",
       "line2": "Unisciti a Internxt e partecipa all'estrazione di Natale"

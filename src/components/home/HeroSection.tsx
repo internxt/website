@@ -2,7 +2,16 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import dynamic from 'next/dynamic';
-import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import {
+  Brain,
+  CellTower,
+  Check,
+  CloudArrowUp,
+  Envelope,
+  ShieldPlus,
+  Sparkle,
+  VideoConference,
+} from '@phosphor-icons/react';
 import Link from 'next/link';
 import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
@@ -59,18 +68,22 @@ export default function HeroSection({
       icon: Envelope,
       text: textContent.products.mail,
     },
+    {
+      icon: Brain,
+      text: textContent.products.ai,
+    },
   ];
 
   const parsePriceText = (text: string) => {
     if (!minimumPrice || minimumPrice === '0') {
-      return <div className="bg-gray-200 h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16"></div>;
+      return <span className="bg-gray-200 inline-block h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
   };
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -152,10 +165,6 @@ export default function HeroSection({
             >
               {textContent.claimDeal}
             </Link>
-
-            <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 py-5 text-primary shadow-soft lg:w-[177px]">
-              <Countdown textFont="font-medium" textHeight="text-base text-gray-100" />
-            </div>
           </div>
           <span className="flex flex-row items-center gap-2 text-xs font-normal leading-tight text-gray-100 lg:text-lg">
             <Image

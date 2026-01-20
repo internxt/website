@@ -15,8 +15,8 @@ const FeatureSection = ({ textContent }) => {
             height={520}
             className="rounded-2xl"
             autoPlay
+            controls
             loop
-            muted
             playsInline
             style={{ objectFit: 'cover' }}
           >
@@ -30,9 +30,9 @@ const FeatureSection = ({ textContent }) => {
             width={345}
             height={324}
             className="rounded-2xl"
+            controls
             autoPlay
             loop
-            muted
             playsInline
             style={{ objectFit: 'cover' }}
           >

@@ -13,6 +13,7 @@
       "ultimate": "Chance to win a €1000 gift card"
     }
   },
+  "renewsInfo": "*Renews at {{price}}/year",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

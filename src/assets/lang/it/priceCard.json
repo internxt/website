@@ -13,6 +13,7 @@
       "ultimate": "Vinci Carta Regalo 1.000€"
     }
   },
+  "renewsInfo": "*Si rinnova a {{price}}/anno",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
