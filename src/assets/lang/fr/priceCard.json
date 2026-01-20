@@ -13,6 +13,7 @@
       "ultimate": "Gagnez une carte de 1 000€"
     }
   },
+  "renewsInfo": "*Se renouvelle à {{price}}/an",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

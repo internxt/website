@@ -13,6 +13,7 @@
       "ultimate": "Выиграйте карту на 1 000€"
     }
   },
+  "renewsInfo": "*Si rinnova a {{price}}/anno",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
