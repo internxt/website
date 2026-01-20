@@ -8,7 +8,7 @@
       "meet": "Meet",
       "mail": "Mail"
     },
-    "title": "The most secure cloud storage **for less**",
+    "title": "Lifetime Cloud Storage **for less**",
     "description": "Secure cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
     "subtitle": "Get {{discount}}% off now",
     "claimDeal": "Claim deal"
@@ -26,7 +26,7 @@
     "cloudwardsAuthor": "Mauricio Preuss - CEO at Cloudwards"
   },
   "NextGenSection": {
-    "title": "Why choose Internxt?",
+    "title": "Why choose Internxt permanent cloud storage?",
     "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
     "cta": "Get to know us better",
     "cardDescriptions": {
@@ -46,7 +46,7 @@
   },
   "ctaSection": {
     "titleWithoutDiscount": "Complete Digital Privacy Suite",
-    "title": "Maximum Privacy with {{discount}}% off",
+    "title": "One time payment cloud storage",
     "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
     "cta": "Accept Invite"
   },
@@ -60,7 +60,7 @@
     "title": "Internxt Plans",
     "hotLabel": "{{discount}}% off",
     "planTitles": {
-      "header": "Select your Plan",
+      "header": "Select your lifetime plans",
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
       "lifetime": "Lifetime Plans",

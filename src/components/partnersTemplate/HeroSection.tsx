@@ -114,11 +114,11 @@ export default function HeroSection({
             </div>
           ))}
         </div>
-        <p
+        <h1
           className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
         >
           <HighlightText text={textContent.title} />
-        </p>
+        </h1>
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && (

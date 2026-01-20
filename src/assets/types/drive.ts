@@ -1,5 +1,6 @@
 export interface DriveText {
   HeroSection: HeroSection;
+  tableSection: TableSection;
   DriveSection: DriveSection;
   EncryptedCloudStorageSection: EncryptedCloudStorageSection;
   CoreFeatures: CoreFeatures;
@@ -146,4 +147,60 @@ export interface ReviewSection {
   pcMag: string;
   mashable: string;
   pcWorld: string;
+}
+
+export interface TableSection {
+  title: string;
+  hotLabel: string;
+  planTitles: PlanTitles;
+  lifetimeDescription: string;
+  planDescription: string;
+  businessDescription: string;
+  businessDescription2: string;
+  billingFrequency: BillingFrequency;
+  freePlanCard: FreePlanCard;
+  features: Features;
+  planStorage: PlanStorage;
+}
+
+export interface BillingFrequency {
+  monthly: string;
+  annually: string;
+  lifetime: string;
+  individual: string;
+  business: string;
+}
+
+export interface Features {
+  endToEnd: string;
+  openSource: string;
+  anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
+}
+
+export interface FreePlanCard {
+  eyeBrow: string;
+  description: string;
+  cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
+}
+
+export interface PlanTitles {
+  header: string;
+  individuals: string;
+  homePage: string;
+  lifetime: string;
+  business: string;
+  lifetimeCampaign: LifetimeCampaign;
+}
+
+export interface LifetimeCampaign {
+  blueText: string;
+  normalText: string;
 }
