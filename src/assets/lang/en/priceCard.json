@@ -13,7 +13,7 @@
       "ultimate": "Chance to win a €1000 gift card"
     }
   },
-  "renewsInfo": "Promo annual price valid for the first year only. Renews at {{price}}/year",
+  "renewsInfo": "Annual promo price valid for the first year only. Renews at {{price}}/year",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
