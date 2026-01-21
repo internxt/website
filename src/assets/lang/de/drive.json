@@ -31,6 +31,48 @@
       "MacOS": "Mac"
     }
   },
+  "tableSection": {
+    "title": "Internxt Tarife",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Plan",
+      "homePage": "Wählen Sie den richtigen Tarif für Sie",
+      "lifetime": "Lifetime-Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und lebenslang Datenschutz und Sicherheit genießen",
+    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail. ",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Gewährleisten Sie die Sicherheit Ihrer Unternehmensdaten mit Internxts verschlüsselten Cloud-Speicher-Tarifen.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lifetime",
+      "individual": "Einzelperson",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "DriveSection": {
     "title": "Internxt Drive",
     "description": [

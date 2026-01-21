@@ -19,6 +19,8 @@ export const ALLOWED_PATHS = [
   'payette',
   'christian',
   'ition',
+  'foci',
+  'neumanndigital',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -40,6 +42,8 @@ export const COUPON_CODES = {
   payette: PromoCodeName.payette,
   christian: PromoCodeName.christian,
   ition: PromoCodeName.ition,
+  foci: PromoCodeName.FOCI,
+  neumanndigital: PromoCodeName.NEUMANNDIGITAL,
 };
 
 interface OfferConfig {

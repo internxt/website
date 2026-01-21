@@ -61,7 +61,7 @@ export const BusinessPage = ({
       isCheckoutForLifetime,
       interval,
       storage,
-      PromoCodeName.BlackFriday,
+      PromoCodeName.SoftSales85,
     );
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
