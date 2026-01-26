@@ -67,6 +67,7 @@ const LANG_MAP = {
   ct3003: 'de',
   ition: 'de',
   neumanndigital: 'de',
+  bluewin: 'de',
 };
 
 function CombinedSpecialOffer({
@@ -79,7 +80,6 @@ function CombinedSpecialOffer({
 }: CombinedSpecialOfferProps): JSX.Element {
   const { selectedPathname, isDarkMode, alternateRecommendedPlan, couponCode, alternativeImages } =
     useOfferConfig(pathname);
-
   const {
     products,
     loadingCards,
