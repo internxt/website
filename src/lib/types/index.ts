@@ -198,7 +198,7 @@ export enum PromoCodeName {
   ition = 'ITION',
   TEAMS = 'TEAMS87',
   FOCI = 'FOCI',
-  NEUMANNDIGITAL = ' NEUMANNDIGITAL',
+  NEUMANNDIGITAL = 'NEUMANNDIGITAL',
   Bluewin = 'BLUEWIN87',
 }
 
