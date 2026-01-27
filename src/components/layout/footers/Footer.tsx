@@ -626,6 +626,9 @@ export default function Footer({
                     <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.reviews}
                     </Link>
+                    <Link href="/cloud-data-centers" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.resources.certifications}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1283,6 +1286,14 @@ export default function Footer({
                       </Link>
                       <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.reviews}
+                      </Link>
+                      <Link
+                        href="/cloud-data-centers"
+                        locale={lang}
+                        passHref
+                        className="items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.certifications}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
