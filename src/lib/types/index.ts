@@ -199,6 +199,7 @@ export enum PromoCodeName {
   TEAMS = 'TEAMS87',
   FOCI = 'FOCI',
   NEUMANNDIGITAL = 'NEUMANNDIGITAL',
+  Bluewin = 'BLUEWIN87',
 }
 
 export interface PromoCodeProps {
