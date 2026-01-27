@@ -60,10 +60,22 @@ export default function Footer({
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col overflow-hidden lg:pb-10 ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
-      style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
+      className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
     >
-      <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
+      {lang === 'es' && (
+        <div className="flex w-full items-center justify-center ">
+          <Image
+            src={getImage('/images/footer/ProyectoGeneralitat.webp')}
+            alt="Proyecto Financiado por la generalitat"
+            width={330}
+            height={140}
+          />
+        </div>
+      )}
+      <div
+        className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
+        style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
+      >
         <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
 
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
