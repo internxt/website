@@ -78,7 +78,8 @@
         "WebDAV": "CLI 和 WebDAV",
         "nas": "NAS (网络存储)",
         "coupons": "优惠券",
-        "reviews": "评论"
+        "reviews": "评论",
+        "certifications": "认证"
       },
       "tools": {
         "title": "免费工具",

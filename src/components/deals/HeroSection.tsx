@@ -1,6 +1,15 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import {
+  Brain,
+  CellTower,
+  Check,
+  CloudArrowUp,
+  Envelope,
+  ShieldPlus,
+  Sparkle,
+  VideoConference,
+} from '@phosphor-icons/react';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 
@@ -41,6 +50,10 @@ export default function HeroSection({
     {
       icon: Envelope,
       text: textContent.products.mail,
+    },
+    {
+      icon: Brain,
+      text: textContent.products.ai,
     },
   ];
 

@@ -100,6 +100,7 @@ export interface Resources {
   nas: string;
   coupons: string;
   reviews: string;
+  certifications: string;
 }
 
 export interface Tools {
