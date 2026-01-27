@@ -35,8 +35,8 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
   );
 };
 
-export async function getServerSideProps() {
-  const lang = 'en';
+export async function getServerSideProps(ctx) {
+  const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/webdav.json`);

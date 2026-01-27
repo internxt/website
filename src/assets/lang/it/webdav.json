@@ -1,0 +1,133 @@
+{
+  "HeroSection": {
+    "title": "Supporto Internxt CLI e WebDAV",
+    "description": "Internxt funziona con il client WebDAV di tua scelta per gestire i tuoi file di Internxt Drive tramite comandi.",
+    "cta": "Inizia ora"
+  },
+  "WebDAVSupportSection": {
+    "title": "Interfaccia a riga di comando Internxt e supporto WebDAV",
+    "description": [
+      "La CLI di Internxt interagisce con il tuo computer tramite una serie di comandi. Una CLI offre un modo potente ed efficiente per gestire varie attività con il tuo account Internxt Drive.",
+      "La CLI di Internxt funge da ponte tra il tuo computer e Internxt Drive attraverso il client WebDAV scelto. WebDAV è un'estensione di HTTP che ti consente di gestire i file tra la tua macchina locale e il tuo account Internxt."
+    ],
+    "howToInstall": {
+      "title": "Come installare",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "[Scarica e installa Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Accedi alla CLI utilizzando il comando internxt login."
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scegli il tuo client WebDAV preferito."
+        },
+        {
+          "step": "Passaggio 4:",
+          "description": "Inserisci l'URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) e la porta 3005."
+        }
+      ]
+    },
+    "whyUseCLI": {
+      "title": "Perché usare una CLI con un client WebDAV",
+      "description": [
+        "Abbiamo creato la CLI di Internxt e il supporto WebDAV con la stessa enfasi sulla sicurezza e l'architettura pluripremiata per il nostro impegno verso la privacy.",
+        "I tuoi file vengono crittografati sul tuo dispositivo prima di raggiungere i nostri server e solo tu possiedi la chiave di decrittazione. Questo costante impegno per la sicurezza ti dà il controllo completo dei tuoi dati.",
+        "Ricorda di dare priorità alla sicurezza quando trasferisci dati sensibili o riservati online."
+      ]
+    }
+  },
+  "DownloadCLISection": {
+    "title": "Scarica la CLI di Internxt",
+    "downloads": [
+      {
+        "platform": "Windows",
+        "description": "Per Windows 10 e versioni successive."
+      },
+      {
+        "platform": "Mac",
+        "description": "Per MacOS 11 Big Sur o versioni successive."
+      },
+      {
+        "platform": "Linux",
+        "description": "Ubuntu e Debian"
+      }
+    ],
+    "installation": "Installa usando npm",
+    "command": "npm i -g @internxt/cli"
+  },
+  "CtaSection": {
+    "title": "La sicurezza incontra la privacy",
+    "description": "Proteggi i tuoi file con l'archiviazione cloud sicura di Internxt.",
+    "cta": "Crea un account gratuito"
+  },
+  "HowToUseCLISection": {
+    "title": "Come configurare e utilizzare Internxt CLI",
+    "description": "Abbiamo creato delle risorse per aiutarti a scaricare la CLI di Internxt e iniziare con WebDAV.",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "Informazioni sulla CLI di Internxt. Scopri l'utilizzo, le funzionalità, i comandi e le istruzioni per il download dal nostro repository GitHub.",
+        "cta": "Scopri di più"
+      },
+      {
+        "title": "Guida utente",
+        "description": "Scopri di più sulla CLI di Internxt, su come funziona WebDAV e sulle funzionalità di sicurezza dal nostro centro assistenza.",
+        "cta": "Leggi la guida"
+      },
+      {
+        "title": "Aggiornamenti",
+        "description": "Rimani aggiornato con i nuovi aggiornamenti per la CLI di Internxt dal nostro codice sorgente per scoprire nuove versioni e funzionalità.",
+        "cta": "Maggiori dettagli"
+      }
+    ]
+  },
+  "CtaSection2": {
+    "title": "Gestisci i tuoi file come un professionista",
+    "description": "Goditi il controllo diretto dei tuoi file con le funzionalità di gestione dei file desktop.",
+    "cta": "Crea un account gratuito"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cos'è Internxt CLI?",
+        "answer": [
+          "L'interfaccia a riga di comando di Internxt interagisce con un programma per computer digitando comandi di testo invece di utilizzare un mouse e un'interfaccia grafica (GUI) come finestre, icone e menu.",
+          "Le CLI sono strumenti potenti per coloro che desiderano maggiore controllo ed efficienza nell'interazione con i propri computer."
+        ]
+      },
+      {
+        "question": "Cos'è WebDAV?",
+        "answer": [
+          "WebDAV sta per Web Distributed Authoring and Versioning. La sua funzionalità di base include la condivisione, copia, spostamento e modifica di file tramite un server web. WebDAV utilizza comunemente protocolli di sicurezza HTTP per garantire una comunicazione sicura tra client e server."
+        ]
+      },
+      {
+        "question": "Come posso installare la CLI di Internxt?",
+        "answer": [
+          "Per installare la nostra CLI sul tuo computer e iniziare a utilizzare WebDAV, puoi seguire i passaggi di installazione dalla nostra [pagina GitHub](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+        ]
+      },
+      {
+        "question": "WebDAV è sicuro?",
+        "answer": [
+          "Sì. Quando abilitata, la funzione WebDAV utilizza un server solo locale sulla tua macchina, grazie alla nostra CLI. Implementiamo gli stessi metodi di crittografia zero-knowledge ed end-to-end per garantire la privacy e la sicurezza dei tuoi file."
+        ]
+      },
+      {
+        "question": "Quali client WebDAV supporta Internxt?",
+        "answer": ["Supportiamo i seguenti client WebDAV:", "* CyberDuck", "* Transmit", "* Cadaver", "* Finder"]
+      },
+      {
+        "question": "Devo preoccuparmi dei certificati autofirmati?",
+        "answer": [
+          "Internxt utilizza certificati autofirmati per il server locale WebDAV. Sebbene alcuni client WebDAV possano segnalare un avviso su questi certificati, possono essere tranquillamente ignorati. La crittografia protegge i tuoi dati in ogni caso."
+        ]
+      }
+    ]
+  }
+}

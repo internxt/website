@@ -121,8 +121,10 @@ function LifetimeSpecial({
         popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
-        SectionTag={'h1'}
+        SectionTag={'h2'}
       />
+
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection}
@@ -141,8 +143,6 @@ function LifetimeSpecial({
         bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
-
       <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
 
       <FloatingCtaSectionv2
@@ -150,9 +150,9 @@ function LifetimeSpecial({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:px-40 lg:text-4xl">
               {langJson.ctaSection2.title}
-            </p>
+            </h2>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
               {ctaText2}
             </p>
