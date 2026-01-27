@@ -1,0 +1,133 @@
+{
+  "HeroSection": {
+    "title": "Internxt CLI 和 WebDAV 支持",
+    "description": "Internxt 可与您选择的 WebDAV 客户端配合使用，通过命令管理您的 Internxt Drive 文件。",
+    "cta": "立即开始"
+  },
+  "WebDAVSupportSection": {
+    "title": "Internxt 命令行界面及 WebDAV 支持",
+    "description": [
+      "Internxt CLI 通过一系列命令与您的计算机交互。CLI 提供了一种强大且高效的方式来管理 Internxt Drive 账户中的各种任务。",
+      "Internxt CLI 充当您的计算机与 Internxt Drive 之间通过您选择的 WebDAV 客户端进行沟通的桥梁。WebDAV 是 HTTP 的扩展，允许您在本地机器和 Internxt 账户之间管理文件。"
+    ],
+    "howToInstall": {
+      "title": "如何安装",
+      "steps": [
+        {
+          "step": "第一步：",
+          "description": "[下载并安装 Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
+        },
+        {
+          "step": "第二步：",
+          "description": "使用 internxt login 命令登录 CLI。"
+        },
+        {
+          "step": "第三步：",
+          "description": "选择您首选的 WebDAV 客户端。"
+        },
+        {
+          "step": "第四步：",
+          "description": "输入 URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) 和端口 3005。"
+        }
+      ]
+    },
+    "whyUseCLI": {
+      "title": "为什么要配合 WebDAV 客户端使用 CLI",
+      "description": [
+        "我们构建 Internxt CLI 和 WebDAV 支持时，同样注重安全性，并采用了我们承诺保护隐私的屡获殊荣的架构。",
+        "您的文件在到达我们的服务器之前已在您的设备上加密，并且只有您拥有解密密钥。这种对安全性的坚定承诺让您完全掌控自己的数据。",
+        "在网上传输敏感或机密数据时，请务必优先考虑安全性。"
+      ]
+    }
+  },
+  "DownloadCLISection": {
+    "title": "下载 Internxt CLI",
+    "downloads": [
+      {
+        "platform": "Windows",
+        "description": "适用于 Windows 10 及更高版本。"
+      },
+      {
+        "platform": "Mac",
+        "description": "适用于 MacOS 11 Big Sur 及更高版本。"
+      },
+      {
+        "platform": "Linux",
+        "description": "Ubuntu 和 Debian"
+      }
+    ],
+    "installation": "使用 npm 安装",
+    "command": "npm i -g @internxt/cli"
+  },
+  "CtaSection": {
+    "title": "安全与隐私的结合",
+    "description": "使用 Internxt 的安全云存储保护您的文件。",
+    "cta": "创建免费账户"
+  },
+  "HowToUseCLISection": {
+    "title": "如何构建和使用 Internxt CLI",
+    "description": "我们创建了相关资源来帮助您下载 Internxt CLI 并开始使用 WebDAV。",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "关于 Internxt CLI 的信息。从我们的 GitHub 仓库了解其用法、功能、命令和下载说明。",
+        "cta": "了解更多"
+      },
+      {
+        "title": "用户指南",
+        "description": "从我们的帮助中心了解更多关于 Internxt CLI、WebDAV 工作原理以及安全功能的信息。",
+        "cta": "阅读指南"
+      },
+      {
+        "title": "更新",
+        "description": "从我们的源代码关注 Internxt CLI 的新更新，了解新版本和新功能。",
+        "cta": "更多详情"
+      }
+    ]
+  },
+  "CtaSection2": {
+    "title": "像专家一样管理您的文件",
+    "description": "通过桌面文件管理功能直接控制您的文件。",
+    "cta": "创建免费账户"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "什么是 Internxt CLI？",
+        "answer": [
+          "Internxt 命令行界面通过键入文本命令与计算机程序交互，而不是使用鼠标和图形用户界面（GUI，如窗口、图标和菜单）。",
+          "对于那些希望在与计算机交互时获得更多控制权和更高效率的人来说，CLI 是强大的工具。"
+        ]
+      },
+      {
+        "question": "什么是 WebDAV？",
+        "answer": [
+          "WebDAV 代表 Web 分布式创作和版本控制。其基本功能包括通过 Web 服务器共享、复制、移动和编辑文件。WebDAV 通常使用 HTTP 安全协议来确保客户端和服务器之间的安全通信。"
+        ]
+      },
+      {
+        "question": "如何安装 Internxt CLI？",
+        "answer": [
+          "要在您的计算机上安装我们的 CLI 并开始使用 WebDAV，您可以按照 [GitHub 页面](https://github.com/internxt/cli?tab=readme-ov-file#installation) 上的安装步骤进行操作。"
+        ]
+      },
+      {
+        "question": "WebDAV 安全吗？",
+        "answer": [
+          "是的。启用后，得益于我们的 CLI，WebDAV 功能会在您的机器上使用仅限本地的服务器。我们实施相同的零知识和端到端加密方法，以确保您文件的隐私和安全。"
+        ]
+      },
+      {
+        "question": "Internxt 支持哪些 WebDAV 客户端？",
+        "answer": ["我们支持以下 WebDAV 客户端：", "* CyberDuck", "* Transmit", "* Cadaver", "* Finder"]
+      },
+      {
+        "question": "我需要担心自签名证书吗？",
+        "answer": [
+          "Internxt 为 WebDAV 本地服务器使用自签名证书。虽然某些 WebDAV 客户端可能会发出有关这些证书的警告，但可以放心忽略。无论如何，加密都会保护您的数据。"
+        ]
+      }
+    ]
+  }
+}

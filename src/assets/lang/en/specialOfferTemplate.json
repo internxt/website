@@ -6,9 +6,10 @@
       "cleaner": "Cleaner",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Mail"
+      "mail": "Mail",
+      "ai": "AI"
     },
-    "title": "Switch to real privacy **for less**",
+    "title": "Lifetime cloud storage **for less**",
     "description": "Secure cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
     "subtitle": "Get {{discount}}% off now",
     "claimDeal": "Claim deal"
@@ -51,8 +52,8 @@
     "cta": "Accept Invite"
   },
   "ctaSection2": {
-    "title": "The world’s most private cloud storage",
-    "description": "Claim your exclusive {{discount}}% discount to access Internxt’s privacy suite for a year",
+    "title": "Among Internxt’s lifetime plans: Which one should I choose? 1TB, 3TB, or 5TB?",
+    "description": "All our plans give you everything you need to store your files privately in the cloud. If you want complete privacy, advanced cloud management, and all of Internxt’s features, such as Meet and Mail, the 5TB Ultimate plan is the best choice for total control and maximum privacy.",
     "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
     "cta": "Choose Plan"
   },

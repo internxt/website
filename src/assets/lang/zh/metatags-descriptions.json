@@ -25,6 +25,11 @@
     "description": "使用我们的Internxt家庭计划云存储管理您家庭的在线隐私。安全地存储、组织和共享您家庭的私人文件。"
   },
   {
+    "id": "webDAV",
+    "title": "Internxt CLI 和 WebDAV – Internxt",
+    "description": "通过 Internxt CLI 和 WebDAV 功能访问您的 Internxt Drive 账户。体验一种私密管理和控制文件的新方法。"
+  },
+  {
     "id": "what-google-knows",
     "title": "What Does Google Know About Me – Internxt",
     "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."

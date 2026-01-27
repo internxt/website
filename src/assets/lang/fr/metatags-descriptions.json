@@ -25,6 +25,11 @@
     "description": "Obtenez 75% de réduction sur n'importe quel plan Internxt pour garder vos fichiers privés et ne plus jamais vous soucier de manquer d'espace."
   },
   {
+    "id": "webDAV",
+    "title": "Internxt CLI et WebDAV – Internxt",
+    "description": "Accédez à votre compte Internxt Drive avec les fonctionnalités Internxt CLI et WebDAV. Découvrez une nouvelle méthode pour gérer et contrôler vos fichiers en toute confidentialité."
+  },
+  {
     "id": "what-google-knows",
     "title": "Ce que Google sait de moi – Internxt",
     "description": "Découvrez les données que Google conserve sur vous. Comment consulter et télécharger vos données Google, comment les supprimer et comment désactiver la collecte de données par Google."
