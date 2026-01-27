@@ -23,7 +23,7 @@ const PARTNER_CONFIG = {
     rounded: false,
   },
   levante: {
-    image: '/images/home/NewDesign/levante.png',
+    image: '/images/home/NewDesign/LevanteHomeImage.webp',
     alt: 'Internxt official cloud storage partner of Levante UD',
     dimensions: { height: 430, width: 352 },
     blogUrl: {

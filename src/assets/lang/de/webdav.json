@@ -1,0 +1,139 @@
+{
+  "HeroSection": {
+    "title": "Internxt CLI- und WebDAV-Unterstützung",
+    "description": "Internxt arbeitet mit dem WebDAV-Client Ihrer Wahl zusammen, um Ihre Internxt Drive-Dateien über Befehle zu verwalten.",
+    "cta": "Erste Schritte"
+  },
+  "WebDAVSupportSection": {
+    "title": "Internxt Kommandozeile (CLI) & WebDAV-Unterstützung",
+    "description": [
+      "Die Internxt CLI interagiert mit Ihrem Computer über eine Reihe von Befehlen. Eine CLI bietet eine leistungsstarke und effiziente Möglichkeit, verschiedene Aufgaben mit Ihrem Internxt Drive-Konto zu verwalten.",
+      "Die Internxt CLI fungiert als Brücke zwischen Ihrem Computer und Internxt Drive über den von Ihnen gewählten WebDAV-Client. WebDAV ist eine Erweiterung von HTTP, die es Ihnen ermöglicht, Dateien zwischen Ihrem lokalen Rechner und Ihrem Internxt-Konto zu verwalten."
+    ],
+    "howToInstall": {
+      "title": "Installation",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "[Internxt CLI herunterladen und installieren](https://www.npmjs.com/package/@internxt/cli)"
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Melden Sie sich bei der CLI mit dem Befehl internxt login an."
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Wählen Sie Ihren bevorzugten WebDAV-Client."
+        },
+        {
+          "step": "Schritt 4:",
+          "description": "Geben Sie die URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) und den Port 3005 ein."
+        }
+      ]
+    },
+    "whyUseCLI": {
+      "title": "Warum eine CLI mit einem WebDAV-Client verwenden",
+      "description": [
+        "Wir haben die Internxt CLI und die WebDAV-Unterstützung mit dem gleichen Schwerpunkt auf Sicherheit und preisgekrönter Architektur für unser Engagement für den Datenschutz entwickelt.",
+        "Ihre Dateien werden auf Ihrem Gerät verschlüsselt, bevor sie jemals unsere Server erreichen, und nur Sie besitzen den Entschlüsselungscode. Dieses unerschütterliche Engagement für die Sicherheit gibt Ihnen die vollständige Kontrolle über Ihre Daten.",
+        "Denken Sie daran, der Sicherheit beim Online-Transfer sensibler oder vertraulicher Daten Priorität einzuräumen."
+      ]
+    }
+  },
+  "DownloadCLISection": {
+    "title": "Internxt CLI herunterladen",
+    "downloads": [
+      {
+        "platform": "Windows",
+        "description": "Für Windows 10 und höher."
+      },
+      {
+        "platform": "Mac",
+        "description": "Für MacOS 11 Big Sur oder höher."
+      },
+      {
+        "platform": "Linux",
+        "description": "Ubuntu und Debian"
+      }
+    ],
+    "installation": "Installation über npm",
+    "command": "npm i -g @internxt/cli"
+  },
+  "CtaSection": {
+    "title": "Sicherheit trifft Privatsphäre",
+    "description": "Schützen Sie Ihre Dateien mit dem sicheren Cloud-Speicher von Internxt.",
+    "cta": "Kostenloses Konto erstellen"
+  },
+  "HowToUseCLISection": {
+    "title": "Einrichtung und Nutzung der Internxt CLI",
+    "description": "Wir haben Ressourcen zusammengestellt, die Ihnen helfen, die Internxt CLI herunterzuladen und mit WebDAV zu beginnen.",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "Informationen über die Internxt CLI. Erfahren Sie mehr über die Nutzung, Funktionen, Befehle und Installationsanweisungen in unserem GitHub-Repository.",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "title": "Benutzerhandbuch",
+        "description": "Erfahren Sie mehr über die Internxt CLI, wie WebDAV funktioniert und welche Sicherheitsfunktionen es gibt, in unserem Hilfe-Center.",
+        "cta": "Leitfaden lesen"
+      },
+      {
+        "title": "Updates",
+        "description": "Bleiben Sie auf dem Laufenden mit neuen Updates für die Internxt CLI direkt aus unserem Quellcode, um mehr über neue Versionen und Funktionen zu erfahren.",
+        "cta": "Mehr Details"
+      }
+    ]
+  },
+  "CtaSection2": {
+    "title": "Verwalten Sie Ihre Dateien wie ein Profi",
+    "description": "Genießen Sie die direkte Kontrolle über Ihre Dateien mit Desktop-Dateiverwaltungsfunktionen.",
+    "cta": "Kostenloses Konto erstellen"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist die Internxt CLI?",
+        "answer": [
+          "Das Internxt Command Line Interface (CLI) interagiert mit einem Computerprogramm durch das Tippen von Textbefehlen anstelle der Verwendung einer Maus und einer grafischen Benutzeroberfläche (GUI) wie Fenstern, Symbolen und Menüs.",
+          "CLIs sind leistungsstarke Werkzeuge für diejenigen, die mehr Kontrolle und Effizienz bei der Interaktion mit ihren Computern wünschen."
+        ]
+      },
+      {
+        "question": "Was ist WebDAV?",
+        "answer": [
+          "WebDAV steht für Web Distributed Authoring and Versioning. Zu seinen Grundfunktionen gehören das Teilen, Kopieren, Verschieben und Bearbeiten von Dateien über einen Webserver. WebDAV verwendet in der Regel HTTP-Sicherheitsprotokolle, um eine sichere Kommunikation zwischen Clients und Servern zu gewährleisten."
+        ]
+      },
+      {
+        "question": "Wie kann ich die Internxt CLI installieren?",
+        "answer": [
+          "Um unsere CLI auf Ihrem Computer zu installieren und WebDAV zu nutzen, folgen Sie den Installationsschritten auf unserer [GitHub-Seite](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+        ]
+      },
+      {
+        "question": "Ist WebDAV sicher?",
+        "answer": [
+          "Ja. Wenn diese Funktion aktiviert ist, nutzt WebDAV dank unserer CLI einen rein lokalen Server auf Ihrem Rechner. Wir setzen die gleichen Zero-Knowledge- und Ende-zu-Ende-Verschlüsselungsmethoden ein, um die Privatsphäre und Sicherheit Ihrer Dateien zu garantieren."
+        ]
+      },
+      {
+        "question": "Welche WebDAV-Clients unterstützt Internxt?",
+        "answer": [
+          "Wir unterstützen die folgenden WebDAV-Clients:",
+          "* CyberDuck",
+          "* Transmit",
+          "* Cadaver",
+          "* Finder"
+        ]
+      },
+      {
+        "question": "Muss ich mir Sorgen um selbstsignierte Zertifikate machen?",
+        "answer": [
+          "Internxt verwendet selbstsignierte Zertifikate für den lokalen WebDAV-Server. Während einige WebDAV-Clients eine Warnung bezüglich dieser Zertifikate ausgeben könnten, können diese sicher ignoriert werden. Die Verschlüsselung schützt Ihre Daten in jedem Fall."
+        ]
+      }
+    ]
+  }
+}

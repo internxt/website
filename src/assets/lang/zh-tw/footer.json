@@ -78,7 +78,8 @@
         "WebDAV": "CLI 和 WebDAV",
         "nas": "NAS (網路儲存)",
         "coupons": "優惠券",
-        "reviews": "評論"
+        "reviews": "評論",
+        "certifications": "認證"
       },
       "tools": {
         "title": "免費工具",

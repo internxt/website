@@ -25,6 +25,11 @@
     "description": "Prevenga la pérdida de datos con el almacenamiento en la nube encriptado de Internxt para empresas—regístrese para beneficiarse de la protección de datos en la nube líder en la industria."
   },
   {
+    "id": "webDAV",
+    "title": "Internxt CLI y WebDAV – Internxt",
+    "description": "Accede a tu cuenta de Internxt Drive con las funciones Internxt CLI y WebDAV. Experimenta un nuevo método para gestionar y controlar tus archivos de forma privada."
+  },
+  {
     "id": "what-google-knows",
     "title": "Qué sabe Google de mí — Internxt",
     "description": "Averigua qué sabe Google sobre ti. Cómo ver y descargar tus datos de Google, cómo eliminarlos y cómo inhabilitar la recopilación de datos de Google."

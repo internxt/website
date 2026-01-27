@@ -25,6 +25,11 @@
     "description": "Erhalten Sie 75% Rabatt auf jeden Internxt-Plan, um Ihre Dateien privat zu halten und sich nie wieder Sorgen um Platzmangel zu machen."
   },
   {
+    "id": "webDAV",
+    "title": "Internxt CLI und WebDAV – Internxt",
+    "description": "Greifen Sie mit Internxt CLI- und WebDAV-Funktionen auf Ihr Internxt Drive-Konto zu. Erleben Sie eine neue Methode, um Ihre Dateien privat zu verwalten und zu kontrollieren."
+  },
+  {
     "id": "affiliates",
     "title": "Internxt — Partner-Programm",
     "description": "Treten Sie Internxts Affiliate-Marketing-Programm bei! Wie Sie anfangen plus Programmdetails, Vorteile und Vergünstigungen."
