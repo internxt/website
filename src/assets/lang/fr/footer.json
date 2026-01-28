@@ -100,7 +100,9 @@
         "cloudBakcup": "Solution de sauvegarde cloud",
         "GDPRCloud": "Stockage conforme au RGPD",
         "cloudPhotos": "Photos dans le cloud",
-        "cloudVideo": "Vidéos dans le cloud"
+        "cloudVideo": "Vidéos dans le cloud",
+        "lifetime": "Stockage cloud à vie",
+        "freeCloudStorage": "Stockage cloud gratuit"
       }
     }
   }
