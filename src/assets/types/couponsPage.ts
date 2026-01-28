@@ -37,6 +37,7 @@ export interface Products {
   vpn: string;
   meet: string;
   mail: string;
+  ai: string;
 }
 
 export interface StartFrom {

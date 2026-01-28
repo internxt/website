@@ -79,7 +79,8 @@
         "WebDAV": "CLI e WebDAV",
         "nas": "NAS",
         "coupons": "Coupon",
-        "reviews": "Recensioni"
+        "reviews": "Recensioni",
+        "certifications": "Certificazioni"
       },
       "tools": {
         "title": "Strumenti gratuiti",
