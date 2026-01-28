@@ -100,7 +100,9 @@
         "cloudBakcup": "Cloud storage backup",
         "GDPRCloud": "GDPR Cloud Storage",
         "cloudPhotos": "Storage for photos",
-        "cloudVideo": "Storage for videos"
+        "cloudVideo": "Storage for videos",
+        "lifetime": "Lifetime Cloud Storage",
+        "freeCloudStorage": "Free Cloud Storage"
       }
     }
   }

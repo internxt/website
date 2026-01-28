@@ -46,11 +46,6 @@
         "pathname": "jpg-to-png"
       },
       {
-        "title": "JPG 轉 HEIC",
-        "description": "免費的 JPG 轉 HEIC 轉換器。",
-        "pathname": "jpg-to-heic"
-      },
-      {
         "title": "JPG 轉 WebP",
         "description": "免費的 JPG 轉 WebP 轉換器。",
         "pathname": "jpg-to-webp"
@@ -59,11 +54,6 @@
         "title": "PNG 轉 JPG",
         "description": "免費的 PNG 轉 JPG 轉換器。",
         "pathname": "png-to-jpg"
-      },
-      {
-        "title": "PNG 轉 HEIC",
-        "description": "免費的 PNG 轉 HEIC 轉換器。",
-        "pathname": "png-to-heic"
       },
       {
         "title": "PNG 轉 WebP",

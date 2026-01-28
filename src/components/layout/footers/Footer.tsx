@@ -717,6 +717,17 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.features.cloudVideo}
                     </Link>
+                    <Link href="/lifetime" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.features.lifetime}
+                    </Link>
+                    <Link
+                      href="/drive/free-cloud-storage"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.freeCloudStorage}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1408,6 +1419,14 @@ export default function Footer({
 
                       <Link href="/cloud-storage-for-videos" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.cloudVideo}
+                      </Link>
+
+                      <Link href="/lifetime" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.lifetime}
+                      </Link>
+
+                      <Link href="/drive/free-cloud-storage" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.freeCloudStorage}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

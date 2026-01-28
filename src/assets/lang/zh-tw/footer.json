@@ -100,7 +100,9 @@
         "cloudBakcup": "雲端備份解決方案",
         "GDPRCloud": "GDPR 雲端儲存",
         "cloudPhotos": "雲端照片儲存",
-        "cloudVideo": "雲端影片儲存"
+        "cloudVideo": "雲端影片儲存",
+        "lifetime": "終身雲端儲存",
+        "freeCloudStorage": "免費雲端儲存"
       }
     }
   }

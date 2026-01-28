@@ -162,16 +162,16 @@ export default function HorizontalScrollableSection({
                 }}
               >
                 <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white'} p-6`}>
-                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
                     {title}
-                  </p>
-                  <h3
+                  </h3>
+                  <p
                     className={`${
                       darkMode ? 'text-green-120' : 'text-gray-55'
                     } flex-1 text-sm font-normal leading-tight lg:text-base`}
                   >
                     {textContent.cardDescriptions.descriptions[index]}
-                  </h3>
+                  </p>
                 </div>
               </div>
             );
