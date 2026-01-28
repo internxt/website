@@ -50,7 +50,7 @@
     "hamburger-react": "^2.4.1",
     "jsonwebtoken": "^9.0.0",
     "jszip": "^3.10.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "mammoth": "^1.11.0",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
