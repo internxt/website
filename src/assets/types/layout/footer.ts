@@ -42,6 +42,8 @@ export interface Features {
   GDPRCloud: string;
   cloudPhotos: string;
   cloudVideo: string;
+  lifetime: string;
+  freeCloudStorage: string;
 }
 
 export interface Join {

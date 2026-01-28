@@ -100,7 +100,9 @@
         "cloudBakcup": "云备份解决方案",
         "GDPRCloud": "GDPR 云存储",
         "cloudPhotos": "云端照片存储",
-        "cloudVideo": "云端视频存储"
+        "cloudVideo": "云端视频存储",
+        "lifetime": "终身云存储",
+        "freeCloudStorage": "免费云存储"
       }
     }
   }
