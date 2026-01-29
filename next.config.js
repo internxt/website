@@ -1,7 +1,9 @@
+const { locales, defaultLocale } = require('./src/lib/i18n-config');
+
 module.exports = {
   i18n: {
-    locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw'],
-    defaultLocale: 'en',
+    locales: locales,
+    defaultLocale: defaultLocale,
   },
   experimental: {
     //swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],

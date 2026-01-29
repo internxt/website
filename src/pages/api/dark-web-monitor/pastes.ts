@@ -5,13 +5,14 @@ import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 const CACHE_CLEAN_INTERVAL_MS = 2 * 60 * 60 * 1000;
 const API_URL = process.env.INXT_MONITOR_API_URL;
 const API_KEY = process.env.INXT_MONITOR_API_KEY;
+const { locales: ALLOWED_LANGS } = require('@/lib/i18n-config');
 
 const cache: Map<string, any> = new Map();
 let lastCacheClean = Date.now();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   const { email, lang } = req.query;
-  const currentLang = typeof lang === 'string' ? lang : 'en';
+  const currentLang = typeof lang === 'string' && ALLOWED_LANGS.includes(lang) ? lang : 'en';
 
   const fullTextContent = require(`@/assets/lang/${currentLang}/i-have-been-pawned.json`);
   const textContent: HaveIbeenPwnedText['HeroSection']['breaches'] = fullTextContent.HeroSection.breaches;
