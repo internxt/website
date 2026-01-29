@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import rateLimitMiddleware from './rate-limiter';
+import rateLimitMiddleware from '../../../lib/rate-limiter';
 import axios from 'axios';
 import { csrf } from '@/lib/csrf';
 
