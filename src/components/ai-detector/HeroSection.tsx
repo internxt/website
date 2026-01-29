@@ -1,6 +1,9 @@
-import { useState, Fragment, createRef } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useState, createRef } from 'react';
 import { AiDetectorText } from '@/assets/types/aiDetector';
-import pdfToText from 'react-pdftotext';
+import * as pdfjsLib from 'pdfjs-dist';
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 interface HeroSectionProps {
   textContent: AiDetectorText['HeroSection'];
@@ -9,6 +12,21 @@ interface HeroSectionProps {
 
 const MIN_CHARS = 250;
 const MAX_CHARS = 15000;
+
+async function extractTextFromPdf(file: File): Promise<string> {
+  const arrayBuffer = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+
+  let fullText = '';
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const pageText = content.items.map((item: any) => item.str).join(' ');
+    fullText += pageText + '\n';
+  }
+
+  return fullText.trim();
+}
 
 const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [text, setText] = useState('');
@@ -29,8 +47,8 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
 
   const processPdfFile = async (file: File) => {
     try {
-      const text = await pdfToText(file);
-      setText(text);
+      const extractedText = await extractTextFromPdf(file);
+      setText(extractedText);
       resetDetectionState();
     } catch (err) {
       setError(textContent.error.fileReadError);
