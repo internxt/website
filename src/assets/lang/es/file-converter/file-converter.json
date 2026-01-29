@@ -46,11 +46,6 @@
         "pathname": "jpg-to-png"
       },
       {
-        "title": "JPG a HEIC",
-        "description": "Un convertidor de JPG a HEIC gratuito.",
-        "pathname": "jpg-to-heic"
-      },
-      {
         "title": "JPG a WebP",
         "description": "Un convertidor de JPG a WebP gratuito.",
         "pathname": "jpg-to-webp"
@@ -59,11 +54,6 @@
         "title": "PNG a JPG",
         "description": "Un convertidor de PNG a JPG gratuito.",
         "pathname": "png-to-jpg"
-      },
-      {
-        "title": "PNG a HEIC",
-        "description": "Un convertidor de PNG a HEIC gratuito.",
-        "pathname": "png-to-heic"
       },
       {
         "title": "PNG a WebP",

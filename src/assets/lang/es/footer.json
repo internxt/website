@@ -100,7 +100,9 @@
         "cloudBakcup": "Solución cloud backup",
         "GDPRCloud": "Almacenamiento RGPD",
         "cloudPhotos": "Fotos en la nube",
-        "cloudVideo": "Videos en la nube"
+        "cloudVideo": "Videos en la nube",
+        "lifetime": "Almacenamiento en la nube de por vida",
+        "freeCloudStorage": "Almacenamiento gratuito en la nube"
       }
     },
     "financialProject": "Proyecto financiado por el CDTI y financiado por los fondos FEDER de la UE. Internxt Mail e Internxt Meet: Servicio de correo seguro Internxt Mail y servicio de videollamadas seguras Internxt Meet, mediante el uso de encriptación post-cuántica e inteligencia artificial."
