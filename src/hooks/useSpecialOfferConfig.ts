@@ -22,6 +22,7 @@ export const ALLOWED_PATHS = [
   'foci',
   'neumanndigital',
   'bluewin',
+  'tatiana',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -46,6 +47,7 @@ export const COUPON_CODES = {
   foci: PromoCodeName.FOCI,
   neumanndigital: PromoCodeName.NEUMANNDIGITAL,
   bluewin: PromoCodeName.Bluewin,
+  tatiana: PromoCodeName.Tatiana,
 };
 
 interface OfferConfig {
