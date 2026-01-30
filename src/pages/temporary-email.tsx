@@ -12,8 +12,8 @@ import Footer from '@/components/layout/footers/Footer';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { setup } from '@/lib/csrf';
 import { useRouter } from 'next/router';
-import { GetServerSideProps } from 'next';
 
 const TempEmail = () => {
   const dialogAction = useGlobalDialog();
@@ -61,8 +61,8 @@ const TempEmail = () => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps = setup(async () => {
   return { props: {} };
-};
+});
 
 export default TempEmail;

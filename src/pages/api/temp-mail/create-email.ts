@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import rateLimitMiddleware from '../../../lib/rate-limiter';
+import rateLimitMiddleware from './rate-limiter';
 import { csrf } from '@/lib/csrf';
 
 const CONVERTER_URL =

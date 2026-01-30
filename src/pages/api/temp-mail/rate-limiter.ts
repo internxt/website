@@ -9,11 +9,9 @@ export default function rateLimitMiddleware(
   path: string,
   limit: number,
   windowMs = windowMsValue,
-): NextApiHandler {
-  return async (req: NextApiRequest, res: NextApiResponse) => {
-    const forwarded = req.headers['x-forwarded-for'];
-    const ip = typeof forwarded === 'string' ? forwarded : forwarded ? forwarded[0] : 'unknown';
-
+) {
+  return (req: NextApiRequest, res: NextApiResponse) => {
+    const ip = req.headers['x-forwarded-for'];
     const mapIdentifier = `${ip}-${path}`;
 
     if (!rateLimitMap.has(mapIdentifier)) {
@@ -32,8 +30,8 @@ export default function rateLimitMiddleware(
 
     if (ipData.count >= limit) {
       console.log(`Identifier ${mapIdentifier} is banned`);
-      res.status(429).send('Too Many Requests');
-      return;
+
+      return res.status(429).send('Too Many Requests');
     }
 
     ipData.count += 1;
