@@ -216,12 +216,12 @@
     },
     "Rclone": {
       "title": "Rclone",
-      "comingSoon": "Bientôt disponible",
+      "cta": "Obtenir Rclone",
       "description": "Synchronisez, sauvegardez et gérez vos fichiers sans effort sur plusieurs services cloud grâce à la prise en charge native de Rclone."
     },
     "NAS": {
       "title": "NAS",
-      "comingSoon": "Bientôt disponible",
+      "cta": "Obtenir NAS",
       "description": "Connectez votre système NAS directement à Internxt Drive pour sauvegarder, synchroniser et gérer vos données en toute sécurité."
     }
   },

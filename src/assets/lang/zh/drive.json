@@ -200,12 +200,12 @@
     },
     "Rclone": {
       "title": "Rclone",
-      "comingSoon": "即将推出",
+      "cta": "获取 Rclone",
       "description": "通过原生 Rclone 支持，轻松地在多个云服务之间同步、备份和管理您的文件。"
     },
     "NAS": {
       "title": "NAS",
-      "comingSoon": "即将推出",
+      "cta": "获取 NAS",
       "description": "将您的 NAS 系统直接连接到 Internxt Drive，安全地备份、同步和管理您的数据。"
     }
   },
