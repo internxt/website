@@ -31,12 +31,6 @@ const CloudObjectStorage = ({
 
   const lang = locale as string;
 
-  const scrollToTop = () => {
-    document.querySelector('#contactSales')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
-  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
