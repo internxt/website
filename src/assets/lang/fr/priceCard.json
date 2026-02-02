@@ -96,6 +96,10 @@
           "status": "Coming soon"
         },
         {
+          "name": "Photos",
+          "status": "Coming soon"
+        },
+        {
           "name": "VPN chiffré",
           "status": "available"
         },
@@ -139,6 +143,10 @@
         },
         {
           "name": "Gestion des versions de fichiers",
+          "status": "Coming soon"
+        },
+        {
+          "name": "Photos",
           "status": "Coming soon"
         },
         {
