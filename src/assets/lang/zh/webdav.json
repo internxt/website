@@ -1,44 +1,78 @@
 {
   "HeroSection": {
-    "title": "Internxt CLI 和 WebDAV 支持",
-    "description": "Internxt 可与您选择的 WebDAV 客户端配合使用，通过命令管理您的 Internxt Drive 文件。",
-    "cta": "立即开始"
+    "label": "对象存储",
+    "title": "Internxt **Rclone**、**CLI** 和 **WebDAV**",
+    "description": "通过原生方式或 WebDAV 将您的 Internxt Drive 连接到 Rclone，实现更高级的文件管理",
+    "cta": "获取 Internxt"
+  },
+  "RcloneSupportSection": {
+    "title": "Internxt 原生 Rclone 支持",
+    "description": [
+      "Rclone 是一款命令行工具，通过灵活且可脚本化的界面将您的计算机连接到 Internxt Drive。它专为寻求快速、可靠且可自定义文件传输的用户而设计。",
+      "设置完成后，rclone 会将您的设备直接连接到您的存储账户，从而轻松移动文件、运行备份并跨系统自动进行传输。"
+    ],
+    "howToInstall": "如何安装",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "从我们的 GitHub 仓库获取有关 rclone 的用法、功能、命令和下载说明的信息。",
+        "cta": "了解更多"
+      },
+      {
+        "title": "用户指南",
+        "description": "从我们的帮助中心了解如何以原生方式连接和配置 Internxt Drive 与 rclone。",
+        "cta": "阅读指南"
+      },
+      {
+        "title": "更新",
+        "description": "从我们的源代码中关注 Internxt CLI 的最新版本，了解新版本和新功能。",
+        "cta": "更多详情"
+      }
+    ]
   },
   "WebDAVSupportSection": {
-    "title": "Internxt 命令行界面及 WebDAV 支持",
+    "title": "Internxt CLI & WebDAV 支持",
     "description": [
-      "Internxt CLI 通过一系列命令与您的计算机交互。CLI 提供了一种强大且高效的方式来管理 Internxt Drive 账户中的各种任务。",
-      "Internxt CLI 充当您的计算机与 Internxt Drive 之间通过您选择的 WebDAV 客户端进行沟通的桥梁。WebDAV 是 HTTP 的扩展，允许您在本地机器和 Internxt 账户之间管理文件。"
+      "Internxt CLI 通过一系列命令与您的计算机交互。CLI 为管理 Internxt Drive 账户中的各种任务提供了一种强大且高效的方式。",
+      "Internxt CLI 通过您选择的 WebDAV 客户端，充当您的计算机与 Internxt Drive 之间的桥梁。WebDAV 是 HTTP 的扩展，允许您在本地机器和 Internxt 账户之间管理文件。"
     ],
     "howToInstall": {
       "title": "如何安装",
       "steps": [
         {
-          "step": "第一步：",
+          "step": "第 1 步",
           "description": "[下载并安装 Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
         },
         {
-          "step": "第二步：",
+          "step": "第 2 步",
           "description": "使用 internxt login 命令登录 CLI。"
         },
         {
-          "step": "第三步：",
+          "step": "第 3 步",
           "description": "选择您首选的 WebDAV 客户端。"
         },
         {
-          "step": "第四步：",
+          "step": "第 4 步",
           "description": "输入 URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) 和端口 3005。"
         }
       ]
     },
-    "whyUseCLI": {
-      "title": "为什么要配合 WebDAV 客户端使用 CLI",
-      "description": [
-        "我们构建 Internxt CLI 和 WebDAV 支持时，同样注重安全性，并采用了我们承诺保护隐私的屡获殊荣的架构。",
-        "您的文件在到达我们的服务器之前已在您的设备上加密，并且只有您拥有解密密钥。这种对安全性的坚定承诺让您完全掌控自己的数据。",
-        "在网上传输敏感或机密数据时，请务必优先考虑安全性。"
-      ]
-    }
+    "questions": [
+      {
+        "question": "Internxt 原生 rclone 支持",
+        "answer": [
+          "原生 rclone 集成让您能够使用云存储工作流中最值得信赖的开源工具之一来同步、复制和管理文件。",
+          "将 Internxt Drive 与 rclone 连接可实现快速、灵活的传输、自动化，并能轻松集成到现有的备份或迁移设置中，且不影响安全性。"
+        ]
+      },
+      {
+        "question": "Internxt WebDAV 支持",
+        "answer": [
+          "您还可以使用 Internxt CLI 进行连接和管理文件，同样强调安全性和屡获殊荣的架构，以实现最大的隐私保护。",
+          "您的文件在到达我们的服务器之前已在您的设备上加密，只有您拥有解密密钥。这种对安全性的坚定承诺让您能够完全控制自己的数据。"
+        ]
+      }
+    ]
   },
   "DownloadCLISection": {
     "title": "下载 Internxt CLI",
@@ -60,13 +94,13 @@
     "command": "npm i -g @internxt/cli"
   },
   "CtaSection": {
-    "title": "安全与隐私的结合",
-    "description": "使用 Internxt 的安全云存储保护您的文件。",
-    "cta": "创建免费账户"
+    "title": "使用 Internxt Drive 保护您的文件",
+    "description": "以隐私为核心构建的安全云存储",
+    "cta": "获取 Internxt"
   },
   "HowToUseCLISection": {
     "title": "如何构建和使用 Internxt CLI",
-    "description": "我们创建了相关资源来帮助您下载 Internxt CLI 并开始使用 WebDAV。",
+    "description": "我们创建了一些资源来帮助您下载 Internxt CLI 并开始使用 WebDAV。",
     "info": [
       {
         "title": "ReadMe",
@@ -75,42 +109,45 @@
       },
       {
         "title": "用户指南",
-        "description": "从我们的帮助中心了解更多关于 Internxt CLI、WebDAV 工作原理以及安全功能的信息。",
+        "description": "从我们的帮助中心了解有关 Internxt CLI、WebDAV 工作原理以及安全功能的更多信息。",
         "cta": "阅读指南"
       },
       {
         "title": "更新",
-        "description": "从我们的源代码关注 Internxt CLI 的新更新，了解新版本和新功能。",
+        "description": "从我们的源代码中关注 Internxt CLI 的最新更新，了解新版本和新功能。",
         "cta": "更多详情"
       }
     ]
   },
   "CtaSection2": {
-    "title": "像专家一样管理您的文件",
-    "description": "通过桌面文件管理功能直接控制您的文件。",
-    "cta": "创建免费账户"
+    "title": "像专业人士一样管理您的文件",
+    "description": "通过 rclone 或 WebDAV 直接掌控您的文件。",
+    "cta": "获取 Internxt"
   },
   "FaqSection": {
     "title": "有问题？我们有答案",
     "faq": [
       {
+        "question": "什么是 rclone？",
+        "answer": ["Rclone 是一款开源命令行工具，可让您在计算机和云存储服务之间管理、同步和传输文件。"]
+      },
+      {
+        "question": "如何将 Internxt 连接到 rclone？",
+        "answer": ["首先，您需要从官方网站下载 rclone，然后可以按照我们帮助中心提供的安装步骤进行操作。"]
+      },
+      {
         "question": "什么是 Internxt CLI？",
-        "answer": [
-          "Internxt 命令行界面通过键入文本命令与计算机程序交互，而不是使用鼠标和图形用户界面（GUI，如窗口、图标和菜单）。",
-          "对于那些希望在与计算机交互时获得更多控制权和更高效率的人来说，CLI 是强大的工具。"
-        ]
+        "answer": ["Internxt 命令行界面通过键入文本命令（而不是使用鼠标和图形用户界面）与计算机程序进行交互。"]
       },
       {
         "question": "什么是 WebDAV？",
         "answer": [
-          "WebDAV 代表 Web 分布式创作和版本控制。其基本功能包括通过 Web 服务器共享、复制、移动和编辑文件。WebDAV 通常使用 HTTP 安全协议来确保客户端和服务器之间的安全通信。"
+          "WebDAV 代表 Web 分布式授权和版本控制。其基本功能包括通过 Web 服务器共享、复制、移动和编辑文件。WebDAV 通常使用 HTTP 安全协议来确保客户端和服务器之间的安全通信。"
         ]
       },
       {
         "question": "如何安装 Internxt CLI？",
-        "answer": [
-          "要在您的计算机上安装我们的 CLI 并开始使用 WebDAV，您可以按照 [GitHub 页面](https://github.com/internxt/cli?tab=readme-ov-file#installation) 上的安装步骤进行操作。"
-        ]
+        "answer": ["要在您的计算机上安装我们的 CLI 并开始使用 WebDAV，您可以按照我们 GitHub 页面上的安装步骤进行操作。"]
       },
       {
         "question": "WebDAV 安全吗？",
@@ -125,7 +162,7 @@
       {
         "question": "我需要担心自签名证书吗？",
         "answer": [
-          "Internxt 为 WebDAV 本地服务器使用自签名证书。虽然某些 WebDAV 客户端可能会发出有关这些证书的警告，但可以放心忽略。无论如何，加密都会保护您的数据。"
+          "Internxt 为 WebDAV 本地服务器使用自签名证书。虽然某些 WebDAV 客户端可能会发出有关这些证书的警告，但可以安全地忽略它们。无论如何，加密都会保护您的数据。"
         ]
       }
     ]
