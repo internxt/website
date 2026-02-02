@@ -11,9 +11,10 @@ import { useRef, useState, useEffect } from 'react';
 
 interface AdvancedToolsProps {
   textContent: DriveText['AdvancedToolsSection'];
+  lang?: string;
 }
 
-const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element => {
+const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps): JSX.Element => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -135,7 +136,6 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
         </div>
       </div>
 
-      {/* Contenedor con scroll horizontal en móvil */}
       <div className="flex flex-col gap-4">
         <div
           ref={scrollContainerRef}
@@ -156,7 +156,7 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
           }
         >
           <Link
-            href="https://internxt.com/es/webdav"
+            href="https://internxt.com/webdav"
             className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
@@ -168,32 +168,37 @@ const AdvancedToolsSection = ({ textContent }: AdvancedToolsProps): JSX.Element 
             </span>
           </Link>
 
-          <div
-            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6"
+          <Link
+            href={`https://internxt.com/${lang}/webdav`}
+            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
               <p className="text-xl font-medium text-gray-100">{textContent.Rclone.title}</p>
-              <span className="rounded-2 bg-purple-1 px-1 py-0.5 text-primary-dark">
-                {textContent.Rclone.comingSoon}
-              </span>
             </div>
             <p className="text-base font-normal text-gray-55">{textContent.Rclone.description}</p>
-          </div>
+            <span className="flex flex-row items-center text-base font-medium text-primary">
+              {textContent.Rclone.cta}
+              <CaretRight className="text-primary" height={24} width={24} />
+            </span>
+          </Link>
 
-          <div
-            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6"
+          <Link
+            href={`https://internxt.com/${lang}/nas`}
+            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
               <p className="text-xl font-medium text-gray-100">{textContent.NAS.title}</p>
-              <span className="rounded-2 bg-purple-1 px-1 py-0.5 text-primary-dark">{textContent.NAS.comingSoon}</span>
             </div>
             <p className="text-base font-normal text-gray-55">{textContent.NAS.description}</p>
-          </div>
+            <span className="flex flex-row items-center text-base font-medium text-primary">
+              {textContent.NAS.cta}
+              <CaretRight className="text-primary" height={24} width={24} />
+            </span>
+          </Link>
         </div>
 
-        {/* Botones de navegación solo en móvil */}
         {isMobile && (
           <div className="flex justify-end px-5">
             <div className="flex w-[120px] justify-between">

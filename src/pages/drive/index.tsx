@@ -158,7 +158,7 @@ const Drive = ({
 
       <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
 
-      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
+      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} />
 
       <ReviewsSection
         textContent={textContent.ReviewSection}
