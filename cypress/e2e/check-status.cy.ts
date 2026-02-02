@@ -47,6 +47,8 @@ const nameFiles = [
   'alternative-to-zoom',
   'webdav',
   'cloud-object-storage',
+  'cloud-object-storage/free-cloud-object-storage',
+  'webdav-rclone',
 ];
 
 const langs = {
