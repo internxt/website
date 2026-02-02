@@ -232,8 +232,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI 和 WebDAV – Internxt",
-    "description": "使用Internxt CLI 和 WebDAV 功能訪問您的Internxt Drive賬戶。體驗一種新的管理和控制文件的私密方法。"
+    "title": "Internxt CLI, WebDAV 和 Rclone – Internxt",
+    "description": "使用Internxt CLI, WebDAV 和 Rclone 功能訪問您的Internxt Drive賬戶。體驗一種新的管理和控制文件的私密方法。"
   },
   {
     "id": "vpn-extension",
