@@ -201,6 +201,8 @@ export enum PromoCodeName {
   NEUMANNDIGITAL = 'NEUMANNDIGITAL',
   Bluewin = 'BLUEWIN87',
   Tatiana = 'TATIANA',
+  Rclone = 'RCLONE87',
+  simon42 = 'SIMON42',
 }
 
 export interface PromoCodeProps {
