@@ -194,5 +194,10 @@
     "title": "Internxt Cloud Objektspeicher",
     "description": "Erleben Sie überlegene Datenverwaltung, Geschwindigkeit und Effizienz",
     "cta": "Jetzt starten"
+  },
+  "CtaSectionV2": {
+    "title": "Objektspeicher in der Internxt-Cloud",
+    "description": "Die Cloud-Speicherlösungen von Internxt kombinieren Sicherheit und Effizienz",
+    "cta": "Starten"
   }
 }

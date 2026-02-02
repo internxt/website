@@ -136,5 +136,10 @@
     "title": "Internxt 物件雲端儲存",
     "description": "體驗卓越的數據管理、速度與效率",
     "cta": "立即開始"
+  },
+  "CtaSectionV2": {
+    "title": "Internxt 雲端物件儲存",
+    "description": "Internxt 的雲端儲存解決方案結合了安全性和效率",
+    "cta": "開始"
   }
 }

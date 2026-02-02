@@ -140,5 +140,10 @@
     "title": "Internxt 对象云存储",
     "description": "体验卓越的数据管理、速度与效率",
     "cta": "立即开始"
+  },
+  "CtaSectionV2": {
+    "title": "Internxt 云端对象存储",
+    "description": "Internxt 的云存储解决方案结合了安全性和效率",
+    "cta": "开始"
   }
 }
