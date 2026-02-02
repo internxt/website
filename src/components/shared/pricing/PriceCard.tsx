@@ -360,7 +360,7 @@ export const PriceCard = ({
         </div>
       </div>
       {isAnnual && (
-        <p className="text-xs font-normal italic text-gray-35">
+        <p className="text-10 font-normal italic text-gray-35">
           {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
         </p>
       )}
