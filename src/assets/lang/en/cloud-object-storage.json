@@ -196,8 +196,13 @@
     }
   },
   "CtaSection": {
+    "title": "Internxt is Cheap object storage",
+    "description": "Internxt object cloud storage solutions combines security and efficiency",
+    "cta": "Get started"
+  },
+  "CtaSectionV2": {
     "title": "Internxt object cloud storage",
-    "description": "Experience superior data management, speed, and efficiency",
+    "description": "Internxt object cloud storage solutions combines security and efficiency",
     "cta": "Get started"
   }
 }

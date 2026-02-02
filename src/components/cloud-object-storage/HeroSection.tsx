@@ -18,10 +18,10 @@ export const HeroSection = ({ textContent }) => {
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>
-        <span className="flex flex-col text-30 font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-5xl">
+        <h1 className="flex flex-col text-30 font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-5xl">
           <HighlightText text={textContent.title.line1} />
           <p className="flex lg:text-3xl">{textContent.title.line2}</p>
-        </span>
+        </h1>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <Link
           href={'/pricing'}

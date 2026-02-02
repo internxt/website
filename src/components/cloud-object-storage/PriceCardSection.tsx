@@ -14,18 +14,14 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
   const router = useRouter();
   const iconMap = [HandCoins, LockSimple, CodeBlock, Gauge, Resize, Code, Star, Headset];
   return (
-    <section
-      className="overflow-hidden px-5 py-20"
-      id="storageSection"
-      style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)' }}
-    >
+    <section className="overflow-hidden bg-white px-5 py-20" id="storageSection">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex max-w-[887px] flex-col items-center gap-6 text-center">
           <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:whitespace-pre-line lg:text-3xl">
             {textContent.title}
           </h2>
-          <h3 className="text-lg leading-tight text-gray-55">{textContent.description}</h3>
+          <p className="text-lg leading-tight text-gray-55">{textContent.description}</p>
         </div>
         <div className="flex flex-col-reverse gap-16 md:flex-row">
           <div className="flex w-full max-w-[400px] flex-col justify-between rounded-2xl bg-primary md:w-screen">

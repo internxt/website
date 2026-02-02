@@ -7,6 +7,7 @@ export interface CloudObjectStorageText {
   FaqSection: FAQSection;
   ContactSales: ContactSales;
   CtaSection: CtaSection;
+  CtaSectionV2: CtaSection;
 }
 
 export interface ContactSales {
