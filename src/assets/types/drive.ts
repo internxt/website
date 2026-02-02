@@ -19,13 +19,13 @@ export interface AdvancedToolsSection {
   description: string;
   powerUsers: PowerUsers;
   webDAV: CtaSection;
-  Rclone: NAS;
-  NAS: NAS;
+  Rclone: CtaSection;
+  NAS: CtaSection;
 }
 
-export interface NAS {
+export interface CtaSection {
   title: string;
-  comingSoon: string;
+  cta: string;
   description: string;
 }
 
@@ -46,12 +46,6 @@ export interface LearnMore {
   title: string;
   GitHub: string;
   learnMore: string;
-}
-
-export interface CtaSection {
-  title: string;
-  description: string;
-  cta: string;
 }
 
 export interface AllInOnePrivacySection {

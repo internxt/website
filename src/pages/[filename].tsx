@@ -69,6 +69,7 @@ const LANG_MAP = {
   neumanndigital: 'de',
   bluewin: 'de',
   tatiana: 'en',
+  simon42: 'de',
 };
 
 function CombinedSpecialOffer({
