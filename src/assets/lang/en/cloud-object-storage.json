@@ -1,16 +1,15 @@
 {
   "HeroSection": {
+    "label": "Object Storage",
     "title": {
-      "line1": "Internxt S3 ",
-      "line2": "compatible cloud object storage"
+      "line1": "**Internxt S3**",
+      "line2": "Compatible object storage"
     },
-    "description": "A secure, affordable, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
-    "cta": "Get started",
-    "separator": "|",
-    "cta2": "Contact us"
+    "description": "An efficient, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
+    "cta": "Get started"
   },
   "PredictablePricingSection": {
-    "title": "Simple, predictable pricing with zero fees and no API charges",
+    "title": "Simple, predictable pricing\n with zero fees and no API charges",
     "description": "Avoid the hassle of unpredictable storage bills. Internxt offers a straightforward rate for storage capacity with no hidden fees.",
     "info": [
       {
@@ -28,22 +27,22 @@
     ]
   },
   "PriceCardSection": {
-    "title": "Internxt object cloud storage combines security and efficiency",
+    "title": "Internxt object cloud storage\n combines security and efficiency",
     "description": "Internxt object storage is an affordable, high-performance solution revolutionizing online data storage, perfect for individuals or organizations needing reliable and secure infrastructure at a minimal cost.",
     "payAsYouGoCard": {
       "title": "Pay as you go!",
       "description": "Pay only for the storage you use."
     },
     "cardText": {
-      "label": "Internxt S3",
+      "label": "S3",
       "perTB": "Per TB/Billed monthly",
-      "price": "7",
+      "price": "6.99",
       "cta": "Select plan",
       "whatsIncluded": {
-        "title": "What's included:",
+        "title": "What's included",
         "features": [
-          "Minimum monthly charge of €7",
-          "Minimum storage of 1TB",
+          "Billed monthly",
+          "Server-side encryption",
           "AWS S3 and IAM API compatible",
           "Increased speed",
           "Flexible storage",
@@ -68,32 +67,24 @@
   "WhyChooseInternxtSection": {
     "title": "Why choose Internxt object storage?",
     "description": "The benefits of object cloud storage with Internxt emphasize effective data management and security.",
-    "cards": [
-      {
-        "title": "Zero ingress and egress fees",
-        "description": "Zero ingress and egress fees eliminate costs for transferring data into or out of storage, allowing for predictable budgeting and cost savings. This benefit is crucial for businesses with frequent data movement or large-scale data operations."
-      },
-      {
-        "title": "Cost per GB",
-        "description": "With our pay-as-you-go model, you only pay for the storage you actually use. Object storage is designed to handle large volumes of unstructured data, which is typically less expensive per GB compared to structured data, which requires more complex management."
-      },
-      {
-        "title": "Durability & Availability",
-        "description": "We enable redundant data storage that replicates and distributes data across multiple European servers. Data is protected from loss or corruption with technology that guarantees 99.999999999% (11 9s) of data durability for each object."
-      },
-      {
-        "title": "Security",
-        "description": "With our object cloud storage, we use multiple security measures to protect your data. Your data is encrypted in transit and at rest. We support the HTTPS protocol and server-side encryption with customer-provided encryption keys (SSE-C)."
-      },
-      {
-        "title": "Simple storage service",
-        "description": "Internxt provides object storage using the S3 protocol to simplify and manage data workflows, ensuring high availability and durability of data with the added security focus that Internxt prioritizes."
-      },
-      {
-        "title": "Speed",
-        "description": "Object storage offers superior speed by allowing multiple read and write operations simultaneously and utilizing rich metadata for faster data retrieval. This allows for quicker access times and efficient handling of large volumes of data."
-      }
-    ],
+    "scrollableSection": {
+      "titles": [
+        "Zero ingress and egress fees",
+        "Cost per GB",
+        "Durability & Availability",
+        "Security",
+        "Simple storage service",
+        "Speed"
+      ],
+      "descriptions": [
+        "Zero ingress and egress fees eliminate costs for transferring data into or out of storage, allowing for predictable budgeting and cost savings. This benefit is crucial for businesses with frequent data movement or large-scale data operations.",
+        "With our pay-as-you-go model, you only pay for the storage you actually use. Object storage is designed to handle large volumes of unstructured data, which is typically less expensive per GB compared to structured data, which requires more complex management.",
+        "We enable redundant data storage that replicates and distributes data across multiple European servers. Data is protected from loss or corruption with technology that guarantees 99.999999999% (11 9s) of data durability for each object.",
+        "With our object cloud storage, we use multiple security measures to protect your data. Your data is encrypted in transit and at rest. We support the HTTPS protocol and server-side encryption with customer-provided encryption keys (SSE-C).",
+        "Internxt provides object storage using the S3 protocol to simplify and manage data workflows, ensuring high availability and durability of data with the added security focus that Internxt prioritizes.",
+        "Object storage offers superior speed by allowing multiple read and write operations simultaneously and utilizing rich metadata for faster data retrieval. This allows for quicker access times and efficient handling of large volumes of data."
+      ]
+    },
     "bannerText": {
       "title": "Internxt object cloud storage",
       "description": "Experience superior data management, speed, and efficiency",
@@ -203,5 +194,10 @@
       "successMessage": "Your message has been sent successfully.",
       "errorMessage": "An error occurred. Please try again."
     }
+  },
+  "CtaSection": {
+    "title": "Internxt object cloud storage",
+    "description": "Experience superior data management, speed, and efficiency",
+    "cta": "Get started"
   }
 }

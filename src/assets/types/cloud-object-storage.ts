@@ -6,6 +6,7 @@ export interface CloudObjectStorageText {
   WhyChooseInternxtSection: WhyChooseInternxtSection;
   FaqSection: FAQSection;
   ContactSales: ContactSales;
+  CtaSection: CtaSection;
 }
 
 export interface ContactSales {
@@ -23,11 +24,17 @@ export interface Form {
   totalCharacters: string;
   options: string[];
   howWeCanHelp: string;
-  howWeCanHelpPlaceholder: string;
+  howWeCanHelpPlaceHolder: string;
   cta: string;
   ctaSending: string;
   successMessage: string;
   errorMessage: string;
+}
+
+export interface CtaSection {
+  title: string;
+  description: string;
+  cta: string;
 }
 
 export interface FAQSection {
@@ -41,11 +48,10 @@ export interface FAQ {
 }
 
 export interface HeroSection {
+  label: string;
   title: Title;
   description: string;
   cta: string;
-  separator: string;
-  cta2: string;
 }
 
 export interface Title {
@@ -99,7 +105,7 @@ export interface WhatsIncluded {
 export interface WhyChooseInternxtSection {
   title: string;
   description: string;
-  cards: PayAsYouGoCard[];
+  scrollableSection: ScrollableSection;
   bannerText: BannerText;
 }
 
@@ -109,4 +115,9 @@ export interface BannerText {
   cta: string;
   separator: string;
   cta2: string;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
 }

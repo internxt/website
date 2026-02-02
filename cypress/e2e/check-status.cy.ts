@@ -46,6 +46,7 @@ const nameFiles = [
   'terabox-alternative',
   'alternative-to-zoom',
   'webdav',
+  'cloud-object-storage',
 ];
 
 const langs = {
