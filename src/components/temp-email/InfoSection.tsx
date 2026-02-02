@@ -46,7 +46,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
-          <div className="flex w-full flex-col items-center justify-center">
+          <div className="flex hidden w-full flex-col items-center justify-center">
             <Image
               src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
               alt="File Arrow Up icon"
@@ -81,7 +81,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center">
+            <div className=" hidden w-full flex-col items-center justify-center">
               <Image
                 src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
                 alt="File Arrow Up icon"
@@ -124,7 +124,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </div>
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center">
+            <div className="hidden w-full flex-col items-center justify-center">
               <Image
                 src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
                 alt="File Arrow Up icon"
@@ -167,7 +167,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center pt-6">
+            <div className="flex hidden w-full flex-col items-center justify-center pt-6">
               <Image
                 src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
                 alt="File Arrow Up icon"

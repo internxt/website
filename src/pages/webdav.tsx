@@ -3,11 +3,10 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/webdav/HeroSection';
 import { WebDAVSupportSection } from '@/components/webdav/WebDAVSupportSection';
 import { DownloadCLISection } from '@/components/webdav/DownloadCLISection';
-import CtaSection from '@/components/shared/CtaSection';
 import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
 import Footer from '@/components/layout/footers/Footer';
-import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
@@ -18,15 +17,48 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
 
       <HeroSection textContent={langJson.HeroSection} />
 
+      <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
+
       <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
+
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              {langJson.CtaSection.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+        bgPadding=" px-20 py-10"
+        bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+      />
 
       <DownloadCLISection textContent={langJson.DownloadCLISection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
-
       <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB} />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection2}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {langJson.CtaSection2.title}
+            </p>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              {langJson.CtaSection2.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+        bgPadding=" px-20 py-10"
+      />
 
       <FAQSection textContent={langJson.FaqSection} />
 

@@ -1,55 +1,89 @@
 {
   "HeroSection": {
-    "title": "Support Internxt CLI et WebDAV",
-    "description": "Internxt fonctionne avec le client WebDAV de votre choix pour gérer vos fichiers Internxt Drive via des commandes.",
-    "cta": "Commencer"
+    "label": "Stockage d'objets",
+    "title": "Internxt **Rclone**, **CLI** et **WebDAV**",
+    "description": "Connectez votre Internxt Drive à Rclone nativement ou via WebDAV pour une gestion de fichiers plus avancée",
+    "cta": "Obtenir Internxt"
+  },
+  "RcloneSupportSection": {
+    "title": "Support natif Rclone d'Internxt",
+    "description": [
+      "Rclone est un outil en ligne de commande qui connecte votre ordinateur à Internxt Drive via une interface flexible et scriptable. Il est conçu pour les utilisateurs qui souhaitent des transferts de fichiers rapides, fiables et personnalisables.",
+      "Une fois configuré, rclone connecte votre appareil directement à votre compte de stockage, facilitant ainsi le déplacement de fichiers, l'exécution de sauvegardes et l'automatisation des transferts sur vos systèmes."
+    ],
+    "howToInstall": "Comment installer",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "Informations sur l'utilisation de rclone, ses fonctionnalités, ses commandes et les instructions de téléchargement à partir de notre dépôt GitHub.",
+        "cta": "En savoir plus"
+      },
+      {
+        "title": "Guide de l'utilisateur",
+        "description": "Découvrez comment connecter et configurer Internxt Drive avec rclone nativement à partir de notre centre d'aide.",
+        "cta": "Lire le guide"
+      },
+      {
+        "title": "Mises à jour",
+        "description": "Restez informé des nouvelles versions de l'Internxt CLI à partir de notre code source pour découvrir les nouvelles fonctionnalités.",
+        "cta": "Plus de détails"
+      }
+    ]
   },
   "WebDAVSupportSection": {
-    "title": "Interface de ligne de commande Internxt et support WebDAV",
+    "title": "Support Internxt CLI et WebDAV",
     "description": [
-      "L'interface CLI d'Internxt interagit avec votre ordinateur via une série de commandes. Une CLI offre un moyen puissant et efficace de gérer diverses tâches avec votre compte Internxt Drive.",
-      "L'interface CLI d'Internxt agit comme un pont entre votre ordinateur et Internxt Drive via le client WebDAV de votre choix. WebDAV est une extension de HTTP qui vous permet de gérer des fichiers entre votre machine locale et votre compte Internxt."
+      "L'interface CLI d'Internxt interagit avec votre ordinateur via une série de commandes. Une interface CLI offre un moyen puissant et efficace de gérer diverses tâches avec votre compte Internxt Drive.",
+      "L'Internxt CLI agit comme un pont entre votre ordinateur et Internxt Drive via le client WebDAV de votre choix. WebDAV est une extension de HTTP qui vous permet de gérer des fichiers entre votre machine locale et votre compte Internxt."
     ],
     "howToInstall": {
       "title": "Comment installer",
       "steps": [
         {
-          "step": "Étape 1 :",
+          "step": "Étape 1",
           "description": "[Télécharger et installer Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
         },
         {
-          "step": "Étape 2 :",
+          "step": "Étape 2",
           "description": "Connectez-vous à la CLI en utilisant la commande internxt login."
         },
         {
-          "step": "Étape 3 :",
+          "step": "Étape 3",
           "description": "Choisissez votre client WebDAV préféré."
         },
         {
-          "step": "Étape 4 :",
+          "step": "Étape 4",
           "description": "Insérez l'URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) et le port 3005."
         }
       ]
     },
-    "whyUseCLI": {
-      "title": "Pourquoi utiliser une CLI avec un client WebDAV",
-      "description": [
-        "Nous avons conçu l'interface CLI d'Internxt et le support WebDAV avec le même accent sur la sécurité et une architecture primée pour notre engagement envers la confidentialité.",
-        "Vos fichiers sont chiffrés sur votre appareil avant même d'atteindre nos serveurs, et vous seul possédez la clé de déchiffrement. Cet engagement inébranlable envers la sécurité vous donne un contrôle total sur vos données.",
-        "N'oubliez pas de donner la priorité à la sécurité lors du transfert de données sensibles ou confidentielles en ligne."
-      ]
-    }
+    "questions": [
+      {
+        "question": "Support natif rclone d'Internxt",
+        "answer": [
+          "L'intégration native de rclone vous permet de synchroniser, copier et gérer vos fichiers en utilisant l'un des outils open source les plus fiables pour les flux de travail de stockage en nuage.",
+          "La connexion d'Internxt Drive avec rclone permet des transferts rapides et flexibles, l'automatisation et une intégration facile dans les configurations de sauvegarde ou de migration existantes sans compromettre la sécurité."
+        ]
+      },
+      {
+        "question": "Support WebDAV d'Internxt",
+        "answer": [
+          "Vous pouvez également utiliser l'Internxt CLI pour connecter et gérer vos fichiers, avec le même accent sur la sécurité et une architecture primée pour une confidentialité maximale.",
+          "Vos fichiers sont cryptés sur votre appareil avant même d'atteindre nos serveurs, et vous seul possédez la clé de décryptage. Cet engagement inébranlable en faveur de la sécurité vous donne un contrôle total sur vos données."
+        ]
+      }
+    ]
   },
   "DownloadCLISection": {
-    "title": "Télécharger l'interface CLI d'Internxt",
+    "title": "Télécharger l'Internxt CLI",
     "downloads": [
       {
         "platform": "Windows",
-        "description": "Pour Windows 10 et versions supérieures."
+        "description": "Pour Windows 10 et versions ultérieures."
       },
       {
         "platform": "Mac",
-        "description": "Pour MacOS 11 Big Sur ou versions supérieures."
+        "description": "Pour MacOS 11 Big Sur ou version ultérieure."
       },
       {
         "platform": "Linux",
@@ -60,66 +94,77 @@
     "command": "npm i -g @internxt/cli"
   },
   "CtaSection": {
-    "title": "La sécurité rencontre la confidentialité",
-    "description": "Protégez vos fichiers avec le stockage cloud sécurisé d'Internxt.",
-    "cta": "Créer un compte gratuit"
+    "title": "Protégez vos fichiers avec Internxt Drive",
+    "description": "Stockage cloud sécurisé conçu dans le respect de la vie privée",
+    "cta": "Obtenir Internxt"
   },
   "HowToUseCLISection": {
-    "title": "Comment configurer et utiliser l'interface CLI d'Internxt",
-    "description": "Nous avons créé des ressources pour vous aider à télécharger l'interface CLI d'Internxt et à démarrer avec WebDAV.",
+    "title": "Comment compiler et utiliser l'Internxt CLI",
+    "description": "Nous avons créé des ressources pour vous aider à télécharger l'Internxt CLI et à démarrer avec WebDAV.",
     "info": [
       {
         "title": "ReadMe",
-        "description": "Informations sur l'interface CLI d'Internxt. Découvrez son utilisation, ses fonctionnalités, ses commandes et les instructions de téléchargement sur notre dépôt GitHub.",
+        "description": "Informations sur l'Internxt CLI. Découvrez son utilisation, ses fonctionnalités, ses commandes et les instructions de téléchargement à partir de notre dépôt GitHub.",
         "cta": "En savoir plus"
       },
       {
         "title": "Guide de l'utilisateur",
-        "description": "En savoir plus sur l'interface CLI d'Internxt, le fonctionnement de WebDAV et les fonctionnalités de sécurité sur notre centre d'aide.",
+        "description": "En savoir plus sur l'Internxt CLI, le fonctionnement de WebDAV et les fonctions de sécurité grâce à notre centre d'aide.",
         "cta": "Lire le guide"
       },
       {
         "title": "Mises à jour",
-        "description": "Restez informé des nouvelles mises à jour pour l'interface CLI d'Internxt à partir de notre code source pour découvrir les nouvelles versions et fonctionnalités.",
+        "description": "Restez au courant des nouvelles mises à jour de l'Internxt CLI à partir de notre code source pour découvrir les nouvelles versions et fonctionnalités.",
         "cta": "Plus de détails"
       }
     ]
   },
   "CtaSection2": {
     "title": "Gérez vos fichiers comme un pro",
-    "description": "Profitez d'un contrôle direct sur vos fichiers avec des fonctionnalités de gestion de fichiers de bureau.",
-    "cta": "Créer un compte gratuit"
+    "description": "Profitez d'un contrôle direct de vos fichiers avec rclone ou WebDAV.",
+    "cta": "Obtenir Internxt"
   },
   "FaqSection": {
     "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qu'est-ce que l'interface CLI d'Internxt ?",
+        "question": "Qu'est-ce que rclone ?",
         "answer": [
-          "L'interface de ligne de commande (CLI) d'Internxt interagit avec un programme informatique en tapant des commandes textuelles au lieu d'utiliser une souris et une interface graphique (GUI) comme des fenêtres, des icônes et des menus.",
-          "Les CLI sont des outils puissants pour ceux qui veulent plus de contrôle et d'efficacité dans l'interaction avec leurs ordinateurs."
+          "Rclone est un outil en ligne de commande open source qui vous permet de gérer, synchroniser et transférer des fichiers entre votre ordinateur et les services de stockage en nuage."
+        ]
+      },
+      {
+        "question": "Comment puis-je connecter Internxt à rclone ?",
+        "answer": [
+          "Tout d'abord, vous devez télécharger rclone sur le site officiel, puis vous pouvez suivre les étapes d'installation de notre centre d'aide."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que l'Internxt CLI ?",
+        "answer": [
+          "L'interface de ligne de commande (CLI) d'Internxt interagit avec un programme informatique en tapant des commandes textuelles au lieu d'utiliser une souris et une interface graphique (GUI)."
         ]
       },
       {
         "question": "Qu'est-ce que WebDAV ?",
         "answer": [
-          "WebDAV signifie Web Distributed Authoring and Versioning. Ses fonctionnalités de base incluent le partage, la copie, le déplacement et la modification de fichiers via un serveur web. WebDAV utilise couramment des protocoles de sécurité HTTP pour garantir une communication sécurisée entre les clients et les serveurs."
+          "WebDAV signifie Web Distributed Authoring and Versioning. Sa fonctionnalité de base comprend le partage, la copie, le déplacement et la modification de fichiers via un serveur web. WebDAV utilise couramment des protocoles de sécurité HTTP pour garantir une communication sécurisée entre les clients et les serveurs."
         ]
       },
       {
-        "question": "Comment puis-il installer l'interface CLI d'Internxt ?",
+        "question": "Comment puis-je installer l'Internxt CLI ?",
         "answer": [
-          "Pour installer notre CLI sur votre ordinateur et commencer à utiliser WebDAV, vous pouvez suivre les étapes d'installation de notre [page GitHub](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+          "Pour installer notre CLI sur votre ordinateur et commencer à utiliser WebDAV, vous pouvez suivre les étapes d'installation de notre page GitHub."
         ]
       },
       {
-        "question": "Est-ce que WebDAV est sécurisé ?",
+        "question": "WebDAV est-il sécurisé ?",
         "answer": [
-          "Oui. Lorsqu'elle est activée, la fonctionnalité WebDAV utilise un serveur exclusivement local sur votre machine, grâce à notre CLI. Nous implémentons les mêmes méthodes de chiffrement à connaissance nulle et de bout en bout pour garantir la confidentialité et la sécurité de vos fichiers."
+          "Oui. Lorsqu'elle est activée, la fonction WebDAV utilise un serveur local uniquement sur votre machine, grâce à notre CLI. Nous mettons en œuvre les mêmes méthodes de zero-knowledge et de cryptage de bout en bout pour garantir la confidentialité et la sécurité de vos fichiers."
         ]
       },
       {
-        "question": "Quels clients WebDAV sont supportés par Internxt ?",
+        "question": "Quels sont les clients WebDAV supportés par Internxt ?",
         "answer": [
           "Nous supportons les clients WebDAV suivants :",
           "* CyberDuck",
@@ -131,7 +176,7 @@
       {
         "question": "Dois-je m'inquiéter des certificats auto-signés ?",
         "answer": [
-          "Internxt utilise des certificats auto-signés pour le serveur local WebDAV. Bien que certains clients WebDAV puissent afficher un avertissement concernant ces certificats, ils peuvent être ignorés en toute sécurité. Le chiffrement protège vos données quoi qu'il arrive."
+          "Internxt utilise des certificats auto-signés pour le serveur local WebDAV. Bien que certains clients WebDAV puissent émettre un avertissement concernant ces certificats, ils peuvent être ignorés en toute sécurité. Le cryptage protège vos données quoi qu'il en soit."
         ]
       }
     ]
