@@ -45,7 +45,7 @@ const nameFiles = [
   'sync-alternative',
   'terabox-alternative',
   'alternative-to-zoom',
-  'webdav',
+  'webdav-rclone',
 ];
 
 const langs = {
