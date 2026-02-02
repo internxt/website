@@ -38,7 +38,7 @@ const SignUpBanner = ({
 
         {/* Imagen oculta en móvil, visible desde md */}
         <div className="relative hidden md:flex md:items-center">
-          <div className="relative right-0 flex flex-col object-contain pt-10">
+          <div className="relative left-20 flex flex-col object-contain pt-10">
             <Image
               src={getImage('/banners/components_for_banners/Grid.webp')}
               width={527}
