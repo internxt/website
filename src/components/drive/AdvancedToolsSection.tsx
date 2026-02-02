@@ -11,10 +11,10 @@ import { useRef, useState, useEffect } from 'react';
 
 interface AdvancedToolsProps {
   textContent: DriveText['AdvancedToolsSection'];
-  lang: string;
+  lang?: string;
 }
 
-const AdvancedToolsSection = ({ textContent, lang }: AdvancedToolsProps): JSX.Element => {
+const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps): JSX.Element => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
