@@ -3,7 +3,7 @@
     "label": "Object Storage",
     "title": {
       "line1": "**Internxt S3**",
-      "line2": "Compatible object storage"
+      "line2": "Free cloud object storage"
     },
     "description": "An efficient, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
     "cta": "Get started"
@@ -27,7 +27,7 @@
     ]
   },
   "PriceCardSection": {
-    "title": "Internxt object cloud storage\n combines security and efficiency",
+    "title": "Internxt free object storage \n combines security and efficiency",
     "description": "Internxt object storage is an affordable, high-performance solution revolutionizing online data storage, perfect for individuals or organizations needing reliable and secure infrastructure at a minimal cost.",
     "payAsYouGoCard": {
       "title": "Pay as you go!",
@@ -196,12 +196,12 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt is Cheap object storage",
-    "description": "Internxt object cloud storage solutions combines security and efficiency",
+    "title": "Internxt S3: Free cloud object storage",
+    "description": "Internxt free object storage services combines security and efficiency",
     "cta": "Get started"
   },
   "CtaSectionV2": {
-    "title": "Internxt object cloud storage",
+    "title": "Internxt free object cloud storage",
     "description": "Internxt object cloud storage solutions combines security and efficiency",
     "cta": "Get started"
   }

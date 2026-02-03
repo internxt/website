@@ -12,7 +12,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
 
-interface CloudObjectStorageProps {
+interface FreeCloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudObjectStorageText;
@@ -20,17 +20,23 @@ interface CloudObjectStorageProps {
   locale: GetServerSidePropsContext['locale'];
 }
 
-const CloudObjectStorage = ({
+const FreeCloudObjectStorage = ({
   metatagsDescription,
   navbarText,
   textContent,
   footerText,
   locale,
-}: CloudObjectStorageProps): JSX.Element => {
+}: FreeCloudObjectStorageProps): JSX.Element => {
   const metatags = metatagsDescription.filter((metatag) => metatag.id === 'cloud-object-storage')[0];
 
   const lang = locale as string;
 
+  const scrollToTop = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
@@ -99,7 +105,7 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
   const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
-  const textContent = require(`@/assets/lang/${locale}/cloud-object-storage.json`);
+  const textContent = require(`@/assets/lang/${locale}/free-cloud-object-storage.json`);
   const footerText = require(`@/assets/lang/${locale}/footer.json`);
 
   return {
@@ -113,4 +119,4 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default CloudObjectStorage;
+export default FreeCloudObjectStorage;
