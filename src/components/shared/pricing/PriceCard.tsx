@@ -35,7 +35,6 @@ const ICON_MAPS = {
     Password,
     CirclesThreePlus,
     Files,
-    Image,
     CellTower,
     Shield,
     Sparkle,
