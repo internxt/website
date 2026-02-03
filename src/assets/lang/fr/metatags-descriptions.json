@@ -30,6 +30,11 @@
     "description": "Accédez à votre compte Internxt Drive avec les fonctionnalités Internxt CLI, WebDAV et Rclone. Découvrez une nouvelle méthode pour gérer et contrôler vos fichiers en toute confidentialité."
   },
   {
+    "id": "free-cloud-object-storage",
+    "title": "Stockage d'objets cloud gratuit : Internxt compatible S3 et sécurisé",
+    "description": "Découvrez le stockage d'objets cloud gratuit et des services professionnels de stockage d'objets. Internxt fournit un cloud de stockage d'objets sécurisé et compatible S3 pour vos données."
+  },
+  {
     "id": "what-google-knows",
     "title": "Ce que Google sait de moi – Internxt",
     "description": "Découvrez les données que Google conserve sur vous. Comment consulter et télécharger vos données Google, comment les supprimer et comment désactiver la collecte de données par Google."
