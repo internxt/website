@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt's **data centers**\n and **certifications**",
     "description": "We offer compliance, security, and European\n cloud storage to protect your data.",
-    "features": ["GDPR, ISO, SOC 2, and HIPAA compliant", "Post-quantum encryption", "Open source and audited"]
+    "features": ["GDPR, ISO, SOC 2, HIPAA, ENS", "Post-quantum encryption", "Open source and audited"]
   },
   "WhatIsDataCenterSection": {
     "title": "What is a data center?",
