@@ -1,193 +1,119 @@
 {
   "HeroSection": {
+    "label": "物件儲存",
     "title": {
-      "line1": "Internxt S3",
-      "line2": "雲端物件儲存服"
+      "line1": "**Internxt S3**",
+      "line2": "相容的物件儲存"
     },
-    "description": "一個安全、經濟實惠且可擴展的雲端儲存解決方案，用於儲存、訪問和管理大量數據。",
-    "cta": "立即開始",
-    "separator": "|",
-    "cta2": "聯繫銷售"
+    "description": "高效、可擴展的雲端儲存解決方案，專為存取與管理大規模數據而設計。",
+    "cta": "立即開始"
   },
   "PredictablePricingSection": {
-    "title": "簡單且可預測的價格，無 API 費用",
-    "description": "避免複雜的不可預測儲存費用。Internxt 提供按儲存容量計費的簡單費率，無隱藏費用。",
+    "title": "簡單、可預測的定價\n 零手續費，無 API 費用",
+    "description": "免除難以預測的儲存帳單煩惱。Internxt 提供透明的儲存容量費率，無隱藏費用。",
     "info": [
       {
-        "title": "100% 活躍",
-        "description": "超快速且即時可用"
+        "title": "100% 熱儲存",
+        "description": "極速且可即時存取"
       },
       {
-        "title": "最多 80% 節省",
-        "description": "比 AWS 便宜"
+        "title": "最高節省 80%",
+        "description": "比 AWS 更實惠"
       },
       {
-        "title": "無費用",
+        "title": "零手續費",
         "description": "免費數據傳輸"
       }
     ]
   },
   "PriceCardSection": {
-    "title": "Internxt 的物件儲存結合了安全性與高效能",
-    "description": "Internxt 的物件儲存是一個成本效益高且強大的解決方案，徹底改變了線上數據儲存，特別適合需要可靠、安全、低成本基礎設施的個人或企業。",
+    "title": "Internxt 物件雲端儲存\n 兼顧安全與效率",
+    "description": "Internxt 物件儲存是一種經濟實惠的高性能解決方案，為個人或需要可靠基礎設施的組織提供安全保障。",
     "payAsYouGoCard": {
-      "title": "只為你所使用的支付費用！",
-      "description": "僅為你實際使用的儲存空間付費。"
+      "title": "按需計費！",
+      "description": "只需為您實際使用的儲存空間付費。"
     },
     "cardText": {
-      "label": "Internxt S3",
-      "perTB": "每 TB / 月計費",
-      "price": "7",
-      "cta": "選擇計劃",
+      "label": "S3",
+      "perTB": "每 TB/按月計費",
+      "price": "6.99",
+      "cta": "選擇方案",
       "whatsIncluded": {
-        "title": "包括：",
+        "title": "包含內容",
         "features": [
-          "每月最低 7€",
-          "最少 1 TB 儲存空間",
-          "與 AWS S3 及 IAM 兼容",
-          "增強的速度",
-          "靈活的儲存",
-          "開放源碼",
+          "按月計費",
+          "伺服器端加密",
+          "相容 AWS S3 與 IAM API",
+          "速度提升",
+          "靈活儲存",
+          "開源",
           "符合 GDPR",
-          "優質客戶支持"
+          "優質客戶支援"
         ]
       }
     },
-    "oneTimePayment": "*需支付 1€ 帳戶驗證費用"
+    "oneTimePayment": "*帳戶驗證需支付 1 歐元的單次費用"
   },
   "HowMuchYouNeedSection": {
-    "title": "你需要多少儲存空間？",
-    "description": "使用我們的成本計算器來查看儲存物件的成本。了解我們與市場領導者的比較，並探索如何節省費用。",
-    "pay-as-you-go": "按使用量計費",
+    "title": "您需要多少儲存空間？",
+    "description": "了解使用 Internxt 可以節省多少成本。使用我們的計算機與主流雲端業者進行比較。",
+    "pay-as-you-go": "按需計費定價",
     "perMonth": "/每月",
     "perYear": "/每年",
-    "storageAmount": "儲存空間量",
+    "storageAmount": "儲存容量",
     "percentDownloadPerMonth": "每月下載百分比",
     "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
-    "title": "為什麼選擇 Internxt 的物件儲存？",
-    "description": "Internxt 的物件儲存優勢在於其高效且安全的數據管理。",
-    "cards": [
-      {
-        "title": "無進出費用",
-        "description": "無進出費用，降低與數據傳輸相關的成本，確保費用可預測且具有成本效益。這對於經常處理數據的企業尤其有利。"
-      },
-      {
-        "title": "按每 GB 收費",
-        "description": "通過按使用量計費的模式，你只需為實際使用的儲存空間付費。物件儲存通常比結構化數據儲存更具成本效益，後者需要更為複雜的管理。"
-      },
-      {
-        "title": "耐久性與可用性",
-        "description": "我們提供冗餘的數據儲存，將數據複製並分布在多個歐洲伺服器上，保護你的數據免於丟失或損壞，並確保每個物件擁有 99.999999999%（11 個九） 的耐久性。"
-      },
-      {
-        "title": "安全性",
-        "description": "我們的雲端物件儲存實施了多重安全措施來保護你的數據。在傳輸過程中和靜態數據都會加密。我們支援 HTTPS 協議和伺服器端加密（SSE-C），由用戶提供加密密鑰。"
-      },
-      {
-        "title": "簡化的儲存服務",
-        "description": "Internxt 透過 S3 協議提供物件儲存服務，實現簡單的數據流管理，保證高可用性和高耐久性，並優先保障安全性。"
-      },
-      {
-        "title": "速度",
-        "description": "物件儲存允許同時讀取和寫入操作，並利用豐富的元數據來更快地存取數據。這能夠縮短存取時間，提高大數據量的管理效率。"
-      }
-    ],
+    "title": "為什麼選擇 Internxt 物件儲存？",
+    "description": "Internxt 物件雲端儲存的優勢在於有效的數據管理與安全性。",
+    "scrollableSection": {
+      "titles": ["零流量費用 (Ingress/Egress)", "每 GB 成本", "持久性與可用性", "安全性", "簡單儲存服務", "速度"],
+      "descriptions": [
+        "免除數據流入與流出費用，讓預算更精確。這對於有頻繁數據遷移需求的企業至關重要。",
+        "採用按需計費模式，僅為實際使用付費。物件儲存處理非結構化數據的成本通常較低。",
+        "數據在多個歐洲伺服器上進行冗餘儲存，保證 99.999999999% (11個9) 的數據持久性。",
+        "數據在傳輸與靜態儲存時均加密。支援 HTTPS 協議與用戶提供密鑰的伺服器端加密 (SSE-C)。",
+        "Internxt 使用 S3 協議簡化工作流，確保高可用性的同時，優先考慮安全性。",
+        "透過並發讀寫與豐富的元數據，物件儲存提供卓越的存取速度。"
+      ]
+    },
     "bannerText": {
-      "title": "Internxt 的雲端物件儲存",
-      "description": "享受超越的數據管理、高效能和更高速度",
+      "title": "Internxt 物件雲端儲存",
+      "description": "體驗卓越的數據管理、速度與效率",
       "cta": "立即開始",
       "separator": "|",
-      "cta2": "聯繫銷售"
+      "cta2": "聯繫我們"
     }
   },
   "FaqSection": {
-    "title": "有問題嗎？我們有答案",
+    "title": "常見問題解答",
     "faq": [
       {
         "question": "什麼是物件儲存？",
         "answer": [
-          "物件儲存將大量數據（如照片、影片和電子郵件）儲存為個別物件，每個物件都有唯一的識別碼。",
-          "與傳統的檔案儲存不同，物件儲存將數據存儲在一個平坦的地址空間中，通常在分散式儲存基礎設施上。",
-          "雲端物件儲存更容易擴展，能夠更快速地存取單個物件，並根據儲存需求降低成本。"
+          "將大量數據（如照片、影片）作為帶有唯一識別碼的獨立「物件」進行儲存。",
+          "與傳統文件系統不同，它使用扁平地址空間，更易於擴展且存取更快。"
         ]
       },
       {
-        "question": "什麼是 S3 協議？",
-        "answer": [
-          "S3（簡單儲存服務）協議是一組規範，定義了如何在亞馬遜的 S3 服務中訪問、儲存和管理數據，這是亞馬遜雲服務（AWS）的一個儲存服務。"
-        ]
-      },
-      {
-        "question": "我會得到多少物件儲存空間？",
-        "answer": ["Internxt 的物件儲存可以根據你的需求擴展。每月按使用的 GB 計費，你可以根據需要增加或減少儲存空間。"]
-      },
-      {
-        "question": "我能將 Internxt 的物件儲存整合到現有的應用程式和服務中嗎？",
-        "answer": [
-          "是的，Internxt 的物件儲存與 AWS S3 API 完全兼容，這使得它能與各種應用程式、工具和服務無縫集成，這些應用程式、工具和服務支援 S3 協議。",
-          "Internxt 的 S3 兼容性讓用戶能夠將我們的服務作為補充或替代解決方案來儲存和管理物件。"
-        ]
-      },
-      {
-        "question": "Internxt 有最小儲存政策嗎？",
-        "answer": [
-          "Internxt 的物件儲存計劃有最少 1 TB 的儲存空間。如果在 30 天內刪除儲存的物件，將會對刪除的儲存空間收取相應費用，這些費用會根據剩餘天數計算。",
-          "這與 AWS 等大型儲存公司類似。"
-        ]
-      },
-      {
-        "question": "Internxt 是否收取每月儲存費用？",
-        "answer": [
-          "Internxt 每月會根據每個月的 1 TB 儲存計劃收取最低費用。如果你儲存的空間小於 1 TB（例如 4 KB），你仍然會被收取 1 TB 儲存空間的費用。"
-        ]
-      },
-      {
-        "question": "如果我儲存的小文件（小於 4 KB）呢？",
-        "answer": ["Internxt 會為這些小於 4 KB 的文件按標準 1 TB 計費，並提供與其他數據的價格一致的運算費用。"]
-      },
-      {
-        "question": "物件儲存和檔案儲存有什麼區別？",
-        "answer": [
-          "物件儲存以平坦的結構儲存大量數據，這些數據通常是多媒體、網頁應用程式或備份檔案，每個檔案都是單獨的物件，並透過分散的伺服器網絡提供。",
-          "檔案儲存則是將數據按檔案層級組織，依照層級結構儲存。此類儲存適用於需要簡單檔案存取和管理的應用程式。"
-        ]
-      },
-      {
-        "question": "我能將資料在 AWS S3 和 Internxt 之間移動嗎？",
-        "answer": [
-          "是的，Internxt 的物件儲存完全兼容 AWS S3 API，這意味著你可以使用我們的友好 API 和配置選項，在 AWS S3 和 Internxt 之間無縫移動資料。",
-          "Internxt 的 S3 兼容性使其成為補充或替代解決方案的理想選擇。"
-        ]
-      },
-      {
-        "question": "Internxt 的物件儲存速度如何？",
-        "answer": [
-          "Internxt 使用分散式伺服器網絡來優化對儲存數據的訪問，能夠即時取回你的數據，並且儲存擴展快速，滿足你的需求。Internxt 提供了企業和個人所需的速度和可用性。"
-        ]
-      },
-      {
-        "question": "我可以免費試用 Internxt 的物件儲存嗎？",
-        "answer": [
-          "是的，你可以免費試用 Internxt 的物件儲存。我們的試用計劃包括 1 TB 的空間，讓你體驗 Internxt 雲端儲存的功能和效能。"
-        ]
+        "question": "有最低儲存政策嗎？",
+        "answer": ["最低月度政策為 1TB。若儲存未滿 30 天即刪除，仍將按 30 天計費，此政策與 AWS 相同。"]
       }
     ]
   },
   "ContactSales": {
     "title": "聯繫銷售",
-    "description": "填寫聯絡表格，團隊將盡快與您聯繫。",
+    "description": "填寫聯繫表單，我們的團隊將很快與您聯繫。",
     "form": {
-      "name": "名字",
-      "surname": "姓氏",
+      "name": "全名",
       "email": "電子郵件地址",
       "company": "公司名稱",
       "phone": "電話號碼",
       "howMuchStorage": "您需要多少儲存空間？",
       "totalCharacters": " /1000",
       "options": [
-        "選擇",
+        "請選擇",
         "1 - 10TB",
         "15 - 25TB",
         "25 - 50 TB",
@@ -198,12 +124,22 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "我們如何幫助您？",
-      "howWeCanHelpPlaceHolder": "請告訴我們您的需求",
+      "howWeCanHelp": "我們能為您提供什麼幫助？（選填）",
+      "howWeCanHelpPlaceHolder": "告訴我們更多關於您的需求",
       "cta": "發送消息",
-      "ctaSending": "發送中...",
-      "successMessage": "您的消息已成功发送。",
-      "errorMessage": "发生错误。请再试一次。"
+      "ctaSending": "正在發送...",
+      "successMessage": "您的消息已成功發送。",
+      "errorMessage": "發生錯誤，請重試。"
     }
+  },
+  "CtaSection": {
+    "title": "Internxt 物件雲端儲存",
+    "description": "體驗卓越的數據管理、速度與效率",
+    "cta": "立即開始"
+  },
+  "CtaSectionV2": {
+    "title": "Internxt 雲端物件儲存",
+    "description": "Internxt 的雲端儲存解決方案結合了安全性和效率",
+    "cta": "開始"
   }
 }
