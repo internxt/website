@@ -1,11 +1,6 @@
-import { Fragment, useState } from 'react';
-import RevealX from '@/components/components/RevealX';
 import Image from 'next/image';
 
-const FeaturesSliderImg = ({ textContent, cardInfo, backgroundClass = 'bg-white' }) => {
-  const [cardIndex, setCardIndex] = useState(0);
-  const DescriptionIcon = cardInfo[cardIndex].icon;
-
+const FeaturesSliderImg = ({ textContent, cardInfo }) => {
   return (
     <section className={`overflow-hidden bg-gray-1`}>
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
@@ -17,7 +12,6 @@ const FeaturesSliderImg = ({ textContent, cardInfo, backgroundClass = 'bg-white'
         </div>
       </section>
 
-      {/* Mobile view */}
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-5 pb-20 md:grid-cols-2">
         {cardInfo.map((info) => (
           <div key={info.title} className="flex h-full flex-col items-start justify-start rounded-2xl bg-white">

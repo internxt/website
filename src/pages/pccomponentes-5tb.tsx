@@ -10,11 +10,11 @@ import { Interval } from '@/services/stripe.service';
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 const trialToken = 'pc-cloud-25';
 
-const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
+const PCComponentes5tb = ({ metatagsDescriptions, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [pageName] = useState('Pricing Individuals Annually');
 
-  const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
+  const { currency, currencyValue, loadingCards, coupon } = usePricing({
     couponCode: PromoCodeName.PcComponentes5TB,
   });
 
