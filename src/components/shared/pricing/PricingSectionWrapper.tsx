@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';

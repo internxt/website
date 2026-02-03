@@ -20,7 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       const coupons = await Promise.all([twoTBCoupon, fiveTBCoupon, tenTBCoupon]);
-
       const [twoTB, fiveTB, tenTB] = coupons;
 
       const couponCodes = {
@@ -31,6 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       res.status(200).send(couponCodes);
     } catch (err) {
+      console.error('Failed to fetch coupons from Stripe:', err);
       res.status(500).send({
         message: 'Internal Server Error',
       });
