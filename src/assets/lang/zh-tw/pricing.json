@@ -343,6 +343,11 @@
             "id": "mail",
             "name": "Mail",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "photos",
+            "name": "照片",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]
       }

@@ -27,16 +27,10 @@ const FreeCloudObjectStorage = ({
   footerText,
   locale,
 }: FreeCloudObjectStorageProps): JSX.Element => {
-  const metatags = metatagsDescription.filter((metatag) => metatag.id === 'cloud-object-storage')[0];
+  const metatags = metatagsDescription.filter((metatag) => metatag.id === 'free-cloud-object-storage')[0];
 
   const lang = locale as string;
 
-  const scrollToTop = () => {
-    document.querySelector('#contactSales')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
-  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
