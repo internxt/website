@@ -20,7 +20,7 @@ const RenderDescription = ({ description, fontSize }: { description: string[]; f
       {description.map((item) => (
         <ReactMarkdown
           key={item}
-          className={`${fontSize ? fontSize : 'text-base leading-tight lg:text-lg'} text-gray-80`}
+          className={`${fontSize ? fontSize : 'text-base font-normal leading-tight lg:text-lg'} text-gray-55`}
         >
           {item}
         </ReactMarkdown>

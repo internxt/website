@@ -26,8 +26,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI 和 WebDAV – Internxt",
-    "description": "通过 Internxt CLI 和 WebDAV 功能访问您的 Internxt Drive 账户。体验一种私密管理和控制文件的新方法。"
+    "title": "Internxt CLI, WebDAV 和 Rclone – Internxt",
+    "description": "通过 Internxt CLI, WebDAV 和 Rclone 功能访问您的 Internxt Drive 账户。体验一种私密管理和控制文件的新方法。"
   },
   {
     "id": "what-google-knows",

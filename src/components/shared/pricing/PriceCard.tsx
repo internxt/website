@@ -11,6 +11,7 @@ import {
   Files,
   Fingerprint,
   Gauge,
+  Image,
   Key,
   LockSimple,
   Password,
@@ -24,7 +25,7 @@ import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
 const ICON_MAPS = {
-  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, CellTower, Shield],
+  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, Shield],
   premium: [
     Database,
     Key,
@@ -34,6 +35,7 @@ const ICON_MAPS = {
     Password,
     CirclesThreePlus,
     Files,
+    Image,
     CellTower,
     Shield,
     Sparkle,
@@ -47,6 +49,7 @@ const ICON_MAPS = {
     Password,
     CirclesThreePlus,
     Files,
+    Image,
     CodeBlock,
     Code,
     CellTower,
@@ -360,7 +363,7 @@ export const PriceCard = ({
         </div>
       </div>
       {isAnnual && (
-        <p className="text-xs font-normal italic text-gray-35">
+        <p className="text-10 font-normal italic text-gray-35">
           {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
         </p>
       )}

@@ -26,8 +26,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI e WebDAV – Internxt",
-    "description": "Accedi al tuo account Internxt Drive con le funzioni Internxt CLI e WebDAV. Scopri un nuovo metodo per gestire e controllare i tuoi file in modo privato."
+    "title": "Internxt CLI, WebDAV e Rclone – Internxt",
+    "description": "Accedi al tuo account Internxt Drive con le funzioni Internxt CLI, WebDAV e Rclone. Scopri un nuovo metodo per gestire e controllare i tuoi file in modo privato."
   },
   {
     "id": "affiliates",
@@ -209,6 +209,11 @@
     "id": "vpn–extension",
     "title": "Internxt VPN gratuito e sicuro – Internxt",
     "description": "Estensione VPN gratuita di Internxt per Chrome: navigazione sicura, Wi–Fi crittografato e protezione della privacy. Scarica la nostra VPN sicura per proteggere i tuoi dati online."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt – Passa a un internet più etico e sicuro",
+    "description": "Internxt offre un'archiviazione a oggetti privata e conveniente per archiviare i dati in modo sicuro, utilizzando il protocollo S3 per gestire le tue esigenze di archiviazione in modo efficace."
   },
   {
     "id": "internxt–private–cloud–storage–solutions",

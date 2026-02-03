@@ -96,6 +96,10 @@
           "status": "Coming soon"
         },
         {
+          "name": "Photos",
+          "status": "Coming soon"
+        },
+        {
           "name": "Encrypted VPN",
           "status": "available"
         },
@@ -139,6 +143,10 @@
         },
         {
           "name": "File versioning",
+          "status": "Coming soon"
+        },
+        {
+          "name": "Photos",
           "status": "Coming soon"
         },
         {

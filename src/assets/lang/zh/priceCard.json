@@ -96,6 +96,10 @@
           "status": "Coming soon"
         },
         {
+          "name": "照片",
+          "status": "Coming soon"
+        },
+        {
           "name": "加密 VPN",
           "status": "available"
         },
@@ -139,6 +143,10 @@
         },
         {
           "name": "文件版本控制",
+          "status": "Coming soon"
+        },
+        {
+          "name": "照片",
           "status": "Coming soon"
         },
         {
