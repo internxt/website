@@ -191,5 +191,10 @@
     "title": "Stockage cloud d'objets Internxt",
     "description": "Découvrez une gestion des données, une vitesse et une efficacité supérieures",
     "cta": "Commencer"
+  },
+  "CtaSectionV2": {
+    "title": "Stockage d'objets dans le cloud d'Internxt",
+    "description": "Les solutions de stockage cloud d'Internxt allient sécurité et efficacité",
+    "cta": "Commencer"
   }
 }

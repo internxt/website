@@ -26,8 +26,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI и WebDAV – Internxt",
-    "description": "Получите доступ к своей учетной записи Internxt Drive с помощью функций Internxt CLI и WebDAV. Оцените новый способ приватного управления и контроля ваших файлов."
+    "title": "Internxt CLI, WebDAV и Rclone – Internxt",
+    "description": "Получите доступ к своей учетной записи Internxt Drive с помощью функций Internxt CLI, WebDAV и Rclonem. Оцените новый способ приватного управления и контроля ваших файлов."
   },
   {
     "id": "free-cloud-storage",
