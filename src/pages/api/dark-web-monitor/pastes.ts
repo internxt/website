@@ -1,52 +1,53 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
-import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
-const CACHE_CLEAN_INTERVAL_MS = 2 * 60 * 60 * 1000;
-interface BreachesProps {
-  textContent: HaveIbeenPwnedText['HeroSection']['breaches'];
-}
 
+const CACHE_TTL_MS = 2 * 60 * 60 * 1000;
 const API_URL = process.env.INXT_MONITOR_API_URL;
 const API_KEY = process.env.INXT_MONITOR_API_KEY;
 
-const cache: Map<string, any> = new Map();
+const cache: Map<string, { data: any; timestamp: number }> = new Map();
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  textContent: BreachesProps['textContent'],
-): Promise<void> {
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: textContent.error405 });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-
-  setInterval(() => {
-    cache.clear();
-  }, CACHE_CLEAN_INTERVAL_MS);
 
   const { email } = req.query;
 
   if (!email || typeof email !== 'string') {
-    return res.status(400).json({ error: textContent.error400 });
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  const cachedEntry = cache.get(email);
+  const now = Date.now();
+
+  if (cachedEntry && now - cachedEntry.timestamp < CACHE_TTL_MS) {
+    return res.status(200).json(cachedEntry.data);
+  }
+
+  if (cachedEntry) {
+    cache.delete(email);
   }
 
   try {
-    if (cache.has(email)) {
-      return res.status(200).json(cache.get(email));
-    }
-
-    const url = `${API_URL}/pasteaccount/${email}`;
+    const url = `${API_URL}/pasteaccount/${encodeURIComponent(email)}`;
     const headers = {
       'hibp-api-key': API_KEY,
+      'user-agent': 'NextJS-App',
     };
 
     const response = await axios.get(url, { headers });
-    cache.set(email, response.data);
-    res.status(200).json(response.data);
+
+    cache.set(email, { data: response.data, timestamp: Date.now() });
+
+    return res.status(200).json(response.data);
   } catch (err: any) {
     if (err.response?.status === 404) {
-      return res.status(200).json({ pastes: [] });
+      const emptyData = { pastes: [] };
+      cache.set(email, { data: emptyData, timestamp: Date.now() });
+      return res.status(200).json(emptyData);
     }
-    res.status(500).json({ error: err.response?.data });
+
+    return res.status(500).json({ error: err.response?.data || 'Internal Server Error' });
   }
 }
