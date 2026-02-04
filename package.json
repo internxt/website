@@ -9,7 +9,7 @@
     "prebuild": "node ./scripts/check-envs.js",
     "dev": "next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
-    "build": "node ./scripts/check-envs.js && next build",
+    "build": "node ./scripts/check-envs.js && next build --webpack",
     "start": "next start",
     "prod": "next export",
     "cypress:open": "cypress open",
