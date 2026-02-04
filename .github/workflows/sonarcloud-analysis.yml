@@ -9,10 +9,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  pull-requests: read # allows SonarCloud to decorate PRs with analysis results
+  pull-requests: read
 
 jobs:
   Analysis:
+    name: Analysis (18.x)
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,16 +22,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
           cache: yarn
-      # Generate a .npmrc file with the NPM_TOKEN
       - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
       - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
 
-      # Install dependencies, build and run tests
       - name: Test and coverage
         uses: cypress-io/github-action@v6
         with:
@@ -46,9 +45,8 @@ jobs:
           name: cypress-videos
           path: cypress/videos/**/*
 
-      # Analyze with SonarCloud
       - name: Analyze with SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # Generate a token on Sonarcloud.io, add it to the secrets of this repo with the name SONAR_TOKEN (Settings > Secrets > Actions > add new repository secret)
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
