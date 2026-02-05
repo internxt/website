@@ -10,6 +10,7 @@
       "ai": "AI"
     },
     "title": "El almacenamiento más seguro **por menos**",
+    "valentinesTitle": "El //amor// merece **privacidad**",
     "description": "Almacenamiento seguro en la nube por menos. Reclama tu descuento especial hoy. Accede a la galardonada suite de privacidad de Internxt con almacenamiento en la nube encriptado post-cuántico y mucho más.",
     "subtitle": "Obtén un {{discount}}% de descuento",
     "claimDeal": "Reclamar oferta"
@@ -60,6 +61,7 @@
   "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
+    "valentinesTitle": "Amor seguro - ",
     "planTitles": {
       "header": "Elige tu plan",
       "individuals": "Planes Anuales",

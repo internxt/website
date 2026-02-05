@@ -4,11 +4,13 @@ import { useRef, useState, useEffect } from 'react';
 interface HorizontalScrollableProps {
   textContent: any;
   darkMode?: boolean;
+  isValentinesMode?: boolean;
 }
 
 export default function HorizontalScrollableSection({
   textContent,
   darkMode = false,
+  isValentinesMode = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollState, setScrollState] = useState({
@@ -116,7 +118,7 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+        isValentinesMode ? 'bg-pink-0' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
       } pb-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">

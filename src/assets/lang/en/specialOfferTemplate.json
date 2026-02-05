@@ -10,6 +10,7 @@
       "ai": "AI"
     },
     "title": "Lifetime cloud storage **for less**",
+    "valentinesTitle": "//Love// deserves **privacy**",
     "description": "Secure cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
     "subtitle": "Get {{discount}}% off now",
     "claimDeal": "Claim deal"
@@ -59,6 +60,7 @@
   },
   "tableSection": {
     "title": "Internxt Plans",
+    "valentinesTitle": "Secure love - ",
     "hotLabel": "{{discount}}% off",
     "planTitles": {
       "header": "Select your lifetime plans",
