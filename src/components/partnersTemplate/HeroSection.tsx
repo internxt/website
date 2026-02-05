@@ -138,7 +138,7 @@ export default function HeroSection({
           className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
         >
           {isValentinesMode ? (
-            <StyledTitle rawText={textContent.valentinesTitle} />
+            <HighlightText text={textContent.valentinesTitle} />
           ) : (
             <HighlightText text={textContent.title} />
           )}
@@ -148,15 +148,10 @@ export default function HeroSection({
             {percentOff !== '0' && (
               <span
                 className={`flex w-min whitespace-nowrap rounded-2 ${
-                  isValentinesMode
-                    ? 'gap-0.5 bg-pink-10 text-pink-80'
-                    : darkMode
-                    ? 'bg-purple-100 text-purple-8'
-                    : 'bg-neutral-37 text-primary '
+                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '
                 }  px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
               >
                 {parsePercentText(textContent.subtitle)}
-                {isValentinesMode ? '💘' : undefined}
               </span>
             )}
             <p
