@@ -70,6 +70,8 @@ const LANG_MAP = {
   bluewin: 'de',
   tatiana: 'en',
   simon42: 'de',
+  heisect: 'de',
+  devopstoolbox: 'en',
 };
 
 function CombinedSpecialOffer({
