@@ -21,6 +21,7 @@ interface HeroSectionForPartnerProps {
   cloudWards?: boolean;
   darkMode?: boolean;
   image?: any;
+  isValentinesMode?: boolean;
 }
 
 export default function HeroSection({
@@ -28,6 +29,7 @@ export default function HeroSection({
   percentOff,
   cloudWards = false,
   darkMode = false,
+  isValentinesMode = false,
   image = 'internxt-private-cloud',
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
@@ -38,56 +40,61 @@ export default function HeroSection({
       .then((currency) => {
         setCurrency(currency.currency);
       })
-      .catch(() => {
-        //
-      });
+      .catch(() => {});
   }, []);
 
   const products = [
-    {
-      icon: CloudArrowUp,
-      text: textContent.products.drive,
-    },
-    {
-      icon: ShieldPlus,
-      text: textContent.products.antivirus,
-    },
-    {
-      icon: Sparkle,
-      text: textContent.products.cleaner,
-    },
-    {
-      icon: CellTower,
-      text: textContent.products.vpn,
-    },
-    {
-      icon: VideoConference,
-      text: textContent.products.meet,
-    },
-    {
-      icon: Envelope,
-      text: textContent.products.mail,
-    },
-    {
-      icon: Brain,
-      text: textContent.products.ai,
-    },
+    { icon: CloudArrowUp, text: textContent.products.drive },
+    { icon: ShieldPlus, text: textContent.products.antivirus },
+    { icon: Sparkle, text: textContent.products.cleaner },
+    { icon: CellTower, text: textContent.products.vpn },
+    { icon: VideoConference, text: textContent.products.meet },
+    { icon: Envelope, text: textContent.products.mail },
+    { icon: Brain, text: textContent.products.ai },
   ];
 
   const parsePercentText = (text: string) => {
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
+  const StyledTitle = ({ rawText }: { rawText: string }) => {
+    const parts = rawText.split(/(\/\/.*?\/\/|\*\*.*?\*\*)/g);
+
+    return (
+      <>
+        {parts.map((part, index) => {
+          if (part.startsWith('//') && part.endsWith('//')) {
+            return (
+              <span key={index} style={{ color: '#E93D82' }}>
+                {part.slice(2, -2)}
+              </span>
+            );
+          }
+          if (part.startsWith('**') && part.endsWith('**')) {
+            return (
+              <span key={index} style={{ color: '#007bff' }}>
+                {part.slice(2, -2)}
+              </span>
+            );
+          }
+          return part;
+        })}
+      </>
+    );
+  };
+
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
       style={{
-        background: darkMode
+        background: isValentinesMode
+          ? 'linear-gradient(180deg, #FFF2F8 0%, #FFFFFF 100.01%)'
+          : darkMode
           ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[566px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[606px] lg:justify-between">
         {cloudWards && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
             <Image
@@ -130,18 +137,27 @@ export default function HeroSection({
         <h1
           className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
         >
-          <HighlightText text={textContent.title} />
+          {isValentinesMode ? (
+            <StyledTitle rawText={textContent.valentinesTitle} />
+          ) : (
+            <HighlightText text={textContent.title} />
+          )}
         </h1>
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && (
-              <p
-                className={`w-min whitespace-nowrap rounded-2 ${
-                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '
+              <span
+                className={`flex w-min whitespace-nowrap rounded-2 ${
+                  isValentinesMode
+                    ? 'gap-0.5 bg-pink-10 text-pink-80'
+                    : darkMode
+                    ? 'bg-purple-100 text-purple-8'
+                    : 'bg-neutral-37 text-primary '
                 }  px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
               >
                 {parsePercentText(textContent.subtitle)}
-              </p>
+                {isValentinesMode ? '💘' : undefined}
+              </span>
             )}
             <p
               className={`font-regular ${
@@ -157,7 +173,7 @@ export default function HeroSection({
           <div className="flex w-full flex-row items-start gap-4">
             <Link
               href={'#billingButtons'}
-              className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white hover:bg-primary-dark"
+              className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary-dark"
             >
               {textContent.claimDeal}
             </Link>
@@ -165,7 +181,9 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="hidden h-[500px] w-[562px] justify-center lg:flex">
+      <div
+        className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}
+      >
         <Image
           src={getImage(`/images/influencers/${image}.webp`)}
           alt="Internxt Partners HeroSection Image"

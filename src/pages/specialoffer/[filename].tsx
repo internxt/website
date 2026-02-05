@@ -37,6 +37,7 @@ const ALLOWED_PATHS = [
   'nextjump',
   'kripesh',
   'rclone',
+  'love',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh'];
@@ -52,6 +53,7 @@ const COUPON_CODES = {
   pcmag: PromoCodeName.PcmagCoupon,
   kripesh: PromoCodeName.FreePlanUpsell,
   rclone: PromoCodeName.Rclone,
+  love: PromoCodeName.love,
 };
 
 function CombinedSpecialOffer({
@@ -65,6 +67,7 @@ function CombinedSpecialOffer({
   const router = useRouter();
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
+  const isValentinesMode = selectedPathname === 'love';
 
   const alternateRecommendedPlan = selectedPathname
     ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
@@ -135,6 +138,8 @@ function CombinedSpecialOffer({
     return <></>;
   }
 
+  const HeroImage = isValentinesMode ? 'valentines' : 'internxt-private-cloud';
+
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
@@ -143,7 +148,8 @@ function CombinedSpecialOffer({
         textContent={langJson.HeroSection}
         percentOff={percentOff}
         darkMode={isDarkMode}
-        image={'internxt-private-cloud'}
+        image={HeroImage}
+        isValentinesMode={isValentinesMode}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
@@ -167,6 +173,8 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
         showPromo
+        isValentinesMode={isValentinesMode}
+        backgroundGradientColor={isValentinesMode ? 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)' : undefined}
       />
 
       <FloatingCtaSectionv2
@@ -196,19 +204,36 @@ function CombinedSpecialOffer({
             ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
             : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
         }
-        bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgPadding={
+          isValentinesMode
+            ? 'bg-pink-0 pb-10  lg:py-10'
+            : isDarkMode
+            ? 'pb-10  lg:pt-10 bg-[#1C1C1C]'
+            : 'pb-10  lg:py-10'
+        }
+        bgGradientColor={
+          isValentinesMode ? undefined : isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
+      <HorizontalScrollableSection
+        textContent={langJson.NextGenSection}
+        darkMode={isDarkMode}
+        isValentinesMode={isValentinesMode}
+      />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
+      <TrustedSection
+        textContent={langJson.TrustedBySection}
+        bottomBar={false}
+        darkMode={isDarkMode}
+        isValentinesMode={isValentinesMode}
+      />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'/pricing'}
         customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-40">
             <p
               className={`text-2xl font-semibold leading-tight lg:text-4xl ${
                 isDarkMode ? 'text-white' : 'text-gray-95'
@@ -218,7 +243,7 @@ function CombinedSpecialOffer({
             </p>
             <p
               className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
+                isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full'
               }`}
             >
               {parsePercentText(langJson.ctaSection2.description)}

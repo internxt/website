@@ -203,6 +203,7 @@ export enum PromoCodeName {
   Tatiana = 'TATIANA',
   Rclone = 'RCLONE87',
   simon42 = 'SIMON42',
+  love = 'LOVE88',
 }
 
 export interface PromoCodeProps {

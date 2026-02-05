@@ -9,6 +9,7 @@
       "mail": "郵件"
     },
     "title": "最安全的雲端儲存**價格更優**",
+    "valentinesTitle": "//爱//值得**隐私**",
     "description": "更優價格的安全雲端儲存。立即獲取您的專屬折扣。存取Internxt屢獲殊榮的隱私套件，包含後量子加密雲端儲存及更多功能。",
     "subtitle": "立即享受{{discount}}%折扣",
     "claimDeal": "領取優惠"
@@ -54,6 +55,7 @@
   "tableSection": {
     "title": "Internxt方案",
     "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的愛 - ",
     "planTitles": {
       "header": " 選擇您的計劃",
       "individuals": "年度方案",
