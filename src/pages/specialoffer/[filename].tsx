@@ -173,7 +173,6 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
         showPromo
-        isValentinesMode={isValentinesMode}
         backgroundGradientColor={isValentinesMode ? 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)' : undefined}
       />
 
