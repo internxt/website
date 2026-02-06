@@ -15,7 +15,6 @@ import { GetServerSidePropsContext } from 'next';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
-import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
@@ -135,6 +134,7 @@ export const BusinessPage = ({
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%) lg:py-20"
+        hidePlanSelectorAndSwitch
       />
 
       <div className=" lg:pt-10">
@@ -194,8 +194,6 @@ export const BusinessPage = ({
       />
 
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
-
-      <ContactSalesForm textContent={textContent.ContactSales} isBusiness />
 
       <FAQSection textContent={textContent.FaqSection} />
 
