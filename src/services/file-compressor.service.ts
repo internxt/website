@@ -66,9 +66,6 @@ const compressExcelFile = async (file: File): Promise<Blob> => {
     workbook.SheetNames.forEach((sheetName) => {
       const worksheet = workbook.Sheets[sheetName];
 
-      // Remove empty rows and columns
-      const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1');
-
       // Clean up the worksheet by removing empty cells
       Object.keys(worksheet).forEach((key) => {
         if (key.startsWith('!')) return; // Skip special keys
@@ -199,12 +196,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
       let contentEnd = uint8Array.length;
 
       // Look for common PPT file endings and remove trailing data
-      const pptEndings = [
-        // Common PPT file endings
-        [0x00, 0x00, 0x00, 0x00], // Null padding
-        [0xff, 0xff, 0xff, 0xff], // Filled padding
-        [0x20, 0x20, 0x20, 0x20], // Space padding
-      ];
 
       // Remove trailing zeros and padding
       while (contentEnd > 0) {
@@ -298,8 +289,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
  */
 const compressOfficeDocument = async (file: File, fileExtension: string): Promise<Blob> => {
   try {
-    const arrayBuffer = await file.arrayBuffer();
-
     // Handle Excel files with xlsx library
     if (['xls', 'xlsx'].includes(fileExtension.toLowerCase())) {
       return await compressExcelFile(file);

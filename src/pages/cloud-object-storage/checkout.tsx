@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Script from 'next/script';
@@ -68,7 +70,7 @@ const PRICE_ID = IS_PRODUCTION
   ? (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string)
   : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
-const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
+const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Element => {
   const paymentService = new ObjStoragePaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
 
@@ -92,7 +94,8 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         setPlan(plan);
         loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, plan);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('Plan fetch failed, redirecting to storage page:', err);
         router.push('/cloud-object-storage');
       });
   }, []);
@@ -267,6 +270,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       setCoupon(couponData);
       setCouponError('');
     } catch (error) {
+      console.warn('Coupon validation failed:', error);
       setCouponError(textContent.invalidCoupon);
       setCoupon(undefined);
     }

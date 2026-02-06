@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, TextT } from '@phosphor-icons/react';
-import { useRouter } from 'next/router';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';

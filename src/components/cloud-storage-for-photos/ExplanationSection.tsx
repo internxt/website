@@ -1,16 +1,8 @@
-import Image from 'next/legacy/image';
-import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
 
-const language = {
-  en: 'EN',
-  es: 'ES',
-};
-const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
-  const langUpperCase = language[lang] || 'EN';
+const ExplanationSection = ({ textContent, ctaText, ctaLink }) => {
   return (
     <section className="overflow-hidden bg-white">
-      {/* Header Section */}
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
         <div className="flex w-full flex-col items-center justify-center space-y-6 pt-20 text-center lg:max-w-[75%]">
           <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</p>
@@ -44,7 +36,6 @@ const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
             {ctaText}
           </Link>
         )}
-        {/* <div id="incontent_2" className="flex w-full justify-center"></div> */}
       </div>
     </section>
   );

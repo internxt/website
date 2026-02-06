@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { currencyService } from '@/services/currency.service';
 import { ProductsDataProps, stripeService } from '@/services/stripe.service';
 import { useEffect, useReducer } from 'react';
@@ -79,11 +81,13 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       dispatch({ type: 'SET_CURRENCY', payload: res.currency });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
+      console.warn('Primary price fetch failed, falling back to EUR:', err);
+
       try {
         const prices = await stripeService.getPrices('eur');
         dispatch({ type: 'SET_PRODUCTS', payload: prices });
       } catch (error) {
-        console.error('Error getting prices:', error);
+        console.error('Critical error: Failed to fetch fallback prices:', error);
       }
 
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
@@ -93,20 +97,18 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     if (fetchLifetimeCoupons) {
       try {
         const lifetimeCoupons = await stripeService.getLifetimeCoupons();
-
         dispatch({ type: 'SET_LIFETIME_COUPONS', payload: lifetimeCoupons });
       } catch (error) {
-        //NO OP
+        console.error('Error fetching lifetime coupons:', error);
       }
     }
 
     if (couponCode) {
       try {
         const coupon = await stripeService.getCoupon(couponCode);
-
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        // NO OP
+        console.error('Error fetching coupon:', err);
       }
     }
 
@@ -121,7 +123,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
         const businessCoupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_BUSINESS_COUPON', payload: businessCoupon });
       } catch (err) {
-        // NO OP
+        console.warn('Invalid or expired business coupon ignored', err);
       }
     }
   };

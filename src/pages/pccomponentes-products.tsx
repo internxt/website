@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 
@@ -23,7 +24,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
   const contentText = textContent;
 
   const isIndividual = activeSwitchPlan !== 'Business';
-  const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
 

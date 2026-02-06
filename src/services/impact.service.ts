@@ -51,9 +51,9 @@ export const handleImpact = async ({
     const { data } = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
     ip = data.ip;
   } catch (error) {
+    console.warn('IP lookup service unavailable, defaulting to undefined', error);
     ip = undefined;
   }
-
   const impactAnonymousId = getCookie('impactAnonymousId');
   const randomUUID = impactAnonymousId ?? crypto.randomUUID();
 
@@ -69,6 +69,6 @@ export const handleImpact = async ({
   try {
     await sendImpactTrack({ randomUUID, ip, userAgent, page });
   } catch (error) {
-    //
+    console.warn('Analytics tracking failed:', error);
   }
 };
