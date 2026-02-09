@@ -26,7 +26,7 @@ import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
-export const HeroSection = ({ textContent, lang }) => {
+export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
 
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
@@ -221,8 +221,6 @@ export const HeroSection = ({ textContent, lang }) => {
 
     await getNewEmail();
   };
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">

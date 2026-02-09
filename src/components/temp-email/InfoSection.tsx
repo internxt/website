@@ -2,10 +2,9 @@ import Image from 'next/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 export const InfoSection = ({ textContent, bannerText, lang }) => {
-  const infoCards = (lang) => {
+  const infoCards = () => {
     return [
       {
         icon: Bug,
@@ -39,8 +38,6 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
       },
     ];
   };
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
@@ -85,7 +82,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             </div>
             <div className="flex flex-col space-y-8">
               <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
-                {infoCards(lang).map((card) => (
+                {infoCards().map((card) => (
                   <div
                     key={card.title}
                     className="flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]"
@@ -119,7 +116,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
               <p className="text-lg">{textContent.whenUseTempMail.description}</p>
               <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 lg:max-w-2xl">
-                {textContent.whenUseTempMail.bulletedList.map((item, index) => (
+                {textContent.whenUseTempMail.bulletedList.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

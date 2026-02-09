@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { getImage } from '@/lib/getImage';
-import router from 'next/router';
 
 export const HeroSection = ({ textContent }) => {
   return (
