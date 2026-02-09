@@ -46,21 +46,15 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
-          <div className="flex hidden w-full flex-col items-center justify-center">
+          <div className="flex  w-full flex-col items-center justify-center">
             <Image
-              src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
+              src={getImage(`/banners/temp-email 728x90 EN.png`)}
               alt="File Arrow Up icon"
               width={800}
               height={110}
               quality={100}
               style={{ cursor: 'pointer' }}
-              onClick={() =>
-                window.open(
-                  `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
-                  '_blank',
-                  'noopener noreferrer',
-                )
-              }
+              onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
             />
           </div>
           <SignUpBanner textContent={bannerText} lang={lang} />
@@ -79,24 +73,6 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className=" hidden w-full flex-col items-center justify-center">
-              <Image
-                src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
-                alt="File Arrow Up icon"
-                width={800}
-                height={110}
-                quality={100}
-                style={{ cursor: 'pointer' }}
-                onClick={() =>
-                  window.open(
-                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt`,
-                    '_blank',
-                    'noopener noreferrer',
-                  )
-                }
-              />
             </div>
 
             <div className="flex max-w-2xl flex-col space-y-3 text-start">
@@ -124,24 +100,6 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </div>
             </div>
 
-            <div className="hidden w-full flex-col items-center justify-center">
-              <Image
-                src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
-                alt="File Arrow Up icon"
-                width={800}
-                height={110}
-                quality={100}
-                style={{ cursor: 'pointer' }}
-                onClick={() =>
-                  window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
-                    '_blank',
-                    'noopener noreferrer',
-                  )
-                }
-              />
-            </div>
-
             <div className="flex">
               <Image
                 src={getImage('/images/temp-email/cta_general_10_storage_en.webp')}
@@ -167,21 +125,15 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div className="flex hidden w-full flex-col items-center justify-center pt-6">
+            <div className="flex  w-full flex-col items-center justify-center pt-6">
               <Image
-                src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
+                src={getImage(`/banners/temp-email 728x90 EN.png`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
                 quality={100}
                 style={{ cursor: 'pointer' }}
-                onClick={() =>
-                  window.open(
-                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt`,
-                    '_blank',
-                    'noopener noreferrer',
-                  )
-                }
+                onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
               />
             </div>
           </div>

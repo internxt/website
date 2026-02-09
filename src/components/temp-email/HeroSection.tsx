@@ -226,21 +226,15 @@ export const HeroSection = ({ textContent, lang }) => {
 
   return (
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
-      <div className="hidden w-full flex-col items-center justify-center ">
+      <div className="flex w-full flex-col items-center justify-center ">
         <Image
-          src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
+          src={getImage(`/banners/temp-email 160x600 EN.png`)}
+          alt=" Vertical Banner"
           width={180}
           height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
+          onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
         />
       </div>
       <div className="flex w-full flex-col items-center justify-center space-y-10  px-2 md:max-w-[720px] ">
@@ -274,21 +268,15 @@ export const HeroSection = ({ textContent, lang }) => {
           </p>
         </div>
       </div>
-      <div className="hidden w-full flex-col items-center justify-center">
+      <div className="flex w-full flex-col items-center justify-center">
         <Image
-          src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
+          src={getImage(`/banners/temp-email 160x600 EN.png`)}
+          alt="Vertical Banner"
           width={180}
           height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
+          onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
         />
       </div>
     </section>
