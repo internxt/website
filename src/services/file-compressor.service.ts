@@ -75,7 +75,7 @@ class FileCompressorService {
 
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
-        const scale = 1.2;
+        const scale = 2.0;
         const viewport = page.getViewport({ scale });
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
@@ -86,7 +86,7 @@ class FileCompressorService {
 
         await page.render({ canvasContext: context, viewport }).promise;
 
-        const imageData = canvas.toDataURL('image/jpeg', 0.35);
+        const imageData = canvas.toDataURL('image/jpeg', 0.55);
         const imageBytes = await fetch(imageData).then((res) => res.arrayBuffer());
         const pdfImage = await outPdf.embedJpg(imageBytes);
 
