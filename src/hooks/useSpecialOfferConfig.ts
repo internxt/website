@@ -22,6 +22,10 @@ export const ALLOWED_PATHS = [
   'foci',
   'neumanndigital',
   'bluewin',
+  'tatiana',
+  'simon42',
+  'devopstoolbox',
+  'heisect',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -46,6 +50,10 @@ export const COUPON_CODES = {
   foci: PromoCodeName.FOCI,
   neumanndigital: PromoCodeName.NEUMANNDIGITAL,
   bluewin: PromoCodeName.Bluewin,
+  tatiana: PromoCodeName.Tatiana,
+  simon42: PromoCodeName.simon42,
+  devopstoolbox: PromoCodeName.devopstoolbox,
+  heisect: PromoCodeName.heisect,
 };
 
 interface OfferConfig {

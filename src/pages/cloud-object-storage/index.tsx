@@ -1,18 +1,16 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { HeroSection } from '@/components/cloud-object-storage/HeroSection';
 import { HowMuchYouNeedSection } from '@/components/cloud-object-storage/HowMuchYouNeedSection';
 import { PredictablePricingSection } from '@/components/cloud-object-storage/PredictablePricingSection';
 import { CloudObjectStoragePriceCardSection } from '@/components/cloud-object-storage/PriceCardSection';
-import { CloudObjectStorageWhyChooseInternxtSection } from '@/components/cloud-object-storage/WhyChooseInternxtSection';
-import { HeroSection } from '@/components/shared/components/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
-import Button from '@/components/shared/Button';
-import { getImage } from '@/lib/getImage';
-import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -33,65 +31,63 @@ const CloudObjectStorage = ({
 
   const lang = locale as string;
 
-  const scrollToTop = () => {
-    document.querySelector('#contactSales')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
-  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection
-        TextComponent={
-          <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 pb-6 pt-10 text-center text-white lg:items-start lg:pt-0 lg:text-left">
-            <h1 className="text-3xl font-semibold leading-tight text-white lg:text-5xl">
-              {lang === 'es' ? (
-                <>
-                  {textContent.HeroSection.title.line2} {textContent.HeroSection.title.line1}
-                </>
-              ) : (
-                <>
-                  {textContent.HeroSection.title.line1}
-                  {textContent.HeroSection.title.line2}
-                </>
-              )}
-            </h1>
-            <p className="px-10 text-xl leading-tight lg:px-0">{textContent.HeroSection.description}</p>
-            <div className="flex flex-row items-center gap-4 pb-16 lg:pb-0">
-              <Button
-                className="w-full lg:w-max"
-                text={textContent.HeroSection.cta}
-                onClick={() => (window.location.hash = '#storageSection')}
-              />
-              <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
-              <Button className="w-full lg:w-max" text={textContent.HeroSection.cta2} onClick={scrollToTop} />
-            </div>
-          </div>
-        }
-        style={{
-          background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
-        }}
-        imageProperties={{
-          src: getImage('/images/cloud-object-storage/s3_internxt.webp'),
-          alt: 'cloud object storage',
-          width: 631,
-          height: 745,
-        }}
-      />
-
-      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+      <HeroSection textContent={textContent.HeroSection} />
 
       <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
+      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+
       <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
 
-      <CloudObjectStorageWhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
+      <FloatingCtaSectionv2
+        textContent={textContent.CtaSection}
+        url={'#storageSection'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {textContent.CtaSection.title}
+            </h2>
+            <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
+              {textContent.CtaSection.description}
+            </h2>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+        bgPadding="bg-neutral-17 px-10"
+      />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <HorizontalScrollableSection
+        textContent={textContent.WhyChooseInternxtSection}
+        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        needsH2
+        needsH3
+        needsDivider={false}
+      />
 
-      <ContactSalesForm textContent={textContent.ContactSales} />
+      <FloatingCtaSectionv2
+        textContent={textContent.CtaSectionV2}
+        url={'#storageSection'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {textContent.CtaSectionV2.title}
+            </h2>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
+              {textContent.CtaSectionV2.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+        bgPadding="px-10"
+      />
+
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <Footer textContent={footerText} lang={lang} />
     </Layout>

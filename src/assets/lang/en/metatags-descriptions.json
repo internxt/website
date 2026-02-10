@@ -20,6 +20,11 @@
     "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
   },
   {
+    "id": "free-cloud-object-storage",
+    "title": "Free Cloud Object Storage: Internxt S3 Compatible & Secure",
+    "description": "Experience free cloud object storage and professional object storage services. Internxt provides a secure, S3-compatible object storage cloud for your data."
+  },
+  {
     "id": "drive",
     "title": "Internxt Drive – Secure & Encrypted Cloud Storage",
     "description": "Internxt Drive offers the ultimate secure cloud storage solution. Store, share, and back up your files and photos using our open-source, end-to-end encrypted platform for guaranteed privacy."
@@ -46,8 +51,8 @@
   },
   {
     "id": "pricing",
-    "title": "Internxt Pricing – Lifetime Encrypted Cloud Storage",
-    "description": "Internxt offers affordable, secure, free, and encrypted cloud storage with annual and lifetime payment option plans."
+    "title": "Best Cloud Storage Pricing & Cost",
+    "description": "Get the best cloud storage pricing. Choose a plan and cost that fits your life. Privacy-first storage starting with a free plan. Check our limited-time offers."
   },
   {
     "id": "about",
@@ -341,8 +346,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI and WebDAV – Internxt",
-    "description": "Access your Internxt Drive account with Internxt CLI and WebDAV features. Experience a new method to manage and control your files privately."
+    "title": "Internxt CLI, WebDAV & Rclone– Internxt",
+    "description": "Access your Internxt Drive account with Internxt CLI, WebDAV and Rclone features. Experience a new method to manage and control your files privately."
   },
   {
     "id": "free-user",

@@ -142,6 +142,10 @@
           "status": "Coming soon"
         },
         {
+          "name": "Fotos",
+          "status": "Coming soon"
+        },
+        {
           "name": "Soporte CLI y WebDav",
           "status": "available"
         },

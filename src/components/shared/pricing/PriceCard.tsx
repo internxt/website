@@ -11,6 +11,7 @@ import {
   Files,
   Fingerprint,
   Gauge,
+  Image,
   Key,
   LockSimple,
   Password,
@@ -24,7 +25,7 @@ import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
 const ICON_MAPS = {
-  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, CellTower, Shield],
+  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, Shield],
   premium: [
     Database,
     Key,
@@ -47,6 +48,7 @@ const ICON_MAPS = {
     Password,
     CirclesThreePlus,
     Files,
+    Image,
     CodeBlock,
     Code,
     CellTower,
@@ -88,6 +90,7 @@ export interface PriceCardProps {
   redeemCodeCta?: LifetimeMode;
   monthlyProductPrice?: number;
   darkMode?: boolean;
+  isValentinesMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   isFamilyPage?: boolean;
   isAffiliate?: boolean;
@@ -102,6 +105,7 @@ export const PriceCard = ({
   productCardPlan = 'individuals',
   popular,
   lang,
+  isValentinesMode,
   onCheckoutButtonClicked,
   darkMode,
 }: PriceCardProps): JSX.Element => {
@@ -151,14 +155,6 @@ export const PriceCard = ({
   };
   const planLabel = planTypes[storage] || null;
 
-  const planGifts = {
-    '1TB': isBusiness ? contentText.gifts.prices.essential : contentText.gifts.prices.essentials,
-    '2TB': contentText.gifts.prices.pro,
-    '3TB': contentText.gifts.prices.premium,
-    '5TB': contentText.gifts.prices.ultimate,
-  };
-  const planGift = planGifts[storage] || null;
-
   const ctaText = contentText.cta;
 
   const features = isBusiness
@@ -184,7 +180,7 @@ export const PriceCard = ({
     <div className="flex flex-col gap-5">
       <div
         className={`flex h-full flex-col items-center justify-start rounded-16 ${
-          popular ? (darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl') : ''
+          popular ? (isValentinesMode ? 'bg-pink-30' : darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl') : ''
         }`}
       >
         <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'} items-center justify-center`}>
@@ -360,7 +356,7 @@ export const PriceCard = ({
         </div>
       </div>
       {isAnnual && (
-        <p className="text-xs font-normal italic text-gray-35">
+        <p className="text-10 font-normal italic text-gray-35">
           {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
         </p>
       )}

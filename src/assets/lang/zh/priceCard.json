@@ -142,6 +142,10 @@
           "status": "Coming soon"
         },
         {
+          "name": "照片",
+          "status": "Coming soon"
+        },
+        {
           "name": "支持 CLI 和 WebDav",
           "status": "available"
         },

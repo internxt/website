@@ -26,8 +26,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI e WebDAV – Internxt",
-    "description": "Accedi al tuo account Internxt Drive con le funzioni Internxt CLI e WebDAV. Scopri un nuovo metodo per gestire e controllare i tuoi file in modo privato."
+    "title": "Internxt CLI, WebDAV e Rclone – Internxt",
+    "description": "Accedi al tuo account Internxt Drive con le funzioni Internxt CLI, WebDAV e Rclone. Scopri un nuovo metodo per gestire e controllare i tuoi file in modo privato."
   },
   {
     "id": "affiliates",
@@ -201,14 +201,24 @@
     "description": "I data center ecologici di Internxt promuovono il nostro impegno per la sostenibilità e l'informatica cloud ecologica, supportando un ambiente più verde e sostenibile."
   },
   {
-    "id": "internxt–antivirus",
+    "id": "internxt-antivirus",
     "title": "Proteggi i tuoi dispositivi dai malware con Internxt Antivirus",
     "description": "Internxt Antivirus esegue la scansione e rimuove i virus dai tuoi file. Proteggi i tuoi dispositivi dai malware e garantisci una sicurezza completa nel cloud."
   },
   {
-    "id": "vpn–extension",
+    "id": "vpn-extension",
     "title": "Internxt VPN gratuito e sicuro – Internxt",
     "description": "Estensione VPN gratuita di Internxt per Chrome: navigazione sicura, Wi–Fi crittografato e protezione della privacy. Scarica la nostra VPN sicura per proteggere i tuoi dati online."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt – Passa a un internet più etico e sicuro",
+    "description": "Internxt offre un'archiviazione a oggetti privata e conveniente per archiviare i dati in modo sicuro, utilizzando il protocollo S3 per gestire le tue esigenze di archiviazione in modo efficace."
+  },
+  {
+    "id": "free-cloud-object-storage",
+    "title": "Archiviazione a oggetti cloud gratuita: Internxt compatibile con S3 e sicura",
+    "description": "Prova l'archiviazione a oggetti cloud gratuita e i servizi professionali di archiviazione a oggetti. Internxt fornisce un cloud di archiviazione a oggetti sicuro e compatibile con S3 per i tuoi dati."
   },
   {
     "id": "internxt–private–cloud–storage–solutions",

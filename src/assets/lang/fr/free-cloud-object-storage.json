@@ -1,0 +1,201 @@
+{
+  "HeroSection": {
+    "label": "Stockage d'objets",
+    "title": {
+      "line1": "**Internxt S3**",
+      "line2": "Stockage d'objets cloud gratuit"
+    },
+    "description": "Une solution de stockage cloud efficace et évolutive pour stocker, accéder et gérer des données à grande échelle.",
+    "cta": "Commencer"
+  },
+  "PredictablePricingSection": {
+    "title": "Une tarification simple et prévisible\n sans frais ni coûts d'API",
+    "description": "Évitez les factures de stockage imprévisibles. Internxt propose un tarif clair par capacité de stockage, sans frais cachés.",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "Ultrarapide et accessible instantanément"
+      },
+      {
+        "title": "Jusqu'à 80%",
+        "description": "Plus abordable qu'AWS"
+      },
+      {
+        "title": "Zéro frais",
+        "description": "Transfert de données gratuit"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Le stockage d'objets gratuit d'Internxt\n allie sécurité et efficacité",
+    "description": "Le stockage d'objets Internxt est une solution performante et économique qui révolutionne le stockage de données en ligne, idéale pour les particuliers ou les organisations ayant besoin d'une infrastructure fiable à moindre coût.",
+    "payAsYouGoCard": {
+      "title": "Paiement à l'usage !",
+      "description": "Payez uniquement pour le stockage que vous utilisez."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Par TO/Facturé mensuellement",
+      "price": "7",
+      "cta": "Choisir ce plan",
+      "whatsIncluded": {
+        "title": "Ce qui est inclus",
+        "features": [
+          "Facturation mensuelle",
+          "Chiffrement côté serveur",
+          "Compatible avec les API AWS S3 et IAM",
+          "Vitesse accrue",
+          "Stockage flexible",
+          "Open source",
+          "Conforme au RGPD",
+          "Support client Premium"
+        ]
+      }
+    },
+    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "De quel volume de stockage avez-vous besoin ?",
+    "description": "Découvrez combien vous pouvez économiser avec le stockage d'objets Internxt. Utilisez notre calculateur de coûts pour comparer nos tarifs avec ceux des géants du cloud.",
+    "pay-as-you-go": "Tarification à l'usage",
+    "perMonth": "/par mois",
+    "perYear": "/par an",
+    "storageAmount": "Volume de stockage",
+    "percentDownloadPerMonth": "Pourcentage de téléchargement par mois",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Pourquoi choisir le stockage d'objets Internxt ?",
+    "description": "Les avantages du stockage d'objets cloud avec Internxt mettent l'accent sur une gestion efficace des données et la sécurité.",
+    "scrollableSection": {
+      "titles": [
+        "Zéro frais d'entrée et de sortie",
+        "Coût par Go",
+        "Durabilité et disponibilité",
+        "Sécurité",
+        "Service de stockage simple",
+        "Vitesse"
+      ],
+      "descriptions": [
+        "L'absence de frais d'entrée (ingress) et de sortie (egress) élimine les coûts liés au transfert de données, permettant une budgétisation prévisible. C'est essentiel pour les entreprises gérant des flux de données fréquents ou massifs.",
+        "Avec notre modèle de paiement à l'usage, vous ne payez que pour ce que vous utilisez réellement. Le stockage d'objets est conçu pour gérer de gros volumes de données non structurées, généralement moins coûteux par Go que les données structurées.",
+        "Nous permettons un stockage redondant qui réplique les données sur plusieurs serveurs européens. Vos données sont protégées contre la perte ou la corruption grâce à une technologie garantissant une durabilité de 99,999999999 % (11 neufs) par objet.",
+        "Nous utilisons de multiples mesures de sécurité pour protéger vos données. Elles sont chiffrées en transit et au repos. Nous supportons le protocole HTTPS et le chiffrement côté serveur avec vos propres clés (SSE-C).",
+        "Internxt utilise le protocole S3 pour simplifier la gestion des flux de travail, assurant une haute disponibilité avec l'accent mis sur la sécurité.",
+        "Le stockage d'objets offre une vitesse supérieure en permettant plusieurs opérations de lecture/écriture simultanées et en utilisant des métadonnées enrichies pour une récupération plus rapide."
+      ]
+    },
+    "bannerText": {
+      "title": "Stockage cloud d'objets Internxt",
+      "description": "Découvrez une gestion de données, une vitesse et une efficacité supérieures",
+      "cta": "Commencer",
+      "separator": "|",
+      "cta2": "Contactez-nous"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce que le stockage d'objets ?",
+        "answer": [
+          "Le stockage d'objets conserve de grandes quantités de données (photos, vidéos, e-mails) sous forme d'« objets » individuels avec des identifiants uniques.",
+          "Contrairement au stockage traditionnel en mode fichier, il stocke les données dans un espace d'adressage plat, facilitant l'évolutivité et l'accès rapide.",
+          "Cela permet une meilleure scalabilité et des coûts potentiellement plus bas selon vos besoins."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le protocole S3 ?",
+        "answer": [
+          "Le protocole S3 (Simple Storage Service) est un ensemble de règles définissant comment les données sont accédées et gérées, popularisé par Amazon Web Services (AWS)."
+        ]
+      },
+      {
+        "question": "Quel volume de stockage puis-je obtenir ?",
+        "answer": [
+          "Vous pouvez faire évoluer votre stockage selon vos besoins. Nos plans facturent mensuellement chaque gigaoctet utilisé par jour. Vous pouvez ajouter ou supprimer du stockage à tout moment."
+        ]
+      },
+      {
+        "question": "Puis-je intégrer Internxt S3 avec mes applications existantes ?",
+        "answer": [
+          "Oui, il est compatible avec les API AWS S3, permettant une intégration fluide avec de nombreux outils et services supportant ce protocole."
+        ]
+      },
+      {
+        "question": "Existe-t-il une politique de stockage mensuel minimum ?",
+        "answer": [
+          "Le minimum est de 1 TO. Si des objets sont supprimés avant 30 jours, des frais correspondant aux jours restants du mois s'appliquent, conformément aux standards du marché."
+        ]
+      },
+      {
+        "question": "Y a-t-il des frais mensuels minimums ?",
+        "answer": [
+          "Oui, il y a une charge minimale correspondant à 1 TO. Si vous stockez moins (par exemple 4 Ko), vous serez facturé pour 1 TO."
+        ]
+      },
+      {
+        "question": "Que se passe-t-il pour les petits fichiers (moins de 4 Ko) ?",
+        "answer": [
+          "Une taille minimale de 4 Ko par fichier est appliquée pour la facturation, similaire aux politiques de certains services AWS."
+        ]
+      },
+      {
+        "question": "Quel est le coût d'écrasement d'un fichier sans versioning ?",
+        "answer": [
+          "Si vous remplacez un fichier sans changer son nom, l'original passe en stockage supprimé. Cela génère des frais pour le jour de stockage actif et pour les jours restants selon la politique de rétention minimale."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": ["Via le chat en direct ou par e-mail à [hello@internxt.com](mailto:hello@internxt.com)."]
+      },
+      {
+        "question": "Comment annuler mon plan ?",
+        "answer": [
+          "Toute suppression avant 30 jours est facturée pour le mois complet. Pour résilier, contactez-nous à hello@internxt.com."
+        ]
+      }
+    ]
+  },
+  "ContactSales": {
+    "title": "Contacter le service commercial",
+    "description": "Remplissez le formulaire et notre équipe vous contactera rapidement.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "howMuchStorage": "De quel volume de stockage avez-vous besoin ?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Sélectionner",
+        "1 - 10 TO",
+        "15 - 25 TO",
+        "25 - 50 TO",
+        "50 - 100 TO",
+        "100 - 150 TO",
+        "150 - 200 TO",
+        "250 - 500 TO",
+        "1 - 20 PO",
+        "Plus de 20 PO"
+      ],
+      "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
+      "howWeCanHelpPlaceHolder": "Dites-nous en plus sur vos besoins",
+      "cta": "Envoyer le message",
+      "ctaSending": "Envoi en cours...",
+      "successMessage": "Votre message a été envoyé avec succès.",
+      "errorMessage": "Une erreur est survenue. Veuillez réessayer."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt S3 : Stockage d'objets cloud gratuit",
+    "description": "Le service de stockage d'objets gratuit d'Internxt allie sécurité et efficacité",
+    "cta": "Commencer"
+  },
+  "CtaSectionV2": {
+    "title": "Stockage d'objets cloud gratuit Internxt",
+    "description": "Les solutions de stockage d'objets Internxt allient sécurité et efficacité",
+    "cta": "Commencer"
+  }
+}

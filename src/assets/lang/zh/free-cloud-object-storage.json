@@ -1,0 +1,177 @@
+{
+  "HeroSection": {
+    "label": "对象存储",
+    "title": {
+      "line1": "**Internxt S3**",
+      "line2": "免费云对象存储"
+    },
+    "description": "高效、可扩展的云存储解决方案，用于大规模存储、访问和管理数据。",
+    "cta": "立即开始"
+  },
+  "PredictablePricingSection": {
+    "title": "简单、可预测的定价\n 零手续费，无 API 费用",
+    "description": "避免不可预测的存储账单困扰。Internxt 提供清晰的存储容量费率，无隐藏费用。",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "极速响应，即时访问"
+      },
+      {
+        "title": "高达 80%",
+        "description": "比 AWS 更实惠"
+      },
+      {
+        "title": "零手续费",
+        "description": "免费数据传输"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt 免费对象存储\n 兼顾安全与效率",
+    "description": "Internxt 对象存储是一种高性能、低成本的解决方案，正在彻底改变在线数据存储，非常适合需要可靠安全基础设施的个人或组织。",
+    "payAsYouGoCard": {
+      "title": "按需付费！",
+      "description": "仅为您使用的存储空间付费。"
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "每 TB/按月计费",
+      "price": "7",
+      "cta": "选择方案",
+      "whatsIncluded": {
+        "title": "包含内容",
+        "features": [
+          "按月计费",
+          "服务端加密",
+          "兼容 AWS S3 和 IAM API",
+          "提升速度",
+          "灵活存储",
+          "开源",
+          "符合 GDPR",
+          "尊享客户支持"
+        ]
+      }
+    },
+    "oneTimePayment": "*账户验证需支付 1 欧元的单次费用"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "您需要多少存储空间？",
+    "description": "了解使用 Internxt 对象存储可以节省多少成本。使用我们的成本计算器查看我们与超大规模云服务商的对比。",
+    "pay-as-you-go": "按需付费定价",
+    "perMonth": "/每月",
+    "perYear": "/每年",
+    "storageAmount": "存储总量",
+    "percentDownloadPerMonth": "每月下载百分比",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "为什么选择 Internxt 对象存储？",
+    "description": "Internxt 云对象存储的优势在于高效的数据管理和安全性。",
+    "scrollableSection": {
+      "titles": ["零流入和流出费用", "每 GB 成本", "持久性与可用性", "安全性", "简单存储服务", "速度"],
+      "descriptions": [
+        "零流入（ingress）和流出（egress）费用消除了数据传输成本，实现可预测的预算。这对数据流动频繁的企业至关重要。",
+        "通过我们的按需付费模式，您只需为实际使用的存储付费。对象存储处理非结构化数据的每 GB 成本通常低于结构化数据。",
+        "我们支持冗余数据存储，数据分布在多个欧洲服务器上。技术确保每个对象的持久性高达 99.999999999%（11 个 9）。",
+        "您的数据在传输和存储时均经过加密。我们支持 HTTPS 协议和使用客户提供密钥的服务端加密（SSE-C）。",
+        "Internxt 使用 S3 协议提供对象存储，简化数据工作流程，并确保高可用性。",
+        "对象存储通过允许并发读写操作和利用丰富的元数据，提供卓越的访问速度。"
+      ]
+    },
+    "bannerText": {
+      "title": "Internxt 云对象存储",
+      "description": "体验卓越的数据管理、速度和效率",
+      "cta": "立即开始",
+      "separator": "|",
+      "cta2": "联系我们"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "什么是对象存储？",
+        "answer": [
+          "对象存储将照片、视频和电子邮件等大量数据作为具有唯一标识符的单个“对象”进行存储。",
+          "与传统文件系统不同，它在扁平地址空间中存储数据，更易于扩展并降低成本。"
+        ]
+      },
+      {
+        "question": "什么是 S3 协议？",
+        "answer": ["S3 协议（简单存储服务协议）是定义如何在 AWS S3 等云服务中访问和管理数据的规则集。"]
+      },
+      {
+        "question": "我可以获得多少存储空间？",
+        "answer": ["您可以根据需求扩展存储。我们按每月实际使用的容量计费。"]
+      },
+      {
+        "question": "我可以将 Internxt 存储与现有应用集成吗？",
+        "answer": ["是的，它与 AWS S3 API 兼容，可与支持该协议的广泛应用和工具无缝集成。"]
+      },
+      {
+        "question": "是否有每月最低存储政策？",
+        "answer": ["最低政策为 1TB。如果对象存储未满 30 天即被删除，将按剩余天数收取费用。"]
+      },
+      {
+        "question": "是否有月度最低收费？",
+        "answer": ["是的，1TB 账号有最低月度收费。即使存储极小文件，也将按 1TB 计费。"]
+      },
+      {
+        "question": "存储小于 4KB 的文件怎么办？",
+        "answer": ["最小计费文件大小为 4KB。存储 4KB 以下文件将产生等同于 4KB 的费用。"]
+      },
+      {
+        "question": "反复覆盖文件的成本是多少？",
+        "answer": ["覆盖无版本控制的文件时，原文件转为删除存储。这将产生一天的活跃存储费及剩余天数的删除存储费。"]
+      },
+      {
+        "question": "如何联系支持团队？",
+        "answer": ["通过在线聊天或发送邮件至 [hello@internxt.com](mailto:hello@internxt.com)。"]
+      },
+      {
+        "question": "如何取消方案？",
+        "answer": ["如果您想取消订阅，请发送邮件至 hello@internxt.com。"]
+      }
+    ]
+  },
+  "ContactSales": {
+    "title": "联系销售",
+    "description": "填写联系表单，我们的团队将很快与您联系。",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮箱",
+      "company": "公司名称",
+      "phone": "电话号码",
+      "howMuchStorage": "您需要多少存储空间？",
+      "totalCharacters": " /1000",
+      "options": [
+        "请选择",
+        "1 - 10TB",
+        "15 - 25TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我们能为您提供什么帮助？（选填）",
+      "howWeCanHelpPlaceHolder": "告诉我们更多关于您的需求",
+      "cta": "发送消息",
+      "ctaSending": "发送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请重试。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt S3: 免费云对象存储",
+    "description": "Internxt 免费对象存储服务兼顾安全与效率",
+    "cta": "立即开始"
+  },
+  "CtaSectionV2": {
+    "title": "Internxt 免费云对象存储",
+    "description": "Internxt 云对象存储解决方案兼顾安全与效率",
+    "cta": "立即开始"
+  }
+}

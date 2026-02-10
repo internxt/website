@@ -90,7 +90,7 @@ export default function HeroSection({
       className={`flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 pt-28 lg:h-[705px] lg:justify-between lg:pl-10 lg:pt-36 xl:pl-32 3xl:pl-80`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[566px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[736px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div

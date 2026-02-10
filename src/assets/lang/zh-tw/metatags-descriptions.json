@@ -232,8 +232,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI 和 WebDAV – Internxt",
-    "description": "使用Internxt CLI 和 WebDAV 功能訪問您的Internxt Drive賬戶。體驗一種新的管理和控制文件的私密方法。"
+    "title": "Internxt CLI, WebDAV 和 Rclone – Internxt",
+    "description": "使用Internxt CLI, WebDAV 和 Rclone 功能訪問您的Internxt Drive賬戶。體驗一種新的管理和控制文件的私密方法。"
   },
   {
     "id": "vpn-extension",
@@ -354,6 +354,11 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 物件儲存",
     "description": "Internxt 提供私密且實惠的物件儲存，使用 S3 協議安全地存儲資料，有效地管理您的儲存需求。"
+  },
+  {
+    "id": "free-cloud-object-storage",
+    "title": "免費雲端物件儲存：Internxt 相容 S3 且安全",
+    "description": "體驗免費的雲端物件儲存與專業的物件儲存服務。Internxt 為您的數據提供安全、相容 S3 的物件儲存雲。"
   },
   {
     "id": "green-cloud-computing",

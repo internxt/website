@@ -26,8 +26,13 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI et WebDAV – Internxt",
-    "description": "Accédez à votre compte Internxt Drive avec les fonctionnalités Internxt CLI et WebDAV. Découvrez une nouvelle méthode pour gérer et contrôler vos fichiers en toute confidentialité."
+    "title": "Internxt CLI, WebDAV et Rclone – Internxt",
+    "description": "Accédez à votre compte Internxt Drive avec les fonctionnalités Internxt CLI, WebDAV et Rclone. Découvrez une nouvelle méthode pour gérer et contrôler vos fichiers en toute confidentialité."
+  },
+  {
+    "id": "free-cloud-object-storage",
+    "title": "Stockage d'objets cloud gratuit : Internxt compatible S3 et sécurisé",
+    "description": "Découvrez le stockage d'objets cloud gratuit et des services professionnels de stockage d'objets. Internxt fournit un cloud de stockage d'objets sécurisé et compatible S3 pour vos données."
   },
   {
     "id": "what-google-knows",

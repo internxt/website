@@ -1,11 +1,37 @@
 {
   "HeroSection": {
-    "title": "Internxt CLI and WebDAV support",
-    "description": "Internxt works with your chosen WebDAV client to manage your Internxt Drive files via commands.",
-    "cta": "Get Started"
+    "label": "Object Storage",
+    "title": "Internxt **Rclone**, **CLI** and **WebDAV**",
+    "description": "Connect your Internxt Drive to Rclone natively or via WebDAV for more advanced file management",
+    "cta": "Get Internxt"
+  },
+  "RcloneSupportSection": {
+    "title": "Internxt native Rclone support",
+    "description": [
+      "Rclone is a command line tool that connects your computer to Internxt Drive through a flexible and scriptable interface. It is designed for users who want fast, reliable, and customizable file transfers.",
+      "Once set up, rclone connects your device directly to your storage account, making it easy to move files, run backups, and automate transfers across your systems."
+    ],
+    "howToInstall": "How to install",
+    "info": [
+      {
+        "title": "ReadMe",
+        "description": "Information about rclone’s usage, features, commands, and download instructions from our GitHub Repository.",
+        "cta": "Learn more"
+      },
+      {
+        "title": "User guide",
+        "description": "Learn how to connect and configure Internxt Drive with rclone natively from our help center.",
+        "cta": "Read guide"
+      },
+      {
+        "title": "Updates",
+        "description": "Stay updated with new releases for the Internxt CLI from our source code to find out about new releases and features.",
+        "cta": "More details"
+      }
+    ]
   },
   "WebDAVSupportSection": {
-    "title": "Internxt Command Line Interface & WebDAV support",
+    "title": "Internxt CLI & WebDAV support",
     "description": [
       "Internxt’s CLI interacts with your computer via a series of commands. A CLI offers a powerful and efficient way to manage various tasks with your Internxt Drive account.",
       "Internxt CLI acts as a bridge between your computer and Internxt Drive through your chosen WebDAV client. WebDAV is an extension of HTTP that allows you to manage files between your local machine and your Internxt account."
@@ -14,31 +40,39 @@
       "title": "How to install",
       "steps": [
         {
-          "step": "Step 1:",
+          "step": "Step 1",
           "description": "[Download and install Internxt CLI](https://www.npmjs.com/package/@internxt/cli)"
         },
         {
-          "step": "Step 2:",
+          "step": "Step 2",
           "description": "Log in to the CLI using the internxt login command."
         },
         {
-          "step": "Step 3:",
+          "step": "Step 3",
           "description": "Choose your preferred WebDAV client."
         },
         {
-          "step": "Step 4:",
+          "step": "Step 4",
           "description": "Insert the URL [webdav.local.internxt.com](https://webdav.local.internxt.com:3005) and port 3005."
         }
       ]
     },
-    "whyUseCLI": {
-      "title": "Why use a CLI with a WebDAV client",
-      "description": [
-        "We built the Internxt CLI  and WebDAV support with the same emphasis on security and award-winning architecture for our commitment to privacy.",
-        "Your files are encrypted on your device before ever reaching our servers, and only you possess the decryption key. This unwavering commitment to security puts you in complete control of your data.",
-        "Remember to prioritize security when transferring sensitive or confidential data online."
-      ]
-    }
+    "questions": [
+      {
+        "question": "Internxt native rclone support",
+        "answer": [
+          "Native rclone integration lets you sync, copy, and manage your files using one of the most trusted open source tools for cloud storage workflows. ",
+          "Connecting Internxt Drive with rclone enables fast, flexible transfers, automation, and easy integration into existing backup or migration setups without compromising on security."
+        ]
+      },
+      {
+        "question": "Internxt WebDAV support",
+        "answer": [
+          "You can also use the Internxt CLI to connect to manage your files, with the same emphasis on security and award-winning architecture for maximum privacy.",
+          "Your files are encrypted on your device before ever reaching our servers, and only you possess the decryption key. This unwavering commitment to security puts you in complete control of your data."
+        ]
+      }
+    ]
   },
   "DownloadCLISection": {
     "title": "Download the Internxt CLI",
@@ -60,9 +94,9 @@
     "command": "npm i -g @internxt/cli"
   },
   "CtaSection": {
-    "title": "Security meets privacy",
-    "description": "Protect your files with Internxt's secure cloud storage.",
-    "cta": "Create free account"
+    "title": "Protect your files with Internxt Drive",
+    "description": "Secure cloud storage built with privacy in mind",
+    "cta": "Get Internxt"
   },
   "HowToUseCLISection": {
     "title": "How to build and use Internxt CLI",
@@ -87,17 +121,28 @@
   },
   "CtaSection2": {
     "title": "Manage your files like a pro",
-    "description": "Enjoy direct control of your files with desktop file management functionalities.",
-    "cta": "Create free account"
+    "description": "Enjoy direct control of your files with rclone or WebDAV.",
+    "cta": "Get Internxt"
   },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "What is Internxt CLI?",
+        "question": "What is rclone?",
         "answer": [
-          "The Internxt Command Line Interface interacts with a computer program by typing text commands instead of using a mouse and Graphical User Interface (GUI) like windows, icons, and menus.",
-          "CLIs are powerful tools for those who want more control and efficiency in interacting with their computers."
+          "Rclone is an open source command line tool that lets you manage, sync, and transfer files between your computer and cloud storage services."
+        ]
+      },
+      {
+        "question": "How can I connect Internxt to rclone?",
+        "answer": [
+          "First, you need to download rclone from the official website, and then you can follow the installation steps from our help center."
+        ]
+      },
+      {
+        "question": "What is the Internxt CLI?",
+        "answer": [
+          "The Internxt Command Line Interface interacts with a computer program by typing text commands instead of using a mouse and a Graphical User Interface (GUI)."
         ]
       },
       {
@@ -109,7 +154,7 @@
       {
         "question": "How can I install the Internxt CLI?",
         "answer": [
-          "To install our CLI on your computer and start using WebDAV, you can follow the installation steps from our [GitHub page](https://github.com/internxt/cli?tab=readme-ov-file#installation)."
+          "To install our CLI on your computer and start using WebDAV, you can follow the installation steps from our GitHub page."
         ]
       },
       {
@@ -120,7 +165,7 @@
       },
       {
         "question": "What WebDAV clients does Internxt support?",
-        "answer": ["We support the following WebDAV clients:", "* CyberDuck", "*  Transmit", "* Cadaver", "* Finder"]
+        "answer": ["We support the following WebDAV clients:", "* CyberDuck", "* Transmit", "* Cadaver", "* Finder"]
       },
       {
         "question": "Do I need to worry about self-signed certificates?",

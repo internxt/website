@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-import rateLimitMiddleware from '../temp-mail/rate-limiter';
+import rateLimitMiddleware from '../../../utils/rate-limiter';
 import { encode } from 'querystring';
 
 interface SheetPayload {

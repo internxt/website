@@ -2,6 +2,10 @@ export const GH_README_LINK = 'https://github.com/internxt/cli/tree/main?tab=rea
 export const USER_GUIDE_LINK = 'https://help.internxt.com/en/articles/9178044-does-internxt-support-webdav';
 export const CLI_UPDATES_LINK = 'https://github.com/internxt/cli/releases';
 
+export const RCLONE_README_LINK = 'https://github.com/internxt/rclone/blob/master/README.md';
+export const RCLONE_USER_GUIDE_LINK = 'https://help.internxt.com/en/articles/9746292-does-internxt-support-rclone';
+export const RCLONE_CLI_UPDATES_LINK = 'https://github.com/internxt/rclone/releases';
+
 export const SIGNUP_DRIVE_WEB = 'https://drive.internxt.com/new';
 
 export const VPN_CHROME_WEB_STORE =

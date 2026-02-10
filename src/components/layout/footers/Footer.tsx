@@ -614,7 +614,7 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                     </Link>
-                    <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link href="/webdav-rclone" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.WebDAV}
                     </Link>
                     <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">
@@ -1286,7 +1286,7 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>
-                      <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
+                      <Link href="/webdav-rclone" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.WebDAV}
                       </Link>
                       <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">

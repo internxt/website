@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
@@ -56,6 +57,7 @@ interface PricingSectionWrapperProps {
   hideFeatures?: boolean;
   showPromo?: boolean;
   isAffiliate?: boolean;
+  isValentinesMode?: boolean;
   hideBillingController?: boolean;
   overrideBillingFrequency?: Interval;
   overrideBusinessBillingFrequency?: Interval;
@@ -85,7 +87,7 @@ const couponNameLabel = (label: string, couponName: string) => {
   return label.replace('{{coupon}}', `'${couponName}'`);
 };
 
-const HotLabel = ({ textContent, discountValue, darkMode }) => {
+const HotLabel = ({ textContent, discountValue, darkMode, isValentinesMode }) => {
   if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
   }
@@ -93,21 +95,45 @@ const HotLabel = ({ textContent, discountValue, darkMode }) => {
   return (
     <span
       className={`flex rounded-sm ${
-        darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
+        isValentinesMode
+          ? 'flex gap-0.5 bg-pink-10 text-pink-80'
+          : darkMode
+          ? 'bg-purple-100 text-purple-8'
+          : 'bg-neutral-37 text-primary'
       } px-1 py-0.5 text-xl font-semibold `}
     >
-      {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
+      {isValentinesMode ? textContent.valentinesTitle : ''}
+      {formatDiscountLabel(textContent.hotLabel, discountValue)}
+      {isValentinesMode ? '💘' : '🔥'}
     </span>
   );
 };
 
-const PricingHeader = ({ textContent, discountValue, className = '', couponCodeName, darkMode, SectionTag }) => (
-  <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
+const PricingHeader = ({
+  textContent,
+  discountValue,
+  className = '',
+  couponCodeName,
+  darkMode,
+  SectionTag,
+  isValentinesMode,
+}) => (
+  <div
+    className={`flex flex-col items-center gap-4 text-center ${
+      isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'
+    } ${className}`}
+    id="priceTable"
+  >
     <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
       {textContent.planTitles.header}
     </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
-      <HotLabel textContent={textContent} discountValue={discountValue} darkMode={darkMode} />
+      <HotLabel
+        textContent={textContent}
+        discountValue={discountValue}
+        darkMode={darkMode}
+        isValentinesMode={isValentinesMode}
+      />
     </div>
   </div>
 );
@@ -146,6 +172,7 @@ export const PricingSectionWrapper = ({
   isAnnual,
   showPromo,
   isAffiliate,
+  isValentinesMode = false,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
   startIndividualPlansFromInterval = Interval.Lifetime,
@@ -221,6 +248,7 @@ export const PricingSectionWrapper = ({
     onBusinessStorageChange,
     hideFreeCard,
     differentRecommended,
+    isValentinesMode,
   };
 
   return (
@@ -237,6 +265,7 @@ export const PricingSectionWrapper = ({
             couponCodeName={couponCodeName}
             darkMode={darkMode}
             SectionTag={SectionTag}
+            isValentinesMode={isValentinesMode}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -250,6 +279,7 @@ export const PricingSectionWrapper = ({
           darkMode={darkMode}
           differentRecommended={differentRecommended}
           showPromo={showPromo}
+          isValentinesMode={isValentinesMode}
         />
       </div>
 
@@ -261,6 +291,7 @@ export const PricingSectionWrapper = ({
             couponCodeName={couponCodeName}
             darkMode={darkMode}
             SectionTag={'p'}
+            isValentinesMode={isValentinesMode}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -274,6 +305,7 @@ export const PricingSectionWrapper = ({
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           darkMode={darkMode}
           showPromo={showPromo}
+          isValentinesMode={isValentinesMode}
         />
       </div>
     </section>
