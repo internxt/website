@@ -26,8 +26,8 @@
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI 和 WebDAV – Internxt",
-    "description": "通过 Internxt CLI 和 WebDAV 功能访问您的 Internxt Drive 账户。体验一种私密管理和控制文件的新方法。"
+    "title": "Internxt CLI, WebDAV 和 Rclone – Internxt",
+    "description": "通过 Internxt CLI, WebDAV 和 Rclone 功能访问您的 Internxt Drive 账户。体验一种私密管理和控制文件的新方法。"
   },
   {
     "id": "what-google-knows",
@@ -194,6 +194,11 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 对象存储",
     "description": "Internxt 提供私密且实惠的对象存储，使用 S3 协议安全地存储数据，有效地管理您的存储需求。"
+  },
+  {
+    "id": "free-cloud-object-storage",
+    "title": "免费云对象存储：Internxt 兼容 S3 且安全",
+    "description": "体验免费的云对象存储和专业的对象存储服务。Internxt 为您的数据提供安全、兼容 S3 的对象存储云。"
   },
   {
     "id": "green-cloud-computing",

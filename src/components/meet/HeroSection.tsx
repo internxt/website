@@ -40,7 +40,7 @@ const HeroSection = ({ textContent }) => (
       </div>
     </div>
     <Image
-      src={getImage('/images/meet/hero desktop.webp')}
+      src={getImage('/images/meet/hero-desktop.webp')}
       alt="Meet Hero Section"
       width={711}
       height={495}
@@ -48,7 +48,7 @@ const HeroSection = ({ textContent }) => (
       className="-ml-16 hidden lg:flex"
     />
     <Image
-      src={getImage('/images/meet/hero mobile.webp')}
+      src={getImage('/images/meet/hero-mobile.webp')}
       alt="Meet Hero Section"
       width={339}
       height={118}

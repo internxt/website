@@ -68,6 +68,10 @@ const LANG_MAP = {
   ition: 'de',
   neumanndigital: 'de',
   bluewin: 'de',
+  tatiana: 'en',
+  simon42: 'de',
+  heisect: 'de',
+  devopstoolbox: 'en',
 };
 
 function CombinedSpecialOffer({

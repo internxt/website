@@ -13,7 +13,6 @@ import {
   VideoConference,
 } from '@phosphor-icons/react';
 import Link from 'next/link';
-import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 
@@ -113,14 +112,14 @@ export default function HeroSection({
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[566px] lg:justify-between">
-        <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
+        <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[566px] lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-1.5 lg:py-1"
             >
-              <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80">{feature.text}</p>
+              <feature.icon className="h-5 w-5 text-primary lg:h-5 lg:w-5" />
+              <p className="whitespace-nowrap text-xs font-medium leading-tight text-gray-80">{feature.text}</p>
             </div>
           ))}
         </div>

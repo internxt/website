@@ -226,7 +226,7 @@ export const HeroSection = ({ textContent, lang }) => {
 
   return (
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
-      <div className="flex w-full flex-col items-center justify-center ">
+      <div className="hidden w-full flex-col items-center justify-center ">
         <Image
           src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
@@ -274,7 +274,7 @@ export const HeroSection = ({ textContent, lang }) => {
           </p>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center">
+      <div className="hidden w-full flex-col items-center justify-center">
         <Image
           src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"

@@ -115,11 +115,12 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   }
 
   return (
-    <section className="hidden overflow-hidden bg-gray-1 px-5 py-20 lg:flex">
+    <section className="hidden overflow-hidden bg-neutral-17 px-5 py-20 lg:flex">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
+          <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
+          <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
 
         <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 md:flex-row">

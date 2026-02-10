@@ -7,6 +7,7 @@ interface TrustedSectionProps {
   bottomBar?: boolean;
   darkMode?: boolean;
   image?: string;
+  isValentinesMode?: boolean;
 }
 
 export default function TrustedSection({
@@ -14,13 +15,20 @@ export default function TrustedSection({
   bottomBar = true,
   darkMode,
   image,
+  isValentinesMode,
 }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
       className={` flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-32 lg:py-20 ${
         darkMode ? 'bg-[#1C1C1C]' : ''
       }`}
-      style={!darkMode && !image ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' } : undefined}
+      style={
+        isValentinesMode
+          ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)' }
+          : !darkMode && !image
+          ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }
+          : undefined
+      }
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       {bottomBar && (

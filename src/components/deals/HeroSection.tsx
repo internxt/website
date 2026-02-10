@@ -75,7 +75,7 @@ export default function HeroSection({
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[566px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[596px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div

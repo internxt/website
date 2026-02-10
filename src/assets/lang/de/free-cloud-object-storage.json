@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "label": "Objektspeicherung",
+    "title": {
+      "line1": "**Internxt S3**",
+      "line2": "Kostenloser Cloud-Objektspeicher"
+    },
+    "description": "Eine effiziente, skalierbare Cloud-Speicherlösung zum Speichern, Abrufen und Verwalten von Daten in großem Umfang.",
+    "cta": "Jetzt starten"
+  },
+  "PredictablePricingSection": {
+    "title": "Einfache, planbare Preise\n ohne Gebühren oder API-Kosten",
+    "description": "Vermeiden Sie das Chaos unvorhersehbarer Speicherrechnungen. Internxt bietet einen klaren Tarif pro Speicherkapazität ohne versteckte Gebühren.",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "Ultraschnell und sofort verfügbar"
+      },
+      {
+        "title": "Bis zu 80%",
+        "description": "Günstiger als AWS"
+      },
+      {
+        "title": "Null Gebühren",
+        "description": "Kostenloser Datentransfer"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Der kostenlose Objektspeicher von Internxt\n kombiniert Sicherheit und Effizienz",
+    "description": "Der Internxt-Objektspeicher ist eine erschwingliche Hochleistungslösung, die die Online-Datenspeicherung revolutioniert – perfekt für Einzelpersonen oder Organisationen, die eine zuverlässige und sichere Infrastruktur zu minimalen Kosten benötigen.",
+    "payAsYouGoCard": {
+      "title": "Pay-as-you-go!",
+      "description": "Zahlen Sie nur für den Speicherplatz, den Sie tatsächlich nutzen."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Pro TB / Monatliche Abrechnung",
+      "price": "7",
+      "cta": "Tarif wählen",
+      "whatsIncluded": {
+        "title": "Inbegriffen",
+        "features": [
+          "Monatliche Abrechnung",
+          "Serverseitige Verschlüsselung",
+          "AWS S3 und IAM API kompatibel",
+          "Erhöhte Geschwindigkeit",
+          "Flexibler Speicher",
+          "Open Source",
+          "DSGVO-konform",
+          "Premium-Kundensupport"
+        ]
+      }
+    },
+    "oneTimePayment": "*Für die Kontoverifizierung ist eine einmalige Gebühr von 1 € erforderlich"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "Wie viel Speicherplatz benötigen Sie?",
+    "description": "Finden Sie heraus, wie viel Sie mit dem Internxt-Objektspeicher sparen können. Nutzen Sie unseren Kostenrechner, um uns mit Hyperscalern zu vergleichen.",
+    "pay-as-you-go": "Pay-as-you-go-Preise",
+    "perMonth": "/pro Monat",
+    "perYear": "/pro Jahr",
+    "storageAmount": "Speichermenge",
+    "percentDownloadPerMonth": "Prozentualer Download pro Monat",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Warum sollten Sie sich für den Internxt-Objektspeicher entscheiden?",
+    "description": "Die Vorteile des Objekt-Cloud-Speichers bei Internxt liegen in der effektiven Datenverwaltung und Sicherheit.",
+    "scrollableSection": {
+      "titles": [
+        "Keine Ingress- und Egress-Gebühren",
+        "Kosten pro GB",
+        "Haltbarkeit & Verfügbarkeit",
+        "Sicherheit",
+        "Einfacher Speicherdienst",
+        "Geschwindigkeit"
+      ],
+      "descriptions": [
+        "Der Wegfall von Ingress- und Egress-Gebühren eliminiert die Kosten für den Datentransfer in oder aus dem Speicher, was eine planbare Budgetierung und Kosteneinsparungen ermöglicht. Dieser Vorteil ist entscheidend für Unternehmen mit häufigen Datenbewegungen oder großen Datenoperationen.",
+        "Mit unserem Pay-as-you-go-Modell zahlen Sie nur für den Speicherplatz, den Sie tatsächlich nutzen. Objektspeicher ist für die Verarbeitung großer Mengen unstrukturierter Daten ausgelegt, was pro GB in der Regel kostengünstiger ist als bei strukturierten Daten, die eine komplexere Verwaltung erfordern.",
+        "Wir ermöglichen eine redundante Datenspeicherung, bei der die Daten repliziert und über mehrere europäische Server verteilt werden. Die Daten sind durch Technologien, die eine Haltbarkeit von 99,999999999 % (11 Neunen) für jedes Objekt garantieren, vor Verlust oder Beschädigung geschützt.",
+        "Bei unserem Cloud-Objektspeicher setzen wir verschiedene Sicherheitsmaßnahmen zum Schutz Ihrer Daten ein. Ihre Daten werden sowohl bei der Übertragung als auch im Ruhezustand verschlüsselt. Wir unterstützen das HTTPS-Protokoll und serverseitige Verschlüsselung mit vom Kunden bereitgestellten Schlüsseln (SSE-C).",
+        "Internxt bietet Objektspeicherung unter Verwendung des S3-Protokolls an, um Daten-Workflows zu vereinfachen und zu verwalten, wobei eine hohe Verfügbarkeit und Haltbarkeit der Daten mit dem von Internxt priorisierten Sicherheitsfokus gewährleistet wird.",
+        "Objektspeicher bietet überlegene Geschwindigkeit, indem er mehrere Lese- und Schreibvorgänge gleichzeitig ermöglicht und umfangreiche Metadaten für einen schnelleren Datenabruf nutzt. Dies ermöglicht kürzere Zugriffszeiten und eine effiziente Handhabung großer Datenmengen."
+      ]
+    },
+    "bannerText": {
+      "title": "Internxt Objekt-Cloud-Speicher",
+      "description": "Erleben Sie überlegene Datenverwaltung, Geschwindigkeit und Effizienz",
+      "cta": "Jetzt starten",
+      "separator": "|",
+      "cta2": "Kontakt"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist Objektspeicherung?",
+        "answer": [
+          "Bei der Objektspeicherung werden große Datenmengen wie Fotos, Videos und E-Mails als einzelne „Objekte“ mit eindeutigen Identifikatoren gespeichert.",
+          "Im Gegensatz zur herkömmlichen Dateispeicherung, die Daten in einem hierarchischen Dateisystem organisiert, speichert die Objektspeicherung Daten als Objekte in einem flachen Adressraum, typischerweise in einer verteilten Speicherinfrastruktur.",
+          "Dadurch ermöglicht die Cloud-Objektspeicherung eine einfachere Skalierung, einen schnelleren Zugriff auf einzelne Elemente und potenziell geringere Kosten, je nach Ihren Speicheranforderungen."
+        ]
+      },
+      {
+        "question": "Was ist das S3-Protokoll?",
+        "answer": [
+          "Das S3-Protokoll (Simple Storage Service Protocol) ist eine Reihe von Regeln und Standards, die festlegen, wie auf Daten in Amazon S3 zugegriffen, wie sie gespeichert und verwaltet werden – einem beliebten Cloud-Speicherdienst von Amazon Web Services (AWS)."
+        ]
+      },
+      {
+        "question": "Wie viel Objektspeicher erhalte ich?",
+        "answer": [
+          "Mit dem Internxt Cloud-Objektspeicher können Sie Ihren Speicherbedarf flexibel skalieren. Unsere Tarife berechnen monatlich pro genutztem Gigabyte pro Tag. Sie können Speicherplatz je nach Bedarf hinzufügen oder löschen."
+        ]
+      },
+      {
+        "question": "Kann ich den Internxt-Objektspeicher in bestehende Anwendungen und Dienste integrieren?",
+        "answer": [
+          "Ja, der Internxt-Objektspeicher ist mit den AWS S3-APIs kompatibel, was eine nahtlose Integration in eine Vielzahl von Anwendungen, Tools und Diensten ermöglicht, die das S3-Protokoll unterstützen.",
+          "S3-Objektspeicher ermöglicht es Benutzern, Objekte (Dateien und Daten) über eine einfache Weboberfläche und APIs hochzuladen, abzurufen und zu verwalten. Das Protokoll gewährleistet Datenintegrität, Sicherheit durch Zugriffskontrollen und Skalierbarkeit für unterschiedliche Speicheranforderungen über verteilte Server hinweg."
+        ]
+      },
+      {
+        "question": "Gibt es bei Internxt eine monatliche Mindestspeicherrichtlinie?",
+        "answer": [
+          "Die monatliche Mindestrichtlinie von Internxt für Objektspeichertarife beträgt 1 TB. Wenn gespeicherte Objekte gelöscht werden, bevor sie 30 Tage lang bei Internxt gespeichert wurden, wird eine Gebühr für zeitlich gelöschten Speicher erhoben, die den verbleibenden Tagen des monatlichen Abonnements entspricht.",
+          "Diese Richtlinie entspricht der Mindestspeicherdauer-Richtlinie, die auch von AWS und anderen Hyperscaler-Speicherdiensten erhoben wird."
+        ]
+      },
+      {
+        "question": "Gibt es bei Internxt eine monatliche Speichergebühr?",
+        "answer": [
+          "Internxt erhebt eine monatliche Mindestgebühr, die mit einem monatlich bezahlten 1-TB-Konto verbunden ist. Wenn Sie weniger als 1 TB speichern, zum Beispiel das Minimum von 4 KB, werden Ihnen 1 TB Speicherplatz berechnet."
+        ]
+      },
+      {
+        "question": "Was ist, wenn ich kleine Dateien speichern möchte? (Weniger als 4 KB)",
+        "answer": [
+          "Es gibt eine Mindestgebühr für die Dateigröße von 4 KB. Das Speichern einer 4-KB-Datei verursacht Gebühren, die einer 1-TB-Datei entsprechen, basierend auf der Mindestkapazitätsgebühr pro Objekt, ähnlich wie bei einigen AWS-Speicherrichtlinien."
+        ]
+      },
+      {
+        "question": "Wie hoch sind die Kosten für das wiederholte Überschreiben einer Datei ohne Versionierung?",
+        "answer": [
+          "Wenn Sie beispielsweise eine Datei namens 'datei.pdf' hochladen und diese am nächsten Tag mit einer neuen Version überschreiben, ohne den Dateinamen zu ändern oder die Versionierung zu nutzen, geht die ursprüngliche Datei vom aktiven Speicher in den gelöschten Speicher über.",
+          "Dies verursacht Kosten für einen Tag aktiven Speicher und 29 oder 89 Tage gelöschten Speicher, je nach der Mindestspeicher-Aufbewahrungsrichtlinie Ihres Kontos. Zusätzlich fallen Gebühren für die Speicherung der neuen Version von 'datei.pdf' an."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie Fragen, Bedenken oder Feedback haben, können Sie unser Kundensupport-Team per Live-Chat oder per E-Mail unter [hello@internxt.com](mailto:hello@internxt.com) kontaktieren."
+        ]
+      },
+      {
+        "question": "Was ist, wenn ich meinen Plan kündigen möchte?",
+        "answer": [
+          "Wenn Sie Objekte aus dem Internxt-Objektspeicher löschen, bevor sie 30 Tage lang gespeichert wurden, wird Ihnen der Betrag dennoch so berechnet, als wären diese Objekte die vollen 30 Tage lang gespeichert worden.",
+          "Diese Richtlinie gewährleistet einen Mindestgebührenzeitraum für gespeicherte Daten, unabhängig davon, wie lange die Objekte tatsächlich vor der Löschung gespeichert waren.",
+          "Wenn Sie Ihren Objektspeichertarif kündigen möchten, senden Sie uns eine E-Mail an hello@internxt.com, und wir werden die Stornierung des Abonnements bearbeiten."
+        ]
+      }
+    ]
+  },
+  "ContactSales": {
+    "title": "Vertrieb kontaktieren",
+    "description": "Füllen Sie das Kontaktformular aus und unser Team wird sich in Kürze mit Ihnen in Verbindung setzen.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "howMuchStorage": "Wie viel Speicherplatz benötigen Sie?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Auswählen",
+        "1 - 10 TB",
+        "15 - 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Wie können wir Ihnen helfen? (Optional)",
+      "howWeCanHelpPlaceHolder": "Erzählen Sie uns mehr über Ihre Anforderungen",
+      "cta": "Nachricht senden",
+      "ctaSending": "Wird gesendet...",
+      "successMessage": "Ihre Nachricht wurde erfolgreich gesendet.",
+      "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt S3: Kostenloser Cloud-Objektspeicher",
+    "description": "Der kostenlose Objektspeicherdienst von Internxt kombiniert Sicherheit und Effizienz",
+    "cta": "Jetzt starten"
+  },
+  "CtaSectionV2": {
+    "title": "Kostenloser Cloud-Objektspeicher von Internxt",
+    "description": "Die Cloud-Objektspeicherlösungen von Internxt kombinieren Sicherheit und Effizienz",
+    "cta": "Jetzt starten"
+  }
+}

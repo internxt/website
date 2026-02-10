@@ -1,0 +1,201 @@
+{
+  "HeroSection": {
+    "label": "Archiviazione a oggetti",
+    "title": {
+      "line1": "**Internxt S3**",
+      "line2": "Archiviazione a oggetti cloud gratuita"
+    },
+    "description": "Una soluzione di archiviazione cloud efficiente e scalabile per archiviare, consultare e gestire dati su larga scala.",
+    "cta": "Inizia ora"
+  },
+  "PredictablePricingSection": {
+    "title": "Prezzi semplici e prevedibili\n senza commissioni o costi API",
+    "description": "Evita lo stress di fatture imprevedibili. Internxt offre una tariffa chiara per capacità di archiviazione senza costi nascosti.",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "Ultrarapido e accessibile all'istante"
+      },
+      {
+        "title": "Fino all'80%",
+        "description": "Più conveniente di AWS"
+      },
+      {
+        "title": "Zero commissioni",
+        "description": "Trasferimento dati gratuito"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "L'archiviazione a oggetti gratuita di Internxt\n unisce sicurezza ed efficienza",
+    "description": "L'object storage di Internxt è una soluzione economica e ad alte prestazioni che rivoluziona l'archiviazione dati online, ideale per privati o aziende che cercano un'infrastruttura sicura a costi minimi.",
+    "payAsYouGoCard": {
+      "title": "Paga a consumo!",
+      "description": "Paga solo per lo spazio che utilizzi realmente."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Per TB/Fatturato mensilmente",
+      "price": "7",
+      "cta": "Seleziona piano",
+      "whatsIncluded": {
+        "title": "Cosa include",
+        "features": [
+          "Fatturazione mensile",
+          "Crittografia lato server",
+          "Compatibile con API AWS S3 e IAM",
+          "Velocità aumentata",
+          "Archiviazione flessibile",
+          "Open source",
+          "Conforme al GDPR",
+          "Supporto clienti Premium"
+        ]
+      }
+    },
+    "oneTimePayment": "*È richiesta una commissione una tantum di 1 € per la verifica dell'account"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "Di quanto spazio hai bisogno?",
+    "description": "Scopri quanto puoi risparmiare con l'object storage di Internxt. Usa il nostro calcolatore per confrontarci con gli hyperscaler.",
+    "pay-as-you-go": "Prezzo a consumo",
+    "perMonth": "/al mese",
+    "perYear": "/all'anno",
+    "storageAmount": "Quantità di archiviazione",
+    "percentDownloadPerMonth": "Percentuale di download mensile",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Perché scegliere l'object storage di Internxt?",
+    "description": "I vantaggi del cloud object storage con Internxt si concentrano sulla gestione efficace dei dati e sulla sicurezza.",
+    "scrollableSection": {
+      "titles": [
+        "Zero costi di ingress e egress",
+        "Costo per GB",
+        "Durabilità e disponibilità",
+        "Sicurezza",
+        "Servizio di archiviazione semplice",
+        "Velocità"
+      ],
+      "descriptions": [
+        "L'assenza di costi per il trasferimento dati in entrata (ingress) o in uscita (egress) permette un risparmio concreto e una pianificazione del budget precisa.",
+        "Con il modello pay-as-you-go, paghi solo per l'uso effettivo. L'object storage è progettato per gestire grandi volumi di dati non strutturati a costi per GB inferiori rispetto ai dati strutturati.",
+        "Garantiamo una ridondanza dei dati distribuita su più server europei. La tecnologia assicura una durabilità del 99,999999999% (11 nove) per ogni singolo oggetto.",
+        "Utilizziamo molteplici misure di sicurezza. I dati sono crittografati sia in transito che a riposo. Supportiamo HTTPS e crittografia lato server con chiavi fornite dall'utente (SSE-C).",
+        "Internxt utilizza il protocollo S3 per semplificare i flussi di lavoro, garantendo alta disponibilità e massima attenzione alla privacy.",
+        "L'archiviazione a oggetti offre una velocità superiore permettendo operazioni simultanee e l'uso di metadati avanzati per un recupero rapido dei dati."
+      ]
+    },
+    "bannerText": {
+      "title": "Internxt cloud object storage",
+      "description": "Sperimenta una gestione dei dati, velocità ed efficienza superiori",
+      "cta": "Inizia ora",
+      "separator": "|",
+      "cta2": "Contattaci"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cos'è l'object storage?",
+        "answer": [
+          "L'archiviazione a oggetti conserva grandi quantità di dati (foto, video, email) come \"oggetti\" individuali dotati di identificativi unici.",
+          "A differenza dei sistemi gerarchici tradizionali, utilizza uno spazio di indirizzamento piatto, facilitando la scalabilità e l'accesso rapido.",
+          "Consente una crescita flessibile e costi potenzialmente più bassi."
+        ]
+      },
+      {
+        "question": "Cos'è il protocollo S3?",
+        "answer": [
+          "Il protocollo S3 (Simple Storage Service) è lo standard che definisce come accedere e gestire i dati nel cloud, reso celebre da AWS."
+        ]
+      },
+      {
+        "question": "Quanto spazio posso ottenere?",
+        "answer": [
+          "Puoi scalare lo spazio in base alle tue necessità. I piani prevedono l'addebito mensile per ogni gigabyte utilizzato al giorno."
+        ]
+      },
+      {
+        "question": "Posso integrarlo con app esistenti?",
+        "answer": [
+          "Sì, la compatibilità con le API AWS S3 permette un'integrazione immediata con la maggior parte degli strumenti che supportano lo standard S3."
+        ]
+      },
+      {
+        "question": "Esiste una soglia minima mensile?",
+        "answer": [
+          "La soglia minima è di 1 TB. Se i dati vengono cancellati prima di 30 giorni, viene applicato un costo pari ai giorni rimanenti del mese."
+        ]
+      },
+      {
+        "question": "C'è un costo minimo mensile?",
+        "answer": [
+          "Sì, l'account prevede un minimo di 1 TB. Se archivi meno (es. 4 KB), ti verrà fatturato il costo relativo a 1 TB."
+        ]
+      },
+      {
+        "question": "E per i file molto piccoli (meno di 4 KB)?",
+        "answer": [
+          "Viene applicato un costo minimo basato su 4 KB per ogni file, similmente alle policy di Amazon AWS."
+        ]
+      },
+      {
+        "question": "Quanto costa sovrascrivere un file senza versioning?",
+        "answer": [
+          "Se sovrascrivi un file, l'originale viene considerato \"cancellato\". Questo genera costi per il periodo di attività e per il residuo dei 30 giorni previsti dalla policy di ritenzione."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": ["Via chat o email a [hello@internxt.com](mailto:hello@internxt.com)."]
+      },
+      {
+        "question": "Come posso annullare il piano?",
+        "answer": [
+          "La cancellazione prima dei 30 giorni comporta comunque l'addebito per l'intero mese. Per disdire, scrivi a hello@internxt.com."
+        ]
+      }
+    ]
+  },
+  "ContactSales": {
+    "title": "Contatta l'ufficio vendite",
+    "description": "Compila il modulo e il nostro team ti contatterà al più presto.",
+    "form": {
+      "name": "Nome completo",
+      "email": "Indirizzo email",
+      "company": "Nome azienda",
+      "phone": "Numero di telefono",
+      "howMuchStorage": "Di quanto spazio hai bisogno?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Seleziona",
+        "1 - 10 TB",
+        "15 - 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "Oltre 20 PB"
+      ],
+      "howWeCanHelp": "Come possiamo aiutarti? (Opzionale)",
+      "howWeCanHelpPlaceHolder": "Dacci più dettagli sulle tue necessità",
+      "cta": "Invia messaggio",
+      "ctaSending": "Invio in corso...",
+      "successMessage": "Il messaggio è stato inviato con successo.",
+      "errorMessage": "Si è verificato un errore. Riprova più tardi."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt S3: Archiviazione cloud gratuita",
+    "description": "L'object storage di Internxt unisce sicurezza ed efficienza",
+    "cta": "Inizia ora"
+  },
+  "CtaSectionV2": {
+    "title": "Archiviazione a oggetti cloud Internxt",
+    "description": "Le soluzioni cloud di Internxt uniscono sicurezza ed efficienza",
+    "cta": "Inizia ora"
+  }
+}

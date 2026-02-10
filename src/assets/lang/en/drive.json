@@ -208,12 +208,12 @@
     },
     "Rclone": {
       "title": "Rclone",
-      "comingSoon": "Comming soon",
+      "cta": "Get Rclone",
       "description": "Sync, backup, and manage your files across multiple cloud services effortlessly with native Rclone support."
     },
     "NAS": {
       "title": "NAS",
-      "comingSoon": "Comming soon",
+      "cta": "Get NAS",
       "description": "Connect your NAS system directly to Internxt Drive to back up, sync, and manage your data securely."
     }
   },

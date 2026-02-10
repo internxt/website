@@ -9,6 +9,7 @@
       "mail": "邮箱"
     },
     "title": "最安全的云存储**价格更低**",
+    "valentinesTitle": "爱值得**隐私**",
     "description": "更低价格的安全云存储。立即获取您的专属折扣。访问Internxt屡获殊荣的隐私套件，包含后量子加密云存储等更多功能。",
     "subtitle": "立即享受{{discount}}%折扣",
     "claimDeal": "获取优惠"
@@ -54,6 +55,7 @@
   "tableSection": {
     "title": "Internxt套餐",
     "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的爱 - ",
     "planTitles": {
       "header": " 選擇您的計劃",
       "individuals": "年度套餐",
