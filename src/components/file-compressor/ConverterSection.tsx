@@ -1,4 +1,6 @@
-import { createRef, useCallback, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createRef, useCallback, useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import { Errors, MAX_FILE_SIZE, extensionName, compressionTypes, fileMimeTypes } from './types';
 
 import InitialState from './states/InitialState';
@@ -17,30 +19,26 @@ interface ConverterSectionProps {
   pathname: string;
 }
 
-interface ConverterStatesProps {
-  state: ConverterStates;
-}
-
 type ConverterStates = 'initialState' | 'selectedFileState' | 'compressingState' | 'downloadFileState' | 'errorState';
 
 export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
+  const router = useRouter();
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
-  const borderStyle = isDragging
-    ? 'border border-dashed border-primary'
-    : 'border-4 border-dashed border-primary/8 bg-primary/2';
 
-  const pathnameSegments = pathname.split('-');
-  const fileType = pathnameSegments[1];
+  const fileType = useMemo(() => {
+    const segments = pathname.split('-');
+    return segments[1] || 'pdf';
+  }, [pathname]);
 
-  const urlToFileExtensionsMap = {
-    jpg: ['jpg'],
+  const urlToFileExtensionsMap: Record<string, string[]> = {
+    jpg: ['jpg', 'jpeg'],
     png: ['png'],
     pdf: ['pdf'],
-    mov: ['mov'],
+    mov: ['mov', 'mp4'],
     zip: ['zip'],
     word: ['doc', 'docx'],
     excel: ['xls', 'xlsx'],
@@ -48,16 +46,27 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   const allowedExtensionsForPath = urlToFileExtensionsMap[fileType] || [];
-
   const allowedUploadedFilesExtension = fileMimeTypes[fileType];
 
-  const formattedConverterText = formatText(converterText, {
-    pathFrom: extensionName[fileType],
-  });
+  const formattedConverterText = useMemo(
+    () =>
+      formatText(converterText, {
+        pathFrom: extensionName[fileType],
+      }),
+    [converterText, fileType],
+  );
 
-  const formattedErrorText = formatText(errorContent, {
-    pathFrom: extensionName[fileType],
-  });
+  const formattedErrorText = useMemo(
+    () =>
+      formatText(errorContent, {
+        pathFrom: extensionName[fileType],
+      }),
+    [errorContent, fileType],
+  );
+
+  const borderStyle = isDragging
+    ? 'border border-dashed border-primary'
+    : 'border-4 border-dashed border-primary/8 bg-primary/2';
 
   const resetViewToInitialState = useCallback(() => {
     setError(null);
@@ -65,140 +74,132 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setConverterStates('initialState');
     setIsDragging(false);
 
-    setTimeout(() => {
-      if (uploadFileRef.current) {
-        uploadFileRef.current.value = '';
-      }
-    }, 100);
-  }, []);
+    if (uploadFileRef.current) {
+      uploadFileRef.current.value = '';
+    }
+  }, [uploadFileRef]);
 
-  const handleDroppedFiles = (files: FileList) => {
-    const file = files.length > 0 ? files.item(files.length - 1) : null;
+  const validateAndSetFiles = (incomingFiles: FileList) => {
+    const file = incomingFiles.length > 0 ? incomingFiles.item(0) : null;
     if (!file) return;
 
-    const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
+    const filesSize = Array.from(incomingFiles).reduce((acc, f) => acc + f.size, 0);
+    if (filesSize > MAX_FILE_SIZE) {
+      setError('bigFile');
+      setConverterStates('errorState');
+      return;
+    }
 
+    const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
     if (!allowedExtensionsForPath.includes(fileExtension)) {
       setError('unsupportedFormat');
       setConverterStates('errorState');
       return;
     }
 
-    setFiles(files);
+    setFiles(incomingFiles);
     setConverterStates('selectedFileState');
   };
 
+  const handleDroppedFiles = (droppedFiles: FileList) => {
+    validateAndSetFiles(droppedFiles);
+  };
+
   const handleOpenFileExplorer = () => {
-    if (uploadFileRef.current) {
-      uploadFileRef.current.click();
-    }
+    uploadFileRef.current?.click();
   };
 
   const handleFileInput = () => {
-    const fileInput = uploadFileRef.current;
-    if (fileInput?.files && fileInput.files.length > 0) {
-      const file = fileInput.files[0];
-      const filesSize = Array.from(fileInput.files).reduce((accumulator, file) => accumulator + file.size, 0);
-
-      if (filesSize > MAX_FILE_SIZE) {
-        setError('bigFile');
-        setConverterStates('errorState');
-        return;
-      }
-
-      const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
-
-      if (!allowedExtensionsForPath.includes(fileExtension)) {
-        setError('unsupportedFormat');
-        setConverterStates('errorState');
-        return;
-      }
-
-      setFiles(fileInput.files);
-      setConverterStates('selectedFileState');
+    if (uploadFileRef.current?.files) {
+      validateAndSetFiles(uploadFileRef.current.files);
     }
   };
 
   const handleCompression = async () => {
-    if (!fileType || !files) return;
+    if (!fileType || !files || !files[0]) return;
 
     setConverterStates('compressingState');
 
     try {
-      let compressionType: 'image' | 'document' | 'video' | 'archive' | undefined;
       const fileExtension = files[0].name.split('.').pop()?.toLowerCase() || '';
+      let compressionType: 'image' | 'document' | 'video' | 'archive' | undefined;
 
-      if (compressionTypes.imageCompression.includes(fileExtension)) {
-        compressionType = 'image';
-      } else if (compressionTypes.documentCompression.includes(fileExtension)) {
-        compressionType = 'document';
-      } else if (compressionTypes.videoCompression.includes(fileExtension)) {
-        compressionType = 'video';
-      } else if (compressionTypes.archiveCompression.includes(fileExtension)) {
-        compressionType = 'archive';
-      } else {
-        throw new Error('Unsupported file type for compression');
+      const typeEntries = Object.entries(compressionTypes) as [string, string[]][];
+      for (const [key, extensions] of typeEntries) {
+        if (extensions.includes(fileExtension)) {
+          compressionType = key.replace('Compression', '') as any;
+          break;
+        }
       }
+
+      if (!compressionType) throw new Error('Unsupported file type');
 
       await fileCompressorService.handleFileCompression(files[0], compressionType, fileExtension);
       setConverterStates('downloadFileState');
     } catch (err) {
-      const error = err as Error;
-      const filteredError = error.message.includes('File too large') ? 'bigFile' : 'internalError';
-      setError(filteredError);
+      const errorMsg = err as Error;
+      const filteredError = errorMsg.message.includes('File too large') ? 'bigFile' : 'internalError';
+      setError(filteredError as Errors);
       setConverterStates('errorState');
     }
   };
 
-  const State = (views: ConverterStatesProps) => {
-    const state = {
-      initialState: (
-        <InitialState
-          textContent={formattedConverterText.dragNDropArea}
-          pathFrom={extensionName[fileType]}
-          handleFileDrop={handleDroppedFiles}
-          isDragging={isDragging}
-          setIsDragging={setIsDragging}
-          handleOpenFileExplorer={handleOpenFileExplorer}
-        />
-      ),
-      selectedFileState: files && (
-        <SelectedFile
-          textContent={formattedConverterText.fileSelected}
-          files={files}
-          onFileConvert={handleCompression}
-          onCancel={resetViewToInitialState}
-        />
-      ),
-      compressingState: (
-        <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
-          <div className="relative">
-            <div className="absolute inset-1">
-              <div className="upDownMotion absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl" />
+  const renderState = () => {
+    switch (converterStates) {
+      case 'initialState':
+        return (
+          <InitialState
+            textContent={formattedConverterText.dragNDropArea}
+            pathFrom={extensionName[fileType]}
+            handleFileDrop={handleDroppedFiles}
+            isDragging={isDragging}
+            setIsDragging={setIsDragging}
+            handleOpenFileExplorer={handleOpenFileExplorer}
+          />
+        );
+      case 'selectedFileState':
+        return (
+          files && (
+            <SelectedFile
+              textContent={formattedConverterText.fileSelected}
+              files={files}
+              onFileConvert={handleCompression}
+              onCancel={resetViewToInitialState}
+            />
+          )
+        );
+      case 'compressingState':
+        return (
+          <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
+            <div className="relative">
+              <div className="absolute inset-1">
+                <div className="upDownMotion absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl" />
+              </div>
+              <EmptyFile />
             </div>
-            <EmptyFile />
+            <p className="text-2xl font-semibold">{formattedConverterText.compressing}</p>
           </div>
-          <p className="text-2xl font-semibold">{formattedConverterText.compressing}</p>
-        </div>
-      ),
-      downloadFileState: (
-        <DownloadFileState
-          textContent={formattedConverterText.fileConverted}
-          onConvertMoreFilesButtonPressed={resetViewToInitialState}
-          onDownloadFile={handleCompression}
-        />
-      ),
-      errorState: (
-        <ErrorState
-          error={error}
-          resetViewToInitialState={resetViewToInitialState}
-          errorContent={formattedErrorText}
-          textContent={formattedConverterText.dragNDropArea}
-        />
-      ),
-    };
-
-    return state[views.state];
+        );
+      case 'downloadFileState':
+        return (
+          <DownloadFileState
+            textContent={formattedConverterText.fileConverted}
+            onConvertMoreFilesButtonPressed={resetViewToInitialState}
+            onDownloadFile={handleCompression}
+          />
+        );
+      case 'errorState':
+        return (
+          <ErrorState
+            error={error}
+            resetViewToInitialState={resetViewToInitialState}
+            errorContent={formattedErrorText}
+            textContent={formattedConverterText.dragNDropArea}
+          />
+        );
+      default:
+        return null;
+    }
   };
 
   return (
@@ -217,14 +218,12 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         <div className="flex flex-col items-center space-y-5 text-center">
           <div className="relative flex h-[58px] items-center text-center lg:w-[60rem] lg-xl:w-[65rem] 1.5xl:w-[72rem] 2xl:w-[80rem]">
             <div
-              className="absolute left-0 hidden flex-row items-center justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50 lg:flex"
-              onClick={() => window.history.back()}
+              className="absolute left-0 hidden cursor-pointer flex-row items-center justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50 lg:flex"
+              onClick={() => router.back()}
             >
               <CaretLeft className="text-primary" size={24} />
               <p className="pl-1 text-base font-medium text-primary">Back</p>
             </div>
-
-            {/* Título centrado */}
             <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold">{formattedConverterText.title}</p>
           </div>
 
@@ -235,9 +234,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
           </div>
         </div>
         <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl  px-5 ${borderStyle}  py-12`}
+          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle} py-12`}
         >
-          <State state={converterStates} />
+          {renderState()}
         </div>
       </div>
     </section>
