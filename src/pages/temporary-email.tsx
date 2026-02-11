@@ -13,6 +13,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { setup } from '@/lib/csrf';
+import { GetServerSidePropsContext } from 'next';
 
 const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
   const dialogAction = useGlobalDialog();
@@ -32,7 +33,7 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} lang={lang} />
+        <HeroSection textContent={textContent.HeroSection} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 
@@ -50,7 +51,7 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
   );
 };
 
-export const getServerSideProps = setup(async (ctx: any) => {
+export const getServerSideProps = setup(async (ctx: GetServerSidePropsContext) => {
   const lang = ctx.locale || 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -60,6 +61,7 @@ export const getServerSideProps = setup(async (ctx: any) => {
   const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const metatags = metatagsDescriptions.filter((desc: any) => desc.id === 'temporary-email');
 
   return {
