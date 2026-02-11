@@ -226,8 +226,8 @@ export const HeroSection = ({ textContent }) => {
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
-          src={getImage(`/banners/temp-email 160x600 EN.png`)}
-          alt=" Vertical Banner"
+          src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
+          alt=" Internxt Vertical Banner"
           width={180}
           height={180}
           quality={100}
@@ -268,8 +268,8 @@ export const HeroSection = ({ textContent }) => {
       </div>
       <div className="flex w-full flex-col items-center justify-center">
         <Image
-          src={getImage(`/banners/temp-email 160x600 EN.png`)}
-          alt="Vertical Banner"
+          src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
+          alt="Internxt Vertical Banner"
           width={180}
           height={180}
           quality={100}

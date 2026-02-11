@@ -45,8 +45,8 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
           <div className="flex  w-full flex-col items-center justify-center">
             <Image
-              src={getImage(`/banners/temp-email 728x90 EN.png`)}
-              alt="File Arrow Up icon"
+              src={getImage(`/banners/BanInternxt728x90en.webp`)}
+              alt="Internxt Banner"
               width={800}
               height={110}
               quality={100}
@@ -124,8 +124,8 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
 
             <div className="flex  w-full flex-col items-center justify-center pt-6">
               <Image
-                src={getImage(`/banners/temp-email 728x90 EN.png`)}
-                alt="File Arrow Up icon"
+                src={getImage(`/banners/BanInternxt728x90en.webp`)}
+                alt="Internxt Banner"
                 width={800}
                 height={110}
                 quality={100}
