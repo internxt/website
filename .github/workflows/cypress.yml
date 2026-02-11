@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -30,3 +30,8 @@ jobs:
           build: yarn build
           start: yarn start
           browser: chrome
+        env:
+          RECAPTCHA_V3: ${{ secrets.RECAPTCHA_V3 }}
+          RECAPTCHA_V3_ENDPOINT: ${{ secrets.RECAPTCHA_V3_ENDPOINT }}
+          RECAPTCHA_V3_SCORE_THRESHOLD: ${{ secrets.RECAPTCHA_V3_SCORE_THRESHOLD }}
+          SHEETS_API_URL: ${{ secrets.SHEETS_API_URL }}
