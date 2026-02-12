@@ -208,6 +208,7 @@ export enum PromoCodeName {
   devopstoolbox = 'DEVOPSTOOLBOX',
   bjoern = 'BJOERN',
   lefiltre = 'LEFILTRE',
+  cloudoff = 'CLOUDOFF',
 }
 
 export interface PromoCodeProps {

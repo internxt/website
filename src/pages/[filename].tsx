@@ -10,7 +10,7 @@ import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { useOfferConfig, usePathRedirect } from '@/hooks/useSpecialOfferConfig';
 import FeaturesSection from '@/components/drive/FeaturesSection';
@@ -74,6 +74,8 @@ const LANG_MAP = {
   devopstoolbox: 'en',
   bjoern: 'de',
   lefiltre: 'fr',
+  annual: 'en',
+  ultimate: 'en',
 };
 
 function CombinedSpecialOffer({
@@ -84,8 +86,16 @@ function CombinedSpecialOffer({
   navbarLang,
   pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
-  const { selectedPathname, isDarkMode, alternateRecommendedPlan, couponCode, alternativeImages } =
-    useOfferConfig(pathname);
+  const {
+    selectedPathname,
+    isDarkMode,
+    alternateRecommendedPlan,
+    couponCode,
+    alternativeImages,
+    onlyUltimatePlan,
+    ultimateAndPremiumPlans,
+    annualPlans,
+  } = useOfferConfig(pathname);
   const {
     products,
     loadingCards,
@@ -109,7 +119,7 @@ function CombinedSpecialOffer({
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   const themeClasses = getThemeClasses(isDarkMode);
-
+  const openerInterval = annualPlans ? Interval.Year : Interval.Lifetime;
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
@@ -147,7 +157,7 @@ function CombinedSpecialOffer({
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
       <HeroSection
         textContent={langJson.HeroSection}
@@ -171,11 +181,15 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="5TB"
         sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
+        onlyUltimatePlan={onlyUltimatePlan}
+        premiumAndUltimatePlan={ultimateAndPremiumPlans}
+        startIndividualPlansFromInterval={openerInterval}
+        hidePlanSelectorComponent={annualPlans}
       />
 
       <FeaturesSection
