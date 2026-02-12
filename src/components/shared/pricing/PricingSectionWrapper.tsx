@@ -71,6 +71,8 @@ interface PricingSectionWrapperProps {
   overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
   differentRecommended?: boolean;
   SectionTag?: React.ElementType;
+  onlyUltimatePlan?: boolean;
+  premiumAndUltimatePlan?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -194,6 +196,8 @@ export const PricingSectionWrapper = ({
   overrideOnBusinessSwitchToggled,
   differentRecommended,
   SectionTag = DEFAULTS.SectionTag,
+  onlyUltimatePlan = false,
+  premiumAndUltimatePlan = false,
 }: PricingSectionWrapperProps): JSX.Element => {
   const localPlanSelection = usePlanSelection(
     startFromPlan,
@@ -280,6 +284,8 @@ export const PricingSectionWrapper = ({
           differentRecommended={differentRecommended}
           showPromo={showPromo}
           isValentinesMode={isValentinesMode}
+          onlyUltimatePlan={onlyUltimatePlan}
+          premiumAndUltimatePlan={premiumAndUltimatePlan}
         />
       </div>
 
