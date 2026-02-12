@@ -40,7 +40,10 @@
       }
     },
     "title": "Pásate a un **internet** más **ético**, **privado** y **seguro**",
-    "subtitle": "Así es Internxt - Tu aliado digital fiable",
+    "subtitle": {
+      "part1": "Así es Internxt -",
+      "part2": "Tu aliado digital fiable"
+    },
     "description": "{{discount}}% de descuento",
     "descriptionNormal": "en todos los planes",
     "giftDescription": {

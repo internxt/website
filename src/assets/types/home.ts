@@ -37,7 +37,7 @@ export interface HeroSection {
   products: Products;
   SignUp: SignUp;
   title: string;
-  subtitle: string;
+  subtitle: Subtitle;
   description: string;
   descriptionNormal: string;
   features: string[];
@@ -111,6 +111,11 @@ export interface StartFrom {
   normal1: string;
   price: string;
   normal2: string;
+}
+
+export interface Subtitle {
+  part1: string;
+  part2: string;
 }
 
 export interface OfficalCloudProvider {

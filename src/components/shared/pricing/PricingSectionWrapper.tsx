@@ -71,6 +71,7 @@ interface PricingSectionWrapperProps {
   overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
   differentRecommended?: boolean;
   SectionTag?: React.ElementType;
+  freePlanNeedsH2?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -173,6 +174,7 @@ export const PricingSectionWrapper = ({
   showPromo,
   isAffiliate,
   isValentinesMode = false,
+  freePlanNeedsH2 = false,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
   startIndividualPlansFromInterval = Interval.Lifetime,
@@ -280,6 +282,7 @@ export const PricingSectionWrapper = ({
           differentRecommended={differentRecommended}
           showPromo={showPromo}
           isValentinesMode={isValentinesMode}
+          freePlanNeedsH2={freePlanNeedsH2}
         />
       </div>
 

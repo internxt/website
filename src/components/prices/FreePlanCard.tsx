@@ -3,23 +3,25 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 interface FreePlanCardProps {
   textContent: any;
   darkMode?: boolean;
+  freePlanNeedsH2?: boolean;
 }
 
-const FreePlanCard = ({ textContent, darkMode }: FreePlanCardProps): JSX.Element => {
+const FreePlanCard = ({ textContent, darkMode, freePlanNeedsH2 = false }: FreePlanCardProps): JSX.Element => {
   const { openDialog } = useGlobalDialog();
 
+  const TitleTag = freePlanNeedsH2 ? 'h2' : 'p';
   return (
     <>
-      <div className="w-full  lg:px-8 xl:px-28 3xl:px-80">
+      <div className="w-full lg:px-8 xl:px-28 3xl:px-80">
         <div
           className={`hidden h-[160px] w-full flex-col items-center justify-center gap-3 rounded-16 border  ${
             darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
           } p-4 lg:flex`}
         >
           <div className="flex h-[78px] w-full flex-col items-center justify-center text-start lg:h-[68px] lg:justify-between">
-            <p className={`${darkMode ? 'text-white-95' : 'text-gray-95'} text-3xl font-semibold lg:text-4xl`}>
+            <TitleTag className={`${darkMode ? 'text-white-95' : 'text-gray-95'} text-3xl font-semibold lg:text-4xl`}>
               {textContent.eyeBrow}
-            </p>
+            </TitleTag>
             <p className={`text-sm font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
               {textContent.description}
             </p>

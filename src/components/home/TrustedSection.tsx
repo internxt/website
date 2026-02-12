@@ -34,13 +34,13 @@ export default function TrustedSection({
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <p
+      <h2
         className={`${
           darkMode ? 'text-white-95' : 'text-gray-100'
-        } flex w-[260px] items-start justify-start text-start text-30 font-bold leading-tight lg:w-full lg:items-center lg:justify-center lg:text-center lg:text-3xl`}
+        } flex w-[260px] items-start justify-start text-start text-30 font-bold leading-tight lg:w-1/2 lg:items-center lg:justify-center lg:text-center lg:text-3xl`}
       >
         {textContent.title}
-      </p>
+      </h2>
       <div className="flex w-full flex-col-reverse items-center justify-center lg:w-min lg:flex-row lg:gap-8">
         {image ? (
           <div className="relative h-full w-full lg:w-[650px]">
