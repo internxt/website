@@ -257,6 +257,11 @@ module.exports = {
         destination: '/:path*',
         permanent: true,
       },
+      {
+        source: '/webdav',
+        destination: '/webdav-rclone',
+        permanent: true,
+      },
     ];
   },
   images: {
