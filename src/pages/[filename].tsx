@@ -72,6 +72,8 @@ const LANG_MAP = {
   simon42: 'de',
   heisect: 'de',
   devopstoolbox: 'en',
+  bjoern: 'de',
+  lefiltre: 'fr',
 };
 
 function CombinedSpecialOffer({

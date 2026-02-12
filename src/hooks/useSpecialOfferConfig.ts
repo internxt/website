@@ -26,6 +26,8 @@ export const ALLOWED_PATHS = [
   'simon42',
   'devopstoolbox',
   'heisect',
+  'bjoern',
+  'lefiltre',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -54,6 +56,8 @@ export const COUPON_CODES = {
   simon42: PromoCodeName.simon42,
   devopstoolbox: PromoCodeName.devopstoolbox,
   heisect: PromoCodeName.heisect,
+  bjoern: PromoCodeName.bjoern,
+  lefiltre: PromoCodeName.lefiltre,
 };
 
 interface OfferConfig {
