@@ -3,7 +3,7 @@
     "title": "Internxt Plans",
     "hotLabel": "{{discount}}% off",
     "planTitles": {
-      "header": "Select your Plan",
+      "header": "Cloud storage pricing",
       "individuals": "Individuals",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans"
@@ -39,7 +39,7 @@
     }
   },
   "ComparisonTable": {
-    "title": "Plans and features",
+    "title": "Cloud storage pricing comparison",
     "cta": "Get started",
     "billedAnnualy": "Billed annually",
     "billedOnce": "One-time payment",
@@ -387,7 +387,7 @@
     ]
   },
   "InfoSection": {
-    "title": "Secure cloud storage with unmatched privacy",
+    "title": "Best cloud storage pricing",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
     "cta": "Internxt’s commitment to privacy",
     "scrollableSection": {
@@ -425,7 +425,7 @@
     }
   },
   "lastCtaSection": {
-    "title": "The world's most private cloud storage",
+    "title": "Personal cloud storage pricing",
     "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
     "cta": "Select a plan now"
   }
