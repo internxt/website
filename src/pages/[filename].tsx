@@ -202,7 +202,7 @@ function CombinedSpecialOffer({
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={renderCtaContent(
           langJson.ctaSection.title,
           langJson.ctaSection.description,
@@ -222,7 +222,7 @@ function CombinedSpecialOffer({
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={renderCtaContent(
           langJson.ctaSection2.title,
           langJson.ctaSection2.description,

@@ -19,7 +19,7 @@
       "products": {
         "title": "Produkte",
         "drive": "Internxt Drive",
-        "objStorage": "Internxt S3",
+        "objStorage": "Internxt Enterprise S3",
         "antivirus": "Internxt Antivirus",
         "send": "Internxt Send",
         "vpn": "Internxt VPN",
