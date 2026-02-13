@@ -203,6 +203,12 @@ export enum PromoCodeName {
   Tatiana = 'TATIANA',
   Rclone = 'RCLONE87',
   simon42 = 'SIMON42',
+  love = 'LOVE88',
+  heisect = 'HEISECT',
+  devopstoolbox = 'DEVOPSTOOLBOX',
+  bjoern = 'BJOERN',
+  lefiltre = 'LEFILTRE',
+  cloudoff = 'CLOUDOFF',
 }
 
 export interface PromoCodeProps {

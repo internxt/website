@@ -24,10 +24,20 @@ export const ALLOWED_PATHS = [
   'bluewin',
   'tatiana',
   'simon42',
+  'devopstoolbox',
+  'heisect',
+  'bjoern',
+  'lefiltre',
+  'ultimate',
+  'annual',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
+export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
+export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>(['annual']);
+export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
   xavier: PromoCodeName.Xavier,
@@ -50,6 +60,12 @@ export const COUPON_CODES = {
   bluewin: PromoCodeName.Bluewin,
   tatiana: PromoCodeName.Tatiana,
   simon42: PromoCodeName.simon42,
+  devopstoolbox: PromoCodeName.devopstoolbox,
+  heisect: PromoCodeName.heisect,
+  bjoern: PromoCodeName.bjoern,
+  lefiltre: PromoCodeName.lefiltre,
+  ultimate: PromoCodeName.cloudoff,
+  annual: PromoCodeName.cloudoff,
 };
 
 interface OfferConfig {
@@ -58,6 +74,9 @@ interface OfferConfig {
   alternateRecommendedPlan: boolean;
   couponCode: PromoCodeName | undefined;
   alternativeImages: string | null;
+  onlyUltimatePlan: boolean;
+  ultimateAndPremiumPlans: boolean;
+  annualPlans: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -71,12 +90,18 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         alternateRecommendedPlan: false,
         couponCode: undefined,
         alternativeImages: null,
+        onlyUltimatePlan: false,
+        ultimateAndPremiumPlans: false,
+        annualPlans: false,
       };
     }
 
     const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname as keyof typeof COUPON_CODES];
+    const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);
+    const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
+    const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -88,6 +113,9 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       alternateRecommendedPlan,
       couponCode,
       alternativeImages,
+      onlyUltimatePlan,
+      ultimateAndPremiumPlans,
+      annualPlans,
     };
   }, [pathname]);
 };

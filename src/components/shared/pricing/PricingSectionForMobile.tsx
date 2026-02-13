@@ -45,6 +45,7 @@ interface PriceTableProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  isValentinesMode?: boolean;
 }
 
 export const PricingSectionForMobile = ({
@@ -75,6 +76,7 @@ export const PricingSectionForMobile = ({
   showPromo,
   isAffiliate,
   hideBillingController,
+  isValentinesMode = false,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -198,6 +200,7 @@ export const PricingSectionForMobile = ({
                     isAffiliate={isAffiliate}
                     cardIndex={cardIndex}
                     showGift={showPromo}
+                    isValentinesMode={isValentinesMode}
                   />
                 ))
             : undefined}
@@ -241,6 +244,7 @@ export const PricingSectionForMobile = ({
                         darkMode={darkMode}
                         cardIndex={cardIndex}
                         showGift={showPromo}
+                        isValentinesMode={isValentinesMode}
                       />
                     ))
                 : undefined}
