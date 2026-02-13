@@ -97,7 +97,6 @@ const CloudStorageBackupSolutions = ({
 
         <ExplanationSection
           textContent={textContent.ExplanationSection}
-          lang={lang}
           ctaText={textContent.ExplanationSection.cta}
           ctaLink={CTA_URL}
         ></ExplanationSection>

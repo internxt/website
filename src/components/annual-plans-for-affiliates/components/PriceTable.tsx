@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 import PriceCard from './PriceCard';
-import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
@@ -26,9 +27,8 @@ const PriceTable: React.FC<PriceTableProps> = ({
   billingFrequency,
   isStartPage,
   titleFontSize,
-  isCloudwards,
 }) => {
-  const { products, currency, lifetimeCoupons, currencyValue, loadingCards } = usePricing({
+  const { products, currency, lifetimeCoupons, loadingCards } = usePricing({
     fetchLifetimeCoupons: true,
   });
 
