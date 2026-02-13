@@ -122,6 +122,15 @@ export const ItemsNavigation = ({
           darkMode={darkMode}
           lang={lang}
         />
+
+        <NavigationLink
+          href="/cloud-object-storage"
+          text={textContent.products.s3}
+          isActive={currentPath === getTitles.links.pricing.trim().toLowerCase()}
+          isDarkMode={darkMode}
+          lang={lang}
+        />
+
         <DropdownMenu
           label={textContent.links.ourValues}
           items={[
