@@ -40,7 +40,10 @@
       }
     },
     "title": "Passez à un **internet** plus **éthique**, **privé** et **sécurisé**",
-    "subtitle": "Voici Internxt - Votre allié numérique de confiance",
+    "subtitle": {
+      "part1": "C'est Internxt - ",
+      "part2": "Stockage cloud chiffré"
+    },
     "description": "Obtenez {{discount}}% de réduction ",
     "descriptionNormal": "sur tous les plans",
     "giftDescription": {

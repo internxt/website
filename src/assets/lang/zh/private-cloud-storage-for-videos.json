@@ -19,6 +19,7 @@
   },
   "FeaturesSection": {
     "intro": "Internxt提供最佳视频云存储来存储、共享和备份您的文件。通过我们的零知识云存储防止AI和大科技公司在未经您同意的情况下使用您的视频。",
+    "title": "适合视频的最佳云存储",
     "features": {
       "feature1": {
         "title": "支持4K和8K文件",

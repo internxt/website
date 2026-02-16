@@ -217,7 +217,7 @@ export default function ComparisonTableSection({
       className="flex h-min w-full flex-col items-center py-10 lg:h-min lg:gap-16 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
-      <p className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</p>
+      <h2 className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</h2>
 
       <div className="hidden h-min w-full justify-center lg:flex lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
         <table>
@@ -226,7 +226,7 @@ export default function ComparisonTableSection({
               {textContent.plans.map((plan, planIndex) => (
                 <th key={plan.id} className={getHeaderStyles(planIndex)}>
                   <div className="flex flex-col gap-6">
-                    <p className="text-4xl font-semibold text-gray-95">{plan.name}</p>
+                    <h3 className="text-4xl font-semibold text-gray-95">{plan.name}</h3>
                     <span className="flex flex-row gap-2">
                       <p className="flex text-xl font-bold text-gray-95">
                         {currency}
@@ -355,14 +355,14 @@ export default function ComparisonTableSection({
                     categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
-                  <h3 className="font-medium text-gray-95">{category.name}</h3>
+                  <p className="font-medium text-gray-95">{category.name}</p>
                 </div>
                 <div
                   className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${
                     categoryIndex === 0 ? '' : ''
                   }`}
                 >
-                  <h3 className="font-medium text-gray-95">{category.name}</h3>
+                  <p className="font-medium text-gray-95">{category.name}</p>
                 </div>
               </div>
 

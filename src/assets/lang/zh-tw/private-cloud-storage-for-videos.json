@@ -19,6 +19,7 @@
   },
   "FeaturesSection": {
     "intro": "Internxt提供最佳視頻雲端儲存來儲存、分享和備份您的檔案。透過我們的零知識雲端儲存防止AI和大科技公司在未經您同意的情況下使用您的視頻。",
+    "title": "適合影片的最佳雲端儲存",
     "features": {
       "feature1": {
         "title": "支援4K和8K檔案",

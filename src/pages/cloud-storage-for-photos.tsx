@@ -106,13 +106,8 @@ const CloudStorageBackupSolutions = ({
           cardInfo={cardInfo}
           backgroundClass="bg-white lg:bg-gray-1"
         />
-        <CtaSection
-          textContent={textContent.CtaSection2}
-          url={CTA_URL}
-          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
-        />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>

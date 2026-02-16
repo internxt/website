@@ -52,6 +52,7 @@ interface PriceTableProps {
   isValentinesMode?: boolean;
   onlyUltimatePlan?: boolean;
   premiumAndUltimatePlan?: boolean;
+  freePlanNeedsH2?: boolean;
 }
 
 export const PricingSection = ({
@@ -86,6 +87,7 @@ export const PricingSection = ({
   isValentinesMode = false,
   onlyUltimatePlan = false,
   premiumAndUltimatePlan = false,
+  freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -283,7 +285,7 @@ export const PricingSection = ({
         </div>
       )}
 
-      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} freePlanNeedsH2={freePlanNeedsH2} />}
     </>
   );
 };

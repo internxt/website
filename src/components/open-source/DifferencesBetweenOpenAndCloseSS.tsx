@@ -8,13 +8,13 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-20">
         {/* Title and description */}
         <div className="flex flex-col items-center space-y-6 text-center">
-          <p className="max-w-[756px] text-5xl font-semibold text-gray-100">{textContent.title}</p>
+          <h2 className="max-w-[756px] text-5xl font-semibold text-gray-100">{textContent.title}</h2>
           <p className="max-w-[850px] text-xl text-gray-80">{textContent.description}</p>
         </div>
 
         {/* Tables */}
         <div className="flex w-full">
-          <div className="flex w-full flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-20 lg:items-start lg:justify-center">
+          <div className="flex w-full flex-col space-y-10 md:flex-row md:space-x-20 md:space-y-0 lg:items-start lg:justify-center">
             {/* Table 1 */}
             <div className="flex h-full max-w-[387px] flex-1 flex-col">
               <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">

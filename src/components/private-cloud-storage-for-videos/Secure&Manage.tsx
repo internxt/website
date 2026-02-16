@@ -5,9 +5,9 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
   return (
     <section className="flex flex-col items-center justify-center gap-8 bg-neutral-17 py-10 lg:gap-12 lg:py-20">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:top-0"></div>
-      <p className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-3xl">
+      <h2 className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-3xl">
         {textContent.title}
-      </p>
+      </h2>
       <p className="w-[323px] text-center text-sm font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
         {textContent.description}
       </p>
@@ -15,7 +15,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div key={index} className="flex w-[544px] flex-col items-center gap-16 rounded-16  bg-white p-10">
             <div className="flex flex-col gap-6">
-              <h3 className="text-30 font-semibold text-gray-100 ">{card.title}</h3>
+              <p className="text-30 font-semibold text-gray-100 ">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph, pIndex) => (
                   <p key={pIndex} className="text-base font-normal leading-tight text-gray-55">
@@ -63,7 +63,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div key={index} className="flex w-[340px] flex-col items-center gap-16 rounded-16 bg-white p-10">
             <div className="flex flex-col gap-6">
-              <h3 className="text-xl font-semibold text-gray-100 ">{card.title}</h3>
+              <p className="text-xl font-semibold text-gray-100 ">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph, pIndex) => (
                   <p key={pIndex} className="text-xs font-normal leading-tight text-gray-55">

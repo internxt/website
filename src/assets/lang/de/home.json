@@ -40,7 +40,10 @@
       }
     },
     "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
-    "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
+    "subtitle": {
+      "part1": "Das ist Internxt - ",
+      "part2": "Verschlüsselter Cloud-Speicher"
+    },
     "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
     "descriptionNormal": "auf alle Pläne",
     "giftDescription": {

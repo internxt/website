@@ -125,6 +125,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         />
       </div>
 
+      <h2 className="text-30 font-semibold text-gray-95 lg:text-3xl">{textContent.title}</h2>
       <div className="flex w-[330px] flex-col items-start justify-center gap-12 lg:w-full lg:items-center">
         <div
           ref={scrollContainerRef}
@@ -136,7 +137,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         >
           {featuresArray.map(([key, { title, description }]) => (
             <div key={key} className="h-full w-[330px] shrink-0 lg:w-[352px]">
-              <p className="pb-6 text-lg font-medium text-gray-100 lg:text-xl">{title}</p>
+              <h3 className="pb-6 text-lg font-medium text-gray-100 lg:text-xl">{title}</h3>
               <div className="space-y-4">
                 {description.map((paragraph, i) => (
                   <p key={i} className="text-base font-normal leading-tight text-gray-55 lg:text-base">

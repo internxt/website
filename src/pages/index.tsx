@@ -98,6 +98,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessSelector
         popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20 xl:py-32"
+        freePlanNeedsH2
       />
 
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
@@ -113,7 +114,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <TrustedSection textContent={textContent.TrustedBySection} />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <Footer textContent={footerLang} lang={locale} />
     </Layout>

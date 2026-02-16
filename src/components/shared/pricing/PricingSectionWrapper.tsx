@@ -73,6 +73,7 @@ interface PricingSectionWrapperProps {
   SectionTag?: React.ElementType;
   onlyUltimatePlan?: boolean;
   premiumAndUltimatePlan?: boolean;
+  freePlanNeedsH2?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -175,6 +176,7 @@ export const PricingSectionWrapper = ({
   showPromo,
   isAffiliate,
   isValentinesMode = false,
+  freePlanNeedsH2 = false,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
   startIndividualPlansFromInterval = Interval.Lifetime,

@@ -163,7 +163,7 @@ const PrivateCloudStorageSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection3.description}</p>}
         />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>

@@ -26,7 +26,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
-            <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{title}</p>
+            <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{title}</h2>
             <div className="flex flex-col space-y-6 lg:max-w-[800px]">
               {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
               {description && (
@@ -87,7 +87,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     </div>
                   )}
 
-                  <p className="text-30 font-semibold  sm:leading-tight md:text-3xl">{card.title}</p>
+                  <h3 className="text-30 font-semibold  sm:leading-tight md:text-3xl">{card.title}</h3>
                   <p className="font-regular text-base sm:text-lg md:text-xl">
                     {Array.isArray(card.description)
                       ? card.description.map((line, index) => (

@@ -21,6 +21,7 @@ export interface FAQ {
 
 export interface FeaturesSection {
   intro: string;
+  title: string;
   features: Features;
 }
 
@@ -35,6 +36,13 @@ export interface Feature {
   description: string[];
 }
 
+export interface HeroSection {
+  title: string;
+  features?: string[];
+  subtitle: string;
+  cta: string;
+}
+
 export interface HorizontalScrollableSection {
   title: string;
   description: string;
@@ -45,13 +53,6 @@ export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
   imagesPathname: string[];
-}
-
-export interface HeroSection {
-  title: string;
-  features?: string[];
-  subtitle: string;
-  cta: string;
 }
 
 export interface HowToChooseSection {

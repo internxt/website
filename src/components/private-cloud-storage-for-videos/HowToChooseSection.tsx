@@ -6,7 +6,7 @@ const HowToChooseSection = ({ textContent }) => (
   <section className="flex h-auto w-full flex-row items-center justify-center bg-neutral-17 py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80">
     <div className="flex w-[320px] flex-col items-center justify-between gap-2 lg:h-max lg:w-full lg:gap-12">
       <div className=" w-[320px] lg:w-[832px]">
-        <p className=" text-start text-30 font-bold text-gray-100 lg:text-5xl">{textContent.title}</p>
+        <h2 className=" text-start text-30 font-bold text-gray-100 lg:text-5xl">{textContent.title}</h2>
       </div>
       <div className="flex w-[326px] flex-row items-center justify-center gap-4 pt-8 lg:hidden">
         <Image

@@ -99,7 +99,7 @@ const PrivateCloudStorageSolutions = ({
           textComponent={
             <>
               <div className="flex flex-col px-6 py-10 text-3xl font-medium lg:text-5xl">
-                <h1 className="font-medium leading-tight text-white">
+                <h1 className="lea font-medium text-white">
                   {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
                   <span className="text-primary">{textContent.HeroSection.TitleAndOnePlan.title.blueText}</span>
                   {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
@@ -157,7 +157,7 @@ const PrivateCloudStorageSolutions = ({
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
