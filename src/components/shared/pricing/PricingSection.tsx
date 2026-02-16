@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
@@ -49,7 +50,8 @@ interface PriceTableProps {
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   differentRecommended?: boolean;
   isValentinesMode?: boolean;
-  freePlanNeedsH2?: boolean;
+  onlyUltimatePlan?: boolean;
+  premiumAndUltimatePlan?: boolean;
 }
 
 export const PricingSection = ({
@@ -82,7 +84,8 @@ export const PricingSection = ({
   showPromo,
   isAffiliate,
   isValentinesMode = false,
-  freePlanNeedsH2 = false,
+  onlyUltimatePlan = false,
+  premiumAndUltimatePlan = false,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -185,28 +188,40 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content grid w-full grid-cols-3 items-stretch gap-6 ">
+        <div className="content flex w-full flex-nowrap items-stretch justify-start gap-6 overflow-x-auto pb-8 md:justify-center">
           {products?.individuals
-            ? products.individuals[billingFrequency].map((product, cardIndex) => (
-                <PriceCard
-                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                  product={product}
-                  onCheckoutButtonClicked={onCheckoutButtonClicked}
-                  label={product.storage}
-                  key={product.storage}
-                  popular={product.storage === popularPlan}
-                  productCardPlan="individuals"
-                  decimalDiscountValue={
-                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
+            ? products.individuals[billingFrequency]
+                .filter((product) => {
+                  if (premiumAndUltimatePlan) {
+                    return product.storage === '5TB' || product.storage === '3TB';
                   }
-                  lang={lang}
-                  darkMode={darkMode}
-                  isAffiliate={isAffiliate}
-                  cardIndex={cardIndex}
-                  showGift={showPromo}
-                  isValentinesMode={isValentinesMode}
-                />
-              ))
+                  if (onlyUltimatePlan) {
+                    return product.storage === '5TB';
+                  }
+                  return true;
+                })
+                .map((product, cardIndex) => (
+                  <PriceCard
+                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                    product={product}
+                    onCheckoutButtonClicked={onCheckoutButtonClicked}
+                    label={product.storage}
+                    key={product.storage}
+                    popular={product.storage === popularPlan}
+                    productCardPlan="individuals"
+                    decimalDiscountValue={
+                      product.interval === Interval.Lifetime
+                        ? decimalDiscount?.lifetime
+                        : decimalDiscount?.subscriptions
+                    }
+                    lang={lang}
+                    darkMode={darkMode}
+                    isAffiliate={isAffiliate}
+                    cardIndex={cardIndex}
+                    showGift={showPromo}
+                    isValentinesMode={isValentinesMode}
+                  />
+                ))
             : undefined}
         </div>
       </Transition>

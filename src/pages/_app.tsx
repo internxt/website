@@ -39,7 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager
@@ -83,7 +82,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P7N7LW5G"
@@ -101,8 +99,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           ></iframe>
         </noscript>
 
-        {/* End Google Tag Manager (noscript) */}
-
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
@@ -110,13 +106,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             <>
               <BottomBanner />
               <FeaturesBanner />
-              {/* <S3Banner /> */}
             </>
           ) : undefined}
-          {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
         <FreeCardPromoBanner />
-        {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

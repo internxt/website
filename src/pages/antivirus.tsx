@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
@@ -96,7 +97,7 @@ const AntivirusPage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={locale} download={download} />
+      <HeroSection textContent={langJson.HeroSection} download={download} />
 
       <InfoSection
         FirstComponent={

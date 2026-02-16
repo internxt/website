@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { Info } from '@phosphor-icons/react';
 import { Inbox } from './components/InboxView';
@@ -35,7 +36,6 @@ export const HeroSection = ({ textContent }) => {
   const { user, borderColor, openedMessages, messages, selectedMessage, isChangeEmailIconAnimated } =
     state as StateProps;
 
-  // Open the links that are in the email received in a new tab
   useEffect(() => {
     const inboxElement = document.getElementById('inbox');
 
@@ -104,7 +104,7 @@ export const HeroSection = ({ textContent }) => {
       localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
       localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
     } catch (error) {
-      // NO OP
+      console.error('Failed to initialize new email session:', error);
     }
   };
 

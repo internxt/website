@@ -18,7 +18,6 @@ export default function Footer({
   lang,
   hideNewsletter,
   darkMode,
-  needsH2 = true,
 }: Readonly<{
   textContent: FooterText;
   lang: string;
@@ -186,15 +185,6 @@ export default function Footer({
                     </Link>
 
                     <Link
-                      href="/cloud-object-storage"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
-                    </Link>
-
-                    <Link
                       href="/antivirus"
                       target="_blank"
                       rel="noreferrer"
@@ -264,22 +254,14 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
-                    <Link
-                      href="/business"
-                      locale={'en'}
-                      passHref
-                      className="flex max-w-[250px] items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.products.business}
-                    </Link>
 
                     <Link
-                      href="/family"
-                      locale={'en'}
-                      passHref
-                      className="flex max-w-[250px] items-center hover:text-primary"
+                      href="/cloud-object-storage"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-row items-center hover:text-primary"
                     >
-                      {textContent.FooterSection.sections.products.family}
+                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
                     </Link>
 
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
@@ -866,14 +848,7 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
-                      <Link
-                        href="/cloud-object-storage"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.products.objStorage}
-                      </Link>
+
                       <Link
                         href="/antivirus"
                         target="_blank"
@@ -909,12 +884,16 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.products.ai}
                       </Link>
-                      <Link href="/business" locale={lang} passHref className="items-center hover:text-primary">
-                        {textContent.FooterSection.sections.products.business}
+
+                      <Link
+                        href="/cloud-object-storage"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.products.objStorage}
                       </Link>
-                      <Link href="/family" locale={lang} passHref className="items-center hover:text-primary">
-                        {textContent.FooterSection.sections.products.family}
-                      </Link>
+
                       <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>
@@ -1363,12 +1342,6 @@ export default function Footer({
                       </Link>
                       <Link href="/ai-detector" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.aiDetector}
-                      </Link>
-                      <Link href="/business" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.business}
-                      </Link>
-                      <Link href="/family" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.family}
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}

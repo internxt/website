@@ -19,7 +19,7 @@
       "products": {
         "title": "产品",
         "drive": "Internxt Drive (云盘)",
-        "objStorage": "Internxt S3 (对象存储)",
+        "objStorage": "Internxt 企业级 S3 (对象存储)",
         "antivirus": "Internxt Antivirus (杀毒软件)",
         "send": "Internxt Send (发送)",
         "vpn": "Internxt VPN (虚拟私人网络)",
