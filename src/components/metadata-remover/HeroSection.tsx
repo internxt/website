@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle } from '@phosphor-icons/react';
@@ -10,18 +11,17 @@ interface HeroSectionProps {
   lang: string;
 }
 
-const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isProcessFinished, setIsProcessFinished] = useState(false);
-  const [processResult, setProcessResult] = useState<any>(null);
+  const [setProcessResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
-  const [showPopup, setShowPopup] = useState(true);
   const isDragging = dragEnter;
   const maxFileSize = 104_857_600;
 
@@ -52,7 +52,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
       setProcessResult({ success: true });
       setIsProcessFinished(true);
-      setShowPopup(true);
 
       const downloadLink = document.createElement('a');
       downloadLink.href = url;
@@ -66,7 +65,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsSelectedFile(false);
       setIsProcessing(false);
       setIsProcessFinished(false);
-      setShowPopup(false);
     }
   };
 
@@ -95,7 +93,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     setIsProcessing(false);
     setIsProcessFinished(false);
     setIsError(false);
-    setShowPopup(false);
     setFile(null);
   };
 
@@ -142,30 +139,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       fileInput.files = e.dataTransfer.files;
       handleFiles();
     }
-  };
-
-  const processAgainButton = () => {
-    return (
-      <Transition
-        as={Fragment}
-        show={!isError && isProcessFinished}
-        enter="transition duration-200 ease-in-out"
-        enterFrom="opacity-0 translate-y-2"
-        enterTo="opacity-100 translate-y-0"
-      >
-        <div className="flex w-full flex-row justify-center pt-6">
-          <button
-            type="button"
-            className="group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-primary px-6 text-lg text-white transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base"
-            onClick={() => {
-              handleRestartProcess();
-            }}
-          >
-            <p className="text-base font-medium">{textContent.scanAgain}</p>
-          </button>
-        </div>
-      </Transition>
-    );
   };
 
   const renderProcessStatus = () => {

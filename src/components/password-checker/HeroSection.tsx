@@ -5,14 +5,13 @@ import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
 
-const HeroSection = ({ textContent, lang }) => {
+const HeroSection = ({ textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
   const [crackFeedback, setCrackFeedback] = useState('-');
   const [crackScore, setCrackScore] = useState(0);
   const [crackTime, setCrackTime] = useState('-');
-  const [crackTimeInSeconds, setCrackTimeInSeconds] = useState(0);
 
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);
@@ -30,14 +29,12 @@ const HeroSection = ({ textContent, lang }) => {
     const timecases = textContent.result.crack.cases;
     const displaytTimeHasNumbers = hasNumber(displaytTime);
 
-    // Time is composed of a number and one or more words
     if (displaytTimeHasNumbers) {
-      const number = displaytTime.split(' ')[0]; // Get number (1 year --> 1)
-      const timecase = displaytTime.split(' ')[1]; // Get timecase (1 year --> year)
+      const number = displaytTime.split(' ')[0];
+      const timecase = displaytTime.split(' ')[1];
       return `${number} ${timecases[timecase]}`;
     }
 
-    // Time has only words
     return timecases[displaytTime];
   };
 
@@ -48,20 +45,17 @@ const HeroSection = ({ textContent, lang }) => {
     if (password === '') {
       setPwned('-');
       setCrackTime('-');
-      setCrackTimeInSeconds(0);
       setCrackFeedback('-');
       setCrackScore(0);
     } else {
-      // Check for leaked passwords
       pwnedpasswords(password)
         .then((count) => {
           setPwned(count);
         })
-        .catch((err) => {
-          // eslint-disable-next-line no-console
+        .catch(() => {
+          //
         });
 
-      // Check for crack time and get anti-crack feedback
       const crack = zxcvbn(password);
       if (crack.feedback.warning !== '') {
         setCrackFeedback(getFeedbackTranslation(crack.feedback.warning));
@@ -70,12 +64,11 @@ const HeroSection = ({ textContent, lang }) => {
       }
       setCrackScore(crack.score);
       setCrackTime(getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second));
-      setCrackTimeInSeconds(crack.crack_times_seconds.offline_slow_hashing_1e4_per_second);
     }
   };
 
   return (
-    <section className=" flex flex-row items-center justify-center pb-8 pt-32">
+    <section className="flex flex-row items-center justify-center pb-8 pt-32">
       <div className="flex flex-col items-center justify-center space-y-6 px-2">
         <div className="lg:max flex flex-col items-center space-y-5 px-4 text-center lg:max-w-2xl lg:px-0">
           <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
@@ -127,11 +120,10 @@ const HeroSection = ({ textContent, lang }) => {
           </div>
         </div>
 
-        {/* Password dynamic feedback */}
         <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:max-w-2xl lg:flex-row lg:space-x-5 lg:space-y-0">
           <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
             <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
-            <span className={`text-2xl font-semibold text-gray-80`}>{crackFeedback}</span>
+            <span className="text-2xl font-semibold text-gray-80">{crackFeedback}</span>
           </div>
 
           <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
@@ -151,10 +143,10 @@ const HeroSection = ({ textContent, lang }) => {
             </div>
           </div>
 
-          <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64 ">
+          <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.crack.title}</span>
-              <span className={`text-2xl font-semibold text-gray-80`}>{crackTime}</span>
+              <span className="text-2xl font-semibold text-gray-80">{crackTime}</span>
             </div>
 
             <span className="text-sm text-gray-50">{textContent.result.crack.subtitle}</span>
