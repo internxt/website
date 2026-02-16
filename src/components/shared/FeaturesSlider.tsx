@@ -39,7 +39,7 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
     <section className={`overflow-hidden ${backgroundClass}`}>
       <section className="flex flex-col items-center justify-center space-y-12 px-5 py-20 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</p>
+          <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
 
           <div className="flex flex-col">
             <p className="text-lg leading-tight text-gray-80">{textContent.description}</p>
@@ -61,13 +61,13 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
                 onClick={() => setCardIndex(index)}
               >
                 <info.icon className="mr-2 text-primary" size={32} />
-                <p
+                <h3
                   className={`text-left text-2xl font-medium transition-colors duration-500 ${
                     cardIndex === index ? 'text-primary' : 'text-gray-100 hover:text-primary'
                   }`}
                 >
                   {info.title}
-                </p>
+                </h3>
               </button>
               <div className="h-8 border-r-4 border-gray-10 pr-8 transition-all duration-500">
                 <div
