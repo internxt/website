@@ -26,7 +26,7 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
             <div
               className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}
             >
-              <p className="text-30 font-semibold leading-tight lg:text-3xl">{textContent.title}</p>
+              <h2 className="text-30 font-semibold leading-tight lg:text-3xl">{textContent.title}</h2>
               <p className="font-regular text-base leading-tight sm:text-lg md:text-xl">
                 {Array.isArray(textContent.description)
                   ? textContent.description.map((line, index) => (
