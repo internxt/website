@@ -6,7 +6,7 @@ const WhatIsOSS = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center px-5 py-20 text-center">
         <div className="flex w-full max-w-[850px] flex-col items-center space-y-16">
           <div className="flex flex-col space-y-6">
-            <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+            <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
             <p className="text-xl text-gray-80">{textContent.description}</p>
           </div>
 
