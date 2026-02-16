@@ -19,6 +19,7 @@
   },
   "FeaturesSection": {
     "intro": "Internxt provides the best cloud storage for videos to store, share, and back up your files. Prevent AI and Big Tech from using your videos without your consent with our zero-knowledge cloud storage.",
+    "title": "Best Cloud Storage for videos",
     "features": {
       "feature1": {
         "title": "Support for 4K and 8K files",

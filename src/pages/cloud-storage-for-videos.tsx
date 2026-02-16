@@ -82,7 +82,7 @@ const CloudStorageForVideos = ({
         textContent={textContent.cta}
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <p className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</p>
+            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
           </div>
         }
@@ -103,7 +103,7 @@ const CloudStorageForVideos = ({
         textContent={textContent.cta}
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <p className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</p>
+            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
           </div>
         }
@@ -113,7 +113,7 @@ const CloudStorageForVideos = ({
         bgPadding="lg:py-20"
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

@@ -108,7 +108,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <h2 className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</h2>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
 
@@ -134,7 +134,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             >
               <div className="flex h-full flex-col items-center justify-between">
                 <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <h3 className="pb-6 text-xl font-medium text-gray-95">{title}</h3>
                   <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
                     {cardDescriptions[index]}
                   </p>
