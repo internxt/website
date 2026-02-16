@@ -73,6 +73,7 @@ interface PricingSectionWrapperProps {
   SectionTag?: React.ElementType;
   onlyUltimatePlan?: boolean;
   premiumAndUltimatePlan?: boolean;
+  freePlanNeedsH2?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
