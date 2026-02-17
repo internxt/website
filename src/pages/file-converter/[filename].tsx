@@ -1,5 +1,3 @@
-'use client';
-
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
@@ -53,15 +51,15 @@ const FileConverter = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
-  const pathname = ctx.params.filename;
+  const rawFilename = ctx.params.filename;
 
-  const isValidPath = /^[a-z0-9-]+$/.test(pathname);
-
-  if (!isValidPath) {
+  if (typeof rawFilename !== 'string' || !/^[a-z0-9-]+$/.test(rawFilename)) {
     return {
       notFound: true,
     };
   }
+
+  const pathname = rawFilename.replace(/[^a-z0-9-]/g, '');
 
   try {
     const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
