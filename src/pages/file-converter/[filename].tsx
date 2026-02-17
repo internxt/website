@@ -85,7 +85,7 @@ export async function getServerSideProps(ctx) {
         pathname,
       },
     };
-  } catch (error) {
+  } catch {
     return {
       notFound: true,
     };

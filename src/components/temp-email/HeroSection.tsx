@@ -94,7 +94,7 @@ export const HeroSection = ({ textContent }) => {
             address,
             token,
           });
-        } catch (error) {
+        } catch {
           await getNewEmail();
         }
       }

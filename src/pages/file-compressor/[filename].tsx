@@ -89,7 +89,7 @@ export async function getServerSideProps(ctx) {
         bannerLang,
       },
     };
-  } catch (error) {
+  } catch {
     return {
       notFound: true,
     };
