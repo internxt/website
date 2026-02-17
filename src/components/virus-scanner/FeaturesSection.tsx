@@ -17,15 +17,15 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           <SignUpBanner textContent={bannerText} lang={lang} />
           <div className="flex w-full flex-col items-center justify-center pt-10">
             <Image
-              src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
-              alt="File Arrow Up icon"
+              src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
+              alt="Internxt x Bitdefender Banner"
               width={800}
               height={110}
               quality={100}
               style={{ cursor: 'pointer' }}
               onClick={() =>
                 window.open(
-                  `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
+                  `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
                   '_blank',
                   'noopener noreferrer',
                 )
@@ -78,7 +78,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             </div>
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
+                src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
@@ -86,7 +86,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
+                    `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
                     '_blank',
                     'noopener noreferrer',
                   )
@@ -128,7 +128,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             </div>
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
+                src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
@@ -136,7 +136,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
+                    `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
                     '_blank',
                     'noopener noreferrer',
                   )

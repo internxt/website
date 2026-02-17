@@ -209,6 +209,8 @@ export enum PromoCodeName {
   bjoern = 'BJOERN',
   lefiltre = 'LEFILTRE',
   cloudoff = 'CLOUDOFF',
+  bunker = 'BUNKER',
+  speciale = 'SPECIALE',
 }
 
 export interface PromoCodeProps {

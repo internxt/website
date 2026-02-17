@@ -466,7 +466,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       </div>
       <div className="flex w-full flex-col items-center justify-center px-6 ">
         <Image
-          src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
+          src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
           alt="File Arrow Up icon"
           width={800}
           height={110}
