@@ -55,27 +55,41 @@ export async function getServerSideProps(ctx) {
   const textLang = lang === 'es' ? lang : 'en';
   const pathname = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
-  const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
-  const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
-  const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
-  const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
-  const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+  const isValidPath = /^[a-z0-9-]+$/.test(pathname);
 
-  return {
-    props: {
-      metatagsDescriptions,
-      navbarLang,
-      textContent,
-      converterText,
-      errorContent,
-      footerLang,
-      lang,
-      toolsContent,
-      pathname,
-    },
-  };
+  if (!isValidPath) {
+    return {
+      notFound: true,
+    };
+  }
+
+  try {
+    const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
+    const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
+    const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
+    const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
+    const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
+    const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
+    const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+
+    return {
+      props: {
+        metatagsDescriptions,
+        navbarLang,
+        textContent,
+        converterText,
+        errorContent,
+        footerLang,
+        lang,
+        toolsContent,
+        pathname,
+      },
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default FileConverter;

@@ -4,10 +4,7 @@ import path from 'path';
 const Sitemap = () => {};
 
 export const getServerSideProps = ({ res }) => {
-  const baseUrl = {
-    development: 'http://localhost:3001',
-    production: 'https://internxt.com',
-  }[process.env.NODE_ENV];
+  const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://internxt.com';
 
   const pages = {
     index: '1.0',

@@ -55,32 +55,45 @@ const FileConverter = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-
   const pathname = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const textContent = require(`@/assets/lang/${lang}/file-compressor/${pathname}.json`);
-  const converterText = require(`@/assets/lang/${lang}/file-compressor/converter-card.json`);
-  const errorContent = require(`@/assets/lang/${lang}/file-compressor/errorState.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
-  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
+  const isValidPath = /^[a-z0-9-]+$/.test(pathname);
 
-  return {
-    props: {
-      metatagsDescriptions,
-      navbarLang,
-      textContent,
-      converterText,
-      errorContent,
-      footerLang,
-      lang,
-      toolsContent,
-      pathname,
-      bannerLang,
-    },
-  };
+  if (!isValidPath) {
+    return {
+      notFound: true,
+    };
+  }
+
+  try {
+    const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+    const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+    const textContent = require(`@/assets/lang/${lang}/file-compressor/${pathname}.json`);
+    const converterText = require(`@/assets/lang/${lang}/file-compressor/converter-card.json`);
+    const errorContent = require(`@/assets/lang/${lang}/file-compressor/errorState.json`);
+    const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+    const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+    const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
+
+    return {
+      props: {
+        metatagsDescriptions,
+        navbarLang,
+        textContent,
+        converterText,
+        errorContent,
+        footerLang,
+        lang,
+        toolsContent,
+        pathname,
+        bannerLang,
+      },
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default FileConverter;

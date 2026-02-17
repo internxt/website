@@ -80,11 +80,24 @@ export const HeroSection = ({ textContent }) => {
     const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
 
     if (storedEmail !== null) {
-      const { address, token } = JSON.parse(storedEmail);
-      setUser({
-        address,
-        token,
-      });
+      try {
+        const decodedEmail = atob(storedEmail);
+        const { address, token } = JSON.parse(decodedEmail);
+        setUser({
+          address,
+          token,
+        });
+      } catch {
+        try {
+          const { address, token } = JSON.parse(storedEmail);
+          setUser({
+            address,
+            token,
+          });
+        } catch (error) {
+          await getNewEmail();
+        }
+      }
     } else {
       await getNewEmail();
     }
@@ -102,7 +115,7 @@ export const HeroSection = ({ textContent }) => {
       setMessages(undefined);
 
       localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
-      localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
+      localStorage.setItem(EMAIL_STORAGE_KEY, btoa(JSON.stringify(emailData)));
     } catch (error) {
       console.error('Failed to initialize new email session:', error);
     }
