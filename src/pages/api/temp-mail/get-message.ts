@@ -10,9 +10,18 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).json({ message: 'Method not allowed' });
 
   const { email, token, messageId } = req.query;
+
+  if (typeof email !== 'string' || typeof token !== 'string' || typeof messageId !== 'string') {
+    return res.status(400).json({ message: 'Invalid parameters' });
+  }
+
   try {
+    const safeEmail = encodeURIComponent(email);
+    const safeToken = encodeURIComponent(token);
+    const safeMessageId = encodeURIComponent(messageId);
+
     const inbox = await axios.get(
-      `${CONVERTER_URL}/api/temp-mail/messages/selectedMessage/${email}/${token}/${messageId}`,
+      `${CONVERTER_URL}/api/temp-mail/messages/selectedMessage/${safeEmail}/${safeToken}/${safeMessageId}`,
     );
 
     return res.status(200).json(inbox.data.messageObj);

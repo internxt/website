@@ -1,5 +1,6 @@
 'use client';
 
+import path from 'path';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
@@ -53,29 +54,49 @@ const FileConverter = ({
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
-  const pathname = ctx.params.filename;
+  const rawFilename = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
-  const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
-  const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
-  const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
-  const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
-  const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+  if (typeof rawFilename !== 'string') {
+    return {
+      notFound: true,
+    };
+  }
 
-  return {
-    props: {
-      metatagsDescriptions,
-      navbarLang,
-      textContent,
-      converterText,
-      errorContent,
-      footerLang,
-      lang,
-      toolsContent,
-      pathname,
-    },
-  };
+  const pathname = path.basename(rawFilename);
+
+  if (!/^[a-z0-9-]+$/.test(pathname)) {
+    return {
+      notFound: true,
+    };
+  }
+
+  try {
+    const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
+    const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
+    const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
+    const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
+    const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
+    const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
+    const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+
+    return {
+      props: {
+        metatagsDescriptions,
+        navbarLang,
+        textContent,
+        converterText,
+        errorContent,
+        footerLang,
+        lang,
+        toolsContent,
+        pathname,
+      },
+    };
+  } catch {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default FileConverter;
