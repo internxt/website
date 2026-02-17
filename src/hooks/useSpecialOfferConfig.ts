@@ -30,6 +30,8 @@ export const ALLOWED_PATHS = [
   'lefiltre',
   'ultimate',
   'annual',
+  'bunker',
+  'speciale',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -66,6 +68,8 @@ export const COUPON_CODES = {
   lefiltre: PromoCodeName.lefiltre,
   ultimate: PromoCodeName.cloudoff,
   annual: PromoCodeName.cloudoff,
+  bunker: PromoCodeName.bunker,
+  speciale: PromoCodeName.speciale,
 };
 
 interface OfferConfig {

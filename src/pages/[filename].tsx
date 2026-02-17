@@ -76,6 +76,8 @@ const LANG_MAP = {
   lefiltre: 'fr',
   annual: 'en',
   ultimate: 'en',
+  bunker: 'es',
+  speciale: 'it',
 };
 
 function CombinedSpecialOffer({
