@@ -29,7 +29,7 @@ const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerPr
 
   const handleOnClick = () => {
     window.open(
-      `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+      `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
       '_blank',
     );
   };
@@ -56,8 +56,8 @@ const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerPr
 
         <div className="w-[350px] lg:w-[650px] ">
           <Image
-            src={getImage(`/banners/Ban_Internext_800x450_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
+            src={getImage(`/banners/Ban_Internxt_800x450.webp`)}
+            alt="Bitdefender Popup Banner"
             width={800}
             height={110}
             quality={100}

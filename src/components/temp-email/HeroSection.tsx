@@ -226,13 +226,19 @@ export const HeroSection = ({ textContent }) => {
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
-          src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
-          alt=" Internxt Vertical Banner"
+          src={getImage(`/banners/Ban_Internxt_160x600.webp`)}
+          alt=" Bitdefender x Internxt Banner"
           width={180}
           height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
-          onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
         />
       </div>
       <div className="flex w-full flex-col items-center justify-center space-y-10  px-2 md:max-w-[720px] ">
@@ -268,13 +274,19 @@ export const HeroSection = ({ textContent }) => {
       </div>
       <div className="flex w-full flex-col items-center justify-center">
         <Image
-          src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
-          alt="Internxt Vertical Banner"
+          src={getImage(`/banners/Ban_Internxt_160x600.webp`)}
+          alt="Bitdefender x Internxt Banner"
           width={180}
           height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
-          onClick={() => window.open(`https://internxt.com/`, '_blank', 'noopener noreferrer')}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
         />
       </div>
     </section>
