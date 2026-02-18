@@ -30,6 +30,7 @@ interface ItemsNavigationProps {
     links: {
       pricing: string;
       about: string;
+      s3: string;
     };
   };
   textContent: NavigationBarText;
@@ -126,7 +127,7 @@ export const ItemsNavigation = ({
         <NavigationLink
           href="/cloud-object-storage"
           text={textContent.products.s3}
-          isActive={currentPath === getTitles.links.pricing.trim().toLowerCase()}
+          isActive={currentPath === 'cloud-object-storage'}
           isDarkMode={darkMode}
           lang={lang}
         />
