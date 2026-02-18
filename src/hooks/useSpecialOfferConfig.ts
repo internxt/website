@@ -32,6 +32,10 @@ export const ALLOWED_PATHS = [
   'annual',
   'bunker',
   'speciale',
+  'xataka',
+  'techradar',
+  'shanon',
+  'overflow',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -70,6 +74,10 @@ export const COUPON_CODES = {
   annual: PromoCodeName.cloudoff,
   bunker: PromoCodeName.bunker,
   speciale: PromoCodeName.speciale,
+  xataka: PromoCodeName.xataka,
+  techradar: PromoCodeName.techradar,
+  shanon: PromoCodeName.shanon,
+  overflow: PromoCodeName.overflow,
 };
 
 interface OfferConfig {

@@ -78,6 +78,10 @@ const LANG_MAP = {
   ultimate: 'en',
   bunker: 'es',
   speciale: 'it',
+  xataka: 'es',
+  techradar: 'en',
+  shanon: 'en',
+  overflow: 'fr',
 };
 
 function CombinedSpecialOffer({
