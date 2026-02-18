@@ -215,6 +215,8 @@ export enum PromoCodeName {
   techradar = 'TECHRADAR',
   shanon = 'SHANON',
   overflow = 'OVERFLOW',
+  OFFSUB = '83OFFSUB',
+  OFFLFT = '83OFFLFT',
 }
 
 export interface PromoCodeProps {
