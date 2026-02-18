@@ -34,8 +34,9 @@ export const ALLOWED_PATHS = [
   'speciale',
   'xataka',
   'techradar',
-  'shanon',
-  'overflow',
+  'shannon',
+  'overfl0w',
+  'lefiltreitalia',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -76,8 +77,9 @@ export const COUPON_CODES = {
   speciale: PromoCodeName.speciale,
   xataka: PromoCodeName.xataka,
   techradar: PromoCodeName.techradar,
-  shanon: PromoCodeName.shanon,
-  overflow: PromoCodeName.overflow,
+  shannon: PromoCodeName.shannon,
+  overfl0w: PromoCodeName.overflow,
+  lefiltreitalia: PromoCodeName.lefiltreitalia,
 };
 
 interface OfferConfig {
