@@ -211,6 +211,10 @@ export enum PromoCodeName {
   cloudoff = 'CLOUDOFF',
   bunker = 'BUNKER',
   speciale = 'SPECIALE',
+  xataka = 'XATAKA',
+  techradar = 'TECHRADAR',
+  shanon = 'SHANON',
+  overflow = 'OVERFLOW',
 }
 
 export interface PromoCodeProps {
