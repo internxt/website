@@ -298,6 +298,11 @@
             }
           },
           {
+            "id": "file_versioning",
+            "name": "Versionamento file",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "cli_webdav_support",
             "name": "Supporto CLI e WebDAV",
             "avalability": {
@@ -333,11 +338,6 @@
             "id": "trash_limits",
             "name": "Svuotamento automatico del cestino",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-          {
-            "id": "file_versioning",
-            "name": "Versionamento file",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",
