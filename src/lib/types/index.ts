@@ -213,10 +213,11 @@ export enum PromoCodeName {
   speciale = 'SPECIALE',
   xataka = 'XATAKA',
   techradar = 'TECHRADAR',
-  shanon = 'SHANON',
-  overflow = 'OVERFLOW',
+  shannon = 'SHANNON',
+  overflow = 'OVERFL0W',
   OFFSUB = '83OFFSUB',
   OFFLFT = '83OFFLFT',
+  lefiltreitalia = 'LEFILTREITALIA',
 }
 
 export interface PromoCodeProps {
