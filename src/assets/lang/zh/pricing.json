@@ -298,6 +298,11 @@
             }
           },
           {
+            "id": "file_versioning",
+            "name": "文件版本控制",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "cli_webdav_support",
             "name": "CLI 和 WebDAV 支持",
             "avalability": {
@@ -338,11 +343,6 @@
             "id": "trash_limits",
             "name": "自动清空回收站",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-          {
-            "id": "file_versioning",
-            "name": "文件版本控制",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
             "id": "mail",

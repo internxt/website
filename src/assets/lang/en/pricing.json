@@ -193,6 +193,11 @@
             "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
           {
+            "id": "file_versioning",
+            "name": "File Versioning",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+          },
+          {
             "id": "cli_webdav_support",
             "name": "CLI & WebDAV support",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
@@ -213,11 +218,7 @@
             "name": "Self-emptying bin",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
-          {
-            "id": "file_versioning",
-            "name": "File Versioning",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
-          },
+
           {
             "id": "mail",
             "name": "Mail",
