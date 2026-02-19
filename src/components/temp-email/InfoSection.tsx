@@ -45,15 +45,15 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
           <div className="flex  w-full flex-col items-center justify-center">
             <Image
-              src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
-              alt="Bitdefender x Internxt Banner"
+              src={getImage(`/banners/BanInternxt728x90en.webp`)}
+              alt="Internxt Banner"
               width={800}
               height={110}
               quality={100}
               style={{ cursor: 'pointer' }}
               onClick={() =>
                 window.open(
-                  `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
+                  `/pricing`,
                   '_blank',
                   'noopener noreferrer',
                 )
@@ -130,7 +130,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
 
             <div className="flex  w-full flex-col items-center justify-center pt-6">
               <Image
-                src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
+                src={getImage(`/banners/BanInternxt728x90en.webp`)}
                 alt="Bitdefender x Internxt Banner"
                 width={800}
                 height={110}
@@ -138,7 +138,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
+                    `/pricing`,
                     '_blank',
                     'noopener noreferrer',
                   )

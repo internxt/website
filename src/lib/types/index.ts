@@ -218,6 +218,8 @@ export enum PromoCodeName {
   OFFSUB = '83OFFSUB',
   OFFLFT = '83OFFLFT',
   lefiltreitalia = 'LEFILTREITALIA',
+  genius = 'GENIUS',
+  letosa = 'LETOSA',
 }
 
 export interface PromoCodeProps {
