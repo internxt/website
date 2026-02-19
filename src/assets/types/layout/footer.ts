@@ -97,6 +97,12 @@ export interface Resources {
   googleMeet: string;
   zoom: string;
   teams: string;
+  aiAlternatives: string;
+  geminiAlternative: string;
+  grokAlternative: string;
+  copilotAlternative: string;
+  chatGPTAlternative: string;
+  deepSeekAlternative: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
   nas: string;
