@@ -302,6 +302,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 >
                                   <p>{props.textContent.products.ai}</p>
                                 </Link>
+                                <Link
+                                  href="https://send.internxt.com/"
+                                  locale={props.lang}
+                                  className="flex flex-row space-x-2"
+                                >
+                                  <p>{props.textContent.products.send}</p>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>
