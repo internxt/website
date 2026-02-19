@@ -37,6 +37,8 @@ export const ALLOWED_PATHS = [
   'shannon',
   'overfl0w',
   'lefiltreitalia',
+  'genius',
+  'letosa',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -80,6 +82,8 @@ export const COUPON_CODES = {
   shannon: PromoCodeName.shannon,
   overfl0w: PromoCodeName.overflow,
   lefiltreitalia: PromoCodeName.lefiltreitalia,
+  genius: PromoCodeName.genius,
+  letosa: PromoCodeName.letosa,
 };
 
 interface OfferConfig {
