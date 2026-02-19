@@ -40,8 +40,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales85,
-    couponCodeForLifetime: PromoCodeName.SoftSales85,
+    couponCode: PromoCodeName.OFFSUB,
+    couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
