@@ -80,8 +80,9 @@ const LANG_MAP = {
   speciale: 'it',
   xataka: 'es',
   techradar: 'en',
-  shanon: 'en',
-  overflow: 'fr',
+  shannon: 'en',
+  overfl0w: 'fr',
+  lefiltreitalia: 'it',
 };
 
 function CombinedSpecialOffer({
