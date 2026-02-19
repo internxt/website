@@ -119,6 +119,7 @@ export const ItemsNavigation = ({
             { href: '/cleaner', text: textContent.products.cleaner },
             { href: '/meet', text: textContent.products.meet },
             { href: 'https://ai.internxt.com/', text: textContent.products.ai },
+            { href: 'https://send.internxt.com/', text: textContent.products.send },
           ]}
           darkMode={darkMode}
           lang={lang}
