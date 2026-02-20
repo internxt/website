@@ -1,0 +1,227 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Wie DeepSeek, \n aber **privat**",
+    "description": "Wechseln Sie zu Internxt AI, der besten DeepSeek-Alternative, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie {{percentage}}% Rabatt  ",
+    "cta": "Jetzt wechseln"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. DeepSeek Übersicht",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt.",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselte Chats",
+        "Von Menschen überprüfte Chats",
+        "Preise und Speicherplatz",
+        "Weitere Funktionen",
+        "Sicherheitsaudits",
+        "Maschinelles Lernen",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Ja, auf Ihrem Gerät verschlüsselt",
+        "Niemals",
+        "Kostenloser, jährlicher & lebenslanger Speicher bis zu 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail und Send",
+        "Regelmäßige Sicherheitsaudits",
+        "Chats werden niemals zum Training unserer KI verwendet",
+        "Kann niemals auf Ihre Chats zugreifen",
+        "Voller Datenschutz: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Keine Ende-zu-Ende-Verschlüsselung",
+        "Ja",
+        "Nur KI, keine Abonnements angeboten",
+        "DeepSeek AI oder API",
+        "Keine veröffentlichten Audits",
+        "Ihre Chats werden zum Trainieren und Verbessern von DeepSeek verwendet",
+        "Menschen können auf Ihre Chats zugreifen und sie überprüfen",
+        "Sitz in China, Regierung kann auf Ihre Daten zugreifen"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "DeepSeek verfolgt, teilt und überwacht Ihre Chats. Internxt schützt sie.",
+    "description": "DeepSeek mag sicher sein, aber es ist ein Albtraum für Ihre Privatsphäre. Wechseln Sie zu Internxt AI für sichere, private Unterhaltungen, die vollständig vertraulich und verschlüsselt bleiben.",
+    "scrollableSection": {
+      "titles": [
+        "Ihre Chats können von DeepSeek eingesehen werden",
+        "Staatlicher Zugriff auf Daten",
+        "Verstöße gegen den Datenschutz",
+        "Sicherheitslücken"
+      ],
+      "descriptions": [
+        "Keiner Ihrer Chats in DeepSeek kann als privat oder vertraulich betrachtet werden, da Ihre Chats nicht verschlüsselt sind. Mitarbeiter, Auftragnehmer oder Moderatoren können zu Überwachungs-, Moderations-, Trainings- oder Fehlerbehebungszwecken auf Gespräche zugreifen.",
+        "DeepSeek speichert Nutzerdaten auf Servern in China, wo Unternehmen verpflichtet sein können, der Regierung Informationen ohne Zustimmung des Nutzers zur Verfügung zu stellen. Nutzer außerhalb Chinas haben nur begrenzten rechtlichen Schutz, wenn auf Daten zugegriffen oder diese missbraucht werden.",
+        "Mehrere Länder und Aufsichtsbehörden haben Datenschutzverletzungen durch DeepSeek gemeldet. Italien blockierte den Zugang zum Schutz der Nutzerdaten, und EU-Behörden haben DeepSeek unrechtmäßige Datentransfers nach China unter Verstoß gegen die DSGVO vorgeworfen.",
+        "Unabhängige Analysen haben schwache oder veraltete Verschlüsselungspraktiken, potenzielle unverschlüsselte Datenübertragung und unsichere Speicherung aufgezeigt, die Chats oder persönliche Informationen Lecks oder Sicherheitsverstößen aussetzen könnten."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private DeepSeek-Alternative brauchen",
+    "description": "Was DeepSeek an Sicherheit zeigt, fehlt beim Datenschutz. Holen Sie sich absolute Sicherheit und verschlüsselte Chats mit Internxt AI.",
+    "cards": {
+      "titles": ["Privatsphäre", "Keine Verschlüsselung, keine Privatsphäre", "Datenerfassung"],
+      "descriptions": [
+        "DeepSeek speichert, prüft und nutzt Ihre Chats, um seine KI zu verbessern. Mit Internxt sind Ihre Chats absolut privat, werden niemals für das Training verwendet und sind für niemanden außer Ihnen zugänglich.",
+        "Ohne Ende-zu-Ende-Verschlüsselung bleiben DeepSeek-Unterhaltungen für Systeme, Mitarbeiter und Behörden lesbar, wodurch vertrauliche Informationen anfällig für Zugriff oder Missbrauch werden.",
+        "DeepSeek kann Daten an Dritte wie Cloud- oder Analyseanbieter weitergeben, was Tracking, Fingerprinting und eine potenzielle De-Anonymisierung der Nutzer ermöglicht."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs. DeepSeek",
+    "description": "Internxt bietet unvergleichliche Privatsphäre und Sicherheit dank Zero-Knowledge- und Post-Quanten-Verschlüsselung und bietet Ihnen so den besten Schutz vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Absolute Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Internxt AI macht seinen Code über GitHub für jeden zugänglich, was Transparenz gewährleistet und versteckte Schwachstellen verhindert."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Chats werden clientseitig verschlüsselt, so dass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Sitz in Europa",
+            "description": "Internxt hat seinen Sitz in Spanien und erfüllt DSGVO, HIPAA, ISO 27001 und SOC 2, wodurch strenger Datenschutz gewährleistet ist."
+          },
+          {
+            "title": "Kostenlose und erschwingliche Pläne",
+            "description": "Internxt AI ist kostenlos und kann mit Internxt Drive Lifetime-Plänen bis zu 5TB kombiniert werden. Nutzen Sie unsere Dienste für immer mit {{percentage}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "DeepSeek: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "DeepSeek hält seinen Quellcode verborgen, was es unmöglich macht, zu überprüfen, wie Nutzerdaten gehandhabt oder geschützt werden."
+          },
+          {
+            "title": "Keine Ende-zu-Ende-Verschlüsselung",
+            "description": "DeepSeek behält den Zugriff auf Konversationen, was bedeutet, dass Chats theoretisch entschlüsselt oder aufgrund rechtlicher Anfragen eingesehen werden könnten."
+          },
+          {
+            "title": "Chats auf chinesischen Servern gespeichert",
+            "description": "Daten, die in der Cloud von DeepSeek gespeichert sind, unterliegen den staatlichen Überwachungsgesetzen, die unter bestimmten Bedingungen den Zugriff erlauben können."
+          },
+          {
+            "title": "Sie bezahlen mit Ihren Daten",
+            "description": "Begrenzte rechtliche Schutzmaßnahmen und Datenpraktiken können Chats und persönliche Informationen durch Überwachungs- oder Trainingsprozesse offenlegen."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu DeepSeek ist",
+    "description": "Internxt bietet eine umfassende Suite von Produkten zusammen mit seiner privaten KI, um Ihnen eine sichere DeepSeek-Alternative zu bieten.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Drive bietet sicheren, Zero-Knowledge- und Post-Quanten-verschlüsselten Cloud-Speicher mit erweitertem Filesharing, Versionierung, NAS und Rclone-Unterstützung.",
+        "Internxt Antivirus ist direkt in Ihre App integriert, um mit vollständigen oder benutzerdefinierten Scans vor Malware, Ransomware und Spyware zu schützen.",
+        "Das VPN von Internxt verschlüsselt Ihre Verbindung, blockiert Werbung und Tracker und schützt Ihre Identität beim Online-Surfen.",
+        "Internxt Cleaner hilft Ihnen, unnötige oder doppelte Dateien zu identifizieren und zu entfernen, damit Ihr Speicher organisiert und effizient bleibt.",
+        "Internxt Meet ermöglicht sichere, private Videoanrufe, die mit Post-Quanten-Verschlüsselung geschützt und frei von Trackern oder Werbung sind.",
+        "Verfügbar für Windows, Mac, Linux und mobil, mit WebDAV-, Rclone- und NAS-Unterstützung für fortgeschrittene Nutzer."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt als die beste DeepSeek-Alternative",
+    "description": "Verschlüsselte private KI plus sicherer Cloud-Speicher und eine vollständige Datenschutz-Suite für {{percentage}}% Rabatt",
+    "cta": "Jetzt wechseln"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Verbündeter für Privatsphäre",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One-Verbündeter für Privatsphäre"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Nutzen Sie Internxt AI kostenlos mit privaten verschlüsselten Unterhaltungen",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt AI eine sicherere und privatere DeepSeek-Alternative?",
+        "answer": [
+          "Ja, Internxt verschlüsselt alle Ihre Chats und speichert Ihre Gespräche niemals. DeepSeek verschlüsselt Chats nicht und kann sie zum Trainieren seiner KI verwenden.",
+          "Internxt umfasst auch Drive, VPN, Antivirus, Cleaner, Meet und Mail, um zusätzlichen Schutz vor Hackern und Datenschutzverletzungen zu bieten."
+        ]
+      },
+      {
+        "question": "Ist Internxt AI kostenlos nutzbar?",
+        "answer": [
+          "Ja, Sie können Internxt AI kostenlos nutzen, ohne sich einzuloggen oder persönliche Informationen oder Zahlungsdaten anzugeben."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Die Post-Quanten-Verschlüsselung ist so konzipiert, dass sie künftigen Quantenangriffen standhält, was sie zu einer sichereren Alternative zur Standardverschlüsselung macht.",
+          "Internxt nutzt diese Technologie, um Ihre Daten und lebenslangen Speicherpläne ohne zusätzliche Kosten gegen künftige Cybersicherheitsbedrohungen zu schützen."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und hält sich an die DSGVO und strenge europäische Datenschutzgesetze, um Ihre Daten zu schützen."
+        ]
+      },
+      {
+        "question": "Ist DeepSeek teurer als Internxt?",
+        "answer": [
+          "Internxt AI ist kostenlos, und mit Ihrem exklusiven {{percentage}}% Rabatt sind alle Pläne günstiger, während sie sicheren Cloud-Speicher und eine komplette Datenschutz-Suite bieten."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Support kontaktieren?",
+        "answer": [
+          "Wenn Sie Hilfe benötigen, wenden Sie sich an hello@internxt.com. Unser Customer Success Team hilft Ihnen gerne weiter."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden oder zusätzliche Pläne erwerben, woraufhin Ihr Speicherplatz automatisch gestapelt wird."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert Debit- und Kreditkarten (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, Kryptowährungen und Klarna."
+        ]
+      }
+    ]
+  }
+}

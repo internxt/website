@@ -56,7 +56,6 @@
   },
   {
     "id": "about",
-
     "title": "Internxt Privacy – I nostri valori fondamentali",
     "description": "Qui in Internxt, proteggere la privacy dell'utente è la nostra missione. Passa alla suite di privacy tutto-in-uno di Internxt. Internxt Drive, Meet, Mail, Cleaner e altro."
   },
@@ -454,5 +453,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — Data Center e Certificazioni",
     "description": "Mantieni i tuoi dati al sicuro con Internxt. Crittografia end-to-end, data center cloud affidabili e conformità al GDPR e ad altri standard."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Alternativa a ChatGPT",
+    "description": "Passa a Internxt per un'alternativa a ChatGPT privata e crittografata. Internxt mantiene le tue chat private, crittografate e accessibili solo a te."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Alternativa a Copilot",
+    "description": "Passa a Internxt per un'alternativa a Copilot privata e crittografata. Internxt mantiene le tue chat private, crittografate e accessibili solo a te."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Alternativa a DeepSeek",
+    "description": "Passa a Internxt per un'alternativa a DeepSeek privata e crittografata. Internxt mantiene le tue chat private, crittografate e accessibili solo a te."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Alternativa a Gemini",
+    "description": "Passa a Internxt per un'alternativa a Gemini privata e crittografata. Internxt mantiene le tue chat private, crittografate e accessibili solo a te."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Alternativa a Grok",
+    "description": "Passa a Internxt per un'alternativa a Grok privata e crittografata. Internxt mantiene le tue chat private, crittografate e accessibili solo a te."
   }
 ]

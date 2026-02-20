@@ -1,0 +1,180 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI。像 DeepSeek 一样强大，\n但更**私密**",
+    "description": "切换到 Internxt AI，尊重您隐私的最佳 DeepSeek 替代方案",
+    "getPrivacy": " 选择您的方案并享受 {{percentage}}% 的折扣 ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 DeepSeek 对比概览",
+    "description": "探索让 Internxt 重新赋予您数据控制权的关键功能和差异。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密聊天",
+        "人工审查聊天",
+        "价格与存储",
+        "其他功能",
+        "安全审计",
+        "机器学习",
+        "隐私政策",
+        "隐私法"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "是，在您的设备上加密",
+        "从不",
+        "免费、年度及终身存储，最高 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail 和 Send",
+        "定期安全审计",
+        "聊天记录绝不用于训练我们的 AI",
+        "永远无法访问您的聊天内容",
+        "全面隐私保护：符合 GDPR 及西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "无端到端加密",
+        "是",
+        "仅提供 AI，不提供订阅服务",
+        "DeepSeek AI 或 API",
+        "未公开审计报告",
+        "您的聊天记录会被用于训练和改进 DeepSeek",
+        "相关人员可以访问并查看您的聊天记录",
+        "总部位于中国，数据受相关监管要求"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "DeepSeek 追踪、共享并监控您的聊天，而 Internxt 保护它们。",
+    "description": "DeepSeek 可能很安全，但对您的隐私来说是一场噩梦。切换到 Internxt AI，享受完全保密和加密的安全对话。",
+    "scrollableSection": {
+      "titles": ["您的聊天可能被 DeepSeek 查看", "数据访问权限", "数据处理违规行为", "安全漏洞"],
+      "descriptions": [
+        "由于您的聊天未加密，DeepSeek 中的任何对话都不能被视为私密或机密。员工、承包商或审核员可能会访问对话以进行监控或培训。",
+        "DeepSeek 将用户数据存储在服务器上。在某些法域下，公司可能需要根据法律要求提供信息。",
+        "多个国家和监管机构对 DeepSeek 的隐私做法表示关注。在欧盟，有关其数据传输合规性的讨论一直在进行。",
+        "独立分析指出，较弱的加密实践或不安全的存储可能导致聊天内容或个人信息暴露于泄露风险中。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 DeepSeek 替代方案",
+    "description": "DeepSeek 在安全性方面的表现掩盖了其在隐私方面的不足。使用 Internxt AI 获得全面的安全和加密聊天。",
+    "cards": {
+      "titles": ["隐私", "没有加密，就没有隐私", "数据采集"],
+      "descriptions": [
+        "DeepSeek 会存储、审查并利用您的聊天来改进其 AI。而在 Internxt，您的聊天是完全私密的，绝不用于培训。",
+        "由于缺乏端到端加密，DeepSeek 的对话对系统和相关人员是可见的，使机密信息处于易受访问的状态。",
+        "DeepSeek 可能会与第三方共享数据，从而实现对用户的追踪、指纹识别及潜在的去匿名化。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI 对比 DeepSeek",
+    "description": "得益于零知识证明和后量子加密技术，Internxt 提供无与伦比的隐私和安全保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面的隐私、透明度和信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt AI 通过 GitHub 公开其代码，确保透明度并防止隐藏漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的聊天在客户端加密，确保只有您自己可以访问。"
+          },
+          {
+            "title": "总部位于欧洲",
+            "description": "Internxt 总部位于西班牙，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。"
+          },
+          {
+            "title": "免费且超值的方案",
+            "description": "Internxt AI 免费使用，并可结合终身云盘方案，享受 {{percentage}}% 的折扣。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "DeepSeek：您的隐私如何保障？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "DeepSeek 隐藏其源代码，因此无法验证用户数据的处理方式。"
+          },
+          {
+            "title": "无端到端加密",
+            "description": "DeepSeek 拥有访问对话的权限，这意味着聊天记录在法律要求下可能被查阅。"
+          },
+          {
+            "title": "数据存储",
+            "description": "存储在 DeepSeek 云端的数据受其所在地法律和监管政策的约束。"
+          },
+          {
+            "title": "您在用数据付费",
+            "description": "有限的法律保护和数据实践可能会通过监控或训练过程暴露聊天内容。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 DeepSeek 的最佳替代方案",
+    "description": "Internxt 提供一系列产品及私密 AI，为您打造安全的 DeepSeek 替代体验。",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "杀毒软件", "VPN", "清理工具", "Meet 会议", "高级工具"],
+      "descriptions": [
+        "提供安全的零知识及后量子加密云存储，支持高级共享和 NAS/rclone。",
+        "直接内置在应用中，通过全盘或自定义扫描抵御恶意软件和勒索软件。",
+        "加密您的连接，拦截广告和追踪器，保护您的在线身份。",
+        "帮助您识别并删除垃圾或重复文件，保持存储高效有序。",
+        "受后量子加密保护的安全视频通话，无广告且无追踪器。",
+        "支持 Windows, Mac, Linux 和移动端，具备 WebDAV 和 Rclone 支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt，体验最佳 DeepSeek 替代方案",
+    "description": "加密私密 AI 加安全云存储，全套隐私方案现享 {{percentage}}% 折扣",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的一站式隐私盟友",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费使用 Internxt AI，享受私密加密对话",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题",
+    "faq": [
+      {
+        "question": "Internxt AI 是更安全、更私密的 DeepSeek 替代方案吗？",
+        "answer": ["是的，Internxt 加密所有聊天且从不存储内容。DeepSeek 则可能使用聊天记录进行 AI 训练。"]
+      },
+      {
+        "question": "Internxt AI 免费吗？",
+        "answer": ["是的，您可以免费使用，无需登录或提供个人付款信息。"]
+      }
+    ]
+  }
+}

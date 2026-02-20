@@ -623,5 +623,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — Data Centers and Certifications",
     "description": "Keep your data safe with Internxt. End-to-end encryption, reliable cloud data centers, and compliance with GDPR and other standards."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Alternative to ChatGPT",
+    "description": "Switch to Internxt for a private and encrypted ChatGPT alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Alternative to Copilot",
+    "description": "Switch to Internxt for a private and encrypted Copilot alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Alternative to DeepSeek",
+    "description": "Switch to Internxt for a private and encrypted DeepSeek alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Alternative to Gemini",
+    "description": "Switch to Internxt for a private and encrypted Gemini alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Alternative to Grok",
+    "description": "Switch to Internxt for a private and encrypted Grok alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
   }
 ]

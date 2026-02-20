@@ -1,0 +1,189 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI。像 Copilot，\n 但更**私密**",
+    "description": "切换到 Internxt AI，这是最尊重您隐私的 Copilot 替代方案",
+    "getPrivacy": " 选择您的计划，享受 1.3 折优惠 (87% off) ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Copilot 对比概览",
+    "description": "了解 Internxt 如何通过关键功能和差异，让您重新夺回对数据的控制权。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密对话",
+        "人工审核对话",
+        "价格与存储",
+        "其他功能",
+        "安全审计",
+        "机器学习",
+        "隐私政策",
+        "隐私法规"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "是的，在您的设备上加密",
+        "从不",
+        "免费，高达 5TB 的终身存储",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail 和 Send",
+        "定期安全审计",
+        "对话绝不用于训练我们的 AI",
+        "无法访问您的对话",
+        "完全隐私：符合 GDPR 及西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "无端到端加密",
+        "是",
+        "高达 6TB 云存储，每月 1.99 到 12.99 欧元",
+        "Microsoft Copilot, OneDrive 和 Office",
+        "定期安全审计",
+        "您的对话被用于训练和改进 Copilot",
+        "人工可能会访问并审核您的对话",
+        "隐私较低：受欧美数据隐私框架约束"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Copilot 跟踪、共享并监控您的对话。Internxt 则保护它们。",
+    "description": "Copilot 或许安全，但对隐私而言是一场噩梦。选择 Internxt AI，享受完全保密且加密的安全对话。",
+    "scrollableSection": {
+      "titles": [
+        "微软可以看到您的对话",
+        "对话存储在微软服务器上",
+        "Copilot 会与其它关联应用共享数据",
+        "对话未经过端到端加密"
+      ],
+      "descriptions": [
+        "Copilot 会提示它可能使用您的输入来训练 AI 模型。某些对话可能被人工审核，这意味着微软员工有可能看到您的私人谈话。",
+        "Copilot 对话及其元数据默认在微软账户中保留长达 18 个月。虽然可以缩短至 3 个月，但默认设置限制了您对数据的控制。",
+        "如果您将 Copilot 连接到 Gmail 或 WhatsApp 等应用，它会在服务间共享数据。任何敏感信息都可能在多个服务中被处理，增加了数据泄露风险。",
+        "默认情况下，Copilot 对话不具备端到端加密。这使得微软能够访问和处理您的内容，从而损害了个人敏感信息的机密性。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 Copilot 替代方案",
+    "description": "Copilot 在安全方面的表现掩盖了其在隐私方面的缺失。使用 Internxt AI 获得全面的安全和加密对话。",
+    "cards": {
+      "titles": ["隐私性", "无加密，无隐私", "数据收割"],
+      "descriptions": [
+        "Copilot 存储并使用您的对话来改进 AI。而 Internxt 的对话完全私密，绝不用于训练，且除了您以外没人可以访问。",
+        "由于缺乏端到端加密，Copilot 的谈话对微软系统是可见的。共享的机密细节可能被存储或用于训练，使您面临泄露风险。",
+        "微软 Copilot 收集您的对话、元数据和使用信息。与其他服务的集成扩大了数据收集范围，带来了巨大的隐私风险和个人数据收割。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI 对比 Copilot",
+    "description": "凭借零知识加密和后量子加密技术，Internxt 提供无与伦比的隐私保护，助您抵御网络攻击。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：完全隐私、透明与信任",
+        "features": [
+          {
+            "title": "开源软件",
+            "description": "Internxt AI 在 GitHub 上公开代码供所有人审查。这种透明度确保了没有隐藏的漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的对话在客户端加密，确保只有您自己可以访问。"
+          },
+          {
+            "title": "总部位于欧洲",
+            "description": "Internxt 总部位于西班牙，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。经过全面审计，确保无外部访问。"
+          },
+          {
+            "title": "免费且实惠的计划",
+            "description": "Internxt AI 是免费的，您可以搭配 1.3 折优惠的 5TB 终身 Drive 存储计划使用。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Copilot：您的隐私如何保障？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "Copilot 的源代码不对外公开。缺乏透明度，无法确定其如何处理或保护您的数据。"
+          },
+          {
+            "title": "无端到端加密",
+            "description": "微软持有加密密钥，这意味着他们在收到法律请求时，理论上可以解密并访问您的数据。"
+          },
+          {
+            "title": "对话存储在美国",
+            "description": "存储在微软云端的数据受美国政府监视法律约束，在某些条件下政府可访问数据。"
+          },
+          {
+            "title": "订阅制模式",
+            "description": "付费计划每月从 1.99 欧元到 19.99 欧元不等。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Copilot 的最佳替代方案",
+    "description": "Internxt 提供全面的产品套件，为您的私密 AI 提供安全保障。",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "杀毒软件", "VPN", "清理工具", "视频会议", "高级工具"],
+      "descriptions": [
+        "提供零知识、后量子加密的云存储。支持高级文件共享、版本管理、NAS 和 rclone。",
+        "内置于 Drive 应用中的病毒防护。运行全盘或自定义扫描，抵御勒索软件和间谍软件。",
+        "Internxt VPN 保护您的浏览行为，拦截广告和跟踪器，并隐藏您的真实位置。",
+        "帮助您识别并清理设备上的垃圾或重复文件，保持存储整洁有序。",
+        "安全私密的 Teams 替代方案。视频通话无跟踪、无广告，并受后量子加密保护。",
+        "支持 Windows, Mac, Linux 和移动端。为进阶用户提供 WebDAV, Rclone 和 NAS 支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt，获得最佳 Copilot 替代体验",
+    "description": "包含加密私密 AI、安全云存储及全套隐私工具，现享 1.3 折优惠",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的全方位隐私盟友",
+    "hotLabel": "1.3 折优惠 (87% off) 🔥",
+    "planTitles": {
+      "header": "您的全方位隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年付",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费版",
+      "description": "免费使用 Internxt AI，享受私密加密对话",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天无理由退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "Internxt AI 是否比 Copilot 更安全、更私密？",
+        "answer": ["是的，Internxt 加密您所有的对话且从不存储。而 Copilot 不加密对话，并可能使用对话来训练其模型。"]
+      },
+      {
+        "question": "Internxt AI 可以免费使用吗？",
+        "answer": ["是的，您可以免费使用我们的 AI 而无需登录，也无需输入个人或支付信息。"]
+      },
+      {
+        "question": "什么是后量子加密？",
+        "answer": ["这是一种能够抵御强大量子攻击的算法，使您的数据在未来也能保持安全。"]
+      }
+    ]
+  }
+}

@@ -34,7 +34,12 @@ interface ComparisonTableProps {
     | 'sync'
     | 'proton-drive'
     | 'zoom'
-    | 'Teams';
+    | 'Teams'
+    | 'ChatGPT'
+    | 'Copilot'
+    | 'deepseek'
+    | 'gemini'
+    | 'grok';
   hideTooltip?: boolean;
   needH2?: boolean;
 }
@@ -116,6 +121,21 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     },
     Teams: {
       defaultLogo: '/images/comparison/Teams_Letters.webp',
+    },
+    chatgpt: {
+      defaultLogo: '/images/comparison/ChatGPT-Letters.webp',
+    },
+    copilot: {
+      defaultLogo: '/images/comparison/copilot-Letters.webp',
+    },
+    deepseek: {
+      defaultLogo: '/images/comparison/deepseek-Letters.webp',
+    },
+    gemini: {
+      defaultLogo: '/images/comparison/gemini-Letters.webp',
+    },
+    grok: {
+      defaultLogo: '/images/comparison/grok-Letters.webp',
     },
   } as const;
 
