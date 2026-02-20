@@ -129,7 +129,7 @@ export default function HeroSection({
             <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               <HighlightText text={textContent.title} />
             </p>
-            <span className="flex lg:flex-row">
+            <span className="flex lg:flex-row gap-1">
               <p className="font-regular text-lg leading-tight text-gray-100 lg:text-2xl">
                 {textContent.subtitle.part1}
               </p>
