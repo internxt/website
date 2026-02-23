@@ -134,7 +134,6 @@
     "title": "Internxt – CloudWards Partnerschaft",
     "description": "Sichere dir dank Cloudwards die besten Angebote für den sichersten Cloud-Speicher. Günstigere und sicherere Alternative zu pCloud, IceDrive und AppSumo verschlüsseltem Cloud-Speicher."
   },
-
   {
     "id": "guru99",
     "title": "Internxt – Guru99 Partnerschaft",
@@ -434,5 +433,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — Rechenzentren und Zertifizierungen",
     "description": "Bewahren Sie Ihre Daten sicher auf mit Internxt. Ende-zu-Ende-Verschlüsselung, zuverlässige Cloud-Rechenzentren und Einhaltung der DSGVO und anderer Standards."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Alternative zu ChatGPT",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte ChatGPT-Alternative. Internxt hält Ihre Chats privat, verschlüsselt und nur für Sie zugänglich."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Alternative zu Copilot",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte Copilot-Alternative. Internxt hält Ihre Chats privat, verschlüsselt und nur für Sie zugänglich."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Alternative zu DeepSeek",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte DeepSeek-Alternative. Internxt hält Ihre Chats privat, verschlüsselt und nur für Sie zugänglich."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Alternative zu Gemini",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte Gemini-Alternative. Internxt hält Ihre Chats privat, verschlüsselt und nur für Sie zugänglich."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Alternative zu Grok",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte Grok-Alternative. Internxt hält Ihre Chats privat, verschlüsselt und nur für Sie zugänglich."
   }
 ]

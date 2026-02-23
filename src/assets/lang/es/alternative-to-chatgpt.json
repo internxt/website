@@ -1,0 +1,227 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Como ChatGPT, \n pero **privado**",
+    "description": "Pásate a Internxt AI, la mejor alternativa a ChatGPT que respeta tu privacidad",
+    "getPrivacy": " Selecciona tu plan y obtén un 87% de descuento ",
+    "cta": "Haz el cambio"
+  },
+  "HeaderSection": {
+    "title": "Comparativa Internxt vs ChatGPT",
+    "description": "Descubre las funciones clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos.",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Chats cifrados",
+        "Chats revisados por humanos",
+        "Precios y almacenamiento",
+        "Otras funciones",
+        "Auditorías de seguridad",
+        "Aprendizaje automático",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto (Open-source)",
+        "Sí, cifrados en tu dispositivo",
+        "Nunca",
+        "Gratis, almacenamiento de por vida hasta 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail y Send",
+        "Auditorías de seguridad periódicas",
+        "Los chats nunca se usan para entrenar nuestra IA",
+        "Nunca podemos acceder a tus chats",
+        "Privacidad total: RGPD, Leyes Españolas de Protección de Datos"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Sin cifrado de extremo a extremo",
+        "Sí",
+        "Sin almacenamiento en la nube, solo funciones de IA, suscripciones mensuales",
+        "Funciones avanzadas según el nivel de suscripción",
+        "Auditorías de seguridad periódicas",
+        "Tus chats se usan para entrenar y mejorar ChatGPT",
+        "Los humanos pueden acceder y revisar tus chats",
+        "Menor privacidad: Marco de Privacidad de Datos UE-EE. UU."
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "ChatGPT rastrea, comparte y monitoriza tus chats. Internxt los protege.",
+    "description": "ChatGPT puede ser seguro, pero es una pesadilla para tu privacidad. Pásate a Internxt AI para disfrutar de conversaciones seguras y privadas que permanecen totalmente confidenciales y cifradas.",
+    "scrollableSection": {
+      "titles": [
+        "OpenAI puede ver tus chats",
+        "Las conversaciones se guardan en los servidores de OpenAI",
+        "ChatGPT puede acceder y compartir datos con otras apps conectadas",
+        "Los chats no tienen cifrado de extremo a extremo"
+      ],
+      "descriptions": [
+        "ChatGPT te advierte que puede utilizar tus entradas de chat para entrenar y perfeccionar sus modelos de IA. Ciertas conversaciones podrían ser revisadas por personal humano, lo que crea el riesgo de que empleados de OpenAI vean tus charlas personales.",
+        "Los chats de ChatGPT y los metadatos relacionados (como información del dispositivo, idioma y comentarios) se guardan en la actividad de tu cuenta de OpenAI y se conservan por defecto hasta 30 días.",
+        "Si conectas ChatGPT a aplicaciones como Gmail, Calendario, Mensajes, WhatsApp u otros servicios de OpenAI, puede compartir datos relevantes entre ellos. Cualquier información sensible o personal podría ser procesada en múltiples servicios, aumentando el riesgo de brechas de datos.",
+        "Por defecto, los chats de ChatGPT no están cifrados de extremo a extremo. Esta falta de cifrado total permite a OpenAI acceder y procesar tus chats, lo que podría comprometer la confidencialidad de tu información personal o sensible."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Por qué necesitas una alternativa privada a ChatGPT",
+    "description": "Lo que ChatGPT demuestra en seguridad, lo falla en privacidad. Obtén seguridad total y chats cifrados con Internxt AI.",
+    "cards": {
+      "titles": ["Privacidad", "Sin cifrado no hay privacidad", "Recolección de datos"],
+      "descriptions": [
+        "ChatGPT almacena, revisa y utiliza tus chats para mejorar su IA, e incluso los datos anonimizados pueden usarse para perfeccionar modelos o compartirse entre apps de OpenAI. Con Internxt, tus chats son completamente privados, nunca se usan para entrenamiento y nadie más que tú puede acceder a ellos.",
+        "Sin cifrado de extremo a extremo, las conversaciones de ChatGPT siguen siendo legibles para los sistemas y empleados de OpenAI. Los detalles personales o confidenciales compartidos podrían ser almacenados o utilizados, dejándote vulnerable ante filtraciones o hackeos.",
+        "OpenAI ChatGPT recopila tus chats, metadatos e información de uso para mejorar su IA. Algunas conversaciones pueden ser revisadas por humanos, y la integración con otros servicios amplía la recolección de datos, creando riesgos de privacidad y una recolección masiva de datos personales."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs ChatGPT",
+    "description": "Internxt ofrece una privacidad y seguridad inigualables gracias al cifrado de conocimiento cero y post-cuántico, brindándote la mejor protección contra ciberataques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacidad total, transparencia y confianza",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "Internxt AI pone su código a disposición de cualquiera para examinarlo y garantizar su seguridad a través de GitHub. Esta transparencia garantiza que no haya vulnerabilidades ocultas."
+          },
+          {
+            "title": "Cifrado de conocimiento cero",
+            "description": "Tus chats se cifran en el lado del cliente, garantizando que solo tú puedas acceder a ellos."
+          },
+          {
+            "title": "Sede en Europa",
+            "description": "Internxt tiene su sede en España y cumple con el RGPD, HIPAA, ISO 27001 y SOC 2. Internxt es totalmente de código abierto y está auditado para asegurar que no haya acceso externo a tus datos."
+          },
+          {
+            "title": "Planes gratuitos y asequibles",
+            "description": "Internxt AI es gratuito y puedes combinarlo con Internxt Drive con planes de por vida de hasta 5TB. Accede a nuestros servicios para siempre con un 87% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "ChatGPT: ¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Software propietario",
+            "description": "ChatGPT mantiene su código fuente oculto al público. Sin transparencia, no hay forma de saber con certeza cómo ChatGPT gestiona o protege tus datos."
+          },
+          {
+            "title": "Sin cifrado de extremo a extremo",
+            "description": "OpenAI posee las claves de cifrado, lo que significa que teóricamente pueden descifrar y acceder a tus datos si reciben una solicitud legal (como una citación)."
+          },
+          {
+            "title": "Chats almacenados en EE. UU.",
+            "description": "Los datos almacenados en la nube de OpenAI están sujetos a las leyes de vigilancia del gobierno de EE. UU., que permiten el acceso a tus datos bajo ciertas condiciones."
+          },
+          {
+            "title": "Basado en suscripción",
+            "description": "Los planes de pago oscilan entre 8 €/mes y 229 €/mes."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a ChatGPT",
+    "description": "Internxt ofrece una suite completa de productos junto a su IA privada para darte una alternativa segura a ChatGPT.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
+      "descriptions": [
+        "Internxt Drive ofrece almacenamiento en la nube seguro, de conocimiento cero y cifrado post-cuántico para guardar tus archivos con total privacidad. También ofrece funciones avanzadas para compartir archivos, control de versiones, soporte para NAS y rclone.",
+        "Obtén mayor protección con el Antivirus de Internxt integrado directamente en la app de Drive. Realiza escaneos completos o personalizados para mantener tu dispositivo libre de malware, ransomware o spyware.",
+        "La VPN de Internxt protege tu navegación, bloquea anuncios y rastreadores, y mantiene tu ubicación privada. Cifra tu conexión wifi para evitar el espionaje y el robo de identidad.",
+        "Internxt Cleaner te ayuda a identificar y eliminar archivos basura o duplicados de tu dispositivo. Mantén tu almacenamiento organizado y asegúrate de que tu dispositivo funcione de manera eficiente.",
+        "Internxt Meet es tu alternativa segura y privada a Teams. Organiza videollamadas privadas libres de rastreadores, anuncios y recolección de datos, protegidas con cifrado post-cuántico.",
+        "Disponible en Windows, Mac, Linux y dispositivos móviles. Para usuarios avanzados, Internxt ofrece soporte para WebDAV, Rclone y NAS, permitiéndote tomar el control total de tu nube."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Elige Internxt: la mejor alternativa a ChatGPT",
+    "description": "Internxt te ofrece una IA privada y cifrada, además de almacenamiento seguro y una suite de privacidad completa con un 87% de descuento",
+    "cta": "Haz el cambio"
+  },
+  "tableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "87% de dto. 🔥",
+    "planTitles": {
+      "header": "Tu aliado de privacidad todo en uno"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Usa Internxt AI gratis con conversaciones privadas y cifradas",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Atención al cliente premium",
+      "guarantee": "Garantía de reembolso de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt AI una alternativa a ChatGPT más segura y privada?",
+        "answer": [
+          "Sí, Internxt cifra todos tus chats y nunca almacena tus conversaciones. ChatGPT no cifra tus chats, por lo que puede usarlos para entrenar su modelo de IA.",
+          "Las funciones adicionales de Internxt incluyen Drive, VPN, Antivirus, Cleaner, Meet y Mail, que te ofrecen protección adicional contra hackers y brechas de datos."
+        ]
+      },
+      {
+        "question": "¿Es Internxt AI de uso gratuito?",
+        "answer": [
+          "Sí, puedes usar nuestra IA de forma gratuita sin necesidad de iniciar sesión, sin introducir información personal ni datos de pago."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado post-cuántico y por qué es más seguro?",
+        "answer": [
+          "A diferencia del cifrado estándar, los algoritmos de cifrado post-cuántico están diseñados para resistir ataques de ordenadores cuánticos potentes.",
+          "Internxt utiliza este método para asegurar que tu plan de almacenamiento de por vida te proteja contra futuras ciberamenazas. Está disponible en todos los planes sin coste extra."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, lo que la convierte en una solución de almacenamiento en la nube que cumple con el RGPD y sigue leyes estrictas para proteger tus datos."
+        ]
+      },
+      {
+        "question": "¿Es ChatGPT más caro que Internxt?",
+        "answer": [
+          "Internxt AI es una alternativa gratuita y, con nuestro descuento exclusivo del 87%, todos nuestros planes son más económicos que las opciones actuales de ChatGPT, con la ventaja de incluir almacenamiento seguro y una suite completa de privacidad."
+        ]
+      },
+      {
+        "question": "¿Cómo contacto con el soporte?",
+        "answer": [
+          "Si tienes más preguntas o necesitas ayuda, puedes contactar con hello@internxt.com y nuestro equipo de Success Success estará encantado de ayudarte."
+        ]
+      },
+      {
+        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, puedes mejorar tu plan desde los ajustes de tu cuenta de Internxt. O bien, adquiere un nuevo plan en internxt.com/pricing con tu cuenta actual y el almacenamiento se acumulará automáticamente."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar mediante PayPal, iDEAL, Sofort, Criptomonedas y Klarna."
+        ]
+      }
+    ]
+  }
+}

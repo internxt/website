@@ -1,0 +1,225 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Wie ChatGPT, \n aber **privat**",
+    "description": "Wechseln Sie zu Internxt AI, der besten ChatGPT-Alternative, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie 87% Rabatt ",
+    "cta": "Jetzt wechseln"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. ChatGPT im Überblick",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt.",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselte Chats",
+        "Überprüfung durch Menschen",
+        "Preise und Speicher",
+        "Weitere Funktionen",
+        "Sicherheits-Audits",
+        "Maschinelles Lernen",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Ja, auf Ihrem Gerät verschlüsselt",
+        "Niemals",
+        "Kostenlos, Lifetime-Speicher bis zu 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail und Send",
+        "Regelmäßige Sicherheits-Audits",
+        "Chats werden nie zum Training unserer KI verwendet",
+        "Kein Zugriff auf Ihre Chats möglich",
+        "Voller Datenschutz: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Keine Ende-zu-Ende-Verschlüsselung",
+        "Ja",
+        "Kein Cloud-Speicher, nur KI-Funktionen, nur monatliche Abos",
+        "Erweiterte Funktionen je nach Abo-Stufe",
+        "Regelmäßige Sicherheits-Audits",
+        "Ihre Chats werden zum Training von ChatGPT verwendet",
+        "Menschen können Ihre Chats einsehen und überprüfen",
+        "Weniger Datenschutz: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "ChatGPT verfolgt, teilt und überwacht Ihre Chats. Internxt schützt sie.",
+    "description": "ChatGPT mag sicher sein, ist aber ein Albtraum für Ihre Privatsphäre. Wechseln Sie zu Internxt AI für sichere, private Gespräche, die vollständig vertraulich und verschlüsselt bleiben.",
+    "scrollableSection": {
+      "titles": [
+        "Ihre Chats können von OpenAI eingesehen werden",
+        "Konversationen werden auf den Servern von OpenAI gespeichert",
+        "ChatGPT kann Daten mit anderen verbundenen Apps teilen",
+        "Chats sind nicht Ende-zu-Ende verschlüsselt"
+      ],
+      "descriptions": [
+        "ChatGPT weist darauf hin, dass es Ihre Chateingaben zum Trainieren und Verfeinern seiner KI-Modelle verwenden kann. Bestimmte Gespräche könnten von menschlichem Personal überprüft werden, was das Risiko birgt, dass Ihre persönlichen Chats von OpenAI-Mitarbeitern gesehen werden.",
+        "ChatGPT-Chats und zugehörige Metadaten (wie Geräteinformationen, Sprache und Feedback) werden in Ihrem OpenAI-Konto gespeichert und standardmäßig bis zu 30 Tage lang aufbewahrt.",
+        "Wenn Sie ChatGPT mit Apps wie Gmail, Kalender oder WhatsApp verbinden, können relevante Daten zwischen ihnen ausgetauscht werden. Sensible Informationen könnten so über mehrere Dienste hinweg verarbeitet werden, was das Risiko von Datenlecks erhöht.",
+        "Standardmäßig sind ChatGPT-Chats nicht Ende-zu-Ende verschlüsselt. Dieser Mangel an vollständiger Verschlüsselung erlaubt es OpenAI, Ihre Chats einzusehen und zu verarbeiten, was die Vertraulichkeit Ihrer Daten gefährdet."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private ChatGPT-Alternative brauchen",
+    "description": "Was ChatGPT an Sicherheit bietet, fehlt beim Datenschutz. Holen Sie sich totale Sicherheit und verschlüsselte Chats mit Internxt AI.",
+    "cards": {
+      "titles": ["Privatsphäre", "Keine Verschlüsselung, kein Datenschutz", "Datenernte"],
+      "descriptions": [
+        "ChatGPT speichert, überprüft und nutzt Ihre Chats zur Verbesserung der KI. Selbst anonymisierte Daten können zur Modelloptimierung verwendet oder mit verbundenen Apps geteilt werden. Bei Internxt sind Ihre Chats komplett privat und für niemanden außer Ihnen zugänglich.",
+        "Ohne Ende-zu-Ende-Verschlüsselung bleiben ChatGPT-Gespräche für OpenAI-Systeme lesbar. Vertrauliche Details könnten für das KI-Training verwendet werden, was Sie anfällig für Datenlecks oder Hacks macht.",
+        "OpenAI sammelt Ihre Chats, Metadaten und Nutzungsinformationen. Einige Gespräche werden von Menschen überprüft, und die Integration mit anderen Diensten erweitert die Datensammlung, was zu massiver persönlicher Datenernte führt."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs. ChatGPT",
+    "description": "Internxt bietet unvergleichliche Privatsphäre dank Zero-Knowledge- und Post-Quanten-Verschlüsselung und schützt Sie so optimal vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Totale Privatsphäre und Transparenz",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Internxt AI macht seinen Code auf GitHub für jeden zugänglich. Diese Transparenz garantiert, dass keine Sicherheitslücken versteckt sind."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Chats werden clientseitig verschlüsselt. Das garantiert, dass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Sitz in Europa",
+            "description": "Internxt hat seinen Sitz in Spanien und erfüllt DSGVO, HIPAA, ISO 27001 und SOC 2 Standards. Wir sind vollständig Open-Source und auditiert."
+          },
+          {
+            "title": "Kostenlose und günstige Pläne",
+            "description": "Internxt AI ist kostenlos. Sie können es mit Internxt Drive Lifetime-Plänen bis zu 5TB kombinieren und 87% sparen."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "ChatGPT: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "ChatGPT hält seinen Quellcode geheim. Ohne Transparenz gibt es keine Gewissheit darüber, wie Ihre Daten geschützt werden."
+          },
+          {
+            "title": "Keine Ende-zu-Ende-Verschlüsselung",
+            "description": "OpenAI hält die Schlüssel für Ihre Daten. Das bedeutet, sie könnten theoretisch bei rechtlichen Anfragen auf Ihre Inhalte zugreifen."
+          },
+          {
+            "title": "Speicherung in den USA",
+            "description": "Daten in der OpenAI-Cloud unterliegen den US-Überwachungsgesetzen, die unter bestimmten Bedingungen Zugriff auf Ihre Daten erlauben."
+          },
+          {
+            "title": "Abonnement-basiert",
+            "description": "Bezahlpläne reichen von ca. 8 €/Monat bis zu 229 €/Monat."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu ChatGPT ist",
+    "description": "Internxt bietet eine umfassende Produkt-Suite zusammen mit seiner privaten KI für maximale Sicherheit.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Sicherer, Zero-Knowledge- und Post-Quanten-verschlüsselter Cloud-Speicher für Ihre Dateien. Bietet Dateifreigabe, Versionierung, NAS- und Rclone-Support.",
+        "Schutz vor Malware direkt in Ihrer Drive-App. Führen Sie Scans durch, um Ihr Gerät vor Viren, Ransomware oder Spyware zu schützen.",
+        "Schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsselt Ihre WLAN-Verbindung gegen Hacker.",
+        "Hilft Ihnen, unnötigen Datenmüll oder Duplikate auf Ihrem Gerät zu finden und zu löschen, damit Ihr System effizient läuft.",
+        "Die sichere Video-Alternative zu Teams. Hostenvie Videogespräche ohne Tracker und Datensammlung, geschützt durch Post-Quanten-Verschlüsselung.",
+        "Verfügbar für Windows, Mac, Linux und Mobile. Bietet volle Kontrolle mit Unterstützung für WebDAV, Rclone und NAS für Fortgeschrittene."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt als die beste ChatGPT-Alternative",
+    "description": "Internxt bietet verschlüsselte KI, sicheren Cloud-Speicher und eine komplette Datenschutz-Suite mit 87% Rabatt.",
+    "cta": "Jetzt wechseln"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Partner für Privatsphäre",
+    "hotLabel": "87% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One-Partner für Privatsphäre"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Nutzen Sie Internxt AI kostenlos mit privaten, verschlüsselten Chats",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und auditiert",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt AI eine sicherere und privatere ChatGPT-Alternative?",
+        "answer": [
+          "Ja, Internxt verschlüsselt alle Ihre Chats und speichert Ihre Konversationen niemals. ChatGPT verschlüsselt Ihre Chats nicht und nutzt sie zum KI-Training.",
+          "Zusätzliche Funktionen wie Drive, VPN und Antivirus bieten Ihnen weiteren Schutz vor Datenlecks."
+        ]
+      },
+      {
+        "question": "Ist die Nutzung von Internxt AI kostenlos?",
+        "answer": [
+          "Ja, Sie können unsere KI ohne Anmeldung kostenlos nutzen. Es müssen keine persönlichen Daten oder Zahlungsdetails hinterlegt werden."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung?",
+        "answer": [
+          "Diese Algorithmen sind resistent gegen Angriffe durch leistungsstarke Quantencomputer, was Internxt zu einer zukunftssicheren Alternative macht.",
+          "Diese Methode wird in allen Plänen ohne Aufpreis eingesetzt, um Ihren Lifetime-Speicher gegen zukünftige Bedrohungen zu schützen."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und ist damit eine DSGVO-konforme Lösung, die strengen europäischen Datenschutzgesetzen unterliegt."
+        ]
+      },
+      {
+        "question": "Ist ChatGPT teurer als Internxt?",
+        "answer": [
+          "Internxt AI ist kostenlos. Mit dem 87% Rabatt sind unsere Cloud-Pläne günstiger als die aktuellen ChatGPT-Abos und bieten zusätzlich eine komplette Sicherheits-Suite."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": ["Bei weiteren Fragen hilft Ihnen unser Customer Success Team gerne unter hello@internxt.com weiter."]
+      },
+      {
+        "question": "Kann ich mehr Speicher zu meinem Lifetime-Plan hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan jederzeit in den Einstellungen upgraden oder einen neuen Plan erwerben, der automatisch mit Ihrem bestehenden Speicher kombiniert wird."
+        ]
+      },
+      {
+        "question": "Welche Zahlungsmethoden werden akzeptiert?",
+        "answer": [
+          "Wir akzeptieren Kreditkarten (Mastercard, VISA, Amex), PayPal, iDEAL, Sofortüberweisung, Kryptowährungen und Klarna."
+        ]
+      }
+    ]
+  }
+}
