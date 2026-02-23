@@ -83,6 +83,8 @@ const LANG_MAP = {
   shannon: 'en',
   overfl0w: 'fr',
   lefiltreitalia: 'it',
+  letosa: 'es',
+  genius: 'es',
 };
 
 function CombinedSpecialOffer({
