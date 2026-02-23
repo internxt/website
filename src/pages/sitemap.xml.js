@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { encode } from 'html-entities';
 
 const Sitemap = () => {};
 
@@ -24,14 +25,17 @@ export const getServerSideProps = ({ res }) => {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${staticPages
         .map(
-          (page) => `
+          (page) => {
+            const loc = page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`;
+            return `
             <url>
-              <loc>${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}</loc>
+              <loc>${encode(loc)}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>${pages[page]}</priority>
             </url>
-          `,
+          `;
+          },
         )
         .join('')}
     </urlset>
