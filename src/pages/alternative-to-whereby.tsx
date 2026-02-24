@@ -10,7 +10,7 @@ const WherebyComparison = (props: any) => (
     metaTagId="whereby-alternative"
     segmentName="Whereby Comparison"
     logo="/images/comparison/Whereby_Letters.webp"
-    couponCodeName={PromoCodeName.WHEREBY}
+    couponCodeName={PromoCodeName.whereby}
   />
 );
 

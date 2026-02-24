@@ -226,8 +226,8 @@ export enum PromoCodeName {
   lefiltreitalia = 'LEFILTREITALIA',
   genius = 'GENIUS',
   letosa = 'LETOSA',
-  cninternxtl='CNINTERNXTL'
-  WHEREBY='WHEREBY87',
+  cninternxtl='CNINTERNXTL',
+  whereby='WHEREBY87',
 }
 
 export interface PromoCodeProps {
