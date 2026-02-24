@@ -6,7 +6,7 @@ import { GetServerSidePropsContext } from 'next';
 const copilotComparison = (props) => (
   <ComparisonPage
     {...props}
-    competitor="copilot"
+    competitor="Copilot"
     metaTagId="alternative-to-copilot"
     segmentName="Copilot Comparison"
     logo="/images/comparison/copilot-Letters.webp"

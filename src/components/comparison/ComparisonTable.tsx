@@ -122,10 +122,10 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     Teams: {
       defaultLogo: '/images/comparison/Teams_Letters.webp',
     },
-    chatgpt: {
-      defaultLogo: '/images/comparison/ChatGPT-Letters.webp',
+    ChatGPT: {
+      defaultLogo: '/images/comparison/chatGPT-Letters.webp',
     },
-    copilot: {
+    Copilot: {
       defaultLogo: '/images/comparison/copilot-Letters.webp',
     },
     deepseek: {

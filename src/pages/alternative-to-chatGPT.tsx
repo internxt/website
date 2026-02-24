@@ -6,7 +6,7 @@ import { GetServerSidePropsContext } from 'next';
 const chatgptComparison = (props) => (
   <ComparisonPage
     {...props}
-    competitor="chatgpt"
+    competitor="ChatGPT"
     metaTagId="alternative-to-chatgpt"
     segmentName="ChatGPT Comparison"
     logo="/images/comparison/ChatGPT-Letters.webp"
