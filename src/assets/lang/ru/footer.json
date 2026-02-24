@@ -14,7 +14,10 @@
   "FooterSection": {
     "comingSoon": "Скоро",
     "new": "Новое",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
+    "copyright": {
+      "line1": "Copyright © ",
+      "line2": ", Internxt Universal Technologies SL"
+    },
     "sections": {
       "products": {
         "title": "Продукты",
@@ -26,7 +29,6 @@
         "cleaner": "Internxt Cleaner",
         "meet": "Internxt Meet",
         "ai": "Internxt AI",
-
         "business": "Internxt для бизнеса",
         "family": "Internxt для семьи",
         "pricing": "Цены"
@@ -86,7 +88,9 @@
         "nas": "NAS",
         "coupons": "Купоны",
         "reviews": "Отзывы",
-        "certifications": "Certificazioni"
+        "certifications": "Certificazioni",
+        "wire": "Альтернатива Wire",
+        "whereby": "Альтернатива Whereby"
       },
       "tools": {
         "title": "Бесплатные инструменты",

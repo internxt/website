@@ -52,6 +52,8 @@ const nameFiles = [
   'alternative-to-deepseek',
   'alternative-to-gemini',
   'alternative-to-grok',
+  'alternative-to-whereby',
+  'alternative-to-wire',
   'webdav-rclone',
 ];
 
