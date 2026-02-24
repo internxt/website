@@ -588,6 +588,22 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.teams}
                       </Link>
+                      <Link
+                        href="/alternative-to-wire"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.wire}
+                      </Link>
+                      <Link
+                        href="/alternative-to-whereby"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.whereby}
+                      </Link>
                     </div>
 
                     <button
@@ -1314,6 +1330,22 @@ export default function Footer({
                               className="w-full max-w-[160px] hover:text-primary"
                             >
                               {textContent.FooterSection.sections.resources.zoom}
+                            </Link>
+                            <Link
+                              href="/alternative-to-wire"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.wire}
+                            </Link>
+                            <Link
+                              href="/alternative-to-whereby"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.whereby}
                             </Link>
                           </div>
                         </div>

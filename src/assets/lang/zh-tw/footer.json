@@ -14,7 +14,10 @@
   "FooterSection": {
     "comingSoon": "即將推出",
     "new": "新品",
-    "copyright": { "line1": "版權所有 © ", "line2": ", Internxt Universal Technologies SL" },
+    "copyright": {
+      "line1": "版權所有 © ",
+      "line2": ", Internxt Universal Technologies SL"
+    },
     "sections": {
       "products": {
         "title": "產品",
@@ -85,7 +88,9 @@
         "nas": "NAS (網路儲存)",
         "coupons": "優惠券",
         "reviews": "評論",
-        "certifications": "認證"
+        "certifications": "認證",
+        "wire": "Wire 替代方案",
+        "whereby": "Whereby 替代方案"
       },
       "tools": {
         "title": "免費工具",

@@ -628,5 +628,15 @@
     "id": "alternative-to-grok",
     "title": "Internxt — Grok的替代方案",
     "description": "切換到Internxt，獲取隱私且加密的Grok替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
+  },
+  {
+    "id": "wire-alternative",
+    "title": "Internxt — Alternative to Wire",
+    "description": "Switch to Internxt for an open-source alternative to Wire. Post-quantum and zero-knowledge video meetings for full privacy of your calls."
+  },
+  {
+    "id": "whereby-alternative",
+    "title": "Internxt — Alternative to Whereby",
+    "description": "Switch to Internxt for an open-source alternative to Whereby. Post-quantum and zero-knowledge video meetings for full privacy of your calls."
   }
 ]

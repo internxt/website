@@ -14,7 +14,10 @@
   "FooterSection": {
     "comingSoon": "Bientôt disponible",
     "new": "Nouveau",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
+    "copyright": {
+      "line1": "Copyright © ",
+      "line2": ", Internxt Universal Technologies SL"
+    },
     "sections": {
       "products": {
         "title": "Produits",
@@ -85,7 +88,9 @@
         "nas": "NAS",
         "coupons": "Coupons",
         "reviews": "Avis",
-        "certifications": "Certifications"
+        "certifications": "Certifications",
+        "wire": "Alternative à Wire",
+        "whereby": "Alternative à Whereby"
       },
       "tools": {
         "title": "Outils gratuits",

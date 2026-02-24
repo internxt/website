@@ -202,6 +202,7 @@ export enum PromoCodeName {
   DEEPSEEK87 = 'DEEPSEEK87',
   GEMINI87 = 'GEMINI87',
   GROK87 = 'GROK87',
+  WIRE = 'WIRE87',
   FOCI = 'FOCI',
   NEUMANNDIGITAL = 'NEUMANNDIGITAL',
   Bluewin = 'BLUEWIN87',
@@ -225,7 +226,8 @@ export enum PromoCodeName {
   lefiltreitalia = 'LEFILTREITALIA',
   genius = 'GENIUS',
   letosa = 'LETOSA',
-  cninternxtl='CNINTERNXT'
+  cninternxtl='CNINTERNXTL',
+  whereby='WHEREBY87',
 }
 
 export interface PromoCodeProps {
