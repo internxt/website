@@ -97,6 +97,8 @@ export interface Resources {
   googleMeet: string;
   zoom: string;
   teams: string;
+  wire: string;
+  whereby: string;
   aiAlternatives: string;
   geminiAlternative: string;
   grokAlternative: string;
