@@ -1,0 +1,135 @@
+{
+  "HeroSection": {
+    "title": "安全隱私的雲端儲存",
+    "subtitle": "保護您的隱私權",
+    "description": "Internxt 的開源 web3 雲端儲存透過零知識抗量子加密技術保護您的隱私。",
+    "info": "從 {{enterpise}} 兌換您的專屬 Internxt 終生計劃。只需點擊 <strong>兌換代碼</strong> 並輸入您的購買代碼。",
+    "cta": "兌換代碼"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "創建 Internxt 帳戶",
+      "or": "或",
+      "login": "登入",
+      "disclaimer": {
+        "text": "創建帳戶即表示您同意",
+        "link": "條款和條件"
+      },
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "strength": {
+            "complexity": "密碼不夠複雜",
+            "length": "密碼必須至少為 8 個字元",
+            "weak": "密碼強度較弱",
+            "strong": "密碼強度很強"
+          }
+        },
+        "submit": "開始"
+      }
+    },
+    "LogIn": {
+      "title": "登入 Internxt",
+      "or": "或",
+      "signup": "創建帳戶",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "helper": "忘記密碼？"
+        },
+        "tfa": {
+          "label": "雙因素身份驗證",
+          "placeholder": "2FA 代碼",
+          "hint": "2FA 代碼必須為 6 位數字"
+        },
+        "submit": "登入"
+      }
+    },
+    "Recover": {
+      "title": "恢復帳戶",
+      "back": "返回登入",
+      "disclaimer": "正如應用設定中所示，只有您可以訪問您的密碼，因此如果沒有它，我們將無法恢復您的帳戶。您可以在下方輸入您的電子郵件重新註冊，以便我們刪除您的帳戶及其所有文件。",
+      "fields": {
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "電子郵件"
+        },
+        "submit": "發送確認電子郵件"
+      },
+      "success": {
+        "title": "檢查您的郵箱",
+        "subtitle": "我們已將重置帳戶的連結發送到"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "限時優惠！",
+    "title": { "blueText": "", "normalText": "探索我們所有的專屬終生計劃" },
+    "title2": { "blueText": "獲得 ${{percent}}% 折扣", "normalText": "，享受我們的專屬終生計劃" },
+    "description": "一次購買，獲得永久的隱私和安全。",
+    "description2": "透過獨有的一次性付款，為您的文件提供終生隱私和安全保障。",
+    "normalSection": {
+      "title": "探索我們所有的專屬終生計劃",
+      "description": "僅限本週，一次購買，獲得永久的隱私和安全。"
+    },
+    "securePayment": "100% 安全支付，由 Stripe 提供支援",
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "開源且經過審核",
+      "anonymousAccount": "匿名創建帳戶"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "生命不短！但這限時優惠卻很短暫...",
+    "description": "Internxt 正在提供為期一週的優惠，讓您終生享有隱私和安心。",
+    "cta": "選擇計劃"
+  },
+  "FeatureSection": {
+    "title": "為什麼選擇 Internxt 來保護您的文件？",
+    "description": "Internxt 讓您重新掌控自己的隱私。與傳統的雲端儲存不同，我們確保只有您擁有加密數據的密鑰。由於我們不知道您的密碼，因此只有您才能解密數據。",
+    "cta": "",
+    "cards": [
+      {
+        "title": "增強的隱私",
+        "description": "我們強大的加密功能保護您的數據免受未經授權的訪問。我們從不存儲密碼；您所有的信息在傳輸中和靜止時都是加密的。"
+      },
+      {
+        "title": "用戶控制",
+        "description": "為了保護您免受數據洩露的影響，Internxt 透過使第三方（包括 Internxt）無法訪問您的數據來保護其安全。"
+      },
+      {
+        "title": "跨平台訪問",
+        "description": "在各類設備和操作系統上自由工作並訪問您的所有文件。"
+      },
+      {
+        "title": "一次性付款",
+        "description": "Internxt 的終身計劃為您提供安全永久的文件訪問，只需一次預付。支付一次即可終身保障您的數據安全，無任何經常性費用。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密的雲端儲存",
+    "description": "使用 Internxt 安全、私密且加密的雲端儲存來保護真正重要的內容。",
+    "cta": "選擇計劃"
+  },
+  "MostSecureSection": {
+    "title": "為您文件、照片等提供最安全的雲端儲存",
+    "description": "Internxt Drive 是一種開源、端到端加密的雲端儲存解決方案，可在完全保密的情況下存儲、備份和共享您的文件。 Internxt Drive 提供屢獲殊榮的加密技術，能夠讓您自行控制您的數據。",
+    "cta": "兌換代碼"
+  }
+}

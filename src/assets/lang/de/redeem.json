@@ -1,0 +1,135 @@
+{
+  "HeroSection": {
+    "title": "Sicherer, privater Cloud-Speicher",
+    "subtitle": "der Ihr Recht auf Privatsphäre schützt",
+    "description": "Der quelloffene Web3-Cloud-Speicher von Internxt schützt Ihre Privatsphäre mit Post-Quanten-Verschlüsselung nach dem Zero-Knowledge-Prinzip.",
+    "info": "Lösen Sie Ihren exklusiven lebenslangen Internxt-Plan von {{enterpise}} ein. Klicken Sie einfach auf <strong>Code einlösen</strong> und geben Sie Ihren Kaufcode ein.",
+    "cta": "Code einlösen"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Internxt-Konto erstellen",
+      "or": "oder",
+      "login": "Anmelden",
+      "disclaimer": {
+        "text": "Indem Sie ein Konto erstellen, akzeptieren Sie die",
+        "link": "Allgemeinen Geschäftsbedingungen"
+      },
+      "fields": {
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "E-Mail"
+        },
+        "password": {
+          "label": "Passwort",
+          "placeholder": "Passwort",
+          "strength": {
+            "complexity": "Passwort ist nicht komplex genug",
+            "length": "Passwort muss mindestens 8 Zeichen lang sein",
+            "weak": "Passwort ist schwach",
+            "strong": "Passwort ist stark"
+          }
+        },
+        "submit": "Loslegen"
+      }
+    },
+    "LogIn": {
+      "title": "Bei Internxt anmelden",
+      "or": "oder",
+      "signup": "Konto erstellen",
+      "fields": {
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "E-Mail"
+        },
+        "password": {
+          "label": "Passwort",
+          "placeholder": "Passwort",
+          "helper": "Passwort vergessen?"
+        },
+        "tfa": {
+          "label": "Zwei-Faktor-Authentifizierung",
+          "placeholder": "2FA-Code",
+          "hint": "2FA-Code muss 6 Ziffern lang sein"
+        },
+        "submit": "Anmelden"
+      }
+    },
+    "Recover": {
+      "title": "Konto wiederherstellen",
+      "back": "Zur Anmeldung zurück",
+      "disclaimer": "Wie in den App-Einstellungen angegeben, haben nur Sie Zugriff auf Ihr Passwort, daher können wir Ihr Konto ohne es nicht wiederherstellen. Sie können sich erneut anmelden, indem Sie unten Ihre E-Mail-Adresse eingeben, damit wir Ihr Konto und alle Ihre Dateien löschen können.",
+      "fields": {
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "E-Mail"
+        },
+        "submit": "Bestätigungs-E-Mail senden"
+      },
+      "success": {
+        "title": "Überprüfen Sie Ihre E-Mails",
+        "subtitle": "Wir haben einen Konto-Wiederherstellungslink gesendet an"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "Zeitlich begrenztes Angebot!",
+    "title": { "blueText": "", "normalText": "Entdecken Sie unsere exklusiven Lifetime-Pläne" },
+    "title2": { "blueText": "Erhalten Sie ${{percent}}% Rabatt", "normalText": " auf unsere exklusiven Lifetime-Pläne" },
+    "description": "Einmal kaufen und für immer Privatsphäre und Sicherheit erhalten.",
+    "description2": "Lebenslange Privatsphäre und Sicherheit für Ihre Dateien zu einem einmaligen, exklusiven Preis.",
+    "normalSection": {
+      "title": "Entdecken Sie unsere exklusiven Lifetime-Pläne",
+      "description": "Nur diese Woche: Einmal kaufen und für immer Privatsphäre und Sicherheit erhalten."
+    },
+    "securePayment": "100% Sichere Zahlung, unterstützt von Stripe",
+    "features": {
+      "endToEnd": "End-to-End-verschlüsselt",
+      "openSource": "Open Source und auditiert",
+      "anonymousAccount": "Anonyme Kontoerstellung"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "Das Leben ist nicht kurz! Aber dieses zeitlich begrenzte Angebot...",
+    "description": "Internxt bietet eine Woche lang lebenslange Privatsphäre und Seelenfrieden.",
+    "cta": "Plan auswählen"
+  },
+  "FeatureSection": {
+    "title": "Warum Internxt zur Sicherung Ihrer Dateien wählen?",
+    "description": "Internxt gibt Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichen Cloud-Speichern stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Verbesserte Privatsphäre",
+        "description": "Unsere starke Verschlüsselung schützt Ihre Daten vor unbefugtem Zugriff. Wir speichern niemals Passwörter; all Ihre Daten werden verschlüsselt."
+      },
+      {
+        "title": "Benutzerkontrolle",
+        "description": "Um Sie vor Datenschutzverletzungen zu schützen, macht Internxt Ihre Daten für Dritte, einschließlich Internxt, unzugänglich."
+      },
+      {
+        "title": "Plattformübergreifender Zugriff",
+        "description": "Arbeiten Sie frei und greifen Sie über verschiedene Geräte und Betriebssysteme auf all Ihre Dateien zu."
+      },
+      {
+        "title": "Einmalige Zahlung",
+        "description": "Die Lifetime-Pläne von Internxt bieten Ihnen gegen eine einmalige Zahlung dauerhaft sicheren Zugriff. Zahlen Sie einmal, um Ihre Daten auf Lebenszeit ohne laufende Gebühren zu sichern."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Schützen Sie die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Plan auswählen"
+  },
+  "MostSecureSection": {
+    "title": "Der sicherste Cloud-Speicher für Ihre Dateien, Fotos und mehr",
+    "description": "Internxt Drive ist eine quelloffene, End-to-End-verschlüsselte Cloud-Speicherlösung zum Speichern, Sichern und Teilen Ihrer Dateien in absoluter Privatsphäre. Internxt Drive bietet preisgekrönte Verschlüsselung und Kontrolle über Ihre Daten.",
+    "cta": "Code einlösen"
+  }
+}

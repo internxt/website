@@ -1,0 +1,135 @@
+{
+  "HeroSection": {
+    "title": "安全隐私的云存储",
+    "subtitle": "保护您的隐私权",
+    "description": "Internxt 的开源 web3 云存储通过零知识抗量子加密技术保护您的隐私。",
+    "info": "从 {{enterpise}} 兑换您的专属 Internxt 终生计划。只需点击 <strong>兑换代码</strong> 并输入您的购买代码。",
+    "cta": "兑换代码"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "创建 Internxt 账户",
+      "or": "或",
+      "login": "登录",
+      "disclaimer": {
+        "text": "创建账户即表示您同意",
+        "link": "条款和条件"
+      },
+      "fields": {
+        "email": {
+          "label": "邮箱",
+          "placeholder": "邮箱"
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "密码",
+          "strength": {
+            "complexity": "密码不够复杂",
+            "length": "密码必须至少为 8 个字符",
+            "weak": "密码强度较弱",
+            "strong": "密码强度很强"
+          }
+        },
+        "submit": "开始"
+      }
+    },
+    "LogIn": {
+      "title": "登录 Internxt",
+      "or": "或",
+      "signup": "创建账户",
+      "fields": {
+        "email": {
+          "label": "邮箱",
+          "placeholder": "邮箱"
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "密码",
+          "helper": "忘记密码？"
+        },
+        "tfa": {
+          "label": "双因素身份验证",
+          "placeholder": "2FA 代码",
+          "hint": "2FA 代码必须为 6 位数字"
+        },
+        "submit": "登录"
+      }
+    },
+    "Recover": {
+      "title": "恢复账户",
+      "back": "返回登录",
+      "disclaimer": "正如应用设置中所示，只有您可以访问您的密码，因此如果没有它，我们将无法恢复您的账户。您可以在下方输入您的电子邮件重新注册，以便我们删除您的帐户及其所有文件。",
+      "fields": {
+        "email": {
+          "label": "邮箱",
+          "placeholder": "邮箱"
+        },
+        "submit": "发送确认电子邮件"
+      },
+      "success": {
+        "title": "检查您的邮箱",
+        "subtitle": "我们已将重置账户的链接发送到"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "限时优惠！",
+    "title": { "blueText": "", "normalText": "探索我们所有的专属终身计划" },
+    "title2": { "blueText": "获得 ${{percent}}% 折扣", "normalText": "，享受我们的专属终身计划" },
+    "description": "一次购买，获得永久的隐私和安全。",
+    "description2": "通过独有的一次性付款，为您的文件提供终身隐私和安全保障。",
+    "normalSection": {
+      "title": "探索我们所有的专属终身计划",
+      "description": "仅限本周，一次购买，获得永久的隐私和安全。"
+    },
+    "securePayment": "100% 安全支付，由 Stripe 提供支持",
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审核",
+      "anonymousAccount": "匿名创建账户"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "生命不短！但这限时优惠却很短暂...",
+    "description": "Internxt 正在提供为期一周的优惠，让您终生享有隐私和安心。",
+    "cta": "选择计划"
+  },
+  "FeatureSection": {
+    "title": "为什么选择 Internxt 来保护您的文件？",
+    "description": "Internxt 让您重新掌控自己的隐私。与传统的云存储不同，我们确保只有您拥有加密数据的密钥。由于我们不知道您的密码，因此只有您才能解密数据。",
+    "cta": "",
+    "cards": [
+      {
+        "title": "增强的隐私",
+        "description": "我们强大的加密功能保护您的数据免受未经授权的访问。我们从不存储密码；您所有的信息在传输中和静止时都是加密的。"
+      },
+      {
+        "title": "用户控制",
+        "description": "为了保护您免受数据泄露的影响，Internxt 通过使第三方（包括 Internxt）无法访问您的数据来保护其安全。"
+      },
+      {
+        "title": "跨平台访问",
+        "description": "在各类设备和操作系统上自由工作并访问您的所有文件。"
+      },
+      {
+        "title": "一次性付款",
+        "description": "Internxt 的终身计划为您提供安全永久的文件访问，只需一次预付。支付一次即可终身保障您的数据安全，无任何经常性费用。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密的云存储",
+    "description": "使用 Internxt 安全、私密且加密的云存储来保护真正重要的内容。",
+    "cta": "选择计划"
+  },
+  "MostSecureSection": {
+    "title": "为您文件、照片等提供最安全的云存储",
+    "description": "Internxt Drive 是一种开源、端到端加密的云存储解决方案，可在完全保密的情况下存储、备份和共享您的文件。 Internxt Drive 提供屡获殊荣的加密技术，能够让您自行控制您的数据。",
+    "cta": "兑换代码"
+  }
+}
