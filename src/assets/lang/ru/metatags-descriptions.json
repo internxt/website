@@ -344,7 +344,6 @@
     "title": "Internxt — Как Google Drive, но Приватно",
     "description": "Дегуглизируйте свою жизнь с Internxt, лучшей альтернативой Google Drive, которая уважает вашу конфиденциальность. Получите Zero-Knowledge шифрование и полный контроль над данными."
   },
-
   {
     "id": "elephantdrive-alternative",
     "title": "Internxt — Приватная и безопасная альтернатива ElephantDrive",
@@ -439,5 +438,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — Центры обработки данных и сертификации",
     "description": "Храните свои данные в безопасности с Internxt. Сквозное шифрование, надежные облачные центры обработки данных и соответствие GDPR и другим стандартам."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Альтернатива ChatGPT",
+    "description": "Перейдите на Internxt — приватную и зашифрованную альтернативу ChatGPT. Internxt сохраняет ваши чаты приватными, зашифрованными и доступными только вам."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Альтернатива Copilot",
+    "description": "Перейдите на Internxt — приватную и зашифрованную альтернативу Copilot. Internxt сохраняет ваши чаты приватными, зашифрованными и доступными только вам."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Альтернатива DeepSeek",
+    "description": "Перейдите на Internxt — приватную и зашифрованную альтернативу DeepSeek. Internxt сохраняет ваши чаты приватными, зашифрованными и доступными только вам."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Альтернатива Gemini",
+    "description": "Перейдите на Internxt — приватную и зашифрованную альтернативу Gemini. Internxt сохраняет ваши чаты приватными, зашифрованными и доступными только вам."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Альтернатива Grok",
+    "description": "Перейдите на Internxt — приватную и зашифрованную альтернативу Grok. Internxt сохраняет ваши чаты приватными, зашифрованными и доступными только вам."
   }
 ]

@@ -47,6 +47,11 @@ const nameFiles = [
   'alternative-to-zoom',
   'cloud-object-storage',
   'cloud-object-storage/free-cloud-object-storage',
+  'alternative-to-chatGPT',
+  'alternative-to-copilot',
+  'alternative-to-deepseek',
+  'alternative-to-gemini',
+  'alternative-to-grok',
   'webdav-rclone',
 ];
 

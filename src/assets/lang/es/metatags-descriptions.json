@@ -523,5 +523,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — Centros de Datos y Certificaciones",
     "description": "Mantén tus datos seguros con Internxt. Cifrado de extremo a extremo, centros de datos en la nube fiables y cumplimiento con el RGPD y otras normativas."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Alternativa a ChatGPT",
+    "description": "Cámbiate a Internxt para obtener una alternativa a ChatGPT privada y cifrada. Internxt mantiene tus chats privados, cifrados y accesibles solo para ti."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Alternativa a Copilot",
+    "description": "Cámbiate a Internxt para obtener una alternativa a Copilot privada y cifrada. Internxt mantiene tus chats privados, cifrados y accesibles solo para ti."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Alternativa a DeepSeek",
+    "description": "Cámbiate a Internxt para obtener una alternativa a DeepSeek privada y cifrada. Internxt mantiene tus chats privados, cifrados y accesibles solo para ti."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Alternativa a Gemini",
+    "description": "Cámbiate a Internxt para obtener una alternativa a Gemini privada y cifrada. Internxt mantiene tus chats privados, cifrados y accesibles solo para ti."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Alternativa a Grok",
+    "description": "Cámbiate a Internxt para obtener una alternativa a Grok privada y cifrada. Internxt mantiene tus chats privados, cifrados y accesibles solo para ti."
   }
 ]

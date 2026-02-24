@@ -1,0 +1,227 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Como Grok, \n pero **privado**",
+    "description": "Cámbiate a Internxt AI, la mejor alternativa a Grok que sí respeta tu privacidad",
+    "getPrivacy": " Selecciona tu plan y obtén un {{percentage}}% de descuento ",
+    "cta": "Haz el cambio"
+  },
+  "HeaderSection": {
+    "title": "Comparativa Internxt vs Grok",
+    "description": "Descubre las funciones clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos.",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia de código",
+        "Chats cifrados",
+        "Chats revisados por humanos",
+        "Precio y almacenamiento",
+        "Otras funciones",
+        "Auditorías de seguridad",
+        "Aprendizaje automático",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto (Open-source)",
+        "Sí, cifrados en tu dispositivo",
+        "Nunca",
+        "Gratis, almacenamiento de por vida hasta 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail y Send",
+        "Auditorías de seguridad periódicas",
+        "Los chats nunca se usan para entrenar nuestra IA",
+        "Nunca podemos acceder a tus chats",
+        "Privacidad total: RGPD, Leyes Españolas de Protección de Datos"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Sin cifrado de extremo a extremo",
+        "Sí",
+        "Plan gratuito o 30 €/mes",
+        "Funciones de IA avanzadas, modo voz, generación de imágenes ilimitada",
+        "Auditorías de seguridad periódicas",
+        "Tus chats y publicaciones en redes sociales se usan para entrenar y mejorar Grok",
+        "Los humanos pueden acceder y revisar tus chats",
+        "Menor privacidad: Marco de Privacidad de Datos UE-EE. UU."
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Grok rastrea, comparte y monitorea tus chats. Internxt los protege.",
+    "description": "Grok puede ser seguro, pero es una pesadilla para tu privacidad. Cámbiate a Internxt AI para tener conversaciones seguras y privadas que se mantienen totalmente confidenciales y cifradas.",
+    "scrollableSection": {
+      "titles": [
+        "Tus chats pueden ser vistos por X",
+        "Las conversaciones se guardan en los servidores de X",
+        "Privacidad en redes sociales",
+        "Los chats no tienen cifrado de extremo a extremo"
+      ],
+      "descriptions": [
+        "Grok puede usar los datos de los chats para entrenar y perfeccionar sus modelos de IA, y algunas conversaciones pueden ser revisadas por personal humano, lo que genera el riesgo de que empleados de X vean charlas personales.",
+        "Los chats de Grok y sus metadatos (información del dispositivo, idioma, feedback) se guardan en la actividad de tu cuenta de X y se conservan por defecto durante periodos prolongados, limitando el control del usuario.",
+        "Al estar integrado con X, las interacciones pueden vincularse a tu perfil público y exponer intereses u opiniones personales, aumentando riesgos como el acoso o el daño reputacional.",
+        "Por defecto, los chats de Grok no están cifrados de extremo a extremo, lo que permite a X acceder y procesar las conversaciones, comprometiendo potencialmente la confidencialidad."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Por qué necesitas una alternativa privada a Grok",
+    "description": "Lo que Grok demuestra en seguridad, lo pierde en privacidad. Consigue seguridad total y chats cifrados con Internxt AI.",
+    "cards": {
+      "titles": ["Privacidad", "Sin cifrado no hay privacidad", "Recolección de datos"],
+      "descriptions": [
+        "Incluso si decides no participar en el entrenamiento, el personal autorizado puede revisar los chats de Grok. Al estar embebido en X, los prompts e interacciones están ligados a las cuentas sociales y las políticas de la plataforma.",
+        "Sin cifrado de extremo a extremo, las conversaciones de Grok son legibles para los sistemas y empleados de la plataforma, exponiendo información confidencial a posibles usos indebidos o brechas.",
+        "Grok puede usar automáticamente las publicaciones e interacciones de los usuarios en X para entrenar modelos de inteligencia artificial, aumentando los riesgos de recolección masiva de datos."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs Grok",
+    "description": "Internxt ofrece una privacidad y seguridad inigualables gracias al cifrado de conocimiento cero y post-cuántico, dándote la mejor protección contra ciberataques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacidad total, transparencia y confianza",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "Internxt AI pone su código a disposición de cualquiera para ser examinado en GitHub, garantizando transparencia y evitando vulnerabilidades ocultas."
+          },
+          {
+            "title": "Cifrado de conocimiento cero",
+            "description": "Tus chats se cifran en el lado del cliente, garantizando que solo tú puedas acceder a ellos."
+          },
+          {
+            "title": "Sede en Europa",
+            "description": "Internxt tiene su sede en España y cumple con el RGPD, HIPAA, ISO 27001 y SOC 2, asegurando protecciones de privacidad estrictas."
+          },
+          {
+            "title": "Planes gratuitos y asequibles",
+            "description": "Internxt AI es gratuito y puede combinarse con los planes de por vida de Internxt Drive de hasta 5TB. Accede a nuestros servicios para siempre con un {{percentage}}% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Grok: ¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Software propietario",
+            "description": "Las versiones antiguas de Grok eran de código abierto, pero las nuevas son propietarias, lo que dificulta verificar cómo se manejan o protegen los datos."
+          },
+          {
+            "title": "Sin cifrado de extremo a extremo",
+            "description": "X retiene el acceso al cifrado, lo que significa que los chats podrían ser accedidos bajo peticiones legales o internas."
+          },
+          {
+            "title": "Chats almacenados en EE. UU.",
+            "description": "Los datos guardados en la nube de X están sujetos a las leyes de vigilancia de EE. UU. que pueden permitir el acceso bajo ciertas condiciones."
+          },
+          {
+            "title": "Basado en suscripción",
+            "description": "Disponible con un plan gratuito o acceso premium por 30 €/mes."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a Grok",
+    "description": "Internxt ofrece una suite completa de productos junto a su IA privada para darte una alternativa a Grok realmente segura.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
+      "descriptions": [
+        "Internxt Drive ofrece almacenamiento en la nube seguro, con cifrado de conocimiento cero y post-cuántico, con funciones avanzadas para compartir, versionado, NAS y soporte para rclone.",
+        "Internxt Antivirus está integrado directamente en tu app para protegerte contra malware, ransomware y spyware con análisis completos o personalizados.",
+        "La VPN de Internxt cifra tu conexión, bloquea anuncios y rastreadores, y protege tu identidad mientras navegas por internet.",
+        "Internxt Cleaner te ayuda a identificar y eliminar archivos basura o duplicados para mantener tu almacenamiento organizado y eficiente.",
+        "Internxt Meet permite videollamadas seguras y privadas protegidas con cifrado post-cuántico y libres de rastreadores o anuncios.",
+        "Disponible en Windows, Mac, Linux y móvil, con soporte para WebDAV, Rclone y NAS para usuarios avanzados."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Elige Internxt como la mejor alternativa a Grok",
+    "description": "IA privada cifrada además de almacenamiento en la nube seguro y una suite de privacidad completa con un {{percentage}}% de descuento",
+    "cta": "Haz el cambio"
+  },
+  "tableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "¡{{discount}}% de dto! 🔥",
+    "planTitles": {
+      "header": "Tu aliado de privacidad todo en uno"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Usa Internxt AI gratis con conversaciones privadas y cifradas",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Atención al cliente premium",
+      "guarantee": "Garantía de reembolso de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt AI una alternativa a Grok más segura y privada?",
+        "answer": [
+          "Sí, Internxt cifra todos tus chats y nunca almacena tus conversaciones. Grok no cifra los chats y puede usarlos para entrenar su IA.",
+          "Internxt también incluye Drive, VPN, Antivirus, Cleaner, Meet y Mail para proporcionar protección adicional contra hackers y brechas de datos."
+        ]
+      },
+      {
+        "question": "¿Es Internxt AI de uso gratuito?",
+        "answer": [
+          "Sí, puedes usar Internxt AI gratis sin necesidad de iniciar sesión ni proporcionar información personal o datos de pago."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado post-cuántico y por qué es más seguro?",
+        "answer": [
+          "El cifrado post-cuántico está diseñado para resistir futuros ataques de ordenadores cuánticos, lo que lo convierte en una alternativa más segura al cifrado estándar.",
+          "Internxt utiliza esta tecnología para proteger tus datos y planes de almacenamiento de por vida contra futuras ciberamenazas sin coste adicional."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, y cumple con el RGPD y las estrictas leyes de privacidad europeas para proteger tus datos."
+        ]
+      },
+      {
+        "question": "¿Es Grok más caro que Internxt?",
+        "answer": [
+          "Internxt AI es gratuito y, con tu descuento exclusivo del {{percentage}}%, todos los planes son más económicos a la vez que ofrecen almacenamiento en la nube seguro y una suite de privacidad completa."
+        ]
+      },
+      {
+        "question": "¿Cómo contacto con soporte?",
+        "answer": [
+          "Si necesitas ayuda, contacta con hello@internxt.com y nuestro equipo de Customer Success estará encantado de ayudarte."
+        ]
+      },
+      {
+        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, puedes mejorar tu plan desde los ajustes de tu cuenta de Internxt o comprar planes adicionales y tu almacenamiento se acumulará automáticamente."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, Criptomonedas y Klarna."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Wie Gemini, \n aber **privat**",
+    "description": "Wechseln Sie zu Internxt AI, der besten Gemini-Alternative, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie {{percentage}}% Rabatt ",
+    "cta": "Jetzt wechseln"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Gemini im Überblick",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt.",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselte Chats",
+        "Von Menschen geprüfte Chats",
+        "Preise und Speicherplatz",
+        "Weitere Funktionen",
+        "Sicherheitsaudits",
+        "Maschinelles Lernen",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Ja, auf Ihrem Gerät verschlüsselt",
+        "Niemals",
+        "Kostenloser, jährlicher & lebenslanger Speicher bis zu 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail und Send",
+        "Regelmäßige Sicherheitsaudits",
+        "Chats werden niemals zum Training unserer KI verwendet",
+        "Kann niemals auf Ihre Chats zugreifen",
+        "Voller Datenschutz: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Keine Ende-zu-Ende-Verschlüsselung",
+        "Ja",
+        "Teurere Jahres- oder Monatspläne, bis zu 6TB",
+        "Gemini, Drive und Google Workspace",
+        "Regelmäßige Sicherheitsaudits",
+        "Ihre Chats werden zum Trainieren und Verbessern von Gemini verwendet",
+        "Menschen können Ihre Chats einsehen und überprüfen",
+        "Weniger Datenschutz: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Gemini verfolgt, teilt und überwacht Ihre Chats. Internxt schützt sie.",
+    "description": "Gemini mag sicher sein, ist aber ein Albtraum für Ihre Privatsphäre. Wechseln Sie zu Internxt AI für sichere, private Gespräche, die vollständig vertraulich und verschlüsselt bleiben.",
+    "scrollableSection": {
+      "titles": [
+        "Ihre Chats können von Google eingesehen werden",
+        "Gespräche werden auf Google-Servern gespeichert",
+        "Gemini kann auf Daten zugreifen und diese mit anderen Apps teilen",
+        "Chats sind nicht Ende-zu-Ende verschlüsselt"
+      ],
+      "descriptions": [
+        "Gemini kann Ihre Chateingaben verwenden, um seine KI-Modelle zu trainieren und zu verfeinern. Bestimmte Gespräche können von Mitarbeitern überprüft werden, wodurch das Risiko besteht, dass persönliche Chats von Google-Angestellten gesehen werden.",
+        "Gemini-Chats und zugehörige Metadaten werden in Ihren Google-Kontoaktivitäten gespeichert und standardmäßig bis zu 18 Monate lang aufbewahrt, was die Kontrolle des Nutzers über die gespeicherten Daten einschränkt.",
+        "Wenn eine Verbindung zu Gmail, Kalender, Messages, WhatsApp oder anderen Google-Diensten besteht, kann Gemini relevante Daten app-übergreifend teilen, was die Exponierung sensibler Informationen erhöht.",
+        "Standardmäßig sind Gemini-Chats nicht Ende-zu-Ende verschlüsselt, was Google ermöglicht, Gespräche einzusehen und zu verarbeiten, was die Vertraulichkeit potenziell gefährdet."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum Sie eine private Gemini-Alternative brauchen",
+    "description": "Was Gemini an Sicherheit bietet, fehlt beim Datenschutz. Holen Sie sich totale Sicherheit und verschlüsselte Chats mit Internxt AI.",
+    "cards": {
+      "titles": ["Privatsphäre", "Keine Verschlüsselung, keine Privatsphäre", "Datensammlung"],
+      "descriptions": [
+        "Gemini speichert, überprüft und nutzt Ihre Chats zur Verbesserung seiner KI, und anonymisierte Daten können über verbundene Google-Apps geteilt werden. Bei Internxt bleiben die Chats absolut privat und werden niemals für das Training verwendet.",
+        "Ohne Ende-zu-Ende-Verschlüsselung bleiben Gemini-Gespräche für Google-Systeme und Mitarbeiter lesbar, wodurch vertrauliche Informationen einem potenziellen Zugriff oder Missbrauch ausgesetzt sind.",
+        "Google Gemini sammelt Chats, Metadaten und Nutzungsinformationen, um seine KI zu verbessern, und weitet die Datenerfassung durch Integrationen aus, was die Datenschutzrisiken erhöht."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs. Gemini",
+    "description": "Internxt bietet unübertroffene Privatsphäre und Sicherheit dank Zero-Knowledge- und Post-Quanten-Verschlüsselung und bietet Ihnen so den besten Schutz vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Totale Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Internxt AI macht seinen Code über GitHub für jeden zugänglich, was Transparenz gewährleistet und versteckte Schwachstellen verhindert."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Chats werden clientseitig verschlüsselt, sodass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Sitz in Europa",
+            "description": "Internxt hat seinen Sitz in Spanien und erfüllt die Anforderungen von DSGVO, HIPAA, ISO 27001 und SOC 2, was einen strengen Datenschutz gewährleistet."
+          },
+          {
+            "title": "Kostenlose und erschwingliche Pläne",
+            "description": "Internxt AI ist kostenlos und kann mit Internxt Drive Lifetime-Plänen bis zu 5TB kombiniert werden. Nutzen Sie unsere Dienste dauerhaft mit {{percentage}}% Rabatt."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Gemini: Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Gemini hält seinen Quellcode vor der Öffentlichkeit verborgen, was es unmöglich macht, zu überprüfen, wie Nutzerdaten gehandhabt oder geschützt werden."
+          },
+          {
+            "title": "Keine Ende-zu-Ende-Verschlüsselung",
+            "description": "Google behält den Verschlüsselungszugriff auf Gespräche, was bedeutet, dass Chats theoretisch auf rechtliche Anfrage hin eingesehen werden könnten."
+          },
+          {
+            "title": "Chats in den USA gespeichert",
+            "description": "In der Google-Cloud gespeicherte Daten unterliegen den US-Überwachungsgesetzen, die unter bestimmten Bedingungen einen Zugriff ermöglichen können."
+          },
+          {
+            "title": "Abonnementbasiert",
+            "description": "Kostenpflichtige Pläne reichen von 7,99 €/Monat bis 274,99 €/Monat."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Gemini ist",
+    "description": "Internxt bietet neben seiner privaten KI eine umfassende Suite von Produkten, um Ihnen eine sichere Gemini-Alternative zu bieten.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Drive bietet sicheren, Zero-Knowledge- und Post-Quanten-verschlüsselten Cloud-Speicher mit erweitertem Filesharing, Versionierung, NAS und Rclone-Unterstützung.",
+        "Internxt Antivirus ist direkt in Ihre App integriert, um mit vollständigen oder benutzerdefinierten Scans vor Malware, Ransomware und Spyware zu schützen.",
+        "Internxts VPN verschlüsselt Ihre Verbindung, blockiert Werbung und Tracker und schützt Ihre Identität beim Online-Surfen.",
+        "Internxt Cleaner hilft Ihnen, Junk-Dateien oder Duplikate zu identifizieren und zu entfernen, um Ihren Speicher organisiert und effizient zu halten.",
+        "Internxt Meet ermöglicht sichere, private Videoanrufe, die durch Post-Quanten-Verschlüsselung geschützt und frei von Trackern oder Werbung sind.",
+        "Verfügbar für Windows, Mac, Linux und Mobilgeräte, mit WebDAV-, Rclone- und NAS-Unterstützung für fortgeschrittene Nutzer."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt für die beste Gemini-Alternative",
+    "description": "Verschlüsselte private KI plus sicherer Cloud-Speicher und eine vollständige Datenschutz-Suite mit {{percentage}}% Rabatt",
+    "cta": "Jetzt wechseln"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One-Partner für Privatsphäre",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One-Partner für Privatsphäre"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Nutzen Sie Internxt AI kostenlos mit privaten, verschlüsselten Gesprächen",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt AI eine sicherere und privatere Alternative zu Gemini?",
+        "answer": [
+          "Ja, Internxt verschlüsselt alle Ihre Chats und speichert Ihre Gespräche niemals. Gemini verschlüsselt Chats nicht und kann sie zum Training seiner KI verwenden.",
+          "Internxt umfasst auch Drive, VPN, Antivirus, Cleaner, Meet und Mail, um zusätzlichen Schutz vor Hackern und Datenschutzverletzungen zu bieten."
+        ]
+      },
+      {
+        "question": "Ist die Nutzung von Internxt AI kostenlos?",
+        "answer": [
+          "Ja, Sie können Internxt AI kostenlos nutzen, ohne sich einzuloggen oder persönliche Informationen oder Zahlungsdaten anzugeben."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Die Post-Quanten-Verschlüsselung ist so konzipiert, dass sie künftigen Quantenangriffen standhält, was sie zu einer sichereren Alternative zur Standardverschlüsselung macht.",
+          "Internxt nutzt diese Technologie, um Ihre Daten und Lifetime-Speicherpläne ohne zusätzliche Kosten vor zukünftigen Cybersicherheitsbedrohungen zu schützen."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und hält sich an die DSGVO und strenge europäische Datenschutzgesetze, um Ihre Daten zu schützen."
+        ]
+      },
+      {
+        "question": "Ist Gemini teurer als Internxt?",
+        "answer": [
+          "Internxt AI ist kostenlos nutzbar, und mit Ihrem exklusiven Rabatt von {{percentage}}% sind alle Pläne günstiger, während sie sicheren Cloud-Speicher und eine vollständige Datenschutz-Suite bieten."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie Hilfe benötigen, kontaktieren Sie hello@internxt.com. Unser Customer Success Team hilft Ihnen gerne weiter."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in Ihren Internxt-Kontoeinstellungen aktualisieren oder zusätzliche Pläne erwerben, und Ihr Speicherplatz wird automatisch addiert."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert Debit- und Kreditkarten (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, Kryptowährungen und Klarna."
+        ]
+      }
+    ]
+  }
+}

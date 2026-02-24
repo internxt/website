@@ -29,6 +29,7 @@ export default function Footer({
   const [platforms, setPlatforms] = useState<any>();
   const [isAlternativesOpen, setIsAlternativesOpen] = useState(false);
   const [isVideocallsOpen, setIsVideocallsOpen] = useState(false);
+  const [isAiAlternativeOpen, setIsAiAlternativeOpen] = useState(false);
 
   const year = moment().format('YYYY');
 
@@ -588,6 +589,67 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.teams}
                       </Link>
                     </div>
+
+                    <button
+                      onClick={() => setIsAiAlternativeOpen(!isAiAlternativeOpen)}
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.aiAlternatives}
+                      {isAiAlternativeOpen ? (
+                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                      ) : (
+                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                      )}
+                    </button>
+
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isAiAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
+                      }`}
+                      style={!isAiAlternativeOpen ? { display: 'none' } : {}}
+                    >
+                      <Link
+                        href="/alternative-to-gemini"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.geminiAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-chatGPT"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.chatGPTAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-grok"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.grokAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-copilot"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.copilotAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-deepseek"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.deepSeekAlternative}
+                      </Link>
+                    </div>
+
                     <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}

@@ -38,7 +38,12 @@ type CompetitorType =
   | 'sync'
   | 'proton-drive'
   | 'zoom'
-  | 'Teams';
+  | 'Teams'
+  | 'ChatGPT'
+  | 'Copilot'
+  | 'deepseek'
+  | 'gemini'
+  | 'grok';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;

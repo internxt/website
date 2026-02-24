@@ -61,7 +61,6 @@
   },
   {
     "id": "about",
-
     "title": "Internxt 隐私 – 我们的核心价值观",
     "description": "在 Internxt，保护用户隐私是我们的使命。切换到 Internxt 一体化隐私套件。Internxt Drive、Meet、Mail、Cleaner 等更多服务。"
   },
@@ -444,5 +443,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — 数据中心与认证",
     "description": "使用 Internxt 保护您的数据安全。端到端加密、可靠的云数据中心以及符合 GDPR 和其他标准。"
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — ChatGPT的替代方案",
+    "description": "切换到Internxt，获取私密且加密的ChatGPT替代方案。Internxt让您的聊天保持私密、加密，并且仅对您可用。"
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Copilot的替代方案",
+    "description": "切换到Internxt，获取私密且加密的Copilot替代方案。Internxt让您的聊天保持私密、加密，并且仅对您可用。"
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — DeepSeek的替代方案",
+    "description": "切换到Internxt，获取私密且加密的DeepSeek替代方案。Internxt让您的聊天保持私密、加密，并且仅对您可用。"
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Gemini的替代方案",
+    "description": "切换到Internxt，获取私密且加密的Gemini替代方案。Internxt让您的聊天保持私密、加密，并且仅对您可用。"
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Grok的替代方案",
+    "description": "切换到Internxt，获取私密且加密的Grok替代方案。Internxt让您的聊天保持私密、加密，并且仅对您可用。"
   }
 ]

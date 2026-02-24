@@ -1,0 +1,217 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI。类似 ChatGPT，\n 但更**私密**",
+    "description": "切换到 Internxt AI，这是尊重您隐私的最佳 ChatGPT 替代方案",
+    "getPrivacy": " 选择您的方案并享受 87% 的折扣 ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 ChatGPT 概览",
+    "description": "探索关键功能和差异，让 Internxt 重新为您掌握数据控制权。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密聊天",
+        "人工审核聊天",
+        "价格与存储",
+        "其他功能",
+        "安全审计",
+        "机器学习",
+        "隐私政策",
+        "隐私法"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "是的，在您的设备上加密",
+        "从不",
+        "免费，高达 5TB 的终身存储",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail 和 Send",
+        "定期安全审计",
+        "聊天绝不用于训练我们的 AI",
+        "永远无法访问您的聊天记录",
+        "完整隐私保护：GDPR，西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "无端到端加密",
+        "是",
+        "无云存储，仅限 AI 功能，仅限按月订阅",
+        "不同层级提供高级功能",
+        "定期安全审计",
+        "您的聊天记录被用于训练和改进 ChatGPT",
+        "人员可以访问并审查您的聊天内容",
+        "隐私保护较弱：欧盟-美国数据隐私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "ChatGPT 跟踪、共享并监控您的聊天。Internxt 则保护它们。",
+    "description": "ChatGPT 可能安全，但对您的隐私来说是一场噩梦。切换到 Internxt AI，享受完全保密且加密的安全私人对话。",
+    "scrollableSection": {
+      "titles": [
+        "您的聊天内容可被 OpenAI 查看",
+        "对话存储在 OpenAI 的服务器上",
+        "ChatGPT 可以访问并与连接的其他应用共享数据",
+        "聊天未经过端到端加密"
+      ],
+      "descriptions": [
+        "ChatGPT 提醒您，它可能会使用您的聊天输入来训练和完善其 AI 模型。某些对话可能会由人工审查，这可能会导致您的私人对话被 OpenAI 员工看到的风险。",
+        "ChatGPT 的聊天记录及相关元数据（如设备信息、语言和反馈）存储在您的 OpenAI 账户活动中，默认保留长达 30 天。",
+        "如果您将 ChatGPT 连接到 Gmail、日历或 WhatsApp 等应用，它可能会在这些应用之间共享相关数据。聊天中的任何敏感或个人信息都可能被多个服务处理，增加了数据泄露的风险。",
+        "默认情况下，ChatGPT 聊天不进行端到端加密。这种缺乏完整加密的情况允许 OpenAI 访问并处理您的聊天内容，从而可能损害个人或敏感信息的机密性。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要一个私密的 ChatGPT 替代方案",
+    "description": "ChatGPT 在安全方面的表现掩盖了其在隐私方面的失败。通过 Internxt AI 获得完全的安全保障和加密聊天。",
+    "cards": {
+      "titles": ["隐私", "没有加密，就没有隐私", "数据采集"],
+      "descriptions": [
+        "ChatGPT 存储、审查并使用您的聊天记录来改进其 AI，甚至匿名数据也可能被用于模型完善或在连接的应用中共享。使用 Internxt，您的聊天完全私密，绝不用于训练，除了您自己，任何人都无法访问。",
+        "如果没有端到端加密，ChatGPT 的对话对 OpenAI 的系统和员工保持可读。聊天中共享的个人或机密细节可能会被访问、存储或用于 AI 训练，使您容易受到数据泄露或黑客攻击。",
+        "OpenAI ChatGPT 收集并存储您的聊天、元数据和使用信息以改进其 AI。部分对话可能由人工审查，与其他服务的集成可能会扩大数据收集范围，造成潜在的隐私风险。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI 对比 ChatGPT",
+    "description": "得益于零知识、后量子加密技术，Internxt 提供无与伦比的隐私和安全，为您提供针对网络攻击的最佳保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：完全隐私、透明且值得信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt AI 在 GitHub 上公开其代码供所有人检查。这种透明度保证了没有隐藏的漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的聊天在客户端加密，保证只有您自己可以访问。"
+          },
+          {
+            "title": "总部位于欧洲",
+            "description": "Internxt 总部位于西班牙，符合 GDPR, HIPAA, ISO 27001 和 SOC 2。Internxt 完全开源并经过审计，确保外部无法访问您的数据。"
+          },
+          {
+            "title": "免费和超值的方案",
+            "description": "Internxt AI 是免费的，您可以将其与高达 5TB 的 Internxt Drive 终身方案结合使用。享受 87% 的折扣。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "ChatGPT：您的隐私如何保障？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "ChatGPT 对公众隐藏其源代码。由于缺乏透明度，无法确定 ChatGPT 如何处理或保护您的数据。"
+          },
+          {
+            "title": "无端到端加密",
+            "description": "OpenAI 持有您文件的加密密钥，这意味着如果收到法律请求（如传票），他们理论上可以解密并访问您的内容。"
+          },
+          {
+            "title": "聊天存储在美国",
+            "description": "存储在 OpenAI 云端的数据受美国政府监控法的约束，这些法律允许在某些条件下访问您的数据。"
+          },
+          {
+            "title": "基于订阅制",
+            "description": "付费方案从每月 8 欧元到 229 欧元不等。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 ChatGPT 的最佳替代方案",
+    "description": "Internxt 提供了一整套产品以及私密 AI，为您提供安全的 ChatGPT 替代方案。",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
+      "descriptions": [
+        "Internxt Drive 提供安全、零知识和后量子加密的云存储。它还提供先进的文件共享、版本控制、NAS 和 rclone 支持。",
+        "通过直接内置在 Internxt Drive 应用中的 Antivirus 获得更强的保护。运行病毒扫描以保护您的设备免受勒索软件或间谍软件的攻击。",
+        "Internxt 的 VPN 保护您的浏览，拦截广告和跟踪器。加密您的 WiFi 连接以防止窥探和身份盗用。",
+        "Internxt Cleaner 帮助您识别并清理设备中的垃圾或重复文件。保持存储组织有序，确保设备高效运行。",
+        "Internxt Meet 是您安全且私密的 Teams 替代方案。举办无跟踪器、无广告和无数据收集的私人视频会议。",
+        "适用于 Windows, Mac, Linux 和移动端。Internxt 为高级用户提供 WebDAV, Rclone 和 NAS 支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt，获得最佳 ChatGPT 替代方案",
+    "description": "Internxt 提供加密和私密的 AI，以及安全的云存储和全套隐私工具，立减 87%",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的全方位隐私盟友",
+    "hotLabel": "87% 折扣 🔥",
+    "planTitles": {
+      "header": "您的全方位隐私盟友"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费使用 Internxt AI 进行私密加密对话",
+      "cta": "选择方案"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt AI 是更安全、更私密的 ChatGPT 替代方案吗？",
+        "answer": [
+          "是的，Internxt 加密您的所有聊天，绝不存储对话。ChatGPT 不加密聊天，因此它可以使用对话来训练其 AI 模型。",
+          "Internxt 的额外功能包括 Drive, VPN, Antivirus 等，为您提供针对数据泄露的额外保护。"
+        ]
+      },
+      {
+        "question": "Internxt AI 可以免费使用吗？",
+        "answer": ["是的，您可以免费使用我们的 AI 而无需登录，无需输入任何个人信息或付款详情。"]
+      },
+      {
+        "question": "什么是后量子加密？它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵抗强大的量子攻击，使其成为更安全的替代方案。",
+          "所有方案都包含此方法，以确保您的终身存储计划能够防御未来的网络安全威胁。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": ["Internxt 总部位于西班牙巴伦西亚，符合 GDPR 规范，遵循严格的法律以保护您的数据。"]
+      },
+      {
+        "question": "ChatGPT 比 Internxt 贵吗？",
+        "answer": ["Internxt AI 是免费的，凭借 87% 的专属折扣，我们的方案比 ChatGPT 的订阅更便宜，且包含全套隐私套件。"]
+      },
+      {
+        "question": "如何联系支持部门？",
+        "answer": ["如有任何问题，可联系 hello@internxt.com，我们的客户成功团队将竭诚为您服务。"]
+      },
+      {
+        "question": "我可以为我的终身方案添加更多存储空间吗？",
+        "answer": ["可以，您可以在设置中升级，或者购买新方案，存储空间将自动累加。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币支付吗？",
+        "answer": [
+          "Internxt 接受借记卡和信用卡（Mastercard, VISA, Amex 等），也支持 PayPal, iDEAL, 加密货币和 Klarna。"
+        ]
+      }
+    ]
+  }
+}

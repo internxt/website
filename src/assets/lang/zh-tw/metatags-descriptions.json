@@ -46,7 +46,6 @@
   },
   {
     "id": "pricing",
-
     "title": "Internxt 價格 – 終身加密雲端儲存",
     "description": "Internxt 提供實惠、安全、免費和加密的雲端儲存，包含年付和終身付費計劃"
   },
@@ -604,5 +603,30 @@
     "id": "cloud-data-centers",
     "title": "Internxt — 資料中心與認證",
     "description": "使用 Internxt 保護您的資料安全。端對端加密、可靠的雲端資料中心以及符合 GDPR 和其他標準。"
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — ChatGPT的替代方案",
+    "description": "切換到Internxt，獲取隱私且加密的ChatGPT替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Copilot的替代方案",
+    "description": "切換到Internxt，獲取隱私且加密的Copilot替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — DeepSeek的替代方案",
+    "description": "切換到Internxt，獲取隱私且加密的DeepSeek替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Gemini的替代方案",
+    "description": "切換到Internxt，獲取隱私且加密的Gemini替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Grok的替代方案",
+    "description": "切換到Internxt，獲取隱私且加密的Grok替代方案。Internxt讓您的聊天保持隱私、加密，並且僅對您可用。"
   }
 ]

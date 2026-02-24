@@ -1,0 +1,227 @@
+{
+  "HeroSection": {
+    "title": "Internxt AI. Like Copilot, \n but **private**",
+    "description": "Switch to Internxt AI, the best Copilot alternative that respects your privacy",
+    "getPrivacy": " Select your plan and get 87% off  ",
+    "cta": "Make the switch"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Copilot overview",
+    "description": "Discover the key features and differences that allow Internxt to give you back control over your data.",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encrypted chats",
+        "Chats reviewed by humans",
+        "Pricing and storage",
+        "Other features",
+        "Security audits",
+        "Machine learning",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Yes, encrypted on your device",
+        "Never",
+        "Free, lifetime storage up to 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail, and Send",
+        "Regular security audits",
+        "Chats are never used to train our AI",
+        "Can never access your chats",
+        "Full privacy: GDPR, Spanish Data Protection Laws"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "No end-to-end encryption",
+        "Yes",
+        "Cloud storage up to 6TB, costs from €1.99 to 12.99/month",
+        "Microsoft Copilot, OneDrive, and Office",
+        "Regular security audits",
+        "Your chats are used to train and improve Copilot",
+        "Humans can access and review your chats.",
+        "Less privacy: EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Copilot tracks, shares, and monitors your chats. Internxt protects it.",
+    "description": "Copilot may be secure, but it’s a nightmare for your privacy. Switch to Internxt AI for secure, private conversations that remain fully confidential and encrypted.",
+    "scrollableSection": {
+      "titles": [
+        "Your chats can be seen by Microsoft",
+        "Conversations are stored on Microsoft’s servers",
+        "Copilot can access and share data with other connected apps",
+        "Chats are not end-to-end encrypted"
+      ],
+      "descriptions": [
+        "Copilot alerts you that it may use your chat inputs to train and refine its AI models. Certain conversations could be reviewed by human staff, potentially creating a risk that your personal conversations could be seen by Microsoft’s employees.",
+        "Copilot chats and related metadata (like device information, language, and feedback) are stored in your Microsoft Account activity and retained by default for up to 18 months. You can shorten this to 3 months or extend it to 36 months, but the default limits control over your data.",
+        "If you connect Copilot to apps like Gmail, Calendar, Messages, WhatsApp, or other Microsoft services, it may share relevant data between them. Any sensitive or personal information from your chats could be accessed or processed across multiple services, increasing the risk of data breaches.",
+        "By default, Copilot chats are not end-to-end encrypted. This lack of full encryption allows Microsoft to access and process your chats, which could compromise the confidentiality of personal or sensitive information"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Why you need a private Copilot alternative",
+    "description": "What Copilot demonstrates in security fails in terms of privacy. Get total security and encrypted chats with Internxt AI.",
+    "cards": {
+      "titles": ["Privacy", "No encryption, no privacy", "Data harvesting"],
+      "descriptions": [
+        "Copilot stores, reviews, and uses your chats to improve its AI, and even anonymized data may be used for model refinement or shared across connected Microsoft apps. With Internxt, your chats are completely private, never used for training, and cannot be accessed by anyone but you.",
+        "Without end-to-end encryption, Copilot conversations remain readable by Microsoft systems and employees. Personal or confidential details shared in chats could be accessed, stored, or used for AI training, leaving you vulnerable to data leaks or hacks.",
+        "Microsoft Copilot collects and stores your chats, metadata, and usage information to improve its AI. Some conversations may be reviewed by humans, and integration with other services can expand data collection, creating potential privacy risks and extensive personal data harvesting."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt AI vs Copilot",
+    "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption, giving you the best protection from cyberattacks.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and trust",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt AI makes its code open for everyone to examine and ensure its security via GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Zero-knowledge Encryption",
+            "description": "Your chats are encrypted on the client side, guaranteeing that only you can access it."
+          },
+          {
+            "title": "Based in Europe",
+            "description": "Internxt is based in Spain and complies with GDPR, HIPAA, ISO 27001, and SOC 2. Internxt is fully open-source and audited to ensure no external access to your data."
+          },
+          {
+            "title": "Free and affordable plans",
+            "description": "Internxt AI is free, and you can combine it with Internxt Drive with lifetime plans up to 5TB. Access our services forever for 87% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Copilot: What about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "Copilot keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Copilot handles or protects your data."
+          },
+          {
+            "title": "No end-to-end encryption",
+            "description": "Microsoft holds the encryption keys to your files, meaning they can theoretically decrypt and access your cloud if they receive a legal request (such as a subpoena)."
+          },
+          {
+            "title": "Chats stored in the US",
+            "description": "Data stored in Microsoft’s cloud is subject to U.S. government surveillance laws which access to your data under certain conditions."
+          },
+          {
+            "title": "Subscription based",
+            "description": "Paid plans range from €1.99/month to €19.99/month"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best alternative to Copilot",
+    "description": "Internxt offers a comprehensive suite of products alongside its private AI to give you a secure Copilot alternative.",
+    "scrollableSection": {
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "descriptions": [
+        "Internxt Drive offers secure, zero-knowledge, and post-quantum encrypted cloud storage to store your files in total privacy. It also offers advanced file sharing, versioning, NAS, and rclone support, giving you maximum convenience combined with award-winning encryption.",
+        "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
+        "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
+        "Internxt Cleaner helps you identify, eliminate, and manage unwanted junk or duplicate files from your device. With Cleaner, you can delete unwanted files to keep your storage organized, free from clutter, and ensure your device runs efficiently.",
+        "Internxt Meet is also available as your secure and private alternative to Teams. With Meet, you can host private video calls free from trackers, ads, and data collection. Your video calls are protected with post-quantum encryption, allowing you to host calls in total privacy.",
+        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device. For advanced users, Internxt offers support for WebDAV, Rclone, and NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choose Internxt for the best Copilot alternative",
+    "description": "Internxt gives encrypted and private AI, plus secure cloud storage and a full privacy suite for 87% off",
+    "cta": "Make the switch"
+  },
+  "tableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "87% off 🔥",
+    "planTitles": {
+      "header": "Your all-in-one privacy ally"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Use Internxt AI for free with private encrypted conversations",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt AI a more secure and private Copilot alternative?",
+        "answer": [
+          "Yes, Internxt encrypts all your chats and never stores your conversations. Copilot does not encrypt your chats, so it can use your conversations to train its AI model.",
+          "Additional features of Internxt include Drive, VPN, Antivirus, Device Cleaner, Meet, and Mail, which also offer you additional protection from hackers and data breaches."
+        ]
+      },
+      {
+        "question": "Is Internxt AI free to use?",
+        "answer": [
+          "Yes, you can use our AI without logging in for free, no need to enter any personal information or payment details."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure Copilot alternative.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is Copilot more expensive than Internxt?",
+        "answer": [
+          "Internxt AI is a free Copilot alternative, and with your exclusive 87% discount, all our plans are cheaper than Copilot’s pricing options currently available, with the benefit of offering secure cloud storage and a full privacy suite."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
+        ]
+      }
+    ]
+  }
+}

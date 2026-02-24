@@ -39,6 +39,7 @@ export const ALLOWED_PATHS = [
   'lefiltreitalia',
   'genius',
   'letosa',
+  'cninternxtl'
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -84,6 +85,7 @@ export const COUPON_CODES = {
   lefiltreitalia: PromoCodeName.lefiltreitalia,
   genius: PromoCodeName.genius,
   letosa: PromoCodeName.letosa,
+  cninternxtl: PromoCodeName.cninternxtl
 };
 
 interface OfferConfig {
