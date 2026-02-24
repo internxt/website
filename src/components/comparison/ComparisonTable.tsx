@@ -39,6 +39,8 @@ interface ComparisonTableProps {
     | 'Copilot'
     | 'deepseek'
     | 'gemini'
+    | 'Wire'
+    | 'Whereby'
     | 'grok';
   hideTooltip?: boolean;
   needH2?: boolean;
@@ -133,6 +135,12 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     },
     gemini: {
       defaultLogo: '/images/comparison/gemini-Letters.webp',
+    },
+    Wire: {
+      defaultLogo: '/images/comparison/Wire-Letters.webp',
+    },
+    Whereby: {
+      defaultLogo: '/images/comparison/Whereby-Letters.webp',
     },
     grok: {
       defaultLogo: '/images/comparison/grok-Letters.webp',

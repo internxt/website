@@ -648,5 +648,15 @@
     "id": "alternative-to-grok",
     "title": "Internxt — Alternative to Grok",
     "description": "Switch to Internxt for a private and encrypted Grok alternative. Internxt keeps your chats private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "wire-alternative",
+    "title": "Internxt — Alternative to Wire",
+    "description": "Switch to Internxt for an open-source alternative to Wire. Post-quantum and zero-knowledge video meetings for full privacy of your calls."
+  },
+  {
+    "id": "whereby-alternative",
+    "title": "Internxt — Alternative to Whereby",
+    "description": "Switch to Internxt for an open-source alternative to Whereby. Post-quantum and zero-knowledge video meetings for full privacy of your calls."
   }
 ]

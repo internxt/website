@@ -43,6 +43,8 @@ type CompetitorType =
   | 'Copilot'
   | 'deepseek'
   | 'gemini'
+  | 'Wire'
+  | 'Whereby'
   | 'grok';
 
 interface ComparisonPageProps {
