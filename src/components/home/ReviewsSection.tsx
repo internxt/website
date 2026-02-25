@@ -65,7 +65,7 @@ export default function ReviewSection({
       text: textContent.pcMag,
     },
     {
-      logo: darkMode ? '/images/home/NewDesign/ForbesIcon.webp' : '/images/home/NewDesign/ForbesIcon.webp',
+      logo: '/images/home/NewDesign/ForbesIcon.webp',
       alt: 'Forbes Logo',
       text: textContent.mashable,
     },
