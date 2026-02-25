@@ -228,6 +228,7 @@ export enum PromoCodeName {
   letosa = 'LETOSA',
   cninternxtl='CNINTERNXTL',
   whereby='WHEREBY87',
+  CLOUDWARDS='CLOUDWARDS',
 }
 
 export interface PromoCodeProps {
