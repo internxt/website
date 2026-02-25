@@ -3,7 +3,7 @@
     "label": "Object Storage",
     "title": {
       "line1": "**Internxt S3**",
-      "line2": "Almacenamiento de objetos compatible"
+      "line2": "Almacenamiento de objetos en la nube "
     },
     "description": "Una solución de almacenamiento en la nube eficiente y escalable para almacenar, acceder y gestionar datos a gran escala.",
     "cta": "Empezar"
