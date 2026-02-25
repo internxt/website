@@ -19,7 +19,7 @@ export const PredictablePricingSection = ({ textContent }: PredictablePricingSec
         </div>
         <div className="flex flex-row flex-wrap items-start justify-center gap-8 lg:gap-32">
           {textContent.info.map((card) => (
-            <div className="flex max-w-[230px] flex-col gap-3 text-center" key={card.title}>
+            <div className="flex w-[330px] flex-col gap-3 text-center" key={card.title}>
               <p className="text-30 font-semibold leading-tight text-primary md:whitespace-nowrap lg:text-3xl">
                 {card.title}
               </p>
