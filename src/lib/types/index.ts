@@ -229,6 +229,7 @@ export enum PromoCodeName {
   cninternxtl='CNINTERNXTL',
   whereby='WHEREBY87',
   CLOUDWARDS='CLOUDWARDS',
+  CTZ='CTZ',
 }
 
 export interface PromoCodeProps {

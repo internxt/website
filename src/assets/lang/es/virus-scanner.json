@@ -4,7 +4,6 @@
     "subtitle1": "Arrastra y suelta tus archivos para detectar malware y otras vulneraciones de forma gratuita.",
     "subtitle2": "Escanea cualquier documento, imagen, pdf u otro tipo de archivo. Asegúrate de que tus archivos son seguros y están libres de virus antes de abrirlos, con nuestro escáner de virus cifrado.",
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
-
     "dropFile": {
       "line1": "Suelta tu archivo para escanear en busca de virus"
     },
@@ -30,8 +29,8 @@
       "noVirusesDetected": {
         "message": "No se ha detectado ningún virus",
         "title": "Mantén tus archivos seguros",
-        "subtitle": "Internxt se ha asociado con Bitdefender para ofrecerte la máxima protección en tiempo real para tu dispositivo. Consigue 3 meses de protección antivirus gratis.",
-        "cta": "Pruébalo"
+        "subtitle": "Internxt recomienda Bitdefender para ayudar a proteger tu dispositivo con tecnologías antivirus galardonadas. Consigue protección de por vida para Windows, con seguridad en tiempo real que ayuda a detener las amenazas antes de que lleguen a tus archivos.",
+        "cta": "Consigue el antivirus gratis"
       },
       "analyzing": "Escaneando archivo...",
       "scanTime": "Tiempo de escaneo",
@@ -105,7 +104,6 @@
       }
     ]
   },
-
   "ToolsSection": {
     "title": "Prueba las herramientas gratuitas de seguridad en línea de Internxt:",
     "toolsCard": [

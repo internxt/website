@@ -4,7 +4,6 @@
     "subtitle1": "拖放可疑文件以免费检测恶意软件和其他违规行为。",
     "subtitle2": "扫描任何文档、图像、pdf 或其他文件类型。 在使用 Internxt 的零知识病毒扫描程序打开文件之前，请确保您的文件安全且没有病毒。",
     "footer": "Internxt 对您提供的任何个人信息概不负责。 提交您的文件，即表示您同意我们的[服务条款和条件以及隐私政策。](https://internxt.com/legal)",
-
     "dropFile": {
       "line1": "拖动文件进行病毒扫描"
     },
@@ -30,8 +29,8 @@
       "noVirusesDetected": {
         "message": "未检测到病毒",
         "title": "保护您的文件免受病毒侵害",
-        "subtitle": "Internxt 携手 Bitdefender，为您的设备提供终极实时保护。免费领取 3 个月的顶级杀毒保护。",
-        "cta": "立即领取"
+        "subtitle": "Internxt 推荐屡获殊荣的 Bitdefender 防病毒技术，以帮助保护您的设备。为 Windows 获取终身保护以及实时安全功能，在威胁触及您的文件之前将其阻止。",
+        "cta": "免费获取防病毒软件"
       },
       "analyzing": "正在扫描文件...",
       "scanTime": "扫描时间",
@@ -103,7 +102,6 @@
       }
     ]
   },
-
   "ToolsSection": {
     "title": "Prova gli strumenti online gratuiti di Internxt dedicati alla sicurezza:",
     "toolsCard": [
