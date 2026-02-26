@@ -1,5 +1,6 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { CertificationsSection } from '@/components/cloud-object-storage/certificationsSections';
 import { HeroSection } from '@/components/cloud-object-storage/HeroSection';
 import { HowMuchYouNeedSection } from '@/components/cloud-object-storage/HowMuchYouNeedSection';
 import { PredictablePricingSection } from '@/components/cloud-object-storage/PredictablePricingSection';
@@ -36,6 +37,8 @@ const CloudObjectStorage = ({
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
+
+      <CertificationsSection />
 
       <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
