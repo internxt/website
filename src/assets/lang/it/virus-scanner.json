@@ -4,7 +4,6 @@
     "subtitle1": "Trascina qui i file sospetti per rilevare gratuitamente la presenza di malware o di altre manomissioni.",
     "subtitle2": "Scansiona qualsiasi documento, immagine, pdf o altro tipo di file. Prima di aprirli, assicurati che i tuoi file siano sicuri e privi di virus, con il Virus Scanner di Internxt, con tecnologia zero-knowledge.",
     "footer": "Internxt non è responsabile delle informazioni personali fornite. Inviando i tuoi file, accetti i nostri [Termini e Condizioni di Servizio e l'Informativa sulla Privacy.](https://internxt.com/legal)",
-
     "dropFile": {
       "line1": "Rilascia il tuo file per eseguire la scansione antivirus"
     },
@@ -30,8 +29,8 @@
       "noVirusesDetected": {
         "message": "Nessun virus rilevato",
         "title": "Proteggi i tuoi file dai virus",
-        "subtitle": "Internxt ha collaborato con Bitdefender per offrirti la massima protezione in tempo reale sul tuo dispositivo. Ottieni 3 mesi di protezione antivirus completa gratis.",
-        "cta": "Richiedi l’offerta"
+        "subtitle": "Internxt consiglia Bitdefender per aiutare a proteggere il tuo dispositivo con tecnologie antivirus pluripremiate. Ottieni una protezione a vita per Windows, con una sicurezza in tempo reale che aiuta a fermare le minacce prima che raggiungano i tuoi file.",
+        "cta": "Ottieni Antivirus Gratis"
       },
       "analyzing": "Scansione del file in corso...",
       "scanTime": "Durata scansione",
@@ -105,7 +104,6 @@
       }
     ]
   },
-
   "ToolsSection": {
     "title": "Prova gli strumenti online gratuiti di Internxt dedicati alla sicurezza:",
     "toolsCard": [

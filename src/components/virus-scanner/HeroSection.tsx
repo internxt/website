@@ -468,8 +468,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         <Image
           src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
           alt="File Arrow Up icon"
-          width={800}
-          height={110}
+          width={728}
+          height={90}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>

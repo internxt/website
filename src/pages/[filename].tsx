@@ -85,7 +85,8 @@ const LANG_MAP = {
   lefiltreitalia: 'it',
   letosa: 'es',
   genius: 'es',
-  cninternxtl:'en'
+  cninternxtl:'en',
+  cooltechzone:'en'
 };
 
 function CombinedSpecialOffer({

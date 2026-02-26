@@ -4,6 +4,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
@@ -28,6 +29,7 @@ interface AntivirusProps {
     MacOS: any;
     Linux: any;
   };
+  isGetAntivirus?: boolean;
 }
 
 const AntivirusPage = ({
@@ -37,6 +39,7 @@ const AntivirusPage = ({
   navbarLang,
   footerLang,
   download,
+  isGetAntivirus,
 }: AntivirusProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
@@ -95,7 +98,11 @@ const AntivirusPage = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
+      {isGetAntivirus ? (
+        <MinimalNavbar lang={locale} />
+      ) : (
+        <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
+      )}
 
       <HeroSection textContent={langJson.HeroSection} download={download} />
 
@@ -112,7 +119,7 @@ const AntivirusPage = ({
         }
       />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} />
 
       <InfoSection
         FirstComponent={
