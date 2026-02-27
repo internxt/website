@@ -40,7 +40,7 @@ const ALLOWED_PATHS = [
   'love',
 ];
 
-const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh'];
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh','rclone'];
 const DARK_MODE_PATHS = ['baity'];
 
 const COUPON_CODES = {
@@ -167,7 +167,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="5TB"
         sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}

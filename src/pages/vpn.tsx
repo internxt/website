@@ -1,5 +1,6 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import Footer from '@/components/layout/footers/Footer';
 import { EncryptedVPNSection } from '@/components/vpn-extension/EncryptedVPNSection';
 import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
@@ -27,6 +28,7 @@ interface VPNProps {
   lang: string;
   navbarLang: NavigationBarText;
   footerLang: FooterText;
+  isGetVPN?: boolean;
 }
 
 const VPN = ({
@@ -37,12 +39,17 @@ const VPN = ({
   lang,
   navbarLang,
   footerLang,
+  isGetVPN,
 }: VPNProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      {isGetVPN ? (
+        <MinimalNavbar lang={lang} />
+      ) : (
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      )}
 
       <HeroSection
         TextComponent={
@@ -60,12 +67,12 @@ const VPN = ({
             <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:items-start lg:space-x-4 lg:space-y-0">
               <Link
                 className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-                href={'/pricing'}
-              >
+                href={isGetVPN ? 'https://internxt.com/ultimate' : '/pricing'}
+              > 
                 {textContent.HeroSection.cta}
               </Link>
               <Link
-                className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+                className={`flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark ${isGetVPN ? 'hidden' : ''}`}
                 href={VPN_CHROME_WEB_STORE}
                 target="_blank"
                 rel="noopener noreferrer"
