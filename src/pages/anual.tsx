@@ -9,12 +9,12 @@ import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 
-interface LifetimeSpecialProps {
+interface anualSpecialProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -23,15 +23,15 @@ interface LifetimeSpecialProps {
   testimonialsJson: any;
 }
 
-function LifetimeSpecial({
+function anualSpecial({
   langJson,
   lang,
   metatagsDescriptions,
   footerLang,
   navbarLang,
   testimonialsJson,
-}: LifetimeSpecialProps): JSX.Element {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+}: anualSpecialProps): JSX.Element {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'annual');
 
   const {
     products,
@@ -41,8 +41,8 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.lifetime,
-    couponCodeForLifetime: PromoCodeName.lifetime,
+    couponCode: PromoCodeName.anual,
+    couponCodeForLifetime: PromoCodeName.anual,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
@@ -124,6 +124,7 @@ function LifetimeSpecial({
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
         SectionTag={'h2'}
+        startIndividualPlansFromInterval={Interval.Year}
       />
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} />
@@ -175,7 +176,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
+  const langJson = require(`@/assets/lang/${lang}/annual.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
 
@@ -193,4 +194,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default LifetimeSpecial;
+export default anualSpecial;

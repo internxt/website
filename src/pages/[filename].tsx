@@ -89,7 +89,6 @@ const LANG_MAP = {
   cninternxtl:'en',
   cooltechzone:'en',
   lifetime:'en',
-  anual:'en'
 };
 
 function CombinedSpecialOffer({
