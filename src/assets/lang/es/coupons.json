@@ -6,7 +6,8 @@
       "cleaner": "Limpiador",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Mail"
+      "mail": "Mail",
+      "ai":"AI"
     },
     "title": "**Descuentos** y **promociones** de Internxt",
     "subtitle": "¡Has desbloqueado un {{discount}}% de descuento! Obtén tu código de cupón de Internxt aquí",

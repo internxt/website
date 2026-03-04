@@ -14,6 +14,7 @@ import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { useOfferConfig, usePathRedirect } from '@/hooks/useSpecialOfferConfig';
 import FeaturesSection from '@/components/drive/FeaturesSection';
+import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -86,7 +87,8 @@ const LANG_MAP = {
   letosa: 'es',
   genius: 'es',
   cninternxtl:'en',
-  cooltechzone:'en'
+  cooltechzone:'en',
+  lifetime:'en',
 };
 
 function CombinedSpecialOffer({
@@ -106,10 +108,12 @@ function CombinedSpecialOffer({
     onlyUltimatePlan,
     ultimateAndPremiumPlans,
     annualPlans,
+    lifetimePlans
   } = useOfferConfig(pathname);
   const {
     products,
     loadingCards,
+    currency,
     currencyValue,
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
@@ -118,6 +122,8 @@ function CombinedSpecialOffer({
     couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
+
+  const ultimatePlan = products?.individuals?.[Interval.Lifetime]?.find((plan: any) => plan.storage === '5TB');
 
   usePathRedirect(selectedPathname);
 
@@ -179,29 +185,47 @@ function CombinedSpecialOffer({
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscountForLifetime,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
-        popularPlanBySize="5TB"
-        sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
-        hideFreeCard
-        darkMode={isDarkMode}
-        differentRecommended={alternateRecommendedPlan}
-        onlyUltimatePlan={onlyUltimatePlan}
-        premiumAndUltimatePlan={ultimateAndPremiumPlans}
-        startIndividualPlansFromInterval={openerInterval}
-        hidePlanSelectorComponent={annualPlans}
-      />
+            {onlyUltimatePlan ? (
+        <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
+          {ultimatePlan && (
+            <HorizontalPriceCard
+              decimalDiscountValue={decimalDiscountForLifetime || undefined}
+              storage={ultimatePlan.storage}
+              popular={false}
+              currency={currency}
+              priceBefore={ultimatePlan.price.toString().split('.')[0]}
+              price={Number(ultimatePlan.price)}
+              planId={ultimatePlan.priceId}
+              currencyValue={currencyValue}
+              coupon={lifetimeCoupon}
+            />
+          )}
+        </div>
+      ) : (
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessCards
+          hideBusinessSelector
+          popularPlanBySize="5TB"
+          sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
+          hideFreeCard
+          darkMode={isDarkMode}
+          differentRecommended={alternateRecommendedPlan}
+          onlyUltimatePlan={onlyUltimatePlan}
+          premiumAndUltimatePlan={ultimateAndPremiumPlans}
+          startIndividualPlansFromInterval={openerInterval}
+          hidePlanSelectorComponent={annualPlans || lifetimePlans}
+        />
+      )}
 
       <FeaturesSection
         textContent={langJson.FeaturesSection}

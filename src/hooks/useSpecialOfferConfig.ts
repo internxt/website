@@ -40,14 +40,16 @@ export const ALLOWED_PATHS = [
   'genius',
   'letosa',
   'cninternxtl',
-  'cooltechzone'
+  'cooltechzone',
+  'lifetime'
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
-export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>(['annual']);
+export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime']);
 
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
@@ -87,7 +89,8 @@ export const COUPON_CODES = {
   genius: PromoCodeName.genius,
   letosa: PromoCodeName.letosa,
   cninternxtl: PromoCodeName.cninternxtl,
-  cooltechzone: PromoCodeName.CTZ
+  cooltechzone: PromoCodeName.CTZ,
+  lifetime: PromoCodeName.lifetime
 };
 
 interface OfferConfig {
@@ -99,6 +102,7 @@ interface OfferConfig {
   onlyUltimatePlan: boolean;
   ultimateAndPremiumPlans: boolean;
   annualPlans: boolean;
+  lifetimePlans: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -115,6 +119,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         onlyUltimatePlan: false,
         ultimateAndPremiumPlans: false,
         annualPlans: false,
+        lifetimePlans: false,
       };
     }
 
@@ -124,6 +129,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);
     const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
+    const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -138,6 +144,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       onlyUltimatePlan,
       ultimateAndPremiumPlans,
       annualPlans,
+      lifetimePlans,
     };
   }, [pathname]);
 };
