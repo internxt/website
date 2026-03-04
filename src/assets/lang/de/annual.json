@@ -28,7 +28,7 @@
     "cloudwardsAuthor": "Mauricio Preuss - CEO bei Cloudwards"
   },
   "NextGenSection": {
-    "title": "Warum Internxt wählen?",
+    "title": "Warum den jährlichen Cloud-Speicher von Internxt wählen?",
     "description": "Internxt gibt Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichen Cloud-Speichern stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben und wir speichern oder verkaufen Ihre Daten nicht an Dritte. Wir unternehmen jeden Schritt, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
     "cta": "Lernen Sie uns besser kennen",
     "cardDescriptions": {
@@ -48,12 +48,12 @@
   },
   "ctaSection": {
     "titleWithoutDiscount": "Komplette Digitale Privatsphäre-Suite",
-    "title": "Maximale Privatsphäre mit {{discount}}% Rabatt",
+    "title": "Jährlicher Cloud-Speicher",
     "description": "Erlangen Sie Seelenruhe mit diesem exklusiven Rabatt. Totale Privatsphäre und Sicherheit.",
     "cta": "Einladung annehmen"
   },
   "ctaSection2": {
-    "title": "Der privateste Cloud-Speicher der Welt",
+    "title": "Welchen der Jahrespläne von Internxt soll ich wählen? 1 TB, 3 TB oder 5 TB?",
     "description": "Sichern Sie sich Ihren exklusiven {{discount}}% Rabatt für den Zugang zu Internxts Privatsphäre-Suite für ein Jahr",
     "descriptionWithoutDisocunt": "Erleben Sie komplette digitale Privatsphäre mit Internxt",
     "cta": "Tarif wählen"
@@ -66,21 +66,21 @@
       "header": "Wählen Sie Ihren Plan",
       "individuals": "Jahrestärife",
       "homePage": "Wählen Sie den richtigen Tarif für Sie",
-      "lifetime": "Lebenslange Tarife",
+      "lifetime": "Jahrespläne",
       "business": "Business-Tarife",
       "lifetimeCampaign": {
         "blueText": "50% Rabatt",
-        "normalText": "auf alle unsere exklusiven lebenslangen Tarife"
+        "normalText": "auf alle unsere exklusiven Jahrespläne"
       }
     },
-    "lifetimeDescription": "Einmal zahlen und lebenslang Privatsphäre und Sicherheit genießen",
+    "lifetimeDescription": "Zahlen Sie jährlich und genießen Sie das ganze Jahr über Privatsphäre und Sicherheit",
     "planDescription": "Alle Internxt-Tarife sind vollständig ausgestattet mit komplettem Zugang zu unserer preisgekrönten Privatsphäre-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
     "businessDescription2": "Stellen Sie die Datensicherheit Ihres Unternehmens mit Internxts verschlüsselten Cloud-Speicher-Tarifen sicher.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
-      "lifetime": "Lebenslang",
+      "lifetime": "Jährlich",
       "individual": "Individuell",
       "business": "Business"
     },

@@ -98,7 +98,6 @@ function LifetimeSpecial({
       segmentName="Lifetime"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-      robots="noindex, follow"
     >
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 

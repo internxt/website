@@ -28,7 +28,7 @@
     "cloudwardsAuthor": "Mauricio Preuss - CEO at Cloudwards"
   },
   "NextGenSection": {
-    "title": "Why choose Internxt permanent cloud storage?",
+    "title": "Why choose Internxt annual cloud storage?",
     "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
     "cta": "Get to know us better",
     "cardDescriptions": {
@@ -48,12 +48,12 @@
   },
   "ctaSection": {
     "titleWithoutDiscount": "Complete Digital Privacy Suite",
-    "title": "One time payment cloud storage",
+    "title": "Annual cloud storage",
     "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
     "cta": "Accept Invite"
   },
   "ctaSection2": {
-    "title": "Among Internxt’s lifetime plans: Which one should I choose? 1TB, 3TB, or 5TB?",
+    "title": "Among Internxt’s annual plans: Which one should I choose? 1TB, 3TB, or 5TB?",
     "description": "All our plans give you everything you need to store your files privately in the cloud. If you want complete privacy, advanced cloud management, and all of Internxt’s features, such as Meet and Mail, the 5TB Ultimate plan is the best choice for total control and maximum privacy.",
     "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
     "cta": "Choose Plan"
@@ -66,21 +66,21 @@
       "header": "Select your plan",
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
+      "lifetime": "Annual Plans",
       "business": "Business Plans",
       "lifetimeCampaign": {
         "blueText": "50% off",
-        "normalText": "on all our exclusive lifetime plans"
+        "normalText": "on all our exclusive annual plans"
       }
     },
-    "lifetimeDescription": "Pay once and enjoy privacy and security for life",
+    "lifetimeDescription": "Pay annually and enjoy privacy and security all year round",
     "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
     "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
     "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
-      "lifetime": "Lifetime",
+      "lifetime": "Annual",
       "individual": "Individual",
       "business": "Business"
     },

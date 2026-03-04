@@ -28,7 +28,7 @@
     "cloudwardsAuthor": "Mauricio Preuss - PDG de Cloudwards"
   },
   "NextGenSection": {
-    "title": "Pourquoi choisir Internxt ?",
+    "title": "Pourquoi choisir le stockage cloud annuel d'Internxt ?",
     "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous nous assurons que vous seul avez les clés de vos données chiffrées et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour nous assurer que vos informations restent sécurisées.",
     "cta": "Apprenez à mieux nous connaître",
     "cardDescriptions": {
@@ -48,12 +48,12 @@
   },
   "ctaSection": {
     "titleWithoutDiscount": "Suite Complète de Confidentialité Numérique",
-    "title": "Confidentialité Maximale avec {{discount}}% de réduction",
+    "title": "Stockage cloud annuel",
     "description": "Obtenez la tranquillité d'esprit avec cette remise exclusive. Confidentialité et sécurité totales.",
     "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Le stockage cloud le plus privé au monde",
+    "title": "Parmi les forfaits annuels d'Internxt : Lequel dois-je choisir ? 1 To, 3 To ou 5 To ?",
     "description": "Réclamez votre remise exclusive de {{discount}}% pour accéder à la suite de confidentialité d'Internxt pendant un an",
     "descriptionWithoutDisocunt": "Découvrez la confidentialité numérique complète avec Internxt",
     "cta": "Choisir un forfait"
@@ -66,21 +66,21 @@
       "header": "Choisissez votre plan",
       "individuals": "Forfaits Annuels",
       "homePage": "Choisissez le bon forfait pour vous",
-      "lifetime": "Forfaits À Vie",
+      "lifetime": "Forfaits annuels",
       "business": "Forfaits Entreprise",
       "lifetimeCampaign": {
         "blueText": "50% de réduction",
-        "normalText": "sur tous nos forfaits à vie exclusifs"
+        "normalText": "sur tous nos forfaits annuels exclusifs"
       }
     },
-    "lifetimeDescription": "Payez une fois et profitez de la confidentialité et de la sécurité à vie",
+    "lifetimeDescription": "Payez annuellement et profitez de la confidentialité et de la sécurité toute l'année",
     "planDescription": "Tous les forfaits Internxt sont entièrement équipés avec un accès complet à notre suite de confidentialité primée composée d'Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux forfaits Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les forfaits de stockage cloud chiffré d'Internxt.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
-      "lifetime": "À vie",
+      "lifetime": "Annuel",
       "individual": "Individuel",
       "business": "Entreprise"
     },
