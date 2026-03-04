@@ -230,6 +230,7 @@ export enum PromoCodeName {
   whereby='WHEREBY87',
   CLOUDWARDS='CLOUDWARDS',
   CTZ='CTZ',
+  lifetime='LIFETIME'
 }
 
 export interface PromoCodeProps {

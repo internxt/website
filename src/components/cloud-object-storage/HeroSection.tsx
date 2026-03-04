@@ -6,7 +6,7 @@ import { getImage } from '@/lib/getImage';
 export const HeroSection = ({ textContent }) => {
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 pt-28 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 lg:pt-10 xl:px-32 3xl:px-80"
+      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 pt-28 lg:flex-row lg:gap-16 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
     >
       <div

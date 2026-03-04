@@ -118,6 +118,7 @@ function LifetimeSpecial({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
+        hidePlanSelectorComponent={true}
         popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard

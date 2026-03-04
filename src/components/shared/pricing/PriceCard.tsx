@@ -316,7 +316,7 @@ export const PriceCard = ({
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                     : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-                } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]`}
+                } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]whi`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
               </button>
@@ -330,7 +330,7 @@ export const PriceCard = ({
 
                   return (
                     <>
-                      <div key={index} className="flex items-start gap-3 px-4 lg:px-0">
+                      <div key={index} className="flex items-start gap-3 px-2 lg:px-0">
                         {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
                         <div className="flex flex-row items-center gap-2">
                           <p
