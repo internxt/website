@@ -28,6 +28,7 @@ interface LayoutProps {
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
   readonly pathnameForSEO?: string;
+  readonly robots?: string;
 }
 
 const imageLang = new Set(['ES', 'FR', 'EN']);
@@ -39,6 +40,7 @@ export default function Layout({
   segmentName = null,
   specialOffer,
   pathnameForSEO,
+  robots,
 }: LayoutProps) {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
@@ -75,6 +77,7 @@ export default function Layout({
     <>
       <Head>
         <title>{title}</title>
+        {robots && <meta name="robots" content={robots} />}
         <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
