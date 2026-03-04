@@ -141,7 +141,13 @@ function CombinedSpecialOffer({
   const HeroImage = isValentinesMode ? 'valentines' : 'internxt-private-cloud';
 
   return (
-    <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
+    <Layout
+      title={metatags!.title}
+      description={metatags!.description}
+      segmentName="Partners"
+      lang={lang}
+      robots="noindex, follow"
+    >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection

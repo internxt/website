@@ -41,7 +41,7 @@ export const ALLOWED_PATHS = [
   'letosa',
   'cninternxtl',
   'cooltechzone',
-  'lifetime'
+  'lifetime',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -90,7 +90,7 @@ export const COUPON_CODES = {
   letosa: PromoCodeName.letosa,
   cninternxtl: PromoCodeName.cninternxtl,
   cooltechzone: PromoCodeName.CTZ,
-  lifetime: PromoCodeName.lifetime
+  lifetime: PromoCodeName.lifetime,
 };
 
 interface OfferConfig {

@@ -1,45 +1,94 @@
 {
   "HeroSection": {
-    "header": "立即享受所有年付计划高达87%的专属折扣！",
-    "title": {
-      "normalText": "最安全私密的云存储服务 ",
-      "blueText": "为你的文件保驾护航"
+    "products": {
+      "drive": "Drive",
+      "antivirus": "杀毒软件",
+      "cleaner": "清理工具",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "邮箱"
     },
-    "description": "订阅 Internxt 年付计划，尊享 365 天全面隐私保护。",
-    "cta": "选择你的计划"
+    "title": "最安全的云存储**价格更低**",
+    "valentinesTitle": "爱值得**隐私**",
+    "description": "更低价格的安全云存储。立即获取您的专属折扣。访问Internxt屡获殊荣的隐私套件，包含后量子加密云存储等更多功能。",
+    "subtitle": "立即享受{{discount}}%折扣",
+    "claimDeal": "获取优惠"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt正在进行超级优惠，拥有**出色的用户评价**、**端到端和后量子加密**，并将代码完全**开源**。\"",
+    "mashable": "\"认真对待您的重要数据的**安全**。Internxt 的诞生是为了通过创造一个更**合乎道德**、**安全**、**隐私**和负责任的数字世界，赋予人们真正的**在线自由**。\"",
+    "pcWorld": "\"Internxt的网页访问、文件同步和备份服务令人**印象深刻**。这个**加密在线存储**服务**简单易用**，当前的套餐非常划算。\""
+  },
+  "TrustedBySection": {
+    "title": "受到像您一样的用户信赖",
+    "review": "感谢Internxt，我能够在线安全地保存我的信息。他们的客户支持反应迅速，服务极其可靠。他们经过审计、开源且加密的事实让我放心，知道我的数据始终受到第三方保护。",
+    "cloudwardsReview": "在 Cloudwards,我们测试了数十家云存储提供商,Internxt 因其对用户隐私的承诺而脱颖而出。凭借零知识加密和后量子安全性,它是最安全的选择之一——尤其是在这个价位上。看到一项将隐私放在首位并使其价格合理的服务令人耳目一新。",
+    "author": "桑德拉·迪亚斯 - Trustpilot 评论",
+    "cloudwardsAuthor": "毛里西奥·Preuss - Cloudwards 首席执行官"
+  },
+  "NextGenSection": {
+    "title": "为什么选择Internxt？",
+    "description": "Internxt让您重新掌控隐私。与传统云存储不同，我们确保只有您拥有加密数据的密钥，我们不会存储或向第三方出售您的数据。我们采取一切措施确保您的信息保持安全。",
+    "cta": "更好地了解我们",
+    "cardDescriptions": {
+      "titles": ["不可破解和不可泄露的数据", "下一代安全性", "开源且透明", "独立验证"],
+      "descriptions": [
+        "我们不存储密码或用户数据，您的所有数据在传输和静止状态下都经过加密。Internxt让您完全控制文件。您的数据是您的事务。保护它们是我们的责任。",
+        "Internxt是唯一自动使用端到端和后量子加密技术加密文件的云存储，这意味着只有您可以访问您的数据。",
+        "我们为所做的工作感到自豪，因此我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了您的数据，我们没有什么需要隐藏的。",
+        "我们完全符合GDPR规定，100%安全，但不要仅仅相信我们的话。Internxt已经由欧洲领先的渗透测试公司Securitum进行了独立审计和验证。"
+      ]
+    }
+  },
+  "ctaSection": {
+    "titleWithoutDiscount": "完整数字隐私套件",
+    "title": "最大隐私保护享{{discount}}%折扣",
+    "description": "通过这个独家折扣获得内心平静。完全的隐私和安全。",
+    "cta": "接受邀请"
+  },
+  "ctaSection2": {
+    "title": "全球最私密的云存储",
+    "description": "获取您的独家{{discount}}%折扣，享用Internxt隐私套件一整年",
+    "descriptionWithoutDisocunt": "使用Internxt体验完整的数字隐私",
+    "cta": "选择套餐"
   },
   "tableSection": {
+    "title": "Internxt套餐",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的爱 - ",
     "planTitles": {
-      "individuals": "年付计划",
-      "homePage": "选择适合你的计划",
-      "lifetime": "终身计划",
-      "business": "企业计划",
+      "header": " 選擇您的計劃",
+      "individuals": "年度套餐",
+      "homePage": "选择适合您的套餐",
+      "lifetime": "终身套餐",
+      "business": "商业套餐",
       "lifetimeCampaign": {
-        "blueText": "立享 50% 折扣",
-        "normalText": "专属终身计划全面特惠"
+        "blueText": "50%折扣",
+        "normalText": "所有独家终身套餐"
       }
     },
-    "header": "享受 87% 折扣，开启全面隐私保护",
-    "lifetimeDescription": "一次性支付，终身隐私保障。永久访问 Internxt 的所有隐私功能和加密云存储服务。",
-    "planDescription": "所有 Internxt 计划均提供对我们全套隐私解决方案的完整访问：Internxt Drive、Send、VPN、防病毒、Meet 和 Mail。",
+    "lifetimeDescription": "一次付费，终身享受隐私和安全",
+    "planDescription": "所有Internxt套餐功能齐全，完整访问我们屡获殊荣的隐私套件，包括Internxt Drive、Send、VPN、杀毒软件、清理工具、暗网监控、Meet和邮箱。",
+    "businessDescription": "我们目前正在开发专为保护您的企业、保护员工和确保盈利能力而设计的新Internxt套餐。",
+    "businessDescription2": "使用Internxt的加密云存储套餐确保公司数据安全。",
     "billingFrequency": {
-      "monthly": "按月计费",
-      "annually": "按年计费",
-      "individual": "个人",
+      "monthly": "月付",
+      "annually": "年付",
       "lifetime": "终身",
-      "business": "企业"
+      "individual": "个人",
+      "business": "商业"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt 免费版",
-      "description": "获取高达 1GB 的加密云存储，并体验我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
-      "cta": "选择计划"
+      "eyeBrow": "Internxt免费版",
+      "description": "免费获取1GB加密云存储",
+      "cta": "选择套餐"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源并已审计",
+      "openSource": "开源且经过审计",
       "anonymousAccount": "匿名账户创建",
       "premiumSupport": "高级客户支持",
-      "guarantee": "30 天退款保障"
+      "guarantee": "30天退款保证"
     },
     "planStorage": {
       "essential": "1TB",
@@ -47,44 +96,125 @@
       "ultimate": "5TB"
     }
   },
-  "PaymentSection": {
-    "blueTitle": "享受 87% 折扣，开启全面隐私保护",
-    "title": "年付计划",
-    "description": "所有 Internxt 计划均提供对我们全套隐私解决方案的完整访问：Internxt Drive、Send、VPN、防病毒、Meet 和 Mail。",
-    "firstFeed": "高级客户支持",
-    "secondFeed": "30 天退款保障",
-    "thirdFeed": "开源并已审计"
-  },
-  "FeatureSection": {
-    "title": "重新掌握你的隐私权",
-    "description": "Internxt 提供私密、安全的云服务，旨在让你重新掌握数据控制权。我们从零开始构建所有服务，只为带来无与伦比的安全性和隐私保护，保障你的文件和基本隐私权利。",
-    "cta": "选择你的计划"
-  },
-  "CtaSection": {
-    "title": "Internxt 云存储",
-    "description": "全球最私密、安全、加密的云端。保护你的信息，守护你真正重要的数据。",
-    "cta": "选择你的计划"
-  },
   "FeaturesSection": {
-    "title": "高度安全的云存储，打造无与伦比的隐私体验",
-    "description": "Internxt 有什么特别之处？我们是一支专注于在线隐私保护的专业团队。我们所做的一切，每一个决策，都是为了守护你的数据并防止滥用。",
-    "info": [
-      {
-        "title": "无与伦比的隐私保护",
-        "description": "隐私是我们的首要任务。我们从不存储密码或个人数据。你的文件始终处于加密状态，由你完全掌控。"
-      },
-      {
-        "title": "绝不妥协的安全性",
-        "description": "你的文件在离开设备前就已加密。凭借零知识架构和后量子加密技术，只有你能访问自己的数据。"
-      },
-      {
-        "title": "开源透明",
-        "description": "我们为所做的一切感到自豪，因此我们的代码完全开源，托管在 GitHub 上，任何人都可以查看、审计并验证其安全性。我们无事可隐，除了你的数据。"
-      },
-      {
-        "title": "独立安全审计",
-        "description": "我们完全符合 GDPR 要求，安全性达 100%。Internxt 已通过欧洲领先渗透测试公司 Securitum 的独立安全审计。"
+    "section1": {
+      "title": {
+        "line1": "各类文件",
+        "line2": "各类设备"
       }
-    ]
+    },
+    "section2": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "都可以在",
+        "line3": "您的所有设备"
+      },
+      "subtitle": {
+        "line1": "从你的电脑、智能手机和平板电脑安全地访问你的所有文件 ",
+        "line2": "你的电脑、智能手机、平板电脑 ",
+        "line3": "或任何连接互联网的设备 ",
+        "line4": "具备最安全的云存储应用 ",
+        "line5": "存储应用。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "让你的文件井井有条,",
+        "line2": "并可从任何地方访问。",
+        "line3": "",
+        "line4": ""
+      },
+      "subtitle": {
+        "line1": "Internxt Drive让你在文件夹中组织你的",
+        "line2": "文件夹中，重命名它们，并过滤",
+        "line3": "文件列表，以便更快地找到你想要的东西。",
+        "line4": "你甚至可以备份你的电脑",
+        "line5": "文件夹，比如你的文档文件夹，所以",
+        "line6": "你总是有最新的",
+        "line7": "你最重要的文件的最新变化。"
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "轻松地分享你的文件、",
+        "line2": "我们负责",
+        "line3": "的安全问题"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive专注于隐私和",
+        "line2": "安全性，所以你只需要关注",
+        "line3": "对你来说很重要的事情，比如与同事分享",
+        "line4": "与同事分享文件或飞机票",
+        "line5": "与你的家人分享文件或机票。你 ",
+        "line6": "你可以选择你想与谁分享",
+        "line7": "哪些人，以及你希望下载多少次",
+        "line8": "他们被下载的次数。"
+      }
+    },
+    "section5": {
+      "eyebrow": "新功能",
+      "title": {
+        "line1": "备份重要的东西",
+        "line2": "对你来说很重要"
+      },
+      "subtitle": {
+        "line1": "现在你可以保留你的那个超级重要的项目的最后一个版本",
+        "line2": "你正在进行的那个超级重要项目的",
+        "line3": "你正在进行的那个超级重要的项目的最后一个版本，你的文档文件夹、",
+        "line4": "或你的大学作业、",
+        "line5": "都安全地保存在你的Internxt Drive中。"
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "同步你的文件",
+        "line2": "在完全保密的情况下"
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "安全和隐私"
+      },
+      "subtitle": {
+        "line1": "隐私和安全是我们一切工作的核心，我们的业务并不依赖于数据或广告，而是依赖于",
+        "line2": "于信任。我们尊重你的权利，并围绕它们建立惊人的工具，而不是反对它们。"
+      },
+      "cta": "我们对隐私的承诺",
+      "card1": {
+        "title": "下一代安全",
+        "subtitle": "Internxt Drive 使用端到端和后量子加密来保护您的文件。我们是第一个保护数据免受量子计算机未来威胁的云存储服务。"
+      },
+      "card2": {
+        "title": "零知识技术",
+        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
+      },
+      "card3": {
+        "title": "为隐私而生",
+        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
+      },
+      "card4": {
+        "title": "开源和透明化",
+        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
+      }
+    },
+    "DownloadLinks": {
+      "downloadTitle": "下载Internxt Drive",
+      "or": "或",
+      "downloadFor": "为<>下载",
+      "orDownloadFor": "或为<>下载",
+      "downloadOnThe": "在<>上下载",
+      "orDownloadOnThe": "或在<>上下载",
+      "getOn": "从<>上获取",
+      "orGetOn": "或从<>上获取",
+      "openDriveWeb": "打开 Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }
