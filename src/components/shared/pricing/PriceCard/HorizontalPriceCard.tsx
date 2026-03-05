@@ -101,10 +101,12 @@ export const HorizontalPriceCard = ({
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
               <span className="text-4xl font-bold">{priceNow}</span>
               <span>{currency}</span>
+              <span className="text-sm">{contentText.perYear}</span>
             </p>
             <p className="flex flex-row items-end whitespace-nowrap pl-2 font-semibold text-gray-50 line-through">
               <span className="text-2xl font-medium">{priceBefore}</span>
               <span className="text-sm">{currency}</span>
+              <span className="text-sm">{contentText.perYear}</span>
             </p>
           </div>
         </div>
