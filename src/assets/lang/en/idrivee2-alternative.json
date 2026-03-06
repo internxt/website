@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3, like IDrive E2\n but **private**",
+    "description": "Pay-as-you-go object storage with no hidden charges",
+    "getPrivacy": "Switch to Internxt, the best enterprise cloud storage and IDrive alternative",
+    "cta": "Get Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs IDrive overview",
+    "description": "Discover the key features and differences that allow Internxt to give you back control over your data",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Data transfer fees",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Encrypted on your device",
+        "No",
+        "Pay-as-you-go fixed fee",
+        "Object storage, backups, S3 compatible, instant data access",
+        "Regular security audits",
+        "Yes",
+        "Can never access your files",
+        "GDPR, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "Encrypted by IDrive or with a private keys",
+        "Yes",
+        "Variable costs",
+        "IDrive Backup, B2 Cloud Storage, IDrive Fireball, S3",
+        "Regular security audits",
+        "No",
+        "Can access files under certain circumstances.",
+        "Less privacy: U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "IDrive mainly focuses on backups only, has variable storage costs, and follows less stringent US privacy laws.",
+    "description": "Internxt object storage includes default advanced security, keeps your files private, and offers predictable, affordable plans.",
+    "scrollableSection": {
+      "titles": [
+        "Complex security configuration",
+        "High costs at scale",
+        "Employee access to your data",
+        "US-based jurisdiction"
+      ],
+      "descriptions": [
+        "IDrive requires managing multiple layers of settings, including firewalls, encryption keys, and permissions. Improperly set permissions, mismanaged keys, or overlooked network policies can leave data exposed. Users must constantly monitor and adjust settings to maintain security.",
+        "As your usage expands with IDrive, expenses grow from storage consumption, bandwidth transfers, retention extensions, and service add-ons, which can lead to higher than expected total spending.",
+        "IDrive employees and contractors may access user data for maintenance or compliance. Even though access is controlled, there is always a risk of unintended exposure. Sensitive files are technically accessible to others, which may concern privacy-conscious individuals or organizations.",
+        "IDrive operates under the United States legal jurisdiction and privacy laws. For organizations that require data residency in other regions or stronger regulatory alignment outside the US, this structure may be a concern."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Why you need an IDrive alternative",
+    "description": "Internxt offers European S3 object storage and complies with multiple compliance regulations to offer full privacy and security for businesses and enterprises.",
+    "cards": {
+      "titles": [
+        "Complex setup",
+        "Hidden and unpredictable costs",
+        "Expensive downloads"
+      ],
+      "descriptions": [
+        "Setting up storage on IDrive involves navigating multiple dashboards and security systems. Users must manually manage roles, access rules, and encryption. Simple tasks often require technical knowledge, making the platform difficult for beginners and slowing down development.",
+        "IDrive charges separately for storage, requests, data transfer, monitoring, backups, and security features. These small fees accumulate quickly and are difficult to track. Any increases in traffic or usage can cause major bill spikes, making long-term budgeting unreliable for businesses.",
+        "IDrive charges high fees for transferring data out of its platform once you reach your account limit. Every file download, backup, restore, or migration adds to the bill. This pricing model effectively locks data inside the platform and penalizes high-usage workloads."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs IDrive",
+    "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge encryption and multiple compliance for all industry types.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\nTotal privacy, transparency, and trust",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Encryption",
+            "description": "Your data is encrypted on the client side with server-side encryption and customer-provided encryption keys (SSE-C)."
+          },
+          {
+            "title": "Data protection",
+            "description": "Internxt is based in Europe and complies with GDPR, HIPAA, ISO 27001, and SOC 2. The platform is fully audited to ensure no external access to your data."
+          },
+          {
+            "title": "Affordable, predictable pricing",
+            "description": "Pay for the storage you use, upgrade or downgrade whenever you need to, without worrying about hidden fees or long-term contracts"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "IDrive\nWhat about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "IDrive keeps its source code hidden from the public. With no transparency, there is no way to know for sure how IDrive handles or protects your data."
+          },
+          {
+            "title": "Encryption",
+            "description": "Encrypted by IDrive or configured and managed by the customer"
+          },
+          {
+            "title": "Data protection",
+            "description": "IDrive is based in the US, so US privacy laws apply."
+          },
+          {
+            "title": "Usage based",
+            "description": "Costs depend and increase based on multiple factors, which can soon become expensive and unmanageable."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt S3 is the best IDrive alternative",
+    "description": "Internxt cloud object storage offers affordable S3 storage for rapid access to large amounts of data.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "Secure and durable storage",
+        "Instant access",
+        "Simple and predictable pricing",
+        "Cost per GB"
+      ],
+      "descriptions": [
+        "Internxt S3 provides built-in end-to-end encryption and immutable object locking to protect data from loss, corruption, or ransomware. With 11×9s durability, all files are kept secure and safe across multiple regions.",
+        "Internxt S3 is a 100% hot cloud storage solution, so all files are immediately available for upload or download. This instant availability ensures fast response times for all workloads.",
+        "Internxt S3 uses flat-rate pricing with no hidden fees. Users know exactly what they will pay each month without worrying about request charges, downloads, or replication costs. This is simpler and more predictable than IDrive, where billing can be confusing and variable.",
+        "Users pay a simple cost per gigabyte with Internxt S3, and pricing does not change based on access frequency or transfer. This predictable model reduces total expenses, unlike IDrive, where storage, retrieval, and egress fees all affect the per-gigabyte cost."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choose Internxt for the best IDrive alternative",
+    "description": "Internxt S3 gives you affordable object storage with full private encryption, open source software, and no additional data transfer fees.",
+    "cta": "Get Internxt S3"
+  },
+  "tableSection": {
+    "title": "Select your plan",
+    "hotLabel": "Up to 80% cheaper 🔥",
+    "planTitles": {
+      "header": "100% hot cloud storage"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Pay-as-you-go",
+      "description": "Pay only for the storage you use. No additional fees.",
+      "cta": "Get Internxt S3"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is object storage?",
+        "answer": [
+          "Object storage is a way to store data as discrete units called objects, each with its own metadata and unique identifier. Internet S3 object storage offers rapid access to large data sets, making it an affordable and scalable cloud storage solution."
+        ]
+      },
+      {
+        "question": "What is the best alternative to IDrive?",
+        "answer": [
+          "Internxt is the best IDrive alternative if you need object storage with predictable and scalable pricing, and fast and efficient access to large amounts of data."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud object storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is IDrive more expensive than Internxt?",
+        "answer": [
+          "As Internxt offers pay-as-you-go storage, there are no additional fees for moving data in or out of the cloud. The more you use IDrive and its services, the higher the costs of your storage can become."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt object cloud storage\n combines security and efficiency",
+    "description": "Internxt object storage is an affordable, high-performance solution revolutionizing online data storage, perfect for individuals or organizations needing reliable and secure infrastructure at a minimal cost.",
+    "payAsYouGoCard": {
+      "title": "Pay as you go!",
+      "description": "Pay only for the storage you use."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Per TB/Billed monthly",
+      "price": "7",
+      "cta": "Select plan",
+      "whatsIncluded": {
+        "title": "What's included",
+        "features": [
+          "Billed monthly",
+          "Server-side encryption",
+          "AWS S3 and IAM API compatible",
+          "Increased speed",
+          "Flexible storage",
+          "Open source",
+          "GDPR compliant",
+          "Premium customer support"
+        ]
+      }
+    },
+    "oneTimePayment": "*A €1 one-time fee is required for account verification"
+  }
+}
