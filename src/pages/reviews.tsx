@@ -10,7 +10,6 @@ import { ReviewsTextPage } from '@/assets/types/reviews';
 import SupportSection from '@/components/reviews/support-section';
 import VideotSection from '@/components/reviews/VideoSection';
 import HeroSection from '@/components/reviews/HeroSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import HorizontalScrollableSection from '@/components/reviews/HorizontalScrollableSection';
 
 interface CleanerProps {

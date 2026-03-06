@@ -15,7 +15,6 @@ import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];

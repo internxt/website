@@ -9,7 +9,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import { CouponPageText } from '@/assets/types/couponsPage';
 import HeroSection from '@/components/coupons/HeroSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
