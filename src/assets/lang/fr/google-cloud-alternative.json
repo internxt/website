@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3, comme Google Cloud\nmais **privé**",
+    "description": "Stockage d'objets pay-as-you-go jusqu'à 80 % moins cher que Google Cloud",
+    "getPrivacy": "Passez à Internxt, le meilleur stockage cloud d'entreprise et l'alternative à Google Cloud",
+    "cta": "Obtenir Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Aperçu d'Internxt vs Google Cloud",
+    "description": "Découvrez les fonctionnalités clés et les différences qui permettent à Internxt de vous redonner le contrôle de vos données",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Frais de transfert de données",
+        "Prix et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Support en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Chiffré sur votre appareil",
+        "Non",
+        "Frais fixes pay-as-you-go",
+        "Stockage d'objets, sauvegardes, compatible S3, accès instantané aux données",
+        "Audits de sécurité réguliers",
+        "Oui",
+        "Ne peut jamais accéder à vos fichiers",
+        "RGPD, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Code source fermé",
+        "Chiffré par Google Cloud",
+        "Oui",
+        "Coûts imprévisibles et variables",
+        "Stockage d'objets, Accès peu fréquent, Glacier, Archive Profonde",
+        "Audits de sécurité réguliers",
+        "Non",
+        "Peut accéder aux fichiers dans certaines circonstances.",
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google Cloud implique des contrôles de sécurité complexes, des coûts élevés et les employés peuvent accéder à vos données.",
+    "description": "Le stockage d'objets d'Internxt inclut par défaut une sécurité avancée, garde vos fichiers privés et propose des forfaits prévisibles et abordables.",
+    "scrollableSection": {
+      "titles": [
+        "Configuration de sécurité complexe",
+        "Coûts élevés à grande échelle",
+        "Accès des employés à vos données",
+        "Intégration avec l'écosystème de Google"
+      ],
+      "descriptions": [
+        "Sécuriser Google Cloud nécessite de gérer plusieurs niveaux de paramètres, y compris les pare-feu, les clés de chiffrement et les autorisations. Des autorisations mal configurées, des clés mal gérées ou des stratégies réseau négligées peuvent laisser des données exposées. Les utilisateurs doivent surveiller et ajuster en permanence les paramètres pour maintenir la sécurité.",
+        "L'utilisation de Google Cloud à des volumes élevés peut rapidement devenir coûteuse. Les prix du stockage, du transfert réseau et des services supplémentaires s'accumulent au fil du temps. Une mise à l'échelle sans planification minutieuse peut entraîner des dépenses imprévues, rendant la planification financière à long terme difficile.",
+        "Les employés et sous-traitants de Google Cloud peuvent accéder aux données des utilisateurs pour des raisons de maintenance ou de conformité. Même si l'accès est contrôlé, il y a toujours un risque d'exposition involontaire. Les fichiers sensibles sont techniquement accessibles à d'autres, ce qui peut inquiéter les individus ou organisations soucieux de la confidentialité.",
+        "L'intégration avec d'autres services Google signifie que des informations sur le comportement des utilisateurs, les habitudes de stockage et l'utilisation des applications peuvent être collectées et combinées. Les utilisateurs soucieux de la confidentialité peuvent avoir du mal à limiter le suivi ou à empêcher l'utilisation de leurs données dans plusieurs contextes."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Pourquoi avez-vous besoin d'une alternative à Google Cloud",
+    "description": "Ce que Google Cloud démontre en matière de sécurité échoue en termes de confidentialité. Pour une confidentialité totale, obtenez une sécurité totale combinée au chiffrement à divulgation nulle d'Internxt.",
+    "cards": {
+      "titles": [
+        "Configuration complexe",
+        "Coûts cachés et imprévisibles",
+        "Téléchargements coûteux"
+      ],
+      "descriptions": [
+        "Configurer le stockage sur Google Cloud implique de naviguer dans plusieurs tableaux de bord et systèmes de sécurité. Les utilisateurs doivent gérer manuellement les rôles, les règles d'accès et les régions. Des tâches simples nécessitent souvent des connaissances techniques, ce qui rend la plateforme difficile pour les débutants et ralentit le développement.",
+        "Google Cloud facture séparément le stockage, les requêtes, le transfert de données, la surveillance, les sauvegardes et les fonctionnalités de sécurité. Ces petits frais s'accumulent rapidement et sont difficiles à suivre. Toute augmentation du trafic ou de l'utilisation peut entraîner des pics de facturation importants, rendant la budgétisation à long terme peu fiable pour les entreprises.",
+        "Google Cloud facture des frais élevés pour le transfert de données hors de sa plateforme. Chaque téléchargement de fichier, sauvegarde, restauration ou migration s'ajoute à la facture. Ce modèle de tarification verrouille efficacement les données à l'intérieur de la plateforme et pénalise les charges de travail à forte utilisation."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Google Cloud",
+    "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement à divulgation nulle et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\nConfidentialité totale, transparence et confiance",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Le code d'Internxt est ouvert à tous pour examen et pour garantir sa sécurité via notre GitHub. Cette transparence garantit qu'aucune vulnérabilité n'est cachée."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Vos données sont chiffrées côté client avec un chiffrement côté serveur et des clés de chiffrement fournies par le client (SSE-C)."
+          },
+          {
+            "title": "Protection des données",
+            "description": "Internxt est basé en Europe et se conforme au RGPD, à la HIPAA, à la norme ISO 27001 et à la norme SOC 2. La plateforme est entièrement auditée pour garantir qu'aucun accès externe à vos données n'est possible."
+          },
+          {
+            "title": "Prix abordables et prévisibles",
+            "description": "Payez pour le stockage que vous utilisez, passez au niveau supérieur ou inférieur chaque fois que vous en avez besoin, sans vous soucier des frais cachés ou des contrats à long terme."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Google Cloud\nEt votre confidentialité ?",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "Google Cloud garde son code source caché au public. Sans transparence, il n'y a aucun moyen de savoir avec certitude comment Google Cloud gère ou protège vos données."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Chiffré par Google Cloud ou configuré et géré par le client."
+          },
+          {
+            "title": "Protection des données",
+            "description": "Google Cloud propose un stockage dans plusieurs régions, les lois de conformité de cette région s'appliquent donc."
+          },
+          {
+            "title": "Basé sur l'utilisation",
+            "description": "Les coûts dépendent et augmentent en fonction de multiples facteurs, ce qui peut vite devenir coûteux et ingérable."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à Google Cloud",
+    "description": "Internxt Drive propose une suite complète de produits conçus pour vous redonner le contrôle de votre confidentialité en ligne.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "Stockage sécurisé et durable",
+        "Accès instantané",
+        "Prix simples et prévisibles",
+        "Coût par Go"
+      ],
+      "descriptions": [
+        "Internxt S3 fournit un chiffrement de bout en bout intégré et un verrouillage d'objet immuable pour protéger les données de la perte, de la corruption ou des ransomwares. Avec une durabilité de 11×9s, tous les fichiers sont conservés en toute sécurité dans plusieurs régions.",
+        "Internxt S3 est une solution de stockage cloud 100 % chaude, tous les fichiers sont donc immédiatement disponibles pour le téléchargement. Il n'y a pas de stockage à froid ni de récupération différée, contrairement à Microsoft S3 Glacier, où l'accès aux données peut prendre des heures. Cette disponibilité instantanée garantit des temps de réponse rapides pour toutes les charges de travail.",
+        "Internxt S3 utilise une tarification forfaitaire sans frais cachés. Les utilisateurs savent exactement ce qu'ils paieront chaque mois sans se soucier des frais de demande, des téléchargements ou des coûts de réplication. Cela est plus simple et plus prévisible que Microsoft S3, où la facturation peut être confuse et variable.",
+        "Les utilisateurs paient un simple coût par gigaoctet avec Internxt S3, et les prix ne changent en fonction de la fréquence d'accès ou de transfert. Ce modèle prévisible réduit les dépenses totales, contrairement à Microsoft S3, où les frais de stockage, de récupération et de sortie de données affectent tous le coût par gigaoctet."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choisissez Internxt pour la meilleure alternative à Google Cloud",
+    "description": "Internxt S3 vous offre un stockage d'objets abordable avec un chiffrement privé complet, un logiciel open source et aucun frais de transfert de données supplémentaire.",
+    "cta": "Obtenir Internxt S3"
+  },
+  "tableSection": {
+    "title": "Sélectionnez votre forfait",
+    "hotLabel": "Jusqu'à 80 % moins cher 🔥",
+    "planTitles": {
+      "header": "Gestion des données et vitesse supérieures"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Pay-as-you-go",
+      "description": "Payez uniquement pour le stockage que vous utilisez. Aucun frais supplémentaire.",
+      "cta": "Obtenir Internxt S3"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce que le stockage d'objets ?",
+        "answer": [
+          "Le stockage d'objets est un moyen de stocker des données sous forme d'unités discrètes appelées objets, chacune ayant ses propres métadonnées et un identifiant unique. Le stockage d'objets Internxt S3 offre un accès rapide à d'importants ensembles de données, ce qui en fait une solution de stockage cloud abordable et évolutive."
+        ]
+      },
+      {
+        "question": "Quelle est la meilleure alternative à Google Cloud ?",
+        "answer": [
+          "Internxt est la meilleure alternative à Google Cloud si vous avez besoin d'un stockage d'objets avec des prix prévisibles et évolutifs, et d'un accès rapide et efficace à de grandes quantités de données."
+        ]
+      },
+      {
+        "question": "Où Internxt est-il basé ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage d'objets cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre confidentialité."
+        ]
+      },
+      {
+        "question": "Google Cloud est-il plus cher qu'Internxt ?",
+        "answer": [
+          "Étant donné qu'Internxt propose un stockage pay-as-you-go, aucun frais supplémentaire n'est facturé pour l'entrée ou la sortie des données du cloud, ce qui rend Internxt S3 jusqu'à 80 % moins cher qu'Amazon, Azure ou Google Cloud."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter l'assistance ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou si vous avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de réussite client se fera un plaisir de vous aider."
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Le stockage cloud d'objets Internxt\n combine sécurité et efficacité",
+    "description": "Le stockage d'objets Internxt est une solution abordable et performante révolutionnant le stockage de données en ligne, parfaite pour les particuliers ou les organisations ayant besoin d'une infrastructure fiable et sécurisée à un coût minime.",
+    "payAsYouGoCard": {
+      "title": "Payez au fur et à mesure !",
+      "description": "Payez uniquement pour le stockage que vous utilisez."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Par To / Facturé mensuellement",
+      "price": "7",
+      "cta": "Sélectionner le forfait",
+      "whatsIncluded": {
+        "title": "Ce qui est inclus",
+        "features": [
+          "Facturé mensuellement",
+          "Chiffrement côté serveur",
+          "Compatible avec les API AWS S3 et IAM",
+          "Vitesse accrue",
+          "Stockage flexible",
+          "Open source",
+          "Conforme au RGPD",
+          "Support client premium"
+        ]
+      }
+    },
+    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
+  }
+}
