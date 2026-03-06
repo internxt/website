@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3，像 Backblaze\n但**私密**",
+    "description": "即用即付的物件儲存空間，沒有隱藏費用",
+    "getPrivacy": "轉換到 Internxt，最好的企業雲端儲存及 Backblaze 替代方案",
+    "cta": "取得 Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Backblaze 概覽",
+    "description": "發現關鍵功能和差異，這些功能使 Internxt 能夠讓您重新掌控自己的資料",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "資料傳輸費",
+        "定價與儲存",
+        "特點",
+        "安全性稽核",
+        "即時線上支援",
+        "隱私權政策",
+        "隱私權法"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "在您的裝置上加密",
+        "沒有",
+        "按使用量付費的固定費用",
+        "物件儲存、備份、相容 S3、即時資料存取",
+        "定期安全性稽核",
+        "有",
+        "永遠無法存取您的檔案",
+        "GDPR、ISO 27001、HIPAA、SOC 2"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "由 Backblaze 加密或帶有私鑰",
+        "有",
+        "可變成本",
+        "Backblaze Backup、B2 Cloud Storage、Backblaze Fireball、S3",
+        "定期安全性稽核",
+        "沒有",
+        "在特定情況下可以存取檔案。",
+        "隱私較少：美國資料隱私架構"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Backblaze 主要側重於備份，且具有可變的儲存成本，遵循沒那麼嚴格的美國隱私法。",
+    "description": "Internxt 物件儲存空間預設包含進階安全性保護，讓您的檔案保持私密，並提供可預測的、價格合理的方案。",
+    "scrollableSection": {
+      "titles": [
+        "複雜的安全性設定",
+        "大規模下成本高昂",
+        "員工存取您的資料",
+        "總部位於美國的司法管轄區"
+      ],
+      "descriptions": [
+        "Backblaze 需要管理多層設定，包括防火牆、加密金鑰和權限。設定不當的權限、管理不善的金鑰或被忽略的網路原則都可能導致資料外洩。使用者必須不斷監控和調整設定以維護安全性。",
+        "隨著您隨著 Backblaze 擴大自身使用量，由於儲存消耗、頻寬傳輸、保留延期和附加服務，您的支出將會隨之增加，這進而可能會導致遠超預期的總支出。",
+        "Backblaze 員工和承包商可能會為了維護或合規目的存取使用者資料。即使存取受到控制，也始終存在意外暴露的風險。敏感檔案在技術上可以被其他人存取，這可能會引起注重隱私的個人或組織的擔憂。",
+        "Backblaze 根據美國的法律管轄區和隱私法進行營運。對於需要將資料保留在其他地區或比起美國有更嚴格遵守準則的組織來說，這種架構可能不是一個最好的選擇。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼您需要 Backblaze 的替代方案",
+    "description": "Internxt 提供歐洲 S3 物件儲存並遵守多項合規性法規，為企業和組織提供全面的隱私和安全保障。",
+    "cards": {
+      "titles": [
+        "設定複雜",
+        "隱藏且不可預測的成本",
+        "下載費用昂貴"
+      ],
+      "descriptions": [
+        "在 Backblaze 上設定儲存空間涉及瀏覽多個儀表板和安全系統。使用者必須手動對角色、存取規則和加密進行管理。簡單的任務通常需要相關的技術知識支援，這也導致該平台對初學者來說不好上手，另外這也拖慢了後期的平台開發速度。",
+        "Backblaze 針對儲存、資料請求、資料傳輸、監控、備份和安全功能單獨收費。這些小規模的相關細微服務費用可以很快地成倍增加，以至於在事後難以有效追蹤它的去向。不管是任何流量或使用的增加都有可能會導致帳單出現爆增，並使得對於企業用戶來說相關長期預算編成了極度不可靠的情況發生。",
+        "一旦您的帳戶相關用量突破既有上限後，Backblaze 便會對將資料傳出其平台的操作收取高昂的資料傳輸費。無論是每次檔案下載、備份操作還是還原流程甚至是做遷移時皆會導致帳單當中的金額爆增。這種收費模式非常直截了當地說明了資料等於是被完全鎖定在平台內一樣，而這也是在對那些需要有大量的使用和工作負載情況做變相懲罰。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Backblaze",
+    "description": "憑藉零知識加密技術以及適合各種產業類型的合規性資格取得，Internxt 提供無與倫比的隱私和安全性防護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\n完全的隱私、透明度和信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 的程式碼是公開的，每個人都可以閱讀查閱並確保其可以在我們的 GitHub 上被證實安全。這種透明度保證了沒有任何隱藏的漏洞。"
+          },
+          {
+            "title": "加密",
+            "description": "您的資料在用戶端進行加密，並使用客戶提供的加密金鑰 (SSE-C) 進行伺服器端加密。"
+          },
+          {
+            "title": "資料保護",
+            "description": "Internxt 總部設在歐洲，遵守 GDPR、HIPAA、ISO 27001 和 SOC 2 規定。該平台經過全面稽核，確保您的資料不會受到外部存取。"
+          },
+          {
+            "title": "價格合理、可預測",
+            "description": "只需為您使用的儲存空間付費，根據需要隨時升級或降級，不必擔心隱藏費用或長期合約"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Backblaze\n那麼您的隱私呢？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "Backblaze 對大眾隱藏其原始碼。如果不透明，您就無法確定 Backblaze 如何處理或保護您的資料。"
+          },
+          {
+            "title": "加密",
+            "description": "由 Backblaze 加密或由客戶設定和管理"
+          },
+          {
+            "title": "資料保護",
+            "description": "Backblaze 總部位於美國，因此適用美國隱私法。"
+          },
+          {
+            "title": "按用量計費",
+            "description": "成本取決於多種因素並會增加，這可能很快就會變得昂貴且難以管理。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt S3 是 Backblaze 的最佳替代品",
+    "description": "Internxt 雲端物件儲存空間提供價格合理且實惠的 S3 儲存，以便快速存取大量資料。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "安全持久的儲存",
+        "即時存取",
+        "簡單、可預測的定價",
+        "每 GB 的成本"
+      ],
+      "descriptions": [
+        "Internxt S3 提供內建的端到端加密和不可變的物件鎖定功能，以保護資料免受遺失、損壞或勒索軟體的侵害。具有 11 個 9 的持久性，所有檔案在多個區域都受到安全保護。",
+        "Internxt S3 是 100% 的熱雲端儲存解決方案，因此所有檔案都可以立即上傳或下載。這種即時可用性保證了針對所有工作負載的卓越快速回應時間。",
+        "Internxt S3 採用固定費率的統一定價，不會產生隱藏費用。用戶非常清楚地知道自己每個月即將要支付的具體開支，不需煩憂要求次數費、下載費或複製的開銷。這比 Amazon S3 更簡單且更容易預測，因為後者的計費方式十分混亂且充滿變數。",
+        "用戶只需為 Internxt S3 支付簡潔易懂的每 GB 儲存費用，而價格不會因為存取頻率或傳輸而改變。這種具有預見性的收費模式有助於減少總體開支，與 Backblaze 的模式截然不同，因為後者的儲存費、檢索費和傳輸流量輸出費均會影響總體的每 GB 費用等開銷。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為最佳 Backblaze 替代方案",
+    "description": "Internxt S3 透過更低廉的價格以及全私人的加密、開源保護程式代碼且不再向您收取額外的資料傳輸費用，來帶給您更好的雲端物件儲存空間。",
+    "cta": "取得 Internxt S3"
+  },
+  "tableSection": {
+    "title": "選擇您的方案",
+    "hotLabel": "最高可便宜 80% 🔥",
+    "planTitles": {
+      "header": "100% 熱雲端儲存空間"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "按使用量付費",
+      "description": "只需為您使用的儲存付費。無額外費用。",
+      "cta": "取得 Internxt S3"
+    },
+    "features": {
+      "openSource": "開源且經過稽核",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑問？我們有解答",
+    "faq": [
+      {
+        "question": "什麼是物件儲存？",
+        "answer": [
+          "物件儲存是一種以稱為物件的離散單位來儲存資料的方法，每個物件都有自己專屬的詮釋資料以及唯一識別碼。Internxt S3 物件儲存提供對大型資料集更高速與敏捷讀取的訪問速度，這特質讓它成為平易近人同時也能夠做可擴展的雲端儲存解決方案。"
+        ]
+      },
+      {
+        "question": "最好的 Backblaze 替代品是什麼？",
+        "answer": [
+          "如果您需要具有可預測和可擴展定價的物件儲存空間，以及快速高效存取大量資料，那麼 Internxt 是最好的 Backblaze 替代品。"
+        ]
+      },
+      {
+        "question": "Internxt 總部在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙的瓦倫西亞，這使其成為一個符合 GDPR 規範的雲端物件儲存解決方案，遵循嚴格的法律來確保您的資料和隱私得到保護。"
+        ]
+      },
+      {
+        "question": "Backblaze 比 Internxt 更貴嗎？",
+        "answer": [
+          "由於 Internxt 提供按使用量付費的儲存空間，因此在雲端移入或移出資料不需要任何額外的費用。您對 Backblaze 及其服務的利用率越高，儲存成本就越高。"
+        ]
+      },
+      {
+        "question": "我該如何聯絡客戶支援團隊？",
+        "answer": [
+          "如果您有任何其他問題、請求或需要協助，您可以聯絡 hello@internxt.com ，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt 物件雲端儲存空間\n 完美結合安全與效率",
+    "description": "Internxt 物件儲存空間是一個價格合理、高效能的解決方案，它徹底改變了線上資料儲存方式，非常適合需要以最低成本獲得可靠、安全基礎設施的個人或組織。",
+    "payAsYouGoCard": {
+      "title": "按使用量付費！",
+      "description": "只需為您正在使用的儲存空間額度付費。"
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "每 TB / 每月計費",
+      "price": "7",
+      "cta": "選擇方案",
+      "whatsIncluded": {
+        "title": "包含功能",
+        "features": [
+          "每月計費",
+          "伺服器端加密",
+          "相容 AWS S3 與 IAM API",
+          "速度提升",
+          "靈活儲存",
+          "開源",
+          "符合 GDPR 規範",
+          "尊享客戶支援"
+        ]
+      }
+    },
+    "oneTimePayment": "*需要支付 1 歐元的一次性費用以進行帳戶驗證"
+  }
+}
