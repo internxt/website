@@ -64,8 +64,8 @@ export default function ReviewSection({
       alt: 'pcMag Logo',
       text: textContent.pcMag,
     },
-     {
-      logo: darkMode ? '/images/home/NewDesign/pcworld-new.webp'
+    {
+      logo: '/images/home/NewDesign/pcworld-new.webp',
       alt: 'pcworld Logo',
       text: textContent.pcWorld,
     },
@@ -74,7 +74,6 @@ export default function ReviewSection({
       alt: 'Forbes Logo',
       text: textContent.mashable,
     },
-   
   ];
 
   const maxIndex = reviews.length - 1;
