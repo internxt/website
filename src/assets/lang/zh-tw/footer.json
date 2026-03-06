@@ -90,7 +90,13 @@
         "reviews": "評論",
         "certifications": "認證",
         "wire": "Wire 替代方案",
-        "whereby": "Whereby 替代方案"
+        "whereby": "Whereby 替代方案",
+        "s3Alternative": "S3 替代方案",
+        "idrivee2Alternative": "IDrive e2 替代方案",
+        "backblazeAlternative": "Backblaze 替代方案",
+        "googleCloudAlternative": "Google Cloud 替代方案",
+        "awsAlternative": "AWS 替代方案",
+        "azureAlternative": "Azure 替代方案"
       },
       "tools": {
         "title": "免費工具",

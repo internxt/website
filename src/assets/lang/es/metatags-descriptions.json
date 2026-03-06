@@ -563,5 +563,30 @@
     "id": "annual",
     "title": "Oferta Planes Anuales Internxt: Almacenamiento en la Nube Seguro y Encriptado",
     "description": "Obtén los planes anuales de Internxt para almacenamiento en la nube seguro y encriptado. Protege tus archivos con tecnología de conocimiento cero y seguridad post-cuántica. ¡Ahorra más hoy mismo!"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternativa a AWS",
+    "description": "Pásate a Internxt para obtener una alternativa a AWS privada y encriptada. Internxt mantiene tus datos privados, encriptados y accesibles solo para ti."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Alternativa a Microsoft Azure",
+    "description": "Pásate a Internxt S3 para obtener una alternativa de código abierto a Azure. Almacenamiento en la nube de objetos asequible y seguro para empresas."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Alternativa a Backblaze",
+    "description": "Pásate a Internxt S3 para obtener una alternativa de código abierto a Backblaze. Almacenamiento en la nube de objetos asequible y seguro para empresas."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — Alternativa a IDrive e2",
+    "description": "Pásate a Internxt S3 para obtener una alternativa de código abierto a IDrive. Almacenamiento en la nube de objetos asequible y seguro para empresas."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Alternativa a Google Cloud",
+    "description": "Pásate a Internxt S3 para obtener una alternativa de código abierto a Google Cloud. Almacenamiento en la nube de objetos asequible y seguro para empresas."
   }
 ]

@@ -41,7 +41,12 @@ interface ComparisonTableProps {
     | 'gemini'
     | 'Wire'
     | 'Whereby'
-    | 'grok';
+    | 'grok'
+    | 'aws'
+    | 'azure'
+    | 'backblaze'
+    | 'idriveE2'
+    | 'googleCloud';
   hideTooltip?: boolean;
   needH2?: boolean;
 }
@@ -144,6 +149,21 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     },
     grok: {
       defaultLogo: '/images/comparison/grok-Letters.webp',
+    },
+    aws: {
+      defaultLogo: '/images/comparison/aws-Letters.webp',
+    },
+    azure: {
+      defaultLogo: '/images/comparison/azure-Letters.webp',
+    },
+    backblaze: {
+      defaultLogo: '/images/comparison/backblaze-Letters.webp',
+    },
+    idriveE2: {
+      defaultLogo: '/images/comparison/idrive-Letters.webp',
+    },
+    googleCloud: {
+      defaultLogo: '/images/comparison/googleCloud-Letters.webp',
     },
   } as const;
 

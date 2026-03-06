@@ -663,5 +663,30 @@
     "id": "annual",
     "title": "Internxt Annual Plans Offer: Secure Encrypted Cloud Storage",
     "description": "Get Internxt's annual plans for secure, encrypted cloud storage. Protect your files with zero-knowledge technology and post-quantum security. Save more today!"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternative to AWS",
+    "description": "Switch to Internxt for a private and encrypted AWS alternative. Internxt keeps your data private, encrypted, and accessible only to you."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt  — Alternative to Microsoft Azure",
+    "description": "Switch to Internxt S3 for an open-source alternative to Azure. Affordable, secure object cloud storage for enterprises."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt  — Alternative to Backblaze",
+    "description": "Switch to Internxt S3 for an open-source alternative to Backblaze. Affordable, secure object cloud storage for enterprises."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt  — Alternative to IDrive e2",
+    "description": "Switch to Internxt S3 for an open-source alternative to IDrive. Affordable, secure object cloud storage for enterprises."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt  — Alternative to Google Cloud",
+    "description": "Switch to Internxt S3 for an open-source alternative to Google Cloud. Affordable, secure object cloud storage for enterprises."
   }
 ]

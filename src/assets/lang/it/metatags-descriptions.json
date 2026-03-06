@@ -493,5 +493,30 @@
     "id": "annual",
     "title": "Offerta Piani Annuali Internxt: Archiviazione Cloud Sicura e Crittografata",
     "description": "Ottieni i piani annuali di Internxt per un'archiviazione cloud sicura e crittografata. Proteggi i tuoi file con la tecnologia a conoscenza zero e la sicurezza post-quantistica. Risparmia di più oggi stesso!"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternativa ad AWS",
+    "description": "Passa a Internxt per un'alternativa AWS privata e crittografata. Internxt mantiene i tuoi dati privati, crittografati e accessibili solo a te."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Alternativa a Microsoft Azure",
+    "description": "Passa a Internxt S3 per un'alternativa open-source ad Azure. Archiviazione di oggetti cloud conveniente e sicura per le aziende."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Alternativa a Backblaze",
+    "description": "Passa a Internxt S3 per un'alternativa open-source a Backblaze. Archiviazione di oggetti cloud conveniente e sicura per le aziende."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — Alternativa a IDrive e2",
+    "description": "Passa a Internxt S3 per un'alternativa open-source a IDrive. Archiviazione di oggetti cloud conveniente e sicura per le aziende."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Alternativa a Google Cloud",
+    "description": "Passa a Internxt S3 per un'alternativa open-source a Google Cloud. Archiviazione di oggetti cloud conveniente e sicura per le aziende."
   }
 ]
