@@ -65,7 +65,7 @@ export default function ReviewSection({
       text: textContent.pcMag,
     },
      {
-      logo: darkMode ? '/images/home/NewDesign/pcworld-new.webp' : '/images/home/NewDesign/pcworld-new.webp',
+      logo: darkMode ? '/images/home/NewDesign/pcworld-new.webp'
       alt: 'pcworld Logo',
       text: textContent.pcWorld,
     },
