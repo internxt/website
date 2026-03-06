@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3，像AWS S3 一样 \n但**更加私密**",
+    "description": "按需付费的对象存储比 AWS 便宜高达 80%",
+    "getPrivacy": "切换到 Internxt：最佳的企业云存储也是 AWS 的首选替代方案",
+    "cta": "获取 Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 AWS 概览",
+    "description": "发现将数据控制权归还给您的关键功能和差异。",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密机制",
+        "数据传输费用",
+        "定价与存储",
+        "主要特性",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "无",
+        "按需付费固定费率",
+        "对象存储，备份，兼容 S3，即时数据访问",
+        "定期安全审计",
+        "有",
+        "绝不会访问您的文件",
+        "GDPR, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由 AWS 加密",
+        "有",
+        "不可预测的变动成本",
+        "对象存储，不频繁访问，Glacier，深度归档",
+        "定期安全审计",
+        "无",
+        "在特定情况下能访问文件",
+        "更少的隐私：欧盟-美国数据隐私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Amazon AWS 涉及复杂的安全控制、高昂成本且员工能访问您的数据。",
+    "description": "Internxt 对象存储默认包含高级安全防护，保护您的文件私密，并提供可预测的价格。",
+    "scrollableSection": {
+      "titles": [
+        "复杂的安全配置",
+        "规模化后的高成本",
+        "员工能访问您的数据",
+        "融入亚马逊生态系统"
+      ],
+      "descriptions": [
+        "保护 AWS 需要管理多个层次的设置（防火墙、密钥与权限）。设置不当可能导致数据暴露。",
+        "在大规模使用时 AWS 将变得极其昂贵，因为其网络传输、存储与额外服务费用不断累积。",
+        "AWS 的员工有权限因维护或合规目的访问您的数据，敏感文件存在隐私风险。",
+        "与亚马逊其他服务整合意味着您使用数据可能被合并收集，很难限制他们的追踪。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为何您需要 AWS 的替代方案",
+    "description": "AWS 在安全方面的表现恰是其在隐私方面的缺陷。为了全面的隐私保护，请获取具有零知识加密的卓越存储。",
+    "cards": {
+      "titles": [
+        "设置复杂",
+        "隐藏且不可预测的成本",
+        "昂贵的下载费用"
+      ],
+      "descriptions": [
+        "在 AWS 上设置存储需要浏览大量复杂的面板，手动管理各种权限，增加开发困难。",
+        "Amazon AWS 单独对请求、传输、日常监控和备份收取各种零散的小额费用，导致账单无法估算。",
+        "AWS 数据出站（Egress）费用高昂。任何恢复、拉取或迁移文件都会面临巨大的账单压力。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 与 AWS",
+    "description": "Internxt 提供基于抗量子黑客技术的零知识隐私和安全，助您免遭一切网络攻击。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：绝对的隐私，透明与信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt 代码在 GitHub 公开供公众和专家审查，排除了隐藏后门的风险。"
+          },
+          {
+            "title": "加密",
+            "description": "基于客户端的端对端加密以及支持客户自备密钥的服务器加密（SSE-C）。"
+          },
+          {
+            "title": "数据保护",
+            "description": "位于欧洲，符合 GDPR 等级且通过了严格的独立审计。"
+          },
+          {
+            "title": "可负担且价格简单",
+            "description": "按需为存储付费，无锁定契约与额外隐形账单。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "AWS：你的隐私何在？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "AWS 的源代码对公众封闭，用户无法验证其内部数据处理方式。"
+          },
+          {
+            "title": "加密",
+            "description": "由 AWS 自己加密或需要客户自行繁琐管理。"
+          },
+          {
+            "title": "数据保护",
+            "description": "根据 AWS 服务器所在区域来决定遵循哪种法律。"
+          },
+          {
+            "title": "按用量计算的繁杂结构",
+            "description": "计费项多如牛毛，管理成本很快失控。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为何 Internxt 是 AWS 的最佳替代品",
+    "description": "重拾你对数据的掌控权，保卫线上隐私。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "持久安全的存储",
+        "即时访问",
+        "简明可预测的价格",
+        "每 GB 的极低成本"
+      ],
+      "descriptions": [
+        "Internxt S3 提供对象锁定功能与全面加密机制，避免被勒索软件利用，提供 11×9s 持久度。",
+        "Internxt S3 是 100% 的热存储云，文件随时可用。不必像 Amazon S3 Glacier 需要等好几个小时。",
+        "我们坚持平面定价、无隐藏费用，你确切知晓每月花费。不再迷失于繁杂的定价公式。",
+        "存储成本单一明了，没有任何按请求次数与调用的费用负担。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt，最完美的 AWS 替代品",
+    "description": "获取毫无额外下行数据传输费用的高负担能力开源对象云存储。",
+    "cta": "获取 Internxt S3"
+  },
+  "tableSection": {
+    "title": "选择您的计划",
+    "hotLabel": "便宜高达 80% 🔥",
+    "planTitles": {
+      "header": "极速与高级数据管理"
+    },
+    "billingFrequency": {
+      "annually": "包年",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "按需付费",
+      "description": "只为您使用的容量付费。没有额外费用。",
+      "cta": "获取 Internxt S3"
+    },
+    "features": {
+      "openSource": "开源并经过审计",
+      "premiumSupport": "优质客服支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑问吗？我们来解答",
+    "faq": [
+      {
+        "question": "什么是对象存储？",
+        "answer": [
+          "对象存储将数据以独立单元的形式保存（每个都有自己的元数据与唯一标识）。它更具可扩展性和成本效益。"
+        ]
+      },
+      {
+        "question": "什么是 AWS 最好的替代品？",
+        "answer": [
+          "如果您需要价格稳定且访问迅速的类 S3 对象存储，Internxt 是最好的选择。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": [
+          "我们在西班牙的瓦伦西亚，严格遵循最高标准的 GDPR 欧洲隐私法规。"
+        ]
+      },
+      {
+        "question": "AWS 会比 Internxt 更贵吗？",
+        "answer": [
+          "是的，由于我们不收取下行与出站费用，因此我们可以帮您比在 AWS 上节省最多 80% 的成本。"
+        ]
+      },
+      {
+        "question": "我该怎么联系支持团队？",
+        "answer": [
+          "联系邮箱 hello@internxt.com ，我们会热心解答您的任何请求。"
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "结合效率与安全的绝佳选择",
+    "description": "以最低的成本换取可靠安全架构，非常适合个人及组织的高性能数据革命方案。",
+    "payAsYouGoCard": {
+      "title": "按需结账！",
+      "description": "仅仅为您用掉的存储付费。"
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "每 TB / 每月计费",
+      "price": "7",
+      "cta": "选择计划",
+      "whatsIncluded": {
+        "title": "它涵盖了什么",
+        "features": [
+          "按月计费",
+          "服务端加密",
+          "完全兼容 AWS S3 及 IAM API",
+          "提速保障",
+          "弹性容量扩展",
+          "开源透明",
+          "符合 GDPR 规定",
+          "高阶客服响应"
+        ]
+      }
+    },
+    "oneTimePayment": "*账户验证会产生需要一次性的 1 欧元费用"
+  }
+}
