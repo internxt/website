@@ -38,7 +38,7 @@ const CleanerPage = ({
 
       <HeroSection textContent={textContent.heroSection} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
       <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} />
 

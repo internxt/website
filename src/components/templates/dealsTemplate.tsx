@@ -112,7 +112,7 @@ const DealsTemplate = ({
         image={config.heroImage}
       />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
