@@ -90,7 +90,13 @@
         "reviews": "Bewertungen",
         "certifications": "Certificaciones",
         "wire": "Alternative zu Wire",
-        "whereby": "Alternative zu Whereby"
+        "whereby": "Alternative zu Whereby",
+        "s3Alternative": "S3-Alternativen",
+        "idrivee2Alternative": "IDrive e2-Alternative",
+        "backblazeAlternative": "Backblaze-Alternative",
+        "googleCloudAlternative": "Google Cloud-Alternative",
+        "awsAlternative": "AWS-Alternative",
+        "azureAlternative": "Azure-Alternative"
       },
       "tools": {
         "title": "Kostenlose Tools",

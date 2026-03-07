@@ -30,6 +30,7 @@ export default function Footer({
   const [isAlternativesOpen, setIsAlternativesOpen] = useState(false);
   const [isVideocallsOpen, setIsVideocallsOpen] = useState(false);
   const [isAiAlternativeOpen, setIsAiAlternativeOpen] = useState(false);
+  const [isS3AlternativeOpen, setIsS3AlternativeOpen] = useState(false);
 
   const year = moment().format('YYYY');
 
@@ -663,6 +664,66 @@ export default function Footer({
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.deepSeekAlternative}
+                      </Link>
+                    </div>
+
+                    <button
+                      onClick={() => setIsS3AlternativeOpen(!isS3AlternativeOpen)}
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.s3Alternative}
+                      {isS3AlternativeOpen ? (
+                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                      ) : (
+                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                      )}
+                    </button> 
+
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isS3AlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
+                      }`}
+                      style={!isS3AlternativeOpen ? { display: 'none' } : {}}
+                    >
+                      <Link
+                        href="/alternative-to-idrive-e2"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.idrivee2Alternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-backblaze"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.backblazeAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-google-cloud"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.googleCloudAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-aws"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.awsAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-azure"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.azureAlternative}
                       </Link>
                     </div>
 
@@ -1346,6 +1407,133 @@ export default function Footer({
                               className="w-full max-w-[160px] hover:text-primary"
                             >
                               {textContent.FooterSection.sections.resources.whereby}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsAlternativesOpen(!isAiAlternativeOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.aiAlternatives}
+                          {isAiAlternativeOpen ? (
+                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                          ) : (
+                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                          )}
+                        </button>
+
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isAiAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                            <Link
+                              href="/alternative-to-gemini"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.geminiAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-grok"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.grokAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-copilot"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.copilotAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-chatgpt"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.chatGPTAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-deepseek"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.deepSeekAlternative}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsS3AlternativeOpen(!isS3AlternativeOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.s3Alternative}
+                          {isS3AlternativeOpen ? (
+                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                          ) : (
+                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                          )}
+                        </button>
+
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isS3AlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                          
+                            <Link
+                              href="/idrive-e2-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.idrivee2Alternative}
+                            </Link>
+                            <Link
+                              href="/backblaze-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.backblazeAlternative}
+                            </Link>
+                            <Link
+                              href="/google-cloud-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.googleCloudAlternative}
+                            </Link>
+                            <Link
+                              href="/aws-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.awsAlternative}
+                            </Link>
+                            <Link
+                              href="/azure-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.azureAlternative}
                             </Link>
                           </div>
                         </div>

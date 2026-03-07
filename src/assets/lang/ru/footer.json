@@ -90,7 +90,13 @@
         "reviews": "Отзывы",
         "certifications": "Certificazioni",
         "wire": "Альтернатива Wire",
-        "whereby": "Альтернатива Whereby"
+        "whereby": "Альтернатива Whereby",
+        "s3Alternative": "Альтернативы S3",
+        "idrivee2Alternative": "Альтернатива IDrive e2",
+        "backblazeAlternative": "Альтернатива Backblaze",
+        "googleCloudAlternative": "Альтернатива Google Cloud",
+        "awsAlternative": "Альтернатива AWS",
+        "azureAlternative": "Альтернатива Azure"
       },
       "tools": {
         "title": "Бесплатные инструменты",

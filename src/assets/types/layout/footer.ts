@@ -105,6 +105,12 @@ export interface Resources {
   copilotAlternative: string;
   chatGPTAlternative: string;
   deepSeekAlternative: string;
+  s3Alternative: string;
+  idrivee2Alternative: string;
+  backblazeAlternative: string;
+  googleCloudAlternative: string;
+  awsAlternative: string;
+  azureAlternative: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
   nas: string;
