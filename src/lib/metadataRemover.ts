@@ -78,7 +78,7 @@ const SUPPORTED_VIDEO_TYPES = ['video/mp4', 'video/x-m4v', 'video/quicktime', 'v
 
 const SUPPORTED_VISIO_TYPES = ['application/vnd.visio'];
 
-const SUPPORTED_TYPES = [
+export const SUPPORTED_TYPES = [
   ...SUPPORTED_IMAGE_TYPES,
   ...SUPPORTED_PDF_TYPES,
   ...SUPPORTED_WORD_TYPES,
