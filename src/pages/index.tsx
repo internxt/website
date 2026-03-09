@@ -15,7 +15,6 @@ import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -81,7 +80,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}

@@ -10,7 +10,6 @@ import { PromoCodeName } from '@/lib/types';
 import { DealsPageText } from '@/assets/types/freeCloudStorage';
 import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
 import HeroSection from '../deals/HeroSection';
-import ReviewsSection from '../home/ReviewsSection';
 import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
 import MoreDealsSection from '../black-friday/MoreDealsSection';
 
@@ -112,7 +111,7 @@ const DealsTemplate = ({
         image={config.heroImage}
       />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
