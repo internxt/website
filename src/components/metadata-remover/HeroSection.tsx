@@ -4,7 +4,7 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
-import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
+import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/metadataRemover';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
@@ -16,9 +16,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isProcessFinished, setIsProcessFinished] = useState(false);
-  const [setProcessResult] = useState<any>(null);
+  const [processResult, setProcessResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
+  const [isUnsupportedType, setIsUnsupportedType] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
@@ -93,11 +94,13 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
     setIsProcessing(false);
     setIsProcessFinished(false);
     setIsError(false);
+    setIsUnsupportedType(false);
     setFile(null);
   };
 
   const handleCancelProcess = () => {
     setIsSelectedFile(false);
+    setIsUnsupportedType(false);
   };
 
   const handleConfirmProcess = () => {
@@ -110,11 +113,15 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
     if (fileInput?.files) {
       setDragEnter(false);
       setFileSizeLimitReached(false);
+      setIsUnsupportedType(false);
       setIsSelectedFile(true);
-      if (fileInput.files[0] && fileInput.files[0].size >= maxFileSize) {
+      const selectedFile = fileInput.files[0];
+      if (selectedFile && !SUPPORTED_TYPES.includes(selectedFile.type)) {
+        setIsUnsupportedType(true);
+      } else if (selectedFile && selectedFile.size >= maxFileSize) {
         setFileSizeLimitReached(true);
       } else {
-        setFile(fileInput.files[0]);
+        setFile(selectedFile);
       }
     } else {
       console.error('No files to process');
@@ -303,7 +310,35 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                   </>
                 ) : (
                   <>
-                    {fileSizeLimitReached ? (
+                    {isUnsupportedType ? (
+                      <>
+                        <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl bg-opacity-3 sm:h-96">
+                          <Transition
+                            as="div"
+                            show={isSelectedFile}
+                            enter="transition duration-200 ease-out"
+                            enterFrom="opacity-0 translate-y-2"
+                            enterTo="opacity-100 translate-y-0"
+                          >
+                            <div className="flex flex-col items-center space-y-6">
+                              <div className="flex flex-col items-center space-y-2">
+                                <p className="text-2xl font-medium">{textContent.error.title}</p>
+                                <p className="text-xl text-cool-gray-60">File type not supported</p>
+                              </div>
+                              <button
+                                type="button"
+                                className="flex h-10 flex-row items-center rounded-lg bg-primary px-5 font-medium text-white transition duration-150 ease-out active:scale-98"
+                                onClick={() => {
+                                  handleCancelProcess();
+                                }}
+                              >
+                                {textContent.scanAgain}
+                              </button>
+                            </div>
+                          </Transition>
+                        </div>
+                      </>
+                    ) : fileSizeLimitReached ? (
                       <>
                         <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
