@@ -8,6 +8,10 @@ import { FeaturesSection } from '@/components/file-converter/main-state/Features
 import CtaSection from '@/components/shared/CtaSection';
 import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -21,8 +25,21 @@ const FileConverter = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'file-converter');
 
   return (
-    <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+    <>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('File converter', 'file-converter')}
+      </Script>
+<Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'File converter', url: '/file-converter' },
+          ]}
+        />
+      </div>
 
       <HeroSection textContent={textContent.HeroSection} />
 
@@ -50,7 +67,7 @@ const FileConverter = ({
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
-  );
+  </>);
 };
 
 export async function getServerSideProps(ctx) {

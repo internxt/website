@@ -7,6 +7,7 @@ import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
@@ -105,11 +106,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Pricing', 'pricing')}
+        {sm_breadcrumb('Cloud Storage Pricing', 'pricing')}
       </Script>
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud Storage Pricing', url: '/pricing' },
+          ]}
+          className="sr-only"
+        />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}

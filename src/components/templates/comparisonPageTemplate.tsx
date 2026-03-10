@@ -1,5 +1,8 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { CloudObjectStoragePriceCardSection } from '@/components/cloud-object-storage/PriceCardSection';
 import { PromoCodeName } from '@/lib/types';
@@ -70,6 +73,8 @@ interface ComparisonPageProps {
   };
   couponCodeName?: PromoCodeName;
   isS3Alternative?: boolean;
+  breadcrumbName?: string;
+  urlSlug?: string;
 }
 
 export const ComparisonPage = ({
@@ -85,6 +90,8 @@ export const ComparisonPage = ({
   customSections = {},
   couponCodeName,
   isS3Alternative = false,
+  breadcrumbName,
+  urlSlug,
 }: ComparisonPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === metaTagId);
   const {
@@ -138,8 +145,25 @@ export const ComparisonPage = ({
   } = customSections;
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+    <>
+      {breadcrumbName && urlSlug && (
+        <Script type="application/ld+json" strategy="beforeInteractive">
+          {sm_breadcrumb(breadcrumbName, urlSlug)}
+        </Script>
+      )}
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+
+        {breadcrumbName && urlSlug && (
+          <div className="sr-only">
+            <Breadcrumb
+              items={[
+                { name: 'Encrypted Cloud Storage', url: '/' },
+                { name: breadcrumbName, url: `/${urlSlug}` },
+              ]}
+            />
+          </div>
+        )}
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
 
@@ -205,5 +229,6 @@ export const ComparisonPage = ({
 
       <Footer textContent={footerLang} lang={locale} />
     </Layout>
+    </>
   );
 };

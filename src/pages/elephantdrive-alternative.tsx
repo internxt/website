@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const ElephantdriveComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Alternative to elephantdrive"
+    urlSlug="elephantdrive-alternative"
     {...props}
     competitor="Elephantdrive"
     metaTagId="elephantdrive-alternative"

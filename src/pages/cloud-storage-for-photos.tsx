@@ -16,6 +16,8 @@ import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -78,6 +80,13 @@ const CloudStorageBackupSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }
+]} />
+      </div>
 
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 

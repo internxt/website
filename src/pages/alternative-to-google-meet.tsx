@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const GoogleMeetComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Google meet alternative"
+    urlSlug="alternative-to-google-meet"
     {...props}
     competitor="GoogleMeet"
     metaTagId="google-meet-alternative"

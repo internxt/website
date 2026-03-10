@@ -16,6 +16,8 @@ import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection'
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -94,6 +96,13 @@ const PrivateCloudStorageSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }
+]} />
+      </div>
 
         <AnimatedHeroSection
           textComponent={

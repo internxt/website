@@ -10,6 +10,8 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -43,6 +45,14 @@ const PasswordGenerator = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Password generator', url: '/password-generator' },
+          ]}
+        />
+      </div>
 
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 

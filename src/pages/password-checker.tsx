@@ -12,6 +12,8 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -43,6 +45,14 @@ const PasswordChecker = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Password security checker', url: '/password-checker' },
+          ]}
+        />
+      </div>
 
         <TryInternxtBanner
           textContent={

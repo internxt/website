@@ -11,6 +11,8 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const Scan = ({
   metatagsDescriptions,
@@ -35,6 +37,14 @@ const Scan = ({
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Virus scanner online', url: '/virus-scanner' },
+          ]}
+        />
+      </div>
 
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 

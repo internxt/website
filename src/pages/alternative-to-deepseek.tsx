@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const DeepSeekComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Deepseek alternative"
+    urlSlug="alternative-to-deepseek"
     {...props}
     competitor="deepseek"
     metaTagId="alternative-to-deepseek"

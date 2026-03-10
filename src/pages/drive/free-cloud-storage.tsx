@@ -17,6 +17,9 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
+
 
 interface DriveProps {
   textContent: DriveText;
@@ -49,6 +52,13 @@ const Drive = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }
+]} />
+      </div>
 
       <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
 

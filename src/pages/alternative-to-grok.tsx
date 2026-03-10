@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const grokComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Grok alternative"
+    urlSlug="alternative-to-grok"
     {...props}
     competitor="grok"
     metaTagId="alternative-to-grok"
