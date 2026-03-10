@@ -4,7 +4,6 @@ import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -103,7 +102,7 @@ function LifetimeSpecial({
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-      <ReviewsSection textContent={langJson.ReviewSection || testimonialsJson.TestimonialsSection} />
+      {/*<ReviewsSection textContent={langJson.ReviewSection || testimonialsJson.TestimonialsSection} /> */}
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}

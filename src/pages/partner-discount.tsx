@@ -11,7 +11,6 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { GetServerSidePropsContext } from 'next';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -91,7 +90,7 @@ const PartnerDiscount = ({
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      {/*<ReviewsSection textContent={langJson.ReviewSection} />*/}
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}

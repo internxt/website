@@ -22,6 +22,7 @@ interface HeroSectionForPartnerProps {
   darkMode?: boolean;
   image?: any;
   isValentinesMode?: boolean;
+  isClubic?: boolean;
 }
 
 export default function HeroSection({
@@ -31,6 +32,7 @@ export default function HeroSection({
   darkMode = false,
   isValentinesMode = false,
   image = 'internxt-private-cloud',
+  isClubic = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -57,31 +59,7 @@ export default function HeroSection({
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
-  const StyledTitle = ({ rawText }: { rawText: string }) => {
-    const parts = rawText.split(/(\/\/.*?\/\/|\*\*.*?\*\*)/g);
-
-    return (
-      <>
-        {parts.map((part, index) => {
-          if (part.startsWith('//') && part.endsWith('//')) {
-            return (
-              <span key={index} style={{ color: '#E93D82' }}>
-                {part.slice(2, -2)}
-              </span>
-            );
-          }
-          if (part.startsWith('**') && part.endsWith('**')) {
-            return (
-              <span key={index} style={{ color: '#007bff' }}>
-                {part.slice(2, -2)}
-              </span>
-            );
-          }
-          return part;
-        })}
-      </>
-    );
-  };
+  
 
   return (
     <section
@@ -102,6 +80,26 @@ export default function HeroSection({
               width={117}
               height={27}
               alt="Brave logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>
+        )}
+
+        {isClubic && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/partnerships/Clubic.webp')}
+              width={117}
+              height={27}
+              alt="Clubic logo"
             />
             <X size={16} />
             <Image

@@ -42,6 +42,7 @@ export const ALLOWED_PATHS = [
   'cninternxtl',
   'cooltechzone',
   'lifetime',
+  'clubic',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -91,6 +92,7 @@ export const COUPON_CODES = {
   cninternxtl: PromoCodeName.cninternxtl,
   cooltechzone: PromoCodeName.CTZ,
   lifetime: PromoCodeName.lifetime,
+  clubic: PromoCodeName.DRIVE87,
 };
 
 interface OfferConfig {
@@ -103,6 +105,7 @@ interface OfferConfig {
   ultimateAndPremiumPlans: boolean;
   annualPlans: boolean;
   lifetimePlans: boolean;
+  isClubic: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -120,6 +123,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         ultimateAndPremiumPlans: false,
         annualPlans: false,
         lifetimePlans: false,
+        isClubic: false,
       };
     }
 
@@ -130,6 +134,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
+    const isClubic = selectedPathname === 'clubic';
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -145,6 +150,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       ultimateAndPremiumPlans,
       annualPlans,
       lifetimePlans,
+      isClubic,
     };
   }, [pathname]);
 };
