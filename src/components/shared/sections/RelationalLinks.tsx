@@ -13,15 +13,24 @@ interface RelationalLinksProps {
   };
 }
 
+const shuffleData = (data: Card[]): Card[] => {
+  const shuffled = [...data];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
 
   useEffect(() => {
     if (textContent?.links) {
-      const shuffled = [...textContent.links].sort(() => 0.5 - Math.random());
-      setCards(shuffled.slice(0, 3));
+      const shuffledLinks = shuffleData(textContent.links);
+      setCards(shuffledLinks);
     }
-  }, [textContent?.links]);
+  }, [textContent]);
 
   if (cards.length === 0) return null;
 
