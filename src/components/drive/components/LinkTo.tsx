@@ -8,7 +8,7 @@ interface LinkTo {
 
 export const LinkTo = ({ text, linkToRedirect }: LinkTo) => {
   return (
-    <Link href={linkToRedirect} target="_blank" className="flex flex-row items-center space-x-1 text-primary">
+    <Link href={linkToRedirect} className="flex flex-row items-center space-x-1 text-primary">
       <p className="text-base font-medium">{text}</p>
       <ArrowUpRight size={20} weight="bold" />
     </Link>

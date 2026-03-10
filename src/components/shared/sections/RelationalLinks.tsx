@@ -28,7 +28,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   useEffect(() => {
     if (textContent?.links) {
       const shuffledLinks = shuffleData(textContent.links);
-      setCards(shuffledLinks);
+      setCards(shuffledLinks.slice(0, 3));
     }
   }, [textContent]);
 
