@@ -8,6 +8,7 @@ import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection'
 import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
 import { HeroSection } from '@/components/shared/components/HeroSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -31,6 +32,7 @@ interface VPNProps {
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   isGetVPN?: boolean;
+  relationalLinksText: any;
 }
 
 const VPN = ({
@@ -42,6 +44,7 @@ const VPN = ({
   navbarLang,
   footerLang,
   isGetVPN,
+  relationalLinksText,
 }: VPNProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
@@ -140,6 +143,8 @@ const VPN = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
+      <RelationalLinks textContent={relationalLinksText} />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
@@ -154,6 +159,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   return {
     props: {
@@ -164,6 +170,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       bannerJson,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

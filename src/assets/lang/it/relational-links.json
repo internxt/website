@@ -1,0 +1,45 @@
+{
+  "title": "Potrebbe interessarti",
+  "links": [
+    {
+      "cta": "Archiviazione cloud sicura",
+      "link": "/drive"
+    },
+    {
+      "cta": "Archiviazione cloud gratuita",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Archiviazione cloud a vita",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Prezzi dell'archiviazione cloud",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Archiviazione cloud privata",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Archiviazione cloud open source",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Backup su cloud",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "Archiviazione cloud GDPR",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Archiviazione cloud per foto",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Archiviazione cloud per file video di grandi dimensioni",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

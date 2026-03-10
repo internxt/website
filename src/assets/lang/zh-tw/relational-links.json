@@ -1,0 +1,45 @@
+{
+  "title": "您可能感興趣",
+  "links": [
+    {
+      "cta": "安全雲端儲存",
+      "link": "/drive"
+    },
+    {
+      "cta": "免費雲端儲存",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "終身雲端儲存",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "雲端儲存價格",
+      "link": "/pricing"
+    },
+    {
+      "cta": "私有雲端儲存",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "開源雲端儲存",
+      "link": "/open-source"
+    },
+    {
+      "cta": "雲端儲存備份",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "符合 GDPR 的雲端儲存",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "照片雲端儲存",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "大影片檔案雲端儲存",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}
