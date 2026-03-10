@@ -12,10 +12,13 @@ import FeaturesSection from '@/components/private-cloud-storage-solutions/Featur
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -24,6 +27,7 @@ interface PrivacyProps {
   footerLang: FooterText;
   lang: string;
   bannerJson: BannersText;
+  relationalLinksText: any;
 }
 
 const PrivateCloudStorageSolutions = ({
@@ -32,6 +36,7 @@ const PrivateCloudStorageSolutions = ({
   navbarLang,
   footerLang,
   lang,
+  relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
   const CTA_URL = `/pricing`;
@@ -94,6 +99,13 @@ const PrivateCloudStorageSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }
+]} />
+      </div>
 
         <AnimatedHeroSection
           textComponent={
@@ -159,6 +171,8 @@ const PrivateCloudStorageSolutions = ({
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
+        <RelationalLinks textContent={relationalLinksText} />
+
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>
@@ -173,6 +187,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -184,6 +199,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       bannerJson,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

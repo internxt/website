@@ -12,6 +12,9 @@ import { stripeService } from '@/services/stripe.service';
 import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+  
+
 
 interface LifetimeSpecialProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -99,6 +102,13 @@ function LifetimeSpecial({
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Lifetime cloud storage', url: '/lifetime' }
+]} />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 

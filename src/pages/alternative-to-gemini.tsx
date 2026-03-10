@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const GeminiComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Gemini alternative"
+    urlSlug="alternative-to-gemini"
     {...props}
     competitor="gemini"
     metaTagId="alternative-to-gemini"

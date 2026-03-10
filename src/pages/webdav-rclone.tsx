@@ -7,6 +7,9 @@ import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
 import Footer from '@/components/layout/footers/Footer';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
+
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
@@ -14,6 +17,13 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
       <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }
+]} />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} />
 

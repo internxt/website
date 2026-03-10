@@ -16,7 +16,10 @@ import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
 import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { downloadDriveLinks } from '@/lib/get-download-url';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
@@ -24,6 +27,7 @@ interface AntivirusProps {
   navbarLang: NavigationBarText;
   langJson: AntivirusText;
   footerLang: FooterText;
+  relationalLinksText: any;
   download: {
     Windows: any;
     MacOS: any;
@@ -40,6 +44,7 @@ const AntivirusPage = ({
   footerLang,
   download,
   isGetAntivirus,
+  relationalLinksText,
 }: AntivirusProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
@@ -103,6 +108,13 @@ const AntivirusPage = ({
       ) : (
         <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
       )}
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt Antivirus', url: '/antivirus' }
+]} />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} download={download} />
 
@@ -166,6 +178,8 @@ const AntivirusPage = ({
 
       <FAQSection textContent={langJson.FaqSection} />
 
+      <RelationalLinks textContent={relationalLinksText} />
+
       <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
@@ -179,6 +193,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const langJson = require(`@/assets/lang/${lang}/antivirus.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -190,6 +205,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       navbarLang,
       footerLang,
       download,
+      relationalLinksText,
     },
   };
 }

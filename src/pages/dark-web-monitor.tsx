@@ -16,6 +16,10 @@ import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { ToolsSectionText } from '@/assets/types/components/toolsSection';
 import { BannersText } from '@/assets/types/components/banners';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface MonitorProps {
   lang: GetServerSidePropsContext['locale'];
@@ -60,8 +64,21 @@ const Monitor = ({
     },
   ];
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
+    <>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Monitor the dark web', 'dark-web-monitor')}
+      </Script>
+<Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
       <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Monitor the dark web', url: '/dark-web-monitor' },
+          ]}
+        />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -103,7 +120,7 @@ const Monitor = ({
 
       <Footer textContent={footerLang} lang={locale} hideNewsletter={false} />
     </Layout>
-  );
+  </>);
 };
 
 export async function getServerSideProps(ctx) {

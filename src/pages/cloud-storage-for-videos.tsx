@@ -16,6 +16,8 @@ import HowToChooseSection from '@/components/private-cloud-storage-for-videos/Ho
 import SecureAndManageSection from '@/components/private-cloud-storage-for-videos/Secure&Manage';
 
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface CloudStorageForVideosProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -43,6 +45,13 @@ const CloudStorageForVideos = ({
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }
+]} />
+      </div>
 
       <AnimatedHeroSection
         textComponent={

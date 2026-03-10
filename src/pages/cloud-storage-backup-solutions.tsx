@@ -7,16 +7,18 @@ import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
-
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -25,6 +27,7 @@ interface PrivacyProps {
   footerLang: FooterText;
   lang: string;
   bannerJson: BannersText;
+  relationalLinksText: any;
 }
 
 const CloudStorageBackupSolutions = ({
@@ -33,6 +36,7 @@ const CloudStorageBackupSolutions = ({
   navbarLang,
   footerLang,
   lang,
+  relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
   const CTA_URL = `/pricing`;
@@ -88,6 +92,13 @@ const CloudStorageBackupSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }
+]} />
+      </div>
 
         <AnimatedHeroSection
           textComponent={
@@ -148,6 +159,8 @@ const CloudStorageBackupSolutions = ({
 
         <FAQSection textContent={textContent.FaqSection} />
 
+        <RelationalLinks textContent={relationalLinksText} />
+
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>
@@ -162,6 +175,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -173,6 +187,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       bannerJson,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

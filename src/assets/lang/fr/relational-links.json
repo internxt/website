@@ -1,0 +1,45 @@
+{
+  "title": "Vous pourriez être intéressé",
+  "links": [
+    {
+      "cta": "Stockage cloud sécurisé",
+      "link": "/drive"
+    },
+    {
+      "cta": "Stockage cloud gratuit",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Stockage cloud à vie",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Tarifs du stockage cloud",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Stockage cloud privé",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Cloud de stockage open source",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Sauvegarde sur le cloud",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "Stockage cloud RGPD",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Stockage cloud pour photos",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Stockage cloud pour les fichiers vidéo volumineux",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

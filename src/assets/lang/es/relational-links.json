@@ -1,0 +1,45 @@
+{
+  "title": "También te puede interesar",
+  "links": [
+    {
+      "cta": "Almacenamiento seguro\n en la nube",
+      "link": "/drive"
+    },
+    {
+      "cta": "Almacenamiento en la\n nube gratuito",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Almacenamiento en la nube\n de por vida",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Precios de almacenamiento\n en la nube",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Almacenamiento privado en la nube",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Nube de almacenamiento de código abierto",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Copia de seguridad \nen la nube",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "Almacenamiento en \nla nube GDPR",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Almacenamiento en la nube\n para fotos",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Almacenamiento en la nube para archivos de vídeo grandes",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

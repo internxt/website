@@ -16,6 +16,10 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'icedrive-alternative');
@@ -66,13 +70,26 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
   const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
 
   return (
-    <Layout
+    <>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Icedrive alternative', 'icedrive-alternative')}
+      </Script>
+<Layout
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName={'Icedrive Comparison'}
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Icedrive alternative', url: '/icedrive-alternative' },
+          ]}
+        />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Icedrive'} />
 
@@ -151,7 +168,7 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
 
       <Footer textContent={footerLang} lang={locale} needsH2={false} />
     </Layout>
-  );
+  </>);
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

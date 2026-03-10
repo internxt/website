@@ -1,0 +1,45 @@
+{
+  "title": "You may be interested",
+  "links": [
+    {
+      "cta": "Secure Cloud Storage",
+      "link": "/drive"
+    },
+    {
+      "cta": "Free Cloud Storage",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Lifetime Cloud Storage",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Cloud Storage Pricing",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Private cloud storage",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Open Source Storage Cloud",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Cloud storage backup",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "GDPR cloud storage",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Cloud storage for photos",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Cloud storage for large video files",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

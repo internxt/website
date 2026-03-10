@@ -15,6 +15,8 @@ import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const URL_REDIRECT = 'https://internxt.com/specialoffer';
 
@@ -61,6 +63,12 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Cloud storage comparison', url: '/cloud-storage-comparison' }
+]} />
+      </div>
 
         <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
 

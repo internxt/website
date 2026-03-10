@@ -13,6 +13,10 @@ import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
@@ -60,13 +64,26 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (
-    <Layout
+    <>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Alternative to dropbox', 'dropbox-alternative')}
+      </Script>
+<Layout
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName="dropbox Comparison"
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Alternative to dropbox', url: '/dropbox-alternative' },
+          ]}
+        />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
@@ -129,7 +146,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <Footer textContent={footerLang} lang={lang} needsH2={false} />
     </Layout>
-  );
+  </>);
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

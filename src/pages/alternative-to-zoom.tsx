@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const zoomComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Zoom alternative"
+    urlSlug="alternative-to-zoom"
     {...props}
     competitor="zoom"
     metaTagId="zoom-alternative"

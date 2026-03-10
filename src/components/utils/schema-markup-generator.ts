@@ -36,7 +36,7 @@ export const sm_faq = (faq) => {
 // Single Breadcrumb Data Structure generator
 // Additional information: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
 
-export const sm_breadcrumb = (name, url) => {
+export const sm_breadcrumb = (name: string, url: string) => {
   return `{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -44,7 +44,7 @@ export const sm_breadcrumb = (name, url) => {
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "Encrypted Cloud Storage",
           "item": "https://internxt.com/"
         },{
           "@type": "ListItem",
@@ -52,5 +52,23 @@ export const sm_breadcrumb = (name, url) => {
           "name": "${name}",
           "item": "https://internxt.com/${url}"
         }
+      ]}`;
+};
+
+export const sm_breadcrumb_list = (items: { name: string; url: string }[]) => {
+  return `{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [${items
+        .map(
+          (item, index) => `
+        {
+          "@type": "ListItem",
+          "position": ${index + 1},
+          "name": "${item.name}",
+          "item": "https://internxt.com${item.url}"
+        }`
+        )
+        .join(',')}
       ]}`;
 };

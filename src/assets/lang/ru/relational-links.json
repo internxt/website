@@ -1,0 +1,45 @@
+{
+  "title": "Вас может заинтересовать",
+  "links": [
+    {
+      "cta": "Безопасное облачное хранилище",
+      "link": "/drive"
+    },
+    {
+      "cta": "Бесплатное облачное хранилище",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Пожизненное облачное хранилище",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Цены на облачное хранилище",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Частное облачное хранилище",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Облачное хранилище с открытым исходным кодом",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Облачное резервное копирование",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "Облачное хранилище GDPR",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Облачное хранилище для фотографий",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Облачное хранилище для больших видеофайлов",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

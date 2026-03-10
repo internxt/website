@@ -19,6 +19,9 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
 import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
+
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -76,6 +79,13 @@ export const BusinessPage = ({
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt for business', url: '/business' }
+]} />
+      </div>
 
       <HeroSection
         TextComponent={
