@@ -11,6 +11,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { GetServerSidePropsContext } from 'next';
 
 interface CloudObjectStorageProps {
@@ -19,6 +20,7 @@ interface CloudObjectStorageProps {
   textContent: CloudObjectStorageText;
   footerText: FooterText;
   locale: GetServerSidePropsContext['locale'];
+  relationalLinksText: any;
 }
 
 const CloudObjectStorage = ({
@@ -27,6 +29,7 @@ const CloudObjectStorage = ({
   textContent,
   footerText,
   locale,
+  relationalLinksText,
 }: CloudObjectStorageProps): JSX.Element => {
   const metatags = metatagsDescription.filter((metatag) => metatag.id === 'cloud-object-storage')[0];
 
@@ -92,6 +95,8 @@ const CloudObjectStorage = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
+      <RelationalLinks textContent={relationalLinksText} />
+
       <Footer textContent={footerText} lang={lang} />
     </Layout>
   );
@@ -104,6 +109,7 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
   const textContent = require(`@/assets/lang/${locale}/cloud-object-storage.json`);
   const footerText = require(`@/assets/lang/${locale}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${locale}/relational-links.json`);
 
   return {
     props: {
@@ -112,6 +118,7 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
       textContent,
       footerText,
       locale,
+      relationalLinksText,
     },
   };
 }

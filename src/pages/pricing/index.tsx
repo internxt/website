@@ -17,6 +17,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
@@ -27,9 +28,17 @@ interface PricingProps {
   footerLang: FooterText;
   lang: string;
   textContent: PricingText;
+  relationalLinksText: any;
 }
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
+const Pricing = ({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  lang,
+  textContent,
+  relationalLinksText,
+}: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const {
@@ -160,6 +169,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <FAQSection textContent={faqSection} needsH3={false} />
 
+        <RelationalLinks textContent={relationalLinksText} />
+
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
           url={'/pricing'}
@@ -190,6 +201,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -200,6 +212,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       navbarLang,
       lang,
       textContent,
+      relationalLinksText,
     },
   };
 }

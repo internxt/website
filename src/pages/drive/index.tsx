@@ -17,6 +17,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
@@ -28,6 +29,7 @@ interface DriveProps {
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   lang: string;
+  relationalLinksText: any;
   download: {
     Android: string;
     iPad: string;
@@ -47,6 +49,7 @@ const Drive = ({
   navbarLang,
   footerLang,
   lang,
+  relationalLinksText,
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
   const {
@@ -166,6 +169,8 @@ const Drive = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
+      <RelationalLinks textContent={relationalLinksText} />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
@@ -179,6 +184,7 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`@/assets/lang/${lang}/drive.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -190,6 +196,7 @@ export async function getServerSideProps(ctx) {
       textContent,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

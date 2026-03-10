@@ -14,6 +14,7 @@ import FeaturesSection from '@/components/cloud-storage-backup-solutions/Feature
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
@@ -25,6 +26,7 @@ interface PrivacyProps {
   footerLang: FooterText;
   lang: string;
   bannerJson: BannersText;
+  relationalLinksText: any;
 }
 
 const CloudStorageBackupSolutions = ({
@@ -33,6 +35,7 @@ const CloudStorageBackupSolutions = ({
   navbarLang,
   footerLang,
   lang,
+  relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
   const CTA_URL = `/pricing`;
@@ -148,6 +151,8 @@ const CloudStorageBackupSolutions = ({
 
         <FAQSection textContent={textContent.FaqSection} />
 
+        <RelationalLinks textContent={relationalLinksText} />
+
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>
@@ -162,6 +167,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -173,6 +179,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       bannerJson,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

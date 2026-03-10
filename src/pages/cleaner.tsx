@@ -4,6 +4,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import cookies from '@/lib/cookies';
 import HeroSection from '@/components/cleaner/HeroSection';
 import { CleanerText } from '@/assets/types/cleaner';
@@ -19,6 +20,7 @@ interface CleanerProps {
   navbarLang: NavigationBarText;
   textContent: CleanerText;
   footerLang: FooterText;
+  relationalLinksText: any;
 }
 
 const CleanerPage = ({
@@ -27,6 +29,7 @@ const CleanerPage = ({
   lang,
   navbarLang,
   footerLang,
+  relationalLinksText,
 }: CleanerProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cleaner');
   const locale = lang as string;
@@ -82,6 +85,8 @@ const CleanerPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
+      <RelationalLinks textContent={relationalLinksText} />
+
       <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
@@ -94,6 +99,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const textContent = require(`@/assets/lang/${lang}/cleaner.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -104,6 +110,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       textContent,
       navbarLang,
       footerLang,
+      relationalLinksText,
     },
   };
 }

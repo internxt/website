@@ -1,0 +1,45 @@
+{
+  "title": "Das könnte Sie interessieren",
+  "links": [
+    {
+      "cta": "Sicherer Cloud-Speicher",
+      "link": "/drive"
+    },
+    {
+      "cta": "Kostenloser Cloud-Speicher",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Lebenslanger Cloud-Speicher",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Cloud-Speicher Preise",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Privater Cloud-Speicher",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Open-Source-Cloud-Speicher",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Cloud-Speicher-Backup",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "DSGVO-Cloud-Speicher",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Cloud-Speicher für Fotos",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "Cloud-Speicher für große Videodateien",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

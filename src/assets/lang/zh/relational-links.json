@@ -1,0 +1,45 @@
+{
+  "title": "您可能感兴趣",
+  "links": [
+    {
+      "cta": "安全的网络存储",
+      "link": "/drive"
+    },
+    {
+      "cta": "免费网络存储",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "终身网络存储",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "网络存储价格",
+      "link": "/pricing"
+    },
+    {
+      "cta": "私有网络存储",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "开源网络存储",
+      "link": "/open-source"
+    },
+    {
+      "cta": "网络存储备份",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "符合 GDPR 的网络存储",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "照片网络存储",
+      "link": "/cloud-storage-for-photos"
+    },
+    {
+      "cta": "大视频文件网络存储",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}
