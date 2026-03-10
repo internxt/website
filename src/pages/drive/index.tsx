@@ -8,7 +8,6 @@ import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -160,10 +159,10 @@ const Drive = ({
 
       <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} />
 
-      <ReviewsSection
+      {/*<ReviewsSection
         textContent={textContent.ReviewSection}
         bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-      />
+      />*/}
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 

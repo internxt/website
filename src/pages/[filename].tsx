@@ -5,7 +5,6 @@ import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -186,7 +185,7 @@ function CombinedSpecialOffer({
         isClubic={isClubic}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
+      {/*<ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />*/}
 
       {onlyUltimatePlan ? (
         <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
