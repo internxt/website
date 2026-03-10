@@ -12,6 +12,10 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -35,6 +39,12 @@ const CloudObjectStorage = ({
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Cloud object storage', url: '/cloud-object-storage' }
+]} />
+      </div>
 
       <HeroSection textContent={textContent.HeroSection} />
 

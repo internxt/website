@@ -14,6 +14,8 @@ import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { setup } from '@/lib/csrf';
 import { GetServerSidePropsContext } from 'next';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
   const dialogAction = useGlobalDialog();
@@ -32,6 +34,14 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Temp email', url: '/temporary-email' },
+          ]}
+        />
+      </div>
 
         <HeroSection textContent={textContent.HeroSection} />
 

@@ -19,6 +19,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface VPNProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -50,6 +54,13 @@ const VPN = ({
       ) : (
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       )}
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt VPN', url: '/vpn' }
+]} />
+      </div>
 
       <HeroSection
         TextComponent={

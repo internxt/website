@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const chatgptComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Alternative to chatgpt"
+    urlSlug="alternative-to-chatGPT"
     {...props}
     competitor="ChatGPT"
     metaTagId="alternative-to-chatgpt"

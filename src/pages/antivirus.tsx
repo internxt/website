@@ -17,6 +17,10 @@ import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
 import { downloadDriveLinks } from '@/lib/get-download-url';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
@@ -103,6 +107,13 @@ const AntivirusPage = ({
       ) : (
         <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
       )}
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt Antivirus', url: '/antivirus' }
+]} />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} download={download} />
 

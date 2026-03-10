@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const copilotComparison = (props) => (
   <ComparisonPage
+    breadcrumbName="Copilot alternative"
+    urlSlug="alternative-to-copilot"
     {...props}
     competitor="Copilot"
     metaTagId="alternative-to-copilot"

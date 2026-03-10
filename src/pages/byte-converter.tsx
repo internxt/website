@@ -13,6 +13,8 @@ import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -31,6 +33,14 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Byte converter', url: '/byte-converter' },
+          ]}
+        />
+      </div>
 
         <HeroSection textContent={langJson.HeroSection} />
 

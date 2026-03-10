@@ -13,6 +13,10 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
@@ -60,8 +64,21 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
+    <>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('pCloud alternative', 'pcloud-alternative')}
+      </Script>
+<Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+      <div className="sr-only">
+        <Breadcrumb
+          items={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'pCloud alternative', url: '/pcloud-alternative' },
+          ]}
+        />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
@@ -121,7 +138,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
       <Footer textContent={footerLang} lang={lang} needsH2={false} />
     </Layout>
-  );
+  </>);
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

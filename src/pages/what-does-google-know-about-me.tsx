@@ -11,6 +11,10 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
 import CtaSection from '@/components/affiliates/CtaSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 const URL_REDIRECT = 'https://internxt.com/pricing';
 
@@ -33,6 +37,12 @@ const WhatDoesGoogleKnowAboutMe = ({
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'What does google know about me', url: '/what-does-google-know-about-me' }
+]} />
+      </div>
 
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 

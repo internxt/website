@@ -21,6 +21,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface DriveProps {
   textContent: DriveText;
@@ -95,6 +99,12 @@ const Drive = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' }
+]} />
+      </div>
 
       <HeroSection textContent={textContent.HeroSection} download={download} />
 

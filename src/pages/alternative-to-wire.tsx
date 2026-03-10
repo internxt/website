@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const WireComparison = (props: any) => (
   <ComparisonPage
+    breadcrumbName="Alternative to wire"
+    urlSlug="alternative-to-wire"
     {...props}
     competitor="Wire"
     metaTagId="wire-alternative"

@@ -12,6 +12,10 @@ import WhenToUseSection from '@/components/cleaner/WhenToUseSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FeatureSection from '@/components/cleaner/FeatureSection';
+import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
+
 
 interface CleanerProps {
   lang: GetServerSidePropsContext['locale'];
@@ -35,6 +39,13 @@ const CleanerPage = ({
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+      <div className="sr-only">
+        <Breadcrumb items={[
+{ name: 'Encrypted Cloud Storage', url: '/' },
+{ name: 'Secure cloud storage', url: '/drive' },
+{ name: 'Internxt Cleaner', url: '/cleaner' }
+]} />
+      </div>
 
       <HeroSection textContent={textContent.HeroSection} />
 

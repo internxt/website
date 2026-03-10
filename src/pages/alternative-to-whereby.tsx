@@ -5,6 +5,8 @@ import { GetServerSidePropsContext } from 'next';
 
 const WherebyComparison = (props: any) => (
   <ComparisonPage
+    breadcrumbName="Whereby alternative"
+    urlSlug="alternative-to-whereby"
     {...props}
     competitor="Whereby"
     metaTagId="whereby-alternative"
