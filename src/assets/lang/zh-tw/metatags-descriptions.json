@@ -643,5 +643,30 @@
     "id": "annual",
     "title": "Internxt 年度計畫優惠：安全加密雲端儲存",
     "description": "取得 Internxt 的年度計畫，享受安全加密的雲端儲存。利用零知識技術和後量子安全保護您的檔案。今天節省更多！"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — AWS 的替代方案",
+    "description": "切換到 Internxt 以獲取私密且加密的 AWS 替代方案。Internxt 確保您的資料私密、加密，並且只有您可以訪問。"
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Microsoft Azure 的替代方案",
+    "description": "切換到 Internxt S3 作為 Azure 的開源替代方案。專為企業提供可負擔且安全的物件雲端儲存。"
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Backblaze 的替代方案",
+    "description": "切換到 Internxt S3 作為 Backblaze 的開源替代方案。專為企業提供可負擔且安全的物件雲端儲存。"
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — IDrive e2 的替代方案",
+    "description": "切換到 Internxt S3 作為 IDrive 的開源替代方案。專為企業提供可負擔且安全的物件雲端儲存。"
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Google Cloud 的替代方案",
+    "description": "切換到 Internxt S3 作為 Google Cloud 的開源替代方案。專為企業提供可負擔且安全的物件雲端儲存。"
   }
 ]

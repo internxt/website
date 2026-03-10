@@ -1,6 +1,7 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { CloudObjectStoragePriceCardSection } from '@/components/cloud-object-storage/PriceCardSection';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
@@ -45,7 +46,12 @@ type CompetitorType =
   | 'gemini'
   | 'Wire'
   | 'Whereby'
-  | 'grok';
+  | 'grok'
+  | 'aws'
+  | 'azure'
+  | 'backblaze'
+  | 'idriveE2'
+  | 'googleCloud';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;
@@ -62,7 +68,8 @@ interface ComparisonPageProps {
     privacyBgGradient?: string;
     alternativeBgColor?: string;
   };
-  couponCodeName: PromoCodeName;
+  couponCodeName?: PromoCodeName;
+  isS3Alternative?: boolean;
 }
 
 export const ComparisonPage = ({
@@ -77,6 +84,7 @@ export const ComparisonPage = ({
   footerLang,
   customSections = {},
   couponCodeName,
+  isS3Alternative = false,
 }: ComparisonPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === metaTagId);
   const {
@@ -137,21 +145,25 @@ export const ComparisonPage = ({
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
 
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-        hideBusinessSelector
-        sectionDetails="bg-white lg:py-20 py-10"
-      />
+      {isS3Alternative && langJson.PriceCardSection ? (
+        <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
+      ) : (
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
+      )}
 
       <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
 

@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3，像AWS S3 一樣 \n但**更加私密**",
+    "description": "按需付費的對象存儲比 AWS 便宜高達 80%",
+    "getPrivacy": "切換到 Internxt：最佳的企業雲端儲存也是 AWS 的首選替代方案",
+    "cta": "獲取 Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 AWS 概覽",
+    "description": "發現將數據控制權歸還給您的關鍵功能和差異。",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "加密機制",
+        "數據傳輸費用",
+        "定價與儲存",
+        "主要特性",
+        "安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "在您的設備上加密",
+        "無",
+        "按需付費固定費率",
+        "對象存儲，備份，兼容 S3，即時數據訪問",
+        "定期安全審計",
+        "有",
+        "絕不會訪問您的文件",
+        "GDPR, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "由 AWS 加密",
+        "有",
+        "不可預測的變動成本",
+        "對象存儲，不頻繁訪問，Glacier，深度歸檔",
+        "定期安全審計",
+        "無",
+        "在特定情況下能訪問文件",
+        "更少的隱私：歐盟-美國數據隱私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Amazon AWS 涉及複雜的安全控制、高昂成本且員工能訪問您的數據。",
+    "description": "Internxt 對象存儲默認包含高級安全防護，保護您的文件私密，並提供可預測的價格。",
+    "scrollableSection": {
+      "titles": [
+        "複雜的安全配置",
+        "規模化後的高成本",
+        "員工能訪問您的數據",
+        "融入亞馬遜生態系統"
+      ],
+      "descriptions": [
+        "保護 AWS 需要管理多個層次的設置（防火牆、密鑰與權限）。設置不當可能導致數據暴露。",
+        "在大規模使用時 AWS 將變得極其昂貴，因為其網路傳輸、存儲與額外服務費用不斷累積。",
+        "AWS 的員工有權限因維護或合規目的訪問您的數據，敏感文件存在隱私風險。",
+        "與亞馬遜其他服務整合意味著您使用數據可能被合併收集，很難限制他們的追踪。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為何您需要 AWS 的替代方案",
+    "description": "AWS 在安全方面的表現恰是其在隱私方面的缺陷。為了全面的隱私保護，請獲取具有零知識加密的卓越存儲。",
+    "cards": {
+      "titles": [
+        "設置複雜",
+        "隱藏且不可預測的成本",
+        "昂貴的下載費用"
+      ],
+      "descriptions": [
+        "在 AWS 上設置存儲需要瀏覽大量複雜的面板，手動管理各種權限，增加開發困難。",
+        "Amazon AWS 單獨對請求、傳輸、日常監控和備份收取各種零散的小額費用，導致帳單無法估算。",
+        "AWS 數據出站（Egress）費用高昂。任何恢復、拉取或遷移文件都會面臨巨大的帳單壓力。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt 與 AWS",
+    "description": "Internxt 提供基於抗量子黑客技術的零知識隱私和安全，助您免遭一切網路攻擊。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：絕對的隱私，透明與信任",
+        "features": [
+          {
+            "title": "開源",
+            "description": "Internxt 代碼在 GitHub 公開供公眾和專家審查，排除了隱藏後門的風險。"
+          },
+          {
+            "title": "加密",
+            "description": "基於客戶端的端對端加密以及支持客戶自備密鑰的服務器加密（SSE-C）。"
+          },
+          {
+            "title": "數據保護",
+            "description": "位於歐洲，符合 GDPR 等级且通過了嚴格的獨立審計。"
+          },
+          {
+            "title": "可負擔且價格簡單",
+            "description": "按需為儲存付費，無鎖定契約與額外隱形帳單。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "AWS：你的隱私何在？",
+        "features": [
+          {
+            "title": "專有軟件",
+            "description": "AWS 的源代碼對公眾封閉，用戶無法驗證其內部數據處理方式。"
+          },
+          {
+            "title": "加密",
+            "description": "由 AWS 自己加密或需要客戶自行繁瑣管理。"
+          },
+          {
+            "title": "數據保護",
+            "description": "根據 AWS 服務器所在區域來決定遵循哪種法律。"
+          },
+          {
+            "title": "按用量計算的繁雜結構",
+            "description": "計費項多如牛毛，管理成本很快失控。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為何 Internxt 是 AWS 的最佳替代品",
+    "description": "重拾你對數據的掌控權，保衛線上隱私。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "持久安全的存儲",
+        "即時訪問",
+        "簡明可預測的價格",
+        "每 GB 的極低成本"
+      ],
+      "descriptions": [
+        "Internxt S3 提供對象鎖定功能與全面加密機制，避免被勒索軟件利用，提供 11×9s 持久度。",
+        "Internxt S3 是 100% 的熱存儲雲，文件隨時可用。不必像 Amazon S3 Glacier 需要等好幾個小時。",
+        "我們堅持平面定價、無隱藏費用，你確切知曉每月花費。不再迷失於繁雜的定價公式。",
+        "存儲成本單一明了，沒有任何按請求次數與調用的費用負擔。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt，最完美的 AWS 替代品",
+    "description": "獲取毫無額外下行數據傳輸費用的高負擔能力開源對象雲端儲存。",
+    "cta": "獲取 Internxt S3"
+  },
+  "tableSection": {
+    "title": "選擇您的計劃",
+    "hotLabel": "便宜高達 80% 🔥",
+    "planTitles": {
+      "header": "極速與高級數據管理"
+    },
+    "billingFrequency": {
+      "annually": "包年",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "按需付費",
+      "description": "只為您使用的容量付費。沒有額外費用。",
+      "cta": "獲取 Internxt S3"
+    },
+    "features": {
+      "openSource": "開源並經過審計",
+      "premiumSupport": "優質客服支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑問嗎？我們來解答",
+    "faq": [
+      {
+        "question": "什麼是對象儲存？",
+        "answer": [
+          "對象儲存將數據以獨立單元的形式保存（每個都有自己的元數據與唯一標識）。它更具可擴展性和成本效益。"
+        ]
+      },
+      {
+        "question": "什麼是 AWS 最好的替代品？",
+        "answer": [
+          "如果您需要價格穩定且訪問迅速的類 S3 對象儲存，Internxt 是最好的選擇。"
+        ]
+      },
+      {
+        "question": "Internxt 總部在哪裡？",
+        "answer": [
+          "我們在西班牙的瓦倫西亞，嚴格遵循最高標準的 GDPR 歐洲隱私法規。"
+        ]
+      },
+      {
+        "question": "AWS 會比 Internxt 更貴嗎？",
+        "answer": [
+          "是的，由於我們不收取下行與出站費用，因此我們可以幫您比在 AWS 上節省最多 80% 的成本。"
+        ]
+      },
+      {
+        "question": "我該怎麼聯繫支援團隊？",
+        "answer": [
+          "聯繫郵箱 hello@internxt.com ，我們會熱心解答您的任何請求。"
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "結合效率與安全的絕佳選擇",
+    "description": "以最低的成本換取可靠安全架構，非常適合個人及組織的高性能數據革命方案。",
+    "payAsYouGoCard": {
+      "title": "按需結帳！",
+      "description": "僅僅為您用掉的存儲付費。"
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "每 TB / 每月計費",
+      "price": "7",
+      "cta": "選擇計劃",
+      "whatsIncluded": {
+        "title": "它涵蓋了什麼",
+        "features": [
+          "按月計費",
+          "服務端加密",
+          "完全兼容 AWS S3 及 IAM API",
+          "提速保障",
+          "彈性容量擴展",
+          "開源透明",
+          "符合 GDPR 規定",
+          "高階客服響應"
+        ]
+      }
+    },
+    "oneTimePayment": "*帳戶驗證會產生需要一次性的 1 歐元費用"
+  }
+}
