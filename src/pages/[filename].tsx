@@ -5,7 +5,6 @@ import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
-import ReviewsSection from '@/components/home/ReviewsSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -89,6 +88,7 @@ const LANG_MAP = {
   cninternxtl:'en',
   cooltechzone:'en',
   lifetime:'en',
+  clubic:'fr'
 };
 
 function CombinedSpecialOffer({
@@ -108,7 +108,8 @@ function CombinedSpecialOffer({
     onlyUltimatePlan,
     ultimateAndPremiumPlans,
     annualPlans,
-    lifetimePlans
+    lifetimePlans,
+    isClubic
   } = useOfferConfig(pathname);
   const {
     products,
@@ -181,11 +182,12 @@ function CombinedSpecialOffer({
         percentOff={percentOff}
         darkMode={isDarkMode}
         image={alternativeImages}
+        isClubic={isClubic}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
+      {/*<ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />*/}
 
-            {onlyUltimatePlan ? (
+      {onlyUltimatePlan ? (
         <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
           {ultimatePlan && (
             <HorizontalPriceCard
@@ -235,41 +237,45 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
       />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.ctaSection}
-        url={'#billingButtons'}
-        customText={renderCtaContent(
-          langJson.ctaSection.title,
-          langJson.ctaSection.description,
-          parsePercentText,
-          themeClasses,
-          'lg:w-[690px]',
-        )}
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={themeClasses.bgGradientContainer}
-        bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-        bgGradientColor={themeClasses.bgGradient}
-      />
+      {!onlyUltimatePlan && (
+        <FloatingCtaSectionv2
+          textContent={langJson.ctaSection}
+          url={'#billingButtons'}
+          customText={renderCtaContent(
+            langJson.ctaSection.title,
+            langJson.ctaSection.description,
+            parsePercentText,
+            themeClasses,
+            'lg:w-[690px]',
+          )}
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgGradientContainerColor={themeClasses.bgGradientContainer}
+          bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
+          bgGradientColor={themeClasses.bgGradient}
+        />
+      )}
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
 
       <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.ctaSection2}
-        url={'#billingButtons'}
-        customText={renderCtaContent(
-          langJson.ctaSection2.title,
-          langJson.ctaSection2.description,
-          parsePercentText,
-          themeClasses,
-          'lg:w-[633px]',
-        )}
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={themeClasses.bgGradientContainer}
-        bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-        bgGradientColor={themeClasses.bgGradient}
-      />
+      {!onlyUltimatePlan && (
+        <FloatingCtaSectionv2
+          textContent={langJson.ctaSection2}
+          url={'#billingButtons'}
+          customText={renderCtaContent(
+            langJson.ctaSection2.title,
+            langJson.ctaSection2.description,
+            parsePercentText,
+            themeClasses,
+            'lg:w-[633px]',
+          )}
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgGradientContainerColor={themeClasses.bgGradientContainer}
+          bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
+          bgGradientColor={themeClasses.bgGradient}
+        />
+      )}
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />
     </Layout>

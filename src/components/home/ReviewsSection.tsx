@@ -60,19 +60,19 @@ export default function ReviewSection({
 
   const reviews = [
     {
-      logo: '/images/home/NewDesign/pcmag.png',
+      logo: '/images/home/NewDesign/trustpilot.webp',
       alt: 'pcMag Logo',
       text: textContent.pcMag,
+    },
+    {
+      logo: '/images/home/NewDesign/pcworld-new.webp',
+      alt: 'pcworld Logo',
+      text: textContent.pcWorld,
     },
     {
       logo: '/images/home/NewDesign/ForbesIcon.webp',
       alt: 'Forbes Logo',
       text: textContent.mashable,
-    },
-    {
-      logo: darkMode ? '/images/home/NewDesign/pcworld-dark.webp' : '/images/home/NewDesign/pcworld.png',
-      alt: 'pcworld Logo',
-      text: textContent.pcWorld,
     },
   ];
 
