@@ -483,5 +483,30 @@
     "id": "annual",
     "title": "Internxt 年度计划优惠：安全加密云存储",
     "description": "获取 Internxt 的年度计划，享受安全加密的云存储。利用零知识技术和后量子安全保护您的文件。今天节省更多！"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — AWS 的替代方案",
+    "description": "切换到 Internxt 获取私密且加密的 AWS 替代方案。Internxt 确保您的数据私密、加密，并且只有您可以访问。"
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Microsoft Azure 的替代方案",
+    "description": "切换到 Internxt S3 作为 Azure 的开源替代方案。专为企业提供可负担且安全的对象云存储。"
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Backblaze 的替代方案",
+    "description": "切换到 Internxt S3 作为 Backblaze 的开源替代方案。专为企业提供可负担且安全的对象云存储。"
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — IDrive e2 的替代方案",
+    "description": "切换到 Internxt S3 作为 IDrive 的开源替代方案。专为企业提供可负担且安全的对象云存储。"
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Google Cloud 的替代方案",
+    "description": "切换到 Internxt S3 作为 Google Cloud 的开源替代方案。专为企业提供可负担且安全的对象云存储。"
   }
 ]

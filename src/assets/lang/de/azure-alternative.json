@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3, wie Azure S3 \naber **privat**",
+    "description": "Pay-as-you-go-Objektspeicher bis zu 80 % günstiger als Azure",
+    "getPrivacy": "Wechsle zu Internxt, dem besten Cloud-Speicher für Unternehmen und der Alternative zu Azure",
+    "cta": "Internxt S3 holen"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Azure im Überblick",
+    "description": "Entdecke die wichtigsten Funktionen und Unterschiede, mit denen Internxt dir die Kontrolle über deine Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Verschlüsselung",
+        "Datenübertragungsgebühren",
+        "Preise und Speicher",
+        "Funktionen",
+        "Sicherheitsaudits",
+        "Live-Support",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Auf deinem Gerät verschlüsselt",
+        "Nein",
+        "Feste Pay-as-you-go-Gebühr",
+        "Objektspeicher, Backups, S3-kompatibel, sofortiger Datenzugriff",
+        "Regelmäßige Sicherheitsaudits",
+        "Ja",
+        "Kann niemals auf deine Dateien zugreifen",
+        "DSGVO, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Verschlüsselt durch Azure",
+        "Ja",
+        "Unvorhersehbare und variable Kosten",
+        "Objektspeicher, Seltener Zugriff, Glacier, Deep Archive",
+        "Regelmäßige Sicherheitsaudits",
+        "Nein",
+        "Kann unter bestimmten Umständen auf Dateien zugreifen.",
+        "Weniger Privatsphäre: EU-US-Datenschutzrahmen"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Microsoft Azure beinhaltet komplexe Sicherheitskontrollen, hohe Kosten und Mitarbeiter können auf deine Daten zugreifen.",
+    "description": "Der Objektspeicher von Internxt bietet standardmäßig erweiterte Sicherheit, hält deine Dateien privat und bietet vorhersehbare, erschwingliche Pläne.",
+    "scrollableSection": {
+      "titles": [
+        "Komplexe Sicherheitskonfiguration",
+        "Hohe Kosten bei Skalierung",
+        "Mitarbeiterzugriff auf deine Daten",
+        "Integration in das Microsoft-Ökosystem"
+      ],
+      "descriptions": [
+        "Die Sicherung von Azure erfordert die Verwaltung mehrerer Einstellungsebenen, einschließlich Firewalls, Verschlüsselungscodes und Berechtigungen. Falsch konfigurierte Berechtigungen, schlecht verwaltete Schlüssel oder übersehene Netzwerkrichtlinien können Daten ungeschützt lassen. Benutzer müssen die Einstellungen ständig überwachen und anpassen, um die Sicherheit zu gewährleisten.",
+        "Die Nutzung von Azure in großen Mengen kann schnell teuer werden. Die Preise für Speicher, Netzwerkübertragung und zusätzliche Dienste summieren sich im Laufe der Zeit. Eine Skalierung ohne sorgfältige Planung kann zu unerwarteten Ausgaben führen und die langfristige Finanzplanung erschweren.",
+        "Mitarbeiter und Auftragnehmer von Azure können zu Wartungs- oder Compliance-Zwecken auf Benutzerdaten zugreifen. Auch wenn der Zugriff kontrolliert ist, besteht immer das Risiko einer unbeabsichtigten Offenlegung. Sensible Dateien sind technisch für andere zugänglich, was datenschutzbewusste Einzelpersonen oder Organisationen beunruhigen kann.",
+        "Die Integration mit anderen Microsoft-Diensten bedeutet, dass Informationen über Benutzerverhalten, Speichergewohnheiten und App-Nutzung gesammelt und kombiniert werden können. Benutzer, die sich um den Datenschutz sorgen, können Schwierigkeiten haben, das Tracking einzuschränken oder zu verhindern, dass ihre Daten in mehreren Kontexten verwendet werden."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Warum du eine Alternative zu Azure brauchst",
+    "description": "Was Azure an Sicherheit zeigt, versäumt es beim Datenschutz. Für absolute Privatsphäre erhältst du bei Internxt absolute Sicherheit in Kombination mit Zero-Knowledge-Verschlüsselung.",
+    "cards": {
+      "titles": [
+        "Komplexe Einrichtung",
+        "Versteckte und unvorhersehbare Kosten",
+        "Teure Downloads"
+      ],
+      "descriptions": [
+        "Die Einrichtung von Speicherplatz auf Azure erfordert die Navigation durch mehrere Dashboards und Sicherheitssysteme. Benutzer müssen Rollen, Zugriffsregeln und Regionen manuell verwalten. Einfache Aufgaben erfordern oft technisches Wissen, was die Plattform für Anfänger schwierig macht und die Entwicklung verlangsamt.",
+        "Microsoft Azure berechnet separat Speicher, Anfragen, Datenübertragung, Überwachung, Backups und Sicherheitsfunktionen. Diese kleinen Gebühren summieren sich schnell und sind schwer zu verfolgen. Jegliche Erhöhung des Datenverkehrs oder der Nutzung kann zu erheblichen Rechnungsspitzen führen, was eine langfristige Budgetierung für Unternehmen unzuverlässig macht.",
+        "Azure erhebt hohe Gebühren für die Übertragung von Daten von seiner Plattform. Jeder Datei-Download, jedes Backup, jede Wiederherstellung oder Migration erhöht die Rechnung. Dieses Preismodell schließt Daten effektiv innerhalb der Plattform ein und bestraft Workloads mit hoher Auslastung."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Azure",
+    "description": "Internxt bietet dank Zero-Knowledge- und Post-Quanten-Verschlüsselung unübertroffene Privatsphäre und Sicherheit und bietet dir den besten Schutz vor Cyberangriffen.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\nAbsolute Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open Source",
+            "description": "Der Code von Internxt ist offen, damit jeder ihn einsehen und seine Sicherheit über unser GitHub überprüfen kann. Diese Transparenz garantiert, dass keine Sicherheitslücken verborgen bleiben."
+          },
+          {
+            "title": "Verschlüsselung",
+            "description": "Deine Daten werden serverseitig mit vom Kunden bereitgestellten Verschlüsselungsschlüsseln (SSE-C) verschlüsselt."
+          },
+          {
+            "title": "Datenschutz",
+            "description": "Internxt hat seinen Sitz in Europa und ist konform mit DSGVO, HIPAA, ISO 27001 und SOC 2. Die Plattform wird vollständig geprüft, um sicherzustellen, dass es keinen externen Zugriff auf deine Daten gibt."
+          },
+          {
+            "title": "Erschwingliche, vorhersehbare Preise",
+            "description": "Zahle für den Speicher, den du nutzt, führe ein Upgrade oder Downgrade durch, wann immer du es brauchst, ohne dir Gedanken über versteckte Gebühren oder langfristige Verträge machen zu müssen."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Azure\nWas ist mit deiner Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Microsoft Azure hält seinen Quellcode vor der Öffentlichkeit verborgen. Ohne Transparenz gibt es keine Möglichkeit, sicher zu sein, wie Azure deine Daten behandelt oder schützt."
+          },
+          {
+            "title": "Verschlüsselung",
+            "description": "Verschlüsselt durch Azure oder konfiguriert und verwaltet durch den Kunden."
+          },
+          {
+            "title": "Datenschutz",
+            "description": "Azure bietet Speicher in mehreren Regionen, sodass die Compliance-Gesetze der jeweiligen Region gelten."
+          },
+          {
+            "title": "Nutzungsbasiert",
+            "description": "Die Kosten hängen von mehreren Faktoren ab und können schnell teuer und unüberschaubar werden."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Azure ist",
+    "description": "Internxt Drive bietet eine umfassende Produktsuite, die dir die Kontrolle über deine Online-Privatsphäre zurückgibt.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "Sicherer und langlebiger Speicher",
+        "Sofortiger Zugriff",
+        "Einfache und vorhersehbare Preisgestaltung",
+        "Kosten pro GB"
+      ],
+      "descriptions": [
+        "Internxt S3 bietet integrierte End-to-End-Verschlüsselung und unveränderliche Objektsperrung, um Daten vor Verlust, Beschädigung oder Ransomware zu schützen. Mit einer Haltbarkeit von 11×9s werden alle Dateien in mehreren Regionen sicher aufbewahrt.",
+        "Internxt S3 ist eine 100%ige Hot-Cloud-Speicherlösung, sodass alle Dateien sofort zum Hoch- oder Herunterladen verfügbar sind. Im Gegensatz zu Microsoft S3 Glacier, bei dem der Zugriff auf Daten Stunden dauern kann, gibt es keinen Cold Storage oder verzögerten Abruf. Diese sofortige Verfügbarkeit gewährleistet schnelle Antwortzeiten für alle Workloads.",
+        "Internxt S3 verwendet Flatrate-Preise ohne versteckte Gebühren. Benutzer wissen genau, was sie jeden Monat bezahlen werden, ohne sich Gedanken über Anforderungsgebühren, Downloads oder Replikationskosten machen zu müssen. Dies ist einfacher und vorhersehbarer als bei Microsoft S3, wo die Abrechnung verwirrend und variabel sein kann.",
+        "Benutzer zahlen einen einfachen Preis pro Gigabyte bei Internxt S3, und die Preise ändern sich nicht aufgrund von Zugriffshäufigkeit oder Übertragung. Dieses vorhersehbare Modell senkt die Gesamtkosten im Gegensatz zu Microsoft S3, wo Speicher-, Abruf- und Egressgebühren den Preis pro Gigabyte beeinflussen."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wähle Internxt als die beste Azure-Alternative",
+    "description": "Internxt S3 bietet dir erschwinglichen Objektspeicher mit vollständiger privater Verschlüsselung, Open-Source-Software und ohne zusätzliche Gebühren für die Datenübertragung.",
+    "cta": "Internxt S3 holen"
+  },
+  "tableSection": {
+    "title": "Wähle deinen Plan",
+    "hotLabel": "Bis zu 80 % günstiger 🔥",
+    "planTitles": {
+      "header": "Überlegene Datenverwaltung und Geschwindigkeit"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Auf Lebenszeit"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Pay-as-you-go",
+      "description": "Zahle nur für den Speicher, den du nutzt. Keine zusätzlichen Gebühren.",
+      "cta": "Internxt S3 holen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist Objektspeicher?",
+        "answer": [
+          "Objektspeicher ist eine Möglichkeit, Daten als diskrete Einheiten, sogenannte Objekte, mit jeweils eigenen Metadaten und einer eindeutigen Kennung zu speichern. Internxt S3 Objektspeicher bietet schnellen Zugriff auf große Datensätze und ist somit eine erschwingliche und skalierbare Cloud-Speicherlösung."
+        ]
+      },
+      {
+        "question": "Was ist die beste Alternative zu Azure?",
+        "answer": [
+          "Internxt ist die beste Alternative zu Azure, wenn du Objektspeicher mit vorhersehbaren und skalierbaren Preisen sowie schnellen und effizienten Zugriff auf große Datenmengen benötigst."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und ist damit eine DSGVO-konforme Cloud-Objektspeicherlösung, die strenge Gesetze befolgt, um sicherzustellen, dass deine Daten und deine Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist Microsoft Azure teurer als Internxt?",
+        "answer": [
+          "Da Internxt Pay-as-you-go-Speicher anbietet, fallen keine zusätzlichen Gebühren für das Verschieben von Daten in oder aus der Cloud an. Damit ist Internxt S3 bis zu 80 % günstiger als Amazon, Azure oder Google Cloud."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn du weitere Fragen, Wünsche hast oder Hilfe benötigst, kannst du hello@internxt.com kontaktieren, und unser Customer Success Team hilft dir gerne weiter."
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt Objekt-Cloud-Speicher\n kombiniert Sicherheit und Effizienz",
+    "description": "Internxt Objektspeicher ist eine erschwingliche, leistungsstarke Lösung, die die Online-Datenspeicherung revolutioniert, ideal für Einzelpersonen oder Organisationen, die eine zuverlässige und sichere Infrastruktur zu minimalen Kosten benötigen.",
+    "payAsYouGoCard": {
+      "title": "Pay as you go!",
+      "description": "Zahle nur für den Speicher, den du nutzt."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Pro TB/Monatlich abgerechnet",
+      "price": "7",
+      "cta": "Plan auswählen",
+      "whatsIncluded": {
+        "title": "Was ist enthalten",
+        "features": [
+          "Monatlich abgerechnet",
+          "Serverseitige Verschlüsselung",
+          "AWS S3- und IAM-API-kompatibel",
+          "Erhöhte Geschwindigkeit",
+          "Flexibler Speicher",
+          "Open Source",
+          "DSGVO-konform",
+          "Premium-Kundensupport"
+        ]
+      }
+    },
+    "oneTimePayment": "*Zur Kontoverifizierung ist eine einmalige Gebühr von 1 € erforderlich"
+  }
+}

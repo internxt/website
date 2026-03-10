@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3, como IDrive E2\n pero **privado**",
+    "description": "Almacenamiento de objetos de pago por uso sin costes ocultos",
+    "getPrivacy": "Cámbiate a Internxt, el mejor almacenamiento en la nube empresarial y alternativa a IDrive",
+    "cta": "Consigue Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Comparativa Internxt vs IDrive",
+    "description": "Descubre las características clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Cifrado",
+        "Tarifas de transferencia de datos",
+        "Precio y almacenamiento",
+        "Características",
+        "Auditorías de seguridad",
+        "Soporte en vivo",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "Cifrado en tu dispositivo",
+        "No",
+        "Tarifa fija de pago por uso",
+        "Almacenamiento de objetos, copias de seguridad, compatible con S3, acceso instantáneo a los datos",
+        "Auditorías de seguridad periódicas",
+        "Sí",
+        "Nunca podemos acceder a tus archivos",
+        "RGPD, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Cifrado por IDrive o con claves privadas",
+        "Sí",
+        "Costes variables",
+        "IDrive Backup, B2 Cloud Storage, IDrive Fireball, S3",
+        "Auditorías de seguridad regulares",
+        "No",
+        "Puede acceder a los archivos bajo ciertas circunstancias.",
+        "Menos privacidad: U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "IDrive se centra principalmente en las copias de seguridad, tiene costes variables de almacenamiento y sigue las leyes de privacidad menos estrictas de EE. UU.",
+    "description": "El almacenamiento de objetos de Internxt incluye seguridad avanzada por defecto, mantiene tus archivos de forma privada y ofrece planes asequibles y predecibles.",
+    "scrollableSection": {
+      "titles": [
+        "Configuración de seguridad compleja",
+        "Altos costes al escalar",
+        "Acceso de los empleados a tus datos",
+        "Jurisdicción en EE. UU."
+      ],
+      "descriptions": [
+        "IDrive requiere gestionar múltiples capas de configuración, incluyendo cortafuegos, claves de cifrado y permisos. Unos permisos mal configurados, claves gestionadas de forma incorrecta o políticas de red descuidadas pueden dejar los datos expuestos. Los usuarios deben supervisar y ajustar constantemente la configuración para mantener la seguridad.",
+        "A medida que tu uso aumenta con IDrive, los gastos crecen por el consumo de almacenamiento, la transferencia de ancho de banda, las extensiones de retención y los complementos de servicio, lo que puede provocar un gasto total más alto de lo esperado.",
+        "Los empleados y contratistas de IDrive pueden acceder a los datos de los usuarios por mantenimiento o cumplimiento. Aunque el acceso esté controlado, siempre hay un riesgo de exposición no intencionada. Los archivos sensibles son técnicamente accesibles para otros, lo que puede preocupar a personas u organizaciones preocupadas por la privacidad.",
+        "IDrive opera bajo la jurisdicción legal y las leyes de privacidad de Estados Unidos. Para las organizaciones que requieren residencia de datos en otras regiones o una alineación regulatoria más estricta fuera de EE. UU., esta estructura puede ser un problema."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Por qué necesitas una alternativa a IDrive",
+    "description": "Internxt ofrece almacenamiento de objetos S3 europeo y cumple con múltiples normativas para ofrecer total privacidad y seguridad a empresas.",
+    "cards": {
+      "titles": [
+        "Configuración compleja",
+        "Costes ocultos e impredecibles",
+        "Descargas caras"
+      ],
+      "descriptions": [
+        "Configurar el almacenamiento en IDrive implica navegar por múltiples paneles y sistemas de seguridad. Los usuarios deben gestionar manualmente roles, reglas de acceso y cifrado. Tareas simples a menudo requieren conocimientos técnicos, lo que hace que la plataforma sea difícil para principiantes y ralentiza el desarrollo.",
+        "IDrive cobra por separado por almacenamiento, solicitudes, transferencia de datos, supervisión, copias de seguridad y funciones de seguridad. Estas pequeñas tarifas se acumulan rápidamente y son difíciles de rastrear. Cualquier aumento en el tráfico o en el uso puede provocar grandes picos de facturación, haciendo que el presupuesto a largo plazo sea poco fiable para las empresas.",
+        "IDrive cobra altas tarifas por sacar datos de su plataforma una vez que alcanzas el límite de tu cuenta. Cada descarga de archivo, copia de seguridad, restauración o migración se suma a la factura. Este modelo de precios bloquea datos de forma efectiva dentro de la plataforma y penaliza las cargas de trabajo de alto uso."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs IDrive",
+    "description": "Internxt ofrece una privacidad y seguridad inigualables gracias a su cifrado de conocimiento cero y cumplimiento múltiple para todo tipo de industrias.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\nTotal privacidad, transparencia y confianza",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "El código de Internxt está abierto para que cualquiera pueda examinarlo y asegurar su seguridad a través de nuestro GitHub. Esta transparencia garantiza que no haya vulnerabilidades ocultas."
+          },
+          {
+            "title": "Cifrado",
+            "description": "Tus datos se cifran en el lado del cliente con cifrado del lado del servidor y claves de cifrado proporcionadas por el cliente (SSE-C)."
+          },
+          {
+            "title": "Protección de datos",
+            "description": "Internxt tiene su sede en Europa y cumple con el RGPD, HIPAA, ISO 27001 y SOC 2. La plataforma está totalmente auditada para garantizar que no hay acceso externo a tus datos."
+          },
+          {
+            "title": "Precios asequibles y predecibles",
+            "description": "Paga por el almacenamiento que usas, mejora o reduce tu plan cuando lo necesites, sin preocuparte de tarifas ocultas o contratos a largo plazo."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "IDrive\n¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Software propietario",
+            "description": "IDrive oculta su código fuente al público. Sin transparencia, no hay forma de saber con certeza cómo IDrive maneja o protege tus datos."
+          },
+          {
+            "title": "Cifrado",
+            "description": "Cifrado por IDrive o configurado y gestionado por el cliente"
+          },
+          {
+            "title": "Protección de datos",
+            "description": "IDrive tiene sede en EE. UU., por lo que se aplican las leyes de privacidad estadounidenses."
+          },
+          {
+            "title": "Facturación por uso",
+            "description": "Los costes dependen y aumentan basándose en múltiples factores, lo que puede volverse caro e inmanejable de forma rápida."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt S3 es la mejor alternativa a IDrive",
+    "description": "El almacenamiento de objetos en la nube de Internxt ofrece almacenamiento S3 asequible para acceso rápido a grandes cantidades de datos.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "Almacenamiento seguro y duradero",
+        "Acceso instantáneo",
+        "Precios simples y predecibles",
+        "Coste por GB"
+      ],
+      "descriptions": [
+        "Internxt S3 ofrece cifrado de extremo a extremo integrado y bloqueo de objetos inmutable para proteger los datos de pérdida, corrupción o ransomware. Con una durabilidad de 11×9s, todos los archivos se mantendrán seguros a través de múltiples regiones.",
+        "Internxt S3 es una solución de almacenamiento en la nube 100% activa (hot cloud), por lo que todos los archivos están disponibles de inmediato para su carga o descarga. Esta disponibilidad instantánea garantiza tiempos de respuesta rápidos para todas las cargas de trabajo.",
+        "Internxt S3 utiliza precios de tarifa plana sin cargos ocultos. Los usuarios saben exactamente lo que pagarán cada mes sin tener que preocuparse por costes de solicitudes, descargas o replicación. Esto es más sencillo y predecible que IDrive, donde la facturación puede ser variable y confusa.",
+        "Los usuarios pagan un simple coste por gigabyte con Internxt S3, y el precio no cambia por frecuencia de uso o transferencia. Este predecible modelo reduce los costes totales, a diferencia de IDrive, donde las tarifas de almacenamiento, recuperación y salida de datos afectan el coste por gigabyte."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Elige Internxt, la mejor alternativa a IDrive",
+    "description": "Internxt S3 te da un almacenamiento de objetos asequible con cifrado totalmente privado, software de código abierto y sin costes adicionales de transferencia de datos.",
+    "cta": "Consigue Internxt S3"
+  },
+  "tableSection": {
+    "title": "Elige tu plan",
+    "hotLabel": "Hasta un 80% más barato 🔥",
+    "planTitles": {
+      "header": "Almacenamiento en la nube 100% hot cloud"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Pago por uso",
+      "description": "Paga solo por el almacenamiento que utilices. Sin costes adicionales.",
+      "cta": "Consigue Internxt S3"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Soporte al cliente Premium",
+      "guarantee": "30 días de garantía de devolución del dinero"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es el almacenamiento de objetos?",
+        "answer": [
+          "El almacenamiento de objetos es una forma de almacenar datos como unidades separadas llamadas objetos, cada uno con sus propios metadatos y un identificador único. El almacenamiento de objetos S3 de Internxt ofrece rápido acceso a amplios conjuntos de datos, lo que lo convierte en una solución de almacenamiento en la nube asequible y escalable."
+        ]
+      },
+      {
+        "question": "¿Cuál es la mejor alternativa a IDrive?",
+        "answer": [
+          "Internxt es la mejor alternativa a IDrive si necesitas almacenamiento de objetos con precios predecibles y escalables, y acceso rápido y eficiente a grandes cantidades de datos."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, por lo cual es una solución de almacenamiento de objetos en la nube que cumple con el RGPD y sigue estrictas leyes para garantizar que tus datos y tu privacidad estén protegidos."
+        ]
+      },
+      {
+        "question": "¿Es IDrive más caro que Internxt?",
+        "answer": [
+          "Dado que Internxt ofrece almacenamiento de pago por uso, no hay tarifas adicionales por mover datos dentro o fuera de la nube. Cuanto más utilices IDrive y sus servicios, más costoso puede ser mantener tu almacenamiento."
+        ]
+      },
+      {
+        "question": "¿Cómo contacto al soporte técnico?",
+        "answer": [
+          "Si tienes más preguntas, peticiones o necesitas ayuda, puedes ponerte en contacto a través de hello@internxt.com y nuestro equipo de Customer Success estará encantado de ayudarte."
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "El almacenamiento de objetos de Internxt\n combina seguridad y eficacia",
+    "description": "El almacenamiento de objetos de Internxt es una solución de alto rendimiento y precio asequible que revoluciona el almacenamiento de datos online. Es perfecta para individuos u organizaciones que necesitan una infraestructura segura y fiable a un coste mínimo.",
+    "payAsYouGoCard": {
+      "title": "¡Pago por uso!",
+      "description": "Paga solo por el almacenamiento que usas."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Por TB/Facturado mensualmente",
+      "price": "7",
+      "cta": "Seleccionar plan",
+      "whatsIncluded": {
+        "title": "Qué incluye",
+        "features": [
+          "Facturación mensual",
+          "Cifrado del lado del servidor",
+          "Compatible con la API AWS S3 y de IAM",
+          "Velocidad incrementada",
+          "Almacenamiento flexible",
+          "Código abierto",
+          "Cumple con el RGPD",
+          "Soporte premium al cliente"
+        ]
+      }
+    },
+    "oneTimePayment": "*Se requiere un pago único de 1€ para la verificación de la cuenta"
+  }
+}
