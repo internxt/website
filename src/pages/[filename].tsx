@@ -89,6 +89,7 @@ const LANG_MAP = {
   cninternxtl:'en',
   cooltechzone:'en',
   lifetime:'en',
+  clubic:'fr'
 };
 
 function CombinedSpecialOffer({
@@ -108,7 +109,8 @@ function CombinedSpecialOffer({
     onlyUltimatePlan,
     ultimateAndPremiumPlans,
     annualPlans,
-    lifetimePlans
+    lifetimePlans,
+    isClubic
   } = useOfferConfig(pathname);
   const {
     products,
@@ -181,6 +183,7 @@ function CombinedSpecialOffer({
         percentOff={percentOff}
         darkMode={isDarkMode}
         image={alternativeImages}
+        isClubic={isClubic}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
