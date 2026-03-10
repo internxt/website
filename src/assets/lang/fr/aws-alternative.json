@@ -1,0 +1,246 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3, comme AWS S3 \nmais **privé**",
+    "description": "Le stockage objet à l'usage (pay-as-you-go) jusqu'à 80% moins cher qu'AWS",
+    "getPrivacy": "Passez à Internxt, la meilleure alternative à AWS pour les entreprises",
+    "cta": "Obtenir Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs AWS : aperçu",
+    "description": "Découvrez les différences et caractéristiques clés qui permettent à Internxt de vous redonner le contrôle de vos données.",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Frais de transfert de données",
+        "Prix et stockage",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Support en direct",
+        "Règles de confidentialité",
+        "Lois sur la vie privée"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Chiffré sur votre appareil",
+        "Non",
+        "Tarif fixe à l'utilisation",
+        "Stockage objet, sauvegardes, compatible S3, accès immédiat",
+        "Audits réguliers",
+        "Oui",
+        "Ne peut jamais accéder à vos fichiers",
+        "RGPD, ISO 27001, HIPAA, SOC 2"
+      ],
+      "competitorFeatures": [
+        "Code source fermé",
+        "Chiffré par AWS",
+        "Oui",
+        "Coûts imprévisibles et variables",
+        "Stockage objet, accès occasionnel, Glacier, Deep Archive",
+        "Audits de sécurité réguliers",
+        "Non",
+        "Peut accéder aux fichiers dans certaines circonstances",
+        "Moins de confidentialité: accord EU-US Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Amazon AWS implique des contrôles de sécurité complexes, des coûts élevés et les employés peuvent accéder à vos données.",
+    "description": "Le stockage objet d'Internxt inclut par défaut une sécurité avancée, garde vos fichiers privés et offre des tarifs prévisibles.",
+    "scrollableSection": {
+      "titles": [
+        "Configuration de sécurité complexe",
+        "Coûts élevés pour les grands volumes",
+        "Accès des employés à vos données",
+        "Intégration à l'écosystème Amazon"
+      ],
+      "descriptions": [
+        "La sécurisation d'AWS nécessite la gestion de plusieurs couches (pare-feu, clés, etc.). Une erreur peut exposer vos données.",
+        "Le prix enfle rapidement (stockage, réseau, services associés), rendant la planification financière difficile.",
+        "Les techniciens d'AWS pourraient techniquement accéder aux données utilisateur, posant un risque de confidentialité.",
+        "Le rapprochement avec d'autres services Amazon permet la collecte et la corrélation approfondie des données."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Pourquoi avez-vous besoin d'une alternative à AWS",
+    "description": "Ce qu'AWS démontre en faille se trouve dans la confidentialité. Pour une confidentialité totale et un chiffrement Zero-Knowledge, passez à Internxt.",
+    "cards": {
+      "titles": [
+        "Configuration difficile",
+        "Coûts cachés et imprévisibles",
+        "Téléchargements coûteux"
+      ],
+      "descriptions": [
+        "Mettre en place un stockage avec AWS demande la gestion pure et technique de rôles et tableaux de bord divers.",
+        "AWS facture chaque transfert, la bande passante, la sécurité, rendant la facture finale souvent salée.",
+        "Chaque sortie de données est fortement taxée et ralentit vos opérations par le coût prohibitif de migration."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs AWS",
+    "description": "Internxt garantit une confidentialité totale face à toute attaque informatique via son chiffrement post-quantique.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité absolue",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Le code source d'Internxt est public (GitHub), garantissant l'absence de failles ou d'accès dissimulés."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Chiffrement côté client et clés fournies par le client (SSE-C)."
+          },
+          {
+            "title": "Protection des données",
+            "description": "Basé en Europe, conformité au RGPD avec audit total."
+          },
+          {
+            "title": "Prix accessibles",
+            "description": "Pas de coûts cachés, payez uniquement la capacité dont vous avez besoin."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "AWS : Et votre confidentialité ?",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "Code masqué au grand public et à l'analyse externe."
+          },
+          {
+            "title": "Chiffrement",
+            "description": "Chiffré et contrôlé via AWS."
+          },
+          {
+            "title": "Protection des données",
+            "description": "Soumis à la législation locale de l'endroit de stockage."
+          },
+          {
+            "title": "Basé sur l'utilisation",
+            "description": "Tarification instable sujette aux taxes variées d'usage."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à AWS",
+    "description": "Reprenez, pour de bon, le contrôle de vos précieuses données.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "Stockage sécurisé",
+        "Accès instantané",
+        "Tarification prévisible",
+        "Coût par Go"
+      ],
+      "descriptions": [
+        "Chiffrement de bout en bout et immuabilité pour combattre les ransomwares.",
+        "Stockage 100% chaud pour un accès sans les délais interminables que connaissent S3 Glacier ou Deep Archive.",
+        "Pas de frais variables ou enchevêtrés. Un plan tarifaire linéaire simple.",
+        "Abonnez-vous à un coût mensuel par utilisateur clair."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optez pour Internxt, l'alternative à AWS",
+    "description": "Stockage d'objet simple, chiffré, abordable.",
+    "cta": "Obtenir Internxt S3"
+  },
+  "tableSection": {
+    "title": "Choisissez votre abonnement",
+    "hotLabel": "Jusqu'à 80% d'économies 🔥",
+    "planTitles": {
+      "header": "Vitesse et de gestion de la donnée supérieure"
+    },
+    "billingFrequency": {
+      "annually": "Annuelles",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "À la carte",
+      "description": "Ne payez que l'espace consommé.",
+      "cta": "Obtenir Internxt S3"
+    },
+    "features": {
+      "openSource": "Code public auditable",
+      "premiumSupport": "Aide client Premium",
+      "guarantee": "30 jours garantis ou remboursés"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions ? Réponses",
+    "faq": [
+      {
+        "question": "Qu'est ce que le stockage objet ?",
+        "answer": [
+          "Format idéal pour des volumes de fichiers où les données et métadonnées sont séparées."
+        ]
+      },
+      {
+        "question": "Pourquoi éviter AWS ?",
+        "answer": [
+          "Coût élevé à l'usage, confidentialité réduite, interfaces ultra complexes : Internxt règle ces failles."
+        ]
+      },
+      {
+        "question": "Où sont les serveurs ?",
+        "answer": [
+          "Internxt est basé en Espagne, au respect du RGPD avec des serveurs protégés au niveau européen."
+        ]
+      },
+      {
+        "question": "Quel coût a Internxt vs AWS ?",
+        "answer": [
+          "Jusqu'à 80% de gain financier sans taxe de transfert cachée."
+        ]
+      },
+      {
+        "question": "Me contacter ?",
+        "answer": [
+          "Une aide vous sera apportée via hello@internxt.com"
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "L'innovation en sécurité et stockage fichier",
+    "description": "Outil performant pour indépendants et entités variées.",
+    "payAsYouGoCard": {
+      "title": "Le meilleur investissement",
+      "description": "Zéro frais surprise."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Par To / Mensuel",
+      "price": "7",
+      "cta": "Choisir plan",
+      "whatsIncluded": {
+        "title": "Notre service comporte :",
+        "features": [
+          "Plan Mensuel",
+          "Chiffrement SSE",
+          "Compatibilité protocoles API AWS IAM",
+          "Accès accéléré",
+          "Modèle Open Source transparent",
+          "Conformité RGPD stricte",
+          "Support prioritaire"
+        ]
+      }
+    },
+    "oneTimePayment": "*Frais de 1 € facturés une seule fois pour vérifier votre identité"
+  }
+}

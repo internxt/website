@@ -1,3 +1,5 @@
+import { CloudObjectStorageText } from './cloud-object-storage';
+
 export interface AlternativePageText {
   HeroSection: Section;
   HeaderSection: HeaderSection;
@@ -8,6 +10,7 @@ export interface AlternativePageText {
   CtaSection: Section;
   tableSection: IcedriveAlternativePageTextTableSection;
   FaqSection: FAQSection;
+  PriceCardSection?: CloudObjectStorageText['PriceCardSection'];
 }
 
 export interface Section {

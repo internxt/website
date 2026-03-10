@@ -463,5 +463,30 @@
     "id": "annual",
     "title": "Offre Forfaits Annuels Internxt : Stockage Cloud Sécurisé et Chiffré",
     "description": "Obtenez les forfaits annuels d'Internxt pour un stockage cloud sécurisé et chiffré. Protégez vos fichiers avec la technologie zéro connaissance et la sécurité post-quantique. Économisez plus dès aujourd'hui !"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternative à AWS",
+    "description": "Passez à Internxt pour une alternative à AWS privée et cryptée. Internxt garde vos données privées, cryptées et accessibles uniquement par vous."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Alternative à Microsoft Azure",
+    "description": "Passez à Internxt S3 pour une alternative open-source à Azure. Stockage d'objets cloud abordable et sécurisé pour les entreprises."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Alternative à Backblaze",
+    "description": "Passez à Internxt S3 pour une alternative open-source à Backblaze. Stockage d'objets cloud abordable et sécurisé pour les entreprises."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — Alternative à IDrive e2",
+    "description": "Passez à Internxt S3 pour une alternative open-source à IDrive. Stockage d'objets cloud abordable et sécurisé pour les entreprises."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Alternative à Google Cloud",
+    "description": "Passez à Internxt S3 pour une alternative open-source à Google Cloud. Stockage d'objets cloud abordable et sécurisé pour les entreprises."
   }
 ]

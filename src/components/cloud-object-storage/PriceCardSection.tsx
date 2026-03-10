@@ -14,7 +14,7 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
   const router = useRouter();
   const iconMap = [HandCoins, LockSimple, CodeBlock, Gauge, Resize, Code, Star, Headset];
   return (
-    <section className="overflow-hidden bg-white px-5 py-20" id="storageSection">
+    <section className="overflow-hidden bg-white px-5 py-20" id="billingButtons">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex max-w-[887px] flex-col items-center gap-6 text-center">

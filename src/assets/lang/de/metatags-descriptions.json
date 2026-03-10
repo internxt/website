@@ -473,5 +473,30 @@
     "id": "annual",
     "title": "Angebot für Internxt-Jahrestarife: Sicherer verschlüsselter Cloud-Speicher",
     "description": "Holen Sie sich die Jahrestarife von Internxt für sicheren, verschlüsselten Cloud-Speicher. Schützen Sie Ihre Dateien mit Zero-Knowledge-Technologie und Post-Quanten-Sicherheit. Sparen Sie heute noch mehr!"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternative zu AWS",
+    "description": "Wechseln Sie zu Internxt für eine private und verschlüsselte AWS-Alternative. Internxt hält Ihre Daten privat, verschlüsselt und nur für Sie zugänglich."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Alternative zu Microsoft Azure",
+    "description": "Wechseln Sie zu Internxt S3 für eine Open-Source-Alternative zu Azure. Erschwinglicher, sicherer Cloud-Objektspeicher für Unternehmen."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Alternative zu Backblaze",
+    "description": "Wechseln Sie zu Internxt S3 für eine Open-Source-Alternative zu Backblaze. Erschwinglicher, sicherer Cloud-Objektspeicher für Unternehmen."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — Alternative zu IDrive e2",
+    "description": "Wechseln Sie zu Internxt S3 für eine Open-Source-Alternative zu IDrive. Erschwinglicher, sicherer Cloud-Objektspeicher für Unternehmen."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Alternative zu Google Cloud",
+    "description": "Wechseln Sie zu Internxt S3 für eine Open-Source-Alternative zu Google Cloud. Erschwinglicher, sicherer Cloud-Objektspeicher für Unternehmen."
   }
 ]

@@ -1,0 +1,247 @@
+{
+  "HeroSection": {
+    "title": "Internxt S3，像 Google Cloud\n但**私密**",
+    "description": "即用即付的对象存储，比 Google Cloud 便宜高达 80%",
+    "getPrivacy": "切换到 Internxt，最好的企业云存储及 Google Cloud 替代方案",
+    "cta": "获取 Internxt S3"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Google Cloud 概览",
+    "description": "了解关键功能和差异，这些功能使 Internxt 能够让您重新掌控自己的数据",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密",
+        "数据传输费",
+        "定价与存储",
+        "特征",
+        "安全审计",
+        "实时在线支持",
+        "隐私政策",
+        "隐私法"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "没有",
+        "即用即付固定费用",
+        "对象存储、备份、兼容 S3、即时数据访问",
+        "定期安全审计",
+        "有",
+        "永远无法访问您的文件",
+        "GDPR、ISO 27001、HIPAA、SOC 2"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由 Google Cloud 加密",
+        "有",
+        "不可预测的变动成本",
+        "对象存储、低频访问存储、Glacier、深度归档",
+        "定期安全审计",
+        "没有",
+        "在特定情况下可以访问文件。",
+        "隐私较少：欧盟-美国数据隐私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Google Cloud 涉及复杂的安全控制、高昂的成本，并且员工可以访问您的数据。",
+    "description": "Internxt 对象存储默认包含高级安全保护，使您的文件保持私密，并提供可预测的、经济实惠的计划。",
+    "scrollableSection": {
+      "titles": [
+        "复杂的安全配置",
+        "大规模下成本高昂",
+        "员工访问您的数据",
+        "与 Google 生态系统集成"
+      ],
+      "descriptions": [
+        "保护 Google Cloud 需要管理多层设置，包括防火墙、加密密钥和权限。设置不当的权限、管理不善的密钥或被忽视的网络策略都可能导致数据暴露。用户必须不断监控和调整设置以维护安全。",
+        "大量使用 Google Cloud 可能会迅速变得昂贵。存储、网络传输和额外服务的价格会随着时间累积。未经仔细规划的扩展可能会导致意外开支，使长期财务规划变得困难。",
+        "Google Cloud 员工和承包商可能会出于维护或合规目的访问用户数据。即使访问受到控制，也始终存在意外暴露的风险。敏感文件在技术上可以被其他人访问，这可能会引起注重隐私的个人或组织的担忧。",
+        "与其它 Google 服务的集成意味着可以收集和合并有关用户行为、存储习惯和应用程序使用情况的信息。关心隐私的用户可能会发现很难限制追踪或防止他们的数据在多种情况下被使用。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要 Google Cloud 的替代方案",
+    "description": "Google Cloud在安全性方面表现出色的地方，在隐私方面却不尽如人意。为了获得完全的隐私保护，请结合 Internxt 的零知识加密实现绝对安全。",
+    "cards": {
+      "titles": [
+        "设置复杂",
+        "隐藏且不可预测的成本",
+        "下载费用昂贵"
+      ],
+      "descriptions": [
+        "在 Google Cloud 上设置存储涉及浏览多个仪表板和安全系统。用户必须手动管理角色、访问规则和区域。简单的任务通常需要技术知识，使平台对初学者来说很困难并减慢开发速度。",
+        "Google Cloud 针对存储、请求、数据传输、监控、备份和安全功能分别收费。这些小额费用会迅速累积，且难以追踪。任何流量或使用的增加都可能导致账单大幅激增，使得企业的长期预算变得不可靠。",
+        "Google Cloud 对将数据传出其平台收取高额费用。每次文件下载、备份、恢复或迁移都会增加账单。这种定价模式有效地将数据锁定在平台内，并对高使用率工作负载进行惩罚。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Google Cloud",
+    "description": "得益于零知识、后量子加密技术，Internxt 提供无与伦比的隐私和安全性，为你提供抵御网络攻击的最佳保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt\n完全的隐私、透明度和信任",
+        "features": [
+          {
+            "title": "开源",
+            "description": "Internxt 的代码是开放的，任何人都可以检查并确保其安全性（通过我们的 GitHub）。这种透明度保证了没有隐藏的漏洞。"
+          },
+          {
+            "title": "加密",
+            "description": "您的数据在客户端以及使用客户提供的加密密钥 (SSE-C) 的服务器端进行加密。"
+          },
+          {
+            "title": "数据保护",
+            "description": "Internxt 总部设在欧洲，遵守 GDPR、HIPAA、ISO 27001 和 SOC 2 规定。平台经过全面审计，确保您的数据不会被外部访问。"
+          },
+          {
+            "title": "价格合理、可预测",
+            "description": "只为您使用的存储空间付费，根据需要随时升级或降级，不用担心隐藏费用或长期合同"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Google Cloud\n隐私如何保障？",
+        "features": [
+          {
+            "title": "闭源软件",
+            "description": "Google Cloud 对公众隐藏了其源代码。如果不透明，就无法确定 Google Cloud 如何处理或保护您的数据。"
+          },
+          {
+            "title": "加密",
+            "description": "由 Google Cloud 加密，或者由客户配置和管理"
+          },
+          {
+            "title": "数据保护",
+            "description": "Google Cloud 提供多个区域的存储，因此适用该区域的合规性法律。"
+          },
+          {
+            "title": "按用量计费",
+            "description": "费用取决于多种因素并在这些因素基础上增加，这不仅容易导致成本高昂且很快变得难以管理。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Google Cloud 的最佳替代品",
+    "description": "Internxt 云盘提供一整套专为让您重新掌控在线隐私而设计的产品。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "storage",
+        "access",
+        "pricing",
+        "cost"
+      ],
+      "titles": [
+        "安全持久的存储",
+        "即时访问",
+        "简单、可预测的定价",
+        "每 GB 的成本"
+      ],
+      "descriptions": [
+        "Internxt S3 提供内置的端到端加密和不可变的对象锁定功能，以保护数据免受丢失、损坏或勒索软件的侵害。具备 11 个 9的持久性，所有文件在多个地区都得到安全保护。",
+        "Internxt S3 是一项 100% 的热云存储解决方案，因此所有文件立即可供上传或下载。与其他存储服务（例如 Microsoft S3 Glacier，由于访问数据可能需要数小时）相比，没有冷存储或延迟检索。这种即时可用性可确保所有工作负载的快速响应时间。",
+        "Internxt S3 采用固定费率统一定价，没有隐藏的费用。用户清楚地知道每月要支付的具体费用，不需要担心请求费、下载费或复制成本。这比 Microsoft S3 更简单且更容易预测，因为后者的计费可能令人困惑且是可变的。",
+        "用户只需为 Internxt S3 支付简单的每 GB 存储费用，而价格不会基于访问频率或传输频率而变化。这种具有预见性的收费模式有助于减少总开支；这与 Microsoft S3 的模式有很大不同，后者的存储费、检索费和输出费都会影响其每 GB 的费率成本。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为最佳 Google Cloud 替代方案",
+    "description": "Internxt S3 为您提供实惠的对象存储服务，有完整的私有加密、开源软件，且不收取额外的数据传输费。",
+    "cta": "获取 Internxt S3"
+  },
+  "tableSection": {
+    "title": "选择您的计划",
+    "hotLabel": "最高可便宜 80% 🔥",
+    "planTitles": {
+      "header": "卓越的数据管理和速度"
+    },
+    "billingFrequency": {
+      "annually": "每年",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "即用即付",
+      "description": "只为您使用的存储付费。无额外费用。",
+      "cta": "获取 Internxt S3"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "什么是对象存储？",
+        "answer": [
+          "对象存储是一种以离散的单元（即“对象”）存储数据的方法，每个对象都有自己的元数据和唯一标识符。Internxt S3 对象存储提供对大型数据集的快速访问，使其成为经济实惠且可扩展的云存储解决方案。"
+        ]
+      },
+      {
+        "question": "Google Cloud 收费更合理的最佳替代方案是什么？",
+        "answer": [
+          "如果您需要价格可预测且可扩展的对象存储，并能快速有效地访问大量数据，Internxt 是最好的 Google Cloud 替代方案。"
+        ]
+      },
+      {
+        "question": "Internxt 的总部在哪里？",
+        "answer": [
+          "Internxt 的总部设在西班牙巴伦西亚，这使其能够符合 GDPR 规范。这是一种符合严格法律的云端对象存储解决方案，以确保您的数据和隐私受到保护。"
+        ]
+      },
+      {
+        "question": "Google Cloud 比 Internxt 更昂贵吗？",
+        "answer": [
+          "由于 Internxt 提供即用即付计费存储模式，因此移入或移出云端数据不产生额外费用。此模式使得 Internxt S3 相比起 Amazon、Azure 或 Google Cloud 要便宜至少 80% 以上。"
+        ]
+      },
+      {
+        "question": "我如何联系客户支持团队？",
+        "answer": [
+          "如果还有任何其他问题，或者是有所要求甚至需要客服支持帮助的情况，您可以发送您的电子邮件发到 hello@internxt.com 这个邮箱，因为我们的用户成功专家团队是很乐于帮助以及排解您这些情况以及顾虑！"
+        ]
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt 对象云存储\n 将安全与高效结合",
+    "description": "Internxt 对象存储是一种经济实惠且高性能的解决方案，它从根本上改变了在线存储数据的方式和理念，因此完美适用于需要更有效、可靠同时也需要有较低维护成本为基础的网络架构下的各种公司个人组织使用！",
+    "payAsYouGoCard": {
+      "title": "即用即付！",
+      "description": "只需为您当前正在使用的储存量金额付费！"
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "每 TB / 每月计费",
+      "price": "7",
+      "cta": "选择计划",
+      "whatsIncluded": {
+        "title": "包含的功能",
+        "features": [
+          "每月计费",
+          "服务器端加密",
+          "兼容 AWS S3 及 IAM API",
+          "速度提升",
+          "灵活存储",
+          "开源",
+          "符合 GDPR 合规性",
+          "高级卓越级别的优质技术支持售后咨询体系以及专员反馈方案应对等措施机制为代表的专业完善售后支援。"
+        ]
+      }
+    },
+    "oneTimePayment": "*需要支付 1 欧元的一次性费用才能进行账户验证使用"
+  }
+}
