@@ -18,8 +18,7 @@ import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 interface DriveProps {

@@ -17,7 +17,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface PrivacyProps {

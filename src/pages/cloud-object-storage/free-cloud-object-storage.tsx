@@ -12,8 +12,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 interface FreeCloudObjectStorageProps {

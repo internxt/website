@@ -13,8 +13,7 @@ import SynologyQNAPSection from '@/components/nas/SynologyQNAPSection';
 import WhatIsNASSection from '@/components/shared/components/TitleAndDescriptionSection';
 import HeroSection from '@/components/nas/HeroSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 interface NASPageProps {

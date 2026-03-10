@@ -11,8 +11,7 @@ import WhatIsOSS from '@/components/open-source/WhatIsOSS';
 import CtaSection from '@/components/shared/CtaSection';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;

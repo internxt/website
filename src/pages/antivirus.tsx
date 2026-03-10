@@ -18,8 +18,6 @@ import HeroSection from '@/components/antivirus/HeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
 
 
 interface AntivirusProps {

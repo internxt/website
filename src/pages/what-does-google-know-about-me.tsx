@@ -12,8 +12,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CtaSection from '@/components/affiliates/CtaSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 const URL_REDIRECT = 'https://internxt.com/pricing';

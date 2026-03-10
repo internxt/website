@@ -24,7 +24,6 @@ import FeaturesSliderImg from '@/components/metadata-remover/FeaturesSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 const HeroSection = dynamic(() => import('@/components/metadata-remover/HeroSection'), { ssr: false });
 

@@ -17,8 +17,6 @@ import SecureAndManageSection from '@/components/private-cloud-storage-for-video
 
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
 
 
 interface CloudStorageForVideosProps {

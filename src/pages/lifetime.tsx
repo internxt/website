@@ -13,8 +13,7 @@ import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+  
 
 
 interface LifetimeSpecialProps {

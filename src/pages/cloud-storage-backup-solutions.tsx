@@ -7,7 +7,6 @@ import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
-
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
@@ -18,7 +17,6 @@ import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSe
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface PrivacyProps {

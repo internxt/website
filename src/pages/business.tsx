@@ -20,8 +20,7 @@ import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
 import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 interface BusinessProps {

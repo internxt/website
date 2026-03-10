@@ -15,7 +15,7 @@ export const Breadcrumb = ({ items, className = '' }: BreadcrumbProps) => {
     <nav className={`sr-only ${className}`} aria-label="Breadcrumb">
       <ol className="flex items-center flex-wrap gap-2">
         {items.map((item, index) => (
-          <li key={index}>
+          <li key={item.url}>
             {index > 0 && <span>/</span>}
             {index === items.length - 1 ? (
               <span>

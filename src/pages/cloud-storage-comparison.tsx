@@ -16,7 +16,6 @@ import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 const URL_REDIRECT = 'https://internxt.com/specialoffer';

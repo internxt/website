@@ -12,8 +12,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import HorizontalScrollableSectionWithPhotosSection from '@/components/meet/HorizontalScrollableSection';
 import AccordionSection from '@/components/meet/AccordionSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+
 
 
 interface CleanerProps {

@@ -18,7 +18,6 @@ import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSe
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface PrivacyProps {

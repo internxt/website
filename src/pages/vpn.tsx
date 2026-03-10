@@ -20,8 +20,6 @@ import { getImage } from '@/lib/getImage';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
 import { Breadcrumb } from '@/components/shared/Breadcrumb';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
 
 
 interface VPNProps {
