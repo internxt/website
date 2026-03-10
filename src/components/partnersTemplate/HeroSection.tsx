@@ -23,6 +23,7 @@ interface HeroSectionForPartnerProps {
   image?: any;
   isValentinesMode?: boolean;
   isClubic?: boolean;
+  isUltimatePlan?: boolean;
 }
 
 export default function HeroSection({
@@ -33,6 +34,7 @@ export default function HeroSection({
   isValentinesMode = false,
   image = 'internxt-private-cloud',
   isClubic = false,
+  isUltimatePlan = false
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -59,7 +61,7 @@ export default function HeroSection({
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
-  
+  const redirection= isUltimatePlan ? 'https://drive.internxt.com/checkout?planId=price_1T1xRhFAOdcgaBMQEjJKKoRN&couponCode=CLOUDOFF&planType=individual&currency=eur&mode=payment' : '#billingButtons';
 
   return (
     <section
@@ -165,7 +167,7 @@ export default function HeroSection({
         <div className="flex h-min w-full flex-col justify-center gap-4">
           <div className="flex w-full flex-row items-start gap-4">
             <Link
-              href={'#billingButtons'}
+              href={redirection}
               className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary-dark"
             >
               {textContent.claimDeal}

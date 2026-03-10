@@ -183,6 +183,7 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         image={alternativeImages}
         isClubic={isClubic}
+        isUltimatePlan={onlyUltimatePlan}
       />
 
       {/*<ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />*/}
