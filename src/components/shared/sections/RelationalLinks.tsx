@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { LinkTo } from '../../drive/components/LinkTo';
 
 interface Card {
@@ -25,12 +26,15 @@ const shuffleData = (data: Card[]): Card[] => {
 const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
 
+  const router = useRouter();
+
   useEffect(() => {
     if (textContent?.links) {
-      const shuffledLinks = shuffleData(textContent.links);
-      setCards(shuffledLinks.slice(0, 3));
+      const filteredLinks = textContent.links.filter((link) => link.link !== router.asPath);
+      const shuffledLinks = shuffleData(filteredLinks);
+      setCards(shuffledLinks.slice(0, 9));
     }
-  }, [textContent]);
+  }, [textContent, router.asPath]);
 
   if (cards.length === 0) return null;
 
