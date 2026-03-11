@@ -36,9 +36,9 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
 
   return (
     <section className="mx-auto flex max-w-7xl flex-col items-center justify-center px-6 py-20 lg:px-0">
-      <h2 className="mb-14 text-center text-4xl font-semibold text-gray-100 lg:text-5xl">
+      <p className="mb-14 text-center text-4xl font-semibold text-gray-100 lg:text-5xl">
         {textContent.title}
-      </h2>
+      </p>
       <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <div
