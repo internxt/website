@@ -43,7 +43,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
         {cards.map((card) => (
           <div
             key={card.link}
-            className="flex w-full max-w-[350px] flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 p-10"
+            className="flex w-full max-w-[350px] flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 p-10 transition-colors hover:hover:bg-neutral-20"
           >
             <LinkTo linkToRedirect={card.link} text={card.cta} />
           </div>
