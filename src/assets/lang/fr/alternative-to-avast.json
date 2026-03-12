@@ -1,0 +1,239 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Comme Avast,\n mais **privé**",
+    "description": "Passez à Internxt, la meilleure alternative à Avast\n qui respecte votre vie privée",
+    "getPrivacy": " Choisissez votre forfait et profitez de {{percentage}}% de réduction ",
+    "cta": "Faire le changement"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs Avast",
+    "description": "Découvrez les fonctionnalités clés et les différences qui permettent à Internxt de vous rendre le contrôle sur vos données",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chats cryptés",
+        "Chats examinés par des humains",
+        "Tarifs et stockage",
+        "Autres fonctionnalités",
+        "Audits de sécurité",
+        "Apprentissage automatique",
+        "Politique de confidentialité",
+        "Lois sur la protection de la vie privée"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Oui, crypté sur votre appareil",
+        "Jamais",
+        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
+        "Audits de sécurité réguliers",
+        "Les chats ne sont jamais utilisés pour entraîner notre IA",
+        "Ne peut jamais accéder à vos chats",
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+      ],
+      "competitorFeatures": [
+        "Code propriétaire",
+        "Pas de chiffrement de bout en bout",
+        "Oui",
+        "Forfait gratuit ou 30 €/mois",
+        "Fonctionnalités d'IA avancées, mode vocal, génération d'images illimitée",
+        "Audits de sécurité réguliers",
+        "Vos chats et publications sur les réseaux sociaux sont utilisés pour entraîner et améliorer Grok",
+        "Des humains peuvent accéder à vos chats et les examiner",
+        "Moins de confidentialité : EU-U.S. Data Privacy Framework"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Pourquoi vous avez besoin d'une alternative à Avast",
+    "description": "Avast n'est qu'une option pour protéger votre appareil contre les logiciels malveillants. Pour une confidentialité totale et une suite complète de produits, passez à Internxt pour une alternative complète à Avast avec Drive, Cleaner, et plus encore.",
+    "scrollableSection": {
+      "titles": [
+        "Collecte de données",
+        "Manque de transparence",
+        "Impact sur les performances de l'appareil",
+        "Suite de produits limitée"
+      ],
+      "descriptions": [
+        "Entre au moins 2014 et janvier 2020, Avast aurait collecté des informations de navigation détaillées via ses antivirus et extensions de navigateur et les aurait vendues à des tiers à des fins publicitaires et analytiques sans notification ou consentement adéquat. Cela incluait les requêtes de recherche et les URL visitées.",
+        "Comme Avast n'est pas open source, vous devez faire confiance aux affirmations de l'entreprise concernant la confidentialité, la télémétrie et les contrôles de sécurité internes, car les experts externes ne peuvent pas librement examiner le code pour y déceler des comportements cachés, des portes dérobées ou des implémentations cryptographiques faibles.",
+        "Avast peut impacter les performances de l'appareil lors des analyses complètes et de la protection en temps réel, provoquant une utilisation élevée de la mémoire, des ralentissements, des connexions réseau retardées ou des lags du système sur certains matériels. Selon votre appareil, vous pourriez constater une dégradation notable des performances qui peut faire plus de mal que de bien.",
+        "Avast propose des produits limités par rapport à Internxt Drive, créant une dépendance vis-à-vis d'un seul abonnement récurrent. Si vous avez besoin d'une protection avancée de stockage cloud pour votre appareil combinée à d'autres fonctionnalités, vous devez chercher ailleurs et potentiellement payer pour plus d'abonnements."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Fonctionnalités",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open source et audité",
+        "Suite complète de produits",
+        "Forfaits abordables"
+      ],
+      "descriptions": [
+        "Internxt est entièrement open source et audité de manière indépendante, vous pouvez donc être assuré qu'il n'y a pas de portes dérobées à vos données et que vos informations sont traitées de manière transparente. Tout le monde peut examiner le code pour un maximum de confiance et de responsabilité.",
+        "Internxt propose Cleaner et un écosystème de confidentialité complet pour vous offrir tout ce dont vous avez besoin pour nettoyer les fichiers inutiles de votre appareil, stocker et partager des fichiers avec un chiffrement zero-knowledge avec Drive, et plus d'avantages, y compris VPN, Meet, Mail, et plus encore.",
+        "Démarrez avec Internxt pour seulement 1,60 € par mois, ou évitez les abonnements avec nos forfaits à vie abordables pour payer une seule fois et utiliser pour toujours. Avec les forfaits à vie, vous accédez aux fonctionnalités de votre forfait pour toujours, et vous pouvez mettre à jour pour ajouter plus de stockage quand vous le souhaitez."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Avast",
+    "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement zero-knowledge et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt AI rend son code ouvert à tous pour examen via GitHub, garantissant la transparence et empêchant les vulnérabilités cachées."
+          },
+          {
+            "title": "Chiffrement Zero-knowledge",
+            "description": "Vos chats sont cryptés côté client, garantissant que vous seul pouvez y accéder."
+          },
+          {
+            "title": "Basé en Europe",
+            "description": "Internxt est basé en Espagne et respecte le RGPD, HIPAA, ISO 27001 et SOC 2, garantissant de strictes protections de la vie privée."
+          },
+          {
+            "title": "Forfaits gratuits et abordables",
+            "description": "Internxt AI est gratuit et peut être combiné avec les forfaits à vie Internxt Drive jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Grok : Qu'en est-il de votre vie privée ?",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "Les anciennes versions de Grok étaient open source, mais les versions plus récentes sont propriétaires, ce qui rend difficile de vérifier comment les données sont traitées ou protégées."
+          },
+          {
+            "title": "Pas de chiffrement de bout en bout",
+            "description": "X conserve l'accès au chiffrement, ce qui signifie que les chats pourraient théoriquement être consultés suite à des demandes légales ou internes."
+          },
+          {
+            "title": "Chats stockés aux États-Unis",
+            "description": "Les données stockées dans le cloud de X sont soumises aux lois de surveillance américaines qui peuvent autoriser l'accès sous certaines conditions."
+          },
+          {
+            "title": "Basé sur l'abonnement",
+            "description": "Disponible avec un forfait gratuit ou un accès premium à 30 €/mois."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à Grok",
+    "description": "Internxt offre une suite complète de produits aux côtés de son IA privée pour vous offrir une alternative à Grok sécurisée.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Outils avancés"
+      ],
+      "descriptions": [
+        "Internxt Drive propose un stockage cloud sécurisé, avec chiffrement zero-knowledge et post-quantique, partage avancé, versionnage, support NAS et rclone.",
+        "Internxt Antivirus est directement intégré à votre application pour vous protéger contre les logiciels malveillants, les ransomwares et les logiciels espions avec des analyses complètes ou personnalisées.",
+        "Le VPN d'Internxt crypte votre connexion, bloque les publicités et les trackers, et protège votre identité lors de votre navigation en ligne.",
+        "Internxt Cleaner vous aide à identifier et supprimer les fichiers inutiles ou en double pour garder votre stockage organisé et efficace.",
+        "Internxt Meet permet des appels vidéo sécurisés et privés, protégés par un chiffrement post-quantique et exempts de trackers ou de publicités.",
+        "Disponible sur Windows, Mac, Linux et mobile, avec support WebDAV, Rclone et NAS pour les utilisateurs avancés."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choisissez Internxt pour la meilleure alternative à Avast",
+    "description": "Internxt vous offre un chiffrement privé complet par défaut, un logiciel open source transparent et une suite de confidentialité complète pour garder vos données et fichiers en sécurité en ligne.",
+    "cta": "Faire le changement"
+  },
+  "tableSection": {
+    "title": "Votre allié confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction 🔥",
+    "planTitles": {
+      "header": "Votre allié confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Utilisez Internxt AI gratuitement avec des conversations privées cryptées",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "openSource": "Open-source et audité",
+      "premiumSupport": "Service client premium",
+      "guarantee": "Garantie satisfait ou remboursé de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sûre et plus privée à Avast ?",
+        "answer": [
+          "Oui, Internxt utilise un chiffrement post-quantique et zero-knowledge qui garantit que personne d'autre que vous ne peut voir vos fichiers.",
+          "Internxt Drive inclut VPN, Antivirus, Cleaner, Meet et Mail, vous offrant plus de services qu'Avast pour vous garantir la meilleure sécurité et confidentialité en ligne."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-ce plus sûr ?",
+        "answer": [
+          "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister à de puissantes attaques quantiques.",
+          "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre forfait de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans coût supplémentaire."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir que vos données et votre vie privée sont protégées."
+        ]
+      },
+      {
+        "question": "Avast est-il plus cher qu'Internxt ?",
+        "answer": [
+          "Avec votre réduction exclusive de 87%, tous nos forfaits sont moins chers que les options tarifaires d'Avast actuellement disponibles, avec l'avantage d'offrir bien plus de fonctionnalités."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de Customer Success se fera un plaisir de vous aider."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "answer": [
+          "Oui, vous pouvez mettre à jour votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau forfait sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Crypto-monnaie et Klarna."
+        ]
+      }
+    ]
+  }
+}
