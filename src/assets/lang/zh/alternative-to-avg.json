@@ -1,0 +1,214 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 AVG，\n但更**私密**",
+    "description": "切换到 Internxt，这是最尊重您隐私的 AVG 最佳替代方案",
+    "getPrivacy": " 选择您的计划并享受 {{percentage}}% 的折扣  ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 AVG 概览",
+    "description": "了解 Internxt 如何通过关键功能和差异化设计为您夺回数据控制权",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "数据隐私",
+        "信息采集",
+        "价格与存储空间",
+        "其他功能",
+        "安全审计",
+        "系统性能",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "端到端加密",
+        "极简数据采集",
+        "免费，高达 5TB 的终身存储空间",
+        "Internxt AI、Drive、VPN、Antivirus、Cleaner、Meet、Mail 和 Send",
+        "定期安全审计",
+        "极低系统占用",
+        "始终无法访问您的文件",
+        "全面隐私保护：GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "无数据加密",
+        "大量遥测数据采集",
+        "强制年度订阅",
+        "基础防病毒保护",
+        "定期安全审计",
+        "设备运行变慢",
+        "曾有数据出售记录",
+        "隐私保护较弱：受美国法律限制"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "为什么您需要 AVG 的替代方案",
+    "description": "AVG 只是保护设备的方案之一。为了获得真正的隐私保护和全套工具，请切换到 Internxt。",
+    "scrollableSection": {
+      "titles": [
+        "数据出售历史",
+        "闭源软件",
+        "性能影响",
+        "产品线有限"
+      ],
+      "descriptions": [
+        "AVG（隶属于 Gen Digital）过去曾因通过子公司收集并转售用户浏览数据而受到批评。",
+        "作为专有软件，用户无法独立审计其代码以验证有哪些数据被提取以及如何处理。",
+        "AVG 的实时监控和扫描可能会消耗大量 CPU 和内存，影响电脑速度和电池寿命。",
+        "AVG 几乎只关注安全。如果您需要安全云存储或无隐藏费用的 VPN，Internxt 是理想之选。\n侵扰式广告\n许多用户抱怨 AVG 会不断弹出通知，催促购买 Premium 版本或其他相关产品。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "功能",
+    "description": "",
+    "cards": {
+      "titles": [
+        "开源且经过审计",
+        "全套产品线",
+        "实惠的价格"
+      ],
+      "descriptions": [
+        "Internxt 完全开源并经过独立审计，确保隐私至上。",
+        "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理、存储和共享零知识加密文件。",
+        "每月仅需 1.60 欧元即可开始，或选择终身计划以永久避开订阅费。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs AVG",
+    "description": "得益于零知识加密和后量子加密，Internxt 提供了无与伦比的隐私保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隐私、透明和信任",
+        "features": [
+          {
+            "title": "开源软件",
+            "description": "Internxt 在 GitHub 上公开其代码，确保透明度。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的文件在本地加密，确保只有您自己可以访问。"
+          },
+          {
+            "title": "总部在欧洲",
+            "description": "总部位于西班牙，严格遵循 GDPR 以及相关隐私法规。"
+          },
+          {
+            "title": "免费与实惠的计划",
+            "description": "以 {{percentage}}% 的折扣通过终身计划永久访问我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "AVG：您的隐私状况如何？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "闭源软件难以验证用户数据的真实处理情况。"
+          },
+          {
+            "title": "无端到端加密",
+            "description": "不为终端用户提供具端到端加密的云存储方案。"
+          },
+          {
+            "title": "隐私争议",
+            "description": "过去曾因保护用户隐私不力而受到外界批评。"
+          },
+          {
+            "title": "订阅制",
+            "description": "需要定期付费以维持实时防护功能。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 AVG 的最佳替代方案",
+    "description": "Internxt 提供全套隐私保护产品，为您提供安全的替代选择。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "高级工具"
+      ],
+      "descriptions": [
+        "零知识及后量子加密的云存储。",
+        "内置恶意软件防护，支持全面扫描。",
+        "Internxt VPN 加密您的连接并提供匿名保护。",
+        "Internxt Cleaner 通过清理文件优化您的存储空间。",
+        "后量子技术保护的私密视频通话。",
+        "支持所有主流平台并提供专家支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为 AVG 的最佳替代方案",
+    "description": "Internxt 为您提供全方位私密加密、透明软件和全套隐私产品。",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的一站式隐私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隐私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "终身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费使用具有隐私工具和加密功能的 Internxt",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 AVG 更安全？",
+        "answer": [
+          "是的，Internxt 采用零知识加密并且是完全开源的。",
+          "Internxt 集成了 Drive、VPN 和 Cleaner 以提供一站式安全保护。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": [
+          "总部位于西班牙瓦伦西亚，严格遵循 GDPR。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "请联系 hello@internxt.com，我们的团队将竭诚为您服务。"
+        ]
+      }
+    ]
+  }
+}
