@@ -1,0 +1,214 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Wie Norton,\n aber **privat**",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu Norton, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie {{percentage}}% Rabatt  ",
+    "cta": "Jetzt wechseln"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. Norton im Überblick",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Datenschutz",
+        "Datenerfassung",
+        "Preise und Speicher",
+        "Weitere Funktionen",
+        "Sicherheitsaudits",
+        "Systemleistung",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Ende-zu-Ende-Verschlüsselung",
+        "Minimale Datenerfassung",
+        "Kostenlos, lebenslanger Speicher bis zu 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail und Send",
+        "Regelmäßige Sicherheitsaudits",
+        "Geringe Systembelastung",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "Volle Privatsphäre: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Keine Datenverschlüsselung",
+        "Massive Datenerfassung",
+        "Jährliches Abonnement",
+        "Basis-Antivirenschutz",
+        "Regelmäßige Sicherheitsaudits",
+        "Hoher Ressourcenverbrauch",
+        "Schwer zu deinstallieren",
+        "Weniger Datenschutz: Unterliegt US-Gesetzen"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Warum Sie eine Norton-Alternative brauchen",
+    "description": "Norton ist nur eine Option zum Schutz Ihres Geräts. Für echte Privatsphäre und eine komplette Produktpalette wechseln Sie zu Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Massive Datenerfassung",
+        "Closed-Source-Software",
+        "Einfluss auf die Leistung",
+        "Begrenzte Produktpalette"
+      ],
+      "descriptions": [
+        "Norton (Gen Digital) sammelt umfangreiche Daten über Nutzerverhalten und Geräte, was die individuelle Privatsphäre beeinträchtigt.",
+        "Da es sich um proprietäre Software handelt, kann der Code von Norton nicht öffentlich geprüft werden, um den tatsächlichen Umgang mit Daten zu verifizieren.",
+        "Norton ist bekannt dafür, viele Systemressourcen zu verbrauchen, was den Systemstart verlangsamen und die Gesamtleistung beeinträchtigen kann.",
+        "Norton bietet einen eingeschränkten Ansatz. Für sicheren Cloud-Speicher oder private Videotelefonie ist Internxt die überlegene Alternative.\nVPN-Datenlimits\nDie integrierte VPN von Norton hat oft Datenlimits oder Geschwindigkeitsbeschränkungen in Basisplänen, im Gegensatz zur Flexibilität von Internxt."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funktionen",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open-Source und geprüft",
+        "Komplette Produktpalette",
+        "Erschwingliche Pläne"
+      ],
+      "descriptions": [
+        "Internxt ist vollständig Open-Source und wird unabhängig geprüft, um sicherzustellen, dass es keine Hintertüren zu Ihren Daten gibt.",
+        "Internxt bietet Cleaner und ein komplettes Datenschutz-Ökosystem zum Reinigen, Speichern und Teilen mit Zero-Knowledge-Verschlüsselung.",
+        "Starten Sie mit Internxt für nur 1,60 € im Monat oder wählen Sie unsere günstigen Lifetime-Pläne."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. Norton",
+    "description": "Internxt bietet dank Zero-Knowledge- und Post-Quanten-Verschlüsselung unübertroffene Privatsphäre und Sicherheit.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Volle Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Internxt öffnet seinen Code auf GitHub für jeden zur Prüfung, um Transparenz zu gewährleisten."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Dateien werden clientseitig verschlüsselt, sodass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Sitz in Europa",
+            "description": "Sitz in Spanien; erfüllt die DSGVO und andere strenge Datenschutzvorgaben."
+          },
+          {
+            "title": "Kostenlose und günstige Pläne",
+            "description": "Greifen Sie mit Lifetime-Plänen und {{percentage}}% Rabatt dauerhaft auf unsere Dienste zu."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Norton: Wie steht es um Ihre Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Geschlossener Quellcode macht es schwierig zu prüfen, wie Daten wirklich geschützt werden."
+          },
+          {
+            "title": "Keine Ende-zu-Ende-Verschlüsselung",
+            "description": "Bietet keine Lösungen für verschlüsselten Speicher mit E2EE für Endnutzer an."
+          },
+          {
+            "title": "Sitz in den USA",
+            "description": "Gesammelte Daten unterliegen den Überwachungsgesetzen der Vereinigten Staaten."
+          },
+          {
+            "title": "Abonnementmodell",
+            "description": "Erfordert regelmäßige und oft teure Verlängerungen, um den Schutz aktiv zu halten."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu Norton ist",
+    "description": "Internxt bietet eine umfassende Produktpalette für eine sichere Alternative.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Fortgeschrittene Tools"
+      ],
+      "descriptions": [
+        "Sicherer Cloud-Speicher mit Zero-Knowledge- und Post-Quanten-Verschlüsselung.",
+        "Internxt Antivirus schützt mit vollständigen Scans vor Malware und Ransomware.",
+        "Die VPN von Internxt verschlüsselt Ihre Verbindung und bietet Anonymität.",
+        "Internxt Cleaner löscht Junk-Dateien, um Ihren Speicher zu optimieren.",
+        "Sichere private Videoanrufe, geschützt mit Post-Quanten-Technologie.",
+        "Verfügbar auf Windows, Mac, Linux und mobil mit Experten-Support."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt für eine bessere Norton-Alternative",
+    "description": "Internxt bietet standardmäßig volle private Verschlüsselung, transparente Software und eine komplette Suite.",
+    "cta": "Jetzt wechseln"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One Datenschutz-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One Datenschutz-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Nutzen Sie Internxt kostenlos mit Datenschutz-Tools und Verschlüsselung",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt sicherer als Norton?",
+        "answer": [
+          "Ja, Internxt setzt auf Zero-Knowledge-Verschlüsselung und ist vollständig Open-Source.",
+          "Internxt umfasst Drive, VPN, Antivirus und Cleaner für ganzheitliche Sicherheit."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Schreiben Sie an hello@internxt.com, unser Team hilft Ihnen gerne weiter."
+        ]
+      }
+    ]
+  }
+}
