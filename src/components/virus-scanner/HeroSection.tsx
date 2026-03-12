@@ -244,7 +244,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                   <a
+                                    <a
                                       href={`https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`}
                                       target="_blank"
                                       rel="noopener noreferrer"
