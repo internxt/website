@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 McAfee，\n但更**私密**",
+    "description": "切換到 Internxt，這是最尊重您隱私的 McAfee 最佳替代方案",
+    "getPrivacy": " 選擇您的方案並享受 {{percentage}}% 的折扣  ",
+    "cta": "立即切換"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 McAfee 概覽",
+    "description": "瞭解 Internxt 如何透過關鍵功能和差異化設計為您奪回數據控制權",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "數據隱私",
+        "信息採集",
+        "價格與儲存空間",
+        "其他功能",
+        "安全審計",
+        "系統效能",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "端到端加密",
+        "極簡數據採集",
+        "免費，高達 5TB 的終身儲存空間",
+        "Internxt AI、Drive、VPN, Antivirus、Cleaner, Meet、Mail 和 Send",
+        "定期安全審計",
+        "極低系統佔用",
+        "始終無法存取您的檔案",
+        "全面隱私保護：GDPR、西班牙數據保護法"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "無數據加密",
+        "大規模數據採集",
+        "強制年度訂閱",
+        "基礎防病毒保護",
+        "定期安全審計",
+        "顯著的效能影響",
+        "曾有漏洞記錄",
+        "隱私保護較弱：受美國法律限制"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "為什麼您需要 McAfee 的替代方案",
+    "description": "McAfee 只是保護裝置的方案之一。為了獲得全面的隱私保護，請切換到 Internxt，獲得全能替代方案。",
+    "scrollableSection": {
+      "titles": [
+        "採集用戶數據",
+        "閉源軟體",
+        "效能影響",
+        "產品線有限"
+      ],
+      "descriptions": [
+        "McAfee 因採集個人及使用數據並與第三方共享而廣受批評，這損害了用戶的隱私。",
+        "作為專有軟體，用戶無法透過代碼驗證工具在後台的具體運行方式。",
+        "McAfee 以佔用大量系統資源著稱，可能導致開機、網路連接和整體效能變慢。",
+        "McAfee 產品線較為單一。如果您需要安全雲端儲存或私密視訊通話，則需支付額外訂閱費用。\n誤報問題\nMcAfee 經常將正常程序標記為惡意，自動隔離可能導致其他應用運行出錯。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "功能",
+    "description": "",
+    "cards": {
+      "titles": [
+        "開源且經過審計",
+        "全套產品線",
+        "實惠的价格"
+      ],
+      "descriptions": [
+        "Internxt 完全開源並經過獨立審計，確保無後門且透明。",
+        "Internxt 提供 Cleaner 和完整的隱私生態系統，用於清理、儲存和共享零知識加密檔案。",
+        "每月僅需 1.60 歐元即可開始，或選擇終身方案以實現永久存取。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs McAfee",
+    "description": "得益於零知識加密 e 後量子加密，Internxt 提供了無與倫比的隱私保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隱私、透明和信任",
+        "features": [
+          {
+            "title": "開源軟體",
+            "description": "Internxt 在 GitHub 上公開其代碼，確保透明度。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的檔案在用戶端加密，確保只有您自己可以存取。"
+          },
+          {
+            "title": "總部位於歐洲",
+            "description": "總部位於西班牙，符合 GDPR 及其他嚴格的隱私規定。"
+          },
+          {
+            "title": "免費與實惠的方案",
+            "description": "以 {{percentage}}% 的折扣透過終身方案永久存取我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "McAfee：您的隱私狀況如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "閉源軟體難釋驗證數據受保護的真實情況。"
+          },
+          {
+            "title": "無端到端加密",
+            "description": "不為終端用戶提供端到端加密的雲端儲存方案。"
+          },
+          {
+            "title": "總部位在美國",
+            "description": "其採集的數據受美國監控法律（如 FISA）約束。"
+          },
+          {
+            "title": "訂閱制",
+            "description": "需要持續且通常昂貴的續費以維持防護。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 McAfee 的最佳替代方案",
+    "description": "Internxt 提供全套方案，為您提供安全的替代選擇。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "進階工具"
+      ],
+      "descriptions": [
+        "零知識及後量子加密的雲端儲存。",
+        "內置惡意軟體防護及全面掃描。",
+        "加密連接並保護在線身份。",
+        "識別並清理垃圾檔案，保持儲存空間整潔。",
+        "後量子加密保護的私人視訊通話。",
+        "支援所有主流平台及進階用戶工具。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 McAfee 的最佳替代方案",
+    "description": "Internxt 預設為您提供全方位私密加密、開源軟體和全套隱私套件。",
+    "cta": "立即切換"
+  },
+  "tableSection": {
+    "title": "您的一站式隱私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隱私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "終身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費使用具有隱私工具和加密功能的 Internxt",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們 exhibit 答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 McAfee 更安全私密？",
+        "answer": [
+          "是的，Internxt 使用後量子加密並且是完全開源的。",
+          "Internxt 集成了 Drive、VPN 和 Cleaner 以提供更全面的安全保障。"
+        ]
+      },
+      {
+        "question": "Internxt 總部在哪裡？",
+        "answer": [
+          "總部位於西班牙瓦倫西亞，嚴格遵循 GDPR。"
+        ]
+      },
+      {
+        "question": "McAfee 是否比 Internxt 更貴？",
+        "answer": [
+          "憑藉您的 87% 折扣，我們的方案更具競爭性，且包含更多服務。"
+        ]
+      },
+      {
+        "question": "如何聯繫支持？",
+        "answer": [
+          "請聯繫 hello@internxt.com，我們將很樂意提供幫助。"
+        ]
+      }
+    ]
+  }
+}
