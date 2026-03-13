@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
+import Script from 'next/script';
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
@@ -39,7 +40,7 @@ const ALLOWED_PATHS = [
   'love',
 ];
 
-const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh','rclone'];
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
 
 const COUPON_CODES = {
@@ -147,6 +148,7 @@ function CombinedSpecialOffer({
       lang={lang}
       robots="noindex, follow"
     >
+      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection
