@@ -111,6 +111,17 @@ export interface Resources {
   googleCloudAlternative: string;
   awsAlternative: string;
   azureAlternative: string;
+  antivirusAlternatives: string;
+  avastAlternative: string;
+  avgAlternative: string;
+  aviraAlternative: string;
+  bitdefenderAlternative: string;
+  malwarebytesAlternative: string;
+  mcafeeAlternative: string;
+  nortonAlternative: string;
+  cleanerAlternatives: string;
+  ccleanerAlternative: string;
+  cleanMyMacAlternative: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
   nas: string;

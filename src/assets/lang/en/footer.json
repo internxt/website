@@ -96,7 +96,18 @@
         "reviews": "Reviews",
         "certifications": "Certifications",
         "wire": "Wire Alternative",
-        "whereby": "Whereby Alternative"
+        "whereby": "Whereby Alternative",
+        "antivirusAlternatives": "Antivirus Alternatives",
+        "avastAlternative": "Avast Alternative",
+        "avgAlternative": "AVG Alternative",
+        "aviraAlternative": "Avira Alternative",
+        "bitdefenderAlternative": "Bitdefender Alternative",
+        "malwarebytesAlternative": "Malwarebytes Alternative",
+        "mcafeeAlternative": "McAfee Alternative",
+        "nortonAlternative": "Norton Alternative",
+        "cleanerAlternatives": "Cleaner Alternatives",
+        "ccleanerAlternative": "CCleaner Alternative",
+        "cleanMyMacAlternative": "CleanMyMac Alternative"
       },
       "tools": {
         "title": "Free Tools",
