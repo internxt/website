@@ -11,7 +11,8 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
 import CtaSection from '@/components/affiliates/CtaSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
 
 
 
@@ -29,20 +30,17 @@ const WhatDoesGoogleKnowAboutMe = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="What Does Google Know About Me"
-      lang={lang}
-    >
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('What does Google know about me', 'what-does-google-know-about-me')}
+      </Script>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="What Does Google Know About Me"
+        lang={lang}
+      >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'What does google know about me', url: '/what-does-google-know-about-me' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
       <RevealY className="content flex h-full w-full flex-col items-center justify-center px-5">
@@ -70,8 +68,9 @@ const WhatDoesGoogleKnowAboutMe = ({
 
       <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} target="_blank" />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'What does Google know about me', url: '/what-does-google-know-about-me' }]} />
     </Layout>
+    </>
   );
 };
 

@@ -17,9 +17,8 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface DriveProps {
   textContent: DriveText;
@@ -50,16 +49,12 @@ const Drive = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-cloud-storage');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }])}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }
-]} />
-      </div>
-
       <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
 
       <DriveSection textContent={textContent.DriveSection} />
@@ -113,8 +108,9 @@ const Drive = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }]} />
     </Layout>
+    </>
   );
 };
 

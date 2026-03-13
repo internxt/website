@@ -16,7 +16,8 @@ import HowToChooseSection from '@/components/private-cloud-storage-for-videos/Ho
 import SecureAndManageSection from '@/components/private-cloud-storage-for-videos/Secure&Manage';
 
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface CloudStorageForVideosProps {
@@ -38,21 +39,17 @@ const CloudStorageForVideos = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-for-videos');
 
   return (
-    <Layout
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }])}
+      </Script>
+      <Layout
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName="Private Cloud Storage Solutions"
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }
-]} />
-      </div>
-
       <AnimatedHeroSection
         textComponent={
           <>
@@ -124,8 +121,9 @@ const CloudStorageForVideos = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }]} />
     </Layout>
+    </>
   );
 };
 

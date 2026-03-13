@@ -25,7 +25,7 @@ import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
 const ICON_MAPS = {
-  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, Files, Shield],
+  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
   premium: [
     Database,
     Key,

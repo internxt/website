@@ -7,24 +7,19 @@ import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
 import Footer from '@/components/layout/footers/Footer';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }])}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
       <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} />
 
       <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
@@ -72,8 +67,9 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
 
       <FAQSection textContent={langJson.FaqSection} />
 
-      <Footer textContent={footerLang} lang={'en'} />
+      <Footer textContent={footerLang} lang={'en'} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }]} />
     </Layout>
+    </>
   );
 };
 

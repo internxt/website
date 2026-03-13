@@ -12,7 +12,6 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const PasswordChecker = ({
@@ -33,7 +32,7 @@ const PasswordChecker = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Password Checker', 'password-checker')}
+        {sm_breadcrumb('Password security checker', 'password-checker')}
       </Script>
 
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
@@ -45,15 +44,6 @@ const PasswordChecker = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Password security checker', url: '/password-checker' },
-          ]}
-        />
-      </div>
-
         <TryInternxtBanner
           textContent={
             lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
@@ -93,7 +83,7 @@ const PasswordChecker = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
       </Layout>
     </>
   );

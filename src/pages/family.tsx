@@ -26,6 +26,8 @@ import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatu
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface FamilyProps {
   lang: GetServerSidePropsContext['locale'];
@@ -123,6 +125,9 @@ export const FamilyLP = ({
 
   return (
     <Layout title={metatag.title} description={metatag.description}>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt for Families', url: '/family' }])}
+      </Script>
       <Navbar fixed cta={['default']} lang={locale} textContent={navbarText} />
 
       <HeroSection
@@ -222,7 +227,7 @@ export const FamilyLP = ({
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
-      <Footer lang={locale} textContent={footerText} />
+      <Footer lang={locale} textContent={footerText} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt for Families', url: '/family' }]} />
     </Layout>
   );
 };

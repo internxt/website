@@ -26,7 +26,6 @@ import { getImage } from '@/lib/getImage';
 import { ShieldStar } from '@phosphor-icons/react';
 import FeaturesSliderImg from '@/components/ai-detector/FeatureSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const AIDetector = ({
@@ -101,20 +100,11 @@ const AIDetector = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
+        {sm_breadcrumb('Ai detector free', 'ai-detector')}
       </Script>
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Ai detector free', url: '/ai-detector' },
-          ]}
-        />
-      </div>
-
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <TryInternxtBanner
@@ -144,7 +134,7 @@ const AIDetector = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Ai detector free', url: '/ai-detector' }]} />
       </Layout>
     </>
   );
