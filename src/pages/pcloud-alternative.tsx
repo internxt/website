@@ -13,7 +13,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -71,15 +70,6 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       </Script>
 <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'pCloud alternative', url: '/pcloud-alternative' },
-          ]}
-        />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" needH2 />
@@ -136,7 +126,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
       <FAQSection textContent={langJson.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={lang} needsH2={false} />
+      <Footer textContent={footerLang} lang={lang} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'pCloud alternative', url: '/pcloud-alternative' }]} />
     </Layout>
   </>);
 };

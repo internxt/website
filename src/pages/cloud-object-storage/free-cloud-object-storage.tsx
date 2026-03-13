@@ -11,9 +11,8 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface FreeCloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -35,16 +34,12 @@ const FreeCloudObjectStorage = ({
   const lang = locale as string;
 
   return (
-    <Layout title={metatags.title} description={metatags.description}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }])}
+      </Script>
+      <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Cloud object storage', url: '/cloud-object-storage' },
-{ name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }
-]} />
-      </div>
-
       <HeroSection textContent={textContent.HeroSection} />
 
       <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
@@ -99,8 +94,9 @@ const FreeCloudObjectStorage = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }]} />
     </Layout>
+    </>
   );
 };
 

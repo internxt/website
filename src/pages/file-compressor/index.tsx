@@ -8,7 +8,6 @@ import { FeaturesSection } from '@/components/file-compressor/main-state/Feature
 import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import CtaSection from '@/components/shared/CtaSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -32,15 +31,6 @@ const FileConverter = ({
       </Script>
 <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'File compressor', url: '/file-compressor' },
-          ]}
-        />
-      </div>
-
       <HeroSection textContent={textContent.HeroSection} />
 
       <FeaturesSection
@@ -59,7 +49,7 @@ const FileConverter = ({
 
       <QASection textContent={textContent.QASection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} />
     </Layout>
   </>);
 };

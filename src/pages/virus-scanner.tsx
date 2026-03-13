@@ -11,7 +11,6 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const Scan = ({
@@ -32,20 +31,11 @@ const Scan = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
+        {sm_breadcrumb('Virus scanner online', 'virus-scanner')}
       </Script>
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Virus scanner online', url: '/virus-scanner' },
-          ]}
-        />
-      </div>
-
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <TryInternxtBanner
@@ -65,7 +55,7 @@ const Scan = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} />
       </Layout>
     </>
   );

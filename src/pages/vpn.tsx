@@ -20,7 +20,8 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface VPNProps {
@@ -49,20 +50,16 @@ const VPN = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt VPN', url: '/vpn' }])}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       {isGetVPN ? (
         <MinimalNavbar lang={lang} />
       ) : (
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       )}
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Internxt VPN', url: '/vpn' }
-]} />
-      </div>
-
       <HeroSection
         TextComponent={
           <div className="flex w-full flex-col items-center space-y-8 lg:max-w-[524px] lg:items-start">
@@ -145,8 +142,9 @@ const VPN = ({
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt VPN', url: '/vpn' }]} />
     </Layout>
+    </>
   );
 };
 

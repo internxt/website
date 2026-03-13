@@ -11,6 +11,8 @@ import SupportSection from '@/components/reviews/support-section';
 import VideotSection from '@/components/reviews/VideoSection';
 import HeroSection from '@/components/reviews/HeroSection';
 import HorizontalScrollableSection from '@/components/reviews/HorizontalScrollableSection';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface CleanerProps {
   lang: GetServerSidePropsContext['locale'];
@@ -33,6 +35,9 @@ const CleanerPage = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }])}
+      </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.heroSection} />
@@ -62,7 +67,7 @@ const CleanerPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }]} />
     </Layout>
   );
 };

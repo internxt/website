@@ -19,9 +19,8 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
 import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -77,16 +76,12 @@ export const BusinessPage = ({
   const imagePath = lang === 'es' ? 'HeroImage' : 'HeroImage';
 
   return (
-    <Layout title={metatags.title} description={metatags.description}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt for business', url: '/business' }])}
+      </Script>
+      <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Internxt for business', url: '/business' }
-]} />
-      </div>
-
       <HeroSection
         TextComponent={
           <div className="flex h-min w-[350px] flex-col gap-6 py-8 lg:w-[656px] lg:gap-8">
@@ -207,8 +202,9 @@ export const BusinessPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerText} lang={locale} />
+      <Footer textContent={footerText} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt for business', url: '/business' }]} />
     </Layout>
+    </>
   );
 };
 
