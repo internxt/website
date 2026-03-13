@@ -60,6 +60,10 @@ export default function Footer({
       });
   };
 
+  const mobileResourcesHeaderClass = `${darkMode ? 'text-gray-1' : 'text-gray-100'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
+  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60';
+  const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
+
   return (
     <section
       id="footer"
@@ -745,7 +749,7 @@ export default function Footer({
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
                         isAntivirusAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
                       }`}
-                      style={!isAntivirusAlternativeOpen ? { display: 'none' } : {}}
+                      style={isAntivirusAlternativeOpen ? {} : { display: 'none' }}
                     >
                       <Link
                         href="/alternative-to-avast"
@@ -821,7 +825,7 @@ export default function Footer({
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
                         isCleanerAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
                       }`}
-                      style={!isCleanerAlternativeOpen ? { display: 'none' } : {}}
+                      style={isCleanerAlternativeOpen ? {} : { display: 'none' }}
                     >
                       <Link
                         href="/alternative-to-ccleaner"
@@ -1283,14 +1287,10 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button
-                    className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
-                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
-                  >
+                  <Disclosure.Button className={mobileResourcesHeaderClass}>
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${open ? 'flex' : 'hidden'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1299,9 +1299,7 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${open ? 'flex' : 'hidden'} ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -1667,9 +1665,7 @@ export default function Footer({
                         </button>
 
                         <div
-                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
-                            isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                          }`}
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${antivirusExpandClass}`}
                         >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link
