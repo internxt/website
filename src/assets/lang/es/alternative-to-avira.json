@@ -1,0 +1,226 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Como Avira,\n pero **privado**",
+    "description": "Cámbiate a Internxt, la mejor alternativa a Avira que respeta tu privacidad",
+    "getPrivacy": " Selecciona tu plan y obtén un {{percentage}}% de descuento ",
+    "cta": "Haz el cambio"
+  },
+  "HeaderSection": {
+    "title": "Descripción general de Internxt vs Avira",
+    "description": "Descubre las características clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Privacidad de los datos",
+        "Auditorías de seguridad",
+        "Precios y almacenamiento",
+        "Ubicación",
+        "Obras sociales",
+        "Recopilación de archivos",
+        "Cifrado",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "Privacidad total por defecto",
+        "Auditorías de seguridad periódicas",
+        "Gratis, almacenamiento de por vida hasta 5TB",
+        "Basado en Europa (España)",
+        "No recopilamos ni vendemos datos",
+        "Nunca puede acceder a tus archivos",
+        "Cifrado de conocimiento cero y post-cuántico",
+        "Privacidad total: RGPD, leyes españolas de protección de datos"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Sujeto a vigilancia",
+        "Auditorías de seguridad periódicas",
+        "Plan gratuito o 45 €/año",
+        "Basado en Europa (Alemania)",
+        "Recopila datos de telemetría por defecto",
+        "Puede escanear y acceder a los metadatos de los archivos",
+        "Sin cifrado de conocimiento cero",
+        "Menos privacidad: RGPD, leyes alemanas"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Por qué necesitas una alternativa a Avira",
+    "description": "Avira es una opción para proteger tu dispositivo, pero si buscas privacidad total, Internxt es la alternativa a Avira que necesitas. Con mayor seguridad y mejores funciones, Internxt mantiene tus archivos seguros.",
+    "scrollableSection": {
+      "titles": [
+        "Recopilación de datos de telemetría",
+        "Falta de transparencia",
+        "Adquisición por NortonLifeLock",
+        "Impacto en el rendimiento"
+      ],
+      "descriptions": [
+        "Avira recopila datos de telemetría por defecto para analizar el uso del software y mejorar sus servicios. Aunque afirman que los datos son anónimos, la recopilación de información del sistema y patrones de uso puede comprometer la privacidad del usuario avanzado que busca anonimato total.",
+        "Al no ser de código abierto, Avira no permite auditorías públicas de su código para verificar cómo manejan exactamente los archivos y datos del usuario, lo que obliga a los usuarios a confiar ciegamente en las políticas de la empresa.",
+        "Desde la adquisición de Avira por NortonLifeLock (ahora Gen Digital), han surgido preocupaciones sobre la consolidación de datos y posibles cambios en las políticas de privacidad, alineándose más con los estándares corporativos estadounidenses de recopilación de datos.",
+        "Muchos usuarios reportan que Avira puede ralentizar significativamente el arranque del sistema y el rendimiento general debido a la cantidad de procesos en segundo plano y notificaciones promocionales de su suite de productos."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funciones",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Cifrado avanzado",
+        "Código abierto y auditado",
+        "Planes flexibles"
+      ],
+      "descriptions": [
+        "Internxt utiliza cifrado de conocimiento cero y post-cuántico para garantizar que nadie más que tú pueda acceder a tus archivos. Tus datos se cifran en tu dispositivo antes de subirse a la nube.",
+        "Internxt es totalmente de código abierto y está auditado de forma independiente, lo que garantiza una transparencia total y elimina cualquier posibilidad de puertas traseras o vigilancia oculta.",
+        "Ofrecemos planes mensuales desde 1,60 € o planes de por vida que te permiten pagar una vez y disfrutar de almacenamiento seguro para siempre, sin suscripciones recurrentes."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Avira",
+    "description": "Internxt ofrece una seguridad superior gracias al cifrado de conocimiento cero y post-cuántico, superando las protecciones estándar de Avira.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacidad y Transparencia",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "Puedes verificar nuestro código en GitHub, lo que asegura que no hay funciones ocultas de recopilación de datos."
+          },
+          {
+            "title": "Conocimiento cero",
+            "description": "Ni siquiera Internxt puede ver tus archivos o contraseñas; tú tienes el control total de tus claves."
+          },
+          {
+            "title": "Sede en España",
+            "description": "Cumplimos con las leyes de privacidad más estrictas del mundo (RGPD) para proteger tus derechos."
+          },
+          {
+            "title": "Planes de por vida",
+            "description": "Obtén hasta 5TB de almacenamiento con un pago único y un {{percentage}}% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Avira: ¿Qué recibes?",
+        "features": [
+          {
+            "title": "Código cerrado",
+            "description": "El software es propietario, por lo que no es posible auditar de forma independiente sus mecanismos internos de seguridad."
+          },
+          {
+            "title": "Privacidad limitada",
+            "description": "Recopila telemetría y metadatos que podrían ser utilizados para análisis comerciales o vinculados a tu perfil."
+          },
+          {
+            "title": "Sede corporativa global",
+            "description": "Parte de una corporación global con normativas que podrían facilitar el acceso institucional a los datos."
+          },
+          {
+            "title": "Basado en suscripción",
+            "description": "Requiere pagos anuales recurrentes para mantener el servicio activo."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a Avira",
+    "description": "Internxt va más allá del antivirus tradicional, ofreciendo una suite completa de privacidad diseñada para el mundo moderno.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Protección integral"
+      ],
+      "descriptions": [
+        "Almacenamiento en la nube con cifrado de conocimiento cero para que tus documentos personales estén totalmente a salvo.",
+        "Analiza tu dispositivo y archivos en busca de amenazas sin comprometer tu privacidad ni recopilar datos excesivos.",
+        "Navega de forma anónima y segura desde cualquier lugar con nuestra VPN de alta velocidad integrada.",
+        "Elimina archivos basura y optimiza el espacio de tu dispositivo de manera sencilla y privada.",
+        "Videollamadas 100% privadas y seguras, sin rastreadores ni intervención de terceros.",
+        "Disponible para todas tus plataformas: Windows, Mac, Linux, iOS y Android con sincronización segura."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Pásate a la mejor alternativa a Avira",
+    "description": "Obtén privacidad total, transparencia y la seguridad que te mereces con Internxt.",
+    "cta": "Haz el cambio"
+  },
+  "tableSection": {
+    "title": "Tu suite de privacidad definitiva",
+    "hotLabel": "{{discount}}% de descuento 🔥",
+    "planTitles": {
+      "header": "Elige tu plan de privacidad"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Empieza hoy con almacenamiento seguro gratuito y funciones básicas de privacidad",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Soporte al cliente prioritario",
+      "guarantee": "30 días de garantía de reembolso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Tienes preguntas sobre Avira y Internxt?",
+    "faq": [
+      {
+        "question": "¿Es Internxt más privado que Avira?",
+        "answer": [
+          "Sí, porque Internxt utiliza cifrado de conocimiento cero por defecto, lo que significa que nadie más que tú tiene las claves para desbloquear tus datos.",
+          "Además, al ser de código abierto, nuestra transparencia es total, a diferencia del sistema cerrado de Avira."
+        ]
+      },
+      {
+        "question": "¿Qué incluye el plan de por vida de Internxt?",
+        "answer": [
+          "Nuestros planes de por vida te dan acceso permanente a la capacidad de almacenamiento elegida con un solo pago, incluyendo Drive, VPN, Antivirus y Cleaner."
+        ]
+      },
+      {
+        "question": "¿Puedo usar Internxt junto con Avira?",
+        "answer": [
+          "Sí, puedes usar Internxt Drive para almacenar tus archivos de forma segura mientras mantienes tu antivirus actual, aunque Internxt ya incluye herramientas de seguridad integradas."
+        ]
+      },
+      {
+        "question": "¿Dónde se guardan mis datos?",
+        "answer": [
+          "Tus datos se cifran localmente y se almacenan de forma fragmentada en servidores ubicados en la Unión Europea, cumpliendo estrictamente con el RGPD."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo migrar mis archivos?",
+        "answer": [
+          "Es muy sencillo: solo tienes que descargar la aplicación de Internxt y arrastrar tus archivos. Estarán cifrados y seguros en cuestión de minutos."
+        ]
+      }
+    ]
+  }
+}
