@@ -12,18 +12,21 @@ import moment from 'moment';
 import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
+import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
 
 export default function Footer({
   textContent,
   lang,
   hideNewsletter,
   darkMode,
+  breadcrumbItems,
 }: Readonly<{
   textContent: FooterText;
   lang: string;
   hideNewsletter?: boolean;
   darkMode?: boolean;
   needsH2?: boolean;
+  breadcrumbItems?: BreadcrumbItem[];
 }>) {
   const [email, setEmail] = useState('');
   const [platforms, setPlatforms] = useState<any>();
@@ -84,7 +87,14 @@ export default function Footer({
         style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
       >
         <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
+        {breadcrumbItems && breadcrumbItems.length > 0 && (
+          <Breadcrumb
+            items={breadcrumbItems}
+            className={`flex w-full py-3 pb-10 text-xs  ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+          />
+        )}
 
+            
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
           <div className="flex w-full flex-row items-end gap-6 lg:w-1/2 2xl:w-1/3">
             <div className="flex flex-col items-start justify-between gap-9">
@@ -972,9 +982,7 @@ export default function Footer({
               </div>
             </div>
 
-            <div
-              className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`}
-            />
+            
 
             {/* Logos */}
             <div className="flex w-full flex-row justify-between">

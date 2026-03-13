@@ -1,6 +1,5 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
@@ -163,17 +162,6 @@ export const ComparisonPage = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-        {breadcrumbName && urlSlug && (
-          <div className="sr-only">
-            <Breadcrumb
-              items={[
-                { name: 'Encrypted Cloud Storage', url: '/' },
-                { name: breadcrumbName, url: `/${urlSlug}` },
-              ]}
-            />
-          </div>
-        )}
-
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
@@ -236,7 +224,18 @@ export const ComparisonPage = ({
 
       <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer
+        textContent={footerLang}
+        lang={locale}
+        breadcrumbItems={
+          breadcrumbName && urlSlug
+            ? [
+                { name: 'Encrypted Cloud Storage', url: '/' },
+                { name: breadcrumbName, url: `/${urlSlug}` },
+              ]
+            : undefined
+        }
+      />
     </Layout>
     </>
   );

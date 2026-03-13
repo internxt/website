@@ -12,6 +12,8 @@ import { WhatIsSection } from '@/components/shared/WhatIsSection';
 import HorizontalScrollableSection from '@/components/data-centers/HorizontalScrollableSection';
 import CompilanceAndCertificationsSection from '@/components/data-centers/CompilanceAndCertificationsSection';
 import { ContentBlockSection } from '@/components/shared/ContentBlock';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface CloudDataCentersPageProps {
   lang: GetServerSidePropsContext['locale'];
@@ -39,6 +41,9 @@ const CloudDataCentersPage = ({
       segmentName="cloud-data-centers"
       lang={lang}
     >
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }])}
+      </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
@@ -90,7 +95,7 @@ const CloudDataCentersPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }]} />
     </Layout>
   );
 };

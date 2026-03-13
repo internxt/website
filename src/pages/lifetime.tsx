@@ -12,9 +12,8 @@ import { stripeService } from '@/services/stripe.service';
 import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-  
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface LifetimeSpecialProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -94,7 +93,11 @@ function LifetimeSpecial({
   const navbarCta = 'chooseStorage';
 
   return (
-    <Layout
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Lifetime cloud storage', url: '/lifetime' }])}
+      </Script>
+      <Layout
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName="Lifetime"
@@ -102,14 +105,6 @@ function LifetimeSpecial({
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Lifetime cloud storage', url: '/lifetime' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
       {/*<ReviewsSection textContent={langJson.ReviewSection || testimonialsJson.TestimonialsSection} /> */}
@@ -174,8 +169,9 @@ function LifetimeSpecial({
         bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Lifetime cloud storage', url: '/lifetime' }]} />
     </Layout>
+    </>
   );
 }
 

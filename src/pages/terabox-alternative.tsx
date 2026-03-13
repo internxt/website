@@ -16,7 +16,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -82,15 +81,6 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Terabox alternative', url: '/terabox-alternative' },
-          ]}
-        />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} needH2 />
@@ -166,7 +156,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         needsH3={false}
       />
 
-      <Footer textContent={footerLang} lang={locale} needsH2={false} />
+      <Footer textContent={footerLang} lang={locale} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Terabox alternative', url: '/terabox-alternative' }]} />
     </Layout>
   </>);
 };

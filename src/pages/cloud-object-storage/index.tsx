@@ -13,7 +13,8 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { GetServerSidePropsContext } from 'next';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
 
 
 
@@ -39,16 +40,13 @@ const CloudObjectStorage = ({
   const lang = locale as string;
 
   return (
-    <Layout title={metatags.title} description={metatags.description}>
-      <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Cloud object storage', url: '/cloud-object-storage' }
-]} />
-      </div>
-
-      <HeroSection textContent={textContent.HeroSection} />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Cloud object storage', 'cloud-object-storage')}
+      </Script>
+      <Layout title={metatags.title} description={metatags.description}>
+        <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
       <CertificationsSection />
 
@@ -106,8 +104,9 @@ const CloudObjectStorage = ({
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }]} />
     </Layout>
+    </>
   );
 };
 

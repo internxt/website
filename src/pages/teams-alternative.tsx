@@ -16,7 +16,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -82,15 +81,6 @@ const TeamsComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Microsoft teams alternative', url: '/teams-alternative' },
-          ]}
-        />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Teams'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={'Teams'} needH2 />
@@ -165,7 +155,7 @@ const TeamsComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         needsH3={false}
       />
 
-      <Footer textContent={footerLang} lang={locale} needsH2={false} />
+      <Footer textContent={footerLang} lang={locale} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Microsoft teams alternative', url: '/teams-alternative' }]} />
     </Layout>
   </>);
 };

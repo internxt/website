@@ -6,12 +6,17 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import HorizontalScrollableSection from '@/components/about/HorizontalScrollableSection';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
     <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }])}
+      </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
@@ -22,7 +27,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} />
     </Layout>
   );
 };

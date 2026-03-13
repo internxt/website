@@ -4,7 +4,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
@@ -17,7 +17,6 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 interface PrivacyProps {
@@ -83,7 +82,7 @@ const CloudStorageBackupSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Cloud Storage Backup Solutions', 'privacy')}
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }])}
       </Script>
       <Layout
         title={metatags[0].title}
@@ -92,13 +91,6 @@ const CloudStorageBackupSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }
-]} />
-      </div>
 
         <AnimatedHeroSection
           textComponent={
@@ -161,7 +153,7 @@ const CloudStorageBackupSolutions = ({
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }]} />
       </Layout>
     </>
   );

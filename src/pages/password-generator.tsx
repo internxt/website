@@ -10,7 +10,6 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
@@ -33,7 +32,7 @@ const PasswordGenerator = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Password Generator', 'password-generator')}
+        {sm_breadcrumb('Password generator', 'password-generator')}
       </Script>
 
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
@@ -45,15 +44,6 @@ const PasswordGenerator = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Password generator', url: '/password-generator' },
-          ]}
-        />
-      </div>
-
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
@@ -64,7 +54,7 @@ const PasswordGenerator = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} />
       </Layout>
     </>
   );

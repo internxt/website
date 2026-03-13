@@ -13,7 +13,6 @@ import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
@@ -28,20 +27,11 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Byte Converter', 'byte-converter')}
+        {sm_breadcrumb('Byte converter', 'byte-converter')}
       </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Byte converter', url: '/byte-converter' },
-          ]}
-        />
-      </div>
-
         <HeroSection textContent={langJson.HeroSection} />
 
         <TryInternxtBanner
@@ -69,7 +59,7 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
         <FaqSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} />
       </Layout>
     </>
   );

@@ -22,7 +22,8 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import Script from 'next/script';
 
 
 
@@ -99,16 +100,13 @@ const Drive = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' }
-]} />
-      </div>
-
-      <HeroSection textContent={textContent.HeroSection} download={download} />
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Secure cloud storage', 'drive')}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} download={download} />
 
       <DriveSection textContent={textContent.DriveSection} />
 
@@ -180,8 +178,9 @@ const Drive = ({
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }]} />
     </Layout>
+    </>
   );
 };
 

@@ -10,9 +10,8 @@ import WhatAreTheBenefits from '@/components/open-source/WhatAreTheBenefits';
 import WhatIsOSS from '@/components/open-source/WhatIsOSS';
 import CtaSection from '@/components/shared/CtaSection';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
-
-
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
 
@@ -21,16 +20,12 @@ const GITHUB_URL = 'https://github.com/internxt';
 const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, download }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'open-source');
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Open Source" lang={lang}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }])}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Open Source" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Open source cloud storage', url: '/open-source' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} />
 
       <FileParallaxSection />
@@ -49,8 +44,9 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
 
       <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }]} />
     </Layout>
+    </>
   );
 };
 
