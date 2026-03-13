@@ -16,7 +16,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -82,15 +81,6 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-      <div className="sr-only">
-        <Breadcrumb
-          items={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Icedrive alternative', url: '/icedrive-alternative' },
-          ]}
-        />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Icedrive'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={'Icedrive'} needH2 />
@@ -166,7 +156,7 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         needsH3={false}
       />
 
-      <Footer textContent={footerLang} lang={locale} needsH2={false} />
+      <Footer textContent={footerLang} lang={locale} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Icedrive alternative', url: '/icedrive-alternative' }]} />
     </Layout>
   </>);
 };

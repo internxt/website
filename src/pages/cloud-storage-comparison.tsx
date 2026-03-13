@@ -15,7 +15,6 @@ import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
 
 
 const URL_REDIRECT = 'https://internxt.com/specialoffer';
@@ -53,7 +52,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Cloud Storage Comparison', 'comparison')}
+        {sm_breadcrumb('Cloud storage comparison', 'cloud-storage-comparison')}
       </Script>
 
       <Layout
@@ -63,13 +62,6 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Cloud storage comparison', url: '/cloud-storage-comparison' }
-]} />
-      </div>
-
         <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
 
         <TableSection textContent={langJson.HeroSection} />
@@ -86,7 +78,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
-        <Footer textContent={footerLang} lang={lang} darkMode={false} />
+        <Footer textContent={footerLang} lang={lang} darkMode={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' }]} />
       </Layout>
     </>
   );

@@ -18,7 +18,8 @@ import HeroSection from '@/components/antivirus/HeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import Script from 'next/script';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 
 interface AntivirusProps {
@@ -102,20 +103,16 @@ const AntivirusPage = ({
   ];
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Antivirus', url: '/antivirus' }])}
+      </Script>
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       {isGetAntivirus ? (
         <MinimalNavbar lang={locale} />
       ) : (
         <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
       )}
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Internxt Antivirus', url: '/antivirus' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} download={download} />
 
       <InfoSection
@@ -180,8 +177,9 @@ const AntivirusPage = ({
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Antivirus', url: '/antivirus' }]} />
     </Layout>
+    </>
   );
 };
 

@@ -12,11 +12,11 @@ interface BreadcrumbProps {
 
 export const Breadcrumb = ({ items, className = '' }: BreadcrumbProps) => {
   return (
-    <nav className={`sr-only ${className}`} aria-label="Breadcrumb">
-      <ol className="flex items-center flex-wrap gap-2">
+    <nav className={className} aria-label="Breadcrumb">
+      <ol className="flex items-center flex-wrap gap-2 bg">
         {items.map((item, index) => (
           <li key={item.url}>
-            {index > 0 && <span>/</span>}
+            {index > 0 && <span className='pr-2'>/</span>}
             {index === items.length - 1 ? (
               <span>
                 {item.name}

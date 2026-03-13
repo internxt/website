@@ -23,7 +23,7 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FeaturesSliderImg from '@/components/metadata-remover/FeaturesSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
 import { getImage } from '@/lib/getImage';
-import { Breadcrumb } from '@/components/shared/Breadcrumb';
+import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 const HeroSection = dynamic(() => import('@/components/metadata-remover/HeroSection'), { ssr: false });
 
@@ -104,15 +104,10 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
         })}
       </Script>
 
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }])}
+      </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <div className="sr-only">
-        <Breadcrumb items={[
-{ name: 'Encrypted Cloud Storage', url: '/' },
-{ name: 'Secure cloud storage', url: '/drive' },
-{ name: 'Internxt Metadata Remover', url: '/metadata-remover' }
-]} />
-      </div>
-
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
       <TryInternxtBanner
@@ -145,7 +140,7 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
 
       <FAQSection textContent={langJson.FaqSection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }]} />
     </Layout>
   );
 };
