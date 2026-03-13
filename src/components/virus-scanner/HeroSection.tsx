@@ -245,7 +245,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                     </div>
 
                                     <a
-                                      href={`https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`}
+                                      href={`https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="button-primary"
