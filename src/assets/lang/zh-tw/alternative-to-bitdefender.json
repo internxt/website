@@ -1,0 +1,238 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 Bitdefender，\n但更**私密**",
+    "description": "切換到 Internxt，這是最尊重您隱私的 Bitdefender 最佳替代方案",
+    "getPrivacy": " 選擇您的方案並享受 {{percentage}}% 的折扣 ",
+    "cta": "立即切換"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 Bitdefender 概覽",
+    "description": "瞭解 Internxt 如何透過關鍵功能和差異化設計為您奪回數據控制權",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "加密聊天",
+        "人工審查聊天內容",
+        "價格與儲存空間",
+        "其他功能",
+        "安全審計",
+        "機器學習",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "是，在您的裝置上加密",
+        "從不",
+        "免費，高達 5TB 的終身儲存空間",
+        "Internxt AI、Drive、VPN、Antivirus、Cleaner、Meet、Mail 和 Send",
+        "定期安全審計",
+        "聊天內容絕不用於訓練我們的 AI",
+        "任何人都無法存取您的聊天內容",
+        "全面隱私保護：GDPR、西班牙數據保護法"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "無端到端加密",
+        "是",
+        "免費方案或 30 歐元/月",
+        "進階 AI 功能、語音模式、無限圖像生成",
+        "定期安全審計",
+        "您的數據可能被用於訓練 AI 模型",
+        "人工可以存取並審查您的互動內容",
+        "隱私保護較弱：歐盟-美國數據隱私框架"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "為什麼您需要 Bitdefender 的替代方案",
+    "description": "Bitdefender 只是保護裝置免受惡意軟體侵害的選擇之一。為了獲得全面的隱私保護和全套產品，請切換到 Internxt，獲得包含 Drive、Cleaner 等在內的 Bitdefender 全能替代方案。",
+    "scrollableSection": {
+      "titles": [
+        "您的數據可以被看到",
+        "對話存儲在服務器上",
+        "影響裝置效能",
+        "產品線有限"
+      ],
+      "descriptions": [
+        "安全 AI 模型可能會使用用戶輸入的數據進行自我完善，且部分互動可能由人工審核，這導致個人對話被公司員工查看的風險。",
+        "聊天記錄和元數據（如裝置信息、語言）會存儲在您的帳戶活動中，並預設保留較長時間，限制了用戶對數據的控制權。",
+        "Bitdefender 在進行全盤掃描和工時防護時可能會佔用大量記憶體，導致某些硬體出現運行緩慢、網路延遲或系統滯後。",
+        "與 Internxt Drive 相比，Bitdefender 提供的產品有限。如果您需要結合了雲端儲存保護及其他功能的先進方案，則需另尋他處。\nVPN 流量限制\nBitdefender 的內置 VPN 在通用方案中設有流量上限，如果不升級到更高級別，大型下載或串流媒體使用將受到限制。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "功能",
+    "description": "",
+    "cards": {
+      "titles": [
+        "開源且經過審計",
+        "全套產品線",
+        "價格實惠的方案"
+      ],
+      "descriptions": [
+        "Internxt 完全開源並經過獨立審計，因此您可以放心，您的數據沒有後門，處理過程完全透明。任何人都可以審查代碼以確保信任。",
+        "Internxt 提供 Cleaner 和整個隱私生態系統，讓您可以清理垃圾檔案，透過 Drive 進行零知識加密儲存，並享有 VPN、Meet 和 Mail 等優勢。",
+        "每月僅需 1.60 歐元即可開啟 Internxt，或透過實惠的終身方案避免訂閱費用。您可以根據需要隨時擴展儲存空間。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Bitdefender",
+    "description": "得益於零知識加密和後量子加密，Internxt 提供了無與倫比的隱私和安全性能，為您提供防範網絡攻擊的最佳保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隱私、透明和信任",
+        "features": [
+          {
+            "title": "開源軟體",
+            "description": "Internxt AI 在 GitHub 上公開其代碼，確保透明度並防止隱藏的漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的聊天和檔案在用戶端加密，確保只有您自己可以存取。"
+          },
+          {
+            "title": "總部位於歐洲",
+            "description": "Internxt 總部位於西班牙，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準，確保嚴格的隱私保護。"
+          },
+          {
+            "title": "免費與實惠的方案",
+            "description": "Internxt AI 是免費的，可以與高達 5TB 的 Internxt Drive 終身方案結合使用。以 {{percentage}}% 的折扣永久存取我們的服務。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Bitdefender：您的隱私狀況如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "作為閉源軟體，很難獨立驗證其處理或保護數據的真實情況。"
+          },
+          {
+            "title": "無端到端加密",
+            "description": "公司在許多服務中保留了加密存取權限，這意味著數據可能在法律請求下被查閱。"
+          },
+          {
+            "title": "數據全球存儲",
+            "description": "存儲在雲端的數據受不同司法管轄區法律約束，可能允許在某些條件下被存取。"
+          },
+          {
+            "title": "基於訂閱制",
+            "description": "方案需定期續費，且第一年過後的續費價格往往會有所上漲。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Bitdefender 的最佳替代方案",
+    "description": "Internxt 提供全套產品及私密 AI，為您提供安全的 Bitdefender 替代方案。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "高級工具"
+      ],
+      "descriptions": [
+        "提供零知識及後量子加密的雲端儲存，支援進階共享、版本控制以及 NAS 支援。",
+        "集成在應用中，透過全盤或自訂掃描防禦惡意軟體及勒索軟體。",
+        "加密您的連接，攔截廣告及跟踪器，保護在線身份。",
+        "識別並清理垃圾或重複檔案，保持儲存空間整潔高效。",
+        "受後量子加密保護的私人視訊通話，無廣告及跟踪器。",
+        "支援 Windows、Mac、Linux 及移動端，為進階用戶提供 WebDAV 和 Rclone 支援。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 Bitdefender 的最佳替代方案",
+    "description": "Internxt 預設為您提供全面的私密加密、透明的開源軟體和全套隱私套件。",
+    "cta": "立即切換"
+  },
+  "tableSection": {
+    "title": "您的一站式隱私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隱私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費使用具有私密加密對話功能的 Internxt AI",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30 天無理由退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 Bitdefender 更安全、更私密？",
+        "answer": [
+          "是的，Internxt 使用後量子及零知識加密，確保只有您能查看自己的檔案。",
+          "Internxt Drive 包含 VPN、Antivirus、Cleaner 等更多服務，確保最佳在線安全。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密？",
+        "answer": [
+          "與標準加密不同，後量子算法旨在抵禦未來強大的量子攻擊。"
+        ]
+      },
+      {
+        "question": "Internxt 的總部在哪裡？",
+        "answer": [
+          "總部位於西班牙瓦倫西亞，遵循嚴格的 GDPR 法律來保護您的數據。"
+        ]
+      },
+      {
+        "question": "Bitdefender 是否比 Internxt 更貴？",
+        "answer": [
+          "憑您的 87% 專屬折扣，我們所有的方案都比 Bitdefender 目前的價格更實惠。"
+        ]
+      },
+      {
+        "question": "如何聯繫支持團隊？",
+        "answer": [
+          "請寫信至 hello@internxt.com，我們的團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以在終身方案中增加儲存空間嗎？",
+        "answer": [
+          "可以，您可以在設置中升級或購買新方案，儲存空間會自動疊加。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "Internxt 接受借記卡/信用卡、PayPal、iDEAL、加密貨幣及 Klarna。"
+        ]
+      }
+    ]
+  }
+}
