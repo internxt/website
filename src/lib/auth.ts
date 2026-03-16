@@ -265,6 +265,14 @@ export function checkout({ planId, promoCodeId, planType, mode, currency, gclid 
     mode && params.set('mode', mode ? mode : 'subscription');
     gclid && params.set('gclid', gclid);
 
+    const currentParams = new URLSearchParams(globalThis.location.search);
+    const celloProductId = currentParams.get('productId');
+    const celloUcc = currentParams.get('ucc');
+    const celloN = currentParams.get('celloN');
+    if (celloProductId) params.set('productId', celloProductId);
+    if (celloUcc) params.set('ucc', celloUcc);
+    if (celloN) params.set('celloN', celloN);
+
     window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
 

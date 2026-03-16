@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/Layout';
+import Script from 'next/script';
 
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
@@ -83,6 +84,7 @@ function SpecialOffer({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
+      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />
