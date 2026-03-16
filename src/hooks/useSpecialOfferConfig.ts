@@ -92,7 +92,7 @@ export const COUPON_CODES = {
   cninternxtl: PromoCodeName.cninternxtl,
   cooltechzone: PromoCodeName.CTZ,
   lifetime: PromoCodeName.lifetime,
-  clubic: PromoCodeName.DRIVE87,
+  clubic: PromoCodeName.DRIVE85,
 };
 
 interface OfferConfig {

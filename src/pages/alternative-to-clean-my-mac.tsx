@@ -12,7 +12,7 @@ const cleanmymacComparison = (props: any) => (
     metaTagId="alternative-to-clean-my-mac"
     segmentName="CleanMyMac Comparison"
     logo="/images/comparison/clean-my-mac-Letters.webp"
-    couponCodeName={PromoCodeName.CLEANMYMAC87}
+    couponCodeName={PromoCodeName.CLEANMYMAC85}
   />
 );
 

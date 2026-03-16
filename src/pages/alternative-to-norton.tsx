@@ -12,7 +12,7 @@ const nortonComparison = (props: any) => (
     metaTagId="alternative-to-norton"
     segmentName="Norton Comparison"
     logo="/images/comparison/norton-Letters.webp"
-    couponCodeName={PromoCodeName.NORTON87}
+    couponCodeName={PromoCodeName.NORTON85}
   />
 );
 

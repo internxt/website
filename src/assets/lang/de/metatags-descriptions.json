@@ -117,17 +117,17 @@
   {
     "id": "black-friday",
     "title": "Black Friday Angebote 2025 - Cloud-Speicher und Personal Cloud-Speicher Angebote",
-    "description": "Internxt Black Friday 2025: 87% RABATT auf sicheren Cloud-Speicher und Ihr vollständiges Datenschutzpaket! Holen Sie sich VPN, Antivirus, Cleaner, Meet und Mail."
+    "description": "Internxt Black Friday 2025: 85% RABATT auf sicheren Cloud-Speicher und Ihr vollständiges Datenschutzpaket! Holen Sie sich VPN, Antivirus, Cleaner, Meet und Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Black Friday Angebot Cloud-Speicher 2025",
-    "description": "Black Friday Internxt 2025 — 87% Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
+    "description": "Black Friday Internxt 2025 — 85% Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Black Friday Angebote für persönlichen Cloud-Speicher 2025",
-    "description": "Black Friday Internxt 2025 — 87% Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
+    "description": "Black Friday Internxt 2025 — 85% Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
   },
   {
     "id": "cloudwards",
@@ -412,17 +412,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — Kostenlose Cloud-Speicher-Angebote",
-    "description": "Kostenlose Cloud-Speicher-Angebote direkt von Internxt, um Ihren Tarif mit 87% Rabatt auf sicheren, verschlüsselten Cloud-Speicher und mehr zu upgraden"
+    "description": "Kostenlose Cloud-Speicher-Angebote direkt von Internxt, um Ihren Tarif mit 85% Rabatt auf sicheren, verschlüsselten Cloud-Speicher und mehr zu upgraden"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Offizielle Internxt Cloud-Speicher Lifetime-Angebote mit 87% Rabatt",
-    "description": "Holen Sie sich die besten Cloud-Speicher Lifetime-Angebote von Internxt. Zahlen Sie einmal und erhalten Sie 87% Rabatt auf privaten, verschlüsselten Cloud-Speicher, für immer."
+    "title": "Internxt — Offizielle Internxt Cloud-Speicher Lifetime-Angebote mit 85% Rabatt",
+    "description": "Holen Sie sich die besten Cloud-Speicher Lifetime-Angebote von Internxt. Zahlen Sie einmal und erhalten Sie 85% Rabatt auf privaten, verschlüsselten Cloud-Speicher, für immer."
   },
   {
     "id": "deals",
-    "title": "Internxt — Offizielle Internxt-Angebote mit 87% Rabatt auf alle Pläne",
-    "description": "Sichern Sie sich Ihren exklusiven Rabatt von 87%. Diese Internxt-Angebote umfassen privaten, verschlüsselten Cloud-Speicher und mehr zu einem unschlagbaren Preis."
+    "title": "Internxt — Offizielle Internxt-Angebote mit 85% Rabatt auf alle Pläne",
+    "description": "Sichern Sie sich Ihren exklusiven Rabatt von 85%. Diese Internxt-Angebote umfassen privaten, verschlüsselten Cloud-Speicher und mehr zu einem unschlagbaren Preis."
   },
   {
     "id": "reviews",
@@ -543,5 +543,10 @@
     "id": "alternative-to-norton",
     "title": "Internxt — Norton Alternative",
     "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu Norton. Inklusive Post-Quanten- und Zero-Knowledge-verschlüsseltem Cloud-Speicher und mehr."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — TotalAV Alternative",
+    "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu TotalAV. Inklusive Post-Quanten- und Zero-Knowledge-verschlüsseltem Cloud-Speicher und mehr."
   }
 ]

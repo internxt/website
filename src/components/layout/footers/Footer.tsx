@@ -421,9 +421,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.cloudStorage}
                       {isAlternativesOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -569,9 +569,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.videoCalls}
                       {isVideocallsOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -629,9 +629,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.aiAlternatives}
                       {isAiAlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -689,9 +689,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.s3Alternative}
                       {isS3AlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button> 
 
@@ -749,9 +749,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.antivirusAlternatives}
                       {isAntivirusAlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button> 
 
@@ -817,19 +817,27 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.nortonAlternative}
                       </Link>
+                      <Link
+                        href="/alternative-to-totalav"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.totalavAlternative}
+                      </Link>
                     </div>
 
                     <button
                       onClick={() => setIsCleanerAlternativeOpen(!isCleanerAlternativeOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary "
                     >
                       {textContent.FooterSection.sections.resources.cleanerAlternatives}
                       {isCleanerAlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mt-0.5 h-2 w-2 shrink-0" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 h-2 w-2 shrink-0" />
                       )}
-                    </button> 
+                    </button>
 
                     <div
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
@@ -1333,7 +1341,7 @@ export default function Footer({
                         >
                           {textContent.FooterSection.sections.resources.alternatives}
                           {isAlternativesOpen ? (
-                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                            <CaretDown className="mb-0.5 flex h-4 w-4" />
                           ) : (
                             <CaretRight className="mt-0.5 flex h-4 w-4" />
                           )}
@@ -1732,6 +1740,14 @@ export default function Footer({
                             >
                               {textContent.FooterSection.sections.resources.nortonAlternative}
                             </Link>
+                            <Link
+                              href="/alternative-to-totalav"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.totalavAlternative}
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -1743,9 +1759,9 @@ export default function Footer({
                         >
                           {textContent.FooterSection.sections.resources.cleanerAlternatives}
                           {isCleanerAlternativeOpen ? (
-                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                            <CaretDown className="mt-0.5 h-4 w-4 shrink-0" />
                           ) : (
-                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                            <CaretRight className="mt-0.5 h-4 w-4 shrink-0" />
                           )}
                         </button>
 

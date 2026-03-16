@@ -202,7 +202,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
           src: getImage('/images/home/internxt_secure_cloud_storage.webp'),
           alt: 'Internxt Secure Cloud Storage',
           width: 1240,
-          height: 687,
+          height: 685,
         }}
       />
 

@@ -62,7 +62,8 @@ type CompetitorType =
   | 'clean-my-mac'
   | 'malwarebytes'
   | 'mcafee'
-  | 'norton';
+  | 'norton'
+  | 'totalav';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;

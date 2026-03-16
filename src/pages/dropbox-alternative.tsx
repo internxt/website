@@ -27,8 +27,8 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Dropbox87,
-    couponCodeForLifetime: PromoCodeName.Dropbox87,
+    couponCode: PromoCodeName.Dropbox85,
+    couponCodeForLifetime: PromoCodeName.Dropbox85,
   });
 
   const onCheckoutButtonClicked = async (

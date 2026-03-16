@@ -105,7 +105,8 @@
         "malwarebytesAlternative": "Alternativa a Malwarebytes",
         "mcafeeAlternative": "Alternativa a McAfee",
         "nortonAlternative": "Alternativa a Norton",
-        "cleanerAlternatives": "Alternativas de Limpieza",
+        "totalavAlternative": "Alternativa a TotalAV",
+        "cleanerAlternatives": "Alternativas de Cleaner",
         "ccleanerAlternative": "Alternativa a CCleaner",
         "cleanMyMacAlternative": "Alternativa a CleanMyMac"
       },

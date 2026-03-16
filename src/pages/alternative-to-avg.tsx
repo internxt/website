@@ -12,7 +12,7 @@ const avgComparison = (props: any) => (
     metaTagId="alternative-to-avg"
     segmentName="Avg Comparison"
     logo="/images/comparison/avg-Letters.webp"
-    couponCodeName={PromoCodeName.AVG87}
+    couponCodeName={PromoCodeName.AVG85}
   />
 );
 

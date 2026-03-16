@@ -119,6 +119,7 @@ export interface Resources {
   malwarebytesAlternative: string;
   mcafeeAlternative: string;
   nortonAlternative: string;
+  totalavAlternative: string;
   cleanerAlternatives: string;
   ccleanerAlternative: string;
   cleanMyMacAlternative: string;

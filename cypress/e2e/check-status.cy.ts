@@ -55,6 +55,23 @@ const nameFiles = [
   'alternative-to-whereby',
   'alternative-to-wire',
   'webdav-rclone',
+  'alternative-to-avast',
+  'alternative-to-avg',
+  'alternative-to-avira',
+  'alternative-to-aws',
+  'alternative-to-azure',
+  'alternative-to-backblaze',
+  'alternative-to-bitdefender',
+  'alternative-to-ccleaner',
+  'alternative-to-clean-my-mac',
+  'alternative-to-google-cloud',
+  'alternative-to-idrive-e2',
+  'alternative-to-malwarebytes',
+  'alternative-to-mcafee',
+  'alternative-to-norton',
+  'alternative-to-totalav',
+  'proton-alternative',
+  'teams-alternative',
 ];
 
 const langs = {

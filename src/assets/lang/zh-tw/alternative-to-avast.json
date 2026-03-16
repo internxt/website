@@ -1,0 +1,236 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 Avast，\n但更**私密**",
+    "description": "切換到 Internxt，這是最尊重您隱私的 Avast 最佳替代方案",
+    "getPrivacy": " 選擇您的方案並享受 {{percentage}}% 的折扣  ",
+    "cta": "立即切換"
+  },
+  "HeaderSection": {
+    "title": "Internxt 與 Avast 概覽",
+    "description": "瞭解 Internxt 如何透過關鍵功能和差異化設計為您奪回數據控制權",
+    "tableSection": {
+      "comparisons": [
+        "代碼透明度",
+        "加密",
+        "後量子加密",
+        "價格與儲存空間",
+        "功能",
+        "安全審計",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "在您的裝置上加密",
+        "是",
+        "具競爭力，無隱藏費用，最高 5TB",
+        "Drive、VPN、Antivirus、Cleaner、Meet、Mail 等",
+        "定期安全審計",
+        "是",
+        "始終無法存取您的檔案",
+        "全面隱私保護：GDPR、西班牙數據保護法"
+      ],
+      "competitorFeatures": [
+        "閉源",
+        "部分功能由 Avast 加密",
+        "否",
+        "起價 €69.99，僅提供年度方案",
+        "防病毒、VPN、洩露監控、瀏覽器",
+        "無已發布的安全審計",
+        "否",
+        "在某些情況下可存取檔案",
+        "隱私保護較弱：GDPR、捷克共和國隱私法"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Avast 可能刪除重要檔案。Internxt 保護您的裝置、釋放儲存空間並保護您的隱私",
+    "description": "Avast 需要深度權限才能運行，增加了意外損壞或濫用的風險。切換到 Internxt，獲得完整的裝置保護與安全雲端儲存的結合。",
+    "scrollableSection": {
+      "titles": [
+        "數據收集",
+        "缺乏透明度",
+        "影響裝置效能",
+        "產品線有限"
+      ],
+      "descriptions": [
+        "至少從2014年至2020年1月，Avast據稱透過其防毒軟體和瀏覽器擴充功能收集了詳細的瀏覽資訊，並在未充分告知或獲得用戶同意的情況下，將其出售給第三方用於廣告和分析目的。這包括搜尋查詢和造訪的URL。",
+        "由於Avast不是開源軟體，您必須相信公司關於隱私、遙測和內部安全控制的聲明，因為外部專家無法自由審查代碼中是否存在隱藏行為、後門或弱加密實現。",
+        "Avast在進行完整掃描和即時保護期間可能影響裝置效能，在某些硬體上導致記憶體使用率高、系統變慢、網路連線延遲或系統卡頓。",
+        "Avast提供的產品與Internxt Drive相比有限，導致對單一訂閱的依賴。如果您需要與其他功能相結合的進階雲端儲存保護，則需要在其他地方尋找。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "為什麼您需要 Avast 的替代方案",
+    "description": "Avast 只是保護裝置免受惡意軟體侵害的選項之一。為了獲得完整的隱私保護和全套產品，請切換到 Internxt，獲得包含 Drive、Cleaner 等功能的完整 Avast 替代方案。",
+    "cards": {
+      "titles": [
+        "開源且經過審計",
+        "全套產品線",
+        "實惠的價格"
+      ],
+      "descriptions": [
+        "Internxt 完全開源並經過獨立審計，您可以放心，沒有後門存取您的數據，您的資訊以透明方式處理。",
+        "Internxt 提供 Cleaner 和完整的隱私生態系統，用於清理垃圾檔案、使用 Drive 的零知識加密儲存和共享檔案，以及更多好處，包括 VPN、Meet、Mail 等。",
+        "每月僅需 1.60 歐元即可開始，或選擇我們實惠的終身方案，一次付款永久使用。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Avast",
+    "description": "得益於零知識加密和後量子加密，Internxt 提供了無與倫比的隱私保護。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隱私、透明和信任",
+        "features": [
+          {
+            "title": "開源軟體",
+            "description": "Internxt 的代碼在 GitHub 上向所有人開放，供檢查和確保安全性。這種透明度保證沒有隱藏的漏洞。"
+          },
+          {
+            "title": "零知識加密",
+            "description": "您的數據在客戶端加密，保證只有您才能存取所有 Internxt 產品。"
+          },
+          {
+            "title": "歐洲雲端儲存",
+            "description": "Internxt 總部位於歐洲，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。平台經過全面審計，確保沒有外部存取您的數據。"
+          },
+          {
+            "title": "終身方案",
+            "description": "透過一次性付款獲得最高 5TB 的方案，避免重複訂閱。以 {{percentage}}% 的折扣獲得線上隱私所需的一切。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Avast：您的隱私狀況如何？",
+        "features": [
+          {
+            "title": "專有軟體",
+            "description": "Avast將其原始碼對公眾保密。沒有透明度，就無法確定Avast如何處理或保護您的檔案。"
+          },
+          {
+            "title": "加密連接",
+            "description": "Avast對其部分產品使用端到端加密，但不提供零知識加密。"
+          },
+          {
+            "title": "總部位於捷克共和國",
+            "description": "符合GDPR標準"
+          },
+          {
+            "title": "訂閱制",
+            "description": "Avast只提供年度訂閱，如果您需要雲端儲存等更多服務，則需要多個訂閱。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "為什麼 Internxt 是 Avast 的最佳替代方案",
+    "description": "Internxt Drive 包含一套全面的產品，旨在讓您重新掌控線上隱私。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "進階工具"
+      ],
+      "descriptions": [
+        "透過直接內置到 Internxt Drive 應用中的 Internxt Antivirus 獲得增強保護。執行完整或自訂病毒掃描，保護您的裝置免受勒索軟體或間諜軟體侵害。",
+        "Internxt 的 VPN 保護您的瀏覽、屏蔽廣告和追蹤器，並保持您的位置私密。加密您的 wifi 連接以防止監視、駭客和身份盜竊。",
+        "Internxt Cleaner 幫助您識別、清除和管理裝置中不需要的垃圾檔案或重複檔案，使您的儲存保持整潔有序。",
+        "Internxt Meet 是 Teams 的安全私密替代方案。使用 Meet，您可以主持無追蹤器、廣告和數據收集的私人視訊通話，通話受後量子加密保護。",
+        "Internxt Drive 可在 Windows、Mac、Linux 和行動裝置上使用。對於進階用戶，Internxt 提供 WebDAV、Rclone 和 NAS 支援。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "選擇 Internxt 作為 Avast 的最佳替代方案",
+    "description": "Internxt 預設提供完整的私密加密、透明的開源軟體和完整的隱私套件，以確保您的數據和檔案在線安全。",
+    "cta": "立即切換"
+  },
+  "tableSection": {
+    "title": "您的一站式隱私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隱私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "終身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "使用 Internxt 零知識雲端儲存掌控您的檔案",
+      "cta": "獲取優惠"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 Avast 更安全、更私密？",
+        "answer": [
+          "是的，Internxt 使用後量子和零知識加密，保證除您之外沒有人可以查看您的檔案。",
+          "Internxt Drive 包含 VPN、Antivirus、Cleaner、Meet 和 Mail，提供比 Avast 更多的服務。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密，它更安全嗎？",
+        "answer": [
+          "與標準加密不同，後量子加密算法旨在抵禦強大的量子攻擊。",
+          "Internxt 使用這種加密方法確保您的終身雲端儲存方案能夠抵禦未來的網路安全威脅，所有方案均可免費使用。"
+        ]
+      },
+      {
+        "question": "Internxt 總部在哪裡？",
+        "answer": [
+          "Internxt 總部位於西班牙瓦倫西亞，是符合 GDPR 的雲端儲存解決方案。"
+        ]
+      },
+      {
+        "question": "Avast 比 Internxt 貴嗎？",
+        "answer": [
+          "享受 87% 的專屬折扣後，我們所有方案都比 Avast 目前可用的定價選項更便宜，並且提供更多功能。"
+        ]
+      },
+      {
+        "question": "如何聯繫支援？",
+        "answer": [
+          "如有更多問題或需要幫助，請聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以為終身方案新增更多儲存空間嗎？",
+        "answer": [
+          "是的，您可以從 Internxt 帳戶設定中升級您的方案。或者在 internxt.com/pricing 購買新方案，您的儲存空間將自動疊加。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受借記卡和信用卡（Mastercard、VISA、American Express 等）。您也可以透過 PayPal、iDEAL、Sofort、加密貨幣和 Klarna 付款。"
+        ]
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Like Copilot, \n but **private**",
     "description": "Switch to Internxt AI, the best Copilot alternative that respects your privacy",
-    "getPrivacy": " Select your plan and get 87% off  ",
+    "getPrivacy": " Select your plan and get 85% off  ",
     "cta": "Make the switch"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
           },
           {
             "title": "Free and affordable plans",
-            "description": "Internxt AI is free, and you can combine it with Internxt Drive with lifetime plans up to 5TB. Access our services forever for 87% off."
+            "description": "Internxt AI is free, and you can combine it with Internxt Drive with lifetime plans up to 5TB. Access our services forever for 85% off."
           }
         ]
       },
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choose Internxt for the best Copilot alternative",
-    "description": "Internxt gives encrypted and private AI, plus secure cloud storage and a full privacy suite for 87% off",
+    "description": "Internxt gives encrypted and private AI, plus secure cloud storage and a full privacy suite for 85% off",
     "cta": "Make the switch"
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",
-    "hotLabel": "87% off 🔥",
+    "hotLabel": "85% off 🔥",
     "planTitles": {
       "header": "Your all-in-one privacy ally"
     },
@@ -201,7 +201,7 @@
       {
         "question": "Is Copilot more expensive than Internxt?",
         "answer": [
-          "Internxt AI is a free Copilot alternative, and with your exclusive 87% discount, all our plans are cheaper than Copilot’s pricing options currently available, with the benefit of offering secure cloud storage and a full privacy suite."
+          "Internxt AI is a free Copilot alternative, and with your exclusive 85% discount, all our plans are cheaper than Copilot’s pricing options currently available, with the benefit of offering secure cloud storage and a full privacy suite."
         ]
       },
       {

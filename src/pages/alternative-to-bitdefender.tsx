@@ -12,7 +12,7 @@ const bitdefenderComparison = (props: any) => (
     metaTagId="alternative-to-bitdefender"
     segmentName="Bitdefender Comparison"
     logo="/images/comparison/bitdefender-Letters.webp"
-    couponCodeName={PromoCodeName.BITDEFENDER87}
+    couponCodeName={PromoCodeName.BITDEFENDER85}
   />
 );
 

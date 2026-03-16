@@ -31,8 +31,8 @@ const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupons,
     // eslint-disable-next-line react-hooks/rules-of-hooks
   } = usePricing({
-    couponCode: PromoCodeName.IDRIVE87,
-    couponCodeForLifetime: PromoCodeName.IDRIVE87,
+    couponCode: PromoCodeName.IDRIVE85,
+    couponCodeForLifetime: PromoCodeName.IDRIVE85,
   });
 
   const onCheckoutButtonClicked = async (

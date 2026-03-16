@@ -1,0 +1,236 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Como TotalAV,\n pero **privado**",
+    "description": "Cámbiate a Internxt, la mejor alternativa a TotalAV que respeta tu privacidad",
+    "getPrivacy": " Selecciona tu plan y obtén un {{percentage}}% de descuento  ",
+    "cta": "Haz el cambio"
+  },
+  "HeaderSection": {
+    "title": "Descripción general de Internxt vs TotalAV",
+    "description": "Descubre las funciones clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Cifrado",
+        "Cifrado post-cuántico",
+        "Precios y almacenamiento",
+        "Funciones",
+        "Auditorías de seguridad",
+        "Soporte en vivo",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "Cifrado en tu dispositivo",
+        "Sí",
+        "Competitivo, sin costes ocultos, hasta 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail y más",
+        "Auditorías de seguridad periódicas",
+        "Sí",
+        "Nunca puede acceder a tus archivos",
+        "Privacidad total: RGPD, leyes españolas de protección de datos"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Ciertas funciones, cifradas por TotalAV",
+        "No",
+        "Planes mensuales o anuales desde €11/mes",
+        "Antivirus, VPN, gestor de contraseñas",
+        "Sin auditorías de seguridad publicadas",
+        "No",
+        "Puede acceder a archivos en ciertas circunstancias",
+        "RGPD, leyes de privacidad del Reino Unido"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "TotalAV puede eliminar archivos importantes. Internxt protege tu dispositivo, libera almacenamiento y protege tu privacidad",
+    "description": "TotalAV requiere permisos profundos para funcionar, lo que aumenta la exposición a daños accidentales o usos indebidos. Cámbiate a Internxt para obtener protección completa del dispositivo combinada con almacenamiento seguro en la nube.",
+    "scrollableSection": {
+      "titles": [
+        "Política de privacidad poco clara",
+        "Falta de transparencia",
+        "Impacto en el rendimiento",
+        "Suite de productos limitada"
+      ],
+      "descriptions": [
+        "La VPN afirma una política de no registros, pero su política de privacidad permite cierta recopilación de metadatos y carece de una auditoría independiente pública, lo que genera confusión e inquietudes sobre lo que realmente se almacena.",
+        "Al no ser de código abierto, debes confiar en las afirmaciones de TotalAV sobre privacidad, telemetría y controles de seguridad internos, ya que expertos externos no pueden revisar libremente el código en busca de comportamientos ocultos, puertas traseras o implementaciones criptográficas débiles.",
+        "TotalAV puede afectar el rendimiento del dispositivo durante los análisis completos y la protección en tiempo real, causando alto uso de memoria, ralentizaciones, conexiones de red retrasadas o retrasos del sistema en cierto hardware.",
+        "TotalAV ofrece productos limitados en comparación con Internxt Drive, creando dependencia de una sola suscripción recurrente. Si necesitas protección avanzada de almacenamiento en la nube combinada con otras funciones, tendrás que buscar en otro lugar."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Por qué necesitas una alternativa a TotalAV",
+    "description": "TotalAV es solo una opción para proteger tu dispositivo del malware. Para una privacidad total y una suite completa, cámbiate a Internxt para una alternativa completa a TotalAV con Drive, Cleaner y más.",
+    "cards": {
+      "titles": [
+        "Código abierto y auditado",
+        "Suite completa de productos",
+        "Planes asequibles"
+      ],
+      "descriptions": [
+        "Internxt es totalmente de código abierto y está auditado de forma independiente, por lo que puedes tener la certeza de que no hay puertas traseras a tus datos y que tu información se gestiona de forma transparente.",
+        "Internxt ofrece Cleaner y un ecosistema de privacidad completo para limpiar archivos basura, almacenar y compartir archivos con cifrado de conocimiento cero con Drive, y más beneficios, incluyendo VPN, Meet, Mail y más.",
+        "Empieza con Internxt por solo 1,60 € al mes, o evita las suscripciones con nuestros asequibles planes de por vida: paga una vez y úsalo siempre."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs TotalAV",
+    "description": "Internxt ofrece una privacidad y seguridad inigualables gracias al cifrado de conocimiento cero y post-cuántico.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacidad total, transparencia y confianza",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "El código de Internxt está abierto para que todos puedan examinarlo en GitHub. Esta transparencia garantiza que no haya vulnerabilidades ocultas."
+          },
+          {
+            "title": "Cifrado de conocimiento cero",
+            "description": "Tus datos se cifran en el lado del cliente, garantizando que solo tú puedas acceder a ellos en todos los productos Internxt."
+          },
+          {
+            "title": "Almacenamiento en la nube europeo",
+            "description": "Internxt tiene su sede en Europa y cumple con RGPD, HIPAA, ISO 27001 y SOC 2. La plataforma está completamente auditada para garantizar que no haya acceso externo a tus datos."
+          },
+          {
+            "title": "Planes de por vida",
+            "description": "Evita suscripciones repetidas con un pago único por planes de hasta 5TB. Consigue todo lo que necesitas con un {{percentage}}% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "TotalAV: ¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Software propietario",
+            "description": "TotalAV mantiene su código fuente oculto al público. Sin transparencia, no hay forma de saber cómo TotalAV maneja o protege tus archivos."
+          },
+          {
+            "title": "Conexión cifrada",
+            "description": "TotalAV utiliza cifrado de extremo a extremo en algunos de sus productos, pero no ofrece cifrado de conocimiento cero."
+          },
+          {
+            "title": "República Checa",
+            "description": "Cumple con el RGPD"
+          },
+          {
+            "title": "Modelo de suscripción",
+            "description": "TotalAV solo ofrece suscripciones anuales, por lo que si necesitas almacenamiento en la nube y más, necesitarías varias suscripciones."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a TotalAV",
+    "description": "Internxt Drive incluye una suite completa de productos diseñada para devolverte el control de tu privacidad online.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Herramientas avanzadas"
+      ],
+      "descriptions": [
+        "Obtén mayor protección con Internxt Antivirus integrado directamente en tu app Internxt Drive. Ejecuta análisis completos o personalizados para mantener tu dispositivo protegido contra ransomware o spyware.",
+        "La VPN de Internxt protege tu navegación, bloquea anuncios y rastreadores y mantiene tu ubicación privada. Cifra tu conexión wifi para evitar espionaje, hackers y robo de identidad.",
+        "Internxt Cleaner te ayuda a identificar, eliminar y gestionar archivos basura o duplicados de tu dispositivo para mantener tu almacenamiento organizado y libre de desorden.",
+        "Internxt Meet está disponible como alternativa segura y privada a Teams. Con Meet, puedes realizar videollamadas privadas libres de rastreadores, anuncios y recopilación de datos, protegidas con cifrado post-cuántico.",
+        "Internxt Drive está disponible en Windows, Mac, Linux y móvil. Para usuarios avanzados, Internxt ofrece soporte para WebDAV, Rclone y NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Elige Internxt para la mejor alternativa a TotalAV",
+    "description": "Internxt te ofrece cifrado privado total por defecto, software de código abierto transparente y una suite de privacidad completa para mantener tus datos y archivos seguros online.",
+    "cta": "Haz el cambio"
+  },
+  "tableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "{{discount}}% de descuento 🔥",
+    "planTitles": {
+      "header": "Tu aliado de privacidad todo en uno"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Toma el control de tus archivos con el almacenamiento en la nube de conocimiento cero de Internxt",
+      "cta": "Consigue la oferta"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Atención al cliente premium",
+      "guarantee": "30 días de garantía de reembolso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt una alternativa más segura y privada a TotalAV?",
+        "answer": [
+          "Sí, Internxt utiliza cifrado post-cuántico y de conocimiento cero que garantiza que nadie más que tú pueda ver tus archivos.",
+          "Internxt Drive incluye VPN, Antivirus, Cleaner, Meet y Mail, ofreciéndote más servicios que TotalAV."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado post-cuántico y es más seguro?",
+        "answer": [
+          "A diferencia del cifrado estándar, los algoritmos de cifrado post-cuántico están diseñados para resistir potentes ataques cuánticos.",
+          "Internxt utiliza este método de criptografía para garantizar que tu plan de almacenamiento de por vida te proteja contra futuras amenazas de ciberseguridad."
+        ]
+      },
+      {
+        "question": "¿Dónde está ubicado Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, lo que lo convierte en una solución de almacenamiento conforme al RGPD."
+        ]
+      },
+      {
+        "question": "¿Es TotalAV más caro que Internxt?",
+        "answer": [
+          "Con tu descuento exclusivo del 87%, todos nuestros planes son más baratos que las opciones de precios de TotalAV, con el beneficio de ofrecer muchas más funciones."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo contactar con soporte?",
+        "answer": [
+          "Si tienes más preguntas o necesitas asistencia, puedes contactar con hello@internxt.com y nuestro equipo estará encantado de ayudarte."
+        ]
+      },
+      {
+        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, puedes actualizar tu plan desde la configuración de tu cuenta Internxt. O compra un nuevo plan en internxt.com/pricing y tu almacenamiento se acumulará automáticamente."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar con PayPal, iDEAL, Sofort, criptomoneda y Klarna."
+        ]
+      }
+    ]
+  }
+}

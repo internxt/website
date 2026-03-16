@@ -12,7 +12,7 @@ const ccleanerComparison = (props: any) => (
     metaTagId="alternative-to-ccleaner"
     segmentName="Ccleaner Comparison"
     logo="/images/comparison/ccleaner-Letters.webp"
-    couponCodeName={PromoCodeName.CCLEANER87}
+    couponCodeName={PromoCodeName.CCLEANER85}
   />
 );
 

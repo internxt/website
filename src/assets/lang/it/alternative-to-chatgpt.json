@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Come ChatGPT, \n ma **privato**",
     "description": "Passa a Internxt AI, la migliore alternativa a ChatGPT che rispetta la tua privacy",
-    "getPrivacy": " Seleziona il tuo piano e ottieni l'87% di sconto ",
+    "getPrivacy": " Seleziona il tuo piano e ottieni l'85% di sconto ",
     "cta": "Fai il passaggio"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
           },
           {
             "title": "Piani gratuiti e convenienti",
-            "description": "Internxt AI è gratuito e puoi combinarlo con Internxt Drive con piani a vita fino a 5TB. Accedi ai nostri servizi per sempre con l'87% di sconto."
+            "description": "Internxt AI è gratuito e puoi combinarlo con Internxt Drive con piani a vita fino a 5TB. Accedi ai nostri servizi per sempre con l'85% di sconto."
           }
         ]
       },
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Scegli Internxt per la migliore alternativa a ChatGPT",
-    "description": "Internxt offre un'IA crittografata e privata, oltre a cloud storage sicuro e una suite completa per la privacy con l'87% di sconto.",
+    "description": "Internxt offre un'IA crittografata e privata, oltre a cloud storage sicuro e una suite completa per la privacy con l'85% di sconto.",
     "cta": "Fai il passaggio"
   },
   "tableSection": {
     "title": "Il tuo alleato per la privacy tutto in uno",
-    "hotLabel": "87% di sconto 🔥",
+    "hotLabel": "85% di sconto 🔥",
     "planTitles": {
       "header": "Il tuo alleato per la privacy tutto in uno"
     },
@@ -201,7 +201,7 @@
       {
         "question": "ChatGPT è più costoso di Internxt?",
         "answer": [
-          "Internxt AI è gratuito e, con lo sconto dell'87%, i nostri piani sono più economici degli abbonamenti di ChatGPT, offrendo in più una suite di sicurezza completa."
+          "Internxt AI è gratuito e, con lo sconto dell'85%, i nostri piani sono più economici degli abbonamenti di ChatGPT, offrendo in più una suite di sicurezza completa."
         ]
       },
       {

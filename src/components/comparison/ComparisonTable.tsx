@@ -55,7 +55,8 @@ interface ComparisonTableProps {
     | 'clean-my-mac'
     | 'malwarebytes'
     | 'mcafee'
-    | 'norton';
+    | 'norton'
+    | 'totalav';
   hideTooltip?: boolean;
   needH2?: boolean;
 }
@@ -200,6 +201,9 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     },
     norton: {
       defaultLogo: '/images/comparison/norton-Letters.webp',
+    },
+    totalav: {
+      defaultLogo: '/images/comparison/totalav-Letters.webp',
     },
   } as const;
 

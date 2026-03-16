@@ -1,0 +1,236 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 TotalAV，\n但更**私密**",
+    "description": "切换到 Internxt，这是最尊重您隐私的 TotalAV 最佳替代方案",
+    "getPrivacy": " 选择您的计划并享受 {{percentage}}% 的折扣  ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 TotalAV 概览",
+    "description": "了解 Internxt 如何通过关键功能和差异化设计为您夺回数据控制权",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密",
+        "后量子加密",
+        "价格与存储空间",
+        "功能",
+        "安全审计",
+        "在线客服",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "是",
+        "具有竞争力，无隐藏费用，最高 5TB",
+        "Drive、VPN、Antivirus、Cleaner、Meet、Mail 等",
+        "定期安全审计",
+        "是",
+        "始终无法访问您的文件",
+        "全面隐私保护：GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "部分功能由 TotalAV 加密",
+        "否",
+        "月度或年度计划，起价 €11/月",
+        "防病毒、VPN、密码管理器",
+        "无已发布的安全审计",
+        "否",
+        "在某些情况下可访问文件",
+        "GDPR、英国隐私法"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "TotalAV 可能删除重要文件。Internxt 保护您的设备、释放存储空间并保护您的隐私",
+    "description": "TotalAV 需要深度权限才能运行，增加了意外损坏或滥用的风险。切换到 Internxt，获得完整的设备保护与安全云存储的结合。",
+    "scrollableSection": {
+      "titles": [
+        "隐私政策不明确",
+        "缺乏透明度",
+        "影响设备性能",
+        "产品线有限"
+      ],
+      "descriptions": [
+        "VPN 声称无日志政策，但其隐私政策允许收集一些元数据，且缺乏公开的独立审计，引发了关于实际存储内容的混淆和信任顾虑。",
+        "由于TotalAV不是开源软件，您必须相信公司关于隐私、遥测和内部安全控制的声明，因为外部专家无法自由审查代码中是否存在隐藏行为、后门或弱加密实现。",
+        "TotalAV在进行完整扫描和实时保护期间可能影响设备性能，在某些硬件上导致内存使用率高、系统变慢、网络连接延迟或系统卡顿。",
+        "TotalAV提供的产品与Internxt Drive相比有限，导致对单一订阅的依赖。如果您需要与其他功能相结合的高级云存储保护，则需要在其他地方寻找。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "为什么您需要 TotalAV 的替代方案",
+    "description": "TotalAV 只是保护设备免受恶意软件侵害的选项之一。为了获得完整的隐私保护和全套产品，请切换到 Internxt，获得包含 Drive、Cleaner 等功能的完整 TotalAV 替代方案。",
+    "cards": {
+      "titles": [
+        "开源且经过审计",
+        "全套产品线",
+        "实惠的价格"
+      ],
+      "descriptions": [
+        "Internxt 完全开源并经过独立审计，您可以放心，没有后门访问您的数据，您的信息以透明方式处理。",
+        "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理垃圾文件、使用 Drive 的零知识加密存储和共享文件，以及更多好处，包括 VPN、Meet、Mail 等。",
+        "每月仅需 1.60 欧元即可开始，或选择我们实惠的终身计划，一次付款永久使用。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs TotalAV",
+    "description": "得益于零知识加密和后量子加密，Internxt 提供了无与伦比的隐私保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隐私、透明和信任",
+        "features": [
+          {
+            "title": "开源软件",
+            "description": "Internxt 的代码在 GitHub 上向所有人开放。这种透明度保证没有隐藏的漏洞。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的数据在客户端加密，保证只有您才能访问所有 Internxt 产品。"
+          },
+          {
+            "title": "欧洲云存储",
+            "description": "Internxt 总部位于欧洲，符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准，确保没有外部访问您的数据。"
+          },
+          {
+            "title": "终身计划",
+            "description": "通过一次性付款获得最高 5TB 的计划，避免重复订阅。以 {{percentage}}% 的折扣获得在线隐私所需的一切。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "TotalAV：您的隐私状况如何？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "TotalAV将其源代码对公众保密。没有透明度，就无法确定TotalAV如何处理或保护您的文件。"
+          },
+          {
+            "title": "加密连接",
+            "description": "TotalAV对其部分产品使用端到端加密，但不提供零知识加密。"
+          },
+          {
+            "title": "捷克共和国",
+            "description": "符合GDPR标准"
+          },
+          {
+            "title": "订阅制",
+            "description": "TotalAV只提供年度订阅，如果您需要云存储等更多服务，则需要多个订阅。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 TotalAV 的最佳替代方案",
+    "description": "Internxt Drive 包含一套全面的产品，旨在让您重新掌控在线隐私。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "高级工具"
+      ],
+      "descriptions": [
+        "通过直接内置到 Internxt Drive 应用中的 Internxt Antivirus 获得增强保护。运行完整或自定义病毒扫描，保护您的设备免受勒索软件或间谍软件侵害。",
+        "Internxt 的 VPN 保护您的浏览、屏蔽广告和追踪器，并保持您的位置私密。加密您的 wifi 连接以防止监视、黑客和身份盗窃。",
+        "Internxt Cleaner 帮助您识别、清除和管理设备中不需要的垃圾文件或重复文件，使您的存储保持整洁有序。",
+        "Internxt Meet 是 Teams 的安全私密替代方案。使用 Meet，您可以主持无追踪器、广告和数据收集的私人视频通话，通话受后量子加密保护。",
+        "Internxt Drive 可在 Windows、Mac、Linux 和移动设备上使用。对于高级用户，Internxt 提供 WebDAV、Rclone 和 NAS 支持。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为 TotalAV 的最佳替代方案",
+    "description": "Internxt 默认提供完整的私密加密、透明的开源软件和完整的隐私套件，以确保您的数据和文件在线安全。",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的一站式隐私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隐私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "终身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "使用 Internxt 零知识云存储掌控您的文件",
+      "cta": "获取优惠"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 TotalAV 更安全、更私密？",
+        "answer": [
+          "是的，Internxt 使用后量子和零知识加密，保证除您之外没有人可以查看您的文件。",
+          "Internxt Drive 包含 VPN、Antivirus、Cleaner、Meet 和 Mail，提供比 TotalAV 更多的服务。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密，它更安全吗？",
+        "answer": [
+          "与标准加密不同，后量子加密算法旨在抵御强大的量子攻击。",
+          "Internxt 使用这种加密方法确保您的终身云存储计划能够抵御未来的网络安全威胁。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": [
+          "Internxt 总部位于西班牙瓦伦西亚，是符合 GDPR 的云存储解决方案。"
+        ]
+      },
+      {
+        "question": "TotalAV 比 Internxt 贵吗？",
+        "answer": [
+          "享受 87% 的专属折扣后，我们所有计划都比 TotalAV 目前可用的定价选项更便宜，并且提供更多功能。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "如有更多问题或需要帮助，请联系 hello@internxt.com，我们的客户成功团队将很乐意为您提供帮助。"
+        ]
+      },
+      {
+        "question": "我可以为终身计划添加更多存储空间吗？",
+        "answer": [
+          "是的，从 Internxt 账户设置中升级您的计划，或在 internxt.com/pricing 购买新计划，存储空间将自动叠加。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密货币付款吗？",
+        "answer": [
+          "Internxt 目前接受借记卡和信用卡（Mastercard、VISA、American Express 等）。您也可以通过 PayPal、iDEAL、Sofort、加密货币和 Klarna 付款。"
+        ]
+      }
+    ]
+  }
+}

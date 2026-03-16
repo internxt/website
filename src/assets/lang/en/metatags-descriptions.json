@@ -227,22 +227,22 @@
   {
     "id": "black-friday",
     "title": "Black Friday Deals 2025 - Cloud Storage and Personal Cloud Storage Deals",
-    "description": "Internxt Black Friday 2025: 87% OFF secure cloud storage & your full privacy suite! Get VPN, Antivirus, Cleaner, Meet, and Mail."
+    "description": "Internxt Black Friday 2025: 85% OFF secure cloud storage & your full privacy suite! Get VPN, Antivirus, Cleaner, Meet, and Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt – Black Friday Cloud Storage Deals 2025",
-    "description": "Black Friday Internxt 2025 — 87% off cloud storage, Antivirus, Cleaner, VPN, Meet, and Mail."
+    "description": "Black Friday Internxt 2025 — 85% off cloud storage, Antivirus, Cleaner, VPN, Meet, and Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Black Friday Personal Cloud Storage Deals 2025",
-    "description": "Black Friday Internxt 2025 — 87% off cloud storage, Antivirus, Cleaner, VPN, Meet, and Mail."
+    "description": "Black Friday Internxt 2025 — 85% off cloud storage, Antivirus, Cleaner, VPN, Meet, and Mail."
   },
   {
     "id": "cloudwards",
     "title": "Internxt Lifetime Special Offer for Cloudwards Users",
-    "description": "Internxt is offering 87% off all lifetime cloud storage plans to Cloudwards customers. Secure your files for a lifetime with a single payment."
+    "description": "Internxt is offering 85% off all lifetime cloud storage plans to Cloudwards customers. Secure your files for a lifetime with a single payment."
   },
   {
     "id": "guru99",
@@ -461,8 +461,8 @@
   },
   {
     "id": "resurrection-campaign",
-    "title": "Internxt Cloud Storage Offer – 87% off Subscription and Lifetime Plans!",
-    "description": "Internxt is offering 87% off our new and improved private cloud storage. Choose from our subscription and lifetime plans to get huge savings."
+    "title": "Internxt Cloud Storage Offer – 85% off Subscription and Lifetime Plans!",
+    "description": "Internxt is offering 85% off our new and improved private cloud storage. Choose from our subscription and lifetime plans to get huge savings."
   },
   {
     "id": "halloween-campaign",
@@ -602,17 +602,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — Free Cloud Storage Deals",
-    "description": "Free cloud storage deals directly from Internxt to upgrade your plan for 87% off secure, encrypted cloud storage and more."
+    "description": "Free cloud storage deals directly from Internxt to upgrade your plan for 85% off secure, encrypted cloud storage and more."
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Official Internxt Cloud Storage Lifetime Deals for 87%",
-    "description": "Get the best cloud storage lifetime deals from Internxt. Pay once to get 87% off private, encrypted cloud storage, forever."
+    "title": "Internxt — Official Internxt Cloud Storage Lifetime Deals for 85%",
+    "description": "Get the best cloud storage lifetime deals from Internxt. Pay once to get 85% off private, encrypted cloud storage, forever."
   },
   {
     "id": "deals",
-    "title": "Internxt — Official Internxt Deals for 87% off All Plans",
-    "description": "Claim your exclusive 87% discount. These Internxt deals include private, encrypted cloud storage, and more at an unbeatable price."
+    "title": "Internxt — Official Internxt Deals for 85% off All Plans",
+    "description": "Claim your exclusive 85% discount. These Internxt deals include private, encrypted cloud storage, and more at an unbeatable price."
   },
   {
     "id": "reviews",
@@ -733,5 +733,10 @@
     "id": "alternative-to-norton",
     "title": "Internxt — Norton Alternative",
     "description": "Switch to Internxt for an open-source alternative to Norton. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — TotalAV Alternative",
+    "description": "Switch to Internxt for an open-source alternative to TotalAV. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
   }
 ]

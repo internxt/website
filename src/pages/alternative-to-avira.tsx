@@ -12,7 +12,7 @@ const aviraComparison = (props: any) => (
     metaTagId="alternative-to-avira"
     segmentName="Avira Comparison"
     logo="/images/comparison/avira-Letters.webp"
-    couponCodeName={PromoCodeName.AVIRA87}
+    couponCodeName={PromoCodeName.AVIRA85}
   />
 );
 

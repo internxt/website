@@ -102,17 +102,17 @@
   {
     "id": "black-friday",
     "title": "Ofertas de Black Friday 2025 - Almacenamiento en la Nube y Ofertas de Nube Personal",
-    "description": "Internxt Black Friday 2025: ¡87% de descuento en almacenamiento seguro en la nube y tu paquete de privacidad completo! Obtén VPN, Antivirus, Cleaner, Meet y Mail."
+    "description": "Internxt Black Friday 2025: ¡85% de descuento en almacenamiento seguro en la nube y tu paquete de privacidad completo! Obtén VPN, Antivirus, Cleaner, Meet y Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Oferta Black Friday Almacenamiento en la Nube 2025",
-    "description": "Black Friday Internxt 2025 — 87% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
+    "description": "Black Friday Internxt 2025 — 85% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Ofertas de Almacenamiento Personal en la Nube Black Friday 2025",
-    "description": "Black Friday Internxt 2025 — 87% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
+    "description": "Black Friday Internxt 2025 — 85% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
   },
   {
     "id": "cloudwards",
@@ -502,17 +502,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — Ofertas de Almacenamiento en la Nube Gratuito",
-    "description": "Ofertas de almacenamiento en la nube gratuito directamente de Internxt para mejorar tu plan con un 87% de descuento en almacenamiento en la nube seguro y encriptado y más"
+    "description": "Ofertas de almacenamiento en la nube gratuito directamente de Internxt para mejorar tu plan con un 85% de descuento en almacenamiento en la nube seguro y encriptado y más"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Ofertas Oficiales de Almacenamiento en la Nube de por Vida de Internxt con 87% de Descuento",
-    "description": "Obtén las mejores ofertas de almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 87% de descuento en almacenamiento en la nube privado y encriptado, para siempre."
+    "title": "Internxt — Ofertas Oficiales de Almacenamiento en la Nube de por Vida de Internxt con 85% de Descuento",
+    "description": "Obtén las mejores ofertas de almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 85% de descuento en almacenamiento en la nube privado y encriptado, para siempre."
   },
   {
     "id": "deals",
-    "title": "Internxt — Ofertas oficiales de Internxt con 87% de descuento en todos los planes",
-    "description": "Reclama tu descuento exclusivo del 87%. Estas ofertas de Internxt incluyen almacenamiento en la nube privado y encriptado, y más a un precio inmejorable."
+    "title": "Internxt — Ofertas oficiales de Internxt con 85% de descuento en todos los planes",
+    "description": "Reclama tu descuento exclusivo del 85%. Estas ofertas de Internxt incluyen almacenamiento en la nube privado y encriptado, y más a un precio inmejorable."
   },
   {
     "id": "reviews",
@@ -633,5 +633,10 @@
     "id": "alternative-to-norton",
     "title": "Internxt — Alternativa a Norton",
     "description": "Pásate a Internxt para una alternativa de código abierto a Norton. Incluye almacenamiento en la nube con cifrado post-cuántico y de conocimiento cero, y más."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — Internxt — Alternativa a TotalAV",
+    "description": "Pásate a Internxt para una alternativa de código abierto a TotalAV. Incluye almacenamiento en la nube con cifrado post-cuántico y de conocimiento cero, y más."
   }
 ]

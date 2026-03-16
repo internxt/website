@@ -112,17 +112,17 @@
   {
     "id": "black-friday",
     "title": "2025 年黑色星期五优惠 — 云存储和个人云存储优惠",
-    "description": "Internxt 2025 年黑色星期五：安全云存储和完整隐私套件可享 87% 折扣！获取 VPN、Antivirus、Cleaner、Meet 和 Mail。"
+    "description": "Internxt 2025 年黑色星期五：安全云存储和完整隐私套件可享 85% 折扣！获取 VPN、Antivirus、Cleaner、Meet 和 Mail。"
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — 2025 黑色星期五云存储优惠",
-    "description": "Internxt 2025 黑色星期五 — 云存储、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 87% 折扣。"
+    "description": "Internxt 2025 黑色星期五 — 云存储、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 85% 折扣。"
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — 2025黑色星期五個人雲端儲存優惠",
-    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受87%折扣。"
+    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受85%折扣。"
   },
   {
     "id": "cloudwards",
@@ -422,17 +422,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — 免费云存储优惠",
-    "description": "直接来自Internxt的免费云存储优惠，以87%的折扣升级您的计划，获得安全、加密的云存储等服务"
+    "description": "直接来自Internxt的免费云存储优惠，以85%的折扣升级您的计划，获得安全、加密的云存储等服务"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Internxt 官方雲端儲存終身優惠87%折扣",
-    "description": "從 Internxt 獲得最佳的雲端儲存終身優惠。一次性付款，永久享受私密加密雲端儲存87%折扣。"
+    "title": "Internxt — Internxt 官方雲端儲存終身優惠85%折扣",
+    "description": "從 Internxt 獲得最佳的雲端儲存終身優惠。一次性付款，永久享受私密加密雲端儲存85%折扣。"
   },
   {
     "id": "deals",
-    "title": "Internxt — Internxt 官方優惠，所有方案享受 87% 折扣",
-    "description": "領取您的專屬 87% 折扣。這些 Internxt 優惠包括私密加密雲端儲存等，價格無與倫比。"
+    "title": "Internxt — Internxt 官方優惠，所有方案享受 85% 折扣",
+    "description": "領取您的專屬 85% 折扣。這些 Internxt 優惠包括私密加密雲端儲存等，價格無與倫比。"
   },
   {
     "id": "reviews",
@@ -553,5 +553,10 @@
     "id": "alternative-to-norton",
     "title": "Internxt — Norton 替代方案",
     "description": "切换到 Internxt，体验 Norton 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — TotalAV 替代方案",
+    "description": "切换到 Internxt，体验 TotalAV 的开源替代方案。包含后量子和零知识加密云存储等功能。"
   }
 ]

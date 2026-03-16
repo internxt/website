@@ -12,7 +12,7 @@ const mcafeeComparison = (props: any) => (
     metaTagId="alternative-to-mcafee"
     segmentName="Mcafee Comparison"
     logo="/images/comparison/mcafee-Letters.webp"
-    couponCodeName={PromoCodeName.MCAFEE87}
+    couponCodeName={PromoCodeName.MCAFEE85}
   />
 );
 

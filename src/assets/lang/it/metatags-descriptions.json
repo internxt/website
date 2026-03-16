@@ -117,17 +117,17 @@
   {
     "id": "black-friday",
     "title": "Offerte Black Friday 2025 - Offerte di Archiviazione Cloud e Cloud Personale",
-    "description": "Internxt Black Friday 2025: 87% DI SCONTO sull'archiviazione cloud sicura e sulla tua suite completa per la privacy! Ottieni VPN, Antivirus, Cleaner, Meet e Mail."
+    "description": "Internxt Black Friday 2025: 85% DI SCONTO sull'archiviazione cloud sicura e sulla tua suite completa per la privacy! Ottieni VPN, Antivirus, Cleaner, Meet e Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Offerta Black Friday Archiviazione Cloud 2025",
-    "description": "Black Friday Internxt 2025 — 87% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
+    "description": "Black Friday Internxt 2025 — 85% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Offerte Black Friday per Archiviazione Cloud Personale 2025",
-    "description": "Black Friday Internxt 2025 — 87% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
+    "description": "Black Friday Internxt 2025 — 85% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
   },
   {
     "id": "cloudwards",
@@ -432,17 +432,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — Offerte di Cloud Storage Gratuito",
-    "description": "Offerte di cloud storage gratuito direttamente da Internxt per aggiornare il tuo piano con l'87% di sconto su cloud storage sicuro e crittografato e altro ancora"
+    "description": "Offerte di cloud storage gratuito direttamente da Internxt per aggiornare il tuo piano con l'85% di sconto su cloud storage sicuro e crittografato e altro ancora"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Offerte Ufficiali di Archiviazione Cloud a Vita Internxt con 87% di Sconto",
-    "description": "Ottieni le migliori offerte di archiviazione cloud a vita da Internxt. Paga una volta per ottenere l'87% di sconto sull'archiviazione cloud privata e crittografata, per sempre."
+    "title": "Internxt — Offerte Ufficiali di Archiviazione Cloud a Vita Internxt con 85% di Sconto",
+    "description": "Ottieni le migliori offerte di archiviazione cloud a vita da Internxt. Paga una volta per ottenere l'85% di sconto sull'archiviazione cloud privata e crittografata, per sempre."
   },
   {
     "id": "deals",
-    "title": "Internxt — Offerte ufficiali Internxt con 87% di sconto su tutti i piani",
-    "description": "Richiedi il tuo sconto esclusivo dell'87%. Queste offerte Internxt includono cloud storage privato e crittografato, e altro a un prezzo imbattibile."
+    "title": "Internxt — Offerte ufficiali Internxt con 85% di sconto su tutti i piani",
+    "description": "Richiedi il tuo sconto esclusivo dell'85%. Queste offerte Internxt includono cloud storage privato e crittografato, e altro a un prezzo imbattibile."
   },
   {
     "id": "reviews",
@@ -563,5 +563,10 @@
     "id": "alternative-to-norton",
     "title": "Internxt — Alternativa a Norton",
     "description": "Passa a Internxt per un'alternativa open-source a Norton. Include archiviazione cloud crittografata post-quantistica e zero-knowledge e altro ancora."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — Alternativa a TotalAV",
+    "description": "Passa a Internxt per un'alternativa open-source a TotalAV. Include archiviazione cloud crittografata post-quantistica e zero-knowledge e altro ancora."
   }
 ]
