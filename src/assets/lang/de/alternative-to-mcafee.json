@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Wie McAfee,\n aber **privat**",
+    "description": "Wechseln Sie zu Internxt, der besten Alternative zu McAfee, die Ihre Privatsphäre respektiert",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie {{percentage}}% Rabatt  ",
+    "cta": "Jetzt wechseln"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs. McAfee im Überblick",
+    "description": "Entdecken Sie die wichtigsten Funktionen und Unterschiede, mit denen Internxt Ihnen die Kontrolle über Ihre Daten zurückgibt",
+    "tableSection": {
+      "comparisons": [
+        "Code-Transparenz",
+        "Datenschutz",
+        "Datenerfassung",
+        "Preise und Speicher",
+        "Weitere Funktionen",
+        "Sicherheitsaudits",
+        "Systemleistung",
+        "Datenschutzrichtlinie",
+        "Datenschutzgesetze"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Ende-zu-Ende-Verschlüsselung",
+        "Minimale Datenerfassung",
+        "Kostenlos, lebenslanger Speicher bis zu 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail und Send",
+        "Regelmäßige Sicherheitsaudits",
+        "Geringe Systembelastung",
+        "Kann niemals auf Ihre Dateien zugreifen",
+        "Volle Privatsphäre: DSGVO, spanische Datenschutzgesetze"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Keine Datenverschlüsselung",
+        "Umfangreiche Datensammlung",
+        "Jährliches Abonnement",
+        "Basis-Antivirenschutz",
+        "Regelmäßige Sicherheitsaudits",
+        "Hoher Ressourcenverbrauch",
+        "Frühere Sicherheitslücken",
+        "Weniger Datenschutz: Unterliegt US-Überwachungsgesetzen"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Warum Sie eine McAfee-Alternative brauchen",
+    "description": "McAfee ist nur eine Option zum Schutz Ihres Geräts. Für volle Privatsphäre und eine komplette Produktpalette wechseln Sie zu Internxt – der umfassenden Alternative.",
+    "scrollableSection": {
+      "titles": [
+        "Sammlung von Nutzerdaten",
+        "Closed-Source-Software",
+        "Einfluss auf die Leistung",
+        "Begrenzte Produktpalette"
+      ],
+      "descriptions": [
+        "McAfee steht in der Kritik, umfangreiche Nutzerdaten zu sammeln, die zu verschiedenen Zwecken mit Dritten geteilt werden können.",
+        "Da es sich um proprietäre Software handelt, können Benutzer den Code nicht einsehen, um die genaue Funktionsweise zu prüfen.",
+        "McAfee ist dafür bekannt, erhebliche Systemressourcen zu verbrauchen, was Starts und allgemeine Prozesse verlangsamen kann.",
+        "McAfee bietet einen begrenzten Fokus auf Gerätesicherheit. Wenn Sie sicheren Cloud-Speicher oder private Videotelefonie suchen, fallen extra Kosten an.\nFehlalarme (False Positives)\nMcAfee markiert oft legitime Programme als bösartig und schiebt sie in Quarantäne, was andere Anwendungen stören kann."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funktionen",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open-Source und geprüft",
+        "Komplette Produktpalette",
+        "Erschwingliche Pläne"
+      ],
+      "descriptions": [
+        "Internxt ist vollständig Open-Source und wird unabhängig geprüft, sodass Sie sicher sein können, dass es keine Hintertüren gibt.",
+        "Internxt bietet Cleaner und ein komplettes Datenschutz-Ökosystem zum Reinigen, Speichern und Teilen mit Zero-Knowledge-Verschlüsselung.",
+        "Starten Sie mit Internxt für nur 1,60 € im Monat oder wählen Sie unsere günstigen Lifetime-Pläne."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs. McAfee",
+    "description": "Internxt bietet dank Zero-Knowledge- und Post-Quanten-Verschlüsselung unübertroffene Privatsphäre und Sicherheit.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Volle Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source",
+            "description": "Internxt öffnet seinen Code auf GitHub für jeden zur Prüfung, um Transparenz zu gewährleisten."
+          },
+          {
+            "title": "Zero-Knowledge-Verschlüsselung",
+            "description": "Ihre Dateien werden clientseitig verschlüsselt, sodass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Sitz in Europa",
+            "description": "Hauptsitz in Spanien; erfüllt DSGVO und andere strenge Datenschutzvorgaben."
+          },
+          {
+            "title": "Kostenlose und günstige Pläne",
+            "description": "Greifen Sie mit Lifetime-Plänen und {{percentage}}% Rabatt dauerhaft auf unsere Dienste zu."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "McAfee: Wie steht es um Ihre Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Geschlossener Quellcode macht es schwierig zu prüfen, wie Daten wirklich geschützt werden."
+          },
+          {
+            "title": "Keine Ende-zu-Ende-Verschlüsselung",
+            "description": "Bietet keine Lösungen für verschlüsselten Cloud-Speicher für Endnutzer an."
+          },
+          {
+            "title": "Sitz in den USA",
+            "description": "Gesammelte Daten unterliegen den US-Überwachungsgesetzen (z.B. FISA)."
+          },
+          {
+            "title": "Abonnementmodell",
+            "description": "Erfordert ständige und oft teure Verlängerungen, um den Schutz aktiv zu halten."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Warum Internxt die beste Alternative zu McAfee ist",
+    "description": "Internxt bietet eine umfassende Produktpalette für eine sichere Alternative.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Fortgeschrittene Tools"
+      ],
+      "descriptions": [
+        "Sicherer Cloud-Speicher mit Zero-Knowledge- und Post-Quanten-Verschlüsselung.",
+        "Internxt Antivirus ist integriert, um mit vollständigen Scans vor Malware zu schützen.",
+        "Die VPN von Internxt verschlüsselt Ihre Verbindung und schützt Ihre Identität.",
+        "Internxt Cleaner hilft beim Löschen von Junk-Dateien für einen organisierten Speicher.",
+        "Sichere private Videoanrufe, geschützt mit Post-Quanten-Verschlüsselung.",
+        "Verfügbar auf allen Plattformen mit Unterstützung für Rclone und NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Wählen Sie Internxt für eine bessere McAfee-Alternative",
+    "description": "Internxt bietet standardmäßig volle private Verschlüsselung, transparente Open-Source-Software und eine komplette Datenschutz-Suite.",
+    "cta": "Jetzt wechseln"
+  },
+  "tableSection": {
+    "title": "Ihr All-in-One Datenschutz-Verbündeter",
+    "hotLabel": "{{discount}}% Rabatt 🔥",
+    "planTitles": {
+      "header": "Ihr All-in-One Datenschutz-Verbündeter"
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Nutzen Sie Internxt kostenlos mit Datenschutz-Tools und Verschlüsselung",
+      "cta": "Plan wählen"
+    },
+    "features": {
+      "openSource": "Open-Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt sicherer als McAfee?",
+        "answer": [
+          "Ja, Internxt verwendet Post-Quanten-Verschlüsselung und ist vollständig Open-Source.",
+          "Internxt umfasst Drive, VPN, Antivirus und Cleaner für eine ganzheitliche Sicherheit."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."
+        ]
+      },
+      {
+        "question": "Ist McAfee teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven 87%-Rabatt sind unsere Pläne günstiger und bieten viel mehr Wert."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Schreiben Sie an hello@internxt.com, und unser Team hilft Ihnen gerne weiter."
+        ]
+      }
+    ]
+  }
+}
