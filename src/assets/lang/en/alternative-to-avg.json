@@ -1,12 +1,12 @@
 {
   "HeroSection": {
-    "title": "Internxt. Like Avast,\n but **private**",
-    "description": "Switch to Internxt, the best alternative to Avast\n that respects your privacy",
+    "title": "Internxt. Like AVG,\n but **private**",
+    "description": "Switch to Internxt, the best alternative to AVG that respects your privacy",
     "getPrivacy": " Select your plan and get {{percentage}}% off  ",
     "cta": "Make the switch"
   },
   "HeaderSection": {
-    "title": "Internxt vs Avast overview",
+    "title": "Internxt vs AVG overview",
     "description": "Discover the key features and differences that allow Internxt to give you back control over your data",
     "tableSection": {
       "comparisons": [
@@ -45,20 +45,20 @@
     }
   },
   "PrivacyViolationsSection": {
-    "title": "Why you need an Avast alternative",
-    "description": "Avast is only one option to protect your device from malware. For full privacy and a complete product suite, switch to Internxt fora full Avast alternative with Drive, Cleaner, and more.",
+    "title": "Why you need an AVG alternative",
+    "description": "AVG is only one option to protect your device from malware. For full privacy and a complete product suite, switch to Internxt fora full AVG alternative with Drive, Cleaner, and more.",
     "scrollableSection": {
       "titles": [
-        "Data collection",
-        "Lack of transparency",
+        "Your chats can be seen by X",
+        "Conversations are stored on X’s servers",
         "Impacts device performance",
         "Limited product suite"
       ],
       "descriptions": [
-        "Between at least 2014 and January 2020, Avast allegedly collected detailed browsing information through antivirus and browser extensions and sold it to third parties for advertising and analytics purposes without adequate notice or consent. This included search queries and visited URLs.",
-        "As Avast is not open source, you have to trust the company’s claims about privacy, telemetry, and internal security controls because external experts cannot freely review the code for hidden behavior, backdoors, or weak cryptographic implementations.",
-        "Avast can impact device performance during full scans and real-time protection, causing high memory use, slowdowns, delayed network connections, or system lag on some hardware. Depending on your device, you may experience more noticeable performance degradation that can cause more harm than good.",
-        "Avast offers limited products compared to Internxt Drive, creating dependency on a single recurring subscription. If you need advanced cloud storage protection for your device combined with other features, you need to look elsewhere and possibly pay for more subscriptions."
+        "Grok may use chat inputs to train and refine its AI models, and some conversations may be reviewed by human staff, creating a risk that personal conversations may be seen by X employees.",
+        "Grok chats and metadata such as device information, language, and feedback are stored in your X account activity and retained by default for extended periods, limiting user control over data.",
+        "AVG can impact device performance during full scans and real-time protection, causing high memory use, slowdowns, delayed network connections, or system lag on some hardware. Depending on your device, you may experience more noticeable performance degradation that can cause more harm than good.",
+        "AVG offers limited products compared to Internxt Drive, creating dependency on a single recurring subscription. If you need advanced cloud storage protection for your device combined with other features, you need to look elsewhere and possibly pay for more subscriptions."
       ]
     }
   },
@@ -79,7 +79,7 @@
     }
   },
   "VersusSection": {
-    "title": "Internxt vs Avast",
+    "title": "Internxt vs AVG",
     "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption, giving you the best protection from cyberattacks.",
     "mainTable": {
       "inxtTable": {
@@ -157,7 +157,7 @@
     }
   },
   "CtaSection": {
-    "title": "Choose Internxt for the best Avast alternative",
+    "title": "Choose Internxt for the best AVG alternative",
     "description": "Internxt gives you full private encryption by default, transparent open source software, and a full privacy suite to keep your data and files secure online.",
     "cta": "Make the switch"
   },
@@ -191,10 +191,10 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Is Internxt a more secure and private alternative to Avast?",
+        "question": "Is Internxt a more secure and private alternative to AVG?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files.",
-          "Internxt Drive includes VPN, Antivirus, Cleaner, Meet, and Mail giving you more services than Avast to ensure you get the best security and privacy online."
+          "Internxt Drive includes VPN, Antivirus, Cleaner, Meet, and Mail giving you more services than AVG to ensure you get the best security and privacy online."
         ]
       },
       {
@@ -211,9 +211,9 @@
         ]
       },
       {
-        "question": "Is Avast more expensive than Internxt?",
+        "question": "Is AVG more expensive than Internxt?",
         "answer": [
-          "With your exclusive 87% discount, all our plans are cheaper than Avast's pricing options currently available, with the benefit of offering many more features."
+          "With your exclusive 87% discount, all our plans are cheaper than AVG's pricing options currently available, with the benefit of offering many more features."
         ]
       },
       {

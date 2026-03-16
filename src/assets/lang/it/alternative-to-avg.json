@@ -1,0 +1,214 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Come AVG,\n ma **privato**",
+    "description": "Passa a Internxt, la migliore alternativa a AVG che rispetta la tua privacy",
+    "getPrivacy": " Seleziona il tuo piano e ottieni lo {{percentage}}% di sconto  ",
+    "cta": "Fai il passaggio"
+  },
+  "HeaderSection": {
+    "title": "Panoramica Internxt vs AVG",
+    "description": "Scopri le funzionalità chiave e le differenze che permettono a Internxt di ridarti il controllo sui tuoi dati",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Riservatezza dei dati",
+        "Raccolta informazioni",
+        "Prezzi e archiviazione",
+        "Altre funzionalità",
+        "Audit di sicurezza",
+        "Prestazioni del sistema",
+        "Politica sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Crittografia end-to-end",
+        "Raccolta minima di dati",
+        "Gratis, archiviazione a vita fino a 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail e Send",
+        "Audit di sicurezza regolari",
+        "Basso impatto sul sistema",
+        "Non può mai accedere ai tuoi file",
+        "Privacy totale: GDPR, leggi spagnole sulla protezione dei dati"
+      ],
+      "competitorFeatures": [
+        "Codice proprietario",
+        "Nessuna crittografia dei dati",
+        "Raccolta intensiva di telemetria",
+        "Abbonamento annuale obbligatorio",
+        "Protezione antivirus di base",
+        "Audit di sicurezza regolari",
+        "Rallentamento del dispositivo",
+        "Cronologia di vendita dati",
+        "Meno privacy: Soggetto alle leggi USA"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Perché hai bisogno di un'alternativa a AVG",
+    "description": "AVG è solo una delle opzioni per proteggere il tuo dispositivo. Per una privacy reale e una suite completa, passa a Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Cronologia di vendita dei dati",
+        "Software a codice chiuso",
+        "Impatto sulle prestazioni",
+        "Suite di prodotti limitata"
+      ],
+      "descriptions": [
+        "AVG (parte di Gen Digital) è stato criticato in passato per aver raccolto e venduto dati di navigazione degli utenti tramite società sussidiarie.",
+        "Essendo un software proprietario, gli utenti non possono verificare in modo indipendente quali dati vengano estratti dal dispositivo e come vengano elaborati.",
+        "Le scansioni e la protezione in tempo reale di AVG possono consumare molta CPU e RAM, influenzando la velocità del PC e la durata della batteria.",
+        "AVG si concentra quasi solo sulla sicurezza. Se hai bisogno di un cloud sicuro o di una VPN integrata senza costi nascosti, Internxt è la scelta ideale.\nPubblicità invasiva\nMolti utenti segnalano notifiche costanti per acquistare versioni 'Premium' o prodotti aggiuntivi."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funzionalità",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open source e auditato",
+        "Suite completa di prodotti",
+        "Piani convenienti"
+      ],
+      "descriptions": [
+        "Internxt è completamente open source e auditato in modo indipendente, garantendo che la tua privacy venga prima di tutto.",
+        "Internxt offre Cleaner e un ecosistema completo per pulire, archiviare e condividere i tuoi file con crittografia zero-knowledge.",
+        "Inizia con Internxt per soli 1,60 € al mese o evita gli abbonamenti con i nostri convenienti piani a vita."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs AVG",
+    "description": "Internxt offre privacy e sicurezza impareggiabili grazie alla crittografia zero-knowledge e post-quantum.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e fiducia",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt rende il suo codice libero per l'esame di chiunque su GitHub, assicurando trasparenza."
+          },
+          {
+            "title": "Crittografia zero-knowledge",
+            "description": "I tuoi file sono crittografati localmente, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Sede in Europa",
+            "description": "Basato in Spagna, rispettando rigorosamente il GDPR e le norme sulla privacy."
+          },
+          {
+            "title": "Piani gratuiti e convenienti",
+            "description": "Accedi ai nostri servizi per sempre con i piani a vita e lo {{percentage}}% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "AVG: E la tua privacy?",
+        "features": [
+          {
+            "title": "Software proprietario",
+            "description": "Codice chiuso, il che rende difficile verificare l'effettiva gestione dei dati utente."
+          },
+          {
+            "title": "Nessuna crittografia end-to-end",
+            "description": "Non offre soluzioni di archiviazione con crittografia E2EE per l'utente finale."
+          },
+          {
+            "title": "Privacy controversa",
+            "description": "In passato ha ricevuto critiche per una gestione della privacy degli utenti non impeccabile."
+          },
+          {
+            "title": "Modello di abbonamento",
+            "description": "Richiede pagamenti periodici per mantenere attiva la protezione in tempo reale."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a AVG",
+    "description": "Internxt offre una suite completa per la privacy per darti un'alternativa sicura.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Strumenti avanzati"
+      ],
+      "descriptions": [
+        "Archiviazione cloud sicura con crittografia zero-knowledge e post-quantum.",
+        "Protezione integrata contro malware e ransomware con scansioni complete.",
+        "La VPN di Internxt crittografa la tua connessione e offre anonimato online.",
+        "Internxt Cleaner rimuove file duplicati e inutili per ottimizzare lo spazio.",
+        "Videochiamate private sicure protette dalla tecnologia post-quantum.",
+        "Disponibile su Windows, Mac, Linux e mobile con supporto esperto."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Scegli Internxt per una migliore alternativa a AVG",
+    "description": "Internxt ti offre crittografia privata totale, software trasparente e una suite completa.",
+    "cta": "Fai il passaggio"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato per la privacy tutto in uno",
+    "hotLabel": "{{discount}}% di sconto 🔥",
+    "planTitles": {
+      "header": "Il tuo alleato per la privacy tutto in uno"
+    },
+    "billingFrequency": {
+      "annually": "Anuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Usa Internxt gratuitamente con strumenti per la privacy e crittografia",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open source e auditato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "30 giorni di garanzia di rimborso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Internxt è più sicuro di AVG?",
+        "answer": [
+          "Sì, Internxt utilizza la crittografia zero-knowledge ed è interamente open source.",
+          "Internxt include Drive, VPN, Antivirus e Cleaner per una sicurezza a 360 gradi."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, e rispetta rigorosamente il GDPR."
+        ]
+      },
+      {
+        "question": "Come contattare il supporto?",
+        "answer": [
+          "Contatta hello@internxt.com e il nostro team ti aiuterà volentieri."
+        ]
+      }
+    ]
+  }
+}
