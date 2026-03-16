@@ -508,5 +508,50 @@
     "id": "google-cloud-alternative",
     "title": "Internxt — Google Cloud 的替代方案",
     "description": "切换到 Internxt S3 作为 Google Cloud 的开源替代方案。专为企业提供可负担且安全的对象云存储。"
+  },
+  {
+    "id": "alternative-to-avast",
+    "title": "Internxt — Avast 替代方案",
+    "description": "切换到 Internxt，体验 Avast 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-avg",
+    "title": "Internxt — AVG 替代方案",
+    "description": "切换到 Internxt，体验 AVG 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-avira",
+    "title": "Internxt — Avira 替代方案",
+    "description": "切换到 Internxt，体验 Avira 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-bitdefender",
+    "title": "Internxt — Bitdefender 替代方案",
+    "description": "切换到 Internxt，体验 Bitdefender 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-ccleaner",
+    "title": "Internxt — CCleaner 替代方案",
+    "description": "切换到 Internxt，体验 CCleaner 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-clean-my-mac",
+    "title": "Internxt — CleanMyMac 替代方案",
+    "description": "切换到 Internxt，体验 CleanMyMac 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-malwarebytes",
+    "title": "Internxt — Malwarebytes 替代方案",
+    "description": "切换到 Internxt，体验 Malwarebytes 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-mcafee",
+    "title": "Internxt — McAfee 替代方案",
+    "description": "切换到 Internxt，体验 McAfee 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "alternative-to-norton",
+    "title": "Internxt — Norton 替代方案",
+    "description": "切换到 Internxt，体验 Norton 的开源替代方案。包含后量子和零知识加密云存储等功能。"
   }
 ]

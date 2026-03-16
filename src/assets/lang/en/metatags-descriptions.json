@@ -688,5 +688,50 @@
     "id": "google-cloud-alternative",
     "title": "Internxt  — Alternative to Google Cloud",
     "description": "Switch to Internxt S3 for an open-source alternative to Google Cloud. Affordable, secure object cloud storage for enterprises."
+  },
+  {
+    "id": "alternative-to-avast",
+    "title": "Internxt — Avast Alternative",
+    "description": "Switch to Internxt for an open-source alternative to Avast. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-avg",
+    "title": "Internxt — AVG Alternative",
+    "description": "Switch to Internxt for an open-source alternative to AVG. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-avira",
+    "title": "Internxt — Avira Alternative",
+    "description": "Switch to Internxt for an open-source alternative to Avira. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-bitdefender",
+    "title": "Internxt — Bitdefender Alternative",
+    "description": "Switch to Internxt for an open-source alternative to Bitdefender. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-ccleaner",
+    "title": "Internxt — CCleaner Alternative",
+    "description": "Switch to Internxt for an open-source alternative to CCleaner. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-clean-my-mac",
+    "title": "Internxt — CleanMyMac Alternative",
+    "description": "Switch to Internxt for an open-source alternative to CleanMyMac. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-malwarebytes",
+    "title": "Internxt — Malwarebytes Alternative",
+    "description": "Switch to Internxt for an open-source alternative to Malwarebytes. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-mcafee",
+    "title": "Internxt — McAfee Alternative",
+    "description": "Switch to Internxt for an open-source alternative to McAfee. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
+  },
+  {
+    "id": "alternative-to-norton",
+    "title": "Internxt — Norton Alternative",
+    "description": "Switch to Internxt for an open-source alternative to Norton. Includes post-quantum and zero-knowledge encrypted cloud storage and more."
   }
 ]

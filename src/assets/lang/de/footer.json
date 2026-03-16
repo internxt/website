@@ -96,7 +96,18 @@
         "backblazeAlternative": "Backblaze-Alternative",
         "googleCloudAlternative": "Google Cloud-Alternative",
         "awsAlternative": "AWS-Alternative",
-        "azureAlternative": "Azure-Alternative"
+        "azureAlternative": "Azure-Alternative",
+        "antivirusAlternatives": "Antivirus-Alternativen",
+        "avastAlternative": "Avast-Alternative",
+        "avgAlternative": "AVG-Alternative",
+        "aviraAlternative": "Avira-Alternative",
+        "bitdefenderAlternative": "Bitdefender-Alternative",
+        "malwarebytesAlternative": "Malwarebytes-Alternative",
+        "mcafeeAlternative": "McAfee-Alternative",
+        "nortonAlternative": "Norton-Alternative",
+        "cleanerAlternatives": "Cleaner-Alternativen",
+        "ccleanerAlternative": "CCleaner-Alternative",
+        "cleanMyMacAlternative": "CleanMyMac-Alternative"
       },
       "tools": {
         "title": "Kostenlose Tools",
