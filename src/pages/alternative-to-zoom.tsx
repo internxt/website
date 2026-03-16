@@ -12,7 +12,7 @@ const zoomComparison = (props) => (
     metaTagId="zoom-alternative"
     segmentName="zoom Comparison"
     logo="/images/comparison/zoom-Letters.webp"
-    couponCodeName={PromoCodeName.ZOOM87}
+    couponCodeName={PromoCodeName.ZOOM85}
   />
 );
 

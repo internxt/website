@@ -12,7 +12,7 @@ const chatgptComparison = (props) => (
     metaTagId="alternative-to-chatgpt"
     segmentName="ChatGPT Comparison"
     logo="/images/comparison/ChatGPT-Letters.webp"
-    couponCodeName={PromoCodeName.CHATGPT87}
+    couponCodeName={PromoCodeName.CHATGPT85}
   />
 );
 

@@ -1,0 +1,236 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Like Avast,\n but **private**",
+    "description": "Switch to Internxt, the best alternative to Avast that respects your privacy",
+    "getPrivacy": " Select your plan and get {{percentage}}% off  ",
+    "cta": "Make the switch"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs Avast overview",
+    "description": "Discover the key features and differences that allow Internxt to give you back control over your data",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-quantum encryption",
+        "Pricing and storage",
+        "Features",
+        "Security audits",
+        "Live support",
+        "Privacy policy",
+        "Privacy laws"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Encrypted on your device",
+        "Yes",
+        "Competitive, no hidden costs, up to 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail, and more",
+        "Regular security audits",
+        "Yes",
+        "Can never access your files",
+        "Full privacy: GDPR, Spanish Data Protection Laws"
+      ],
+      "competitorFeatures": [
+        "Closed-source",
+        "Certain features, encrypted by Avast",
+        "No",
+        "From €69.99, annual plans only",
+        "Antivirus, VPN, breach monitoring, browser",
+        "No published security audits",
+        "No",
+        "Can access files under certain circumstances.",
+        "Less privacy: GDPR, Czech Republic privacy laws"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Avast may remove important files. Internxt secures your device, frees up storage, and protects your privacy",
+    "description": "Avast requires deep permissions to function, increasing exposure to accidental damage or misuse. Switch to Internxt for full device protection combined with secure cloud storage.",
+    "scrollableSection": {
+      "titles": [
+        "Data collection",
+        "Lack of transparency",
+        "Impacts device performance",
+        "Limited product suite"
+      ],
+      "descriptions": [
+        "Between at least 2014 and January 2020, Avast allegedly collected detailed browsing information through antivirus and browser extensions and sold it to third parties for advertising and analytics purposes without adequate notice or consent. This included search queries and visited URLs.",
+        "As Avast is not open source, you have to trust the company's claims about privacy, telemetry, and internal security controls because external experts cannot freely review the code for hidden behavior, backdoors, or weak cryptographic implementations.",
+        "Avast can impact device performance during full scans and real-time protection, causing high memory use, slowdowns, delayed network connections, or system lag on some hardware. Depending on your device, you may experience more noticeable performance degradation that can cause more harm than good.",
+        "Avast offers limited products compared to Internxt Drive, creating dependency on a single recurring subscription. If you need advanced cloud storage protection for your device combined with other features, you need to look elsewhere and possibly pay for more subscriptions."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Why you need an Avast alternative",
+    "description": "Avast is only one option to protect your device from malware. For full privacy and a complete product suite, switch to Internxt for a full Avast alternative with Drive, Cleaner, and more.",
+    "cards": {
+      "titles": [
+        "Open source and audited",
+        "Full product suite",
+        "Affordable plans"
+      ],
+      "descriptions": [
+        "Internxt is fully open source and independently audited, so you can rest assured there are no backdoors to your data and that your information is handled transparently. Anyone can review the code for maximum trust and accountability.",
+        "Internxt offers Cleaner, and a full privacy ecosystem to give you everything you need to clear junk files from your device, store and share files with zero-knowledge encryption with Drive, and more benefits, including VPN, Meet, Mail, and more.",
+        "Get started with Internxt for just €1.60 a month, or avoid subscriptions with our affordable lifetime plans to pay once and use forever. With lifetime plans, you get access to the features of your plan forever, and you can upgrade to add more storage whenever you need."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Avast",
+    "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption, giving you the best protection from cyberattacks.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Total privacy, transparency, and trust",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt's code is open for everyone to examine and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
+          },
+          {
+            "title": "Zero-knowledge Encryption",
+            "description": "Your data is encrypted on the client side, guaranteeing that only you can access it for all Internxt products."
+          },
+          {
+            "title": "European cloud storage",
+            "description": "Internxt is based in Europe and complies with GDPR, HIPAA, ISO 27001, and SOC 2. The platform is fully audited to ensure no external access to your data."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Get everything you need for online privacy for {{percentage}}% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Avast: What about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "Avast keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Avast handles or protects your files."
+          },
+          {
+            "title": "Encrypted connection",
+            "description": "Avast uses end-to-end encryption for some of its products, but doesn't provide zero-knowledge encryption."
+          },
+          {
+            "title": "Czech Republic-based",
+            "description": "GDPR compliant"
+          },
+          {
+            "title": "Subscription based",
+            "description": "Avast only offers annual subscriptions, so if you need cloud storage and more, you would need multiple subscriptions."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Why Internxt is the best Avast alternative",
+    "description": "Internxt Drive includes a comprehensive suite of products designed to give you back control of your online privacy.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Advanced tools"
+      ],
+      "descriptions": [
+        "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
+        "Internxt's VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely, knowing your personal information, passwords, and accounts are protected.",
+        "Internxt Cleaner helps you identify, eliminate, and manage unwanted junk or duplicate files from your device. With Cleaner, you can delete unwanted files to keep your storage organized, free from clutter, and ensure your device runs efficiently.",
+        "Internxt Meet is also available as your secure and private alternative to Teams. With Meet, you can host private video calls free from trackers, ads, and data collection. Your video calls are protected with post-quantum encryption, allowing you to host calls in total privacy.",
+        "Internxt Drive is available on Windows, Mac, Linux, and mobile. For advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choose Internxt for the best Avast alternative",
+    "description": "Internxt gives you full private encryption by default, transparent open source software, and a full privacy suite to keep your data and files secure online.",
+    "cta": "Make the switch"
+  },
+  "tableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off 🔥",
+    "planTitles": {
+      "header": "Your all-in-one privacy ally"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Take ownership of your files with Internxt zero-knowledge cloud storage",
+      "cta": "Claim deal"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to Avast?",
+        "answer": [
+          "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files.",
+          "Internxt Drive includes VPN, Antivirus, Cleaner, Meet, and Mail giving you more services than Avast to ensure you get the best security and privacy online."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is Avast more expensive than Internxt?",
+        "answer": [
+          "With your exclusive 87% discount, all our plans are cheaper than Avast's pricing options currently available, with the benefit of offering many more features."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
+        ]
+      }
+    ]
+  }
+}

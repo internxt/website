@@ -72,7 +72,19 @@
         "dropboxAlternative": "Alternativa ao Dropbox",
         "directoryOfPrivacyOrganizations": "Diretório de Organizações de Privacidade",
         "cyberAwareness": "Conscientização Cibernética",
-        "whatGoogleKnowsAboutMe": "O Que o Google Sabe Sobre Mim"
+        "whatGoogleKnowsAboutMe": "O Que o Google Sabe Sobre Mim",
+        "antivirusAlternatives": "Alternativas a Antivírus",
+        "avastAlternative": "Alternativa ao Avast",
+        "avgAlternative": "Alternativa ao AVG",
+        "aviraAlternative": "Alternativa ao Avira",
+        "bitdefenderAlternative": "Alternativa ao Bitdefender",
+        "malwarebytesAlternative": "Alternativa ao Malwarebytes",
+        "mcafeeAlternative": "Alternativa ao McAfee",
+        "nortonAlternative": "Alternativa ao Norton",
+        "totalavAlternative": "Alternativa ao TotalAV",
+        "cleanerAlternatives": "Alternativas de Limpeza",
+        "ccleanerAlternative": "Alternativa ao CCleaner",
+        "cleanMyMacAlternative": "Alternativa ao CleanMyMac"
       },
       "tools": {
         "title": "Ferramentas Gratuitas",

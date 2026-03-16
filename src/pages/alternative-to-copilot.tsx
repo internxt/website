@@ -12,7 +12,7 @@ const copilotComparison = (props) => (
     metaTagId="alternative-to-copilot"
     segmentName="Copilot Comparison"
     logo="/images/comparison/copilot-Letters.webp"
-    couponCodeName={PromoCodeName.COPILOT87}
+    couponCodeName={PromoCodeName.COPILOT85}
   />
 );
 

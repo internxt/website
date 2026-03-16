@@ -46,7 +46,17 @@ interface ComparisonTableProps {
     | 'azure'
     | 'backblaze'
     | 'idriveE2'
-    | 'googleCloud';
+    | 'googleCloud'
+    | 'avast'
+    | 'avg'
+    | 'avira'
+    | 'bitdefender'
+    | 'ccleaner'
+    | 'clean-my-mac'
+    | 'malwarebytes'
+    | 'mcafee'
+    | 'norton'
+    | 'totalav';
   hideTooltip?: boolean;
   needH2?: boolean;
 }
@@ -164,6 +174,36 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
     },
     googleCloud: {
       defaultLogo: '/images/comparison/googleCloud-Letters.webp',
+    },
+    avast: {
+      defaultLogo: '/images/comparison/avast-Letters.webp',
+    },
+    avg: {
+      defaultLogo: '/images/comparison/avg-Letters.webp',
+    },
+    avira: {
+      defaultLogo: '/images/comparison/avira-Letters.webp',
+    },
+    bitdefender: {
+      defaultLogo: '/images/comparison/bitdefender-Letters.webp',
+    },
+    ccleaner: {
+      defaultLogo: '/images/comparison/ccleaner-Letters.webp',
+    },
+    'clean-my-mac': {
+      defaultLogo: '/images/comparison/clean-my-mac-Letters.webp',
+    },
+    malwarebytes: {
+      defaultLogo: '/images/comparison/malwarebytes-Letters.webp',
+    },
+    mcafee: {
+      defaultLogo: '/images/comparison/mcafee-Letters.webp',
+    },
+    norton: {
+      defaultLogo: '/images/comparison/norton-Letters.webp',
+    },
+    totalav: {
+      defaultLogo: '/images/comparison/totalav-Letters.webp',
     },
   } as const;
 

@@ -34,6 +34,8 @@ export default function Footer({
   const [isVideocallsOpen, setIsVideocallsOpen] = useState(false);
   const [isAiAlternativeOpen, setIsAiAlternativeOpen] = useState(false);
   const [isS3AlternativeOpen, setIsS3AlternativeOpen] = useState(false);
+  const [isAntivirusAlternativeOpen, setIsAntivirusAlternativeOpen] = useState(false);
+  const [isCleanerAlternativeOpen, setIsCleanerAlternativeOpen] = useState(false);
 
   const year = moment().format('YYYY');
 
@@ -60,6 +62,10 @@ export default function Footer({
         notificationService.openErrorToast('Something went wrong!');
       });
   };
+
+  const mobileResourcesHeaderClass = `${darkMode ? 'text-gray-1' : 'text-gray-100'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
+  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60';
+  const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
 
   return (
     <section
@@ -415,9 +421,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.cloudStorage}
                       {isAlternativesOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -563,9 +569,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.videoCalls}
                       {isVideocallsOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -623,9 +629,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.aiAlternatives}
                       {isAiAlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button>
 
@@ -683,9 +689,9 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.s3Alternative}
                       {isS3AlternativeOpen ? (
-                        <CaretDown className="mt-0.5 flex h-2 w-2" />
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
                       ) : (
-                        <CaretRight className="mt-0.5 flex h-2 w-2" />
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
                     </button> 
 
@@ -734,6 +740,126 @@ export default function Footer({
                         className="w-full max-w-[160px] pl-3 hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.azureAlternative}
+                      </Link>
+                    </div>
+
+                    <button
+                      onClick={() => setIsAntivirusAlternativeOpen(!isAntivirusAlternativeOpen)}
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.antivirusAlternatives}
+                      {isAntivirusAlternativeOpen ? (
+                        <CaretDown className="mb-0.5 flex h-2 w-2" />
+                      ) : (
+                        <CaretRight className="mb-0.5 flex h-2 w-2" />
+                      )}
+                    </button> 
+
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isAntivirusAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
+                      }`}
+                      style={isAntivirusAlternativeOpen ? {} : { display: 'none' }}
+                    >
+                      <Link
+                        href="/alternative-to-avast"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.avastAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-avg"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.avgAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-avira"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.aviraAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-bitdefender"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.bitdefenderAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-malwarebytes"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.malwarebytesAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-mcafee"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.mcafeeAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-norton"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.nortonAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-totalav"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.totalavAlternative}
+                      </Link>
+                    </div>
+
+                    <button
+                      onClick={() => setIsCleanerAlternativeOpen(!isCleanerAlternativeOpen)}
+                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary "
+                    >
+                      {textContent.FooterSection.sections.resources.cleanerAlternatives}
+                      {isCleanerAlternativeOpen ? (
+                        <CaretDown className="mt-0.5 h-2 w-2 shrink-0" />
+                      ) : (
+                        <CaretRight className="mb-0.5 h-2 w-2 shrink-0" />
+                      )}
+                    </button>
+
+                    <div
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isCleanerAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
+                      }`}
+                      style={isCleanerAlternativeOpen ? {} : { display: 'none' }}
+                    >
+                      <Link
+                        href="/alternative-to-ccleaner"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.ccleanerAlternative}
+                      </Link>
+                      <Link
+                        href="/alternative-to-clean-my-mac"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.cleanMyMacAlternative}
                       </Link>
                     </div>
 
@@ -1177,14 +1303,10 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button
-                    className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
-                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
-                  >
+                  <Disclosure.Button className={mobileResourcesHeaderClass}>
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${open ? 'flex' : 'hidden'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1193,9 +1315,7 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${open ? 'flex' : 'hidden'} ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -1221,7 +1341,7 @@ export default function Footer({
                         >
                           {textContent.FooterSection.sections.resources.alternatives}
                           {isAlternativesOpen ? (
-                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                            <CaretDown className="mb-0.5 flex h-4 w-4" />
                           ) : (
                             <CaretRight className="mt-0.5 flex h-4 w-4" />
                           )}
@@ -1422,7 +1542,7 @@ export default function Footer({
 
                       <div className="flex flex-col">
                         <button
-                          onClick={() => setIsAlternativesOpen(!isAiAlternativeOpen)}
+                          onClick={() => setIsAiAlternativeOpen(!isAiAlternativeOpen)}
                           className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
                         >
                           {textContent.FooterSection.sections.resources.aiAlternatives}
@@ -1547,6 +1667,129 @@ export default function Footer({
                         </div>
                       </div>
 
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsAntivirusAlternativeOpen(!isAntivirusAlternativeOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.antivirusAlternatives}
+                          {isAntivirusAlternativeOpen ? (
+                            <CaretDown className="mt-0.5 flex h-4 w-4" />
+                          ) : (
+                            <CaretRight className="mt-0.5 flex h-4 w-4" />
+                          )}
+                        </button>
+
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${antivirusExpandClass}`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                            <Link
+                              href="/alternative-to-avast"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.avastAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-avg"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.avgAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-avira"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.aviraAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-bitdefender"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.bitdefenderAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-malwarebytes"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.malwarebytesAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-mcafee"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.mcafeeAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-norton"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.nortonAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-totalav"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.totalavAlternative}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setIsCleanerAlternativeOpen(!isCleanerAlternativeOpen)}
+                          className="flex w-full max-w-[160px] flex-row items-center gap-1 text-left hover:text-primary"
+                        >
+                          {textContent.FooterSection.sections.resources.cleanerAlternatives}
+                          {isCleanerAlternativeOpen ? (
+                            <CaretDown className="mt-0.5 h-4 w-4 shrink-0" />
+                          ) : (
+                            <CaretRight className="mt-0.5 h-4 w-4 shrink-0" />
+                          )}
+                        </button>
+
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isCleanerAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="flex flex-col space-y-8 pl-4">
+                            <Link
+                              href="/alternative-to-ccleaner"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.ccleanerAlternative}
+                            </Link>
+                            <Link
+                              href="/alternative-to-clean-my-mac"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
+                              {textContent.FooterSection.sections.resources.cleanMyMacAlternative}
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}

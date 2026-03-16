@@ -96,7 +96,19 @@
         "backblazeAlternative": "Альтернатива Backblaze",
         "googleCloudAlternative": "Альтернатива Google Cloud",
         "awsAlternative": "Альтернатива AWS",
-        "azureAlternative": "Альтернатива Azure"
+        "azureAlternative": "Альтернатива Azure",
+        "antivirusAlternatives": "Альтернативы Антивирусам",
+        "avastAlternative": "Альтернатива Avast",
+        "avgAlternative": "Альтернатива AVG",
+        "aviraAlternative": "Альтернатива Avira",
+        "bitdefenderAlternative": "Альтернатива Bitdefender",
+        "malwarebytesAlternative": "Альтернатива Malwarebytes",
+        "mcafeeAlternative": "Альтернатива McAfee",
+        "nortonAlternative": "Альтернатива Norton",
+        "totalavAlternative": "Альтернатива TotalAV",
+        "cleanerAlternatives": "Альтернативы Очистителям",
+        "ccleanerAlternative": "Альтернатива CCleaner",
+        "cleanMyMacAlternative": "Альтернатива CleanMyMac"
       },
       "tools": {
         "title": "Бесплатные инструменты",

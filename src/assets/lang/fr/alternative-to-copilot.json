@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Comme Copilot, \n mais **privé**",
     "description": "Passez à Internxt AI, la meilleure alternative à Copilot qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre plan et profitez de -87 % ",
+    "getPrivacy": " Sélectionnez votre plan et profitez de -85 % ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
           },
           {
             "title": "Plans gratuits et abordables",
-            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive via des plans à vie jusqu'à 5 To avec -87 % de réduction."
+            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive via des plans à vie jusqu'à 5 To avec -85 % de réduction."
           }
         ]
       },
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choisissez Internxt pour la meilleure alternative à Copilot",
-    "description": "IA privée chiffrée, stockage cloud sécurisé et suite complète de confidentialité à -87 %.",
+    "description": "IA privée chiffrée, stockage cloud sécurisé et suite complète de confidentialité à -85 %.",
     "cta": "Faire le changement"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "-87 % 🔥",
+    "hotLabel": "-85 % 🔥",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },

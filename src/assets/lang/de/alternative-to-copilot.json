@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Wie Copilot, \n aber **privat**",
     "description": "Wechseln Sie zu Internxt AI, der besten Copilot-Alternative, die Ihre Privatsphäre respektiert",
-    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie 87% Rabatt  ",
+    "getPrivacy": " Wählen Sie Ihren Plan und erhalten Sie 85% Rabatt  ",
     "cta": "Jetzt wechseln"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
           },
           {
             "title": "Kostenlose Pläne",
-            "description": "Internxt AI ist kostenlos und kombinierbar mit Lifetime-Speicherplänen bis zu 5TB mit 87% Rabatt."
+            "description": "Internxt AI ist kostenlos und kombinierbar mit Lifetime-Speicherplänen bis zu 5TB mit 85% Rabatt."
           }
         ]
       },
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Wählen Sie Internxt als beste Copilot-Alternative",
-    "description": "Verschlüsselte KI, sicherer Cloud-Speicher und eine komplette Datenschutz-Suite mit 87% Rabatt.",
+    "description": "Verschlüsselte KI, sicherer Cloud-Speicher und eine komplette Datenschutz-Suite mit 85% Rabatt.",
     "cta": "Jetzt wechseln"
   },
   "tableSection": {
     "title": "Ihr All-in-One Partner für Privatsphäre",
-    "hotLabel": "87% Rabatt 🔥",
+    "hotLabel": "85% Rabatt 🔥",
     "planTitles": {
       "header": "Ihr All-in-One Partner für Privatsphäre"
     },
@@ -196,7 +196,7 @@
       },
       {
         "question": "Ist Copilot teurer als Internxt?",
-        "answer": ["Mit dem 87% Rabatt sind alle Internxt-Pläne deutlich günstiger als die Optionen von Copilot."]
+        "answer": ["Mit dem 85% Rabatt sind alle Internxt-Pläne deutlich günstiger als die Optionen von Copilot."]
       },
       {
         "question": "Wie kontaktiere ich den Support?",

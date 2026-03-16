@@ -12,7 +12,7 @@ const DeepSeekComparison = (props) => (
     metaTagId="alternative-to-deepseek"
     segmentName="DeepSeek Comparison"
     logo="/images/comparison/deepseek-Letters.webp"
-    couponCodeName={PromoCodeName.DEEPSEEK87}
+    couponCodeName={PromoCodeName.DEEPSEEK85}
   />
 );
 

@@ -112,17 +112,17 @@
   {
     "id": "black-friday",
     "title": "2025 年黑色星期五優惠 — 雲端儲存和個人雲端儲存優惠",
-    "description": "Internxt 2025 年黑色星期五：安全雲端儲存和完整隱私套件可享 87% 折扣！取得 VPN、Antivirus、Cleaner、Meet 和 Mail。"
+    "description": "Internxt 2025 年黑色星期五：安全雲端儲存和完整隱私套件可享 85% 折扣！取得 VPN、Antivirus、Cleaner、Meet 和 Mail。"
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — 2025 黑色星期五雲端儲存優惠",
-    "description": "Internxt 2025 黑色星期五 — 雲端儲存、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 87% 折扣。"
+    "description": "Internxt 2025 黑色星期五 — 雲端儲存、Antivirus、Cleaner、VPN、Meet 和 Mail 享受 85% 折扣。"
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — 2025黑色星期五個人雲端儲存優惠",
-    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受87%折扣。"
+    "description": "Internxt 2025黑色星期五 — 雲端儲存、防毒軟體、清理工具、VPN、Meet和郵箱享受85%折扣。"
   },
   {
     "id": "cloudwards",
@@ -582,17 +582,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — 免費雲端儲存優惠",
-    "description": "直接來自Internxt的免費雲端儲存優惠，以87%的折扣升級您的方案，獲得安全、加密的雲端儲存等服務"
+    "description": "直接來自Internxt的免費雲端儲存優惠，以85%的折扣升級您的方案，獲得安全、加密的雲端儲存等服務"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Internxt 官方雲端儲存終身優惠87%折扣",
-    "description": "從 Internxt 獲得最佳的雲端儲存終身優惠。一次性付款，永久享受私密加密雲端儲存87%折扣。"
+    "title": "Internxt — Internxt 官方雲端儲存終身優惠85%折扣",
+    "description": "從 Internxt 獲得最佳的雲端儲存終身優惠。一次性付款，永久享受私密加密雲端儲存85%折扣。"
   },
   {
     "id": "deals",
-    "title": "Internxt — Internxt 官方優惠，所有方案享受 87% 折扣",
-    "description": "領取您的專屬 87% 折扣。這些 Internxt 優惠包括私密加密雲端儲存等，價格無與倫比。"
+    "title": "Internxt — Internxt 官方優惠，所有方案享受 85% 折扣",
+    "description": "領取您的專屬 85% 折扣。這些 Internxt 優惠包括私密加密雲端儲存等，價格無與倫比。"
   },
   {
     "id": "reviews",
@@ -668,5 +668,55 @@
     "id": "google-cloud-alternative",
     "title": "Internxt — Google Cloud 的替代方案",
     "description": "切換到 Internxt S3 作為 Google Cloud 的開源替代方案。專為企業提供可負擔且安全的物件雲端儲存。"
+  },
+  {
+    "id": "alternative-to-avast",
+    "title": "Internxt — Avast 替代方案",
+    "description": "切換到 Internxt，體驗 Avast 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-avg",
+    "title": "Internxt — AVG 替代方案",
+    "description": "切換到 Internxt，體驗 AVG 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-avira",
+    "title": "Internxt — Avira 替代方案",
+    "description": "切換到 Internxt，體驗 Avira 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-bitdefender",
+    "title": "Internxt — Bitdefender 替代方案",
+    "description": "切換到 Internxt，體驗 Bitdefender 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-ccleaner",
+    "title": "Internxt — CCleaner 替代方案",
+    "description": "切換到 Internxt，體驗 CCleaner 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-clean-my-mac",
+    "title": "Internxt — CleanMyMac 替代方案",
+    "description": "切換到 Internxt，體驗 CleanMyMac 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-malwarebytes",
+    "title": "Internxt — Malwarebytes 替代方案",
+    "description": "切換到 Internxt，體驗 Malwarebytes 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-mcafee",
+    "title": "Internxt — McAfee 替代方案",
+    "description": "切換到 Internxt，體驗 McAfee 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-norton",
+    "title": "Internxt — Norton 替代方案",
+    "description": "切換到 Internxt，體驗 Norton 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — TotalAV 替代方案",
+    "description": "切換到 Internxt，體驗 TotalAV 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
   }
 ]

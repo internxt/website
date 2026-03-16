@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI。类似 ChatGPT，\n 但更**私密**",
     "description": "切换到 Internxt AI，这是尊重您隐私的最佳 ChatGPT 替代方案",
-    "getPrivacy": " 选择您的方案并享受 87% 的折扣 ",
+    "getPrivacy": " 选择您的方案并享受 85% 的折扣 ",
     "cta": "立即切换"
   },
   "HeaderSection": {
@@ -95,7 +95,7 @@
           },
           {
             "title": "免费和超值的方案",
-            "description": "Internxt AI 是免费的，您可以将其与高达 5TB 的 Internxt Drive 终身方案结合使用。享受 87% 的折扣。"
+            "description": "Internxt AI 是免费的，您可以将其与高达 5TB 的 Internxt Drive 终身方案结合使用。享受 85% 的折扣。"
           }
         ]
       },
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "选择 Internxt，获得最佳 ChatGPT 替代方案",
-    "description": "Internxt 提供加密和私密的 AI，以及安全的云存储和全套隐私工具，立减 87%",
+    "description": "Internxt 提供加密和私密的 AI，以及安全的云存储和全套隐私工具，立减 85%",
     "cta": "立即切换"
   },
   "tableSection": {
     "title": "您的全方位隐私盟友",
-    "hotLabel": "87% 折扣 🔥",
+    "hotLabel": "85% 折扣 🔥",
     "planTitles": {
       "header": "您的全方位隐私盟友"
     },
@@ -196,7 +196,7 @@
       },
       {
         "question": "ChatGPT 比 Internxt 贵吗？",
-        "answer": ["Internxt AI 是免费的，凭借 87% 的专属折扣，我们的方案比 ChatGPT 的订阅更便宜，且包含全套隐私套件。"]
+        "answer": ["Internxt AI 是免费的，凭借 85% 的专属折扣，我们的方案比 ChatGPT 的订阅更便宜，且包含全套隐私套件。"]
       },
       {
         "question": "如何联系支持部门？",

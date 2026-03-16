@@ -12,7 +12,7 @@ const GeminiComparison = (props) => (
     metaTagId="alternative-to-gemini"
     segmentName="Gemini Comparison"
     logo="/images/comparison/gemini-Letters.webp"
-    couponCodeName={PromoCodeName.GEMINI87}
+    couponCodeName={PromoCodeName.GEMINI85}
   />
 );
 

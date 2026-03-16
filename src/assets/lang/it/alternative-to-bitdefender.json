@@ -1,0 +1,238 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Come Bitdefender,\n ma **privato**",
+    "description": "Passa a Internxt, la migliore alternativa a Bitdefender che rispetta la tua privacy",
+    "getPrivacy": " Seleziona il tuo piano e ottieni lo {{percentage}}% di sconto ",
+    "cta": "Fai il passaggio"
+  },
+  "HeaderSection": {
+    "title": "Panoramica Internxt vs Bitdefender",
+    "description": "Scopri le caratteristiche principali e le differenze che permettono a Internxt di ridarti il controllo sui tuoi dati",
+    "tableSection": {
+      "comparisons": [
+        "Trasparenza del codice",
+        "Chat crittografate",
+        "Chat revisionate da umani",
+        "Prezzi e archiviazione",
+        "Altre funzionalità",
+        "Audit di sicurezza",
+        "Apprendimento automatico",
+        "Politica sulla privacy",
+        "Leggi sulla privacy"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Sì, crittografato sul tuo dispositivo",
+        "Mai",
+        "Gratis, archiviazione a vita fino a 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail e Send",
+        "Audit di sicurezza regolari",
+        "Le chat non vengono mai usate per addestrare la nostra IA",
+        "Non può mai accedere alle tue chat",
+        "Privacy totale: GDPR, leggi spagnole sulla protezione dei dati"
+      ],
+      "competitorFeatures": [
+        "Codice proprietario",
+        "Nessuna crittografia end-to-end",
+        "Sì",
+        "Piano gratuito o 30 €/mese",
+        "Funzioni IA avanzate, modalità voce, generazione immagini illimitata",
+        "Audit di sicurezza regolari",
+        "I tuoi dati potrebbero essere usati per addestrare modelli IA",
+        "Gli esseri umani possono accedere e rivedere le tue interazioni",
+        "Meno privacy: Quadro UE-USA per la privacy dei dati"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Perché hai bisogno di un'alternativa a Bitdefender",
+    "description": "Bitdefender è solo un'opzione per proteggere il tuo dispositivo dai malware. Per una privacy totale e una suite di prodotti completa, passa a Internxt, un'alternativa integrale a Bitdefender con Drive, Cleaner e altro ancora.",
+    "scrollableSection": {
+      "titles": [
+        "I tuoi dati possono essere visti",
+        "Le conversazioni sono memorizzate sui loro server",
+        "Impatto sulle prestazioni del dispositivo",
+        "Suite di prodotti limitata"
+      ],
+      "descriptions": [
+        "I modelli IA di sicurezza potrebbero usare gli input degli utenti per migliorarsi, e alcune interazioni potrebbero essere esaminate da personale, comportando il rischio che conversazioni personali siano viste da dipendenti.",
+        "Le chat e i metadati come le informazioni sul dispositivo e la lingua sono memorizzati nell'attività del tuo account e conservati per lunghi periodi, limitando il controllo dell'utente.",
+        "Bitdefender può influire sulle prestazioni del dispositivo durante le scansioni complete e la protezione in tempo reale, causando un elevato utilizzo della memoria o rallentamenti del sistema su alcuni hardware.",
+        "Bitdefender offre prodotti limitati rispetto a Internxt Drive, creando una dipendenza da un singolo abbonamento ricorrente. Se hai bisogno di una protezione avanzata per l'archiviazione cloud combinata con altre funzioni, devi cercare altrove.\nLimiti dati VPN\nLa VPN integrata di Bitdefender ha limiti di dati sui piani consumer, limitando l'uso intensivo (download, streaming) a meno di non passare a un piano superiore."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funzionalità",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open source e auditato",
+        "Suite completa di prodotti",
+        "Piani convenienti"
+      ],
+      "descriptions": [
+        "Internxt è completamente open source e auditato in modo indipendente, quindi puoi essere certo che non ci siano backdoor e che le tue informazioni siano gestite in modo trasparente. Chiunque può esaminare il codice.",
+        "Internxt offre Cleaner e un ecosistema completo per la privacy per darti tutto ciò di cui hai bisogno per pulire i file spazzatura, archiviare e condividere file con crittografia zero-knowledge, oltre a VPN, Meet e Mail.",
+        "Inizia con Internxt per soli 1,60 € al mese o evita gli abbonamenti con i nostri convenienti piani a vita: paghi una volta e usi per sempre. Accedi alle funzionalità del tuo piano in modo permanente."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Bitdefender",
+    "description": "Internxt offre privacy e sicurezza impareggiabili grazie alla crittografia zero-knowledge e post-quantum, offrendoti la migliore protezione dagli attacchi informatici.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacy totale, trasparenza e fiducia",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt AI apre il suo codice su GitHub affinché chiunque possa esaminarlo, garantendo trasparenza e prevenendo vulnerabilità nascoste."
+          },
+          {
+            "title": "Crittografia zero-knowledge",
+            "description": "Le tue chat e i tuoi file sono crittografati lato client, garantendo che solo tu possa accedervi."
+          },
+          {
+            "title": "Sede in Europa",
+            "description": "Internxt ha sede in Spagna e rispetta GDPR, HIPAA, ISO 27001 e SOC 2, garantendo rigide protezioni della privacy."
+          },
+          {
+            "title": "Piani gratuiti e convenienti",
+            "description": "Internxt AI è gratuito e può essere combinato con i piani a vita di Internxt Drive fino a 5TB. Accedi ai nostri servizi con lo {{percentage}}% di sconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Bitdefender: E la tua privacy?",
+        "features": [
+          {
+            "title": "Software proprietario",
+            "description": "Trattandosi di software chiuso, è difficile verificare in modo indipendente come i dati vengono realmente gestiti o protetti."
+          },
+          {
+            "title": "Nessuna crittografia end-to-end",
+            "description": "L'azienda mantiene l'accesso alla crittografia su molti servizi, il che significa che i dati potrebbero essere accessibili su richiesta legale o interna."
+          },
+          {
+            "title": "Dati memorizzati globalmente",
+            "description": "I dati memorizzati nel cloud sono soggetti a leggi che potrebbero consentirne l'accesso a seconda della giurisdizione."
+          },
+          {
+            "title": "Basato su abbonamento",
+            "description": "Disponibile con piani che richiedono rinnovi periodici, spesso con prezzi che aumentano dopo il primo anno."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Perché Internxt è la migliore alternativa a Bitdefender",
+    "description": "Internxt offre una suite completa di prodotti insieme alla sua IA privata per offrirti un'alternativa sicura.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Strumenti avanzati"
+      ],
+      "descriptions": [
+        "Internxt Drive offre archiviazione cloud sicura, zero-knowledge e con crittografia post-quantum, inclusa condivisione avanzata e supporto NAS.",
+        "Internxt Antivirus è integrato per proteggerti dai malware tramite scansioni complete o personalizzate.",
+        "La VPN di Internxt crittografa la tua connessione, blocca annunci e protegge la tua identità durante la navigazione.",
+        "Internxt Cleaner ti aiuta a identificare e rimuovere i file spazzatura per tenere la tua archiviazione organizzata.",
+        "Internxt Meet consente videochiamate private sicure, protette da crittografia post-quantum e senza pubblicità.",
+        "Disponibile per Windows, Mac, Linux e mobile, con supporto WebDAV, Rclone e NAS per utenti avanzati."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Scegli Internxt come migliore alternativa a Bitdefender",
+    "description": "Internxt ti offre crittografia privata totale per impostazione predefinita, software open source trasparente e una suite completa per la privacy.",
+    "cta": "Fai il passaggio"
+  },
+  "tableSection": {
+    "title": "Il tuo alleato per la privacy tutto in uno",
+    "hotLabel": "{{discount}}% di sconto 🔥",
+    "planTitles": {
+      "header": "Il tuo alleato per la privacy tutto in uno"
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Usa Internxt AI gratuitamente con conversazioni private crittografate",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open source e auditato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "30 giorni di garanzia di rimborso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa più sicura e privata di Bitdefender?",
+        "answer": [
+          "Sì, Internxt usa la crittografia post-quantum e zero-knowledge che garantisce che solo tu possa vedere i tuoi file.",
+          "Internxt Drive include VPN, Antivirus, Cleaner, Meet e Mail, offrendo più servizi di Bitdefender per la tua sicurezza online."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantum?",
+        "answer": [
+          "A differenza della crittografia standard, gli algoritmi post-quantum sono progettati per resistere ai futuri attacchi informatici quantistici."
+        ]
+      },
+      {
+        "question": "Dove ha sede Internxt?",
+        "answer": [
+          "Internxt ha sede a Valencia, in Spagna, il che la rende una soluzione conforme al GDPR che rispetta leggi rigorose sulla protezione dei dati."
+        ]
+      },
+      {
+        "question": "Bitdefender è più caro di Internxt?",
+        "answer": [
+          "Con il tuo sconto esclusivo dell'85%, i nostri piani sono più vantaggiosi dei prezzi attuali di Bitdefender, con più funzionalità incluse."
+        ]
+      },
+      {
+        "question": "Come contattare il supporto?",
+        "answer": [
+          "Per qualsiasi domanda, contatta hello@internxt.com e il nostro team sarà lieto di aiutarti."
+        ]
+      },
+      {
+        "question": "Posso aggiungere archiviazione al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiornare il piano nelle impostazioni o acquistarne uno nuovo che si cumulerà automaticamente."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta, PayPal o crypto?",
+        "answer": [
+          "Internxt accetta carte, PayPal, iDEAL, Sofort, criptovalute e Klarna."
+        ]
+      }
+    ]
+  }
+}

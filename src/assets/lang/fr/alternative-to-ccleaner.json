@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Comme CCleaner,\n mais **privé**",
+    "description": "Passez à Internxt, la meilleure alternative à CCleaner qui respecte votre vie privée",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction  ",
+    "cta": "Faire le changement"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs CCleaner",
+    "description": "Découvrez les fonctionnalités clés et les différences qui permettent à Internxt de vous rendre le contrôle sur vos données",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Confidentialité des données",
+        "Collecte d'informations",
+        "Prix et stockage",
+        "Autres fonctionnalités",
+        "Audits de sécurité",
+        "Nettoyage du système",
+        "Politique de confidentialité",
+        "Lois sur la vie privée"
+      ],
+      "internxtFeatures": [
+        "Open-source",
+        "Cryptage de bout en bout",
+        "Collecte de données minimale",
+        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
+        "Audits de sécurité réguliers",
+        "Nettoyeur sûr et intelligent intégré",
+        "Ne peut jamais accéder à vos fichiers",
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+      ],
+      "competitorFeatures": [
+        "Code propriétaire",
+        "Pas de cryptage des données",
+        "Collecte massive de données système",
+        "Forfait gratuit ou abonnements payants",
+        "Nettoyage du registre, mise à jour des pilotes",
+        "Audits de sécurité réguliers",
+        "Nettoyage système standard",
+        "Historique d'incidents de sécurité et confidentialité",
+        "Moins de confidentialité : Soumis aux lois US/Globales sur les données"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Pourquoi vous avez besoin d'une alternative à CCleaner",
+    "description": "CCleaner n'est qu'une option pour nettoyer les fichiers inutiles de votre appareil. Pour une confidentialité totale et une suite complète, passez à Internxt pour une alternative intégrale avec Drive, Cleaner et plus encore.",
+    "scrollableSection": {
+      "titles": [
+        "Collecte massive de données",
+        "Incidents de sécurité passés",
+        "Logiciels indésirables (Bloatware)",
+        "Suite de produits limitée"
+      ],
+      "descriptions": [
+        "CCleaner a été critiqué pour la collecte de données utilisateur étendues à des fins d'analyse et de publicité, compromettant la vie privée.",
+        "Au fil des ans, CCleaner a subi des failles de sécurité majeures ayant exposé des millions d'utilisateurs à des logiciels malveillants.",
+        "CCleaner inclut souvent des logiciels supplémentaires non sollicités lors de l'installation, ce qui peut ralentir votre appareil.",
+        "CCleaner ne propose qu'un seul produit principal. Si vous avez besoin de protection avancée, de stockage cloud ou de communication privée, vous devez payer pour plusieurs abonnements.\nManque de confidentialité avancée\nCCleaner ne crypte pas votre trafic ; son focus est le nettoyage, alors qu'Internxt Drive inclut un VPN et un cryptage total."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Fonctionnalités",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Open source et audité",
+        "Suite de produits complète",
+        "Forfaits abordables"
+      ],
+      "descriptions": [
+        "Internxt est entièrement open source et audité de manière indépendante, garantissant l'absence de portes dérobées.",
+        "Internxt offre Cleaner et un écosystème de confidentialité complet pour nettoyer, stocker et partager vos fichiers avec cryptage zero-knowledge.",
+        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie abordables."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs CCleaner",
+    "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au cryptage zero-knowledge et post-quantique.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "features": [
+          {
+            "title": "Open source",
+            "description": "Internxt rend son code accessible à tous sur GitHub, assurant une transparence totale."
+          },
+          {
+            "title": "Cryptage zero-knowledge",
+            "description": "Vos fichiers sont cryptés côté client, garantissant que vous seul pouvez y accéder."
+          },
+          {
+            "title": "Basé en Europe",
+            "description": "Basé en Espagne, Internxt respecte le RGPD et d'autres normes strictes de confidentialité."
+          },
+          {
+            "title": "Forfaits gratuits et abordables",
+            "description": "Accédez à nos services avec les forfaits à vie et {{percentage}}% de réduction."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "CCleaner : Et votre vie privée ?",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "Code fermé, rendant difficile la vérification de la protection réelle des données."
+          },
+          {
+            "title": "Pas de cryptage de bout en bout",
+            "description": "N'offre pas de cryptage pour vos données personnelles, se concentrant uniquement sur le nettoyage."
+          },
+          {
+            "title": "Collecte de données",
+            "description": "Collecte des informations système partagées avec des tiers à des fins publicitaires."
+          },
+          {
+            "title": "Basé sur l'abonnement",
+            "description": "Nécessite des renouvellements périodiques pour les fonctions de nettoyage automatique."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Pourquoi Internxt est la meilleure alternative à CCleaner",
+    "description": "Internxt propose une suite complète pour vous offrir une alternative sûre aux outils de nettoyage traditionnels.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Outils avancés"
+      ],
+      "descriptions": [
+        "Stockage cloud sécurisé avec cryptage zero-knowledge et post-quantique.",
+        "Protection intégrée contre les logiciels malveillants avec analyses complètes.",
+        "Crypte votre connexion et protège votre identité en ligne.",
+        "Aide à supprimer les fichiers inutiles pour organiser votre stockage.",
+        "Appels vidéo privés sécurisés protégés par cryptage post-quantique.",
+        "Disponible sur toutes les plateformes avec support Rclone et NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Choisissez Internxt pour une meilleure alternative à CCleaner",
+    "description": "Internxt vous offre un cryptage privé total, un logiciel open source et une suite de confidentialité complète.",
+    "cta": "Faire le changement"
+  },
+  "tableSection": {
+    "title": "Votre allié de confidentialité tout-en-un",
+    "hotLabel": "{{discount}}% de réduction 🔥",
+    "planTitles": {
+      "header": "Votre allié de confidentialité tout-en-un"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Utilisez Internxt gratuitement avec des outils de confidentialité",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus privée que CCleaner ?",
+        "answer": [
+          "Oui, Internxt utilise le cryptage post-quantique et zero-knowledge et est entièrement open source.",
+          "Internxt inclut Drive, VPN, Antivirus et Cleaner pour une sécurité complète."
+        ]
+      },
+      {
+        "question": "Où est basé Internxt ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, respectant strictement le RGPD."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Contactez hello@internxt.com et notre équipe vous aidera avec plaisir."
+        ]
+      },
+      {
+        "question": "Puis-je payer en crypto ?",
+        "answer": [
+          "Oui, nous acceptons les cartes, PayPal, les cryptomonnaies et Klarna."
+        ]
+      }
+    ]
+  }
+}

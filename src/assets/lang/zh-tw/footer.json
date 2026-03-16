@@ -96,7 +96,19 @@
         "backblazeAlternative": "Backblaze 替代方案",
         "googleCloudAlternative": "Google Cloud 替代方案",
         "awsAlternative": "AWS 替代方案",
-        "azureAlternative": "Azure 替代方案"
+        "azureAlternative": "Azure 替代方案",
+        "antivirusAlternatives": "防毒軟體替代方案",
+        "avastAlternative": "Avast 替代方案",
+        "avgAlternative": "AVG 替代方案",
+        "aviraAlternative": "Avira 替代方案",
+        "bitdefenderAlternative": "Bitdefender 替代方案",
+        "malwarebytesAlternative": "Malwarebytes 替代方案",
+        "mcafeeAlternative": "McAfee 替代方案",
+        "nortonAlternative": "Norton 替代方案",
+        "totalavAlternative": "TotalAV 替代方案",
+        "cleanerAlternatives": "清理工具替代方案",
+        "ccleanerAlternative": "CCleaner 替代方案",
+        "cleanMyMacAlternative": "CleanMyMac 替代方案"
       },
       "tools": {
         "title": "免費工具",

@@ -41,8 +41,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE87,
-    couponCodeForLifetime: PromoCodeName.DRIVE87,
+    couponCode: PromoCodeName.DRIVE85,
+    couponCodeForLifetime: PromoCodeName.DRIVE85,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';

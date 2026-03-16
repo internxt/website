@@ -30,8 +30,8 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE87,
-    couponCodeForLifetime: PromoCodeName.DRIVE87,
+    couponCode: PromoCodeName.DRIVE85,
+    couponCodeForLifetime: PromoCodeName.DRIVE85,
   });
 
   const onCheckoutButtonClicked = async (
@@ -74,13 +74,15 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Google drive alternative', 'google-drive-alternative')}
       </Script>
-<Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName={'Drive Comparison'}
-      lang={lang}
-    >
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName={'Drive Comparison'}
+        lang={lang}
+      >
+        
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+      
       <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />

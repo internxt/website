@@ -12,7 +12,7 @@ const grokComparison = (props) => (
     metaTagId="alternative-to-grok"
     segmentName="Grok Comparison"
     logo="/images/comparison/grok-Letters.webp"
-    couponCodeName={PromoCodeName.GROK87}
+    couponCodeName={PromoCodeName.GROK85}
   />
 );
 

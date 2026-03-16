@@ -1,0 +1,220 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 CCleaner，\n但更**私密**",
+    "description": "切换到 Internxt，这是最尊重您隐私的 CCleaner 最佳替代方案",
+    "getPrivacy": " 选择您的计划并享受 {{percentage}}% 的折扣  ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 CCleaner 概览",
+    "description": "了解 Internxt 如何通过关键功能和差异化设计为您夺回数据控制权",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "数据隐私",
+        "信息采集",
+        "价格与存储空间",
+        "其他功能",
+        "安全审计",
+        "系统清理",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "端到端加密",
+        "极简数据采集",
+        "免费，高达 5TB 的终身存储空间",
+        "Internxt AI、Drive、VPN、Antivirus、Cleaner、Meet、Mail 和 Send",
+        "定期安全审计",
+        "内置安全智能清理工具",
+        "始终无法访问您的文件",
+        "全面隐私保护：GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "无数据加密",
+        "大规模系统数据采集",
+        "免费计划或付费订阅",
+        "注册表清理、驱动更新",
+        "定期安全审计",
+        "常规系统清理",
+        "安全与隐私事件历史",
+        "隐私保护较弱：受全球数据法限制"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "为什么您需要 CCleaner 的替代方案",
+    "description": "CCleaner 只是清理垃圾文件的选择之一。为了获得全面的隐私保护，请切换到 Internxt，获得包含 Drive、Cleaner 在内的全能替代方案。",
+    "scrollableSection": {
+      "titles": [
+        "大规模数据采集",
+        "曾发生安全事件",
+        "捆绑软件 (Bloatware)",
+        "产品线有限"
+      ],
+      "descriptions": [
+        "CCleaner 曾因采集大量用户数据用于分析和广告而受到批评，这损害了用户的隐私。",
+        "多年来，CCleaner 曾遭受重大安全漏洞，导致数百万用户面临恶意软件风险。",
+        "CCleaner 在安装过程中常包含未经请求的其他软件，可能导致设备变慢。",
+        "CCleaner 仅提供单一核心产品。如果您需要高级保护或云存储，则需支付更多订阅费用。\n由于缺乏高级隐私保护\nCCleaner 不会对您的流量进行加密；而 Internxt Drive 包含 VPN 和全面加密。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "功能",
+    "description": "",
+    "cards": {
+      "titles": [
+        "开源且经过审计",
+        "全套产品线",
+        "实惠的价格"
+      ],
+      "descriptions": [
+        "Internxt 完全开源并经过独立审计，确保无后门且透明。",
+        "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理、存储和共享零知识加密文件。",
+        "每月仅需 1.60 欧元即可开始，或选择终身计划以实现永久访问。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs CCleaner",
+    "description": "得益于零知识加密和后量子加密，Internxt 提供了无与伦比的隐私保护。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：全面隐私、透明和信任",
+        "features": [
+          {
+            "title": "开源软件",
+            "description": "Internxt 在 GitHub 上公开其代码，确保透明度。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "您的文件在客户端加密，确保只有您自己可以访问。"
+          },
+          {
+            "title": "总部位于欧洲",
+            "description": "总部位于西班牙，符合 GDPR 及其他严格的隐私规定。"
+          },
+          {
+            "title": "免费与实惠的计划",
+            "description": "以 {{percentage}}% 的折扣通过终身计划永久访问我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "CCleaner：您的隐私状况如何？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "闭源软件难以验证数据受保护的真实情况。"
+          },
+          {
+            "title": "无端到端加密",
+            "description": "不提供个人数据加密，重点仅在于清理功能。"
+          },
+          {
+            "title": "数据采集",
+            "description": "采集系统信息用于广告目的。"
+          },
+          {
+            "title": "订阅制",
+            "description": "自动清理功能通常需要定期续费。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 CCleaner 的最佳替代方案",
+    "description": "Internxt 提供全套方案，为传统清理工具提供安全的替代选择。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "高级工具"
+      ],
+      "descriptions": [
+        "零知识及后量子加密的云存储。",
+        "内置恶意软件防护及全面扫描。",
+        "加密连接并保护是在线身份。",
+        "识别并清理垃圾文件，保持存储空间整洁。",
+        "后量子加密保护的私人视频通话。",
+        "支持所有主流平台及高级用户工具。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "选择 Internxt 作为 CCleaner 的最佳替代方案",
+    "description": "Internxt 默认为您提供全方位私密加密、开源软件和全套隐私套件。",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的一站式隐私助手",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "您的一站式隐私助手"
+    },
+    "billingFrequency": {
+      "annually": "年度制",
+      "lifetime": "终身制"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费使用具有隐私工具和加密功能的 Internxt",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 是否比 CCleaner 更安全？",
+        "answer": [
+          "是的，Internxt 使用后量子加密并且是完全开源的。",
+          "Internxt 集成了 Drive、VPN 和 Cleaner 以提供全方位安全。"
+        ]
+      },
+      {
+        "question": "Internxt 总部在哪里？",
+        "answer": [
+          "总部位于西班牙瓦伦西亚，严格遵循 GDPR。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": [
+          "请联系 hello@internxt.com，我们将很乐意提供帮助。"
+        ]
+      },
+      {
+        "question": "支持哪些支付方式？",
+        "answer": [
+          "接受信用卡、PayPal、加密货币及 Klarna。"
+        ]
+      }
+    ]
+  }
+}

@@ -27,8 +27,8 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PCLOUD87,
-    couponCodeForLifetime: PromoCodeName.PCLOUD87,
+    couponCode: PromoCodeName.PCLOUD85,
+    couponCodeForLifetime: PromoCodeName.PCLOUD85,
   });
 
   const onCheckoutButtonClicked = async (

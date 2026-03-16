@@ -27,8 +27,8 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Mega87,
-    couponCodeForLifetime: PromoCodeName.Mega87,
+    couponCode: PromoCodeName.Mega85,
+    couponCodeForLifetime: PromoCodeName.Mega85,
   });
 
   const onCheckoutButtonClicked = async (

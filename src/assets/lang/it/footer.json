@@ -96,7 +96,19 @@
         "backblazeAlternative": "Alternativa a Backblaze",
         "googleCloudAlternative": "Alternativa a Google Cloud",
         "awsAlternative": "Alternativa a AWS",
-        "azureAlternative": "Alternativa a Azure"
+        "azureAlternative": "Alternativa a Azure",
+        "antivirusAlternatives": "Alternative ad Antivirus",
+        "avastAlternative": "Alternativa ad Avast",
+        "avgAlternative": "Alternativa ad AVG",
+        "aviraAlternative": "Alternativa ad Avira",
+        "bitdefenderAlternative": "Alternativa a Bitdefender",
+        "malwarebytesAlternative": "Alternativa a Malwarebytes",
+        "mcafeeAlternative": "Alternativa a McAfee",
+        "nortonAlternative": "Alternativa a Norton",
+        "totalavAlternative": "Alternativa a TotalAV",
+        "cleanerAlternatives": "Alternative per la Pulizia",
+        "ccleanerAlternative": "Alternativa a CCleaner",
+        "cleanMyMacAlternative": "Alternativa a CleanMyMac"
       },
       "tools": {
         "title": "Strumenti gratuiti",

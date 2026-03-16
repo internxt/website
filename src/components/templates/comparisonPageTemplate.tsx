@@ -53,7 +53,17 @@ type CompetitorType =
   | 'azure'
   | 'backblaze'
   | 'idriveE2'
-  | 'googleCloud';
+  | 'googleCloud'
+  | 'avast'
+  | 'avg'
+  | 'avira'
+  | 'bitdefender'
+  | 'ccleaner'
+  | 'clean-my-mac'
+  | 'malwarebytes'
+  | 'mcafee'
+  | 'norton'
+  | 'totalav';
 
 interface ComparisonPageProps {
   competitor: CompetitorType;

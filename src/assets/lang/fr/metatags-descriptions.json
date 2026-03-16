@@ -102,17 +102,17 @@
   {
     "id": "black-friday",
     "title": "Offres Black Friday 2025 - Offres de Stockage Cloud et de Cloud Personnel",
-    "description": "Internxt Black Friday 2025 : 87% DE RÉDUCTION sur le stockage cloud sécurisé et votre suite complète de confidentialité ! Obtenez VPN, Antivirus, Cleaner, Meet et Mail."
+    "description": "Internxt Black Friday 2025 : 85% DE RÉDUCTION sur le stockage cloud sécurisé et votre suite complète de confidentialité ! Obtenez VPN, Antivirus, Cleaner, Meet et Mail."
   },
   {
     "id": "black-friday-cloud-storage",
     "title": "Internxt — Offre Black Friday Stockage Cloud 2025",
-    "description": "Black Friday Internxt 2025 — 87% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
+    "description": "Black Friday Internxt 2025 — 85% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
   },
   {
     "id": "black-friday-personal-cloud-storage",
     "title": "Internxt — Offres Black Friday de Stockage Cloud Personnel 2025",
-    "description": "Black Friday Internxt 2025 — 87% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
+    "description": "Black Friday Internxt 2025 — 85% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
   },
   {
     "id": "cloudwards",
@@ -402,17 +402,17 @@
   {
     "id": "free-cloud-storage-deals",
     "title": "Internxt — Offres de Stockage Cloud Gratuit",
-    "description": "Offres de stockage cloud gratuit directement d'Internxt pour améliorer votre forfait avec 87% de réduction sur le stockage cloud sécurisé et chiffré et plus encore"
+    "description": "Offres de stockage cloud gratuit directement d'Internxt pour améliorer votre forfait avec 85% de réduction sur le stockage cloud sécurisé et chiffré et plus encore"
   },
   {
     "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Offres Officielles de Stockage Cloud à Vie Internxt avec 87% de Réduction",
-    "description": "Obtenez les meilleures offres de stockage cloud à vie d'Internxt. Payez une fois pour obtenir 87% de réduction sur le stockage cloud privé et chiffré, pour toujours."
+    "title": "Internxt — Offres Officielles de Stockage Cloud à Vie Internxt avec 85% de Réduction",
+    "description": "Obtenez les meilleures offres de stockage cloud à vie d'Internxt. Payez une fois pour obtenir 85% de réduction sur le stockage cloud privé et chiffré, pour toujours."
   },
   {
     "id": "deals",
-    "title": "Internxt — Offres officielles Internxt avec 87% de réduction sur tous les forfaits",
-    "description": "Profitez de votre réduction exclusive de 87%. Ces offres Internxt incluent un stockage cloud privé et chiffré, et plus encore à un prix imbattable."
+    "title": "Internxt — Offres officielles Internxt avec 85% de réduction sur tous les forfaits",
+    "description": "Profitez de votre réduction exclusive de 85%. Ces offres Internxt incluent un stockage cloud privé et chiffré, et plus encore à un prix imbattable."
   },
   {
     "id": "reviews",
@@ -488,5 +488,55 @@
     "id": "google-cloud-alternative",
     "title": "Internxt — Alternative à Google Cloud",
     "description": "Passez à Internxt S3 pour une alternative open-source à Google Cloud. Stockage d'objets cloud abordable et sécurisé pour les entreprises."
+  },
+  {
+    "id": "alternative-to-avast",
+    "title": "Internxt — Alternative à Avast",
+    "description": "Passez à Internxt pour une alternative open-source à Avast. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-avg",
+    "title": "Internxt — Alternative à AVG",
+    "description": "Passez à Internxt pour une alternative open-source à AVG. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-avira",
+    "title": "Internxt — Alternative à Avira",
+    "description": "Passez à Internxt pour une alternative open-source à Avira. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-bitdefender",
+    "title": "Internxt — Alternative à Bitdefender",
+    "description": "Passez à Internxt pour une alternative open-source à Bitdefender. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-ccleaner",
+    "title": "Internxt — Alternative à CCleaner",
+    "description": "Passez à Internxt pour une alternative open-source à CCleaner. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-clean-my-mac",
+    "title": "Internxt — Alternative à CleanMyMac",
+    "description": "Passez à Internxt pour une alternative open-source à CleanMyMac. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-malwarebytes",
+    "title": "Internxt — Alternative à Malwarebytes",
+    "description": "Passez à Internxt pour une alternative open-source à Malwarebytes. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-mcafee",
+    "title": "Internxt — Alternative à McAfee",
+    "description": "Passez à Internxt pour une alternative open-source à McAfee. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-norton",
+    "title": "Internxt — Alternative à Norton",
+    "description": "Passez à Internxt pour une alternative open-source à Norton. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — Alternative à TotalAV",
+    "description": "Passez à Internxt pour une alternative open-source à TotalAV. Comprend un stockage cloud crypté post-quantique et à connaissance zéro, et plus encore."
   }
 ]

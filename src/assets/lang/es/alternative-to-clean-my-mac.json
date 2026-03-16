@@ -1,0 +1,238 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Como CleanMyMac,\n pero **privado**",
+    "description": "Cámbiate a Internxt, la mejor alternativa a CleanMyMac que respeta tu privacidad",
+    "getPrivacy": " Selecciona tu plan y obtén un {{percentage}}% de descuento  ",
+    "cta": "Haz el cambio"
+  },
+  "HeaderSection": {
+    "title": "Descripción general de Internxt vs CleanMyMac",
+    "description": "Descubre las funciones clave y las diferencias que permiten a Internxt devolverte el control sobre tus datos",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Privacidad de datos",
+        "Recopilación de información",
+        "Precios y almacenamiento",
+        "Otras funciones",
+        "Auditorías de seguridad",
+        "Eliminación de archivos",
+        "Política de privacidad",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "Cifrado de extremo a extremo",
+        "Mínima información recopilada",
+        "Gratis, almacenamiento de por vida hasta 5TB",
+        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail y Send",
+        "Auditorías de seguridad periódicas",
+        "Limpieza inteligente que no borra archivos vitales",
+        "Nunca puede acceder a tus archivos",
+        "Privacidad total: RGPD, leyes españolas de protección de datos"
+      ],
+      "competitorFeatures": [
+        "Código cerrado",
+        "Sin cifrado de datos",
+        "Recopilación de datos de uso del sistema",
+        "Desde 35 €/año",
+        "Limpieza de archivos pesados, desinstalador",
+        "Auditorías de seguridad periódicas",
+        "Herramientas de limpieza profunda",
+        "Software con acceso de administrador al sistema",
+        "Menos privacidad: Sujeto a políticas de datos corporativas"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Por qué necesitas una alternativa a CleanMyMac",
+    "description": "CleanMyMac es solo una opción para limpiar archivos basura de tu dispositivo. Para una privacidad total y una suite de productos completa, cámbiate a Internxt para obtener una alternativa integral a CleanMyMac con Drive, Cleaner y mucho más.",
+    "scrollableSection": {
+      "titles": [
+        "Software de código cerrado",
+        "Acceso profundo al sistema",
+        "Falta de cifrado",
+        "Suite de productos limitada"
+      ],
+      "descriptions": [
+        "Al ser un software propietario, no hay forma de que los usuarios verifiquen de forma independiente qué datos se recopilan o cómo se procesa la información de su Mac en segundo plano.",
+        "CleanMyMac requiere permisos extensos que pueden poner en riesgo la estabilidad del sistema si no se usa con precaución, pudiendo eliminar componentes esenciales de aplicaciones o del propio SO.",
+        "A diferencia de Internxt, CleanMyMac no protege tus archivos personales con cifrado de conocimiento cero; se limita a la gestión de archivos sin ofrecer una capa de seguridad para tu privacidad digital.",
+        "CleanMyMac solo ofrece un producto principal para limpieza. Si necesitas almacenamiento seguro en la nube o comunicaciones privadas, tendrás que pagar por diversas suscripciones adicionales.\nAplicaciones falsas\nExisten numerosos sitios que ofrecen versiones pirateadas de herramientas de limpieza que contienen malware. Con Internxt, siempre tienes acceso a software seguro y verificado."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Funciones",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Código abierto y auditado",
+        "Suite completa de productos",
+        "Planes asequibles"
+      ],
+      "descriptions": [
+        "Internxt es totalmente de código abierto y está auditado de forma independiente, por lo que puedes estar seguro de que no hay puertas traseras y de que tu información se gestiona de forma transparente.",
+        "Internxt ofrece Cleaner y un ecosistema de privacidad completo para darte todo lo que necesitas para limpiar archivos basura, almacenar archivos con cifrado de conocimiento cero en Drive, VPN, Meet y más.",
+        "Empieza con Internxt por solo 1,60 € al mes, o evita suscripciones con nuestros planes de por vida: paga una vez y úsalo para siempre. Amplía tu almacenamiento siempre que lo necesites."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs CleanMyMac",
+    "description": "Internxt ofrece una privacidad y seguridad inigualables gracias al cifrado de conocimiento cero y post-cuántico, brindándote la mejor protección.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: Privacidad total, transparencia y confianza",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "Internxt hace que su código sea abierto para que todos lo examinen a través de GitHub, asegurando la transparencia."
+          },
+          {
+            "title": "Cifrado de conocimiento cero",
+            "description": "Tus archivos y chats se cifran en el lado del cliente, garantizando que solo tú puedas acceder a ellos."
+          },
+          {
+            "title": "Basado en Europa",
+            "description": "Internxt tiene su sede en España y cumple con RGPD y otras normativas estrictas de privacidad."
+          },
+          {
+            "title": "Planes gratuitos y asequibles",
+            "description": "Accede a nuestros servicios para siempre con planes de por vida y un {{percentage}}% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "CleanMyMac: ¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "Software propietario",
+            "description": "Código cerrado, lo que dificulta verificar de forma independiente cómo se manejan los datos del usuario."
+          },
+          {
+            "title": "Sin cifrado de extremo a extremo",
+            "description": "No ofrece cifrado para tus datos personales ni para tus archivos almacenados localmente."
+          },
+          {
+            "title": "Datos del sistema en la nube",
+            "description": "La información sobre el estado y el uso de tu sistema puede ser enviada a sus servidores para análisis."
+          },
+          {
+            "title": "Basado en suscripción",
+            "description": "Requiere un pago anual o una compra única costosa para un solo producto de mantenimiento."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por qué Internxt es la mejor alternativa a CleanMyMac",
+    "description": "Internxt ofrece una suite completa de productos de privacidad para ofrecerte una alternativa segura a las herramientas de limpieza tradicionales.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Herramientas avanzadas"
+      ],
+      "descriptions": [
+        "Internxt Drive ofrece almacenamiento en la nube seguro con cifrado de conocimiento cero y post-cuántico con funciones avanzadas.",
+        "Internxt Antivirus está integrado para proteger contra malware y ransomware con escaneos completos.",
+        "La VPN de Internxt cifra tu conexión y protege tu identidad mientras navegas en línea.",
+        "Internxt Cleaner ayuda a identificar y eliminar archivos basura para mantener tu almacenamiento organizado y eficiente.",
+        "Internxt Meet permite videollamadas seguras y privadas protegidas con cifrado post-cuántico.",
+        "Disponible en todas las plataformas principales con soporte para usuarios avanzados como Rclone y NAS."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Elige Internxt para una mejor alternativa a CleanMyMac",
+    "description": "Internxt te ofrece cifrado privado total por defecto, software de código abierto transparente y una suite de privacidad completa.",
+    "cta": "Haz el cambio"
+  },
+  "tableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "{{discount}}% de descuento 🔥",
+    "planTitles": {
+      "header": "Tu aliado de privacidad todo en uno"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Usa Internxt de forma gratuita con herramientas de privacidad y cifrado",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Atención al cliente premium",
+      "guarantee": "30 días de garantía de reembolso"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt una alternativa más segura y privada que CleanMyMac?",
+        "answer": [
+          "Sí, Internxt utiliza cifrado post-cuántico y de conocimiento cero, además de ser totalmente de código abierto, a diferencia de CleanMyMac.",
+          "Internxt incluye Drive, VPN, Antivirus y Cleaner, ofreciendo una solución de seguridad mucho más completa."
+        ]
+      },
+      {
+        "question": "¿Cómo protege Internxt mi privacidad mejor que CleanMyMac?",
+        "answer": [
+          "Mientras que CleanMyMac se enfoca en la limpieza local, Internxt está diseñado desde cero para proteger todos tus datos con cifrado que nadie más puede leer."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, cumpliendo estrictamente con el RGPD de la Unión Europea."
+        ]
+      },
+      {
+        "question": "¿Es CleanMyMac más caro que Internxt?",
+        "answer": [
+          "Con tu descuento exclusivo del 85%, nuestros planes son más competitivos que las opciones de CleanMyMac y ofrecen mucho más valor con múltiples servicios incluidos."
+        ]
+      },
+      {
+        "question": "¿Cómo contacto con el soporte?",
+        "answer": [
+          "Puedes contactar con hello@internxt.com y nuestro equipo de atención al cliente te ayudará encantado."
+        ]
+      },
+      {
+        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, puedes mejorar tu plan desde los ajustes o comprar uno nuevo que se sumará automáticamente a tu cuenta."
+        ]
+      },
+      {
+        "question": "¿Qué métodos de pago aceptáis?",
+        "answer": [
+          "Aceptamos tarjetas de crédito/débito, PayPal, criptomonedas y otros métodos locales como Klarna y Sofort."
+        ]
+      }
+    ]
+  }
+}
