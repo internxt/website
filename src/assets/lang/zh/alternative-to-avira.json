@@ -1,0 +1,226 @@
+{
+  "HeroSection": {
+    "title": "Internxt。像 Avira，\n但更**私密**",
+    "description": "切换到 Internxt，这是最尊重您隐私的 Avira 最佳替代方案",
+    "getPrivacy": " 选择您的计划并享受 {{percentage}}% 的折扣 ",
+    "cta": "立即切换"
+  },
+  "HeaderSection": {
+    "title": "Internxt 与 Avira 概览",
+    "description": "了解 Internxt 如何通过关键功能和差异化设计为您夺回数据控制权",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "数据隐私",
+        "安全审计",
+        "价格与存储空间",
+        "总部所在地",
+        "数据收集",
+        "文件访问权限",
+        "加密技术",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "默认全面隐私保护",
+        "定期安全审计",
+        "免费，高达 5TB 的终身存储空间",
+        "总部位于欧洲（西班牙）",
+        "不收集或出售数据",
+        "绝无权限访问您的文件",
+        "零知识加密与后量子加密",
+        "全面隐私保护：GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "受监管监控",
+        "定期安全审计",
+        "免费计划或 45 欧元/年",
+        "总部位于欧洲（德国）",
+        "默认收集遥测数据",
+        "可扫描并访问文件元数据",
+        "无零知识加密",
+        "隐私保护较弱：GDPR、德国法律"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "为什么您需要 Avira 的替代方案",
+    "description": "Avira 是保护设备的选择之一，但如果您追求极限隐私，Internxt 就是您需要的 Avira 替代方案。凭借更高的安全性，Internxt 能更稳妥地保护您的文件。",
+    "scrollableSection": {
+      "titles": [
+        "收集遥测数据",
+        "缺乏透明度",
+        "被 NortonLifeLock 收购",
+        "性能影响"
+      ],
+      "descriptions": [
+        "Avira 默认收集遥测数据以分析软件使用情况。尽管声称数据是匿名的，但收集系统信息仍可能威胁到追求绝对匿名的资深用户的隐私。",
+        "由于不是开源软件，Avira 不允许公众审计其代码，无法核实其处理文件的具体细节，用户只能盲目信任其公司政策。",
+        "自 Avira 被 NortonLifeLock（现 Gen Digital）收购后，人们对其数据整合和隐私政策变更（更趋向于美国企业标准）表示担忧。",
+        "许多用户反映，由于后台进程繁多和促销弹窗，Avira 会显著拖慢系统启动和整体运行速度。"
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "核心功能",
+    "description": "",
+    "cards": {
+      "titles": [
+        "领先的加密技术",
+        "开源且经过审计",
+        "灵活的计划"
+      ],
+      "descriptions": [
+        "Internxt 采用零知识加密和后量子加密，确保除您之外无人能访问文件。数据在上传前已在本地完成加密。",
+        "Internxt 完全开源并接受第三方独立审计，确保无任何后门或隐形监控，透明度极高。",
+        "我们提供每月 1.60 欧元的定额计划，或只需支付一次即可永久享受安全存储的终身计划。"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Avira",
+    "description": "得益于零知识加密和后量子加密，Internxt 提供了超越 Avira 标准防护的卓越安全性能。",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt：隐私与透明",
+        "features": [
+          {
+            "title": "开源软件",
+            "description": "您可以在 GitHub 上随时核查代码，以此确保软件中没有隐藏的数据收集功能。"
+          },
+          {
+            "title": "零知识加密",
+            "description": "即便是 Internxt 也无法查看您的文件或密码；密钥完全由您掌控。"
+          },
+          {
+            "title": "立足西班牙",
+            "description": "我们遵循全球最严苛的隐私法律 (GDPR) 来捍卫您的个人权利。"
+          },
+          {
+            "title": "终身计划",
+            "description": "凭一次性付款和 {{percentage}}% 的折扣即可获得高达 5TB 的存储空间。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Avira：您能得到什么？",
+        "features": [
+          {
+            "title": "闭源软件",
+            "description": "专有软件意味着其内部安全机制无法通过第三方的独立审计核实。"
+          },
+          {
+            "title": "有限隐私",
+            "description": "会收集可能被用于商业分析或与个人画像关联的遥测数据及元数据。"
+          },
+          {
+            "title": "全球企业背景",
+            "description": "隶属于全球化大企业，其规章可能更容易允许机构依法访问用户数据。"
+          },
+          {
+            "title": "订阅制服务",
+            "description": "需每年支付订阅费才能维持服务持续有效。"
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "为什么 Internxt 是 Avira 的最佳替代",
+    "description": "Internxt 突破了传统安全软件的局限，为您提供面向现代世界的全方位隐私套件。",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "全方位保护"
+      ],
+      "descriptions": [
+        "具备零知识加密的云存储，让您的个人文档获得绝对的安全保障。",
+        "在不牺牲隐私、不收集多余数据的前提下，扫描设备中的潜在威胁。",
+        "通过集成的超高速 VPN，从任何地方匿名且安全地访问互联网。",
+        "以私密且便捷的方式清理垃圾文件，释放并优化设备存储空间。",
+        "100% 私密安全的视频通话，无跟踪器、无第三方干预。",
+        "支持 Windows、Mac、Linux、iOS 和 Android 平台并提供安全同步。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "切换到 Avira 的最佳替代方案",
+    "description": "在 Internxt 获得您应享有的绝对隐私、透明度和安全性。",
+    "cta": "立即切换"
+  },
+  "tableSection": {
+    "title": "您的终极隐私套件",
+    "hotLabel": "{{discount}}% 折扣 🔥",
+    "planTitles": {
+      "header": "选择您的隐私计划"
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "今天就开启您的免费安全存储和基础隐私功能体验",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "尊享优先客服",
+      "guarantee": "30 天无理由退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "关于 Avira 与 Internxt 的疑问？",
+    "faq": [
+      {
+        "question": "Internxt 是否比 Avira 更私密？",
+        "answer": [
+          "是的，Internxt 默认采用零知识加密，这意味着唯独您拥有解密密钥。",
+          "此外，作为开源提供商，我们的透明度远超 Avira 的闭源系统。"
+        ]
+      },
+      {
+        "question": "Internxt 终身计划包含哪些内容？",
+        "answer": [
+          "一次性付款即可永久使用选定的存储容量，包含 Drive, VPN, Antivirus 和 Cleaner 等功能。"
+        ]
+      },
+      {
+        "question": "我可以同时使用 Internxt 和 Avira 吗？",
+        "answer": [
+          "可以，您可以使用 Internxt Drive 安全存储文件的同时，保留您现有的杀毒软件。"
+        ]
+      },
+      {
+        "question": "我的数据保存在哪里？",
+        "answer": [
+          "您的数据会在本地加密并切片存储在欧盟境内的服务器上，严苛遵循 GDPR 规范。"
+        ]
+      },
+      {
+        "question": "如何迁移我的文件？",
+        "answer": [
+          "非常简单：下载 Internxt 应用，然后直接拖拽文件即可。几分钟内即可完成加密和安全上传。"
+        ]
+      }
+    ]
+  }
+}
