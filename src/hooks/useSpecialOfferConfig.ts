@@ -93,7 +93,7 @@ export const COUPON_CODES = {
   cninternxtl: PromoCodeName.cninternxtl,
   cooltechzone: PromoCodeName.CTZ,
   lifetime: PromoCodeName.lifetime,
-  clubic: PromoCodeName.DRIVE85,
+  clubic: PromoCodeName.clubic,
   morrolinux: PromoCodeName.morrolinux,
 };
 

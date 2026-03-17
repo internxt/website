@@ -239,7 +239,8 @@ export enum PromoCodeName {
   MALWAREBYTES85 = 'MALWAREBYTES85',
   MCAFEE85 = 'MCAFEE85',
   NORTON85 = 'NORTON85',
-  morrolinux = 'MORROLINUX'
+  morrolinux = 'MORROLINUX',
+  clubic = 'DRIVE87'
 }
 
 export interface PromoCodeProps {
