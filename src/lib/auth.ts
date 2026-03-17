@@ -4,7 +4,7 @@ import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-che
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'https://drive.internxt.com';
+const AUTH_FLOW_URL = 'https://feature-cello-referral-banne.drive-web.pages.dev';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
