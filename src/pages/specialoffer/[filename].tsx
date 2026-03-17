@@ -139,7 +139,7 @@ function CombinedSpecialOffer({
   }
 
   const HeroImage = isValentinesMode ? 'valentines' : 'internxt-private-cloud';
-
+  console.log(process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL);
   return (
     <Layout
       title={metatags!.title}
