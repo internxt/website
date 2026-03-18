@@ -94,7 +94,7 @@ export enum PromoCodeName {
   euro2024fiveTB = '75OFF5TB',
   euro2024TenTB = '75OFF10TB',
   freeUserCoupon = 'SPECIAL75',
-  PcmagCoupon = 'PCMAG85',
+  PcmagCoupon = 'PCMAG87',
   OnePlanCoupon = '5TBplan',
   AllPlansCoupon = 'SUMMER80',
   Lifetime83DiscountCoupon = 'NATIONAL83',
