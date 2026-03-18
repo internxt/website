@@ -7,7 +7,7 @@ export const CertificationsSection = () => {
         { src: '/images/datacenters-and-certifications/HipaaCompilance.webp', width: 102, alt: 'HIPAA Compliance' },
         { src: '/images/datacenters-and-certifications/AICPA.webp', width: 120, alt: 'AICPA Certification' },
         { src: '/images/datacenters-and-certifications/GDPR.webp', width: 146, alt: 'GDPR Compliance' },
-        { src: '/images/datacenters-and-certifications/ENS.webp', width: 55, alt: 'ENS Certification' },
+        { src: '/images/datacenters-and-certifications/ENS.webp', width: 110, alt: 'ENS Certification' },
         { src: '/images/datacenters-and-certifications/CSA.webp', width: 48, alt: 'CSA Certification' },
     ];
   return (
