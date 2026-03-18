@@ -136,16 +136,18 @@ export default function Layout({
         />*/}
 
         {/*Cookies Banner */}
+        <script src="/js/cookiebanner.script.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
           $(document).ready(function() {
-            cookieBanner.init();
+            if (typeof cookieBanner !== 'undefined') {
+              cookieBanner.init();
+            }
         });
           `,
           }}
         />
-        <script async src="/js/cookiebanner.script.js" />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">

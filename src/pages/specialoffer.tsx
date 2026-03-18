@@ -60,10 +60,11 @@ function SpecialOffer({
     interval: string,
     storage: string,
   ) => {
+    const overriddenPriceId = 'price_1RQYKvFAOdcgaBMQfAYnxyMN';
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
+      overriddenPriceId,
       interval,
       currencyValue,
       'individuals',
@@ -71,7 +72,7 @@ function SpecialOffer({
     );
 
     stripeService.redirectToCheckout(
-      priceId,
+      overriddenPriceId,
       finalPrice,
       currencyValue,
       'individual',
@@ -84,7 +85,11 @@ function SpecialOffer({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      <Script
+        src={'https://assets.sandbox.cello.so/attribution/latest/cello-attribution.js'}
+        type="module"
+        strategy="afterInteractive"
+      />
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />

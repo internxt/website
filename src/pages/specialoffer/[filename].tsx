@@ -112,10 +112,11 @@ function CombinedSpecialOffer({
     interval: string,
     storage: string,
   ) => {
+    const overriddenPriceId = 'price_1RQYKvFAOdcgaBMQfAYnxyMN';
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
+      overriddenPriceId,
       interval,
       currencyValue,
       'individuals',
@@ -123,7 +124,7 @@ function CombinedSpecialOffer({
     );
 
     stripeService.redirectToCheckout(
-      priceId,
+      overriddenPriceId,
       finalPrice,
       currencyValue,
       'individual',
@@ -139,7 +140,7 @@ function CombinedSpecialOffer({
   }
 
   const HeroImage = isValentinesMode ? 'valentines' : 'internxt-private-cloud';
-
+  console.log(process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL);
   return (
     <Layout
       title={metatags!.title}
@@ -148,7 +149,11 @@ function CombinedSpecialOffer({
       lang={lang}
       robots="noindex, follow"
     >
-      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      <Script
+        src={'https://assets.sandbox.cello.so/attribution/latest/cello-attribution.js'}
+        type="module"
+        strategy="afterInteractive"
+      />
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection
