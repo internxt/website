@@ -112,10 +112,11 @@ function CombinedSpecialOffer({
     interval: string,
     storage: string,
   ) => {
+    const overriddenPriceId = 'price_1RQYKvFAOdcgaBMQfAYnxyMN';
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
     const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
+      overriddenPriceId,
       interval,
       currencyValue,
       'individuals',
@@ -123,7 +124,7 @@ function CombinedSpecialOffer({
     );
 
     stripeService.redirectToCheckout(
-      priceId,
+      overriddenPriceId,
       finalPrice,
       currencyValue,
       'individual',

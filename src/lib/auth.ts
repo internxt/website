@@ -4,7 +4,7 @@ import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-che
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'https://c08d-2001-1308-26f7-6300-1124-7a2b-943a-7502.ngrok-free.app';
+const AUTH_FLOW_URL = 'https://asus-tools-reef-though.trycloudflare.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
