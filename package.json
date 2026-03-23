@@ -50,7 +50,7 @@
     "hamburger-react": "^2.4.1",
     "html-entities": "^2.6.0",
     "jsonwebtoken": "^9.0.0",
-    "jspdf": "^4.2.0",
+    "jspdf": "^4.2.1",
     "jszip": "^3.10.1",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
