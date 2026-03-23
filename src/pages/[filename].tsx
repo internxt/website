@@ -89,7 +89,8 @@ const LANG_MAP = {
   cooltechzone: 'en',
   lifetime: 'en',
   clubic: 'fr',
-  morrolinux: 'it'
+  morrolinux: 'it',
+  heise: 'de'
 };
 
 function CombinedSpecialOffer({
