@@ -85,10 +85,11 @@ const LANG_MAP = {
   lefiltreitalia: 'it',
   letosa: 'es',
   genius: 'es',
-  cninternxtl:'en',
-  cooltechzone:'en',
-  lifetime:'en',
-  clubic:'fr'
+  cninternxtl: 'en',
+  cooltechzone: 'en',
+  lifetime: 'en',
+  clubic: 'fr',
+  morrolinux: 'it'
 };
 
 function CombinedSpecialOffer({
@@ -111,6 +112,7 @@ function CombinedSpecialOffer({
     lifetimePlans,
     isClubic
   } = useOfferConfig(pathname);
+
   const {
     products,
     loadingCards,
