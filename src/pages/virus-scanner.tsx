@@ -40,7 +40,7 @@ const Scan = ({
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
-          url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
+          url={'https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt'}
         />
 
         <FeaturesSection

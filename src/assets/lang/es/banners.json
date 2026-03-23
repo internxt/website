@@ -10,31 +10,45 @@
   },
   "FreeCardPromoBanner": {
     "title": "Obtén un descuento exclusivo!",
-    "subtitle": { "blue": "Oferta especial:", "normal": " almacena archivos de manera privada por menos" },
+    "subtitle": {
+      "blue": "Oferta especial:",
+      "normal": " almacena archivos de manera privada por menos"
+    },
     "getDealCta": "Obtener oferta",
     "freePlanCta": "Continuar con el plan gratuito",
     "guarantee": "Garantía de devolución de 30 días"
   },
   "featuresBanner": {
-    "label": "¡Ahorra un 80%!",
-    "title": "Oferta para la semana de Privacidad de Datos.",
-    "subtitle": "80% en TODOS los planes lifetime",
-    "cta": "Consigue el tuyo",
-    "guarantee": "Garantía de devolución de 30 días",
-    "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
-    "features": [
-      "Seguridad de por vida",
-      "Almacenamiento 100% privado y cifrado ",
-      "Código abierto y auditado",
-      "Cifrado de extremo a extremo",
-      "Cumple con RGPD",
-      "Oferta finaliza el 31 de enero"
-    ]
+    "label": {
+      "blueText": "Get 85% off",
+      "text": "in all Plans"
+    },
+    "title": "Claim your exclusive discount!",
+    "subTitle": {
+      "blueText": "Special offer:",
+      "text": "store files in privacy for even less"
+    },
+    "ctaGet": "Accept invite",
+    "ctaContinue": "Continue free",
+    "guarantee": "30-day money-back guarantee",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
   "s3StorageBanner": {
     "label": "¡Disponible ahora!",
     "title": "Almacenamiento de objetos compatible con S3",
-    "feat": ["Hasta un 80% más barato que AWS", "Seguro, escalable, compatible con S3", "Soporte nativo de Rclone"],
+    "feat": [
+      "Hasta un 80% más barato que AWS",
+      "Seguro, escalable, compatible con S3",
+      "Soporte nativo de Rclone"
+    ],
     "cta": "Obtén 1TB gratis",
     "offerEnds": "*Oferta solo para el primer mes"
   },
@@ -43,7 +57,6 @@
     "description": "Almacenamiento seguro de archivos con antivirus integrado.",
     "cta": "Regístrate gratis"
   },
-
   "tryOutInternxtGeneralBanner": {
     "title": "Pásate a Internxt",
     "description": "Almacenamiento seguro en la nube basado en la privacidad.",
@@ -81,7 +94,10 @@
     "line1": "Usa miles de bytes en la nube de almacenamiento segura",
     "blueText": "de Internxt"
   },
-  "SignUpTempMailBanner": { "line1": "Mantén tu correo limpio y tus archivos a salvo", "blueText": "con Internxt" },
+  "SignUpTempMailBanner": {
+    "line1": "Mantén tu correo limpio y tus archivos a salvo",
+    "blueText": "con Internxt"
+  },
   "SignUpCyberAwareness": {
     "line1": "Mantén tu correo limpio y tus archivos a salvo",
     "blueText": "con Internxt"

@@ -133,13 +133,21 @@ export interface ChangeEmailBanner {
 }
 
 export interface FeaturesBanner {
-  label: string;
+  label: { blueText: string; text: string };
   title: string;
-  subtitle: string;
-  cta: string;
+  subTitle: { blueText: string; text: string };
+  ctaGet: string;
+  ctaContinue: string;
   guarantee: string;
-  lastCta: string;
-  features: string[];
+  products: {
+    drive: string;
+    antivirus: string;
+    cleaner: string;
+    vpn: string;
+    meet: string;
+    mail: string;
+    ai: string;
+  };
 }
 
 export interface LifetimeBanner {
