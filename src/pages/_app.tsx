@@ -10,7 +10,6 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -105,7 +104,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? (
             <>
               <BottomBanner />
-              <FeaturesBanner />
             </>
           ) : undefined}
         </div>

@@ -12,6 +12,7 @@ import Footer from '@/components/layout/footers/Footer';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 import { setup } from '@/lib/csrf';
 import { GetServerSidePropsContext } from 'next';
 
@@ -40,6 +41,7 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
         <ToolsSection textContent={toolsContent} lang={lang} />
 
         {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
+        <FeaturesBanner />
 
         <SignupSection textContent={textContent.SignupSection} />
 

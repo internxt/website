@@ -45,25 +45,36 @@
     }
   },
   "featuresBanner": {
-    "label": "Spare 80%",
-    "title": "Boo! Sparen Sie mit uns...",
-    "subtitle": "Gewinne unseren Premium-Rucksack mit unseren lebenslangen Plänen.",
-    "cta": "Plan wählen",
-    "guarantee": "30-Tage-Geld-zurück-Garantie",
-    "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
-    "features": [
-      "Spare bei allen lebenslangen Plänen",
-      "Privater, verschlüsselter Cloud-Speicher",
-      "Quelloffen und geprüft",
-      "End-to-End-verschlüsselte Übertragungen",
-      "Kein unbefugter Zugriff",
-      "Angebot endet am 3. Dezember"
-    ]
+    "label": {
+      "blueText": "Get 85% off",
+      "text": "in all Plans"
+    },
+    "title": "Claim your exclusive discount!",
+    "subTitle": {
+      "blueText": "Special offer:",
+      "text": "store files in privacy for even less"
+    },
+    "ctaGet": "Accept invite",
+    "ctaContinue": "Continue free",
+    "guarantee": "30-day money-back guarantee",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
   "s3StorageBanner": {
     "label": "Jetzt verfügbar!",
     "title": "S3-kompatibler Objektspeicher",
-    "feat": ["Bis zu 80% günstiger als AWS", "Sicher, skalierbar, S3-kompatibel", "Native Rclone-Unterstützung"],
+    "feat": [
+      "Bis zu 80% günstiger als AWS",
+      "Sicher, skalierbar, S3-kompatibel",
+      "Native Rclone-Unterstützung"
+    ],
     "cta": "Holen Sie sich 1TB kostenlos",
     "offerEnds": "*Angebot nur für den ersten Monat"
   },
