@@ -43,7 +43,10 @@ export const ALLOWED_PATHS = [
   'cooltechzone',
   'lifetime',
   'clubic',
-  'morrolinux'
+  'morrolinux',
+  'tukaram',
+  'f4mi',
+  'macho',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -95,6 +98,9 @@ export const COUPON_CODES = {
   lifetime: PromoCodeName.lifetime,
   clubic: PromoCodeName.clubic,
   morrolinux: PromoCodeName.morrolinux,
+  tukaram: PromoCodeName.tukaram,
+  f4mi: PromoCodeName.f4mi,
+  macho: PromoCodeName.macho,
 };
 
 interface OfferConfig {
