@@ -48,26 +48,36 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 80% ",
-    "title": "Make your privacy play!",
-    "subtitle": "Special offer! Win two Internxt x Swiss Peak backpacks",
-    "cta": "Choose plan",
+    "label": {
+      "blueText": "Get 85% off",
+      "text": "in all Plans"
+    },
+    "title": "Claim your exclusive discount!",
+    "subTitle": {
+      "blueText": "Special offer:",
+      "text": "store files in privacy for even less"
+    },
+    "ctaGet": "Accept invite",
+    "ctaContinue": "Continue free",
     "guarantee": "30-day money-back guarantee",
-    "lastCta": "*Offer is for free accounts or new customers",
-    "features": [
-      "A lifetime of privacy, one-time payment",
-      "End-to-end encrypted cloud storage",
-      "Open-source and audited",
-      "End-to-end encrypted transfers",
-      "No unauthorized access",
-      "Win two Internxt x Swiss Peak backpacks",
-      "Offer ends February 25"
-    ]
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
   "s3StorageBanner": {
     "label": "Available now!",
     "title": "S3 compatible object storage",
-    "feat": ["Up to 80% cheaper than AWS", "Secure, scalable, S3-compatible", "Native Rclone support"],
+    "feat": [
+      "Up to 80% cheaper than AWS",
+      "Secure, scalable, S3-compatible",
+      "Native Rclone support"
+    ],
     "cta": "Get 1TB for free",
     "offerEnds": "*Offer only for the first month"
   },
@@ -109,7 +119,10 @@
     "line1": "Secure while you surf.",
     "blueText": "Enjoy a more private online experience with Internxt"
   },
-  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpVirusScannerBanner": {
+    "line1": "Keep those now clean files safe,",
+    "blueText": "join Internxt for free"
+  },
   "SignUpMetadataRemoverBanner": {
     "line1": "Strip your files of revealing metadata.",
     "blueText": "Clean your digital footprint with Internxt"
@@ -118,8 +131,14 @@
     "line1": "Detect AI content, ensure authenticity, and",
     "blueText": "publish in confidence with Internxt"
   },
-  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
-  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpByteConverterBanner": {
+    "line1": "Get bytes and bytes of secure cloud storage",
+    "blueText": "with Internxt"
+  },
+  "SignUpTempMailBanner": {
+    "line1": "Keep your email clean and your files safe",
+    "blueText": "with Internxt"
+  },
   "SignUpSuccessStoriesBanner": {
     "line1": "Join the fight for privacy and build a better internet",
     "blueText": "with Internxt"

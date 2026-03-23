@@ -10,7 +10,10 @@
   },
   "FreeCardPromoBanner": {
     "title": "Ottieni uno sconto esclusivo!",
-    "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
+    "subtitle": {
+      "blue": "Offerta speciale:",
+      "normal": " archivia i file in modo privato a meno"
+    },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
     "guarantee": "Garanzia di rimborso di 30 giorni"
@@ -42,25 +45,36 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia l'80%!",
-    "title": "Le migliori offerte del Black Friday",
-    "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
-    "cta": "Scegli il tuo piano",
-    "guarantee": "Garanzia di rimborso di 30 giorni",
-    "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
-    "features": [
-      "Risparmia su tutti i piani premium",
-      "Archivio cloud privato e crittografato",
-      "Open source e verificato",
-      "Trasferimenti crittografati end-to-end",
-      "Nessun accesso non autorizzato",
-      "L'offerta termina il 3 dicembre"
-    ]
+    "label": {
+      "blueText": "Get 85% off",
+      "text": "in all Plans"
+    },
+    "title": "Claim your exclusive discount!",
+    "subTitle": {
+      "blueText": "Special offer:",
+      "text": "store files in privacy for even less"
+    },
+    "ctaGet": "Accept invite",
+    "ctaContinue": "Continue free",
+    "guarantee": "30-day money-back guarantee",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
   "s3StorageBanner": {
     "label": "Disponibile ora!",
     "title": "Archiviazione di oggetti compatibile S3",
-    "feat": ["Fino all'80% più economico di AWS", "Sicuro, scalabile, compatibile S3", "Supporto nativo Rclone"],
+    "feat": [
+      "Fino all'80% più economico di AWS",
+      "Sicuro, scalabile, compatibile S3",
+      "Supporto nativo Rclone"
+    ],
     "cta": "Ottieni 1TB gratis",
     "offerEnds": "*Offerta valida solo per il primo mese"
   },
@@ -98,7 +112,10 @@
     "line1": "Rileva contenuti AI, garantisci l'autenticità e",
     "blueText": "pubblica con sicurezza con Internxt"
   },
-  "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
+  "SignUpByteConverterBanner": {
+    "line1": "Ottieni byte e byte di cloud storage sicuro",
+    "blueText": "con Internxt"
+  },
   "SignUpTempMailBanner": {
     "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
     "blueText": "con Internxt"
@@ -148,7 +165,6 @@
     "cta": "Scegli il tuo piano",
     "guarantee": "Garanzia di rimborso entro 30 giorni"
   },
-
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Aspetta! Offerta speciale ",

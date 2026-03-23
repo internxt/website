@@ -47,6 +47,7 @@ export const ALLOWED_PATHS = [
   'tukaram',
   'f4mi',
   'macho',
+  'heise'
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity', 'xavier', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -101,6 +102,7 @@ export const COUPON_CODES = {
   tukaram: PromoCodeName.tukaram,
   f4mi: PromoCodeName.f4mi,
   macho: PromoCodeName.macho,
+  heise: PromoCodeName.heise,
 };
 
 interface OfferConfig {

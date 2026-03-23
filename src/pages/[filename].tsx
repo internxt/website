@@ -93,6 +93,7 @@ const LANG_MAP = {
   tukaram: 'es',
   f4mi: 'en',
   macho: 'es',
+  heise: 'de'
 };
 
 function CombinedSpecialOffer({

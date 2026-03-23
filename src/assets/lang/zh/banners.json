@@ -10,7 +10,10 @@
   },
   "FreeCardPromoBanner": {
     "title": "获取独家折扣！",
-    "subtitle": { "blue": "特别优惠：", "normal": "更便宜地私人存储文件" },
+    "subtitle": {
+      "blue": "特别优惠：",
+      "normal": "更便宜地私人存储文件"
+    },
     "getDealCta": "获取优惠",
     "freePlanCta": "继续使用免费计划",
     "guarantee": "30天退款保证"
@@ -45,25 +48,36 @@
     }
   },
   "featuresBanner": {
-    "label": "节省80%！",
-    "title": "最佳黑色星期五优惠",
-    "subtitle": "赢取我们终身计划的高级背包。",
-    "cta": "选择计划",
-    "guarantee": "30天退款保证",
-    "lastCta": "*优惠仅适用于免费账户或新客户",
-    "features": [
-      "所有高级计划均可节省大量费用",
-      "私人加密云存储",
-      "开源并经过审核",
-      "端到端加密传输",
-      "无未经授权的访问",
-      "优惠截止至12月3日"
-    ]
+    "label": {
+      "blueText": "Get 85% off",
+      "text": "in all Plans"
+    },
+    "title": "Claim your exclusive discount!",
+    "subTitle": {
+      "blueText": "Special offer:",
+      "text": "store files in privacy for even less"
+    },
+    "ctaGet": "Accept invite",
+    "ctaContinue": "Continue free",
+    "guarantee": "30-day money-back guarantee",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
   "s3StorageBanner": {
     "label": "现已上线！",
     "title": "兼容S3的对象存储",
-    "feat": ["比AWS便宜多达80%", "安全、可扩展、兼容S3", "原生Rclone支持"],
+    "feat": [
+      "比AWS便宜多达80%",
+      "安全、可扩展、兼容S3",
+      "原生Rclone支持"
+    ],
     "cta": "免费获取1TB",
     "offerEnds": "*仅限首月优惠"
   },
@@ -93,7 +107,10 @@
     "line1": "上网时保持安全。",
     "blueText": "使用 Internxt 享受更私密的在线体验"
   },
-  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpVirusScannerBanner": {
+    "line1": "Keep those now clean files safe,",
+    "blueText": "join Internxt for free"
+  },
   "SignUpMetadataRemoverBanner": {
     "line1": "去除文件中暴露隐私的元数据。",
     "blueText": "用 Internxt 清理您的数字足迹"
@@ -102,8 +119,14 @@
     "line1": "检测AI内容，确保真实性，",
     "blueText": "安心发布，尽在Internxt"
   },
-  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
-  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpByteConverterBanner": {
+    "line1": "Get bytes and bytes of secure cloud storage",
+    "blueText": "with Internxt"
+  },
+  "SignUpTempMailBanner": {
+    "line1": "Keep your email clean and your files safe",
+    "blueText": "with Internxt"
+  },
   "SignUpCyberAwareness": {
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"
