@@ -190,7 +190,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex w-full flex-nowrap items-stretch justify-start gap-6 overflow-x-auto pb-8 md:justify-center">
+        <div className="content flex w-full flex-nowrap items-stretch justify-start gap-6 overflow-x-auto pb-8 px-2 md:justify-center">
           {products?.individuals
             ? products.individuals[billingFrequency]
                 .filter((product) => {
