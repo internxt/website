@@ -66,7 +66,7 @@ function CombinedSpecialOffer({
   pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
   const router = useRouter();
-  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(false);
+  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(true);
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
   const isValentinesMode = selectedPathname === 'love';

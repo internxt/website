@@ -32,7 +32,7 @@ function SpecialOffer({
   footerLang,
   navbarLang,
 }: SpecialOfferProps): JSX.Element {
-  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(false);
+  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(true);
 
   useEffect(() => {
     saveCelloFirstVisit();
