@@ -156,7 +156,11 @@ function CombinedSpecialOffer({
       robots="noindex, follow"
     >
       {!isCelloAttributionExpired && (
-        <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+        <Script
+          src="https://assets.cello.so/attribution/latest/cello-attribution.js"
+          type="module"
+          strategy="afterInteractive"
+        />
       )}
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
