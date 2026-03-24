@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Script from 'next/script';
 
 import { PromoCodeName } from '@/lib/types';
+import { saveCelloFirstVisit, isCelloExpired } from '@/lib/cookies';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 
@@ -30,6 +32,13 @@ function SpecialOffer({
   footerLang,
   navbarLang,
 }: SpecialOfferProps): JSX.Element {
+  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(false);
+
+  useEffect(() => {
+    saveCelloFirstVisit();
+    setIsCelloAttributionExpired(isCelloExpired());
+  }, []);
+
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
 
   const {
@@ -84,7 +93,9 @@ function SpecialOffer({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      {!isCelloAttributionExpired && (
+        <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      )}
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />

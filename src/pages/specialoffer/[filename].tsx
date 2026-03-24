@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import Script from 'next/script';
 import { PromoCodeName } from '@/lib/types';
+import { saveCelloFirstVisit, isCelloExpired } from '@/lib/cookies';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -65,6 +66,7 @@ function CombinedSpecialOffer({
   pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
   const router = useRouter();
+  const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(false);
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
   const isValentinesMode = selectedPathname === 'love';
@@ -78,6 +80,11 @@ function CombinedSpecialOffer({
       router.replace('/specialoffer');
     }
   }, [selectedPathname, router]);
+
+  useEffect(() => {
+    saveCelloFirstVisit();
+    setIsCelloAttributionExpired(isCelloExpired());
+  }, []);
 
   const couponCode = COUPON_CODES[pathname];
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
@@ -148,7 +155,9 @@ function CombinedSpecialOffer({
       lang={lang}
       robots="noindex, follow"
     >
-      <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      {!isCelloAttributionExpired && (
+        <Script src={process.env.NEXT_PUBLIC_CELLO_ATTRIBUTION_URL} type="module" strategy="afterInteractive" />
+      )}
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection
