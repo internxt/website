@@ -92,8 +92,8 @@ const LANG_MAP = {
   morrolinux: 'it',
   tukaram: 'es',
   f4mi: 'en',
-  macho: 'es',
-  heise: 'de'
+  heise: 'de',
+  macho: 'en',
 };
 
 function CombinedSpecialOffer({
