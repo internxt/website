@@ -6,6 +6,7 @@ const url = require('url');
 const queryString = require('querystring');
 
 const GCLID_COOKIE_LIFESPAN_DAYS = 90;
+const CELLO_EXPIRATION_DAYS = 30;
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
 function parseUri(ctx: GetServerSidePropsContext) {
@@ -88,10 +89,31 @@ export const getGclidFromURL = (): string | null => {
   return params.get('gclid');
 };
 
+export const saveCelloFirstVisit = (): void => {
+  if (typeof window === 'undefined') return;
+  if (localStorage.getItem('cello_first_visit') === null) {
+    localStorage.setItem('cello_first_visit', new Date().toISOString());
+  }
+};
+
+export const getCelloFirstVisitDate = (): string | null => {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem('cello_first_visit');
+};
+
+export const isCelloExpired = (): boolean => {
+  const storedDate = getCelloFirstVisitDate();
+  if (!storedDate) return false;
+  return Date.now() - new Date(storedDate).getTime() > CELLO_EXPIRATION_DAYS * MILLISECONDS_PER_DAY;
+};
+
 export default {
   parseUri,
   setCookie,
   getCookie,
   setReferralCookie,
   setPublicCookie,
+  saveCelloFirstVisit,
+  getCelloFirstVisitDate,
+  isCelloExpired,
 };

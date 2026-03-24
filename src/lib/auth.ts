@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { PromoCodeProps } from './types';
 import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
+import { isCelloExpired } from '@/lib/cookies';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
@@ -265,13 +266,15 @@ export function checkout({ planId, promoCodeId, planType, mode, currency, gclid 
     mode && params.set('mode', mode ? mode : 'subscription');
     gclid && params.set('gclid', gclid);
 
-    const currentParams = new URLSearchParams(globalThis.location.search);
-    const celloProductId = currentParams.get('productId');
-    const celloUcc = currentParams.get('ucc');
-    const celloN = currentParams.get('celloN');
-    if (celloProductId) params.set('productId', celloProductId);
-    if (celloUcc) params.set('ucc', celloUcc);
-    if (celloN) params.set('celloN', celloN);
+    if (!isCelloExpired()) {
+      const currentParams = new URLSearchParams(globalThis.location.search);
+      const celloProductId = currentParams.get('productId');
+      const celloUcc = currentParams.get('ucc');
+      const celloN = currentParams.get('celloN');
+      if (celloProductId) params.set('productId', celloProductId);
+      if (celloUcc) params.set('ucc', celloUcc);
+      if (celloN) params.set('celloN', celloN);
+    }
 
     window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
