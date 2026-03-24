@@ -90,7 +90,10 @@ const LANG_MAP = {
   lifetime: 'en',
   clubic: 'fr',
   morrolinux: 'it',
-  heise: 'de'
+  tukaram: 'es',
+  f4mi: 'en',
+  heise: 'de',
+  macho: 'en',
 };
 
 function CombinedSpecialOffer({

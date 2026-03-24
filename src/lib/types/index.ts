@@ -241,6 +241,9 @@ export enum PromoCodeName {
   NORTON85 = 'NORTON85',
   morrolinux = 'MORROLINUX',
   clubic = 'DRIVE87',
+  tukaram = 'TUKARAM',
+  f4mi = 'F4MI',
+  macho = 'MACHO',
   heise = 'HEISE'
 }
 
