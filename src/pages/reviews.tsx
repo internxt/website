@@ -13,6 +13,7 @@ import HeroSection from '@/components/reviews/HeroSection';
 import HorizontalScrollableSection from '@/components/reviews/HorizontalScrollableSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import ReviewsSection from '@/components/home/ReviewsSection';
 
 interface CleanerProps {
   lang: GetServerSidePropsContext['locale'];
@@ -42,7 +43,7 @@ const CleanerPage = ({
 
       <HeroSection textContent={textContent.heroSection} />
 
-      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} />
 

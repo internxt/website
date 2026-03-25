@@ -1,53 +1,28 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { useState, useRef, useCallback } from 'react';
-
-const ReviewText = ({ text, darkMode }: { text: string; darkMode?: boolean }) => {
-  const formatText = (text: string) => {
-    const parts = text.split(/(\*\*[^*]+\*\*)/g);
-
-    return parts.map((part, index) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        const boldText = part.slice(2, -2);
-        return (
-          <strong key={index} className="font-regular text-xs leading-tight lg:text-sm">
-            {boldText}
-          </strong>
-        );
-      }
-      return part;
-    });
-  };
-
-  return (
-    <p
-      className={`w-full text-xs font-normal leading-tight lg:w-[321px] lg:text-sm ${
-        darkMode ? 'text-white-95' : 'text-gray-55'
-      }`}
-    >
-      {formatText(text)}
-    </p>
-  );
-};
+import { useState, useRef, useCallback, useEffect } from 'react';
 
 interface ReviewSectionProps {
   textContent: {
-    pcMag: string;
-    mashable: string;
-    pcWorld: string;
+    forbes: string;
+    deloitte: string;
+    techradar: string;
+    fortune: string;
+    trustpilot: string;
   };
   darkMode?: boolean;
   bgColor?: string;
   reverseDivider?: boolean;
 }
 
-const HorizontalDivider = ({ darkMode, reverseDivider }: { darkMode: boolean; reverseDivider: boolean }) => {
-  const colorClass = darkMode ? 'bg-gray-55' : 'bg-neutral-35';
-  const positionClass = reverseDivider ? 'lg:bottom-0' : 'lg:top-0';
-
-  return <div className={`absolute ${colorClass} lg:left-32 lg:right-32 ${positionClass} lg:h-[1px]`} />;
-};
+const brands = [
+  { name: 'Forbes', logo: '/images/reviews/Forbes.webp', width: 96, height: 24, key: 'forbes' as const },
+  { name: 'Deloitte', logo: '/images/reviews/Deloitte.webp', width: 125, height: 24, key: 'deloitte' as const },
+  { name: 'Techradar', logo: '/images/reviews/Techradar.webp', width: 149, height: 24, key: 'techradar' as const },
+  { name: 'Fortune', logo: '/images/reviews/Fortune.webp', width: 104, height: 23, key: 'fortune' as const },
+  { name: 'Trustpilot', logo: '/images/reviews/Trustpilot.webp', width: 136, height: 24, key: 'trustpilot' as const },
+];
 
 export default function ReviewSection({
   textContent,
@@ -55,128 +30,112 @@ export default function ReviewSection({
   bgColor,
   reverseDivider = false,
 }: Readonly<ReviewSectionProps>): JSX.Element {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollState, setScrollState] = useState({ canGoLeft: false, canGoRight: true });
 
-  const reviews = [
-    {
-      logo: '/images/home/NewDesign/trustpilot.webp',
-      alt: 'pcMag Logo',
-      text: textContent.pcMag,
-    },
-    {
-      logo: '/images/home/NewDesign/pcworld-new.webp',
-      alt: 'pcworld Logo',
-      text: textContent.pcWorld,
-    },
-    {
-      logo: '/images/home/NewDesign/ForbesIcon.webp',
-      alt: 'Forbes Logo',
-      text: textContent.mashable,
-    },
-  ];
+  const updateScrollState = useCallback(() => {
+    if (!scrollContainerRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+    setScrollState({
+      canGoLeft: scrollLeft > 0,
+      canGoRight: scrollLeft < scrollWidth - clientWidth - 1,
+    });
+  }, []);
 
-  const maxIndex = reviews.length - 1;
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    updateScrollState();
+    container.addEventListener('scroll', updateScrollState);
+    return () => container.removeEventListener('scroll', updateScrollState);
+  }, [updateScrollState]);
 
-  const handleScroll = useCallback(
-    (direction: 'left' | 'right') => {
-      if (!scrollContainerRef.current) return;
-
-      let newIndex = currentIndex;
-      if (direction === 'left' && currentIndex > 0) {
-        newIndex = currentIndex - 1;
-      } else if (direction === 'right' && currentIndex < maxIndex) {
-        newIndex = currentIndex + 1;
-      }
-
-      if (newIndex !== currentIndex) {
-        setCurrentIndex(newIndex);
-        const scrollAmount = scrollContainerRef.current.scrollWidth / reviews.length;
-        scrollContainerRef.current.scrollTo({
-          left: scrollAmount * newIndex,
-          behavior: 'smooth',
-        });
-      }
-    },
-    [currentIndex, maxIndex, reviews.length],
-  );
-
-  const scrollLeft = () => handleScroll('left');
-  const scrollRight = () => handleScroll('right');
-
-  const sectionStyle = {
-    background: bgColor ? bgColor : darkMode ? '#1C1C1C' : 'white',
+  const scrollLeft = () => {
+    scrollContainerRef.current?.scrollBy({ left: -220, behavior: 'smooth' });
   };
 
-  const buttonBaseClass = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-opacity ${
+  const scrollRight = () => {
+    scrollContainerRef.current?.scrollBy({ left: 220, behavior: 'smooth' });
+  };
+
+  const sectionBg = bgColor ?? (darkMode ? '#1C1C1C' : 'white');
+  const dividerColor = darkMode ? 'bg-gray-55' : 'bg-neutral-35';
+  const dividerPosition = reverseDivider ? 'lg:top-0' : 'lg:bottom-0';
+  const buttonBase = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-all ${
     darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
   }`;
 
-  const leftButtonClass = `${buttonBaseClass} ${
-    currentIndex === 0
-      ? 'cursor-not-allowed opacity-50'
-      : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-  }`;
+  const getButtonClass = (disabled: boolean) => {
+    if (disabled) return `${buttonBase} cursor-not-allowed opacity-30`;
+    const hover = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+    return `${buttonBase} cursor-pointer ${hover}`;
+  };
 
-  const rightButtonClass = `${buttonBaseClass} ${
-    currentIndex === maxIndex
-      ? 'cursor-not-allowed opacity-50'
-      : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
-  }`;
+  const quoteClass = `text-sm font-medium italic leading-[1.2] text-gray-55 text-center whitespace-pre-line`;
 
   return (
     <section
-      className={`relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
-      style={sectionStyle}
+      className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10 lg:py-16"
+      style={{ background: sectionBg }}
     >
-      <HorizontalDivider darkMode={darkMode} reverseDivider={reverseDivider} />
+      <div className={`absolute ${dividerColor} lg:left-32 lg:right-32 ${dividerPosition} lg:h-[1px]`} />
 
-      <div className="flex w-[345px] flex-col gap-8 lg:hidden lg:w-full ">
+      <div className="flex w-full flex-col gap-4 lg:hidden">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-none flex w-full snap-x snap-mandatory gap-6 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+          className="scrollbar-none flex w-full gap-6 overflow-x-auto px-6 [&::-webkit-scrollbar]:hidden"
         >
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="flex h-min w-full flex-shrink-0 snap-center flex-row items-start justify-center gap-5  lg:px-4"
-            >
-              <Image
-                src={getImage(review.logo)}
-                alt={review.alt}
-                height={70}
-                width={70}
-                quality={100}
-                className="flex-shrink-0"
-              />
-              <ReviewText text={review.text} darkMode={darkMode} />
+          {brands.map((brand) => (
+            <div key={brand.key} className="flex w-[200px] flex-shrink-0 flex-col items-center gap-3">
+              <div className="flex h-6 items-center justify-center">
+                <Image
+                  src={getImage(brand.logo)}
+                  alt={`${brand.name} logo`}
+                  width={brand.width}
+                  height={brand.height}
+                  quality={100}
+                />
+              </div>
+              <p className={quoteClass}>{textContent[brand.key]}</p>
             </div>
           ))}
         </div>
-        <div className="flex h-[48px] w-[345px] flex-row items-end justify-end ">
-          <div className="flex w-[120px] justify-between">
-            <button onClick={scrollLeft} disabled={currentIndex === 0} className={leftButtonClass}>
-              <CaretLeft className="h-[24px] w-[24px] text-primary" />
-            </button>
-            <button onClick={scrollRight} disabled={currentIndex === maxIndex} className={rightButtonClass}>
-              <CaretRight className="h-[24px] w-[24px] text-primary" />
-            </button>
-          </div>
+
+        <div className="flex justify-end gap-2 px-6">
+          <button
+            onClick={scrollLeft}
+            disabled={!scrollState.canGoLeft}
+            aria-label="Previous"
+            className={getButtonClass(!scrollState.canGoLeft)}
+          >
+            <CaretLeft className="h-[24px] w-[24px] text-primary" />
+          </button>
+          <button
+            onClick={scrollRight}
+            disabled={!scrollState.canGoRight}
+            aria-label="Next"
+            className={getButtonClass(!scrollState.canGoRight)}
+          >
+            <CaretRight className="h-[24px] w-[24px] text-primary" />
+          </button>
         </div>
       </div>
 
-      <div className="hidden w-full flex-row gap-8 lg:flex ">
-        {reviews.map((review, index) => (
-          <div key={index} className="flex h-min min-w-0 flex-1 flex-row items-start justify-between gap-5">
-            <Image
-              src={getImage(review.logo)}
-              alt={review.alt}
-              height={70}
-              width={70}
-              quality={100}
-              className="flex-shrink-0"
-            />
-            <ReviewText text={review.text} darkMode={darkMode} />
+      <div className="hidden w-full flex-row items-center justify-between gap-4 px-10 lg:flex xl:px-32 3xl:px-80">
+        {brands.map((brand) => (
+          <div key={brand.key} className="group relative flex h-16 w-full flex-1 cursor-default items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+              <Image
+                src={getImage(brand.logo)}
+                alt={`${brand.name} logo`}
+                width={brand.width}
+                height={brand.height}
+                quality={100}
+              />
+            </div>
+            <p className={`${quoteClass} absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100`}>
+              {textContent[brand.key]}
+            </p>
           </div>
         ))}
       </div>

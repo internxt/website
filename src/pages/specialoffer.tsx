@@ -11,6 +11,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
@@ -104,7 +105,7 @@ function SpecialOffer({
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />
 
-      {/*<ReviewsSection textContent={langJson.ReviewSection} />*/}
+      <ReviewsSection textContent={langJson.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}

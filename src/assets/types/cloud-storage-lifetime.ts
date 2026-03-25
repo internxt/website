@@ -68,9 +68,11 @@ export interface Link {
 }
 
 export interface ReviewSection {
-  pcMag: string;
-  mashable: string;
-  pcWorld: string;
+  forbes: string;
+  deloitte: string;
+  techradar: string;
+  fortune: string;
+  trustpilot: string;
 }
 
 export interface WhatsIncludedSection {
