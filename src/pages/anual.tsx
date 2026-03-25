@@ -6,6 +6,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
@@ -103,7 +104,7 @@ function anualSpecial({
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-      {/*<ReviewsSection textContent={langJson.ReviewSection || testimonialsJson.TestimonialsSection} />*/}
+      <ReviewsSection textContent={testimonialsJson.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}

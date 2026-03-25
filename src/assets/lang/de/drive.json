@@ -225,9 +225,11 @@
     }
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt ist im **Mega-Sale**, hat **ausgezeichnete Nutzerbewertungen**, **End-to-End** und **Post-Quanten-Verschlüsselung**, und sie machen ihren Code komplett **Open Source** für totale Transparenz gegenüber ihren Kunden.\"",
-    "mashable": "\"Nehmen Sie die **Sicherung** Ihrer wichtigen Daten ernst. Internxt wurde mit dem Ziel gegründet, den Menschen wahre **Freiheit online** zu geben, indem eine **ethischere**, **sicherere**, **privatere** und verantwortungsvollere digitale Welt geschaffen wird.\"",
-    "pcWorld": "\"Internxts **intuitiver Webzugriff**, die **Dateisynchronisierung** und die **Backup-Dienste** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Dienst ist **einfach**, deckt alle Grundlagen ab und die aktuellen **Lebenszeit-Pläne** sind ein **Schnäppchen**.\""
+    "forbes": "Internxt festigt seine Position als europäische Alternative zu den Tech-Giganten",
+    "deloitte": "Erhielt den Deloitte Fast 50 Award für die am schnellsten wachsenden Unternehmen",
+    "techradar": "Ein Cloud-Speicheranbieter mit Schwerpunkt auf Datenschutz und Sicherheit",
+    "fortune": "Internxt baut ein Internet auf, in dem Datenschutz und Sicherheit an erster Stelle stehen",
+    "trustpilot": "Jede Menge privater, sicherer Speicherplatz. Toller Support. Definitiv preiswert."
   },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",

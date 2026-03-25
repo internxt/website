@@ -171,9 +171,11 @@
     ]
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt è in **mega-saldo**, ha **eccellenti recensioni utenti**, crittografia **end-to-end** e **post-quantica**, e rendono il loro codice completamente **open source** per totale trasparenza con i loro clienti.\"",
-    "mashable": "\"Prendi sul serio la **sicurezza** dei tuoi dati importanti. Internxt è nato con l'ambizione di dare alle persone la vera **libertà online** creando un mondo digitale più **etico**, **sicuro**, **privato** e responsabile.\"",
-    "pcWorld": "\"L'**accesso web intuitivo**, **sincronizzazione file** e **servizi di backup** di Internxt sono **impressionanti**. Questo servizio di archiviazione e backup online crittografato è **facile**, copre tutte le basi, e gli attuali **piani a vita** sono un **affare**.\""
+    "forbes": "Internxt consolida la sua posizione come alternativa europea ai giganti tecnologici",
+    "deloitte": "Ha ricevuto il premio Deloitte Fast 50, che riconosce le aziende in più rapida crescita",
+    "techradar": "Un provider di cloud storage molto attento alla privacy e alla sicurezza",
+    "fortune": "Internxt sta costruendo un internet dove la privacy e la sicurezza vengono prima di tutto",
+    "trustpilot": "Tantissimo spazio privato e sicuro. Supporto eccellente. Decisamente conveniente."
   },
   "OfficalCloudProvider": {
     "title": "Fornitore ufficiale di cloud storage del Levante UD",
@@ -209,8 +211,6 @@
     }
   },
   "TrustedBySection": {
-    "title": "Apprezzato da persone come te",
-    "review": "Mantengo le mie informazioni sicure online grazie a Internxt. Il loro supporto clienti è veloce, e i loro servizi sono incredibilmente affidabili. Il fatto che siano verificati, open source e crittografati mi fa stare tranquilla che i miei dati sono sempre protetti da terze parti.",
-    "author": "Sandra Díaz - Recensione Trustpilot"
+    "description": "Internxt riguarda il controllo. Con Internxt, hai la tranquillità di sapere che i tuoi dati sono crittografati, protetti e che la tua vita digitale ti appartiene."
   }
 }

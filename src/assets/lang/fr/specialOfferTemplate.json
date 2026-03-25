@@ -16,16 +16,14 @@
     "claimDeal": "Réclamer l'offre"
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt est en méga-promotion, a d'**excellents avis d'utilisateurs**, un **chiffrement de bout en bout et post-quantique**, et rend leur code complètement **open source**.\"",
-    "mashable": "\"Prenez au sérieux la **sécurisation** de vos données importantes. Internxt est né avec l'ambition de donner aux gens une véritable **liberté en ligne** en créant un monde numérique plus **éthique**, **sûr**, **privé** et responsable.\"",
-    "pcWorld": "\"L'accès web, la synchronisation de fichiers et les services de sauvegarde d'Internxt sont **impressionnants**. Ce service de **stockage en ligne chiffré** est **facile,** et les forfaits actuels sont une affaire.\""
+    "forbes": "Internxt consolide sa position en tant qu'alternative européenne aux géants technologiques",
+    "deloitte": "A reçu le prix Deloitte Fast 50, qui récompense les entreprises à la croissance la plus rapide",
+    "techradar": "Un fournisseur de stockage cloud très axé sur la confidentialité et la sécurité",
+    "fortune": "Internxt construit un internet où la confidentialité et la sécurité passent en premier",
+    "trustpilot": "Des tonnes d'espace privé et sécurisé. Excellent support. Vraiment rentable."
   },
   "TrustedBySection": {
-    "title": "Fait confiance par des personnes comme vous",
-    "review": "Je garde mes informations sécurisées en ligne grâce à Internxt. Leur support client est rapide, et leurs services sont incroyablement fiables. Le fait qu'ils soient audités, open-source et chiffrés me rassure en sachant que mes données sont toujours protégées des tiers.",
-    "cloudwardsReview": "Chez Cloudwards, nous avons testé des dizaines de fournisseurs de stockage cloud, et Internxt se distingue par son engagement envers la confidentialité des utilisateurs. Avec un chiffrement à connaissance nulle et une sécurité post-quantique, c'est l'une des options les plus sécurisées disponibles, surtout à ce prix. C'est rafraîchissant de voir un service qui place la confidentialité en premier et la rend abordable.",
-    "author": "Sandra Díaz - Avis Trustpilot",
-    "cloudwardsAuthor": "Mauricio Preuss - PDG de Cloudwards"
+    "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
   },
   "NextGenSection": {
     "title": "Pourquoi choisir Internxt ?",

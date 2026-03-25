@@ -17,6 +17,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
@@ -101,10 +102,10 @@ const Drive = ({
 
       <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
-      { /* <ReviewsSection
+      <ReviewsSection
         textContent={textContent.ReviewSection}
         bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-      /> */}
+      />
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 

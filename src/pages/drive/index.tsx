@@ -18,6 +18,7 @@ import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
@@ -169,10 +170,10 @@ const Drive = ({
 
       <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} />
 
-      {/*<ReviewsSection
+      <ReviewsSection
         textContent={textContent.ReviewSection}
         bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-      />*/}
+      />
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 

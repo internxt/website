@@ -121,17 +121,15 @@ export interface CardDescriptions {
 }
 
 export interface ReviewSection {
-  pcMag: string;
-  mashable: string;
-  pcWorld: string;
+  forbes: string;
+  deloitte: string;
+  techradar: string;
+  fortune: string;
+  trustpilot: string;
 }
 
 export interface TrustedBySection {
-  title: string;
-  review: string;
-  cloudwardsReview: string;
-  author: string;
-  cloudwardsAuthor: string;
+  description: string;
 }
 
 export interface TableSection {

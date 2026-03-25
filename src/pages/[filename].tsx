@@ -7,6 +7,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
@@ -192,7 +193,7 @@ function CombinedSpecialOffer({
         isUltimatePlan={onlyUltimatePlan}
       />
 
-      {/*<ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />*/}
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
       {onlyUltimatePlan ? (
         <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
