@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
-import { Quotes } from '@phosphor-icons/react';
+import { useEffect, useRef } from 'react';
 
 interface TrustedSectionProps {
-  textContent: any;
+  textContent: {
+    description: string;
+  };
   bottomBar?: boolean;
   darkMode?: boolean;
   image?: string;
@@ -17,9 +17,36 @@ export default function TrustedSection({
   image,
   isValentinesMode,
 }: Readonly<TrustedSectionProps>): JSX.Element {
+  const sectionRef = useRef<HTMLElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const text = textRef.current;
+    if (!section || !text) return;
+
+    const updateGradient = () => {
+      const rect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const progress = Math.max(0, Math.min(1, (viewportHeight * 0.7 - rect.top) / (viewportHeight * 0.7)));
+
+      const r = Math.round(255 + (115 - 255) * progress);
+      const g = Math.round(255 + (115 - 255) * progress);
+      const b = Math.round(255 + (115 - 255) * progress);
+      text.style.background = `linear-gradient(180deg, #737373 50%, rgb(${r},${g},${b}) 100%)`;
+      text.style.backgroundClip = 'text';
+      text.style.webkitTextFillColor = 'transparent';
+    };
+
+    updateGradient();
+    window.addEventListener('scroll', updateGradient, { passive: true });
+    return () => window.removeEventListener('scroll', updateGradient);
+  }, []);
+
   return (
     <section
-      className={` flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-32 lg:py-20 ${
+      ref={sectionRef}
+      className={` flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:py-28 ${
         darkMode ? 'bg-[#1C1C1C]' : ''
       }`}
       style={
@@ -30,59 +57,20 @@ export default function TrustedSection({
           : undefined
       }
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <h2
-        className={`${
-          darkMode ? 'text-white-95' : 'text-gray-100'
-        } flex w-[260px] items-start justify-start text-start text-30 font-bold leading-tight lg:w-1/2 lg:items-center lg:justify-center lg:text-center lg:text-3xl`}
+      <p
+        ref={textRef}
+        className="flex w-[1280px] font-semibold text-[60px] leading-[100%] py-1"
+        style={{
+          background: 'linear-gradient(180deg, #737373 50%, #FFFFFF 100%)',
+          backgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}
       >
-        {textContent.title}
-      </h2>
-      <div className="flex w-full flex-col-reverse items-center justify-center lg:w-min lg:flex-row lg:gap-8">
-        {image ? (
-          <div className="relative h-full w-full lg:w-[650px]">
-            <Image
-              src={getImage(image ? image : '/images/home/NewDesign/mujer-joven-trabajar-desde-casa.jpg')}
-              alt="mauricio hoody techbg"
-              height={600}
-              width={600}
-              className="rounded-16"
-              quality={100}
-            />
-          </div>
-        ) : (
-          <div className="relative h-full w-full lg:w-[650px]">
-            <Image
-              src={getImage('/images/home/NewDesign/mujer-joven-trabajar-desde-casa.jpg')}
-              alt="Woman working fromhome"
-              height={600}
-              width={600}
-              className="rounded-16"
-              quality={100}
-            />
-          </div>
-        )}
-
-        <div className="flex h-full flex-col justify-center gap-3 pb-8 lg:max-w-[400px] lg:justify-center lg:gap-3 lg:pb-0">
-          <Quotes className="text-primary" height={24} width={24} weight="fill" />
-          <p
-            className={`${darkMode ? 'text-white-95' : 'text-gray-55'} text-sm font-normal italic
-        leading-tight lg:text-base`}
-          >
-            {image ? textContent.cloudwardsReview : textContent.review}
-          </p>
-          <p
-            className={`${
-              darkMode ? 'text-white-95' : 'text-gray-55'
-            } text-sm font-semibold leading-tight lg:text-base`}
-          >
-            {image ? textContent.cloudwardsAuthor : textContent.author}
-          </p>
-        </div>
-      </div>
+        {textContent.description}
+      </p>
     </section>
   );
 }

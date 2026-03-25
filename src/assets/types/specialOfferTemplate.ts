@@ -127,11 +127,7 @@ export interface ReviewSection {
 }
 
 export interface TrustedBySection {
-  title: string;
-  review: string;
-  cloudwardsReview: string;
-  author: string;
-  cloudwardsAuthor: string;
+  description: string;
 }
 
 export interface TableSection {

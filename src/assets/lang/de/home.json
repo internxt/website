@@ -209,8 +209,6 @@
     }
   },
   "TrustedBySection": {
-    "title": "Vertraut von Menschen wie Ihnen",
-    "review": "Ich halte meine Informationen dank Internxt online sicher. Ihr Kundensupport ist schnell, und ihre Services sind unglaublich zuverlässig. Die Tatsache, dass sie auditiert, Open-Source und verschlüsselt sind, gibt mir die Gewissheit, dass meine Daten immer vor Dritten geschützt sind.",
-    "author": "Sandra Díaz - Trustpilot Bewertung"
+    "description": "Bei Internxt geht es darum, die Kontrolle zu behalten. Mit Internxt haben Sie die Gewissheit, dass Ihre Daten verschlüsselt und geschützt sind und Ihr digitales Leben Ihnen gehört."
   }
 }

@@ -210,8 +210,6 @@
     }
   },
   "TrustedBySection": {
-    "title": "Trusted encrypted cloud storage solutions for people like you.",
-    "review": "I keep my information secure online thanks to Internxt. Their customer support is fast, and their services are incredibly reliable. The fact that they are audited, open-source and encrypted makes me rest assured that my data is always protected from third-parties.",
-    "author": "Sandra Díaz - Trustpilot Review"
+    "description": "Internxt is about being in control. With Internxt, you get peace of mind knowing that your data is encrypted, protected and your digital life belongs to you."
   }
 }

@@ -147,9 +147,7 @@ export interface Title {
 }
 
 export interface TrustedBySection {
-  title: string;
-  review: string;
-  author: string;
+  description: string;
 }
 
 export interface TableSection {
