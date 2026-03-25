@@ -125,9 +125,11 @@ export interface OfficalCloudProvider {
 }
 
 export interface ReviewSection {
-  pcMag: string;
-  mashable: string;
-  pcWorld: string;
+  forbes: string;
+  deloitte: string;
+  techradar: string;
+  fortune: string;
+  trustpilot: string;
 }
 
 export interface TestimonialsSection {

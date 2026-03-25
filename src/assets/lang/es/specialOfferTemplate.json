@@ -16,9 +16,11 @@
     "claimDeal": "Reclamar oferta"
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt está en mega-oferta, tiene **excelentes reseñas de usuarios**, cifrado **de extremo a extremo y post-cuántico**, y hacen su código completamente **de código abierto**.\"",
-    "mashable": "\"Tómate en serio la **seguridad** de tus datos importantes. Internxt nació con la ambición de darle a las personas verdadera **libertad online** creando un mundo digital más **ético**, **seguro**, **privado** y responsable.\"",
-    "pcWorld": "\"El acceso web, sincronización de archivos y servicios de respaldo de Internxt son **impresionantes**. Este servicio de **almacenamiento online encriptado** es **fácil,** y los planes actuales son una ganga.\""
+    "forbes": "Internxt consolida su posición como alternativa europea a los gigantes tecnológicos",
+    "deloitte": "Recibió el premio Deloitte Fast 50, que reconoce a las empresas de más rápido crecimiento",
+    "techradar": "Un proveedor de almacenamiento en la nube muy comprometido con la privacidad y la seguridad",
+    "fortune": "Internxt está construyendo un internet donde la privacidad y la seguridad son lo primero",
+    "trustpilot": "Montones de espacio privado y seguro. Soporte excelente. Sin duda, una buena relación calidad-precio."
   },
   "TrustedBySection": {
     "title": "Con la confianza de personas como tú",

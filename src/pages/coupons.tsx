@@ -15,6 +15,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import RedeemCouponsSection from '@/components/coupons/ReedeemCouponSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
@@ -85,7 +86,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
