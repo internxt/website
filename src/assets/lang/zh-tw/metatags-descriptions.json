@@ -550,6 +550,13 @@
     "description": "切換到 Internxt，體驗 Sync 的開源替代方案。後量子和零知識加密雲端儲存，為您提供全方位的檔案隱私保護。"
   },
   {
+    "id": "levante-ud",
+    "title": "Internxt — 萊萬特體育會 (Levante UD) 官方雲端合作夥伴",
+    "description": "Internxt 是萊萬特體育會 (Levante UD) 的官方合作夥伴，提供加密雲端儲存及備份服務，保護俱樂部的寶貴數據。",
+    "og:title": "Internxt — 萊萬特體育會 (Levante UD) 官方雲端合作夥伴",
+    "og:description": "Internxt 是萊萬特體育會 (Levante UD) 的官方合作夥伴，提供加密雲端儲存及備份服務，保護俱樂部的寶貴數據。"
+  },
+  {
     "id": "filen-alternative",
     "title": "Internxt — Filen 的替代方案",
     "description": "切換到 Internxt 作為 Filen 的替代方案。後量子和零知識加密雲端儲存，確保您檔案的完整隱私。"
