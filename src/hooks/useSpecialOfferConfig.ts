@@ -48,10 +48,11 @@ export const ALLOWED_PATHS = [
   'f4mi',
   'macho',
   'heise',
-  'world-backup-day'
+  'world-backup-day',
+  'gentiluomodigitale'
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>(['baity', 'oscar', 'rimembah', 'believemy', 'ghareeb']);
+export const DARK_MODE_PATHS = new Set<string>([ 'oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -105,6 +106,7 @@ export const COUPON_CODES = {
   macho: PromoCodeName.macho,
   heise: PromoCodeName.heise,
   'world-backup-day': PromoCodeName.worldBackupDay,
+  gentiluomodigitale: PromoCodeName.gentiluomodigitale,
 };
 
 interface OfferConfig {

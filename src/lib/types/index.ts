@@ -246,6 +246,7 @@ export enum PromoCodeName {
   macho = 'MACHO',
   heise = 'HEISE',
   worldBackupDay = 'WORLDBACKUPDAY',
+  gentiluomodigitale = 'GENTILUOMODIGITALE',
 }
 
 export interface PromoCodeProps {

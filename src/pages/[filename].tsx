@@ -95,6 +95,7 @@ const LANG_MAP = {
   f4mi: 'en',
   heise: 'de',
   macho: 'en',
+  gentiluomodigitale: 'it',
 };
 
 function CombinedSpecialOffer({
