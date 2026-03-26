@@ -120,7 +120,6 @@ function CombinedSpecialOffer({
 
   const {
     products,
-    loadingCards,
     currency,
     currencyValue,
     coupon: individualCoupon,
@@ -181,7 +180,13 @@ function CombinedSpecialOffer({
   };
 
   return (
-    <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
+    <Layout
+      title={metatags!.title}
+      description={metatags!.description}
+      segmentName="Partners"
+      lang={lang}
+      robots={pathname === 'world-backup-day' ? 'noindex,follow' : undefined}
+    >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
       <HeroSection
@@ -221,7 +226,7 @@ function CombinedSpecialOffer({
           lifetimeCoupons={lifetimeCoupons}
           lang={lang}
           products={products}
-          loadingCards={loadingCards}
+          loadingCards={false}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hideBusinessCards
           hideBusinessSelector
@@ -292,7 +297,7 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
-  const lang = LANG_MAP[pathname] || 'es';
+  const lang = pathname === 'world-backup-day' && ctx.locale ? ctx.locale : (LANG_MAP[pathname] || 'es');
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
