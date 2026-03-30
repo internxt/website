@@ -1,0 +1,48 @@
+{
+  "HeroSection":{
+    "title": "Un **partenariat** né d'une passion pour\n la sécurité et la protection avancée des données"
+  },
+  "DigitalIndependenceSection":{
+    "title":"Indépendance numérique grâce à \nla collaboration sportive",
+    "features":[
+      "**Fondé en 1909 à Valence**, en Espagne, le Levante UD est le **plus ancien club de football** de la ville, avec une riche histoire de résilience et de passion pour devenir l'une des équipes de football les plus respectées de La Liga, la première division du sport espagnol.",
+      "Également basé à Valence, Internxt crée un monde numérique qui respecte la vie privée des utilisateurs. Grâce à sa suite de produits, tels que Drive, Mail, Meet, VPN, Antivirus et Send, Internxt propose des solutions de stockage en nuage et de communication avec un chiffrement de bout en bout post-quantique pour des milliers de clients dans le monde entier.",
+      "Cette collaboration met en lumière le rôle croissant d'Internxt dans le paysage technologique européen, où il fait progresser un modèle fondé sur la confidentialité, la confiance et l'indépendance numérique.",
+      "Tout comme notre architecture à connaissance zéro protège vos données sans compromis, l'esprit combatif de Levante nous inspire à repousser les limites \nchaque jour."
+    ]
+  },
+  "LeadingOrganizationsSection":{
+   "title":"Pourquoi les organisations leaders font confiance à Internxt",
+   "subtitle":[
+      "Internxt fournit une suite de produits privée et chiffrée comprenant Drive, VPN, Antivirus, Mail et Meet pour une confidentialité en ligne maximale.",
+      "Internxt et Levante se sont associés pour unir technologie et sport autour d'une vision commune de progrès et de sécurité. Alors que Levante modernise son infrastructure numérique, Internxt accompagnera le Club avec un stockage en nuage sécurisé et chiffré pour garder ses données sûres et privées."
+    ],
+    "cards":[
+      {
+        "title": "Chiffrement avancé",
+        "description":[
+          "Internxt stimule l'innovation avec le chiffrement post-quantique le plus avancé, auquel fait confiance la légendaire équipe de football, le Levante UD.",
+          "Cette collaboration reflète l'influence croissante d'Internxt dans le paysage technologique européen, où il continue à faire progresser un modèle d'innovation ancré dans la confidentialité, la confiance et l'indépendance numérique.",
+          "À mesure que la cybersécurité évolue avec les menaces quantiques émergentes, Internxt continue de donner la priorité à une approche axée sur la sécurité pour protéger les données des utilisateurs et des industries."
+        ]
+      },
+       {
+        "title":"Open source & vérifié",
+        "description":[
+          "La mission de confidentialité d'Internxt se reflète dans son logiciel open source et son infrastructure vérifiable. Pour maximiser la confiance, il est audité de manière indépendante afin de garantir une sécurité robuste pour les utilisateurs, les entreprises et les organisations du monde entier."
+        ]
+      },
+       {
+        "title":"Normes de sécurité certifiées",
+        "description":[
+          "Soutenu par la conformité RGPD, ISO 27001, SOC 2 et HIPAA, Internxt fournit des cadres de sécurité certifiés qui protègent les données sensibles dans les secteurs d'activité tout en soutenant le Levante UD pour ses besoins en stockage en nuage."
+        ]
+      }
+    ]
+  },
+
+  "ctaBanner": {
+    "description": "Internxt associe une technologie cloud sécurisée à l'excellence sportive pour offrir une sécurité, un contrôle et une indépendance numérique maximaux.",
+    "cta": "Obtenir Internxt"
+  }
+}
