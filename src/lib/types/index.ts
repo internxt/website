@@ -244,7 +244,9 @@ export enum PromoCodeName {
   tukaram = 'TUKARAM',
   f4mi = 'F4MI',
   macho = 'MACHO',
-  heise = 'HEISE'
+  heise = 'HEISE',
+  worldBackupDay = 'WORLDBACKUPDAY',
+  gentiluomodigitale = 'GENTILUOMODIGITALE',
 }
 
 export interface PromoCodeProps {

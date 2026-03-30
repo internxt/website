@@ -474,7 +474,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           style={{ cursor: 'pointer' }}
           onClick={() =>
             window.open(
-              `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
+              `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
               '_blank',
               'noopener noreferrer',
             )
