@@ -101,6 +101,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         freePlanNeedsH2
       />
 
+      <TrustedSection textContent={textContent.TrustedBySection} />
+
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
 
       <OfficialCloudProviderSection
@@ -112,9 +114,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <HorizontalScrollableSection textContent={textContent.NextGenSection} />
 
-      <TrustedSection textContent={textContent.TrustedBySection} />
-
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)" />
 
       <Footer textContent={footerLang} lang={locale} />
     </Layout>

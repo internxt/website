@@ -3,6 +3,7 @@ import FaqAccordion from '@/components/shared/FAQAccordion';
 interface FAQSectionProps {
   textContent: any;
   bgColor?: string;
+  bgGradient?: string;
   cardColor?: string;
   textColor?: string;
   percentageDiscount?: string;
@@ -16,9 +17,10 @@ const FAQSection = ({
   textColor,
   percentageDiscount,
   needsH3 = true,
+  bgGradient
 }: FAQSectionProps) => {
   return (
-    <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`}>
+    <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`} style={bgGradient ? { background: bgGradient } : undefined}>
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-10 pb-16 lg:pb-10 lg:pt-20">
         <p className={`text-center text-30 font-semibold ${textColor ? textColor : 'text- gray-100'} lg:text-3xl`}>
           {textContent.title}
