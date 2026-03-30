@@ -26,10 +26,7 @@ const PARTNER_CONFIG = {
     image: '/images/home/NewDesign/LevanteHomeImage.webp',
     alt: 'Internxt official cloud storage partner of Levante UD',
     dimensions: { height: 430, width: 352 },
-    blogUrl: {
-      en: 'https://blog.internxt.com/internxt-becomes-levante-uds-official-cloud-provider/',
-      es: 'https://blog.internxt.com/es/internxt-se-convierte-en-el-proveedor-oficial-de-nube-y-socio-del-levante-ud/',
-    },
+    blogUrl:{en:'https://internxt.com/levanteud',es:'https://internxt.com/es/levanteud'},
     rounded: true,
   },
 };

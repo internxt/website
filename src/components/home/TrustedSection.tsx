@@ -10,6 +10,11 @@ interface TrustedSectionProps {
   isValentinesMode?: boolean;
 }
 
+const WORDS_PER_GROUP = 2;
+const LIT_COLOR_DARK = '#FFFFFF';
+const LIT_COLOR_LIGHT = '#0A0A0A';
+const UNLIT_COLOR = '#A0A0A0';
+
 export default function TrustedSection({
   textContent,
   bottomBar = true,
@@ -18,58 +23,71 @@ export default function TrustedSection({
   isValentinesMode,
 }: Readonly<TrustedSectionProps>): JSX.Element {
   const sectionRef = useRef<HTMLElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
+  const spanRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+  const words = textContent.description.split(' ');
+  const groups: string[] = [];
+  for (let i = 0; i < words.length; i += WORDS_PER_GROUP) {
+    groups.push(words.slice(i, i + WORDS_PER_GROUP).join(' '));
+  }
 
   useEffect(() => {
     const section = sectionRef.current;
-    const text = textRef.current;
-    if (!section || !text) return;
+    if (!section) return;
 
-    const updateGradient = () => {
+    const litColor = darkMode ? LIT_COLOR_DARK : LIT_COLOR_LIGHT;
+
+    const updateProgress = () => {
       const rect = section.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      const progress = Math.max(0, Math.min(1, (viewportHeight * 0.7 - rect.top) / (viewportHeight * 0.7)));
+      const progress = Math.max(0, Math.min(1, (viewportHeight * 0.85 - rect.top) / (viewportHeight * 0.7)));
 
-      const r = Math.round(255 + (115 - 255) * progress);
-      const g = Math.round(255 + (115 - 255) * progress);
-      const b = Math.round(255 + (115 - 255) * progress);
-      text.style.background = `linear-gradient(180deg, #737373 50%, rgb(${r},${g},${b}) 100%)`;
-      text.style.backgroundClip = 'text';
-      text.style.webkitTextFillColor = 'transparent';
+      const totalGroups = spanRefs.current.length;
+      const litCount = Math.round(progress * totalGroups);
+
+      spanRefs.current.forEach((span, i) => {
+        if (!span) return;
+        span.style.color = i < litCount ? litColor : UNLIT_COLOR;
+      });
     };
 
-    updateGradient();
-    window.addEventListener('scroll', updateGradient, { passive: true });
-    return () => window.removeEventListener('scroll', updateGradient);
-  }, []);
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    return () => window.removeEventListener('scroll', updateProgress);
+  }, [darkMode]);
 
   return (
     <section
       ref={sectionRef}
-      className={` flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:py-28 ${
+      className={`flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:pb-28 ${
         darkMode ? 'bg-[#1C1C1C]' : ''
       }`}
       style={
         isValentinesMode
           ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)' }
           : !darkMode && !image
-          ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }
+          ? { background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }
           : undefined
       }
     >
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <p
-        ref={textRef}
-        className="flex w-[1280px] font-semibold text-[60px] leading-[100%] py-1"
-        style={{
-          background: 'linear-gradient(180deg, #737373 50%, #FFFFFF 100%)',
-          backgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
-        {textContent.description}
+      <p className="flex w-[1280px] flex-wrap font-semibold text-[60px] leading-[100%] py-1 gap-x-[0.35em]">
+        {groups.map((group, i) => (
+          <span
+            key={i}
+            ref={(el) => {
+              spanRefs.current[i] = el;
+            }}
+            style={{
+              color: UNLIT_COLOR,
+              transition: 'color 0.4s ease',
+            }}
+          >
+            {group}
+          </span>
+        ))}
       </p>
     </section>
   );
