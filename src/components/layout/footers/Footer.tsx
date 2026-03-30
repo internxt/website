@@ -386,10 +386,6 @@ export default function Footer({
                     <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
-
-                    <Link href="/levanteud" className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.levanteUD}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -1298,10 +1294,6 @@ export default function Footer({
 
                       <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
-                      </Link>
-
-                      <Link href="/levanteud" className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.levanteUD}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
