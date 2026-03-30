@@ -72,29 +72,29 @@ export default function LeadingOrganizationsSection({
 
   return (
     <section
-      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 lg:px-20 gap-16`}
+      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 gap-16`}
       style={{ background: 'linear-gradient(180deg, #F4F8FF 59.26%, #FFFFFF 100%)' }}
     >
-      <div className='flex flex-col gap-6 text-start lg:text-center px-6 lg:px-0'>
+      <div className='flex flex-col gap-6 text-start lg:text-center px-6 lg:px-0 lg:px-10 xl:px-32 3xl:px-80'>
        <p className='text-30 lg:text-5xl text-start lg:text-center font-semibold leading-tight lg:whitespace-pre-line'>{textContent.title}</p>
        <p className='text-base text-start lg:text-center font-regular text-gray-55 leading-tight lg:whitespace-pre-line'>{textContent.subtitle[0]}</p>
        <p className='text-base text-start lg:text-center font-regular text-gray-55 leading-tight lg:whitespace-pre-line'>{textContent.subtitle[1]}</p>
       </div>
-      <div className='flex flex-col lg:flex-row gap-8 w-full items-center lg:items-stretch'>
+      <div className='flex flex-col lg:flex-row gap-8 w-full items-center lg:items-stretch lg:px-10 xl:px-32 3xl:px-80'>
         <div className='w-full lg:w-max flex justify-center px-6 lg:px-0'>
           <Image
             src={getImage('/images/Levante/Levante7.webp')}
             alt="Levante"
             width={534}
             height={320}
-            className='rounded-16 w-full lg:w-[534px] h-auto object-cover'
+            className='rounded-16 w-full lg:w-full- h-auto object-cover'
             quality={100}
           />
         </div>
         <div className='flex flex-col gap-6 w-full'>
           <div
             ref={scrollContainerRef}
-            className='scrollbar-hide flex flex-row lg:flex-col gap-8 overflow-x-auto lg:overflow-visible scroll-smooth w-full'
+            className='scrollbar-hide flex flex-row lg:flex-col gap-8 overflow-x-auto justify-between lg:overflow-visible scroll-smooth w-full'
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
@@ -107,7 +107,7 @@ export default function LeadingOrganizationsSection({
             {textContent.cards.map((card, index) => (
               <div
                 key={index}
-                className='flex flex-col gap-6 bg-white rounded-xl lg:rounded-16 p-6 lg:p-8 w-[340px] lg:min-w-0 flex-shrink-0 lg:flex-shrink'
+                className='flex flex-col gap-6 bg-white rounded-xl lg:rounded-16 p-6 lg:p-8 w-full lg:min-w-0 flex-shrink-0 lg:flex-shrink'
               >
                 <p className='text-xl font-medium leading-tight lg:whitespace-pre-line text-black'>{card.title}</p>
                 <div className="flex flex-col gap-2">

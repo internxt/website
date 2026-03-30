@@ -29,7 +29,7 @@ export default function DigitalIndependenceSection({
 
   return (
     <section
-      className={`flex h-min flex flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 lg:mt-16 lg:px-20 px-6 lg:gap-16 gap-8`}
+      className={`flex h-min flex flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 lg:mt-16 lg:px-20 px-6 lg:gap-16 gap-8 lg:px-10 xl:px-32 3xl:px-80`}
       style={{ background: 'linear-gradient(360deg, #F4F8FF 63.1%, #FFFFFF 100%)' }}
     >
        <p className='text-30 lg:text-5xl lg:text-center text-start font-semibold leading-tight lg:whitespace-pre-line'>{textContent.title}</p>
