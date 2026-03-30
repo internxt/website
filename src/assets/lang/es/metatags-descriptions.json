@@ -638,5 +638,12 @@
     "id": "alternative-to-totalav",
     "title": "Internxt — Internxt — Alternativa a TotalAV",
     "description": "Pásate a Internxt para una alternativa de código abierto a TotalAV. Incluye almacenamiento en la nube con cifrado post-cuántico y de conocimiento cero, y más."
+  },
+  {
+    "id": "levante-ud",
+    "title": "Internxt — Partner oficial en la nube del Levante UD",
+    "description": "Internxt es socio oficial del Levante UD, proporcionando almacenamiento cifrado en la nube y copias de seguridad para proteger los valiosos datos del club.",
+    "og:title": "Internxt — Partner oficial en la nube del Levante UD",
+    "og:description": "Internxt es socio oficial del Levante UD, proporcionando almacenamiento cifrado en la nube y copias de seguridad para proteger los valiosos datos del club."
   }
 ]

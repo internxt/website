@@ -1,0 +1,48 @@
+{
+  "HeroSection":{
+    "title": "Eine **Partnerschaft**, die aus der Leidenschaft für\n Sicherheit und fortgeschrittenen Datenschutz entstand"
+  },
+  "DigitalIndependenceSection":{
+    "title":"Digitale Unabhängigkeit durch \nsportliche Zusammenarbeit",
+    "features":[
+      "**1909 in Valencia gegründet**, ist Levante UD der **älteste Fußballverein** der Stadt mit einer reichen Geschichte voller Ausdauer und Leidenschaft, um zu einem der angesehensten Fußballteams in La Liga, Spaniens höchster Spielklasse, zu werden.",
+      "Ebenfalls in Valencia ansässig, schafft Internxt eine digitale Welt, die die Privatsphäre der Nutzer respektiert. Mit seiner Produktpalette – darunter Drive, Mail, Meet, VPN, Antivirus und Send – bietet Internxt Cloud-Speicher- und Kommunikationslösungen mit post-quanten Ende-zu-Ende-Verschlüsselung für tausende von Kunden weltweit.",
+      "Diese Zusammenarbeit unterstreicht Internxts wachsende Rolle in der europäischen Tech-Landschaft, wo das Unternehmen ein Modell vorantreibt, das auf Datenschutz, Vertrauen und digitaler Unabhängigkeit aufbaut.",
+      "Genau wie unsere Zero-Knowledge-Architektur Ihre Daten kompromisslos schützt, inspiriert uns der Kampfgeist von Levante täglich dazu, Grenzen zu überschreiten."
+    ]
+  },
+  "LeadingOrganizationsSection":{
+   "title":"Warum führende Organisationen Internxt vertrauen",
+   "subtitle":[
+      "Internxt bietet eine private, verschlüsselte Produktpalette, einschließlich Drive, VPN, Antivirus, Mail und Meet für maximale Online-Privatsphäre.",
+      "Internxt und Levante haben eine Partnerschaft geschlossen, um Technologie und Sport unter einer gemeinsamen Vision von Fortschritt und Sicherheit zu vereinen. Während Levante seine digitale Infrastruktur modernisiert, wird Internxt den Club mit sicherem, verschlüsseltem Cloud-Speicher unterstützen, um seine Daten sicher und privat zu halten."
+    ],
+    "cards":[
+      {
+        "title": "Fortschrittliche Verschlüsselung",
+        "description":[
+          "Internxt treibt Innovation mit der fortschrittlichsten Post-Quanten-Verschlüsselung voran, der das traditionsreiche Fußballteam Levante UD vertraut.",
+          "Diese Zusammenarbeit spiegelt Internxts wachsenden Einfluss in der europäischen Tech-Landschaft wider, wo es weiterhin ein Innovationsmodell vorantreibt, das in Datenschutz, Vertrauen und digitaler Unabhängigkeit verwurzelt ist.",
+          "Da sich die Cybersicherheit mit aufkommenden Quantenbedrohungen weiterentwickelt, priorisiert Internxt weiterhin einen sicherheitsorientierten Ansatz zum Schutz von Daten für Nutzer und Industrien."
+        ]
+      },
+       {
+        "title":"Open Source & verifiziert",
+        "description":[
+          "Internxts Mission des Datenschutzes spiegelt sich in seiner Open-Source-Software und nachprüfbaren Infrastruktur wider. Zur Maximierung des Vertrauens wird es unabhängig geprüft, um starke Sicherheit für Nutzer, Unternehmen und Organisationen weltweit zu gewährleisten."
+        ]
+      },
+       {
+        "title":"Zertifizierte Sicherheitsstandards",
+        "description":[
+          "Unterstützt durch DSGVO-, ISO 27001-, SOC 2- und HIPAA-Konformität bietet Internxt zertifizierte Sicherheitsrahmen, die sensible Daten branchenübergreifend schützen und gleichzeitig Levante UD für seine Cloud-Speicherbedürfnisse unterstützen."
+        ]
+      }
+    ]
+  },
+
+  "ctaBanner": {
+    "description": "Internxt verbindet sichere Cloud-Technologie mit sportlicher Exzellenz, um maximale Sicherheit, Kontrolle und digitale Unabhängigkeit zu bieten.",
+    "cta": "Internxt holen"
+  }
+}

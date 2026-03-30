@@ -1,0 +1,48 @@
+{
+  "HeroSection":{
+    "title": "A **partnership** born from a passion for\n security and advanced data protection"
+  },
+  "DigitalIndependenceSection":{
+    "title":"Digital independence through \nsports collaboration",
+    "features":[
+      "**Founded in 1909 in Valencia**, Spain, Levante UD is the **oldest football club** in the city with a rich history of resilience and passion to become one of the most respected football teams in La Liga, Spain’s top sports division.",
+      "Also based in Valencia, Internxt is creating a digital world that respects users' privacy. Through its suite of products, such as Drive, Mail, Meet, VPN, Antivirus, and Send, Internxt offers cloud storage and communication solutions with post-quantum end-to-end encryption to thousands of customers worldwide.",
+      "This collaboration highlights Internxt’s expanding role in the European tech landscape, where it advances a model built on privacy, trust, and digital independence.",
+      "Just like our zero-knowledge architecture protects your data without compromise, Levante's fighting spirit inspires us to push boundaries \nevery day."
+    ]
+  },
+  "LeadingOrganizationsSection":{
+   "title":"Why leading organizations trust Internxt",
+   "subtitle":[
+      "Internxt provides a private, encrypted product suite including Drive, VPN, Antivirus, Mail, and Meet for maximum online privacy.",
+      "Internxt and Levante have partnered to unite technology and sport under a shared vision of progress and security. As Levante modernizes its digital infrastructure, Internxt will support the Club with secure, encrypted cloud storage to keep its data safe and private."   
+    ],
+    "cards":[
+      {
+        "title": "Advanced encryption",
+        "description":[
+          "Internxt drives innovation with the most advanced post-quantum encryption trusted by the historic football team, Levante UD.",
+          "This collaboration reflects Internxt’s growing influence in the European tech landscape, where it continues to drive forward a model of innovation rooted in privacy, trust, and digital independence.",
+"As cybersecurity evolves with emerging quantum threats, Internxt continues to prioritize a security-first approach to protect data across users and industries."
+        ]
+      },
+       {
+        "title":"Open source & verified",
+        "description":[
+          "Internxt’s mission of privacy is reflected in its open source software and verifiable infrastructure. To maximize trust, it is independently audited to ensure strong security for users, businesses, and enterprises worldwide."
+        ]
+      },
+       {
+        "title":"Certified security standards",
+        "description":[
+          "Backed by GDPR, ISO 27001, SOC 2, and HIPAA compliance, Internxt provides certified security frameworks that protect sensitive data across industries while supporting Levante UD for its cloud storage needs."
+        ]
+      }
+    ]
+  },
+ 
+  "ctaBanner": {
+    "description": "Internxt combines secure cloud technology with sporting excellence to provide maximum security, control, and digital independence.",
+    "cta": "Get Internxt"
+  }
+}

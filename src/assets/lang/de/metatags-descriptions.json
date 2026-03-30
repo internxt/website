@@ -548,5 +548,12 @@
     "id": "alternative-to-totalav",
     "title": "Internxt — TotalAV Alternative",
     "description": "Wechseln Sie zu Internxt für eine Open-Source-Alternative zu TotalAV. Inklusive Post-Quanten- und Zero-Knowledge-verschlüsseltem Cloud-Speicher und mehr."
+  },
+  {
+    "id": "levante-ud",
+    "title": "Internxt — Offizieller Cloud-Partner von Levante UD",
+    "description": "Internxt ist ein offizieller Partner von Levante UD und bietet verschlüsselten Cloud-Speicher und Backups zum Schutz der wertvollen Daten des Vereins.",
+    "og:title": "Internxt — Offizieller Cloud-Partner von Levante UD",
+    "og:description": "Internxt ist ein offizieller Partner von Levante UD und bietet verschlüsselten Cloud-Speicher und Backups zum Schutz der wertvollen Daten des Vereins."
   }
 ]
