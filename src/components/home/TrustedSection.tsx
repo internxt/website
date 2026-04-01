@@ -59,7 +59,7 @@ export default function TrustedSection({
   return (
     <section
       ref={sectionRef}
-      className={`flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:pb-28 ${
+      className={`flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:pb-28 lg:px-10 xl:px-32 3xl:px-80 ${
         darkMode ? 'bg-[#1C1C1C]' : ''
       }`}
       style={
@@ -73,7 +73,7 @@ export default function TrustedSection({
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <p className="flex w-[1280px] flex-wrap font-semibold text-[60px] leading-[100%] py-1 gap-x-[0.35em]">
+      <p className="w-full font-semibold text-[60px] leading-[100%] py-1 text-justify">
         {groups.map((group, i) => (
           <span
             key={i}
@@ -85,7 +85,7 @@ export default function TrustedSection({
               transition: 'color 0.4s ease',
             }}
           >
-            {group}
+            {i > 0 ? ' ' : ''}{group}
           </span>
         ))}
       </p>
