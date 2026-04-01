@@ -213,11 +213,6 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/driffle',
-        destination: '/redeem/driffle',
-        permanent: false,
-      },
-      {
         source: '/special-offer/:filename',
         destination: '/specialoffer/:filename',
         permanent: false,
