@@ -1,0 +1,73 @@
+{
+  "HeroSection": {
+    "title": "**推荐**朋友，**赚取**高达100欧元",
+    "subtitle": "邀请您的朋友试用 Internxt Drive、VPN、Meet 等。当他们购买计划时，您们都会获得奖励。",
+    "features": [
+      "每次推荐可获得高达100欧元",
+      "您的朋友可享受所有计划85%的折扣",
+      "直接将款项支付到您的 PayPal 账户"
+    ],
+    "cta": "邀请朋友"
+  },
+  "RewardsSection": {
+    "title": "您可以获得什么奖励？",
+    "subtitle": "推荐朋友，获得高达100欧元",
+    "features": [
+      "您将为您独特的推荐链接所购买的每个计划获得佣金。您推荐的朋友越多，赚的钱就越多，每次推荐最高可获得100欧元，总计高达1000欧元。",
+      "使用您的推荐链接的人还可以享受任何 Internxt 计划 85% 的折扣。"
+    ]
+  },
+  "HowItWorks": {
+    "title": "Internxt 的“推荐并赚钱”计划如何运作？",
+    "subtitle": "分三步轻松推荐朋友，立即开始赚钱！",
+    "cards": [
+      {
+        "title": "发送您的邀请链接",
+        "description": "登录您的 Internxt 账户并从 Internxt Web 应用程序分享您独特的推荐链接。"
+      },
+      {
+        "title": "等待购买",
+        "description": "与朋友分享您的推荐链接，他们可以享受任何 Internxt 计划 85% 的折扣。"
+      },
+      {
+        "title": "获得奖励！",
+        "description": "一旦有人通过您的推荐链接购买了计划，请将您的收入直接转入您的 PayPal 账户。"
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "我在哪里可以找到我的推荐链接？",
+        "answer": [
+          "登录您的 Internxt 帐户 https://drive.internxt.com/login，然后在菜单栏中单击赚取 100 欧元。"
+        ]
+      },
+      {
+        "question": "谁有资格进行推荐？",
+        "answer": [
+          "该计划向所有拥有 Internxt 付费计划的人开放。"
+        ]
+      },
+      {
+        "question": "谁有资格获得推荐链接？",
+        "answer": [
+          "任何拥有免费 Internxt 帐户的人都有资格获得任何年度或终身计划 85% 的折扣。"
+        ]
+      },
+      {
+        "question": "我能赚多少钱？",
+        "answer": [
+          "根据使用您的链接购买的计划，您每次推荐最高可赚取 100 欧元。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密货币付款吗？",
+        "answer": [
+          "Internxt 目前接受借记卡和信用卡（万事达卡、VISA 卡、美国运通卡等）。您还可以通过 PayPal、Crypto 和 Klarna 付款。根据要求，我们也接受加密货币和 SEPA 借记卡付款。如果您对付款方式有疑问，只需发送电子邮件至 hello@internxt.com 发送邮件给我们。"
+        ]
+      }
+    ]
+  }
+}

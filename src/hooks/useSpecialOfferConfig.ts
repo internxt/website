@@ -49,7 +49,8 @@ export const ALLOWED_PATHS = [
   'macho',
   'heise',
   'world-backup-day',
-  'gentiluomodigitale'
+  'gentiluomodigitale',
+  'spencer'
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>([ 'oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -107,6 +108,7 @@ export const COUPON_CODES = {
   heise: PromoCodeName.heise,
   'world-backup-day': PromoCodeName.worldBackupDay,
   gentiluomodigitale: PromoCodeName.gentiluomodigitale,
+  spencer: PromoCodeName.spencer,
 };
 
 interface OfferConfig {

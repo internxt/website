@@ -40,6 +40,9 @@ const ALLOWED_PATHS = [
   'kripesh',
   'rclone',
   'love',
+  'nomadz',
+  'yrj',
+  'moonrover',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
@@ -56,6 +59,9 @@ const COUPON_CODES = {
   kripesh: PromoCodeName.FreePlanUpsell,
   rclone: PromoCodeName.Rclone,
   love: PromoCodeName.love,
+  nomadz: PromoCodeName.nomadz,
+  yrj: PromoCodeName.yrj,
+  moonrover: PromoCodeName.moonrover,
 };
 
 function CombinedSpecialOffer({
@@ -71,6 +77,7 @@ function CombinedSpecialOffer({
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
   const isValentinesMode = selectedPathname === 'love';
+  const isPcMag = selectedPathname === 'pcmag';
 
   const alternateRecommendedPlan = selectedPathname
     ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
@@ -171,6 +178,7 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         image={HeroImage}
         isValentinesMode={isValentinesMode}
+        isPcMag={isPcMag}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />

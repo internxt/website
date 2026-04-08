@@ -42,7 +42,7 @@ const renderCtaContent = (
   themeClasses: ReturnType<typeof getThemeClasses>,
   descriptionWidth: string,
 ) => (
-  <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+  <div className="flex flex-col items-center gap-4 px-10 text-center">
     <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${themeClasses.title}`}>
       {parsePercentText(title)}
     </p>
@@ -96,6 +96,7 @@ const LANG_MAP = {
   heise: 'de',
   macho: 'en',
   gentiluomodigitale: 'it',
+  spencer: 'en',
 };
 
 function CombinedSpecialOffer({
@@ -265,31 +266,13 @@ function CombinedSpecialOffer({
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgGradientContainerColor={themeClasses.bgGradientContainer}
           bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-          bgGradientColor={themeClasses.bgGradient}
+         
         />
       )}
-
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
-
+      
       <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
 
-      {!onlyUltimatePlan && (
-        <FloatingCtaSectionv2
-          textContent={langJson.ctaSection2}
-          url={'#billingButtons'}
-          customText={renderCtaContent(
-            langJson.ctaSection2.title,
-            langJson.ctaSection2.description,
-            parsePercentText,
-            themeClasses,
-            'lg:w-[633px]',
-          )}
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgGradientContainerColor={themeClasses.bgGradientContainer}
-          bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-          bgGradientColor={themeClasses.bgGradient}
-        />
-      )}
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />
     </Layout>
