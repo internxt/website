@@ -62,7 +62,8 @@
         "linkedin": "LinkedIn",
         "youtube": "Youtube",
         "instagram": "Instagram",
-        "mastodon": "Mastodon"
+        "mastodon": "Mastodon",
+        "referrals": "Indique um amigo"
       },
       "resources": {
         "title": "Recursos",

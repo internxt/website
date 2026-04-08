@@ -54,6 +54,7 @@ export interface Join {
   whitePaper: string;
   github: string;
   affiliates: string;
+  referrals: string;
 }
 
 export interface Products {

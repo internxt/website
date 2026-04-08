@@ -386,6 +386,10 @@ export default function Footer({
                     <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
+
+                    <Link href="/refer-a-friend" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.referrals}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1294,6 +1298,10 @@ export default function Footer({
 
                       <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
+                      </Link>
+
+                      <Link href="/refer-a-friend" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.referrals}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
