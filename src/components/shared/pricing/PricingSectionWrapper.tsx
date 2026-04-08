@@ -314,6 +314,7 @@ export const PricingSectionWrapper = ({
           darkMode={darkMode}
           showPromo={showPromo}
           isValentinesMode={isValentinesMode}
+          hideFreeCard={hideFreeCard}
         />
       </div>
     </section>

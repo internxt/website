@@ -1,0 +1,73 @@
+{
+  "HeroSection": {
+    "title": "**Recomienda** a un amigo y **gana** hasta 100€",
+    "subtitle": "Invita a tus amigos a probar Internxt. Cuando compren un plan, ambos recibiréis recompensas.",
+    "features": [
+      "Recibe hasta 100€ por cada referido",
+      "Tu amigo obtiene un 85% de descuento en todos los planes",
+      "Recibe el pago directamente en tu cuenta de PayPal"
+    ],
+    "cta": "Invitar a un amigo"
+  },
+  "RewardsSection": {
+    "title": "¿Qué recompensas obtienes?",
+    "subtitle": "Recomienda a un amigo, obtén hasta 100€",
+    "features": [
+      "Recibirás una comisión por cada plan comprado a través de tu enlace de referido único. Cuantos más amigos recomiendes, más dinero ganarás, con la posibilidad de conseguir hasta 100€ por cada referido y 1000€ en total.",
+      "Aquellos que utilicen tu enlace de referido también obtendrán un 85% de descuento en cualquier plan de Internxt."
+    ]
+  },
+  "HowItWorks": {
+    "title": "¿Cómo funciona el programa \"Recomienda y Gana\" de Internxt?",
+    "subtitle": "¡Recomienda a un amigo en 3 sencillos pasos y empieza a ganar dinero al instante!",
+    "cards": [
+      {
+        "title": "Envía tu enlace de invitación",
+        "description": "Inicia sesión en tu cuenta de Internxt y comparte tu enlace de referido único desde la aplicación web de Internxt."
+      },
+      {
+        "title": "Espera a que compren",
+        "description": "Comparte tu enlace de referido con un amigo y obtendrán un 85% de descuento en cualquier plan de Internxt."
+      },
+      {
+        "title": "¡Obtén tu recompensa!",
+        "description": "Una vez que alguien compre un plan a través de tu enlace de referido, transfiere tus ganancias directamente a tu cuenta de PayPal."
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Dónde puedo encontrar mi enlace de referido?",
+        "answer": [
+          "Inicia sesión en tu cuenta de Internxt https://drive.internxt.com/login y haz clic en Gana 100€ en la barra de menú."
+        ]
+      },
+      {
+        "question": "¿Quién puede ser referidor?",
+        "answer": [
+          "El programa está abierto a todas las personas que tengan un plan de pago de Internxt."
+        ]
+      },
+      {
+        "question": "¿Quién puede conseguir un enlace de referido?",
+        "answer": [
+          "Cualquiera que tenga una cuenta gratuita de Internxt puede obtener un 85% de descuento en cualquier plan anual o de por vida."
+        ]
+      },
+      {
+        "question": "¿Cuánto puedo ganar?",
+        "answer": [
+          "Puedes ganar hasta 100€ por referido, dependiendo del plan comprado con tu enlace."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar mediante PayPal, Crypto y Klarna. Bajo petición, también aceptamos criptomonedas y SEPA Direct Debit. Si tienes dudas sobre los métodos de pago, envíanos un correo a hello@internxt.com."
+        ]
+      }
+    ]
+  }
+}

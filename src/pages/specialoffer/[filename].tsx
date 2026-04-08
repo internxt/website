@@ -40,6 +40,9 @@ const ALLOWED_PATHS = [
   'kripesh',
   'rclone',
   'love',
+  'nomadz',
+  'yrj',
+  'moonrover',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
@@ -56,6 +59,9 @@ const COUPON_CODES = {
   kripesh: PromoCodeName.FreePlanUpsell,
   rclone: PromoCodeName.Rclone,
   love: PromoCodeName.love,
+  nomadz: PromoCodeName.nomadz,
+  yrj: PromoCodeName.yrj,
+  moonrover: PromoCodeName.moonrover,
 };
 
 function CombinedSpecialOffer({
