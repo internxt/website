@@ -250,6 +250,7 @@ export enum PromoCodeName {
   nomadz = 'NOMADZ85',
   yrj = 'YRJ85',
   moonrover = 'MOONROVER85',
+  spencer = 'SPENCER',
 }
 
 export interface PromoCodeProps {

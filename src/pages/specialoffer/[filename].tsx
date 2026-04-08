@@ -77,6 +77,7 @@ function CombinedSpecialOffer({
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
   const isValentinesMode = selectedPathname === 'love';
+  const isPcMag = selectedPathname === 'pcmag';
 
   const alternateRecommendedPlan = selectedPathname
     ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
@@ -177,6 +178,7 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         image={HeroImage}
         isValentinesMode={isValentinesMode}
+        isPcMag={isPcMag}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />

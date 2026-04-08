@@ -23,6 +23,7 @@ interface HeroSectionForPartnerProps {
   image?: any;
   isValentinesMode?: boolean;
   isClubic?: boolean;
+  isPcMag?: boolean;
   isUltimatePlan?: boolean;
 }
 
@@ -34,7 +35,8 @@ export default function HeroSection({
   isValentinesMode = false,
   image = 'internxt-private-cloud',
   isClubic = false,
-  isUltimatePlan = false
+  isUltimatePlan = false,
+  isPcMag = false
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -99,8 +101,8 @@ export default function HeroSection({
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
             <Image
               src={getImage('/images/partnerships/Clubic.webp')}
-              width={117}
-              height={27}
+              width={90}
+              height={17}
               alt="Clubic logo"
             />
             <X size={16} />
@@ -114,6 +116,24 @@ export default function HeroSection({
             />
           </div>
         )}
+
+        {isPcMag &&( <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/partnerships/pcmag.webp')}
+              width={110}
+              height={35}
+              alt="pcmag logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>)}
 
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
