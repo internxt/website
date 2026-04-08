@@ -35,49 +35,6 @@
       }
     ]
   },
-  "tableSection": {
-    "title": "¿Qué recompensas recibe tu amigo?",
-    "subtitle": "Tu enlace de referido les da un 85% de descuento en todos los planes, dándoles acceso a almacenamiento seguro en la nube, VPN, Meet y más.",
-    "planTitles": {
-      "header": "Selecciona tu plan",
-      "individuals": "Planes anuales",
-      "homePage": "Elige el plan adecuado para ti",
-      "lifetime": "Planes de por vida",
-      "business": "Planes para empresas",
-      "lifetimeCampaign": {
-        "blueText": "50% de descuento",
-        "normalText": "en todos nuestros planes exclusivos de por vida"
-      }
-    },
-    "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre.",
-    "planDescription": "Todos los planes de Internxt cuentan con acceso completo a nuestra galardonada suite de privacidad que consta de Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
-    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu negocio, proteger a tus empleados y asegurar tu rentabilidad.",
-    "businessDescription2": "Garantiza la seguridad de los datos de tu empresa con los planes de almacenamiento encriptado en la nube de Internxt.",
-    "billingFrequency": {
-      "monthly": "Mensual",
-      "annually": "Anual",
-      "lifetime": "De por vida",
-      "individual": "Individual",
-      "business": "Empresas"
-    },
-    "freePlanCard": {
-      "eyeBrow": "Obtén nube encriptada gratis",
-      "description": "Obtén 1 GB de almacenamiento encriptado en la nube gratis",
-      "cta": "Seleccionar plan"
-    },
-    "features": {
-      "endToEnd": "Cifrado de extremo a extremo",
-      "openSource": "Código abierto y auditado",
-      "anonymousAccount": "Creación de cuenta anónima",
-      "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución del dinero de 30 días"
-    },
-    "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
-    }
-  },
   "FaqSection": {
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [
@@ -89,7 +46,9 @@
       },
       {
         "question": "¿Quién puede ser referidor?",
-        "answer": ["El programa está abierto a todas las personas que tengan un plan de pago de Internxt."]
+        "answer": [
+          "El programa está abierto a todas las personas que tengan un plan de pago de Internxt."
+        ]
       },
       {
         "question": "¿Quién puede conseguir un enlace de referido?",
@@ -99,7 +58,9 @@
       },
       {
         "question": "¿Cuánto puedo ganar?",
-        "answer": ["Puedes ganar hasta 100€ por referido, dependiendo del plan comprado con tu enlace."]
+        "answer": [
+          "Puedes ganar hasta 100€ por referido, dependiendo del plan comprado con tu enlace."
+        ]
       },
       {
         "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",

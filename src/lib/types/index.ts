@@ -247,6 +247,9 @@ export enum PromoCodeName {
   heise = 'HEISE',
   worldBackupDay = 'WORLDBACKUPDAY',
   gentiluomodigitale = 'GENTILUOMODIGITALE',
+  nomadz = 'NOMADZ85',
+  yrj = 'YRJ85',
+  moonrover = 'MOONROVER85',
 }
 
 export interface PromoCodeProps {
