@@ -1,0 +1,99 @@
+{
+    "HeroSection": {
+        "title": "**Empfehlen** Sie uns und **verdienen** Sie bis zu 100€",
+        "subtitle":"Laden Sie Ihre Freunde ein, Internxt Drive, VPN, Meet und mehr auszuprobieren. Wenn diese ein Abonnement erwerben, erhalten Sie beide Prämien.",
+        "features":["Erhalten Sie bis zu 100€ für jede Empfehlung","Ihr Freund erhält 85% Rabatt auf alle Tarife","Auszahlung direkt auf Ihr PayPal-Konto"],
+        "cta":"Einen Freund einladen"
+    },
+    "RewardsSection": {
+        "title": "Welche Belohnungen erhalten Sie?",
+        "subtitle":"Einen Freund empfehlen, bis zu 100€ erhalten",
+        "features":["Sie erhalten eine Provision für jeden Plan, der über Ihren einzigartigen Empfehlungslink gekauft wird. Je mehr Freunde Sie werben, desto mehr Geld verdienen Sie, mit der Chance auf bis zu 100€ pro Empfehlung und 1000€ insgesamt.","Alle, die Ihren Empfehlungslink nutzen, erhalten außerdem 85 % Rabatt auf jeden Internxt-Plan."]
+    },
+    "HowItWorks": {
+        "title": "Wie funktioniert das „Empfehlen und Verdienen“-Programm von Internxt?",
+        "subtitle":"Empfehlen Sie einen Freund in 3 einfachen Schritten und fangen Sie sofort an, Geld zu verdienen!",
+        "cards":[
+            {
+                "title":"Senden Sie Ihren Einladungslink",
+                "description":"Melden Sie sich bei Ihrem Internxt-Konto an und teilen Sie Ihren einzigartigen Empfehlungslink über die Internxt-Web-App."
+            },
+            {
+                "title":"Warten Sie auf den Kauf",
+                "description":"Teilen Sie Ihren Empfehlungslink mit einem Freund, und er erhält 85 % Rabatt auf jeden Internxt-Plan."
+            },
+            {
+                "title":"Holen Sie sich Ihre Belohnung!",
+                "description":"Sobald jemand einen Tarif über Ihren Empfehlungslink kauft, überweisen Sie Ihre Einnahmen direkt auf Ihr PayPal-Konto."
+            }
+        ]
+    },
+   "tableSection": {
+    "title": "Welche Belohnungen erhält Ihr Freund?",
+    "subtitle":"Ihr Empfehlungslink bietet 85 % Rabatt auf alle Tarife und gibt ihnen Zugang zu sicherem Cloud-Speicher, VPN, Meet und vielem mehr.",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Plan",
+      "individuals": "Jahrespläne",
+      "homePage": "Wählen Sie den richtigen Plan für Sie",
+      "lifetime": "Lebenslange Pläne",
+      "business": "Business-Pläne",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Pläne"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und Privatsphäre und Sicherheit für immer erhalten.",
+    "planDescription": "Alle Internxt-Pläne sind voll ausgestattet und bieten vollständigen Zugriff auf unsere preisgekrönte Privacy-Suite, bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die exklusiv darauf ausgelegt sind, Ihr Geschäft zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Sorgen Sie mit den verschlüsselten Cloud-Speicherplänen von Internxt für die Datensicherheit Ihres Unternehmens.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Auf Lebenszeit",
+      "individual": "Individuell",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Holen Sie sich eine kostenlose verschlüsselte Cloud",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wo finde ich meinen Empfehlungslink?",
+        "answer": ["Melden Sie sich in Ihrem Internxt-Konto an https://drive.internxt.com/login und klicken Sie in der Menüleiste auf 100€ verdienen."]
+      },
+      {
+        "question": "Wer ist berechtigt, jemanden zu empfehlen?",
+        "answer": ["Das Programm steht jedem offen, der einen kostenpflichtigen Internxt-Plan hat."]
+      },
+      {
+        "question": "Wer hat Anspruch auf einen Empfehlungslink?",
+        "answer": ["Jeder, der ein kostenloses Internxt-Konto hat, Anspruch auf 85 % Rabatt auf einen Jahres- oder Lifetime-Plan."]
+      },
+      {
+        "question": "Wie viel kann ich verdienen?",
+        "answer": ["Sie können bis zu 100€ pro Empfehlung verdienen, abhängig vom Plan, der mit Ihrem Link gekauft wurde."]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährungen bezahlen?",
+        "answer": ["Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch per PayPal, Krypto und Klarna bezahlen. Auf Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an hello@internxt.com."]
+      }
+    ]
+  }
+}

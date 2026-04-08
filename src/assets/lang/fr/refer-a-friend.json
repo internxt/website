@@ -1,0 +1,99 @@
+{
+    "HeroSection": {
+        "title": "**Parrainez** un ami et **gagnez** jusqu'à 100€",
+        "subtitle":"Invitez vos amis à essayer Internxt Drive, VPN, Meet, et plus encore. Lorsqu'ils achètent un plan, vous recevez tous les deux des récompenses.",
+        "features":["Recevez jusqu'à 100€ pour chaque parrainage","Votre ami bénéficie de 85% de réduction sur tous les plans","Soyez payé directement sur votre compte PayPal"],
+        "cta":"Inviter un ami"
+    },
+    "RewardsSection": {
+        "title": "Quelles sont les récompenses ?",
+        "subtitle":"Parrainez un ami, obtenez jusqu'à 100€",
+        "features":["Vous recevrez une commission pour chaque plan acheté via votre lien de parrainage unique. Plus vous parrainez d'amis, plus vous gagnez d'argent, avec une chance d'obtenir jusqu'à 100€ par parrainage et 1000€ au total.","Ceux qui utilisent votre lien de parrainage obtiendront également 85% de réduction sur n'importe quel plan Internxt."]
+    },
+    "HowItWorks": {
+        "title": "Comment fonctionne le programme \"Parrainez et Gagnez\" d'Internxt ?",
+        "subtitle":"Parrainez un ami en 3 étapes faciles et commencez à gagner de l'argent instantanément !",
+        "cards":[
+            {
+                "title":"Envoyez votre lien d'invitation",
+                "description":"Connectez-vous à votre compte Internxt et partagez votre lien de parrainage unique depuis l'application web Internxt."
+            },
+            {
+                "title":"Attendez l'achat",
+                "description":"Partagez votre lien de parrainage avec un ami et il bénéficiera de 85% de réduction sur n'importe quel plan Internxt."
+            },
+            {
+                "title":"Obtenez votre récompense !",
+                "description":"Dès que quelqu'un achète un plan via votre lien de parrainage, transférez vos gains directement sur votre compte PayPal."
+            }
+        ]
+    },
+   "tableSection": {
+    "title": "Quelles récompenses votre ami reçoit-il ?",
+    "subtitle":"Votre lien de parrainage lui offre 85% de réduction sur tous les plans, lui donnant accès au stockage cloud sécurisé, VPN, Meet, et plus.",
+    "planTitles": {
+      "header": "Sélectionnez votre plan",
+      "individuals": "Plans annuels",
+      "homePage": "Choisissez le plan qui vous convient",
+      "lifetime": "Plans à vie",
+      "business": "Plans professionnels",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur tous nos plans à vie exclusifs"
+      }
+    },
+    "lifetimeDescription": "Payez une fois et obtenez la confidentialité et la sécurité pour toujours.",
+    "planDescription": "Tous les plans Internxt sont dotés de toutes les fonctionnalités de notre suite primée de confidentialité, comprenant Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Garantissez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffré d'Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Entreprise"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Obtenez un cloud chiffré gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuit",
+      "cta": "Sélectionner le plan"
+    },
+    "features": {
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie satisfait ou remboursé de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Où puis-je trouver mon lien de parrainage ?",
+        "answer": ["Connectez-vous à votre compte Internxt https://drive.internxt.com/login et cliquez sur Gagnez 100€ dans la barre de menu."]
+      },
+      {
+        "question": "Qui peut parrainer quelqu'un ?",
+        "answer": ["Le programme est ouvert à toutes les personnes disposant d'un abonnement payant chez Internxt."]
+      },
+      {
+        "question": "Qui a droit à un lien de parrainage ?",
+        "answer": ["Toute personne possédant un compte Internxt gratuit a droit à 85% de réduction sur tout plan annuel ou à vie."]
+      },
+      {
+        "question": "Combien puis-je gagner ?",
+        "answer": ["Vous pouvez gagner jusqu'à 100€ par parrainage, selon le plan acheté avec votre lien."]
+      },
+      {
+        "question": "Puis-je payer avec une carte de crédit, PayPal ou des crypto-monnaies ?",
+        "answer": ["Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna. Sur demande, nous acceptons également les cryptomonnaies et le prélèvement SEPA. Si vous avez des questions sur les modes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com."]
+      }
+    ]
+  }
+}

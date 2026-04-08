@@ -1,0 +1,100 @@
+{
+    "HeroSection": {
+        "title": "**Refer** a friend and **earn** up to 100€",
+        "subtitle":"Invite your friends to try Internxt Drive, VPN, Meet, and more. When they buy a plan, you'll both receive rewards.",
+        "features":["Get paid up to €100 for each referral","Your friend gets 85% off all plans","Get paid directly into your PayPal account"],
+        "cta":"Invite a friend"
+    },
+    "RewardsSection": {
+        "title": "What rewards do you get?",
+        "subtitle":"Refer a friend, get up to €100",
+        "features":["You’ll receive a commission for every plan purchased through your unique referral link. The more friends you refer, the more money you’ll earn, with a chance to get up to €100 for each referral and €1000 total.","Those who use your referral link will also get 85% off any Internxt plan."]
+    },
+    "HowItWorks": {
+        "title": "How does Internxt’s “Refer and Earn” program work?",
+        "subtitle":"Refer a friend in 3 easy steps and start earning money instantly!",
+        "cards":[
+            {
+                "title":"Send your invite link",
+                "description":"Log in to your Internxt account and share your unique referral link from the Internxt web app. "
+            },
+            {
+                "title":"Wait for the purchase",
+                "description":"Share your referral link with a friend, and they get 85% off any Internxt plan."
+            },
+            {
+                "title":"Get your reward!",
+                "description":"Once someone purchases a plan through your referral link,  transfer your earnings directly to your PayPal account. "
+            }
+        ]
+    },
+   "tableSection": {
+    "title": "What rewards does your friend get?",
+    "subtitle":"Your referral link gives 85% off all plans, giving them access to secure cloud storage, VPN, Meet, and More.",
+    "planTitles": {
+      "header": "Select your Plan",
+      "individuals": "Annual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "50% off",
+        "normalText": "on all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Pay once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
+    "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
+    "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "lifetime": "Lifetime",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Get Free Encrypted Cloud",
+      "description": "Get 1 GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encryption",
+      "openSource": "Open source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Where can I find my referral link?",
+        "answer": ["Sign in to your Internxt account  https://drive.internxt.com/login and click Earn €100 in the menu bar."]
+      },
+      {
+        "question": "Who is eligible to make a referral?",
+        "answer": ["The program is open to everyone who has a paid Internxt plan."]
+      },
+      {
+        "question": "Who is eligible to get a referral link?",
+        "answer": ["Anyone who has a free Internxt account is eligible to get 85% off any annual or lifetime plan."]
+      },
+      {
+        "question": "How much can I earn?",
+        "answer": ["You can earn up to €100 per referral, depending on the plan bought with your link."]
+      },
+      {
+        "question": "Can I pay with a credit card, PayPal, or cryptocurrency?",
+        "answer": ["Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, Crypto, and Klarna. Upon request, we also accept cryptocurrencies and SEPA Debit. If you have questions about payment methods, simply email us at hello@internxt.com."]
+      }
+
+    ]
+  }
+}
