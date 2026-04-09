@@ -97,6 +97,11 @@ const LANG_MAP = {
   macho: 'en',
   gentiluomodigitale: 'it',
   spencer: 'en',
+  nate: 'es',
+  shortcircuit: 'en',
+  techlinked: 'en',
+  techquickie: 'en',
+  'last-chance': 'en',
 };
 
 function CombinedSpecialOffer({
@@ -117,7 +122,7 @@ function CombinedSpecialOffer({
     ultimateAndPremiumPlans,
     annualPlans,
     lifetimePlans,
-    isClubic
+    isClubic,
   } = useOfferConfig(pathname);
 
   const {
@@ -266,10 +271,9 @@ function CombinedSpecialOffer({
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgGradientContainerColor={themeClasses.bgGradientContainer}
           bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-         
         />
       )}
-      
+
       <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
@@ -281,7 +285,7 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
-  const lang = pathname === 'world-backup-day' && ctx.locale ? ctx.locale : (LANG_MAP[pathname] || 'es');
+  const lang = pathname === 'world-backup-day' && ctx.locale ? ctx.locale : LANG_MAP[pathname] || 'es';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
