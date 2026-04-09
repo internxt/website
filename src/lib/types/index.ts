@@ -251,6 +251,11 @@ export enum PromoCodeName {
   yrj = 'YRJ85',
   moonrover = 'MOONROVER85',
   spencer = 'SPENCER',
+  nate = 'NATE',
+  shortcircuit = 'SHORTCIRCUIT',
+  techlinked = 'TECHLINKED',
+  techquickie = 'TECHQUICKIE',
+  lastChance = 'lastchance-nb',
 }
 
 export interface PromoCodeProps {

@@ -50,10 +50,15 @@ export const ALLOWED_PATHS = [
   'heise',
   'world-backup-day',
   'gentiluomodigitale',
-  'spencer'
+  'spencer',
+  'nate',
+  'shortcircuit',
+  'techlinked',
+  'techquickie',
+  'last-chance',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>([ 'oscar', 'rimembah', 'believemy', 'ghareeb']);
+export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
 export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -109,6 +114,11 @@ export const COUPON_CODES = {
   'world-backup-day': PromoCodeName.worldBackupDay,
   gentiluomodigitale: PromoCodeName.gentiluomodigitale,
   spencer: PromoCodeName.spencer,
+  nate: PromoCodeName.nate,
+  shortcircuit: PromoCodeName.shortcircuit,
+  techlinked: PromoCodeName.techlinked,
+  techquickie: PromoCodeName.techquickie,
+  'last-chance': PromoCodeName.lastChance,
 };
 
 interface OfferConfig {
