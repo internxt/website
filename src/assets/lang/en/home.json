@@ -106,44 +106,65 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Can Internxt access my files?",
+        "question": "What is encrypted cloud storage?",
         "answer": [
-          "No. Internxt, along with any other third party, cannot access your files, photos, or data.",
-          "Internxt services feature zero-knowledge encryption, meaning only you can access and decrypt your private data and information. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available to protect your information from any threat. "
+          "Encrypted cloud storage is an online file storage method that mathematically transforms your data into an unreadable format (called ciphertext) before it is transmitted or saved to a server, so only someone with the correct key can read the original content.",
+          "Most mainstream platforms apply encryption at the server level, meaning the provider manages the keys and can technically access your files. Encrypted cloud storage providers like Internxt take a different approach: files are encrypted on your device before upload, and the encryption keys never leave your control. Even the storage provider cannot read what you have stored.",
+          "Internxt uses AES-256 for files at rest and TLS 1.3 for files in transit, two of the most rigorously vetted standards in modern cryptography. These implementations were independently reviewed and confirmed in a 2024 security audit by Securitum, one of Europe's leading cybersecurity firms."
         ]
       },
       {
-        "question": "Does Internxt store my password?",
+        "question": "What is end-to-end encrypted cloud storage and how does it work?",
         "answer": [
-          "No. As such, Internxt cannot store your password.",
-          "Your Internxt password is unique to you and is used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          "End-to-end encrypted cloud storage means your file is encrypted at one end, your device, and can only be decrypted at the other end, by you or someone you have explicitly shared access with. Nothing in between — not the network, not the server, not the provider — can read the file contents.",
+          "The process: when you upload a file, your device generates encryption keys locally and uses them to transform the file before it leaves your machine. The ciphertext travels to the cloud server, where it is stored but remains completely opaque. When you download, the file is retrieved and decrypted locally using your keys.",
+          "This is meaningfully different from standard cloud storage with encryption. In a standard model, the provider encrypts data in transit and at rest, but holds the encryption keys themselves. End-to-end encryption (E2EE) removes the provider from the equation entirely: they store data they cannot read.",
+          "All files stored on the platform are end-to-end encrypted. This architecture was verified in the 2024 Securitum audit and underpins Internxt's ISO 27001:2022 certification and HIPAA compliance."
         ]
       },
       {
-        "question": "Can I enable two-factor authentication (2FA)?",
+        "question": "What is the difference between cloud storage encryption and end-to-end encryption?",
         "answer": [
-          "Yes. You can set up two-factor authentication for your account through the Internxt web app.",
-          "You can also use Authy or other 2FA tools to generate a personal 2FA code with Internxt."
+          "Cloud storage encryption is a broad term: at minimum, it means data is protected in transit (using TLS) and at rest (using AES-256 or similar). This is the baseline standard — virtually every major cloud platform offers it. End-to-end encryption is a specific, stronger form where the provider never has access to the keys used to protect your files.",
+          "The critical difference is who controls the keys. Standard cloud storage encryption: the provider encrypts your data but holds the keys — they can access your files, and governments can compel them to produce them. End-to-end encrypted cloud storage: keys are generated and stored on your device. The provider stores ciphertext it cannot decode. Third-party access is technically impossible, not merely prohibited by policy.",
+          "For most personal use, standard encryption is adequate. For healthcare records, legal documents, financial data, or any information where third-party access would be unacceptable, end-to-end encryption is the appropriate standard."
         ]
       },
       {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "question": "What is cloud storage with zero-knowledge encryption?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, Crypto and Klarna.",
-          "Upon request, we also accept cryptocurrencies and SEPA Debit. If you have questions about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+          "Cloud storage with zero-knowledge encryption is a privacy architecture in which the storage provider has zero knowledge of your file contents, zero access to your encryption keys, and zero ability to hand your data to a third party — even under legal pressure — because they genuinely cannot read it.",
+          "In a zero-knowledge system, key generation, encryption, and decryption all happen locally on the user's device. The provider's servers receive and store data that is, from their perspective, meaningless. There is no master key, no backdoor, and no administrator override.",
+          "Internxt Drive is built on a zero-knowledge architecture. This means that if you forget your password, Internxt cannot recover your files on your behalf, because the platform never held access to begin with. This is the strongest privacy guarantee available in cloud file storage, and it distinguishes Internxt from providers that call themselves private but still hold your keys."
         ]
       },
       {
-        "question": "What is Internxt's refund policy?",
+        "question": "Why should I use cloud storage with encryption?",
         "answer": [
-          "All paid subscriptions include a 30-day money-back guarantee starting from the date of purchase.",
-          "If for any reason you are not fully satisfied within those first 30 days, just reach out to [hello@internxt.com](mailto:hello@internxt.com) and we will process your refund."
+          "Cloud storage with encryption protects your files from three main categories of risk: data breaches, provider-side access, and legal exposure — and each protection operates at a different layer.",
+          "Data breaches: if a cloud provider's servers are compromised and your files are stored unprotected or protected only by provider-held keys, attackers may be able to read your data. With client-side cloud storage encryption, a breach of the server yields nothing useful — attackers would only obtain ciphertext they cannot decode.",
+          "Provider access: major cloud platforms reserve the right to scan file contents for policy enforcement, advertising, or legal compliance. When you use cloud storage that encrypts files on your device before upload, the provider has nothing to scan.",
+          "Legal and regulatory exposure: businesses handling healthcare data (HIPAA), personal data of EU residents (GDPR), or sensitive client information often have legal obligations around how that data is stored and who can access it. Cloud storage with encryption built on a zero-knowledge architecture gives a defensible, auditable answer to those requirements.",
+          "Internxt Drive addresses all three with AES-256 and TLS 1.3, a zero-knowledge architecture, European data centres under GDPR, ISO 27001:2022 certification, and HIPAA compliance — each verified by Securitum's independent audit in 2024."
         ]
       },
       {
-        "question": "How can I contact support?",
+        "question": "What are the best encrypted cloud storage providers?",
         "answer": [
-          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing [hello@internxt.com](mailto:hello@internxt.com)."
+          "The best encrypted cloud storage providers are those that perform encryption on the client side (your device), never hold your encryption keys, and have had their privacy architecture independently verified by a third-party cybersecurity firm — not just self-declared.",
+          "When evaluating encrypted cloud storage services, compare: where encryption happens (client-side vs. server-side), whether the provider has access to your keys, what certifications have been independently verified, and whether the codebase is open-source for third-party review.",
+          "Leading options include Internxt (zero-knowledge, client-side E2EE, post-quantum Kyber-512 + AES-256, ISO 27001:2022, HIPAA, Securitum 2024 audit), Tresorit (zero-knowledge, ISO 27001), ProtonDrive (zero-knowledge, Swiss privacy law), and Sync.com (zero-knowledge, HIPAA-capable).",
+          "The primary differentiator of the best end-to-end encrypted cloud storage options compared to Google Drive, Dropbox, or OneDrive is key ownership: the providers listed above never hold your encryption keys. Internxt alone adds a post-quantum cryptography layer (Kyber-512) on top of AES-256, protecting your files against future quantum computing threats."
+        ]
+      },
+      {
+        "question": "What are the best encrypted cloud storage solutions for businesses and professionals?",
+        "answer": [
+          "The best encrypted cloud storage solutions for business and professional use must satisfy three requirements beyond personal privacy: compliance certification, audit trails, and administrative control — in addition to the underlying zero-knowledge architecture.",
+          "For healthcare (HIPAA): Internxt offers a HIPAA-compliant plan with a Business Associate Agreement (BAA). Files are handled under zero-knowledge architecture, meaning Internxt cannot access patient data even if legally compelled. This satisfies the technical safeguard requirements under 45 CFR §164.312.",
+          "For legal professionals: zero-knowledge file storage protects attorney-client privilege at the technical level, so it cannot be circumvented by the provider. Its open-source codebase lets legal IT teams independently verify the privacy architecture before deployment.",
+          "For enterprises and teams: Internxt's business plans include team management, role-based access controls, and an ISO 27001:2022-certified infrastructure — the internationally recognised standard for information security management.",
+          "Services that pair zero-knowledge architecture with verifiable compliance certifications and an independent security audit represent the strongest option for organisations with legal, regulatory, or contractual data protection requirements."
         ]
       }
     ]
