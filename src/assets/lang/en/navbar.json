@@ -10,7 +10,8 @@
     "getStarted": "Get Internxt",
     "chooseStorage": "Get Internxt",
     "checkout": "Claim now!",
-    "business": "Business"
+    "business": "Business",
+    "solutions": "Solutions"
   },
   "products": {
     "drive": "Internxt Drive",
@@ -25,11 +26,21 @@
     "meet": "Internxt Meet",
     "ai": "Internxt AI"
   },
+  "solutions": {
+    "secureCloudStorage": "Secure Cloud Storage",
+    "lifetimeCloudStorage": "Lifetime Cloud Storage",
+    "privateCloudStorage": "Private Cloud Storage",
+    "cloudStorageForPhotos": "Cloud Storage for Photos",
+    "cloudStorageForVideos": "Cloud Storage for Videos",
+    "cloudStorageForBackup": "Cloud Storage Backups",
+    "cloudNASBackup": "Cloud NAS Backup"
+  },
   "ourValues": {
     "privacy": "Privacy",
     "openSource": "Open Source",
     "sustainability": "Sustainability",
-    "certifications": "Certifications"
+    "certifications": "Certifications",
+    "about": "About Us"
   },
   "Auth": {
     "SignUp": {

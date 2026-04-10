@@ -10,7 +10,8 @@
     "getStarted": "Starte jetzt",
     "chooseStorage": "Wählen",
     "checkout": "Jetzt anfordern!",
-    "business": "Geschäftskunden"
+    "business": "Geschäftskunden",
+    "solutions": "Lösungen"
   },
   "products": {
     "drive": "Internxt Drive",
@@ -25,11 +26,21 @@
     "meet": "Internxt Meet",
     "ai": "Internxt AI"
   },
+  "solutions": {
+    "secureCloudStorage": "Sichere Cloud-Speicherung",
+    "lifetimeCloudStorage": "Lebenslange Cloud-Speicherung",
+    "privateCloudStorage": "Private Cloud-Speicherung",
+    "cloudStorageForPhotos": "Cloud-Speicherung für Fotos",
+    "cloudStorageForVideos": "Cloud-Speicherung für Videos",
+    "cloudStorageForBackup": "Cloud-Speicherung für Backups",
+    "cloudNASBackup": "Cloud-Speicherung für NAS"
+  },
   "ourValues": {
     "privacy": "Privatsphäre",
     "openSource": "Open Source",
     "sustainability": "Nachhaltigkeit",
-    "certifications": "Zertifizierungen"
+    "certifications": "Zertifizierungen",
+    "about": "Über uns"
   },
   "Auth": {
     "SignUp": {

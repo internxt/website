@@ -9,13 +9,24 @@
     "getStarted": "Registro",
     "chooseStorage": "Elige tu plan",
     "checkout": "¡Reclamar oferta!",
-    "business": "Empresas"
+    "business": "Empresas",
+    "solutions": "Soluciones"
   },
   "ourValues": {
     "privacy": "Privacidad",
     "openSource": "Código abierto",
     "sustainability": "Sostenibilidad",
-    "certifications": "Certificationes"
+    "certifications": "Certificationes",
+    "about": "Nosotros"
+  },
+  "solutions": {
+    "secureCloudStorage": "Almacenamiento en la nube seguro",
+    "lifetimeCloudStorage": "Almacenamiento en la nube de por vida",
+    "privateCloudStorage": "Almacenamiento en la nube privado",
+    "cloudStorageForPhotos": "Almacenamiento en la nube para fotos",
+    "cloudStorageForVideos": "Almacenamiento en la nube para videos",
+    "cloudStorageForBackup": "Almacenamiento en la nube para copias de seguridad",
+    "cloudNASBackup": "Almacenamiento en la nube para NAS"
   },
   "products": {
     "drive": "Internxt Drive",

@@ -68,7 +68,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
         size={20}
         className="translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30"
       />
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-max -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
         <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
           {items.map(({ href, text }) => (
@@ -125,6 +125,21 @@ export const ItemsNavigation = ({
           lang={lang}
         />
 
+        <DropdownMenu
+          label={textContent.links.solutions}
+          items={[
+            { href: '/secure-cloud-storage', text: textContent.solutions.secureCloudStorage },
+            { href: '/lifetime-cloud-storage', text: textContent.solutions.lifetimeCloudStorage },
+            { href: '/private-cloud-storage', text: textContent.solutions.privateCloudStorage },
+            { href: '/cloud-storage-for-photos', text: textContent.solutions.cloudStorageForPhotos },
+            { href: '/cloud-storage-for-videos', text: textContent.solutions.cloudStorageForVideos },
+            { href: '/cloud-storage-for-backup', text: textContent.solutions.cloudStorageForBackup },
+            { href: '/cloud-nas-backup', text: textContent.solutions.cloudNASBackup },
+          ]}
+          darkMode={darkMode}
+          lang={lang}
+        />
+
         <NavigationLink
           href="/cloud-object-storage"
           text={textContent.products.s3}
@@ -140,15 +155,9 @@ export const ItemsNavigation = ({
             { href: '/open-source', text: textContent.ourValues.openSource },
             { href: '/green-cloud-computing', text: textContent.ourValues.sustainability },
             { href: '/cloud-data-centers', text: textContent.ourValues.certifications },
+            { href: '/about', text: textContent.ourValues.about },
           ]}
           darkMode={darkMode}
-          lang={lang}
-        />
-        <NavigationLink
-          href="/about"
-          text={textContent.links.about}
-          isActive={currentPath === getTitles.links.about.split(' ')[0].toLowerCase()}
-          isDarkMode={darkMode}
           lang={lang}
         />
       </div>

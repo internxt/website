@@ -281,12 +281,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   <p>{props.textContent.products.drive}</p>
                                 </Link>
 
-                                <Link href="/vpn" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.vpn}</p>
-                                </Link>
-
                                 <Link href="/antivirus" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.products.antivirus}</p>
+                                </Link>
+
+                                <Link href="/vpn" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.vpn}</p>
                                 </Link>
 
                                 <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
@@ -314,6 +314,61 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           </>
                         )}
                       </Disclosure>
+
+                      <Disclosure
+                        as="div"
+                        className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
+                              <span className="flex flex-row">{props.textContent.links.solutions}</span>
+                              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                            </Disclosure.Button>
+                            <Transition
+                              enter="transition duration-200 ease-out"
+                              enterFrom="-translate-y-10 opacity-0"
+                              enterTo="translate-y-0 opacity-100"
+                              leave="transition duration-200 ease-out"
+                            >
+                              <Disclosure.Panel
+                                className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
+                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
+                                } space-y-8 p-4`}
+                              >
+                                <Link href="/secure-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.secureCloudStorage}</p>
+                                </Link>
+
+                                <Link href="/lifetime-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.lifetimeCloudStorage}</p>
+                                </Link>
+
+                                <Link href="/private-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.privateCloudStorage}</p>
+                                </Link>
+
+                                <Link href="/cloud-storage-for-photos" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.cloudStorageForPhotos}</p>
+                                </Link>
+                                <Link href="/cloud-storage-for-videos" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.cloudStorageForVideos}</p>
+                                </Link>
+                                <Link href="/cloud-storage-for-backup" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.cloudStorageForBackup}</p>
+                                </Link>
+                                <Link href="/cloud-nas-backup" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.solutions.cloudNASBackup}</p>
+                                </Link>
+                              </Disclosure.Panel>
+                            </Transition>
+                          </>
+                        )}
+                      </Disclosure>
+
                       <Link
                         href="/cloud-object-storage"
                         locale={props.lang}
@@ -373,26 +428,15 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 >
                                   <p>{props.textContent.ourValues.certifications}</p>
                                 </Link>
+                                <Link href="/about" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.ourValues.about}</p>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>
                         )}
                       </Disclosure>
 
-                      <Link
-                        href="/about"
-                        locale={props.lang}
-                        role="link"
-                        tabIndex={0}
-                        onClick={() => {
-                          setMenuState(false);
-                        }}
-                        className={`flex w-full translate-y-0 cursor-pointer px-8 py-4 outline-none transition delay-250 duration-300 ${
-                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}
-                      >
-                        {props.textContent.links.about}
-                      </Link>
 
                       {props.lang === 'en' && router.pathname === '/temporary-email' ? (
                         <button

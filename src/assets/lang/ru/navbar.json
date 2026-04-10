@@ -9,12 +9,24 @@
     "chooseStorage": "Xранилище",
     "checkout": "Оформить заказ сейчас!",
     "business": "Для бизнеса",
-    "blackFriday": "Black Friday"
+    "blackFriday": "Black Friday",
+    "solutions": "Решения"
   },
   "ourValues": {
     "openSource": "открытого исходного кода",
     "privacy": "Конфиденциальность",
-    "sustainability": "Устойчивость"
+    "sustainability": "Устойчивость",
+    "certifications": "Сертификаты",
+    "about": "О нас"
+  },
+  "solutions": {
+    "secureCloudStorage": "Безопасное облачное хранилище",
+    "lifetimeCloudStorage": "Пожизненное облачное хранилище",
+    "privateCloudStorage": "Частное облачное хранилище",
+    "cloudStorageForPhotos": "Облачное хранилище для фотографий",
+    "cloudStorageForVideos": "Облачное хранилище для видео",
+    "cloudStorageForBackup": "Облачное хранилище для резервных копий",
+    "cloudNASBackup": "Облачное хранилище для NAS"
   },
   "products": {
     "drive": "Internxt Drive",

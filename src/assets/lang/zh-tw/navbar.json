@@ -10,7 +10,8 @@
     "chooseStorage": "選擇存儲",
     "checkout": "立即領取！",
     "business": "商業",
-    "blackFriday": "Black Friday"
+    "blackFriday": "Black Friday",
+    "solutions": "解決方案"
   },
   "products": {
     "drive": "Internxt Drive",
@@ -29,7 +30,17 @@
     "privacy": "隱私",
     "openSource": "開源",
     "sustainability": "可持續性",
-    "certifications": "認證"
+    "certifications": "認證",
+    "about": "關於我們"
+  },
+  "solutions": {
+    "secureCloudStorage": "安全雲存儲",
+    "lifetimeCloudStorage": "終身雲存儲",
+    "privateCloudStorage": "私有雲存儲",
+    "cloudStorageForPhotos": "雲存儲照片",
+    "cloudStorageForVideos": "雲存儲視頻",
+    "cloudStorageForBackup": "雲存儲備份",
+    "cloudNASBackup": "雲存儲NAS"
   },
   "Auth": {
     "SignUp": {
