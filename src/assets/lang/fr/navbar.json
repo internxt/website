@@ -9,13 +9,24 @@
     "getStarted": "Commencer",
     "chooseStorage": "Choisir stockage",
     "checkout": "Offre de réclamation",
-    "business": "Entreprises"
+    "business": "Entreprises",
+    "solutions": "Solutions"
   },
   "ourValues": {
     "openSource": "Open Source",
     "privacy": "Confidentialité",
     "sustainability": "Durabilité",
-    "certifications": "Certifications"
+    "certifications": "Certifications",
+    "about": "À propos de nous"
+  },
+  "solutions": {
+    "secureCloudStorage": "Stockage en nuage sécurisé",
+    "lifetimeCloudStorage": "Stockage en nuage à vie",
+    "privateCloudStorage": "Stockage en nuage privé",
+    "cloudStorageForPhotos": "Stockage en nuage pour photos",
+    "cloudStorageForVideos": "Stockage en nuage pour vidéos",
+    "cloudStorageForBackup": "Stockage en nuage pour sauvegardes",
+    "cloudNASBackup": "Stockage en nuage pour NAS"
   },
   "products": {
     "drive": "Internxt Drive",

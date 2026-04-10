@@ -9,12 +9,24 @@
     "blackFriday": "Black Friday",
     "chooseStorage": "Scegli lo storage",
     "checkout": "Claim now!",
-    "business": "Aziende"
+    "business": "Aziende",
+    "solutions": "Soluzioni"
   },
   "ourValues": {
     "privacy": "Privacy",
     "openSource": "Open Source",
-    "sustainability": "Sostenibilità"
+    "sustainability": "Sostenibilità",
+    "certifications": "Certificazioni",
+    "about": "Chi siamo"
+  },
+  "solutions": {
+    "secureCloudStorage": "Archiviazione cloud sicura",
+    "lifetimeCloudStorage": "Archiviazione cloud a vita",
+    "privateCloudStorage": "Archiviazione cloud privata",
+    "cloudStorageForPhotos": "Archiviazione cloud per foto",
+    "cloudStorageForVideos": "Archiviazione cloud per video",
+    "cloudStorageForBackup": "Archiviazione cloud per backup",
+    "cloudNASBackup": "Archiviazione cloud per NAS"
   },
   "products": {
     "drive": "Internxt Drive",

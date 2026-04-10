@@ -79,29 +79,51 @@
     "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "Wie richte ich mein NAS-System mit Internxt ein?",
+        "question": "Wo hat Internxt seinen Sitz?",
         "answer": [
-          "Zuerst müssen Sie die Docker-App installieren und sie dann mit Internxt verbinden. Nach der Einrichtung können Sie Ihre Dateien sicher auf NAS-Geräten, Servern oder in jeder Umgebung verwalten und synchronisieren, in der Docker unterstützt wird."
+          "Internxt hat seinen Sitz in Valencia, Spanien. Internxt verfügt über zahlreiche europäische Cloud-Rechenzentren, um Ihre Daten gemäß der DSGVO und anderen Compliance-Vorschriften zu speichern."
         ]
       },
       {
-        "question": "Benötige ich Docker, um Internxt auf meinem NAS auszuführen?",
+        "question": "Wo befinden sich die Cloud-Rechenzentren von Internxt?",
         "answer": [
-          "Ja, Internxt läuft über Docker, was die Einrichtung einfach macht und die Kompatibilität mit beliebten NAS-Geräten wie QNAP oder Synology gewährleistet."
+          "Internxt setzt eine Multi-Cloud-Netzwerkstrategie ein, die sicherstellt, dass Dateien über mehrere europäische Cloud-Rechenzentren gespeichert werden, um Ihnen die beste Leistung, Sicherheit und den Schutz Ihrer Dateien zu garantieren."
         ]
       },
       {
-        "question": "Welcher Plan beinhaltet NAS-Unterstützung?",
+        "question": "Wie funktionieren die Rechenzentren von Internxt?",
         "answer": [
-          "Die NAS-Unterstützung ist im Ultimate-Plan enthalten, der als lebenslange oder jährliche Abonnement verfügbar ist. Wenn Sie bereits einen Internxt-Plan haben, können Sie Ihren aktuellen lebenslangen Plan upgraden, um mehr Speicherplatz zu erhalten, Zugang zur NAS-Unterstützung zu bekommen und alle anderen Funktionen eines Ultimate-Plans zu genießen."
+          "Internxt arbeitet mit OVHcloud zusammen, die über europäische Cloud-Rechenzentren und mehrere Standorte weltweit verfügen, um Ihre Cloud-Daten zu speichern.",
+          "Diese Rechenzentrumsinfrastrukturen beherbergen Tausende von Servern, um Verfügbarkeit, Leistung und Redundanz zu gewährleisten und einen schnellen und sicheren Zugriff auf Dateien zu ermöglichen, während Ihre Dateien geschützt bleiben."
+        ]
+      },
+      {
+        "question": "Was ist eine Verfügbarkeitszone?",
+        "answer": [
+          "Verfügbarkeitszonen sind eine Gruppe von einem oder mehreren Rechenzentren in einer Region. Jede Verfügbarkeitszone arbeitet unabhängig und verfügt über eine eigene Stromversorgung, Kühlung und ein eigenes Netzwerk, um Stromausfälle oder andere Ereignisse wie Infrastrukturausfälle zu verhindern.",
+          "Zonen innerhalb einer Region sind miteinander verknüpft, um eine höhere Verfügbarkeit und Verbindungen mit geringer Latenz zu bieten, sodass Anwendungen auch dann online bleiben können, wenn eine Zone ausfällt."
+        ]
+      },
+      {
+        "question": "Kann Internxt auf meine Dateien zugreifen?",
+        "answer": [
+          "Nein, niemand, auch nicht Internxt, kann auf Ihre Dateien zugreifen. Alle Ihre Dateien und Daten werden auf Ihrem Gerät mit Post-Quanten-Verschlüsselung verschlüsselt. Da die Schlüssel auf Ihrem Gerät gespeichert und verwaltet werden und nicht von uns oder unseren Dienstanbietern, können nur Sie oder Personen, mit denen Sie Dateien teilen möchten, diese entschlüsseln.",
+          "Alle in unseren Rechenzentren gespeicherten Dateien sind verschlüsselt, sodass weder Mitarbeiter noch Hacker deren Inhalt einsehen können."
         ]
       },
       {
         "question": "Wie kontaktiere ich den Support?",
         "answer": [
-          "Sie können unser Kundensupport-Team über den Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
+          "Sie finden nicht, was Sie suchen? Sie können unser technisches Support-Team über den Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
         ]
       }
     ]
+  },
+  "Breadcrumbs": {
+    "home": "Verschlüsselter Cloud-Speicher",
+    "drive": "Sicherer Cloud-Speicher",
+    "nas": "NAS-Cloud-Backup",
+    "qnap": "QNAP-Cloud-Backup",
+    "synology": "Synology NAS-Cloud-Backup"
   }
 }

@@ -7,7 +7,7 @@
   {
     "id": "drive",
     "title": "Internxt Drive – Almacenamiento privado y seguro en la nube",
-    "description": "Almacena, comparte y haz copias de seguridad de tus archivos y fotos en la nube con Internxt Drive. Almacenamiento de archivos cifrado de extremo a extremo y copia de seguridad en línea de código abierto."
+    "description": "Internxt Drive ofrece la solución definitiva de almacenamiento seguro en la nube. Almacena, comparte y realiza copias de seguridad de tus archivos y fotos con nuestra plataforma de código abierto y cifrado de extremo a extremo para una privacidad garantizada."
   },
   {
     "id": "free-cloud-storage",
@@ -266,8 +266,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt – Pásate a un internet más Ético y Seguro",
-    "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
+    "title": "Almacenamiento de Objetos en la Nube Seguro (Compatible con S3) — Internxt S3",
+    "description": "Internxt S3 ofrece almacenamiento de objetos en la nube seguro, privado y asequible. Escala tus necesidades de almacenamiento con nuestra solución compatible con S3."
   },
   {
     "id": "free-cloud-object-storage",
@@ -491,8 +491,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – NAS QNAP y Synology",
-    "description": "Haz copias de seguridad de tus dispositivos NAS QNAP y Synology en la nube con Internxt."
+    "title": "Mejor copia de seguridad en la nube para NAS (QNAP y Synology) — Internxt",
+    "description": "Realiza copias de seguridad de tus dispositivos NAS QNAP y Synology de forma segura en la nube con el cifrado post-cuántico de Internxt. El backup para NAS más seguro."
   },
   {
     "id": "coupons",
@@ -645,5 +645,15 @@
     "description": "Internxt es socio oficial del Levante UD, proporcionando almacenamiento cifrado en la nube y copias de seguridad para proteger los valiosos datos del club.",
     "og:title": "Internxt — Partner oficial en la nube del Levante UD",
     "og:description": "Internxt es socio oficial del Levante UD, proporcionando almacenamiento cifrado en la nube y copias de seguridad para proteger los valiosos datos del club."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Copia de seguridad en la nube para Synology NAS — Almacenamiento NAS Seguro | Internxt",
+    "description": "Realiza copias de seguridad de tu Synology NAS en la nube con Internxt. Almacenamiento en la nube seguro, cifrado y privado para tu dispositivo Synology."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "Copia de seguridad en la nube para QNAP NAS — Almacenamiento NAS Seguro | Internxt",
+    "description": "Realiza copias de seguridad de tu QNAP NAS en la nube con Internxt. Almacenamiento en la nube seguro, cifrado y privado para tu dispositivo QNAP."
   }
 ]

@@ -62,7 +62,12 @@
     "perYear": "/par an",
     "storageAmount": "Quantité de stockage",
     "percentDownloadPerMonth": "Pourcentage de téléchargement par mois",
-    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+    "companies": [
+      "Internxt",
+      "Microsoft",
+      "Amazon",
+      "Google"
+    ]
   },
   "WhyChooseInternxtSection": {
     "title": "Pourquoi choisir le stockage d'objets Internxt ?",
@@ -149,11 +154,15 @@
       },
       {
         "question": "Comment contacter le support ?",
-        "answer": ["Via le chat en direct ou par email à hello@internxt.com."]
+        "answer": [
+          "Via le chat en direct ou par email à hello@internxt.com."
+        ]
       },
       {
         "question": "Comment annuler mon plan ?",
-        "answer": ["Contactez-nous à hello@internxt.com pour traiter l'annulation de votre abonnement."]
+        "answer": [
+          "Contactez-nous à hello@internxt.com pour traiter l'annulation de votre abonnement."
+        ]
       }
     ]
   },
@@ -188,13 +197,48 @@
     }
   },
   "CtaSection": {
-    "title": "Stockage cloud d'objets Internxt",
-    "description": "Découvrez une gestion des données, une vitesse et une efficacité supérieures",
+    "title": "Stockage d'objet cloud sécurisé",
+    "description": "Les solutions de stockage cloud d'Internxt allient sécurité et efficacité",
     "cta": "Commencer"
   },
   "CtaSectionV2": {
     "title": "Stockage d'objets dans le cloud d'Internxt",
     "description": "Les solutions de stockage cloud d'Internxt allient sécurité et efficacité",
     "cta": "Commencer"
+  },
+  "SemanticAccordion": {
+    "title": "En savoir plus sur le stockage d'objets cloud",
+    "items": [
+      {
+        "question": "Qu'est-ce que le stockage d'objets cloud ?",
+        "answer": [
+          "Le stockage d'objets cloud est une architecture de stockage de données évolutive qui gère les données sous forme d'objets, ce qui le rend idéal pour les données non structurées à grande échelle dans le cloud."
+        ]
+      },
+      {
+        "question": "Comment fonctionne un cloud de stockage d'objets ?",
+        "answer": [
+          "Un cloud de stockage d'objets stocke les données dans un espace d'adressage plat, en utilisant des identifiants uniques pour chaque objet, ce qui permet une évolutivité massive et une récupération facile sur des réseaux distribués."
+        ]
+      },
+      {
+        "question": "Quels sont les avantages du stockage d'objets basé sur le cloud ?",
+        "answer": [
+          "Le stockage d'objets basé sur le cloud offre une durabilité, une disponibilité et une rentabilité élevées, en particulier pour les applications Web, les sauvegardes et l'archivage de données."
+        ]
+      },
+      {
+        "question": "Internxt propose-t-il un stockage d'objets en cloud privé ?",
+        "answer": [
+          "Oui, Internxt propose un stockage d'objets en cloud privé avec un chiffrement côté serveur et une compatibilité S3, garantissant que vos données restent sécurisées et sous votre contrôle."
+        ]
+      },
+      {
+        "question": "Internxt est-il compatible avec le stockage d'objets cloud S3 ?",
+        "answer": [
+          "Internxt est entièrement compatible avec les protocoles de stockage d'objets cloud S3, ce qui vous permet d'utiliser vos outils et applications compatibles S3 existants de manière transparente."
+        ]
+      }
+    ]
   }
 }

@@ -78,7 +78,7 @@
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Privacy-first secure cloud file storage",
+    "title": "Secure cloud storage, built on privacy",
     "description": "Internxt Drive uses post-quantum and zero-knowledge encryption to encrypt your files and data at rest and in transit.",
     "scrollableSection": {
       "titles": [
@@ -294,6 +294,63 @@
           "SOC 2 Type II: a US-originated standard auditing security, availability, and confidentiality controls. Relevant for US enterprise procurement.",
           "Independent security audits: the most credible providers commission third-party cybersecurity firms to probe their systems and publish the results. Internxt’s 2024 independent audit was conducted by Securitum, one of Europe’s leading cybersecurity firms.",
           "Self-declared claims like ‘military-grade’ or ‘bank-level’ are not certifications and carry no verifiable weight. When evaluating cloud storage security, look for documented, third-party-verified credentials from recognised certifying bodies."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Secure Cloud File Storage: How Internxt Protects Your Data",
+    "faq": [
+      {
+        "question": "What is secure cloud file storage and what makes it different?",
+        "answer": [
+          "Secure cloud file storage is online file storage designed around data protection as its primary requirement, not an afterthought. The difference between standard cloud storage and a genuinely protected alternative comes down to two technical factors: where encryption happens and who controls the keys.",
+          "Standard cloud file storage encrypts data in transit and at rest, but the provider manages the encryption keys. This means the provider can access your files, comply with legal data requests, and potentially expose your data in the event of a breach or a compromised employee.",
+          "A cloud secure storage platform built on a zero-knowledge architecture operates differently. Encryption happens on your device. The provider receives ciphertext they cannot decode. Even under legal compulsion, the provider cannot hand over readable file contents because they genuinely do not have access to them.",
+          "Internxt Drive is purpose-built as cloud file storage on this model: zero-knowledge architecture, AES-256 and post-quantum Kyber-512 encryption, European data centres, ISO 27001:2022 certification, HIPAA compliance, and a 2024 third-party audit by Securitum."
+        ]
+      },
+      {
+        "question": "How does cloud storage security work at a technical level?",
+        "answer": [
+          "Cloud storage security is a stack of protective layers, each addressing a different threat surface. Understanding how they work together clarifies why some platforms offer stronger protection than others.",
+          "Encryption in transit: files are protected while traveling from your device to the server using TLS 1.3. This prevents man-in-the-middle attacks and network-level interception.",
+          "Encryption at rest: files are protected while stored on the server, typically using AES-256. This prevents unauthorised access if physical storage media is compromised.",
+          "Access controls: multi-factor authentication, role-based permissions, session management, and the ability to revoke access to shared files all form part of effective cloud storage security.",
+          "Privacy architecture: the most meaningful cloud storage security measure is whether the provider can access your data at all. Zero-knowledge platforms protect data from the provider itself — not just from outside attackers.",
+          "Certifications and audits: ISO 27001:2022, HIPAA compliance, GDPR adherence, and third-party penetration testing provide independently verified evidence that cloud storage security controls are working as described.",
+          "Internxt Drive covers all five layers: TLS 1.3, AES-256 plus post-quantum Kyber-512, granular access controls, zero-knowledge privacy architecture, and a full compliance and audit record confirmed by Securitum in 2024."
+        ]
+      },
+      {
+        "question": "What is cloud-based storage security and why does it matter for your files?",
+        "answer": [
+          "Cloud based storage security refers to the full set of technical and organisational measures that protect data stored on remote infrastructure — covering transmission, storage, access, and recovery.",
+          "It matters because the files most people store in the cloud are also the most sensitive: financial records, personal photos, legal documents, health information, and business data. The convenience of cloud access creates exposure if the underlying cloud based storage security model is weak.",
+          "The three things cloud based storage security must address: confidentiality (who can read your files), integrity (whether files can be tampered with in storage or transit), and availability (whether your files remain accessible when you need them).",
+          "A platform that claims strong cloud based storage security but holds your encryption keys only addresses the first requirement partially — because the provider itself represents a potential access point. A zero-knowledge architecture addresses confidentiality completely, because the provider is technically excluded from the equation.",
+          "Internxt Drive addresses all three: zero-knowledge encryption for confidentiality, cryptographic integrity checks, and redundant European data centres for availability — the full picture of cloud based storage security in a single platform."
+        ]
+      },
+      {
+        "question": "What is secure cloud-based storage and how do you evaluate it?",
+        "answer": [
+          "Secure cloud-based storage is remote file storage built so that data protection is a design requirement, not a feature layer added afterwards. The evaluation framework for any platform claiming to offer cloud storage security comes down to five verifiable questions.",
+          "First: where does encryption happen? Client-side (on your device, before upload) is stronger than server-side (at the provider’s infrastructure). Client-side encryption means the provider stores data it cannot read.",
+          "Second: who holds the encryption keys? In a zero-knowledge model, keys are generated and stored locally. The provider has no key custody. In a standard model, the provider holds keys and can access your files.",
+          "Third: what independent certifications exist? ISO 27001:2022 and HIPAA compliance are the most relevant for cloud storage — but only when verified by an external auditor, not self-declared.",
+          "Fourth: is the codebase open to review? Open-source code allows the security community to verify privacy claims independently. Closed-source platforms require trusting the provider’s word.",
+          "Fifth: has a third-party penetration test been completed and published? Internxt Drive answers all five: client-side encryption, zero-knowledge key management, ISO 27001:2022 and HIPAA compliance, a fully open-source codebase, and a 2024 Securitum audit."
+        ]
+      },
+      {
+        "question": "What is safe cloud storage and what does it offer beyond standard options?",
+        "answer": [
+          "Safe cloud storage goes beyond what most people think of as ‘cloud storage security’. It is not just about having a password on your account or using HTTPS. It means the underlying architecture prevents unauthorised access even from the platform that hosts your files.",
+          "Standard cloud platforms can be compelled to access your data by courts, pressured by regulators, or compromised in a breach — in all three scenarios, your files can be exposed if the provider holds your encryption keys. Safe cloud storage built on zero-knowledge architecture removes this vulnerability entirely.",
+          "What safe cloud storage offers in practice: your files are encrypted on your device before they reach any server; the storage provider holds only ciphertext; if the provider is breached, attackers obtain data they cannot read; if the provider receives a legal request, they cannot produce readable file contents.",
+          "For individuals, this means true digital ownership of your files. For businesses and professionals in regulated industries, it means a technically defensible data protection posture — not one that relies solely on a provider’s privacy policy.",
+          "Internxt Drive is designed from the ground up as safe cloud storage: zero-knowledge, end-to-end encrypted, open-source, and independently audited. It is the cloud secure storage option for users who need protection they can verify, not just trust."
         ]
       }
     ]

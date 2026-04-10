@@ -60,7 +60,7 @@ export default function FaqAccordion({
           textColor ? textColor : 'text-gray-60'
         } transition-all ease-in-out`}
       >
-        {answer.map((text) => {
+        {(Array.isArray(answer) ? answer : [answer]).map((text) => {
           return (
             <ReactMarkdown key={text}>
               {formatText(text, { percentage: percentageDiscount?.toString() ?? '70' })}

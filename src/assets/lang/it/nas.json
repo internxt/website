@@ -84,29 +84,51 @@
     "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Come configuro il mio sistema NAS con Internxt?",
+        "question": "Dove ha sede Internxt?",
         "answer": [
-          "Prima devi installare l'app Docker, quindi collegarla a Internxt. Una volta configurato, puoi gestire e sincronizzare i tuoi file in modo sicuro su dispositivi NAS, server o qualsiasi ambiente in cui Docker è supportato."
+          "Internxt ha sede a Valencia, in Spagna. Internxt dispone di numerosi data center cloud europei per archiviare i tuoi dati in linea con il GDPR e altre normative di conformità."
         ]
       },
       {
-        "question": "Ho bisogno di Docker per eseguire Internxt sul mio NAS?",
+        "question": "Dove si trovano i data center cloud di Internxt?",
         "answer": [
-          "Sì, Internxt funziona tramite Docker, il che rende la configurazione semplice e garantisce la compatibilità su dispositivi NAS popolari come QNAP o Synology."
+          "Internxt utilizza una strategia di rete multi-cloud, garantendo che i file siano archiviati in più data center cloud europei per assicurarti le migliori prestazioni, sicurezza e protezione per i tuoi file."
         ]
       },
       {
-        "question": "Quale piano include il supporto NAS?",
+        "question": "Come funzionano i data center di Internxt?",
         "answer": [
-          "Il supporto NAS è incluso nel piano Ultimate, disponibile come abbonamento a vita o annuale. Se hai già un piano Internxt, puoi aggiornare il tuo attuale piano a vita per ottenere più spazio di archiviazione, accesso al supporto NAS e goderti tutte le altre funzionalità di un piano Ultimate."
+          "Internxt collabora con OVHcloud, che possiede data center cloud europei e più sedi in tutto il mondo per archiviare i tuoi dati cloud.",
+          "Queste infrastrutture di data center ospitano migliaia de server per garantire disponibilità, prestazioni e ridondanza per assicurare un accesso rapido e sicuro ai file mantenendoli al sicuro."
         ]
       },
       {
-        "question": "Come contatto l'assistenza?",
+        "question": "Cos'è una zona di disponibilità?",
         "answer": [
-          "Puoi contattare il nostro team di assistenza clienti tramite chat dal vivo o inviando un'email a hello@internxt.com"
+          "Le zone di disponibilità sono un insieme di uno o più data center situati in una regione. Ogni zona di disponibilità funziona in modo indipendente e dispone di propria alimentazione, raffreddamento e rete per prevenire interruzioni di corrente o altri eventi come guasti all'infrastruttura.",
+          "Le zone all'interno di una regione sono collegate per fornire una maggiore disponibilità e connessioni a bassa latenza, garantendo che le applicazioni possano rimanere online anche se una zona subisce un guasto."
+        ]
+      },
+      {
+        "question": "Internxt può accedere ai miei file?",
+        "answer": [
+          "No, nessuno, incluso Internxt, può accedere ai tuoi file. Tutti i tuoi file e dati sono crittografati sul tuo dispositivo con crittografia post-quantistica. Poiché le chiavi sono archiviate e gestite sul tuo dispositivo e non da noi o dai nostri fornitori di servizi, solo tu o le persone con cui scegli di condividere i file potete decrittografarli.",
+          "Tutti i file archiviati nei nostri data center sono crittografati, quindi nessun dipendente o hacker può visualizzarne il contenuto."
+        ]
+      },
+      {
+        "question": "Come posso contattare l'assistenza?",
+        "answer": [
+          "Non riesci a trovare quello che cerchi? Puoi contattare il nostro team di supporto tecnico tramite chat dal vivo o inviando un'e-mail a hello@internxt.com"
         ]
       }
     ]
+  },
+  "Breadcrumbs": {
+    "home": "Cloud storage crittografato",
+    "drive": "Cloud storage sicuro",
+    "nas": "Backup cloud NAS",
+    "qnap": "Backup cloud QNAP",
+    "synology": "Backup cloud Synology NAS"
   }
 }

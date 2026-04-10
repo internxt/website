@@ -1,5 +1,5 @@
 import { DownloadApp, FooterSection, NewsletterSection } from './footer';
-import { Auth, Links, OurValues, Products } from './navbar';
+import { Auth, Links, OurValues, Products, Solutions } from './navbar';
 
 export interface MetatagsDescription {
   id: string;
@@ -8,6 +8,7 @@ export interface MetatagsDescription {
 }
 
 export interface NavigationBarText {
+  solutions: Solutions;
   links: Links;
   products: Products;
   ourValues: OurValues;

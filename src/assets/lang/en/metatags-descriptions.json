@@ -16,8 +16,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Cloud Object Storage (Secure & Affordable) — Internxt S3",
-    "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
+    "title": "Secure Cloud Object Storage (S3 Compatible) — Internxt S3",
+    "description": "Internxt S3 offers secure, private, and affordable cloud object storage. Scale your storage needs with our S3-compatible cloud based object storage solution."
   },
   {
     "id": "free-cloud-object-storage",
@@ -27,7 +27,7 @@
   {
     "id": "drive",
     "title": "Internxt Drive – Secure Cloud File Storage",
-    "description": "Internxt Drive is the privacy-first secure cloud file storage solution. Store, share, and back up your files on a zero-knowledge, open-source platform independently audited for your peace of mind."
+    "description": "Internxt Drive offers the ultimate secure cloud storage solution. Store, share, and back up your files and photos using our open-source, end-to-end encrypted platform for guaranteed privacy."
   },
   {
     "id": "free-cloud-storage",
@@ -591,8 +591,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – QNAP and Synology NAS",
-    "description": "Back up your QNAS and Synology NAS devices in the cloud with Internxt."
+    "title": "Best NAS Cloud Backup Solution (QNAP & Synology) — Internxt",
+    "description": "Securely back up your QNAP and Synology NAS devices to the cloud with Internxt's post-quantum encryption. The safest and most private NAS cloud backup available."
   },
   {
     "id": "coupons",
@@ -743,5 +743,15 @@
     "id": "levante-ud",
     "title": "Internxt — Official Cloud Partner of Levante UD",
     "description": "Internxt is an official partner of Levante UD, providing encrypted cloud storage and backups to protect the club’s valuable data."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Synology NAS Cloud Backup — Secure NAS Storage | Internxt",
+    "description": "Back up your Synology NAS to the cloud with Internxt. Secure, encrypted, and private cloud storage for your Synology device."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "QNAP NAS Cloud Backup — Secure NAS Storage | Internxt",
+    "description": "Back up your QNAP NAS to the cloud with Internxt. Secure, encrypted, and private cloud storage for your QNAP device."
   }
 ]

@@ -6,8 +6,8 @@
   },
   {
     "id": "drive",
-    "title": "Internxt – Drive",
-    "description": "Internxt Drive est une alternative privée et sécurisée à Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive et MediaFire. Cryptage à connaissance zéro, distribué, stockage en nuage blockchain."
+    "title": "Internxt Drive – Stockage cloud sécurisé",
+    "description": "Internxt Drive offre la solution ultime de stockage cloud sécurisé. Stockez, partagez et sauvegardez vos fichiers et photos grâce à notre plateforme open-source et chiffrée de bout en bout pour une confidentialité garantie."
   },
   {
     "id": "free-cloud-storage",
@@ -171,8 +171,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — Stockage d'Objets",
-    "description": "Internxt propose un stockage d'objets privé et abordable pour stocker des données en toute sécurité en utilisant le protocole S3 pour gérer efficacement vos besoins de stockage."
+    "title": "Stockage d'Objet Cloud Sécurisé (Compatible S3) — Internxt S3",
+    "description": "Internxt S3 offre un stockage d'objets cloud sécurisé, privé et abordable. Faites évoluer vos besoins de stockage avec notre solution de stockage d'objets basée sur le cloud et compatible S3."
   },
   {
     "id": "green-cloud-computing",
@@ -391,8 +391,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – NAS QNAP et Synology",
-    "description": "Sauvegardez vos appareils NAS QNAP et Synology dans le cloud avec Internxt."
+    "title": "Meilleure Solution de Sauvegarde NAS sur le Cloud (QNAP & Synology) — Internxt",
+    "description": "Sauvegardez vos appareils NAS QNAP et Synology en toute sécurité dans le cloud grâce au chiffrement post-quantique d'Internxt. La sauvegarde NAS la plus sûre."
   },
   {
     "id": "coupons",
@@ -543,5 +543,15 @@
     "id": "levante-ud",
     "title": "Internxt — Partenaire cloud officiel du Levante UD",
     "description": "Internxt est un partenaire officiel de Levante UD, fournissant un stockage cloud chiffré et des sauvegardes pour protéger les données précieuses du club."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Sauvegarde Cloud pour NAS Synology — Stockage NAS Sécurisé | Internxt",
+    "description": "Sauvegardez votre NAS Synology dans le cloud avec Internxt. Stockage cloud sécurisé, chiffré et privé pour votre appareil Synology."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "Sauvegarde Cloud pour NAS QNAP — Stockage NAS Sécurisé | Internxt",
+    "description": "Sauvegardez votre NAS QNAP dans le cloud con Internxt. Stockage cloud sécurisé, chiffré et privé pour votre appareil QNAP."
   }
 ]

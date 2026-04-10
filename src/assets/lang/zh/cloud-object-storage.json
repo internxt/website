@@ -62,13 +62,25 @@
     "perYear": "/每年",
     "storageAmount": "存储容量",
     "percentDownloadPerMonth": "每月下载百分比",
-    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+    "companies": [
+      "Internxt",
+      "Microsoft",
+      "Amazon",
+      "Google"
+    ]
   },
   "WhyChooseInternxtSection": {
     "title": "为什么选择 Internxt 对象存储？",
     "description": "Internxt 对象云存储的优势在于有效的数据管理和安全性。",
     "scrollableSection": {
-      "titles": ["零流量费用 (Ingress/Egress)", "每 GB 成本", "持久性与可用性", "安全性", "简单存储服务", "速度"],
+      "titles": [
+        "零流量费用 (Ingress/Egress)",
+        "每 GB 成本",
+        "持久性与可用性",
+        "安全性",
+        "简单存储服务",
+        "速度"
+      ],
       "descriptions": [
         "零流入和流出费用消除了数据传输成本，使预算更可控。这对有大规模数据迁移需求的企业至关重要。",
         "采用按需付费模式，您只需为实际使用的存储付费。对象存储处理非结构化数据的成本通常低于结构化数据。",
@@ -98,11 +110,15 @@
       },
       {
         "question": "什么是 S3 协议？",
-        "answer": ["S3 协议是一套规则和标准，定义了如何访问和管理 Amazon S3 等云存储服务中的数据。"]
+        "answer": [
+          "S3 协议是一套规则和标准，定义了如何访问和管理 Amazon S3 等云存储服务中的数据。"
+        ]
       },
       {
         "question": "有最低存储政策吗？",
-        "answer": ["最低月度政策为 1TB。如果对象存储未满 30 天即删除，将按 30 天计费。这与 AWS 等服务商的政策一致。"]
+        "answer": [
+          "最低月度政策为 1TB。如果对象存储未满 30 天即删除，将按 30 天计费。这与 AWS 等服务商的政策一致。"
+        ]
       }
     ]
   },
@@ -137,13 +153,48 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt 对象云存储",
-    "description": "体验卓越的数据管理、速度与效率",
+    "title": "安全云对象存储",
+    "description": "Internxt 的云存储解决方案结合了安全性和效率",
     "cta": "立即开始"
   },
   "CtaSectionV2": {
     "title": "Internxt 云端对象存储",
     "description": "Internxt 的云存储解决方案结合了安全性和效率",
     "cta": "开始"
+  },
+  "SemanticAccordion": {
+    "title": "了解有关云对象存储的更多信息",
+    "items": [
+      {
+        "question": "什么是云对象存储？",
+        "answer": [
+          "云对象存储是一种可扩展的数据存储架构，将数据作为对象进行管理，非常适合云中的大规模非结构化数据。"
+        ]
+      },
+      {
+        "question": "对象存储云是如何工作的？",
+        "answer": [
+          "对象存储云将数据存储在扁平地址空间中，为每个对象使用唯一标识符，从而实现海量可扩展性并便于在分布式网络中进行检索。"
+        ]
+      },
+      {
+        "question": "基于云的对象存储有什么好处？",
+        "answer": [
+          "基于云的对象存储提供高耐用性、可用性和成本效益，特别适用于 Web 应用程序、备份和数据归档。"
+        ]
+      },
+      {
+        "question": "Internxt 是否提供私有云对象存储？",
+        "answer": [
+          "是的，Internxt 提供具有服务端加密和 S3 兼容性的私有云对象存储，确保您的数据安全且受您控制。"
+        ]
+      },
+      {
+        "question": "Internxt 是否与 S3 云对象存储兼容？",
+        "answer": [
+          "Internxt 完全兼容 S3 云对象存储协议，允许您无缝使用现有的 S3 兼容工具和应用程序。"
+        ]
+      }
+    ]
   }
 }

@@ -7,7 +7,7 @@
   {
     "id": "drive",
     "title": "Internxt Drive – 私密且安全的雲端儲存",
-    "description": "使用Internxt Drive將文件和照片存儲、共享和備份到雲端。開源和端到端加密的檔案儲存和線上備份。"
+    "description": "Internxt Drive 提供終極安全雲端儲存解決方案。使用我們的開源端對端加密平台存儲、共享和備份您的文件和照片，享有有保障的隱私保護。"
   },
   {
     "id": "free-cloud-storage",
@@ -351,8 +351,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — 物件儲存",
-    "description": "Internxt 提供私密且實惠的物件儲存，使用 S3 協議安全地存儲資料，有效地管理您的儲存需求。"
+    "title": "安全雲端物件儲存 (相容 S3) — Internxt S3",
+    "description": "Internxt S3 提供安全、私密且實惠的雲端物件儲存。使用我們的 S3 相容雲端物件儲存解決方案擴展您的儲存需求。"
   },
   {
     "id": "free-cloud-object-storage",
@@ -578,8 +578,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – QNAP 和 Synology NAS",
-    "description": "使用 Internxt 在云端备份您的 QNAP 和 Synology NAS 设备。"
+    "title": "最佳 NAS 雲端備份解決方案 (QNAP 和 Synology) — Internxt",
+    "description": "使用 Internxt 的後量子加密技術，安全地在雲端備份您的 QNAP 和 Synology NAS 設備。最安全的 NAS 雲端備份。"
   },
   {
     "id": "coupons",
@@ -725,5 +725,15 @@
     "id": "alternative-to-totalav",
     "title": "Internxt — TotalAV 替代方案",
     "description": "切換到 Internxt，體驗 TotalAV 的開源替代方案。包含後量子和零知識加密雲端儲存等功能。"
+  },
+  {
+    "id": "nas-synology",
+    "title": "Synology NAS 雲端備份 — 安全 NAS 儲存 | Internxt",
+    "description": "使用 Internxt 在雲端備份您的 Synology NAS。為您提供安全、加密且私密的雲端儲存空間。"
+  },
+  {
+    "id": "nas-qnap",
+    "title": "QNAP NAS 雲端備份 — 安全 NAS 儲存 | Internxt",
+    "description": "使用 Internxt 在雲端備份您的 QNAP NAS。為您提供安全、加密且私密的雲端儲存空間。"
   }
 ]

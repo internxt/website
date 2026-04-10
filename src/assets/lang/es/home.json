@@ -213,5 +213,59 @@
   },
   "TrustedBySection": {
     "description": "Internxt se trata de tener el control. Con Internxt, tienes la tranquilidad de saber que tus datos están cifrados, protegidos y que tu vida digital te pertenece a ti."
+  },
+  "EncryptedStorageSeoSection": {
+    "title": "Almacenamiento en la nube cifrado: cómo funciona y por qué importa",
+    "faq": [
+      {
+        "question": "¿Qué es el almacenamiento en la nube cifrado de extremo a extremo y cómo protege tus archivos?",
+        "answer": [
+          "El almacenamiento en la nube cifrado de extremo a extremo es un método de almacenamiento online en el que el cifrado y el descifrado ocurren exclusivamente en tu dispositivo. Ningún tercero —ni la plataforma, ni la red, ni ningún interceptor— puede leer el contenido de tus archivos en ningún momento.",
+          "Cuando subes un archivo a una plataforma cifrada de extremo a extremo, tu dispositivo genera claves de cifrado locales, transforma el archivo en texto cifrado ilegible y solo entonces lo transmite. La plataforma almacena datos que no puede interpretar. Al recuperar el archivo, el descifrado ocurre localmente con claves que solo tú controlas.",
+          "Internxt utiliza AES-256 combinado con Kyber-512 post-cuántico, ofreciendo la mejor arquitectura de almacenamiento en la nube cifrado de extremo a extremo disponible actualmente, verificada por la auditoría independiente de Securitum en 2024."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado de almacenamiento en la nube y qué tipos existen?",
+        "answer": [
+          "El cifrado de almacenamiento en la nube es el proceso de transformar matemáticamente los datos para que sean ilegibles sin la clave de descifrado correcta. Existen tres tipos principales que difieren significativamente en el nivel de protección.",
+          "Cifrado en tránsito: protege tus archivos durante la transferencia entre tu dispositivo y el servidor. TLS 1.3 es el estándar actual. Cifrado en reposo: protege los archivos almacenados en el servidor con AES-256, aunque el proveedor sigue manteniendo las claves.",
+          "Cifrado de extremo a extremo (E2EE): cifra los archivos en tu dispositivo antes de subirlos. El proveedor nunca posee las claves. Esta es la forma más elevada de cifrado de almacenamiento en la nube, la única que protege simultáneamente contra el acceso del proveedor, las solicitudes gubernamentales y las brechas de datos.",
+          "Internxt implementa los tres: TLS 1.3 en tránsito, AES-256 en reposo y cifrado de extremo a extremo desde el momento en que un archivo sale de tu dispositivo."
+        ]
+      },
+      {
+        "question": "¿Qué diferencia hay entre almacenamiento en la nube con cifrado y con cifrado de conocimiento cero?",
+        "answer": [
+          "El almacenamiento en la nube con cifrado es una categoría amplia: incluye cualquier plataforma que aplique protección criptográfica a tus datos. Google Drive, Dropbox u OneDrive entran en esta categoría: cifran, pero el proveedor gestiona las claves.",
+          "El almacenamiento en la nube con cifrado de conocimiento cero es una arquitectura más robusta. Conocimiento cero significa que el proveedor no tiene acceso a tus claves ni puede leer el contenido de tus archivos. La generación, cifrado y descifrado ocurren localmente.",
+          "La diferencia práctica: con un proveedor estándar, este puede cumplir órdenes judiciales o verse comprometido en una brecha. Con almacenamiento en la nube de extremo a extremo con conocimiento cero, esto es técnicamente imposible. Internxt está construido sobre esta arquitectura, verificable en el código abierto y confirmada por auditoría externa."
+        ]
+      },
+      {
+        "question": "¿Qué es el almacenamiento en la nube con cifrado de conocimiento cero y quién debería usarlo?",
+        "answer": [
+          "El almacenamiento en la nube con cifrado de conocimiento cero está diseñado para usuarios que necesitan una garantía técnica —no solo política— de que sus datos no pueden ser accedidos por nadie más que ellos mismos.",
+          "Se benefician especialmente: periodistas y activistas que necesitan cifrado de extremo a extremo para proteger fuentes; profesionales sanitarios con obligaciones HIPAA; abogados con deber de confidencialidad; empresas que gestionan datos personales de ciudadanos de la UE bajo el RGPD.",
+          "Internxt está construido sobre arquitectura de conocimiento cero: tus claves nunca salen de tu dispositivo, tus archivos se cifran antes de subirse, y ni siquiera los empleados de Internxt tienen acceso a lo que almacenas."
+        ]
+      },
+      {
+        "question": "¿Qué son las soluciones de almacenamiento en la nube cifrado y cómo se comparan?",
+        "answer": [
+          "Las soluciones de almacenamiento en la nube cifrado son plataformas donde la protección criptográfica de datos es una característica central. Se diferencian del almacenamiento convencional principalmente en quién posee las claves y qué garantías están verificadas de forma independiente.",
+          "Las principales soluciones incluyen: Internxt (conocimiento cero, E2EE, Kyber-512 post-cuántico + AES-256, ISO 27001:2022, HIPAA, código abierto, auditoría Securitum 2024), ProtonDrive (conocimiento cero, jurisdicción suiza), Tresorit (conocimiento cero, ISO 27001) y Sync.com (conocimiento cero, compatible con HIPAA).",
+          "Internxt es la única solución de almacenamiento cifrado en la nube que añade una capa criptográfica post-cuántica (Kyber-512) sobre el AES-256 estándar, protegiéndote contra la amenaza futura de la computación cuántica."
+        ]
+      },
+      {
+        "question": "¿Qué son los proveedores y servicios de almacenamiento en la nube cifrado?",
+        "answer": [
+          "Los proveedores de almacenamiento en la nube cifrado son empresas que ofrecen almacenamiento de archivos online sobre bases criptográficas sólidas, donde los datos del usuario están protegidos del propio proveedor, no solo de atacantes externos.",
+          "No todos los proveedores que se describen como 'cifrados' usan el mismo modelo. Con cifrado en el servidor, el proveedor cifra tus datos pero mantiene las claves. Con cifrado de extremo a extremo, la gestión de claves permanece en tu dispositivo.",
+          "Los servicios de almacenamiento cifrado en la nube incluyen típicamente almacenamiento de archivos, sincronización entre dispositivos, compartición con enlaces caducables o protegidos por contraseña y funcionalidad de copia de seguridad. Internxt ofrece una suite completa: Drive, Send, herramientas de copia de seguridad y un paquete de privacidad con VPN, Mail, Antivirus y Meet, todo sobre la misma base de conocimiento cero y cifrado de extremo a extremo."
+        ]
+      }
+    ]
   }
 }

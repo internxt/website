@@ -52,7 +52,7 @@
     "jsonwebtoken": "^9.0.0",
     "jspdf": "^4.2.1",
     "jszip": "^3.10.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "music-metadata": "^11.2.3",

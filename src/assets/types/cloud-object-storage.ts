@@ -8,6 +8,7 @@ export interface CloudObjectStorageText {
   ContactSales: ContactSales;
   CtaSection: CtaSection;
   CtaSectionV2: CtaSection;
+  SemanticAccordion: SemanticAccordion;
 }
 
 export interface ContactSales {
@@ -121,4 +122,14 @@ export interface BannerText {
 export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
+}
+
+export interface SemanticAccordion {
+  title: string;
+  items: SemanticAccordionItem[];
+}
+
+export interface SemanticAccordionItem {
+  question: string;
+  answer: string;
 }

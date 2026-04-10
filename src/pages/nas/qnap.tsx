@@ -25,15 +25,20 @@ interface NASPageProps {
   relationalLinksText: any;
 }
 
-const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang, relationalLinksText }: NASPageProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas');
+const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang, relationalLinksText }: NASPageProps): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas-qnap');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'NAS Cloud Backup', url: '/nas' }])}
+        {sm_breadcrumb_list([
+            { name: textContent.Breadcrumbs.home, url: '/' }, 
+            { name: textContent.Breadcrumbs.drive, url: '/drive' }, 
+            { name: textContent.Breadcrumbs.nas, url: '/nas' },
+            { name: textContent.Breadcrumbs.qnap, url: '/nas/qnap' }
+        ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
@@ -94,7 +99,12 @@ const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLa
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'NAS Cloud Backup', url: '/nas' }]} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[
+          { name: textContent.Breadcrumbs.home, url: '/' }, 
+          { name: textContent.Breadcrumbs.drive, url: '/drive' }, 
+          { name: textContent.Breadcrumbs.nas, url: '/nas' },
+          { name: textContent.Breadcrumbs.qnap, url: '/nas/qnap' }
+      ]} />
     </Layout>
     </>
   );
@@ -123,4 +133,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default NASPage;
+export default QNAPNASPage;

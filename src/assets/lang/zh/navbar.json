@@ -10,7 +10,8 @@
     "chooseStorage": "选择存储",
     "checkout": "现在宣称！",
     "business": "商业",
-    "blackFriday": "Black Friday"
+    "blackFriday": "Black Friday",
+    "solutions": "解决方案"
   },
   "products": {
     "drive": "Internxt Drive",
@@ -25,11 +26,21 @@
     "meet": "Internxt Meet",
     "ai": "Internxt AI"
   },
+  "solutions": {
+    "secureCloudStorage": "安全云存储",
+    "lifetimeCloudStorage": "终身云存储",
+    "privateCloudStorage": "私有云存储",
+    "cloudStorageForPhotos": "云存储照片",
+    "cloudStorageForVideos": "云存储视频",
+    "cloudStorageForBackup": "云存储备份",
+    "cloudNASBackup": "云存储NAS"
+  },
   "ourValues": {
     "privacy": "隐私",
     "openSource": "通过",
     "sustainability": "可持续性",
-    "certifications": "认证"
+    "certifications": "认证",
+    "about": "关于我们"
   },
   "Auth": {
     "SignUp": {

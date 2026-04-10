@@ -13,22 +13,31 @@ interface NASBoxProps {
   alt: string;
   imageWidth: number;
   imageHeight: number;
+  link: string;
+  cta: string;
 }
 
-function NASBox({ title, description, image, alt, imageWidth, imageHeight }: Readonly<NASBoxProps>) {
+import { LinkTo } from '../drive/components/LinkTo';
+
+function NASBox({ title, description, image, alt, imageWidth, imageHeight, link, cta }: Readonly<NASBoxProps>) {
   return (
-    <div className="flex w-full flex-col items-center gap-4 rounded-16 bg-white p-6 lg:w-1/2 lg:gap-10  lg:p-10">
+    <div className="flex w-full flex-col items-center justify-between gap-4 rounded-16 bg-white p-6 lg:w-1/2 lg:gap-10  lg:p-10">
       <div className="flex flex-col gap-4 lg:gap-6">
         <p className="text-30 font-semibold text-gray-95">{title}</p>
         <p className="text-base font-normal leading-tight text-gray-55">{description}</p>
       </div>
-      <Image
-        src={getImage(`/images/NAS/${image}.webp`)}
-        height={imageHeight}
-        width={imageWidth}
-        quality={100}
-        alt={alt}
-      />
+      <div className="flex flex-col items-center gap-6 w-full">
+        <Image
+          src={getImage(`/images/NAS/${image}.webp`)}
+          height={imageHeight}
+          width={imageWidth}
+          quality={100}
+          alt={alt}
+        />
+        <div className="w-full lg:w-max">
+            <LinkTo linkToRedirect={link} text={cta} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -54,6 +63,8 @@ export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQN
           alt="Synology Image"
           imageWidth={434}
           imageHeight={228}
+          link="/nas/synology"
+          cta="synology nas cloud backup"
         />
         <NASBox
           title={textContent.QNAPBox.title}
@@ -62,6 +73,8 @@ export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQN
           alt="QNAP Image"
           imageWidth={503}
           imageHeight={204}
+          link="/nas/qnap"
+          cta="qnap backup"
         />
       </div>
     </section>

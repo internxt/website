@@ -62,7 +62,12 @@
     "perYear": "/pro Jahr",
     "storageAmount": "Speichermenge",
     "percentDownloadPerMonth": "Prozentualer Download pro Monat",
-    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+    "companies": [
+      "Internxt",
+      "Microsoft",
+      "Amazon",
+      "Google"
+    ]
   },
   "WhyChooseInternxtSection": {
     "title": "Warum Internxt Objektspeicher wählen?",
@@ -150,7 +155,9 @@
       },
       {
         "question": "Wie kontaktiere ich den Support?",
-        "answer": ["Per Live-Chat oder E-Mail an hello@internxt.com."]
+        "answer": [
+          "Per Live-Chat oder E-Mail an hello@internxt.com."
+        ]
       },
       {
         "question": "Wie kündige ich meinen Tarif?",
@@ -191,13 +198,48 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt Cloud Objektspeicher",
-    "description": "Erleben Sie überlegene Datenverwaltung, Geschwindigkeit und Effizienz",
+    "title": "Sicherer Cloud-Objektspeicher",
+    "description": "Die Cloud-Speicherlösungen von Internxt kombinieren Sicherheit und Effizienz",
     "cta": "Jetzt starten"
   },
   "CtaSectionV2": {
     "title": "Objektspeicher in der Internxt-Cloud",
     "description": "Die Cloud-Speicherlösungen von Internxt kombinieren Sicherheit und Effizienz",
     "cta": "Starten"
+  },
+  "SemanticAccordion": {
+    "title": "Erfahren Sie mehr über Cloud-Objektspeicher",
+    "items": [
+      {
+        "question": "Was ist Cloud-Objektspeicher?",
+        "answer": [
+          "Cloud-Objektspeicher ist eine skalierbare Datenspeicherarchitektur, die Daten als Objekte verwaltet und sich ideal für große Mengen unstrukturierter Daten in der Cloud eignet."
+        ]
+      },
+      {
+        "question": "Wie funktioniert ein Objektspeicher-Cloud?",
+        "answer": [
+          "Eine Objektspeicher-Cloud speichert Daten in einem flachen Adressraum unter Verwendung eindeutiger Identifikatoren für jedes Objekt, was eine massive Skalierbarkeit und einfaches Abrufen in verteilten Netzwerken ermöglicht."
+        ]
+      },
+      {
+        "question": "Was sind die Vorteile von Cloud-basiertem Objektspeicher?",
+        "answer": [
+          "Cloud-basierter Objektspeicher bietet hohe Haltbarkeit, Verfügbarkeit und Kosteneffizienz, insbesondere für Webanwendungen, Backups und Datenarchivierung."
+        ]
+      },
+      {
+        "question": "Bietet Internxt privaten Cloud-Objektspeicher an?",
+        "answer": [
+          "Ja, Internxt bietet privaten Cloud-Objektspeicher mit serverseitiger Verschlüsselung und S3-Kompatibilität an, um sicherzustellen, dass Ihre Daten sicher und unter Ihrer Kontrolle bleiben."
+        ]
+      },
+      {
+        "question": "Ist Internxt mit S3-Cloud-Objektspeichern kompatibel?",
+        "answer": [
+          "Internxt ist vollständig kompatibel mit S3-Cloud-Objektspeicher-Protokollen, sodass Sie vorhandene S3-kompatible Tools und Anwendungen nahtlos nutzen können."
+        ]
+      }
+    ]
   }
 }

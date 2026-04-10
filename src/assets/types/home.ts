@@ -2,6 +2,7 @@ export interface HomeText {
   HeroSection: HeroSection;
   tableSection: TableSection;
   FaqSection: FAQSection;
+  EncryptedStorageSeoSection: FAQSection;
   TestimonialsSection: TestimonialsSection;
   ReviewSection: ReviewSection;
   OfficalCloudProvider: OfficalCloudProvider;
