@@ -148,11 +148,11 @@ export const ItemsNavigation = ({
         <DropdownMenu
           label={textContent.links.ourValues}
           items={[
+            { href: '/about', text: textContent.ourValues.about },
             { href: '/privacy', text: textContent.ourValues.privacy },
             { href: '/open-source', text: textContent.ourValues.openSource },
             { href: '/green-cloud-computing', text: textContent.ourValues.sustainability },
             { href: '/cloud-data-centers', text: textContent.ourValues.certifications },
-            { href: '/about', text: textContent.ourValues.about },
           ]}
           darkMode={darkMode}
           lang={lang}
