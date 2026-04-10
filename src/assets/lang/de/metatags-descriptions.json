@@ -181,8 +181,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — Objektspeicherung",
-    "description": "Internxt bietet privaten und erschwinglichen Objektspeicher zum sicheren Speichern von Daten mit dem S3-Protokoll, um Ihre Speicheranforderungen effektiv zu verwalten."
+    "title": "Sicherer Cloud-Objektspeicher (S3-kompatibel) — Internxt S3",
+    "description": "Internxt S3 bietet sicheren, privaten und erschwinglichen Cloud-Objektspeicher. Skalieren Sie Ihren Speicherbedarf mit unserer S3-kompatiblen Cloud-basierten Objektspeicherlösung."
   },
   {
     "id": "free-cloud-object-storage",
@@ -401,8 +401,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – QNAP und Synology NAS",
-    "description": "Sichern Sie Ihre QNAP- und Synology-NAS-Geräte in der Cloud mit Internxt."
+    "title": "Beste NAS-Cloud-Backup-Lösung (QNAP & Synology) — Internxt",
+    "description": "Sichern Sie Ihre QNAP- und Synology-NAS-Geräte sicher in der Cloud mit der Post-Quanten-Verschlüsselung von Internxt. Das sicherste NAS-Cloud-Backup."
   },
   {
     "id": "coupons",
@@ -555,5 +555,15 @@
     "description": "Internxt ist ein offizieller Partner von Levante UD und bietet verschlüsselten Cloud-Speicher und Backups zum Schutz der wertvollen Daten des Vereins.",
     "og:title": "Internxt — Offizieller Cloud-Partner von Levante UD",
     "og:description": "Internxt ist ein offizieller Partner von Levante UD und bietet verschlüsselten Cloud-Speicher und Backups zum Schutz der wertvollen Daten des Vereins."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Synology NAS Cloud-Backup — Sicherer NAS-Speicher | Internxt",
+    "description": "Sichern Sie Ihr Synology NAS in der Cloud mit Internxt. Sicherer, verschlüsselter und privater Cloud-Speicher für Ihr Synology-Gerät."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "QNAP NAS Cloud-Backup — Sicherer NAS-Speicher | Internxt",
+    "description": "Sichern Sie Ihr QNAP NAS in der Cloud mit Internxt. Sicherer, verschlüsselter und privater Cloud-Speicher für Ihr QNAP-Gerät."
   }
 ]

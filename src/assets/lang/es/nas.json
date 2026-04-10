@@ -84,29 +84,51 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [
       {
-        "question": "¿Cómo configuro mi sistema NAS con Internxt?",
+        "question": "¿Dónde tiene su sede Internxt?",
         "answer": [
-          "Primero, debes instalar la aplicación Docker y luego conectarla a Internxt. Una vez configurado, puedes gestionar y sincronizar tus archivos de forma segura en dispositivos NAS, servidores o cualquier entorno donde Docker sea compatible."
+          "Internxt tiene su sede en Valencia, España. Internxt cuenta con numerosos centros de datos en la nube europeos para almacenar sus datos de acuerdo con el RGPD y otras normativas de cumplimiento."
         ]
       },
       {
-        "question": "¿Necesito Docker para ejecutar Internxt en mi NAS?",
+        "question": "¿Dónde se encuentran los centros de datos en la nube de Internxt?",
         "answer": [
-          "Sí, Internxt funciona a través de Docker, lo que hace que la configuración sea sencilla y garantiza la compatibilidad con dispositivos NAS populares como QNAP o Synology."
+          "Internxt utiliza una estrategia de red multi-nube, lo que garantiza que los archivos se almacenen en varios centros de datos en la nube europeos para asegurar el mejor rendimiento, seguridad y protección para sus archivos."
         ]
       },
       {
-        "question": "¿Qué plan incluye soporte para NAS?",
+        "question": "¿Cómo funcionan los centros de datos de Internxt?",
         "answer": [
-          "El soporte para NAS está incluido en el plan Ultimate, disponible como suscripción de por vida o anual. Si ya tienes un plan de Internxt, puedes mejorar tu plan de por vida actual para obtener más almacenamiento, acceso al soporte NAS y disfrutar de todas las demás características de un plan Ultimate."
+          "Internxt se asocia con OVHcloud, que posee centros de datos en la nube europeos y múltiples ubicaciones en todo el mundo para almacenar sus datos en la nube.",
+          "Estas infraestructuras de centros de datos albergan miles de servidores para garantizar la disponibilidad, el rendimiento y la redundancia, asegurando un acceso rápido y seguro a los archivos mientras se mantienen protegidos."
         ]
       },
       {
-        "question": "¿Cómo contacto con el soporte técnico?",
+        "question": "¿Qué es una zona de disponibilidad?",
         "answer": [
-          "Puedes contactar con nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un correo electrónico a hello@internxt.com"
+          "Las zonas de disponibilidad son un conjunto de uno o más centros de datos ubicados en una región. Cada zona de disponibilidad funciona de forma independiente y tiene su propia energía, refrigeración y red para evitar cortes de energía u otros eventos como fallos de infraestructura.",
+          "Las zonas dentro de una región están vinculadas para proporcionar una mayor disponibilidad y conexiones de baja latencia, lo que garantiza que las aplicaciones puedan permanecer en línea incluso si una zona experimenta un fallo."
+        ]
+      },
+      {
+        "question": "¿Puede Internxt acceder a mi archivos?",
+        "answer": [
+          "No, nadie, incluido Internxt, puede acceder a sus archivos. Todos sus archivos y datos se cifran en su dispositivo con cifrado post-cuántico. Como las claves se almacenan y gestionan en su dispositivo y no por nosotros o nuestros proveedores de servicios, solo usted o las personas con las que elija compartir archivos pueden descifrarlos.",
+          "Todos los archivos almacenados en nuestros centros de datos están cifrados, por lo que ningún empleado o hacker puede ver su contenido."
+        ]
+      },
+      {
+        "question": "¿Cómo me pongo en contacto con el soporte?",
+        "answer": [
+          "¿No encuentra lo que busca? Puede ponerse en contacto con nuestro equipo de soporte técnico a través del chat en vivo o enviando un correo electrónico a hello@internxt.com"
         ]
       }
     ]
+  },
+  "Breadcrumbs": {
+    "home": "Almacenamiento en la nube cifrado",
+    "drive": "Almacenamiento seguro en la nube",
+    "nas": "Copia de seguridad en la nube NAS",
+    "qnap": "Copia de seguridad en la nube QNAP",
+    "synology": "Copia de seguridad en la nube Synology NAS"
   }
 }

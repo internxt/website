@@ -180,13 +180,38 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt cloud object storage",
-    "description": "Sperimenta una gestione dati, velocità ed efficienza superiori",
+    "title": "Archiviazione di oggetti cloud sicura",
+    "description": "Le soluzioni di cloud storage di Internxt combinano sicurezza ed efficienza",
     "cta": "Inizia ora"
   },
   "CtaSectionV2": {
     "title": "Archiviazione di oggetti nel cloud Internxt",
     "description": "Le soluzioni di cloud storage di Internxt combinano sicurezza ed efficienza",
     "cta": "Inizia"
+  },
+  "SemanticAccordion": {
+    "title": "Scopri di più sull'archiviazione di oggetti cloud",
+    "items": [
+      {
+        "question": "Cos'è l'archiviazione di oggetti cloud?",
+        "answer": "L'archiviazione di oggetti cloud è un'architettura di archiviazione dati scalabile che gestisce i dati come oggetti, rendendola ideale per dati non strutturati su larga scala nel cloud."
+      },
+      {
+        "question": "Come funziona un cloud di archiviazione oggetti?",
+        "answer": "Un cloud di archiviazione oggetti memorizza i dati in uno spazio di indirizzi piatto, utilizzando identificatori unici per ogni oggetto, il che consente una scalabilità massiccia e un facile recupero attraverso reti distribuite."
+      },
+      {
+        "question": "Quali sono i vantaggi dell'archiviazione a oggetti basata su cloud?",
+        "answer": "L'archiviazione a oggetti basata su cloud offre elevata durabilità, disponibilità e convenienza, specialmente per applicazioni web, backup e archiviazione dati."
+      },
+      {
+        "question": "Internxt fornisce archiviazione di oggetti cloud privato?",
+        "answer": "Sì, Internxt offre archiviazione di oggetti cloud privato con crittografia lato server e compatibilità S3, garantendo che i tuoi dati rimangano sicuri e sotto il tuo controllo."
+      },
+      {
+        "question": "Internxt è compatibile con l'archiviazione di oggetti cloud S3?",
+        "answer": "Internxt è completamente compatibile con i protocolli di archiviazione di oggetti cloud S3, consentendoti di utilizzare i tuoi strumenti e applicazioni compatibili con S3 esistenti in modo trasparente."
+      }
+    ]
   }
 }

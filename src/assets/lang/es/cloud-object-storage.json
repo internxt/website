@@ -195,7 +195,7 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt es almacenamiento de objetos económico",
+    "title": "Almacenamiento de objetos en la nube seguro",
     "description": "Las soluciones de almacenamiento en la nube de Internxt combinan seguridad y eficiencia",
     "cta": "Empezar"
   },
@@ -203,5 +203,30 @@
     "title": "Almacenamiento de objetos en la nube de Internxt",
     "description": "Las soluciones de almacenamiento en la nube de Internxt combinan seguridad y eficiencia",
     "cta": "Empezar"
+  },
+  "SemanticAccordion": {
+    "title": "Más información sobre el Almacenamiento de Objetos en la Nube",
+    "items": [
+      {
+        "question": "¿Qué es el Almacenamiento de Objetos en la Nube?",
+        "answer": "El almacenamiento de objetos en la nube es una arquitectura de almacenamiento de datos escalable que gestiona los datos como objetos, lo que lo hace ideal para datos no estructurados a gran escala en la nube."
+      },
+      {
+        "question": "¿Cómo funciona el almacenamiento de objetos cloud?",
+        "answer": "El almacenamiento de objetos cloud guarda los datos en un espacio de direcciones plano, utilizando identificadores únicos para cada objeto, lo que permite una escalabilidad masiva y una recuperación sencilla a través de redes distribuidas."
+      },
+      {
+        "question": "¿Cuáles son los beneficios del almacenamiento de objetos basado en la nube?",
+        "answer": "El almacenamiento de objetos basado en la nube proporciona una alta durabilidad, disponibilidad y rentabilidad, especialmente para aplicaciones web, copias de seguridad y archivado de datos."
+      },
+      {
+        "question": "¿Ofrece Internxt almacenamiento de objetos en nube privada?",
+        "answer": "Sí, Internxt ofrece almacenamiento de objetos en nube privada con cifrado en el lado del servidor y compatibilidad con S3, garantizando que tus datos permanezcan seguros y bajo tu control."
+      },
+      {
+        "question": "¿Es Internxt compatible con el almacenamiento de objetos en la nube S3?",
+        "answer": "Internxt es totalmente compatible con los protocolos de almacenamiento de objetos en la nube S3, lo que te permite utilizar las herramientas y aplicaciones compatibles con S3 existentes de forma fluida."
+      }
+    ]
   }
 }

@@ -84,29 +84,51 @@
     "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Comment configurer mon système NAS avec Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
-          "Tout d'abord, vous devez installer l'application Docker, puis la connecter à Internxt. Une fois configuré, vous pouvez gérer et synchroniser vos fichiers en toute sécurité sur les périphériques NAS, les serveurs ou tout environnement où Docker est pris en charge."
+          "Internxt est basé à Valence, en Espagne. Internxt dispose de nombreux centres de données cloud européens pour stocker vos données conformément au RGPD et à d'autres réglementations de conformité."
         ]
       },
       {
-        "question": "Ai-je besoin de Docker pour exécuter Internxt sur mon NAS ?",
+        "question": "Où sont situés les centres de données cloud d'Internxt ?",
         "answer": [
-          "Oui, Internxt fonctionne via Docker, ce qui rend la configuration simple et garantit la compatibilité sur les périphériques NAS populaires comme QNAP ou Synology."
+          "Internxt utilise une stratégie de réseau multi-cloud, garantissant que les fichiers sont stockés dans plusieurs centres de données cloud européens pour vous assurer les meilleures performances, sécurité et protection pour vos fichiers."
         ]
       },
       {
-        "question": "Quel plan inclut le support NAS ?",
+        "question": "Comment fonctionnent les centres de données d'Internxt ?",
         "answer": [
-          "Le support NAS est inclus dans le plan Ultimate, disponible en tant qu'abonnement à vie ou annuel. Si vous avez déjà un plan Internxt, vous pouvez mettre à niveau votre plan à vie actuel pour obtenir plus de stockage, accéder au support NAS et profiter de toutes les autres fonctionnalités d'un plan Ultimate."
+          "Internxt s'associe à OVHcloud, qui possède des centres de données cloud européens et plusieurs sites à travers le monde pour stocker vos données cloud.",
+          "Ces infrastructures de centres de données hébergent des milliers de serveurs pour garantir la disponibilité, la performance et la redondance afin d'assurer un accès rapide et sécurisé aux fichiers tout en gardant vos fichiers en sécurité."
+        ]
+      },
+      {
+        "question": "Qu'est-ce qu'une zone de disponibilité ?",
+        "answer": [
+          "Les zones de disponibilité sont un ensemble d'un ou plusieurs centres de données situés dans une région. Chaque zone de disponibilité fonctionne de manière indépendante et dispose de sa propre alimentation, de son propre refroidissement et de son propre réseau pour éviter les pannes de courant ou d'autres événements tels qu'une défaillance de l'infrastructure.",
+          "Les zones d'une région sont liées pour offrir une disponibilité plus élevée et des connexions à faible latence, garantissant que les applications peuvent rester en ligne même si une zone subit une défaillance."
+        ]
+      },
+      {
+        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "answer": [
+          "Non, personne, y compris Internxt, ne peut accéder à vos fichiers. Tous vos fichiers et données sont chiffrés sur votre appareil avec un chiffrement post-quantique. Comme les clés sont stockées et gérées sur votre appareil et non par nous ou nos prestataires de services, vous seul ou les personas avec qui vous choisissez de partager des fichiers pouvez les déchiffrer.",
+          "Tous les fichiers stockés dans nos centres de données sont chiffrés, de sorte qu'aucun employé ou hacker ne peut voir leur contenu."
         ]
       },
       {
         "question": "Comment contacter le support ?",
         "answer": [
-          "Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou par e-mail à hello@internxt.com"
         ]
       }
     ]
+  },
+  "Breadcrumbs": {
+    "home": "Stockage cloud chiffré",
+    "drive": "Stockage cloud sécurisé",
+    "nas": "Sauvegarde cloud NAS",
+    "qnap": "Sauvegarde cloud QNAP",
+    "synology": "Sauvegarde cloud Synology NAS"
   }
 }

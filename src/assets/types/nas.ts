@@ -8,6 +8,15 @@ export interface NASPageText {
   howSetupSection: HowSetupSection;
   ctaSectionV2: CtaSection;
   FaqSection: FAQSection;
+  Breadcrumbs: Breadcrumbs;
+}
+
+export interface Breadcrumbs {
+  home: string;
+  drive: string;
+  nas: string;
+  qnap: string;
+  synology: string;
 }
 
 export interface FAQSection {

@@ -137,13 +137,38 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt 对象云存储",
-    "description": "体验卓越的数据管理、速度与效率",
+    "title": "安全云对象存储",
+    "description": "Internxt 的云存储解决方案结合了安全性和效率",
     "cta": "立即开始"
   },
   "CtaSectionV2": {
     "title": "Internxt 云端对象存储",
     "description": "Internxt 的云存储解决方案结合了安全性和效率",
     "cta": "开始"
+  },
+  "SemanticAccordion": {
+    "title": "了解有关云对象存储的更多信息",
+    "items": [
+      {
+        "question": "什么是云对象存储？",
+        "answer": "云对象存储是一种可扩展的数据存储架构，将数据作为对象进行管理，非常适合云中的大规模非结构化数据。"
+      },
+      {
+        "question": "对象存储云是如何工作的？",
+        "answer": "对象存储云将数据存储在扁平地址空间中，为每个对象使用唯一标识符，从而实现海量可扩展性并便于在分布式网络中进行检索。"
+      },
+      {
+        "question": "基于云的对象存储有什么好处？",
+        "answer": "基于云的对象存储提供高耐用性、可用性和成本效益，特别适用于 Web 应用程序、备份和数据归档。"
+      },
+      {
+        "question": "Internxt 是否提供私有云对象存储？",
+        "answer": "是的，Internxt 提供具有服务端加密和 S3 兼容性的私有云对象存储，确保您的数据安全且受您控制。"
+      },
+      {
+        "question": "Internxt 是否与 S3 云对象存储兼容？",
+        "answer": "Internxt 完全兼容 S3 云对象存储协议，允许您无缝使用现有的 S3 兼容工具和应用程序。"
+      }
+    ]
   }
 }

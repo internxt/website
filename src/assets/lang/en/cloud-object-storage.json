@@ -196,7 +196,7 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt is Cheap object storage",
+    "title": "Secure Cloud Object Storage",
     "description": "Internxt object cloud storage solutions combines security and efficiency",
     "cta": "Get started"
   },
@@ -204,5 +204,30 @@
     "title": "Internxt object cloud storage",
     "description": "Internxt object cloud storage solutions combines security and efficiency",
     "cta": "Get started"
+  },
+  "SemanticAccordion": {
+    "title": "Learn more about Cloud Object Storage",
+    "items": [
+      {
+        "question": "What is Cloud Object Storage?",
+        "answer": "Cloud Object Storage is a scalable data storage architecture that manages data as objects, making it ideal for large-scale, unstructured data in the cloud."
+      },
+      {
+        "question": "How does an object storage cloud work?",
+        "answer": "An object storage cloud stores data in a flat address space, using unique identifiers for each object, which allows for massive scalability and easy retrieval across distributed networks."
+      },
+      {
+        "question": "What are the benefits of cloud based object storage?",
+        "answer": "Cloud based object storage provides high durability, availability, and cost-effectiveness, especially for web applications, backups, and data archiving."
+      },
+      {
+        "question": "Does Internxt provide private cloud object storage?",
+        "answer": "Yes, Internxt offers private cloud object storage with server-side encryption and S3 compatibility, ensuring your data remains secure and under your control."
+      },
+      {
+        "question": "Is Internxt compatible with S3 cloud object storage?",
+        "answer": "Internxt is fully compatible with S3 cloud object storage protocols, allowing you to use existing S3-compatible tools and applications seamlessly."
+      }
+    ]
   }
 }

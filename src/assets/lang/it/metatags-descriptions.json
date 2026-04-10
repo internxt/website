@@ -190,9 +190,9 @@
     "description": "Internxt Dark Web Monitor è un servizio 'sono stato compromesso' che controlla se la tua email è stata compromessa in violazioni di dati online."
   },
   {
-    "id": "cloud–object–storage",
-    "title": "Internxt — Archiviazione di Oggetti",
-    "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
+    "id": "cloud-object-storage",
+    "title": "Archiviazione di Oggetti Cloud Sicura (S3 Compatibile) — Internxt S3",
+    "description": "Internxt S3 offre un'archiviazione di oggetti cloud sicura, privata e conveniente. Scala le tue esigenze di archiviazione con la nostra soluzione di archiviazione di oggetti basata su cloud e compatibile con S3."
   },
   {
     "id": "green–cloud–computing",
@@ -210,9 +210,9 @@
     "description": "Estensione VPN gratuita di Internxt per Chrome: navigazione sicura, Wi–Fi crittografato e protezione della privacy. Scarica la nostra VPN sicura per proteggere i tuoi dati online."
   },
   {
-    "id": "cloud-object-storage",
-    "title": "Internxt – Passa a un internet più etico e sicuro",
-    "description": "Internxt offre un'archiviazione a oggetti privata e conveniente per archiviare i dati in modo sicuro, utilizzando il protocollo S3 per gestire le tue esigenze di archiviazione in modo efficace."
+    "id": "cloud-object-storage-legacy",
+    "title": "Archiviazione di Oggetti Cloud Sicura (S3 Compatibile) — Internxt S3",
+    "description": "Internxt S3 offre un'archiviazione di oggetti cloud sicura, privata e conveniente."
   },
   {
     "id": "free-cloud-object-storage",
@@ -421,8 +421,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – NAS QNAP e Synology",
-    "description": "Esegui il backup dei tuoi dispositivi NAS QNAP e Synology nel cloud con Internxt."
+    "title": "Migliore soluzione di Backup Cloud per NAS (QNAP e Synology) — Internxt",
+    "description": "Esegui il backup dei tuoi dispositivi NAS QNAP e Synology in modo sicuro nel cloud con la crittografia post-quantistica di Internxt. Il backup NAS più sicuro."
   },
   {
     "id": "coupons",
@@ -575,5 +575,15 @@
     "description": "Internxt è un partner ufficiale di Levante UD, che fornisce archiviazione cloud crittografata e backup per proteggere i preziosi dati del club.",
     "og:title": "Internxt — Partner cloud ufficiale del Levante UD",
     "og:description": "Internxt è un partner ufficiale di Levante UD, che fornisce archiviazione cloud crittografata e backup per proteggere i preziosi dati del club."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Backup Cloud per NAS Synology — Archiviazione NAS Sicura | Internxt",
+    "description": "Esegui il backup del tuo NAS Synology nel cloud con Internxt. Archiviazione cloud sicura, crittografata e privata per il tuo dispositivo Synology."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "Backup Cloud per NAS QNAP — Archiviazione NAS Sicura | Internxt",
+    "description": "Esegui il backup del tuo NAS QNAP nel cloud con Internxt. Archiviazione cloud sicura, crittografata e privata per il tuo dispositivo QNAP."
   }
 ]

@@ -191,8 +191,8 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — 对象存储",
-    "description": "Internxt 提供私密且实惠的对象存储，使用 S3 协议安全地存储数据，有效地管理您的存储需求。"
+    "title": "安全云对象存储 (兼容 S3) — Internxt S3",
+    "description": "Internxt S3 提供安全、私密且实惠的云对象存储。使用我们的 S3 兼容云对象存储解决方案扩展您的存储需求。"
   },
   {
     "id": "free-cloud-object-storage",
@@ -418,8 +418,8 @@
   },
   {
     "id": "nas",
-    "title": "Internxt – QNAP 和 Synology NAS",
-    "description": "使用 Internxt 在云端备份您的 QNAP 和 Synology NAS 设备。"
+    "title": "最佳 NAS 云备份解决方案 (QNAP 和 Synology) — Internxt",
+    "description": "使用 Internxt 的后量子加密技术，安全地在云端备份您的 QNAP 和 Synology NAS 设备。最安全的 NAS 云备份。"
   },
   {
     "id": "coupons",
@@ -565,5 +565,15 @@
     "id": "alternative-to-totalav",
     "title": "Internxt — TotalAV 替代方案",
     "description": "切换到 Internxt，体验 TotalAV 的开源替代方案。包含后量子和零知识加密云存储等功能。"
+  },
+  {
+    "id": "nas-synology",
+    "title": "Synology NAS 云备份 — 安全 NAS 存储 | Internxt",
+    "description": "使用 Internxt 在云端备份您的 Synology NAS。为您提供安全、加密且私密的云存储空间。"
+  },
+  {
+    "id": "nas-qnap",
+    "title": "QNAP NAS 云备份 — 安全 NAS 存储 | Internxt",
+    "description": "使用 Internxt 在云端备份您的 QNAP NAS。为您提供安全、加密且私密的云存储空间。"
   }
 ]

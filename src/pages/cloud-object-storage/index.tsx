@@ -100,6 +100,14 @@ const CloudObjectStorage = ({
         bgPadding="px-10"
       />
 
+      <FAQSection
+        textContent={{
+           title: textContent.SemanticAccordion.title,
+           faq: textContent.SemanticAccordion.items
+        }}
+        needsH3={false}
+      />
+
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <RelationalLinks textContent={relationalLinksText} />

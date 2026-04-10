@@ -119,5 +119,12 @@
         ]
       }
     ]
+  },
+  "Breadcrumbs": {
+    "home": "Encrypted Cloud Storage",
+    "drive": "Secure cloud storage",
+    "nas": "NAS Cloud Backup",
+    "qnap": "QNAP Cloud Backup",
+    "synology": "Synology NAS Cloud Backup"
   }
 }
