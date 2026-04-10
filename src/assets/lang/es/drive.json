@@ -82,7 +82,7 @@
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Almacenamiento en la nube cifrado y basado en la privacidad",
+    "title": "Almacenamiento en la nube seguro, basado en la privacidad",
     "description": "Internxt Drive utiliza cifrado post-cuántico y de conocimiento cero para cifrar tus archivos y datos en reposo y en tránsito.",
     "scrollableSection": {
       "titles": [
@@ -266,6 +266,56 @@
         "question": "¿Puedo configurar 2FA con Internxt?",
         "answer": [
           "Sí. Puedes configurar la autenticación de dos factores (2FA) para tu cuenta de Internxt desde la aplicación Drive Web. Además, puedes usar Authy o cualquier otra herramienta 2FA para generar tu código 2FA con Internxt, para iniciar sesión en nuestra aplicación de disco online."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Almacenamiento seguro de archivos en la nube: cómo Internxt protege tus datos",
+    "faq": [
+      {
+        "question": "¿Qué es el almacenamiento seguro de archivos en la nube y qué lo diferencia?",
+        "answer": [
+          "El almacenamiento seguro de archivos en la nube es un almacenamiento online diseñado con la protección de datos como requisito principal, no como añadido. La diferencia respecto al almacenamiento estándar depende de dos factores técnicos: dónde ocurre el cifrado y quién controla las claves.",
+          "El almacenamiento en la nube estándar cifra los datos en tránsito y en reposo, pero el proveedor gestiona las claves de cifrado. Esto significa que puede acceder a tus archivos, responder solicitudes legales y potencialmente exponer tus datos.",
+          "Una plataforma construida sobre arquitectura de conocimiento cero funciona de manera diferente: el cifrado ocurre en tu dispositivo, el proveedor solo recibe texto cifrado. Incluso bajo presión legal, no puede entregar contenido legible.",
+          "Internxt Drive está diseñado con este modelo: arquitectura de conocimiento cero, AES-256 y Kyber-512 post-cuántico, centros de datos europeos, ISO 27001:2022, cumplimiento HIPAA y auditoría Securitum 2024."
+        ]
+      },
+      {
+        "question": "¿Cómo funciona la seguridad del almacenamiento en la nube a nivel técnico?",
+        "answer": [
+          "La seguridad del almacenamiento en la nube es una pila de capas de protección, cada una dirigida a una superficie de amenaza diferente.",
+          "Cifrado en tránsito (TLS 1.3): previene la interceptación en red. Cifrado en reposo (AES-256): protege ante compromisos físicos. Controles de acceso: autenticación multifactor, permisos basados en roles, revocación de accesos a archivos compartidos.",
+          "Arquitectura de privacidad: la medida más significativa es si el proveedor puede acceder a tus datos. Las plataformas de conocimiento cero protegen los datos del propio proveedor.",
+          "Internxt Drive cubre todas las capas: TLS 1.3, AES-256 más Kyber-512 post-cuántico, controles de acceso granulares, arquitectura de conocimiento cero y registro completo de cumplimiento confirmado por Securitum 2024."
+        ]
+      },
+      {
+        "question": "¿Qué es la seguridad del almacenamiento basado en la nube y por qué es importante?",
+        "answer": [
+          "La seguridad del almacenamiento basado en la nube abarca todas las medidas técnicas y organizativas que protegen los datos almacenados en infraestructura remota: transmisión, almacenamiento, acceso y recuperación.",
+          "Los tres requisitos: confidencialidad (quién puede leer tus archivos), integridad (si los archivos pueden ser alterados) y disponibilidad (si tus archivos permanecen accesibles).",
+          "Una plataforma que retiene las claves aborda la confidencialidad solo parcialmente. La arquitectura de conocimiento cero la aborda completamente, excluyendo técnicamente al proveedor.",
+          "Internxt Drive aborda los tres: cifrado de conocimiento cero para confidencialidad, verificaciones de integridad criptográfica y centros de datos europeos redundantes para disponibilidad."
+        ]
+      },
+      {
+        "question": "¿Qué es el almacenamiento seguro basado en la nube y cómo se evalúa?",
+        "answer": [
+          "El almacenamiento seguro basado en la nube es almacenamiento remoto donde la protección de datos es un requisito de diseño. Cinco preguntas verificables ayudan a evaluarlo.",
+          "Primero: ¿dónde ocurre el cifrado? Del lado del cliente es más robusto que del servidor. Segundo: ¿quién posee las claves? El modelo de conocimiento cero mantiene las claves localmente. Tercero: ¿qué certificaciones independientes existen?",
+          "Cuarto: ¿el código es de revisión pública? El software de código abierto permite verificación independiente. Quinto: ¿se ha completado una prueba de penetración por terceros?",
+          "Internxt Drive responde las cinco: cifrado del lado del cliente, gestión de claves de conocimiento cero, ISO 27001:2022 e HIPAA, código completamente abierto y auditoría Securitum 2024."
+        ]
+      },
+      {
+        "question": "¿Qué es el almacenamiento en la nube seguro y qué ofrece frente a las opciones estándar?",
+        "answer": [
+          "El almacenamiento en la nube seguro va más allá de una contraseña o HTTPS. Significa que la arquitectura subyacente impide técnicamente el acceso no autorizado, incluso de la propia plataforma que aloja tus archivos.",
+          "Las plataformas estándar pueden ser obligadas por tribunales a entregar datos o verse comprometidas en brechas. La arquitectura de conocimiento cero elimina esta vulnerabilidad: los archivos se cifran antes de la subida, el proveedor solo guarda texto cifrado ilegible.",
+          "Lo que ofrece el almacenamiento en la nube seguro en la práctica: tus archivos solo salen del dispositivo cifrados; ante una brecha del proveedor, los atacantes obtienen datos ilegibles; las solicitudes judiciales no pueden cumplirse porque el proveedor no tiene acceso.",
+          "Internxt Drive está diseñado desde cero como almacenamiento en la nube seguro: conocimiento cero, cifrado de extremo a extremo, código abierto y auditado de forma independiente."
         ]
       }
     ]

@@ -81,7 +81,7 @@
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Stockage cloud chiffré axé sur la confidentialité",
+    "title": "Stockage cloud sécurisé, fondé sur la confidentialité",
     "description": "Internxt Drive utilise le chiffrement post-quantique et à connaissance zéro pour chiffrer vos fichiers et données au repos et en transit.",
     "scrollableSection": {
       "titles": [
@@ -270,6 +270,56 @@
         "question": "Puis-je configurer l'authentification à deux facteurs (2FA) avec Internxt ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs (2FA) pour votre compte Internxt à partir de l'application Drive Web. De plus, vous pouvez utiliser Authy ou tout autre outil 2FA pour générer votre code 2FA avec Internxt, afin de vous connecter à notre application Drive en ligne."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Stockage cloud sécurisé : comment Internxt protège vos données",
+    "faq": [
+      {
+        "question": "Qu'est-ce que le stockage cloud sécurisé de fichiers et qu'est-ce qui le différencie ?",
+        "answer": [
+          "Le stockage cloud sécurisé de fichiers est un stockage en ligne conçu avec la protection des données comme exigence principale, pas comme une fonctionnalité secondaire. La différence repose sur deux facteurs techniques : où se produit le chiffrement et qui contrôle les clés.",
+          "Le stockage cloud standard chiffre les données en transit et au repos, mais le fournisseur gère les clés. Cela signifie qu'il peut accéder à vos fichiers, répondre à des demandes légales et potentiellement exposer vos données.",
+          "Une plateforme construite sur une architecture à connaissance zéro fonctionne différemment : le chiffrement a lieu sur votre appareil, le fournisseur ne reçoit que du texte chiffré. Même sous contrainte légale, il ne peut pas fournir un contenu lisible.",
+          "Internxt Drive est conçu selon ce modèle : architecture à connaissance zéro, AES-256 et Kyber-512 post-quantique, centres de données européens, ISO 27001:2022, conformité HIPAA et audit Securitum 2024."
+        ]
+      },
+      {
+        "question": "Comment fonctionne la sécurité du stockage cloud au niveau technique ?",
+        "answer": [
+          "La sécurité du stockage cloud est une pile de couches de protection, chacune adressant une surface de menace différente.",
+          "Chiffrement en transit (TLS 1.3) : prévient l'interception réseau. Chiffrement au repos (AES-256) : protège en cas de compromission physique. Contrôles d'accès : authentification multi-facteurs, permissions basées sur les rôles, révocation des accès aux fichiers partagés.",
+          "Architecture de confidentialité : la mesure la plus significative est de savoir si le fournisseur peut accéder à vos données. Les plateformes à connaissance zéro protègent les données du fournisseur lui-même.",
+          "Internxt Drive couvre toutes les couches : TLS 1.3, AES-256 plus Kyber-512 post-quantique, contrôles d'accès granulaires, architecture à connaissance zéro et dossier complet de conformité confirmé par Securitum 2024."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que la sécurité du stockage cloud et pourquoi est-elle importante ?",
+        "answer": [
+          "La sécurité du stockage cloud couvre toutes les mesures techniques et organisationnelles qui protègent les données sur une infrastructure distante : transmission, stockage, accès et récupération.",
+          "Les trois exigences : confidentialité (qui peut lire vos fichiers), intégrité (si les fichiers peuvent être altérés) et disponibilité (si vos fichiers restent accessibles).",
+          "Une plateforme qui conserve les clés n'adresse la confidentialité que partiellement. L'architecture à connaissance zéro l'adresse complètement, excluant techniquement le fournisseur.",
+          "Internxt Drive adresse les trois : chiffrement à connaissance zéro pour la confidentialité, vérifications d'intégrité cryptographique et centres de données européens redondants pour la disponibilité."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le stockage cloud sécurisé et comment l'évaluer ?",
+        "answer": [
+          "Le stockage cloud sécurisé est un stockage distant où la protection des données est une exigence de conception. Cinq questions vérifiables aident à l'évaluer.",
+          "Premièrement : où se produit le chiffrement ? Côté client est plus robuste que côté serveur. Deuxièmement : qui détient les clés ? Le modèle à connaissance zéro maintient les clés localement. Troisièmement : quelles certifications indépendantes existent ?",
+          "Quatrièmement : le code est-il ouvert à la revue ? L'open-source permet une vérification indépendante. Cinquièmement : un test de pénétration tiers a-t-il été réalisé et publié ?",
+          "Internxt Drive répond aux cinq : chiffrement côté client, gestion des clés à connaissance zéro, ISO 27001:2022 et HIPAA, code source entièrement ouvert et audit Securitum 2024."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le stockage cloud sécurisé et qu'offre-t-il par rapport aux options standard ?",
+        "answer": [
+          "Le stockage cloud sécurisé va au-delà d'un mot de passe ou du HTTPS. Il signifie que l'architecture sous-jacente empêche techniquement tout accès non autorisé, même de la plateforme qui héberge vos fichiers.",
+          "Les plateformes standard peuvent être contraintes par des tribunaux de produire des données ou être compromises lors d'une violation. L'architecture à connaissance zéro élimine cette vulnérabilité : les fichiers sont chiffrés avant l'envoi, le fournisseur ne stocke que du texte chiffré illisible.",
+          "Ce que le stockage cloud sécurisé offre en pratique : vos fichiers ne quittent l'appareil que chiffrés ; en cas de violation du fournisseur, les attaquants obtiennent des données illisibles ; les demandes judiciaires ne peuvent être satisfaites car le fournisseur n'a pas accès.",
+          "Internxt Drive est conçu dès le départ comme un stockage cloud sécurisé : connaissance zéro, chiffrement de bout en bout, open-source et audité de manière indépendante."
         ]
       }
     ]

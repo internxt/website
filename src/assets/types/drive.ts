@@ -12,6 +12,7 @@ export interface DriveText {
   AdvancedToolsSection: AdvancedToolsSection;
   ReviewSection: ReviewSection;
   FaqSection: FAQSection;
+  SecureStorageSeoSection: FAQSection;
 }
 
 export interface AdvancedToolsSection {

@@ -17,12 +17,19 @@ const FAQSection = ({
   textColor,
   percentageDiscount,
   needsH3 = true,
-  bgGradient
+  bgGradient,
 }: FAQSectionProps) => {
   return (
-    <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`} style={bgGradient ? { background: bgGradient } : undefined}>
+    <section
+      className={`overflow-hidden ${bgColor ?? 'bg-white'}`}
+      style={bgGradient ? { background: bgGradient } : undefined}
+    >
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-10 pb-16 lg:pb-10 lg:pt-20">
-        <p className={`text-center text-30 font-semibold ${textColor ? textColor : 'text- gray-100'} lg:text-3xl`}>
+        <p
+          className={`text-center text-30 font-semibold lg:max-w-[850px] ${
+            textColor ? textColor : 'text- gray-100'
+          } lg:text-3xl`}
+        >
           {textContent.title}
         </p>
         <div className="flex w-full flex-col space-y-2 lg:max-w-[850px]">

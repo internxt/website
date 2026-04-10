@@ -212,5 +212,59 @@
   },
   "TrustedBySection": {
     "description": "Internxt riguarda il controllo. Con Internxt, hai la tranquillità di sapere che i tuoi dati sono crittografati, protetti e che la tua vita digitale ti appartiene."
+  },
+  "EncryptedStorageSeoSection": {
+    "title": "Archiviazione cloud crittografata: come funziona e perché è importante",
+    "faq": [
+      {
+        "question": "Cos'è l'archiviazione cloud crittografata end-to-end e come protegge i tuoi file?",
+        "answer": [
+          "L'archiviazione cloud crittografata end-to-end è un metodo di archiviazione online in cui la crittografia e la decrittografia avvengono esclusivamente sul tuo dispositivo. Nessuna terza parte — né la piattaforma, né la rete, né alcun intercettore — può leggere il contenuto dei tuoi file in qualsiasi momento.",
+          "Quando carichi un file su una piattaforma crittografata end-to-end, il tuo dispositivo genera chiavi di crittografia locali, trasforma il file in testo cifrato illeggibile e poi lo trasmette. La piattaforma archivia dati che non può interpretare. Al recupero, la decrittografia avviene localmente con chiavi che solo tu controlli.",
+          "Internxt utilizza AES-256 combinato con Kyber-512 post-quantistico, offrendo la migliore architettura di archiviazione cloud crittografata end-to-end attualmente disponibile, verificata dall'audit indipendente di Securitum nel 2024."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia per l'archiviazione cloud e quali tipi esistono?",
+        "answer": [
+          "La crittografia per l'archiviazione cloud è il processo di trasformazione matematica dei dati in modo che siano illeggibili senza la chiave di decrittografia corretta. Esistono tre tipi principali che differiscono significativamente nel livello di protezione.",
+          "Crittografia in transito: protegge i tuoi file durante il trasferimento tramite TLS 1.3. Crittografia a riposo: protegge i file sul server con AES-256, ma il fornitore conserva ancora le chiavi.",
+          "Crittografia end-to-end (E2EE): cifra i file sul tuo dispositivo prima del caricamento. Il fornitore non detiene mai le chiavi. È la forma più elevata di crittografia per l'archiviazione cloud — l'unica che protegge simultaneamente dall'accesso del fornitore, dalle richieste governative e dalle violazioni dei dati.",
+          "Internxt implementa tutti e tre: TLS 1.3 in transito, AES-256 a riposo e crittografia end-to-end dal momento in cui un file lascia il tuo dispositivo."
+        ]
+      },
+      {
+        "question": "Qual è la differenza tra archiviazione cloud con crittografia e con crittografia a conoscenza zero?",
+        "answer": [
+          "L'archiviazione cloud con crittografia è una categoria ampia: include qualsiasi piattaforma che applica protezione crittografica ai tuoi dati. Google Drive, Dropbox, OneDrive rientrano in questa categoria — cifrano, ma il fornitore gestisce le chiavi.",
+          "L'archiviazione cloud con crittografia a conoscenza zero è un'architettura più robusta. Conoscenza zero significa che il fornitore non ha accesso alle tue chiavi e non può leggere i tuoi file. Generazione, crittografia e decrittografia avvengono localmente.",
+          "La differenza pratica: con un fornitore standard, questo può rispondere a richieste legali o essere compromesso in una violazione. Con archiviazione cloud end-to-end a conoscenza zero, ciò è tecnicamente impossibile. Internxt è costruito su questa architettura, verificabile nel codice open-source e confermato da un audit di terze parti."
+        ]
+      },
+      {
+        "question": "Cos'è l'archiviazione cloud con crittografia a conoscenza zero e chi dovrebbe usarla?",
+        "answer": [
+          "L'archiviazione cloud con crittografia a conoscenza zero è progettata per utenti che necessitano di una garanzia tecnica — non solo politica — che i loro dati non possano essere consultati da nessuno tranne loro stessi.",
+          "Ne beneficiano maggiormente: giornalisti e attivisti che necessitano di crittografia end-to-end per proteggere le fonti; professionisti sanitari con obblighi HIPAA; avvocati con dovere di riservatezza verso i clienti; aziende che gestiscono dati personali di cittadini UE ai sensi del GDPR.",
+          "Internxt è costruito su un'architettura a conoscenza zero: le tue chiavi non lasciano mai il tuo dispositivo, i tuoi file vengono crittografati prima del caricamento, e nemmeno i dipendenti di Internxt hanno accesso a ciò che archivi."
+        ]
+      },
+      {
+        "question": "Cosa sono le soluzioni di archiviazione cloud crittografata e come si confrontano?",
+        "answer": [
+          "Le soluzioni di archiviazione cloud crittografata sono piattaforme in cui la protezione crittografica dei dati è una funzionalità centrale. Si distinguono dall'archiviazione mainstream principalmente per chi detiene le chiavi e quali garanzie sono verificate indipendentemente.",
+          "Le soluzioni leader includono: Internxt (conoscenza zero, E2EE, Kyber-512 post-quantistico + AES-256, ISO 27001:2022, HIPAA, open-source, audit Securitum 2024), ProtonDrive (conoscenza zero, diritto svizzero), Tresorit (conoscenza zero, ISO 27001) e Sync.com (conoscenza zero, compatibile HIPAA).",
+          "Internxt è l'unica soluzione di archiviazione cloud crittografata che aggiunge uno strato crittografico post-quantistico (Kyber-512) oltre all'AES-256 standard, proteggendo contro la minaccia futura del calcolo quantistico."
+        ]
+      },
+      {
+        "question": "Cosa sono i provider e i servizi di archiviazione cloud crittografata?",
+        "answer": [
+          "I provider di archiviazione cloud crittografata sono aziende che offrono archiviazione di file online su basi crittografiche solide, dove i dati degli utenti sono protetti dal fornitore stesso, non solo da aggressori esterni.",
+          "Non tutti i provider che si descrivono come 'crittografati' usano lo stesso modello. Con la crittografia lato server, il fornitore cifra i tuoi dati ma conserva le chiavi. Con la crittografia end-to-end, la gestione delle chiavi rimane sul tuo dispositivo.",
+          "I servizi di archiviazione cloud crittografata includono tipicamente archiviazione di file, sincronizzazione tra dispositivi, condivisione con link in scadenza o protetti da password e funzionalità di backup. Internxt offre una suite completa: Drive, Send, strumenti di backup e un pacchetto privacy con VPN, Mail, Antivirus e Meet, tutto sulla stessa base a conoscenza zero e crittografia end-to-end."
+        ]
+      }
+    ]
   }
 }

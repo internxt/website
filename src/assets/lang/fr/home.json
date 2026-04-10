@@ -213,5 +213,59 @@
   },
   "TrustedBySection": {
     "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
+  },
+  "EncryptedStorageSeoSection": {
+    "title": "Stockage cloud chiffré : fonctionnement et importance",
+    "faq": [
+      {
+        "question": "Qu'est-ce que le stockage cloud chiffré de bout en bout et comment protège-t-il vos fichiers ?",
+        "answer": [
+          "Le stockage cloud chiffré de bout en bout est une méthode de stockage en ligne où le chiffrement et le déchiffrement se produisent exclusivement sur votre appareil. Aucun tiers — ni la plateforme, ni le réseau, ni aucun intercepteur — ne peut lire le contenu de vos fichiers à aucun moment.",
+          "Lorsque vous téléchargez un fichier sur une plateforme chiffrée de bout en bout, votre appareil génère des clés de chiffrement locales, transforme le fichier en texte chiffré illisible, puis le transmet. La plateforme stocke des données qu'elle ne peut pas interpréter. Lors de la récupération, le déchiffrement a lieu localement avec des clés que vous seul contrôlez.",
+          "Internxt utilise AES-256 combiné avec Kyber-512 post-quantique, offrant la meilleure architecture de stockage cloud chiffré de bout en bout actuellement disponible, vérifiée par l'audit indépendant de Securitum en 2024."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement du stockage cloud et quels types existent ?",
+        "answer": [
+          "Le chiffrement du stockage cloud est le processus de transformation mathématique des données pour les rendre illisibles sans la clé de déchiffrement correcte. Trois types principaux existent, différant significativement en termes de protection.",
+          "Chiffrement en transit : protège vos fichiers lors du transfert entre votre appareil et le serveur via TLS 1.3. Chiffrement au repos : protège les fichiers stockés sur le serveur avec AES-256, mais le fournisseur conserve toujours les clés.",
+          "Chiffrement de bout en bout (E2EE) : chiffre les fichiers sur votre appareil avant le téléchargement. Le fournisseur ne détient jamais les clés. C'est la forme la plus élevée de chiffrement du stockage cloud, la seule qui protège simultanément contre l'accès du fournisseur, les demandes gouvernementales et les violations de données.",
+          "Internxt implémente les trois : TLS 1.3 en transit, AES-256 au repos et chiffrement de bout en bout dès qu'un fichier quitte votre appareil."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre stockage cloud avec chiffrement et stockage cloud avec chiffrement à connaissance zéro ?",
+        "answer": [
+          "Le stockage cloud avec chiffrement est une catégorie large : elle inclut toute plateforme qui applique une protection cryptographique à vos données. Google Drive, Dropbox, OneDrive entrent dans cette catégorie — ils chiffrent, mais le fournisseur gère les clés.",
+          "Le stockage cloud avec chiffrement à connaissance zéro est une architecture plus robuste. Connaissance zéro signifie que le fournisseur n'a aucune connaissance de vos clés et aucune capacité à lire vos fichiers. La génération, le chiffrement et le déchiffrement ont lieu localement.",
+          "La différence pratique : avec un fournisseur standard, celui-ci peut répondre à des demandes judiciaires ou être compromis lors d'une violation. Avec un stockage cloud de bout en bout à connaissance zéro, c'est techniquement impossible. Internxt est construit sur cette architecture, vérifiable dans le code open-source et confirmé par un audit tiers."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le stockage cloud avec chiffrement à connaissance zéro et qui devrait l'utiliser ?",
+        "answer": [
+          "Le stockage cloud avec chiffrement à connaissance zéro est conçu pour les utilisateurs qui ont besoin d'une garantie technique — pas seulement politique — que leurs données ne peuvent être consultées par personne d'autre qu'eux-mêmes.",
+          "Les principaux bénéficiaires : journalistes et militants ayant besoin d'un chiffrement de bout en bout pour protéger leurs sources ; professionnels de santé soumis aux obligations HIPAA ; avocats avec un devoir de confidentialité client ; entreprises gérant des données personnelles de résidents de l'UE sous le RGPD.",
+          "Internxt est construit sur une architecture à connaissance zéro : vos clés ne quittent jamais votre appareil, vos fichiers sont chiffrés avant l'envoi, et même les employés d'Internxt n'ont pas accès à ce que vous stockez."
+        ]
+      },
+      {
+        "question": "Que sont les solutions de stockage cloud chiffré et comment se comparent-elles ?",
+        "answer": [
+          "Les solutions de stockage cloud chiffré sont des plateformes où la protection cryptographique des données est une fonctionnalité centrale. Elles se distinguent du stockage grand public principalement par qui détient les clés et quelles garanties sont vérifiées indépendamment.",
+          "Les solutions leaders incluent : Internxt (connaissance zéro, E2EE, Kyber-512 post-quantique + AES-256, ISO 27001:2022, HIPAA, open-source, audit Securitum 2024), ProtonDrive (connaissance zéro, droit suisse), Tresorit (connaissance zéro, ISO 27001) et Sync.com (connaissance zéro, compatible HIPAA).",
+          "Internxt est la seule solution de stockage cloud chiffré qui ajoute une couche cryptographique post-quantique (Kyber-512) en plus de l'AES-256 standard, protégeant contre la menace future de l'informatique quantique."
+        ]
+      },
+      {
+        "question": "Que sont les fournisseurs et services de stockage cloud chiffré ?",
+        "answer": [
+          "Les fournisseurs de stockage cloud chiffré sont des entreprises proposant du stockage de fichiers en ligne sur des bases cryptographiques solides, où les données des utilisateurs sont protégées du fournisseur lui-même, pas seulement des attaquants externes.",
+          "Tous les fournisseurs se décrivant comme 'chiffrés' n'utilisent pas le même modèle. Avec le chiffrement côté serveur, le fournisseur chiffre vos données mais conserve les clés. Avec le chiffrement de bout en bout, la gestion des clés reste sur votre appareil.",
+          "Les services de stockage cloud chiffré comprennent généralement le stockage de fichiers, la synchronisation entre appareils, le partage avec des liens à expiration et la fonctionnalité de sauvegarde. Internxt propose une suite complète de services de stockage cloud chiffré : Drive, Send, des outils de sauvegarde et un pack de confidentialité incluant VPN, Mail, Antivirus et Meet, le tout sur la même base à connaissance zéro et chiffrement de bout en bout."
+        ]
+      }
+    ]
   }
 }

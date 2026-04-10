@@ -116,6 +116,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)" />
 
+      <FAQSection textContent={textContent.EncryptedStorageSeoSection} needsH3={false} />
+
       <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );

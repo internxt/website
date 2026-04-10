@@ -81,7 +81,7 @@
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Verschlüsselter Cloud-Speicher, der auf Privatsphäre basiert",
+    "title": "Sicherer Cloud-Speicher, auf Datenschutz ausgerichtet",
     "description": "Internxt Drive verwendet Post-Quanten- und Zero-Knowledge-Verschlüsselung, um Ihre Dateien und Daten im Ruhezustand und während der Übertragung zu verschlüsseln.",
     "scrollableSection": {
       "titles": [
@@ -269,6 +269,56 @@
         "question": "Kann ich 2FA mit Internxt konfigurieren?",
         "answer": [
           "Ja. Sie können die Zwei-Faktor-Authentifizierung (2FA) für Ihr Internxt-Konto über die Drive Web-App konfigurieren. Darüber hinaus können Sie Authy oder jedes andere 2FA-Tool verwenden, um Ihren 2FA-Code mit Internxt zu generieren, um sich bei unserer Online-Drive-App anzumelden."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Sicherer Cloud-Dateispeicher: Wie Internxt Ihre Daten schützt",
+    "faq": [
+      {
+        "question": "Was ist sicherer Cloud-Dateispeicher und was macht ihn besonders?",
+        "answer": [
+          "Sicherer Cloud-Dateispeicher ist Online-Dateispeicherung, bei der Datenschutz als primäre Anforderung konzipiert ist, nicht als Nachgedanke. Der Unterschied hängt von zwei technischen Faktoren ab: wo die Verschlüsselung stattfindet und wer die Schlüssel kontrolliert.",
+          "Standard-Cloud-Dateispeicher verschlüsselt Daten in Übertragung und Ruhezustand, aber der Anbieter verwaltet die Schlüssel. Das bedeutet, er kann auf Ihre Dateien zugreifen, rechtliche Anfragen beantworten und Ihre Daten bei einem Sicherheitsvorfall offenlegen.",
+          "Eine Plattform mit Zero-Knowledge-Architektur funktioniert anders: Verschlüsselung findet auf Ihrem Gerät statt, der Anbieter empfängt nur Chiffretext. Selbst unter rechtlichem Zwang kann er keine lesbaren Inhalte übergeben.",
+          "Internxt Drive ist nach diesem Modell konzipiert: Zero-Knowledge-Architektur, AES-256 und post-quanten Kyber-512, europäische Rechenzentren, ISO 27001:2022, HIPAA-Konformität und Securitum-Audit 2024."
+        ]
+      },
+      {
+        "question": "Wie funktioniert Cloud-Speichersicherheit auf technischer Ebene?",
+        "answer": [
+          "Cloud-Speichersicherheit ist ein Stapel von Schutzschichten, die jeweils eine andere Bedrohungsfläche adressieren.",
+          "Verschlüsselung in Übertragung (TLS 1.3): verhindert Netzwerkabfangung. Verschlüsselung im Ruhezustand (AES-256): schützt bei physischer Kompromittierung. Zugriffskontrollen: Multi-Faktor-Authentifizierung, rollenbasierte Berechtigungen, Widerruf von Freigaben.",
+          "Datenschutzarchitektur: die bedeutsamste Maßnahme ist, ob der Anbieter überhaupt auf Ihre Daten zugreifen kann. Zero-Knowledge-Plattformen schützen Daten vor dem Anbieter selbst.",
+          "Internxt Drive deckt alle Schichten ab: TLS 1.3, AES-256 plus post-quanten Kyber-512, granulare Zugriffskontrollen, Zero-Knowledge-Architektur und vollständiges Compliance-Register, bestätigt von Securitum 2024."
+        ]
+      },
+      {
+        "question": "Was ist Cloud-basierte Speichersicherheit und warum ist sie wichtig?",
+        "answer": [
+          "Cloud-basierte Speichersicherheit umfasst alle technischen und organisatorischen Maßnahmen zum Schutz von Daten auf Remote-Infrastruktur – Übertragung, Speicherung, Zugriff und Wiederherstellung.",
+          "Die drei Anforderungen: Vertraulichkeit (wer Ihre Dateien lesen kann), Integrität (ob Dateien manipuliert werden können) und Verfügbarkeit (ob Ihre Dateien zugänglich bleiben).",
+          "Eine Plattform, die Schlüssel hält, adressiert Vertraulichkeit nur teilweise – der Anbieter ist ein potenzieller Zugriffspunkt. Zero-Knowledge-Architektur adressiert dies vollständig.",
+          "Internxt Drive adressiert alle drei: Zero-Knowledge-Verschlüsselung für Vertraulichkeit, kryptografische Integritätsprüfungen und redundante europäische Rechenzentren für Verfügbarkeit."
+        ]
+      },
+      {
+        "question": "Was ist sicherer Cloud-basierter Speicher und wie bewertet man ihn?",
+        "answer": [
+          "Sicherer Cloud-basierter Speicher ist Remote-Dateispeicherung, bei der Datenschutz eine Designanforderung ist. Fünf überprüfbare Fragen helfen bei der Bewertung.",
+          "Erstens: Wo findet Verschlüsselung statt? Clientseitig ist stärker als serverseitig. Zweitens: Wer hält die Schlüssel? Zero-Knowledge bedeutet lokale Schlüsselspeicherung. Drittens: Welche unabhängigen Zertifizierungen liegen vor?",
+          "Viertens: Ist der Code öffentlich einsehbar? Open-Source ermöglicht unabhängige Überprüfung. Fünftens: Wurde ein Drittanbieter-Penetrationstest durchgeführt?",
+          "Internxt Drive beantwortet alle fünf: clientseitige Verschlüsselung, Zero-Knowledge-Schlüsselverwaltung, ISO 27001:2022 und HIPAA, vollständig Open-Source und Securitum-Audit 2024."
+        ]
+      },
+      {
+        "question": "Was ist sicherer Cloud-Speicher und was bietet er gegenüber Standardoptionen?",
+        "answer": [
+          "Sicherer Cloud-Speicher geht über ein Passwort oder HTTPS hinaus. Er bedeutet, dass die zugrunde liegende Architektur unbefugten Zugriff – auch vom Hosting-Anbieter – technisch verhindert.",
+          "Standard-Plattformen können durch Gerichte zur Datensherausgabe gezwungen oder bei Sicherheitsvorfällen kompromittiert werden. Zero-Knowledge-Architektur beseitigt diese Schwachstelle: Dateien werden vor dem Upload verschlüsselt, der Anbieter hält nur unlesbaren Chiffretext.",
+          "Was sicherer Cloud-Speicher in der Praxis bietet: Ihre Dateien verlassen das Gerät nur verschlüsselt; bei einem Anbietervorfall erhalten Angreifer unlesbare Daten; gerichtliche Anfragen können nicht erfüllt werden, da der Anbieter keinen Zugriff hat.",
+          "Internxt Drive ist von Grund auf als sicherer Cloud-Speicher konzipiert: Zero-Knowledge, Ende-zu-Ende-verschlüsselt, Open-Source und unabhängig geprüft."
         ]
       }
     ]

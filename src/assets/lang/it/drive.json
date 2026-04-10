@@ -81,7 +81,7 @@
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Archiviazione cloud crittografata basata sulla privacy",
+    "title": "Archiviazione cloud sicura, costruita sulla privacy",
     "description": "Internxt Drive utilizza la crittografia post-quantistica e zero-knowledge per crittografare i tuoi file e dati a riposo e in transito.",
     "scrollableSection": {
       "titles": [
@@ -265,6 +265,56 @@
         "question": "Posso configurare il 2FA con Internxt?",
         "answer": [
           "Sì. Puoi configurare l'autenticazione a due fattori (2FA) per il tuo account Internxt dall'app Drive Web. Inoltre, puoi utilizzare Authy o qualsiasi altro strumento 2FA per generare il tuo codice 2FA con Internxt, per accedere alla nostra app drive online."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Archiviazione cloud sicura: come Internxt protegge i tuoi dati",
+    "faq": [
+      {
+        "question": "Cos'è l'archiviazione cloud sicura di file e cosa la distingue?",
+        "answer": [
+          "L'archiviazione cloud sicura di file è un'archiviazione online progettata con la protezione dei dati come requisito principale, non come funzionalità aggiuntiva. La differenza rispetto all'archiviazione standard dipende da due fattori tecnici: dove avviene la crittografia e chi controlla le chiavi.",
+          "L'archiviazione cloud standard crittografa i dati in transito e a riposo, ma il fornitore gestisce le chiavi di crittografia. Ciò significa che può accedere ai tuoi file, rispondere a richieste legali e potenzialmente esporre i tuoi dati.",
+          "Una piattaforma costruita su architettura a conoscenza zero funziona diversamente: la crittografia avviene sul tuo dispositivo, il fornitore riceve solo testo cifrato. Anche sotto coercizione legale, non può fornire contenuto leggibile.",
+          "Internxt Drive è progettato secondo questo modello: architettura a conoscenza zero, AES-256 e Kyber-512 post-quantistico, data center europei, ISO 27001:2022, conformità HIPAA e audit Securitum 2024."
+        ]
+      },
+      {
+        "question": "Come funziona la sicurezza dell'archiviazione cloud a livello tecnico?",
+        "answer": [
+          "La sicurezza dell'archiviazione cloud è una pila di livelli di protezione, ognuno che indirizza una diversa superficie di minaccia.",
+          "Crittografia in transito (TLS 1.3): previene l'intercettazione di rete. Crittografia a riposo (AES-256): protegge in caso di compromissione fisica. Controlli di accesso: autenticazione multi-fattore, permessi basati sui ruoli, revoca dell'accesso ai file condivisi.",
+          "Architettura della privacy: la misura più significativa è se il fornitore può accedere ai tuoi dati. Le piattaforme a conoscenza zero proteggono i dati dal fornitore stesso.",
+          "Internxt Drive copre tutti i livelli: TLS 1.3, AES-256 più Kyber-512 post-quantistico, controlli di accesso granulari, architettura a conoscenza zero e registro completo di conformità confermato da Securitum 2024."
+        ]
+      },
+      {
+        "question": "Cos'è la sicurezza dell'archiviazione cloud e perché è importante?",
+        "answer": [
+          "La sicurezza dell'archiviazione cloud copre tutte le misure tecniche e organizzative che proteggono i dati su infrastruttura remota: trasmissione, archiviazione, accesso e recupero.",
+          "I tre requisiti: riservatezza (chi può leggere i tuoi file), integrità (se i file possono essere alterati) e disponibilità (se i tuoi file rimangono accessibili).",
+          "Una piattaforma che conserva le chiavi affronta la riservatezza solo parzialmente. L'architettura a conoscenza zero la affronta completamente, escludendo tecnicamente il fornitore.",
+          "Internxt Drive affronta tutti e tre: crittografia a conoscenza zero per la riservatezza, verifiche di integrità crittografiche e data center europei ridondanti per la disponibilità."
+        ]
+      },
+      {
+        "question": "Cos'è l'archiviazione cloud sicura e come si valuta?",
+        "answer": [
+          "L'archiviazione cloud sicura è un'archiviazione remota dove la protezione dei dati è un requisito di progettazione. Cinque domande verificabili aiutano a valutarla.",
+          "Primo: dove avviene la crittografia? Lato client è più robusto che lato server. Secondo: chi detiene le chiavi? Il modello a conoscenza zero mantiene le chiavi localmente. Terzo: quali certificazioni indipendenti esistono?",
+          "Quarto: il codice è aperto alla revisione? L'open-source consente la verifica indipendente. Quinto: è stato completato un test di penetrazione di terze parti?",
+          "Internxt Drive risponde a tutte e cinque: crittografia lato client, gestione delle chiavi a conoscenza zero, ISO 27001:2022 e HIPAA, codebase completamente open-source e audit Securitum 2024."
+        ]
+      },
+      {
+        "question": "Cos'è l'archiviazione cloud sicura e cosa offre rispetto alle opzioni standard?",
+        "answer": [
+          "L'archiviazione cloud sicura va oltre una password o HTTPS. Significa che l'architettura sottostante impedisce tecnicamente l'accesso non autorizzato, anche dalla piattaforma che ospita i tuoi file.",
+          "Le piattaforme standard possono essere costrette da tribunali a produrre dati o essere compromesse in una violazione. L'architettura a conoscenza zero elimina questa vulnerabilità: i file vengono crittografati prima del caricamento, il fornitore conserva solo testo cifrato illeggibile.",
+          "Cosa offre l'archiviazione cloud sicura in pratica: i tuoi file lasciano il dispositivo solo crittografati; in caso di violazione del fornitore, gli aggressori ottengono dati illeggibili; le richieste giudiziarie non possono essere soddisfatte perché il fornitore non ha accesso.",
+          "Internxt Drive è progettato fin dall'inizio come archiviazione cloud sicura: conoscenza zero, crittografato end-to-end, open-source e verificato indipendentemente."
         ]
       }
     ]
