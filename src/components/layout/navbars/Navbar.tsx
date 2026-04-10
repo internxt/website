@@ -45,12 +45,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const shouldHideRibbon = true;
 
   // SCROLL EFFECTS
-  const handleScroll = () => setScrolled(window.pageYOffset > 0);
-
   useEffect(() => {
+    const handleScroll = () => setScrolled(window.pageYOffset > 0);
     handleScroll();
     window.addEventListener('scroll', handleScroll);
-  });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
