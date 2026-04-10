@@ -5,3 +5,4 @@ Disallow: /use-cases
 Disallow: /internxt-library
 Disallow: /online-privacy-ebook
 Sitemap: https://internxt.com/sitemap.xml
+Sitemap: https://internxt.com/sitemap-top-urls.xml
