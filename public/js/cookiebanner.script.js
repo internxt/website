@@ -269,7 +269,11 @@ var injectScripts = function () {
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){window.dataLayer.push(arguments);}
-  var prefsStr = n('cookieConsentPrefs');
+  var prefsStr = document.cookie.split(';').reduce(function(acc, c) {
+    var parts = c.split('=').map(function(p) { return p.trim(); });
+    if (parts[0] && parts[1]) acc[parts[0]] = decodeURIComponent(parts[1]);
+    return acc;
+  }, {})['cookieConsentPrefs'] || null;
   var prefs = prefsStr ? JSON.parse(prefsStr) : [];
   var isAnalytics = prefs.indexOf('analytics') !== -1;
   var isMarketing = prefs.indexOf('marketing') !== -1;

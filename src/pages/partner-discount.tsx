@@ -49,7 +49,7 @@ const PartnerDiscount = ({
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <span className="inline-block bg-gray-200 h-4 w-16 animate-pulse rounded"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };

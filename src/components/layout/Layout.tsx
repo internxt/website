@@ -132,7 +132,7 @@ export default function Layout({
           `,
           }}
         />
-        <script async src="/js/cookiebanner.script.js" />
+        <script defer src="/js/cookiebanner.script.js" />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">

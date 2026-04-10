@@ -109,7 +109,6 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
-
         <DropdownMenu
           label={textContent.links.products}
           items={[
@@ -128,18 +127,17 @@ export const ItemsNavigation = ({
         <DropdownMenu
           label={textContent.links.solutions}
           items={[
-            { href: '/secure-cloud-storage', text: textContent.solutions.secureCloudStorage },
-            { href: '/lifetime-cloud-storage', text: textContent.solutions.lifetimeCloudStorage },
-            { href: '/private-cloud-storage', text: textContent.solutions.privateCloudStorage },
+            { href: '/drive', text: textContent.solutions.secureCloudStorage },
+            { href: '/lifetime', text: textContent.solutions.lifetimeCloudStorage },
+            { href: '/private-cloud-storage-solutions', text: textContent.solutions.privateCloudStorage },
             { href: '/cloud-storage-for-photos', text: textContent.solutions.cloudStorageForPhotos },
             { href: '/cloud-storage-for-videos', text: textContent.solutions.cloudStorageForVideos },
-            { href: '/cloud-storage-for-backup', text: textContent.solutions.cloudStorageForBackup },
-            { href: '/cloud-nas-backup', text: textContent.solutions.cloudNASBackup },
+            { href: '/cloud-storage-backup-solutions', text: textContent.solutions.cloudStorageForBackup },
+            { href: '/nas', text: textContent.solutions.cloudNASBackup },
           ]}
           darkMode={darkMode}
           lang={lang}
         />
-
         <NavigationLink
           href="/cloud-object-storage"
           text={textContent.products.s3}
@@ -147,7 +145,6 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
-
         <DropdownMenu
           label={textContent.links.ourValues}
           items={[
