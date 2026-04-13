@@ -56,7 +56,7 @@
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
     "music-metadata": "^11.2.3",
-    "next": "16.1.7",
+    "next": "16.2.3",
     "next-csrf": "^0.2.1",
     "next-share": "^0.18.1",
     "pdf-lib": "^1.17.1",
