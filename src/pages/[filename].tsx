@@ -102,6 +102,7 @@ const LANG_MAP = {
   techlinked: 'en',
   techquickie: 'en',
   'last-chance': 'en',
+  'earth-day': 'en',
 };
 
 function CombinedSpecialOffer({
@@ -192,7 +193,7 @@ function CombinedSpecialOffer({
       description={metatags!.description}
       segmentName="Partners"
       lang={lang}
-      robots={pathname === 'world-backup-day' ? 'noindex,follow' : undefined}
+      robots={pathname === 'world-backup-day' || pathname === 'earth-day' ? 'noindex,follow' : undefined}
     >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 

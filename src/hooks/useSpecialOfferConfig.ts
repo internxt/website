@@ -119,6 +119,7 @@ export const COUPON_CODES = {
   techlinked: PromoCodeName.techlinked,
   techquickie: PromoCodeName.techquickie,
   'last-chance': PromoCodeName.lastChance,
+  'earth-day': PromoCodeName.earthDay,
 };
 
 interface OfferConfig {
