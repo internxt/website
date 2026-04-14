@@ -56,6 +56,7 @@ export const ALLOWED_PATHS = [
   'techlinked',
   'techquickie',
   'last-chance',
+  'dezz',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -120,6 +121,7 @@ export const COUPON_CODES = {
   techquickie: PromoCodeName.techquickie,
   'last-chance': PromoCodeName.lastChance,
   'earth-day': PromoCodeName.earthDay,
+  dezz: PromoCodeName.Dezz,
 };
 
 interface OfferConfig {

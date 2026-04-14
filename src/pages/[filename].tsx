@@ -103,6 +103,7 @@ const LANG_MAP = {
   techquickie: 'en',
   'last-chance': 'en',
   'earth-day': 'en',
+  dezz: 'es',
 };
 
 function CombinedSpecialOffer({
