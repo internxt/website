@@ -256,6 +256,8 @@ export enum PromoCodeName {
   techlinked = 'TECHLINKED',
   techquickie = 'TECHQUICKIE',
   lastChance = 'lastchance-nb',
+  earthDay = 'EARTHDAY87',
+  Dezz = 'DEZZ',
 }
 
 export interface PromoCodeProps {
