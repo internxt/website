@@ -56,6 +56,7 @@ export const ALLOWED_PATHS = [
   'techlinked',
   'techquickie',
   'last-chance',
+  'earth-day',
   'dezz',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
