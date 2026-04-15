@@ -54,58 +54,6 @@ const renderCtaContent = (
   </div>
 );
 
-const LANG_MAP = {
-  believemy: 'fr',
-  madroz: 'fr',
-  justin: 'fr',
-  benjamin: 'fr',
-  qinhui: 'fr',
-  payette: 'en',
-  ghareeb: 'en',
-  christian: 'en',
-  foci: 'en',
-  apfelcast: 'de',
-  ct3003: 'de',
-  ition: 'de',
-  neumanndigital: 'de',
-  bluewin: 'de',
-  tatiana: 'en',
-  simon42: 'de',
-  heisect: 'de',
-  devopstoolbox: 'en',
-  bjoern: 'de',
-  lefiltre: 'fr',
-  annual: 'en',
-  ultimate: 'en',
-  bunker: 'es',
-  speciale: 'it',
-  xataka: 'es',
-  techradar: 'en',
-  shannon: 'en',
-  overfl0w: 'fr',
-  lefiltreitalia: 'it',
-  letosa: 'es',
-  genius: 'es',
-  cninternxtl: 'en',
-  cooltechzone: 'en',
-  lifetime: 'en',
-  clubic: 'fr',
-  morrolinux: 'it',
-  tukaram: 'es',
-  f4mi: 'en',
-  heise: 'de',
-  macho: 'en',
-  gentiluomodigitale: 'it',
-  spencer: 'en',
-  nate: 'es',
-  shortcircuit: 'en',
-  techlinked: 'en',
-  techquickie: 'en',
-  'last-chance': 'en',
-  'earth-day': 'en',
-  dezz: 'es',
-};
-
 function CombinedSpecialOffer({
   langJson,
   lang,
@@ -287,7 +235,7 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
-  const lang = pathname === 'world-backup-day' && ctx.locale ? ctx.locale : LANG_MAP[pathname] || 'es';
+  const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
