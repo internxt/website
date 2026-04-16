@@ -6,12 +6,13 @@ import debounce from 'lodash.debounce';
 interface ContactSalesFormProps {
   textContent: any;
   isBusiness?: boolean;
+  locale?: string;
 }
 type FormStatus = 'error' | 'success' | 'default';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
+export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -53,18 +54,18 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   };
 
   const handleSubmitDebounced = useCallback(
-    debounce(async (formData, isBusiness, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
+    debounce(async (formData, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
       setIsSubmitting(true);
       const origin_contact = isBusiness ? 'B2B' : 'S3';
-      const help = formData.help;
       const payload = {
         email: formData.email,
         name: formData.name,
         company: formData.company,
         phone: formData.phone,
         origin_contact: origin_contact,
-        help: help,
+        help: formData.help,
         storage: formData.storage,
+        locale: locale,
       };
 
       try {
@@ -82,7 +83,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmitDebounced(formData, isBusiness, onSubmitSuccess, onSubmitError, setIsSubmitting);
+    handleSubmitDebounced(formData, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting);
   };
 
   return (

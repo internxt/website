@@ -176,15 +176,10 @@
       "totalCharacters": " /1000",
       "options": [
         "Seleziona",
-        "1 - 10 TB",
-        "15 - 25 TB",
-        "25 - 50 TB",
-        "50 - 100 TB",
-        "100 - 150 TB",
-        "150 - 200 TB",
-        "250 - 500 TB",
-        "1 - 20 PB",
-        "20+ PB"
+        "Meno di 10TB",
+        "10TB - 50TB",
+        "50TB - 100 TB",
+        "Più di 100TB"
       ],
       "howWeCanHelp": "Come possiamo aiutarti? (Opzionale)",
       "howWeCanHelpPlaceHolder": "Dicci di più sulle tue necessità",
