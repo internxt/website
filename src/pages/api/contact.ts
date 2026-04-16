@@ -26,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ status: 'Error' });
   }
 
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress || 'unknown';
   const now = Date.now();
   const lastRequest = requestTimestamps.get(ip) || 0;
 
