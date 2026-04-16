@@ -43,7 +43,7 @@
     "cookies": "^0.8.0",
     "dgram": "^1.0.1",
     "docx": "^9.5.1",
-    "dompurify": "^3.3.2",
+    "dompurify": "^3.4.0",
     "dotenv": "^8.2.0",
     "eslint-config-next": "13",
     "exifr": "^7.1.3",
