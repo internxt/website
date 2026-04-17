@@ -2,7 +2,7 @@
 import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/metadataRemover';
 
@@ -267,7 +267,6 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${
@@ -424,7 +423,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                         alt="File Arrow Up icon"
                         width={80}
                         height={80}
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto"
+                        }} />
                       <p className="pt-4 text-2xl font-semibold">{textContent.dropHere}</p>
                     </div>
                   </>
@@ -438,7 +440,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             width={187}
                             height={187}
                             alt="Upload File"
-                          />
+                            style={{
+                              maxWidth: "100%",
+                              height: "auto"
+                            }} />
                         </div>
                         <div className="flex max-w-[255px] flex-col items-center space-y-4 text-center">
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">

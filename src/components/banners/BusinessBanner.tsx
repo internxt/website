@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { useState } from 'react';
 import { notificationService } from '@/components/Snackbar';
 
@@ -70,9 +70,11 @@ const BusinessBanner = ({ textContent }) => {
               draggable={false}
               quality={100}
               loading="eager"
-              layout="intrinsic"
               alt="desktop, laptop and phone with Internxt app"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
       </div>

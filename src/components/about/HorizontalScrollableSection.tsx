@@ -1,6 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 
@@ -101,7 +101,6 @@ export default function HorizontalScrollableSection({
       style={header ? { background: 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)' } : undefined}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
-
       <p
         className={`whitespace-pre-line ${
           header ? 'text-start lg:text-center' : 'text-start lg:pl-20'
@@ -109,7 +108,6 @@ export default function HorizontalScrollableSection({
       >
         {textContent.title}
       </p>
-
       <div className="flex w-[345px] flex-col items-center justify-between gap-8 lg:w-[749px] lg:flex-row">
         {header && (
           <>
@@ -127,12 +125,14 @@ export default function HorizontalScrollableSection({
                 width={358}
                 height={346}
                 quality={100}
-                layout="intrinsic"
                 className="rounded-2xl"
                 draggable={false}
                 alt="Internxt gift"
                 loading="eager"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </RevealX>
             <RevealX direction="right" className="flex lg:hidden">
               <Image
@@ -140,17 +140,18 @@ export default function HorizontalScrollableSection({
                 width={345}
                 height={150}
                 quality={100}
-                layout="intrinsic"
                 className="rounded-2xl"
                 draggable={false}
                 alt="Internxt gift"
                 loading="eager"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </RevealX>
           </>
         )}
       </div>
-
       {textContent.cta !== undefined && (
         <span
           onClick={() => window.open('https://internxt.com/about/', '_blank', 'noopener,noreferrer')}
@@ -160,7 +161,6 @@ export default function HorizontalScrollableSection({
           <CaretRight className="pt-[2px] text-primary" size={24} />
         </span>
       )}
-
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}

@@ -118,7 +118,6 @@ export const HorizontalPriceCard = ({
           {contentText.cta}
         </button>
       </div>
-
       <div className="flex w-full flex-col border-t border-neutral-20 bg-neutral-10 pb-6 pt-6 text-sm lg:h-[590px] lg:border-t-0">
         <div className="grid w-full grid-cols-1 gap-y-4 gap-x-4 px-6 text-start sm:grid-cols-2 lg:h-[264px] lg:w-fit lg:gap-x-12 lg:grid-cols-3 lg:items-center lg:justify-center">
             {contentText.productFeatures.individualPlans[storage].map((feature: {name: string, status: string}, index: number) => {

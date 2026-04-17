@@ -5,7 +5,7 @@ import { Transition, Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import setUTM from '@/lib/conversions';
 import LanguageMobileBox from '../components/LanguageMobileBox';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import axios from 'axios';
 import { CaretDown, CaretRight, CaretUp } from '@phosphor-icons/react';
 import moment from 'moment';
@@ -105,7 +105,10 @@ export default function Footer({
                     className="cursor-pointer"
                     alt="Download on the App Store"
                     onClick={() => platforms && window.open(platforms.iPhone, '_blank')}
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                   <Image
                     src={getImage('/images/footer/store-for-android.svg')}
                     width={148}
@@ -113,7 +116,10 @@ export default function Footer({
                     className="cursor-pointer"
                     alt="Get it on Google Play"
                     onClick={() => platforms && window.open(platforms.Android, '_blank')}
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
               </div>
             </div>
@@ -123,7 +129,10 @@ export default function Footer({
               height={125}
               className="cursor-pointer"
               alt="QR code for download Internxt APP"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
 
           {!hideNewsletter && (
@@ -993,16 +1002,30 @@ export default function Footer({
                   alt="Eturia logo"
                   width={60}
                   height={60}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 {lang !== 'es' ? (
                   <Image
                     src={getImage('/icons/social/gdpr-internxt.svg')}
                     alt="GDPR Internxt"
                     width={146}
                     height={48}
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 ) : (
-                  <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
+                  <Image
+                    src={getImage('/icons/social/cdti.png')}
+                    alt="GDPR Internxt"
+                    width={200}
+                    height={60}
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 )}
               </div>
 
@@ -1014,7 +1037,10 @@ export default function Footer({
                     loading="lazy"
                     src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
@@ -1030,7 +1056,10 @@ export default function Footer({
                     src={getImage(`/icons/social/X_logo.svg`)}
                     draggable="false"
                     alt="twitter icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1040,7 +1069,10 @@ export default function Footer({
                     src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
                     alt="Reddit icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1050,7 +1082,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
@@ -1064,7 +1099,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1074,7 +1112,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
               </div>
             </div>
@@ -1950,7 +1991,10 @@ export default function Footer({
                     src={getImage(`/icons/social/X_logo.svg`)}
                     draggable="false"
                     alt="twitter icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1960,7 +2004,10 @@ export default function Footer({
                     src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
                     alt="Reddit icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1970,7 +2017,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
@@ -1984,7 +2034,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
                 <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1994,7 +2047,10 @@ export default function Footer({
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </Link>
               </div>
 
@@ -2009,7 +2065,10 @@ export default function Footer({
                   loading="lazy"
                   src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </Link>
             </div>
           </div>

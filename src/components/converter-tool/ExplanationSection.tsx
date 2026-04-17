@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
 
@@ -44,7 +44,10 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
               layout={'intrinsic'}
               loading="lazy"
               alt="Virus scanner image"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
         </div>
       </div>

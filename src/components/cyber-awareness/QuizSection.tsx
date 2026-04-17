@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import Link from 'next/link';
 
@@ -18,7 +18,10 @@ const QuizSection = ({ textContent }) => {
             height={350}
             loading="eager"
             alt="Quiz image"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </Link>
 
         <div className="flex flex-col rounded-[20px] bg-primary bg-opacity-5 p-8 lg:hidden">

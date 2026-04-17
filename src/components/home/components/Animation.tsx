@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 interface AnimationProps {
   browserImg?: string;
@@ -71,7 +71,10 @@ const Animation = ({
             height={520}
             className="rounded-2xl"
             alt="drive web app"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
       {/* File preview */}
@@ -85,9 +88,14 @@ const Animation = ({
           borderRadius: '24px',
         }}
       >
-        <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
+        <Image
+          loading="eager"
+          src={previewImg}
+          draggable="false"
+          alt="photo file preview"
+          fill
+          sizes="100vw" />
       </div>
-
       {/* Tasklogger */}
       <div
         className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute bottom-0 left-[416px]`}
@@ -104,37 +112,62 @@ const Animation = ({
           width={211}
           height={190}
           alt="file logger with items downloading"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       {/* Icon / Folder */}
       <div
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '64px', height: '64px' }}
       >
-        <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image
+          loading="eager"
+          src={folderImg}
+          draggable="false"
+          alt="folder icon"
+          fill
+          sizes="100vw" />
       </div>
-
       {/* Icon / Zip */}
       <div
         className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '56px', height: '56px' }}
       >
-        <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />
+        <Image
+          loading="eager"
+          src={zipImg}
+          draggable="false"
+          alt="zip icon"
+          fill
+          sizes="100vw" />
       </div>
       {/* Icon / Powerpoint */}
       <div
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '52px', height: '52px' }}
       >
-        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
+        <Image
+          loading="eager"
+          src={powerpointImg}
+          draggable="false"
+          alt="powerpoint icon"
+          fill
+          sizes="100vw" />
       </div>
-
       {/* Icon / Csv */}
       <div
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
       >
-        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
+        <Image
+          loading="eager"
+          src={csvImg}
+          draggable="false"
+          alt="Csv icon"
+          fill
+          sizes="100vw" />
       </div>
     </div>
   );

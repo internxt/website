@@ -1,5 +1,5 @@
 import { FileArrowDown } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 
 const FeatureSection = ({ textContent }) => {
@@ -12,7 +12,10 @@ const FeatureSection = ({ textContent }) => {
           width={496}
           height={520}
           draggable={false}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <RevealX
           direction="left"
           className="flex w-full max-w-[388px] flex-col items-center space-y-7 text-center lg:items-start lg:text-left"

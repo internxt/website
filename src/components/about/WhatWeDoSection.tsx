@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
@@ -19,7 +19,10 @@ const WhatWeDoSection = ({ textContent }) => {
               height={743}
               alt="Fran Villalba Segarra"
               loading="eager"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </RevealX>
           <RevealX direction="right" className="flex lg:hidden">
             <div
@@ -52,7 +55,10 @@ const WhatWeDoSection = ({ textContent }) => {
                   alt="BitCoin Logo"
                   className="hidden lg:flex"
                   quality={100}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
                 <p className="text-xl font-medium leading-tight text-gray-95">{textContent.bitSection.title}</p>
               </div>
               <div className="flex flex-col gap-4 lg:hidden">
@@ -63,7 +69,10 @@ const WhatWeDoSection = ({ textContent }) => {
                     width={48}
                     alt="BitCoin Logo"
                     className="hidden lg:flex"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <p className="text-start text-sm font-medium leading-tight text-gray-95">
                   {textContent.bitSection.title}

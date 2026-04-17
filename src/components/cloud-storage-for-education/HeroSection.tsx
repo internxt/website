@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 
 const HeroSection = ({ textContent }) => {
   return (
@@ -42,7 +42,10 @@ const HeroSection = ({ textContent }) => {
               width={496}
               height={520}
               alt={'File Sharing for Education'}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
       </div>

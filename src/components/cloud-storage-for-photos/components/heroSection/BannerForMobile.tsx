@@ -1,7 +1,7 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -34,7 +34,10 @@ export const BannerForMobile = () => {
           height={300}
           quality={100}
           alt="Valentines Mobile"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
   );
