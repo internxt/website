@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 
 interface Position {
@@ -57,13 +57,17 @@ const Animation = ({ images }: AnimationProps) => {
         >
           <Image
             loading="eager"
-            src={getImage(image.src, true)} // Assuming getImage handles the src path correctly
+            // Assuming getImage handles the src path correctly
+            src={getImage(image.src, true)}
             draggable="false"
             width={image.size.width}
             height={image.size.height}
             alt={image.alt}
             className={image.className}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       ))}
     </div>

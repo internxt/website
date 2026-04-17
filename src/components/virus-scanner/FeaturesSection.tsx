@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import SignUpBanner from '../banners/SignUpBanner';
 import { getImage } from '@/lib/getImage';
 
@@ -22,7 +22,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               width={728}
               height={90}
               quality={100}
-              style={{ cursor: 'pointer' }}
               onClick={() =>
                 window.open(
                   `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
@@ -30,7 +29,11 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   'noopener noreferrer',
                 )
               }
-            />
+              style={{
+                cursor: 'pointer',
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
         <div id="incontent_2" className="flex w-full max-w-[1000px] justify-center"></div>
@@ -57,7 +60,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   height={390}
                   alt="Viruses Hate Privacy"
                   loading="lazy"
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
             </div>
             {/* Prevent malware */}
@@ -69,7 +75,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   height={390}
                   alt="Stop malware image"
                   loading="lazy"
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
                 <p className=" text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
@@ -83,7 +92,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 width={728}
                 height={90}
                 quality={100}
-                style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
                     `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
@@ -91,7 +99,11 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                     'noopener noreferrer',
                   )
                 }
-              />
+                style={{
+                  cursor: 'pointer',
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
 
             {/* Free online scanner */}
@@ -123,7 +135,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   height={390}
                   alt="Scan files image"
                   loading="lazy"
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
             </div>
             <div className="flex w-full flex-col items-center justify-center">
@@ -133,7 +148,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 width={728}
                 height={90}
                 quality={100}
-                style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
                     `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
@@ -141,7 +155,11 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                     'noopener noreferrer',
                   )
                 }
-              />
+                style={{
+                  cursor: 'pointer',
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
           </div>
         </div>

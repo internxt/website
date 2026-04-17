@@ -1,5 +1,5 @@
 import { ShieldStar } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { goToSignUpURL } from '@/lib/auth';
 
@@ -15,7 +15,10 @@ const FeatureSection = ({ textContent }) => {
             quality={100}
             draggable={false}
             alt="Protect your data"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </RevealX>
         <RevealX
           direction="left"

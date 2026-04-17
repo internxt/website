@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { CaretRight } from '@phosphor-icons/react';
 
 const BannersSection = ({ textContent, lang }) => {
@@ -19,7 +19,10 @@ const BannersSection = ({ textContent, lang }) => {
               layout={'intrinsic'}
               loading={'lazy'}
               alt="Password checker image"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
             <button
               onClick={() =>
@@ -40,7 +43,10 @@ const BannersSection = ({ textContent, lang }) => {
               layout={'intrinsic'}
               loading={'lazy'}
               alt="Byte converter image"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
             <button
               onClick={() =>

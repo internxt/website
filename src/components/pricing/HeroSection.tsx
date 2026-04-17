@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 
@@ -64,10 +64,12 @@ const HeroSection = ({ textContent }) => {
             className=" rounded-3xl"
             width={496}
             height={520}
-            layout="intrinsic"
             loading="eager"
             quality={100}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </section>

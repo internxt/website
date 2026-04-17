@@ -138,7 +138,6 @@ export default function HorizontalScrollableSection({
           </span>
         )}
       </div>
-
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 
 const FeatureSection = ({ textContent }) => {
@@ -16,7 +16,10 @@ const FeatureSection = ({ textContent }) => {
             height={500}
             className="mx-auto h-auto w-full max-w-[400px] object-contain"
             alt="Man with laptop"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
           <div className="flex max-w-[500px] flex-col">

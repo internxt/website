@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 
 const TryInternxtBanner = ({ textContent, url }) => {
   const [bannerVisible, setBannerVisible] = useState(false);
@@ -53,9 +53,11 @@ const TryInternxtBanner = ({ textContent, url }) => {
                 alt="hero"
                 width={208}
                 height={208}
-                layout="intrinsic"
                 loading="lazy"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
           </div>
         </div>

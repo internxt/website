@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
 
@@ -60,7 +60,10 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
               width={496}
               height={520}
               draggable={false}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <CardText textContent={cards.workFromAnywhere} />
         </div>
@@ -74,7 +77,10 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
               width={496}
               height={520}
               draggable={false}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
         {/* Secure backup */}
@@ -86,7 +92,10 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
               width={496}
               height={520}
               draggable={false}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           <CardText textContent={cards.secureBackup} />
         </div>

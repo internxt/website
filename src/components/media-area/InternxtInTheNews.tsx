@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
 
@@ -42,7 +42,15 @@ const InternxtInTheNews = ({ textContent }) => {
               className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start">
-                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={120} />
+                <Image
+                  src={getImage(`/images/media-area/${card.img}`)}
+                  alt="logo"
+                  height={30}
+                  width={120}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
@@ -64,7 +72,15 @@ const InternxtInTheNews = ({ textContent }) => {
               className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
               <div className="flex flex-col items-start justify-center">
-                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={card.width} />
+                <Image
+                  src={getImage(`/images/media-area/${card.img}`)}
+                  alt="logo"
+                  height={30}
+                  width={card.width}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
@@ -86,14 +102,21 @@ const InternxtInTheNews = ({ textContent }) => {
               className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start justify-center">
-                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={card.width} />
+                <Image
+                  src={getImage(`/images/media-area/${card.img}`)}
+                  alt="logo"
+                  height={30}
+                  width={card.width}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
           ))}
         </div>
       </RevealY>
-
       {/*Mobile/Tablet View*/}
       <div className="flex snap-x snap-mandatory flex-row overflow-scroll pb-20 xl:hidden">
         <div className="flex justify-center">
@@ -109,7 +132,10 @@ const InternxtInTheNews = ({ textContent }) => {
                           alt="logo"
                           height={30}
                           width={card.width}
-                        />
+                          style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                          }} />
                       </div>
                     </div>
                     <p className="pt-9 text-lg font-normal">{card.title}</p>

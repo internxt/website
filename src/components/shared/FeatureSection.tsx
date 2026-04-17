@@ -77,14 +77,14 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                   {/* Icon Section (Optional) */}
                   {IconComponent && (
                     // <IconComponent className="text-primary" size={48} weight="duotone" />
-                    <div
+                    (<div
                       className="flex h-20 w-20 items-center justify-center rounded-xl shadow-md"
                       style={{
                         background: 'linear-gradient(135deg, #A2C6FF 0%, #086AFF 100%)',
                       }}
                     >
                       <IconComponent className="text-white" size={48} weight="duotone" />
-                    </div>
+                    </div>)
                   )}
 
                   <h3 className="text-30 font-semibold  sm:leading-tight md:text-3xl">{card.title}</h3>

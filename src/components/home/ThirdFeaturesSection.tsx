@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { Gift } from '@phosphor-icons/react';
 import React from 'react';
 import RevealX from '@/components/components/RevealX';
@@ -14,10 +14,12 @@ const ThirdFeaturesSection = ({ textContent }) => {
             height={520}
             quality={100}
             loading="lazy"
-            layout="intrinsic"
             className="rounded-3xl"
             alt="Only privacy services image"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </RevealX>
         <RevealX
           direction="left"

@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { RocketLaunch } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
@@ -15,7 +15,10 @@ const ThirdFeaturesSection = ({ textContent }) => {
             quality={100}
             className="rounded-3xl"
             alt="sharing large files"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </RevealX>
         <RevealX
           direction="left"

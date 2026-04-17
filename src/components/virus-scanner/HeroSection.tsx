@@ -1,7 +1,7 @@
 import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { VirusScannerText } from '@/assets/types/virusScanner';
 
