@@ -30,12 +30,13 @@ const FeaturesSection = ({
           className="flex w-full flex-col items-center justify-center text-center"
           renderLayer={(percentage) => (
             <h2
-              className={`relative text-30 font-semibold ${
+              className={`flex flex-col items-center text-center text-30 font-semibold ${
                 darkMode ? 'text-white-95' : 'text-cool-gray-90'
-              } lg:mb-20 lg:text-3xl`}
+              } lg:my-10 lg:text-3xl`}
             >
               <Transition
                 show={anim.trigger(percentage)}
+                className="w-full text-center"
                 enter="transition-all duration-500"
                 enterFrom="opacity-0 translate-y-6"
                 enterTo="opacity-100 translate-y-0"
@@ -45,17 +46,20 @@ const FeaturesSection = ({
               >
                 {textContent.section1.title.line1}
               </Transition>
-              <Transition
-                show={anim.trigger(percentage)}
-                enter="transition-all duration-500 delay-250"
-                enterFrom="opacity-0 translate-y-2"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition-all duration-500"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-2"
-              >
-                {textContent.section1.title.line2}
-              </Transition>
+              {textContent.section1.title.line2 && (
+                <Transition
+                  show={anim.trigger(percentage)}
+                  className="w-full text-center"
+                  enter="transition-all duration-500 delay-250"
+                  enterFrom="opacity-0 translate-y-2"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition-all duration-500"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-2"
+                >
+                  {textContent.section1.title.line2}
+                </Transition>
+              )}
             </h2>
           )}
         />
