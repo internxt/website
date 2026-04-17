@@ -134,15 +134,10 @@
       "totalCharacters": " /1000",
       "options": [
         "请选择",
-        "1 - 10TB",
-        "15 - 25TB",
-        "25 - 50 TB",
-        "50 - 100 TB",
-        "100 - 150 TB",
-        "150 - 200 TB",
-        "250 - 500 TB",
-        "1 - 20 PB",
-        "20+ PB"
+        "少于10TB",
+        "10TB - 50TB",
+        "50TB - 100 TB",
+        "超过100TB"
       ],
       "howWeCanHelp": "我们能为您提供什么帮助？（可选）",
       "howWeCanHelpPlaceHolder": "告诉我们更多关于您的需求",

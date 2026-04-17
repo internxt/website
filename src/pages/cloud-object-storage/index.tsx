@@ -15,8 +15,7 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { GetServerSidePropsContext } from 'next';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-
-
+import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -48,72 +47,81 @@ const CloudObjectStorage = ({
         <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
         <HeroSection textContent={textContent.HeroSection} />
 
-      <CertificationsSection />
+        <CertificationsSection />
 
-      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
+        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
-      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+        <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
 
-      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+        <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection}
-        url={'#storageSection'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSection.title}
-            </h2>
-            <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
-            </h2>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="bg-neutral-17 px-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection}
+          url={'#storageSection'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.CtaSection.title}
+              </h2>
+              <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
+                {textContent.CtaSection.description}
+              </h2>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="bg-neutral-17 px-10"
+        />
 
-      <HorizontalScrollableSection
-        textContent={textContent.WhyChooseInternxtSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-        needsDivider={false}
-      />
+        <HorizontalScrollableSection
+          textContent={textContent.WhyChooseInternxtSection}
+          bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          needsH2
+          needsH3
+          needsDivider={false}
+        />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSectionV2}
-        url={'#storageSection'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSectionV2.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="px-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSectionV2}
+          url={'#storageSection'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.CtaSectionV2.title}
+              </h2>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
+                {textContent.CtaSectionV2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="px-10"
+        />
 
-      <FAQSection
-        textContent={{
-           title: textContent.SemanticAccordion.title,
-           faq: textContent.SemanticAccordion.items
-        }}
-        needsH3={false}
-      />
+        <FAQSection
+          textContent={{
+            title: textContent.SemanticAccordion.title,
+            faq: textContent.SemanticAccordion.items,
+          }}
+          needsH3={false}
+        />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+        <ContactSalesForm textContent={textContent.ContactSales} locale={locale} />
 
-      <Footer textContent={footerText} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }]} />
-    </Layout>
+        <RelationalLinks textContent={relationalLinksText} />
+
+        <Footer
+          textContent={footerText}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud object storage', url: '/cloud-object-storage' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };

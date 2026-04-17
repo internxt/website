@@ -178,15 +178,10 @@
       "totalCharacters": " /1000",
       "options": [
         "Sélectionner",
-        "1 - 10 To",
-        "15 - 25 To",
-        "25 - 50 To",
-        "50 - 100 To",
-        "100 - 150 To",
-        "150 - 200 To",
-        "250 - 500 To",
-        "1 - 20 Po",
-        "20+ Po"
+        "Moins de 10 To",
+        "10 To - 50 To",
+        "50 To - 100 To",
+        "Plus de 100 To"
       ],
       "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
       "howWeCanHelpPlaceHolder": "Dites-nous en plus sur vos besoins",
