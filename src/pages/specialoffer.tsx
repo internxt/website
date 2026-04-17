@@ -146,25 +146,25 @@ function SpecialOffer({
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} bgColor="bg-neutral-17" />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'#billingButtons'}
         customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
               {parsePercentText(langJson.ctaSection2.description)}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
+        containerDetails="shadow-lg backdrop-blur-[55px] px-10"
         bgPadding="lg:pb-20 pb-10"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
       <Footer textContent={footerLang} lang={lang} />

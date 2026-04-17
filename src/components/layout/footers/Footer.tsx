@@ -63,7 +63,9 @@ export default function Footer({
       });
   };
 
-  const mobileResourcesHeaderClass = `${darkMode ? 'text-gray-1' : 'text-gray-100'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
+  const mobileResourcesHeaderClass = `${
+    darkMode ? 'text-gray-1' : 'text-gray-100'
+  } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
   const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60';
   const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
 
@@ -72,16 +74,6 @@ export default function Footer({
       id="footer"
       className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
     >
-      {lang === 'es' && (
-        <div className="flex w-full items-center justify-center ">
-          <Image
-            src={getImage('/images/footer/ProyectoGeneralitat.webp')}
-            alt="Proyecto Financiado por la generalitat"
-            width={330}
-            height={140}
-          />
-        </div>
-      )}
       <div
         className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
         style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
@@ -94,7 +86,6 @@ export default function Footer({
           />
         )}
 
-            
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
           <div className="flex w-full flex-row items-end gap-6 lg:w-1/2 2xl:w-1/3">
             <div className="flex flex-col items-start justify-between gap-9">
@@ -697,7 +688,7 @@ export default function Footer({
                       ) : (
                         <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
-                    </button> 
+                    </button>
 
                     <div
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
@@ -757,7 +748,7 @@ export default function Footer({
                       ) : (
                         <CaretRight className="mb-0.5 flex h-2 w-2" />
                       )}
-                    </button> 
+                    </button>
 
                     <div
                       className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
@@ -993,8 +984,6 @@ export default function Footer({
                 </div>
               </div>
             </div>
-
-            
 
             {/* Logos */}
             <div className="flex w-full flex-row justify-between">
@@ -1323,7 +1312,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${open ? 'flex' : 'hidden'} ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${
+                        open ? 'flex' : 'hidden'
+                      } ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -1630,7 +1621,6 @@ export default function Footer({
                           }`}
                         >
                           <div className="flex flex-col space-y-8 pl-4">
-                          
                             <Link
                               href="/idrive-e2-alternative"
                               locale={lang}
