@@ -8,6 +8,8 @@ interface TrustedSectionProps {
   darkMode?: boolean;
   image?: string;
   isValentinesMode?: boolean;
+  bgGradientColor?: string;
+  bgColor?: string;
 }
 
 const WORDS_PER_GROUP = 2;
@@ -21,6 +23,8 @@ export default function TrustedSection({
   darkMode,
   image,
   isValentinesMode,
+  bgGradientColor,
+  bgColor,
 }: Readonly<TrustedSectionProps>): JSX.Element {
   const sectionRef = useRef<HTMLElement>(null);
   const spanRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -59,13 +63,15 @@ export default function TrustedSection({
   return (
     <section
       ref={sectionRef}
-      className={`flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:pb-28 lg:px-10 xl:px-32 3xl:px-80 ${
-        darkMode ? 'bg-[#1C1C1C]' : ''
+      className={`${bgColor || ''} flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-10 lg:pb-28 xl:px-32 3xl:px-80 ${
+        darkMode && !bgColor ? 'bg-[#1C1C1C]' : ''
       }`}
       style={
         isValentinesMode
           ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)' }
-          : !darkMode && !image
+          : bgGradientColor
+          ? { background: bgGradientColor }
+          : !darkMode && !image && !bgColor
           ? { background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }
           : undefined
       }
@@ -73,7 +79,7 @@ export default function TrustedSection({
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <p className="w-full font-semibold text-[60px] leading-[100%] py-1 text-justify">
+      <p className="w-full py-1 text-justify text-[60px] font-semibold leading-[100%]">
         {groups.map((group, i) => (
           <span
             key={i}
@@ -85,7 +91,8 @@ export default function TrustedSection({
               transition: 'color 0.4s ease',
             }}
           >
-            {i > 0 ? ' ' : ''}{group}
+            {i > 0 ? ' ' : ''}
+            {group}
           </span>
         ))}
       </p>
