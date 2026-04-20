@@ -6,10 +6,8 @@ const KLAVIYO_S3_LIST_ID = process.env.KLAVIYO_S3_CONTACT_LIST_ID;
 const KLAVIYO_API_URL = 'https://a.klaviyo.com/api';
 const KLAVIYO_API_REVISION = '2024-10-15';
 
-const THROTTLE_TIME = 60 * 1000;
+const THROTTLE_TIME = 2 * 1000;
 const requestTimestamps = new Map<string, number>();
-
-const VALID_STORAGE_OPTIONS = ['Less than 10TB', '10TB - 50TB', '50TB - 100 TB', 'More than 100TB'];
 
 const klaviyoAxios = axios.create({
   baseURL: KLAVIYO_API_URL,
@@ -44,10 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (!email.includes('@') || email.length > 254) {
     return res.status(400).json({ status: 'Error', message: 'Invalid email' });
-  }
-
-  if (!VALID_STORAGE_OPTIONS.includes(storage)) {
-    return res.status(400).json({ status: 'Error', message: 'Invalid storage option' });
   }
 
   if (name.length > 100 || company.length > 100 || phone.length > 30 || (help && help.length > 1000)) {
