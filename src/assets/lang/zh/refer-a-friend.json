@@ -35,6 +35,49 @@
       }
     ]
   },
+  "tableSection": {
+    "title": "您的朋友可以获得什么奖励？",
+    "subtitle": "您的推荐链接可享受所有计划85%的折扣，让他们访问安全的云存储、VPN、Meet等更多服务。",
+    "planTitles": {
+      "header": "选择您的计划",
+      "individuals": "年度计划",
+      "homePage": "为您选择合适的计划",
+      "lifetime": "终身计划",
+      "business": "企业计划",
+      "lifetimeCampaign": {
+        "blueText": "5折优惠",
+        "normalText": "所有独家终身计划"
+      }
+    },
+    "lifetimeDescription": "一次付款，永久享受隐私和安全。",
+    "planDescription": "所有 Internxt 计划均包含完整访问我们屡获殊荣的隐私套件：Internxt Drive、Send、VPN、防病毒、清理工具、暗网监控、Meet 和 Mail。",
+    "businessDescription": "我们目前正在开发专为保护您的企业、员工和盈利能力而设计的全新 Internxt 企业计划。",
+    "businessDescription2": "使用 Internxt 的加密云存储计划确保您公司的数据安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "获取免费加密云存储",
+      "description": "免费获取 1 GB 加密云存储",
+      "cta": "选择计划"
+    },
+    "features": {
+      "endToEnd": "端对端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "有问题？我们有答案",
     "faq": [

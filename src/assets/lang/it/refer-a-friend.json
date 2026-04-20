@@ -35,6 +35,49 @@
       }
     ]
   },
+  "tableSection": {
+    "title": "Quali premi riceve il tuo amico?",
+    "subtitle": "Il tuo link di invito offre l'85% di sconto su tutti i piani, dando accesso ad archiviazione cloud sicura, VPN, Meet e altro ancora.",
+    "planTitles": {
+      "header": "Seleziona il tuo piano",
+      "individuals": "Piani annuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani aziendali",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri esclusivi piani a vita"
+      }
+    },
+    "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre.",
+    "planDescription": "Tutti i piani Internxt includono l'accesso completo alla nostra pluripremiata suite per la privacy: Internxt Drive, Send, VPN, Antivirus, Cleaner, Monitor del Dark Web, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di archiviazione cloud crittografata di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Aziendale"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Ottieni archiviazione cloud crittografata gratuita",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonima",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
     "faq": [

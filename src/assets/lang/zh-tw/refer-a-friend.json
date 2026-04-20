@@ -35,6 +35,49 @@
       }
     ]
   },
+  "tableSection": {
+    "title": "您的朋友可以獲得什麼獎勵？",
+    "subtitle": "您的推薦連結可享受所有方案85%的折扣，讓他們使用安全的雲端儲存、VPN、Meet等更多服務。",
+    "planTitles": {
+      "header": "選擇您的方案",
+      "individuals": "年度方案",
+      "homePage": "為您選擇合適的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
+      "lifetimeCampaign": {
+        "blueText": "5折優惠",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付款，永久享受隱私和安全。",
+    "planDescription": "所有 Internxt 方案均包含完整存取我們屢獲殊榮的隱私套件：Internxt Drive、Send、VPN、防病毒、清理工具、暗網監控、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的企業、員工和獲利能力而設計的全新 Internxt 企業方案。",
+    "businessDescription2": "使用 Internxt 的加密雲端儲存方案確保您公司的資料安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "取得免費加密雲端儲存",
+      "description": "免費取得 1 GB 加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過審計",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "有問題？我們有答案",
     "faq": [

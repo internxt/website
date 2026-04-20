@@ -35,6 +35,49 @@
       }
     ]
   },
+  "tableSection": {
+    "title": "Welche Prämien erhält Ihr Freund?",
+    "subtitle": "Ihr Empfehlungslink gibt 85% Rabatt auf alle Tarife und ermöglicht Zugang zu sicherem Cloud-Speicher, VPN, Meet und mehr.",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Tarif",
+      "individuals": "Jahrestarife",
+      "homePage": "Wählen Sie den richtigen Tarif für Sie",
+      "lifetime": "Lifetime-Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und für immer Privatsphäre und Sicherheit genießen.",
+    "planDescription": "Alle Internxt-Tarife beinhalten vollständigen Zugang zu unserer preisgekrönten Datenschutzsuite: Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark-Web-Monitor, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die speziell für den Schutz Ihres Unternehmens, Ihrer Mitarbeiter und Ihrer Rentabilität entwickelt werden.",
+    "businessDescription2": "Sichern Sie die Daten Ihres Unternehmens mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lifetime",
+      "individual": "Einzelperson",
+      "business": "Unternehmen"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlosen verschlüsselten Cloud-Speicher erhalten",
+      "description": "1 GB verschlüsselten Cloud-Speicher kostenlos erhalten",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [

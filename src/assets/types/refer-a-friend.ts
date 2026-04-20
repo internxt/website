@@ -1,7 +1,10 @@
+import { TableSection } from '@/assets/types/home';
+
 export interface ReferAFriendText {
   HeroSection: HeroSection;
   RewardsSection: RewardsSection;
   HowItWorks: HowItWorks;
+  tableSection: TableSection;
   FaqSection: FaqSection;
 }
 
