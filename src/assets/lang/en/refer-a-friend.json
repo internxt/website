@@ -13,7 +13,7 @@
     "title": "What rewards do you get?",
     "subtitle": "Refer a friend, get up to €100",
     "features": [
-      "You’ll receive a commission for every plan purchased through your unique referral link. The more friends you refer, the more money you’ll earn, with a chance to get up to €100 for each referral and €1000 total.",
+      "You’ll receive a commission for every plan purchased through your unique referral link. The more friends you refer, the more money you’ll earn, with a chance to get up to €100 for each referral, computed as a 10% recurrent commission of whatever your referral pays.",
       "Those who use your referral link will also get 85% off any Internxt plan."
     ]
   },
@@ -89,21 +89,15 @@
       },
       {
         "question": "Who is eligible to make a referral?",
-        "answer": [
-          "The program is open to everyone who has a paid Internxt plan."
-        ]
+        "answer": ["The program is open to everyone who has a paid Internxt plan."]
       },
       {
         "question": "Who is eligible to get a referral link?",
-        "answer": [
-          "Anyone who has a free Internxt account is eligible to get 85% off any annual or lifetime plan."
-        ]
+        "answer": ["Anyone who has a free Internxt account is eligible to get 85% off any annual or lifetime plan."]
       },
       {
         "question": "How much can I earn?",
-        "answer": [
-          "You can earn up to €100 per referral, depending on the plan bought with your link."
-        ]
+        "answer": ["You can earn up to €100 per referral, depending on the plan bought with your link."]
       },
       {
         "question": "Can I pay with a credit card, PayPal, or cryptocurrency?",

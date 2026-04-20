@@ -86,6 +86,22 @@ const ReferAFriendPage = ({
 
       <HowItWorksSection textContent={textContent.HowItWorks} />
 
+      <PricingSectionWrapper
+        textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={locale}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
+        backgroundGradientColor="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+      />
+
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <Footer textContent={footerLang} lang={locale} />
