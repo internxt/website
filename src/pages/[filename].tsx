@@ -236,6 +236,16 @@ function CombinedSpecialOffer({
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
   const lang = ctx.locale;
+  const hasLocalePreference = ctx.req.cookies['NEXT_LOCALE'];
+
+  if (pathname === 'baity' && lang === 'en' && !hasLocalePreference) {
+    return {
+      redirect: {
+        destination: '/es/baity',
+        permanent: false,
+      },
+    };
+  }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
