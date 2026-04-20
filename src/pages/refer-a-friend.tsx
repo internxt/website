@@ -39,8 +39,8 @@ const ReferAFriendPage = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
+    couponCode: PromoCodeName.SUBSCRIPTION,
+    couponCodeForLifetime: PromoCodeName.LIFETIME,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';

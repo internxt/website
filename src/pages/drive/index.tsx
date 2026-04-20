@@ -63,8 +63,8 @@ const Drive = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales85,
-    couponCodeForLifetime: PromoCodeName.SoftSales85,
+    couponCode: PromoCodeName.SUBSCRIPTION,
+    couponCodeForLifetime: PromoCodeName.LIFETIME,
   });
 
   const onCheckoutButtonClicked = async (

@@ -258,6 +258,8 @@ export enum PromoCodeName {
   lastChance = 'lastchance-nb',
   earthDay = 'EARTHDAY87',
   Dezz = 'DEZZ',
+  LIFETIME = '75OFFLFT',
+  SUBSCRIPTION = '75OFF',
 }
 
 export interface PromoCodeProps {
