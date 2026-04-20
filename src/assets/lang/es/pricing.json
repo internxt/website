@@ -300,7 +300,11 @@
           {
             "id": "file_versioning",
             "name": "Control de versiones",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "cli_webdav_support",
@@ -337,17 +341,29 @@
           {
             "id": "trash_limits",
             "name": "Autovaciado de papeleras",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "mail",
             "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           },
           {
             "id": "photos",
             "name": "Fotos",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           }
         ]
       }
@@ -388,7 +404,7 @@
         "question": "¿Puedo pagar con tarjeta, PayPal o criptomonedas?",
         "answer": [
           "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar vía PayPal, criptomonedas, Klarna y otros métodos.",
-          "Bajo petición, también aceptamos criptomonedas y débito SEPA. Si tienes dudas sobre los métodos de pago, simplemente envíanos un correo a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Bajo petición, también aceptamos criptomonedas. Si tienes dudas sobre los métodos de pago, simplemente envíanos un correo a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
@@ -484,7 +500,6 @@
       }
     ]
   },
-
   "InfoSectionForBusiness": {
     "title": "¿Qué puedes hacer con Internxt?",
     "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube seguro para empresas.",

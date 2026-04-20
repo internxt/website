@@ -12,7 +12,11 @@
     "title": "Internxt **Rabatte** und **Aktionen**",
     "subtitle": "Sie haben {{discount}}% Rabatt freigeschaltet! Holen Sie sich hier Ihren Internxt-Gutscheincode",
     "descriptionNormal": "alle Tarife",
-    "features": ["Komplette Privacy-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "features": [
+      "Komplette Privacy-Suite",
+      "Post-Quanten-Verschlüsselung",
+      "Open Source und geprüft"
+    ],
     "startFrom": {
       "normal1": "Ab ",
       "price": " {{minimumPrice}}",
@@ -62,7 +66,11 @@
     "title": "So lösen Sie Internxt-Gutscheine ein",
     "description": "Fordern Sie Ihren Internxt-Gutscheincode an, indem Sie diese drei einfachen Schritte befolgen:",
     "cards": {
-      "titles": ["Wählen Sie Ihren Tarif", "Gehen Sie zur Kasse", "Bestätigen und genießen!"],
+      "titles": [
+        "Wählen Sie Ihren Tarif",
+        "Gehen Sie zur Kasse",
+        "Bestätigen und genießen!"
+      ],
       "descriptions": [
         "Wählen Sie aus unseren 3 jährlichen oder Lifetime-Tarifen aus unserer obigen Tabelle und klicken Sie auf 'Tarif wählen', um Ihren Internxt-Gutschein einzulösen.",
         "Sobald Sie zur Kasse gehen, wird Ihr Internxt-Gutscheincode automatisch angewendet! Von hier aus müssen Sie nur noch Ihre Daten eingeben, um zur Zahlung zu gelangen.",
@@ -94,8 +102,23 @@
     "description": "Ihr Internxt-Gutscheincode gilt für alle unsere Essential-, Premium- und Ultimate-Jahres- und Lifetime-Tarife.",
     "cta": "Lernen Sie uns besser kennen",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
-      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
+      "imagesPathname": [
+        "Drive",
+        "Terminal",
+        "antivirus",
+        "cleaner",
+        "hero",
+        "meet",
+        "vpn"
+      ],
+      "titles": [
+        "Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Erweiterte Tools"
+      ],
       "descriptions": [
         "Internxt Drive kommt mit Post-Quanten- und Zero-Knowledge-Verschlüsselung, sodass niemand außer Ihnen auf Ihre Dateien zugreifen kann. Erhalten Sie verschlüsselten Cloud-Speicher und Backups für Ihre Fotos, Videos und Dateien. \n\n Plus, verschlüsselte Backups und passwortgeschütztes Dateisharing bieten maximalen Schutz vor Ransomware und Datenschutzverletzungen.",
         "Alle bezahlten Tarife beinhalten auch Internxt Antivirus für erhöhten Schutz gegen die zunehmenden Bedrohungen, denen wir online gegenüberstehen. \n\n  Führen Sie vollständige oder benutzerdefinierte Scans über die Internxt-App aus, um sich gegen Malware, Phishing und Ransomware zu verteidigen, und reinigen und schützen Sie Ihr Gerät vor Datenverlust oder -verletzungen.",
@@ -144,7 +167,7 @@
         "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
         "answer": [
           "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, Crypto und Klarna bezahlen.",
-          "On Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
+          "On Anfrage akzeptieren wir auch Kryptowährungen. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

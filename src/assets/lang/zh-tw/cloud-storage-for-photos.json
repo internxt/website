@@ -7,7 +7,11 @@
         "textAfterBlueText": "私有雲端"
       },
       "description": "Internxt 的照片儲存服務可讓你建立私人相簿，並安全地在雲端儲存與分享你的照片。",
-      "features": ["私密儲存你的照片", "後量子與零知識加密", "開源且經過審核"],
+      "features": [
+        "私密儲存你的照片",
+        "後量子與零知識加密",
+        "開源且經過審核"
+      ],
       "claimDeal": "選擇方案"
     },
     "TitleAndOnePlanV2": {
@@ -103,7 +107,9 @@
       },
       {
         "question": "如何備份照片到 Internxt Drive？",
-        "answer": ["Essential、Premium 與 Ultimate 方案皆支援備份功能。透過虛擬硬碟備份的照片可隨時在線上下載與存取。"]
+        "answer": [
+          "Essential、Premium 與 Ultimate 方案皆支援備份功能。透過虛擬硬碟備份的照片可隨時在線上下載與存取。"
+        ]
       },
       {
         "question": "Internxt Drive 是否支援 RAW 照片？",
@@ -121,13 +127,15 @@
       },
       {
         "question": "如何聯繫客服支援？",
-        "answer": ["若找不到你需要的資訊，請透過線上客服或發送電子郵件至 hello@internxt.com 聯繫我們的團隊。"]
+        "answer": [
+          "若找不到你需要的資訊，請透過線上客服或發送電子郵件至 hello@internxt.com 聯繫我們的團隊。"
+        ]
       },
       {
         "question": "可以使用信用卡、PayPal 或加密貨幣付款嗎？",
         "answer": [
           "Internxt 支援 Mastercard、VISA、American Express 等信用卡，也接受 PayPal、iDEAL、Sofort 與 Bancontact。",
-          "如有需求，也可接受加密貨幣與 SEPA 自動扣款。如有付款疑問，歡迎來信 hello@internxt.com 詢問。"
+          "如有需求，也可接受加密貨幣。如有付款疑問，歡迎來信 hello@internxt.com 詢問。"
         ]
       }
     ]

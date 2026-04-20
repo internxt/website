@@ -12,7 +12,11 @@
     "title": "Internxt **折扣**与**促销**",
     "subtitle": "您已解锁{{discount}}%的折扣！在此获取您的Internxt优惠券代码",
     "descriptionNormal": "所有套餐",
-    "features": ["完整隐私套件", "后量子加密", "开源且经过审计"],
+    "features": [
+      "完整隐私套件",
+      "后量子加密",
+      "开源且经过审计"
+    ],
     "startFrom": {
       "normal1": "起价 ",
       "price": " {{minimumPrice}}",
@@ -62,7 +66,11 @@
     "title": "如何使用Internxt优惠券",
     "description": "按照这三个简单步骤领取您的Internxt优惠券代码：",
     "cards": {
-      "titles": ["选择您的套餐", "前往结算", "确认并享受！"],
+      "titles": [
+        "选择您的套餐",
+        "前往结算",
+        "确认并享受！"
+      ],
       "descriptions": [
         "从上表中选择我们的3个年度或终身套餐之一，点击'选择套餐'来使用您的Internxt优惠券。",
         "当您前往结算时，您的Internxt优惠券代码会自动应用！从这里，您只需输入详细信息即可进行付款。",
@@ -75,7 +83,12 @@
     "description": "我们使用先进的加密技术保护您文件的安全和隐私，为您应对新兴威胁做好准备。",
     "cta": "更好地了解我们",
     "scrollableSection": {
-      "titles": ["无法破解和泄露的数据", "新一代安全", "开源且透明", "独立验证"],
+      "titles": [
+        "无法破解和泄露的数据",
+        "新一代安全",
+        "开源且透明",
+        "独立验证"
+      ],
       "descriptions": [
         "我们不存储密码或用户数据，您的所有数据在传输和静态时都经过加密。Internxt让您完全控制您的文件。您的数据是您的事务。保护它们是我们的工作。",
         "Internxt是唯一使用端到端和后量子密码学自动加密您文件的云存储服务，这意味着只有您可以访问您的数据。",
@@ -89,8 +102,23 @@
     "description": "您的Internxt优惠券代码适用于我们所有的Essential、Premium和Ultimate年度和终身套餐。",
     "cta": "更好地了解我们",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
-      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
+      "imagesPathname": [
+        "Drive",
+        "Terminal",
+        "antivirus",
+        "cleaner",
+        "hero",
+        "meet",
+        "vpn"
+      ],
+      "titles": [
+        "Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "高级工具"
+      ],
       "descriptions": [
         "Internxt Drive具有后量子和零知识加密功能，因此除了您之外没有人可以访问您的文件。为您的照片、视频和文件获得加密的云存储和备份。\n\n此外，加密备份和密码保护的文件共享提供针对勒索软件和数据泄露的最大保护。",
         "所有付费套餐还包括Internxt Antivirus，为我们在线面临的日益增长的威胁提供增强保护。\n\n从Internxt应用程序运行完整或自定义扫描，以防御恶意软件、钓鱼和勒索软件，并清理和保护您的设备免受数据丢失或泄露。",
@@ -139,7 +167,7 @@
         "question": "我可以使用信用卡、PayPal或加密货币支付吗？",
         "answer": [
           "Internxt目前接受借记卡和信用卡（Mastercard、VISA、American Express等）。您也可以通过PayPal、Crypto和Klarna支付。",
-          "根据要求，我们也接受加密货币和SEPA直接借记。如果您对支付方式有疑问，只需发送邮件至[hello@internxt.com](mailto:hello@internxt.com)。"
+          "根据要求，我们也接受加密货币。如果您对支付方式有疑问，只需发送邮件至[hello@internxt.com](mailto:hello@internxt.com)。"
         ]
       },
       {

@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "人們對Internxt的**評價**",
     "subtitle": "了解為什麼人們信任Internxt保護他們的數據",
-    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
+    "features": [
+      "完整的隱私套件",
+      "後量子加密",
+      "開源且經過審計"
+    ],
     "cta": "獲取 Internxt"
   },
   "ReviewSection": {
@@ -47,13 +51,21 @@
       }
     },
     "TechReviews": {
-      "titles": ["價格極其實惠的存儲", "注重隱私和安全的雲端提供商", "Internxt提供出色的安全性和隱私保護"],
+      "titles": [
+        "價格極其實惠的存儲",
+        "注重隱私和安全的雲端提供商",
+        "Internxt提供出色的安全性和隱私保護"
+      ],
       "description": [
         "Internxt直觀地融合了網頁訪問、檔案同步和備份（鏡像）服務，令人印象深刻。然而，價格極其實惠的終身計劃無疑是最突出的方面。",
         "Internxt是一項出色的雲端存儲服務，因其實惠的定價計劃、直觀的介面和可靠的支援而受到好評。它在安全措施和對隱私的承諾方面表現出色，使其成為首選。",
         "Internxt是一個注重隱私的雲端存儲解決方案，提供客戶端加密、後量子安全性、開源軟體和位於歐盟的伺服器，以極具競爭力的價格提供安全合規的存儲。"
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "在 Trustpilot 上阅读更多评论"
   },
@@ -108,7 +120,7 @@
         "question": "我可以使用信用卡、PayPal或加密貨幣支付嗎？",
         "answer": [
           "Internxt目前接受借記卡和信用卡（Mastercard、VISA、American Express等）。您還可以通過PayPal、Crypto和Klarna支付。",
-          "應要求，我們還接受加密貨幣和SEPA直接扣款。如果您對支付方式有疑問，只需發送電子郵件至[hello@internxt.com](mailto:hello@internxt.com)。"
+          "應要求，我們還接受加密貨幣。如果您對支付方式有疑問，只需發送電子郵件至[hello@internxt.com](mailto:hello@internxt.com)。"
         ]
       },
       {

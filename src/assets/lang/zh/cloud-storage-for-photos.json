@@ -7,7 +7,11 @@
         "textAfterBlueText": "的私有云"
       },
       "description": "Internxt 照片存储允许您创建私人相册，安全地在云端保存和分享您的照片。",
-      "features": ["私密的照片存储", "后量子和零知识加密", "开源并经过审计"],
+      "features": [
+        "私密的照片存储",
+        "后量子和零知识加密",
+        "开源并经过审计"
+      ],
       "claimDeal": "选择方案"
     },
     "TitleAndOnePlanV2": {
@@ -33,7 +37,6 @@
     },
     "cta": "选择方案"
   },
-
   "FeaturesSection": {
     "title": "为您的照片量身定制的安全存储",
     "description": "安全地管理和存储您的照片，释放设备空间。",
@@ -82,19 +85,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "最私密的照片云存储",
     "description": "采用后量子加密保护",
     "cta": "选择方案"
   },
-
   "CtaSection2": {
     "title": "不再担心照片丢失",
     "description": "使用加密备份保护您的数据",
     "cta": "订阅方案"
   },
-
   "FaqSection": {
     "title": "有疑问？我们来帮您",
     "faq": [
@@ -107,7 +107,9 @@
       },
       {
         "question": "如何在 Internxt 中备份照片？",
-        "answer": ["备份功能在所有付费方案中可用。通过虚拟驱动器，照片会自动保存，并可在线访问。"]
+        "answer": [
+          "备份功能在所有付费方案中可用。通过虚拟驱动器，照片会自动保存，并可在线访问。"
+        ]
       },
       {
         "question": "Internxt 适合存储 RAW 照片吗？",
@@ -125,18 +127,19 @@
       },
       {
         "question": "如何联系支持？",
-        "answer": ["通过在线聊天或发送电子邮件至 hello@internxt.com 与我们联系。"]
+        "answer": [
+          "通过在线聊天或发送电子邮件至 hello@internxt.com 与我们联系。"
+        ]
       },
       {
         "question": "我可以用信用卡、PayPal 或加密货币付款吗？",
         "answer": [
           "Internxt 当前接受借记卡和信用卡（如 Mastercard、VISA、American Express 等）。您也可以使用 PayPal、iDEAL、Sofort 和 Bancontact 付款。",
-          "根据请求，我们也接受加密货币和 SEPA 自动扣款。如果您对支付方式有任何疑问，请通过 hello@internxt.com 联系我们。"
+          "根据请求，我们也接受加密货币。如果您对支付方式有任何疑问，请通过 hello@internxt.com 联系我们。"
         ]
       }
     ]
   },
-
   "FeatureSection": {
     "title": "为您的照片提供最安全的云存储",
     "titleLine2": "",

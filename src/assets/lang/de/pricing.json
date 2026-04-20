@@ -300,7 +300,11 @@
           {
             "id": "file_versioning",
             "name": "Dateiversionierung",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "cli_webdav_support",
@@ -337,17 +341,29 @@
           {
             "id": "trash_limits",
             "name": "Papierkorb automatisch leeren",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "mail",
             "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           },
           {
             "id": "photos",
             "name": "Fotos",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           }
         ]
       }
@@ -388,7 +404,7 @@
         "question": "Kann ich mit Karte, PayPal oder Krypto bezahlen?",
         "answer": [
           "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, Krypto, Klarna und andere Methoden bezahlen.",
-          "Auf Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
+          "Auf Anfrage akzeptieren wir auch Kryptowährungen. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
