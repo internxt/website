@@ -41,7 +41,7 @@
       ]
     },
     "cards": {
-      "images": ["GDPR2", "ISO2", "SOC", "PCI", "HD", "HIPAA", "ENS2", "EBA"],
+      "images": ["GDPRBadge", "ISO2", "SOC", "PCI", "HD", "HIPAA", "ENS2", "EBA"],
       "titles": ["GDPR", "ISO 27001", "SOC 2", "PCI DSS", "Healthcare data in Europe", "HIPAA", "ENS", "EBA"],
       "description": [
         "Compliance with Regulation (EU) 2016/679, known as the General Data Protection Regulation (GDPR)",

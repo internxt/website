@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "Lo que la gente está **diciendo** sobre Internxt",
     "subtitle": "Descubre por qué la gente confía en Internxt sus datos",
-    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"],
+    "features": [
+      "Suite completa de privacidad",
+      "Cifrado post-cuántico",
+      "Código abierto y auditado"
+    ],
     "cta": "Obtener Internxt"
   },
   "ReviewSection": {
@@ -57,7 +61,11 @@
         "Internxt es un excelente servicio de almacenamiento en la nube debido a sus planes de precios asequibles, interfaz intuitiva y soporte confiable. Destaca en medidas de seguridad y compromiso con la privacidad, convirtiéndolo en una opción principal.",
         "Internxt es una solución de almacenamiento en la nube centrada en la privacidad que ofrece cifrado del lado del cliente, seguridad post-cuántica, software de código abierto y servidores con sede en la UE, proporcionando almacenamiento seguro y conforme a un excelente precio."
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "Lee más reseñas en Trustpilot"
   },
@@ -112,7 +120,7 @@
         "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
         "answer": [
           "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, Crypto y Klarna.",
-          "Bajo solicitud, también aceptamos criptomonedas y débito SEPA. Si tienes preguntas sobre métodos de pago, simplemente envíanos un correo a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Bajo solicitud, también aceptamos criptomonedas. Si tienes preguntas sobre métodos de pago, simplemente envíanos un correo a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

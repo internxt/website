@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "Ce que les gens **disent** d'Internxt",
     "subtitle": "Découvrez pourquoi les gens font confiance à Internxt pour leurs données",
-    "features": ["Suite complète de confidentialité", "Chiffrement post-quantique", "Open source et audité"],
+    "features": [
+      "Suite complète de confidentialité",
+      "Chiffrement post-quantique",
+      "Open source et audité"
+    ],
     "cta": "Obtenir Internxt"
   },
   "ReviewSection": {
@@ -57,7 +61,11 @@
         "Internxt est un excellent service de stockage cloud grâce à ses plans tarifaires abordables, son interface intuitive et son support fiable. Il excelle dans les mesures de sécurité et l'engagement envers la confidentialité, en faisant un choix de premier plan.",
         "Internxt est une solution de stockage cloud axée sur la confidentialité offrant un chiffrement côté client, une sécurité post-quantique, un logiciel open source et des serveurs basés dans l'UE, fournissant un stockage sécurisé et conforme à un excellent rapport qualité-prix."
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "Lire plus d'avis sur Trustpilot"
   },
@@ -112,7 +120,7 @@
         "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna.",
-          "Sur demande, nous acceptons également les cryptomonnaies et le prélèvement SEPA. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
+          "Sur demande, nous acceptons également les cryptomonnaies. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

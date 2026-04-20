@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 import { Percent } from '@phosphor-icons/react';
 
@@ -48,7 +48,10 @@ const HeroSection = ({ textContent }) => {
             height={500}
             className="mx-auto h-auto w-full max-w-[400px] object-contain"
             alt="Man with laptop"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </section>

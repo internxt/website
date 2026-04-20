@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import axios from 'axios';
 
 import TextInput from '@/components/components/TextInput';
@@ -126,7 +126,10 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
               alt="Cloud Storage for eLearning"
               className="rounded-r-[32px]"
               draggable={false}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         </div>
       </div>

@@ -7,12 +7,16 @@
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai":"AI"
+      "ai": "AI"
     },
     "title": "**Descuentos** y **promociones** de Internxt",
     "subtitle": "¡Has desbloqueado un {{discount}}% de descuento! Obtén tu código de cupón de Internxt aquí",
     "descriptionNormal": "todos los planes",
-    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"],
+    "features": [
+      "Suite completa de privacidad",
+      "Cifrado post-cuántico",
+      "Código abierto y auditado"
+    ],
     "startFrom": {
       "normal1": "Desde ",
       "price": " {{minimumPrice}}",
@@ -62,7 +66,11 @@
     "title": "Cómo canjear cupones de Internxt",
     "description": "Reclama tu código de cupón de Internxt siguiendo estos tres sencillos pasos:",
     "cards": {
-      "titles": ["Elige tu plan", "Ve al checkout", "¡Confirma y disfruta!"],
+      "titles": [
+        "Elige tu plan",
+        "Ve al checkout",
+        "¡Confirma y disfruta!"
+      ],
       "descriptions": [
         "Elige entre nuestros 3 planes anuales o de por vida de nuestra tabla anterior y haz clic en 'Seleccionar plan' para canjear tu cupón de Internxt.",
         "Una vez que vayas al checkout, ¡tu código de cupón de Internxt se aplica automáticamente! Desde aquí, solo necesitas ingresar tus datos para proceder al pago.",
@@ -94,8 +102,23 @@
     "description": "Tu código de cupón de Internxt se aplica a todos nuestros planes anuales y de por vida Esencial, Premium y Ultimate.",
     "cta": "Conoce más sobre nosotros",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
-      "titles": ["Drive", "Antivirus", "VPN", "Limpiador", "Meet", "Herramientas avanzadas"],
+      "imagesPathname": [
+        "Drive",
+        "Terminal",
+        "antivirus",
+        "cleaner",
+        "hero",
+        "meet",
+        "vpn"
+      ],
+      "titles": [
+        "Drive",
+        "Antivirus",
+        "VPN",
+        "Limpiador",
+        "Meet",
+        "Herramientas avanzadas"
+      ],
       "descriptions": [
         "Internxt Drive viene con cifrado post-cuántico y de conocimiento cero, así que nadie más que tú puede acceder a tus archivos. Obtén almacenamiento en la nube cifrado y respaldos para tus fotos, videos y archivos. \n\n Además, los respaldos cifrados y el compartir archivos protegidos por contraseña ofrecen máxima protección contra ransomware y violaciones de datos.",
         "Todos los planes pagos también incluyen Internxt Antivirus para mayor protección contra las crecientes amenazas que enfrentamos en línea. \n\n  Ejecuta escaneos completos o personalizados desde la app de Internxt para defenderte contra malware, phishing y ransomware, y limpia y protege tu dispositivo de pérdida de datos o violaciones.",
@@ -144,7 +167,7 @@
         "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
         "answer": [
           "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, Crypto y Klarna.",
-          "Bajo solicitud, también aceptamos criptomonedas y débito SEPA. Si tienes preguntas sobre métodos de pago, simplemente envíanos un email a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Bajo solicitud, también aceptamos criptomonedas. Si tienes preguntas sobre métodos de pago, simplemente envíanos un email a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

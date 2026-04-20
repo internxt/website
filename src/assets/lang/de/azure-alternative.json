@@ -73,7 +73,7 @@
       ],
       "descriptions": [
         "Die Einrichtung von Speicherplatz auf Azure erfordert die Navigation durch mehrere Dashboards und Sicherheitssysteme. Benutzer müssen Rollen, Zugriffsregeln und Regionen manuell verwalten. Einfache Aufgaben erfordern oft technisches Wissen, was die Plattform für Anfänger schwierig macht und die Entwicklung verlangsamt.",
-        "Microsoft Azure berechnet separat Speicher, Anfragen, Datenübertragung, Überwachung, Backups und Sicherheitsfunktionen. Diese kleinen Gebühren summieren sich schnell und sind schwer zu verfolgen. Jegliche Erhöhung des Datenverkehrs oder der Nutzung kann zu erheblichen Rechnungsspitzen führen, was eine langfristige Budgetierung für Unternehmen unzuverlässig macht.",
+        "Microsoft Azure berechnrat Speicher, Anfragen, Datenübertragung, Überwachung, Backups und Sicherheitsfunktionen. Diese kleinen Gebühren summieren sich schnell und sind schwer zu verfolgen. Jegliche Erhöhung des Datenverkehrs oder der Nutzung kann zu erheblichen Rechnungsspitzen führen, was eine langfristige Budgetierung für Unternehmen unzuverlässig macht.",
         "Azure erhebt hohe Gebühren für die Übertragung von Daten von seiner Plattform. Jeder Datei-Download, jedes Backup, jede Wiederherstellung oder Migration erhöht die Rechnung. Dieses Preismodell schließt Daten effektiv innerhalb der Plattform ein und bestraft Workloads mit hoher Auslastung."
       ]
     }

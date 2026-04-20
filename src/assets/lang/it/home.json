@@ -50,7 +50,11 @@
       "line1": "Vinci una carta regalo fino a 1.000€!",
       "line2": "Unisciti a Internxt e partecipa all'estrazione di Natale"
     },
-    "features": ["Suite digitale privata", "Crittografia post-quantistica", "Open source e verificato"],
+    "features": [
+      "Suite digitale privata",
+      "Crittografia post-quantistica",
+      "Open source e verificato"
+    ],
     "startFrom": {
       "normal1": "A partire da ",
       "price": " {{minimumPrice}}",
@@ -129,7 +133,7 @@
         "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
         "answer": [
           "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort, Bancontact e Klarna.",
-          "Su richiesta, accettiamo anche criptovalute e SEPA Debit. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Su richiesta, accettiamo anche criptovalute. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

@@ -32,10 +32,18 @@
   "DealSection": {
     "title": "我們的 2TB 優惠包括：",
     "adv": [
-      { "title": "30天退款保證" },
-      { "title": "加密文件存儲和共享" },
-      { "title": "在任何設備上同步文件和照片" },
-      { "title": "訪問我們的所有服務：\nDrive、Photos 和 Send" }
+      {
+        "title": "30天退款保證"
+      },
+      {
+        "title": "加密文件存儲和共享"
+      },
+      {
+        "title": "在任何設備上同步文件和照片"
+      },
+      {
+        "title": "訪問我們的所有服務：\nDrive、Photos 和 Send"
+      }
     ],
     "footer": "優惠僅對新訂戶或免費計劃用戶有效。",
     "card": {
@@ -57,7 +65,9 @@
       },
       {
         "question": "促銷活動何時結束？",
-        "answer": ["我們的 Startpage 優惠活動從 2023 年 2 月 20 日至 3 月 6 日。"]
+        "answer": [
+          "我們的 Startpage 優惠活動從 2023 年 2 月 20 日至 3 月 6 日。"
+        ]
       },
       {
         "question": "誰有資格享受此折扣？",
@@ -80,7 +90,7 @@
       {
         "question": "Internxt 接受哪些支付方式？",
         "answer": [
-          "我們目前接受信用卡和借記卡支付（包括萬事達卡、VISA、美國運通等）。您也可以通過 Apple 和 Google Pay、Cartes Banaires、Alipay、Wechat Pay、Bancontact、EPS、GiroPay、iDEAL、Przelewy24、Sofort、Blik、Klarna、Afterpay、SEPA 直接借記支付。"
+          "我們目前接受信用卡和借記卡支付（包括萬事達卡、VISA、美國運通等）。您也可以通過 Apple 和 Google Pay、Cartes Banaires、Alipay、Wechat Pay、Bancontact、EPS、GiroPay、iDEAL、Przelewy24、Sofort、Blik、Klarna、Afterpay。"
         ]
       },
       {
@@ -92,4 +102,3 @@
     ]
   }
 }
-

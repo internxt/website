@@ -1,6 +1,6 @@
 import React from 'react';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
@@ -46,7 +46,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           </div>
         </div>
       </div>
-
       {/* Password tool info */}
       <div className="flex w-full flex-col items-center justify-center">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
@@ -77,21 +76,25 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   src="/images/password-checker/virus-scanner-es.webp"
                   width={897}
                   height={350}
-                  layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
                   onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               ) : (
                 <Image
                   src="/images/password-checker/virus-scanner.webp"
                   width={897}
                   height={350}
-                  layout="intrinsic"
                   loading="eager"
                   alt="Virus Scanner image"
                   onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               )}
             </div>
 
@@ -103,7 +106,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           </div>
         </div>
       </div>
-
       <div className="flex w-full flex-col items-center justify-center px-5 pb-16">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="justify-center-center flex max-w-2xl flex-col space-y-3">
@@ -118,21 +120,25 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 src="/images/password-checker/byte-converter-es.webp"
                 width={897}
                 height={350}
-                layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
                 onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             ) : (
               <Image
                 src="/images/password-checker/byte-converter.webp"
                 width={897}
                 height={350}
-                layout="intrinsic"
                 loading="eager"
                 alt="Byte converter image"
                 onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             )}
           </div>
         </div>

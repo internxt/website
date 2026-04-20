@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "Was die Leute über Internxt **sagen**",
     "subtitle": "Erfahren Sie, warum Menschen Internxt mit ihren Daten vertrauen",
-    "features": ["Vollständige Privatsphäre-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "features": [
+      "Vollständige Privatsphäre-Suite",
+      "Post-Quanten-Verschlüsselung",
+      "Open Source und geprüft"
+    ],
     "cta": "Obtener Internxt"
   },
   "ReviewSection": {
@@ -57,7 +61,11 @@
         "Internxt ist ein ausgezeichneter Cloud-Speicher-Service aufgrund seiner erschwinglichen Preispläne, intuitiven Benutzeroberfläche und zuverlässigen Supports. Er zeichnet sich durch Sicherheitsmaßnahmen und Engagement für Privatsphäre aus und ist damit eine Top-Wahl.",
         "Internxt ist eine auf Privatsphäre ausgerichtete Cloud-Speicherlösung, die clientseitige Verschlüsselung, Post-Quanten-Sicherheit, Open-Source-Software und EU-basierte Server bietet und sicheren und konformen Speicher zu einem hervorragenden Preis-Leistungs-Verhältnis liefert."
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "Mehr Bewertungen auf Trustpilot lesen"
   },
@@ -112,7 +120,7 @@
         "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
         "answer": [
           "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, Crypto und Klarna bezahlen.",
-          "Auf Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
+          "Auf Anfrage akzeptieren wir auch Kryptowährungen. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

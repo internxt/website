@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "Cosa dice la gente **su** Internxt",
     "subtitle": "Scopri perché le persone si fidano di Internxt con i dati",
-    "features": ["Suite completa per la privacy", "Crittografia post-quantistica", "Open source e verificato"],
+    "features": [
+      "Suite completa per la privacy",
+      "Crittografia post-quantistica",
+      "Open source e verificato"
+    ],
     "cta": "Ottieni Internxt"
   },
   "ReviewSection": {
@@ -57,7 +61,11 @@
         "Internxt è un eccellente servizio di archiviazione cloud grazie ai suoi piani tariffari convenienti, interfaccia intuitiva e supporto affidabile. Eccelle nelle misure di sicurezza e nell'impegno per la privacy, rendendolo una scelta di primo piano.",
         "Internxt è una soluzione di archiviazione cloud incentrata sulla privacy che offre crittografia lato client, sicurezza post-quantistica, software open source e server con sede nell'UE, fornendo archiviazione sicura e conforme a un eccellente rapporto qualità-prezzo."
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "Leggi altre recensioni su Trustpilot"
   },
@@ -112,7 +120,7 @@
         "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
         "answer": [
           "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, Crypto e Klarna.",
-          "Su richiesta, accettiamo anche criptovalute e addebito diretto SEPA. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Su richiesta, accettiamo anche criptovalute. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

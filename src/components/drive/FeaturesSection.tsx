@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 
@@ -167,10 +167,13 @@ const FeaturesSection = ({
                 quality={100}
                 unoptimized={true}
                 objectPosition={'left'}
-                objectFit="cover"
                 draggable={false}
                 alt="Document folders"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </RevealX>
           </div>
         </div>
@@ -187,10 +190,13 @@ const FeaturesSection = ({
                 quality={100}
                 unoptimized={true}
                 objectPosition={'right'}
-                objectFit="cover"
                 draggable={false}
                 alt="File sharing"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </RevealX>
           </div>
 

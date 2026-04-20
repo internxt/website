@@ -37,7 +37,6 @@
     },
     "cta": "Choisissez votre plan"
   },
-
   "FeaturesSection": {
     "title": "Stockage sécurisé de photos pour répondre à vos besoins",
     "description": "Gérez et sauvegardez vos photos dans le cloud de manière sécurisée et libérez de l'espace de stockage local pour récupérer vos fichiers.",
@@ -86,19 +85,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Le stockage dans le cloud le plus privé pour vos photos dans le cloud",
     "description": "Protégé par chiffrement post-quantique",
     "cta": "Choisissez votre plan"
   },
-
   "CtaSection2": {
     "title": "Ne vous inquiétez jamais de perdre vos photos",
     "description": "Protégez vos informations avec des sauvegardes chiffrées",
     "cta": "Achetez votre plan"
   },
-
   "FaqSection": {
     "title": "Des questions ? Nous avons des réponses",
     "faq": [
@@ -139,7 +135,7 @@
         "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Bancontact.",
-          "Sur demande, nous acceptons également les cryptomonnaies et le débit SEPA. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com."
+          "Sur demande, nous acceptons également les cryptomonnaies . Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com."
         ]
       }
     ]

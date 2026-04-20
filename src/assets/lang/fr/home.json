@@ -50,7 +50,11 @@
       "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
       "line2": "Rejoignez Internxt et participez au tirage de Noël"
     },
-    "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
+    "features": [
+      "Suite numérique privée",
+      "Chiffrement post-quantique",
+      "Open source et audité"
+    ],
     "startFrom": {
       "normal1": "À partir de ",
       "price": " {{minimumPrice}}",
@@ -59,7 +63,6 @@
     "claimDeal": "Réclamer l'offre",
     "guarantee": "Garantie de remboursement de 30 jours"
   },
-
   "tableSection": {
     "title": "Plans Internxt",
     "hotLabel": "{{discount}}% remise",
@@ -130,7 +133,7 @@
         "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Bancontact et Klarna.",
-          "Sur demande, nous acceptons également les cryptomonnaies et SEPA Debit. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
+          "Sur demande, nous acceptons également les cryptomonnaies. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

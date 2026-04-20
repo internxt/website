@@ -2,7 +2,11 @@
   "heroSection": {
     "title": "What people are **saying** about Internxt",
     "subtitle": "Find out why people trust Internxt with their data",
-    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
+    "features": [
+      "Complete privacy suite",
+      "Post-quantum encryption",
+      "Open source and audited"
+    ],
     "cta": "Get Internxt"
   },
   "ReviewSection": {
@@ -57,7 +61,11 @@
         "Internxt is an excellent cloud storage service due to its affordable pricing plans, intuitive interface, and reliable support. It excels in security measures and commitment to privacy, making it a top choice.",
         "Internxt is a privacy-focused cloud storage solution offering client-side encryption, post-quantum security, open-source software, and EU-based servers, delivering secure and compliant storage at an excellent value."
       ],
-      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
     },
     "readMore": "Read more reviews on Trustpilot"
   },
@@ -112,7 +120,7 @@
         "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
           "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, Crypto and Klarna.",
-          "Upon request, we also accept cryptocurrencies and SEPA Debit. If you have questions about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+          "Upon request, we also accept cryptocurrencies. If you have questions about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

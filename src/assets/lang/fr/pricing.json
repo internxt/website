@@ -300,7 +300,11 @@
           {
             "id": "file_versioning",
             "name": "Versionnage de fichiers",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "cli_webdav_support",
@@ -337,17 +341,29 @@
           {
             "id": "trash_limits",
             "name": "Vidage automatique de la corbeille",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "mail",
             "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           },
           {
             "id": "photos",
             "name": "Photos",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           }
         ]
       }
@@ -388,7 +404,7 @@
         "question": "Puis-je payer par carte, PayPal ou crypto ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, crypto, Klarna et d'autres moyens.",
-          "Sur demande, nous acceptons également les cryptomonnaies et le prélèvement SEPA. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à [hello@internxt.com](mailto:hello@internxt.com)."
+          "Sur demande, nous acceptons également les cryptomonnaies. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {

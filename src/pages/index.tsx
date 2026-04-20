@@ -36,8 +36,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
+    couponCode: PromoCodeName.SUBSCRIPTION,
+    couponCodeForLifetime: PromoCodeName.LIFETIME,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -114,7 +114,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <HorizontalScrollableSection textContent={textContent.NextGenSection} />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)" />
+      <FAQSection
+        textContent={textContent.FaqSection}
+        needsH3={false}
+        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+      />
 
       <FAQSection textContent={textContent.EncryptedStorageSeoSection} needsH3={false} />
 

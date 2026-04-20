@@ -300,7 +300,11 @@
           {
             "id": "file_versioning",
             "name": "檔案版本控制",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "cli_webdav_support",
@@ -337,17 +341,29 @@
           {
             "id": "trash_limits",
             "name": "自動清空回收站",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
           },
           {
             "id": "mail",
             "name": "Mail",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           },
           {
             "id": "photos",
             "name": "照片",
-            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
           }
         ]
       }
@@ -388,7 +404,7 @@
         "question": "我可以用信用卡、PayPal 或加密貨幣付款嗎？",
         "answer": [
           "Internxt 目前接受金融卡和信用卡（萬事達卡、VISA、美國運通等）。您也可以透過 PayPal、加密貨幣、Klarna 和其他方式付款。",
-          "應要求，我們也接受加密貨幣和 SEPA 直接扣款。如果您對付款方式有疑問，請發送郵件至 [hello@internxt.com](mailto:hello@internxt.com)。"
+          "應要求，我們也接受加密貨幣。如果您對付款方式有疑問，請發送郵件至 [hello@internxt.com](mailto:hello@internxt.com)。"
         ]
       },
       {
@@ -425,7 +441,9 @@
       },
       {
         "question": "我可以分期付款終身方案嗎？",
-        "answer": ["可以，您現在可以使用 Klarna 將終身付款分為多個免息分期付款。享受終身方案，輕鬆分期付款！"]
+        "answer": [
+          "可以，您現在可以使用 Klarna 將終身付款分為多個免息分期付款。享受終身方案，輕鬆分期付款！"
+        ]
       }
     ]
   },
@@ -532,7 +550,12 @@
     "description": "是什麼讓 Internxt 如此特別？我們是一個由專業人士組成的團結團隊，完全致力於您的線上保護。我們所做的一切和我們做出的每一個決定都專注於保護您的資料免受剝削。",
     "cta": "Internxt 對隱私的承諾",
     "scrollableSection": {
-      "titles": ["設計即私密", "毫不妥協的安全", "開源且透明", "獨立驗證"],
+      "titles": [
+        "設計即私密",
+        "毫不妥協的安全",
+        "開源且透明",
+        "獨立驗證"
+      ],
       "descriptions": [
         "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜止時都是加密的。Internxt 讓您完全控制您的檔案。您的資料是您的事。保護它們是我們的事。",
         "您的檔案在離開裝置之前就經過端到端加密。借助 AES-256 零知識加密，您絕對是唯一可以存取您資料的人。",

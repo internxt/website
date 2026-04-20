@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import RevealX from '@/components/components/RevealX';
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { CaretRight } from '@phosphor-icons/react';
 
 interface ProductCard {
@@ -42,7 +42,6 @@ const ProductCard = ({
           </Link>
         </div>
       </div>
-
       {/* Image Section */}
       <div className={`${imageOrderClass} relative mt-16 flex self-stretch lg:mt-0`}>
         <div className="hidden lg:flex lg:max-w-[480px]">
@@ -52,9 +51,12 @@ const ProductCard = ({
             width={480}
             height={480}
             alt="Internxt Drive"
-            objectFit="cover"
             draggable={false}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
         </div>
       </div>
     </RevealX>

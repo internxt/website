@@ -18,17 +18,20 @@ export const ImageAndCards = ({ textContent, image }: ImageAndCardsProps) => {
           {textContent.description}
         </p>
       </div>
-      <div className="flex w-full flex-col-reverse gap-8 lg:flex-row lg:px-10 xl:px-32 3xl:px-80">
-        <Image
-          loading="lazy"
-          src={getImage(image)}
-          draggable="false"
-          alt="Internxt data centers and certifications"
-          width={541}
-          height={120}
-          quality={100}
-        />
-        <div className="flex flex-col justify-between gap-8">
+      <div className="flex w-full flex-col-reverse items-center gap-8 lg:flex-row lg:px-10 xl:px-32 3xl:px-80">
+        <div className="flex flex-1 items-center justify-center">
+          <Image
+            loading="lazy"
+            src={getImage(image)}
+            draggable="false"
+            alt="Internxt data centers and certifications"
+            className="h-auto w-full max-w-[541px] object-contain"
+            width={541}
+            height={360}
+            quality={100}
+          />
+        </div>
+        <div className="flex flex-1 flex-col justify-between gap-8">
           {textContent.features.titles.map((title: string, index: number) => (
             <div key={index} className="flex w-full flex-col gap-6 rounded-16 bg-white p-8">
               <h3 className="text-xl font-medium leading-tight text-gray-100">{title}</h3>

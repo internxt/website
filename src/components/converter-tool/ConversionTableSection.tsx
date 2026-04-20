@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 const language = {
@@ -140,10 +140,12 @@ const ConversionTableSection = ({ textContent, lang }) => {
               src={`/images/converter-tool/PasswordChecker${langUpperCase}.webp`}
               width={897}
               height={350}
-              layout="intrinsic"
               loading="lazy"
               alt="Password checker"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
         </div>
       </div>

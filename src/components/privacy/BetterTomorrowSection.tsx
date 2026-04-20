@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from "next/image";
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import Link from 'next/link';
@@ -13,11 +13,13 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
             width={496}
             height={520}
             quality={100}
-            layout="intrinsic"
             className="rounded-3xl"
             alt="encrypted file storage"
             draggable={false}
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         <RevealX
           direction="left"

@@ -49,8 +49,8 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
+    couponCode: PromoCodeName.SUBSCRIPTION,
+    couponCodeForLifetime: PromoCodeName.LIFETIME,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -189,7 +189,15 @@ const Pricing = ({
           bgPadding="lg:pb-20 pb-20"
         />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud Storage Pricing', url: '/pricing' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud Storage Pricing', url: '/pricing' },
+          ]}
+        />
       </Layout>
     </>
   );

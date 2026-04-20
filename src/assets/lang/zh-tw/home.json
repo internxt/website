@@ -50,7 +50,11 @@
       "line1": "贏取高達 1000 歐元的禮品卡，隨處消費！",
       "line2": "在這個節日季加入 Internxt，參與我們的聖誕禮品卡抽獎活動"
     },
-    "features": ["完整隱私套件", "後量子加密", "開源且經過稽核"],
+    "features": [
+      "完整隱私套件",
+      "後量子加密",
+      "開源且經過稽核"
+    ],
     "startFrom": {
       "normal1": "起價 ",
       "price": "{{minimumPrice}}",
@@ -129,7 +133,7 @@
         "question": "我能用信用卡、PayPal 或加密貨幣付款嗎？",
         "answer": [
           "Internxt 目前接受簽帳金融卡和信用卡（Mastercard、VISA、American Express 等）。您也可以透過 PayPal、iDEAL、Sofort 和 Bancontact 付款。",
-          "應要求，我們也接受加密貨幣和 SEPA 直接扣款。如果您對付款方式有疑問，請寄信至 [hello@internxt.com](mailto:hello@internxt.com)。"
+          "應要求，我們也接受加密貨幣。如果您對付款方式有疑問，請寄信至 [hello@internxt.com](mailto:hello@internxt.com)。"
         ]
       },
       {
@@ -196,7 +200,12 @@
     "description": "我們使用先進的加密技術保護您檔案的安全和隱私，為未來的新興威脅做好準備。",
     "cta": "更深入瞭解我們",
     "cardDescriptions": {
-      "titles": ["無法破解和洩露的資料", "新世代安全技術", "開源且透明", "獨立驗證"],
+      "titles": [
+        "無法破解和洩露的資料",
+        "新世代安全技術",
+        "開源且透明",
+        "獨立驗證"
+      ],
       "descriptions": [
         "我們不儲存密碼或使用者資料，您的所有資料在傳輸和儲存時都經過加密。Internxt 讓您完全控制自己的檔案。您的資料是您的事。保護它們是我們的事。",
         "Internxt 是唯一一個使用端對端和後量子密碼學自動加密檔案的雲端儲存服務，這意味著只有您可以存取您的資料。",
