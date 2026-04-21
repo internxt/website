@@ -43,6 +43,7 @@ const ALLOWED_PATHS = [
   'nomadz',
   'yrj',
   'moonrover',
+  'icw',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
@@ -62,6 +63,7 @@ const COUPON_CODES = {
   nomadz: PromoCodeName.nomadz,
   yrj: PromoCodeName.yrj,
   moonrover: PromoCodeName.moonrover,
+  icw: PromoCodeName.icw,
 };
 
 function CombinedSpecialOffer({

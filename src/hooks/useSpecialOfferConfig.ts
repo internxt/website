@@ -58,7 +58,6 @@ export const ALLOWED_PATHS = [
   'last-chance',
   'earth-day',
   'dezz',
-  'icw',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -124,7 +123,6 @@ export const COUPON_CODES = {
   'last-chance': PromoCodeName.lastChance,
   'earth-day': PromoCodeName.earthDay,
   dezz: PromoCodeName.Dezz,
-  icw: PromoCodeName.icw,
 };
 
 interface OfferConfig {
