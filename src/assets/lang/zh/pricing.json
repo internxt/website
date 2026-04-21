@@ -307,6 +307,15 @@
             }
           },
           {
+            "id": "meet",
+            "name": "Meet",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
             "id": "cli_webdav_support",
             "name": "CLI 和 WebDAV 支持",
             "avalability": {
@@ -324,15 +333,7 @@
               "Ultimate": true
             }
           },
-          {
-            "id": "meet",
-            "name": "Meet",
-            "avalability": {
-              "Essential": false,
-              "Premium": false,
-              "Ultimate": true
-            }
-          },
+
           {
             "id": "photos",
             "name": "照片",
@@ -347,15 +348,6 @@
       {
         "name": "即将推出",
         "features": [
-          {
-            "id": "trash_limits",
-            "name": "自动清空回收站",
-            "avalability": {
-              "Essential": true,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
           {
             "id": "mail",
             "name": "Mail",
@@ -528,12 +520,7 @@
     "description": "是什么让 Internxt 如此特别？我们是一个由专业人士组成的团结团队，完全致力于您的在线保护。我们所做的一切和我们做出的每一个决定都专注于保护您的数据免受剥削。",
     "cta": "Internxt 对隐私的承诺",
     "scrollableSection": {
-      "titles": [
-        "设计即私密",
-        "毫不妥协的安全",
-        "开源且透明",
-        "独立验证"
-      ],
+      "titles": ["设计即私密", "毫不妥协的安全", "开源且透明", "独立验证"],
       "descriptions": [
         "我们不存储密码或用户数据，您的所有数据在传输和静止时都是加密的。Internxt 让您完全控制您的文件。您的数据是您的事。保护它们是我们的事。",
         "您的文件在离开设备之前就经过端到端加密。借助 AES-256 零知识加密，您绝对是唯一可以访问您数据的人。",

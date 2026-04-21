@@ -106,6 +106,10 @@
         {
           "name": "Cleaner",
           "status": "available"
+        },
+        {
+          "name": "Meet",
+          "status": "available"
         }
       ],
       "5TB": [

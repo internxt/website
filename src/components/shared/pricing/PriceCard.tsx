@@ -38,6 +38,7 @@ const ICON_MAPS = {
     CellTower,
     Shield,
     Sparkle,
+    VideoCamera,
   ],
   ultimate: [
     Database,
@@ -316,7 +317,7 @@ export const PriceCard = ({
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                     : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-                } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]whi`}
+                } lg:w-[290px]whi flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
               </button>
