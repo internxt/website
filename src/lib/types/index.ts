@@ -260,6 +260,7 @@ export enum PromoCodeName {
   Dezz = 'DEZZ',
   LIFETIME = '75OFFLFT',
   SUBSCRIPTION = '75OFF',
+  icw = 'ICW85',
 }
 
 export interface PromoCodeProps {
