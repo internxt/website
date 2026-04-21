@@ -10,6 +10,8 @@ export default function FaqAccordion({
   textColor,
   percentageDiscount = '70',
   needsH3,
+  needsSpecialH3 = false,
+  index,
 }: {
   question: string;
   answer: string[];
@@ -17,6 +19,8 @@ export default function FaqAccordion({
   textColor?: string;
   percentageDiscount?: string;
   needsH3?: boolean;
+  needsSpecialH3?: boolean;
+  index?: number;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -26,14 +30,14 @@ export default function FaqAccordion({
       list.classList.add('list-disc', 'list-inside');
     });
 
-    // if text has a link, add _blank target
     const links = document.querySelectorAll('.markdown a');
     links.forEach((link) => {
       link.setAttribute('target', '_blank');
     });
   }, []);
 
-  const QuestionTag = needsH3 ? 'h3' : 'p';
+  const QuestionTag =
+    needsSpecialH3 && typeof index === 'number' ? (index < 5 ? 'h3' : 'p') : needsH3 ? 'h3' : 'p';
   return (
     <div className="flex flex-col items-stretch justify-start">
       <button
