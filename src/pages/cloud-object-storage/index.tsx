@@ -13,7 +13,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { GetServerSidePropsContext } from 'next';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
@@ -42,6 +42,9 @@ const CloudObjectStorage = ({
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Cloud object storage', 'cloud-object-storage')}
+      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.SemanticAccordion.items.slice(0, 5))}
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
         <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
@@ -105,9 +108,9 @@ const CloudObjectStorage = ({
             faq: textContent.SemanticAccordion.items,
           }}
           needsH3={false}
+          needsSpecialH3
+          needsH2
         />
-
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <ContactSalesForm textContent={textContent.ContactSales} locale={locale} />
 

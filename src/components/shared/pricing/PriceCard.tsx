@@ -38,6 +38,7 @@ const ICON_MAPS = {
     CellTower,
     Shield,
     Sparkle,
+    VideoCamera,
   ],
   ultimate: [
     Database,
@@ -130,17 +131,19 @@ export const PriceCard = ({
   const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
   const showCents = priceNumber < 1;
 
-  const currentPrice = showCents ? priceNumber.toFixed(2) : priceNumber.toFixed(0);
+  const currentPrice = showCents
+    ? (Math.floor(priceNumber * 100) / 100).toFixed(2)
+    : Math.floor(priceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
       return undefined;
     }
 
     if (showCents) {
-      return Number(price).toFixed(2);
+      return (Math.floor(Number(price) * 100) / 100).toFixed(2);
     }
 
-    return Number(price).toFixed(0);
+    return Math.floor(Number(price)).toString();
   };
 
   const originalPrice = getOriginalPrice();
@@ -316,7 +319,7 @@ export const PriceCard = ({
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                     : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-                } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[290px]whi`}
+                } lg:w-[290px]whi flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
               </button>

@@ -197,6 +197,7 @@
             "name": "File Versioning",
             "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
           },
+          { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": true, "Ultimate": true } },
           {
             "id": "cli_webdav_support",
             "name": "CLI & WebDAV support",
@@ -206,19 +207,12 @@
             "id": "NAS_&_Rclone_support",
             "name": "NAS & Rclone support",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
-          },
-          { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } }
+          }
         ]
       },
       {
         "name": "Comming soon",
         "features": [
-          {
-            "id": "trash_limits",
-            "name": "Self-emptying bin",
-            "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
-          },
-
           {
             "id": "mail",
             "name": "Mail",

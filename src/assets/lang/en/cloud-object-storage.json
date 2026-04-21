@@ -62,12 +62,7 @@
     "perYear": "/per year",
     "storageAmount": "Storage amount",
     "percentDownloadPerMonth": "Percent download per month",
-    "companies": [
-      "Internxt",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ]
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
     "title": "Why choose Internxt object storage?",
@@ -98,21 +93,66 @@
       "cta2": "Contact us"
     }
   },
-  "FaqSection": {
-    "title": "Questions? We have answers",
-    "faq": [
+  "ContactSales": {
+    "title": "Contact sales",
+    "description": "Fill out the contact form and the team will contact you shortly.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email address",
+      "company": "Company Name",
+      "phone": "Phone number",
+      "howMuchStorage": "How much storage do you need?",
+      "totalCharacters": " /1000",
+      "options": ["Select", "Less than 10TB", "10TB - 50TB", "50TB - 100 TB", "More than 100TB"],
+      "howWeCanHelp": "How can we help you? (Optional)",
+      "howWeCanHelpPlaceHolder": "Tell us more about your  needs",
+      "cta": "Send message",
+      "ctaSending": "Sending...",
+      "successMessage": "Your message has been sent successfully.",
+      "errorMessage": "An error occurred. Please try again."
+    }
+  },
+  "CtaSection": {
+    "title": "Secure Cloud Object Storage",
+    "description": "Internxt object cloud storage solutions combines security and efficiency",
+    "cta": "Get started"
+  },
+  "CtaSectionV2": {
+    "title": "Internxt object cloud storage",
+    "description": "Internxt object cloud storage solutions combines security and efficiency",
+    "cta": "Get started"
+  },
+  "SemanticAccordion": {
+    "title": "Learn more about Cloud Object Storage",
+    "items": [
       {
-        "question": "What is object storage?",
+        "question": "What is Cloud Object Storage?",
         "answer": [
-          "Object storage stores large amounts of data, like photos, videos, and emails, as individual “objects” with unique identifiers.",
-          "Unlike traditional file storage, which organizes data in a hierarchical file system, object storage stores data as objects in a flat address space, typically in a distributed storage infrastructure.",
-          "As a result, cloud object storage allows for easier scaling, faster access to individual items, and potentially lower costs depending on your storage needs."
+          "Cloud Object Storage is a scalable data storage architecture that manages data as objects, making it ideal for large-scale, unstructured data in the cloud."
         ]
       },
       {
-        "question": "What is a S3 protocol?",
+        "question": "How does an object storage cloud work?",
         "answer": [
-          "The S3 protocol, or Simple Storage Service protocol, is a set of rules and standards that define how data is accessed, stored, and managed within Amazon S3, a popular cloud storage service provided by Amazon Web Services (AWS)."
+          "An object storage cloud stores data in a flat address space, using unique identifiers for each object, which allows for massive scalability and easy retrieval across distributed networks."
+        ]
+      },
+      {
+        "question": "What are the benefits of cloud based object storage?",
+        "answer": [
+          "Cloud based object storage provides high durability, availability, and cost-effectiveness, especially for web applications, backups, and data archiving."
+        ]
+      },
+      {
+        "question": "Does Internxt provide private cloud object storage?",
+        "answer": [
+          "Yes, Internxt offers private cloud object storage with server-side encryption and S3 compatibility, ensuring your data remains secure and under your control."
+        ]
+      },
+      {
+        "question": "Is Internxt compatible with S3 cloud object storage?",
+        "answer": [
+          "Internxt is fully compatible with S3 cloud object storage protocols, allowing you to use existing S3-compatible tools and applications seamlessly."
         ]
       },
       {
@@ -166,76 +206,6 @@
           "If you delete objects from Internxt object storage before they have been stored for 30 days, you will still be charged as if those objects had been stored for the full 30 days.",
           "This policy ensures a minimum charge period for stored data, regardless of how long the objects were actually stored before deletion.",
           "If you want to cancel your object storage plan, email us at hello@internxt.com, and we’ll process the subscription cancellation."
-        ]
-      }
-    ]
-  },
-  "ContactSales": {
-    "title": "Contact sales",
-    "description": "Fill out the contact form and the team will contact you shortly.",
-    "form": {
-      "name": "Full Name",
-      "email": "Email address",
-      "company": "Company Name",
-      "phone": "Phone number",
-      "howMuchStorage": "How much storage do you need?",
-      "totalCharacters": " /1000",
-      "options": [
-        "Select",
-        "Less than 10TB",
-        "10TB - 50TB",
-        "50TB - 100 TB",
-        "More than 100TB"
-      ],
-      "howWeCanHelp": "How can we help you? (Optional)",
-      "howWeCanHelpPlaceHolder": "Tell us more about your  needs",
-      "cta": "Send message",
-      "ctaSending": "Sending...",
-      "successMessage": "Your message has been sent successfully.",
-      "errorMessage": "An error occurred. Please try again."
-    }
-  },
-  "CtaSection": {
-    "title": "Secure Cloud Object Storage",
-    "description": "Internxt object cloud storage solutions combines security and efficiency",
-    "cta": "Get started"
-  },
-  "CtaSectionV2": {
-    "title": "Internxt object cloud storage",
-    "description": "Internxt object cloud storage solutions combines security and efficiency",
-    "cta": "Get started"
-  },
-  "SemanticAccordion": {
-    "title": "Learn more about Cloud Object Storage",
-    "items": [
-      {
-        "question": "What is Cloud Object Storage?",
-        "answer": [
-          "Cloud Object Storage is a scalable data storage architecture that manages data as objects, making it ideal for large-scale, unstructured data in the cloud."
-        ]
-      },
-      {
-        "question": "How does an object storage cloud work?",
-        "answer": [
-          "An object storage cloud stores data in a flat address space, using unique identifiers for each object, which allows for massive scalability and easy retrieval across distributed networks."
-        ]
-      },
-      {
-        "question": "What are the benefits of cloud based object storage?",
-        "answer": [
-          "Cloud based object storage provides high durability, availability, and cost-effectiveness, especially for web applications, backups, and data archiving."
-        ]
-      },
-      {
-        "question": "Does Internxt provide private cloud object storage?",
-        "answer": [
-          "Yes, Internxt offers private cloud object storage with server-side encryption and S3 compatibility, ensuring your data remains secure and under your control."
-        ]
-      },
-      {
-        "question": "Is Internxt compatible with S3 cloud object storage?",
-        "answer": [
-          "Internxt is fully compatible with S3 cloud object storage protocols, allowing you to use existing S3-compatible tools and applications seamlessly."
         ]
       }
     ]

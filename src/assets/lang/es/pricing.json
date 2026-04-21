@@ -307,6 +307,15 @@
             }
           },
           {
+            "id": "meet",
+            "name": "Meet",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
             "id": "cli_webdav_support",
             "name": "Soporte CLI y WebDAV",
             "avalability": {
@@ -323,30 +332,12 @@
               "Premium": false,
               "Ultimate": true
             }
-          },
-          {
-            "id": "meet",
-            "name": "Meet",
-            "avalability": {
-              "Essential": false,
-              "Premium": false,
-              "Ultimate": true
-            }
           }
         ]
       },
       {
         "name": "Próximamente",
         "features": [
-          {
-            "id": "trash_limits",
-            "name": "Autovaciado de papeleras",
-            "avalability": {
-              "Essential": true,
-              "Premium": true,
-              "Ultimate": true
-            }
-          },
           {
             "id": "mail",
             "name": "Mail",
