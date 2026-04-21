@@ -131,17 +131,19 @@ export const PriceCard = ({
   const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
   const showCents = priceNumber < 1;
 
-  const currentPrice = showCents ? priceNumber.toFixed(2) : priceNumber.toFixed(0);
+  const currentPrice = showCents
+    ? (Math.floor(priceNumber * 100) / 100).toFixed(2)
+    : Math.floor(priceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
       return undefined;
     }
 
     if (showCents) {
-      return Number(price).toFixed(2);
+      return (Math.floor(Number(price) * 100) / 100).toFixed(2);
     }
 
-    return Number(price).toFixed(0);
+    return Math.floor(Number(price)).toString();
   };
 
   const originalPrice = getOriginalPrice();
