@@ -10,55 +10,55 @@
     "description": "Discover the key features and differences that allow Internxt to give you back control over your data",
     "tableSection": {
       "comparisons": [
-        "Code transparency",
-        "Encrypted chats",
-        "Chats reviewed by humans",
-        "Pricing and storage",
+        "Open-source",
+        "Zero-knowledge privacy",
+        "Data collection",
+        "Price and features",
         "Other features",
         "Security audits",
-        "Machine learning",
+        "User experience",
         "Privacy policy",
         "Privacy laws"
       ],
       "internxtFeatures": [
-        "Open-source",
-        "Yes, encrypted on your device",
-        "Never",
-        "Free, lifetime storage up to 5TB",
-        "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail, and Send",
+        "Yes",
+        "Yes, zero-knowledge encryption",
+        "None",
+        "Affordable annual and lifetime plans",
+        "Includes Drive, VPN, Antivirus, Cleaner, Meet, and more",
         "Regular security audits",
-        "Chats are never used to train our AI",
-        "Can never access your chats",
+        "Smooth and non-intrusive",
+        "Strict no-logs policy",
         "Full privacy: GDPR, Spanish Data Protection Laws"
       ],
       "competitorFeatures": [
-        "Closed-source",
-        "No end-to-end encryption",
-        "Yes",
-        "Free plan or €30/month",
-        "Advanced AI features, voice mode, unlimited image generation",
-        "Regular security audits",
-        "Your chats and social media posts are used to train and improve Grok",
-        "Humans can access and review your chats",
-        "Less privacy: EU-U.S. Data Privacy Framework"
+        "No",
+        "No zero-knowledge encryption",
+        "Extensive telemetry",
+        "Expensive renewal rates",
+        "Basic antivirus and firewall tools",
+        "Rarely audited",
+        "Constant intrusive notifications",
+        "Extensive data sharing",
+        "Less privacy: US surveillance laws"
       ]
     }
   },
   "PrivacyViolationsSection": {
     "title": "Why you need a McAfee alternative",
-    "description": "McAfee is only one option to protect your device from malware. For full privacy and a complete product suite, switch to Internxt fora full McAfee alternative with Drive, Cleaner, and more.",
+    "description": "McAfee is often pre-installed on devices, but it is known for intrusive popups and heavy resource use. Switch to Internxt for a cleaner, more private experience.",
     "scrollableSection": {
       "titles": [
-        "Your chats can be seen by X",
-        "Conversations are stored on X’s servers",
-        "Impacts device performance",
+        "Intrusive 'Bloatware' notifications",
+        "High resource consumption",
+        "Complex cancellation process",
         "Limited product suite"
       ],
       "descriptions": [
-        "Grok may use chat inputs to train and refine its AI models, and some conversations may be reviewed by human staff, creating a risk that personal conversations may be seen by X employees.",
-        "Grok chats and metadata such as device information, language, and feedback are stored in your X account activity and retained by default for extended periods, limiting user control over data.",
-        "McAfee can impact device performance during full scans and real-time protection, causing high memory use, slowdowns, delayed network connections, or system lag on some hardware. Depending on your device, you may experience more noticeable performance degradation that can cause more harm than good.",
-        "McAfee offers limited products compared to Internxt Drive, creating dependency on a single recurring subscription. If you need advanced cloud storage protection for your device combined with other features, you need to look elsewhere and possibly pay for more subscriptions.\nFalse threat detection\nMcAfee sometimes flags normal programs, installers, drivers, or game launchers as malware or potentially unwanted programs even though those files are widely used and clean. \nAnother common complaint is that the product moves those files into quarantine automatically, which can break software or prevent it from running."
+        "McAfee is notorious for frequent and aggressive popup notifications and 'scareware' tactics that urge users to renew or buy additional services.",
+        "Like many legacy antivirus tools, McAfee can take up significant system resources, slowing down your PC's performance during daily tasks.",
+        "Users often report difficulties when trying to cancel subscriptions or remove the software completely from their systems, leading to frustrating experiences.",
+        "McAfee focus is primarily on device protection. Internxt provides a complete, encrypted ecosystem including cloud storage, a VPN, and antivirus, giving you total protection in one plan."
       ]
     }
   },
@@ -73,62 +73,62 @@
       ],
       "descriptions": [
         "Internxt is fully open source and independently audited, so you can rest assured there are no backdoors to your data and that your information is handled transparently. Anyone can review the code for maximum trust and accountability.",
-        "Internxt offers Cleaner, and a full privacy ecosystem to give you everything you need to clear junk files from your device, store and share files with zero-knowledge encryption with Drive, and more benefits, including VPN, Meet, Mail, and more.",
-        "Get started with Internxt for just €1.60 a month, or avoid subscriptions with our affordable lifetime plans to pay once and use forever. With lifetime plans, you get access to the features of your plan forever, and you can upgrade to add more storage whenever you need."
+        "Internxt offers Cleaner and a full privacy ecosystem to give you everything you need to clear junk files from your device, store and share files with zero-knowledge encryption with Drive, and more benefits, including VPN, Meet, Mail, and more.",
+        "Get started with Internxt for just €1.60 a month, or avoid subscriptions with our affordable lifetime plans to pay once and use forever. With lifetime plans, you get access to all features forever, and you can upgrade whenever you need."
       ]
     }
   },
   "VersusSection": {
     "title": "Internxt vs McAfee",
-    "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption, giving you the best protection from cyberattacks.",
+    "description": "Internxt offers unrivaled privacy and security thanks to zero-knowledge, post-quantum encryption, giving you the best protection for your data.",
     "mainTable": {
       "inxtTable": {
         "title": "Internxt: Total privacy, transparency, and trust",
         "features": [
           {
             "title": "Open source",
-            "description": "Internxt AI makes its code open for everyone to examine via GitHub, ensuring transparency and preventing hidden vulnerabilities."
+            "description": "Internxt makes its code public on GitHub, ensuring transparency and preventing hidden vulnerabilities or backdoors."
           },
           {
             "title": "Zero-knowledge Encryption",
-            "description": "Your chats are encrypted on the client side, guaranteeing that only you can access them."
+            "description": "Your files and data are encrypted on your device, guaranteeing that only you can access them."
           },
           {
             "title": "Based in Europe",
-            "description": "Internxt is based in Spain and complies with GDPR, HIPAA, ISO 27001, and SOC 2, ensuring strict privacy protections."
+            "description": "Internxt is based in Spain and complies with strict GDPR laws, ensuring your personal information is protected by law."
           },
           {
             "title": "Free and affordable plans",
-            "description": "Internxt AI is free and can be combined with Internxt Drive lifetime plans up to 5TB. Access our services forever for {{percentage}}% off."
+            "description": "Internxt is free to start and offers affordable lifetime plans up to 5TB. Access our full suite of privacy tools forever for {{percentage}}% off."
           }
         ]
       },
       "competitorTable": {
-        "title": "Grok: What about your privacy?",
+        "title": "McAfee: What about your privacy?",
         "features": [
           {
-            "title": "Proprietary software",
-            "description": "Older versions of Grok were open source, but newer versions are proprietary, making it difficult to verify how data is handled or protected."
+            "title": "Closed-source software",
+            "description": "Proprietary software that makes it impossible for users to verify how their system data is handled."
           },
           {
-            "title": "No end-to-end encryption",
-            "description": "X retains encryption access, meaning chats could theoretically be accessed under legal or internal requests."
+            "title": "No zero-knowledge encryption",
+            "description": "McAfee lacks true end-to-end encryption for user data, maintaining potential access to sensitive info."
           },
           {
-            "title": "Chats stored in the US",
-            "description": "Data stored in X’s cloud is subject to U.S. surveillance laws that may allow access under certain conditions."
+            "title": "Data collection",
+            "description": "Collects detailed system telemetry and usage data, often shared with a network of partners and affiliates."
           },
           {
-            "title": "Subscription based",
-            "description": "Available with a free plan or premium access at €30/month."
+            "title": "Auto-renewal tactics",
+            "description": "Known for aggressive auto-renewal policies that often charge users at significantly higher rates after initial trials."
           }
         ]
       }
     }
   },
   "WhyBestAlternativeSection": {
-    "title": "Why Internxt is the best alternative to Grok",
-    "description": "Internxt offers a comprehensive suite of products alongside its private AI to give you a secure Grok alternative.",
+    "title": "Why Internxt is the best alternative to McAfee",
+    "description": "Internxt offers a comprehensive suite of products alongside its private antivirus and security tools to give you a secure McAfee alternative.",
     "scrollableSection": {
       "imagesPathname": [
         "drive",
@@ -173,7 +173,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Free",
-      "description": "Use Internxt AI for free with private encrypted conversations",
+      "description": "Use Internxt for free with private encrypted storage and antivirus tools",
       "cta": "Select plan"
     },
     "features": {
