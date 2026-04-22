@@ -63,7 +63,9 @@ export default function TrustedSection({
   return (
     <section
       ref={sectionRef}
-      className={`${bgColor || ''} flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-10 lg:pb-28 xl:px-32 3xl:px-80 ${
+      className={`${
+        bgColor || ''
+      } flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-10 lg:pb-28 xl:px-32 3xl:px-80 ${
         darkMode && !bgColor ? 'bg-[#1C1C1C]' : ''
       }`}
       style={
@@ -79,7 +81,7 @@ export default function TrustedSection({
       {bottomBar && (
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
-      <p className="w-full py-1 text-justify text-[60px] font-semibold leading-[100%]">
+      <p className="w-full py-1 text-justify text-2xl font-semibold leading-[100%] lg:text-[60px]">
         {groups.map((group, i) => (
           <span
             key={i}
