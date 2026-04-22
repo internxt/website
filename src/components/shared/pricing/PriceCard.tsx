@@ -332,8 +332,8 @@ export const PriceCard = ({
                   const formattedName = feature.name.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
                   return (
-                    <>
-                      <div key={index} className="flex items-start gap-3 px-2 lg:px-0">
+                    <React.Fragment key={index}>
+                      <div className="flex items-start gap-3 px-2 lg:px-0">
                         {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
                         <div className="flex flex-row items-center gap-2">
                           <p
@@ -350,7 +350,7 @@ export const PriceCard = ({
                         </div>
                       </div>
                       {index === 0 && <div className={`h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-25'}`} />}
-                    </>
+                    </React.Fragment>
                   );
                 })}
               </div>
