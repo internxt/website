@@ -1,18 +1,19 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { PricingText } from '@/assets/types/pricing';
+import { Category, Feature, PricingText } from '@/assets/types/pricing';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
+
+type FeatureGroup = { group: string; features: Feature[] };
+type GroupedItem = Feature | FeatureGroup;
 
 interface ComparisonTableProps {
   textContent: PricingText['ComparisonTable'];
   products: ProductsDataProps | undefined;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   billingFrequency: Interval;
-  decimalDiscount: any;
-  currencyValue: any;
+  decimalDiscount: number | null | undefined;
+  currencyValue: string;
 }
 
 export default function ComparisonTableSection({
@@ -71,7 +72,7 @@ export default function ComparisonTableSection({
     return plan ? getPlanPriceId(plan.order) : '';
   };
 
-  const isExclusiveCategory = (category: any) => {
+  const isExclusiveCategory = (category: Category) => {
     const comingSoonTranslations = [
       'Comming soon',
       'Próximamente',
@@ -85,13 +86,13 @@ export default function ComparisonTableSection({
 
     if (comingSoonTranslations.includes(category.name)) return false;
 
-    return category.features.every((feature: any) => Object.values(feature.avalability).filter(Boolean).length === 1);
+    return category.features.every((feature: Feature) => Object.values(feature.avalability).filter(Boolean).length === 1);
   };
 
   const isRecommendedPlan = (index: number) => index === textContent.plans.length - 2;
   const isSecondToLastColumn = (index: number) => index === textContent.plans.length - 2;
   const isLastCategory = (index: number) => index === textContent.categories.length - 1;
-  const isLastFeature = (categoryFeatures: any[], featureIndex: number) => featureIndex === categoryFeatures.length - 1;
+  const isLastFeature = (categoryFeatures: Feature[], featureIndex: number) => featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
     return `items-start p-6 text-start  ${
@@ -132,7 +133,7 @@ export default function ComparisonTableSection({
     return baseStyles;
   };
 
-  const getRegularFeatureStyles = (planIndex: number, categoryIndex: number, category: any, featureIndex: number) => {
+  const getRegularFeatureStyles = (planIndex: number, categoryIndex: number, category: Category, featureIndex: number) => {
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
@@ -170,7 +171,7 @@ export default function ComparisonTableSection({
     return 'border border-neutral-25';
   };
 
-  const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
+  const renderFeatureContent = (feature: Feature, categoryName: string, isAvailable: boolean, category?: Category) => {
     const showIcon = categoryName !== 'Storage' && !category?.hideIcons && !feature.hideIcons;
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
@@ -196,17 +197,17 @@ export default function ComparisonTableSection({
     );
   };
 
-  const renderMobileFeatureContent = (planId: string, category: any) => {
+  const renderMobileFeatureContent = (planId: string, category: Category) => {
     if (isExclusiveCategory(category)) {
-      const availableFeature = category.features.find((feature: any) => feature.avalability[planId]);
+      const availableFeature = category.features.find((feature: Feature) => feature.avalability[planId]);
       if (availableFeature) {
         return renderFeatureContent(availableFeature, category.name, true, category);
       }
     } else {
-      const groupedFeatures: any[] = [];
-      category.features.forEach((feature: any) => {
+      const groupedFeatures: GroupedItem[] = [];
+      category.features.forEach((feature: Feature) => {
         if (feature.group) {
-          const existingGroup = groupedFeatures.find((f: any) => f.group === feature.group);
+          const existingGroup = groupedFeatures.find((f): f is FeatureGroup => 'group' in f && f.group === feature.group);
           if (existingGroup) {
             existingGroup.features.push(feature);
           } else {
@@ -217,9 +218,9 @@ export default function ComparisonTableSection({
         }
       });
 
-      return groupedFeatures.map((item: any, index: number) => {
-        if (item.group) {
-          const featureInPlan = item.features.find((f: any) => f.avalability[planId]);
+      return groupedFeatures.map((item: GroupedItem, index: number) => {
+        if ('features' in item) {
+          const featureInPlan = item.features.find((f: Feature) => f.avalability[planId]);
           if (featureInPlan) {
             return (
               <div key={`${item.group}-${index}`} className="mb-2 last:mb-0">
@@ -306,10 +307,10 @@ export default function ComparisonTableSection({
                   </tr>
                 ) : (
                   (() => {
-                    const groupedFeatures: any[] = [];
-                    category.features.forEach((feature: any) => {
+                    const groupedFeatures: GroupedItem[] = [];
+                    category.features.forEach((feature: Feature) => {
                       if (feature.group) {
-                        const existingGroup = groupedFeatures.find((f: any) => f.group === feature.group);
+                        const existingGroup = groupedFeatures.find((f): f is FeatureGroup => 'features' in f && f.group === feature.group);
                         if (existingGroup) {
                           existingGroup.features.push(feature);
                         } else {
@@ -320,19 +321,19 @@ export default function ComparisonTableSection({
                       }
                     });
 
-                    return groupedFeatures.map((item: any, itemIndex: number) => (
+                    return groupedFeatures.map((item: GroupedItem, itemIndex: number) => (
                       <tr
-                        key={`${category.name}-${item.group || item.id}-${itemIndex}`}
+                        key={`${category.name}-${'features' in item ? item.group : item.id}-${itemIndex}`}
                         className={`border-t-[1px] border-neutral-25 ${itemIndex === 0 ? 'border-t-[1px]' : ''}`}
                       >
                         {textContent.plans.map((plan, planIndex) => (
                           <td
-                            key={`${item.group || item.id}-${plan.id}`}
+                            key={`${'features' in item ? item.group : item.id}-${plan.id}`}
                             className={getRegularFeatureStyles(planIndex, categoryIndex, category, itemIndex)}
                           >
-                            {item.group
+                            {'features' in item
                               ? (() => {
-                                  const featureInPlan = item.features.find((f: any) => f.avalability[plan.id]);
+                                  const featureInPlan = item.features.find((f: Feature) => f.avalability[plan.id]);
                                   return featureInPlan
                                     ? renderFeatureContent(featureInPlan, category.name, true, category)
                                     : null;

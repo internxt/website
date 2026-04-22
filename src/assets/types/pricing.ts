@@ -48,6 +48,7 @@ export interface Feature {
 }
 
 export interface Avalability {
+  [key: string]: boolean;
   Essential: boolean;
   Premium: boolean;
   Ultimate: boolean;
