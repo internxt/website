@@ -243,6 +243,7 @@ export default function ComparisonTableSection({
     <section
       className="flex h-min w-full flex-col items-center py-10 lg:h-min lg:gap-16 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      id="comparisonTable"
     >
       <h2 className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</h2>
 
@@ -329,16 +330,14 @@ export default function ComparisonTableSection({
                             key={`${item.group || item.id}-${plan.id}`}
                             className={getRegularFeatureStyles(planIndex, categoryIndex, category, itemIndex)}
                           >
-                            {item.group ? (
-                              (() => {
-                                const featureInPlan = item.features.find((f: any) => f.avalability[plan.id]);
-                                return featureInPlan
-                                  ? renderFeatureContent(featureInPlan, category.name, true, category)
-                                  : null;
-                              })()
-                            ) : (
-                              renderFeatureContent(item, category.name, item.avalability[plan.id], category)
-                            )}
+                            {item.group
+                              ? (() => {
+                                  const featureInPlan = item.features.find((f: any) => f.avalability[plan.id]);
+                                  return featureInPlan
+                                    ? renderFeatureContent(featureInPlan, category.name, true, category)
+                                    : null;
+                                })()
+                              : renderFeatureContent(item, category.name, item.avalability[plan.id], category)}
                           </td>
                         ))}
                       </tr>

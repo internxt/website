@@ -8,6 +8,7 @@ import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { CheckCircle } from '@phosphor-icons/react';
+import { ArrowDown } from '@phosphor-icons/react/dist/ssr';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -289,6 +290,15 @@ export const PricingSectionWrapper = ({
           onlyUltimatePlan={onlyUltimatePlan}
           premiumAndUltimatePlan={premiumAndUltimatePlan}
         />
+        {textContent.ctaCompare && (
+          <a
+            href="#comparisonTable"
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark hover:bg-neutral-20 hover:text-primary-dark`}
+          >
+            {textContent.ctaCompare}
+            <ArrowDown className="h-6 w-6 text-primary" />
+          </a>
+        )}
       </div>
 
       <div className="flex flex-col items-center gap-6 py-10 lg:hidden">
@@ -316,6 +326,14 @@ export const PricingSectionWrapper = ({
           isValentinesMode={isValentinesMode}
           hideFreeCard={hideFreeCard}
         />
+        {textContent.ctaCompare && (
+          <a
+            href="#comparisonTable"
+            className={`text-base font-medium underline ${darkMode ? 'text-white' : 'text-gray-55'} hover:opacity-80`}
+          >
+            {textContent.ctaCompare}
+          </a>
+        )}
       </div>
     </section>
   );
