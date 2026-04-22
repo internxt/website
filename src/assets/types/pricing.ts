@@ -36,12 +36,15 @@ export interface ComparisonTable {
 export interface Category {
   name: string;
   features: Feature[];
+  hideIcons?: boolean;
 }
 
 export interface Feature {
   id: string;
   name: string;
   avalability: Avalability;
+  group?: string;
+  hideIcons?: boolean;
 }
 
 export interface Avalability {
@@ -100,6 +103,7 @@ export interface TableSection {
   freePlanCard: FreePlanCard;
   features: Features;
   planStorage: PlanStorage;
+  ctaCompare?: string;
 }
 
 export interface BillingFrequency {

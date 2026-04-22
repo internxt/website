@@ -37,7 +37,8 @@
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
-    }
+    },
+    "ctaCompare": "Alle Pläne vergleichen"
   },
   "ComparisonTable": {
     "title": "Pläne und Features",
@@ -64,6 +65,7 @@
     "categories": [
       {
         "name": "Speicher",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -278,6 +280,42 @@
               "Premium": true,
               "Ultimate": true
             }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "Dateigrößenlimit von 1 GB pro Datei",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "Dateigrößenlimit von 50 GB pro Datei",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "Dateigrößenlimit von 100 GB pro Datei",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "Papierkorb-Aufbewahrung von 7 Tagen",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "Papierkorb-Aufbewahrung von 14 Tagen",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "Papierkorb-Aufbewahrung von 30 Tagen",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",

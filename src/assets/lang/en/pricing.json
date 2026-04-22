@@ -51,6 +51,7 @@
     "categories": [
       {
         "name": "Storage",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -181,6 +182,42 @@
             "id": "Password-protected-sharing",
             "name": "Password-protected sharing",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "File size limit 1GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "File size limit 50GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "File size limit 100GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "Trash retention period of 7 days",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "Trash retention period of  14 days",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "Trash retention period of 30 days",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",

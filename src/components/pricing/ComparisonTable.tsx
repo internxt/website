@@ -171,7 +171,7 @@ export default function ComparisonTableSection({
   };
 
   const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
-    const showIcon = categoryName !== 'Storage';
+    const showIcon = categoryName !== 'Storage' && !category?.hideIcons && !feature.hideIcons;
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
     const textColor = isAvailable ? 'text-gray-95' : 'text-gray-95/50';
@@ -203,11 +203,38 @@ export default function ComparisonTableSection({
         return renderFeatureContent(availableFeature, category.name, true, category);
       }
     } else {
-      return category.features.map((feature: any, index: number) => (
-        <div key={`${feature.id}-${index}`} className="mb-2 last:mb-0">
-          {renderFeatureContent(feature, category.name, feature.avalability[planId], category)}
-        </div>
-      ));
+      const groupedFeatures: any[] = [];
+      category.features.forEach((feature: any) => {
+        if (feature.group) {
+          const existingGroup = groupedFeatures.find((f: any) => f.group === feature.group);
+          if (existingGroup) {
+            existingGroup.features.push(feature);
+          } else {
+            groupedFeatures.push({ group: feature.group, features: [feature] });
+          }
+        } else {
+          groupedFeatures.push(feature);
+        }
+      });
+
+      return groupedFeatures.map((item: any, index: number) => {
+        if (item.group) {
+          const featureInPlan = item.features.find((f: any) => f.avalability[planId]);
+          if (featureInPlan) {
+            return (
+              <div key={`${item.group}-${index}`} className="mb-2 last:mb-0">
+                {renderFeatureContent(featureInPlan, category.name, true, category)}
+              </div>
+            );
+          }
+          return null;
+        }
+        return (
+          <div key={`${item.id}-${index}`} className="mb-2 last:mb-0">
+            {renderFeatureContent(item, category.name, item.avalability[planId], category)}
+          </div>
+        );
+      });
     }
     return null;
   };
@@ -277,21 +304,46 @@ export default function ComparisonTableSection({
                     ))}
                   </tr>
                 ) : (
-                  category.features.map((feature, featureIndex) => (
-                    <tr
-                      key={`${category.name}-${feature.id}-${featureIndex}`}
-                      className={`border-t-[1px] border-neutral-25 ${featureIndex === 0 ? 'border-t-[1px]' : ''}`}
-                    >
-                      {textContent.plans.map((plan, planIndex) => (
-                        <td
-                          key={`${feature.id}-${plan.id}`}
-                          className={getRegularFeatureStyles(planIndex, categoryIndex, category, featureIndex)}
-                        >
-                          {renderFeatureContent(feature, category.name, feature.avalability[plan.id], category)}
-                        </td>
-                      ))}
-                    </tr>
-                  ))
+                  (() => {
+                    const groupedFeatures: any[] = [];
+                    category.features.forEach((feature: any) => {
+                      if (feature.group) {
+                        const existingGroup = groupedFeatures.find((f: any) => f.group === feature.group);
+                        if (existingGroup) {
+                          existingGroup.features.push(feature);
+                        } else {
+                          groupedFeatures.push({ group: feature.group, features: [feature] });
+                        }
+                      } else {
+                        groupedFeatures.push(feature);
+                      }
+                    });
+
+                    return groupedFeatures.map((item: any, itemIndex: number) => (
+                      <tr
+                        key={`${category.name}-${item.group || item.id}-${itemIndex}`}
+                        className={`border-t-[1px] border-neutral-25 ${itemIndex === 0 ? 'border-t-[1px]' : ''}`}
+                      >
+                        {textContent.plans.map((plan, planIndex) => (
+                          <td
+                            key={`${item.group || item.id}-${plan.id}`}
+                            className={getRegularFeatureStyles(planIndex, categoryIndex, category, itemIndex)}
+                          >
+                            {item.group ? (
+                              (() => {
+                                const featureInPlan = item.features.find((f: any) => f.avalability[plan.id]);
+                                return featureInPlan
+                                  ? renderFeatureContent(featureInPlan, category.name, true, category)
+                                  : null;
+                              })()
+                            ) : (
+                              renderFeatureContent(item, category.name, item.avalability[plan.id], category)
+                            )}
+                          </td>
+                        ))}
+                      </tr>
+                    ));
+                  })()
                 )}
               </>
             ))}
