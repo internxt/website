@@ -261,6 +261,7 @@ export enum PromoCodeName {
   LIFETIME = '75OFFLFT',
   SUBSCRIPTION = '75OFF',
   icw = 'ICW85',
+  gdrive = 'GDRIVE85',
 }
 
 export interface PromoCodeProps {

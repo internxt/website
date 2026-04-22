@@ -37,7 +37,8 @@
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
-    }
+    },
+    "ctaCompare": "比较所有计划"
   },
   "ComparisonTable": {
     "title": "计划和功能",
@@ -64,6 +65,7 @@
     "categories": [
       {
         "name": "存储",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -278,6 +280,42 @@
               "Premium": true,
               "Ultimate": true
             }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "文件大小限制：每个文件 1GB",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "文件大小限制：每个文件 50GB",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "文件大小限制：每个文件 100GB",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "回收站保留 7 天",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "回收站保留 14 天",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "回收站保留 30 天",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",

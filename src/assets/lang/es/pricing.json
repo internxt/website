@@ -37,7 +37,8 @@
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
-    }
+    },
+    "ctaCompare": "Comparar todos los planes"
   },
   "ComparisonTable": {
     "title": "Planes y características",
@@ -64,6 +65,7 @@
     "categories": [
       {
         "name": "Almacenamiento",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -278,6 +280,42 @@
               "Premium": true,
               "Ultimate": true
             }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "Límite de 1GB por archivo",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "Límite de 50GB por archivo",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "Límite de 100GB por archivo",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "Retención de papelera de 7 días",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "Retención de papelera de 14 días",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "Retención de papelera de 30 días",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",

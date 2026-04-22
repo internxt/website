@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/next-script-for-ga */
-/* eslint-disable @next/next/no-sync-scripts */
-/* eslint-disable @next/next/no-css-tags */
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -105,8 +102,6 @@ export default function Layout({
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
-        <link rel="stylesheet" href="/cookiebanner.style.css" />
-
         <link rel="alternate" hrefLang="en-US" href={`https://internxt.com${pathname}`} />
         <link rel="alternate" hrefLang="es-ES" href={`https://internxt.com/es${pathname}`} />
         <link rel="alternate" hrefLang="de-DE" href={`https://internxt.com/de${pathname}`} />
@@ -116,24 +111,13 @@ export default function Layout({
         <link rel="alternate" hrefLang="zh-CN" href={`https://internxt.com/zh${pathname}`} />
         <link rel="alternate" hrefLang="zh-TW" href={`https://internxt.com/zh-tw${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href={`https://internxt.com${pathname}`} />
-
-        <style
-          style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
-        ></style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
-
-        {/*Cookies Banner */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          $(document).ready(function() {
-            cookieBanner.init();
-        });
-          `,
-          }}
-        />
-        <script defer src="/js/cookiebanner.script.js" />
       </Head>
+
+      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
+      <Script src="/js/cookiebanner.script.js" strategy="afterInteractive" />
+      <Script id="cookie-banner-init" strategy="afterInteractive">{`
+        $(document).ready(function() { cookieBanner.init(); });
+      `}</Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {`{
@@ -156,13 +140,8 @@ export default function Layout({
           ]
         }`}
       </Script>
-      {shouldShowBanner ? (
-        <>
-          <div className="flex flex-col overflow-hidden">{children}</div>
-        </>
-      ) : (
-        <div className="flex flex-col overflow-hidden">{children}</div>
-      )}
+
+      <div className="flex flex-col">{children}</div>
 
       {/* <BFBanner /> */}
     </>

@@ -49,8 +49,8 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SUBSCRIPTION,
-    couponCodeForLifetime: PromoCodeName.LIFETIME,
+    couponCode: PromoCodeName.OFFSUB,
+    couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');

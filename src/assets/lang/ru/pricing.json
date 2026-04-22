@@ -37,7 +37,8 @@
       "essential": "1 ТБ",
       "premium": "3 ТБ",
       "ultimate": "5 ТБ"
-    }
+    },
+    "ctaCompare": "Сравнить все планы"
   },
   "ComparisonTable": {
     "title": "Планы и функции",
@@ -64,6 +65,7 @@
     "categories": [
       {
         "name": "Хранилище",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -278,6 +280,42 @@
               "Premium": true,
               "Ultimate": true
             }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "Ограничение размера файла 1 ГБ на файл",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "Ограничение размера файла 50 ГБ на файл",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "Ограничение размера файла 100 ГБ на файл",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "Срок хранения в корзине 7 дней",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "Срок хранения в корзине 14 дней",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "Срок хранения в корзине 30 дней",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",

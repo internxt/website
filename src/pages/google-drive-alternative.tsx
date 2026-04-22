@@ -19,7 +19,6 @@ import { formatText } from '@/components/utils/format-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-
 const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'google-drive-alternative');
   const {
@@ -30,8 +29,8 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE85,
-    couponCodeForLifetime: PromoCodeName.DRIVE85,
+    couponCode: PromoCodeName.gdrive,
+    couponCodeForLifetime: PromoCodeName.gdrive,
   });
 
   const onCheckoutButtonClicked = async (
@@ -70,7 +69,6 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
 
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Google drive alternative', 'google-drive-alternative')}
       </Script>
@@ -80,81 +78,89 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         segmentName={'Drive Comparison'}
         lang={lang}
       >
-        
-      <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-      
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Drive'}
-        logo={'/images/comparison/competitors/Drive-Letters.webp'}
-        TableTitleTag={'h3'}
-        sectionNeedsH2
-        bottomSeparationBar
-      />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />
 
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-        hideBusinessSelector
-        sectionDetails="bg-white lg:py-20 py-10"
-      />
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Drive'}
+          logo={'/images/comparison/competitors/Drive-Letters.webp'}
+          TableTitleTag={'h3'}
+          sectionNeedsH2
+          bottomSeparationBar
+        />
 
-      <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
 
-      <ThreeCardsSection
-        textContent={langJson.WhyNeedAlternativeSection}
-        bgColor={privacyBgGradient}
-        cardColor="bg-white"
-        TitleTag={'h3'}
-      />
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
 
-      <HorizontalScrollableSectionWithPhotosSection
-        textContent={langJson.WhyBestAlternativeSection}
-        bgColor={alternativeBgColor}
-        TitleCardTag={'h3'}
-        TitleTag={'h2'}
-      />
+        <ThreeCardsSection
+          textContent={langJson.WhyNeedAlternativeSection}
+          bgColor={privacyBgGradient}
+          cardColor="bg-white"
+          TitleTag={'h3'}
+        />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'#pricingTable'}
-        customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-28">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-              {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">
-              {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="px-20 py-10"
-      />
+        <HorizontalScrollableSectionWithPhotosSection
+          textContent={langJson.WhyBestAlternativeSection}
+          bgColor={alternativeBgColor}
+          TitleCardTag={'h3'}
+          TitleTag={'h2'}
+        />
 
-      <FAQSection
-        textContent={langJson.FaqSection}
-        percentageDiscount={percentageDiscount?.toString()}
-        needsH3={false}
-      />
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url={'#pricingTable'}
+          customText={
+            <div className="flex flex-col gap-4 px-10 lg:px-28">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+                {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">
+                {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+            </div>
+          }
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgPadding="px-20 py-10"
+        />
 
-      <Footer textContent={footerLang} lang={locale} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Google drive alternative', url: '/google-drive-alternative' }]} />
-    </Layout>
-  </>);
+        <FAQSection
+          textContent={langJson.FaqSection}
+          percentageDiscount={percentageDiscount?.toString()}
+          needsH3={false}
+        />
+
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          needsH2={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Google drive alternative', url: '/google-drive-alternative' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

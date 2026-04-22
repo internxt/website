@@ -37,7 +37,8 @@
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
-    }
+    },
+    "ctaCompare": "Confronta tutti i piani"
   },
   "ComparisonTable": {
     "title": "Piani e funzionalità",
@@ -64,6 +65,7 @@
     "categories": [
       {
         "name": "Archiviazione",
+        "hideIcons": true,
         "features": [
           {
             "id": "storage_Essential",
@@ -278,6 +280,42 @@
               "Premium": true,
               "Ultimate": true
             }
+          },
+          {
+            "id": "file_size_limit_essential",
+            "name": "Limite dimensione file di 1 GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_premium",
+            "name": "Limite dimensione file di 50 GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "file_size_limit_ultimate",
+            "name": "Limite dimensione file di 100 GB per file",
+            "group": "file_size_limit",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          },
+          {
+            "id": "trash_retention_essential",
+            "name": "Conservazione nel cestino di 7 giorni",
+            "group": "trash_retention",
+            "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_premium",
+            "name": "Conservazione nel cestino di 14 giorni",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
+          },
+          {
+            "id": "trash_retention_ultimate",
+            "name": "Conservazione nel cestino di 30 giorni",
+            "group": "trash_retention",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "Invite_share_&_collaborate",
