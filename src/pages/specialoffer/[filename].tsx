@@ -44,6 +44,7 @@ const ALLOWED_PATHS = [
   'yrj',
   'moonrover',
   'icw',
+  'fb',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
@@ -64,6 +65,7 @@ const COUPON_CODES = {
   yrj: PromoCodeName.yrj,
   moonrover: PromoCodeName.moonrover,
   icw: PromoCodeName.icw,
+  fb: PromoCodeName.Facebook,
 };
 
 function CombinedSpecialOffer({
@@ -163,7 +165,7 @@ function CombinedSpecialOffer({
       description={metatags!.description}
       segmentName="Partners"
       lang={lang}
-      robots="noindex, follow"
+      robots={pathname === 'fb' ? "noindex, nofollow" : "noindex, follow"}
     >
       {!isCelloAttributionExpired && (
         <Script
