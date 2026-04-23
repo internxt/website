@@ -41,8 +41,8 @@ function anualSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.anual,
-    couponCodeForLifetime: PromoCodeName.anual,
+    couponCode: PromoCodeName.Facebook,
+    couponCodeForLifetime: PromoCodeName.Facebook,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
@@ -98,7 +98,7 @@ function anualSpecial({
       segmentName="Lifetime"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-      robots="noindex, follow"
+      robots="noindex, nofollow"
     >
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 

@@ -43,8 +43,8 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.lifetime,
-    couponCodeForLifetime: PromoCodeName.lifetime,
+    couponCode: PromoCodeName.Facebook,
+    couponCodeForLifetime: PromoCodeName.Facebook,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
@@ -96,82 +96,95 @@ function LifetimeSpecial({
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Lifetime cloud storage', url: '/lifetime' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Lifetime cloud storage', url: '/lifetime' },
+        ])}
       </Script>
       <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Lifetime"
-      lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
-
-      <ReviewsSection textContent={testimonialsJson.ReviewSection} />
-
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscountForLifetime,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Lifetime"
         lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
-        hidePlanSelectorComponent={true}
-        popularPlanBySize="3TB"
-        sectionDetails="bg-white lg:py-20"
-        hideFreeCard
-        SectionTag={'h2'}
-      />
+        specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+        robots="noindex, nofollow"
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+        <ReviewsSection textContent={testimonialsJson.ReviewSection} />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.ctaSection}
-        url={'#billingButtons'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {langJson.ctaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20 pb-20"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
-      />
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessCards
+          hideBusinessSelector
+          hidePlanSelectorComponent={true}
+          popularPlanBySize="3TB"
+          sectionDetails="bg-white lg:py-20"
+          hideFreeCard
+          SectionTag={'h2'}
+        />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+        <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.ctaSection2}
-        url={'#billingButtons'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:px-40 lg:text-4xl">
-              {langJson.ctaSection2.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {ctaText2}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-10"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
-      />
+        <FloatingCtaSectionv2
+          textContent={langJson.ctaSection}
+          url={'#billingButtons'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</h2>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+                {langJson.ctaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:py-20 pb-20"
+          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Lifetime cloud storage', url: '/lifetime' }]} />
-    </Layout>
+        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+
+        <FloatingCtaSectionv2
+          textContent={langJson.ctaSection2}
+          url={'#billingButtons'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:px-40 lg:text-4xl">
+                {langJson.ctaSection2.title}
+              </h2>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+                {ctaText2}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:pb-20 pb-10"
+          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        />
+
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Lifetime cloud storage', url: '/lifetime' },
+          ]}
+        />
+      </Layout>
     </>
   );
 }
