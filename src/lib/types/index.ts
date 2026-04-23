@@ -262,6 +262,7 @@ export enum PromoCodeName {
   SUBSCRIPTION = '75OFF',
   icw = 'ICW85',
   gdrive = 'GDRIVE85',
+  Alejavi = 'ALEJAVI',
 }
 
 export interface PromoCodeProps {
