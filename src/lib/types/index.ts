@@ -264,6 +264,7 @@ export enum PromoCodeName {
   gdrive = 'GDRIVE85',
   Alejavi = 'ALEJAVI',
   Facebook = 'FB87',
+  nextGenia = 'NEXTGENIA',
 }
 
 export interface PromoCodeProps {

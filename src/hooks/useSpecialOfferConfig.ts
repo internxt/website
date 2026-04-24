@@ -59,6 +59,7 @@ export const ALLOWED_PATHS = [
   'earth-day',
   'dezz',
   'alejavi',
+  'nextgenia',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -125,6 +126,7 @@ export const COUPON_CODES = {
   'earth-day': PromoCodeName.earthDay,
   dezz: PromoCodeName.Dezz,
   alejavi: PromoCodeName.Alejavi,
+  nextgenia: PromoCodeName.nextGenia,
 };
 
 interface OfferConfig {
