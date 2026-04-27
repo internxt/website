@@ -49,7 +49,6 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 

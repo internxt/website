@@ -358,11 +358,11 @@ export const PriceCard = ({
           </div>
         </div>
       </div>
-      {isAnnual && (
+      {/*{isAnnual && (
         <p className="text-10 font-normal italic text-gray-35">
           {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
         </p>
-      )}
+      )}*/}
     </div>
   );
 };

@@ -45,7 +45,7 @@
       "part2": "archiviazione cloud crittografata"
     },
     "description": "Ottieni il {{discount}}% di sconto ora",
-    "descriptionNormal": "su tutti i piani",
+    "descriptionNormal": "sui piani a vita",
     "giftDescription": {
       "line1": "Vinci una carta regalo fino a 1.000€!",
       "line2": "Unisciti a Internxt e partecipa all'estrazione di Natale"
@@ -68,6 +68,7 @@
     "hotLabel": "{{discount}}% sconto",
     "planTitles": {
       "header": "Scegli il tuo piano",
+      "individuals": "Piani Annuali",
       "homePage": "Scegli il piano giusto per te",
       "lifetime": "Piani a vita",
       "business": "Piani business",

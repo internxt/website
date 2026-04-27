@@ -221,7 +221,10 @@ export const PricingSectionWrapper = ({
   const onIndividualSwitchToggled = overrideOnIndividualSwitchToggled ?? localPlanSelection.onIndividualSwitchToggled;
   const onBusinessSwitchToggled = overrideOnBusinessSwitchToggled ?? localPlanSelection.onBusinessSwitchToggled;
 
-  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
+  const actualDiscountValue =
+    activeSwitchPlan === 'Lifetime'
+      ? calculateDiscountPercentage(decimalDiscount?.lifetime)
+      : calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
 
   const commonPricingProps = {
     textContent,

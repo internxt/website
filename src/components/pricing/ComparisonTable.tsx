@@ -49,7 +49,7 @@ export default function ComparisonTableSection({
   const isLifetime = billingFrequency === Interval.Lifetime;
 
   const getPlanPrice = (planOrder: number) => {
-    const basePrice = products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0;
+    const basePrice = Number(products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0);
     const finalPrice = decimalDiscount ? basePrice * (decimalDiscount / 100) : basePrice;
     return finalPrice.toFixed(0);
   };

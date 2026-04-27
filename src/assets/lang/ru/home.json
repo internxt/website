@@ -45,7 +45,7 @@
       "part2": "зашифрованное облако."
     },
     "description": "Получите скидку {{discount}}% прямо сейчас",
-    "descriptionNormal": "на пожизненные",
+    "descriptionNormal": "на пожизненные планы",
     "giftDescription": {
       "line1": "Выиграйте подарочную карту на 1000 €!",
       "line2": "Участвуйте в новогоднем розыгрыше от Internxt"
@@ -68,6 +68,7 @@
     "hotLabel": "Скидка {{discount}}% ",
     "planTitles": {
       "header": " Выберите свой тариф",
+      "individuals": "Годовые Планы",
       "homePage": "Выберите подходящий тариф",
       "lifetime": "Пожизненные тарифы",
       "business": "Бизнес-тарифы",

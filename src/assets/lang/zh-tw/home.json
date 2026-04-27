@@ -68,6 +68,7 @@
     "hotLabel": "{{discount}}% 折扣 ",
     "planTitles": {
       "header": " 選擇您的計劃",
+      "individuals": "年度計劃",
       "homePage": "選擇適合您的方案",
       "lifetime": "終身方案",
       "business": "企業方案",
