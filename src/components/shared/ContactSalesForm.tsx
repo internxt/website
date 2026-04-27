@@ -8,9 +8,115 @@ interface ContactSalesFormProps {
   isBusiness?: boolean;
   locale?: string;
 }
+
 type FormStatus = 'error' | 'success' | 'default';
 
+const PHONE_PREFIXES = [
+  { code: '+1', flag: '🇺🇸', label: 'US/CA' },
+  { code: '+7', flag: '🇷🇺', label: 'RU' },
+  { code: '+20', flag: '🇪🇬', label: 'EG' },
+  { code: '+27', flag: '🇿🇦', label: 'ZA' },
+  { code: '+30', flag: '🇬🇷', label: 'GR' },
+  { code: '+31', flag: '🇳🇱', label: 'NL' },
+  { code: '+32', flag: '🇧🇪', label: 'BE' },
+  { code: '+33', flag: '🇫🇷', label: 'FR' },
+  { code: '+34', flag: '🇪🇸', label: 'ES' },
+  { code: '+36', flag: '🇭🇺', label: 'HU' },
+  { code: '+39', flag: '🇮🇹', label: 'IT' },
+  { code: '+40', flag: '🇷🇴', label: 'RO' },
+  { code: '+41', flag: '🇨🇭', label: 'CH' },
+  { code: '+43', flag: '🇦🇹', label: 'AT' },
+  { code: '+44', flag: '🇬🇧', label: 'GB' },
+  { code: '+45', flag: '🇩🇰', label: 'DK' },
+  { code: '+46', flag: '🇸🇪', label: 'SE' },
+  { code: '+47', flag: '🇳🇴', label: 'NO' },
+  { code: '+48', flag: '🇵🇱', label: 'PL' },
+  { code: '+49', flag: '🇩🇪', label: 'DE' },
+  { code: '+51', flag: '🇵🇪', label: 'PE' },
+  { code: '+52', flag: '🇲🇽', label: 'MX' },
+  { code: '+54', flag: '🇦🇷', label: 'AR' },
+  { code: '+55', flag: '🇧🇷', label: 'BR' },
+  { code: '+56', flag: '🇨🇱', label: 'CL' },
+  { code: '+57', flag: '🇨🇴', label: 'CO' },
+  { code: '+58', flag: '🇻🇪', label: 'VE' },
+  { code: '+60', flag: '🇲🇾', label: 'MY' },
+  { code: '+61', flag: '🇦🇺', label: 'AU' },
+  { code: '+62', flag: '🇮🇩', label: 'ID' },
+  { code: '+63', flag: '🇵🇭', label: 'PH' },
+  { code: '+64', flag: '🇳🇿', label: 'NZ' },
+  { code: '+65', flag: '🇸🇬', label: 'SG' },
+  { code: '+66', flag: '🇹🇭', label: 'TH' },
+  { code: '+81', flag: '🇯🇵', label: 'JP' },
+  { code: '+82', flag: '🇰🇷', label: 'KR' },
+  { code: '+84', flag: '🇻🇳', label: 'VN' },
+  { code: '+86', flag: '🇨🇳', label: 'CN' },
+  { code: '+90', flag: '🇹🇷', label: 'TR' },
+  { code: '+91', flag: '🇮🇳', label: 'IN' },
+  { code: '+92', flag: '🇵🇰', label: 'PK' },
+  { code: '+93', flag: '🇦🇫', label: 'AF' },
+  { code: '+94', flag: '🇱🇰', label: 'LK' },
+  { code: '+95', flag: '🇲🇲', label: 'MM' },
+  { code: '+98', flag: '🇮🇷', label: 'IR' },
+  { code: '+212', flag: '🇲🇦', label: 'MA' },
+  { code: '+213', flag: '🇩🇿', label: 'DZ' },
+  { code: '+216', flag: '🇹🇳', label: 'TN' },
+  { code: '+218', flag: '🇱🇾', label: 'LY' },
+  { code: '+220', flag: '🇬🇲', label: 'GM' },
+  { code: '+234', flag: '🇳🇬', label: 'NG' },
+  { code: '+254', flag: '🇰🇪', label: 'KE' },
+  { code: '+351', flag: '🇵🇹', label: 'PT' },
+  { code: '+352', flag: '🇱🇺', label: 'LU' },
+  { code: '+353', flag: '🇮🇪', label: 'IE' },
+  { code: '+358', flag: '🇫🇮', label: 'FI' },
+  { code: '+380', flag: '🇺🇦', label: 'UA' },
+  { code: '+420', flag: '🇨🇿', label: 'CZ' },
+  { code: '+421', flag: '🇸🇰', label: 'SK' },
+  { code: '+966', flag: '🇸🇦', label: 'SA' },
+  { code: '+971', flag: '🇦🇪', label: 'AE' },
+  { code: '+972', flag: '🇮🇱', label: 'IL' },
+  { code: '+974', flag: '🇶🇦', label: 'QA' },
+];
+
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const shannonEntropy = (str: string): number => {
+  const freq: Record<string, number> = {};
+  for (const char of str) {
+    freq[char] = (freq[char] || 0) + 1;
+  }
+  return Object.values(freq).reduce((sum, count) => {
+    const p = count / str.length;
+    return sum - p * Math.log2(p);
+  }, 0);
+};
+
+const isRandomString = (str: string): boolean => {
+  const trimmed = str.trim();
+  if (trimmed.length < 10) return false;
+  const hasNoSpaces = !trimmed.includes(' ');
+  const entropy = shannonEntropy(trimmed);
+  return hasNoSpaces && entropy > 3.5;
+};
+
+const isValidPhone = (phone: string): boolean => {
+  const digits = phone.replace(/\D/g, '');
+  if (digits.length < 7 || digits.length > 15) return false;
+  return /^\+?[\d\s\-().]{7,20}$/.test(phone.trim());
+};
+
+const isFormDataLegitimate = (data: {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  storage: string;
+  help: string;
+}): boolean => {
+  if (isRandomString(data.company)) return false;
+  if (data.help.trim().length > 0 && isRandomString(data.help)) return false;
+  if (!isValidPhone(data.phone)) return false;
+  return true;
+};
 
 export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
@@ -22,9 +128,9 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
     help: '',
   });
 
+  const [phonePrefix, setPhonePrefix] = useState('+34');
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const [formStatus, setFormStatus] = useState<FormStatus>('default');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -49,19 +155,25 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
 
   const onSubmitError = (error: unknown) => {
     console.error('Error:', error);
-    console.log('Error:', error);
     setFormStatus('error');
   };
 
   const handleSubmitDebounced = useCallback(
-    debounce(async (formData, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
+    debounce(async (formData, phonePrefix, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
+      const fullPhone = `${phonePrefix} ${formData.phone}`.trim();
+
+      if (!isFormDataLegitimate({ ...formData, phone: fullPhone })) {
+        await onSubmitSuccess();
+        return;
+      }
+
       setIsSubmitting(true);
       const origin_contact = isBusiness ? 'B2B' : 'S3';
       const payload = {
         email: formData.email,
         name: formData.name,
         company: formData.company,
-        phone: formData.phone,
+        phone: fullPhone,
         origin_contact: origin_contact,
         help: formData.help,
         storage: formData.storage,
@@ -70,7 +182,6 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
 
       try {
         await axios.post('/api/contact', payload);
-
         await onSubmitSuccess();
       } catch (error) {
         onSubmitError(error);
@@ -83,7 +194,7 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmitDebounced(formData, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting);
+    handleSubmitDebounced(formData, phonePrefix, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting);
   };
 
   return (
@@ -148,14 +259,28 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
                   <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    placeholder={textContent.form.phone}
-                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none "
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
+                  <div className="flex rounded-lg border border-highlight overflow-hidden">
+                    <select
+                      id="phonePrefix"
+                      value={phonePrefix}
+                      onChange={(e) => setPhonePrefix(e.target.value)}
+                      className="appearance-none bg-white px-2 py-2 text-sm text-gray-100 focus:outline-none border-r border-highlight cursor-pointer"
+                    >
+                      {PHONE_PREFIXES.map(({ code, flag, label }) => (
+                        <option key={code} value={code}>
+                          {flag} {code}
+                        </option>
+                      ))}
+                    </select>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder={textContent.form.phone}
+                      className="flex-1 bg-white px-3 py-2 focus:outline-none"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
               </div>
 
