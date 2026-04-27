@@ -126,17 +126,12 @@ export default function HeroSection({
 
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               <HighlightText text={textContent.title} />
+            </h1>
+            <p className="font-regular whitespace-pre-line text-lg leading-tight text-gray-100 lg:whitespace-nowrap lg:text-2xl">
+              {textContent.subtitle.part1} {textContent.subtitle.part2}
             </p>
-            <span className="flex lg:flex-row gap-1">
-              <p className="font-regular text-lg leading-tight text-gray-100 lg:text-2xl">
-                {textContent.subtitle.part1}
-              </p>
-              <h1 className="font-regular text-lg leading-tight text-gray-100 lg:text-2xl">
-                {textContent.subtitle.part2}
-              </h1>
-            </span>
           </div>
           <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
             <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>

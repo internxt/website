@@ -39,7 +39,7 @@
         }
       }
     },
-    "title": "**預設私密**，**安全設計**，**天然自由**",
+    "title": "默認私密。**加密**提供額外**保護**。",
     "subtitle": {
       "part1": "这就是 Internxt - ",
       "part2": "加密云存储"
@@ -68,6 +68,7 @@
     "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
       "header": "选择您的计划 ",
+      "individuals": "年度计划",
       "homePage": "選擇適合您的方案",
       "lifetime": "終身方案",
       "business": "企業方案",
