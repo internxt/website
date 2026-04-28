@@ -240,7 +240,7 @@ export enum PromoCodeName {
   MCAFEE85 = 'MCAFEE85',
   NORTON85 = 'NORTON85',
   morrolinux = 'MORROLINUX',
-  clubic = 'DRIVE87',
+  clubic = 'CLUBIC',
   tukaram = 'TUKARAM',
   f4mi = 'F4MI',
   macho = 'MACHO',
