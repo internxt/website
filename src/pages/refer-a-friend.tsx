@@ -39,6 +39,7 @@ const ReferAFriendPage = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
   const locale = lang as string;
