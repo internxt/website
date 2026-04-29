@@ -268,6 +268,7 @@ export enum PromoCodeName {
   dgmax = 'DGMAX',
   gbascunana = 'GBASCUNANA',
   marcocreativo = 'MARCOCREATIVO',
+  alexziskind = 'ALEXZISKIND',
 }
 
 export interface PromoCodeProps {
