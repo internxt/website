@@ -129,7 +129,7 @@ export default function HeroSection({
             <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               <HighlightText text={textContent.title} />
             </h1>
-            <p className="font-regular whitespace-pre-line text-lg leading-tight text-gray-100 lg:whitespace-nowrap lg:text-2xl">
+            <p className="font-regular text-lg leading-tight text-gray-100 lg:whitespace-pre-line  lg:text-2xl">
               {textContent.subtitle.part1} {textContent.subtitle.part2}
             </p>
           </div>
