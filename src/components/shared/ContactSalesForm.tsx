@@ -5,8 +5,10 @@ import debounce from 'lodash.debounce';
 
 interface ContactSalesFormProps {
   textContent: any;
-  isBusiness?: boolean;
+  isReseller?: boolean;
   locale?: string;
+  needsTopDivider?: boolean;
+  needsBottomDivider?: boolean;
 }
 
 type FormStatus = 'error' | 'success' | 'default';
@@ -118,7 +120,13 @@ const isFormDataLegitimate = (data: {
   return true;
 };
 
-export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSalesFormProps) => {
+export const ContactSalesForm = ({
+  textContent,
+  isReseller,
+  locale,
+  needsTopDivider = true,
+  needsBottomDivider = true,
+}: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -159,7 +167,7 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
   };
 
   const handleSubmitDebounced = useCallback(
-    debounce(async (formData, phonePrefix, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
+    debounce(async (formData, phonePrefix, isReseller, locale, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
       const fullPhone = `${phonePrefix} ${formData.phone}`.trim();
 
       if (!isFormDataLegitimate({ ...formData, phone: fullPhone })) {
@@ -168,7 +176,7 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
       }
 
       setIsSubmitting(true);
-      const origin_contact = isBusiness ? 'B2B' : 'S3';
+      const origin_contact = isReseller ? 'Reseller' : 'S3';
       const payload = {
         email: formData.email,
         name: formData.name,
@@ -194,13 +202,17 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmitDebounced(formData, phonePrefix, isBusiness, locale, onSubmitSuccess, onSubmitError, setIsSubmitting);
+    handleSubmitDebounced(formData, phonePrefix, isReseller, locale, onSubmitSuccess, onSubmitError, setIsSubmitting);
   };
 
   return (
-    <section className=" overflow-hidden px-8 py-10 lg:px-0 lg:py-20">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
-      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+    <section className="overflow-hidden px-8 py-10 lg:px-0 lg:py-20" id="contactSalesForm">
+      {needsTopDivider && (
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      )}
+      {needsBottomDivider && (
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      )}
       <div className="flex flex-col items-center gap-6 text-center ">
         <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
         <p className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">
@@ -259,12 +271,12 @@ export const ContactSalesForm = ({ textContent, isBusiness, locale }: ContactSal
                   <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
-                  <div className="flex rounded-lg border border-highlight overflow-hidden">
+                  <div className="flex overflow-hidden rounded-lg border border-highlight">
                     <select
                       id="phonePrefix"
                       value={phonePrefix}
                       onChange={(e) => setPhonePrefix(e.target.value)}
-                      className="appearance-none bg-white px-2 py-2 text-sm text-gray-100 focus:outline-none border-r border-highlight cursor-pointer"
+                      className="cursor-pointer appearance-none border-r border-highlight bg-white px-2 py-2 text-sm text-gray-100 focus:outline-none"
                     >
                       {PHONE_PREFIXES.map(({ code, flag, label }) => (
                         <option key={code} value={code}>
