@@ -55,6 +55,7 @@ export interface Join {
   github: string;
   affiliates: string;
   referrals: string;
+  cloudPartner: string;
 }
 
 export interface Products {

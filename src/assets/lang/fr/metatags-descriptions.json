@@ -553,5 +553,10 @@
     "id": "nas-qnap",
     "title": "Sauvegarde Cloud pour NAS QNAP — Stockage NAS Sécurisé | Internxt",
     "description": "Sauvegardez votre NAS QNAP dans le cloud con Internxt. Stockage cloud sécurisé, chiffré et privé pour votre appareil QNAP."
+  },
+  {
+    "id": "cloud-partner",
+    "title": "Programme Partenaire Cloud Internxt",
+    "description": "Devenez revendeur du stockage objet Internxt S3 pour les entreprises. Stockage cloud à chaud, et moins cher qu'AWS, Azure et Google Cloud."
   }
 ]
