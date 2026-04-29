@@ -1,0 +1,58 @@
+{
+  "HeroSection": {
+    "title": "Internxt reseller programme",
+    "description": "AWS compatible, 100% hot cloud storage",
+    "cta": "Become a reseller"
+  },
+  "FeatureSection": {
+    "title": "Internxt S3",
+    "description": "With the Internxt Partner Program, you provide your customers with rapid access to large amounts of cloud storage at a fixed, competitive cost and no additional fees. Save up to 80% compared to other hyperscalers. "
+  },
+  "AccordionSection": {
+    "title": "Benefits of Internxt’s reseller programme ",
+    "description": "Our reseller programme offers a low-cost, high-impact solution for data access, backup, and archiving.",
+    "accordionSection": {
+      "titles": ["Enterprise-grade object storage", "Pricing and scalability", "API access"],
+      "descriptions": [
+        "Meet the latest standards of data compliance and management with 11 9s of data durability to ensure secure and reliable access to petabytes of data with rapid uploads and downloads.  Resell petabytes of storage with rapid upload and download speeds from your web console.",
+        "Manage customer accounts from a single dashboard and enjoy pay-as-you-go fixed pricing with no additional fees. Add as much storage as you need to meet the demands of partners. We provide an incredibly affordable cost structure so you can earn high margins while reselling our solution.",
+        "API access makes it easy for you to manage partners, control where data is stored, and securely access resources, all from a single interface. Centralize user management, improve data control, and enable secure, tailored storage access."
+      ]
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Easily scale your storage business",
+    "description": "Simplify how you sell, manage, and scale storage across all your customers. ",
+    "cards": {
+      "titles": ["Account automation", "Set up and management", "Simplify billing"],
+      "descriptions": [
+        "Simplify your account management by handling trials, billing, and policy adjustments automatically, helping you scale without added complexity. ",
+        "Enjoy quick delivery for your customers. There are no long setup or deployment delays, so you can instantly start making money with our reseller programme.  ",
+        "Combine billing across all your accounts and channels into a single invoice, making it easier to track, manage, and reconcile payments. "
+      ]
+    }
+  },
+  "TrustedSection": {
+    "title": "Trusted, European object storage",
+    "description": "Get the best compliant object storage, data protection, and security for all industries. We enable redundant data storage that replicates and distributes data across multiple servers for ultra-low latency and ultra-fast data access. "
+  },
+  "ContactSales": {
+    "title": "Contact sales",
+    "description": "Fill out the contact form and the team will contact you shortly.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email address",
+      "company": "Company Name",
+      "phone": "Phone number",
+      "howMuchStorage": "How much storage do you need?",
+      "totalCharacters": " /1000",
+      "options": ["Select", "Less than 10TB", "10TB - 50TB", "50TB - 100 TB", "More than 100TB"],
+      "howWeCanHelp": "How can we help you? (Optional)",
+      "howWeCanHelpPlaceHolder": "Tell us more about your  needs",
+      "cta": "Send message",
+      "ctaSending": "Sending...",
+      "successMessage": "Your message has been sent successfully.",
+      "errorMessage": "An error occurred. Please try again."
+    }
+  }
+}

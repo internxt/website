@@ -1,0 +1,72 @@
+{
+  "HeroSection": {
+    "title": "Internxt Wiederverkäufer-Programm",
+    "description": "AWS-kompatibler, 100 % heißer Cloud-Speicher",
+    "cta": "Wiederverkäufer werden"
+  },
+  "FeatureSection": {
+    "title": "Internxt S3",
+    "description": "Mit dem Internxt Partnerprogramm bieten Sie Ihren Kunden schnellen Zugriff auf große Mengen an Cloud-Speicher zu festen, wettbewerbsfähigen Kosten und ohne zusätzliche Gebühren. Sparen Sie bis zu 80 % im Vergleich zu anderen Hyperscalern."
+  },
+  "AccordionSection": {
+    "title": "Vorteile des Internxt Wiederverkäufer-Programms",
+    "description": "Unser Wiederverkäufer-Programm bietet eine kostengünstige, hochwirksame Lösung für Datenzugriff, Backup und Archivierung.",
+    "accordionSection": {
+      "titles": [
+        "Objektspeicher auf Unternehmensebene",
+        "Preisgestaltung und Skalierbarkeit",
+        "API-Zugang"
+      ],
+      "descriptions": [
+        "Erfüllen Sie die neuesten Standards für Daten-Compliance und -Management mit 11 Neunen (99,999999999 %) Datenhaltbarkeit, um einen sicheren und zuverlässigen Zugriff auf Petabytes an Daten mit schnellen Uploads und Downloads zu gewährleisten. Verkaufen Sie Petabytes an Speicher mit schnellen Upload- und Downloadgeschwindigkeiten über Ihre Webkonsole.",
+        "Verwalten Sie Kundenkonten über ein einziges Dashboard und genießen Sie feste Pay-as-you-go-Preise ohne zusätzliche Gebühren. Fügen Sie so viel Speicherplatz hinzu, wie Sie benötigen, um die Anforderungen der Partner zu erfüllen. Wir bieten eine unglaublich erschwingliche Kostenstruktur, damit Sie hohe Margen erzielen können, während Sie unsere Lösung weiterverkaufen.",
+        "Der API-Zugang erleichtert es Ihnen, Partner zu verwalten, zu kontrollieren, wo Daten gespeichert werden, und sicher auf Ressourcen zuzugreifen – alles über eine einzige Schnittstelle. Zentralisieren Sie die Benutzerverwaltung, verbessern Sie die Datenkontrolle und ermöglichen Sie einen sicheren, maßgeschneiderten Speicherzugriff."
+      ]
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Skalieren Sie Ihr Speichergeschäft einfach",
+    "description": "Vereinfachen Sie, wie Sie Speicher für all Ihre Kunden verkaufen, verwalten und skalieren.",
+    "cards": {
+      "titles": [
+        "Kontoautomatisierung",
+        "Einrichtung und Verwaltung",
+        "Abrechnung vereinfachen"
+      ],
+      "descriptions": [
+        "Vereinfachen Sie Ihre Kontoverwaltung, indem Sie Testversionen, Abrechnungen und Richtlinienanpassungen automatisch handhaben, was Ihnen hilft, ohne zusätzliche Komplexität zu skalieren.",
+        "Profitieren Sie von einer schnellen Bereitstellung für Ihre Kunden. Es gibt keine langen Einrichtungs- oder Bereitstellungsverzögerungen, sodass Sie mit unserem Wiederverkäufer-Programm sofort Geld verdienen können.",
+        "Fassen Sie die Abrechnung über all Ihre Konten und Kanäle in einer einzigen Rechnung zusammen, was die Nachverfolgung, Verwaltung und den Abgleich von Zahlungen erleichtert."
+      ]
+    }
+  },
+  "TrustedSection": {
+    "title": "Vertrauenswürdiger, europäischer Objektspeicher",
+    "description": "Holen Sie sich den besten konformen Objektspeicher, Datenschutz und Sicherheit für alle Branchen. Wir ermöglichen eine redundante Datenspeicherung, die Daten über mehrere Server repliziert und verteilt, für extrem niedrige Latenzzeiten und ultraschnellen Datenzugriff."
+  },
+  "ContactSales": {
+    "title": "Vertrieb kontaktieren",
+    "description": "Füllen Sie das Kontaktformular aus und das Team wird sich in Kürze mit Ihnen in Verbindung setzen.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "howMuchStorage": "Wie viel Speicherplatz benötigen Sie?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Auswählen",
+        "Weniger als 10 TB",
+        "10 TB - 50 TB",
+        "50 TB - 100 TB",
+        "Mehr als 100 TB"
+      ],
+      "howWeCanHelp": "Wie können wir Ihnen helfen? (Optional)",
+      "howWeCanHelpPlaceHolder": "Erzählen Sie uns mehr über Ihre Bedürfnisse",
+      "cta": "Nachricht senden",
+      "ctaSending": "Senden...",
+      "successMessage": "Ihre Nachricht wurde erfolgreich gesendet.",
+      "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  }
+}

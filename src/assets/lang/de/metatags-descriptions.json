@@ -565,5 +565,10 @@
     "id": "nas-qnap",
     "title": "QNAP NAS Cloud-Backup — Sicherer NAS-Speicher | Internxt",
     "description": "Sichern Sie Ihr QNAP NAS in der Cloud mit Internxt. Sicherer, verschlüsselter und privater Cloud-Speicher für Ihr QNAP-Gerät."
+  },
+  {
+    "id": "cloud-partner",
+    "title": "Internxt Cloud Partnerprogramm",
+    "description": "Werden Sie Wiederverkäufer für Internxt S3 Objektspeicher für Unternehmen. Heißer Cloud-Speicher und günstiger als AWS, Azure und Google Cloud."
   }
 ]

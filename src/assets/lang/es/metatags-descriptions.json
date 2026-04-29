@@ -655,5 +655,10 @@
     "id": "nas-qnap",
     "title": "Copia de seguridad en la nube para QNAP NAS — Almacenamiento NAS Seguro | Internxt",
     "description": "Realiza copias de seguridad de tu QNAP NAS en la nube con Internxt. Almacenamiento en la nube seguro, cifrado y privado para tu dispositivo QNAP."
+  },
+  {
+    "id": "cloud-partner",
+    "title": "Programa Cloud Partner de Internxt",
+    "description": "Conviértete en revendedor del almacenamiento de objetos de Internxt S3 para empresas. Almacenamiento en la nube caliente y más barato que AWS, Azure y Google Cloud."
   }
 ]

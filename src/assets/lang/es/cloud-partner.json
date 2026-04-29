@@ -1,0 +1,72 @@
+{
+  "HeroSection": {
+    "title": "Programa de revendedores de Internxt",
+    "description": "Almacenamiento en la nube caliente, 100% compatible con AWS",
+    "cta": "Hazte revendedor"
+  },
+  "FeatureSection": {
+    "title": "Internxt S3",
+    "description": "Con el programa de socios de Internxt, proporcionas a tus clientes un acceso rápido a grandes cantidades de almacenamiento en la nube a un costo fijo y competitivo sin tarifas adicionales. Ahorra hasta un 80% en comparación con otros proveedores a gran escala."
+  },
+  "AccordionSection": {
+    "title": "Beneficios del programa de revendedores de Internxt",
+    "description": "Nuestro programa de revendedores ofrece una solución de bajo costo y alto impacto para el acceso, la copia de seguridad y el archivo de datos.",
+    "accordionSection": {
+      "titles": [
+        "Almacenamiento de objetos de nivel empresarial",
+        "Precios y escalabilidad",
+        "Acceso API"
+      ],
+      "descriptions": [
+        "Cumple con los últimos estándares de cumplimiento y gestión de datos con 11 nueves de durabilidad para garantizar un acceso seguro y confiable a petabytes de datos con cargas y descargas rápidas. Revende petabytes de almacenamiento con velocidades rápidas de carga y descarga desde tu consola web.",
+        "Gestiona las cuentas de los clientes desde un único panel y disfruta de precios fijos de pago por uso sin tarifas adicionales. Añade todo el almacenamiento que necesites para satisfacer las demandas de los socios. Ofrecemos una estructura de costos increíblemente asequible para que puedas obtener altos márgenes mientras revendes nuestra solución.",
+        "El acceso a la API te facilita gestionar socios, controlar dónde se almacenan los datos y acceder a los recursos de forma segura, todo desde una única interfaz. Centraliza la gestión de usuarios, mejora el control de los datos y permite un acceso seguro y personalizado al almacenamiento."
+      ]
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Escala fácilmente tu negocio de almacenamiento",
+    "description": "Simplifica cómo vendes, gestionas y escalas el almacenamiento en todos tus clientes.",
+    "cards": {
+      "titles": [
+        "Automatización de cuentas",
+        "Configuración y gestión",
+        "Facturación simplificada"
+      ],
+      "descriptions": [
+        "Simplifica la gestión de tus cuentas manejando pruebas, facturación y ajustes de políticas de forma automática, ayudándote a escalar sin añadir complejidad.",
+        "Disfruta de una entrega rápida para tus clientes. No hay retrasos prolongados en la configuración o el despliegue, por lo que puedes empezar a ganar dinero al instante con nuestro programa de revendedores.",
+        "Combina la facturación de todas tus cuentas y canales en una sola factura, facilitando el seguimiento, la gestión y la conciliación de los pagos."
+      ]
+    }
+  },
+  "TrustedSection": {
+    "title": "Almacenamiento de objetos europeo y de confianza",
+    "description": "Consigue el mejor almacenamiento de objetos en cumplimiento con la normativa, protección de datos y seguridad para todas las industrias. Habilitamos un almacenamiento de datos redundante que replica y distribuye datos en múltiples servidores para una latencia ultrabaja y un acceso ultrarrápido."
+  },
+  "ContactSales": {
+    "title": "Contacta a ventas",
+    "description": "Rellena el formulario de contacto y el equipo se comunicará contigo en breve.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Dirección de correo electrónico",
+      "company": "Nombre de la empresa",
+      "phone": "Número de teléfono",
+      "howMuchStorage": "¿Cuánto almacenamiento necesitas?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Seleccionar",
+        "Menos de 10TB",
+        "10TB - 50TB",
+        "50TB - 100 TB",
+        "Más de 100TB"
+      ],
+      "howWeCanHelp": "¿Cómo podemos ayudarte? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Cuéntanos más sobre tus necesidades",
+      "cta": "Enviar mensaje",
+      "ctaSending": "Enviando...",
+      "successMessage": "Tu mensaje se ha enviado con éxito.",
+      "errorMessage": "Ocurrió un error. Por favor, inténtalo de nuevo."
+    }
+  }
+}
