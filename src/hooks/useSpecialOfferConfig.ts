@@ -60,6 +60,9 @@ export const ALLOWED_PATHS = [
   'dezz',
   'alejavi',
   'nextgenia',
+  'gbascunana',
+  'marcocreativo',
+  'alexziskind',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -127,6 +130,9 @@ export const COUPON_CODES = {
   dezz: PromoCodeName.Dezz,
   alejavi: PromoCodeName.Alejavi,
   nextgenia: PromoCodeName.nextGenia,
+  gbascunana: PromoCodeName.gbascunana,
+  marcocreativo: PromoCodeName.marcocreativo,
+  alexziskind: PromoCodeName.alexziskind,
 };
 
 interface OfferConfig {
