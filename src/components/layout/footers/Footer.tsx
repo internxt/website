@@ -5,7 +5,7 @@ import { Transition, Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import setUTM from '@/lib/conversions';
 import LanguageMobileBox from '../components/LanguageMobileBox';
-import Image from "next/image";
+import Image from 'next/image';
 import axios from 'axios';
 import { CaretDown, CaretRight, CaretUp } from '@phosphor-icons/react';
 import moment from 'moment';
@@ -106,9 +106,10 @@ export default function Footer({
                     alt="Download on the App Store"
                     onClick={() => platforms && window.open(platforms.iPhone, '_blank')}
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                   <Image
                     src={getImage('/images/footer/store-for-android.svg')}
                     width={148}
@@ -117,9 +118,10 @@ export default function Footer({
                     alt="Get it on Google Play"
                     onClick={() => platforms && window.open(platforms.Android, '_blank')}
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </div>
               </div>
             </div>
@@ -130,9 +132,10 @@ export default function Footer({
               className="cursor-pointer"
               alt="QR code for download Internxt APP"
               style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
 
           {!hideNewsletter && (
@@ -567,305 +570,71 @@ export default function Footer({
                       </Link>
                     </div>
 
-                    <button
-                      onClick={() => setIsVideocallsOpen(!isVideocallsOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    <Link
+                      href="https://blog.internxt.com/best-video-conferencing/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.videoCalls}
-                      {isVideocallsOpen ? (
-                        <CaretDown className="mb-0.5 flex h-2 w-2" />
-                      ) : (
-                        <CaretRight className="mb-0.5 flex h-2 w-2" />
-                      )}
-                    </button>
+                    </Link>
 
-                    <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isVideocallsOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
-                      }`}
-                      style={!isVideocallsOpen ? { display: 'none' } : {}}
-                    >
-                      <Link
-                        href="/alternative-to-google-meet"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.googleMeet}
-                      </Link>
-                      <Link
-                        href="/alternative-to-zoom"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.zoom}
-                      </Link>
-                      <Link
-                        href="/teams-alternative"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.teams}
-                      </Link>
-                      <Link
-                        href="/alternative-to-wire"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.wire}
-                      </Link>
-                      <Link
-                        href="/alternative-to-whereby"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.whereby}
-                      </Link>
-                    </div>
-
-                    <button
-                      onClick={() => setIsAiAlternativeOpen(!isAiAlternativeOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    <Link
+                      href="https://blog.internxt.com/best-ai/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.aiAlternatives}
-                      {isAiAlternativeOpen ? (
-                        <CaretDown className="mb-0.5 flex h-2 w-2" />
-                      ) : (
-                        <CaretRight className="mb-0.5 flex h-2 w-2" />
-                      )}
-                    </button>
+                    </Link>
 
-                    <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isAiAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
-                      }`}
-                      style={!isAiAlternativeOpen ? { display: 'none' } : {}}
-                    >
-                      <Link
-                        href="/alternative-to-gemini"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.geminiAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-chatGPT"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.chatGPTAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-grok"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.grokAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-copilot"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.copilotAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-deepseek"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.deepSeekAlternative}
-                      </Link>
-                    </div>
-
-                    <button
-                      onClick={() => setIsS3AlternativeOpen(!isS3AlternativeOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    <Link
+                      href="https://blog.internxt.com/most-efficient-object-storage-products/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.s3Alternative}
-                      {isS3AlternativeOpen ? (
-                        <CaretDown className="mb-0.5 flex h-2 w-2" />
-                      ) : (
-                        <CaretRight className="mb-0.5 flex h-2 w-2" />
-                      )}
-                    </button>
+                    </Link>
 
-                    <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isS3AlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
-                      }`}
-                      style={!isS3AlternativeOpen ? { display: 'none' } : {}}
+                    <Link
+                      href="https://blog.internxt.com/most-efficient-object-storage-products/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
-                      <Link
-                        href="/alternative-to-idrive-e2"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.idrivee2Alternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-backblaze"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.backblazeAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-google-cloud"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.googleCloudAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-aws"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.awsAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-azure"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.azureAlternative}
-                      </Link>
-                    </div>
+                      {textContent.FooterSection.sections.resources.s3Alternative}
+                    </Link>
 
-                    <button
-                      onClick={() => setIsAntivirusAlternativeOpen(!isAntivirusAlternativeOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary"
+                    <Link
+                      href="https://blog.internxt.com/best-free-antivirus-software/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.antivirusAlternatives}
-                      {isAntivirusAlternativeOpen ? (
-                        <CaretDown className="mb-0.5 flex h-2 w-2" />
-                      ) : (
-                        <CaretRight className="mb-0.5 flex h-2 w-2" />
-                      )}
-                    </button>
+                    </Link>
 
-                    <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isAntivirusAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
-                      }`}
-                      style={isAntivirusAlternativeOpen ? {} : { display: 'none' }}
-                    >
-                      <Link
-                        href="/alternative-to-avast"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.avastAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-avg"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.avgAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-avira"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.aviraAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-bitdefender"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.bitdefenderAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-malwarebytes"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.malwarebytesAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-mcafee"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.mcafeeAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-norton"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.nortonAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-totalav"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.totalavAlternative}
-                      </Link>
-                    </div>
-
-                    <button
-                      onClick={() => setIsCleanerAlternativeOpen(!isCleanerAlternativeOpen)}
-                      className="flex w-full flex-row items-center gap-1 text-left hover:text-primary "
+                    <Link
+                      href="https://blog.internxt.com/best-pc-cleaner/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.cleanerAlternatives}
-                      {isCleanerAlternativeOpen ? (
-                        <CaretDown className="mt-0.5 h-2 w-2 shrink-0" />
-                      ) : (
-                        <CaretRight className="mb-0.5 h-2 w-2 shrink-0" />
-                      )}
-                    </button>
-
-                    <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                        isCleanerAlternativeOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
-                      }`}
-                      style={isCleanerAlternativeOpen ? {} : { display: 'none' }}
-                    >
-                      <Link
-                        href="/alternative-to-ccleaner"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.ccleanerAlternative}
-                      </Link>
-                      <Link
-                        href="/alternative-to-clean-my-mac"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[160px] pl-3 hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.cleanMyMacAlternative}
-                      </Link>
-                    </div>
+                    </Link>
 
                     <Link
                       href="/what-does-google-know-about-me"
@@ -1003,9 +772,10 @@ export default function Footer({
                   width={60}
                   height={60}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 {lang !== 'es' ? (
                   <Image
                     src={getImage('/icons/social/gdpr-internxt.svg')}
@@ -1013,9 +783,10 @@ export default function Footer({
                     width={146}
                     height={48}
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 ) : (
                   <Image
                     src={getImage('/icons/social/cdti.png')}
@@ -1023,9 +794,10 @@ export default function Footer({
                     width={200}
                     height={60}
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 )}
               </div>
 
@@ -1038,9 +810,10 @@ export default function Footer({
                     src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
@@ -1057,9 +830,10 @@ export default function Footer({
                     draggable="false"
                     alt="twitter icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1070,9 +844,10 @@ export default function Footer({
                     draggable="false"
                     alt="Reddit icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1083,9 +858,10 @@ export default function Footer({
                     draggable="false"
                     alt="linkedin icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
@@ -1100,9 +876,10 @@ export default function Footer({
                     draggable="false"
                     alt="youtube icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -1113,9 +890,10 @@ export default function Footer({
                     draggable="false"
                     alt="instagram icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
               </div>
             </div>
@@ -1992,9 +1770,10 @@ export default function Footer({
                     draggable="false"
                     alt="twitter icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -2005,9 +1784,10 @@ export default function Footer({
                     draggable="false"
                     alt="Reddit icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -2018,9 +1798,10 @@ export default function Footer({
                     draggable="false"
                     alt="linkedin icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
@@ -2035,9 +1816,10 @@ export default function Footer({
                     draggable="false"
                     alt="youtube icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
                 <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                   <Image
@@ -2048,9 +1830,10 @@ export default function Footer({
                     draggable="false"
                     alt="instagram icon"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </Link>
               </div>
 
@@ -2066,9 +1849,10 @@ export default function Footer({
                   src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </Link>
             </div>
           </div>
