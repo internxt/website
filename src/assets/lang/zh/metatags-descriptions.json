@@ -575,5 +575,10 @@
     "id": "nas-qnap",
     "title": "QNAP NAS 云备份 — 安全 NAS 存储 | Internxt",
     "description": "使用 Internxt 在云端备份您的 QNAP NAS。为您提供安全、加密且私密的云存储空间。"
+  },
+  {
+    "id": "cloud-partner",
+    "title": "Internxt 云合作伙伴计划",
+    "description": "成为面向企业的 Internxt S3 对象存储的经销商。热云存储，比 AWS、Azure 和 Google Cloud 更便宜。"
   }
 ]

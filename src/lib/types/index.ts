@@ -266,6 +266,10 @@ export enum PromoCodeName {
   Facebook = 'FB87',
   nextGenia = 'NEXTGENIA',
   dgmax = 'DGMAX',
+  gbascunana = 'GBASCUNANA',
+  marcocreativo = 'MARCOCREATIVO',
+  alexziskind = 'ALEXZISKIND',
+  cocadmin = 'COCADMIN',
 }
 
 export interface PromoCodeProps {

@@ -72,6 +72,7 @@ const nameFiles = [
   'alternative-to-totalav',
   'proton-alternative',
   'teams-alternative',
+  'cloud-partner',
 ];
 
 const langs = {

@@ -173,11 +173,9 @@ const Drive = ({
           bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} bgColor="bg-neutral-17" />
-
         <FAQSection
-          textContent={textContent.SecureStorageSeoSection}
-          needsH3={false}
+          textContent={textContent.FaqSection}
+          needsH3
           bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
         />
 
