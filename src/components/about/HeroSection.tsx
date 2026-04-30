@@ -78,14 +78,6 @@ const HeroSection = ({ textContent }): JSX.Element => (
             />
           </div>
         </div>
-
-        <div className="flex h-min w-[345px] flex-col justify-center gap-8  py-10 lg:w-full lg:gap-16 lg:py-10">
-          <h4 className="text-center text-2xl font-bold text-gray-100 lg:text-4xl lg:font-semibold">
-            {textContent.recognitionsTitle}
-          </h4>
-          <CompanyLogosRecognitions />
-        </div>
-        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
       </div>
     </div>
   </section>

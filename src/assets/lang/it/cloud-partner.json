@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": "Programma per rivenditori Internxt",
-    "description": "Archiviazione cloud a caldo, compatibile con AWS al 100%",
+    "description": "Archiviazione cloud a caldo, compatibile con S3 al 100%",
     "cta": "Diventa un rivenditore"
   },
   "FeatureSection": {
@@ -12,11 +12,7 @@
     "title": "Vantaggi del programma rivenditori di Internxt",
     "description": "Il nostro programma per rivenditori offre una soluzione a basso costo e ad alto impatto per l'accesso ai dati, il backup e l'archiviazione.",
     "accordionSection": {
-      "titles": [
-        "Archiviazione a oggetti di livello aziendale",
-        "Prezzi e scalabilità",
-        "Accesso API"
-      ],
+      "titles": ["Archiviazione a oggetti di livello aziendale", "Prezzi e scalabilità", "Accesso API"],
       "descriptions": [
         "Soddisfa i più recenti standard di conformità e gestione dei dati con 11 nove di durabilità dei dati per garantire un accesso sicuro e affidabile a petabyte di dati con caricamenti e download rapidi. Rivendi petabyte di spazio di archiviazione con velocità di upload e download rapide dalla tua console web.",
         "Gestisci gli account dei clienti da un'unica dashboard e goditi prezzi fissi con pagamento a consumo senza costi aggiuntivi. Aggiungi tutto lo spazio di archiviazione di cui hai bisogno per soddisfare le richieste dei partner. Offriamo una struttura dei costi incredibilmente conveniente in modo che tu possa ottenere margini elevati rivendendo la nostra soluzione.",
@@ -28,11 +24,7 @@
     "title": "Scala facilmente il tuo business di archiviazione",
     "description": "Semplifica il modo in cui vendi, gestisci e scali l'archiviazione per tutti i tuoi clienti.",
     "cards": {
-      "titles": [
-        "Automazione dell'account",
-        "Configurazione e gestione",
-        "Fatturazione semplificata"
-      ],
+      "titles": ["Automazione dell'account", "Configurazione e gestione", "Fatturazione semplificata"],
       "descriptions": [
         "Semplifica la gestione del tuo account gestendo automaticamente prove, fatturazione e adeguamenti delle policy, aiutandoti a scalare senza ulteriore complessità.",
         "Goditi consegne rapide per i tuoi clienti. Non ci sono lunghi ritardi di configurazione o implementazione, così puoi iniziare a guadagnare all'istante con il nostro programma per rivenditori.",
@@ -54,13 +46,7 @@
       "phone": "Numero di telefono",
       "howMuchStorage": "Di quanto spazio di archiviazione hai bisogno?",
       "totalCharacters": " /1000",
-      "options": [
-        "Seleziona",
-        "Meno di 10 TB",
-        "10 TB - 50 TB",
-        "50 TB - 100 TB",
-        "Più di 100 TB"
-      ],
+      "options": ["Seleziona", "Meno di 10 TB", "10 TB - 50 TB", "50 TB - 100 TB", "Più di 100 TB"],
       "howWeCanHelp": "Come possiamo aiutarti? (Facoltativo)",
       "howWeCanHelpPlaceHolder": "Raccontaci di più sulle tue esigenze",
       "cta": "Invia messaggio",

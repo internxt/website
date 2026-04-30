@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": "Programa de revendedores de Internxt",
-    "description": "Almacenamiento en la nube caliente, 100% compatible con AWS",
+    "description": "Almacenamiento en la nube caliente, 100% compatible con S3",
     "cta": "Hazte revendedor"
   },
   "FeatureSection": {
@@ -12,11 +12,7 @@
     "title": "Beneficios del programa de revendedores de Internxt",
     "description": "Nuestro programa de revendedores ofrece una solución de bajo costo y alto impacto para el acceso, la copia de seguridad y el archivo de datos.",
     "accordionSection": {
-      "titles": [
-        "Almacenamiento de objetos de nivel empresarial",
-        "Precios y escalabilidad",
-        "Acceso API"
-      ],
+      "titles": ["Almacenamiento de objetos de nivel empresarial", "Precios y escalabilidad", "Acceso API"],
       "descriptions": [
         "Cumple con los últimos estándares de cumplimiento y gestión de datos con 11 nueves de durabilidad para garantizar un acceso seguro y confiable a petabytes de datos con cargas y descargas rápidas. Revende petabytes de almacenamiento con velocidades rápidas de carga y descarga desde tu consola web.",
         "Gestiona las cuentas de los clientes desde un único panel y disfruta de precios fijos de pago por uso sin tarifas adicionales. Añade todo el almacenamiento que necesites para satisfacer las demandas de los socios. Ofrecemos una estructura de costos increíblemente asequible para que puedas obtener altos márgenes mientras revendes nuestra solución.",
@@ -28,11 +24,7 @@
     "title": "Escala fácilmente tu negocio de almacenamiento",
     "description": "Simplifica cómo vendes, gestionas y escalas el almacenamiento en todos tus clientes.",
     "cards": {
-      "titles": [
-        "Automatización de cuentas",
-        "Configuración y gestión",
-        "Facturación simplificada"
-      ],
+      "titles": ["Automatización de cuentas", "Configuración y gestión", "Facturación simplificada"],
       "descriptions": [
         "Simplifica la gestión de tus cuentas manejando pruebas, facturación y ajustes de políticas de forma automática, ayudándote a escalar sin añadir complejidad.",
         "Disfruta de una entrega rápida para tus clientes. No hay retrasos prolongados en la configuración o el despliegue, por lo que puedes empezar a ganar dinero al instante con nuestro programa de revendedores.",
@@ -54,13 +46,7 @@
       "phone": "Número de teléfono",
       "howMuchStorage": "¿Cuánto almacenamiento necesitas?",
       "totalCharacters": " /1000",
-      "options": [
-        "Seleccionar",
-        "Menos de 10TB",
-        "10TB - 50TB",
-        "50TB - 100 TB",
-        "Más de 100TB"
-      ],
+      "options": ["Seleccionar", "Menos de 10TB", "10TB - 50TB", "50TB - 100 TB", "Más de 100TB"],
       "howWeCanHelp": "¿Cómo podemos ayudarte? (Opcional)",
       "howWeCanHelpPlaceHolder": "Cuéntanos más sobre tus necesidades",
       "cta": "Enviar mensaje",
