@@ -393,6 +393,10 @@ export default function Footer({
                     <Link href="/refer-a-friend" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.join.referrals}
                     </Link>
+
+                    <Link href="/cloud-partner" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.cloudPartner}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -1110,6 +1114,10 @@ export default function Footer({
 
                       <Link href="/refer-a-friend" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.join.referrals}
+                      </Link>
+
+                      <Link href="/cloud-partner" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.cloudPartner}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
