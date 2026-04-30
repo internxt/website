@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { Check } from '@phosphor-icons/react';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -59,12 +58,12 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
 
         <div className="flex h-min w-full flex-col justify-center gap-4">
           <div className="flex w-full flex-row items-start gap-4">
-            <Link
-              href={'#billingButtons'}
+            <a
+              href={'https://drive.internxt.com/?openReferrals=true'}
               className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
             >
               {textContent.cta}
-            </Link>
+            </a>
           </div>
         </div>
       </div>

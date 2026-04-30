@@ -402,7 +402,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">
                           <Image
-                            src="/images/virus-scanner/upload_file.webp"
+                            src="/images/virus-scanner/upload_file2.webp"
                             width={187}
                             height={187}
                             alt="Upload File"

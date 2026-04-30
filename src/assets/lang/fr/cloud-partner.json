@@ -1,0 +1,72 @@
+{
+  "HeroSection": {
+    "title": "Programme revendeur Internxt",
+    "description": "Stockage cloud à chaud 100 % compatible AWS",
+    "cta": "Devenir revendeur"
+  },
+  "FeatureSection": {
+    "title": "Internxt S3",
+    "description": "Avec le programme de partenariat Internxt, vous offrez à vos clients un accès rapide à d'importants volumes de stockage cloud à un coût fixe et compétitif, sans frais supplémentaires. Économisez jusqu'à 80 % par rapport aux autres fournisseurs cloud majeurs."
+  },
+  "AccordionSection": {
+    "title": "Avantages du programme revendeur d'Internxt",
+    "description": "Notre programme revendeur offre une solution rentable et très performante pour l'accès aux données, la sauvegarde et l'archivage.",
+    "accordionSection": {
+      "titles": [
+        "Stockage objet de niveau entreprise",
+        "Tarification et évolutivité",
+        "Accès API"
+      ],
+      "descriptions": [
+        "Répondez aux dernières normes en matière de conformité et de gestion des données avec une durabilité des données de 99,999999999 % (onze 9) pour garantir un accès sécurisé et fiable à des pétaoctets de données avec des téléchargements et des transferts rapides. Revendez des pétaoctets de stockage avec des vitesses de transfert rapides depuis votre console web.",
+        "Gérez les comptes clients depuis un tableau de bord unique et profitez d'une tarification fixe à l'usage sans frais supplémentaires. Ajoutez autant de stockage que nécessaire pour répondre aux demandes des partenaires. Nous offrons une structure de coûts incroyablement abordable pour que vous puissiez réaliser des marges élevées tout en revendant notre solution.",
+        "L'accès API vous permet de gérer facilement vos partenaires, de contrôler l'emplacement de stockage des données et d'accéder aux ressources de manière sécurisée, le tout depuis une interface unique. Centralisez la gestion des utilisateurs, améliorez le contrôle des données et permettez un accès au stockage sécurisé et sur mesure."
+      ]
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Faites évoluer facilement votre activité de stockage",
+    "description": "Simplifiez la façon dont vous vendez, gérez et faites évoluer le stockage pour tous vos clients.",
+    "cards": {
+      "titles": [
+        "Automatisation des comptes",
+        "Configuration et gestion",
+        "Simplifier la facturation"
+      ],
+      "descriptions": [
+        "Simplifiez la gestion de votre compte en gérant automatiquement les essais, la facturation et les ajustements de politiques, vous aidant ainsi à évoluer sans complexité supplémentaire.",
+        "Profitez d'une livraison rapide pour vos clients. Il n'y a pas de longs délais de configuration ou de déploiement, vous pouvez donc commencer à gagner de l'argent instantanément avec notre programme revendeur.",
+        "Regroupez la facturation de tous vos comptes et canaux sur une seule facture, ce qui facilite le suivi, la gestion et le rapprochement des paiements."
+      ]
+    }
+  },
+  "TrustedSection": {
+    "title": "Stockage objet européen de confiance",
+    "description": "Bénéficiez du meilleur stockage objet conforme, de la protection des données et de la sécurité pour tous les secteurs. Nous permettons un stockage de données redondant qui réplique et distribue les données sur plusieurs serveurs pour une latence ultra-faible et un accès aux données ultra-rapide."
+  },
+  "ContactSales": {
+    "title": "Contacter l'équipe commerciale",
+    "description": "Remplissez le formulaire de contact et l'équipe vous contactera sous peu.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "howMuchStorage": "De combien de stockage avez-vous besoin ?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Sélectionner",
+        "Moins de 10 To",
+        "10 To - 50 To",
+        "50 To - 100 To",
+        "Plus de 100 To"
+      ],
+      "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
+      "howWeCanHelpPlaceHolder": "Dites-nous en plus sur vos besoins",
+      "cta": "Envoyer un message",
+      "ctaSending": "Envoi en cours...",
+      "successMessage": "Votre message a été envoyé avec succès.",
+      "errorMessage": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  }
+}

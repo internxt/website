@@ -63,7 +63,8 @@
         "youtube": "Youtube",
         "instagram": "Instagram",
         "mastodon": "Mastodon",
-        "referrals": "Indique um amigo"
+        "referrals": "Indique um amigo",
+        "cloudPartner": "Cloud Partner"
       },
       "resources": {
         "title": "Recursos",
