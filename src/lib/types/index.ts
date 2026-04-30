@@ -269,6 +269,7 @@ export enum PromoCodeName {
   gbascunana = 'GBASCUNANA',
   marcocreativo = 'MARCOCREATIVO',
   alexziskind = 'ALEXZISKIND',
+  cocadmin = 'COCADMIN',
 }
 
 export interface PromoCodeProps {
