@@ -1,5 +1,4 @@
 import { getImage } from '@/lib/getImage';
-import { CompanyLogosRecognitions } from '../shared/CompanyLogosRecognitions';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }): JSX.Element => (
