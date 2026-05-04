@@ -2,6 +2,7 @@
   "mostPopular": "Recommended",
   "perUserSlash": "/user",
   "perYear": "/year",
+  "perMonth": "/month",
   "cta": "Select plan",
   "gifts": {
     "line1": "Enter our holiday raffle!",
@@ -13,7 +14,7 @@
       "ultimate": "Chance to win a €1000 gift card"
     }
   },
-  "renewsInfo": "Annual promo price valid for the first year only. Renews at {{price}}/year",
+  "renewsInfo": "Annual plan, billed monthly at {{price}}/month for 12 months",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

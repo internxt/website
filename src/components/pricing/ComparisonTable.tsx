@@ -51,7 +51,7 @@ export default function ComparisonTableSection({
   const getPlanPrice = (planOrder: number) => {
     const basePrice = Number(products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0);
     const finalPrice = decimalDiscount ? basePrice * (decimalDiscount / 100) : basePrice;
-    return finalPrice.toFixed(0);
+    return finalPrice.toFixed(2).replace('.00', '');
   };
 
   const getPlanPriceId = (planOrder: number) => {

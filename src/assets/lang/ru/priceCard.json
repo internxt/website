@@ -2,6 +2,7 @@
   "mostPopular": "Рекомендуемый",
   "perUserSlash": "/пользователь",
   "perYear": "/год",
+  "perMonth": "/мес",
   "cta": "Выбрать план",
   "gifts": {
     "line1": "Участвуйте сейчас!",
@@ -13,7 +14,7 @@
       "ultimate": "Выиграйте карту на 1 000€"
     }
   },
-  "renewsInfo": "*Si rinnova a {{price}}/anno",
+  "renewsInfo": "Годовой план, ежемесячный счет на {{price}}/мес в течение 12 месяцев",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

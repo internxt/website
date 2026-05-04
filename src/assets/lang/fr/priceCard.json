@@ -2,6 +2,7 @@
   "mostPopular": "Recommandé",
   "perUserSlash": "/utilisateur",
   "perYear": "/an",
+  "perMonth": "/mois",
   "cta": "Sélectionner le plan",
   "gifts": {
     "line1": "Participez maintenant !",
@@ -13,7 +14,7 @@
       "ultimate": "Gagnez une carte de 1 000€"
     }
   },
-  "renewsInfo": "*Se renouvelle à {{price}}/an",
+  "renewsInfo": "Plan annuel, facturé mensuellement à {{price}}/mois pendant 12 mois",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

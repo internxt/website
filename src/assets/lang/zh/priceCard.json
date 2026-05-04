@@ -2,6 +2,7 @@
   "mostPopular": "推荐",
   "perUserSlash": "/用户",
   "perYear": "/年",
+  "perMonth": "/月",
   "cta": "选择计划",
   "gifts": {
     "line1": "参与我们的圣诞抽奖",
@@ -13,7 +14,7 @@
       "ultimate": "有机会赢取 1000 欧元礼品卡*"
     }
   },
-  "renewsInfo": "*以 {{price}}/年 续订",
+  "renewsInfo": "年度计划，每月以 {{price}}/月计费，为期 12 个月",
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

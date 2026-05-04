@@ -2,6 +2,7 @@
   "mostPopular": "Recomendado",
   "perUserSlash": "/usuario",
   "perYear": "/año",
+  "perMonth": "/mes",
   "cta": "Seleccionar plan",
   "gifts": {
     "line1": "¡Participa en nuestro sorteo!",
@@ -13,7 +14,7 @@
       "ultimate": "Gana una tarjeta regalo de 1000 €"
     }
   },
-  "renewsInfo": "*Precio promocional durante el primer año. Se renueva a {{price}}/año",
+  "renewsInfo": "Plan anual, facturado mensualmente a {{price}}/mes durante 12 meses",
   "productFeatures": {
     "planTypes": {
       "essentials": "Esencial",

@@ -129,21 +129,24 @@ export const PriceCard = ({
 
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
   const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
-  const showCents = priceNumber < 1;
+  const displayedPriceNumber = isAnnual ? priceNumber / 12 : priceNumber;
+  const showCents = displayedPriceNumber < 1 || isAnnual;
 
   const currentPrice = showCents
-    ? (Math.floor(priceNumber * 100) / 100).toFixed(2)
-    : Math.floor(priceNumber).toString();
+    ? (Math.floor(displayedPriceNumber * 100) / 100).toFixed(2)
+    : Math.floor(displayedPriceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
       return undefined;
     }
 
+    const originalDisplayedPrice = isAnnual ? Number(price) / 12 : Number(price);
+
     if (showCents) {
-      return (Math.floor(Number(price) * 100) / 100).toFixed(2);
+      return (Math.floor(originalDisplayedPrice * 100) / 100).toFixed(2);
     }
 
-    return Math.floor(Number(price)).toString();
+    return Math.floor(originalDisplayedPrice).toString();
   };
 
   const originalPrice = getOriginalPrice();
@@ -211,7 +214,7 @@ export const PriceCard = ({
 
               {hasDiscount ? (
                 <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
-                  <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
+                  <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2  lg:h-[43px]">
                     <span className="flex h-full flex-row items-end ">
                       <p
                         className={`self-start pb-4 pr-1 text-base font-semibold lg:mb-[18px] ${
@@ -238,7 +241,7 @@ export const PriceCard = ({
                             darkMode ? 'text-white' : 'text-gray-100'
                           }`}
                         >
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
@@ -265,15 +268,15 @@ export const PriceCard = ({
                       )}
                       {isAnnual && (
                         <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50'}`}>
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
                   </div>
                 </div>
               ) : (
-                <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[71px] lg:w-[190px]">
-                  <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px]">
+                <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-min lg:w-[190px]">
+                  <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
                     <span className="flex h-full flex-row items-center gap-1 pr-2">
                       <p
                         className={`text-base font-semibold lg:mb-[18px] ${darkMode ? 'text-white' : 'text-gray-100'}`}
@@ -298,7 +301,7 @@ export const PriceCard = ({
                             darkMode ? 'text-white' : 'text-gray-100'
                           }`}
                         >
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
@@ -360,7 +363,7 @@ export const PriceCard = ({
       </div>
       {isAnnual && (
         <p className="text-10 font-normal italic text-gray-35">
-          {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
+          {contentText.renewsInfo.replace('{{price}}', currency + currentPrice)}
         </p>
       )}
     </div>
