@@ -265,7 +265,7 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
-                    <Link href="" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
@@ -594,17 +594,6 @@ export default function Footer({
                       className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
                     >
                       {textContent.FooterSection.sections.resources.aiAlternatives}
-                    </Link>
-
-                    <Link
-                      href="https://blog.internxt.com/most-efficient-object-storage-products/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[160px] hover:text-primary lg:whitespace-nowrap"
-                    >
-                      {textContent.FooterSection.sections.resources.s3Alternative}
                     </Link>
 
                     <Link
