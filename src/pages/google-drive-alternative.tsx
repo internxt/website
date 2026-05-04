@@ -29,7 +29,6 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.gdrive,
     couponCodeForLifetime: PromoCodeName.gdrive,
   });
 

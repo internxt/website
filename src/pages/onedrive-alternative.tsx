@@ -30,7 +30,6 @@ const OneDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.ONEDRIVE,
     couponCodeForLifetime: PromoCodeName.ONEDRIVE,
   });
 

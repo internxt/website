@@ -30,7 +30,6 @@ const FilenComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.FILEN85,
     couponCodeForLifetime: PromoCodeName.FILEN85,
   });
 

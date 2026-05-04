@@ -27,7 +27,6 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Mega85,
     couponCodeForLifetime: PromoCodeName.Mega85,
   });
 

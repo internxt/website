@@ -30,7 +30,6 @@ const TeamsComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.TEAMS,
     couponCodeForLifetime: PromoCodeName.TEAMS,
   });
 

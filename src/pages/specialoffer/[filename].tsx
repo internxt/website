@@ -111,7 +111,6 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
 

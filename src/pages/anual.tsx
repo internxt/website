@@ -23,7 +23,7 @@ interface anualSpecialProps {
   testimonialsJson: any;
 }
 
-function anualSpecial({
+function AnualSpecial({
   langJson,
   lang,
   metatagsDescriptions,
@@ -41,7 +41,6 @@ function anualSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Facebook,
     couponCodeForLifetime: PromoCodeName.Facebook,
   });
 
@@ -194,4 +193,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default anualSpecial;
+export default AnualSpecial;

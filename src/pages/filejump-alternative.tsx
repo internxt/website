@@ -30,7 +30,6 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.FILEJUMP,
     couponCodeForLifetime: PromoCodeName.FILEJUMP,
   });
 

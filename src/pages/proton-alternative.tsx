@@ -30,7 +30,6 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PROTONDRIVE,
     couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
   });
 

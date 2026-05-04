@@ -30,7 +30,6 @@ const DrimeComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIME,
     couponCodeForLifetime: PromoCodeName.DRIME,
   });
 

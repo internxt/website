@@ -111,7 +111,6 @@ export const ComparisonPage = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: couponCodeName,
     couponCodeForLifetime: couponCodeName,
   });
 

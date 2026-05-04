@@ -42,7 +42,6 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE85,
     couponCodeForLifetime: PromoCodeName.DRIVE85,
   });
 

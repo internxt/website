@@ -30,7 +30,6 @@ const DegooComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DEGOO,
     couponCodeForLifetime: PromoCodeName.DEGOO,
   });
 

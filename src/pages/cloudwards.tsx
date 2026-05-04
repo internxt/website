@@ -34,7 +34,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CLOUDWARDS,
     couponCodeForLifetime: PromoCodeName.CLOUDWARDS,
   });
 

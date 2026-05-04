@@ -43,7 +43,6 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.lifetime,
     couponCodeForLifetime: PromoCodeName.lifetime,
   });
 

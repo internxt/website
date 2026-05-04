@@ -30,7 +30,6 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SYNC,
     couponCodeForLifetime: PromoCodeName.SYNC,
   });
 

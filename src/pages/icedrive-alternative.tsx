@@ -30,7 +30,6 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Ice,
     couponCodeForLifetime: PromoCodeName.Ice,
   });
 

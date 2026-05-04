@@ -29,7 +29,6 @@ const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-    // eslint-disable-next-line react-hooks/rules-of-hooks
   } = usePricing({
     couponCode: PromoCodeName.IDRIVE85,
     couponCodeForLifetime: PromoCodeName.IDRIVE85,

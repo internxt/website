@@ -30,7 +30,6 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.TERABOX85,
     couponCodeForLifetime: PromoCodeName.TERABOX85,
   });
 

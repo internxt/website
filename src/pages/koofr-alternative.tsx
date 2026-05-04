@@ -30,7 +30,6 @@ const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.KOOFR,
     couponCodeForLifetime: PromoCodeName.KOOFR,
   });
 
