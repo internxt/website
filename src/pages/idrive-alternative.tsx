@@ -30,7 +30,6 @@ const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.IDRIVE85,
     couponCodeForLifetime: PromoCodeName.IDRIVE85,
   });
 

@@ -30,7 +30,7 @@ function AnualSpecial({
   footerLang,
   navbarLang,
   testimonialsJson,
-}: anualSpecialProps): JSX.Element {
+}: Readonly<anualSpecialProps>): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'annual');
 
   const {
