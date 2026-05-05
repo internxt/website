@@ -49,7 +49,6 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
@@ -105,7 +104,7 @@ const Pricing = ({
   };
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
   return (
     <>

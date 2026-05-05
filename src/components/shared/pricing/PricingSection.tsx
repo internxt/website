@@ -214,7 +214,7 @@ export const PricingSection = ({
                     decimalDiscountValue={
                       product.interval === Interval.Lifetime
                         ? decimalDiscount?.lifetime
-                        : decimalDiscount?.subscriptions
+                        : undefined
                     }
                     lang={lang}
                     darkMode={darkMode}
@@ -256,7 +256,7 @@ export const PricingSection = ({
                       label={product.storage}
                       key={product.storage}
                       popular={product.storage === '2TB'}
-                      decimalDiscountValue={decimalDiscount?.business}
+                      decimalDiscountValue={undefined}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
                       darkMode={darkMode}

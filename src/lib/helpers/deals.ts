@@ -5,8 +5,8 @@ import cookies from '@/lib/cookies';
 interface DealConfig {
   heroImage: string;
   metatagsId: string;
-  couponCode: PromoCodeName;
-  couponCodeForLifetime: PromoCodeName;
+  couponCode?: PromoCodeName;
+  couponCodeForLifetime?: PromoCodeName;
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;

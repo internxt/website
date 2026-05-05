@@ -54,7 +54,6 @@ const DealsTemplate = ({
     lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: config.couponCode,
     couponCodeForLifetime: config.couponCodeForLifetime,
   });
 

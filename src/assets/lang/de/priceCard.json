@@ -2,6 +2,7 @@
   "mostPopular": "Empfohlen",
   "perUserSlash": "/benutzer",
   "perYear": "/jahr",
+  "perMonth": "/Monat",
   "cta": "Plan auswählen",
   "gifts": {
     "line1": "Jetzt teilnehmen!",
@@ -13,7 +14,7 @@
       "ultimate": "1.000€ Geschenkkarte gewinnen"
     }
   },
-  "renewsInfo": "*Verlängert sich für {{price}}/Jahr",
+  "renewsInfo": "Jahresplan, monatlich abgerechnet zu {{price}}/Monat für 12 Monate",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
@@ -31,6 +32,10 @@
       "1TB": [
         {
           "name": "**1TB** verschlüsselter Speicher",
+          "status": "available"
+        },
+        {
+          "name": "Kostenloser Test für 30 Tage",
           "status": "available"
         },
         {
@@ -65,6 +70,10 @@
       "3TB": [
         {
           "name": "**3TB** verschlüsselter Speicher",
+          "status": "available"
+        },
+        {
+          "name": "Kostenloser Test für 30 Tage",
           "status": "available"
         },
         {
@@ -115,6 +124,10 @@
       "5TB": [
         {
           "name": "**5TB** verschlüsselter Speicher",
+          "status": "available"
+        },
+        {
+          "name": "Kostenloser Test für 30 Tage",
           "status": "available"
         },
         {

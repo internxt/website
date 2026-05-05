@@ -18,6 +18,7 @@ import {
   Shield,
   Sparkle,
   VideoCamera,
+  Medal,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -25,9 +26,10 @@ import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
 const ICON_MAPS = {
-  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
+  individuals: [Database, Medal, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
   premium: [
     Database,
+    Medal,
     Key,
     LockSimple,
     Fingerprint,
@@ -42,6 +44,7 @@ const ICON_MAPS = {
   ],
   ultimate: [
     Database,
+    Medal,
     Key,
     LockSimple,
     Fingerprint,
@@ -128,22 +131,31 @@ export const PriceCard = ({
   }, []);
 
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
-  const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
-  const showCents = priceNumber < 1;
+  let priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
+  if (priceNumber % 1 !== 0) {
+    priceNumber = Math.floor(priceNumber) + 0.99;
+  }
+  const showCents = priceNumber < 1 || isAnnual;
 
   const currentPrice = showCents
-    ? (Math.floor(priceNumber * 100) / 100).toFixed(2)
+    ? (Math.round(priceNumber * 100) / 100).toFixed(2)
     : Math.floor(priceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
       return undefined;
     }
 
-    if (showCents) {
-      return (Math.floor(Number(price) * 100) / 100).toFixed(2);
+    let originalDisplayedPrice = isAnnual ? Number(price) / 12 : Number(price);
+
+    if (originalDisplayedPrice % 1 !== 0) {
+      originalDisplayedPrice = Math.floor(originalDisplayedPrice) + 0.99;
     }
 
-    return Math.floor(Number(price)).toString();
+    if (showCents) {
+      return (Math.round(originalDisplayedPrice * 100) / 100).toFixed(2);
+    }
+
+    return Math.floor(originalDisplayedPrice).toString();
   };
 
   const originalPrice = getOriginalPrice();
@@ -238,7 +250,7 @@ export const PriceCard = ({
                             darkMode ? 'text-white' : 'text-gray-100'
                           }`}
                         >
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
@@ -252,7 +264,7 @@ export const PriceCard = ({
                         {currency}
                       </p>
                       <p
-                        className={`text-lg font-normal line-through lg:pt-0 lg:text-xl ${
+                        className={`text-xl font-normal line-through lg:pt-0 lg:text-xl ${
                           darkMode ? 'text-gray-50' : 'text-gray-50'
                         }`}
                       >
@@ -265,22 +277,22 @@ export const PriceCard = ({
                       )}
                       {isAnnual && (
                         <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50'}`}>
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
                   </div>
                 </div>
               ) : (
-                <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[71px] lg:w-[190px]">
-                  <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px]">
+                <div className="flex h-min w-[180px] flex-col items-center justify-start gap-2 lg:h-min lg:w-[190px]">
+                  <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
                     <span className="flex h-full flex-row items-center gap-1 pr-2">
                       <p
                         className={`text-base font-semibold lg:mb-[18px] ${darkMode ? 'text-white' : 'text-gray-100'}`}
                       >
                         {currency}
                       </p>
-                      <p className={`text-2xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
+                      <p className={`text-3xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
                         {currentPrice}
                       </p>
                       {isBusiness && (
@@ -298,7 +310,7 @@ export const PriceCard = ({
                             darkMode ? 'text-white' : 'text-gray-100'
                           }`}
                         >
-                          {contentText.perYear}
+                          {contentText.perMonth}
                         </span>
                       )}
                     </span>
@@ -360,7 +372,7 @@ export const PriceCard = ({
       </div>
       {isAnnual && (
         <p className="text-10 font-normal italic text-gray-35">
-          {contentText.renewsInfo.replace('{{price}}', currency + originalPrice)}
+          {contentText.renewsInfo.replace('{{price}}', currency + currentPrice)}
         </p>
       )}
     </div>

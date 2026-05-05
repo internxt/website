@@ -111,14 +111,13 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
 
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {

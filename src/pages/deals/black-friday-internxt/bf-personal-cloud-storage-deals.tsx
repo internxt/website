@@ -13,7 +13,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     {
       heroImage: '/images/black-friday/bf-personal-cloud-storage.webp',
       metatagsId: 'black-friday-personal-cloud-storage',
-      couponCode: PromoCodeName.FreePlanUpsell,
       couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
       popularPlanSize: '5TB',
       hideBusinessCards: true,

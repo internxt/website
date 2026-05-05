@@ -20,7 +20,7 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
 
-const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const IDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'idrive-alternative');
   const {
     products,
@@ -29,9 +29,7 @@ const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-    // eslint-disable-next-line react-hooks/rules-of-hooks
   } = usePricing({
-    couponCode: PromoCodeName.IDRIVE85,
     couponCodeForLifetime: PromoCodeName.IDRIVE85,
   });
 
@@ -64,7 +62,7 @@ const iDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   };
 
   const locale = lang as string;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
   const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
   const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
@@ -183,4 +181,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default iDriveComparison;
+export default IDriveComparison;

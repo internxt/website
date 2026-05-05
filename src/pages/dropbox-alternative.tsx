@@ -27,7 +27,6 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Dropbox85,
     couponCodeForLifetime: PromoCodeName.Dropbox85,
   });
 
@@ -59,7 +58,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     );
   };
 
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (

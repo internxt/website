@@ -56,7 +56,6 @@ const BlackFridayDealsTemplate = ({
     lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: config.couponCode,
     couponCodeForLifetime: config.couponCodeForLifetime,
   });
 

@@ -42,11 +42,10 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE85,
     couponCodeForLifetime: PromoCodeName.DRIVE85,
   });
 
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
       return <span className="inline-block bg-gray-200 h-4 w-16 animate-pulse rounded"></span>;

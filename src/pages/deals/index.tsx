@@ -13,7 +13,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     {
       heroImage: '/images/deals/deals-generic.webp',
       metatagsId: 'deals',
-      couponCode: PromoCodeName.FreePlanUpsell,
       couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
       popularPlanSize: '5TB',
       hideBusinessCards: true,

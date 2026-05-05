@@ -34,11 +34,10 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CLOUDWARDS,
     couponCodeForLifetime: PromoCodeName.CLOUDWARDS,
   });
 
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;

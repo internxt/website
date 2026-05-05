@@ -23,14 +23,14 @@ interface anualSpecialProps {
   testimonialsJson: any;
 }
 
-function anualSpecial({
+function AnualSpecial({
   langJson,
   lang,
   metatagsDescriptions,
   footerLang,
   navbarLang,
   testimonialsJson,
-}: anualSpecialProps): JSX.Element {
+}: Readonly<anualSpecialProps>): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'annual');
 
   const {
@@ -41,11 +41,10 @@ function anualSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Facebook,
     couponCodeForLifetime: PromoCodeName.Facebook,
   });
 
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
@@ -194,4 +193,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default anualSpecial;
+export default AnualSpecial;
