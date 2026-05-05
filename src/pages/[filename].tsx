@@ -97,7 +97,7 @@ function CombinedSpecialOffer({
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const themeClasses = getThemeClasses(isDarkMode);
   const openerInterval = annualPlans ? Interval.Year : Interval.Lifetime;
   const parsePercentText = (text: string) => {
