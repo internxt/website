@@ -1,34 +1,57 @@
-import Image from "next/image";
+import Image from 'next/image';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 
 const WhatWeDoSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden" style={{ background: 'linear-gradient(360deg, #F4F8FF 63.1%, #FFFFFF 100%)' }}>
-      <div className="flex flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20">
+    <section
+      className="w-full overflow-hidden"
+      style={{ background: 'linear-gradient(360deg, #F4F8FF 63.1%, #FFFFFF 100%)' }}
+    >
+      <div className="flex w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20">
         <p className="w-[345px] text-start text-30 font-bold text-gray-100 lg:w-full lg:text-center lg:text-5xl">
           {textContent.title}
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:px-10 xl:px-32 3xl:px-80">
-          <RevealX direction="right" className="hidden lg:flex">
-            <Image
-              src={getImage('/images/about/photos/Fran-Villalba-Segarra.webp')}
-              width={554}
-              height={743}
-              alt="Fran Villalba Segarra"
-              loading="eager"
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-          </RevealX>
+        <div className="flex w-full flex-col items-center justify-between gap-8 lg:flex-row lg:px-10 xl:px-32 3xl:px-80">
+          <div className="hidden flex-col gap-16 lg:flex">
+            <RevealX direction="right" className="hidden lg:flex">
+              <Image
+                src={getImage('/images/about/photos/team.webp')}
+                width={554}
+                height={743}
+                alt="Internxt Team"
+                loading="eager"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+                className="rounded-16"
+                quality={100}
+              />
+            </RevealX>
+            <RevealX direction="right" className="hidden lg:flex">
+              <Image
+                src={getImage('/images/about/photos/sticker.webp')}
+                width={554}
+                height={743}
+                alt="Internxt Team"
+                loading="eager"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+                className="rounded-16"
+                quality={100}
+              />
+            </RevealX>
+          </div>
           <RevealX direction="right" className="flex lg:hidden">
             <div
               className="h-[195px] w-[345px] rounded-16 bg-cover lg:hidden"
               style={{
-                backgroundImage: `url(${getImage('/images/about/photos/Fran-Villalba-Segarra.webp')})`,
+                backgroundImage: `url(${getImage('/images/about/photos/team.webp')})`,
                 backgroundPosition: '50% 0%',
               }}
             />
@@ -50,15 +73,16 @@ const WhatWeDoSection = ({ textContent }) => {
               <div className="hidden flex-row items-center justify-center gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
-                  width={196}
-                  height={196}
+                  width={49}
+                  height={48}
                   alt="BitCoin Logo"
                   className="hidden lg:flex"
                   quality={100}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 <p className="text-xl font-medium leading-tight text-gray-95">{textContent.bitSection.title}</p>
               </div>
               <div className="flex flex-col gap-4 lg:hidden">
@@ -70,9 +94,10 @@ const WhatWeDoSection = ({ textContent }) => {
                     alt="BitCoin Logo"
                     className="hidden lg:flex"
                     style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </div>
                 <p className="text-start text-sm font-medium leading-tight text-gray-95">
                   {textContent.bitSection.title}
