@@ -167,11 +167,12 @@ export default function HeroSection({
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && (
               <span
-                className={`flex w-min whitespace-nowrap rounded-2 ${
-                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '
-                }  px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
+                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
               >
-                {parsePercentText(textContent.subtitle)}
+                <p className={darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '}>
+                  {parsePercentText(textContent.subtitle)}
+                </p>
+                <p>{textContent.subtitle2} </p>
               </span>
             )}
             <p

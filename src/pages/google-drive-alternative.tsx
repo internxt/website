@@ -61,7 +61,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
   };
 
   const locale = lang as string;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
   const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
   const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';

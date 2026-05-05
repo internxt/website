@@ -94,6 +94,7 @@ export interface HeroSection {
   title: string;
   description: string;
   subtitle: string;
+  subtitle2: string;
   claimDeal: string;
 }
 

@@ -44,7 +44,7 @@ function AnualSpecial({
     couponCodeForLifetime: PromoCodeName.Facebook,
   });
 
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
