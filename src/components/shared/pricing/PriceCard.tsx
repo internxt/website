@@ -18,6 +18,7 @@ import {
   Shield,
   Sparkle,
   VideoCamera,
+  Medal,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -25,9 +26,10 @@ import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
 
 const ICON_MAPS = {
-  individuals: [Database, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
+  individuals: [Database, Medal, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
   premium: [
     Database,
+    Medal,
     Key,
     LockSimple,
     Fingerprint,
@@ -42,6 +44,7 @@ const ICON_MAPS = {
   ],
   ultimate: [
     Database,
+    Medal,
     Key,
     LockSimple,
     Fingerprint,

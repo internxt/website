@@ -35,6 +35,10 @@
           "status": "available"
         },
         {
+          "name": "Try risk-free for 30 days",
+          "status": "available"
+        },
+        {
           "name": "Post-quantum encryption",
           "status": "available"
         },
@@ -66,6 +70,10 @@
       "3TB": [
         {
           "name": "**3TB** encrypted storage",
+          "status": "available"
+        },
+        {
+          "name": "Try risk-free for 30 days",
           "status": "available"
         },
         {
@@ -116,6 +124,10 @@
       "5TB": [
         {
           "name": "**5TB** encrypted storage",
+          "status": "available"
+        },
+        {
+          "name": "Try risk-free for 30 days",
           "status": "available"
         },
         {

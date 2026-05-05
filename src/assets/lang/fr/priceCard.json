@@ -35,6 +35,10 @@
           "status": "available"
         },
         {
+          "name": "Essai sans risque pendant 30 jours",
+          "status": "available"
+        },
+        {
           "name": "Cryptographie post-quantique",
           "status": "available"
         },
@@ -66,6 +70,10 @@
       "3TB": [
         {
           "name": "**3To** de stockage chiffré",
+          "status": "available"
+        },
+        {
+          "name": "Essai sans risque pendant 30 jours",
           "status": "available"
         },
         {
@@ -116,6 +124,10 @@
       "5TB": [
         {
           "name": "**5To** de stockage chiffré",
+          "status": "available"
+        },
+        {
+          "name": "Essai sans risque pendant 30 jours",
           "status": "available"
         },
         {

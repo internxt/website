@@ -35,6 +35,10 @@
           "status": "available"
         },
         {
+          "name": "Prova gratuita di 30 giorni",
+          "status": "available"
+        },
+        {
           "name": "Crittografia post-quantistica",
           "status": "available"
         },
@@ -66,6 +70,10 @@
       "3TB": [
         {
           "name": "**3TB** di spazio di archiviazione crittografato",
+          "status": "available"
+        },
+        {
+          "name": "Prova gratuita di 30 giorni",
           "status": "available"
         },
         {
@@ -116,6 +124,10 @@
       "5TB": [
         {
           "name": "**5TB** di spazio di archiviazione crittografato",
+          "status": "available"
+        },
+        {
+          "name": "Prova gratuita di 30 giorni",
           "status": "available"
         },
         {
