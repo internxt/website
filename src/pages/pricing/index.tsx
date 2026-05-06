@@ -122,7 +122,6 @@ const Pricing = ({
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lang={lang}

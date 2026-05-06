@@ -117,7 +117,6 @@ function LifetimeSpecial({
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lifetimeCoupons={lifetimeCoupons}

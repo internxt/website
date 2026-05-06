@@ -191,7 +191,6 @@ function CombinedSpecialOffer({
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
           lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
