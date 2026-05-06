@@ -44,7 +44,7 @@
       "part1": "Internxt — Securing",
       "part2": "the world's data"
     },
-    "description": "Get {{discount}}% off now,",
+    "description": "Get {{discount}}% off now",
     "descriptionNormal": "on lifetime plans",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "giftDescription": {
@@ -52,7 +52,7 @@
       "line2": "Join Internxt this season and access our Christmas gift card raffle"
     },
     "startFrom": {
-      "normal1": "Starting from ",
+      "normal1": "Starting at ",
       "price": " {{minimumPrice}}",
       "normal2": " /month"
     },

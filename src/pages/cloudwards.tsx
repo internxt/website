@@ -96,7 +96,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
           lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}

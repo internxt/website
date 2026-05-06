@@ -19,7 +19,6 @@ import { formatText } from '@/components/utils/format-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-
 const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'koofr-alternative');
   const {
@@ -69,94 +68,101 @@ const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
 
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Koofr alternative', 'koofr-alternative')}
       </Script>
-<Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName={'Drive Comparison'}
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Koofr'} />
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName={'Drive Comparison'}
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Koofr'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={'Koofr'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Koofr'} needH2 />
 
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Drive'}
-        logo={'/images/comparison/Koofr-Letters.webp'}
-        sectionNeedsH2
-        bottomSeparationBar
-      />
-
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-        hideBusinessSelector
-        sectionDetails="bg-white lg:py-20 py-10"
-      />
-
-      {langJson.WhyNeedAlternativeSection && (
-        <ThreeCardsSection
-          textContent={langJson.WhyNeedAlternativeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
-          cardColor="bg-white"
-          bottomSeparationBar={true}
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Drive'}
+          logo={'/images/comparison/Koofr-Letters.webp'}
+          sectionNeedsH2
+          bottomSeparationBar
         />
-      )}
 
-      <HorizontalScrollableSectionWithPhotosSection
-        textContent={langJson.WhyBestAlternativeSection}
-        bgColor={alternativeBgColor}
-        TitleCardTag={'h3'}
-        TitleTag={'h2'}
-      />
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
 
-      <HorizontalScrollableSection
-        textContent={langJson.PrivacyViolationsSection}
-        bgGradient={privacyBgGradient}
-        needsH2
-      />
+        {langJson.WhyNeedAlternativeSection && (
+          <ThreeCardsSection
+            textContent={langJson.WhyNeedAlternativeSection}
+            bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
+            cardColor="bg-white"
+            bottomSeparationBar={true}
+          />
+        )}
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'#pricingTable'}
-        customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-32">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-              {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">
-              {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="px-20 py-10"
-      />
+        <HorizontalScrollableSectionWithPhotosSection
+          textContent={langJson.WhyBestAlternativeSection}
+          bgColor={alternativeBgColor}
+          TitleCardTag={'h3'}
+          TitleTag={'h2'}
+        />
 
-      <FAQSection
-        textContent={langJson.FaqSection}
-        percentageDiscount={percentageDiscount?.toString()}
-        needsH3={false}
-      />
+        <HorizontalScrollableSection
+          textContent={langJson.PrivacyViolationsSection}
+          bgGradient={privacyBgGradient}
+          needsH2
+        />
 
-      <Footer textContent={footerLang} lang={locale} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Koofr alternative', url: '/koofr-alternative' }]} />
-    </Layout>
-  </>);
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url={'#pricingTable'}
+          customText={
+            <div className="flex flex-col gap-4 px-10 lg:px-32">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+                {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">
+                {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+            </div>
+          }
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgPadding="px-20 py-10"
+        />
+
+        <FAQSection
+          textContent={langJson.FaqSection}
+          percentageDiscount={percentageDiscount?.toString()}
+          needsH3={false}
+        />
+
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          needsH2={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Koofr alternative', url: '/koofr-alternative' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

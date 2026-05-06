@@ -40,9 +40,7 @@ function AnualSpecial({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCodeForLifetime: PromoCodeName.Facebook,
-  });
+  } = usePricing();
 
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
@@ -107,10 +105,6 @@ function AnualSpecial({
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscountForLifetime,
-        }}
         lifetimeCoupons={lifetimeCoupons}
         lang={lang}
         products={products}

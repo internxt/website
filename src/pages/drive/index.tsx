@@ -111,7 +111,6 @@ const Drive = ({
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lifetimeCoupons={lifetimeCoupons}

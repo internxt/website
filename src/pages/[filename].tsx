@@ -95,7 +95,6 @@ function CombinedSpecialOffer({
   }
 
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const themeClasses = getThemeClasses(isDarkMode);
@@ -176,7 +175,6 @@ function CombinedSpecialOffer({
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lifetimeCoupons={lifetimeCoupons}

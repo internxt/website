@@ -95,7 +95,6 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}
