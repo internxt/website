@@ -60,7 +60,7 @@ export const HorizontalPriceCard = ({
     }[storage] || null;
 
   const iconsFeatures = [
-   Database,
+    Database,
     Key,
     LockSimple,
     Fingerprint,
@@ -88,7 +88,10 @@ export const HorizontalPriceCard = ({
     });
   }
   return (
-    <div id="billingButtons" className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:h-[328px] lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]">
+    <div
+      id="billingButtons"
+      className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:h-[328px] lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]"
+    >
       <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white p-6 pb-10 pt-10 lg:w-1/4 lg:border-r lg:border-neutral-20">
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex rounded-full px-3 py-0.5">
@@ -99,13 +102,8 @@ export const HorizontalPriceCard = ({
         <div className={`flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
           <div className="flex flex-row items-end space-x-px text-neutral-700">
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
-              <span className="text-4xl font-bold">{priceNow}</span>
+              <span className="text-4xl font-bold">{price}</span>
               <span>{currency}</span>
-              <span className="text-sm">{contentText.perYear}</span>
-            </p>
-            <p className="flex flex-row items-end whitespace-nowrap pl-2 font-semibold text-gray-50 line-through">
-              <span className="text-2xl font-medium">{priceBefore}</span>
-              <span className="text-sm">{currency}</span>
               <span className="text-sm">{contentText.perYear}</span>
             </p>
           </div>
@@ -113,14 +111,15 @@ export const HorizontalPriceCard = ({
         <button
           id={`planButton${storage}`}
           onClick={() => onCheckoutButtonClicked()}
-          className="mt-4 w-full rounded-lg bg-primary px-20 py-2.5 font-medium text-white hover:bg-primary-dark whitespace-nowrap"
+          className="mt-4 w-full whitespace-nowrap rounded-lg bg-primary px-20 py-2.5 font-medium text-white hover:bg-primary-dark"
         >
           {contentText.cta}
         </button>
       </div>
       <div className="flex w-full flex-col border-t border-neutral-20 bg-neutral-10 pb-6 pt-6 text-sm lg:h-[590px] lg:border-t-0">
-        <div className="grid w-full grid-cols-1 gap-y-4 gap-x-4 px-6 text-start sm:grid-cols-2 lg:h-[264px] lg:w-fit lg:gap-x-12 lg:grid-cols-3 lg:items-center lg:justify-center">
-            {contentText.productFeatures.individualPlans[storage].map((feature: {name: string, status: string}, index: number) => {
+        <div className="grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:h-[264px] lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12">
+          {contentText.productFeatures.individualPlans[storage].map(
+            (feature: { name: string; status: string }, index: number) => {
               const Icon = iconsFeatures[index] || iconsFeatures[iconsFeatures.length - 1];
               const isComingSoon = feature.status === 'Coming soon';
               const formattedName = feature.name.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -141,7 +140,8 @@ export const HorizontalPriceCard = ({
                   </div>
                 </div>
               );
-            })}
+            },
+          )}
         </div>
       </div>
     </div>
