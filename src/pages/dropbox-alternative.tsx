@@ -16,7 +16,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-
 const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
   const {
@@ -63,79 +62,88 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Alternative to dropbox', 'dropbox-alternative')}
       </Script>
-<Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="dropbox Comparison"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
-
-      <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" needH2 />
-
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Dropbox'}
-        logo="/images/comparison/competitors/Dropbox_Letters.webp"
-        sectionNeedsH2
-        TableNameTag={'h3'}
-      />
-
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: 0,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="dropbox Comparison"
         lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-        hideBusinessSelector
-        sectionDetails="bg-white lg:py-20 py-10"
-      />
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
-      <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSectionV2}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-      />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" needH2 />
 
-      <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSection}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
-        needsH2
-      />
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Dropbox'}
+          logo="/images/comparison/competitors/Dropbox_Letters.webp"
+          sectionNeedsH2
+          TableNameTag={'h3'}
+        />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
-            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
-              {langJson.CtaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-20"
-      />
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
 
-      <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <HorizontalScrollableSection
+          textContent={langJson.HorizontalScrollableSectionV2}
+          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          needsH2
+          needsH3
+        />
 
-      <Footer textContent={footerLang} lang={lang} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Alternative to dropbox', url: '/dropbox-alternative' }]} />
-    </Layout>
-  </>);
+        <HorizontalScrollableSection
+          textContent={langJson.HorizontalScrollableSection}
+          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          needsH2
+        />
+
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {langJson.CtaSection.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+                {langJson.CtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:pb-20 pb-20"
+        />
+
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          needsH2={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Alternative to dropbox', url: '/dropbox-alternative' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {

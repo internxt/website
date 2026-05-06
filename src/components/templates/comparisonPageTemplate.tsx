@@ -162,81 +162,80 @@ export const ComparisonPage = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
 
-      {isS3Alternative && langJson.PriceCardSection ? (
-        <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
-      ) : (
-        <PricingSectionWrapper
-          textContent={langJson.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
-          }}
-          lifetimeCoupons={lifetimeCoupons}
+        {isS3Alternative && langJson.PriceCardSection ? (
+          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
+        ) : (
+          <PricingSectionWrapper
+            textContent={langJson.tableSection}
+            decimalDiscount={{
+              lifetime: decimalDiscount,
+            }}
+            lifetimeCoupons={lifetimeCoupons}
+            lang={locale}
+            products={products}
+            loadingCards={loadingCards}
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+            hideSwitchSelector
+            hideBusinessSelector
+            sectionDetails="bg-white lg:py-20 py-10"
+          />
+        )}
+
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
+
+        {showThreeCards && langJson.WhyNeedAlternativeSection && (
+          <ThreeCardsSection
+            textContent={langJson.WhyNeedAlternativeSection}
+            bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
+            cardColor="bg-white"
+            bottomSeparationBar={true}
+          />
+        )}
+
+        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} logo={logo} />
+
+        <HorizontalScrollableSectionWithPhotosSection
+          textContent={langJson.WhyBestAlternativeSection}
+          bgColor={alternativeBgColor}
+        />
+
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col gap-4 px-10 lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+                {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">
+                {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
+              </p>
+            </div>
+          }
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgPadding="px-20 py-10"
+        />
+
+        <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
+
+        <Footer
+          textContent={footerLang}
           lang={locale}
-          products={products}
-          loadingCards={loadingCards}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideSwitchSelector
-          hideBusinessSelector
-          sectionDetails="bg-white lg:py-20 py-10"
+          breadcrumbItems={
+            breadcrumbName && urlSlug
+              ? [
+                  { name: 'Encrypted Cloud Storage', url: '/' },
+                  { name: breadcrumbName, url: `/${urlSlug}` },
+                ]
+              : undefined
+          }
         />
-      )}
-
-      <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
-
-      {showThreeCards && langJson.WhyNeedAlternativeSection && (
-        <ThreeCardsSection
-          textContent={langJson.WhyNeedAlternativeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
-          cardColor="bg-white"
-          bottomSeparationBar={true}
-        />
-      )}
-
-      <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} logo={logo} />
-
-      <HorizontalScrollableSectionWithPhotosSection
-        textContent={langJson.WhyBestAlternativeSection}
-        bgColor={alternativeBgColor}
-      />
-
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col gap-4 px-10 lg:px-0">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-              {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">
-              {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
-            </p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="px-20 py-10"
-      />
-
-      <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
-
-      <Footer
-        textContent={footerLang}
-        lang={locale}
-        breadcrumbItems={
-          breadcrumbName && urlSlug
-            ? [
-                { name: 'Encrypted Cloud Storage', url: '/' },
-                { name: breadcrumbName, url: `/${urlSlug}` },
-              ]
-            : undefined
-        }
-      />
-    </Layout>
+      </Layout>
     </>
   );
 };

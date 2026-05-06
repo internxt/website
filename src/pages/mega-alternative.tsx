@@ -16,7 +16,6 @@ import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-
 const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
   const {
@@ -63,70 +62,77 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
 
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Mega alternative', 'mega-alternative')}
       </Script>
-<Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-      <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
 
-      <TablesSection
-        textContent={langJson.VersusSection}
-        competitor={'Mega'}
-        logo="/images/comparison/competitors/Mega_Letters.webp"
-        sectionNeedsH2
-      />
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Mega'}
+          logo="/images/comparison/competitors/Mega_Letters.webp"
+          sectionNeedsH2
+        />
 
-      <PricingSectionWrapper
-        textContent={langJson.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-        hideBusinessSelector
-        sectionDetails="bg-white lg:py-20 py-10"
-      />
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
 
-      <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSectionV2}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-      />
+        <HorizontalScrollableSection
+          textContent={langJson.HorizontalScrollableSectionV2}
+          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          needsH2
+          needsH3
+        />
 
-      <HorizontalScrollableSection
-        textContent={langJson.HorizontalScrollableSection}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
-        needsH2
-      />
+        <HorizontalScrollableSection
+          textContent={langJson.HorizontalScrollableSection}
+          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          needsH2
+        />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url="#billingButtons"
-        customText={
-          <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-      />
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url="#billingButtons"
+          customText={
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
+            </div>
+          }
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        />
 
-      <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={lang} needsH2={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Mega alternative', url: '/mega-alternative' }]} />
-    </Layout>
-  </>);
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          needsH2={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Mega alternative', url: '/mega-alternative' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
