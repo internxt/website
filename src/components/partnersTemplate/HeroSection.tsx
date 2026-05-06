@@ -165,7 +165,7 @@ export default function HeroSection({
         </h1>
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            {percentOff !== '0' && (
+            {percentOff !== '0' && !isUltimatePlan && (
               <span
                 className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
               >
