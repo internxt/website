@@ -59,6 +59,10 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/filejump-alternative',
   '/elephantdrive-alternative',
   '/coupons',
+  '/private-cloud-storage-solutions',
+  '/cloud-storage-for-videos',
+  '/cloud-storage-backup-solutions',
+  '/nas',
 ];
 
 export const SNIGEL_BANNERS = {

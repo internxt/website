@@ -50,6 +50,8 @@ const CleanerPage = ({
         bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
         cardsHeight="245px"
         cardsWidth="352px"
+        needsH2={true}
+        needsH3={true}
       />
 
       <FloatingCtaSectionv2
@@ -92,7 +94,7 @@ const CleanerPage = ({
         bgPadding="lg:pb-20 bg-white px-8"
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <RelationalLinks textContent={relationalLinksText} />
 

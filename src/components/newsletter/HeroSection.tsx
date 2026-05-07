@@ -16,6 +16,8 @@ const HeroSection = ({ textContent }) => {
         groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
       })
       .then(() => {
+        (window as any).klaviyo = (window as any).klaviyo || [];
+        (window as any).klaviyo.push(['identify', { email }]);
         notificationService.openSuccessToast('Successfully submitted');
       })
       .catch((err) => {

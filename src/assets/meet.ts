@@ -38,6 +38,7 @@ export interface Section {
 
 export interface DesginedSection {
   title: string;
+  subtitle?: string;
   description: string;
   scrollableSection: ScrollableSection;
 }

@@ -32,8 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag?.pageview(url);
-      (window as any)._learnq = (window as any)._learnq || [];
-      (window as any)._learnq.push(['track', 'Active on Site']);
+      (window as any).klaviyo = (window as any).klaviyo || [];
+      (window as any).klaviyo.push(['track', 'Active on Site']);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {

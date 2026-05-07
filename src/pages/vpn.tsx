@@ -72,7 +72,7 @@ const VPN = ({
                 <span> {textContent.HeroSection.title.line2}</span>
               </h1>
             </div>
-            <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
+            <p className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</p>
             <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:items-start lg:space-x-4 lg:space-y-0">
               <Link
                 className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
@@ -138,7 +138,7 @@ const VPN = ({
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
       <RelationalLinks textContent={relationalLinksText} />
 

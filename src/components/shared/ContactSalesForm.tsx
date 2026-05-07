@@ -190,6 +190,8 @@ export const ContactSalesForm = ({
 
       try {
         await axios.post('/api/contact', payload);
+        (window as any).klaviyo = (window as any).klaviyo || [];
+        (window as any).klaviyo.push(['identify', { email: formData.email }]);
         await onSubmitSuccess();
       } catch (error) {
         onSubmitError(error);

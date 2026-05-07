@@ -1,15 +1,15 @@
 {
   "HeroSection": {
     "label": "Meet",
-    "title": "Unmatched **privacy for secure** video calls",
+    "title": "Secure video conferencing",
     "description": "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, private and confidential.",
     "cta": "Get Internxt"
   },
   "enjoyPrivacySection": {
-    "title": "Enjoy freedom of speech and privacy",
+    "title": "Private video call",
     "description": "Chat with others with our encrypted video chat platform for private meetings protected with the most advanced post-quantum encryption.",
     "scrollableSection": {
-      "titles": ["Private video calls", "Security", "Higher speed and video quality", "Open source and transparent"],
+      "titles": ["Private video calls", "End to end encrypted video call", "Higher speed and video quality", "Open source encrypted video conferencing"],
       "descriptions": [
         "Use Internxt Meet for video or audio calls you want to keep private. Zero trackers. Zero data collection and nothing linking you or anybody else to your calls.",
         "All your conversations, videos, chats, and messages are kept secure with zero-knowledge encryption. We give you total control of your privacy, and we never access your conversations or messages.",
@@ -24,7 +24,7 @@
     "cta": "Get Internxt Meet"
   },
   "accordionSection": {
-    "title": "The most secure meet alternative to Big Tech",
+    "title": "Internxt Meet is end to end encrypted video conferencing",
     "description": "Join Internxt in building a more secure, private web experience with our encrypted, private suite of products designed to give you control of your privacy.  \n\nEnjoy Mail, Meet, Antivirus, Cleaner, Drive, and VPN as part of your Internxt plan.",
     "accordionSection": {
       "titles": ["European Privacy", "Security", "Sustainability"],
@@ -36,7 +36,8 @@
     }
   },
   "desginedSection": {
-    "title": "Designed to meet all privacy needs",
+    "title": "Secure conference call",
+    "subtitle": "Designed to meet all privacy needs",
     "description": "Internxt Meet is built to meet the needs of everyone looking to communicate and collaborate with others with guaranteed privacy and security.",
     "scrollableSection": {
       "images": ["personal", "business", "lawyers", "medical"],

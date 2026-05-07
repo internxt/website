@@ -44,7 +44,7 @@
       "part1": "Internxt —",
       "part2": "зашифрованное облако."
     },
-    "description": "Получите скидку {{discount}}% прямо сейчас",
+    "description": "Получите скидку {{discount}}% ",
     "descriptionNormal": "на пожизненные планы",
     "giftDescription": {
       "line1": "Выиграйте подарочную карту на 1000 €!",

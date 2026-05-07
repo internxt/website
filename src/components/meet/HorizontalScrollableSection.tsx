@@ -91,7 +91,10 @@ export default function HorizontalScrollableSectionWithPhotosSection({
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex h-min w-[350px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <h2 className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</h2>
+        {textContent.subtitle && (
+          <p className="text-lg font-medium text-gray-70 lg:text-2xl">{textContent.subtitle}</p>
+        )}
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
 
