@@ -111,7 +111,7 @@
         "answer": [
           "Internxt for Business is a cloud storage solution tailored for companies, offering team collaboration, admin controls, and other features to protect businesses from data breaches. ",
           "Internxt S3 is a cloud-based storage system that follows the Amazon S3 protocol. It is ideal for developers and enterprises that need to scale and integrate storage into their applications or services and store data lakes or warehouses. ",
-          "The main difference is that Internxt for Business focuses on team-oriented features, while Internxt S3 provides scalable storage solution up to 85% cheaper than AWS, Azure, or Google Cloud."
+          "The main difference is that Internxt for Business focuses on team-oriented features, while Internxt S3 provides scalable storage solution up to 80% cheaper than AWS, Azure, or Google Cloud."
         ]
       },
       {
@@ -144,33 +144,36 @@
   },
   "FeatureSection": {
     "title": "Why you should switch to private cloud storage solutions",
-    "titleLine2": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
-    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
+    "titleLine2": "Private cloud storage is cloud storage where only the account holder can read the files. The provider stores the encrypted data but cannot decrypt it, because the keys live on the user's device, not on the server. That single architectural choice, client-side key custody, is what separates a private cloud from a public one like Google Drive, Dropbox, or OneDrive, where the provider holds the keys and can read, scan, or share the contents.",
+    "description": "Switching to a private cloud storage solution removes the provider from the trust equation. Internxt encrypts files on your device with AES-256 and protects the key exchange with Kyber-512 post-quantum cryptography, so the server only ever sees ciphertext. The result is a cloud storage service that behaves like a private vault you happen to access over the internet.",
     "cta": "Get Internxt",
     "cards": {
       "element1": {
         "title": "Increased privacy for your data",
-        "description": "Privacy-focused services prioritize your data's security, making sure it's encrypted both during transit and at rest. Unlike traditional public cloud providers, services like Internxt Drive cannot access your encryption keys, so nobody except you can view or sell your data. "
+        "description": [
+          "A secure private cloud storage service encrypts your files locally with AES-256 before they leave your device. The encrypted file then travels over TLS 1.3 and sits at rest on Internxt's servers in the same encrypted form. The encryption key is generated locally and never leaves your device. Without it, the file is unreadable mathematical noise.",
+          "Internxt cannot decrypt your data, hand it over in response to a subpoena, or scan it for advertising. We don't have the technical ability. This is the difference between a privacy policy and zero-knowledge architecture: a public cloud stores your files in a form the provider can read; a private cloud stores them in a form only you can read."
+        ]
       },
       "element2": {
         "title": "Reduced corporate spying",
         "description": [
-          "Companies like Google state in their policies that by using their services, you give them access to monitor and use your data for their own benefit and financial gain. Other services like Dropbox have a past filled with data breaches and unethical data sharing. ",
-          "In contrast, private cloud storage solutions cannot access your files as the keys are stored on the owner’s device, keeping sensitive information private, and away from third parties."
+          "Public cloud providers run their business by reading your data. Google's terms of service grant a license to use uploaded content to operate and improve their services, which has historically included scanning files for spam, malware, and content patterns. Microsoft uses OneDrive content to enforce its Code of Conduct and improve products. Dropbox has acknowledged it accesses files for content moderation. None of this requires malicious intent on the provider's part. It's the architecture: they hold the keys, so they can read what they need to.",
+          "Private cloud storage providers flip the architecture. Internxt never receives your encryption key, so the data we hand to advertisers, governments, or AI training pipelines is the same data anyone else would get: ciphertext that cannot be opened without you."
         ]
       },
       "element3": {
         "title": "Protected by European laws",
         "description": [
-          "Recent legal issues in the UK and less strict privacy laws in the US have caused more people to choose private cloud storage solutions based in Europe. Regulations from the GDPR, for example, give customers more control over their data, with rights to access and deletion.",
-          "GDPR compliance is not only a legal requirement but also a reassurance that European providers are not subject to intrusive data access requests from foreign governments, unlike other services which can give access to data if requested by government or law agencies."
+          "Where your provider is incorporated determines whose courts can compel them to hand over your data. US-based services operate under the CLOUD Act, which lets US authorities subpoena data even when it sits on servers in another country. UK services face similar reach under the Investigatory Powers Act.",
+          "Internxt is incorporated in Valencia, Spain, and stores customer data in EU data centers operated through OVHcloud. That puts the company under GDPR (including the right to access, port, and delete your data) and outside the reach of CLOUD Act subpoenas. The privacy claim is also independently validated: ISO 27001:2022 certification and independently audited. Legal posture and technical posture have to match for either to mean anything."
         ]
       },
       "element4": {
         "title": "More control over your security",
         "description": [
-          "You don’t just get more privacy with cloud storage, you also get increased control over the security of your files. Internxt allows you to schedule or manually back up your files to protect against accidental data loss.",
-          "Other security controls necessary for increased privacy that cloud storage can offer are encrypted and password-protected file sharing, two-factor authentication (2FA), and access logs for business plans."
+          "The best private cloud storage solutions put security controls in your hands rather than the provider's. You decide what gets backed up: schedule automatic backups of folders you select, or run them manually before a hardware swap. WebDAV and Rclone support let power users wire Internxt into existing workflows or automate batch uploads from a script.",
+          "Sharing follows the same key-custody model. Links can carry a password, expire on a schedule, or be revoked from your dashboard. Two-factor authentication is available on every plan, and business plans log every file access for compliance audits. The control surface is the same one a security team would build for their own infrastructure, without the infrastructure overhead."
         ]
       }
     }

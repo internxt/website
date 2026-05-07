@@ -339,15 +339,15 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
-                                <Link href="/secure-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.secureCloudStorage}</p>
                                 </Link>
 
-                                <Link href="/lifetime-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                <Link href="/lifetime" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.lifetimeCloudStorage}</p>
                                 </Link>
 
-                                <Link href="/private-cloud-storage" locale={props.lang} className="flex flex-row space-x-2">
+                                <Link href="/private-cloud-storage-solutions" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.privateCloudStorage}</p>
                                 </Link>
 
@@ -357,10 +357,10 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 <Link href="/cloud-storage-for-videos" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.cloudStorageForVideos}</p>
                                 </Link>
-                                <Link href="/cloud-storage-for-backup" locale={props.lang} className="flex flex-row space-x-2">
+                                <Link href="/cloud-storage-backup-solutions" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.cloudStorageForBackup}</p>
                                 </Link>
-                                <Link href="/cloud-nas-backup" locale={props.lang} className="flex flex-row space-x-2">
+                                <Link href="/nas" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.solutions.cloudNASBackup}</p>
                                 </Link>
                               </Disclosure.Panel>

@@ -2,8 +2,8 @@
   "HeroSection": {
     "label": "Internxt VPN",
     "title": {
-      "line1": "Internxt's secure VPN",
-      "line2": "protects you online"
+      "line1": "Secure and ",
+      "line2": "Private VPN"
     },
     "description": "Surf the web in complete freedom and privacy with Internxt VPN.",
     "cta": "Get Internxt",
@@ -39,7 +39,7 @@
     ]
   },
   "HowItWorksSection": {
-    "title": "How it works",
+    "title": "How it works Internxt's Private VPN Service",
     "subtitle": "Internxt’s VPN uses unlimited, fast speed, and secure servers to encrypt and transmit sensitive data. Mask your IP address and protect your information from third-party data collection.",
     "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
     "cards": [
@@ -75,14 +75,14 @@
     ]
   },
   "CtaSection": {
-    "title": "Break free from online trackers",
+    "title": "Private vpn online",
     "description": "Hide your data for a secure browsing experience with Internxt VPN",
     "cta": "Get Internxt"
   },
   "CtaSection2": {
-    "title": "Internxt Drive",
+    "title": "Private vpn download",
     "description": "Total privacy and zero-knowledge encryption for your files.",
-    "cta": "Cloud storage security"
+    "cta": "Download Internxt's VPN Extension"
   },
   "FaqSection": {
     "title": "Questions? We have answers",

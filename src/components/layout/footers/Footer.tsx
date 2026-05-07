@@ -56,6 +56,8 @@ export default function Footer({
         groups: [process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID],
       })
       .then(() => {
+        (window as any).klaviyo = (window as any).klaviyo || [];
+        (window as any).klaviyo.push(['identify', { email }]);
         notificationService.openSuccessToast('Successfully submitted');
       })
       .catch(() => {
