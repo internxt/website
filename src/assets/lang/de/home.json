@@ -44,7 +44,7 @@
       "part1": "Das ist Internxt - ",
       "part2": "Verschlüsselter Cloud-Speicher"
     },
-    "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
+    "description": "Erhalten Sie {{discount}}% Rabatt",
     "descriptionNormal": "auf Lifetime-Pläne",
     "giftDescription": {
       "line1": "Gewinne einen Gutschein bis zu 1.000 €!",
