@@ -64,6 +64,7 @@ export const ALLOWED_PATHS = [
   'marcocreativo',
   'alexziskind',
   'cocadmin',
+  'einfach',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -71,7 +72,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
-export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime']);
+export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
 
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
@@ -135,6 +136,7 @@ export const COUPON_CODES = {
   marcocreativo: PromoCodeName.marcocreativo,
   alexziskind: PromoCodeName.alexziskind,
   cocadmin: PromoCodeName.cocadmin,
+  einfach: PromoCodeName.einfach,
 };
 
 interface OfferConfig {
