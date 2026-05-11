@@ -9,6 +9,7 @@ export interface FeatureCard {
   description: string | string[];
   image: string;
   icon?: React.ElementType<IconProps> | null; // Accepts a Phosphor Icon component
+  altText?: string;
 }
 
 export interface FeatureSectionProps {
@@ -66,7 +67,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     quality={100}
                     loading="lazy"
                     layout="intrinsic"
-                    alt={`${card.title} image`}
+                    alt={card.altText || `${card.title} image`}
                   />
                 </RevealX>
                 <div
@@ -92,12 +93,16 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     {Array.isArray(card.description)
                       ? card.description.map((line, index) => (
                           <span key={index}>
-                            {line}
-                            <br />
-                            <br />
+                            <span dangerouslySetInnerHTML={{ __html: line }} />
+                            {index < card.description.length - 1 && (
+                              <>
+                                <br />
+                                <br />
+                              </>
+                            )}
                           </span>
                         ))
-                      : card.description}
+                      : <span dangerouslySetInnerHTML={{ __html: card.description }} />}
                   </p>
                 </div>
               </div>

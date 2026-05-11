@@ -30,7 +30,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const images: ImageConfig[] = [
     {
       src: '/images/cloud-storage-for-photos/drive_web_grid_view.webp',
-      alt: 'Browser window',
+      alt: 'Internxt cloud storage for photos web interface',
       animationDelay: 200,
       size: { width: 800, height: 520 },
       position: { top: '12%', left: '200px' },
