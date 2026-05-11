@@ -33,7 +33,7 @@ const GraphComponent = ({
       <div
         className={`${
           isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
-        } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
+        } z-20 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
         <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
       </div>

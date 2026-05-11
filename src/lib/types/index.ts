@@ -271,6 +271,7 @@ export enum PromoCodeName {
   alexziskind = 'ALEXZISKIND',
   cocadmin = 'COCADMIN',
   einfach = 'EINFACH',
+  revolut = 'REVOLUT',
 }
 
 export interface PromoCodeProps {

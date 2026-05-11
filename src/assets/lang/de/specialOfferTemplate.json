@@ -12,7 +12,7 @@
     "title": "Der sicherste Cloud-Speicher **für weniger**",
     "valentinesTitle": "Liebe verdient **Privatsphär**",
     "description": "Sicherer Cloud-Speicher für weniger. Sichern Sie sich noch heute Ihren besonderen Rabatt. Erhalten Sie Zugang zu Internxts preisgekrönter Privatsphäre-Suite mit post-quantenverschlüsseltem Cloud-Speicher und vielem mehr.",
-    "subtitle": "Jetzt {{discount}}% Rabatt erhalten",
+    "subtitle": "Jetzt {{discount}}% Rabatt ",
     "subtitle2": "auf lebenslange Tarife",
     "claimDeal": "Angebot beanspruchen"
   },
@@ -63,6 +63,7 @@
     "valentinesTitle": "Sichere Liebe - ",
     "planTitles": {
       "header": "Wählen Sie Ihren Plan",
+      "lifetimeHeader": "Wählen Sie Ihren lebenslangen Plan",
       "individuals": "Jahrestärife",
       "homePage": "Wählen Sie den richtigen Tarif für Sie",
       "lifetime": "Lebenslange Tarife",
