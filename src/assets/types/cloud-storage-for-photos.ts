@@ -36,11 +36,12 @@ export interface ComponentsInColumnCards {
   element2: Element4Class;
   element3: Element4Class;
   element4: Element4Class;
+  element5: Element4Class;
 }
 
 export interface Element4Class {
   title: string;
-  description: string;
+  description: string | string[];
 }
 export interface CtaSection {
   title: string;

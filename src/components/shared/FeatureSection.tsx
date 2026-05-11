@@ -31,7 +31,10 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
             <div className="flex flex-col space-y-6 lg:max-w-[800px]">
               {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
               {description && (
-                <p className="font-regular text-base leading-tight text-gray-80 lg:text-xl">{description}</p>
+                <p
+                  className="font-regular text-base leading-tight text-gray-80 lg:text-xl"
+                  dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}
+                />
               )}
             </div>
             {ctaText && ctaLink && (
