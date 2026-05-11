@@ -42,19 +42,34 @@ const CloudStorageBackupSolutions = ({
   const CTA_URL = `/pricing`;
   const cardsData: FeatureCard[] = [
     {
-      title: textContent.FeatureSection.cards.element2.title,
-      description: textContent.FeatureSection.cards.element2.description,
-      image: '/images/cloud-storage-for-photos/password_protection.webp',
-    },
-    {
       title: textContent.FeatureSection.cards.element1.title,
       description: textContent.FeatureSection.cards.element1.description,
+      image: '/images/cloud-storage-for-photos/password_protection.webp',
+      altText: 'Password-protected photo album sharing',
+    },
+    {
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
       image: '/images/cloud-storage-for-photos/shared_links.webp',
+      altText: 'Encrypted photo album shared via secure link',
     },
     {
       title: textContent.FeatureSection.cards.element3.title,
       description: textContent.FeatureSection.cards.element3.description,
       image: '/images/cloud-storage-for-photos/share_folders.webp',
+      altText: 'Cloud storage for photographers with shared folder permissions',
+    },
+    {
+      title: textContent.FeatureSection.cards.element4.title,
+      description: textContent.FeatureSection.cards.element4.description,
+      image: '/images/private-cloud-storage-solutions/european-laws.webp',
+      altText: 'European cloud storage for photos in EU data centers',
+    },
+    {
+      title: textContent.FeatureSection.cards.element5.title,
+      description: textContent.FeatureSection.cards.element5.description,
+      image: '/images/cloud-storage-for-photos/share_folders.webp', // Using a placeholder for now
+      altText: 'Lifetime cloud storage for photos library scaling',
     },
   ];
   const cardInfo = [

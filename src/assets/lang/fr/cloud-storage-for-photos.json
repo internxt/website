@@ -2,26 +2,26 @@
   "HeroSection": {
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "",
-        "blueText": "Photos ",
-        "textAfterBlueText": "dans le cloud privé"
+        "textBeforeBlueText": "Stockage ",
+        "blueText": "cloud privé ",
+        "textAfterBlueText": "pour les photos"
       },
       "description": "Le stockage d'Internxt pour les photos vous permet de créer des albums privés et de stocker et partager vos photos dans le cloud de manière sécurisée.",
       "features": [
-        "Stockez vos photos en privé ",
-        "Chiffrement post-quantique et zéro connaissance",
-        "Code ouvert et audité"
+        "Zéro connaissance par défaut",
+        "Chiffrement post-quantique",
+        "Open source, certifié ISO 27001:2022"
       ],
       "claimDeal": "Choisissez votre plan"
     },
     "TitleAndOnePlanV2": {
-      "title": "Photos dans le cloud privé",
+      "title": "Stockage cloud privé pour les photos",
       "description": "Le stockage d'Internxt pour les photos vous permet de créer des albums privés et de stocker et partager vos photos dans le cloud de manière sécurisée.",
       "cta": "Choisissez votre plan"
     }
   },
   "ExplanationSection": {
-    "title": "Comment choisir le stockage adapté pour vos photos dans le cloud",
+    "title": "Comment choisir les services de stockage cloud pour vos photos",
     "description": "Pour trouver le meilleur stockage pour vos photos dans le cloud, suivez ces conseils",
     "costExp": {
       "title": "Coût",
@@ -38,8 +38,8 @@
     "cta": "Choisissez votre plan"
   },
   "FeaturesSection": {
-    "title": "Stockage sécurisé de photos pour répondre à vos besoins",
-    "description": "Gérez et sauvegardez vos photos dans le cloud de manière sécurisée et libérez de l'espace de stockage local pour récupérer vos fichiers.",
+    "title": "Le meilleur stockage cloud pour votre collection de photos",
+    "description": "Gérez et sauvegardez vos photos avec Internxt. Récupérez les fichiers perdus si vous supprimez accidentellement un album.",
     "info": [
       {
         "title": "Libérez de l'espace de stockage local",
@@ -87,7 +87,7 @@
   },
   "CtaSection1": {
     "title": "Le stockage dans le cloud le plus privé pour vos photos dans le cloud",
-    "description": "Protégé par chiffrement post-quantique",
+    "description": "Stockage cloud pour photos avec chiffrement post-quantique intégré",
     "cta": "Choisissez votre plan"
   },
   "CtaSection2": {
@@ -99,72 +99,76 @@
     "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Comment stocker mes photos avec Internxt Drive ?",
+        "question": "Comment stocker des photos avec Internxt ?",
         "answer": [
-          "Stocker vos photos avec Internxt est simple ; vous pouvez créer un compte gratuitement ou choisir l'un de nos plans personnels, professionnels, familiaux ou à vie. Vous pourrez ensuite accéder à votre stockage pour vos photos dans le cloud via votre navigateur web.",
-          "Téléchargez l'application pour Windows, Mac et Linux depuis notre site web et accédez à vos photos via WebDAV avec Internxt CLI. Vous pouvez télécharger l'application Internxt pour iOS et Android afin d'accéder à vos photos depuis votre téléphone ou tout autre appareil. Toutes vos photos sont dans le cloud pour que vous puissiez y accéder depuis n'importe où."
+          "Stocker des photos avec Internxt est simple : créez un compte sur internxt.com (forfait gratuit de 1 Go ou forfaits payants à partir de 2 €/mois), puis téléchargez-les depuis n'importe quel appareil. L'application web sur drive.internxt.com fonctionne dans n'importe quel navigateur ; l'application de bureau pour Windows, Mac et Linux se monte comme un lecteur virtuel qui synchronise automatiquement les photos ; l'application mobile pour iOS et Android vous permet de sauvegarder la pellicule en un seul clic. Toutes les photos sont chiffrées sur votre appareil avant d'arriver sur les serveurs d'Internxt."
         ]
       },
       {
-        "question": "Comment faire une sauvegarde de mes photos dans Internxt Drive ?",
+        "question": "De quelle quantité de stockage cloud ai-je besoin pour les photos ?",
         "answer": [
-          "Les sauvegardes sont disponibles pour tous nos plans Essential, Premium et Ultimate. À partir de là, vous pouvez sauvegarder vos photos via notre unité virtuelle et elles seront disponibles pour téléchargement lors de votre prochaine connexion à votre compte Internxt sur le web."
+          "Une règle approximative : 1 To permet de stocker environ 250 000 photos à 12 MP (qualité smartphone, moyenne de ~4 Mo chacune), ou environ 12 500 fichiers RAW à 80 Mo chacun. Pour un photographe amateur, 1 To dure de cinq à dix ans de prises de vue normales. Pour un photographe professionnel avec des flux de travail RAW, 5 To permettent de stocker environ 60 000 fichiers RAW, assez pour plusieurs années de travail professionnel. Internxt propose des forfaits de 1 To à 5 To ; le cumul des offres à vie permet de gérer les bibliothèques au-delà."
         ]
       },
       {
-        "question": "Est-ce que Internxt Drive est un stockage dans le cloud adapté pour les photos RAW ?",
+        "question": "Puis-je sauvegarder automatiquement la pellicule de mon téléphone ?",
         "answer": [
-          "Oui, Internxt est un stockage dans le cloud adapté pour les photos et fichiers RAW. Nous proposons des plans de stockage dans le cloud de 1 To, 3 To et 5 To. Par exemple, un plan de 5 To est suffisant pour stocker plus de 60 000 fichiers de photos RAW de grande taille, avec une taille de fichier moyenne de 80 Mo. De plus, si vous avez besoin de plus de stockage à l'avenir, vous pouvez toujours acheter d'autres plans et augmenter votre capacité."
+          "Oui. L'application mobile Internxt pour iOS et Android inclut la sauvegarde automatique de la pellicule : activez-la une fois, et les nouvelles photos et vidéos se synchroniseront avec votre compte Internxt en arrière-plan pendant que votre appareil est en charge et connecté au Wi-Fi. Les photos sont téléchargées chiffrées depuis l'appareil, de sorte qu'Internxt ne voit jamais les images non chiffrées. Les applications web et de bureau vous permettent de parcourir les mêmes photos sauvegardées depuis n'importe quelle plateforme."
         ]
       },
       {
-        "question": "Quel est le stockage dans le cloud le plus sûr pour mes photos dans le cloud ?",
+        "question": "Internxt est-il le meilleur stockage cloud pour les photographes ?",
         "answer": [
-          "Les services de stockage dans le cloud les plus sûrs utilisent un chiffrement de bout en bout, ce qui signifie que personne sauf vous ne peut accéder à vos photos. Cependant, de nombreuses entreprises suivent et vendent vos données à des tiers, ce qui augmente le risque de violations de données.",
-          "De plus, ces entreprises gèrent les clés de chiffrement de vos fichiers, ce qui signifie qu'elles peuvent y accéder à tout moment.",
-          "Pour obtenir le stockage dans le cloud le plus sécurisé pour vos photos, choisissez un fournisseur de cloud open-source et sans connaissance comme Internxt, car les clés de chiffrement sont gérées sur votre appareil, de sorte que personne d'autre que vous ne peut y accéder."
+          "Pour les photographes privilégiant la confidentialité et la propriété, Internxt offre la combinaison la plus solide de chiffrement zéro connaissance (le fournisseur ne peut pas lire vos fichiers), de chiffrement post-quantique (Kyber-512), de code open-source vérifiable et de forfaits à vie payables en une fois plutôt qu'en mensualités récurrentes. La comparaison page par page avec Adobe Creative Cloud, Dropbox ou pCloud revient à une question : voulez-vous que vos photos soient accessibles aux clés de chiffrement de votre fournisseur, ou seulement aux vôtres ? Internxt répond non à la première option."
         ]
       },
       {
-        "question": "Comment puis-je contacter le support ?",
+        "question": "Quelle est la différence entre le stockage cloud et la sauvegarde cloud pour les photos ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support via le chat en ligne ou en envoyant un e-mail à hello@internxt.com."
-        ]
-      },
-      {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
-        "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Bancontact.",
-          "Sur demande, nous acceptons également les cryptomonnaies . Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com."
+          "Le stockage cloud et la sauvegarde cloud sont liés mais différents. Le stockage cloud pour les photos est un stockage en ligne où vos photos sont synchronisées entre les appareils en temps réel. Modifiez une photo sur votre téléphone, et la modification apparaît sur votre ordinateur. La sauvegarde cloud est une copie unidirectionnelle qui protège contre la perte : vous téléchargez des photos pour les mettre en sécurité, et la copie de sauvegarde reste inchangée jusqu'à ce que vous ayez besoin de la restaurer. Internxt propose les deux : le stockage cloud via les applications de bureau et mobiles, et la sauvegarde cloud en tant que fonctionnalité distincte sur les forfaits payants."
         ]
       }
     ]
   },
   "FeatureSection": {
-    "title": "Le stockage le plus sécurisé pour vos photos dans le cloud",
+    "title": "Obtenez le stockage cloud pour photos le plus sûr pour conserver vos albums et vos souvenirs pour toujours",
     "titleLine2": "",
-    "description": "Gardez vos albums et souvenirs en sécurité pour toujours. Que ce soit pour stocker des photos personnelles ou partager des projets professionnels, faites-le de manière sécurisée et privée.",
-    "cta": "Choisissez votre plan",
+    "description": "Le stockage cloud pour photos est un stockage en ligne où les fichiers d'images sont chiffrés sur votre appareil avant d'être téléchargés, de sorte que le fournisseur peut stocker les données mais ne peut pas voir, scanner ou remettre les contenus. Avec Google Photos, Dropbox ou OneDrive, le fournisseur détient les clés et se réserve le droit, selon les conditions de service, de scanner les contenus des albums pour la modération, le ciblage publicitaire ou l'entraînement de l'IA. Internxt ne détient que du texte chiffré.\n\nUn cloud photo privé conserve chaque partage à l'intérieur de cette limite, qu'il s'agisse d'un album de famille envoyé aux grands-parents, de photos de vacances partagées avec des amis ou d'une galerie client remise à un réviseur non technique. Chaque album reste chiffré avec AES-256, et la clé de chiffrement ne quitte jamais votre appareil. Les cinq blocs ci-dessous couvrent l'architecture : le fonctionnement des mots de passe, le parcours des liens de partage, la gestion d'une bibliothèque de 5 To par les dossiers partagés, l'emplacement des fichiers et l'évolution du forfait.",
+    "cta": "Get Internxt",
     "cards": {
       "element1": {
-        "title": "Liens partagés",
+        "title": "Protection par mot de passe",
         "description": [
-          "Protégez vos photos pour qu'elles ne soient pas interceptées par des hackers en chiffrant vos albums directement sur votre appareil.",
-          "Créez rapidement un lien sécurisé vers vos images et copiez-le dans des e-mails ou des plateformes de messagerie pour les partager avec n'importe qui, même s'ils n'ont pas de compte Internxt."
+          "Un stockage cloud sécurisé pour les photos signifie que les clés de chiffrement résident sur votre appareil, et non sur les serveurs du fournisseur. La photo est chiffrée avec AES-256 avant de quitter votre matériel, et le fournisseur ne stocke que du texte chiffré, illisible sans la clé. Lorsque vous ajoutez un mot de passe à un album, un dossier ou un lien partagé, le mot de passe filtre le déchiffrement : seules les personnes disposant du mot de passe peuvent déchiffrer et visualiser les contenus.",
+          "Comparez cela au partage Google Photos ou OneDrive, où le fournisseur détient la clé de chiffrement et peut lire ce que vous partagez avec n'importe qui. Internxt n'a pas la capacité technique de le faire. Le mot de passe est ce qui rend l'album opaque pour un destinataire qui ne l'a pas. L'architecture est ce qui rend l'album opaque pour nous. Pas pour les hackers, pas pour les annonceurs, pas pour nous."
         ]
       },
       "element2": {
-        "title": "Protection par mot de passe",
+        "title": "Liens partagés",
         "description": [
-          "Obtenez plus de confidentialité pour vos photos dans le cloud en ajoutant des contrôles de mot de passe pour protéger des images personnelles et confidentielles contre les hackers, les fuites de données ou le partage accidentel.",
-          "Le stockage sécurisé des photos vous protège également contre le vol d'identité en empêchant les hackers de voir ou d'obtenir des images qui pourraient être réutilisées à des fins malveillantes."
+          "Le stockage cloud privé pour photos signifie qu'un lien partagé transporte les photos sous forme chiffrée, et non les photos elles-mêmes. Créez un lien depuis votre tableau de bord Internxt, définissez une expiration ou révoquez-le quand vous en avez besoin, et collez le lien actif dans un e-mail ou un chat. Le destinataire ouvre l'album dans n'importe quel navigateur. Aucun compte Internxt n'est requis, aucune application n'est à installer, et les photos s'ouvrent dans leur qualité d'origine.",
+          "Le déchiffrement se fait sur l'appareil du destinataire, pas sur les serveurs d'Internxt. C'est la différence entre le partage via Google Photos, où le fournisseur voit ce que vous partagez avec qui, et le partage via un cloud photo privé, où le partage est opaque pour le fournisseur par conception. Pas de compte Internxt, pas de copie lisible par le serveur en transit, pas de scan publicitaire en cours de route."
         ]
       },
       "element3": {
         "title": "Dossiers partagés",
         "description": [
-          "Organisez facilement votre stockage en ligne pour vos photos dans le cloud avec notre interface conviviale et les applications Windows, Mac et Linux pour améliorer la collaboration et la productivité.",
-          "Permettez à d'autres de contribuer à vos dossiers partagés dans le cloud pour accéder et télécharger vos albums photo au même endroit. Nous incluons des contrôles de permission afin que vous puissiez décider qui peut voir ou modifier vos photos pour plus de contrôle sur la sécurité de votre compte."
+          "Le meilleur stockage cloud pour photos gère une bibliothèque RAW de 5 To, une galerie client ponctuelle ou un album de famille partagé avec la même surface de contrôle. Créez un dossier partagé, définissez un accès en modification ou en lecture seule par personne, et les contributions arrivent au même endroit. Cela fonctionne pour un photographe de mariage collectant les livrables d'un second photographe, une famille regroupant des photos de vacances ou un freelance remettant une séance non éditée à un éditeur.",
+          "Pour les photographes travaillant avec des fichiers RAW, Internxt propose jusqu'à 5 To sur un seul forfait, et les options à vie se cumulent pour les bibliothèques dépassant ce seuil. Chaque photo du dossier est chiffrée sur votre appareil avant le téléchargement, de sorte que les collaborateurs voient exactement ce que vous leur donnez et Internxt ne voit que du texte chiffré. Les clés restent sur votre matériel. Les personnes que vous invitez voient les photos. Nous ne pouvons pas."
+        ]
+      },
+      "element4": {
+        "title": "Où vivent vos photos",
+        "description": [
+          "Le lieu où un fournisseur de photos est constitué détermine quels tribunaux peuvent le contraindre à remettre vos données. Les services basés aux États-Unis opèrent sous le CLOUD Act, qui permet aux autorités américaines de demander des données même lorsqu'elles se trouvent sur des serveurs dans un autre pays. Internxt est constitué à Valence, en Espagne, et stocke les données des clients dans des centres de données de l'UE gérés par OVHcloud. Cela place l'entreprise sous le RGPD (y compris votre droit d'accès, de portage et de suppression de vos photos) et hors de portée des citations à comparaître du CLOUD Act.",
+          "La juridiction est une moitié de la revendication de confidentialité. Le chiffrement est l'autre. Internxt chiffre chaque photo sur votre appareil, de sorte que même dans la juridiction de l'UE, l'entreprise n'aurait rien de lisible à remettre. La certification ISO 27001:2022 et un code de base audité de manière indépendante rendent ces affirmations vérifiables."
+        ]
+      },
+      "element5": {
+        "title": "Le stockage cloud pour photos qui évolue avec vous",
+        "description": [
+          "Le stockage cloud pour photos qui évolue avec vous signifie un forfait qui grandit avec la bibliothèque, pas contre elle. Un nouveau téléphone avec un capteur de 48 MP, une année de prises de vue RAW, une décennie d'albums de famille : le stockage que vous avez acheté en 2020 est rarement celui dont vous aurez besoin en 2030. Les forfaits d'Internxt vont de 1 To à 5 To avec une facturation mensuelle ou annuelle, avec des options de <a href=\"/fr/lifetime\" class=\"text-primary underline\">stockage cloud à vie</a> qui se payent une seule fois et se cumulent sur plusieurs forfaits pour les bibliothèques dépassant n'importe quel niveau.",
+          "Le stockage à vie est structuré pour les photographes et les archivistes à long terme. Au lieu de frais récurrents qui augmentent avec l'inflation, le coût du stockage est fixé au moment de l'achat. Chaque forfait inclut le même chiffrement, la même juridiction européenne et la même architecture zéro connaissance. La seule chose qui change est la quantité de données qui rentre dans le cercle de confiance."
         ]
       }
     }

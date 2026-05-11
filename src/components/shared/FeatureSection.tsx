@@ -9,6 +9,7 @@ export interface FeatureCard {
   description: string | string[];
   image: string;
   icon?: React.ElementType<IconProps> | null; // Accepts a Phosphor Icon component
+  altText?: string;
 }
 
 export interface FeatureSectionProps {
@@ -30,7 +31,10 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
             <div className="flex flex-col space-y-6 lg:max-w-[800px]">
               {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
               {description && (
-                <p className="font-regular text-base leading-tight text-gray-80 lg:text-xl">{description}</p>
+                <p
+                  className="font-regular text-base leading-tight text-gray-80 lg:text-xl"
+                  dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}
+                />
               )}
             </div>
             {ctaText && ctaLink && (
@@ -66,7 +70,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     quality={100}
                     loading="lazy"
                     layout="intrinsic"
-                    alt={`${card.title} image`}
+                    alt={card.altText || `${card.title} image`}
                   />
                 </RevealX>
                 <div
@@ -92,12 +96,16 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     {Array.isArray(card.description)
                       ? card.description.map((line, index) => (
                           <span key={index}>
-                            {line}
-                            <br />
-                            <br />
+                            <span dangerouslySetInnerHTML={{ __html: line }} />
+                            {index < card.description.length - 1 && (
+                              <>
+                                <br />
+                                <br />
+                              </>
+                            )}
                           </span>
                         ))
-                      : card.description}
+                      : <span dangerouslySetInnerHTML={{ __html: card.description }} />}
                   </p>
                 </div>
               </div>

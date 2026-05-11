@@ -50,7 +50,7 @@ export default function ComparisonTableSection({
 
   const getPlanPrice = (planOrder: number) => {
     const basePrice = Number(products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0);
-    const finalPrice = decimalDiscount ? basePrice * (decimalDiscount / 100) : basePrice;
+    const finalPrice = decimalDiscount && isLifetime ? basePrice * (decimalDiscount / 100) : basePrice;
     return finalPrice.toFixed(2).replace('.00', '');
   };
 
@@ -86,13 +86,16 @@ export default function ComparisonTableSection({
 
     if (comingSoonTranslations.includes(category.name)) return false;
 
-    return category.features.every((feature: Feature) => Object.values(feature.avalability).filter(Boolean).length === 1);
+    return category.features.every(
+      (feature: Feature) => Object.values(feature.avalability).filter(Boolean).length === 1,
+    );
   };
 
   const isRecommendedPlan = (index: number) => index === textContent.plans.length - 2;
   const isSecondToLastColumn = (index: number) => index === textContent.plans.length - 2;
   const isLastCategory = (index: number) => index === textContent.categories.length - 1;
-  const isLastFeature = (categoryFeatures: Feature[], featureIndex: number) => featureIndex === categoryFeatures.length - 1;
+  const isLastFeature = (categoryFeatures: Feature[], featureIndex: number) =>
+    featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
     return `items-start p-6 text-start  ${
@@ -133,7 +136,12 @@ export default function ComparisonTableSection({
     return baseStyles;
   };
 
-  const getRegularFeatureStyles = (planIndex: number, categoryIndex: number, category: Category, featureIndex: number) => {
+  const getRegularFeatureStyles = (
+    planIndex: number,
+    categoryIndex: number,
+    category: Category,
+    featureIndex: number,
+  ) => {
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
@@ -207,7 +215,9 @@ export default function ComparisonTableSection({
       const groupedFeatures: GroupedItem[] = [];
       category.features.forEach((feature: Feature) => {
         if (feature.group) {
-          const existingGroup = groupedFeatures.find((f): f is FeatureGroup => 'group' in f && f.group === feature.group);
+          const existingGroup = groupedFeatures.find(
+            (f): f is FeatureGroup => 'group' in f && f.group === feature.group,
+          );
           if (existingGroup) {
             existingGroup.features.push(feature);
           } else {
@@ -310,7 +320,9 @@ export default function ComparisonTableSection({
                     const groupedFeatures: GroupedItem[] = [];
                     category.features.forEach((feature: Feature) => {
                       if (feature.group) {
-                        const existingGroup = groupedFeatures.find((f): f is FeatureGroup => 'features' in f && f.group === feature.group);
+                        const existingGroup = groupedFeatures.find(
+                          (f): f is FeatureGroup => 'features' in f && f.group === feature.group,
+                        );
                         if (existingGroup) {
                           existingGroup.features.push(feature);
                         } else {

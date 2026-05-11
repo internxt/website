@@ -193,6 +193,7 @@ function CombinedSpecialOffer({
           premiumAndUltimatePlan={ultimateAndPremiumPlans}
           startIndividualPlansFromInterval={openerInterval}
           hidePlanSelectorComponent={annualPlans || lifetimePlans}
+          alternativeHeader={lifetimePlans}
         />
       )}
 

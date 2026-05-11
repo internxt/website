@@ -2,26 +2,26 @@
   "HeroSection": {
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "",
-        "blueText": "Fotos ",
-        "textAfterBlueText": "na nuvem privada"
+        "textBeforeBlueText": "Armazenamento ",
+        "blueText": "em nuvem privada ",
+        "textAfterBlueText": "para fotos"
       },
       "description": "O espaço de armazenamento da Internxt para fotos permite que você crie álbuns privados, armazene e compartilhe suas fotos na nuvem com segurança.",
       "features": [
-        "Armazene suas fotos com privacidade",
-        "Criptografia pós-quântica e zero conhecimento",
-        "Código aberto e auditado"
+        "Conhecimento zero por padrão",
+        "Criptografia pós-quântica",
+        "Código aberto, certificado ISO 27001:2022"
       ],
       "claimDeal": "Escolha seu plano"
     },
     "TitleAndOnePlanV2": {
-      "title": "Fotos na nuvem privada",
+      "title": "Armazenamento em nuvem privada para fotos",
       "description": "O espaço de armazenamento da Internxt para fotos permite que você crie álbuns privados, armazene e compartilhe suas fotos na nuvem com segurança.",
       "cta": "Escolha seu plano"
     }
   },
   "ExplanationSection": {
-    "title": "Como escolher o armazenamento certo para suas fotos na nuvem",
+    "title": "Como escolher serviços de armazenamento em nuvem para suas fotos",
     "description": "Para encontrar a melhor opção de armazenamento para suas fotos na nuvem, siga essas dicas",
     "costExp": {
       "title": "Custo",
@@ -38,8 +38,8 @@
     "cta": "Escolha seu plano"
   },
   "FeaturesSection": {
-    "title": "Armazenamento seguro para suas fotos, atendendo às suas necessidades",
-    "description": "Gerencie e salve suas fotos na nuvem de forma segura e libere espaço de armazenamento local para recuperar seus arquivos.",
+    "title": "O melhor armazenamento em nuvem para sua coleção de fotos",
+    "description": "Gerencie e faça backup de fotos com o Internxt. Recupere arquivos perdidos se você excluir um álbum acidentalmente.",
     "info": [
       {
         "title": "Liberte espaço de armazenamento local",
@@ -87,7 +87,7 @@
   },
   "CtaSection1": {
     "title": "A nuvem mais privada para suas fotos",
-    "description": "Protegido por criptografia pós-quântica",
+    "description": "Armazenamento em nuvem para fotos com criptografia pós-quântica integrada",
     "cta": "Escolha seu plano"
   },
   "CtaSection2": {
@@ -99,72 +99,76 @@
     "title": "Tem perguntas? Temos as respostas",
     "faq": [
       {
-        "question": "Como armazeno minhas fotos com o Internxt Drive?",
+        "question": "Como faço para armazenar fotos com o Internxt?",
         "answer": [
-          "Armazenar suas fotos com o Internxt é simples; você pode criar uma conta gratuitamente ou escolher um de nossos planos pessoais, profissionais, familiares ou vitalícios. Depois, acesse seu espaço de armazenamento para fotos na nuvem pelo navegador.",
-          "Baixe o aplicativo para Windows, Mac e Linux em nosso site e acesse suas fotos via WebDAV com o Internxt CLI. Você também pode baixar o aplicativo Internxt para iOS e Android para acessar suas fotos de seu telefone ou outros dispositivos. Todas as suas fotos estão na nuvem, para que você possa acessá-las de qualquer lugar."
+          "Armazenar fotos com o Internxt é simples: crie uma conta em internxt.com (plano gratuito de 1 GB ou planos pagos a partir de € 2/mês) e faça o upload de qualquer dispositivo. O aplicativo web em drive.internxt.com funciona em qualquer navegador; o aplicativo de desktop para Windows, Mac e Linux monta uma unidade virtual que sincroniza as fotos automaticamente; o aplicativo móvel para iOS e Android permite fazer backup do rolo da câmera com um toque. Todas as fotos são criptografadas no seu dispositivo antes de chegarem aos servidores do Internxt."
         ]
       },
       {
-        "question": "Como faço backup das minhas fotos no Internxt Drive?",
+        "question": "De quanto armazenamento em nuvem eu preciso para fotos?",
         "answer": [
-          "Os backups estão disponíveis para todos os nossos planos Essential, Premium e Ultimate. A partir daí, você pode fazer backup das suas fotos via nossa unidade virtual e elas estarão disponíveis para download quando você se conectar novamente à sua conta Internxt na web."
+          "Uma regra aproximada: 1 TB armazena cerca de 250.000 fotos em 12 MP (qualidade de smartphone, média de ~4 MB cada), ou cerca de 12.500 arquivos RAW em 80 MB cada. Para um fotógrafo casual de celular, 1 TB dura de cinco a dez anos de cliques normais. Para um fotógrafo profissional com fluxos de trabalho RAW, 5 TB armazenam cerca de 60.000 arquivos RAW, o suficiente para vários anos de trabalho profissional. O Internxt oferece planos de 1 TB a 5 TB; o acúmulo vitalício lida com bibliotecas além disso."
         ]
       },
       {
-        "question": "O Internxt Drive é um armazenamento na nuvem adequado para fotos RAW?",
+        "question": "Posso fazer backup automático do rolo da câmera do meu telefone?",
         "answer": [
-          "Sim, o Internxt é um armazenamento na nuvem adequado para fotos RAW e arquivos de grandes dimensões. Oferecemos planos de armazenamento na nuvem de 1 TB, 3 TB e 5 TB. Por exemplo, um plano de 5 TB é suficiente para armazenar mais de 60.000 arquivos de fotos RAW grandes, com uma média de 80 MB por arquivo. Além disso, se no futuro você precisar de mais espaço, pode adquirir planos adicionais e aumentar sua capacidade."
+          "Sim. O aplicativo móvel Internxt para iOS e Android inclui backup automático do rolo da câmera: ative-o uma vez, e novas fotos e vídeos serão sincronizados com sua conta Internxt em segundo plano enquanto seu dispositivo carrega e está conectado ao Wi-Fi. As fotos são enviadas criptografadas do dispositivo, para que o Internxt nunca veja as imagens descriptografadas. Os aplicativos web e desktop permitem navegar pelas mesmas fotos salvas em qualquer plataforma."
         ]
       },
       {
-        "question": "Qual é o armazenamento na nuvem mais seguro para minhas fotos?",
+        "question": "O Internxt é o melhor armazenamento em nuvem para fotógrafos?",
         "answer": [
-          "Os serviços de armazenamento na nuvem mais seguros utilizam criptografia de ponta a ponta, o que significa que ninguém além de você pode acessar suas fotos. No entanto, muitas empresas monitoram e vendem seus dados a terceiros, aumentando o risco de vazamentos.",
-          "Além disso, essas empresas gerenciam as chaves de criptografia dos seus arquivos, o que significa que podem acessá-los a qualquer momento.",
-          "Para obter o armazenamento na nuvem mais seguro para suas fotos, escolha um fornecedor de nuvem open-source e zero-knowledge como a Internxt, pois as chaves de criptografia são gerenciadas em seu dispositivo, então ninguém mais pode acessá-las."
+          "Para fotógrafos que priorizam privacidade e propriedade, o Internxt oferece a combinação mais forte de criptografia de conhecimento zero (o provedor não pode ler seus arquivos), criptografia pós-quântica (Kyber-512), código aberto verificável e planos vitalícios que você paga uma vez em vez de mensalidades recorrentes. A comparação direta com Adobe Creative Cloud, Dropbox ou pCloud se resume a uma pergunta: você quer que suas fotos sejam acessíveis às chaves de criptografia do seu provedor ou apenas às suas? O Internxt responde não à primeira opção."
         ]
       },
       {
-        "question": "Como posso entrar em contato com o suporte?",
+        "question": "Qual é a diferença entre armazenamento em nuvem e backup em nuvem para fotos?",
         "answer": [
-          "Não encontrou o que procura? Você pode entrar em contato com nossa equipe de suporte via chat online ou enviando um e-mail para hello@internxt.com."
-        ]
-      },
-      {
-        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoedas?",
-        "answer": [
-          "A Internxt aceita atualmente cartões de débito e crédito (Mastercard, VISA, American Express, etc.). Você também pode pagar via PayPal, iDEAL, Sofort e Bancontact.",
-          "A pedido, aceitamos criptomoedas. Se tiver dúvidas sobre os métodos de pagamento, basta nos enviar um e-mail para hello@internxt.com."
+          "Armazenamento em nuvem e backup em nuvem são relacionados, mas diferentes. O armazenamento em nuvem para fotos é um armazenamento on-line onde suas fotos são sincronizadas entre dispositivos em tempo real. Altere uma foto no seu telefone e a alteração aparecerá no seu laptop. O backup em nuvem é uma cópia unidirecional que protege contra perdas: você faz o upload das fotos para custódia e a cópia de backup permanece inalterada até que você precise restaurá-la. O Internxt oferece ambos: armazenamento em nuvem via aplicativos de desktop e dispositivos móveis, e backup em nuvem como um recurso separado nos planos pagos."
         ]
       }
     ]
   },
   "FeatureSection": {
-    "title": "O armazenamento mais seguro para suas fotos na nuvem",
+    "title": "Obtenha o armazenamento em nuvem mais seguro para fotos para manter seus álbuns e memórias protegidos para sempre",
     "titleLine2": "",
-    "description": "Mantenha seus álbuns e lembranças seguros para sempre. Seja para armazenar fotos pessoais ou compartilhar projetos profissionais, faça isso com segurança e privacidade.",
-    "cta": "Escolha seu plano",
+    "description": "O armazenamento em nuvem para fotos é um armazenamento on-line onde os arquivos de imagem são criptografados em seu dispositivo antes do upload, para que o provedor possa armazenar os dados, mas não possa visualizar, escanear ou entregar o conteúdo. Com o Google Fotos, Dropbox ou OneDrive, o provedor detém as chaves e reserva o direito, sob os termos de serviço, de escanear o conteúdo do álbum para moderação de conteúdo, direcionamento de anúncios ou treinamento de IA. O Internxt detém apenas o texto cifrado.\n\nUma nuvem de fotos privada mantém cada compartilhamento dentro desse limite, seja um álbum de família enviado aos avós, fotos de férias compartilhadas com amigos ou uma galeria de clientes entregue a um revisor não técnico. Cada álbum permanece criptografado com AES-256 e a chave de criptografia nunca sai do seu dispositivo. Os cinco blocos abaixo cobrem a arquitetura: como funcionam as senhas, como os links de compartilhamento viajam, como as pastas compartilhadas lidam com uma biblioteca de 5 TB, onde os arquivos residem e como o plano escala.",
+    "cta": "Get Internxt",
     "cards": {
       "element1": {
-        "title": "Links compartilhados",
+        "title": "Proteção por senha",
         "description": [
-          "Proteja suas fotos para que não sejam interceptadas por hackers criptografando diretamente seus álbuns no seu dispositivo.",
-          "Crie rapidamente um link seguro para suas imagens e cole-o em e-mails ou plataformas de mensagens para compartilhá-lo com qualquer pessoa, mesmo que ela não tenha uma conta Internxt."
+          "Armazenamento em nuvem seguro para fotos significa que as chaves de criptografia residem em seu dispositivo, não nos servidores do provedor. A foto é criptografada com AES-256 antes de sair do seu hardware, e o provedor armazena apenas o texto cifrado, ilegível sem a chave. Quando você adiciona uma senha a um álbum, pasta ou link compartilhado, a senha protege a descriptografia: apenas pessoas com a senha podem descriptografar e visualizar o conteúdo.",
+          "Compare isso com o compartilhamento do Google Fotos ou OneDrive, onde o provedor detém a chave de criptografia e pode ler o que você compartilha com qualquer pessoa. O Internxt não tem a capacidade técnica para fazer isso. A senha é o que torna o álbum opaco para um destinatário sem ela. A arquitetura é o que torna o álbum opaco para nós. Nem para hackers, nem para anunciantes, nem para nós."
         ]
       },
       "element2": {
-        "title": "Proteção por senha",
+        "title": "Links compartilhados",
         "description": [
-          "Obtenha mais privacidade para suas fotos na nuvem adicionando controles de senha para proteger imagens pessoais e confidenciais contra hackers, vazamentos de dados ou compartilhamentos acidentais.",
-          "O armazenamento seguro para suas fotos também o protege contra roubo de identidade, impedindo que hackers vejam ou obtenham imagens que possam ser reutilizadas para fins prejudiciais."
+          "O armazenamento em nuvem privada de fotos significa que um link compartilhado transporta as fotos de forma criptografada, não as fotos em si. Crie um link no seu painel do Internxt, defina uma expiração ou revogue-o sempre que precisar e cole o link ativo no e-mail ou chat. O destinatário abre o álbum em qualquer navegador. Não é necessária nenhuma conta do Internxt, nenhum aplicativo precisa ser instalado e as fotos abrem em sua qualidade original.",
+          "A descriptografia acontece no dispositivo do destinatario, não nos servidores do Internxt. Essa é a diferença entre compartilhar pelo Google Fotos, onde o provedor vê o que você compartilha com quem, e compartilhar por uma nuvem de fotos privada, onde o compartilhamento é opaco para o provedor por design. Sem conta do Internxt, sem cópia legível pelo servidor em trânsito, sem varredura de publicidade pelo caminho."
         ]
       },
       "element3": {
-        "title": "Pastas compartilhadas",
+        "title": "Compartilhar pastas",
         "description": [
-          "Organize facilmente seu espaço de armazenamento online para suas fotos na nuvem com nossa interface intuitiva e aplicativos para Windows, Mac e Linux para melhorar a colaboração e produtividade.",
-          "Permita que outras pessoas contribuam para suas pastas compartilhadas na nuvem para acessar e baixar seus álbuns fotográficos no mesmo local. Incluímos controles de permissão para que você possa decidir quem pode ver ou editar suas fotos, dando mais controle sobre a segurança da sua conta."
+          "O melhor armazenamento em nuvem para fotos lida com uma biblioteca RAW de 5 TB, uma galeria de cliente única ou um álbum de família compartilhado com a mesma superfície de controle. Crie uma pasta compartilhada, defina o acesso de edição ou apenas visualização por pessoa, e as contribuições chegam em um só lugar. Isso funciona para um fotógrafo de casamento que coleta entregas de um segundo fotógrafo, uma família que agrupa fotos de férias ou um freelancer que entrega uma sessão não editada a um editor.",
+          "Para fotógrafos que trabalham com arquivos RAW, o Internxt oferece até 5 TB em um único plano, e as opções vitalícias se acumulam para bibliotecas que excedem esse limite. Cada foto na pasta é criptografada no seu dispositivo antes do upload, para que os colaboradores vejam exatamente o que você lhes dá e o Internxt veja apenas o texto cifrado. As chaves permanecem no seu hardware. As pessoas que você convida veem as fotos. Nós não podemos."
+        ]
+      },
+      "element4": {
+        "title": "Onde suas fotos vivem",
+        "description": [
+          "Onde um provedor de fotos está incorporado determina quais tribunais podem obrigá-lo a entregar seus dados. Os serviços baseados nos EUA operam sob a Lei CLOUD, que permite às autoridades dos EUA intimar dados mesmo quando eles estão em servidores em outro país. O Internxt está incorporado em Valência, Espanha, e armazena os dados dos clientes em centros de dados da UE operados através da OVHcloud. Isso coloca a empresa sob o GDPR (incluindo o seu direito de acessar, portar e excluir suas fotos) e fora do alcance das intimações da Lei CLOUD.",
+          "A jurisdição é metade da reivindicação de privacidade. A criptografia é a outra. O Internxt criptografa cada foto no seu dispositivo, portanto, mesmo dentro da jurisdição da UE, a empresa não teria nada legível para entregar. A certificação ISO 27001:2022 e uma base de código auditada de forma independente tornam essas alegações verificáveis."
+        ]
+      },
+      "element5": {
+        "title": "Armazenamento em nuvem para fotos que escala com você",
+        "description": [
+          "O armazenamento em nuvem para fotos que escala com você significa um plano que cresce com a biblioteca, não contra ela. Um novo telefone com sensor de 48 MP, um ano de fotos em RAW, uma década de álbuns de família: o armazenamento que você comprou em 2020 raramente é o armazenamento que você precisará em 2030. Os planos do Internxt variam de 1 TB a 5 TB em faturamento mensal ou anual, com opções de <a href=\"/pt-br/lifetime\" class=\"text-primary underline\">armazenamento vitalício em nuvem</a> que você paga uma vez e acumula em vários planos para bibliotecas que excedem qualquer nível individual.",
+          "O vitalício é estruturado para fotógrafos e arquivistas de longo prazo. Em vez de uma taxa recorrente que cresce com a inflação, o custo do armazenamento é fixo no momento da compra. Cada plano inclui a mesma criptografia, a mesma jurisdição da UE e a mesma arquitetura de conhecimento zero. A única coisa que muda é quanto cabe dentro do círculo de confiança."
         ]
       }
     }

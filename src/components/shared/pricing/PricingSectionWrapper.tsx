@@ -75,6 +75,7 @@ interface PricingSectionWrapperProps {
   onlyUltimatePlan?: boolean;
   premiumAndUltimatePlan?: boolean;
   freePlanNeedsH2?: boolean;
+  alternativeHeader?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -121,6 +122,7 @@ const PricingHeader = ({
   darkMode,
   SectionTag,
   isValentinesMode,
+  alternativeHeader,
 }) => (
   <div
     className={`flex flex-col items-center gap-4 text-center ${
@@ -129,7 +131,7 @@ const PricingHeader = ({
     id="priceTable"
   >
     <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
-      {textContent.planTitles.header}
+      {alternativeHeader ? textContent.planTitles.lifetimeHeader : textContent.planTitles.header}
     </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
       <HotLabel
@@ -201,6 +203,7 @@ export const PricingSectionWrapper = ({
   SectionTag = DEFAULTS.SectionTag,
   onlyUltimatePlan = false,
   premiumAndUltimatePlan = false,
+  alternativeHeader = false,
 }: PricingSectionWrapperProps): JSX.Element => {
   const localPlanSelection = usePlanSelection(
     startFromPlan,
@@ -276,6 +279,7 @@ export const PricingSectionWrapper = ({
             darkMode={darkMode}
             SectionTag={SectionTag}
             isValentinesMode={isValentinesMode}
+            alternativeHeader={alternativeHeader}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -313,6 +317,7 @@ export const PricingSectionWrapper = ({
             darkMode={darkMode}
             SectionTag={'p'}
             isValentinesMode={isValentinesMode}
+            alternativeHeader={alternativeHeader}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>

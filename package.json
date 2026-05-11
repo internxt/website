@@ -109,6 +109,8 @@
     "child_process": false
   },
   "resolutions": {
+    "uuid": "14.0.0",
+    "postcss": "8.5.10",
     "**/js-yaml": "^4.1.1",
     "@emotion/react/**/yaml": "1.10.3",
     "@emotion/styled/**/yaml": "1.10.3",
