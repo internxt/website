@@ -689,9 +689,6 @@ export default function Footer({
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
                     </Link>
-                    <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.aiDetector}
-                    </Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileCompressor}
                     </Link>
@@ -1688,9 +1685,6 @@ export default function Footer({
                       </Link>
                       <Link href="/metadata-remover" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.metadataRemover}
-                      </Link>
-                      <Link href="/ai-detector" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.aiDetector}
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
