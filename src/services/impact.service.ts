@@ -78,6 +78,9 @@ export const handleImpact = async ({
   const anonymousDate = new Date();
   anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
 
+  const trackingExpiration = new Date();
+  trackingExpiration.setDate(trackingExpiration.getDate() + 30);
+
   document.cookie = `impactSource=${source};expires=${expirationDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
   document.cookie = `impactAnonymousId=${randomUUID};expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
