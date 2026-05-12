@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
-import { INTERNXT_URL, EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { INTERNXT_URL } from '@/constants';
+import { useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie } from '@/lib/cookies';
 
@@ -40,11 +40,8 @@ export default function Layout({
   robots,
 }: LayoutProps) {
   const router = useRouter();
-  const { dialogIsOpen } = useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
-
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.has(langToUpperCase) ? langToUpperCase : 'EN';
 
@@ -111,13 +108,8 @@ export default function Layout({
         <link rel="alternate" hrefLang="zh-CN" href={`https://internxt.com/zh${pathname}`} />
         <link rel="alternate" hrefLang="zh-TW" href={`https://internxt.com/zh-tw${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href={`https://internxt.com${pathname}`} />
+        <link rel="stylesheet" href="/cookiebanner.style.css" />
       </Head>
-
-      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
-      <Script src="/js/cookiebanner.script.js" strategy="afterInteractive" />
-      <Script id="cookie-banner-init" strategy="afterInteractive">{`
-        $(document).ready(function() { cookieBanner.init(); });
-      `}</Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {`{
@@ -139,6 +131,21 @@ export default function Layout({
             "https://github.com/internxt"
           ]
         }`}
+      </Script>
+
+      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
+      <Script src="/js/cookiebanner.script.js" strategy="afterInteractive" />
+      <Script id="cookie-banner-init" strategy="afterInteractive">
+        {`
+          var attempts = 0;
+          var initCookie = setInterval(function() {
+            if (window.jQuery && window.cookieBanner) {
+              clearInterval(initCookie);
+              window.cookieBanner.init();
+            }
+            if (++attempts > 50) clearInterval(initCookie);
+          }, 100);
+        `}
       </Script>
 
       <div className="flex flex-col">{children}</div>

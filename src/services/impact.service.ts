@@ -11,6 +11,8 @@ const sendImpactTrack = ({
   ip,
   userAgent,
   page,
+  irclickid,
+  utmMedium,
 }: {
   randomUUID: string;
   ip?: string;
@@ -19,6 +21,8 @@ const sendImpactTrack = ({
     url: string;
     referrer: string;
   };
+  irclickid?: string | null;
+  utmMedium?: string | null;
 }): Promise<void> => {
   const nowInTimestamp = moment().format('YYYY-MM-DDTHH:mm:ss.sssZ');
 
@@ -31,6 +35,12 @@ const sendImpactTrack = ({
       page,
     },
     type: 'page',
+    ...(irclickid && {
+      properties: {
+        irclickid,
+        ...(utmMedium && { partner_id: utmMedium }),
+      },
+    }),
   });
 };
 
@@ -54,6 +64,11 @@ export const handleImpact = async ({
     console.warn('IP lookup service unavailable, defaulting to undefined', error);
     ip = undefined;
   }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const irclickid = urlParams.get('irclickid');
+  const utmMedium = urlParams.get('utm_medium');
+
   const impactAnonymousId = getCookie('impactAnonymousId');
   const randomUUID = impactAnonymousId ?? crypto.randomUUID();
 
@@ -63,11 +78,29 @@ export const handleImpact = async ({
   const anonymousDate = new Date();
   anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
 
+  const trackingExpiration = new Date();
+  trackingExpiration.setDate(trackingExpiration.getDate() + 30);
+
   document.cookie = `impactSource=${source};expires=${expirationDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
   document.cookie = `impactAnonymousId=${randomUUID};expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
+  if (irclickid) {
+    document.cookie = `impactClickId=${irclickid};expires=${trackingExpiration.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
+  }
+
+  if (utmMedium) {
+    document.cookie = `impactPartnerId=${utmMedium};expires=${trackingExpiration.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
+  }
+
   try {
-    await sendImpactTrack({ randomUUID, ip, userAgent, page });
+    await sendImpactTrack({
+      randomUUID,
+      ip,
+      userAgent,
+      page,
+      irclickid,
+      utmMedium,
+    });
   } catch (error) {
     console.warn('Analytics tracking failed:', error);
   }
