@@ -40,7 +40,6 @@ export default function Layout({
   robots,
 }: LayoutProps) {
   const router = useRouter();
-  useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
