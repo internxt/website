@@ -66,6 +66,7 @@ export const ALLOWED_PATHS = [
   'cocadmin',
   'einfach',
   'revolut',
+  'scott',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -139,6 +140,7 @@ export const COUPON_CODES = {
   cocadmin: PromoCodeName.cocadmin,
   einfach: PromoCodeName.einfach,
   revolut: PromoCodeName.revolut,
+  scott: PromoCodeName.scott,
 };
 
 interface OfferConfig {
