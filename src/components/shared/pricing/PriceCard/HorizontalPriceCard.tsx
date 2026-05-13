@@ -15,7 +15,6 @@ import {
   Shield,
   Sparkle,
   VideoCamera,
-
 } from '@phosphor-icons/react';
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
@@ -45,14 +44,12 @@ export const HorizontalPriceCard = ({
   if (!storage) {
     return null;
   }
-  
+
   const contentText = require(`@/assets/lang/en/priceCard.json`);
 
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
-
-  const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
 
   const cardLabel =
     {
@@ -84,7 +81,6 @@ export const HorizontalPriceCard = ({
       mode: 'payment',
       planType: 'individual',
       currency: currencyValue ?? 'eur',
-      promoCodeId: coupon?.name ?? undefined,
     });
   }
   return (
@@ -98,13 +94,13 @@ export const HorizontalPriceCard = ({
             <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{cardLabel}</p>
           </div>
         </div>
-       
+
         <div className={`flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
           <div className="flex flex-row items-end space-x-px text-neutral-700">
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
               <span className="text-4xl font-bold">{price}</span>
               <span>{currency}</span>
-              <span className="text-sm">{contentText.perYear}</span>
+              <span className="text-sm">{contentText.perMonth}</span>
             </p>
           </div>
         </div>
