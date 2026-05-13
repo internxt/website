@@ -81,7 +81,6 @@ export const HorizontalPriceCard = ({
       mode: 'payment',
       planType: 'individual',
       currency: currencyValue ?? 'eur',
-      promoCodeId: coupon?.name ?? undefined,
     });
   }
   return (
