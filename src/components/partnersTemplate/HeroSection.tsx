@@ -36,7 +36,7 @@ export default function HeroSection({
   image = 'internxt-private-cloud',
   isClubic = false,
   isUltimatePlan = false,
-  isPcMag = false
+  isPcMag = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -63,7 +63,9 @@ export default function HeroSection({
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
-  const redirection= isUltimatePlan ? 'https://drive.internxt.com/checkout?planId=price_1T1xRhFAOdcgaBMQEjJKKoRN&couponCode=CLOUDOFF&planType=individual&currency=eur&mode=payment' : '#billingButtons';
+  const redirection = isUltimatePlan
+    ? 'https://drive.internxt.com/checkout?planId=price_1TRoAJFAOdcgaBMQveT6cebN&planType=individual&currency=eur&mode=payment'
+    : '#billingButtons';
 
   return (
     <section
@@ -99,12 +101,7 @@ export default function HeroSection({
 
         {isClubic && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image
-              src={getImage('/images/partnerships/Clubic.webp')}
-              width={90}
-              height={17}
-              alt="Clubic logo"
-            />
+            <Image src={getImage('/images/partnerships/Clubic.webp')} width={90} height={17} alt="Clubic logo" />
             <X size={16} />
             <Image
               loading="lazy"
@@ -117,13 +114,9 @@ export default function HeroSection({
           </div>
         )}
 
-        {isPcMag &&( <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image
-              src={getImage('/images/partnerships/pcmag.webp')}
-              width={110}
-              height={35}
-              alt="pcmag logo"
-            />
+        {isPcMag && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image src={getImage('/images/partnerships/pcmag.webp')} width={110} height={35} alt="pcmag logo" />
             <X size={16} />
             <Image
               loading="lazy"
@@ -133,7 +126,8 @@ export default function HeroSection({
               width={130}
               height={16}
             />
-          </div>)}
+          </div>
+        )}
 
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
