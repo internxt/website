@@ -97,6 +97,7 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
     business: {
       [Interval.Month]: [] as Array<any>,
       [Interval.Year]: [] as Array<any>,
+      [Interval.Lifetime]: [] as Array<any>,
     },
   };
 
@@ -106,7 +107,7 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
       const interval = productValue.interval;
 
       if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
-        transformedData[type][interval].push({
+        transformedData[type][interval]?.push({
           priceId: productValue.id,
           storage: storage,
           price: Math.abs(productValue.amount / 100).toFixed(2),
@@ -119,12 +120,14 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
 
     // Sort products by price ascending order for each interval (month, year, lifetime)
     Object.keys(transformedData[type]).forEach((interval) => {
-      transformedData[type][interval].sort((a, b) => a.price - b.price);
+      transformedData[type][interval].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
     });
   };
 
   transform(individualsData, 'individuals');
   transform(businessData, 'business');
+
+  console.log(transformedData);
 
   return transformedData;
 }
