@@ -25,6 +25,7 @@ interface HeroSectionForPartnerProps {
   isClubic?: boolean;
   isPcMag?: boolean;
   isUltimatePlan?: boolean;
+  specialOffer?: boolean;
 }
 
 export default function HeroSection({
@@ -37,6 +38,7 @@ export default function HeroSection({
   isClubic = false,
   isUltimatePlan = false,
   isPcMag = false,
+  specialOffer = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -166,7 +168,7 @@ export default function HeroSection({
                 <p className={darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '}>
                   {parsePercentText(textContent.subtitle)}
                 </p>
-                <p>{textContent.subtitle2} </p>
+                {specialOffer ? <p>{textContent.subtitle2} </p> : <p>{textContent.lifetimeSubtitle2}</p>}
               </span>
             )}
             <p
