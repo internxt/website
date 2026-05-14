@@ -14,6 +14,7 @@
     "description": "Secure cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
     "subtitle": "Get {{discount}}% off ",
     "subtitle2": "on all plans",
+    "lifetimeSubtitle2": "on all lifetime plans",
     "claimDeal": "Claim deal"
   },
   "ReviewSection": {

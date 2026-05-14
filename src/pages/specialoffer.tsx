@@ -100,7 +100,12 @@ function SpecialOffer({
       )}
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        percentOff={percentOff}
+        image={'internxt-private-cloud'}
+        specialOffer
+      />
 
       <ReviewsSection textContent={langJson.ReviewSection} />
 
