@@ -14,7 +14,7 @@
       "ultimate": "1.000€ Geschenkkarte gewinnen"
     }
   },
-  "renewsInfo": "Jahresplan, monatlich abgerechnet zu {{price}}/Monat für 12 Monate",
+  "renewsInfo": "Jahresplan, im ersten Monat mit {{priceNow}} berechnet, danach Erneuerung zu {{price}}/Monat",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

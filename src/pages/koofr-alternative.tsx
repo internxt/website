@@ -29,6 +29,7 @@ const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.KOOFR,
     couponCodeForLifetime: PromoCodeName.KOOFR,
   });
 
@@ -93,6 +94,7 @@ const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

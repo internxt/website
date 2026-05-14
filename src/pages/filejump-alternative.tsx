@@ -29,6 +29,7 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.FILEJUMP,
     couponCodeForLifetime: PromoCodeName.FILEJUMP,
   });
 
@@ -94,6 +95,7 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

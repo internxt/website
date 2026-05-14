@@ -29,6 +29,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.PROTONDRIVE,
     couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
   });
 
@@ -94,6 +95,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

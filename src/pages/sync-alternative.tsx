@@ -29,6 +29,7 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.SYNC,
     couponCodeForLifetime: PromoCodeName.SYNC,
   });
 
@@ -94,6 +95,7 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

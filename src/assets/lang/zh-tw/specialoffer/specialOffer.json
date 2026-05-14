@@ -41,7 +41,7 @@
       "business": "商業方案",
       "lifetimeCampaign": {
         "blueText": "立享五折優惠",
-        "normalText": "適用所有獨家終身方案"
+        "normalText": "適用所有獨家方案"
       }
     },
     "header": "完整隱私保障，高達 {{discount}}% 折扣",

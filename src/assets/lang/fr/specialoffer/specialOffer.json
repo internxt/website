@@ -41,7 +41,7 @@
       "business": "Forfaits professionnels",
       "lifetimeCampaign": {
         "blueText": "Obtenez 50 % DE RÉDUCTION",
-        "normalText": "sur tous nos forfaits à vie exclusifs"
+        "normalText": "sur tous nos forfaits exclusifs"
       }
     },
     "header": "Confidentialité totale avec {{discount}} % de réduction",

@@ -41,7 +41,7 @@
       "business": "企业计划",
       "lifetimeCampaign": {
         "blueText": "享受 50% 折扣",
-        "normalText": "适用于所有专属终身计划"
+        "normalText": "适用于所有专属计划"
       }
     },
     "header": "隐私保护高达 {{discount}}% 折扣",

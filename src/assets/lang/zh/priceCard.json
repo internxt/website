@@ -14,7 +14,7 @@
       "ultimate": "有机会赢取 1000 欧元礼品卡*"
     }
   },
-  "renewsInfo": "年度计划，每月以 {{price}}/月计费，为期 12 个月",
+  "renewsInfo": "年度计划，首月费用为 {{priceNow}}，之后按 {{price}}/月续订",
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

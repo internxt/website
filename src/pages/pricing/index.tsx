@@ -49,6 +49,7 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
@@ -122,6 +123,7 @@ const Pricing = ({
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lang={lang}

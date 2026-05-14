@@ -41,7 +41,7 @@
       "business": "Business Plans",
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
-        "normalText": "all our exclusive lifetime plans"
+        "normalText": "all our exclusive plans"
       }
     },
     "header": "Total privacy for {{discount}}% off",

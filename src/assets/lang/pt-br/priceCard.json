@@ -55,6 +55,7 @@
     "free": "Até "
   },
   "perMonth": "/mês",
+  "renewsInfo": "Plano anual, faturado em {{priceNow}} no primeiro mês, depois renova em {{price}}/mês",
   "firstMonth": "Primeiros 30 dias",
   "cta": {
     "getStarted": "Comece agora",

@@ -14,7 +14,7 @@
       "ultimate": "Gana una tarjeta regalo de 1000 €"
     }
   },
-  "renewsInfo": "Plan anual, facturado mensualmente a {{price}}/mes durante 12 meses",
+  "renewsInfo": "Plan anual, facturado a {{priceNow}} el primer mes, después se renueva a {{price}}/mes",
   "productFeatures": {
     "planTypes": {
       "essentials": "Esencial",

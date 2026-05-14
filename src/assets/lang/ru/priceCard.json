@@ -14,7 +14,7 @@
       "ultimate": "Выиграйте карту на 1 000€"
     }
   },
-  "renewsInfo": "Годовой план, ежемесячный счет на {{price}}/мес в течение 12 месяцев",
+  "renewsInfo": "Годовой план, оплата {{priceNow}} за первый месяц, затем продление по цене {{price}}/месяц",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

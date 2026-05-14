@@ -111,6 +111,7 @@ export const ComparisonPage = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: couponCodeName,
     couponCodeForLifetime: couponCodeName,
   });
 
@@ -172,6 +173,7 @@ export const ComparisonPage = ({
           <PricingSectionWrapper
             textContent={langJson.tableSection}
             decimalDiscount={{
+              individuals: decimalDiscount,
               lifetime: decimalDiscount,
             }}
             lifetimeCoupons={lifetimeCoupons}

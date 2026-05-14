@@ -49,9 +49,7 @@ function SpecialOffer({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
-  });
+  } = usePricing({ couponCode: PromoCodeName.FreePlanUpsell, couponCodeForLifetime: PromoCodeName.FreePlanUpsell });
 
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
@@ -109,6 +107,7 @@ function SpecialOffer({
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
+          individuals: decimalDiscount,
           lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}

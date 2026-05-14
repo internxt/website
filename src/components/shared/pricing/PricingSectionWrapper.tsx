@@ -179,7 +179,6 @@ export const PricingSectionWrapper = ({
   showPromo,
   isAffiliate,
   isValentinesMode = false,
-  freePlanNeedsH2 = false,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
   startIndividualPlansFromInterval = Interval.Lifetime,

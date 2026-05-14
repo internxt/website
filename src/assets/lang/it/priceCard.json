@@ -14,7 +14,7 @@
       "ultimate": "Vinci Carta Regalo 1.000€"
     }
   },
-  "renewsInfo": "Piano annuale, fatturato mensilmente a {{price}}/mese per 12 mesi",
+  "renewsInfo": "Piano annuale, fatturato a {{priceNow}} per il primo mese, poi si rinnova a {{price}}/mese",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",
