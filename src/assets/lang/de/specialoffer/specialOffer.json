@@ -41,7 +41,7 @@
       "business": "Business-Pläne",
       "lifetimeCampaign": {
         "blueText": "50 % RABATT SICHERN",
-        "normalText": "auf alle exklusiven lebenslangen Pläne"
+        "normalText": "auf alle exklusiven Pläne"
       }
     },
     "header": "Vollständige Privatsphäre mit {{discount}} % Rabatt",

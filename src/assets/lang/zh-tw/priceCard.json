@@ -13,7 +13,7 @@
       "ultimate": "有機會贏取 1000 歐元禮品卡*"
     }
   },
-  "renewsInfo": "*以 {{price}}/年 续订",
+  "renewsInfo": "年度計劃，首月費用為 {{priceNow}}，之後按 {{price}}/月續訂",
   "productFeatures": {
     "planTypes": {
       "essentials": "基本",

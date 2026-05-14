@@ -36,6 +36,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
   const locale = lang as string;

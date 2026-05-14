@@ -63,6 +63,7 @@ const Drive = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.OFFSUB,
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
@@ -111,6 +112,7 @@ const Drive = ({
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
           lifetimeCoupons={lifetimeCoupons}

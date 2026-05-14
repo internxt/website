@@ -41,7 +41,7 @@
       "business": "Planes empresariales",
       "lifetimeCampaign": {
         "blueText": "Consigue 50% DE DESCUENTO",
-        "normalText": "en todos nuestros planes de por vida exclusivos"
+        "normalText": "en todos nuestros planes exclusivos"
       }
     },
     "header": "Privacidad total con {{discount}}% de descuento",

@@ -29,6 +29,7 @@ const IDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.IDRIVE85,
     couponCodeForLifetime: PromoCodeName.IDRIVE85,
   });
 
@@ -94,6 +95,7 @@ const IDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

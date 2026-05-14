@@ -145,7 +145,7 @@ export const PriceCard = ({
       return undefined;
     }
 
-    let originalDisplayedPrice = isAnnual ? Number(price) / 12 : Number(price);
+    let originalDisplayedPrice = Number(price);
 
     if (originalDisplayedPrice % 1 !== 0) {
       originalDisplayedPrice = Math.floor(originalDisplayedPrice) + 0.99;
@@ -372,7 +372,9 @@ export const PriceCard = ({
       </div>
       {isAnnual && (
         <p className="text-10 font-normal italic text-gray-35">
-          {contentText.renewsInfo.replace('{{price}}', currency + currentPrice)}
+          {contentText.renewsInfo
+            .replace('{{priceNow}}', currency + currentPrice)
+            .replace('{{price}}', currency + originalPrice)}
         </p>
       )}
     </div>

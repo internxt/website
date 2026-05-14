@@ -26,6 +26,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.Dropbox85,
     couponCodeForLifetime: PromoCodeName.Dropbox85,
   });
 
@@ -87,6 +88,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

@@ -29,6 +29,7 @@ const DrimeComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.DRIME,
     couponCodeForLifetime: PromoCodeName.DRIME,
   });
 
@@ -94,6 +95,7 @@ const DrimeComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

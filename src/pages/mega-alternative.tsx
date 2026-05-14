@@ -26,6 +26,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.Mega85,
     couponCodeForLifetime: PromoCodeName.Mega85,
   });
 
@@ -81,6 +82,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}

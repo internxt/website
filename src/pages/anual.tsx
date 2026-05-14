@@ -40,7 +40,9 @@ function AnualSpecial({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing();
+  } = usePricing({
+    couponCode: PromoCodeName.OFFSUB,
+  });
 
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
@@ -49,7 +51,6 @@ function AnualSpecial({
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const onCheckoutButtonClicked = async (
@@ -107,6 +108,10 @@ function AnualSpecial({
         textContent={langJson.tableSection}
         lifetimeCoupons={lifetimeCoupons}
         lang={lang}
+        decimalDiscount={{
+          lifetime: decimalDiscount,
+          individuals: decimalDiscount,
+        }}
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
