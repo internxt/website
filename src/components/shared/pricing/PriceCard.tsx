@@ -194,7 +194,7 @@ export const PriceCard = ({
   return (
     <div className="flex flex-col gap-5">
       <div
-        className={`flex h-full flex-col items-center justify-start rounded-16 ${
+        className={`flex h-full w-[367px] flex-col items-center justify-start rounded-16 ${
           popular ? (isValentinesMode ? 'bg-pink-30' : darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl') : ''
         }`}
       >
@@ -222,7 +222,7 @@ export const PriceCard = ({
               </p>
 
               {hasDiscount ? (
-                <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
+                <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-full">
                   <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
                     <span className="flex h-full flex-row items-end ">
                       <p
@@ -331,7 +331,7 @@ export const PriceCard = ({
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                     : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-                } lg:w-[290px]whi flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base`}
+                } lg:w-[290px]whi flex h-[48px] w-full items-center justify-center rounded-md border-[1.5px] text-base`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
               </button>
