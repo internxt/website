@@ -67,6 +67,7 @@ export const ALLOWED_PATHS = [
   'einfach',
   'revolut',
   'scott',
+  'drop-offer',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -141,6 +142,7 @@ export const COUPON_CODES = {
   einfach: PromoCodeName.einfach,
   revolut: PromoCodeName.revolut,
   scott: PromoCodeName.scott,
+  'drop-offer': PromoCodeName.dropOffer,
 };
 
 interface OfferConfig {

@@ -660,5 +660,10 @@
     "id": "cloud-partner",
     "title": "Programa Cloud Partner de Internxt",
     "description": "Conviértete en revendedor del almacenamiento de objetos de Internxt S3 para empresas. Almacenamiento en la nube caliente y más barato que AWS, Azure y Google Cloud."
+  },
+  {
+    "id": "thankyou",
+    "title": "Lista de espera de oferta especial — Internxt",
+    "description": "Suscríbete a Internxt para recibir tu descuento exclusivo en almacenamiento en la nube privado y cifrado en el que puedes confiar."
   }
 ]

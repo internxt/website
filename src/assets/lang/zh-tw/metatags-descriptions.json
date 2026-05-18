@@ -740,5 +740,10 @@
     "id": "cloud-partner",
     "title": "Internxt 雲端合作夥伴計劃",
     "description": "成為面向企業的 Internxt S3 物件儲存的經銷商。熱雲端儲存，比 AWS、Azure 和 Google Cloud 更便宜。"
+  },
+  {
+    "id": "thankyou",
+    "title": "特別優惠候補名單 — Internxt",
+    "description": "訂閱 Internxt，獲取私密、加密雲端儲存的專屬折扣，值得信賴。"
   }
 ]

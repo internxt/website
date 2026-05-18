@@ -758,5 +758,10 @@
     "id": "cloud-partner",
     "title": "Internxt Cloud Partner Programme",
     "description": "Become a reseller for Internxt S3 object storage for enterprises. Hot cloud storage, and cheaper than AWS, Azure, and Google Cloud."
+  },
+  {
+    "id": "thankyou",
+    "title": "Special Offer Waitlist — Internxt",
+    "description": "Subscribe to Internxt to receive your exclusive discount for private, encrypted cloud storage you can trust."
   }
 ]
