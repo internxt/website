@@ -126,6 +126,11 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
       </div>
 
       <h2 className="text-30 font-semibold text-gray-95 lg:text-3xl">{textContent.title}</h2>
+      {textContent.h2Intro && (
+        <p className="w-[330px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-center lg:text-lg">
+          {textContent.h2Intro}
+        </p>
+      )}
       <div className="flex w-[330px] flex-col items-start justify-center gap-12 lg:w-full lg:items-center">
         <div
           ref={scrollContainerRef}

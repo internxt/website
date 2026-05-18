@@ -12,7 +12,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
 import Script from 'next/script';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 
 interface FreeCloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -37,6 +37,9 @@ const FreeCloudObjectStorage = ({
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }])}
+      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
@@ -91,6 +94,16 @@ const FreeCloudObjectStorage = ({
         containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
         bgPadding="px-10"
       />
+
+      {textContent.HowInternxtComparesSection && (
+        <HorizontalScrollableSection
+          textContent={textContent.HowInternxtComparesSection}
+          bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          needsH2
+          needsH3
+          needsDivider={false}
+        />
+      )}
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 

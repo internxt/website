@@ -5,6 +5,7 @@ export interface CloudObjectStorageText {
   HowMuchYouNeedSection: HowMuchYouNeedSection;
   WhyChooseInternxtSection: WhyChooseInternxtSection;
   FaqSection: FAQSection;
+  HowInternxtComparesSection: WhyChooseInternxtSection;
   ContactSales: ContactSales;
   CtaSection: CtaSection;
   CtaSectionV2: CtaSection;

@@ -14,7 +14,7 @@
       "ultimate": "Chance to win a €1000 gift card"
     }
   },
-  "renewsInfo": "Annual plan, billed at {{priceNow}} for the first month, then renews at {{price}}/month",
+  "renewsInfo": "Annual plan, billed at {{priceNow}} for the first month, then renews at {{price}}/mo",
   "productFeatures": {
     "planTypes": {
       "essentials": "Essential",

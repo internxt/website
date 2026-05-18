@@ -7,6 +7,13 @@ export interface CloudStorageBackupSolutionsText {
   CtaSection1: BetterTomorrowSection;
   CtaSection2: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
+  NewBlock1?: NewBlock;
+  NewBlock2?: NewBlock;
+}
+
+export interface NewBlock {
+  title: string;
+  intro: string;
 }
 export interface ComponentsInColumn {
   title: string;
@@ -55,7 +62,7 @@ export interface FAQ {
 export interface FeaturesSection {
   title: string;
   description: string;
-  cards: Cards;
+  info: EndToEnd[];
 }
 
 export interface Cards {

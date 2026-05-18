@@ -22,6 +22,7 @@ export interface FAQ {
 export interface FeaturesSection {
   intro: string;
   title: string;
+  h2Intro?: string;
   features: Features;
 }
 

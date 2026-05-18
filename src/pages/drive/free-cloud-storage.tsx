@@ -19,7 +19,7 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImages
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 
 interface DriveProps {
   textContent: DriveText;
@@ -53,6 +53,9 @@ const Drive = ({
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }])}
+      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

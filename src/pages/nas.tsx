@@ -13,7 +13,7 @@ import SynologyQNAPSection from '@/components/nas/SynologyQNAPSection';
 import WhatIsNASSection from '@/components/shared/components/TitleAndDescriptionSection';
 import HeroSection from '@/components/nas/HeroSection';
 import Script from 'next/script';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 
 interface NASPageProps {
@@ -34,6 +34,9 @@ const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLa
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'NAS Cloud Backup', url: '/nas' }])}
+      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />

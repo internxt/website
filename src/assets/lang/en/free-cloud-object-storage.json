@@ -66,23 +66,23 @@
   },
   "WhyChooseInternxtSection": {
     "title": "Why choose Internxt object storage?",
-    "description": "The benefits of object cloud storage with Internxt emphasize effective data management and security.",
+    "description": "Free cloud object storage with Internxt comes down to four kinds of 'free' that S3 buyers usually pay for elsewhere: free data transfer, no per-operation fees, a 30-day money-back trial, and an open-source S3 protocol you can walk away from. Pair that with 11-nines durability, EU data centers, and AES-256 encryption, and you've got a bucket service that fits a side-project budget and an ISO 27001 procurement checklist both. The pricing card above shows the floor: €7/TB, 1 TB minimum, billed monthly. The rest of this section is what you get for it.",
     "scrollableSection": {
       "titles": [
         "Zero ingress and egress fees",
-        "Cost per GB",
-        "Durability & Availability",
-        "Security",
-        "Simple storage service",
-        "Speed"
+        "No API or operation charges",
+        "30-day money-back free trial",
+        "S3 plus IAM API compatibility",
+        "EU-jurisdiction data residency",
+        "11-nines durability and hot-tier speed"
       ],
       "descriptions": [
-        "Zero ingress and egress fees eliminate costs for transferring data into or out of storage, allowing for predictable budgeting and cost savings. This benefit is crucial for businesses with frequent data movement or large-scale data operations.",
-        "With our pay-as-you-go model, you only pay for the storage you actually use. Object storage is designed to handle large volumes of unstructured data, which is typically less expensive per GB compared to structured data, which requires more complex management.",
-        "We enable redundant data storage that replicates and distributes data across multiple European servers. Data is protected from loss or corruption with technology that guarantees 99.999999999% (11 9s) of data durability for each object.",
-        "With our object cloud storage, we use multiple security measures to protect your data. Your data is encrypted in transit and at rest. We support the HTTPS protocol and server-side encryption with customer-provided encryption keys (SSE-C).",
-        "Internxt provides object storage using the S3 protocol to simplify and manage data workflows, ensuring high availability and durability of data with the added security focus that Internxt prioritizes.",
-        "Object storage offers superior speed by allowing multiple read and write operations simultaneously and utilizing rich metadata for faster data retrieval. This allows for quicker access times and efficient handling of large volumes of data."
+        "Free data transfer means you pay €0 to upload to Internxt buckets and €0 to download or stream out, no matter the volume. AWS S3 charges around $0.09 per GB for the first 10 TB of outbound traffic each month, so on a 5 TB egress month, that's roughly $450 you don't pay here. The math holds for ingress too: pushing your first sync up via aws-cli, rclone, or any S3-compatible tool costs nothing. Pair that with a predictable monthly storage rate and your bill stops moving when your traffic spikes.",
+        "No API fees means PUT, GET, COPY, LIST, and DELETE requests don't show up on your bill. Only the storage itself does. On AWS S3, PUT-class requests are billed at $0.005 per 1,000 and GET-class at $0.0004 per 1,000. A backup workload that pushes a million PUTs a month carries a request bill before a single byte of storage gets priced. Internxt skips that line. The monthly minimum is what you pay, and there's no operations meter running underneath.",
+        "Free to try means a full 30-day money-back guarantee on every Internxt object storage plan. Sign up through Internxt's S3 checkout, push your data through aws-cli or rclone, run your actual workload (not a sandbox), and if it doesn't fit, email Internxt support inside 30 days and you'll get the full €7 back. It's not a free plan (there isn't one), and the 1 TB / €7 monthly floor still applies during the trial window. But your first month is reversible, which is enough to validate the egress savings and the S3 compatibility for real.",
+        "S3 plus IAM API compatibility means Internxt's bucket service speaks the AWS S3 and IAM API set, so clients built around standard S3 calls work without code changes. That covers the common ones: aws-cli, boto3, rclone (Internxt publishes setup docs at the rclone integration page), MinIO clients, Cyberduck, s3cmd, FileZilla Pro, and Terraform's aws_s3_bucket resource. Point your existing tooling at the Internxt endpoint, swap the access keys, and the buckets behave the way your scripts expect. The codebase is open source on Internxt's GitHub repository, so the protocol implementation is auditable. If you decide to move off to AWS, R2, Backblaze, or anywhere else, your buckets stay S3-shaped and portable. That's a different kind of free: free of vendor lock-in.",
+        "Private cloud object storage in the EU means your buckets sit on OVHcloud-partner data centers inside the European Union, under GDPR, with no CLOUD Act exposure for European customers. Data is encrypted in transit with TLS 1.3 and at rest with AES-256, and server-side encryption with customer-provided keys (SSE-C) is supported for teams that hold their own keys. The platform is independently audited and holds ISO 27001:2022 certification, SOC 2 attestation, HIPAA compliance, and GDPR compliance. None of that is on you to operate. It's what the bucket comes with.",
+        "99.999999999% durability (that's 11 nines, the same target AWS S3 publishes) comes from replicating every object across multiple European servers. If a disk fails, your data is already in another rack. Everything sits on a single hot tier: there's no Glacier-style retrieval delay, no rehydration window, no separate cold-archive line item on the bill. You can run parallel read and write operations against the same bucket and the metadata layer holds up under burst access. Add it all up, and a single flat rate covers durability, availability, and instant access in one line."
       ]
     },
     "bannerText": {
@@ -93,74 +93,81 @@
       "cta2": "Contact us"
     }
   },
+  "HowInternxtComparesSection": {
+    "title": "How Internxt compares to the AWS S3 free tier",
+    "description": "Free cloud object storage is a usage-based plan where storage, transfer, or operations are free up to a defined cap. AWS, IBM, Oracle, and Cloudflare all run versions of it. Internxt doesn't ship a 'free GB' tier. What it ships is free data transfer, no per-operation fees, a 30-day money-back trial above a €7/TB floor, and an open-source S3 protocol you can walk away from. Here's how that stacks against the AWS S3 free tier, and where each kind of 'free' actually runs out.",
+    "scrollableSection": {
+      "titles": [
+        "The AWS S3 free tier and what runs out",
+        "Free data transfer vs egress-fee hyperscalers",
+        "No per-operation fees: how PUT, GET, LIST work on Internxt",
+        "30-day money-back guarantee as a free trial path",
+        "Open source plus S3 protocol equals freedom from vendor lock-in"
+      ],
+      "descriptions": [
+        "AWS S3 free tier is a 12-month introductory plan: 5 GB of S3 Standard storage, 20,000 GET requests, and 2,000 PUT/COPY/POST/LIST requests per month. AWS also gives every account 100 GB of internet egress free across all services per month. On month 13, the storage and request line items flip to the public rate. The 5 GB cap is fine for a Postman tutorial. It doesn't fit a backup workload, an analytics warehouse, or a media library. Internxt's €7/TB floor is the trade. There's no 5 GB lane, but there's no month-13 cliff either. The same rate that ran your first TB runs the next 10.",
+        "Egress is where hyperscaler bills get unpredictable. AWS S3, Azure Blob, and Google Cloud Storage charge around $0.09 per GB for the first 10 TB of internet egress each month, dropping at higher tiers. Cloudflare R2 ships zero egress on a different cost model; Internxt does the same. Push a 2 TB media library to a CDN once a month and AWS bills around $180 in transit alone. On Internxt that line reads €0. The free here is the egress: every month, every TB, no recalculation at month 13.",
+        "AWS S3 prices object operations in three tiers: PUT/COPY/POST/LIST at $0.005 per 1,000 requests, GET/SELECT at $0.0004 per 1,000, and a separate line for lifecycle transitions. A high-frequency backup job that pushes 1 million PUTs and reads 3 million GETs in a month bills around $6.20 in requests alone, before storage. Internxt doesn't price requests. PUT, GET, COPY, LIST, DELETE, multipart upload: all of them count against your monthly storage rate and nothing else. There's no operations meter to monitor, no CloudWatch alarm for request bills, no surprise spike when traffic doubles.",
+        "30-day money-back guarantee is the closest thing to a free trial on Internxt object storage. There's no free GB allowance (the €7/TB monthly minimum applies from day one), but every euro charged in the first 30 days is refundable if you email Internxt support inside the window. That makes the trial real: you can run your actual workload against the bucket, validate the S3 API behaviour against your tooling, measure egress savings on your traffic shape, and walk away whole if it doesn't fit. The Internxt S3 checkout flow takes a few minutes, and cancellation is manual but processed quickly.",
+        "Open-source S3-compatible storage is the kind of 'free' that doesn't show up on the invoice. Internxt publishes the stack on its GitHub repository, the buckets speak the AWS S3 and IAM API verbatim, and migration to or from another S3 provider is a matter of swapping endpoint and access keys. There's no proprietary client, no closed sync agent, no format conversion. If you outgrow Internxt and move to R2, B2, or Wasabi, your scripts don't change. If you stay, the same scripts hold. That's the kind of 'free' that compounds."
+      ]
+    }
+  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "What is object storage?",
+        "question": "What is cloud object storage?",
         "answer": [
-          "Object storage stores large amounts of data, like photos, videos, and emails, as individual “objects” with unique identifiers.",
-          "Unlike traditional file storage, which organizes data in a hierarchical file system, object storage stores data as objects in a flat address space, typically in a distributed storage infrastructure.",
-          "As a result, cloud object storage allows for easier scaling, faster access to individual items, and potentially lower costs depending on your storage needs."
+          "Cloud object storage is a storage architecture where each file is stored as a self-contained object (data, metadata, and a unique ID) in a flat namespace addressable over HTTP. It scales horizontally across distributed servers, which is why it suits backups, media libraries, analytics data lakes, and any workload measured in TB rather than GB."
         ]
       },
       {
-        "question": "What is a S3 protocol?",
+        "question": "What is the S3 protocol, and is Internxt S3-compatible?",
         "answer": [
-          "The S3 protocol, or Simple Storage Service protocol, is a set of rules and standards that define how data is accessed, stored, and managed within Amazon S3, a popular cloud storage service provided by Amazon Web Services (AWS)."
+          "The S3 protocol is the HTTP-based API set Amazon Web Services published for its Simple Storage Service, now the de facto standard for cloud object storage. Internxt is AWS S3 and IAM API compatible, so any client built for AWS S3 (aws-cli, boto3, rclone, MinIO, Cyberduck, Terraform's S3 module) works against Internxt by changing the endpoint."
         ]
       },
       {
-        "question": "How much object storage do I get?",
+        "question": "Is free cloud object storage really free?",
         "answer": [
-          "With Internxt cloud object storage, you can scale your storage to meet your needs. Our plans charge you monthly for each gigabyte-per-day-used you want to use. You can add or delete storage based on your needs."
+          "Free cloud object storage usually means free up to a cap (free transfer, free operations, or a free trial period), not free forever. AWS S3 free tier covers 5 GB for 12 months. Internxt's version is different: free data transfer, no API charges, and a 30-day money-back trial above a monthly storage floor."
         ]
       },
       {
-        "question": "Can I integrate Internxt object storage with existing applications and services?",
+        "question": "Can I integrate Internxt object storage with my existing AWS S3 tools?",
         "answer": [
-          "Yes, Internxt object storage is compatible with AWS S3 APIs, allowing seamless integration with a wide range of applications, tools, and services that support the S3 protocol.",
-          "S3 object storage allows users to upload, retrieve, and manage objects (files and data) using a simple web interface and APIs. The protocol ensures data integrity, security through access controls, and scalability to accommodate varying storage needs seamlessly across distributed servers."
+          "Yes. Internxt is AWS S3 and IAM API compatible, so clients built against the standard S3 API set work without code changes. Common ones: aws-cli, boto3 / botocore, rclone (setup docs published by Internxt), MinIO clients, Cyberduck, s3cmd, FileZilla Pro, Terraform's aws_s3_bucket resource. Swap the endpoint URL and access keys, and the calls themselves don't change."
         ]
       },
       {
-        "question": "Does Internxt have a minimum monthly storage policy?",
+        "question": "What is Internxt's minimum monthly storage policy?",
         "answer": [
-          "Internxt’s minimum monthly policy for object storage plans is 1TB. If stored objects are deleted before they have been stored with Internxt for 30 days, a time-deleted storage charge will be applied that is equal to the remaining days left on the monthly subscription.",
-          "This policy is the same as the minimum storage duration policy that AWS and other hyperscaler storage services charge."
+          "1 TB minimum for 30 days. Every object you store counts against a 30-day retention window, so if you delete a file before day 30, you're still billed for the remaining days. AWS S3 Standard-IA and One Zone-IA carry the same 30-day minimum-duration rule, and Glacier carries 90. It keeps storage pricing predictable for both sides."
         ]
       },
       {
-        "question": "Does Internxt have a monthly storage charge?",
+        "question": "Does Internxt charge a monthly storage minimum?",
         "answer": [
-          "Internxt has a monthly minimum charge associated with a 1TB monthly paid account. If you store less than 1TB, for example, the 4KB minimum, you will be charged for 1TB of storage."
+          "Yes. The monthly minimum is €7, which covers 1 TB of storage. Storing less than 1 TB still bills at the 1 TB rate, and there's no proration below the floor. Above 1 TB, the rate stays €7 per TB per month, billed monthly. The €7 number is what shows up on every invoice unless you exceed the floor."
         ]
       },
       {
-        "question": "What if I want to store small files? (Less than 4 KB)",
+        "question": "How does Internxt handle files smaller than 4 KB?",
         "answer": [
-          "There is a minimum file size charge of 4KB. Storing a 4KB file will incur charges equivalent to a 1TB file. This policy resembles the minimum capacity charge per object policies found in some AWS storage."
+          "Objects smaller than 4 KB are billed as 4 KB. If you upload a 500-byte log line as its own object, the storage line counts it at 4 KB. AWS S3 Standard-IA and Glacier classes use the same minimum-object-size pattern at higher thresholds (128 KB on Standard-IA). The fix, when it matters, is to batch small objects into larger files before upload."
         ]
       },
       {
-        "question": "What’s the cost of overwriting a file repeatedly without versioning?",
+        "question": "What does it cost to overwrite a file without versioning?",
         "answer": [
-          "For example, if you upload a file named 'file.pdf' and overwrite it with a new version without changing the file name or using versioning the next day, the original file will transition from active storage to deleted storage.",
-          "This incurs charges for one day of active storage and 29 or 89 days of deleted storage, depending on your account's minimum storage retention policy. Additionally, charges will apply for storing the new version of 'file.pdf.'"
+          "Overwriting without versioning moves the old object into the 30-day minimum-duration bucket. If you upload file.pdf today and replace it tomorrow, you're billed for one day of active storage on v1, 29 days of deleted-storage retention on v1, plus active storage on v2 from day two onward. Either version the bucket, or batch updates beyond the 30-day window."
         ]
       },
       {
-        "question": "How do I contact support?",
+        "question": "How do I contact support or cancel my Internxt object storage plan?",
         "answer": [
-          "If you have any questions, concerns, or feedback, you can contact our Customer Support Team via live chat or by emailing [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "What if I want to cancel my plan?",
-        "answer": [
-          "If you delete objects from Internxt object storage before they have been stored for 30 days, you will still be charged as if those objects had been stored for the full 30 days.",
-          "This policy ensures a minimum charge period for stored data, regardless of how long the objects were actually stored before deletion.",
-          "If you want to cancel your object storage plan, email us at hello@internxt.com, and we’ll process the subscription cancellation."
+          "Email Internxt support for help, refund requests inside the 30-day window, and cancellations. Live chat is available in-product. Cancellation is processed manually: you email, the team confirms, and the subscription stops at the next billing cycle. If you delete objects before day 30, the 30-day minimum-duration policy still bills the remaining days, so timing the cancel matters if your storage is fresh."
         ]
       }
     ]
