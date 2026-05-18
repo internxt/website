@@ -590,5 +590,10 @@
     "id": "cloud-partner",
     "title": "Programma Cloud Partner di Internxt",
     "description": "Diventa un rivenditore dell'archiviazione a oggetti Internxt S3 per le aziende. Archiviazione cloud a caldo e più conveniente di AWS, Azure e Google Cloud."
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt – Soluzioni di backup con cloud storage",
+    "description": "Le soluzioni di backup con cloud storage di Internxt utilizzano una crittografia pluripremiata e la ridondanza che protegge te e la tua azienda dalla perdita di dati."
   }
 ]

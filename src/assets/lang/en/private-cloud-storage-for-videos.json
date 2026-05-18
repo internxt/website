@@ -7,39 +7,37 @@
   },
   "HowToChooseSection": {
     "title": "How to choose the best cloud storage for video files",
-    "description": "Finding cloud storage for video files can be challenging due to file upload restrictions, a lack of privacy, or budget. ",
+    "description": "Choosing cloud storage for video files comes down to three things: cost at the volume you actually use, security against providers and pipelines that would otherwise read your videos, and capacity that scales with your library. The three blocks below take each in turn. Internxt Drive starts free at 1 GB, paid plans run from €3 per month annual, and Internxt S3 covers petabyte-scale storage at €7 per TB per month.",
     "cardDescriptions": {
       "titles": ["Cost", "Security", "Storage requirements"],
       "descriptions": [
-        "Free cloud storage for video files may work for smaller files, but many free services come with restrictions, and additional features are behind a paywall. It's important to compare pricing and features and determine whether these plans meet your needs.\n\nIf you want cloud storage for large video files, Internxt offers secure cloud storage, VPN, Antivirus, Mail, and Meet in its plans. You can get started for free or from €3 per month for annual or lifetime plans, or store petabytes of videos with Internxt S3 object storage for €7/TB/month.",
-        "Secure cloud storage for video files is essential for individual, freelance, or company use, as without it, your content could be at risk. Videos containing sensitive, valuable, or proprietary content require extreme security measures to remain secure and private.\n\nChoose a cloud storage provider that doesn't use AI to scan your content to train its models, and keep your content private by providers that use zero-knowledge encryption to ensure only you can view and access your files.",
-        "Storing a library of large video files can quickly use up your cloud storage, leaving you with limited space for new videos or forcing you to delete old files to make room for new projects, which may not be feasible.\n\nChoose a cloud storage provider that allows you to scale your storage based on your needs. When you can easily upgrade your plan, you don't have to worry about migrating all your videos to another service, and you can keep your workflow uninterrupted."
+        "Cost for cloud storage for video files comes down to three things: per-GB price, file-size limits, and what's actually in the bundle. Free tiers from Google Photos, Dropbox, OneDrive, and iCloud cap at 5 to 15 GB, which is fine for a few clips but not for a 4K or 8K library. Internxt's free tier is 1 GB. Paid plans start at €3 a month annual, or one-time lifetime plans from €285 (1 TB) to €585 (5 TB). Plans throw in VPN, Antivirus, Cleaner, Mail, and Meet. Petabyte-scale needs go to Internxt S3 at €7 per TB per month, no transfer fees.",
+        "Cloud storage for video files is secure when the provider can't actually read what it stores. The test that matters: who holds the encryption key. Standard providers (Google Photos, Dropbox, OneDrive) hold the keys themselves and reserve the right under their terms of service to scan content for content moderation, ad targeting, or AI training. Internxt's zero-knowledge architecture generates the key on your device, so the server only ever sees ciphertext it can't decrypt. The 2024 Securitum audit verified there's no backdoor, no master-key recovery path. Files run on AES-256, Kyber-512 post-quantum cryptography, TLS 1.3, and ISO 27001:2022 certification.",
+        "Cloud storage for video files runs out fast at high resolutions. A 5 TB plan holds 444 hours of 4K, 139 hours of 8K, or about 60,000 RAW photos at 80 MB each. When that isn't enough, Internxt's lifetime plans stack on the same email: a second 5 TB layers on top of the first to give 10 TB, a third gives 15 TB, no migration needed. For petabyte-scale needs (media library, long-form production pipeline, broadcast archive), Internxt S3 runs €7 per TB per month with no transfer fees. Both tiers sit on the same European data centers via OVHcloud."
       ]
     }
   },
   "FeaturesSection": {
-    "intro": "Internxt provides the best cloud storage for videos to store, share, and back up your files. Prevent AI and Big Tech from using your videos without your consent with our zero-knowledge cloud storage.",
+    "intro": "Internxt is cloud storage for videos that stores, shares, and backs up your files. Encryption happens on your device, so we hold only ciphertext. No AI scanning, no ad targeting, no exceptions.",
     "title": "Best Cloud Storage for videos",
+    "h2Intro": "The best cloud storage for videos handles three things at once: the file sizes modern cameras spit out, transfer speeds fast enough you're not waiting around, and sharing that doesn't leak the file or its metadata. The numbers get ugly fast. 4K phone footage is about 375 MB per minute, 8K closer to 600, RAW from a mirrorless can hit 100 MB per second. Internxt Drive goes up to 5 TB, roughly 444 hours of 4K or 139 hours of 8K, with WebDAV and Rclone for scripted uploads. Files use AES-256 plus Kyber-512 post-quantum, audited by Securitum.",
     "features": {
       "feature1": {
         "title": "Support for 4K and 8K files",
         "description": [
-          "Finding a cloud storage that supports uploads and cloud storage for large video files can be challenging, especially for 4K and 8K files. With Internxt Drive, you can upload large video files to the cloud for secure sharing or backups.",
-          "We offer up to 5TB of cloud storage for large video files, enough for around 444 hours of 4K or 139 hours of 8K video. You can upgrade your plan anytime, so you never run out of storage."
+          "Most consumer cloud services hit a wall at 4K and 8K: file size capped, upgrade path slow. Internxt Drive doesn't. The Ultimate plan holds up to 5 TB (that's 444 hours of 4K, or 139 hours of 8K), with per-file uploads up to 100 GB on Ultimate, 50 GB on Premium, 1 GB on Essential. RAW, ProRes, and H.265 (HEVC) upload as opaque file types. And when 5 TB isn't enough, lifetime plans stack on the same email, so you can layer them to 10 TB or more without migrating between providers."
         ]
       },
       "feature2": {
         "title": "Fast upload and download speeds",
         "description": [
-          "Thanks to our ultra-fast upload and download speeds, you can save time when managing your videos without worrying about long waits to access your content.",
-          "You don’t have to worry about delays when accessing your files, as you can access and download your files quickly, so your videos are always there when you need them."
+          "Cloud storage for videos fails the workflow test the second a 30 GB master takes all night to upload. Internxt Drive uses parallel chunked transfers for multi-gigabyte files, and WebDAV, Rclone, plus the Internxt CLI handle the rest: scripted uploads, scheduled syncs, pause and resume on shaky connections, ingest straight from a NAS or tape archive. Multi-cloud delivery via OVHcloud's European data centers keeps latency consistent for download and streaming. Premium and Ultimate plans add version history, so if a render goes wrong you can pull the previous master back. Everything runs over TLS 1.3 with end-to-end encryption intact."
         ]
       },
       "feature3": {
         "title": "Secure sharing for videos",
         "description": [
-          "By choosing a secure video file-sharing service, you can prevent your content from falling into the wrong hands and sensitive information, such as metadata, from being leaked.",
-          "With Internxt Drive, you can share your videos securely, as they are protected by post-quantum encryption. For additional privacy, you can add password protection to shared files to ensure secure collaboration."
+          "Sharing video files privately comes down to four controls: who can see it, for how long, what password it takes, and how fast you can pull the link back. Every Internxt share link gets all four, configurable from your dashboard. The recipient doesn't need an account to open it. And because the architecture can't read what it stores, there's no AI scanning, no content-moderation pipeline, no advertising tracking attached to the metadata. For two-way collaboration, share folders let collaborators upload back into the library with permission controls per recipient."
         ]
       }
     }
@@ -104,56 +102,44 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "What is the best cloud storage for video files?",
+        "question": "Which cloud storage is best for videos?",
         "answer": [
-          "Internxt offers many features for you to consider as your new cloud provider for your video files. ",
-          "It allows for large file uploads, affordable storage plans, and unmatched privacy thanks to post-quantum and zero-knowledge encryption. ",
-          "It’s available on all platforms, with WebDAV and Rclone support available via the Internxt CLI. ",
-          "Get started from just €3 per month and get the most secure, private cloud storage for your video files. "
-        ]
-      },
-
-      {
-        "question": "How much storage do I need for my video files?",
-        "answer": [
-          "If you don't know how much cloud storage you need for your videos, for the average user, 200GB is usually enough.",
-          "Professionals working with higher resolutions, like 4K or 8K, will require a minimum of 1TB.",
-          "Businesses that need to host a large number of video files will benefit most from object storage, such as Internxt S3."
+          "The best cloud storage for videos handles 4K and 8K file sizes, supports large per-file uploads, and runs on a zero-knowledge setup so the provider can't actually read or scan what's stored.",
+          "Internxt Drive scales up to 5 TB, takes per-file uploads up to 100 GB, and runs on AES-256 plus Kyber-512 post-quantum cryptography with the encryption key staying on your device.",
+          "Securitum independently audited the architecture in 2024, and ISO 27001:2022 covers the information security management system."
         ]
       },
       {
-        "question": "Can I upload large video files to Internxt Drive?",
+        "question": "Can I store RAW or 4K video files in the cloud?",
         "answer": [
-          "Yes, you can upload up to 40GB of video files with Internxt Drive via the web app.",
-          "Internxt Drive also offers plans with up to 5TB, which is enough to upload and send large videos via the cloud.",
-          "If you need more storage, you can purchase one of our lifetime plans and stack your storage to avoid running out of storage."
+          "Yes. RAW, 4K, 8K, ProRes, H.265, and other large formats all upload to Internxt Drive without transcoding.",
+          "Per-file limits go up to 100 GB on Ultimate, 50 GB on Premium, 1 GB on Essential. A 5 TB plan holds roughly 444 hours of 4K or 139 hours of 8K.",
+          "WebDAV and Rclone handle batch and scripted uploads, and the Internxt CLI lets you automate ingest straight from a camera card, NAS, or tape archive."
+        ]
+      },
+      {
+        "question": "How do I share large video files privately?",
+        "answer": [
+          "Share via Internxt's password-protected links, with configurable expiry and one-click revocation from your dashboard. The recipient doesn't need an Internxt account.",
+          "Per-share file size goes up to 10 GB, and because the architecture can't read what it stores, there's no AI scanning, no content-moderation pipeline, no advertising tracking on the metadata.",
+          "For client review or collaborative editing, share folders let non-technical recipients upload back with permission controls per user."
         ]
       },
       {
         "question": "What is zero-knowledge encryption, and how does it protect my videos?",
         "answer": [
-          "Zero-knowledge encryption means the encryption process and keys are managed on your device, so nobody can view, monitor, or access your files or video content.",
-          "This differs from encryption by Big Tech companies because they hold and manage the keys to your files, limiting the privacy of your cloud storage."
+          "Zero-knowledge encryption means the encryption key gets generated and held on your device, never on the server.",
+          "So the provider only ever holds ciphertext it can't decrypt, even under legal compulsion or if the server gets breached.",
+          "That's different from how Google Photos, Dropbox, and OneDrive work, where the provider holds the keys and reserves the right under terms of service to scan content for content moderation, ad targeting, or AI training.",
+          "Securitum independently verified Internxt's zero-knowledge architecture in 2024."
         ]
       },
       {
-        "question": "Does Internxt offer backup options for video files?",
+        "question": "How long will 1 TB of video last?",
         "answer": [
-          "Yes, Internxt offers backup cloud storage for video files on all its Essential, Premium, and Ultimate plans.",
-          "You can schedule your backups based on your needs, help prevent accidental data loss, and protect against ransomware with our encrypted backups."
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com"
-        ]
-      },
-      {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
-        "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc).",
-          "You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
+          "1 TB of cloud storage holds roughly 89 hours of 4K footage at the typical phone-camera bitrate, about 28 hours of 8K, or 12,500 RAW photos at around 80 MB each.",
+          "A 5 TB plan stretches that to 444 hours of 4K or 139 hours of 8K.",
+          "For long-form pro workflows that blow past 5 TB, lifetime plans stack on the same email so you can pile on storage without migrating libraries, and Internxt S3 runs €7 per TB per month with no transfer fees for petabyte-scale needs."
         ]
       }
     ]

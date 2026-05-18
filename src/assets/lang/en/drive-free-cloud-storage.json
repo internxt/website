@@ -28,15 +28,15 @@
     }
   },
   "DriveSection": {
-    "title": "Internxt Drive",
+    "title": "Internxt Drive: free secure cloud storage you actually control",
     "description": [
-      "Google Drive, iCloud, OneDrive, Dropbox, and more can decrypt, view, and share your data with governments and third parties. ",
-      "Internxt Drive gives you full control and privacy of your cloud storage through zero-knowledge and post-quantum encryption. We can’t access your files; you keep full ownership, access, and control of your data."
+      "Google Drive, Dropbox, and OneDrive encrypt your files on their own servers using keys they hold. That's how they can scan what you upload, index it, and hand it over when a court asks. Apple's iCloud encrypts Photos end-to-end only when you switch Advanced Data Protection on. And the default terms across all of them still grant scanning rights for ad targeting, content moderation, and AI training.",
+      "Internxt Drive encrypts every file on your device with AES-256 and Kyber-512 post-quantum cryptography before anything hits our European data centers. We're left with ciphertext, nothing readable. The decryption keys stay in your account, so we can't view, share, or scan what's inside your files. That's the same free secure cloud storage architecture our paid plans run on."
     ]
   },
   "EncryptedCloudStorageSection": {
-    "title": "Encrypted cloud storage built on privacy",
-    "description": "Internxt Drive uses post-quantum and zero-knowledge encryption to encrypt your files and data at rest and in transit.",
+    "title": "Free secure cloud storage built on privacy",
+    "description": "Free secure cloud storage means your files get encrypted on your device, not on the provider's server. So by the time anything hits our cloud, we're already holding ciphertext, not the actual content. Internxt uses Kyber-512 post-quantum encryption with AES-256 at rest, plus TLS 1.3 on every connection in transit. That's the architecture, free or paid: no paywall over the encryption itself.",
     "scrollableSection": {
       "titles": [
         "Your encrypted vault",
@@ -47,44 +47,44 @@
         "No backdoors"
       ],
       "descriptions": [
-        "Internxt is the first cloud storage to use Kyber 512 post-quantum and AES-256 encryption, ensuring data protection with end-to-end security, European privacy, and advanced technology.",
-        "Unlike Big Tech, Internxt can’t view or delete your files. Your files and data are encrypted directly on your device.  Nobody, not even us, can access your files or data.",
-        "Internxt is HIPAA, ISO 27001, and SOC 2 compliant. Whether you need cloud storage for healthcare, finance, or personal use, Internxt ensures your data and files meet the highest standards of data protection.",
-        "All our code is publicly available on GitHub and has been verified by external cybersecurity experts to ensure it is a safe platform for your data.",
-        "We give you total ownership and control over your privacy. With our privacy-focused products, you hold the power, not Big Tech.",
-        "We have no access to your data or files and don’t share it with anyone. Our apps are fully open source and audited, guaranteeing your privacy is respected."
+        "Every file gets wrapped in Kyber-512 post-quantum encryption and AES-256 on your device before upload. TLS 1.3 protects the wire. The ciphertext lands in EU data centers (operated with OVHcloud), and the decryption keys never leave your account. The same free encrypted cloud storage stack runs on every paid plan.",
+        "Google Drive and OneDrive run free tiers too, but their default terms let them scan or process what you upload. Internxt encrypts your files on your device first, so our servers are only ever holding ciphertext. We can't view, share, copy, or delete what's inside.",
+        "Internxt is independently audited and holds ISO 27001:2022 certification, SOC 2 compliance, HIPAA compliance, and GDPR compliance. Whether you're storing personal files, healthcare records, or finance data, you're getting the same encryption stack. There's no tiered security where free users get a weaker version.",
+        "Internxt's client code is up at github.com/internxt in full, and the platform is independently audited. You can read the implementation that's actually running.",
+        "Your keys, your files, your account. Internxt holds no master key, no shadow copy, and no decryption pathway. As free private cloud storage, this architecture runs the same on day one as it does on every paid plan. Export every file through the desktop client, the CLI, or any WebDAV app. No lock-in.",
+        "Internxt can't read your files because we never get the decryption keys. No admin override, no law-enforcement backdoor, no scanner running over file contents. You can verify the whole thing in the open-source client on GitHub."
       ]
     }
   },
   "CoreFeatures": {
     "title": "Core Features of our free online cloud storage",
-    "description": "Complete security for your data, everything you need to keep your files secure and private",
+    "description": "Free secure cloud storage on the same Kyber-512 and AES-256 stack you get on every paid plan, with working desktop, mobile, web, and CLI apps from day one. No card to sign up, and the encryption doesn't downgrade because the storage is free. If you put zero-knowledge architecture above bundled extras, this is the best free cloud storage option going.",
     "accordionCards": {
       "titles": ["A fully private ecosystem", "Secure collaboration", "Your cloud, like a local drive"],
       "descriptions": [
-        "Internxt bundles encrypted storage, backups, VPN, Antivirus, Cleaner, Meet, Mail & more—everything to break free from Big Tech.",
-        "Send files with encrypted links, passwords, and controls. Work with your team in real time while keeping data private.",
-        "Use Internxt as a virtual drive to sync, upload, and access files seamlessly—just like on your computer, but fully secure and always up to date."
+        "One Internxt account signs you into the whole product line: Drive, VPN, Antivirus, Cleaner, Meet, and Send. Drive itself runs zero-knowledge AES-256 and Kyber-512 encryption on every plan, free or paid. Paid plans bump up storage, add more VPN locations, and unlock collaboration tools like file versioning, but the privacy floor on Drive doesn't change.",
+        "Send files to anyone, including people without an Internxt account. The shared payload travels as ciphertext from your device to theirs, and the recipient's device decrypts it on their end. The link itself doesn't contain a readable copy of the file.",
+        "The Internxt desktop client mounts Drive as a virtual disk on Windows, macOS, and Linux. Drag files into the folder. They encrypt on-device, sync to EU data centers via OVHcloud, and stay available offline through the local cache."
       ]
     },
     "cards": {
       "titles": ["End-to-end encrypted", "Access controls", "Encrypted backups"],
       "descriptions": [
-        "All files are encrypted with post-quantum and zero-knowledge encryption. Nobody but you, or those you choose to share files with, can see its contents.",
-        "You control exactly who can access your shared files with encrypted, password-protected links you can revoke anytime.",
-        "Ensure your files stay safe from ransomware and accidental loss with scheduled, encrypted backups that provide extra protection and peace of mind."
+        "End-to-end encryption runs by default on every plan, free included. Your files encrypt locally before they upload, decrypt only on your own devices, and travel as ciphertext through our servers in between. There's no key-management step you have to remember.",
+        "Every share link is encrypted, and you can lock it with a password, set an expiry date, or revoke it from your dashboard with one click. Internxt can't see what's inside the link. Only you and your recipient hold the key.",
+        "Schedule encrypted backups for any folder on Windows, macOS, or Linux. Versioning keeps recoverable copies of every changed file, so if something corrupts or rewrites your local copy, you can roll back to a clean version."
       ]
     }
   },
   "AllInOnePrivacySection": {
-    "title": "Your all-in-one privacy solution",
+    "title": "Free cloud storage in a full privacy suite",
     "scrollableSection": {
-      "titles": ["Full privacy suite", "For business", "For families", "Unmatched pricing"],
+      "titles": ["Full privacy suite", "For business", "For families", "Lifetime and annual pricing"],
       "descriptions": [
-        "Go beyond cloud storage and include VPN, Antivirus, Cleaner, Meet, and Mail in your privacy package.",
-        "Protect your company from ransomware and data breaches with our cloud storage for business.",
-        "Store and share your family photos, videos, and memories, and keep them safe forever.",
-        "No hidden fees, pick your plan and enjoy its features and full encryption at one price. "
+        "Internxt isn't a paywall over the privacy architecture. Drive on the free plan runs the same AES-256 and Kyber-512 zero-knowledge encryption as every paid plan, and the same Internxt account works across VPN, Antivirus, Cleaner, Meet, and Send. What paid plans add is more storage, more VPN locations, and tools like file versioning and collaborative folders.",
+        "Internxt Business runs the same zero-knowledge stack, with team folders, admin controls, SSO, and shared billing on top. Files stay in EU data centers, and ISO 27001:2022 plus GDPR coverage handle most regulated workloads.",
+        "Share albums with family through encrypted invitation links. RAW files, 4K video, and full-resolution photos stay in their original format. Internxt doesn't re-encode, scan, or downgrade your media to save server space.",
+        "Free at sign-up, no card required. Annual paid plans start at €3 a month. Lifetime plans secure 1 TB, 3 TB, or 5 TB of encrypted storage for a single one-time payment, and your storage stays active for as long as your account does."
       ]
     }
   },
@@ -185,40 +185,33 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "What is Internxt Drive?",
+        "question": "What is free cloud storage and how does it work?",
         "answer": [
-          "Internxt Drive is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Our service doesn’t access your personal data or files. Instead, it is designed to give you back control over your files and protect you from data collectors."
+          "Free cloud storage is online storage a provider gives you without payment, usually a smaller tier of their paid plans. With Internxt, every file gets encrypted on your device with AES-256 and Kyber-512 post-quantum cryptography before it uploads. The ciphertext lands in EU data centers; the decryption keys stay in your account, so we can't read your files even on the free tier."
         ]
       },
       {
-        "question": "How to create an Internxt account?",
+        "question": "Is Internxt's free cloud storage actually free?",
         "answer": [
-          "Head to our website and click 'Get started' in the upper right-hand corner. Fill out the registration form by entering an email address, then create your password. No identity or email verification is required to start using Internxt's services."
+          "Yes. Free at sign-up with no card required and no email verification step. The plan stays active for as long as your Internxt account exists, and Internxt doesn't scan your files for ad targeting, content moderation, or AI training. Paid plans add capacity and tools, but the free tier isn't a trial."
         ]
       },
       {
-        "question": "How to upload files to Internxt Drive?",
+        "question": "How much free cloud storage do you get with Internxt?",
         "answer": [
-          "Visit Drive Web and log in. Drag and drop your chosen files or photos directly into the browser window. You can also click 'New' in the right-hand corner of the browser, which will open Explorer or Finder, and select the files you wish to upload."
+          "The free plan starts at 1 GB of encrypted cloud storage, and the plan stays active for as long as your Internxt account does. If you need more, annual plans start at €3 a month for more storage and tools, and Lifetime plans secure 1 TB, 3 TB, or 5 TB of storage with a single one-time payment."
         ]
       },
       {
-        "question": "How to install Internxt's app?",
+        "question": "Which free cloud storage is most secure?",
         "answer": [
-          "Go to the Internxt website, scroll down the home page, and select 'Download apps.' Internxt App is also available Play Store or App Store. Once the downloading process is completed, you will be asked to run our storage app. Downloading our Drive app allows you to make better use of Internxt's ecosystem."
+          "Free cloud storage is most secure when the provider uses zero-knowledge encryption with the decryption keys held only on your devices. Internxt, Proton Drive, MEGA, and Sync.com all run zero-knowledge architectures on their free plans. Google Drive, OneDrive, Dropbox, and iCloud's default mode use server-side encryption, which lets the provider read or scan file contents."
         ]
       },
       {
-        "question": "Can I configure 2FA with Internxt?",
+        "question": "What's the difference between Internxt's free plan and paid plans?",
         "answer": [
-          "Yes. You can configure two-factor authentication (2FA) for your Internxt account from the Drive Web app. Moreover, you can use Authy or any other 2FA tool to generate your 2FA code with Internxt, to log into our online drive app."
-        ]
-      },
-      {
-        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
-        "answer": [
-          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
-          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+          "The encryption is identical on every plan: AES-256, Kyber-512 post-quantum, TLS 1.3, and zero-knowledge key custody. Paid plans add storage capacity (1 TB to 5 TB on Lifetime), more VPN locations, and tools like file versioning, collaborative folders, Cleaner, and Meet. The privacy floor doesn't change between free and paid."
         ]
       }
     ]

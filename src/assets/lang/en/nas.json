@@ -9,21 +9,21 @@
   "WhatIsNASSection": {
     "title": "What is a NAS device, and why should I use it?",
     "description": [
-      "A NAS (Network Attached Storage) is a dedicated storage system that connects to your home or office network, acting as a personal server for your files. Using it with Internxt lets you back up, sync, and manage data securely while keeping full control and ownership of your files.",
-      "Your data is encrypted and secure with Internxt’s post-quantum encryption, and the keys are managed on your device. This offers the convenience of NAS devices with the security and privacy of Internxt Drive."
+      "NAS cloud backup is encrypted cloud storage that takes a copy of your NAS data off-site, so files survive hardware failure, theft, or local disasters. A NAS device is the on-premises copy; the cloud holds the off-site copy. Internxt connects to Synology and QNAP through a Docker container, so backups leave the network already encrypted.",
+      "Files are encrypted on the device with Kyber-512 post-quantum cryptography and AES-256, and the keys live only on your hardware. The architecture is open source on GitHub and independently audited. Learn more about private cloud storage at internxt.com/private-cloud-storage-solutions."
     ]
   },
   "InternxtNASIntegrations": {
     "title": "Internxt NAS integrations",
-    "description": "Install the Docker app to connect your NAS to Synology or QNAP. This setup lets you securely access, manage, and sync your files while keeping full control over your data.",
+    "description": "Internxt's NAS integrations run as a Docker container that pulls our open-source CLI image, registers with your Internxt account, and exposes a mount point inside Synology DSM 7+ or QNAP QTS 5+. From there, Hyper Backup or HBS3 treats the mount as a backup destination. The same workflow your NAS already runs, with ciphertext-only upload to our European data centers. Setup takes about ten minutes and runs unattended once configured.",
     "synologyBox": {
       "title": "Synology",
-      "description": "Synology is a popular NAS system that allows you to store, organize, and access your files from multiple devices. You can run apps, manage your backups, and share data securely.",
+      "description": "Synology NAS cloud backup connects DSM-native tools to Internxt's encrypted cloud. The Internxt CLI runs as a Docker container inside DSM, exposing a mount that Hyper Backup or Cloud Sync can target. Source-side encryption means your Synology volume contents leave the network already wrapped in Kyber-512 and AES-256 ciphertext, so Internxt and our infrastructure partners only ever store the encrypted blocks. Restores stream back through the same container with the encryption keys held on your hardware.",
       "image": "synology"
     },
     "QNAPBox": {
       "title": "QNAP",
-      "description": "By connecting Internxt via Docker, you can securely manage, sync, and access your files directly on your QNAP NAS.",
+      "description": "QNAP NAS cloud backup uses the same Docker pattern as Synology, running our CLI image inside QTS as a Container Station service. HBS3 (Hybrid Backup Sync 3) points at the exposed mount and pushes ciphertext to Internxt's European OVHcloud data centers. The container is the only piece that touches plaintext. Once it hands files to the cloud, both Internxt and our infrastructure partners see encrypted blocks only. Versioning is preserved, so a ransomware infection on the QNAP cannot rewrite the cloud copy.",
       "image": "QNAP"
     }
   },
@@ -34,38 +34,38 @@
   },
   "horizontalScrollableSection": {
     "title": "Backup your NAS in the cloud",
-    "description": "Manage, sync, and back up your data in the cloud with Internxt’s NAS support. Thanks to Internxt’s post-quantum encryption, your privacy is always guaranteed.",
+    "description": "NAS cloud backup sends your NAS data to encrypted off-site storage where files survive hardware failure, theft, ransomware, or accidental deletion. Internxt's NAS support runs alongside your existing Synology Hyper Backup or QNAP HBS3 workflow, treating the cloud copy as the off-site arm of the standard 3-2-1 backup rule. Every upload is encrypted on your device with Kyber-512 and AES-256 before it leaves the network, and your encryption keys never leave your hardware. Explore more about cloud storage backup solutions at internxt.com/cloud-storage-backup-solutions.",
     "scrollableSection": {
-      "titles": ["Data loss protection", "Real-time syncing", "Security", "Own your data"],
+      "titles": ["Data loss protection", "Real-time syncing", "Security", "Ransomware recovery"],
       "descriptions": [
-        "Never worry about losing your files. Internxt syncs your NAS automatically, so every document, photo, and project is safely backed up in the cloud. This protects against hardware failures or accidental deletion.",
-        "Keep your files up-to-date across all devices. Any changes you make on your NAS or in Internxt Drive are automatically reflected everywhere, ensuring your team or personal devices always have the latest version.",
-        "Your data is protected with post-quantum and zero-knowledge encryption, so all keys are managed and stored on your device for maximum privacy. Only you can access your files, and no hackers, third parties, or even Internxt can read your data.",
-        "Network Attached Storage, or NAS, lets you manage storage, set permissions, and create backups on your own terms, giving you flexibility and ownership over your information with the convenience and privacy of Internxt Drive."
+        "Data loss protection means the cloud copy of your NAS data is independent of the local hardware that holds the original. Internxt is the off-site copy in the 3-2-1 backup rule: three copies of every file, on two media types, with one copy held off-site. Hyper Backup on Synology and HBS3 on QNAP push incremental snapshots to our European data centers on the schedule you set. If a drive fails, a fire takes the rack, or ransomware encrypts the array, the encrypted cloud copy is recoverable from any client.",
+        "Real-time syncing keeps the cloud copy current as files change on the NAS. Backup jobs run on the schedule Hyper Backup or HBS3 enforces, typically hourly for active directories and daily for archives. Files up to 5 TB per object upload over a single TLS 1.3 connection, and incremental syncs transfer only the changed blocks. The Internxt clients on Windows, macOS, Linux, iOS, and Android read the same encrypted copy as the NAS, so a file edited on a laptop appears on the next NAS sync without re-encryption.",
+        "Security on Internxt's NAS backup rests on three architectural choices. Files are encrypted on your device with Kyber-512 post-quantum cryptography and AES-256 before upload, so only ciphertext reaches our European OVHcloud data centers. Encryption keys are stored only on your hardware, so Internxt has no access to them and cannot decrypt your files even under legal compulsion. The codebase is open source on GitHub, was independently audited, and runs under ISO 27001:2022 and HIPAA compliance with GDPR governance across all EU data centers.",
+        "Ransomware recovery on a NAS depends on whether the attacker can reach the backup copy. Internxt's architecture closes that path. Ransomware that compromises a Synology or QNAP endpoint can encrypt local volumes, but the cloud copy is held under different keys—your on-device encryption keys, not the NAS account's credentials. Internxt also retains versioned snapshots, so a forensic restore can pull the last clean version from before the infection. The attacker only sees ciphertext on our infrastructure and never holds the keys to undo it."
       ]
     }
   },
   "whatInternxtOffersSection": {
     "title": "What Internxt offers with NAS devices",
-    "description": "Connect Internxt Drive to your NAS system for a secure cloud solution to backup and sync your files in total privacy.",
+    "description": "Internxt extends a single encrypted account across Synology, QNAP, and every other device your team uses. The same files, the same keys, the same ciphertext-only architecture, accessible from a Docker container on the NAS and from web, desktop, and mobile clients.",
     "cards": {
       "titles": ["QNAP & Synology devices", "Access from anywhere", "Ransomware protection"],
       "descriptions": [
-        "Enjoy all the benefits of Internxt with the flexibility and control of QNAP and Synology devices for effortless cloud storage management.",
-        "Get secure remote access to your files from anywhere, while giving you full control over your data.",
-        "Protect your files against ransomware with encrypted backups that let you quickly restore files affected by ransomware or accidental data loss."
+        "QNAP and Synology integration runs through the Internxt CLI Docker image. On Synology DSM 7+, the container appears as a Hyper Backup destination. On QNAP QTS 5+, HBS3 treats it as a Hybrid Backup target. Either path encrypts data on-device with Kyber-512 and AES-256 before upload, mounts the cloud as a native filesystem path, and respects the NAS's own scheduling. No proprietary backup format: the cloud copy is a direct ciphertext mirror of the local NAS state.",
+        "Encrypted remote access reads the same cloud copy from any device with Internxt installed. Web, Windows, macOS, Linux, iOS, and Android clients each decrypt locally with your on-device key. The cloud surface is a single source for the NAS data, the laptop's working files, and the phone's mobile uploads. One ciphertext store, one key custody model, six client shapes. Connections use TLS 1.3, and the EU data center footprint keeps requests inside GDPR jurisdiction by default.",
+        "Ransomware protection on a NAS backup depends on whether the attacker can rewrite the backup copy. Internxt holds versioned ciphertext, and the encryption keys live on your device, not in the NAS account. An infection that encrypts local DSM or QTS volumes cannot decrypt or destroy the cloud copy, because the attacker doesn't hold the keys. Recovery pulls the last clean version from the version history, restores through the same Docker container that handled the original backup, and writes back to a clean NAS volume."
       ]
     }
   },
   "howSetupSection": {
     "title": "How to set up your NAS device with Internxt",
-    "description": "Instructions on how to set up and configure your NAS device with Internxt Drive:",
+    "description": "Setting up Internxt on a Synology or QNAP NAS takes three steps: pull the Docker image, configure the container with your Internxt credentials, and point Hyper Backup or HBS3 at the mounted volume. The CLI README, the user guide, and the open-source repository back each step. Discover more about our open-source cloud storage at internxt.com/open-source.",
     "cards": {
       "titles": ["ReadMe", "User guide", "Open source"],
       "descriptions": [
-        "Get the information you need about NAS capabilities with Internxt and usage instructions for different platforms from our GitHub page.",
-        "Learn how to set up your Network Attached Storage device with Internxt with examples and explanations.",
-        "Verify the security of Internxt and stay updated for new updates and features."
+        "The Internxt CLI Docker image lives on GitHub Container Registry. Pull with `docker pull internxt/cli:latest`, run the container with your Internxt API token, and mount `/data` to the NAS volume you want to back up. Synology DSM 7+ exposes this through Container Manager; QNAP QTS 5+ uses Container Station. The README covers the full docker run command, required ports, and volume mounts.",
+        "On Synology, install Docker (or Container Manager on DSM 7.2+), pull the Internxt image, configure environment variables for your account, and add the mount as a Hyper Backup destination. On QNAP, the flow is the same through Container Station and HBS3. The user guide walks through screen-by-screen setup for each platform with screenshots, retention policies, and recovery workflows.",
+        "The Internxt CLI repository at github.com/internxt/cli holds every client file the Docker container runs. The same codebase powers the open-source cloud storage product on every platform. The repository carries release notes for each version. Verifying claims about encryption or key handling means reading the actual code, not a marketing PDF."
       ],
       "cta": ["Read guide", "Learn more", "See details"]
     }
@@ -75,47 +75,37 @@
     "description": "Manage your NAS with Internxt",
     "cta": "Get Internxt"
   },
-
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Where is Internxt based?",
+        "question": "Can NAS be used as cloud storage?",
         "answer": [
-          "Internxt is based in Valencia, Spain. Internxt has numerous European cloud data centers to store your data in line with GDPR and other compliance regulations."
+          "A NAS can act as cloud storage for devices on your local network — it stores files centrally and serves them over the LAN. For off-site access and protection against fire, theft, or hardware failure, you also need an encrypted cloud copy. The 3-2-1 backup rule treats the NAS as the on-premises copy and the cloud as the off-site copy."
         ]
       },
       {
-        "question": "Where are Internxt’s cloud data centers located?",
+        "question": "Is a NAS better than cloud storage?",
         "answer": [
-          "Internxt makes use of a multi-cloud network strategy, ensuring files are stored across multiple European cloud data centers to ensure you get the best performance, security, and protection for your files."
+          "A NAS and cloud storage are complementary, not competitors. A NAS gives you fast local access, full control, and no monthly fees. Cloud storage gives you off-site protection, geographic redundancy, and access from anywhere. The 3-2-1 backup rule uses both: three copies of every file, two media types, one off-site. Internxt is the encrypted off-site copy for Synology and QNAP setups."
         ]
       },
       {
-        "question": "How do Internxt’s data centers work?",
+        "question": "What are the downsides of NAS?",
         "answer": [
-          "Internxt partners with OVHcloud, who own European cloud data centers and multiple locations across the globe to store your cloud data.",
-          "These data center infrastructures host thousands of servers to guarantee availability, performance, and redundancy to ensure quick and secure access to files while keeping your files secure."
+          "A NAS is a single point of failure for the data on its drives. Hardware failures, fires, theft, and ransomware that compromises the NAS endpoint can all destroy local copies. A NAS also lacks geographic redundancy: if the building goes down, so does the data. Pairing a NAS with encrypted cloud backup closes both gaps and satisfies the 3-2-1 backup rule."
         ]
       },
       {
-        "question": "What is an availability zone?",
+        "question": "Does Internxt work with Synology and QNAP?",
         "answer": [
-          "Availability zones are a set of one or more data centers located in a region. Each availability zone works independently and has its own power, cooling, and network to prevent power outages or other events such as infrastructure failure.",
-          "Zones within a region are linked to provide higher availability and low-latency connections, ensuring applications can stay online even if one zone experiences a failure."
+          "Yes. Internxt's NAS support runs as a Docker container on Synology DSM 7+ and QNAP QTS 5+. The container exposes a mount that Hyper Backup, Cloud Sync, or HBS3 can target as a backup destination. Files are encrypted on the NAS with Kyber-512 and AES-256 before upload, and the encryption keys never leave your hardware."
         ]
       },
       {
-        "question": "Can Internxt access my files?",
+        "question": "How to back up NAS to cloud?",
         "answer": [
-          "No, nobody, including Internxt, can access your files. All your files and data are encrypted on your device with post-quantum encryption. As the keys are stored and managed on your device and not by us or our service providers, only you or people you choose to share files with can decrypt them.",
-          "All files stored in our data centres are encrypted, so no employees or hackers can view their contents."
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing hello@internxt.com"
+          "NAS cloud backup runs in three steps: install the Internxt CLI Docker container on Synology DSM 7+ or QNAP QTS 5+, mount a NAS volume to the container, and point Hyper Backup, Cloud Sync, or HBS3 at the mounted destination. Files encrypt on the NAS with Kyber-512 and AES-256 before upload, and incremental snapshots run on the schedule your NAS tool enforces."
         ]
       }
     ]

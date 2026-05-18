@@ -27,7 +27,7 @@ export default function ThreeCardsSection({
   const [isMobile, setIsMobile] = useState(false);
 
   const redirections = [
-    'https://github.com/internxt/cli/blob/7d7c9b233f20a71513a8ffc226d340d34c349741/docker/README.md',
+    'https://github.com/internxt/cli/blob/main/docker/README.md',
     'https://help.internxt.com/en/',
     'https://github.com/internxt/cli',
   ];
