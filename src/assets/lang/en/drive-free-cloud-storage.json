@@ -90,7 +90,7 @@
   },
   "MadeInEuropeSection": {
     "title": "Made in Europe",
-    "description": "Your data is protected with strict European compliance laws and regulations combined with award-winning encryption.",
+    "description": "Your data is protected with strict European compliance laws and regulations combined with independently audited, post-quantum encryption.",
     "cards": {
       "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
@@ -143,7 +143,7 @@
   },
   "AdvancedToolsSection": {
     "title": "Advanced tools for experts",
-    "description": "Internxt works on Windows, Mac, Linux, and mobile—with advanced tools for developers and businesses.",
+    "description": "Internxt works on Windows, Mac, Linux, and mobile, with advanced tools for developers and businesses.",
     "powerUsers": {
       "title": "Power tools \n **for power users**",
       "description": "Internxt CLI is a powerful command line tool that lets you\n access and manage Internxt Drive data via commands\n and WebDAV.",
@@ -160,7 +160,7 @@
     },
     "webDAV": {
       "title": "WebDAV",
-      "description": "Run Internxt securely on any platform with your favorite WebDAV client and CLI—end-to-end encrypted, zero-knowledge protected.",
+      "description": "Run Internxt securely on any platform with your favorite WebDAV client and CLI, end-to-end encrypted and zero-knowledge protected.",
       "cta": "Get WebDAV"
     },
     "Rclone": {

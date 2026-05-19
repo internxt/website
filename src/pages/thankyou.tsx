@@ -27,7 +27,7 @@ const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang
   const locale = lang as string;
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang}>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang} robots="noindex">
       <Navbar lang={locale} textContent={navbarLang} cta={['default']} isLinksHidden hideCTA />
 
       <section className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-24 text-center">
