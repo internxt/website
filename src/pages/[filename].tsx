@@ -73,6 +73,7 @@ function CombinedSpecialOffer({
     annualPlans,
     lifetimePlans,
     isClubic,
+    requireAnnualDiscount,
   } = useOfferConfig(pathname);
 
   const {
@@ -83,8 +84,11 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: requireAnnualDiscount ? couponCode : undefined,
     couponCodeForLifetime: couponCode,
   });
+
+  console.log('requireAnnualDiscount', requireAnnualDiscount);
 
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
@@ -96,6 +100,7 @@ function CombinedSpecialOffer({
 
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const themeClasses = getThemeClasses(isDarkMode);
   const openerInterval = annualPlans ? Interval.Year : Interval.Lifetime;
@@ -140,7 +145,11 @@ function CombinedSpecialOffer({
       description={metatags!.description}
       segmentName="Partners"
       lang={lang}
-      robots={pathname === 'world-backup-day' || pathname === 'earth-day' || pathname === 'drop-offer' ? 'noindex,follow' : undefined}
+      robots={
+        pathname === 'world-backup-day' || pathname === 'earth-day' || pathname === 'drop-offer'
+          ? 'noindex,follow'
+          : undefined
+      }
     >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
@@ -175,6 +184,7 @@ function CombinedSpecialOffer({
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
+            ...(requireAnnualDiscount ? { individuals: decimalDiscount } : {}),
             lifetime: decimalDiscountForLifetime,
           }}
           lifetimeCoupons={lifetimeCoupons}

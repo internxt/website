@@ -274,6 +274,7 @@ export enum PromoCodeName {
   revolut = 'REVOLUT',
   scott = 'SCOTT',
   dropOffer = 'DROPOFFER',
+  adi4u = 'ADI4U',
 }
 
 export interface PromoCodeProps {

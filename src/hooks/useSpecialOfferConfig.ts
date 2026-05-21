@@ -68,6 +68,7 @@ export const ALLOWED_PATHS = [
   'revolut',
   'scott',
   'drop-offer',
+  'adi4u',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -76,6 +77,7 @@ export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
+export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>(['adi4u', 'drop-offer']);
 
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
@@ -143,6 +145,7 @@ export const COUPON_CODES = {
   revolut: PromoCodeName.revolut,
   scott: PromoCodeName.scott,
   'drop-offer': PromoCodeName.dropOffer,
+  adi4u: PromoCodeName.adi4u,
 };
 
 interface OfferConfig {
@@ -156,6 +159,7 @@ interface OfferConfig {
   annualPlans: boolean;
   lifetimePlans: boolean;
   isClubic: boolean;
+  requireAnnualDiscount?: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -174,6 +178,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         annualPlans: false,
         lifetimePlans: false,
         isClubic: false,
+        requireAnnualDiscount: false,
       };
     }
 
@@ -185,6 +190,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
+    const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -201,6 +207,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       annualPlans,
       lifetimePlans,
       isClubic,
+      requireAnnualDiscount,
     };
   }, [pathname]);
 };
