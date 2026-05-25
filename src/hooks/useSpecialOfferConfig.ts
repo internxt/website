@@ -72,6 +72,7 @@ export const ALLOWED_PATHS = [
   'nFire',
   'techsagar',
   'levelupid',
+  'privacytutor',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -89,6 +90,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'nFire',
   'techsagar',
   'levelupid',
+  'privacytutor',
 ]);
 
 export const COUPON_CODES = {
@@ -161,6 +163,7 @@ export const COUPON_CODES = {
   nFire: PromoCodeName.nFire,
   techsagar: PromoCodeName.techsagar,
   levelupid: PromoCodeName.levelupid,
+  privacytutor: PromoCodeName.privacyTutor,
 };
 
 interface OfferConfig {
@@ -194,6 +197,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         lifetimePlans: false,
         isClubic: false,
         requireAnnualDiscount: false,
+        isPrivacyTutor: false,
       };
     }
 
@@ -205,6 +209,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
+    const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
@@ -222,6 +227,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       annualPlans,
       lifetimePlans,
       isClubic,
+      isPrivacyTutor,
       requireAnnualDiscount,
     };
   }, [pathname]);

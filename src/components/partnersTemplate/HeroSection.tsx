@@ -24,6 +24,7 @@ interface HeroSectionForPartnerProps {
   isValentinesMode?: boolean;
   isClubic?: boolean;
   isPcMag?: boolean;
+  isPrivacyTutor?: boolean;
   isUltimatePlan?: boolean;
   specialOffer?: boolean;
 }
@@ -36,6 +37,7 @@ export default function HeroSection({
   isValentinesMode = false,
   image = 'internxt-private-cloud',
   isClubic = false,
+  isPrivacyTutor = false,
   isUltimatePlan = false,
   isPcMag = false,
   specialOffer = false,
@@ -131,6 +133,26 @@ export default function HeroSection({
           </div>
         )}
 
+        {isPrivacyTutor && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/partnerships/PrivacyTutor.webp')}
+              width={150}
+              height={30}
+              alt="Privacy Tutor logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>
+        )}
+
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
@@ -163,7 +185,9 @@ export default function HeroSection({
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && !isUltimatePlan && (
               <span
-                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}
+                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${
+                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
+                }`}
               >
                 <span>{parsePercentText(textContent.subtitle)}</span>
                 {specialOffer ? <span>{textContent.subtitle2}</span> : <span>{textContent.lifetimeSubtitle2}</span>}

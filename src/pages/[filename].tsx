@@ -73,6 +73,7 @@ function CombinedSpecialOffer({
     annualPlans,
     lifetimePlans,
     isClubic,
+    isPrivacyTutor,
     requireAnnualDiscount,
   } = useOfferConfig(pathname);
 
@@ -161,6 +162,7 @@ function CombinedSpecialOffer({
         isClubic={isClubic}
         isUltimatePlan={onlyUltimatePlan}
         specialOffer={requireAnnualDiscount}
+        isPrivacyTutor={isPrivacyTutor}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
