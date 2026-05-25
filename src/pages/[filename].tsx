@@ -160,6 +160,7 @@ function CombinedSpecialOffer({
         image={alternativeImages}
         isClubic={isClubic}
         isUltimatePlan={onlyUltimatePlan}
+        specialOffer={requireAnnualDiscount}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />

@@ -163,12 +163,10 @@ export default function HeroSection({
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && !isUltimatePlan && (
               <span
-                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
+                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}
               >
-                <p className={darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '}>
-                  {parsePercentText(textContent.subtitle)}
-                </p>
-                {specialOffer ? <p>{textContent.subtitle2} </p> : <p>{textContent.lifetimeSubtitle2}</p>}
+                <span>{parsePercentText(textContent.subtitle)}</span>
+                {specialOffer ? <span>{textContent.subtitle2}</span> : <span>{textContent.lifetimeSubtitle2}</span>}
               </span>
             )}
             <p
