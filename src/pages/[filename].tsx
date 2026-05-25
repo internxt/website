@@ -73,6 +73,7 @@ function CombinedSpecialOffer({
     annualPlans,
     lifetimePlans,
     isClubic,
+    isPrivacyTutor,
     requireAnnualDiscount,
   } = useOfferConfig(pathname);
 
@@ -160,6 +161,8 @@ function CombinedSpecialOffer({
         image={alternativeImages}
         isClubic={isClubic}
         isUltimatePlan={onlyUltimatePlan}
+        specialOffer={requireAnnualDiscount}
+        isPrivacyTutor={isPrivacyTutor}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
@@ -250,6 +253,15 @@ export async function getServerSideProps(ctx) {
     return {
       redirect: {
         destination: '/es/baity',
+        permanent: false,
+      },
+    };
+  }
+
+  if (pathname === 'heisect' && lang !== 'de') {
+    return {
+      redirect: {
+        destination: '/de/heisect',
         permanent: false,
       },
     };

@@ -275,6 +275,10 @@ export enum PromoCodeName {
   scott = 'SCOTT',
   dropOffer = 'DROPOFFER',
   adi4u = 'ADI4U',
+  nFire = 'NFIRE',
+  techsagar = 'TECHSAGAR',
+  levelupid = 'LEVELUPID',
+  privacyTutor = 'PRIVACY',
 }
 
 export interface PromoCodeProps {

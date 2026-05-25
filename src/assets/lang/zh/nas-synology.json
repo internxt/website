@@ -1,0 +1,122 @@
+{
+  "HeroSection": {
+    "label": "Synology NAS",
+    "title": "Synology NAS 云备份到 **Internxt Drive**",
+    "subtitle": "使用 Internxt Drive 和 Synology 安全地备份您的文件",
+    "features": ["Synology NAS 云备份", "安全传输", "加密同步和备份"],
+    "cta": "获取 Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "什么是 Synology NAS 设备，我为什么要使用它？",
+    "description": [
+      "NAS 云备份是一种加密云存储解决方案，可将您的设备数据和云端数据同时复制，以防止文件因硬件故障、盗窃或本地灾难而丢失。",
+      "Internxt 通过 Docker 容器连接到您的 Synology 设备，因此离开网络的备份已使用 AES-256 和 Kyber-512 后量子密码学以零知识架构进行加密。",
+      "虽然 Synology NAS 可有效存储数据，但仍可能受到各种风险的影响，包括硬件故障、意外丢失、勒索软件和环境事件。使用云备份有助于保护您的数据，并随时可以进行恢复。",
+      "Synology 设备专注于简单性和集成性，通过 Hyper Backup 和 Cloud Sync 等工具使云备份设置变得简单明了。这使您无需复杂配置即可轻松连接到 Internxt Drive。"
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Internxt 与 Synology NAS 的集成",
+    "description": "Internxt 通过我们的开源 CLI 以 Docker 容器形式安装在您的 NAS 上，该 CLI 将您的系统连接到您的账户，并为您的文件创建安全的备份目标。这会在 Synology DSM 7+ 内公开一个挂载点，并将 Hyper Backup 或 HBS3 设置为备份目标。您的数据在上传前会被加密，因此只有加密文件才会发送到我们的欧洲数据中心。",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Internxt 对 Synology 的 NAS 支持通过 Internxt CLI Docker 镜像运行。Internxt 通过 Docker 应用程序与 Synology NAS 集成，允许连接到标准备份工具（如 Hyper Backup）或文件级同步方法，让用户可以直接将 NAS 数据发送到 Internxt 的加密云存储，用于异地备份和灾难恢复。此集成在保持对现有工作流程完全控制的同时简化了备份，并添加了 Internxt 的 Kyber-512 和 AES-256 零知识加密的安全云存储。",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "QNAP NAS 云备份使用与 Synology 相同的 Docker 容器方式。HBS3（混合备份同步 3）指向公开的挂载点，并将加密文件推送到 Internxt 的欧洲数据中心。您的文件受到 Internxt 后量子和零知识加密的保护，而您的 NAS 是唯一持有解密数据密钥的设备。",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Synology NAS 备份解决方案",
+    "description": "像 Internxt Drive 这样可靠的云备份解决方案是保护您 NAS 数据的重要策略。Internxt 提供 Synology Hyper Backup 和 Synology Cloud Sync 集成，确保您的文件始终安全、可访问且可恢复。Synology 设备还包括版本控制、压缩和重复数据删除等功能，以优化您的云备份解决方案。",
+    "cta": "获取 Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "在云端备份您的 Synology NAS",
+    "description": "NAS 云备份将您的 Synology NAS 数据发送到加密的异地存储，文件在这里能够抵御硬件故障、盗窃、勒索软件或意外删除。Internxt 的 NAS 支持与您现有的 Synology Hyper Backup 工作流程并行运行。每次上传都在离开网络之前使用 Kyber-512 和 AES-256 在您的设备上进行加密，您的加密密钥永远不会离开您的硬件。",
+    "scrollableSection": {
+      "titles": ["数据丢失保护", "实时同步", "安全性", "拥有您的数据"],
+      "descriptions": [
+        "Synology 云备份包括 RAID 保护等功能，即使驱动器发生故障也能帮助保持文件可访问，而快照和版本历史功能使恢复已删除或更改的文件成为可能。Internxt 的 Synology NAS 支持通过将所有文件存储在一个安全的集中位置来帮助防止数据丢失。它支持计算机、手机、服务器和外部驱动器的自动备份，降低丢失重要数据的风险。",
+        "Synology 实时同步功能包括跨设备和备份位置的自动文件更新，帮助保持文件在所有系统中的最新和可访问状态。Internxt 的 Synology NAS 支持确保所有更改都能实时同步，降低版本过时、更新丢失或意外覆盖的风险。",
+        "Synology NAS 减少了对隐私保护较弱的云提供商的依赖，让您完全控制自己的云，并具有用户权限、双重验证和密码管理等额外安全功能。将 Synology NAS 与 Internxt Drive 结合使用，您将获得 Kyber-512 和 AES-256 的零知识加密。由于 Internxt 完全开源且经过独立审计，您可以放心您的数据受到最佳安全性和加密的保护。",
+        "通过将所有内容存储在您自己的设备上，使用 Synology NAS 拥有您的数据，完全控制文件的存储位置和访问方式。Internxt 在您这端加密所有文件和数据，因此只有您可以访问它们，让您完全控制您的数据和私有云存储。"
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Internxt 为 Synology NAS 支持提供的功能",
+    "description": "Internxt 为 Synology 提供 NAS 支持，以便在云中上传、同步、共享和备份您的文件，保护文件免受数据丢失和勒索软件的侵害。",
+    "cards": {
+      "titles": ["Synology", "从任何设备访问", "勒索软件保护"],
+      "descriptions": [
+        "Internxt 对 Synology 的 NAS 支持通过 Internxt CLI Docker 镜像运行。Internxt 通过 Docker 应用程序与 Synology NAS 集成，允许连接到标准备份工具（如 Hyper Backup）或文件级同步方法，让用户可以直接将 NAS 数据发送到 Internxt 的加密云存储，用于异地备份和灾难恢复。此集成在保持对现有工作流程完全控制的同时简化了备份，并添加了 Internxt 的 Kyber-512 和 AES-256 零知识加密的安全云存储。",
+        "加密远程访问让您可以从任何安装了 Internxt 的设备安全地访问相同的云文件。适用于 Web、Windows、macOS、Linux、iOS 和 Android 的应用程序均使用您自己的密钥在本地解密您的文件，因此只有您才能看到您的数据。这使您的 NAS、计算机或手机的所有内容都保存在一个安全的地方。",
+        "NAS 上的勒索软件恢复取决于备份是否可被攻击者访问。Internxt 通过使用存储在您设备上（而非 NAS 或云端）的密钥对云备份进行加密来防止这一问题。即使 Synology 设备遭到入侵，攻击者也只能加密本地数据，而云备份则保持受保护和不可访问的状态。版本快照还允许在感染前恢复干净的文件版本。"
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "设置您的 Synology NAS 云备份",
+    "description": "您可以按照我们开源 GitHub 上的详细教程分三步设置 Synology NAS 云备份，以指导您完成每个步骤。了解更多关于我们开源云存储的信息，请访问 internxt.com/open-source。",
+    "cards": {
+      "titles": ["自述文件", "用户指南", "开源"],
+      "descriptions": [
+        "自述文件介绍了如何将您的 NAS 设备连接到 Docker 应用程序，让您可以使用 Docker 运行命令、所需端口、卷挂载和其他额外安全控制开始使用 Internxt Drive 和 NAS Synology。",
+        "在 Synology 上，安装 Docker（或 DSM 7.2+ 上的 Container Manager），拉取 Internxt 镜像，为您的账户配置环境变量，并将挂载点添加为 Hyper Backup 目标。您可以在我们的帮助中心找到更详细的说明。",
+        "github.com/internxt/cli 上的 Internxt CLI 存储库包含 Docker 容器运行的所有客户端文件以及每个版本的发布说明。Internxt 的开源云存储及其所有产品均为开源且透明的，加密或密钥处理安全性可以从我们公开可用的代码库中进行验证。"
+      ],
+      "cta": ["阅读指南", "了解更多", "查看详情"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Synology NAS 云备份",
+    "description": "使用 Internxt Drive 管理您的 Synology NAS",
+    "cta": "获取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "什么是 Synology NAS 云备份服务？",
+        "answer": [
+          "它是一种备份解决方案，可持续或定期将数据从您的 Synology NAS 设备复制到安全的云环境。这会创建您文件的异地副本，即使物理 NAS 损坏、丢失或遭到入侵，文件也能保持安全。"
+        ]
+      },
+      {
+        "question": "为什么我应该将 Synology NAS 备份到云端？",
+        "answer": [
+          "云备份可防范多种风险，包括硬件故障、盗窃、勒索软件攻击、意外删除以及火灾或洪水等现场灾难。它确保您始终拥有可在需要时恢复的外部数据副本。"
+        ]
+      },
+      {
+        "question": "我的数据是否已加密？",
+        "answer": [
+          "是的，Internxt 使用 AES-256 和 Kyber-512 后量子零知识加密来加密您的数据。您的所有数据在离开 NAS 之前都会被加密，并在传输过程中和存储在云端时保持加密状态。加密密钥存放在您的 NAS 上，因此任何人都无法访问您的文件。"
+        ]
+      },
+      {
+        "question": "Internxt 是否适用于所有 Synology NAS 设备？",
+        "answer": [
+          "是的，它与大多数支持现代 DSM 版本和 Hyper Backup 或 Synology Cloud Sync 等备份工具的 Synology NAS 型号兼容。部分较旧或入门级型号的功能可能有限。"
+        ]
+      },
+      {
+        "question": "哪些 Synology 应用程序用于云备份？",
+        "answer": [
+          "主要的 Synology 工具是用于完整版本备份的 Hyper Backup 以及用于与云存储提供商进行实时同步的 Cloud Sync。"
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "加密云存储",
+    "drive": "安全云存储",
+    "nas": "NAS 云备份",
+    "qnap": "QNAP 云备份",
+    "synology": "Synology NAS 云备份"
+  }
+}

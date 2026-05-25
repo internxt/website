@@ -69,6 +69,10 @@ export const ALLOWED_PATHS = [
   'scott',
   'drop-offer',
   'adi4u',
+  'nFire',
+  'techsagar',
+  'levelupid',
+  'privacytutor',
 ];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
@@ -77,7 +81,18 @@ export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
-export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>(['adi4u', 'drop-offer']);
+export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
+  'adi4u',
+  'drop-offer',
+  'morrolinux',
+  'alexziskind',
+  'overfl0w',
+  'nFire',
+  'techsagar',
+  'levelupid',
+  'privacytutor',
+  'heisect',
+]);
 
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
@@ -146,6 +161,10 @@ export const COUPON_CODES = {
   scott: PromoCodeName.scott,
   'drop-offer': PromoCodeName.dropOffer,
   adi4u: PromoCodeName.adi4u,
+  nFire: PromoCodeName.nFire,
+  techsagar: PromoCodeName.techsagar,
+  levelupid: PromoCodeName.levelupid,
+  privacytutor: PromoCodeName.privacyTutor,
 };
 
 interface OfferConfig {
@@ -160,6 +179,7 @@ interface OfferConfig {
   lifetimePlans: boolean;
   isClubic: boolean;
   requireAnnualDiscount?: boolean;
+  isPrivacyTutor: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -179,6 +199,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         lifetimePlans: false,
         isClubic: false,
         requireAnnualDiscount: false,
+        isPrivacyTutor: false,
       };
     }
 
@@ -190,6 +211,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
+    const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
@@ -207,6 +229,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       annualPlans,
       lifetimePlans,
       isClubic,
+      isPrivacyTutor,
       requireAnnualDiscount,
     };
   }, [pathname]);

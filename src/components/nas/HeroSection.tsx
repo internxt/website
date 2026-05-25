@@ -14,7 +14,7 @@ const HeroSection = ({ textContent }) => (
       className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}
     >
       <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
-        <p className="text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
+        <p className="text-sm font-semibold text-primary lg:text-nowrap lg:text-lg">{textContent.label}</p>
       </div>
       <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
         <HighlightText text={textContent.title} />
