@@ -1,0 +1,122 @@
+{
+  "HeroSection": {
+    "label": "Synology NAS",
+    "title": "Synology NAS Cloud-Backup auf **Internxt Drive**",
+    "subtitle": "Sichern und sichern Sie Ihre Dateien mit Internxt Drive und Synology",
+    "features": ["NAS-Cloud-Backup für Synology", "Sichere Übertragungen", "Verschlüsselte Synchronisierung und Backups"],
+    "cta": "Internxt erhalten"
+  },
+  "WhatIsNASSection": {
+    "title": "Was ist ein Synology NAS-Gerät und warum sollte ich es verwenden?",
+    "description": [
+      "NAS-Cloud-Backup ist eine verschlüsselte Cloud-Speicherlösung, die Ihre Daten auf Ihrem Gerät und in der Cloud kopiert, um Dateien vor Hardwareausfällen, Diebstahl oder lokalen Katastrophen zu schützen.",
+      "Internxt verbindet sich über einen Docker-Container mit Ihrem Synology-Gerät, sodass Backups, die das Netzwerk verlassen, bereits mit der Post-Quanten-Kryptographie AES-256 und Kyber-512 mit einer Zero-Knowledge-Architektur verschlüsselt sind.",
+      "Obwohl Synology NAS effektiv für die Datenspeicherung ist, kann es dennoch von Risiken betroffen sein, darunter Hardwarefehlfunktionen, versehentlicher Verlust, Ransomware und Umweltereignisse. Die Verwendung von Cloud-Backup hilft, Ihre Daten zu schützen und eine Wiederherstellung jederzeit zu ermöglichen.",
+      "Synology-Geräte sind mit einem starken Fokus auf Einfachheit und Integration konzipiert, wodurch die Cloud-Backup-Einrichtung durch Tools wie Hyper Backup und Cloud Sync unkompliziert ist. Dies ermöglicht es Ihnen, sich problemlos mit Internxt Drive zu verbinden, ohne komplexe Konfigurationen."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Internxt-Integration mit Synology NAS",
+    "description": "Internxt wird auf Ihrem NAS über einen Docker-Container über unsere Open-Source-CLI installiert, die Ihr System mit Ihrem Konto verbindet und ein sicheres Backup-Ziel für Ihre Dateien erstellt. Dies stellt einen Einhängepunkt innerhalb von Synology DSM 7+ bereit und richtet Hyper Backup oder HBS3 als Backup-Ziel ein. Ihre Daten werden vor dem Upload verschlüsselt, sodass nur verschlüsselte Dateien an unsere europäischen Rechenzentren gesendet werden.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Die Internxt NAS-Unterstützung für Synology läuft über das Internxt CLI Docker-Image. Internxt integriert sich mit Synology NAS über die Docker-App und ermöglicht die Verbindung zu Standard-Backup-Tools wie Hyper Backup oder Synchronisierungsmethoden auf Dateiebene, sodass Benutzer NAS-Daten direkt in Internxts verschlüsselten Cloud-Speicher für Off-Site-Backup und Notfallwiederherstellung senden können. Diese Integration vereinfacht Backups, während die volle Kontrolle über Ihren bestehenden Workflow erhalten bleibt, und fügt sicheren Cloud-Speicher mit Internxts Kyber-512- und AES-256-Zero-Knowledge-Verschlüsselung hinzu.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "QNAP NAS-Cloud-Backup verwendet denselben Docker-Container-Ansatz wie Synology. HBS3 (Hybrid Backup Sync 3) zeigt auf den freigegebenen Einhängepunkt und überträgt verschlüsselte Dateien an Internxts europäische Rechenzentren. Ihre Dateien sind mit Internxts Post-Quanten- und Zero-Knowledge-Verschlüsselung geschützt, und Ihr NAS ist das einzige Gerät, das die Schlüssel zur Entschlüsselung Ihrer Daten besitzt.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Synology NAS-Backup-Lösung",
+    "description": "Eine zuverlässige Cloud-Backup-Lösung wie Internxt Drive ist eine unverzichtbare Strategie zum Schutz Ihrer NAS-Daten. Internxt bietet Synology Hyper Backup und Synology Cloud Sync-Integration, um sicherzustellen, dass Ihre Dateien jederzeit sicher, zugänglich und wiederherstellbar bleiben. Synology-Geräte umfassen auch Funktionen wie Versionierung, Komprimierung und Deduplizierung zur Optimierung Ihrer Cloud-Backup-Lösung.",
+    "cta": "Internxt erhalten"
+  },
+  "horizontalScrollableSection": {
+    "title": "Sichern Sie Ihr Synology NAS in der Cloud",
+    "description": "NAS-Cloud-Backup sendet Ihre Synology NAS-Daten in verschlüsselten Off-Site-Speicher, wo Dateien Hardwareausfälle, Diebstahl, Ransomware oder versehentliches Löschen überstehen. Internxts NAS-Unterstützung läuft neben Ihrem bestehenden Synology Hyper Backup-Workflow. Jeder Upload wird auf Ihrem Gerät mit Kyber-512 und AES-256 verschlüsselt, bevor er das Netzwerk verlässt, und Ihre Verschlüsselungsschlüssel verlassen niemals Ihre Hardware.",
+    "scrollableSection": {
+      "titles": ["Datenverlustschutz", "Echtzeit-Synchronisierung", "Sicherheit", "Besitzen Sie Ihre Daten"],
+      "descriptions": [
+        "Synology-Cloud-Backup umfasst Funktionen wie RAID-Schutz, der dazu beiträgt, Dateien zugänglich zu halten, selbst wenn ein Laufwerk ausfällt, während Snapshot- und Versionsverlaufsfunktionen die Wiederherstellung gelöschter oder geänderter Dateien ermöglichen. Internxt mit Synology NAS-Unterstützung schützt vor Datenverlust, indem alle Ihre Dateien an einem sicheren, zentralen Ort gespeichert werden. Es unterstützt automatische Backups für Computer, Telefone, Server und externe Laufwerke und reduziert das Risiko des Verlustes wichtiger Daten.",
+        "Zu den Funktionen der Synology-Echtzeit-Synchronisierung gehören automatische Dateiaktualisierungen über Geräte und Backup-Standorte hinweg, die dazu beitragen, Dateien auf allen Systemen aktuell und zugänglich zu halten. Internxt mit Synology NAS-Unterstützung stellt sicher, dass alle Änderungen in Echtzeit synchronisiert werden, und reduziert das Risiko veralteter Versionen, verlorener Updates oder versehentlicher Überschreibungen.",
+        "Synology NAS reduziert die Abhängigkeit von weniger privaten Cloud-Anbietern und gibt Ihnen die volle Kontrolle über Ihre eigene Cloud mit zusätzlichen Sicherheitsfunktionen wie Benutzerberechtigungen, 2FA und Passwortverwaltung. Bei der Kombination eines Synology NAS mit Internxt Drive erhalten Sie Zero-Knowledge-Verschlüsselung mit Kyber-512 und AES-256. Da Internxt vollständig Open Source und unabhängig geprüft ist, können Sie sicher sein, dass Ihre Daten durch die beste Sicherheit und Verschlüsselung geschützt sind.",
+        "Besitzen Sie Ihre Daten mit Synology NAS, indem Sie alles auf Ihrem eigenen Gerät speichern und die vollständige Kontrolle darüber haben, wo Ihre Dateien gespeichert werden und wie auf sie zugegriffen wird. Internxt verschlüsselt alle Ihre Dateien und Daten auf Ihrer Seite, sodass nur Sie auf sie zugreifen können, und gibt Ihnen die volle Kontrolle über Ihre Daten und Ihren privaten Cloud-Speicher."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Was Internxt mit Synology NAS-Unterstützung bietet",
+    "description": "Internxt bietet NAS-Unterstützung für Synology zum Hochladen, Synchronisieren, Teilen und Sichern Ihrer Dateien in der Cloud, um Dateien vor Datenverlust und Ransomware zu schützen.",
+    "cards": {
+      "titles": ["Synology", "Zugriff von jedem Gerät", "Ransomware-Schutz"],
+      "descriptions": [
+        "Die Internxt NAS-Unterstützung für Synology läuft über das Internxt CLI Docker-Image. Internxt integriert sich mit Synology NAS über die Docker-App und ermöglicht die Verbindung zu Standard-Backup-Tools wie Hyper Backup oder Synchronisierungsmethoden auf Dateiebene, sodass Benutzer NAS-Daten direkt in Internxts verschlüsselten Cloud-Speicher für Off-Site-Backup und Notfallwiederherstellung senden können. Diese Integration vereinfacht Backups, während die volle Kontrolle über Ihren bestehenden Workflow erhalten bleibt, und fügt sicheren Cloud-Speicher mit Internxts Kyber-512- und AES-256-Zero-Knowledge-Verschlüsselung hinzu.",
+        "Verschlüsselter Fernzugriff ermöglicht es Ihnen, von jedem Gerät mit installiertem Internxt sicher auf dieselben Cloud-Dateien zuzugreifen. Apps für Web, Windows, macOS, Linux, iOS und Android entschlüsseln Ihre Dateien lokal mit Ihrem eigenen Schlüssel, sodass nur Sie Ihre Daten sehen können. Dies hält alles an einem sicheren Ort für Ihr NAS, Ihren Computer oder Ihr Telefon.",
+        "Die Ransomware-Wiederherstellung auf einem NAS hängt davon ab, ob Backups für den Angreifer zugänglich sind. Internxt verhindert dies, indem Cloud-Backups mit Schlüsseln verschlüsselt werden, die auf Ihrem Gerät gespeichert sind, nicht im NAS oder in der Cloud. Selbst wenn ein Synology-Gerät kompromittiert wird, können Angreifer nur lokale Daten verschlüsseln, während Cloud-Backups geschützt und unzugänglich bleiben. Versionierte Snapshots ermöglichen auch die Wiederherstellung sauberer Dateiversionen vor der Infektion."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Richten Sie Ihre Synology NAS-Cloud-Backups ein",
+    "description": "Sie können Ihre Synology NAS-Cloud-Backups in drei Schritten mit unseren detaillierten Tutorials von unserem Open-Source-GitHub einrichten, die Sie durch jeden Schritt führen. Erfahren Sie mehr über unseren Open-Source-Cloud-Speicher auf internxt.com/open-source.",
+    "cards": {
+      "titles": ["ReadMe", "Benutzerhandbuch", "Open Source"],
+      "descriptions": [
+        "Das ReadMe erklärt, wie Sie Ihr NAS-Gerät mit der Docker-App verbinden, um Ihnen den Einstieg mit Internxt Drive und NAS Synology mit dem Docker-Ausführungsbefehl, den erforderlichen Ports, Volume-Einhängepunkten und anderen zusätzlichen Sicherheitskontrollen zu ermöglichen.",
+        "Installieren Sie auf Synology Docker (oder Container Manager auf DSM 7.2+), laden Sie das Internxt-Image herunter, konfigurieren Sie Umgebungsvariablen für Ihr Konto und fügen Sie den Einhängepunkt als Hyper Backup-Ziel hinzu. Weitere detaillierte Anweisungen finden Sie in unserem Hilfecenter.",
+        "Das Internxt CLI-Repository auf github.com/internxt/cli enthält jede Client-Datei, die der Docker-Container ausführt, sowie Versionshinweise für jede Version. Der Open-Source-Cloud-Speicher von Internxt und alle seine Produkte sind Open Source und transparent, und die Sicherheit der Verschlüsselung oder Schlüsselverwaltung kann anhand unserer öffentlich verfügbaren Codebasis überprüft werden."
+      ],
+      "cta": ["Anleitung lesen", "Mehr erfahren", "Details ansehen"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Synology NAS-Cloud-Backup",
+    "description": "Verwalten Sie Ihr Synology NAS mit Internxt Drive",
+    "cta": "Internxt erhalten"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist ein Synology NAS-Cloud-Backup-Dienst?",
+        "answer": [
+          "Es handelt sich um eine Backup-Lösung, die kontinuierlich oder regelmäßig Daten von Ihrem Synology NAS-Gerät in eine sichere Cloud-Umgebung kopiert. Dies erstellt eine externe Kopie Ihrer Dateien, sodass diese sicher bleiben, selbst wenn das physische NAS beschädigt, verloren oder kompromittiert wird."
+        ]
+      },
+      {
+        "question": "Warum sollte ich mein Synology NAS in der Cloud sichern?",
+        "answer": [
+          "Cloud-Backup schützt vor mehreren Risiken, darunter Hardwareausfälle, Diebstahl, Ransomware-Angriffe, versehentliches Löschen und standortbezogene Katastrophen wie Feuer oder Überschwemmungen. Es stellt sicher, dass Sie immer eine externe Kopie Ihrer Daten haben, die bei Bedarf wiederhergestellt werden kann."
+        ]
+      },
+      {
+        "question": "Sind meine Daten verschlüsselt?",
+        "answer": [
+          "Ja, Internxt verschlüsselt Ihre Daten mit AES-256 und Kyber-512 Post-Quanten- und Zero-Knowledge-Verschlüsselung. Alle Ihre Daten werden verschlüsselt, bevor sie Ihr NAS verlassen, und bleiben während der Übertragung und der Speicherung in der Cloud verschlüsselt. Verschlüsselungsschlüssel werden auf Ihrem NAS aufbewahrt, sodass niemand auf Ihre Dateien zugreifen kann."
+        ]
+      },
+      {
+        "question": "Funktioniert Internxt mit allen Synology NAS-Geräten?",
+        "answer": [
+          "Ja, es ist mit den meisten Synology NAS-Modellen kompatibel, die moderne DSM-Versionen und Backup-Tools wie Hyper Backup oder Synology Cloud Sync unterstützen. Einige ältere oder Einstiegsmodelle können eingeschränkte Funktionen haben."
+        ]
+      },
+      {
+        "question": "Welche Synology-Apps werden für das Cloud-Backup verwendet?",
+        "answer": [
+          "Die wichtigsten Synology-Tools sind Hyper Backup für vollständige versionierte Backups und Cloud Sync für die Echtzeit-Synchronisierung mit Cloud-Speicheranbietern."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Verschlüsselter Cloud-Speicher",
+    "drive": "Sicherer Cloud-Speicher",
+    "nas": "NAS-Cloud-Backup",
+    "qnap": "QNAP-Cloud-Backup",
+    "synology": "Synology NAS-Cloud-Backup"
+  }
+}

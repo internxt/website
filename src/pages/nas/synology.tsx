@@ -25,7 +25,14 @@ interface NASPageProps {
   relationalLinksText: any;
 }
 
-const SynologyNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang, relationalLinksText }: NASPageProps): JSX.Element => {
+const SynologyNASPage = ({
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+  relationalLinksText,
+}: NASPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas-synology');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -34,78 +41,82 @@ const SynologyNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, 
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb_list([
-            { name: textContent.Breadcrumbs.home, url: '/' }, 
-            { name: textContent.Breadcrumbs.drive, url: '/drive' }, 
-            { name: textContent.Breadcrumbs.nas, url: '/nas' },
-            { name: textContent.Breadcrumbs.synology, url: '/nas/synology' }
+          { name: textContent.Breadcrumbs.home, url: '/' },
+          { name: textContent.Breadcrumbs.drive, url: '/drive' },
+          { name: textContent.Breadcrumbs.nas, url: '/nas' },
+          { name: textContent.Breadcrumbs.synology, url: '/nas/synology' },
         ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+        <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <WhatIsNASSection textContent={textContent.WhatIsNASSection} />
+        <WhatIsNASSection textContent={textContent.WhatIsNASSection} />
 
-      <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
+        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.ctaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.ctaSection.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.ctaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="bg-neutral-17 px-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.ctaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.ctaSection.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+                {textContent.ctaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="bg-neutral-17 px-10"
+        />
 
-      <HorizontalScrollableSection
-        textContent={textContent.horizontalScrollableSection}
-        needsDivider={false}
-        cardsHeight="330px"
-      />
+        <HorizontalScrollableSection
+          textContent={textContent.horizontalScrollableSection}
+          needsDivider={false}
+          cardsHeight="330px"
+        />
 
-      <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
+        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
 
-      <ThreeCardsSection textContent={textContent.howSetupSection} />
+        <ThreeCardsSection textContent={textContent.howSetupSection} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.ctaSectionV2}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.ctaSectionV2.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.ctaSectionV2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
-        containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="lg:pb-20"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.ctaSectionV2}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.ctaSectionV2.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.ctaSectionV2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
+          bgPadding="lg:pb-20"
+        />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[
-          { name: textContent.Breadcrumbs.home, url: '/' }, 
-          { name: textContent.Breadcrumbs.drive, url: '/drive' }, 
-          { name: textContent.Breadcrumbs.nas, url: '/nas' },
-          { name: textContent.Breadcrumbs.synology, url: '/nas/synology' }
-      ]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          breadcrumbItems={[
+            { name: textContent.Breadcrumbs.home, url: '/' },
+            { name: textContent.Breadcrumbs.drive, url: '/drive' },
+            { name: textContent.Breadcrumbs.nas, url: '/nas' },
+            { name: textContent.Breadcrumbs.synology, url: '/nas/synology' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
@@ -114,7 +125,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/nas.json`);
+  const textContent = require(`@/assets/lang/${lang}/nas-synology.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);

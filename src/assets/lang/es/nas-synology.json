@@ -1,0 +1,122 @@
+{
+  "HeroSection": {
+    "label": "Synology NAS",
+    "title": "Copia de seguridad en la nube de Synology NAS en **Internxt Drive**",
+    "subtitle": "Protege y haz copias de seguridad de tus archivos con Internxt Drive y Synology",
+    "features": ["Copia de seguridad NAS en la nube para Synology", "Transferencias seguras", "Sincronización y copias de seguridad cifradas"],
+    "cta": "Obtener Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "¿Qué es un dispositivo Synology NAS y por qué debería usarlo?",
+    "description": [
+      "La copia de seguridad NAS en la nube es una solución de almacenamiento en la nube cifrada que copia tus datos en tu dispositivo y en la nube para proteger los archivos contra fallos de hardware, robo o desastres locales.",
+      "Internxt se conecta a tu dispositivo Synology a través de un contenedor Docker, por lo que las copias de seguridad que salen de la red ya están cifradas con la criptografía post-cuántica AES-256 y Kyber-512 con una arquitectura de conocimiento cero.",
+      "Aunque Synology NAS es eficaz para almacenar datos, aún puede verse afectado por riesgos como fallos de hardware, pérdidas accidentales, ransomware y eventos medioambientales. Usar una copia de seguridad en la nube ayuda a proteger tus datos y hace posible la recuperación en cualquier momento.",
+      "Los dispositivos Synology están diseñados con un fuerte enfoque en la simplicidad y la integración, lo que hace que la configuración de copias de seguridad en la nube sea sencilla a través de herramientas como Hyper Backup y Cloud Sync. Esto te permite conectarte fácilmente a Internxt Drive sin configuraciones complejas."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Integración de Internxt con Synology NAS",
+    "description": "Internxt se instala en tu NAS a través de un contenedor Docker mediante nuestra CLI de código abierto que conecta tu sistema a tu cuenta y crea un destino de copia de seguridad seguro para tus archivos. Esto expone un punto de montaje dentro de Synology DSM 7+ y configura Hyper Backup o HBS3 como destino de copia de seguridad. Tus datos se cifran antes de la subida, por lo que solo se envían archivos cifrados a nuestros centros de datos europeos.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "El soporte NAS de Internxt para Synology funciona a través de la imagen Docker del CLI de Internxt. Internxt se integra con Synology NAS mediante la aplicación Docker, permitiendo la conexión a herramientas de copia de seguridad estándar como Hyper Backup o métodos de sincronización a nivel de archivos, lo que permite a los usuarios enviar datos del NAS directamente al almacenamiento en la nube cifrado de Internxt para copias de seguridad externas y recuperación ante desastres. Esta integración simplifica las copias de seguridad manteniendo el control total de tu flujo de trabajo existente, y añade almacenamiento seguro en la nube con el cifrado de conocimiento cero Kyber-512 y AES-256 de Internxt.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "La copia de seguridad NAS en la nube de QNAP utiliza el mismo enfoque de contenedor Docker que Synology. HBS3 (Hybrid Backup Sync 3) apunta al punto de montaje expuesto y envía los archivos cifrados a los centros de datos europeos de Internxt. Tus archivos están protegidos con el cifrado post-cuántico y de conocimiento cero de Internxt, y tu NAS es el único dispositivo que tiene las claves para descifrar tus datos.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Solución de copia de seguridad Synology NAS",
+    "description": "Una solución de copia de seguridad en la nube confiable como Internxt Drive es una estrategia esencial para proteger los datos de tu NAS. Internxt ofrece integración con Synology Hyper Backup y Synology Cloud Sync para garantizar que tus archivos permanezcan seguros, accesibles y recuperables en todo momento. Los dispositivos Synology también incluyen funciones como versionado, compresión y deduplicación para optimizar tu solución de copia de seguridad en la nube.",
+    "cta": "Obtener Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Haz copia de seguridad de tu Synology NAS en la nube",
+    "description": "La copia de seguridad NAS en la nube envía los datos de tu Synology NAS a almacenamiento externo cifrado donde los archivos sobreviven a fallos de hardware, robo, ransomware o eliminación accidental. El soporte NAS de Internxt funciona junto a tu flujo de trabajo de Synology Hyper Backup existente. Cada subida se cifra en tu dispositivo con Kyber-512 y AES-256 antes de salir de la red, y tus claves de cifrado nunca abandonan tu hardware.",
+    "scrollableSection": {
+      "titles": ["Protección contra pérdida de datos", "Sincronización en tiempo real", "Seguridad", "Tus datos te pertenecen"],
+      "descriptions": [
+        "La copia de seguridad en la nube de Synology incluye funciones como la protección RAID, que ayuda a mantener los archivos accesibles incluso si falla un disco, mientras que las funciones de instantáneas e historial de versiones permiten recuperar archivos eliminados o modificados. Internxt con soporte Synology NAS ayuda a proteger contra la pérdida de datos manteniendo todos tus archivos almacenados en un lugar seguro y centralizado. Admite copias de seguridad automáticas para ordenadores, teléfonos, servidores y unidades externas, reduciendo el riesgo de perder datos importantes.",
+        "Las funciones de sincronización en tiempo real de Synology incluyen actualizaciones automáticas de archivos entre dispositivos y ubicaciones de copia de seguridad, lo que ayuda a mantener los archivos actualizados y accesibles en todos los sistemas. Internxt con soporte Synology NAS garantiza que todos los cambios se sincronicen en tiempo real, reduciendo el riesgo de versiones desactualizadas, actualizaciones perdidas o sobrescrituras accidentales.",
+        "Synology NAS reduce la dependencia de proveedores de nube menos privados, dándote control total sobre tu propia nube con funciones de seguridad adicionales como permisos de usuario, 2FA y gestión de contraseñas. Al combinar un Synology NAS con Internxt Drive, obtienes cifrado de conocimiento cero con Kyber-512 y AES-256. Como Internxt es completamente de código abierto y auditado de forma independiente, puedes estar tranquilo sabiendo que tus datos están protegidos con la mejor seguridad y cifrado.",
+        "Sé dueño de tus datos con Synology NAS almacenando todo en tu propio dispositivo para tener control total sobre dónde se almacenan tus archivos y cómo se accede a ellos. Internxt cifra todos tus archivos y datos en tu lado, de modo que solo tú puedes acceder a ellos, dándote control total sobre tus datos y almacenamiento privado en la nube."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Lo que Internxt ofrece con soporte Synology NAS",
+    "description": "Internxt ofrece soporte NAS para Synology para subir, sincronizar, compartir y hacer copias de seguridad de tus archivos en la nube y protegerlos contra pérdida de datos y ransomware.",
+    "cards": {
+      "titles": ["Synology", "Acceso desde cualquier dispositivo", "Protección contra ransomware"],
+      "descriptions": [
+        "El soporte NAS de Internxt para Synology funciona a través de la imagen Docker del CLI de Internxt. Internxt se integra con Synology NAS mediante la aplicación Docker, permitiendo la conexión a herramientas de copia de seguridad estándar como Hyper Backup o métodos de sincronización a nivel de archivos, lo que permite a los usuarios enviar datos del NAS directamente al almacenamiento en la nube cifrado de Internxt para copias de seguridad externas y recuperación ante desastres. Esta integración simplifica las copias de seguridad manteniendo el control total de tu flujo de trabajo existente, y añade almacenamiento seguro en la nube con el cifrado de conocimiento cero Kyber-512 y AES-256 de Internxt.",
+        "El acceso remoto cifrado te permite acceder de forma segura a los mismos archivos en la nube desde cualquier dispositivo con Internxt instalado. Las aplicaciones para web, Windows, macOS, Linux, iOS y Android descifran tus archivos localmente con tu propia clave, de modo que solo tú puedes ver tus datos. Esto mantiene todo en un lugar seguro para tu NAS, ordenador o teléfono.",
+        "La recuperación de ransomware en un NAS depende de si las copias de seguridad son accesibles para el atacante. Internxt lo evita manteniendo las copias de seguridad en la nube cifradas con claves almacenadas en tu dispositivo, no en el NAS ni en la nube. Aunque un dispositivo Synology se vea comprometido, los atacantes solo pueden cifrar los datos locales, mientras que las copias de seguridad en la nube permanecen protegidas e inaccesibles. Las instantáneas con versiones también permiten recuperar versiones limpias de archivos antes de la infección."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Configura tus copias de seguridad en la nube de Synology NAS",
+    "description": "Puedes configurar tus copias de seguridad en la nube de Synology NAS en tres pasos usando nuestros tutoriales detallados de nuestro GitHub de código abierto que te guiarán en cada paso. Descubre más sobre nuestro almacenamiento en la nube de código abierto en internxt.com/open-source.",
+    "cards": {
+      "titles": ["ReadMe", "Guía de usuario", "Código abierto"],
+      "descriptions": [
+        "El ReadMe explica cómo conectar tu dispositivo NAS a la aplicación Docker para que puedas comenzar con Internxt Drive y NAS Synology con el comando de ejecución de Docker, los puertos necesarios, los montajes de volúmenes y otros controles de seguridad adicionales.",
+        "En Synology, instala Docker (o Container Manager en DSM 7.2+), descarga la imagen de Internxt, configura las variables de entorno para tu cuenta y añade el punto de montaje como destino de Hyper Backup. Puedes encontrar instrucciones más detalladas en nuestro centro de ayuda.",
+        "El repositorio del CLI de Internxt en github.com/internxt/cli contiene cada archivo cliente que ejecuta el contenedor Docker y las notas de versión de cada lanzamiento. El almacenamiento en la nube de código abierto de Internxt y todos sus productos son de código abierto y transparentes, y la seguridad del cifrado o la gestión de claves puede verificarse desde nuestra base de código disponible públicamente."
+      ],
+      "cta": ["Leer guía", "Más información", "Ver detalles"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Copia de seguridad en la nube de Synology NAS",
+    "description": "Gestiona tu Synology NAS con Internxt Drive",
+    "cta": "Obtener Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es un servicio de copia de seguridad en la nube de Synology NAS?",
+        "answer": [
+          "Es una solución de copia de seguridad que copia continua o periódicamente los datos de tu dispositivo Synology NAS a un entorno seguro en la nube. Esto crea una copia externa de tus archivos para que permanezcan seguros incluso si el NAS físico resulta dañado, perdido o comprometido."
+        ]
+      },
+      {
+        "question": "¿Por qué debería hacer una copia de seguridad de mi Synology NAS en la nube?",
+        "answer": [
+          "La copia de seguridad en la nube protege contra múltiples riesgos, como fallos de hardware, robo, ataques de ransomware, eliminación accidental y desastres en el sitio como incendios o inundaciones. Garantiza que siempre tengas una copia externa de tus datos que pueda restaurarse cuando sea necesario."
+        ]
+      },
+      {
+        "question": "¿Están cifrados mis datos?",
+        "answer": [
+          "Sí, Internxt cifra tus datos con cifrado post-cuántico y de conocimiento cero AES-256 y Kyber-512. Todos tus datos se cifran antes de salir de tu NAS y permanecen cifrados durante la transferencia y mientras se almacenan en la nube. Las claves de cifrado se guardan en tu NAS, por lo que nadie puede acceder a tus archivos."
+        ]
+      },
+      {
+        "question": "¿Funciona Internxt con todos los dispositivos Synology NAS?",
+        "answer": [
+          "Sí, es compatible con la mayoría de los modelos de Synology NAS que admiten versiones modernas de DSM y herramientas de copia de seguridad como Hyper Backup o Synology Cloud Sync. Algunos modelos más antiguos o de nivel básico pueden tener funciones limitadas."
+        ]
+      },
+      {
+        "question": "¿Qué aplicaciones de Synology se usan para la copia de seguridad en la nube?",
+        "answer": [
+          "Las principales herramientas de Synology son Hyper Backup para copias de seguridad completas con versiones y Cloud Sync para la sincronización en tiempo real con proveedores de almacenamiento en la nube."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Almacenamiento en la nube cifrado",
+    "drive": "Almacenamiento seguro en la nube",
+    "nas": "Copia de seguridad en la nube NAS",
+    "qnap": "Copia de seguridad en la nube QNAP",
+    "synology": "Copia de seguridad en la nube Synology NAS"
+  }
+}

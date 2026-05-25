@@ -258,6 +258,15 @@ export async function getServerSideProps(ctx) {
     };
   }
 
+  if (pathname === 'heisect' && lang !== 'de') {
+    return {
+      redirect: {
+        destination: '/de/heisect',
+        permanent: false,
+      },
+    };
+  }
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);

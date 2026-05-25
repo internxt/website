@@ -91,6 +91,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'techsagar',
   'levelupid',
   'privacytutor',
+  'heisect',
 ]);
 
 export const COUPON_CODES = {
@@ -178,6 +179,7 @@ interface OfferConfig {
   lifetimePlans: boolean;
   isClubic: boolean;
   requireAnnualDiscount?: boolean;
+  isPrivacyTutor: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
