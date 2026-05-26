@@ -137,8 +137,8 @@ export default function HeroSection({
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
             <Image
               src={getImage('/images/partnerships/PrivacyTutor.webp')}
-              width={150}
-              height={30}
+              width={140}
+              height={16}
               alt="Privacy Tutor logo"
             />
             <X size={16} />
