@@ -87,7 +87,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'morrolinux',
   'alexziskind',
   'overfl0w',
-  'nFire',
+  'nfire',
   'techsagar',
   'levelupid',
   'privacytutor',
