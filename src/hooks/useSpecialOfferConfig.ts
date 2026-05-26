@@ -69,7 +69,7 @@ export const ALLOWED_PATHS = [
   'scott',
   'drop-offer',
   'adi4u',
-  'nFire',
+  'nfire',
   'techsagar',
   'levelupid',
   'privacytutor',
@@ -92,6 +92,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'levelupid',
   'privacytutor',
   'heisect',
+  'xataka',
 ]);
 
 export const COUPON_CODES = {
@@ -161,7 +162,7 @@ export const COUPON_CODES = {
   scott: PromoCodeName.scott,
   'drop-offer': PromoCodeName.dropOffer,
   adi4u: PromoCodeName.adi4u,
-  nFire: PromoCodeName.nFire,
+  nfire: PromoCodeName.nFire,
   techsagar: PromoCodeName.techsagar,
   levelupid: PromoCodeName.levelupid,
   privacytutor: PromoCodeName.privacyTutor,
