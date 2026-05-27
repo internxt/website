@@ -9,7 +9,14 @@ export interface CloudObjectStorageText {
   CtaSection: CtaSection;
   CtaSectionV2: CtaSection;
   SemanticAccordion: SemanticAccordion;
-  FaqSection?: FaqSection;
+  FaqSection: FaqSection;
+  HowInternxtComparesSection?: HowInternxtComparesSection;
+}
+
+export interface HowInternxtComparesSection {
+  title: string;
+  description: string;
+  scrollableSection: ScrollableSection;
 }
 
 export interface FaqSection {
