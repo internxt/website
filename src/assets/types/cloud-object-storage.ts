@@ -2,10 +2,9 @@ export interface CloudObjectStorageText {
   HeroSection: HeroSection;
   PredictablePricingSection: PredictablePricingSection;
   PriceCardSection: PriceCardSection;
+  PartnersSection: PartnersSection;
   HowMuchYouNeedSection: HowMuchYouNeedSection;
   WhyChooseInternxtSection: WhyChooseInternxtSection;
-  FaqSection: FAQSection;
-  HowInternxtComparesSection: WhyChooseInternxtSection;
   ContactSales: ContactSales;
   CtaSection: CtaSection;
   CtaSectionV2: CtaSection;
@@ -40,16 +39,6 @@ export interface CtaSection {
   cta: string;
 }
 
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
-}
-
 export interface HeroSection {
   label: string;
   title: Title;
@@ -71,6 +60,21 @@ export interface HowMuchYouNeedSection {
   storageAmount: string;
   percentDownloadPerMonth: string;
   companies: string[];
+}
+
+export interface PartnersSection {
+  title: string;
+  description: string;
+  companies: string[];
+  companiesInformation: CompaniesInformation[];
+}
+
+export interface CompaniesInformation {
+  logo: string;
+  image: string;
+  title: string;
+  description: string;
+  cta: string;
 }
 
 export interface PredictablePricingSection {
@@ -105,6 +109,16 @@ export interface WhatsIncluded {
   features: string[];
 }
 
+export interface SemanticAccordion {
+  title: string;
+  items: Item[];
+}
+
+export interface Item {
+  question: string;
+  answer: string[];
+}
+
 export interface WhyChooseInternxtSection {
   title: string;
   description: string;
@@ -123,14 +137,4 @@ export interface BannerText {
 export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
-}
-
-export interface SemanticAccordion {
-  title: string;
-  items: SemanticAccordionItem[];
-}
-
-export interface SemanticAccordionItem {
-  question: string;
-  answer: string;
 }

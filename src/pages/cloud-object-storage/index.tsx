@@ -16,6 +16,7 @@ import { GetServerSidePropsContext } from 'next';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
+import { PartnersSection } from '@/components/cloud-object-storage/PartnersSection';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -52,9 +53,11 @@ const CloudObjectStorage = ({
 
         <CertificationsSection />
 
-        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
-
         <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+
+        <PartnersSection textContent={textContent.PartnersSection} />
+
+        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
         <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
 

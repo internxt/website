@@ -54,6 +54,34 @@
     },
     "oneTimePayment": "*帳戶驗證需支付 1 歐元的單次費用"
   },
+  "PartnersSection": {
+    "title": "適用於實際工作負載的安全物件儲存",
+    "description": "從媒體檔案庫到企業備份，各機構使用 Internxt S3 Storage 安全地儲存、管理和分發大量資料，並享有完整的控制權和隱私保護。",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "企業備份與安全資料保留",
+        "description": "全球團隊使用可擴展的物件儲存，安全保留營運資料、備份及關鍵業務資產，同時對基礎設施成本和隱私保持完整控制。",
+        "cta": "成為客戶"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "媒體儲存與檔案庫分發",
+        "description": "大型媒體庫、影片資產和編輯內容可透過可靠的高容量物件儲存基礎設施安全儲存、歸檔和分發。",
+        "cta": "成為客戶"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "分散式業務與基礎設施備份",
+        "description": "擁有分散式營運的機構使用 S3 相容儲存集中備份、同步系統，並在各地點保護營運資料。",
+        "cta": "成為客戶"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "您需要多少儲存空間？",
     "description": "了解使用 Internxt 可以節省多少成本。使用我們的計算機與主流雲端業者進行比較。",
@@ -62,25 +90,13 @@
     "perYear": "/每年",
     "storageAmount": "儲存容量",
     "percentDownloadPerMonth": "每月下載百分比",
-    "companies": [
-      "Internxt",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ]
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
     "title": "為什麼選擇 Internxt 物件儲存？",
     "description": "Internxt 物件雲端儲存的優勢在於有效的數據管理與安全性。",
     "scrollableSection": {
-      "titles": [
-        "零流量費用 (Ingress/Egress)",
-        "每 GB 成本",
-        "持久性與可用性",
-        "安全性",
-        "簡單儲存服務",
-        "速度"
-      ],
+      "titles": ["零流量費用 (Ingress/Egress)", "每 GB 成本", "持久性與可用性", "安全性", "簡單儲存服務", "速度"],
       "descriptions": [
         "免除數據流入與流出費用，讓預算更精確。這對於有頻繁數據遷移需求的企業至關重要。",
         "採用按需計費模式，僅為實際使用付費。物件儲存處理非結構化數據的成本通常較低。",
@@ -110,9 +126,7 @@
       },
       {
         "question": "有最低儲存政策嗎？",
-        "answer": [
-          "最低月度政策為 1TB。若儲存未滿 30 天即刪除，仍將按 30 天計費，此政策與 AWS 相同。"
-        ]
+        "answer": ["最低月度政策為 1TB。若儲存未滿 30 天即刪除，仍將按 30 天計費，此政策與 AWS 相同。"]
       }
     ]
   },
@@ -126,13 +140,7 @@
       "phone": "電話號碼",
       "howMuchStorage": "您需要多少儲存空間？",
       "totalCharacters": " /1000",
-      "options": [
-        "請選擇",
-        "少於10TB",
-        "10TB - 50TB",
-        "50TB - 100 TB",
-        "超過100TB"
-      ],
+      "options": ["請選擇", "少於10TB", "10TB - 50TB", "50TB - 100 TB", "超過100TB"],
       "howWeCanHelp": "我們能為您提供什麼幫助？（選填）",
       "howWeCanHelpPlaceHolder": "告訴我們更多關於您的需求",
       "cta": "發送消息",
@@ -168,21 +176,15 @@
       },
       {
         "question": "基於雲端的物件儲存有什麼好處？",
-        "answer": [
-          "基於雲端的物件儲存提供高耐用性、可用性和成本效益，特別適用於 Web 應用程序、備份和數據歸檔。"
-        ]
+        "answer": ["基於雲端的物件儲存提供高耐用性、可用性和成本效益，特別適用於 Web 應用程序、備份和數據歸檔。"]
       },
       {
         "question": "Internxt 是否提供私有雲端物件儲存？",
-        "answer": [
-          "是的，Internxt 提供具有伺服器端加密和 S3 相容性的私有雲端物件儲存，確保您的數據安全且受您控制。"
-        ]
+        "answer": ["是的，Internxt 提供具有伺服器端加密和 S3 相容性的私有雲端物件儲存，確保您的數據安全且受您控制。"]
       },
       {
         "question": "Internxt 是否與 S3 雲端物件儲存相容？",
-        "answer": [
-          "Internxt 完全相容 S3 雲端物件儲存協議，允許您無縫使用現有的 S3 相容工具和應用程序。"
-        ]
+        "answer": ["Internxt 完全相容 S3 雲端物件儲存協議，允許您無縫使用現有的 S3 相容工具和應用程序。"]
       }
     ]
   }

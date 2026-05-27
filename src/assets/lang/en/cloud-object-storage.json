@@ -54,6 +54,34 @@
     },
     "oneTimePayment": "*A €1 one-time fee is required for account verification"
   },
+  "PartnersSection": {
+    "title": "Secure object storage for real-world workloads",
+    "description": "From media archives to enterprise backups, organizations use Internxt S3 Storage to securely store, manage, and distribute large volumes of data with full control and privacy.",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "Enterprise backup and secure data retention",
+        "description": "Global teams use scalable object storage to securely retain operational data, backups, and critical business assets while maintaining full control over infrastructure costs and privacy.",
+        "cta": "Become a customer"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "Media storage and archive distribution",
+        "description": "Large media libraries, video assets, and editorial content can be securely stored, archived, and distributed through reliable high-volume object storage infrastructure.",
+        "cta": "Become a customer"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "Distributed business and infrastructure backups",
+        "description": "Organizations with distributed operations use S3-compatible storage to centralize backups, synchronize systems, and protect operational data across locations.",
+        "cta": "Become a customer"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "How much storage do you need?",
     "description": "Find out how much you can save with Internxt object storage. Use our cost calculator to see how we compare to hyperscalers.",
