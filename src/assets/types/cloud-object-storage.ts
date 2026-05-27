@@ -9,6 +9,17 @@ export interface CloudObjectStorageText {
   CtaSection: CtaSection;
   CtaSectionV2: CtaSection;
   SemanticAccordion: SemanticAccordion;
+  FaqSection?: FaqSection;
+}
+
+export interface FaqSection {
+  title: string;
+  faq: FaqItem[];
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string[];
 }
 
 export interface ContactSales {
