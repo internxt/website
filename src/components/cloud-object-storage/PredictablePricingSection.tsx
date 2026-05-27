@@ -6,10 +6,7 @@ interface PredictablePricingSectionProps {
 
 export const PredictablePricingSection = ({ textContent }: PredictablePricingSectionProps): JSX.Element => {
   return (
-    <section
-      className="overflow-hidden px-5 py-10 lg:py-20"
-      style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)' }}
-    >
+    <section className="overflow-hidden bg-white px-5 py-10 lg:py-20">
       <div className="flex flex-col items-center gap-12">
         <div className="flex max-w-[774px] flex-col gap-6 text-center">
           <p className="text-30 font-semibold leading-tight text-gray-100 lg:whitespace-pre-line lg:text-3xl">

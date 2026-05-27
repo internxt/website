@@ -55,6 +55,34 @@
     },
     "oneTimePayment": "*Pagamento único de 1€ para verificação de conta"
   },
+  "PartnersSection": {
+    "title": "Armazenamento de objetos seguro para cargas de trabalho reais",
+    "description": "De arquivos de mídia a backups empresariais, as organizações usam o Internxt S3 Storage para armazenar, gerenciar e distribuir grandes volumes de dados com segurança, com total controle e privacidade.",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "Backup empresarial e retenção segura de dados",
+        "description": "Equipes globais usam armazenamento de objetos escalável para reter com segurança dados operacionais, backups e ativos empresariais críticos, mantendo total controle sobre custos de infraestrutura e privacidade.",
+        "cta": "Torne-se um cliente"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "Armazenamento de mídia e distribuição de arquivos",
+        "description": "Grandes bibliotecas de mídia, ativos de vídeo e conteúdo editorial podem ser armazenados, arquivados e distribuídos com segurança por meio de uma infraestrutura de armazenamento de objetos de alto volume e confiável.",
+        "cta": "Torne-se um cliente"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "Backups empresariais e de infraestrutura distribuídos",
+        "description": "Organizações com operações distribuídas usam armazenamento compatível com S3 para centralizar backups, sincronizar sistemas e proteger dados operacionais em diferentes locais.",
+        "cta": "Torne-se um cliente"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "Quanto espaço de armazenamento você precisa?",
     "description": "Use nossa calculadora de custos para descobrir quanto custaria armazenar seus objetos. Veja como nos comparamos com os líderes do mercado e como você pode economizar.",

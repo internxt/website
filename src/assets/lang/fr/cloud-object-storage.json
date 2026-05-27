@@ -54,6 +54,34 @@
     },
     "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
   },
+  "PartnersSection": {
+    "title": "Stockage objet sécurisé pour les charges de travail réelles",
+    "description": "Des archives multimédias aux sauvegardes d'entreprise, les organisations utilisent Internxt S3 Storage pour stocker, gérer et distribuer de grands volumes de données en toute sécurité, avec un contrôle total et une confidentialité totale.",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "Sauvegarde d'entreprise et conservation sécurisée des données",
+        "description": "Les équipes mondiales utilisent un stockage objet évolutif pour conserver en toute sécurité les données opérationnelles, les sauvegardes et les actifs commerciaux critiques, tout en conservant un contrôle total sur les coûts d'infrastructure et la confidentialité.",
+        "cta": "Devenir client"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "Stockage multimédia et distribution d'archives",
+        "description": "Les grandes bibliothèques multimédias, les ressources vidéo et les contenus éditoriaux peuvent être stockés, archivés et distribués en toute sécurité via une infrastructure de stockage objet à haut volume et fiable.",
+        "cta": "Devenir client"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "Sauvegardes d'entreprise et d'infrastructure distribuées",
+        "description": "Les organisations disposant d'opérations distribuées utilisent un stockage compatible S3 pour centraliser les sauvegardes, synchroniser les systèmes et protéger les données opérationnelles sur tous les sites.",
+        "cta": "Devenir client"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "De quel volume de stockage avez-vous besoin ?",
     "description": "Découvrez combien vous pouvez économiser avec le stockage d'objets Internxt. Utilisez notre calculateur de coûts pour nous comparer aux hyperscalers.",
@@ -62,12 +90,7 @@
     "perYear": "/par an",
     "storageAmount": "Quantité de stockage",
     "percentDownloadPerMonth": "Pourcentage de téléchargement par mois",
-    "companies": [
-      "Internxt",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ]
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
     "title": "Pourquoi choisir le stockage d'objets Internxt ?",
@@ -154,15 +177,11 @@
       },
       {
         "question": "Comment contacter le support ?",
-        "answer": [
-          "Via le chat en direct ou par email à hello@internxt.com."
-        ]
+        "answer": ["Via le chat en direct ou par email à hello@internxt.com."]
       },
       {
         "question": "Comment annuler mon plan ?",
-        "answer": [
-          "Contactez-nous à hello@internxt.com pour traiter l'annulation de votre abonnement."
-        ]
+        "answer": ["Contactez-nous à hello@internxt.com pour traiter l'annulation de votre abonnement."]
       }
     ]
   },
@@ -176,13 +195,7 @@
       "phone": "Numéro de téléphone",
       "howMuchStorage": "De quel volume de stockage avez-vous besoin ?",
       "totalCharacters": " /1000",
-      "options": [
-        "Sélectionner",
-        "Moins de 10 To",
-        "10 To - 50 To",
-        "50 To - 100 To",
-        "Plus de 100 To"
-      ],
+      "options": ["Sélectionner", "Moins de 10 To", "10 To - 50 To", "50 To - 100 To", "Plus de 100 To"],
       "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
       "howWeCanHelpPlaceHolder": "Dites-nous en plus sur vos besoins",
       "cta": "Envoyer le message",

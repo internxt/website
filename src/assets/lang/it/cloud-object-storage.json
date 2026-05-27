@@ -54,6 +54,34 @@
     },
     "oneTimePayment": "*È richiesta una quota una tantum di 1 € per la verifica dell'account"
   },
+  "PartnersSection": {
+    "title": "Archiviazione oggetti sicura per carichi di lavoro reali",
+    "description": "Dagli archivi multimediali ai backup aziendali, le organizzazioni utilizzano Internxt S3 Storage per archiviare, gestire e distribuire in modo sicuro grandi volumi di dati con pieno controllo e privacy.",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "Backup aziendale e conservazione sicura dei dati",
+        "description": "I team globali utilizzano l'archiviazione oggetti scalabile per conservare in modo sicuro dati operativi, backup e asset aziendali critici, mantenendo il pieno controllo sui costi dell'infrastruttura e la privacy.",
+        "cta": "Diventa cliente"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "Archiviazione multimediale e distribuzione archivi",
+        "description": "Grandi librerie multimediali, asset video e contenuti editoriali possono essere archiviati, conservati e distribuiti in modo sicuro tramite un'infrastruttura di archiviazione oggetti ad alto volume e affidabile.",
+        "cta": "Diventa cliente"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "Backup aziendali e infrastrutturali distribuiti",
+        "description": "Le organizzazioni con operazioni distribuite utilizzano l'archiviazione compatibile S3 per centralizzare i backup, sincronizzare i sistemi e proteggere i dati operativi in tutte le sedi.",
+        "cta": "Diventa cliente"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "Di quanto spazio hai bisogno?",
     "description": "Scopri quanto puoi risparmiare con l'object storage di Internxt. Usa il nostro calcolatore per confrontarci con gli hyperscaler.",
@@ -62,12 +90,7 @@
     "perYear": "/all'anno",
     "storageAmount": "Quantità di archiviazione",
     "percentDownloadPerMonth": "Percentuale di download mensile",
-    "companies": [
-      "Internxt",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ]
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
     "title": "Perché scegliere l'object storage di Internxt?",
@@ -110,9 +133,7 @@
       },
       {
         "question": "Cos'è il protocollo S3?",
-        "answer": [
-          "Un insieme di regole che definiscono come i dati vengono gestiti all'interno di Amazon S3 (AWS)."
-        ]
+        "answer": ["Un insieme di regole che definiscono come i dati vengono gestiti all'interno di Amazon S3 (AWS)."]
       },
       {
         "question": "Quanto spazio posso ottenere?",
@@ -134,15 +155,11 @@
       },
       {
         "question": "C'è un costo minimo mensile?",
-        "answer": [
-          "Sì, associato a un account da 1 TB. Se archivi meno, ti verrà comunque addebitato 1 TB."
-        ]
+        "answer": ["Sì, associato a un account da 1 TB. Se archivi meno, ti verrà comunque addebitato 1 TB."]
       },
       {
         "question": "E per i file piccoli? (Meno di 4 KB)",
-        "answer": [
-          "C'è un addebito minimo basato su 4 KB. File più piccoli verranno fatturati come file da 4 KB."
-        ]
+        "answer": ["C'è un addebito minimo basato su 4 KB. File più piccoli verranno fatturati come file da 4 KB."]
       },
       {
         "question": "Costo per sovrascrittura?",
@@ -152,15 +169,11 @@
       },
       {
         "question": "Come contatto il supporto?",
-        "answer": [
-          "Tramite chat live o email a hello@internxt.com."
-        ]
+        "answer": ["Tramite chat live o email a hello@internxt.com."]
       },
       {
         "question": "Come cancello il piano?",
-        "answer": [
-          "Inviaci un'email a hello@internxt.com e processeremo la cancellazione dell'abbonamento."
-        ]
+        "answer": ["Inviaci un'email a hello@internxt.com e processeremo la cancellazione dell'abbonamento."]
       }
     ]
   },
@@ -174,13 +187,7 @@
       "phone": "Numero di telefono",
       "howMuchStorage": "Di quanto spazio hai bisogno?",
       "totalCharacters": " /1000",
-      "options": [
-        "Seleziona",
-        "Meno di 10TB",
-        "10TB - 50TB",
-        "50TB - 100 TB",
-        "Più di 100TB"
-      ],
+      "options": ["Seleziona", "Meno di 10TB", "10TB - 50TB", "50TB - 100 TB", "Più di 100TB"],
       "howWeCanHelp": "Come possiamo aiutarti? (Opzionale)",
       "howWeCanHelpPlaceHolder": "Dicci di più sulle tue necessità",
       "cta": "Invia messaggio",
