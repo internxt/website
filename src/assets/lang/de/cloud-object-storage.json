@@ -54,6 +54,34 @@
     },
     "oneTimePayment": "*Zur Verifizierung des Kontos ist eine einmalige Gebühr von 1 € erforderlich."
   },
+  "PartnersSection": {
+    "title": "Sicherer Objektspeicher für reale Workloads",
+    "description": "Von Medienarchiven bis zu Unternehmens-Backups nutzen Organisationen den Internxt S3 Storage, um große Datenmengen sicher zu speichern, zu verwalten und zu verteilen – mit voller Kontrolle und Datenschutz.",
+    "companies": ["Prosegur", "Europapress", "SPAR"],
+    "companiesInformation": [
+      {
+        "logo": "PROSEGUR3",
+        "image": "Prosegur-Truck",
+        "title": "Enterprise-Backup und sichere Datenaufbewahrung",
+        "description": "Globale Teams nutzen skalierbaren Objektspeicher, um Betriebsdaten, Backups und kritische Geschäftsobjekte sicher aufzubewahren und dabei die volle Kontrolle über Infrastrukturkosten und Datenschutz zu behalten.",
+        "cta": "Kunde werden"
+      },
+      {
+        "logo": "EUROPAPRESS",
+        "image": "Europapress-Conference",
+        "title": "Medienspeicherung und Archivverteilung",
+        "description": "Große Medienbibliotheken, Videoassets und redaktionelle Inhalte können sicher über eine zuverlässige Hochvolumen-Objektspeicher-Infrastruktur gespeichert, archiviert und verteilt werden.",
+        "cta": "Kunde werden"
+      },
+      {
+        "logo": "SPAR",
+        "image": "SPAR-supermarket",
+        "title": "Verteilte Unternehmens- und Infrastruktur-Backups",
+        "description": "Organisationen mit verteilten Betrieben nutzen S3-kompatiblen Speicher, um Backups zu zentralisieren, Systeme zu synchronisieren und Betriebsdaten standortübergreifend zu schützen.",
+        "cta": "Kunde werden"
+      }
+    ]
+  },
   "HowMuchYouNeedSection": {
     "title": "Wie viel Speicherplatz benötigen Sie?",
     "description": "Finden Sie heraus, wie viel Sie mit dem Internxt Objektspeicher sparen können. Nutzen Sie unseren Kostenrechner für den Vergleich mit Hyperscalern.",
@@ -62,12 +90,7 @@
     "perYear": "/pro Jahr",
     "storageAmount": "Speichermenge",
     "percentDownloadPerMonth": "Prozentualer Download pro Monat",
-    "companies": [
-      "Internxt",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ]
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
   },
   "WhyChooseInternxtSection": {
     "title": "Warum Internxt Objektspeicher wählen?",
@@ -155,9 +178,7 @@
       },
       {
         "question": "Wie kontaktiere ich den Support?",
-        "answer": [
-          "Per Live-Chat oder E-Mail an hello@internxt.com."
-        ]
+        "answer": ["Per Live-Chat oder E-Mail an hello@internxt.com."]
       },
       {
         "question": "Wie kündige ich meinen Tarif?",
@@ -177,13 +198,7 @@
       "phone": "Telefonnummer",
       "howMuchStorage": "Wie viel Speicherplatz benötigen Sie?",
       "totalCharacters": " /1000",
-      "options": [
-        "Auswählen",
-        "Weniger als 10TB",
-        "10TB - 50TB",
-        "50TB - 100 TB",
-        "Mehr als 100TB"
-      ],
+      "options": ["Auswählen", "Weniger als 10TB", "10TB - 50TB", "50TB - 100 TB", "Mehr als 100TB"],
       "howWeCanHelp": "Wie können wir helfen? (Optional)",
       "howWeCanHelpPlaceHolder": "Erzählen Sie uns mehr über Ihre Anforderungen",
       "cta": "Nachricht senden",
