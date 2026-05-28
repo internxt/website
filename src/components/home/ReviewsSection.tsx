@@ -87,7 +87,7 @@ export default function ReviewSection({
         >
           {brands.map((brand) => (
             <div key={brand.key} className="flex w-[200px] flex-shrink-0 flex-col items-center gap-3">
-              <div className="flex h-6 items-center justify-center">
+              <div className="flex h-8 items-center justify-center">
                 <Image
                   src={getImage(brand.logo)}
                   alt={`${brand.name} logo`}
@@ -123,7 +123,10 @@ export default function ReviewSection({
 
       <div className="hidden w-full flex-row items-center justify-between gap-4 px-10 lg:flex xl:px-32 3xl:px-80">
         {brands.map((brand) => (
-          <div key={brand.key} className="group relative flex h-16 w-full flex-1 cursor-default items-center justify-center">
+          <div
+            key={brand.key}
+            className="group relative flex h-20 w-full flex-1 cursor-default items-center justify-center"
+          >
             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
               <Image
                 src={getImage(brand.logo)}
@@ -133,7 +136,9 @@ export default function ReviewSection({
                 quality={100}
               />
             </div>
-            <p className={`${quoteClass} absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100`}>
+            <p
+              className={`${quoteClass} absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+            >
               {textContent[brand.key]}
             </p>
           </div>

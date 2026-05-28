@@ -193,7 +193,7 @@ export const PricingSectionForMobile = ({
                     decimalDiscountValue={
                       product.interval === Interval.Lifetime
                         ? decimalDiscount?.lifetime
-                        : undefined
+                        : decimalDiscount?.subscriptions
                     }
                     lang={lang}
                     darkMode={darkMode}
