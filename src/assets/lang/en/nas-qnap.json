@@ -1,0 +1,128 @@
+{
+  "HeroSection": {
+    "label": "QNAP NAS",
+    "title": "QNAP NAS Cloud Backup to **Internxt Drive**",
+    "subtitle": "Secure and back up your files with Internxt Drive and QNAP",
+    "features": ["NAS cloud backup for QNAP", "Secure transfers", "Encrypted syncing and backups"],
+    "cta": "Get Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "What is a QNAP NAS device, and why should I use it?",
+    "description": [
+      "NAS cloud backup is an encrypted cloud storage solution that copies your data on your device and in the cloud to protect files against hardware failure, theft, or local disasters.",
+      "Internxt connects to your QNAP device through a Docker container, so backups leaving the network are already encrypted with AES-256 and Kyber-512 post-quantum cryptography with a zero-knowledge architecture.",
+      "While QNAP NAS is effective for storing data, it can still be affected by risks, including hardware malfunctions, accidental loss, ransomware, and environmental events. Using cloud backup helps safeguard your data and makes recovery possible at any time.",
+      "For advanced users, QNAP also provides advanced security and configuration tools such as granular access controls, multi-factor authentication, IP blocking, snapshot protection, and encryption settings."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Internxt NAS integration with QNAP",
+    "description": "Internxt connects your QNAP NAS device via a Docker container via our open-source CLI that connects your system to your account and creates a secure backup destination for your files. This exposes a mount point inside QNAP DSM 7+ and sets up Hyper Backup, or HBS3, as a backup destination. Your data is encrypted before upload, so only encrypted files are sent to our European data centers.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Synology NAS cloud backup uses the same Docker container approach as QNAP. Hyper Backup points at the exposed mount and pushes encrypted files to Internxt's European data centers. Your files are protected with Internxt's post-quantum and zero-knowledge encryption, and your NAS is the only device that holds the keys to decrypt your data.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "Internxt NAS support for QNAP runs through the Internxt CLI Docker image. Internxt integrates with QNAP NAS via the Docker app, allowing connection to standard backup tools like Hyper Backup or file-level sync methods, allowing users to send NAS data directly to Internxt's encrypted cloud storage for off-site backup and disaster recovery. This integration simplifies backups while keeping full control of your existing workflow, and adding secure cloud storage from Internxt's Kyber-512 and AES-256 zero-knowledge encryption.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "QNAP NAS backup solution",
+    "description": "A reliable cloud backup and collaboration solution like Internxt Drive is an essential strategy to protect your NAS data for your QNAP device. Internxt offers QNAP Hyper Backup and QNAP Cloud Sync integration to ensure your files remain secure, accessible, and recoverable at all times. QNAP NAS cloud backup also supports versioning, allowing you to restore previous file states if data is accidentally changed or deleted. This is especially useful when dealing with ransomware or other data loss threats, since you can roll back to a clean backup copy instead of losing data permanently.",
+    "cta": "Get Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Backup your QNAP NAS in the cloud",
+    "description": "NAS cloud backup sends your QNAP NAS data to encrypted off-site storage where files survive hardware failure, theft, ransomware, or accidental deletion. Internxt's NAS support runs alongside your existing QNAP Hyper Backup workflow. Every upload is encrypted on your device with Kyber-512 and AES-256 before it leaves the network, and your encryption keys never leave your hardware.",
+    "scrollableSection": {
+      "titles": ["Data loss protection", "Real-time syncing", "Security", "Own your data"],
+      "descriptions": [
+        "QNAP cloud backup includes features like RAID protection, helping keep files accessible even if a drive fails, while snapshot and version history features make it possible to recover deleted or changed files. Internxt with QNAP NAS support helps protect against data loss by keeping all your files stored in one secure, centralized location. It supports automatic backups for computers, phones, servers, and external drives, reducing the risk of losing important data.",
+        "Features of QNAP real-time syncing include automatic file updates across devices and backup locations, helping keep files current and accessible across all systems. Internxt with QNAP NAS support ensures all changes are synced in real time, reducing the risk of outdated versions, lost updates, or accidental overwrites.",
+        "QNAP NAS reduces reliance on less private cloud providers, giving you full control over your own cloud with extra security features such as user permissions, 2FA, and password management. When combining a QNAP NAS with Internxt Drive, you get zero-knowledge encryption with Kyber-512 and AES-256. As Internxt is fully open source and independently audited, you can feel safe knowing your data is protected by the best security and encryption.",
+        "Own your data with QNAP NAS by storing everything on your own device for total control over where your files are stored and how they are accessed. Internxt encrypts all your files and data on your side, so only you can access them, giving you full control over your data and private cloud storage."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "What Internxt offers with QNAP NAS support",
+    "description": "Internxt offers NAS support for QNAP to upload, sync, share, and backup your files in the cloud to protect files against data loss and ransomware.",
+    "cards": {
+      "titles": ["QNAP", "Access from any device", "Ransomware protection"],
+      "descriptions": [
+        "Internxt NAS support for QNAP runs through the Internxt CLI Docker image. Internxt integrates with QNAP NAS via the Docker app, allowing connection to standard backup tools like Hyper Backup or file-level sync methods, allowing users to send NAS data directly to Internxt's encrypted cloud storage for off-site backup and disaster recovery. This integration simplifies backups while keeping full control of your existing workflow, and adding secure cloud storage from Internxt's Kyber-512 and AES-256 zero-knowledge encryption.",
+        "Encrypted remote access lets you securely access the same cloud files from any device with Internxt installed. Apps for web, Windows, macOS, Linux, iOS, and Android all decrypt your files locally using your own key, so only you can see your data. This keeps everything in one secure place for your NAS, computer, or phone.",
+        "Ransomware recovery on a NAS depends on whether backups are accessible to the attacker. Internxt prevents this by keeping cloud backups encrypted with keys stored on your device, not on the NAS or in the cloud. Even if a QNAP device is compromised, attackers can only encrypt local data, while cloud backups remain protected and inaccessible. Versioned snapshots also allow recovery of clean file versions before infection."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Set up your QNAP NAS cloud backups",
+    "description": "You can set up your QNAP NAS cloud backups in three steps using our detailed tutorials from our open-source GitHub to guide you through each step.",
+    "cards": {
+      "titles": ["ReadMe", "User guide", "Open source"],
+      "descriptions": [
+        "The ReadMe covers how to connect your NAS device to the Docker app to allow you to get started with Internxt Drive and NAS QNAP with the Docker run command, required ports, volume mounts, and other additional security controls.",
+        "On QNAP, install Docker (or Container Manager on DSM 7.2+), pull the Internxt image, configure environment variables for your account, and add the mount as a Hyper Backup destination. You can find more detailed instructions in our help center.",
+        "The Internxt CLI repository at github.com/internxt/cli holds every client file the Docker container runs and release notes for each release. Internxt's open source cloud storage and all its products are open source and transparent, and encryption or key handling security can be verified from our publicly available codebase."
+      ],
+      "cta": ["Read guide", "Learn more", "See details"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "QNAP NAS cloud backup",
+    "description": "Manage your QNAP NAS with Internxt Drive",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a QNAP cloud backup service?",
+        "answer": [
+          "It is a backup solution that continuously or periodically copies data from your QNAP NAS device to a secure cloud environment. This creates an off-site copy of your files so they remain safe even if the physical NAS is damaged, lost, or compromised."
+        ]
+      },
+      {
+        "question": "Why should I back up my QNAP NAS to the cloud?",
+        "answer": [
+          "Cloud backup protects against multiple risks, including hardware failure, theft, ransomware attacks, accidental deletion, and site disasters like fire or flooding. It ensures you always have an external copy of your data that can be restored when needed."
+        ]
+      },
+      {
+        "question": "Is my data encrypted?",
+        "answer": [
+          "Yes, Internxt encrypts your data with AES-256 and Kyber-512 post-quantum and zero-knowledge encryption. All your data is encrypted before it leaves your NAS and remains encrypted during transfer and while stored in the cloud. Encryption keys are held on your QNAP device, so nobody can access your files."
+        ]
+      },
+      {
+        "question": "Does Internxt work with all QNAP NAS devices?",
+        "answer": [
+          "Yes, it is compatible with most QNAP NAS models that support modern DSM versions and backup tools such as Hyper Backup or Cloud Sync. Some older or entry-level models may have limited features."
+        ]
+      },
+      {
+        "question": "What is the difference between QNAP cloud backup and sync?",
+        "answer": [
+          "Backup creates a recoverable copy of your data at a point in time, while sync keeps files mirrored between NAS and cloud storage. QNAP supports both, but backup is generally preferred for disaster recovery because it protects against accidental deletion and ransomware."
+        ]
+      },
+      {
+        "question": "Which QNAP apps are used for cloud backup?",
+        "answer": [
+          "The main QNAP applications are Hybrid Backup Sync (HBS 3) for backup and synchronization, and QuDedup for deduplication to reduce backup size and speed up transfers."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Encrypted Cloud Storage",
+    "drive": "Secure cloud storage",
+    "nas": "NAS Cloud Backup",
+    "qnap": "QNAP Cloud Backup",
+    "synology": "Synology NAS Cloud Backup"
+  }
+}

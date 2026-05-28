@@ -1,0 +1,128 @@
+{
+  "HeroSection": {
+    "label": "QNAP NAS",
+    "title": "Copia de seguridad en la nube de QNAP NAS en **Internxt Drive**",
+    "subtitle": "Protege y haz copias de seguridad de tus archivos con Internxt Drive y QNAP",
+    "features": ["Copia de seguridad NAS en la nube para QNAP", "Transferencias seguras", "Sincronización y copias de seguridad cifradas"],
+    "cta": "Obtener Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "¿Qué es un dispositivo QNAP NAS y por qué debería usarlo?",
+    "description": [
+      "La copia de seguridad NAS en la nube es una solución de almacenamiento en la nube cifrada que copia tus datos en tu dispositivo y en la nube para proteger los archivos contra fallos de hardware, robo o desastres locales.",
+      "Internxt se conecta a tu dispositivo QNAP a través de un contenedor Docker, por lo que las copias de seguridad que salen de la red ya están cifradas con la criptografía post-cuántica AES-256 y Kyber-512 con una arquitectura de conocimiento cero.",
+      "Aunque QNAP NAS es eficaz para almacenar datos, aún puede verse afectado por riesgos como fallos de hardware, pérdidas accidentales, ransomware y eventos medioambientales. Usar una copia de seguridad en la nube ayuda a proteger tus datos y hace posible la recuperación en cualquier momento.",
+      "Para usuarios avanzados, QNAP también proporciona herramientas avanzadas de seguridad y configuración, como controles de acceso granulares, autenticación multifactor, bloqueo de IP, protección de instantáneas y configuraciones de cifrado."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Integración de Internxt con QNAP NAS",
+    "description": "Internxt conecta tu dispositivo QNAP NAS a través de un contenedor Docker mediante nuestra CLI de código abierto que conecta tu sistema a tu cuenta y crea un destino de copia de seguridad seguro para tus archivos. Esto expone un punto de montaje dentro de QNAP DSM 7+ y configura Hyper Backup, o HBS3, como destino de copia de seguridad. Tus datos se cifran antes de la subida, por lo que solo se envían archivos cifrados a nuestros centros de datos europeos.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "La copia de seguridad NAS en la nube de Synology utiliza el mismo enfoque de contenedor Docker que QNAP. Hyper Backup apunta al punto de montaje expuesto y envía los archivos cifrados a los centros de datos europeos de Internxt. Tus archivos están protegidos con el cifrado post-cuántico y de conocimiento cero de Internxt, y tu NAS es el único dispositivo que tiene las claves para descifrar tus datos.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "El soporte NAS de Internxt para QNAP funciona a través de la imagen Docker del CLI de Internxt. Internxt se integra con QNAP NAS mediante la aplicación Docker, permitiendo la conexión a herramientas de copia de seguridad estándar como Hyper Backup o métodos de sincronización a nivel de archivos, lo que permite a los usuarios enviar datos del NAS directamente al almacenamiento en la nube cifrado de Internxt para copias de seguridad externas y recuperación ante desastres. Esta integración simplifica las copias de seguridad manteniendo el control total de tu flujo de trabajo existente, y añade almacenamiento seguro en la nube con el cifrado de conocimiento cero Kyber-512 y AES-256 de Internxt.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Solución de copia de seguridad QNAP NAS",
+    "description": "Una solución de copia de seguridad y colaboración en la nube fiable como Internxt Drive es una estrategia esencial para proteger los datos de tu NAS en tu dispositivo QNAP. Internxt ofrece integración con QNAP Hyper Backup y QNAP Cloud Sync para garantizar que tus archivos permanezcan seguros, accesibles y recuperables en todo momento. La copia de seguridad NAS en la nube de QNAP también admite el versionado, lo que te permite restaurar estados anteriores de los archivos si los datos se modifican o eliminan accidentalmente. Esto es especialmente útil para hacer frente al ransomware u otras amenazas de pérdida de datos, ya que puedes revertir a una copia de seguridad limpia en lugar de perder los datos definitivamente.",
+    "cta": "Obtener Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Haz copia de seguridad de tu QNAP NAS en la nube",
+    "description": "La copia de seguridad NAS en la nube envía los datos de tu QNAP NAS a almacenamiento externo cifrado donde los archivos sobreviven a fallos de hardware, robo, ransomware o eliminación accidental. El soporte NAS de Internxt funciona junto a tu flujo de trabajo de QNAP Hyper Backup existente. Cada subida se cifra en tu dispositivo con Kyber-512 y AES-256 antes de salir de la red, y tus claves de cifrado nunca abandonan tu hardware.",
+    "scrollableSection": {
+      "titles": ["Protección contra pérdida de datos", "Sincronización en tiempo real", "Seguridad", "Tus datos te pertenecen"],
+      "descriptions": [
+        "La copia de seguridad en la nube de QNAP incluye funciones como la protección RAID, que ayuda a mantener los archivos accesibles incluso si falla un disco, mientras que las funciones de instantáneas e historial de versiones permiten recuperar archivos eliminados o modificados. Internxt con soporte QNAP NAS ayuda a proteger contra la pérdida de datos manteniendo todos tus archivos almacenados en un lugar seguro y centralizado. Admite copias de seguridad automáticas para ordenadores, teléfonos, servidores y unidades externas, reduciendo el riesgo de perder datos importantes.",
+        "Las funciones de sincronización en tiempo real de QNAP incluyen actualizaciones automáticas de archivos entre dispositivos y ubicaciones de copia de seguridad, lo que ayuda a mantener los archivos actualizados y accesibles en todos los sistemas. Internxt con soporte QNAP NAS garantiza que todos los cambios se sincronicen en tiempo real, reduciendo el riesgo de versiones desactualizadas, actualizaciones perdidas o sobrescrituras accidentales.",
+        "QNAP NAS reduce la dependencia de proveedores de nube menos privados, dándote control total sobre tu propia nube con funciones de seguridad adicionales como permisos de usuario, 2FA y gestión de contraseñas. Al combinar un QNAP NAS con Internxt Drive, obtienes cifrado de conocimiento cero con Kyber-512 y AES-256. Como Internxt es completamente de código abierto y auditado de forma independiente, puedes estar tranquilo sabiendo que tus datos están protegidos con la mejor seguridad y cifrado.",
+        "Sé dueño de tus datos con QNAP NAS almacenando todo en tu propio dispositivo para tener control total sobre dónde se almacenan tus archivos y cómo se accede a ellos. Internxt cifra todos tus archivos y datos en tu lado, de modo que solo tú puedes acceder a ellos, dándote control total sobre tus datos y almacenamiento privado en la nube."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Lo que Internxt ofrece con soporte QNAP NAS",
+    "description": "Internxt ofrece soporte NAS para QNAP para subir, sincronizar, compartir y hacer copias de seguridad de tus archivos en la nube y protegerlos contra pérdida de datos y ransomware.",
+    "cards": {
+      "titles": ["QNAP", "Acceso desde cualquier dispositivo", "Protección contra ransomware"],
+      "descriptions": [
+        "El soporte NAS de Internxt para QNAP funciona a través de la imagen Docker del CLI de Internxt. Internxt se integra con QNAP NAS mediante la aplicación Docker, permitiendo la conexión a herramientas de copia de seguridad estándar como Hyper Backup o métodos de sincronización a nivel de archivos, lo que permite a los usuarios enviar datos del NAS directamente al almacenamiento en la nube cifrado de Internxt para copias de seguridad externas y recuperación ante desastres. Esta integración simplifica las copias de seguridad manteniendo el control total de tu flujo de trabajo existente, y añade almacenamiento seguro en la nube con el cifrado de conocimiento cero Kyber-512 y AES-256 de Internxt.",
+        "El acceso remoto cifrado te permite acceder de forma segura a los mismos archivos en la nube desde cualquier dispositivo con Internxt instalado. Las aplicaciones para web, Windows, macOS, Linux, iOS y Android descifran tus archivos localmente con tu propia clave, de modo que solo tú puedes ver tus datos. Esto mantiene todo en un lugar seguro para tu NAS, ordenador o teléfono.",
+        "La recuperación de ransomware en un NAS depende de si las copias de seguridad son accesibles para el atacante. Internxt lo evita manteniendo las copias de seguridad en la nube cifradas con claves almacenadas en tu dispositivo, no en el NAS ni en la nube. Aunque un dispositivo QNAP se vea comprometido, los atacantes solo pueden cifrar los datos locales, mientras que las copias de seguridad en la nube permanecen protegidas e inaccesibles. Las instantáneas con versiones también permiten recuperar versiones limpias de archivos antes de la infección."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Configura tus copias de seguridad en la nube de QNAP NAS",
+    "description": "Puedes configurar tus copias de seguridad en la nube de QNAP NAS en tres pasos usando nuestros tutoriales detallados de nuestro GitHub de código abierto que te guiarán en cada paso.",
+    "cards": {
+      "titles": ["ReadMe", "Guía de usuario", "Código abierto"],
+      "descriptions": [
+        "El ReadMe explica cómo conectar tu dispositivo NAS a la aplicación Docker para que puedas comenzar con Internxt Drive y NAS QNAP con el comando de ejecución de Docker, los puertos necesarios, los montajes de volúmenes y otros controles de seguridad adicionales.",
+        "En QNAP, instala Docker (o Container Manager en DSM 7.2+), descarga la imagen de Internxt, configura las variables de entorno para tu cuenta y añade el punto de montaje como destino de Hyper Backup. Puedes encontrar instrucciones más detalladas en nuestro centro de ayuda.",
+        "El repositorio del CLI de Internxt en github.com/internxt/cli contiene cada archivo cliente que ejecuta el contenedor Docker y las notas de versión de cada lanzamiento. El almacenamiento en la nube de código abierto de Internxt y todos sus productos son de código abierto y transparentes, y la seguridad del cifrado o la gestión de claves puede verificarse desde nuestra base de código disponible públicamente."
+      ],
+      "cta": ["Leer guía", "Más información", "Ver detalles"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Copia de seguridad en la nube de QNAP NAS",
+    "description": "Gestiona tu QNAP NAS con Internxt Drive",
+    "cta": "Obtener Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es un servicio de copia de seguridad en la nube de QNAP?",
+        "answer": [
+          "Es una solución de copia de seguridad que copia continua o periódicamente los datos de tu dispositivo QNAP NAS a un entorno seguro en la nube. Esto crea una copia externa de tus archivos para que permanezcan seguros incluso si el NAS físico resulta dañado, perdido o comprometido."
+        ]
+      },
+      {
+        "question": "¿Por qué debería hacer una copia de seguridad de mi QNAP NAS en la nube?",
+        "answer": [
+          "La copia de seguridad en la nube protege contra múltiples riesgos, como fallos de hardware, robo, ataques de ransomware, eliminación accidental y desastres en el sitio como incendios o inundaciones. Garantiza que siempre tengas una copia externa de tus datos que pueda restaurarse cuando sea necesario."
+        ]
+      },
+      {
+        "question": "¿Están cifrados mis datos?",
+        "answer": [
+          "Sí, Internxt cifra tus datos con cifrado post-cuántico y de conocimiento cero AES-256 y Kyber-512. Todos tus datos se cifran antes de salir de tu NAS y permanecen cifrados durante la transferencia y mientras se almacenan en la nube. Las claves de cifrado se guardan en tu dispositivo QNAP, por lo que nadie puede acceder a tus archivos."
+        ]
+      },
+      {
+        "question": "¿Funciona Internxt con todos los dispositivos QNAP NAS?",
+        "answer": [
+          "Sí, es compatible con la mayoría de los modelos de QNAP NAS que admiten versiones modernas de DSM y herramientas de copia de seguridad como Hyper Backup o Cloud Sync. Algunos modelos más antiguos o de nivel básico pueden tener funciones limitadas."
+        ]
+      },
+      {
+        "question": "¿Cuál es la diferencia entre la copia de seguridad y la sincronización en QNAP?",
+        "answer": [
+          "La copia de seguridad crea una copia recuperable de tus datos en un momento específico, mientras que la sincronización mantiene los archivos reflejados entre el NAS y el almacenamiento en la nube. QNAP admite ambas opciones, pero la copia de seguridad es generalmente preferida para la recuperación ante desastres porque protege contra la eliminación accidental y el ransomware."
+        ]
+      },
+      {
+        "question": "¿Qué aplicaciones de QNAP se usan para la copia de seguridad en la nube?",
+        "answer": [
+          "Las principales aplicaciones de QNAP son Hybrid Backup Sync (HBS 3) para copia de seguridad y sincronización, y QuDedup para la deduplicación y reducir el tamaño de las copias de seguridad y acelerar las transferencias."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Almacenamiento en la nube cifrado",
+    "drive": "Almacenamiento seguro en la nube",
+    "nas": "Copia de seguridad en la nube NAS",
+    "qnap": "Copia de seguridad en la nube QNAP",
+    "synology": "Copia de seguridad en la nube Synology NAS"
+  }
+}
