@@ -135,7 +135,7 @@ export const PriceCard = ({
   const showCents = priceNumber < 1 || isAnnual;
 
   const currentPrice = showCents
-    ? (Math.trunc(priceNumber * 100) / 100).toFixed(2)
+    ? (Math.floor(priceNumber) + 0.98).toFixed(2)
     : Math.floor(priceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
@@ -145,7 +145,7 @@ export const PriceCard = ({
     const originalDisplayedPrice = Number(price);
 
     if (showCents) {
-      return (Math.trunc(originalDisplayedPrice * 100) / 100).toFixed(2);
+      return (Math.floor(originalDisplayedPrice) + 0.98).toFixed(2);
     }
 
     return Math.floor(originalDisplayedPrice).toString();
@@ -187,7 +187,7 @@ export const PriceCard = ({
   return (
     <div className="flex flex-col gap-5">
       <div
-        className={`flex h-full w-[367px] flex-col items-center justify-start rounded-16 ${
+        className={`flex h-full flex-col items-center justify-start rounded-16 lg:w-[367px] ${
           popular ? (isValentinesMode ? 'bg-pink-30' : darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl') : ''
         }`}
       >
@@ -324,7 +324,7 @@ export const PriceCard = ({
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                     : 'border-primary bg-transparent text-primary hover:bg-gray-1'
-                } lg:w-[290px]whi flex h-[48px] w-full items-center justify-center rounded-md border-[1.5px] text-base`}
+                } flex h-[48px] w-[290px] items-center justify-center rounded-md border-[1.5px] text-base`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
               </button>

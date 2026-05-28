@@ -1,0 +1,128 @@
+{
+  "HeroSection": {
+    "label": "QNAP NAS",
+    "title": "Sauvegarde cloud NAS QNAP vers **Internxt Drive**",
+    "subtitle": "Sécurisez et sauvegardez vos fichiers avec Internxt Drive et QNAP",
+    "features": ["Sauvegarde cloud NAS pour QNAP", "Transferts sécurisés", "Synchronisation et sauvegardes chiffrées"],
+    "cta": "Obtenir Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "Qu'est-ce qu'un périphérique QNAP NAS et pourquoi devrais-je l'utiliser ?",
+    "description": [
+      "La sauvegarde cloud NAS est une solution de stockage cloud chiffrée qui copie vos données sur votre appareil et dans le cloud pour protéger vos fichiers contre les pannes matérielles, le vol ou les catastrophes locales.",
+      "Internxt se connecte à votre périphérique QNAP via un conteneur Docker, de sorte que les sauvegardes quittant le réseau sont déjà chiffrées avec AES-256 et la cryptographie post-quantique Kyber-512 grâce à une architecture à connaissance nulle.",
+      "Bien que le NAS QNAP soit efficace pour stocker des données, il peut toujours être exposé à des risques, notamment les dysfonctionnements matériels, les pertes accidentelles, les ransomwares et les événements environnementaux. L'utilisation d'une sauvegarde cloud permet de protéger vos données et de rendre la récupération possible à tout moment.",
+      "Pour les utilisateurs avancés, QNAP propose également des outils de sécurité et de configuration avancés tels que des contrôles d'accès granulaires, l'authentification multifacteur, le blocage d'IP, la protection des instantanés et les paramètres de chiffrement."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Intégration d'Internxt avec QNAP NAS",
+    "description": "Internxt connecte votre périphérique QNAP NAS via un conteneur Docker grâce à notre CLI open source qui connecte votre système à votre compte et crée une destination de sauvegarde sécurisée pour vos fichiers. Cela expose un point de montage dans QNAP DSM 7+ et configure Hyper Backup, ou HBS3, comme destination de sauvegarde. Vos données sont chiffrées avant l'envoi, de sorte que seuls des fichiers chiffrés sont envoyés à nos centres de données européens.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "La sauvegarde cloud NAS Synology utilise la même approche par conteneur Docker que QNAP. Hyper Backup pointe vers le montage exposé et envoie les fichiers chiffrés vers les centres de données européens d'Internxt. Vos fichiers sont protégés par le chiffrement post-quantique et à connaissance nulle d'Internxt, et votre NAS est le seul appareil qui détient les clés pour déchiffrer vos données.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "Le support NAS Internxt pour QNAP fonctionne via l'image Docker CLI d'Internxt. Internxt s'intègre au NAS QNAP via l'application Docker, permettant la connexion aux outils de sauvegarde standard comme Hyper Backup ou les méthodes de synchronisation au niveau des fichiers, permettant aux utilisateurs d'envoyer les données NAS directement vers le stockage cloud chiffré d'Internxt pour la sauvegarde hors site et la reprise après sinistre. Cette intégration simplifie les sauvegardes tout en conservant le contrôle total de votre flux de travail existant, et ajoute un stockage cloud sécurisé grâce au chiffrement à connaissance nulle Kyber-512 et AES-256 d'Internxt.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Solution de sauvegarde NAS QNAP",
+    "description": "Une solution de sauvegarde cloud fiable comme Internxt Drive est une stratégie essentielle pour protéger vos données NAS sur votre périphérique QNAP. Internxt offre l'intégration QNAP Hyper Backup et QNAP Cloud Sync pour garantir que vos fichiers restent sécurisés, accessibles et récupérables à tout moment. La sauvegarde cloud NAS QNAP prend également en charge le versionnage, vous permettant de restaurer les états précédents des fichiers en cas de modification ou de suppression accidentelle. Cela est particulièrement utile face aux ransomwares ou autres menaces de perte de données, car vous pouvez revenir à une copie de sauvegarde propre au lieu de perdre définitivement vos données.",
+    "cta": "Obtenir Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Sauvegardez votre NAS QNAP dans le cloud",
+    "description": "La sauvegarde cloud NAS envoie les données de votre NAS QNAP vers un stockage hors site chiffré où les fichiers survivent aux pannes matérielles, au vol, aux ransomwares ou à la suppression accidentelle. Le support NAS d'Internxt fonctionne en parallèle avec votre flux de travail QNAP Hyper Backup existant. Chaque envoi est chiffré sur votre appareil avec Kyber-512 et AES-256 avant de quitter le réseau, et vos clés de chiffrement ne quittent jamais votre matériel.",
+    "scrollableSection": {
+      "titles": ["Protection contre la perte de données", "Synchronisation en temps réel", "Sécurité", "Possédez vos données"],
+      "descriptions": [
+        "La sauvegarde cloud QNAP inclut des fonctionnalités telles que la protection RAID, permettant de garder les fichiers accessibles même en cas de défaillance d'un disque, tandis que les fonctionnalités d'instantanés et d'historique des versions permettent de récupérer des fichiers supprimés ou modifiés. Internxt avec le support NAS QNAP aide à protéger contre la perte de données en gardant tous vos fichiers stockés dans un emplacement sécurisé et centralisé. Il prend en charge les sauvegardes automatiques pour les ordinateurs, téléphones, serveurs et disques externes, réduisant le risque de perdre des données importantes.",
+        "Les fonctionnalités de synchronisation en temps réel de QNAP incluent les mises à jour automatiques des fichiers sur les appareils et les emplacements de sauvegarde, contribuant à maintenir les fichiers à jour et accessibles sur tous les systèmes. Internxt avec le support NAS QNAP garantit que toutes les modifications sont synchronisées en temps réel, réduisant le risque de versions obsolètes, de mises à jour perdues ou d'écrasements accidentels.",
+        "Le NAS QNAP réduit la dépendance aux fournisseurs cloud moins privés, vous donnant le contrôle total de votre propre cloud avec des fonctionnalités de sécurité supplémentaires telles que les autorisations utilisateur, la 2FA et la gestion des mots de passe. En combinant un NAS QNAP avec Internxt Drive, vous bénéficiez d'un chiffrement à connaissance nulle avec Kyber-512 et AES-256. Comme Internxt est entièrement open source et audité de manière indépendante, vous pouvez avoir la certitude que vos données sont protégées par la meilleure sécurité et le meilleur chiffrement.",
+        "Possédez vos données avec le NAS QNAP en stockant tout sur votre propre appareil pour un contrôle total sur l'emplacement de stockage de vos fichiers et la façon dont ils sont accessibles. Internxt chiffre tous vos fichiers et données de votre côté, de sorte que vous seul pouvez y accéder, vous donnant le contrôle total sur vos données et votre stockage cloud privé."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Ce qu'Internxt offre avec le support NAS QNAP",
+    "description": "Internxt offre le support NAS pour QNAP pour télécharger, synchroniser, partager et sauvegarder vos fichiers dans le cloud afin de protéger les fichiers contre la perte de données et les ransomwares.",
+    "cards": {
+      "titles": ["QNAP", "Accès depuis n'importe quel appareil", "Protection contre les ransomwares"],
+      "descriptions": [
+        "Le support NAS Internxt pour QNAP fonctionne via l'image Docker CLI d'Internxt. Internxt s'intègre au NAS QNAP via l'application Docker, permettant la connexion aux outils de sauvegarde standard comme Hyper Backup ou les méthodes de synchronisation au niveau des fichiers, permettant aux utilisateurs d'envoyer les données NAS directement vers le stockage cloud chiffré d'Internxt pour la sauvegarde hors site et la reprise après sinistre. Cette intégration simplifie les sauvegardes tout en conservant le contrôle total de votre flux de travail existant, et ajoute un stockage cloud sécurisé grâce au chiffrement à connaissance nulle Kyber-512 et AES-256 d'Internxt.",
+        "L'accès distant chiffré vous permet d'accéder en toute sécurité aux mêmes fichiers cloud depuis n'importe quel appareil sur lequel Internxt est installé. Les applications pour le web, Windows, macOS, Linux, iOS et Android déchiffrent tous vos fichiers localement à l'aide de votre propre clé, de sorte que vous seul pouvez voir vos données. Cela maintient tout dans un endroit sécurisé pour votre NAS, ordinateur ou téléphone.",
+        "La récupération après ransomware sur un NAS dépend de l'accessibilité des sauvegardes par l'attaquant. Internxt empêche cela en gardant les sauvegardes cloud chiffrées avec des clés stockées sur votre appareil, et non sur le NAS ou dans le cloud. Même si un périphérique QNAP est compromis, les attaquants ne peuvent chiffrer que les données locales, tandis que les sauvegardes cloud restent protégées et inaccessibles. Les instantanés versionnés permettent également la récupération de versions de fichiers saines avant l'infection."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Configurer vos sauvegardes cloud NAS QNAP",
+    "description": "Vous pouvez configurer vos sauvegardes cloud NAS QNAP en trois étapes grâce à nos tutoriels détaillés sur notre GitHub open source pour vous guider à chaque étape.",
+    "cards": {
+      "titles": ["Lisez-moi", "Guide de l'utilisateur", "Open source"],
+      "descriptions": [
+        "Le Lisez-moi explique comment connecter votre périphérique NAS à l'application Docker pour vous permettre de démarrer avec Internxt Drive et NAS QNAP avec la commande Docker run, les ports requis, les montages de volumes et d'autres contrôles de sécurité supplémentaires.",
+        "Sur QNAP, installez Docker (ou Container Manager sur DSM 7.2+), récupérez l'image Internxt, configurez les variables d'environnement pour votre compte et ajoutez le montage comme destination Hyper Backup. Vous trouverez des instructions plus détaillées dans notre centre d'aide.",
+        "Le dépôt CLI Internxt sur github.com/internxt/cli contient tous les fichiers clients que le conteneur Docker exécute ainsi que les notes de version pour chaque version. Le stockage cloud open source d'Internxt et tous ses produits sont open source et transparents, et la sécurité du chiffrement ou de la gestion des clés peut être vérifiée depuis notre base de code publiquement disponible."
+      ],
+      "cta": ["Lire le guide", "En savoir plus", "Voir les détails"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Sauvegarde cloud NAS QNAP",
+    "description": "Gérez votre NAS QNAP avec Internxt Drive",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'un service de sauvegarde cloud QNAP ?",
+        "answer": [
+          "Il s'agit d'une solution de sauvegarde qui copie en continu ou périodiquement les données de votre périphérique NAS QNAP vers un environnement cloud sécurisé. Cela crée une copie hors site de vos fichiers afin qu'ils restent en sécurité même si le NAS physique est endommagé, perdu ou compromis."
+        ]
+      },
+      {
+        "question": "Pourquoi devrais-je sauvegarder mon NAS QNAP dans le cloud ?",
+        "answer": [
+          "La sauvegarde cloud protège contre de multiples risques, notamment les pannes matérielles, le vol, les attaques par ransomware, la suppression accidentelle et les catastrophes sur site comme les incendies ou les inondations. Elle garantit que vous disposez toujours d'une copie externe de vos données pouvant être restaurée en cas de besoin."
+        ]
+      },
+      {
+        "question": "Mes données sont-elles chiffrées ?",
+        "answer": [
+          "Oui, Internxt chiffre vos données avec AES-256 et le chiffrement post-quantique et à connaissance nulle Kyber-512. Toutes vos données sont chiffrées avant de quitter votre NAS et restent chiffrées pendant le transfert et lors du stockage dans le cloud. Les clés de chiffrement sont conservées sur votre périphérique QNAP, de sorte que personne ne peut accéder à vos fichiers."
+        ]
+      },
+      {
+        "question": "Internxt fonctionne-t-il avec tous les périphériques NAS QNAP ?",
+        "answer": [
+          "Oui, il est compatible avec la plupart des modèles NAS QNAP qui prennent en charge les versions DSM modernes et les outils de sauvegarde tels que Hyper Backup ou Cloud Sync. Certains modèles plus anciens ou d'entrée de gamme peuvent avoir des fonctionnalités limitées."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre la sauvegarde cloud QNAP et la synchronisation ?",
+        "answer": [
+          "La sauvegarde crée une copie récupérable de vos données à un moment donné, tandis que la synchronisation maintient les fichiers mis en miroir entre le NAS et le stockage cloud. QNAP prend en charge les deux, mais la sauvegarde est généralement préférée pour la reprise après sinistre car elle protège contre la suppression accidentelle et les ransomwares."
+        ]
+      },
+      {
+        "question": "Quelles applications QNAP sont utilisées pour la sauvegarde cloud ?",
+        "answer": [
+          "Les principales applications QNAP sont Hybrid Backup Sync (HBS 3) pour la sauvegarde et la synchronisation, et QuDedup pour la déduplication afin de réduire la taille des sauvegardes et d'accélérer les transferts."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Stockage cloud chiffré",
+    "drive": "Stockage cloud sécurisé",
+    "nas": "Sauvegarde cloud NAS",
+    "qnap": "Sauvegarde cloud QNAP",
+    "synology": "Sauvegarde cloud Synology NAS"
+  }
+}
