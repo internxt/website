@@ -15,7 +15,7 @@ const HeroSection2 = ({ textContent, lang, bannerText }) => {
           </div>
           <a
             href="/privacy"
-            target={'_blank'}
+
             className="flex cursor-pointer flex-row items-center justify-center space-x-1"
           >
             <p className="text-lg font-semibold text-primary">{textContent.cta}</p>

@@ -62,7 +62,6 @@ const FeatureSection = ({
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
               href="/about"
               locale={router.locale}
-              target="_blank"
             >
               {textContent.cta ? (
                 <>

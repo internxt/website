@@ -16,7 +16,7 @@ import Script from 'next/script';
 
 
 
-const URL_REDIRECT = 'https://internxt.com/pricing';
+const URL_REDIRECT = '/pricing';
 
 const WhatDoesGoogleKnowAboutMe = ({
   lang,
@@ -44,7 +44,7 @@ const WhatDoesGoogleKnowAboutMe = ({
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
       <RevealY className="content flex h-full w-full flex-col items-center justify-center px-5">
-        <Link href={URL_REDIRECT} passHref target="_blank">
+        <Link href={URL_REDIRECT} passHref>
           <Image
             src={getImage('/banners/PlansBanner.webp')}
             alt="Internxt plans banner"
@@ -60,13 +60,13 @@ const WhatDoesGoogleKnowAboutMe = ({
 
       <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} target="_blank" />
+      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} target="_blank" />
+      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
 
       <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'What does Google know about me', url: '/what-does-google-know-about-me' }]} />
     </Layout>

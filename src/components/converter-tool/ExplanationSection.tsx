@@ -36,7 +36,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
           <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
         </div>
         <div className="flex cursor-pointer">
-          <Link href={'/virus-scanner'} target="_blank" className="flex max-w-4xl cursor-pointer flex-row">
+          <Link href={'/virus-scanner'} className="flex max-w-4xl cursor-pointer flex-row">
             <Image
               src={`/images/converter-tool/VirusScanner${langUpperCase}.webp`}
               width={897}

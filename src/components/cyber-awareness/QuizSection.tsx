@@ -11,7 +11,7 @@ const QuizSection = ({ textContent }) => {
           <RenderDescription description={textContent.description} />
         </div>
 
-        <Link href={'/cyber-security-quiz'} target="_blank" className="hidden cursor-pointer lg:flex">
+        <Link href={'/cyber-security-quiz'} className="hidden cursor-pointer lg:flex">
           <Image
             src={'/images/cyber-awareness/Internxt_CTA_Blog_CyberSecurityQuiz_EN-1.png'}
             width={897}

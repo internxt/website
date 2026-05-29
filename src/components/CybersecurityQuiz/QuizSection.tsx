@@ -186,7 +186,7 @@ const View = (viewSelected: ViewProps | undefined) => {
               <p className="text-center text-lg xl:text-left">{textContent.QuizSection.quizCompleted.description}</p>
               <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href="/cyber-awareness" target="_blank">
+                  <Link href="/cyber-awareness">
                     {textContent.QuizSection.quizCompleted.cyberAwareness}
                   </Link>
                 </li>
@@ -201,22 +201,22 @@ const View = (viewSelected: ViewProps | undefined) => {
                   </button>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/what-does-google-know-about-me'} target="_blank">
+                  <Link href={'/what-does-google-know-about-me'}>
                     {textContent.QuizSection.quizCompleted.whatGoogleKnows}
                   </Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-generator'} target="_blank">
+                  <Link href={'/password-generator'}>
                     {textContent.QuizSection.quizCompleted.passwordGenerator}
                   </Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/virus-scanner'} target="_blank">
+                  <Link href={'/virus-scanner'}>
                     {textContent.QuizSection.quizCompleted.freeVirusScanner}
                   </Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-checker'} target="_blank">
+                  <Link href={'/password-checker'}>
                     {textContent.QuizSection.quizCompleted.passwordChecker}
                   </Link>
                 </li>

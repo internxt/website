@@ -135,7 +135,7 @@ export const PriceCard = ({
   const showCents = priceNumber < 1 || isAnnual;
 
   const currentPrice = showCents
-    ? (Math.floor(priceNumber) + 0.98).toFixed(2)
+    ? (Math.floor(priceNumber) + 0.99).toFixed(2)
     : Math.floor(priceNumber).toString();
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
@@ -145,7 +145,7 @@ export const PriceCard = ({
     const originalDisplayedPrice = Number(price);
 
     if (showCents) {
-      return (Math.floor(originalDisplayedPrice) + 0.98).toFixed(2);
+      return (Math.floor(originalDisplayedPrice) + 0.99).toFixed(2);
     }
 
     return Math.floor(originalDisplayedPrice).toString();

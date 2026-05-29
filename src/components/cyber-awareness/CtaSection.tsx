@@ -12,7 +12,6 @@ const CtaSection = ({ textContent }) => {
         </div>
         <a
           href="/pricing"
-          target={'_blank'}
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
         >
           {textContent.cta}

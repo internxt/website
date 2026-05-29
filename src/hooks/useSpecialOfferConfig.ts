@@ -93,6 +93,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'privacytutor',
   'heisect',
   'xataka',
+  'grabon',
+  'heise',
 ]);
 
 export const COUPON_CODES = {

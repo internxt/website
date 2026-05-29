@@ -135,7 +135,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
           </div>
         </div>
         <div className="flex cursor-pointer">
-          <Link href="/password-checker" target="_blank" className="mx-5 flex max-w-4xl cursor-pointer flex-row">
+          <Link href="/password-checker" className="mx-5 flex max-w-4xl cursor-pointer flex-row">
             <Image
               src={`/images/converter-tool/PasswordChecker${langUpperCase}.webp`}
               width={897}

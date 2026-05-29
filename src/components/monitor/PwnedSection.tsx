@@ -32,7 +32,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
         </p>
         <div className="font-regular flex w-full flex-wrap justify-center px-5 text-center text-xl text-gray-80">
           <p className="ml-2 mr-2">{textContent.breachesSection.linkToPasswordGenerator.previousText}</p>
-          <Link href="/password-generator" target="_blank" className="underline hover:text-gray-100 hover:underline">
+          <Link href="/password-generator" className="underline hover:text-gray-100 hover:underline">
             {textContent.breachesSection.linkToPasswordGenerator.linkText}
           </Link>
           <p className="ml-2">{textContent.breachesSection.linkToPasswordGenerator.otherText}</p>
