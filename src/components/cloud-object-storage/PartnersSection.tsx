@@ -29,6 +29,14 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
 
       <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} />
 
+        {textContent.companiesInformation.map((c) => (
+          <span key={c.image}>
+            <Image src={getImage(`/images/cloud-object-storage/${c.image}.webp`)} alt="" width={512} height={288} />
+            <Image src={getImage(`/images/cloud-object-storage/${c.logo}.webp`)} alt="" width={220} height={40} />
+          </span>
+        ))}
+      </div>
+
       <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:h-[400px] lg:flex-row">
         <Image
           src={getImage(`/images/cloud-object-storage/${company.image}.webp`)}

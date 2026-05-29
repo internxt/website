@@ -1,6 +1,6 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 
-export type SwitchButtonOptions = 'Prosegur' | 'Europapress' | 'SPAR';
+export type SwitchButtonOptions = 'Prosegur' | 'Europa Press' | 'SPAR';
 interface PlanSwitchProps {
   textContent: CloudObjectStorageText['PartnersSection'];
   activePartner: SwitchButtonOptions;
@@ -26,10 +26,10 @@ export const PartnerSelector = ({ textContent, activePartner, onPlanTypeChange }
     <button
       type="button"
       onClick={() => {
-        onPlanTypeChange('Europapress');
+        onPlanTypeChange('Europa Press');
       }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-        activePartner === 'Europapress'
+      className={`flex w-1/2 flex-row items-center justify-center whitespace-nowrap rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+        activePartner === 'Europa Press'
           ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
           : `text-lg font-normal text-gray-105`
       }`}
