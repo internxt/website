@@ -135,8 +135,10 @@ export const PriceCard = ({
   const showCents = priceNumber < 1 || isAnnual;
 
   const roundIfNeeded = (n: number): string => {
-    const cents = Math.round((n % 1) * 100);
-    return cents === 98 ? (Math.floor(n) + 0.99).toFixed(2) : n.toFixed(2);
+    const truncated = (Math.floor(n * 100) / 100).toFixed(2);
+    if (truncated.endsWith('.98')) return truncated.slice(0, -1) + '9';
+    if (truncated.endsWith('.00')) return (parseFloat(truncated) - 0.01).toFixed(2);
+    return truncated;
   };
 
   const currentPrice = showCents ? roundIfNeeded(priceNumber) : Math.floor(priceNumber).toString();
