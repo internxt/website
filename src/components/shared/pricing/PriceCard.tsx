@@ -134,9 +134,15 @@ export const PriceCard = ({
   const priceNumber = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
   const showCents = priceNumber < 1 || isAnnual;
 
-  const currentPrice = showCents
-    ? (Math.floor(priceNumber) + 0.98).toFixed(2)
-    : Math.floor(priceNumber).toString();
+  const roundIfNeeded = (n: number): string => {
+    const truncated = (Math.floor(n * 100) / 100).toFixed(2);
+    if (truncated.endsWith('.98')) return truncated.slice(0, -1) + '9';
+    if (truncated.endsWith('.00')) return (parseFloat(truncated) - 0.01).toFixed(2);
+    return truncated;
+  };
+
+  const currentPrice = showCents ? roundIfNeeded(priceNumber) : Math.floor(priceNumber).toString();
+
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
       return undefined;
@@ -145,7 +151,7 @@ export const PriceCard = ({
     const originalDisplayedPrice = Number(price);
 
     if (showCents) {
-      return (Math.floor(originalDisplayedPrice) + 0.98).toFixed(2);
+      return roundIfNeeded(originalDisplayedPrice);
     }
 
     return Math.floor(originalDisplayedPrice).toString();

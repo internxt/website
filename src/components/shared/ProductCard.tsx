@@ -36,7 +36,6 @@ const ProductCard = ({
           <Link
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
             href={redirect}
-            target="_blank"
           >
             {textContent.cta}
           </Link>

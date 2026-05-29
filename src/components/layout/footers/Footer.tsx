@@ -209,8 +209,8 @@ export default function Footer({
 
                     <Link
                       href="/antivirus"
-                      target="_blank"
-                      rel="noreferrer"
+                      locale={lang}
+                      passHref
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.antivirus}
@@ -280,8 +280,8 @@ export default function Footer({
 
                     <Link
                       href="/cloud-object-storage"
-                      target="_blank"
-                      rel="noreferrer"
+                      locale={lang}
+                      passHref
                       className="flex flex-row items-center hover:text-primary"
                     >
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
@@ -388,7 +388,7 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.github}
                     </Link>
 
-                    <Link href="/affiliates" target="_blank" className="hover:text-primary">
+                    <Link href="/affiliates" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
 
@@ -928,8 +928,8 @@ export default function Footer({
 
                       <Link
                         href="/antivirus"
-                        target="_blank"
-                        rel="noreferrer"
+                        locale={lang}
+                        passHref
                         className="flex flex-row items-center hover:text-primary"
                       >
                         <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
@@ -964,8 +964,8 @@ export default function Footer({
 
                       <Link
                         href="/cloud-object-storage"
-                        target="_blank"
-                        rel="noreferrer"
+                        locale={lang}
+                        passHref
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.products.objStorage}
@@ -1096,7 +1096,7 @@ export default function Footer({
                         {textContent.FooterSection.sections.join.github}
                       </Link>
 
-                      <Link href="/affiliates" target="_blank" className="hover:text-primary">
+                      <Link href="/affiliates" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
                       </Link>
 

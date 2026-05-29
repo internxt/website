@@ -11,7 +11,7 @@ interface RedirectButtonProps {
 export const RedirectButton = ({
   url,
   className,
-  target = '_blank',
+  target,
   rel,
   children,
 }: RedirectButtonProps): JSX.Element => (

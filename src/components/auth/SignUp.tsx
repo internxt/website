@@ -146,7 +146,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
 
         <span className="text-center text-sm text-gray-50">
           <span>{props.textContent.SignUp.disclaimer.text}</span>{' '}
-          <a href="/legal" target="_blank" className="hover:text-gray-60 hover:underline active:text-gray-80">
+          <a href="/legal" className="hover:text-gray-60 hover:underline active:text-gray-80">
             {props.textContent.SignUp.disclaimer.link}
           </a>
           {'.'}
