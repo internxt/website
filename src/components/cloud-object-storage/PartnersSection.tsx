@@ -29,7 +29,7 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
 
       <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} />
 
-      <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:h-[400px] lg:flex-row">
+      <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:h-[450px] lg:flex-row">
         <Image
           src={getImage(`/images/cloud-object-storage/${company.image}.webp`)}
           alt={`Image of ${company.image}`}
