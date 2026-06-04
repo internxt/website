@@ -7,9 +7,10 @@ import Link from 'next/link';
 export interface FeatureSectionProps {
   textContent: AntivirusText['FeatureSection'];
   isGetAntivirus?: boolean;
+  showPlan?: boolean;
 }
 
-const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) => {
+const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
   const cards = [
     {
       icon: '/images/antivirus/internxt_antivirus_1.webp',
@@ -48,9 +49,9 @@ const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) =>
 
           <p className="font-regular text-xl text-gray-80">{formattedDescription}</p>
         </div>
-        
+
         <Link
-          href={isGetAntivirus ? 'https://internxt.com/ultimate' : '/pricing'}
+          href={isGetAntivirus ? 'https://internxt.com/ultimate' : showPlan ? '#priceCard' : '/pricing'}
           className={`flex rounded-lg bg-primary px-5 py-3 text-lg text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.cta}

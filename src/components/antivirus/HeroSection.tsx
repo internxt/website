@@ -3,7 +3,13 @@ import Image from 'next/image';
 import DownloadComponent from './DownloadComponent';
 import { isMobile } from 'react-device-detect';
 
-const HeroSection = ({ textContent, download }) => (
+interface HeroSectionProps {
+  textContent: any;
+  download: any;
+  needsDownloadSection?: boolean;
+}
+
+const HeroSection = ({ textContent, download, needsDownloadSection }: HeroSectionProps) => (
   <section className="flex w-full flex-col px-2">
     <div className="flex flex-col items-center pt-32 lg:pt-40">
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
@@ -60,7 +66,9 @@ const HeroSection = ({ textContent, download }) => (
         </div>
       </div>
 
-      {!isMobile && <DownloadComponent textContent={textContent.DownloadLinks} download={download} />}
+      {needsDownloadSection && !isMobile && (
+        <DownloadComponent textContent={textContent.DownloadLinks} download={download} />
+      )}
     </div>
   </section>
 );
