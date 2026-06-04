@@ -12,7 +12,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { useOfferConfig, usePathRedirect } from '@/hooks/useSpecialOfferConfig';
+import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE } from '@/hooks/useSpecialOfferConfig';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 
@@ -23,6 +23,7 @@ interface CombinedSpecialOfferProps {
   footerLang: FooterText;
   pathname: string;
   lang: string;
+  hideLanguage?: boolean;
 }
 
 const getThemeClasses = (isDarkMode: boolean) => ({
@@ -61,6 +62,7 @@ function CombinedSpecialOffer({
   footerLang,
   navbarLang,
   pathname,
+  hideLanguage,
 }: CombinedSpecialOfferProps): JSX.Element {
   const {
     selectedPathname,
@@ -152,7 +154,7 @@ function CombinedSpecialOffer({
           : undefined
       }
     >
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink hideLanguage={hideLanguage} />
 
       <HeroSection
         textContent={langJson.HeroSection}
@@ -247,39 +249,24 @@ function CombinedSpecialOffer({
 export async function getServerSideProps(ctx) {
   const pathname = ctx.params.filename;
   const lang = ctx.locale;
-  const hasLocalePreference = ctx.req.cookies['NEXT_LOCALE'];
 
-  if (pathname === 'baity' && lang === 'en' && !hasLocalePreference) {
-    return {
-      redirect: {
-        destination: '/es/baity',
-        permanent: false,
-      },
-    };
-  }
+  const enforcedLocale = ENFORCED_LOCALE[pathname];
+  const resolvedLang = enforcedLocale ?? lang;
 
-  if (pathname === 'heisect' && lang !== 'de') {
-    return {
-      redirect: {
-        destination: '/de/heisect',
-        permanent: false,
-      },
-    };
-  }
-
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${resolvedLang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${resolvedLang}/navbar.json`);
+  const langJson = require(`@/assets/lang/${resolvedLang}/specialOfferTemplate.json`);
+  const footerLang = require(`@/assets/lang/${resolvedLang}/footer.json`);
 
   return {
     props: {
-      lang,
+      lang: resolvedLang,
       pathname,
       metatagsDescriptions,
       navbarLang,
       langJson,
       footerLang,
+      hideLanguage: !!enforcedLocale,
     },
   };
 }

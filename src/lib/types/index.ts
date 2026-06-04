@@ -279,6 +279,9 @@ export enum PromoCodeName {
   techsagar = 'TECHSAGAR',
   levelupid = 'LEVELUPID',
   privacyTutor = 'PRIVACY',
+  lukevoidx = 'LUKEVOIDX',
+  howmation = 'HOWMATION',
+  aylabs = 'AYLABS',
 }
 
 export interface PromoCodeProps {

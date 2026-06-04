@@ -27,6 +27,7 @@ interface HeroSectionForPartnerProps {
   isPrivacyTutor?: boolean;
   isUltimatePlan?: boolean;
   specialOffer?: boolean;
+  annualPlans?: boolean;
 }
 
 export default function HeroSection({
@@ -41,6 +42,7 @@ export default function HeroSection({
   isUltimatePlan = false,
   isPcMag = false,
   specialOffer = false,
+  annualPlans = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -190,7 +192,11 @@ export default function HeroSection({
                 }`}
               >
                 <span>{parsePercentText(textContent.subtitle)}</span>
-                {specialOffer ? <span>{textContent.subtitle2}</span> : <span>{textContent.lifetimeSubtitle2}</span>}
+                {specialOffer || annualPlans ? (
+                  <span>{textContent.subtitle2}</span>
+                ) : (
+                  <span>{textContent.lifetimeSubtitle2}</span>
+                )}
               </span>
             )}
             <p

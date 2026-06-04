@@ -28,6 +28,7 @@ export interface NavbarProps {
   hideLogoLink?: boolean;
   hideCTA?: boolean;
   hideLoginButton?: boolean;
+  hideLanguage?: boolean;
 }
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
@@ -217,7 +218,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               </>
             )}
             <div className="hidden items-end justify-center bg-transparent lg:flex">
-              {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
+              {!props.hideNavbar && !props.hideLanguage ? <LanguageBox darkMode={props.darkMode} /> : undefined}
             </div>
 
             {!props.isLinksHidden && (
@@ -455,7 +456,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-                      <LanguageMobileBox darkMode={props.darkMode} />
+                      {!props.hideLanguage && <LanguageMobileBox darkMode={props.darkMode} />}
                       <a
                         onClick={() => {
                           setMenuState(false);
