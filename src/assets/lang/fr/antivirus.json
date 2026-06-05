@@ -133,5 +133,8 @@
     "AntivirusProtection": "Protection antivirus pour vos fichiers",
     "RemoveMalware": "Élimine tout logiciel malveillant (malware)",
     "DeviceProtection": "Protège vos dispositifs"
-  }
+  },
+  "secondaryEyeBrow": "Antivirus",
+  "cta": "Obtenir Internxt",
+  "price": "À partir de {currency}29,99/mois"
 }

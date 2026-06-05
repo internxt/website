@@ -13,6 +13,11 @@ export interface NavigationBarText {
   products: Products;
   ourValues: OurValues;
   Auth: Auth;
+  MinimalNavbar: {
+    secondaryEyeBrow: string;
+    cta: string;
+    price: string;
+  };
 }
 
 export interface FooterText {

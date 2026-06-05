@@ -133,5 +133,8 @@
     "AntivirusProtection": "为您的文件提供杀毒保护",
     "RemoveMalware": "清除任何恶意程序（恶意软件）",
     "DeviceProtection": "保护您的设备"
-  }
+  },
+  "secondaryEyeBrow": "杀毒软件",
+  "cta": "获取 Internxt",
+  "price": "从 {currency}29.99/月"
 }

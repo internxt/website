@@ -107,5 +107,10 @@
         "subtitle": "Мы отправили ссылку на сброс настроек аккаунта."
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Антивирус",
+    "cta": "Получить Internxt",
+    "price": "От {currency}29,99/мес"
   }
 }

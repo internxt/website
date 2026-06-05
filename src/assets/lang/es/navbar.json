@@ -106,5 +106,10 @@
         "subtitle": "Te hemos enviado un link de reseteo a"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Antivirus",
+    "cta": "Obtener Internxt",
+    "price": "Desde {currency}29,99/mes"
   }
 }
