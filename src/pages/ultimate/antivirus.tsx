@@ -8,11 +8,12 @@ import { ComponentsInColumnSection } from '@/components/shared/components/Compon
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
 import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
 import FeatureSection from '@/components/antivirus/FeatureSection';
-import HeroSection from '@/components/antivirus/HeroSection';
+import AlternativeHeroSection from '@/components/antivirus/AlternativeHeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
@@ -40,7 +41,7 @@ const AntivirusPage = ({
   langJson,
   lang,
   footerLang,
-  download,
+  navbarLang,
   isGetAntivirus,
 }: AntivirusProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
@@ -98,7 +99,9 @@ const AntivirusPage = ({
     },
   ];
 
-  const { products, currency, currencyValue, lifetimeCoupon } = usePricing({});
+  const { products, currency, currencyValue, lifetimeCoupon } = usePricing({
+    couponCodeForLifetime: PromoCodeName.antivirus,
+  });
 
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
@@ -106,17 +109,17 @@ const AntivirusPage = ({
   return (
     <>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-        <MinimalNavbar lang={locale} />
+        <MinimalNavbar lang={locale} isOffer textContent={navbarLang} />
 
-        <HeroSection textContent={langJson.HeroSection} download={download} />
+        <AlternativeHeroSection textContent={langJson.HeroSection} />
 
         <InfoSection
           FirstComponent={
-            <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20 md:space-y-0">
+            <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:gap-32">
               {infoSectionData.map((item, index) => (
-                <div key={index} className="flex flex-col items-center justify-center px-5 text-center">
+                <div key={index} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80">{item.description}</p>
+                  <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -178,7 +181,7 @@ const AntivirusPage = ({
               <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white" />
             </div>
           }
-          backgroundColor="bg-gray-1"
+          backgroundColor="bg-white"
         />
         <CtaSection
           textContent={langJson.cta2}

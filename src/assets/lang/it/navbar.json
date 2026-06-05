@@ -107,5 +107,10 @@
         "subtitle": "We've send an account reset link to"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Antivirus",
+    "cta": "Ottieni Internxt",
+    "price": "Da {currency}29,99/mese"
   }
 }

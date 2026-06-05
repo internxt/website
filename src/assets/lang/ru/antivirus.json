@@ -133,5 +133,8 @@
     "AntivirusProtection": "Антивирусная защита для ваших файлов",
     "RemoveMalware": "Удаляет любые вредоносные программы (malware)",
     "DeviceProtection": "Защищает ваши устройства"
-  }
+  },
+  "secondaryEyeBrow": "Антивирус",
+  "cta": "Получить Internxt",
+  "price": "От {currency}29,99/мес"
 }

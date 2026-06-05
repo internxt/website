@@ -107,5 +107,10 @@
         "subtitle": "我們已經發送了帳戶重置鏈接到"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "防毒軟體",
+    "cta": "取得 Internxt",
+    "price": "從 {currency}29.99/月"
   }
 }

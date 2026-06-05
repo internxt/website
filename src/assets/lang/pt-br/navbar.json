@@ -91,5 +91,10 @@
         "subtitle": "Enviamos um link de redefinição de conta para"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Antivirus",
+    "cta": "Obtenha o Internxt",
+    "price": "A partir de {currency}29,99/mês"
   }
 }

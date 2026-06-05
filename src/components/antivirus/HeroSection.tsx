@@ -66,9 +66,7 @@ const HeroSection = ({ textContent, download, needsDownloadSection }: HeroSectio
         </div>
       </div>
 
-      {needsDownloadSection && !isMobile && (
-        <DownloadComponent textContent={textContent.DownloadLinks} download={download} />
-      )}
+      {!isMobile && <DownloadComponent textContent={textContent.DownloadLinks} download={download} />}
     </div>
   </section>
 );
