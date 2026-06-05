@@ -111,6 +111,6 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "杀毒软件",
     "cta": "获取 Internxt",
-    "price": "从 {currency}29.99/月"
+    "price": "从 {currency}{price}/月"
   }
 }

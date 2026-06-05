@@ -109,9 +109,13 @@ const AntivirusPage = ({
   return (
     <>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-        <MinimalNavbar lang={locale} isOffer textContent={navbarLang} />
+        <MinimalNavbar lang={locale} isOffer textContent={navbarLang} price={ultimatePlan?.price.toString()} />
 
-        <AlternativeHeroSection textContent={langJson.HeroSection} />
+        <AlternativeHeroSection
+          textContent={langJson.HeroSection}
+          currentPrice={ultimatePlan?.price.toString()}
+          currency={currency}
+        />
 
         <InfoSection
           FirstComponent={

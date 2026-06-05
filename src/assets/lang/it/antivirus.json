@@ -4,12 +4,15 @@
     "blueText": "Internxt Antivirus",
     "description": "Proteggiti da malware, phishing e ransomware con il nostro antivirus. Tieni tutti i tuoi file sicuri e protetti.",
     "eyeBrow": "Internxt Antivirus",
+    "secondaryEyeBrow": "Antivirus",
     "DownloadLinks": {
       "downloadTitle": "Scarica Internxt Antivirus",
       "downloadForMac": "Scarica per Mac",
       "downloadForWindows": "Scarica per Windows",
       "downloadForLinux": "Scarica per Linux"
-    }
+    },
+    "cta": "Ottieni Internxt",
+    "price": "Da {currency}{price}/mese"
   },
   "cta1": {
     "title": "Internxt Antivirus",

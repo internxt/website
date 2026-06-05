@@ -111,6 +111,6 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "Antivirus",
     "cta": "Ottieni Internxt",
-    "price": "Da {currency}29,99/mese"
+    "price": "Da {currency}{price}/mese"
   }
 }
