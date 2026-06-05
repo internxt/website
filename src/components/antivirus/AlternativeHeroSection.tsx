@@ -4,16 +4,18 @@ import Link from 'next/link';
 
 interface AlternativeHeroSectionProps {
   textContent: any;
+  currentPrice?: string;
+  currency?: string;
 }
 
-const AlternativeHeroSection = ({ textContent }: AlternativeHeroSectionProps) => (
+const AlternativeHeroSection = ({ textContent, currentPrice, currency }: AlternativeHeroSectionProps) => (
   <section
-    className="mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:px-10 xl:px-32 3xl:px-80"
+    className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
   >
-    <div className="flex w-full flex-row items-center gap-[90px]">
+    <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:gap-[90px]">
       <div
-        className={`z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:gap-8 lg:rounded-16 lg:p-8`}
+        className={`z-20 flex h-min w-full shrink-0 flex-col items-center justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:items-start lg:gap-8 lg:rounded-16 lg:p-8`}
         style={{
           background: 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
         }}
@@ -24,14 +26,14 @@ const AlternativeHeroSection = ({ textContent }: AlternativeHeroSectionProps) =>
           </p>
         </div>
 
-        <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+        <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-left lg:text-5xl">
           {textContent.title} <br className="hidden sm:flex" />
           <span className="text-primary">{textContent.blueText}</span>
         </p>
 
-        <p className="text-xl font-normal text-gray-55">{textContent.description}</p>
+        <p className="text-sm font-normal text-gray-55 lg:text-left">{textContent.description}</p>
 
-        <div className="flex w-full flex-row items-center gap-3">
+        <div className="flex w-full flex-row items-center justify-center gap-3 lg:justify-start">
           <Link
             href={'#priceCard'}
             className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
@@ -40,12 +42,12 @@ const AlternativeHeroSection = ({ textContent }: AlternativeHeroSectionProps) =>
           </Link>
 
           <span className="h-min rounded-2 bg-green-100 px-1 py-0.5 text-sm font-semibold text-green-0">
-            {textContent.price}
+            {textContent.price?.replace('{currency}', currency || '').replace('{price}', currentPrice || '')}
           </span>
         </div>
       </div>
 
-      <div className="relative flex h-[65vh] items-center justify-center md:h-[450px]">
+      <div className="relative flex  h-[65vh] items-center justify-center md:h-[450px] lg:flex">
         <Image
           src={getImage('/images/antivirus/Internxt_Antivirus_Header.png')}
           width={490}

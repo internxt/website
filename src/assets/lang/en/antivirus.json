@@ -12,7 +12,7 @@
       "downloadForLinux": "Download for Linux"
     },
     "cta": "Get Internxt",
-    "price": "From €29.99/mo"
+    "price": "From {currency}{price}/mo"
   },
   "cta1": {
     "title": "Internxt Antivirus",

@@ -41,18 +41,18 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <span className="space-y-4 text-3xl font-semibold text-gray-100 lg:text-5xl">
+          <span className="space-y-4 text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
             {textContent.title}
             <br />
             <p className="text-primary"> {textContent.titleLine2}</p>
           </span>
 
-          <p className="font-regular text-xl text-gray-80">{formattedDescription}</p>
+          <p className="font-regular text-sm text-gray-80 lg:text-xl">{formattedDescription}</p>
         </div>
 
         <Link
           href={isGetAntivirus ? 'https://internxt.com/ultimate' : showPlan ? '#priceCard' : '/pricing'}
-          className={`flex rounded-lg bg-primary px-5 py-3  text-xl font-medium text-white hover:bg-primary-dark`}
+          className={`flex rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white hover:bg-primary-dark lg:text-xl`}
         >
           {textContent.cta}
         </Link>
@@ -97,8 +97,8 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
                     layout="intrinsic"
                     alt={`${card.title} image`}
                   />
-                  <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
-                  <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>
+                  <p className=" text-30 font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
+                  <p className="font-regular text-sm sm:text-lg md:text-xl">{card.description}</p>
                 </div>
               </div>
             );

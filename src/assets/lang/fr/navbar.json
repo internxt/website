@@ -110,6 +110,6 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "Antivirus",
     "cta": "Obtenir Internxt",
-    "price": "À partir de {currency}29,99/mois"
+    "price": "À partir de {currency}{price}/mois"
   }
 }

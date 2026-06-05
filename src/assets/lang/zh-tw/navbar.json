@@ -111,6 +111,6 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "防毒軟體",
     "cta": "取得 Internxt",
-    "price": "從 {currency}29.99/月"
+    "price": "從 {currency}{price}/月"
   }
 }

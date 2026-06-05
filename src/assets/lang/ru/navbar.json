@@ -111,6 +111,6 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "Антивирус",
     "cta": "Получить Internxt",
-    "price": "От {currency}29,99/мес"
+    "price": "От {currency}{price}/мес"
   }
 }

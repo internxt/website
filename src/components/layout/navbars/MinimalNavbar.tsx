@@ -9,9 +9,10 @@ export interface MinimalNavbarProps {
   lang: string;
   isOffer?: boolean;
   textContent?: NavigationBarText;
+  price?: string;
 }
 
-export const MinimalNavbar = ({ isOffer, textContent }: MinimalNavbarProps) => {
+export const MinimalNavbar = ({ isOffer, textContent, price }: MinimalNavbarProps) => {
   const [scrolled, setScrolled] = useState<boolean>(true);
   const [currencySymbol, setCurrencySymbol] = useState<string>('€');
 
@@ -28,7 +29,9 @@ export const MinimalNavbar = ({ isOffer, textContent }: MinimalNavbarProps) => {
     });
   }, []);
 
-  const priceLabel = textContent?.MinimalNavbar.price.replace('{currency}', currencySymbol);
+  const priceLabel = textContent?.MinimalNavbar.price
+    .replace('{currency}', currencySymbol)
+    .replace('{price}', price || '');
 
   return (
     <div
@@ -47,7 +50,7 @@ export const MinimalNavbar = ({ isOffer, textContent }: MinimalNavbarProps) => {
           alt="Internxt logo"
         />
         {isOffer && (
-          <div className="absolute right-0 flex flex-row items-center gap-4 px-5 lg:gap-8 lg:px-10 xl:px-32 3xl:px-80">
+          <div className="absolute right-0 hidden flex-row items-center gap-4 px-5 lg:flex lg:gap-8 lg:px-10 xl:px-32 3xl:px-80">
             <p className="text-gray-800 text-sm font-medium">{priceLabel}</p>
             <button
               onClick={() => router.push('#priceCard')}
