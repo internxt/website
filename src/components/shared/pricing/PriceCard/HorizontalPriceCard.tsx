@@ -32,7 +32,6 @@ export interface HorizontalPriceCardProps {
 }
 
 export const HorizontalPriceCard = ({
-  decimalDiscountValue,
   storage,
   currency,
   priceBefore,
@@ -46,10 +45,6 @@ export const HorizontalPriceCard = ({
   }
 
   const contentText = require(`@/assets/lang/en/priceCard.json`);
-
-  const priceNow = decimalDiscountValue
-    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
-    : Number(price).toFixed(2).replace('.00', '');
 
   const cardLabel =
     {
@@ -81,6 +76,7 @@ export const HorizontalPriceCard = ({
       mode: 'payment',
       planType: 'individual',
       currency: currencyValue ?? 'eur',
+      promoCodeId: coupon?.name,
     });
   }
   return (

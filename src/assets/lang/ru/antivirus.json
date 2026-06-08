@@ -4,12 +4,15 @@
     "blueText": "Internxt Antivirus",
     "description": "Защититесь от вредоносного ПО, фишинга и программ-вымогателей с помощью нашего антивируса. Поддерживайте все ваши файлы в безопасности и сохранности.",
     "eyeBrow": "Internxt Antivirus",
+    "secondaryEyeBrow": "Антивирус",
     "DownloadLinks": {
       "downloadTitle": "Скачать Internxt Antivirus",
       "downloadForMac": "Скачать для Mac",
       "downloadForWindows": "Скачать для Windows",
       "downloadForLinux": "Скачать для Linux"
-    }
+    },
+    "cta": "Получить Internxt",
+    "price": "От {currency}{price}/мес"
   },
   "cta1": {
     "title": "Internxt Antivirus",
@@ -133,5 +136,8 @@
     "AntivirusProtection": "Антивирусная защита для ваших файлов",
     "RemoveMalware": "Удаляет любые вредоносные программы (malware)",
     "DeviceProtection": "Защищает ваши устройства"
-  }
+  },
+  "secondaryEyeBrow": "Антивирус",
+  "cta": "Получить Internxt",
+  "price": "От {currency}29,99/мес"
 }

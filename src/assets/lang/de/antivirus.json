@@ -4,12 +4,15 @@
     "blueText": "Internxt Antivirus",
     "description": "Schützen Sie sich vor Schadsoftware, Phishing und Ransomware mit unserem Antivirus. Halten Sie alle Ihre Dateien sicher und geschützt.",
     "eyeBrow": "Internxt Antivirus",
+    "secondaryEyeBrow": "Antivirus",
     "DownloadLinks": {
       "downloadTitle": "Internxt Antivirus herunterladen",
       "downloadForMac": "Mac herunterladen",
       "downloadForWindows": "Windows herunterladen",
       "downloadForLinux": "Linux herunterladen"
-    }
+    },
+    "cta": "Internxt kaufen",
+    "price": "Ab {currency}{price}/Monat"
   },
   "cta1": {
     "title": "Internxt Antivirus",
@@ -133,5 +136,8 @@
     "AntivirusProtection": "Antivirenschutz für Ihre Dateien",
     "RemoveMalware": "Entfernt jegliche Schadsoftware (Malware)",
     "DeviceProtection": "Schützt Ihre Geräte"
-  }
+  },
+  "secondaryEyeBrow": "Antivirus",
+  "cta": "Internxt erhalten",
+  "price": "Ab {currency}29,99/Monat"
 }

@@ -7,9 +7,10 @@ import Link from 'next/link';
 export interface FeatureSectionProps {
   textContent: AntivirusText['FeatureSection'];
   isGetAntivirus?: boolean;
+  showPlan?: boolean;
 }
 
-const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) => {
+const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
   const cards = [
     {
       icon: '/images/antivirus/internxt_antivirus_1.webp',
@@ -40,23 +41,23 @@ const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) =>
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="space-y-4 text-3xl font-semibold text-gray-100 lg:text-5xl">
+          <span className="space-y-4 text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
             {textContent.title}
             <br />
-            {textContent.titleLine2}
-          </p>
+            <p className="text-primary"> {textContent.titleLine2}</p>
+          </span>
 
-          <p className="font-regular text-xl text-gray-80">{formattedDescription}</p>
+          <p className="font-regular text-sm text-gray-80 lg:text-xl">{formattedDescription}</p>
         </div>
-        
+
         <Link
-          href={isGetAntivirus ? 'https://internxt.com/ultimate' : '/pricing'}
-          className={`flex rounded-lg bg-primary px-5 py-3 text-lg text-xl font-medium text-white hover:bg-primary-dark`}
+          href={isGetAntivirus ? 'https://internxt.com/ultimate' : showPlan ? '#priceCard' : '/pricing'}
+          className={`flex rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white hover:bg-primary-dark lg:text-xl`}
         >
           {textContent.cta}
         </Link>
 
-        <div>
+        <div className="w-full  lg:px-10 xl:px-32 3xl:px-80">
           {cards.map((card, index) => {
             const isEven = index % 2 === 0;
 
@@ -64,7 +65,7 @@ const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) =>
               <div
                 key={index}
                 className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
-                  isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
+                  !isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
                 } md:text-start`}
               >
                 <RevealX
@@ -83,7 +84,7 @@ const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) =>
                 </RevealX>
 
                 <div
-                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
+                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:w-1/2 md:items-start md:space-y-6 ${
                     isEven ? 'md:pl-10' : 'md:pr-10'
                   }`}
                 >
@@ -96,8 +97,8 @@ const FeatureSection = ({ textContent, isGetAntivirus }: FeatureSectionProps) =>
                     layout="intrinsic"
                     alt={`${card.title} image`}
                   />
-                  <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
-                  <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>
+                  <p className=" text-30 font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
+                  <p className="font-regular text-sm sm:text-lg md:text-xl">{card.description}</p>
                 </div>
               </div>
             );

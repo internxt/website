@@ -106,5 +106,10 @@
         "subtitle": "Nous vous avons envoyé un lien de réinitialisation pour"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Antivirus",
+    "cta": "Obtenir Internxt",
+    "price": "À partir de {currency}{price}/mois"
   }
 }
