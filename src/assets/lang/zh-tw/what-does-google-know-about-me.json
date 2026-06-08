@@ -1,7 +1,6 @@
 {
   "HeroSection": {
     "mainTitle": "Google 對我的了解是什麼？",
-
     "section1": {
       "description": "隱私組織對 Google 收集個人數據感到擔憂，每個人都聽說過 Google 的許多隱私違規事件。",
       "footer": "毫不秘密地，Google 通過 Chrome、Google 搜索、Google Play 應用、Google 地圖、YouTube 等收集個人信息並跟蹤其用戶。通過調整 Google 控件和設置，防止 Google 訪問您的數據。"
@@ -221,5 +220,48 @@
     "title": "一個可以信任的雲",
     "description": "Internxt 的工作是保護你的數據，而不是利用它。",
     "cta": "創建免費帳戶"
+  },
+  "tableSection": {
+    "title": "Internxt 方案",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "individuals": "年度計劃",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
+      "lifetimeCampaign": {
+        "blueText": "5 折優惠",
+        "normalText": "所有專屬終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付費，終身享受隱私和安全保護",
+    "planDescription": "所有 Internxt 方案都可完整存取我們的私密解決方案套件，配備最新安全技術：Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor,Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的事業、保護員工和確保獲利而設計的全新 Internxt 企業方案。",
+    "businessDescription2": "使用 Internxt 加密雲端儲存方案確保企業資料安全。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費版",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
   }
 }

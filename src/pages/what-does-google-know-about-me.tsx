@@ -13,8 +13,10 @@ import Link from 'next/link';
 import CtaSection from '@/components/affiliates/CtaSection';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-
-
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import usePricing from '@/hooks/usePricing';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
 
 const URL_REDIRECT = '/pricing';
 
@@ -29,6 +31,49 @@ const WhatDoesGoogleKnowAboutMe = ({
 }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.WGKAM,
+    couponCodeForLifetime: PromoCodeName.WGKAM,
+  });
+
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
+
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -40,36 +85,46 @@ const WhatDoesGoogleKnowAboutMe = ({
         segmentName="What Does Google Know About Me"
         lang={lang}
       >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
-      <RevealY className="content flex h-full w-full flex-col items-center justify-center px-5">
-        <Link href={URL_REDIRECT} passHref>
-          <Image
-            src={getImage('/banners/PlansBanner.webp')}
-            alt="Internxt plans banner"
-            draggable={false}
-            loading="lazy"
-            width={1200}
-            height={420}
-            quality={100}
-            className="cursor-pointer"
-          />
-        </Link>
-      </RevealY>
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang as string}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessCards
+          hideBusinessSelector
+          popularPlanBySize="3TB"
+          sectionDetails="bg-white lg:py-20 xl:py-32"
+          freePlanNeedsH2
+        />
 
-      <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
+        <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
 
-      <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
+        <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'What does Google know about me', url: '/what-does-google-know-about-me' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'What does Google know about me', url: '/what-does-google-know-about-me' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
