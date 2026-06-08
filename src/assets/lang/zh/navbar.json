@@ -107,5 +107,10 @@
         "subtitle": "We've send an account reset link to"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "杀毒软件",
+    "cta": "获取 Internxt",
+    "price": "从 {currency}{price}/月"
   }
 }

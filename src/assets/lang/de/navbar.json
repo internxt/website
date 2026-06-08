@@ -107,5 +107,10 @@
         "subtitle": "Wir haben einen Link zum Zurücksetzen des Kontos gesendet an"
       }
     }
+  },
+  "MinimalNavbar": {
+    "secondaryEyeBrow": "Antivirus",
+    "cta": "Internxt erhalten",
+    "price": "Ab {currency}{price}/Monat"
   }
 }
