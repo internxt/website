@@ -50,6 +50,7 @@ const ALLOWED_PATHS = [
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
+const ANNUAL_DISCOUNT_PATHS = ['grabon'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -84,6 +85,7 @@ function CombinedSpecialOffer({
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
   const isValentinesMode = selectedPathname === 'love';
   const isPcMag = selectedPathname === 'pcmag';
+  const isAnnualDiscount = selectedPathname ? ANNUAL_DISCOUNT_PATHS.includes(selectedPathname) : false;
 
   const alternateRecommendedPlan = selectedPathname
     ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
@@ -111,6 +113,7 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
 
@@ -159,6 +162,8 @@ function CombinedSpecialOffer({
   }
 
   const HeroImage = isValentinesMode ? 'valentines' : 'internxt-private-cloud';
+  console.log('Selected pathname:', selectedPathname);
+  console.log('Is annual discount:', isAnnualDiscount);
 
   return (
     <Layout
@@ -192,6 +197,7 @@ function CombinedSpecialOffer({
         textContent={langJson.tableSection}
         decimalDiscount={{
           lifetime: decimalDiscountForLifetime,
+          individuals: isAnnualDiscount ? decimalDiscount : undefined,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={lang}
