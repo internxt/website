@@ -282,6 +282,8 @@ export enum PromoCodeName {
   lukevoidx = 'LUKEVOIDX',
   howmation = 'HOWMATION',
   aylabs = 'AYLABS',
+  antivirus = 'ANTIV',
+  WGKAM = 'WGKAM',
 }
 
 export interface PromoCodeProps {

@@ -1,7 +1,6 @@
 {
   "HeroSection": {
     "mainTitle": "What Does Google Know About Me?",
-
     "section1": {
       "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
       "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
@@ -221,5 +220,48 @@
     "title": "A cloud you can trust",
     "description": "Internxt’s job is to protect your data, not exploit it.",
     "cta": "Create free account"
+  },
+  "tableSection": {
+    "title": "Тарифы Internxt",
+    "hotLabel": "Скидка {{discount}}% ",
+    "planTitles": {
+      "header": " Выберите свой тариф",
+      "individuals": "Годовые Планы",
+      "homePage": "Выберите подходящий тариф",
+      "lifetime": "Пожизненные тарифы",
+      "business": "Бизнес-тарифы",
+      "lifetimeCampaign": {
+        "blueText": "Скидка 50%",
+        "normalText": "на все наши эксклюзивные пожизненные тарифы"
+      }
+    },
+    "lifetimeDescription": "Заплатите один раз — наслаждайтесь конфиденциальностью и безопасностью навсегда.",
+    "planDescription": "Все тарифы предоставляют полный доступ к нашей экосистеме приватных сервисов на базе новейших технологий безопасности: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet и Mail. ",
+    "businessDescription": "В настоящее время мы разрабатываем новые тарифы Internxt, созданные специально для защиты вашего бизнеса, сотрудников и обеспечения финансовой безопасности.",
+    "businessDescription2": "Обеспечьте надежную защиту корпоративных данных с помощью зашифрованного облачного хранилища Internxt.",
+    "billingFrequency": {
+      "monthly": "Ежемесячно",
+      "annually": "Ежегодно",
+      "lifetime": "Пожизненно",
+      "individual": "Для себя",
+      "business": "Для бизнеса"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Бесплатно",
+      "description": "Получите 1 ГБ зашифрованного облачного хранилища абсолютно бесплатно",
+      "cta": "Выбрать тариф"
+    },
+    "features": {
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый исходный код и пройденный аудит",
+      "anonymousAccount": "Анонимное создание аккаунта",
+      "premiumSupport": "Премиум-поддержка",
+      "guarantee": "30-дневная гарантия возврата денег"
+    },
+    "planStorage": {
+      "essential": "1ТБ",
+      "premium": "3ТБ",
+      "ultimate": "5ТБ"
+    }
   }
 }

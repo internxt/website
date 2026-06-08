@@ -1,7 +1,6 @@
 {
   "HeroSection": {
     "mainTitle": "What Does Google Know About Me?",
-
     "section1": {
       "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
       "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
@@ -221,5 +220,48 @@
     "title": "A cloud you can trust",
     "description": "Internxt’s job is to protect your data, not exploit it.",
     "cta": "Create free account"
+  },
+  "tableSection": {
+    "title": "Piani Internxt",
+    "hotLabel": "{{discount}}% sconto",
+    "planTitles": {
+      "header": "Scegli il tuo piano",
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani business",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri piani esclusivi a vita"
+      }
+    },
+    "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza per sempre",
+    "planDescription": "Tutti i piani Internxt hanno accesso completo alla nostra suite di soluzioni private dotate delle più recenti tecnologie di sicurezza: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail. ",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonimo",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia soddisfatti o rimborsati 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
   }
 }

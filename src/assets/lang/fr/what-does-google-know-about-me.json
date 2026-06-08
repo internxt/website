@@ -1,7 +1,6 @@
 {
   "HeroSection": {
     "mainTitle": "What Does Google Know About Me?",
-
     "section1": {
       "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
       "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
@@ -221,5 +220,47 @@
     "title": "A cloud you can trust",
     "description": "Internxt’s job is to protect your data, not exploit it.",
     "cta": "Create free account"
+  },
+  "tableSection": {
+    "title": "Plans Internxt",
+    "hotLabel": "{{discount}}% remise",
+    "planTitles": {
+      "header": "Choisissez votre plan",
+      "homePage": "Choisissez le plan qui vous convient",
+      "lifetime": "Plans à vie",
+      "business": "Plans entreprise",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur tous nos plans exclusifs à vie"
+      }
+    },
+    "lifetimeDescription": "Payez une seule fois et profitez de confidentialité et sécurité à vie",
+    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail. ",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Entreprise"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le plan"
+    },
+    "features": {
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie satisfait ou remboursé 30 jours"
+    },
+    "planStorage": {
+      "essential": "1To",
+      "premium": "3To",
+      "ultimate": "5To"
+    }
   }
 }
