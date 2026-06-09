@@ -29,16 +29,19 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
 
       <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} />
 
-      <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:h-[450px] lg:flex-row">
-        <Image
-          src={getImage(`/images/cloud-object-storage/${company.image}.webp`)}
-          alt={`Image of ${company.image}`}
-          width={512}
-          height={288}
-          className="w-full rounded-xl lg:w-1/2"
-          quality={100}
-        />
-        <div className="flex flex-col items-center justify-center gap-6 lg:w-1/2 lg:items-start">
+      <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:flex-row">
+        <div className="flex w-full items-center justify-center lg:h-min lg:w-[512px]">
+          <Image
+            src={getImage(`/images/cloud-object-storage/${company.image}.webp`)}
+            alt={`Image of ${company.image}`}
+            className="w-full rounded-xl"
+            height={1000}
+            width={1000}
+            quality={100}
+          />
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-6 lg:w-2/3 lg:items-start">
           <Image
             src={getImage(`/images/cloud-object-storage/${company.logo}.webp`)}
             alt={`Logo of ${company.logo}`}
