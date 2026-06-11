@@ -283,7 +283,7 @@
           },
           {
             "id": "file_size_limit_essential",
-            "name": "Límite de 1GB por archivo",
+            "name": "Límite de 10GB por archivo",
             "group": "file_size_limit",
             "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
           },

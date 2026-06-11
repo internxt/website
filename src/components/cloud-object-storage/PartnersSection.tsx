@@ -30,13 +30,12 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
       <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} />
 
       <div className="flex w-full flex-col gap-6 rounded-16 bg-white p-8 lg:flex-row">
-        <div className="flex w-full items-center justify-center lg:h-min lg:w-[512px]">
+        <div className="relative h-[288px] w-full overflow-hidden rounded-xl lg:w-[512px]">
           <Image
             src={getImage(`/images/cloud-object-storage/${company.image}.webp`)}
             alt={`Image of ${company.image}`}
-            className="w-full rounded-xl"
-            height={1000}
-            width={1000}
+            className="object-cover"
+            fill
             quality={100}
           />
         </div>
