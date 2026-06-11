@@ -76,6 +76,7 @@ export const ALLOWED_PATHS = [
   'lukevoidx',
   'howmation',
   'aylabs',
+  'eurodefence',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -117,6 +118,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   techlinked: 'en',
   techquickie: 'en',
   alexziskind: 'en',
+  eurodefence: 'en',
   clubic: 'fr',
   cocadmin: 'fr',
   lefiltreitalia: 'it',
@@ -156,6 +158,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'devopstoolbox',
   'ition',
   'cocadmin',
+  'eurodefence',
 ]);
 
 export const COUPON_CODES = {

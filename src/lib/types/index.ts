@@ -284,6 +284,7 @@ export enum PromoCodeName {
   aylabs = 'AYLABS',
   antivirus = 'ANTIV',
   WGKAM = 'WGKAM',
+  eurodefence = 'EURODEFENCE',
 }
 
 export interface PromoCodeProps {
