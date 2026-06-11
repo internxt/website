@@ -235,6 +235,7 @@ export const COUPON_CODES = {
   lukevoidx: PromoCodeName.lukevoidx,
   howmation: PromoCodeName.howmation,
   aylabs: PromoCodeName.aylabs,
+  eurodefence: PromoCodeName.eurodefence,
 };
 
 interface OfferConfig {
