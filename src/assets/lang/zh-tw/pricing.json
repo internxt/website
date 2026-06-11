@@ -283,7 +283,7 @@
           },
           {
             "id": "file_size_limit_essential",
-            "name": "檔案大小限制：每個檔案 1GB",
+            "name": "檔案大小限制：每個檔案 10GB",
             "group": "file_size_limit",
             "avalability": { "Essential": true, "Premium": false, "Ultimate": false }
           },

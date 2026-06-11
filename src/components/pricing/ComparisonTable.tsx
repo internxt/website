@@ -48,10 +48,17 @@ export default function ComparisonTableSection({
   const billingText = billingFrequency === Interval.Year ? textContent.billedAnnualy : textContent.billedOnce;
   const isLifetime = billingFrequency === Interval.Lifetime;
 
+  const roundIfNeeded = (n: number): string => {
+    const truncated = (Math.floor(n * 100) / 100).toFixed(2);
+    if (truncated.endsWith('.98')) return truncated.slice(0, -1) + '9';
+    if (truncated.endsWith('.00')) return (parseFloat(truncated) - 0.01).toFixed(2);
+    return truncated;
+  };
+
   const getPlanPrice = (planOrder: number) => {
     const basePrice = Number(products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0);
-    const finalPrice = decimalDiscount && isLifetime ? basePrice * (decimalDiscount / 100) : basePrice;
-    return finalPrice.toFixed(2).replace('.00', '');
+    const finalPrice = decimalDiscount ? basePrice * (decimalDiscount / 100) : basePrice;
+    return roundIfNeeded(finalPrice);
   };
 
   const getPlanPriceId = (planOrder: number) => {
