@@ -11,6 +11,8 @@ export const SIGNUP_DRIVE_WEB = 'https://drive.internxt.com/new';
 export const VPN_CHROME_WEB_STORE =
   'https://chromewebstore.google.com/detail/internxt-vpn-free-encrypt/dpggmcodlahmljkhlmpgpdcffdaoccni?pli=1';
 
+export const VPN_FIREFOX_WEB_STORE = 'https://addons.mozilla.org/addon/internxt-vpn/.';
+
 export const INTERNXT_URL = 'https://internxt.com';
 export const COOKIE_DOMAIN = 'internxt.com';
 export const IMPACT_LOGIN_USER = 'https://app.impact.com/login.user';
