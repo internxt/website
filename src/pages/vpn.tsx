@@ -9,7 +9,7 @@ import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection'
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import { VPN_CHROME_WEB_STORE } from '@/constants';
+import { VPN_CHROME_WEB_STORE, VPN_FIREFOX_WEB_STORE } from '@/constants';
 import { HeroSection } from '@/components/shared/components/HeroSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { VPNText } from '@/assets/types/vpn';
@@ -22,6 +22,7 @@ import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { useEffect, useState } from 'react';
 
 
 interface VPNProps {
@@ -48,6 +49,13 @@ const VPN = ({
   relationalLinksText,
 }: VPNProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
+
+  const [vpnWebStoreUrl, setVpnWebStoreUrl] = useState(VPN_CHROME_WEB_STORE);
+
+  useEffect(() => {
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+    setVpnWebStoreUrl(isFirefox ? VPN_FIREFOX_WEB_STORE : VPN_CHROME_WEB_STORE);
+  }, []);
 
   return (
     <>
@@ -82,7 +90,7 @@ const VPN = ({
               </Link>
               <Link
                 className={`flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark ${isGetVPN ? 'hidden' : ''}`}
-                href={VPN_CHROME_WEB_STORE}
+                href={vpnWebStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -133,7 +141,7 @@ const VPN = ({
 
       <CtaSection
         textContent={textContent.CtaSection2}
-        url={VPN_CHROME_WEB_STORE}
+        url={vpnWebStoreUrl}
         target="_blank"
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
       />
