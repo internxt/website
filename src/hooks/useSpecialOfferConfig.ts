@@ -126,6 +126,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   morrolinux: 'it',
   speciale: 'it',
   nfire: 'it',
+  luca: 'it',
+  saddy: 'it',
   ghareeb: 'fr',
 };
 
@@ -159,6 +161,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'ition',
   'cocadmin',
   'eurodefence',
+  'luca',
+  'saddy',
 ]);
 
 export const COUPON_CODES = {
@@ -236,6 +240,8 @@ export const COUPON_CODES = {
   howmation: PromoCodeName.howmation,
   aylabs: PromoCodeName.aylabs,
   eurodefence: PromoCodeName.eurodefence,
+  luca: PromoCodeName.luca,
+  saddy: PromoCodeName.saddy,
 };
 
 interface OfferConfig {

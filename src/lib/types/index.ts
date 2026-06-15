@@ -285,6 +285,8 @@ export enum PromoCodeName {
   antivirus = 'ANTIV',
   WGKAM = 'WGKAM',
   eurodefence = 'EURODEFENCE',
+  luca = 'luca',
+  saddy = 'SADDY',
 }
 
 export interface PromoCodeProps {
