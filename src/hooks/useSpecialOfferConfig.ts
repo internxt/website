@@ -77,6 +77,8 @@ export const ALLOWED_PATHS = [
   'howmation',
   'aylabs',
   'eurodefence',
+  'saddy',
+  'madmoneylabs',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -129,6 +131,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   luca: 'it',
   saddy: 'it',
   ghareeb: 'fr',
+  madmoneylabs: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -163,6 +166,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'eurodefence',
   'luca',
   'saddy',
+  'madmoneylabs',
 ]);
 
 export const COUPON_CODES = {
@@ -242,6 +246,7 @@ export const COUPON_CODES = {
   eurodefence: PromoCodeName.eurodefence,
   luca: PromoCodeName.luca,
   saddy: PromoCodeName.saddy,
+  madmoneylabs: PromoCodeName.madmoneylabs,
 };
 
 interface OfferConfig {
