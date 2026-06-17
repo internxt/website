@@ -20,6 +20,11 @@ import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 import usePricing from '@/hooks/usePricing';
 import { Interval } from '@/services/stripe.service';
+import { analyticsService } from '@/services/ga.services';
+import { checkout } from '@/lib/auth';
+
+const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
+const CLAIM_DEAL_EVENT = 'claim_deal_click';
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
@@ -106,8 +111,32 @@ const AntivirusPage = ({
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
+  const handleClaimDealClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const cta = (event.target as HTMLElement).closest<HTMLElement>(CLAIM_DEAL_CTA_SELECTOR);
+    if (!cta) return;
+
+    analyticsService.trackCustomEvent(CLAIM_DEAL_EVENT, {
+      page: 'ultimate-antivirus',
+      cta_id: cta.id || undefined,
+      cta_text: cta.textContent?.trim() || undefined,
+    });
+
+    if (!ultimatePlan) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    checkout({
+      planId: ultimatePlan.priceId,
+      mode: 'payment',
+      planType: 'individual',
+      currency: currencyValue ?? 'eur',
+      promoCodeId: lifetimeCoupon?.name,
+    });
+  };
+
   return (
-    <>
+    <div onClickCapture={handleClaimDealClick}>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
         <MinimalNavbar lang={locale} isOffer textContent={navbarLang} price={ultimatePlan?.price.toString()} />
 
@@ -197,7 +226,7 @@ const AntivirusPage = ({
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
-    </>
+    </div>
   );
 };
 
