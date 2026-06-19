@@ -21,6 +21,7 @@ import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/Horiz
 import usePricing from '@/hooks/usePricing';
 import { Interval } from '@/services/stripe.service';
 import { analyticsService } from '@/services/ga.services';
+import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
 
 const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
@@ -115,11 +116,15 @@ const AntivirusPage = ({
     const cta = (event.target as HTMLElement).closest<HTMLElement>(CLAIM_DEAL_CTA_SELECTOR);
     if (!cta) return;
 
-    analyticsService.trackCustomEvent(CLAIM_DEAL_EVENT, {
+    const ctaProperties = {
       page: 'ultimate-antivirus',
       cta_id: cta.id || undefined,
       cta_text: cta.textContent?.trim() || undefined,
-    });
+    };
+
+    analyticsService.trackCustomEvent(CLAIM_DEAL_EVENT, ctaProperties);
+
+    handleImpactEvent({ event: CLAIM_DEAL_EVENT, properties: ctaProperties });
 
     if (!ultimatePlan) return;
 

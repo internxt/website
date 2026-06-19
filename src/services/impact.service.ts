@@ -44,6 +44,37 @@ const sendImpactTrack = ({
   });
 };
 
+export const handleImpactEvent = async ({
+  event,
+  properties,
+}: {
+  event: string;
+  properties?: Record<string, unknown>;
+}): Promise<void> => {
+  const randomUUID = getCookie('impactAnonymousId') ?? crypto.randomUUID();
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const irclickid = getCookie('impactClickId') ?? urlParams.get('irclickid');
+  const utmMedium = getCookie('impactPartnerId') ?? urlParams.get('utm_medium');
+
+  try {
+    await axios.post(IMPACT_API, {
+      anonymousId: randomUUID,
+      timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
+      messageId: crypto.randomUUID(),
+      type: 'track',
+      event,
+      properties: {
+        ...properties,
+        ...(irclickid && { irclickid }),
+        ...(utmMedium && { partner_id: utmMedium }),
+      },
+    });
+  } catch (error) {
+    console.warn('Impact event tracking failed:', error);
+  }
+};
+
 export const handleImpact = async ({
   source,
   userAgent,
