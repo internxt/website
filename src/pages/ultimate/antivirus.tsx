@@ -141,7 +141,7 @@ const AntivirusPage = ({
   };
 
   return (
-    <>
+    <div onClickCapture={handleClaimDealClick}>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
         <MinimalNavbar lang={locale} isOffer textContent={navbarLang} price={ultimatePlan?.price.toString()} />
 
@@ -231,7 +231,7 @@ const AntivirusPage = ({
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
-    </>
+    </div>
   );
 };
 
