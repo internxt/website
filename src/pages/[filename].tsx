@@ -154,7 +154,15 @@ function CombinedSpecialOffer({
           : undefined
       }
     >
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink hideLanguage={hideLanguage} />
+      <Navbar
+        lang={lang}
+        textContent={navbarLang}
+        cta={['payment']}
+        isLinksHidden
+        hideCTA
+        hideLogoLink
+        hideLanguage={hideLanguage}
+      />
 
       <HeroSection
         textContent={langJson.HeroSection}
