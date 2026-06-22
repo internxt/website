@@ -32,6 +32,7 @@ export interface HorizontalPriceCardProps {
 }
 
 export const HorizontalPriceCard = ({
+  decimalDiscountValue,
   storage,
   currency,
   priceBefore,
@@ -46,6 +47,9 @@ export const HorizontalPriceCard = ({
 
   const contentText = require(`@/assets/lang/en/priceCard.json`);
 
+  const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
+  const discountedPrice = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
+  const currentPrice = (Math.trunc(discountedPrice * 100) / 100).toFixed(2);
   const cardLabel =
     {
       '5TB': contentText.productFeatures.planTypes.ultimate,
@@ -92,12 +96,19 @@ export const HorizontalPriceCard = ({
         </div>
 
         <div className={`flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
-          <div className="flex flex-row items-end space-x-px text-neutral-700">
+          <div className="flex flex-row items-end space-x-2 text-neutral-700">
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
-              <span className="text-4xl font-bold">{price}</span>
+              <span className="text-4xl font-bold">{currentPrice}</span>
               <span>{currency}</span>
               <span className="text-sm">{contentText.perMonth}</span>
             </p>
+            {hasDiscount && (
+              <p className="flex flex-row items-end whitespace-nowrap font-normal text-gray-50">
+                <span className="text-xl line-through">{price}</span>
+                <span className="text-sm">{currency}</span>
+                <span className="text-sm">{contentText.perMonth}</span>
+              </p>
+            )}
           </div>
         </div>
         <button

@@ -288,6 +288,7 @@ export enum PromoCodeName {
   luca = 'luca',
   saddy = 'SADDY',
   madmoneylabs = 'MADMONEYLABS',
+  WEWE = 'SAVE',
 }
 
 export interface PromoCodeProps {
