@@ -91,8 +91,6 @@ function CombinedSpecialOffer({
     couponCodeForLifetime: couponCode,
   });
 
-  console.log('requireAnnualDiscount', requireAnnualDiscount);
-
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
   usePathRedirect(selectedPathname);
@@ -154,7 +152,15 @@ function CombinedSpecialOffer({
           : undefined
       }
     >
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink hideLanguage={hideLanguage} />
+      <Navbar
+        lang={lang}
+        textContent={navbarLang}
+        cta={['payment']}
+        isLinksHidden
+        hideCTA
+        hideLogoLink
+        hideLanguage={hideLanguage}
+      />
 
       <HeroSection
         textContent={langJson.HeroSection}
