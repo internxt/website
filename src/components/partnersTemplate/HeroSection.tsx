@@ -23,6 +23,7 @@ interface HeroSectionForPartnerProps {
   image?: any;
   isValentinesMode?: boolean;
   isClubic?: boolean;
+  isWpcdrive?: boolean;
   isPcMag?: boolean;
   isPrivacyTutor?: boolean;
   isUltimatePlan?: boolean;
@@ -38,6 +39,7 @@ export default function HeroSection({
   isValentinesMode = false,
   image = 'internxt-private-cloud',
   isClubic = false,
+  isWpcdrive = false,
   isPrivacyTutor = false,
   isUltimatePlan = false,
   isPcMag = false,
@@ -142,6 +144,26 @@ export default function HeroSection({
               width={140}
               height={16}
               alt="Privacy Tutor logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>
+        )}
+
+        {isWpcdrive && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/partnerships/wpcoupons-logo.webp')}
+              width={140}
+              height={16}
+              alt="WPC drive coupon logo"
             />
             <X size={16} />
             <Image
