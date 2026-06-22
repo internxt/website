@@ -127,8 +127,6 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   transform(individualsData, 'individuals');
   transform(businessData, 'business');
 
-  console.log(transformedData);
-
   return transformedData;
 }
 
