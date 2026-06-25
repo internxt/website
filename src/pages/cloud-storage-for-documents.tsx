@@ -12,7 +12,6 @@ import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSe
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import SecureAndManageSection from '@/components/cloud-storage-for-documents/SecureAndManageSection';
-import HowToChooseSection from '@/components/cloud-storage-for-documents/HowToChooseSection';
 import CoreFeaturesSection from '@/components/cloud-storage-for-documents/CoreFeaturesSection';
 
 
@@ -89,12 +88,8 @@ const CloudStorageForDocuments = ({
         bgPadding="lg:py-20"
       />
 
-
- {/* Reviar si ya existe componente o crear nuevo, Accordion */}
-
       <CoreFeaturesSection textContent={textContent.CoreFeatures} />
       
-
       <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
       <HorizontalScrollableSection
