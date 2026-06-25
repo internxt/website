@@ -15,30 +15,21 @@ interface PriceCardSectionProps {
 export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSectionProps): JSX.Element => {
   const router = useRouter();
   const iconMap = [HandCoins, LockSimple, CodeBlock, Gauge, Resize, Code, Star, Headset];
-  const [currencyIcon, setCurrencyIcon] = useState("€");
-  const [country, setCountry] = useState<string>('');
-
+  const [currency, setCurrency] = useState("€");
+  const [currencyValue, setCurrencyValue] = useState("eur");
+  
   useEffect(() => {
-    const loadCurrency = async () => {
-      const result = await currencyService.filterCurrencyByCountry();
-      setCurrencyIcon(result.currency);
-    }
-
-    loadCurrency();
-    console.log("el pais es:" + currencyService.getCountry());
+    currencyService.filterCurrencyByCountry().then(({currency, currencyValue}) => {
+      setCurrency(currency);
+      setCurrencyValue(currencyValue);
+    })
+    .catch(() => {
+      // NO OP
+    })
   }, []);
 
-  useEffect(() => {
-    const loadCountry = async () => {
-      const result = await currencyService.getCountry();
-      setCountry(result.country);
-    }
-
-    loadCountry();
-  });
-
-  const getPrice = (country: string) => {
-  if (country === 'US' || country === 'CA') return 8;
+  const getPrice = (currencyValue: string) => {
+  if (currencyValue === 'usd') return 8;
   return 7;
 };
 
@@ -73,8 +64,8 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               <p className="text-3xl font-semibold text-gray-95">{textContent.cardText.label}</p>
               <div className="flex flex-col items-center gap-4 text-center">
                 <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-                  <span className={`currency`}>{currencyIcon}</span>
-                  <span className="price text-4xl font-bold">{getPrice(country)}</span>
+                  <span className={`currency`}>{currency}</span>
+                  <span className="price text-4xl font-bold">{getPrice(currencyValue)}</span>
                 </p>
                 <p className="text-xs font-normal text-gray-35">{textContent.cardText.perTB}</p>
               </div>
