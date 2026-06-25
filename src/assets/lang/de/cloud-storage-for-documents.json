@@ -1,0 +1,150 @@
+{
+  "HeroSection": {
+    "title": "Privater Cloud-Speicher für Videodateien",
+    "features": ["Speichern Sie Ihre Videos absolut vertraulich", "Post-Quanten- & Zero-Knowledge-Verschlüsselung", "Open-Source und geprüft"],
+    "subtitle": "Holen Sie sich den sichersten Cloud-Speicher, der für Video-Ersteller entwickelt wurde, um Ihre Videos in absoluter Privatsphäre zu speichern.",
+    "cta": "Internxt holen"
+  },
+
+  "FeaturesSection": {
+    "intro": "Internxt ist ein Cloud-Speicher für Videos, der Ihre Dateien speichert, teilt und sichert. Die Verschlüsselung findet auf Ihrem Gerät statt, sodass wir nur Geheimtext speichern. Kein KI-Scanning, kein Werbe-Targeting, keine Ausnahmen.",
+    "title": "",
+    "h2Intro": "",
+    "features": {
+      "feature1": {
+        "title": "Alle Ihre Dokumente in einer sicheren Cloud",
+        "description": [
+          "Greifen Sie von überall auf Ihre Dateien zu – mit unserer Unterstützung für Windows, Mac, Linux, Mobilgeräte und WebDAV. Speichern, organisieren und teilen Sie wichtige Dateien mit Ende-zu-Ende-Verschlüsselung und Echtzeit-Synchronisierung."
+        ]
+      },
+      "feature2": {
+        "title": "Bis zu 5 TB Speicherplatz",
+        "description": [
+          "Machen Sie sich nie wieder Sorgen über Speichergrenzen. Genießen Sie bis zu 5 TB für all Ihre Verträge, Tabellenkalkulationen, Präsentationen und mehr. Erweitern Sie Ihren Tarif ganz einfach, wann immer Sie mehr Platz benötigen."
+        ]
+      },
+      "feature3": {
+        "title": "Privates Teilen von Dateien",
+        "description": [
+          "Teilen Sie verschlüsselte, passwortgeschützte Dokumente für eine bessere Kontrolle darüber, wer auf Ihre Dokumente zugreifen kann. Alles wird auf Ihrem Gerät für absolute Privatsphäre verschlüsselt."
+        ]
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Sicherer Cloud-Speicher für Dokumente",
+    "description": "Speichern Sie Ihre Dateien in absoluter Privatsphäre",
+    "cta": "Internxt holen"
+  },
+
+  "CoreFeatures": {
+    "title": "So wählen Sie den besten Cloud-Speicher für Dokumente aus",
+    "description": "Einen Speicher für wichtige Dokumente in der Cloud zu finden, sollte einfach sein, aber nicht alle Dienste bieten die Privatsphäre, Erreichbarkeit oder Kontrolle, die Sie benötigen. Hier ist, worauf Sie bei der Auswahl des richtigen Anbieters achten sollten.",
+    "accordionCards": {
+      "titles": ["Kosten", "Privatsphäre", "Zusatzfunktionen"],
+      "descriptions": [
+        "Kostenloser Cloud-Speicher für Dokumente reicht oft für Ihre Bedürfnisse aus, da Dokumente normalerweise nicht viel Speicherplatz beanspruchen. Kostenlose Dienste sind jedoch mit Einschränkungen verbunden, und einige Anbieter verlangen zusätzliche Gebühren für eine Zero-Knowledge-Verschlüsselung. Daher ist es wichtig, Preise und Funktionen zu vergleichen, um festzustellen, ob sie Ihren Anforderungen entsprechen. Wenn Sie einen Cloud-Speicher für wichtige Dokumente sowie VPN, Antivirus, Mail, Meet und mehr suchen, bietet Internxt dies in seinen erschwinglichen Tarifen an. Starten Sie kostenlos oder ab 3 € pro Monat für Jahres- oder Lifetime-Pläne, oder speichern Sie Petabytes an Dokumenten mit dem Internxt S3-Objektspeicher für 7 €/TB/Monat.",
+        "Google Drive, Dropbox und andere bieten nicht dieselbe Zero-Knowledge-Verschlüsselung wie Internxt. Stattdessen verwalten die Big-Tech-Unternehmen die Verschlüsselungsschlüssel auf ihren Servern, was bedeutet, dass sie Ihre vertraulichen Dokumente entschlüsseln und einsehen könnten. Die Wahl eines Zero-Knowledge-verschlüsselten Cloud-Speichers bedeutet, dass die Schlüssel auf Ihrem Gerät verwaltet werden, was Ihnen maximale Privatsphäre bietet, da niemand außer Ihnen den Inhalt Ihrer Dokumente sehen kann.",
+        "Kostenloser Cloud-Speicher für Dokumente kann Sie oft Ihre Privatsphäre kosten, da Unternehmen Ihre persönlichen Daten nutzen, um ihre Gewinne zu maximieren. Im Gegenzug erhalten Sie kostenlosen Speicherplatz, aber auch zielgerichtete Werbung von Drittanbietern, was das Risiko von Datenlecks im Internet erhöht. Der kostenlose Cloud-Speicher-Tarif von Internxt bietet 1 GB kostenlosen Cloud-Speicher, der als vollständig private Lösung für Ihre Dateien konzipiert ist. Internxt gibt Ihre Daten niemals an Dritte weiter, und Sie erhalten eine Post-Quanten-Verschlüsselung sowie ein VPN für einen Standort in Ihrem kostenlosen Konto."
+      ]
+    },
+    "cards": {
+      "titles": [],
+      "descriptions": []
+    }
+  },
+
+  "SecureAndManage": {
+    "title": "Sichern und verwalten Sie Ihre Dokumente mit Internxt",
+    "description": "Egal, ob Sie Berichte, PDFs oder persönliche Dateien speichern – Internxt Drive und der S3-Objektspeicher bieten Ihnen eine private, flexible und schnelle Leistung von überall aus.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive ist ein Open-Source- und DSGVO-konformer Cloud-Speicher mit der Vision, den Menschen eine datenschutzorientierte Alternative zu Big Tech zu bieten. Neben dem sicheren Cloud-Speicher für Dokumente enthalten die kostenpflichtigen Tarife ein VPN, Antivirus, Meet, Mail und mehr.",
+          "All Ihre Dateien sind mit preisgekrönter Post-Quanten-Kryptographie geschützt und können dank der Unterstützung mehrerer Plattformen von überall aus abgerufen werden. Nutzen Sie Internxt schon ab 3 €/Monat oder sichern Sie sich dauerhafte Online-Privatsphäre mit unseren erschwinglichen Lifetime-Plänen."
+        ],
+        "cta": "Internxt Drive holen"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Für Unternehmen, die große Datenmengen speichern müssen, ist der S3-Speicher der beste Cloud-Speicher für sichere Dokumente. Der S3-Objektspeicher ist eine Hot-Cloud-Speicherlösung, mit der Sie dank geringer Latenz sofort auf Dateien zugreifen und diese speichern können.",
+          "Behalten Sie die volle Kontrolle über Ihr Cloud-Budget mit einem festen Pay-as-you-go-Preismodell für nur 7 €/TB/Monat und ohne Gebühren für den Datentransfer, wodurch Sie bis zu 80 % gegenüber AWS und anderen Mitbewerbern sparen."
+        ],
+        "cta": "Internxt S3 holen"
+      }
+    ]
+  },
+  
+  "FeaturesInternxtSection": {
+    "title": "Funktionen des Cloud-Speichers für Dokumente von Internxt",
+    "description": "Halten Sie Ihre Dokumente sicher, organisiert und leicht zugänglich mit sicherem Teilen, Backups und Post-Quanten-Kryptographie.",
+    "scrollableSection": {
+      "titles": [
+        "Großzügige Upload-Limits",
+        "Verschlüsselte Backups",
+        "Virtuelles Laufwerk",
+        "Mehr Transparenz"
+      ],
+      "descriptions": [
+        "Internxt Drive hat ein Upload-Limit von 40 GB für bis zu 3.000 Dateien, sodass Sie Ihre Dokumente effizient auf einer einzigen sicheren Cloud-Plattform speichern, verwalten und organisieren können. Sie können auch Dateien von bis zu 10 GB mit Freunden, der Familie oder Kollegen teilen und Ihre Datenschutzeinstellungen für mehr Sicherheit anpassen.",
+        "Ransomware ist die größte Bedrohung für Einzelpersonen und Unternehmen. Schützen Sie Ihre Dokumente vor Ransomware mit den verschlüsselten Backups von Internxt. Planen Sie Ihre Backups stündlich, alle 6 Stunden, täglich oder manuell, um sicherzustellen, dass Sie immer eine Kopie Ihrer Dateien haben, um Datenverlust zu vermeiden und einen erhöhten Schutz vor Cyberangriffen zu erhalten.",
+        "Geben Sie Speicherplatz auf Ihrem Gerät mit der virtuellen Laufwerksanwendung von Internxt frei. Sie funktioniert genauso wie Ihr lokales Laufwerk, speichert und synchronisiert Ihre Dokumente jedoch direkt in der Cloud. Auf diese Weise können Sie unser virtuelles Laufwerk als Speicher für wichtige Dokumente nutzen, als würden Sie diese lokal speichern, ohne sich Sorgen machen zu müssen, dass der Platz ausgeht.",
+        "Internxt wird von Cybersicherheitsexperten geprüft und ist als sichere und vertrauenswürdige Plattform zertifiziert, die Sie vor Datenpannen schützt. Der Quellcode für alle unsere Produkte ist auf unserer GitHub-Seite verfügbar, was Ihnen mehr Sicherheit und die Transparenz gibt, dass nichts Ihre Daten gefährden könnte."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Privater Cloud-Speicher mit Post-Quanten-Verschlüsselung",
+    "description": "Speichern, teilen und organisieren Sie Ihre Dokumente",
+    "cta": "Internxt holen"
+  },
+  "SemanticAccordion": {
+    "title": "Fragen? Wir haben Antworten",
+    "items": [
+      {
+        "question": "Was ist der beste Cloud-Speicher für Dokumente?",
+        "answer": [
+          "Welcher Cloud-Speicher für Dokumente am besten für Sie geeignet ist, hängt von vielen Faktoren ab, wie z. B. Ihren Bedürfnissen, Ihrem Budget und eventuell benötigten Zusatzfunktionen. Wichtig bei der Auswahl eines Cloud-Speichers ist jedoch, einen mit Zero-Knowledge-Verschlüsselung zu wählen.",
+          "Internxt bietet viele Funktionen, die Sie als Speicher für wichtige Dokumente in Betracht ziehen können. Es bietet Cloud-Speicher, VPN, Antivirus, Meet, Mail und mehr, alles mit Post-Quanten- und Zero-Knowledge-Verschlüsselung.",
+          "Testen Sie es kostenlos oder wählen Sie einen unserer Tarife, die schon bei 3 € pro Monat beginnen."
+        ]
+      },
+      {
+        "question": "Wie viel kostenlosen Cloud-Speicher für Dokumente benötige ich?",
+        "answer": [
+          "1 GB kostenloser Cloud-Speicher für Dokumente bietet Platz für eine beachtliche Anzahl von Dateien.",
+          "Wenn es sich bei Ihren Dokumenten hauptsächlich aus einfachen Textdateien oder PDFs mit einer durchschnittlichen Größe von jeweils etwa 100 KB handelt, können Sie auf 1 GB kostenlosem Cloud-Speicher rund 10.000 Dokumente speichern.",
+          "Bei Dateien mit einer durchschnittlichen Größe von etwa 1 MB, wie z. B. bildintensiven PDFs oder gescannten Dokumenten, können Sie fast 1.000 Dokumente speichern."
+        ]
+      },
+      {
+        "question": "Kann ich meine Dokumente mit Internxt sichern?",
+        "answer": [
+          "Ja, Backups sind in allen unseren jährlichen oder lebenslangen Essential-, Premium- oder Ultimate-Tarifen verfügbar. Sie erhalten damit sowohl Cloud-Speicher für sichere Dokumente als auch verschlüsselte Backups zum Schutz vor Ransomware und anderen Cyberangriffen."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quanten-Verschlüsselung und warum ist sie wichtig?",
+        "answer": [
+          "Die Post-Quanten-Verschlüsselung ist eine Art von Kryptographie, die entwickelt wurde, um Ihre Daten vor Quantencomputern zu schützen – einer Technologie, die bald aktuelle Verschlüsselungsprotokolle knacken könnte.",
+          "Internxt verwendet eine Post-Quanten-Kryptographie, die vom National Institute of Standards and Technology als eine der sichersten verfügbaren Verschlüsselungsmethoden für die Cloud ausgewählt wurde."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Sie können nicht finden, wonach Sie suchen? Sie können unser Kundenservice-Team über den Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, iDEAL, Sofort und Kryptowährung bezahlen."
+        ]
+      }
+    ]
+  }
+}

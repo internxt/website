@@ -1,0 +1,150 @@
+{
+  "HeroSection": {
+    "title": "Archiviazione cloud privata per file video",
+    "features": ["Archivia i tuoi video in totale riservatezza", "Crittografia post-quantistica e zero-knowledge", "Open source e controllato"],
+    "subtitle": "Ottieni l'archiviazione cloud più sicura creata per i creatori di video per memorizzare i propri video in totale privacy.",
+    "cta": "Ottieni Internxt"
+  },
+
+  "FeaturesSection": {
+    "intro": "Internxt è un servizio di archiviazione cloud per video che memorizza, condivide e crea copie di backup dei tuoi file. La crittografia avviene sul tuo dispositivo, quindi noi conserviamo solo testo cifrato. Nessuna scansione tramite IA, nessun targeting pubblicitario, nessuna eccezione.",
+    "title": "",
+    "h2Intro": "",
+    "features": {
+      "feature1": {
+        "title": "Tutti i tuoi documenti in un unico cloud sicuro",
+        "description": [
+          "Accedi ai tuoi file da qualsiasi luogo grazie al nostro supporto per Windows, Mac, Linux, Mobile e WebDAV. Archivia, organizza e condividi file importanti con crittografia end-to-end e sincronizzazione in tempo real."
+        ]
+      },
+      "feature2": {
+        "title": "Fino a 5TB di spazio di archiviazione",
+        "description": [
+          "Non preoccuparti mai più dei limiti di spazio. Goditi fino a 5TB per tutti i tuoi contratti, fogli di calcolo, presentazioni e altro ancora. Aggiorna facilmente il tuo piano ogni volta che hai bisogno di più spazio."
+        ]
+      },
+      "feature3": {
+        "title": "Condivisione privata dei file",
+        "description": [
+          "Condividi documenti crittografati e protetti da password per un maggiore controllo su chi può accedere ai tuoi documenti. Tutto viene crittografato sul tuo dispositivo per una privacy totale."
+        ]
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Archiviazione cloud sicura per i documenti",
+    "description": "Archivia i tuoi file in completa privacy",
+    "cta": "Ottieni Internxt"
+  },
+
+  "CoreFeatures": {
+    "title": "Come scegliere la migliore archiviazione cloud per i documenti",
+    "description": "Trovare uno spazio di archiviazione per i documenti importanti nel cloud dovrebbe essere semplice, ma non tutti i servizi offrono la privacy, l'accessibilità o il controllo di cui hai bisogno. Ecco cosa cercare quando si sceglie il fornitore giusto.",
+    "accordionCards": {
+      "titles": ["Costo", "Privacy", "Funzionalità extra"],
+      "descriptions": [
+        "L'archiviazione cloud gratuita per i documenti è spesso sufficiente per le tue esigenze, poiché i documenti di solito non occupano molto spazio di archiviazione. I servizi gratuiti presentano tuttavia delle restrizioni e alcuni fornitori addebitano un costo aggiuntivo per la crittografia zero-knowledge. È quindi importante confrontare prezzi e funzionalità per determinare se soddisfano le tue esigenze. Se desideri un'archiviazione cloud per documenti importanti, oltre a una VPN, antivirus, Mail, Meet e altro, Internxt li offre nei suoi piani tariffari convenienti. Inizia gratuitamente o a partire da 3 € al mese per i piani annuali o a vita, oppure archivia petabyte di documenti con l'archiviazione di oggetti Internxt S3 a 7 €/TB/mese.",
+        "Google Drive, Dropbox e altri non offrono la stessa crittografia zero-knowledge di Internxt. Al contrario, le grandi aziende tecnologiche gestiscono le chiavi di crittografia sui propri server, il che significa che potrebbero decifrare e accedere ai tuoi documenti riservati. Scegliere un'archiviazione cloud crittografata zero-knowledge significa che le chiavi sono gestite sul tuo dispositivo, offrendoti la massima privacy poiché nessuno tranne te può vedere il contenuto dei tuoi documenti.",
+        "L'archiviazione cloud gratuita per i documenti può spesso costarti la privacy a causa di aziende che utilizzano i tuoi dati personali per massimizzare i propri profitti. In cambio, ricevi spazio di archiviazione gratuito, ma con annunci mirati da parte di terzi, aumentando il rischio che i tuoi dati vengano divulgati online. Il piano di archiviazione cloud gratuito di Internxt offre 1GB di spazio di archiviazione cloud gratuito progettato come soluzione completamente privata per i tuoi file. Internxt non condivide mai i tuoi dati con nessuno e include nel tuo account gratuito la crittografia post-quantistica, oltre a una VPN per una posizione."
+      ]
+    },
+    "cards": {
+      "titles": [],
+      "descriptions": []
+    }
+  },
+
+  "SecureAndManage": {
+    "title": "Proteggi e gestisci i tuoi documenti con Internxt",
+    "description": "Sia che tu stia archiviando report, PDF o file personali, Internxt Drive e l'archiviazione di oggetti S3 ti offrono prestazioni private, flessibili e veloci da qualsiasi luogo.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive è un'archiviazione cloud open-source e conforme al GDPR, nata con l'obiettivo di fornire alle persone un'alternativa incentrata sulla privacy rispetto alla Big Tech. Oltre a fornire un'archiviazione cloud sicura per i documenti, i piani a pagamento includono una VPN, antivirus, Meet, Mail e altro ancora.",
+          "All i tuoi file sono protetti da una pluripremiata crittografia post-quantistica e sono accessibili da qualsiasi luogo, grazie al supporto su molteplici piattaforme. Unisciti a Internxt a partire da soli 3 € al mese o ottieni la privacy online per sempre con i nostri convenienti piani a vita."
+        ],
+        "cta": "Ottieni Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Per le aziende che hanno bisogno di archiviare grandi quantità di dati, l'archiviazione S3 è la migliore archiviazione cloud per documenti sicuri. L'archiviazione di oggetti S3 è una soluzione di cloud storage \"hot\" che consente di archiviare e accedere ai file istantaneamente, grazie alla sua bassa latenza.",
+          "Mantieni il controllo totale del tuo budget cloud con un modello di prezzo fisso pay-as-you-go a soli 7 €/TB/mese e zero costi di trasferimento dati, risparmiando fino all'80% rispetto ad AWS e ad altri concorrenti."
+        ],
+        "cta": "Ottieni Internxt S3"
+      }
+    ]
+  },
+  
+  "FeaturesInternxtSection": {
+    "title": "Funzionalità dell'archiviazione cloud per documenti di Internxt",
+    "description": "Mantieni i tuoi documenti al sicuro, organizzati e facili da accedere grazie a condivisione sicura, backup e crittografia post-quantistica.",
+    "scrollableSection": {
+      "titles": [
+        "Limiti di caricamento generosi",
+        "Backup crittografati",
+        "Unità virtuale",
+        "Maggiore trasparenza"
+      ],
+      "descriptions": [
+        "Internxt Drive ha un limite di caricamento di 40GB per un massimo de 3.000 file, in modo da poter archiviare, gestire e organizzare in modo efficiente i tuoi documenti in un'unica piattaforma cloud sicura. Puoi anche condividere file fino a 10GB con amici, familiari o colleghi e impostare i controlli della privacy per una maggiore sicurezza.",
+        "Il ransomware è la più grande minaccia che le persone e le aziende si trovano ad affrontare. Proteggi i tuoi documenti contro il ransomware con i backup crittografati di Internxt. Pianifica i tuoi backup ogni ora, 6 ore, giornalmente o manualmente per assicurarti di avere sempre una copia dei tuoi file per evitare la perdita di dati e ottenere una maggiore protezione contro i cyberattacchi.",
+        "Libera lo spazio di archiviazione sul tuo dispositivo con l'applicazione di unità virtuale di Internxt. Funziona allo stesso modo della tua unità locale, ma archivia e sincronizza i tuoi documenti direttamente sul cloud. In questo modo, puoi utilizzare la nostra unità virtuale come spazio di archiviazione per documenti importanti come se li stessi salvando localmente, senza preoccuparti di esaurire lo spazio.",
+        "Internxt è controllato da esperti di sicurezza informatica ed è certificato come piattaforma sicura e affidabile che ti protegge dalle violazioni dei dati. Il codice sorgente di tutti i nostri prodotti è disponibile sulla nostra pagina GitHub, offrendoti una maggiore tranquillità e la trasparenza che non c'è nulla che possa compromettere i tuoi dati."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Archiviazione cloud privata con crittografia post-quantistica",
+    "description": "Archivia, condividi e organizza i tuoi documenti",
+    "cta": "Ottieni Internxt"
+  },
+  "SemanticAccordion": {
+    "title": "Domande? Abbiamo le risposte",
+    "items": [
+      {
+        "question": "Qual è la migliore archiviazione cloud per i documenti?",
+        "answer": [
+          "La scelta dell'archiviazione cloud per documenti più adatta a te dipenderà da molti fattori, come le esigenze, il budget e le eventuali funzionalità aggiuntive richieste. Ciò che è importante quando si sceglie un cloud storage, tuttavia, è sceglierne uno con crittografia zero-knowledge.",
+          "Internxt offre molte funzionalità da prendere in considerazione per l'archiviazione di documenti importanti. Offre archiviazione cloud, VPN, antivirus, Meet, Mail e altro ancora, il tutto con crittografia post-quantistica e zero-knowledge.",
+          "Provalo gratuitamente o scegli uno dei nostri piani, che partono da soli 3 € al mese."
+        ]
+      },
+      {
+        "question": "Di quanta archiviazione cloud gratuita per i documenti ho bisogno?",
+        "answer": [
+          "1GB di archiviazione cloud gratuita per i documenti conterrà un numero generoso di file.",
+          "Se i tuoi documenti sono per lo più semplici file di testo o PDF con una media di circa 100KB ciascuno, 1GB di archiviazione cloud gratuita per i documenti conterrà circa 10.000 documenti.",
+          "Per i file con una media di circa 1MB, come PDF ricchi di immagini o documenti scansionati, potrai archiviare circa 1.000 documenti."
+        ]
+      },
+      {
+        "question": "Posso eseguire il backup dei miei documenti con Internxt?",
+        "answer": [
+          "Sì, i backup sono disponibili su uno qualsiasi dei nostri piani annuali o a vita Essential, Premium o Ultimate, offrendoti sia l'archiviazione cloud per documenti sicuri sia backup crittografati per proteggerti da ransomware e altri attacchi informatici."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica e perché è importante?",
+        "answer": [
+          "La crittografia post-quantistica è un tipo di crittografia progettata per proteggere i tuoi dati dai computer quantistici, una tecnologia che potrebbe presto violare gli attuali protocolli di crittografia.",
+          "Internxt utilizza la crittografia post-quantistica selezionata dal National Institute of Standards and Technology come uno dei metodi di crittografia più sicuri disponibili per il cloud."
+        ]
+      },
+      {
+        "question": "Come posso contattare il supporto?",
+        "answer": [
+          "Non riesci a trovare quello che cerchi? Puoi contattare il nostro team di Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Internxt attualmente accetta carte di debito e di credito (Mastercard, VISA, American Express, ecc.). Puoi pagare anche tramite PayPal, iDEAL, Sofort e Criptovalute."
+        ]
+      }
+    ]
+  }
+}

@@ -665,5 +665,10 @@
     "id": "thankyou",
     "title": "Lista de espera de oferta especial — Internxt",
     "description": "Suscríbete a Internxt para recibir tu descuento exclusivo en almacenamiento en la nube privado y cifrado en el que puedes confiar."
+  },
+  {
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - Almacenamiento en la nube para documentos",
+    "description": "Internxt ofrece almacenamiento seguro en la nube para documentos, protegido por cifrado poscuántico para la máxima privacidad."
   }
 ]

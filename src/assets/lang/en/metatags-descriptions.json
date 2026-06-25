@@ -763,5 +763,10 @@
     "id": "thankyou",
     "title": "Special Offer Waitlist — Internxt",
     "description": "Subscribe to Internxt to receive your exclusive discount for private, encrypted cloud storage you can trust."
+  },
+  {
+    "id":"cloud-storage-for-documents",
+    "title":"Internxt - Cloud Storage for Documents",
+    "description":"Internxt offers secure cloud storage for documents, protected by post-quantum encryption for maximum privacy."
   }
 ]

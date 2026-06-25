@@ -1,0 +1,150 @@
+{
+  "HeroSection": {
+    "title": "Almacenamiento privado en la nube para archivos de video",
+    "features": ["Almacena tus videos con total privacidad", "Cifrado post-cuántico y de conocimiento cero", "Código abierto y auditado"],
+    "subtitle": "Consigue el almacenamiento en la nube más seguro, diseñado para creadores de contenido, y guarda tus videos en total privacidad.",
+    "cta": "Consigue Internxt"
+  },
+
+  "FeaturesSection": {
+    "intro": "Internxt es un almacenamiento en la nube para videos que guarda, comparte y respalda tus archivos. El cifrado se realiza en tu dispositivo, por lo que solo conservamos texto cifrado. Sin escaneo por IA, sin segmentación publicitaria, sin excepciones.",
+    "title": "",
+    "h2Intro": "",
+    "features": {
+      "feature1": {
+        "title": "Todos tus documentos en una nube segura",
+        "description": [
+          "Accede a tus archivos desde cualquier lugar gracias a nuestra compatibilidad con Windows, Mac, Linux, dispositivos móviles y WebDAV. Almacena, organiza y comparte archivos importantes con cifrado de extremo a extremo y sincronización en tiempo real."
+        ]
+      },
+      "feature2": {
+        "title": "Hasta 5TB de almacenamiento",
+        "description": [
+          "No vuelvas a preocuparte por los límites de almacenamiento. Disfruta de hasta 5TB para todos tus contratos, hojas de cálculo, presentaciones y más. Mejora tu plan fácilmente cuando necesites más espacio."
+        ]
+      },
+      "feature3": {
+        "title": "Uso compartido privado de archivos",
+        "description": [
+          "Comparte documentos cifrados y protegidos con contraseña para tener un mayor control sobre quién puede acceder a ellos. Todo se cifra en tu dispositivo para garantizar una privacidad total."
+        ]
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Almacenamiento seguro en la nube para documentos",
+    "description": "Almacena tus archivos con total privacidad",
+    "cta": "Consigue Internxt"
+  },
+
+  "CoreFeatures": {
+    "title": "Cómo elegir el mejor almacenamiento en la nube para documentos",
+    "description": "Encontrar almacenamiento en la nube para documentos importantes debería ser sencillo, pero no todos los servicios ofrecen la privacidad, accesibilidad o control que necesitas. Esto es lo que debes buscar al elegir al proveedor adecuado.",
+    "accordionCards": {
+      "titles": ["Costo", "Privacidad", "Funciones adicionales"],
+      "descriptions": [
+        "El almacenamiento gratuito en la nube para documentos suele ser suficiente para tus necesidades, ya que los documentos no suelen ocupar mucho espacio. Sin embargo, los servicios gratuitos tienen restricciones, y algunos proveedores cobran un extra por el cifrado de conocimiento cero. Por lo tanto, es importante comparar precios y características para determinar si se adaptan a tus necesidades. Si deseas almacenamiento en la nube para documentos importantes, además de una VPN, antivirus, correo, Meet y más, Internxt lo ofrece en sus asequibles planes de precios. Empieza gratis o desde 3 € al mes con planes anuales o de por vida, o almacena petabytes de documentos con el almacenamiento de objetos S3 de Internxt por 7 €/TB/mes.",
+        "Google Drive, Dropbox y otros no ofrecen el mismo cifrado de conocimiento cero que Internxt. En su lugar, las grandes empresas tecnológicas gestionan las claves de cifrado en sus servidores, lo que significa que podrían descifrar y acceder a tus documentos confidenciales. Elegir un almacenamiento en la nube con cifrado de conocimiento cero significa que las claves se gestionan en tu propio dispositivo, ofreciéndote la máxima privacidad, ya que nadie más que tú puede ver el contenido de tus documentos.",
+        "El almacenamiento gratuito en la nube para documentos a menudo puede costarte tu privacidad por parte de empresas que utilizan tus datos personales para maximizar sus ganancias. A cambio, recibes almacenamiento gratuito, pero con anuncios personalizados de terceros, lo que aumenta el riesgo de que tus datos se filtren en internet. El plan de almacenamiento gratuito en la nube de Internxt ofrece 1GB de almacenamiento diseñado como una solución totalmente privada para tus archivos. Internxt nunca comparte tus datos con nadie, y obtienes cifrado post-cuántico, además de una VPN para una ubicación incluida en tu cuenta gratuita."
+      ]
+    },
+    "cards": {
+      "titles": [],
+      "descriptions": []
+    }
+  },
+
+  "SecureAndManage": {
+    "title": "Asegura y gestiona tu documentación con Internxt",
+    "description": "Ya sea que almacenes informes, archivos PDF o documentos personales, Internxt Drive y el almacenamiento de objetos S3 te brindan un rendimiento privado, flexible y rápido desde cualquier lugar.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive es un almacenamiento en la nube de código abierto que cumple con el RGPD, creado con la visión de ofrecer a las personas una alternativa centrada en la privacidad frente a las grandes tecnológicas. Además de proporcionar almacenamiento seguro en la nube para documentos, los planes de pago incluyen VPN, antivirus, Meet, correo y más.",
+          "Todos tus archivos están protegidos con una galardonada criptografía post-cuántica y se puede acceder a ellos desde cualquier lugar, gracias al soporte multiplataforma. Únete a Internxt desde solo 3 € al mes o consigue privacidad online para siempre con nuestros asequibles planes de por vida."
+        ],
+        "cta": "Consigue Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Para las empresas que necesitan almacenar grandes cantidades de datos, el almacenamiento S3 es la mejor opción en la nube para documentos seguros. El almacenamiento de objetos S3 es una solución de almacenamiento en caliente que te permite guardar y acceder a los archivos al instante gracias a su baja latencia.",
+          "Mantén el control total de tu presupuesto en la nube con un modelo de precios fijo de pago por uso a solo 7 €/TB/mes y sin tarifas por transferencia de datos, ahorrando hasta un 80% en comparación con AWS y otros competidores."
+        ],
+        "cta": "Consigue Internxt S3"
+      }
+    ]
+  },
+  
+  "FeaturesInternxtSection": {
+    "title": "Características del almacenamiento en la nube para documentos de Internxt",
+    "description": "Mantén tus documentos seguros, organizados y fáciles de acceder con funciones para compartir de forma segura, copias de seguridad y criptografía post-cuántica.",
+    "scrollableSection": {
+      "titles": [
+        "Límites de subida generosos",
+        "Copias de seguridad cifradas",
+        "Unidad virtual",
+        "Mayor transparencia"
+      ],
+      "descriptions": [
+        "Internxt Drive tiene un límite de subida de 40GB para hasta 3.000 archivos, lo que te permite almacenar, gestionar y organizar de manera eficiente tus documentos en una única plataforma en la nube segura. También puedes compartir archivos de hasta 10GB con amigos, familiares o compañeros de trabajo, y configurar tus controles de privacidad para una mayor seguridad.",
+        "El ransomware es la mayor amenaza a la que se enfrentan las personas y las empresas. Protege tus documentos contra el ransomware con las copias de seguridad cifradas de Internxt. Programa tus copias de seguridad cada hora, cada 6 horas, diariamente o de forma manual para asegurarte de tener siempre una copia de tus archivos, evitar la pérdida de datos y obtener una mayor protección contra los ciberataques.",
+        "Libera espacio de almacenamiento en tu dispositivo con la aplicación de unidad virtual de Internxt. Funciona de la misma manera que tu unidad local, pero almacena y sincroniza tus documentos directamente en la nube. De este modo, puedes utilizar nuestra unidad virtual como almacenamiento para documentos importantes como si los estuvieras guardando localmente, sin preocuparte por quedarte sin espacio.",
+        "Internxt está auditado por expertos en ciberseguridad y certificado como una plataforma segura y confiable que te protege de las filtraciones de datos. El código fuente de todos nuestros productos está disponible en nuestra página de GitHub, lo que te brinda una mayor tranquilidad y la transparencia de saber que no hay nada que pueda comprometer tus datos."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Almacenamiento privado en la nube con cifrado post-cuántico",
+    "description": "Almacena, comparte y organiza tus documentos",
+    "cta": "Consigue Internxt"
+  },
+  "SemanticAccordion": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "items": [
+      {
+        "question": "¿Cuál es el mejor almacenamiento en la nube para documentos?",
+        "answer": [
+          "Elegir el mejor almacenamiento en la nube para tus documentos dependerá de muchos factores, como tus necesidades, presupuesto y cualquier función adicional que requieras. Sin embargo, lo importante al elegir un almacenamiento en la nube es escoger uno con cifrado de conocimiento cero.",
+          "Internxt ofrece muchas funciones para que las consideres como tu almacenamiento de documentos importantes. Ofrece almacenamiento en la nube, VPN, antivirus, Meet, correo y más, todo con cifrado post-cuántico y de conocimiento cero.",
+          "Pruébalo gratis o elige cualquiera de nuestros planes, que comienzan desde solo 3 € al mes."
+        ]
+      },
+      {
+        "question": "¿Cuánto almacenamiento gratuito en la nube necesito para mis documentos?",
+        "answer": [
+          "1GB de almacenamiento gratuito en la nube para documentos puede albergar una cantidad generosa de archivos.",
+          "Si tus documentos son en su mayoría archivos de texto simple o archivos PDF con un promedio de unos 100KB cada uno, 1GB de almacenamiento gratuito almacenará alrededor de 10.000 documentos.",
+          "Para archivos con un promedio de 1MB, como PDFs con muchas imágenes o documentos escaneados, podrás almacenar cerca de 1.000 documentos."
+        ]
+      },
+      {
+        "question": "¿Puedo hacer copias de seguridad de mi documentación con Internxt?",
+        "answer": [
+          "Sí, las copias de seguridad están disponibles en cualquiera de nuestros planes anuales o de por vida (Essential, Premium o Ultimate), lo que te brinda tanto almacenamiento en la nube para documentos seguros como copias de seguridad cifradas para protegerte contra el ransomware y otros ciberataques."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado post-cuántico y por qué es importante?",
+        "answer": [
+          "El cifrado post-cuántico es un tipo de criptografía diseñado para proteger tus datos de las computadoras cuánticas, una tecnología que pronto podría romper los protocolos de cifrado actuales.",
+          "Internxt utiliza criptografía post-cuántica seleccionada por el Instituto Nacional de Estándares y Tecnología (NIST) como uno de los métodos de cifrado más seguros disponibles para la nube."
+        ]
+      },
+      {
+        "question": "¿Cómo me pongo en contacto con el soporte técnico?",
+        "answer": [
+          "¿No encuentras lo que buscas? Puedes ponerte en contacto con nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un correo electrónico a hello@internxt.com"
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Actualmente, Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, iDEAL, Sofort y criptomonedas."
+        ]
+      }
+    ]
+  }
+}

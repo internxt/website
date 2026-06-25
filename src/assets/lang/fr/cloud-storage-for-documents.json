@@ -1,0 +1,150 @@
+{
+  "HeroSection": {
+    "title": "Stockage cloud privé pour les fichiers vidéo",
+    "features": ["Stockez vos vidéos en toute confidentialité", "Chiffrement post-quantique & zero-knowledge", "Open source et audité"],
+    "subtitle": "Bénéficiez du stockage cloud le plus sécurisé, conçu pour les créateurs de vidéos, pour stocker vos vidéos en totale confidentialité.",
+    "cta": "Obtenir Internxt"
+  },
+
+  "FeaturesSection": {
+    "intro": "Internxt est un espace de stockage cloud pour vidéos qui stocke, partage et sauvegarde vos fichiers. Le chiffrement s'effectue sur votre appareil, de sorte que nous ne détenons que du texte chiffré. Pas d'analyse par IA, pas de ciblage publicitaire, aucune exception.",
+    "title": "",
+    "h2Intro": "",
+    "features": {
+      "feature1": {
+        "title": "Tous vos documents dans un cloud sécurisé",
+        "description": [
+          "Accédez à vos fichiers où que vous soyez grâce à notre compatibilité Windows, Mac, Linux, Mobile et WebDAV. Stockez, organisez et partagez des fichiers importants avec un chiffrement de bout en bout et une synchronisation en temps réel."
+        ]
+      },
+      "feature2": {
+        "title": "Jusqu'à 5 To de stockage",
+        "description": [
+          "Ne vous souciez plus jamais des limites de stockage. Profitez de jusqu'à 5 To pour tous vos contrats, feuilles de calcul, présentations et plus encore. Mettez facilement votre forfait à niveau dès que vous avez besoin de plus d'espace."
+        ]
+      },
+      "feature3": {
+        "title": "Partage privé de fichiers",
+        "description": [
+          "Partagez des documents chiffrés et protégés par mot de passe pour un contrôle accru sur les personnes autorisées à y accéder. Tout est chiffré sur votre appareil pour une confidentialité totale."
+        ]
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Stockage cloud sécurisé pour les documents",
+    "description": "Stockez vos fichiers en toute confidentialité",
+    "cta": "Obtenir Internxt"
+  },
+
+  "CoreFeatures": {
+    "title": "Comment choisir le meilleur stockage cloud pour les documents",
+    "description": "Trouver un espace de stockage pour des documents importants dans le cloud devrait être simple, mais tous les services n'offrent pas la confidentialité, l'accessibilité ou le contrôle dont vous avez besoin. Voici ce qu'il faut rechercher pour choisir le bon fournisseur.",
+    "accordionCards": {
+      "titles": ["Coût", "Confidentialité", "Fonctionnalités supplémentaires"],
+      "descriptions": [
+        "Un stockage cloud gratuit pour les documents est souvent suffisant pour vos besoins, car les documents ne prennent généralement pas beaucoup d'espace de stockage. Les services gratuits s'accompagnent toutefois de restrictions, certains fournisseurs facturant un supplément pour le chiffrement zero-knowledge. Il est donc important de comparer les tarifs et les fonctionnalités pour déterminer s'ils répondent à vos besoins. Si vous souhaitez un stockage cloud pour vos documents importants, ainsi qu'un VPN, un antivirus, Mail, Meet et plus encore, Internxt les propose dans ses abonnements abordables. Commencez gratuitement ou à partir de 3 € par mois pour les forfaits annuels ou à vie, ou stockez des pétaoctets de documents avec le stockage d'objets Internxt S3 pour 7 €/To/mois.",
+        "Google Drive, Dropbox et d'autres n'offrent pas le même chiffrement zero-knowledge qu'Internxt. À la place, les géants de la Tech gèrent les clés de chiffrement sur leurs serveurs, ce qui signifie qu'ils pourraient déchiffrer et accéder à vos documents confidentiels. Choisir un stockage cloud chiffré en zero-knowledge signifie que les clés sont gérées sur votre appareil, vous offrant ainsi une confidentialité maximale puisque personne d'autre que vous ne peut voir le contenu de vos documents.",
+        "Le stockage cloud gratuit pour les documents peut souvent vous coûter votre vie privée auprès d'entreprises qui utilisent vos données personnelles pour maximiser leurs profits. En échange, vous recevez un espace de stockage gratuit, mais avec des publicités ciblées de tiers, ce qui augmente le risque de fuite de vos données en ligne. Le forfait de stockage cloud gratuit d'Internxt offre 1 Go de stockage cloud gratuit, conçu comme une solution entièrement privée pour vos fichiers. Internxt ne partage jamais vos données avec qui que ce soit, et vous bénéficiez d'un chiffrement post-quantique, ainsi que d'un VPN pour un emplacement inclus dans votre compte gratuit."
+      ]
+    },
+    "cards": {
+      "titles": [],
+      "descriptions": []
+    }
+  },
+
+  "SecureAndManage": {
+    "title": "Sécurisez et gérez vos documents avec Internxt",
+    "description": "Que vous stockiez des rapports, des PDF ou des fichiers personnels, Internxt Drive et le stockage d'objets S3 vous offrent des performances privées, flexibles et rapides, où que vous soyez.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive est un espace de stockage cloud open source et conforme au RGPD, créé avec la vision d'offrir aux utilisateurs une alternative respectueuse de la vie privée face aux géants de la Tech. En plus de fournir un stockage cloud sécurisé pour les documents, les forfaits payants incluent un VPN, un antivirus, Meet, Mail et bien plus encore.",
+          "Tous vos fichiers sont protégés par une cryptographie post-quantique primée et sont accessibles de n'importe où, grâce à une compatibilité multiplateforme. Rejoignez Internxt à partir de seulement 3 €/mois ou profitez d'une confidentialité en ligne pour toujours grâce à nos forfaits à vie abordables."
+        ],
+        "cta": "Obtenir Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Pour les entreprises ayant besoin de stocker de grandes quantités de données, le stockage S3 est le meilleur stockage cloud pour les documents sécurisés. Le stockage d'objets S3 est une solution de stockage cloud « hot » qui vous permet de stocker et d'accéder aux fichiers instantanément, grâce à sa faible latence.",
+          "Gardez le contrôle total de votre budget cloud grâce à un modèle de tarification fixe et flexible à seulement 7 €/To/mois et sans frais de transfert de données, ce qui vous permet d'économiser jusqu'à 80 % par rapport à AWS et à d'autres concurrents."
+        ],
+        "cta": "Obtenir Internxt S3"
+      }
+    ]
+  },
+  
+  "FeaturesInternxtSection": {
+    "title": "Fonctionnalités du stockage cloud pour documents d'Internxt",
+    "description": "Gardez vos documents en sécurité, organisés et faciles d'accès grâce au partage sécurisé, aux sauvegardes et à la cryptographie post-quantique.",
+    "scrollableSection": {
+      "titles": [
+        "Limites de téléchargement généreuses",
+        "Sauvegardes chiffrées",
+        "Lecteur virtuel",
+        "Transparence accrue"
+      ],
+      "descriptions": [
+        "Internxt Drive a une limite d'importation de 40 Go pour un maximum de 3 000 fichiers, ce qui vous permet de stocker, gérer et organiser efficacement vos documents sur une plateforme cloud sécurisée unique. Vous pouvez également partager des fichiers allant jusqu'estimer à 10 Go avec vos amis, votre famille ou vos collègues, et configurer vos paramètres de confidentialité pour une sécurité accrue.",
+        "Les ransomwares sont la plus grande menace à laquelle les particuliers et les entreprises font face. Protégez vos documents contre les ransomwares grâce aux sauvegardes chiffrées d'Internxt. Planifiez vos sauvegardes toutes les heures, toutes les 6 heures, quotidiennement ou manuellement pour vous assurer de toujours disposer d'une copie de vos fichiers afin d'éviter la perte de données et bénéficier d'une protection accrue contre les cyberattaques.",
+        "Libérez de l'espace de stockage sur votre appareil grâce à l'application de lecteur virtuel d'Internxt. Elle fonctionne de la même manière que votre disque local, mais stocke et synchronise vos documents directement dans le cloud. De cette façon, vous pouvez utiliser notre lecteur virtuel comme espace de stockage pour vos documents importants comme si vous les sauvegardiez localement, sans craindre de manquer d'espace.",
+        "Internxt est audité par des experts en cybersécurité et certifié comme une plateforme sécurisée et fiable qui vous protège des violations de données. Le code source de tous nos produits est disponible sur notre page GitHub, vous offrant une tranquillité d'esprit accrue et la transparence absolue que rien ne peut compromettre vos données."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Stockage cloud privé avec chiffrement post-quantique",
+    "description": "Stockez, partagez et organisez vos documents",
+    "cta": "Obtenir Internxt"
+  },
+  "SemanticAccordion": {
+    "title": "Des questions ? Nous avons des réponses",
+    "items": [
+      {
+        "question": "Quel est le meilleur stockage cloud pour les documents ?",
+        "answer": [
+          "Le choix du stockage cloud pour documents le mieux adapté pour vous dépendra de nombreux facteurs, tels que vos besoins, votre budget et les fonctionnalités supplémentaires dont vous pourriez avoir besoin. Cependant, ce qui est essentiel lors du choix d'un stockage cloud, c'est d'en choisir un doté d'un chiffrement zero-knowledge.",
+          "Internxt offre de nombreuses fonctionnalités à prendre en compte pour le stockage de vos documents importants. Il propose un stockage cloud, un VPN, un antivirus, Meet, Mail et bien plus encore, le tout avec un chiffrement post-quantique et zero-knowledge.",
+          "Essayez-le gratuitement ou choisissez parmi l'un de nos forfaits, qui commencent à seulement 3 € par mois."
+        ]
+      },
+      {
+        "question": "De combien d'espace de stockage cloud gratuit pour les documents ai-je besoin ?",
+        "answer": [
+          "1 Go de stockage cloud gratuit pour les documents permet de conserver un nombre généreux de fichiers.",
+          "Si vos documents sont principalement de simples fichiers texte ou des PDF d'environ 100 Ko chacun en moyenne, 1 Go de stockage cloud gratuit pour les documents permettra de stocker environ 10 000 documents.",
+          "Pour des fichiers d'environ 1 Mo en moyenne, comme des PDF riches en images ou des documents numérisés, vous pourrez stocker près de 1 000 documents."
+        ]
+      },
+      {
+        "question": "Puis-je sauvegarder vos documents avec Internxt ?",
+        "answer": [
+          "Oui, les sauvegardes sont disponibles sur l'un de nos forfaits annuels ou à vie Essential, Premium ou Ultimate, vous offrant à la fois un stockage cloud pour vos documents sécurisés et des sauvegardes chiffrées pour vous protéger contre les ransomwares et autres cyberattaques."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique et pourquoi est-ce important ?",
+        "answer": [
+          "Le chiffrement post-quantique est un type de cryptographie conçu pour protéger vos données contre les ordinateurs quantiques, une technologie qui pourrait bientôt briser les protocoles de chiffrement actuels.",
+          "Internxt utilise une cryptographie post-quantique sélectionnée par le National Institute of Standards and Technology (NIST) comme l'une des méthodes de chiffrement les plus sécurisées disponibles pour le cloud."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter l'assistance ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et les crypto-monnaies."
+        ]
+      }
+    ]
+  }
+}
