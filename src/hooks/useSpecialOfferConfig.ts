@@ -80,6 +80,7 @@ export const ALLOWED_PATHS = [
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -123,6 +124,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alexziskind: 'en',
   eurodefence: 'en',
   wpcdrive: 'en',
+  jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
   lefiltreitalia: 'it',
@@ -170,6 +172,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ]);
 
 export const COUPON_CODES = {
@@ -251,7 +254,7 @@ export const COUPON_CODES = {
   saddy: PromoCodeName.saddy,
   madmoneylabs: PromoCodeName.madmoneylabs,
   wpcdrive: PromoCodeName.wpcdrive,
-
+  jonatan: PromoCodeName.jonatan,
 };
 
 interface OfferConfig {
