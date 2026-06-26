@@ -1,13 +1,13 @@
 {
   "HeroSection": {
-    "title": "Private cloud storage for video files",
-    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "subtitle": "Get the most secure cloud storage built for video creators to store your videos in total privacy.",
+    "title": "Private cloud storage for documents",
+    "features": ["Store your documents in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
+    "subtitle": "Get the first cloud storage with post-quantum encription to store, share, and organize your files.",
     "cta": "Get Internxt"
   },
 
   "FeaturesSection": {
-    "intro": "Internxt is cloud storage for videos that stores, shares, and backs up your files. Encryption happens on your device, so we hold only ciphertext. No AI scanning, no ad targeting, no exceptions.",
+    "intro": "Internxt offers cloud storage for important documents, utilizing zero knoledge encription for guaranteed privacy. Prevent AI and Big Tech from scanning your documents with our secure product suite.",
     "title": "",
     "h2Intro": "",
     "features": {

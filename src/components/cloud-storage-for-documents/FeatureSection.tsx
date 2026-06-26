@@ -107,7 +107,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
 
   return (
     <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden">
-      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] to-[#001D6C] pt-10">
+      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] to-[#001D6C] pt-10 gap-8">
         <p className="w-[832px] text-center text-sm font-normal leading-tight text-gray-25 lg:w-[832px] lg:text-lg">
           {textContent.intro}
         </p>

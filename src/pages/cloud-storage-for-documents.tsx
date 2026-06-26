@@ -83,6 +83,7 @@ const CloudStorageForDocuments = ({
           </div>
         }
         url="/pricing"
+        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
@@ -103,7 +104,7 @@ const CloudStorageForDocuments = ({
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
         customText={
-          <div className="w-[302px] items-center justify-center  text-center lg:w-full gap-4 fle flex-col">
+          <div className="w-[302px] items-center justify-center text-center lg:w-full gap-4 flex flex-col">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSectionV2.title}</h2>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
           </div>
