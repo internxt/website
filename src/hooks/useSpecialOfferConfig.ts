@@ -269,7 +269,6 @@ interface OfferConfig {
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
-  isJonatan: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
 }
@@ -291,7 +290,6 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
-        isJonatan: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
       };
@@ -306,7 +304,6 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
-    const isJonatan = selectedPathname === 'jonatan';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
@@ -326,7 +323,6 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       lifetimePlans,
       isClubic,
       isWpcdrive,
-      isJonatan,
       isPrivacyTutor,
       requireAnnualDiscount,
     };
