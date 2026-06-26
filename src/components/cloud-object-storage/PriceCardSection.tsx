@@ -5,6 +5,8 @@ import Button from '../shared/Button';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Code, CodeBlock, Gauge, HandCoins, Headset, LockSimple, Resize, Star } from '@phosphor-icons/react';
+import { currencyService } from '@/services/currency.service';
+import { useEffect, useState } from 'react';
 
 interface PriceCardSectionProps {
   textContent: CloudObjectStorageText['PriceCardSection'];
@@ -13,6 +15,24 @@ interface PriceCardSectionProps {
 export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSectionProps): JSX.Element => {
   const router = useRouter();
   const iconMap = [HandCoins, LockSimple, CodeBlock, Gauge, Resize, Code, Star, Headset];
+  const [currency, setCurrency] = useState("€");
+  const [currencyValue, setCurrencyValue] = useState("eur");
+  
+  useEffect(() => {
+    currencyService.filterCurrencyByCountry().then(({currency, currencyValue}) => {
+      setCurrency(currency);
+      setCurrencyValue(currencyValue);
+    })
+    .catch(() => {
+      // NO OP
+    })
+  }, []);
+
+  const getPrice = (currencyValue: string) => {
+  if (currencyValue === 'usd') return 8;
+  return 7;
+};
+
   return (
     <section className="overflow-hidden bg-neutral-17 px-5 py-20" id="billingButtons">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
@@ -44,8 +64,8 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               <p className="text-3xl font-semibold text-gray-95">{textContent.cardText.label}</p>
               <div className="flex flex-col items-center gap-4 text-center">
                 <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
-                  <span className={`currency`}>€</span>
-                  <span className="price text-4xl font-bold">{textContent.cardText.price}</span>
+                  <span className={`currency`}>{currency}</span>
+                  <span className="price text-4xl font-bold">{getPrice(currencyValue)}</span>
                 </p>
                 <p className="text-xs font-normal text-gray-35">{textContent.cardText.perTB}</p>
               </div>

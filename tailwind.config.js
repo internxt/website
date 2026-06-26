@@ -312,6 +312,7 @@ module.exports = {
         'fill-bar': 'fill 1s linear forwards',
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         marquee: 'marquee 8s linear infinite',
+        fadeIn: 'fadeIn 300ms ease-out',
       },
       translate: {
         25: '6.25rem',
@@ -387,6 +388,10 @@ module.exports = {
             transform: 'translateY(100vh) translateX(20px)',
             opacity: '0',
           },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'scale(1.02)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
 
