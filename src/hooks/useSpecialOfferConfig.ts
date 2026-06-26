@@ -80,6 +80,7 @@ export const ALLOWED_PATHS = [
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -123,6 +124,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alexziskind: 'en',
   eurodefence: 'en',
   wpcdrive: 'en',
+  jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
   lefiltreitalia: 'it',
@@ -170,6 +172,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ]);
 
 export const COUPON_CODES = {
@@ -251,7 +254,7 @@ export const COUPON_CODES = {
   saddy: PromoCodeName.saddy,
   madmoneylabs: PromoCodeName.madmoneylabs,
   wpcdrive: PromoCodeName.wpcdrive,
-
+  jonatan: PromoCodeName.jonatan,
 };
 
 interface OfferConfig {
@@ -266,6 +269,7 @@ interface OfferConfig {
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
+  isJonatan: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
 }
@@ -287,6 +291,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
+        isJonatan: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
       };
@@ -301,6 +306,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
+    const isJonatan = selectedPathname === 'jonatan';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
@@ -320,6 +326,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       lifetimePlans,
       isClubic,
       isWpcdrive,
+      isJonatan,
       isPrivacyTutor,
       requireAnnualDiscount,
     };
