@@ -130,7 +130,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                   activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="flex flex-col overflow-hidden gap-2">
+                <div className="flex flex-col overflow-hidden">
                   {textContent.accordionCards.descriptions[index].contents.map((paragraph) => (
                     <p key={paragraph.slice(0,30)} className="text:sm lg:text-base font-normal leading-tight text-gray-55">{paragraph}</p>
                   ))}

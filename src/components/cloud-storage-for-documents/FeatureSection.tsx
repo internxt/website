@@ -105,7 +105,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden">
+    <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden pb-4">
       <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] to-[#001D6C] pt-10 gap-8">
         <p className="w-full max-w-[1120px] px-5 text-center text-sm font-normal leading-tight text-gray-25 lg:w-[1120px] lg:px-0 lg:text-lg">
           {textContent.intro}

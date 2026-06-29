@@ -42,7 +42,7 @@ const CloudStorageForDocuments = ({
         <AnimatedHeroSection
               textComponent={
                   <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
-                    <h1 className="w-[323px] text-30 font-semibold text-white lg:w-full lg:text-5xl">
+                    <h1 className="w-[323px] text-30 font-semibold leading-tight text-white lg:w-full lg:text-5xl">
                       {textContent.HeroSection.title}
                     </h1>
                     <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
