@@ -137,7 +137,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   luca: 'it',
   saddy: 'it',
   ghareeb: 'fr',
-  madmoneylabs: 'en',
+  madmoneylabs: 'zh',
+  lukevoidx: 'zh',
+  
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
