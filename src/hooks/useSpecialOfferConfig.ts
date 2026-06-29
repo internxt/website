@@ -79,6 +79,8 @@ export const ALLOWED_PATHS = [
   'eurodefence',
   'saddy',
   'madmoneylabs',
+  'wpcdrive',
+  'jonatan',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -121,6 +123,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   techquickie: 'en',
   alexziskind: 'en',
   eurodefence: 'en',
+  wpcdrive: 'en',
+  jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
   lefiltreitalia: 'it',
@@ -167,6 +171,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'luca',
   'saddy',
   'madmoneylabs',
+  'wpcdrive',
+  'jonatan',
 ]);
 
 export const COUPON_CODES = {
@@ -247,6 +253,8 @@ export const COUPON_CODES = {
   luca: PromoCodeName.luca,
   saddy: PromoCodeName.saddy,
   madmoneylabs: PromoCodeName.madmoneylabs,
+  wpcdrive: PromoCodeName.wpcdrive,
+  jonatan: PromoCodeName.jonatan,
 };
 
 interface OfferConfig {
@@ -260,6 +268,7 @@ interface OfferConfig {
   annualPlans: boolean;
   lifetimePlans: boolean;
   isClubic: boolean;
+  isWpcdrive: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
 }
@@ -280,6 +289,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         annualPlans: false,
         lifetimePlans: false,
         isClubic: false,
+        isWpcdrive: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
       };
@@ -293,6 +303,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
+    const isWpcdrive = selectedPathname === 'wpcdrive';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
@@ -311,6 +322,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       annualPlans,
       lifetimePlans,
       isClubic,
+      isWpcdrive,
       isPrivacyTutor,
       requireAnnualDiscount,
     };

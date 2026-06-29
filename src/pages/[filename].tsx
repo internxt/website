@@ -75,6 +75,7 @@ function CombinedSpecialOffer({
     annualPlans,
     lifetimePlans,
     isClubic,
+    isWpcdrive,
     isPrivacyTutor,
     requireAnnualDiscount,
   } = useOfferConfig(pathname);
@@ -90,6 +91,7 @@ function CombinedSpecialOffer({
     couponCode: requireAnnualDiscount ? couponCode : undefined,
     couponCodeForLifetime: couponCode,
   });
+
 
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
@@ -168,6 +170,7 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         image={alternativeImages}
         isClubic={isClubic}
+        isWpcdrive={isWpcdrive}
         isUltimatePlan={onlyUltimatePlan}
         specialOffer={requireAnnualDiscount}
         isPrivacyTutor={isPrivacyTutor}
