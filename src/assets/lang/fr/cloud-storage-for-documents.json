@@ -8,8 +8,6 @@
 
   "FeaturesSection": {
     "intro": "Internxt propose un stockage cloud pour les documents importants, utilisant le chiffrement zero-knowledge pour une confidentialité garantie. Empêchez l'IA et les Big Tech de scanner vos documents grâce à notre suite de produits sécurisés.",
-    "title": "",
-    "h2Intro": "",
     "features": {
       "feature1": {
         "title": "Tous vos documents dans un cloud sécurisé",
@@ -44,14 +42,28 @@
     "accordionCards": {
       "titles": ["Coût", "Confidentialité", "Fonctionnalités supplémentaires"],
       "descriptions": [
-        "Un stockage cloud gratuit pour les documents est souvent suffisant pour vos besoins, car les documents ne prennent généralement pas beaucoup d'espace de stockage. Les services gratuits s'accompagnent toutefois de restrictions, certains fournisseurs facturant un supplément pour le chiffrement zero-knowledge. Il est donc important de comparer les tarifs et les fonctionnalités pour déterminer s'ils répondent à vos besoins. Si vous souhaitez un stockage cloud pour vos documents importants, ainsi qu'un VPN, un antivirus, Mail, Meet et plus encore, Internxt les propose dans ses abonnements abordables. Commencez gratuitement ou à partir de 3 € par mois pour les forfaits annuels ou à vie, ou stockez des pétaoctets de documents avec le stockage d'objets Internxt S3 pour 7 €/To/mois.",
-        "Google Drive, Dropbox et d'autres n'offrent pas le même chiffrement zero-knowledge qu'Internxt. À la place, les géants de la Big Tech gèrent les clés de chiffrement sur leurs serveurs, ce qui signifie qu'ils pourraient déchiffrer et accéder à vos documents confidentiels. Choisir un stockage cloud chiffré en zero-knowledge signifie que les clés sont gérées sur votre appareil, vous offrant ainsi une confidentialité maximale puisque personne d'autre que vous ne peut voir le contenu de vos documents.",
-        "Le stockage cloud gratuit pour les documents peut souvent vous coûter votre vie privée auprès d'entreprises qui utilisent vos données personnelles pour maximiser leurs profits. En échange, vous recevez un stockage gratuit, mais avec des publicités ciblées de tiers, ce qui augmente le risque de fuite de vos données en ligne. Le forfait de stockage cloud gratuit d'Internxt offre 1 Go de stockage cloud gratuit, conçu comme une solution entièrement privée pour vos fichiers. Internxt ne partage jamais vos données avec qui que ce soit, et vous bénéficiez du chiffrement post-quantique, ainsi que d'un VPN pour une position géographique inclus dans votre compte gratuit."
+        {
+          "contents":
+          [
+            "Le stockage gratuit dans le cloud pour les documents est souvent suffisant pour vos besoins, car les documents ne prennent généralement pas beaucoup d'espace de stockage. Les services gratuits s'accompagnent de restrictions, certains fournisseurs facturant un supplément pour le chiffrement à connaissance zéro (zero-knowledge). Il est donc important de comparer les prix et les fonctionnalités pour déterminer s'ils répondent à vos besoins. ",
+            "Si vous souhaitez un stockage cloud pour vos documents importants, ainsi qu'un VPN, un antivirus, Mail, Meet, et plus encore, Internxt les propose dans ses abonnements abordables. Commencez gratuitement ou à partir de 3 € par mois pour les forfaits annuels ou à vie, ou stockez des pétaoctets de documents avec le stockage d'objets Internxt S3 pour 7 €/TO/mois."
+          ]
+        },
+        {
+          "contents":
+          [
+            "Google Drive, Dropbox et d'autres n'offrent pas le même chiffrement à connaissance zéro qu'Internxt. À la place, les géants de la Tech gèrent les clés de chiffrement sur leurs serveurs, ce qui signifie qu'ils pourraient déchiffrer et accéder à vos documents confidentiels.",
+            "Choisir un stockage cloud chiffré à connaissance zéro signifie que les clés sont gérées sur votre appareil, vous offrant une confidentialité maximale puisque personne d'autre que vous ne peut voir le contenu de vos documents."
+          ]
+        },
+        {
+          "contents":
+          [
+            "Le stockage gratuit dans le cloud pour les documents peut souvent vous coûter votre vie privée face à des entreprises qui utilisent vos données personnelles pour maximiser leurs profits. En échange, vous recevez un stockage gratuit, mais avec des publicités ciblées de tiers, ce qui augmente le risque de fuite de vos données en ligne.",
+            "Le forfait de stockage cloud gratuit d'Internxt offre 1 Go de stockage cloud gratuit, conçu comme une solution entièrement privée pour vos fichiers. Internxt ne partage jamais vos données avec quiconque, et vous bénéficiez d'un chiffrement post-quantique, ainsi que d'un VPN pour un emplacement inclus dans votre compte gratuit."
+          ]
+        }
       ]
-    },
-    "cards": {
-      "titles": [],
-      "descriptions": []
     }
   },
 

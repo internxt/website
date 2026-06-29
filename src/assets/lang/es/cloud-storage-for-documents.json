@@ -8,8 +8,6 @@
 
   "FeaturesSection": {
     "intro": "Internxt ofrece almacenamiento en la nube para documentos importantes, utilizando cifrado de conocimiento cero para garantizar la privacidad. Evita que la IA y las Big Tech escaneen tus documentos con nuestra suite de productos seguros.",
-    "title": "",
-    "h2Intro": "",
     "features": {
       "feature1": {
         "title": "Todos tus documentos en una nube segura",
@@ -44,14 +42,28 @@
     "accordionCards": {
       "titles": ["Coste", "Privacidad", "Funciones adicionales"],
       "descriptions": [
-        "El almacenamiento gratuito en la nube para documentos suele ser suficiente para tus necesidades, ya que los documentos no suelen ocupar mucho espacio. Los servicios gratuitos conllevan restricciones, y algunos proveedores cobran un extra por el cifrado de conocimiento cero. Por lo tanto, es importante comparar precios y funciones para determinar si se adaptan a tus necesidades. Si deseas un almacenamiento en la nube para documentos importantes, además de VPN, antivirus, correo, Meet y más, Internxt lo ofrece en sus asequibles planes de precios. Empieza gratis o desde 3 € al mes con los planes anuales o de por vida, o almacena petabytes de documentos con el almacenamiento de objetos Internxt S3 por 7 €/TB/mes.",
-        "Google Drive, Dropbox y otros no ofrecen el mismo cifrado de conocimiento cero que Internxt. En su lugar, las empresas de Big Tech gestionan las claves de cifrado en sus servidores, lo que significa que podrían descifrar y acceder a tus documentos confidenciales. Elegir un almacenamiento en la nube cifrado con conocimiento cero significa que las claves se gestionan en tu dispositivo, ofreciéndote la máxima privacidad, ya que nadie más que tú puede ver el contenido de tus documentos.",
-        "El almacenamiento gratuito en la nube para documentos a menudo puede costarte tu privacidad por parte de empresas que utilizan tus datos personales para maximizar sus beneficios. A cambio, recibes almacenamiento gratuito, pero con anuncios personalizados de terceros, lo que aumenta el riesgo de que tus datos se filtren en internet. El plan de almacenamiento gratuito en la nube de Internxt ofrece 1 GB de almacenamiento gratuito diseñado como una solución totalmente privada para tus archivos. Internxt nunca comparte tus datos con nadie, y obtienes cifrado post-cuántico, además de una VPN para una ubicación incluida en tu cuenta gratuita."
+        {
+          "contents":
+            [
+            "El almacenamiento en la nube gratuito para documentos suele ser suficiente para tus necesidades, ya que los documentos no suelen ocupar mucho espacio de almacenamiento. Los servicios gratuitos conllevan restricciones, y algunos proveedores cobran un suplemento por el cifrado de conocimiento cero (zero-knowledge). Por tanto, es importante comparar precios y funciones para determinar si se adaptan a tus necesidades. ",
+            "Si quieres almacenamiento en la nube para documentos importantes, además de una VPN, Antivirus, Correo, Meet y más, Internxt los ofrece en sus asequibles planes de precios. Empieza gratis o desde 3 € al mes con los planes anuales o para toda la vida, o almacena petabytes de documentos con el almacenamiento de objetos S3 de Internxt por 7 €/TB/mes."
+            ]
+        },
+        {
+          "contents":
+            [
+            "Google Drive, Dropbox y otros no ofrecen el mismo cifrado de conocimiento cero que Internxt. En su lugar, las grandes empresas tecnológicas gestionan las claves de cifrado en sus servidores, lo que significa que podrían descifrar y acceder a tus documentos confidenciales.",
+            "Elegir un almacenamiento en la nube cifrado de conocimiento cero significa que las claves se gestionan en tu dispositivo, lo que te ofrece la máxima privacidad, ya que nadie más que tú puede ver el contenido de tus documentos."
+            ]
+          },
+        {
+          "contents":
+          [
+            "El almacenamiento gratuito en la nube para documentos a menudo puede costarte tu privacidad frente a empresas que utilizan tus datos personales para maximizar sus beneficios. A cambio, recibes almacenamiento gratuito, pero con anuncios personalizados de terceros, lo que aumenta el riesgo de que tus datos se filtren en internet.",
+            "El plan de almacenamiento gratuito en la nube de Internxt ofrece 1 GB de almacenamiento gratuito diseñado como una solución totalmente privada para tus archivos. Internxt nunca comparte tus datos con nadie, y obtienes cifrado post-cuántico, además de una VPN para una ubicación incluida en tu cuenta gratuita."
+          ]
+        }
       ]
-    },
-    "cards": {
-      "titles": [],
-      "descriptions": []
     }
   },
 

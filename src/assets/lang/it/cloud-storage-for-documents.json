@@ -8,8 +8,6 @@
 
   "FeaturesSection": {
     "intro": "Internxt offre archiviazione cloud per documenti importanti, utilizzando la crittografia zero-knowledge per garantire la privacy. Impedisci all'IA e a Big Tech di scansionare i tuoi documenti con la nostra suite di prodotti sicuri.",
-    "title": "",
-    "h2Intro": "",
     "features": {
       "feature1": {
         "title": "Tutti i tuoi documenti in un unico cloud sicuro",
@@ -44,14 +42,27 @@
     "accordionCards": {
       "titles": ["Costo", "Privacy", "Funzionalità extra"],
       "descriptions": [
-        "L'archiviazione cloud gratuita per i documenti è spesso sufficiente per le tue esigenze, poiché i documenti di solito non occupano molto spazio di archiviazione. I servizi gratuiti presentano limitazioni e alcuni fornitori richiedono un supplemento per la crittografia zero-knowledge. Pertanto, è importante confrontare prezzi e funzionalità per determinare se soddisfano le tue esigenze. Se desideri un cloud storage per documenti importanti, oltre a VPN, Antivirus, Mail, Meet e altro, Internxt li offre nei suoi piani tariffari convenienti. Inizia gratuitamente o a partire da 3 € al mese per i piani annuali o a vita, oppure archivia petabyte de documenti con l'archiviazione di oggetti Internxt S3 a 7 €/TB/mese.",
-        "Google Drive, Dropbox e altri non offrono la stessa crittografia zero-knowledge di Internxt. Al contrario, le aziende di Big Tech gestiscono le chiavi di crittografia sui loro server, il che significa che potrebbero decrittografare e accedere ai tuoi documenti riservati. Scegliere un'archiviazione cloud crittografata zero-knowledge significa che le chiavi sono gestite sul tuo dispositivo, offrendoti la massima privacy poiché nessuno tranne te può vedere il contenuto dei tuoi documenti.",
-        "L'archiviazione cloud gratuita per i documenti può spesso costarti la privacy da parte di aziende che utilizzano i tuoi dati personali per massimizzare i propri profitti. In cambio, ricevi spazio di archiviazione gratuito, ma con annunci pubblicitari mirati di terze parti, aumentando il rischio che i tuoi dati vengano divulgati online. Il piano di archiviazione cloud gratuito di Internxt offre 1 GB di spazio di archiviazione cloud gratuito progettato come soluzione completamente privata per i tuoi file. Internxt non condivide mai i tuoi dati con nessuno e ottieni la crittografia post-quantistica, oltre a una VPN per una posizione inclusa nel tuo account gratuito."
+        {
+          "contents":
+            [
+              "L'archiviazione cloud gratuita per i documenti è spesso sufficiente per le tue esigenze, poiché i documenti di solito non occupano molto spazio di archiviazione. I servizi gratuiti presentano delle restrizioni, e alcuni fornitori applicano un costo aggiuntivo per la crittografia a conoscenza zero (zero-knowledge). Pertanto, è importante confrontare prezzi e funzionalità para determinare se soddisfano le tue esigenze. ",
+              "Se desideri uno spazio di archiviazione cloud per documenti importanti, oltre a VPN, Antivirus, Mail, Meet e altro ancora, Internxt li offre nei suoi piani tariffari convenienti. Inizia gratuitamente o a partire da 3 € al mese per i piani annuali o a vita, oppure archivia petabyte di documenti con l'archiviazione di oggetti Internxt S3 a 7 €/TB/mese."
+            ]
+        },
+        {
+          "contents":
+            [
+            "Google Drive, Dropbox e altri non offrono la stessa crittografia a conoscenza zero di Internxt. Al contrario, le grandi aziende tecnologiche gestiscono le chiavi di crittografia sui propri server, il che significa che potrebbero decrittografare e accedere ai tuoi documenti riservati.",
+            "Scegliere un'archiviazione cloud crittografata a conoscenza zero significa che le chiavi sono gestite sul tuo dispositivo, offrendoti la massima privacy poiché nessuno tranne te può vedere il contenuto dei tuoi documenti."
+            ]
+        },
+        {"contents":
+          [
+            "L'archiviazione cloud gratuita per i documenti può spesso costarti la privacy a causa di aziende che utilizzano i tuoi dati personali per massimizzare i propri profitti. In cambio, ricevi spazio di archiviazione gratuito, ma con annunci pubblicitari mirati di terze parti, aumentando il rischio che i tuoi dati vengano trapelati online.",
+            "Il piano di archiviazione cloud gratuito di Internxt offre 1 GB di spazio di archiviazione cloud gratuito, progettato come una soluzione completamente privata per i tuoi file. Internxt non condivide mai i tuoi dati con nessuno e ottieni la crittografia post-quantistica, oltre a una VPN per una posizione inclusa nel tuo account gratuito."
+          ]
+        }
       ]
-    },
-    "cards": {
-      "titles": [],
-      "descriptions": []
     }
   },
 

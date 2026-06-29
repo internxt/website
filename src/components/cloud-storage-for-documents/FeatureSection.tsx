@@ -1,4 +1,4 @@
-import { FeaturesSection as FeaturesSectionType } from '@/assets/types/private-cloud-storage-for-videos';
+import { FeaturesSection as FeaturesSectionType } from '@/assets/types/cloud-storage-for-documents';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useState, useRef, useCallback, useEffect } from 'react';
@@ -7,7 +7,6 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 interface Props {
   textContent: FeaturesSectionType;
 }
-
 const FeatureSection = ({ textContent }: Props): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -108,7 +107,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
   return (
     <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden">
       <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] to-[#001D6C] pt-10 gap-8">
-        <p className="w-[832px] text-center text-sm font-normal leading-tight text-gray-25 lg:w-[832px] lg:text-lg">
+        <p className="w-full max-w-[1120px] px-5 text-center text-sm font-normal leading-tight text-gray-25 lg:w-[1120px] lg:px-0 lg:text-lg">
           {textContent.intro}
         </p>
         <div className="w-full max-w-[1280px]">
@@ -122,16 +121,6 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         </div>
       </div>
 
-      <h2 className="text-30 font-semibold text-gray-95 lg:text-3xl">
-        {textContent.title}
-      </h2>
-
-      {textContent.h2Intro && (
-        <p className="w-[330px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-center lg:text-lg">
-          {textContent.h2Intro}
-        </p>
-      )}
-
       <div className="flex w-[330px] flex-col items-start justify-center gap-12 lg:w-full lg:items-center">
         <div
           ref={scrollContainerRef}
@@ -142,14 +131,14 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
           }}
         >
           {featuresArray.map(([key, { title, description }]) => (
-            <div key={key} className="h-full w-[330px] shrink-0 lg:w-[352px]">
+            <div key={key} className="h-full w-full max-w-[330px] shrink-0 lg:w-[352px]">
               <h3 className="pb-6 text-lg font-medium text-gray-100 lg:text-xl">
                 {title}
               </h3>
               <div className="space-y-4">
-                {description.map((paragraph, i) => (
+                {description.map((paragraph) => (
                   <p
-                    key={i}
+                    key={title}
                     className="text-base font-normal leading-tight text-gray-55 lg:text-base"
                   >
                     {paragraph}

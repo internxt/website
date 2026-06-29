@@ -8,8 +8,6 @@
 
   "FeaturesSection": {
     "intro": "Internxt bietet Cloud-Speicher für wichtige Dokumente und nutzt Zero-Knowledge-Verschlüsselung für garantierte Privatsphäre. Verhindern Sie mit unserer sicheren Produktsuite, dass KI und Big Tech Ihre Dokumente scannen.",
-    "title": "",
-    "h2Intro": "",
     "features": {
       "feature1": {
         "title": "Alle Ihre Dokumente in einer sicheren Cloud",
@@ -44,14 +42,27 @@
     "accordionCards": {
       "titles": ["Kosten", "Privatsphäre", "Zusatzfunktionen"],
       "descriptions": [
-        "Kostenloser Cloud-Speicher für Dokumente reicht oft für Ihre Bedürfnisse aus, da Dokumente in der Regel nicht viel Speicherplatz beanspruchen. Kostenlose Dienste sind jedoch mit Einschränkungen verbunden, und einige Anbieter verlangen zusätzliche Gebühren für die Zero-Knowledge-Verschlüsselung. Daher ist es wichtig, Preise und Funktionen zu vergleichen, um festzustellen, ob sie Ihren Anforderungen entsprechen. Wenn Sie Cloud-Speicher für wichtige Dokumente plus VPN, Antivirus, Mail, Meet und mehr suchen, bietet Internxt dies in seinen erschwinglichen Tarifen an. Starten Sie kostenlos oder ab 3 € pro Monat für Jahres- oder Lifetime-Tarife, oder speichern Sie Petabytes an Dokumenten mit dem Internxt S3-Objektspeicher für 7 €/TB/Monat.",
-        "Google Drive, Dropbox und andere bieten nicht die gleiche Zero-Knowledge-Verschlüsselung wie Internxt. Stattdessen verwalten Big-Tech-Unternehmen die Verschlüsselungsunterlagen auf ihren Servern, was bedeutet, dass sie Ihre vertraulichen Dokumente entschlüsseln und einsehen könnten. Die Wahl eines Zero-Knowledge-verschlüsselten Cloud-Speichers bedeutet, dass die Schlüssel auf Ihrem Gerät verwaltet werden, was Ihnen maximale Privatsphäre bietet, da niemand außer Ihnen den Inhalt Ihrer Dokumente sehen kann.",
-        "Kostenloser Cloud-Speicher für Dokumente kann Sie oft Ihre Privatsphäre kosten, da Unternehmen Ihre persönlichen Daten nutzen, um ihre Gewinne zu maximieren. Im Gegenzug erhalten Sie kostenlosen Speicherplatz, jedoch mit zielgerichteter Werbung von Drittanbietern, was das Risiko von Datenlecks im Internet erhöht. Der kostenlose Cloud-Speicher-Tarif von Internxt bietet 1 GB kostenlosen Cloud-Speicher, der als absolut private Lösung für Ihre Dateien konzipiert ist. Internxt gibt Ihre Daten niemals an Dritte weiter, und Sie erhalten Post-Quanten-Verschlüsselung sowie ein VPN für einen Standort, die in Ihrem kostenlosen Konto enthalten sind."
+        {
+          "contents":
+          [
+            "Kostenloser Cloud-Speicher für Dokumente reicht oft für Ihre Bedürfnisse aus, da Dokumente in der Regel nicht viel Speicherplatz beanspruchen. Kostenlose Dienste sind mit Einschränkungen verbunden, wobei einige Anbieter zusätzliche Gebühren für die Zero-Knowledge-Verschlüsselung verlangen. Daher ist es wichtig, Preise und Funktionen zu vergleichen, um festzustellen, ob sie Ihren Anforderungen entsprechen. ",
+            "Wenn Sie Cloud-Speicher für wichtige Dokumente sowie ein VPN, Antivirus, Mail, Meet und mehr wünschen, bietet Internxt dies in seinen erschwinglichen Tarifen an. Starten Sie kostenlos oder ab 3 € pro Monat für Jahres- oder Lifetime-Pläne, oder speichern Sie Petabytes an Dokumenten mit dem Internxt S3-Objektspeicher für 7 €/TB/Monat."
+          ]
+        },
+        {
+          "contents":
+          [
+            "Google Drive, Dropbox und andere bieten nicht die gleiche Zero-Knowledge-Verschlüsselung wie Internxt. Stattdessen verwalten Big-Tech-Unternehmen die Verschlüsselungswerte auf ihren Servern, was bedeutet, dass sie Ihre vertraulichen Dokumente entschlüsseln und darauf zugreifen könnten.",
+            "Die Wahl eines mit Zero-Knowledge verschlüsselten Cloud-Speichers bedeutet, dass die Schlüssel auf Ihrem Gerät verwaltet werden. Dies bietet Ihnen maximale Privatsphäre, da außer Ihnen niemand den Inhalt Ihrer Dokumente sehen kann."
+          ]
+        },
+        { "contents":
+          [
+            "Kostenloser Cloud-Speicher für Dokumente kann Sie oft Ihre Privatsphäre kosten, da Unternehmen Ihre persönlichen Daten nutzen, um ihre Gewinne zu maximieren. In Gegenzug erhalten Sie kostenlosen Speicherplatz, jedoch mit gezielter Werbung von Drittanbietern, was das Risiko erhöht, dass Ihre Daten online durchsickern.",
+            "Der kostenlose Cloud-Speicher-Tarif von Internxt bietet 1 GB kostenlosen Cloud-Speicher, der als absolut private Lösung für Ihre Dateien konzipiert ist. Internxt gibt Ihre Daten niemals an Dritte weiter, und Sie erhalten eine Post-Quanten-Verschlüsselung sowie ein VPN für einen Standort, das in Ihrem kostenlosen Konto enthalten ist."
+          ]
+        }
       ]
-    },
-    "cards": {
-      "titles": [],
-      "descriptions": []
     }
   },
 

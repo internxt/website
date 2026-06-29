@@ -8,8 +8,6 @@
 
   "FeaturesSection": {
     "intro": "Internxt offers cloud storage for important documents, utilizing zero knoledge encription for guaranteed privacy. Prevent AI and Big Tech from scanning your documents with our secure product suite.",
-    "title": "",
-    "h2Intro": "",
     "features": {
       "feature1": {
         "title": "All your documents in one secure cloud",
@@ -44,14 +42,28 @@
     "accordionCards": {
       "titles": ["Cost", "Privacy", "Extra features"],
       "descriptions": [
-        "Free cloud storage for documents is often enough for your needs, as documents don’t usually take up a lot of storage space. Free services come with restrictions, with some providers charging extra for zero-knowledge encryption. So, it’s important to compare pricing and features to determine whether they meet your needs. If you want cloud storage for important documents, plus a VPN, Antivirus, Mail, Meet, and more, Internxt offers them in its affordable pricing plans. Get started for free or from €3 per month for annual or lifetime plans, or store petabytes of documents with Internxt S3 object storage for €7/TB/month.",
-        "Google Drive, Dropbox, and others don’t offer the same zero-knowledge encryption as Internxt. Instead, Big Tech companies manage the encryption keys on their servers, meaning they could decrypt and access your confidential documents. Choosing zero-knowledge encrypted cloud storage means the keys are managed on your device, offering you maximum privacy as nobody but you can see the content of your documents.",
-        "Free cloud storage for documents may often cost you your privacy from companies that use your personal data to maximise their profits. In exchange, you receive free storage, but with targeted ads from third parties, increasing the risk of your data leaking online. Internxt’s free cloud storage plan offers 1GB of free cloud storage that is designed as a fully private solution for your files. Internxt never shares your data with anyone, and you get post-quantum encryption, plus a VPN for one location included in your free account."
-      ]
-    },
-    "cards": {
-      "titles": [],
-      "descriptions": []
+        {
+          "contents":
+          [
+            "Free cloud storage for documents is often enough for your needs, as documents don’t usually take up a lot of storage space. Free services come with restrictions, with some providers charging extra for zero-knowledge encryption. So, it’s important to compare pricing and features to determine whether they meet your needs. ",
+            "If you want cloud storage for important documents, plus a VPN, Antivirus, Mail, Meet, and more, Internxt offers them in its affordable pricing plans. Get started for free or from €3 per month for annual or lifetime plans, or store petabytes of documents with Internxt S3 object storage for €7/TB/month."
+          ]
+       },
+        {
+          "contents":
+          [
+            "Google Drive, Dropbox, and others don’t offer the same zero-knowledge encryption as Internxt. Instead, Big Tech companies manage the encryption keys on their servers, meaning they could decrypt and access your confidential documents.",
+            "Choosing zero-knowledge encrypted cloud storage means the keys are managed on your device, offering you maximum privacy as nobody but you can see the content of your documents."
+          ]
+      },
+        {
+          "contents":
+          [
+            "Free cloud storage for documents may often cost you your privacy from companies that use your personal data to maximise their profits. In exchange, you receive free storage, but with targeted ads from third parties, increasing the risk of your data leaking online.",
+            "Internxt’s free cloud storage plan offers 1GB of free cloud storage that is designed as a fully private solution for your files. Internxt never shares your data with anyone, and you get post-quantum encryption, plus a VPN for one location included in your free account."
+          ]
+      }
+    ]
     }
   },
 

@@ -33,16 +33,14 @@ const CloudStorageForDocuments = ({
   footerText,
   locale,
 }: CloudStorageForDocumentsProps): JSX.Element => {
-  const metatags = metatagsDescription.filter((metatag) => metatag.id === 'cloud-storage-for-documents')[0];
-
+  const metatags = metatagsDescription.find((metatag) => metatag.id === 'cloud-storage-for-documents');
   const lang = locale as string;
 
   return (
       <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <AnimatedHeroSection
+        <AnimatedHeroSection
               textComponent={
-                <>
                   <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
                     <h1 className="w-[323px] text-30 font-semibold text-white lg:w-full lg:text-5xl">
                       {textContent.HeroSection.title}
@@ -66,13 +64,12 @@ const CloudStorageForDocuments = ({
                       {textContent.HeroSection.cta}
                     </Link>
                   </div>
-                </>
               }
               width="w-[580px] "
               bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
             /> 
 
-     <FeatureSection textContent={textContent.FeaturesSection} />
+      <FeatureSection textContent={textContent.FeaturesSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}

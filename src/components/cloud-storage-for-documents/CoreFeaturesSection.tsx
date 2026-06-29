@@ -1,11 +1,11 @@
-import { DriveText } from '@/assets/types/drive';
+import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-documents';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface CoreFeaturesSectionProps {
-  textContent: DriveText['CoreFeatures'];
+  textContent: CloudStorageForDocumentsText['CoreFeatures'];
 }
 
 const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Element => {
@@ -84,8 +84,8 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
 
   return (
     <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
-      <h2 className="flex text-4xl font-bold leading-tight text-gray-100">{textContent.title}</h2>
-      <p className="w-[1200px] text-lg font-normal text-gray-55">{textContent.description}</p>
+      <h2 className="flex text-2xl lg:text-4xl font-bold leading-tight text-gray-100">{textContent.title}</h2>
+      <p className="w-full max-w-[950px] pr-5 lg:pr-0 lg:text-lg font-normal text-gray-55">{textContent.description}</p>
 
       <div className="flex w-full flex-row gap-8">
         <div className="flex w-full flex-col gap-6 lg:w-[45%]">
@@ -95,26 +95,26 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
               alt={textContent.accordionCards.titles[activeIndex]}
               height={188}
               width={95}
-              className="rounded-16 object-cover"
+              className="object-cover"
             />
             <Image
               src={getImage(`/images/secure-file-sharing/mockup2.webp`)}
               alt={textContent.accordionCards.titles[activeIndex]}
               height={188}
               width={95}
-              className="rounded-16 object-cover"
+              className="object-cover"
             />
             <Image
               src={getImage(`/images/secure-file-sharing/mockup3.webp`)}
               alt={textContent.accordionCards.titles[activeIndex]}
               height={188}
               width={95}
-              className="rounded-16 object-cover"
+              className="object-cover"
             />
           </div>
           {textContent.accordionCards.titles.map((title: string, index: number) => (
             <button
-              key={index}
+              key={title}
               onClick={() => handleAccordionClick(index)}
               className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
                 activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
@@ -130,16 +130,16 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                   activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="overflow-hidden">
-                  <p className="text-base font-normal leading-tight text-gray-55">
-                    {textContent.accordionCards.descriptions[index]}
-                  </p>
+                <div className="flex flex-col overflow-hidden gap-2">
+                  {textContent.accordionCards.descriptions[index].contents.map((paragraph) => (
+                    <p key={paragraph.slice(0,30)} className="text:sm lg:text-base font-normal leading-tight text-gray-55">{paragraph}</p>
+                  ))}
                 </div>
               </div>
             </button>
           ))}
         </div>
-        <div className="hidden lg:flex w-full justify-center">
+        <div className="hidden lg:flex w-full justify-center pt-6">
           <div className="w-full max-w-[820px]">
             <Image
               src={getImage(`/images/secure-file-sharing/mockup${activeIndex + 1}.webp`)}
@@ -162,22 +162,6 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             paddingRight: isMobile ? `calc(20px + ${getPaddingRight()}px)` : undefined,
           }}
         >
-          {textContent.cards.titles.map((title: string, index: number) => (
-            <div
-              key={index}
-              className="flex-shrink-0 lg:w-1/3 lg:flex-shrink"
-              style={{
-                width: isMobile ? `${mobileCardWidth}px` : undefined,
-              }}
-            >
-              <div className="flex flex-col gap-2 px-4 pt-8">
-                <p className="text-xl font-medium text-gray-100">{title}</p>
-                <p className="text-base font-normal leading-tight text-gray-55">
-                  {textContent.cards.descriptions[index]}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
 
         {isMobile && (
@@ -187,7 +171,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
                 className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
+                  canScrollLeft ? '' : 'cursor-not-allowed opacity-30'
                 }`}
                 aria-label="Anterior"
               >
@@ -197,7 +181,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                 onClick={scrollRight}
                 disabled={!canScrollRight}
                 className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
+                  canScrollRight ? '' : 'cursor-not-allowed opacity-30'
                 }`}
                 aria-label="Siguiente"
               >

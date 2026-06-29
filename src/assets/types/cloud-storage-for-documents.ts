@@ -19,12 +19,15 @@ export interface CoreFeatures {
   title:          string;
   description:    string;
   accordionCards: AccordionCards;
-  cards:          AccordionCards;
 }
 
 export interface AccordionCards {
   titles:       string[];
-  descriptions: string[];
+  descriptions: Paragraphs[];
+}
+
+export interface Paragraphs {
+  contents: string[]
 }
 
 export interface FeaturesInternxtSection {
@@ -35,8 +38,6 @@ export interface FeaturesInternxtSection {
 
 export interface FeaturesSection {
   intro:    string;
-  title:    string;
-  h2Intro:  string;
   features: Features;
 }
 
