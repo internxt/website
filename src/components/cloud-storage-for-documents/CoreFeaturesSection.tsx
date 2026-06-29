@@ -2,7 +2,6 @@ import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-d
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface CoreFeaturesSectionProps {
   textContent: CloudStorageForDocumentsText['CoreFeatures'];
@@ -11,12 +10,9 @@ interface CoreFeaturesSectionProps {
 const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   const mobileCardWidth = 293;
-  const mobileGap = 32;
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -28,48 +24,6 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
 
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
-
-  const updateScrollButtons = () => {
-    if (!scrollContainerRef.current) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
-  };
-
-  const scrollLeft = () => {
-    if (!scrollContainerRef.current) return;
-    const scrollAmount = mobileCardWidth + mobileGap;
-    scrollContainerRef.current.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth',
-    });
-  };
-
-  const scrollRight = () => {
-    if (!scrollContainerRef.current) return;
-    const scrollAmount = mobileCardWidth + mobileGap;
-    scrollContainerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer || !isMobile) return;
-
-    updateScrollButtons();
-    scrollContainer.addEventListener('scroll', updateScrollButtons);
-    const resizeObserver = new ResizeObserver(updateScrollButtons);
-    resizeObserver.observe(scrollContainer);
-
-    return () => {
-      scrollContainer.removeEventListener('scroll', updateScrollButtons);
-      resizeObserver.disconnect();
-    };
-  }, [isMobile]);
 
   const handleAccordionClick = (index: number) => {
     setActiveIndex(index);
@@ -163,33 +117,6 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
           }}
         >
         </div>
-
-        {isMobile && (
-          <div className="flex h-[48px] w-full flex-row items-end justify-end">
-            <div className="flex w-[120px] justify-between">
-              <button
-                onClick={scrollLeft}
-                disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  canScrollLeft ? '' : 'cursor-not-allowed opacity-30'
-                }`}
-                aria-label="Anterior"
-              >
-                <CaretLeft className="h-[24px] w-[24px] text-primary" />
-              </button>
-              <button
-                onClick={scrollRight}
-                disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  canScrollRight ? '' : 'cursor-not-allowed opacity-30'
-                }`}
-                aria-label="Siguiente"
-              >
-                <CaretRight className="h-[24px] w-[24px] text-primary" />
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
