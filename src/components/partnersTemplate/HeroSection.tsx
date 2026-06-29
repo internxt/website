@@ -24,7 +24,7 @@ interface HeroSectionForPartnerProps {
   isValentinesMode?: boolean;
   isClubic?: boolean;
   isWpcdrive?: boolean;
-  isBpdrive: boolean;
+  isBpdrive?: boolean;
   isPcMag?: boolean;
   isPrivacyTutor?: boolean;
   isUltimatePlan?: boolean;
