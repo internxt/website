@@ -37,7 +37,7 @@ const CloudStorageForDocuments = ({
   const lang = locale as string;
 
   return (
-      <Layout title={metatags.title} description={metatags.description}>
+      <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
         <AnimatedHeroSection
               textComponent={
