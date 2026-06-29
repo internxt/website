@@ -80,6 +80,7 @@ export const ALLOWED_PATHS = [
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -123,6 +124,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alexziskind: 'en',
   eurodefence: 'en',
   wpcdrive: 'en',
+  jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
   lefiltreitalia: 'it',
@@ -133,12 +135,14 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   luca: 'it',
   saddy: 'it',
   ghareeb: 'fr',
-  madmoneylabs: 'en',
+  madmoneylabs: 'zh',
+  lukevoidx: 'zh',
+  
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -170,6 +174,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'jonatan',
 ]);
 
 export const COUPON_CODES = {
@@ -251,7 +256,7 @@ export const COUPON_CODES = {
   saddy: PromoCodeName.saddy,
   madmoneylabs: PromoCodeName.madmoneylabs,
   wpcdrive: PromoCodeName.wpcdrive,
-
+  jonatan: PromoCodeName.jonatan,
 };
 
 interface OfferConfig {
