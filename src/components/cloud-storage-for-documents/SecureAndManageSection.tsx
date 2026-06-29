@@ -83,9 +83,9 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
               </p>
 
               <div className="flex flex-col gap-6">
-                {card.description.map((paragraph, pIndex) => (
+                {card.description.map((paragraph) => (
                   <p
-                    key={pIndex}
+                    key={paragraph.slice(0,30)}
                     className="text-sm font-normal leading-tight text-gray-55"
                   >
                     {paragraph}
