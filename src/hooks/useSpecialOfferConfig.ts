@@ -82,6 +82,7 @@ export const ALLOWED_PATHS = [
   'wpcdrive',
   'jonatan',
   'bpdrive',
+  'dhiarcom',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -139,7 +140,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   ghareeb: 'fr',
   madmoneylabs: 'zh',
   lukevoidx: 'zh',
-  
+  dhiarcom: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -178,6 +179,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'wpcdrive',
   'bpdrive',
   'jonatan',
+  'dhiarcom',
 ]);
 
 export const COUPON_CODES = {
@@ -261,6 +263,7 @@ export const COUPON_CODES = {
   wpcdrive: PromoCodeName.wpcdrive,
   bpdrive: PromoCodeName.bpdrive,
   jonatan: PromoCodeName.jonatan,
+  dhiarcom: PromoCodeName.dhiarcom,
 };
 
 interface OfferConfig {

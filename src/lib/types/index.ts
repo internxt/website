@@ -292,6 +292,7 @@ export enum PromoCodeName {
   bpdrive = 'BPDRIVE',
   jonatan = 'JONATAN',
   WEWE = 'SAVE',
+  dhiarcom = 'DHIARCOM',
 }
 
 export interface PromoCodeProps {
