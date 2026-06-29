@@ -293,6 +293,7 @@ export enum PromoCodeName {
   jonatan = 'JONATAN',
   WEWE = 'SAVE',
   dhiarcom = 'DHIARCOM',
+  gtid = 'GTID',
 }
 
 export interface PromoCodeProps {
