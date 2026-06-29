@@ -289,6 +289,7 @@ export enum PromoCodeName {
   saddy = 'SADDY',
   madmoneylabs = 'MADMONEYLABS',
   wpcdrive = 'WPCDRIVE',
+  bpdrive = 'BPDRIVE',
   jonatan = 'JONATAN',
   WEWE = 'SAVE',
 }

@@ -24,6 +24,7 @@ interface HeroSectionForPartnerProps {
   isValentinesMode?: boolean;
   isClubic?: boolean;
   isWpcdrive?: boolean;
+  isBpdrive: boolean;
   isPcMag?: boolean;
   isPrivacyTutor?: boolean;
   isUltimatePlan?: boolean;
@@ -41,6 +42,7 @@ export default function HeroSection({
   image = 'internxt-private-cloud',
   isClubic = false,
   isWpcdrive = false,
+  isBpdrive = false,
   isPrivacyTutor = false,
   isUltimatePlan = false,
   isPcMag = false,
@@ -166,6 +168,26 @@ export default function HeroSection({
               width={140}
               height={16}
               alt="WPC drive coupon logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>
+        )}
+
+          {isBpdrive && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/influencers/bloggerspassoin.webp')}
+              width={140}
+              height={16}
+              alt="BP drive coupon logo"
             />
             <X size={16} />
             <Image
