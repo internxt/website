@@ -294,6 +294,7 @@ export enum PromoCodeName {
   WEWE = 'SAVE',
   dhiarcom = 'DHIARCOM',
   gtid = 'GTID',
+  bangtutorial = 'BANGTUTORIAL',
 }
 
 export interface PromoCodeProps {

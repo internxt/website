@@ -84,6 +84,7 @@ export const ALLOWED_PATHS = [
   'bpdrive',
   'dhiarcom',
   'gtid',
+  'bangtutorial',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -143,6 +144,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   lukevoidx: 'zh',
   dhiarcom: 'en',
   gtid: 'en',
+  bangtutorial: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -183,6 +185,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'jonatan',
   'dhiarcom',
   'gtid',
+  'bangtutorial',
 ]);
 
 export const COUPON_CODES = {
@@ -268,6 +271,7 @@ export const COUPON_CODES = {
   jonatan: PromoCodeName.jonatan,
   dhiarcom: PromoCodeName.dhiarcom,
   gtid: PromoCodeName.gtid,
+  bangtutorial: PromoCodeName.bangtutorial
 };
 
 interface OfferConfig {
