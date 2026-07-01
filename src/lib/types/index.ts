@@ -295,6 +295,7 @@ export enum PromoCodeName {
   dhiarcom = 'DHIARCOM',
   gtid = 'GTID',
   bangtutorial = 'BANGTUTORIAL',
+  dea = 'DEA',
 }
 
 export interface PromoCodeProps {
