@@ -85,6 +85,7 @@ export const ALLOWED_PATHS = [
   'dhiarcom',
   'gtid',
   'bangtutorial',
+  'dea',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -145,11 +146,12 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   dhiarcom: 'en',
   gtid: 'en',
   bangtutorial: 'en',
+  dea: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -186,6 +188,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'dhiarcom',
   'gtid',
   'bangtutorial',
+  'dea',
 ]);
 
 export const COUPON_CODES = {
@@ -271,7 +274,8 @@ export const COUPON_CODES = {
   jonatan: PromoCodeName.jonatan,
   dhiarcom: PromoCodeName.dhiarcom,
   gtid: PromoCodeName.gtid,
-  bangtutorial: PromoCodeName.bangtutorial
+  bangtutorial: PromoCodeName.bangtutorial,
+  dea: PromoCodeName.dea,
 };
 
 interface OfferConfig {
