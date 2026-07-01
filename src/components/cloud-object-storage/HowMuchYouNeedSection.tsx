@@ -113,7 +113,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   useEffect(() => {
     currencyService
       .filterCurrencyByCountry()
-      .then(({ currency: currency, currencyValue: currencyValue }) => {
+      .then(({ currency, currencyValue }) => {
         setCurrency(currency);
         setCurrencyValue(currencyValue ?? 'eur');
       })
