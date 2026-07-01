@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import Image from 'next/image';
+import { currencyService } from '@/services/currency.service';
 
 interface HowMuchYouNeedSectionProps {
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
@@ -16,6 +17,7 @@ const GraphComponent = ({
   isBlueLabel,
   srcImg,
   altImg,
+  currency,
 }: {
   price: number;
   priceLabel: number;
@@ -25,6 +27,7 @@ const GraphComponent = ({
   isBlueLabel?: boolean;
   srcImg?: string;
   altImg?: string;
+  currency: string;
 }): JSX.Element => {
   return (
     <div
@@ -35,7 +38,7 @@ const GraphComponent = ({
           isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
         } z-20 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
-        <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
+        <p className="lg:whitespace-nowrap">{currency}{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
       </div>
       <div
         className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
@@ -52,6 +55,8 @@ const GraphComponent = ({
 export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProps): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
+  const [currency, setCurrency] = useState('€');
+  const [currencyValue, setCurrencyValue] = useState('eur');
 
   const [costs, setCosts] = useState<Record<string, any>>({
     internxt: 0,
@@ -69,13 +74,16 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
     },
   });
 
-  const calculateCosts = () => {
+  const calculateCosts = useCallback(() => {
     const tbDownloaded = storageAmountValue * (percentDownloadValue / 100);
+    const currencyMultiplier = currencyValue === 'usd' ? 1.14 : 1;
 
-    const wasabiCost = 6.99 * storageAmountValue;
-    const azureCost = 19.25 * storageAmountValue + 0.082 * 1024 * tbDownloaded;
-    const awsCost = 23.55 * storageAmountValue + 0.09 * 1024 * tbDownloaded;
-    const googleCost = 23.55 * storageAmountValue + 0.12 * 1024 * tbDownloaded;
+    const getAdjustedPrice = (price: number) => price * currencyMultiplier;
+
+    const wasabiCost = getAdjustedPrice(6.99 * storageAmountValue);
+    const azureCost = getAdjustedPrice(19.25 * storageAmountValue + 0.082 * 1024 * tbDownloaded);
+    const awsCost = getAdjustedPrice(23.55 * storageAmountValue + 0.09 * 1024 * tbDownloaded);
+    const googleCost = getAdjustedPrice(23.55 * storageAmountValue + 0.12 * 1024 * tbDownloaded);
 
     const calculateDifference = (providerCost) => ((providerCost - wasabiCost) / wasabiCost) * 100;
 
@@ -96,11 +104,23 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
         difference: calculateDifference(googleCost),
       },
     });
-  };
+  }, [currencyValue, percentDownloadValue, storageAmountValue]);
 
   useEffect(() => {
     calculateCosts();
-  }, [storageAmountValue, percentDownloadValue]);
+  }, [calculateCosts]);
+
+  useEffect(() => {
+    currencyService
+      .filterCurrencyByCountry()
+      .then(({ currency: currency, currencyValue: currencyValue }) => {
+        setCurrency(currency);
+        setCurrencyValue(currencyValue ?? 'eur');
+      })
+      .catch(() => {
+        // NO OP
+      });
+  }, []);
 
   const maxPrice = Math.max(costs.internxt.cost, costs.azure.cost, costs.aws.cost, costs.google.cost);
 
@@ -130,14 +150,14 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
 
               <div className="flex flex-row items-end gap-2">
                 <p className="text-4xl font-semibold text-primary lg:text-5xl">
-                  €{Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
+                  {currency}{Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
                 </p>
                 <p className="text-base text-gray-50 lg:text-3xl">{textContent.perMonth}</p>
               </div>
 
               <div className="flex flex-row items-end gap-2">
                 <p className="text-4xl font-semibold text-primary lg:text-5xl">
-                  €{Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
+                  {currency}{Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
                 </p>
                 <p className="text-base text-gray-50 lg:text-3xl">{textContent.perYear}</p>
               </div>
@@ -173,6 +193,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   background="bg-primary/7"
                   isBlueLabel
                   maxPrice={maxPrice}
+                  currency={currency}
                 />
                 <p className="text-lg font-bold">{textContent.companies[0]}</p>
               </div>
@@ -183,6 +204,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   activeBackground="bg-yellow"
                   background="bg-yellow/6"
                   maxPrice={maxPrice}
+                  currency={currency}
                 />
                 <p className="text-lg font-medium">{textContent.companies[1]}</p>
               </div>
@@ -193,6 +215,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   activeBackground="bg-orange-1"
                   background="bg-orange-100"
                   maxPrice={maxPrice}
+                  currency={currency}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>
               </div>
@@ -203,6 +226,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   activeBackground="bg-red-dark"
                   background="bg-red/6"
                   maxPrice={maxPrice}
+                  currency={currency}
                 />
                 <p className="text-lg font-medium">{textContent.companies[3]}</p>
               </div>
