@@ -3,24 +3,19 @@ import Animation from '@/components/shared/Animation'
 
 interface AnimatedHeroSectionProps {
   textComponent: JSX.Element;
-  height?: string;
-  width?: string;
   bgGradient?: string;
 }
 
 export default function AnimatedHero({
   textComponent,
-  height,
-  width,
-  bgGradient,
-}: AnimatedHeroSectionProps): JSX.Element {
+}: Readonly<AnimatedHeroSectionProps>): JSX.Element {
   const images: ImageConfig[] = [
     {
       src: '/images/secure-file-sharing/hero.webp',
       alt: 'Browser window',
       animationDelay: 200,
       size: { width: 650, height: 520 },
-      position: { top: '8%', left: '140px' },
+      position: { top: '12%', left: '140px' },
       borderRadius: '24px',
       className: 'rounded-2xl',
     },
@@ -28,9 +23,7 @@ export default function AnimatedHero({
 
   return (
       <section
-        className={`overflow-hidden mb-0 ${
-          bgGradient ? bgGradient : 'bg-gradient-to-t from-[#001D6C] to-[#121923] lg:bg-gradient-to-b'
-        }`}
+        className={`overflow-hidden mb-0 bg-gradient-to-t from-[#001D6C] to-[#121923]`}
       >
         <div className="relative mx-4 xl:mx-32">
           <div
@@ -42,8 +35,7 @@ export default function AnimatedHero({
               className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
             >
               <div
-                className={`mt-20 flex ${height ? height : 'lg:h-[530px]  h-[450px]'} ${
-                  width ? width : 'w-[400px] lg:w-[760px]'
+                className={`mt-20 flex lg:h-[530px]  h-[450px] w-full lg:w-[580px]'
                 } lg:mt-40 flex-col items-center justify-evenly px-2 text-start lg:items-start lg:px-0`}
               >
                 {textComponent}

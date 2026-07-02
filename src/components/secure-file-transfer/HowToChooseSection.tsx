@@ -45,7 +45,7 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
           </div>
           {textContent.accordionCards.titles.map((title: string, index: number) => (
             <button
-              key={index}
+              key={title}
               onClick={() => handleAccordionClick(index)}
               className={`flex flex-col rounded-16 bg-white text-left lg:w-[80%] transition-all duration-300 ${
                 activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'

@@ -59,8 +59,6 @@ const SecureFileTransfer = ({
                     </Link>
                   </div>
               }
-              width="w-full lg:w-[580px] "
-              bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
             />
 
             <FeatureSection textContent={textContent.FeaturesSection}/>
