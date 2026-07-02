@@ -134,7 +134,8 @@
         "cloudVideo": "Videos in der Cloud",
         "cloudDocuments": "Dokumente in der Cloud",
         "lifetime": "Lebenslanger Cloud-Speicher",
-        "freeCloudStorage": "Kostenloser Cloud-Speicher"
+        "freeCloudStorage": "Kostenloser Cloud-Speicher",
+        "fileTransfer": "Sichere Dateiübertragung"
       }
     },
     "financialProject": "Projekt finanziert durch CDTI und EU-FEDER-Fonds. Internxt Mail und Internxt Meet: Sicherer E-Mail-Dienst Internxt Mail und sicherer Videoanruf-Dienst Internxt Meet, unter Verwendung von Post-Quanten-Verschlüsselung und künstlicher Intelligenz."

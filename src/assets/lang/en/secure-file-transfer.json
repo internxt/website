@@ -1,0 +1,152 @@
+{
+    "HeroSection": {
+        "title": "A Private And Secure File Transfer Platform",
+        "features": [
+            "Share photos, videos, and documents",
+            "Post-quantum & zero-knowledge encryption",
+            "Open source and audited"
+        ],
+        "cta": "Get Internxt"
+    },
+    "FeaturesSection": {
+        "intro": "Internxt provides secure file transfer features to send your files in total privacy, secured from hackers and data leaks.",
+        "features": {
+            "features1": {
+                "title": "Post-quantum protection",
+                "description": [
+                    "Internxt is the first cloud storage solution to offer you protection against the threat of quantum computers with post-quantum encryption. Using a secure large file transfer service with traditional encryption methods could put your sensitive information at risk.",
+                    "Choosing to share your files with Internxt now secures your data now and in the future, even as hackers gain access to more powerful tools."
+                ]
+            },
+            "features2": {
+                "title": "Free, secure file sharing",
+                "description": [
+                    "Internxt gives you a secure way to share files for free with no subscription required for files up to 5GB with Internxt Send. Internxt Drive includes password-protected file sharing for extra security for files up to 10GB.",
+                    "Your files stay secure thanks to end-to-end encryption from start to finish for maximum security, free to share, free from AI, ads, and no third-party access to your data for complete online privacy."
+                ]
+            },
+            "features3": {
+                "title": "Security in your hands",
+                "description": [
+                    "Get the most control out of your secure large file transfer service by customizing how you want to share your files.",
+                    "Choose from an encrypted link or email. Prevent unauthorized access to your files with additional password protection, and monitor and remove access whenever you want to stop sharing your files. Your files. Your rules."
+                ]
+            }
+        }
+    },
+    "HowToChooseSection": {
+        "title": "How to choose a secure file transfer service",
+        "accordionCards": {
+            "titles": ["Encryption method", "Privacy", "Compliance"],
+            "descriptions": [
+                "Many companies use end-to-end encryption, but still control your encryption keys. This means your files can remain accessible on their servers. Even with AES-256 encryption, providers that manage your keys can read, scan, or share your data — voluntarily or if legally required. Without zero-knowledge encryption, your privacy isn’t fully protected.",
+                "Many companies encrypt your files but still control the encryption keys. This means your data can be accessed, scanned, or shared — even if it’s encrypted. With zero-knowledge encryption, files are encrypted on your device and only you hold the keys. No Big Tech, no third parties, not even Internxt can access your data.",
+                "If you share sensitive or confidential documents online, strong privacy, security, and compliance are essential. A GDPR-compliant file sharing provider protects your right to privacy, reduces the risk of data breaches, and gives you control over how your data is handled. For businesses, it also helps meet legal and industry requirements, build trust, and avoid costly fines."
+            ]
+        }
+    },
+    "SecureAndManage": {
+        "title": "Get secure file sharing with Internxt",
+        "description": "Internxt Drive and Internxt Send offer a secure, large file transfer service to send files for free and in privacy, thanks to zero-knowledge encryption.",
+        "cards": [
+            {
+                "title": "Internxt Drive",
+                "description": [
+                    "Internxt Drive offers post-quantum and zero-knowledge encrypted cloud storage and file sharing to share videos, photos, and files with maximum privacy.",
+                    "With Drive, you can share files with a generous limit of 10GB, enough to send large projects and files without worrying about file compression and losing the quality of your content. For additional security, Drive also includes password-protected file sharing and access controls, so you have full control over who can access your shared files.",
+                    "Secure file transfer is included with Internxt’s secure suite of products, which include VPN, Antivirus, Device Cleaner, Meet, Mail, and more. Get the most advanced protection for your online privacy with an Internxt annual or lifetime plan."
+                ],
+                "cta": "Get Internxt Drive"
+            },
+            {
+                "title": "Internxt Send",
+                "description": [
+                    "Internxt Send is a secure file transfer service to privately send files via a link or email of up to 5GB. It offers the same zero-knowledge encryption that Internxt uses in all its products to guarantee the privacy of your files.",
+                    "Send is totally free to use as many times as you like, with no credit card or login details required. Unlike other platforms, the encryption keys are managed on your device, so only you and the people you choose can view your files.",
+                    "Internxt also keeps your data away from third parties, free from trackers, and doesn’t use your content to train artificial intelligence and machine learning models.",
+                    "Get started for free and start sharing files in total privacy with Internxt."
+                ],
+                "cta": "Try Internxt Send"
+            }
+        ]
+    },
+    "SecureFeaturesSection": {
+        "title": "Secure file transfer features",
+        "scrollableSection": {
+            "titles": [
+                "Encryption",
+                "Large file sharing",
+                "Advanced sharing features",
+                "Open source and audited"
+            ],
+            "descriptions": [
+                "Internxt protects your files with post-quantum encryption, keeping them safe from future cyberattacks that could break today’s methods. For maximum privacy, we use zero-knowledge encryption — your files are encrypted on your device, so only you and those you share with can access them, not even Internxt.",
+                "Internxt Drive supports uploads up to 40GB and lets you securely share files up to 10GB, even with people who don’t have an Internxt account. 10GB is enough for about 6.5 hours of HD video, 2,000 photos, or 10,000 documents. Unlike compression or splitting, Internxt ensures your files keep their full quality while being shared safely through Send and Drive.",
+                "Collaborate with your team in total security with advanced sharing controls such as password protection and access controls. When you share files, you can give editing or view-only permissions for secure collaboration with teams. With Drive, you can monitor and restrict access whenever you need, preventing unauthorized access to shared folders.",
+                "Internxt Drive and all our services are open source. Our code is available on GitHub for everybody to verify, check the security, and ensure there are no backdoors that could compromise your data. Our platform is also audited by a leading European penetration testing company, ensuring our platform is secure against hackers and cybersecurity threats."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Secure file transfer",
+        "description": "Share photos, videos, and documents in privacy",
+        "cta": "Get Internxt"
+    },
+    "CtaSectionV2": {
+        "title": "Transfer with confidence",
+        "description": "Secure file sharing from start to finish",
+        "cta": "Get Internxt"
+    },
+    "SemanticAccordion": {
+        "title": "Questions? We have answers",
+        "items": [
+            {
+                "question": "What is the best secure file transfer service?",
+                "answer": [
+                    "Internxt offers secure file sharing that’s built into your cloud storage with Internxt Drive, or as a free platform with Internxt Send.",
+                    "Both options allow for large file uploads to share your files with unmatched privacy thanks to post-quantum and zero-knowledge encryption.",
+                    "Get started with Internxt Drive from just €3 per month and get the most secure, private cloud storage for your video files."
+                ]
+            },
+            {
+                "question": "What size limits are there when sharing files?",
+                "answer": [
+                    "Internxt Drive allows you to share files up to 10GB, and Internxt Send has a size limit of 5GB. With these file limits, you can send large videos, photo albums, and documents as many times as you like with a secure link or email invitation."
+                ]
+            },
+            {
+                "question": "Do I need an Internxt account to share files?",
+                "answer": [
+                    "Internxt Drive has a free plan you can use forever, so you can share as many files as you like for free.",
+                    "Internxt Send is 100% free, and you can use it as many times as you need without limits. There is no credit card or login required for Send, so you get the best secure cloud based file sharing for free."
+                ]
+            },
+            {
+                "question": "Do I need an account to view shared files?",
+                "answer": [
+                    "If you share a file via a link with Internxt Drive, the recipient does not need to create an account to view or download the file. If you send an email, the recipient will receive a notification asking them to create an Internxt account, which they can do for free.",
+                    "Internxt Send creates a secure link or email, which anybody can use, regardless of whether they have an Internxt account."
+                ]
+            },
+            {
+                "question": "Do shared links expire?",
+                "answer": [
+                    "Internxt ensures control for its secure large file transfer service by allowing you to manage and restrict access to shared files from your Internxt Drive account.",
+                    "With Internxt Send, your link is valid and then automatically expires for your safety."
+                ]
+            },
+            {
+                "question": "How do I contact support?",
+                "answer": [
+                    "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com"
+                ]
+            },
+            {
+                "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+                "answer": [
+                    "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
+                ]
+            }
+        ]
+    }
+}
