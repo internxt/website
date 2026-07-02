@@ -670,5 +670,10 @@
     "id": "cloud-storage-for-documents",
     "title": "Internxt - Almacenamiento en la nube para documentos",
     "description": "Internxt ofrece almacenamiento seguro en la nube para documentos, protegido por cifrado poscuántico para la máxima privacidad."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Transferencia segura de archivos",
+    "description": "Internxt ofrece un servicio de transferencia segura de archivos para cifrar y proteger tus archivos, de modo que tú controlas quién puede acceder a tus datos."
   }
 ]

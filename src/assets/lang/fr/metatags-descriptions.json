@@ -568,5 +568,10 @@
     "id": "cloud-storage-for-documents",
     "title": "Internxt - Stockage cloud pour documents",
     "description": "Internxt propose un stockage cloud sécurisé para los documentos, protégé par un chiffrement post-quantique pour une confidentialité maximale."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Transfert de fichiers sécurisé",
+    "description": "Internxt propose un service de transfert de fichiers sécurisé pour chiffrer et protéger vos fichiers, vous permettant ainsi de contrôler qui peut accéder à vos données."
   }
 ]

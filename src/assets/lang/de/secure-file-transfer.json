@@ -1,0 +1,152 @@
+{
+    "HeroSection": {
+        "title": "Eine private und sichere Plattform für den Dateitransfer",
+        "features": [
+            "Fotos, Videos und Dokumente teilen",
+            "Post-Quanten- & Zero-Knowledge-Verschlüsselung",
+            "Open Source und geprüft"
+        ],
+        "cta": "Internxt holen"
+    },
+    "FeaturesSection": {
+        "intro": "Internxt bietet sichere Funktionen für den Dateitransfer, um Ihre Dateien in absoluter Privatsphäre zu senden, geschützt vor Hackern und Datenlecks.",
+        "features": {
+            "features1": {
+                "title": "Post-Quanten-Schutz",
+                "description": [
+                    "Internxt ist die erste Cloud-Speicherlösung, die Ihnen mit Post-Quanten-Verschlüsselung Schutz vor der Bedrohung durch Quantencomputer bietet. Die Nutzung eines Dienstes für den Transfer großer Dateien mit herkömmlichen Verschlüsselungsmethoden könnte Ihre sensiblen Daten gefährden.",
+                    "Wenn Sie sich jetzt dafür entscheiden, Ihre Dateien mit Internxt zu teilen, sichern Sie Ihre Daten für heute und die Zukunft, selbst wenn Hacker Zugriff auf leistungsstärkere Werkzeuge erhalten."
+                ]
+            },
+            "features2": {
+                "title": "Kostenlose, sichere Dateifreigabe",
+                "description": [
+                    "Internxt bietet Ihnen mit Internxt Send eine sichere Möglichkeit, Dateien bis zu 5 GB kostenlos und ohne Abonnement zu teilen. Internxt Drive beinhaltet eine passwortgeschützte Dateifreigabe für zusätzliche Sicherheit bei Dateien bis zu 10 GB.",
+                    "Ihre Dateien bleiben dank durchgehender Ende-zu-Ende-Verschlüsselung von Anfang bis Ende sicher – für maximale Sicherheit, kostenlos teilbar, frei von KI, Werbung und ohne Zugriff Dritter auf Ihre Daten für die vollständige Online-Privatsphäre."
+                ]
+            },
+            "features3": {
+                "title": "Sicherheit in Ihren Händen",
+                "description": [
+                    "Behalten Sie die maximale Kontrolle über Ihren sicheren Dienst für den Transfer großer Dateien, indem Sie anpassen, wie Sie Ihre Dateien teilen möchten.",
+                    "Wählen Sie zwischen einem verschlüsselten Link oder einer E-Mail. Verhindern Sie unbefugten Zugriff auf Ihre Dateien durch zusätzlichen Passwortschutz, und überwachen oder entfernen Sie den Zugriff, wann immer Sie die Freigabe Ihrer Dateien beenden möchten. Ihre Dateien. Ihre Regeln."
+                ]
+            }
+        }
+    },
+    "HowToChooseSection": {
+        "title": "So wählen Sie einen sicheren Dateitransfer-Dienst aus",
+        "accordionCards": {
+            "titles": ["Verschlüsselungsmethode", "Privatsphäre", "Compliance"],
+            "descriptions": [
+                "Viele Unternehmen nutzen eine Ende-zu-Ende-Verschlüsselung, kontrollieren aber weiterhin Ihre Verschlüsselungsschlüssel. Das bedeutet, dass Ihre Dateien auf deren Servern zugänglich bleiben können. Selbst bei einer AES-256-Verschlüsselung können Anbieter, die Ihre Schlüssel verwalten, Ihre Daten lesen, scannen oder weitergeben – freiwillig oder falls gesetzlich vorgeschrieben. Ohne Zero-Knowledge-Verschlüsselung ist Ihre Privatsphäre nicht vollständig geschützt.",
+                "Viele Unternehmen verschlüsseln Ihre Dateien, kontrollieren aber weiterhin die Verschlüsselungsschlüssel. Das bedeutet, dass auf Ihre Daten zugegriffen, sie gescannt oder geteilt werden können – selbst wenn sie verschlüsselt sind. Bei der Zero-Knowledge-Verschlüsselung werden Dateien auf Ihrem Gerät verschlüsselt und nur Sie besitzen die Schlüssel. Kein Big Tech, keine Dritten, nicht einmal Internxt kann auf Ihre Daten zugreifen.",
+                "Wenn Sie sensible oder vertrauliche Dokumente online teilen, sind ein starker Schutz der Privatsphäre, Sicherheit und Compliance unerlässlich. Ein DSGVO-konformer Anbieter für Dateifreigabe schützt Ihr Recht auf Privatsphäre, reduziert das Risiko von Datenpannen und gibt Ihnen die Kontrolle darüber, wie mit Ihren Daten umgegangen wird. Für Unternehmen hilft dies zudem, rechtliche und branchenspezifische Anforderungen zu erfüllen, Vertrauen aufzubauen und kostspielige Strafen zu vermeiden."
+            ]
+        }
+    },
+    "SecureAndManage": {
+        "title": "Sichere Dateifreigabe mit Internxt erhalten",
+        "description": "Internxt Drive und Internxt Send bieten einen sicheren Dienst für den Transfer großer Dateien, um Dateien dank Zero-Knowledge-Verschlüsselung kostenlos und privat zu versenden.",
+        "cards": [
+            {
+                "title": "Internxt Drive",
+                "description": [
+                    "Internxt Drive bietet Post-Quanten- und Zero-Knowledge-verschlüsselten Cloud-Speicher sowie Dateifreigabe, um Videos, Fotos und Dateien mit maximaler Privatsphäre zu teilen.",
+                    "Mit Drive können Sie Dateien mit einem großzügigen Limit von 10 GB teilen, was ausreicht, um große Projekte und Dateien zu senden, ohne sich Gedanken über Dateikomprimierung und Qualitätsverlust Ihrer Inhalte machen zu müssen. Für zusätzliche Sicherheit bietet Drive außerdem eine passwortgeschützte Dateifreigabe und Zugriffskontrollen, sodass Sie die volle Kontrolle darüber haben, wer auf Ihre freigegebenen Dateien zugreifen kann.",
+                    "Der sichere Dateitransfer ist in der sicheren Produktsuite von Internxt enthalten, die VPN, Antivirus, Device Cleaner, Meet, Mail und mehr umfasst. Holen Sie sich den fortschrittlichsten Schutz für Ihre Online-Privatsphäre mit einem Internxt Jahres- oder Lifetime-Plan."
+                ],
+                "cta": "Internxt Drive holen"
+            },
+            {
+                "title": "Internxt Send",
+                "description": [
+                    "Internxt Send ist ein sicherer Dateitransfer-Dienst, um Dateien bis zu 5 GB privat per Link oder E-Mail zu versenden. Es bietet dieselbe Zero-Knowledge-Verschlüsselung, die Internxt in all seinen Produkten einsetzt, um die Privatsphäre Ihrer Dateien zu garantieren.",
+                    "Send ist völlig kostenlos und so oft nutzbar, wie Sie möchten, ohne dass eine Kreditkarte oder Login-Daten erforderlich sind. Im Gegensatz zu anderen Plattformen werden die Verschlüsselungsschlüssel auf Ihrem Gerät verwaltet, sodass nur Sie und die von Ihnen ausgewählten Personen Ihre Dateien ansehen können.",
+                    "Internxt hält Ihre Daten zudem von Dritten fern, frei von Trackern, und nutzt Ihre Inhalte nicht, um Modelle für künstliche Intelligenz und maschinelles Lernen zu trainieren.",
+                    "Starten Sie kostenlos und beginnen Sie, Dateien in absoluter Privatsphäre mit Internxt zu teilen."
+                ],
+                "cta": "Internxt Send ausprobieren"
+            }
+        ]
+    },
+    "SecureFeaturesSection": {
+        "title": "Sichere Dateitransfer-Funktionen",
+        "scrollableSection": {
+            "titles": [
+                "Verschlüsselung",
+                "Freigabe großer Dateien",
+                "Erweiterte Freigabefunktionen",
+                "Open Source und geprüft"
+            ],
+            "descriptions": [
+                "Internxt schützt Ihre Dateien mit Post-Quanten-Verschlüsselung und bewahrt sie vor zukünftigen Cyberangriffen, die heutige Methoden aushebeln könnten. Für maximale Privatsphäre nutzen wir die Zero-Knowledge-Verschlüsselung – Ihre Dateien werden auf Ihrem Gerät verschlüsselt, sodass nur Sie und diejenigen, mit denen Sie sie teilen, darauf zugreifen können, nicht einmal Internxt.",
+                "Internxt Drive unterstützt Uploads von bis zu 40 GB und ermöglicht es Ihnen, Dateien bis zu 10 GB sicher zu teilen, selbst mit Personen, die kein Internxt-Konto haben. 10 GB reichen für etwa 6,5 Stunden HD-Video, 2.000 Fotos oder 10.000 Dokumente. Im Gegensatz zur Komprimierung oder Aufteilung sorgt Internxt dafür, dass Ihre Dateien beim sicheren Teilen über Send und Drive ihre volle Qualität behalten.",
+                "Arbeiten Sie in absoluter Sicherheit mit Ihrem Team zusammen, dank erweiterter Freigabekontrollen wie Passwortschutz und Zugriffskontrollen. Wenn Sie Dateien teilen, können Sie Bearbeitungs- oder reine Ansichtsrechte für eine sichere Zusammenarbeit mit Teams vergeben. Mit Drive können Sie den Zugriff jederzeit überwachen und einschränken, um unbefugten Zugriff auf freigegebene Ordner zu verhindern.",
+                "Internxt Drive und alle unsere Dienste sind Open Source. Unser Code ist auf GitHub für jeden einsehbar, um die Sicherheit zu überprüfen und sicherzustellen, dass es keine Hintertüren gibt, die Ihre Daten gefährden könnten. Unsere Plattform wird zudem von einem führenden europäischen Penetrationstest-Unternehmen geprüft, um sicherzustellen, dass unsere Plattform gegen Hacker und Cybersecurity-Bedrohungen geschützt ist."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Sicherer Dateitransfer",
+        "description": "Fotos, Videos und Dokumente in Privatsphäre teilen",
+        "cta": "Internxt holen"
+    },
+    "CtaSectionV2": {
+        "title": "Mit Vertrauen übertragen",
+        "description": "Sichere Dateifreigabe von Anfang bis Ende",
+        "cta": "Internxt holen"
+    },
+    "SemanticAccordion": {
+        "title": "Fragen? Wir haben Antworten",
+        "items": [
+            {
+                "question": "Was ist der beste sichere Dateitransfer-Dienst?",
+                "answer": [
+                    "Internxt bietet eine sichere Dateifreigabe, die entweder in Ihren Cloud-Speicher mit Internxt Drive integriert ist, oder als kostenlose Plattform mit Internxt Send zur Verfügung steht.",
+                    "Beide Optionen ermöglichen Uploads großer Dateien, um Ihre Dateien dank Post-Quanten- und Zero-Knowledge-Verschlüsselung mit unübertroffener Privatsphäre zu teilen.",
+                    "Starten Sie mit Internxt Drive bereits ab 3 € pro Monat und erhalten Sie den sichersten und privatesten Cloud-Speicher für Ihre Videodateien."
+                ]
+            },
+            {
+                "question": "Welche Größenbeschränkungen gibt es beim Teilen von Dateien?",
+                "answer": [
+                    "Internxt Drive ermöglicht es Ihnen, Dateien bis zu 10 GB zu teilen, und Internxt Send hat ein Größenlimit von 5 GB. Mit diesen Dateilimits können Sie große Videos, Fotoalben und Dokumente so oft wie Sie möchten per sicherem Link oder E-Mail-Einladung versenden."
+                ]
+            },
+            {
+                "question": "Benötige ich ein Internxt-Konto, um Dateien zu teilen?",
+                "answer": [
+                    "Internxt Drive bietet einen kostenlosen Plan, den Sie für immer nutzen können, sodass Sie so viele Dateien wie Sie möchten kostenlos teilen können.",
+                    "Internxt Send ist zu 100 % kostenlos und Sie können es unbegrenzt oft nutzen. Für Send ist weder eine Kreditkarte noch ein Login erforderlich, sodass Sie die beste sichere cloudbasierte Dateifreigabe kostenlos erhalten."
+                ]
+            },
+            {
+                "question": "Benötige ich ein Konto, um freigegebene Dateien anzusehen?",
+                "answer": [
+                    "Wenn Sie eine Datei über einen Link mit Internxt Drive teilen, muss der Empfänger kein Konto erstellen, um die Datei anzusehen oder herunterzuladen. Wenn Sie eine E-Mail senden, erhält der Empfänger eine Benachrichtigung mit der Bitte, ein kostenloses Internxt-Konto zu erstellen.",
+                    "Internxt Send erstellt einen sicheren Link oder eine E-Mail, die jeder nutzen kann, unabhängig davon, ob er ein Internxt-Konto hat oder nicht."
+                ]
+            },
+            {
+                "question": "Laufen freigegebene Links ab?",
+                "answer": [
+                    "Internxt gewährleistet die Kontrolle über seinen sicheren Dienst für den Transfer großer Dateien, indem es Ihnen ermöglicht, den Zugriff auf freigegebene Dateien direkt von Ihrem Internxt Drive-Konto aus zu verwalten und einzuschränken.",
+                    "Bei Internxt Send ist Ihr Link eine Zeit lang gültig und läuft dann zu Ihrer Sicherheit automatisch ab."
+                ]
+            },
+            {
+                "question": "Wie kontaktiere ich den Support?",
+                "answer": [
+                    "Nicht gefunden, wonach Sie suchen? Sie können unser Customer Success Team per Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
+                ]
+            },
+            {
+                "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+                "answer": [
+                    "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express etc.). Sie können auch via PayPal, iDEAL, Sofort und Kryptowährung bezahlen."
+                ]
+            }
+        ]
+    }
+}

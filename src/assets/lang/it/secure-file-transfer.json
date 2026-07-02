@@ -1,0 +1,152 @@
+{
+    "HeroSection": {
+        "title": "Una piattaforma di trasferimento file privata e sicura",
+        "features": [
+            "Condividi foto, video e documenti",
+            "Crittografia post-quantistica e zero-knowledge",
+            "Open source e controllato"
+        ],
+        "cta": "Ottieni Internxt"
+    },
+    "FeaturesSection": {
+        "intro": "Internxt offre funzionalità di trasferimento file sicure per inviare i tuoi file in totale riservatezza, protetti da hacker e fughe di dati.",
+        "features": {
+            "features1": {
+                "title": "Protezione post-quantistica",
+                "description": [
+                    "Internxt è la prima soluzione di cloud storage a offrirti protezione contro la minaccia dei computer quantistici grazie alla crittografia post-quantistica. L'utilizzo di un servizio di trasferimento di file di grandi dimensioni tradizionale con metodi di crittografia convenzionali potrebbe mettere a rischio le tue informazioni sensibili.",
+                    "Scegliere di condividere i tuoi file con Internxt ora protegge i tuoi dati oggi e in futuro, anche se gli hacker ottengono l'accesso a strumenti più potenti."
+                ]
+            },
+            "features2": {
+                "title": "Condivisione file gratuita e sicura",
+                "description": [
+                    "Internxt ti offre un modo sicuro per condividere file gratuitamente senza abbonamento richiesto per file fino a 5GB con Internxt Send. Internxt Drive include la condivisione di file protetta da password per una maggiore sicurezza per file fino a 10GB.",
+                    "I tuoi file rimangono sicuri grazie alla crittografia end-to-end dall'inizio alla fine per la massima sicurezza, gratuiti da condividere, liberi da IA, pubblicità e senza accesso di terze parti ai tuoi dati per una completa privacy online."
+                ]
+            },
+            "features3": {
+                "title": "La sicurezza nelle tue mani",
+                "description": [
+                    "Ottieni il massimo controllo dal tuo servizio di trasferimento sicuro di file di grandi dimensioni personalizzando il modo in care desideri condividere i tuoi file.",
+                    "Scegli tra un link crittografato o un'e-mail. Previeni l'accesso non autorizzato ai tuoi file con una protezione aggiuntiva tramite password, e monitora e rimuovi l'accesso ogni volta che desideri interrompere la condivisione dei tuoi file. I tuoi file. Le tue regole."
+                ]
+            }
+        }
+    },
+    "HowToChooseSection": {
+        "title": "Come scegliere un servizio di trasferimento file sicuro",
+        "accordionCards": {
+            "titles": ["Metodo di crittografia", "Privacy", "Conformità"],
+            "descriptions": [
+                "Molte aziende utilizzano la crittografia end-to-end, ma controllano comunque le tue chiavi di crittografia. Ciò significa che i tuoi file possono rimanere accessibili sui loro server. Anche con la crittografia AES-256, i fornitori che gestiscono le tue chiavi possono leggere, scansionare o condividere i tuoi dati, volontariamente o se legalmente richiesto. Senza la crittografia zero-knowledge, la tua privacy non è completamente protetta.",
+                "Molte aziende crittografano i tuoi file ma controllano comunque le chiavi di crittografia. Ciò significa che ai tuoi dati è possibile accedere, scansionarli o condividerli, anche se sono crittografati. Con la crittografia zero-knowledge, i file vengono crittografati sul tuo dispositivo e solo tu detieni le chiavi. Nessuna Big Tech, nessuna terza parte, nemmeno Internxt può accedere ai tuoi dati.",
+                "Se condividi documenti sensibili o riservati online, una privacy, una sicurezza e una conformità solide sono essenziali. Un fornitore di condivisione file conforme al GDPR protegge il tuo diritto alla privacy, riduce il rischio di violazioni dei dati e ti offre il controllo su come vengono gestiti i tuoi dati. Per le aziende, aiuta anche a soddisfare i requisiti legali e di settore, a creare fiducia e a evitare costose sanzioni."
+            ]
+        }
+    },
+    "SecureAndManage": {
+        "title": "Ottieni una condivisione sicura dei file con Internxt",
+        "description": "Internxt Drive e Internxt Send offrono un servizio di trasferimento file di grandi dimensioni sicuro per inviare file gratuitamente e in riservatezza, grazie alla crittografia zero-knowledge.",
+        "cards": [
+            {
+                "title": "Internxt Drive",
+                "description": [
+                    "Internxt Drive offre archiviazione cloud e condivisione file con crittografia post-quantistica e zero-knowledge per condividere video, foto e file con la massima privacy.",
+                    "Con Drive, puoi condividere file con un generoso limite di 10GB, sufficiente per inviare grandi progetti e file senza preoccuparti della compressione dei file e della perdita di qualità dei tuoi contenuti. Per una maggiore sicurezza, Drive include anche la condivisione di file protetta da password e controlli di accesso, in modo da avere il pieno controllo su chi può accedere ai tuoi file condivisi.",
+                    "Il trasferimento sicuro dei file è incluso nella suite sicura di prodotti Internxt, che include VPN, Antivirus, Device Cleaner, Meet, Mail e altro ancora. Ottieni la protezione più avanzata per la tua privacy online con un piano annuale o a vita Internxt."
+                ],
+                "cta": "Ottieni Internxt Drive"
+            },
+            {
+                "title": "Internxt Send",
+                "description": [
+                    "Internxt Send è un servizio di trasferimento file sicuro per inviare privatamente file tramite un link o un'e-mail fino a 5GB. Offre la stessa crittografia zero-knowledge che Internxt utilizza in tutti i suoi prodotti per garantire la privacy dei tuoi file.",
+                    "Send è totalmente gratuito da usare tutte le volte che vuoi, senza bisogno di carta di credito o dati di accesso. A differenza di altre piattaforme, le chiavi di crittografia sono gestite sul tuo dispositivo, quindi solo tu e le persone che scegli potete visualizzare i tuoi file.",
+                    "Internxt tiene inoltre i tuoi dati lontani da terze parti, privi di tracker, e non utilizza i tuoi contenuti per addestrare modelli di intelligenza artificiale e machine learning.",
+                    "Inizia gratuitamente e comincia a condividere file in totale privacy con Internxt."
+                ],
+                "cta": "Prova Internxt Send"
+            }
+        ]
+    },
+    "SecureFeaturesSection": {
+        "title": "Funzionalità di trasferimento file sicure",
+        "scrollableSection": {
+            "titles": [
+                "Crittografia",
+                "Condivisione di file di grandi dimensioni",
+                "Funzionalità di condivisione avanzate",
+                "Open source e controllato"
+            ],
+            "descriptions": [
+                "Internxt protegge i tuoi file con la crittografia post-quantistica, mantenendoli al sicuro da futuri attacchi informatici che potrebbero violare i metodi odierni. Per la massima privacy, utilizziamo la crittografia zero-knowledge: i tuoi file sono crittografati sul tuo dispositivo, quindi solo tu e coloro con cui li condividi potete accedervi, nemmeno Internxt.",
+                "Internxt Drive supporta caricamenti fino a 40GB e ti consente di condividere in modo sicuro file fino a 10GB, anche con persone che non hanno un account Internxt. 10GB sono sufficienti per circa 6,5 ore di video HD, 2.000 foto o 10.000 documenti. A differenza della compressione o della frammentazione, Internxt assicura che i tuoi file mantengano la loro piena qualità mentre vengono condivisi in sicurezza tramite Send e Drive.",
+                "Collabora con il tuo team in totale sicurezza grazie a controlli di condivisione avanzati come la protezione tramite password e i controlli di accesso. Quando condividi file, puoi concedere autorizzazioni di modifica o di sola visualizzazione per una collaborazione sicura con i team. Con Drive, puoi monitorare e limitare l'accesso ogni volta che ne hai bisogno, impedendo l'accesso non autorizzato alle cartelle condivise.",
+                "Internxt Drive e tutti i nostri servizi sono open source. Il nostro codice è disponibile su GitHub affinché chiunque possa verificarlo, controllarne la sicurezza e assicurarsi che non vi siano backdoor che potrebbero compromettere i tuoi dati. La nostra piattaforma è inoltre controllata da una primaria azienda europea di penetration testing, garantendo che la nostra piattaforma sia sicura contro hacker e minacce alla sicurezza informatica."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Trasferimento file sicuro",
+        "description": "Condividi foto, video e documenti in riservatezza",
+        "cta": "Ottieni Internxt"
+    },
+    "CtaSectionV2": {
+        "title": "Trasferisci con fiducia",
+        "description": "Condivisione file sicura dall'inizio alla fine",
+        "cta": "Ottieni Internxt"
+    },
+    "SemanticAccordion": {
+        "title": "Domande? Abbiamo le risposte",
+        "items": [
+            {
+                "question": "Qual è il miglior servizio di trasferimento file sicuro?",
+                "answer": [
+                    "Internxt offre una condivisione sicura dei file integrata nel tuo cloud storage con Internxt Drive, o come piattaforma gratuita con Internxt Send.",
+                    "Entrambe le opzioni consentono il caricamento di file di grandi dimensioni per condividere i tuoi file con una privacy senza pari grazie alla crittografia post-quantistica e zero-knowledge.",
+                    "Inizia con Internxt Drive a partire da soli 3 € al mese e ottieni il cloud storage più sicuro e privato per i tuoi file video."
+                ]
+            },
+            {
+                "question": "Quali limiti di dimensione ci sono quando si condividono i file?",
+                "answer": [
+                    "Internxt Drive ti consente di condividere file fino a 10GB, ed Internxt Send ha un limite di dimensione di 5GB. Con questi limiti di file, puoi inviare grandi video, album fotografici e documenti tutte le volte che vuoi con un link sicuro o un invito via e-mail."
+                ]
+            },
+            {
+                "question": "Ho bisogno di un account Internxt para condividere i file?",
+                "answer": [
+                    "Internxt Drive ha un piano gratuito che puoi utilizzare per sempre, quindi puoi condividere tutti i file che vuoi gratuitamente.",
+                    "Internxt Send è gratuito al 100% e puoi usarlo tutte le volte che ti serve senza limiti. Non è richiesta alcuna carta di credito o login per Send, quindi ottieni gratuitamente la migliore condivisione sicura di file basata su cloud."
+                ]
+            },
+            {
+                "question": "Ho bisogno di un account per visualizzare i file condivisi?",
+                "answer": [
+                    "Se condividi un file tramite un link con Internxt Drive, il destinatario non ha bisogno di creare un account per visualizzare o scaricare il file. Se invii un'e-mail, il destinatario riceverà una notifica che gli chiedrà di creare un account Internxt, cosa che può fare gratuitamente.",
+                    "Internxt Send crea un link sicuro o un'e-mail che chiunque può utilizzare, indipendentemente dal fatto che abbia o meno un account Internxt."
+                ]
+            },
+            {
+                "question": "I link condivisi scadono?",
+                "answer": [
+                    "Internxt garantisce il controllo del suo servizio di trasferimento sicuro di file di grandi dimensioni consentendoti di gestire e limitare l'accesso ai file condivisi dal tuo account Internxt Drive.",
+                    "Con Internxt Send, il tuo link è valido e poi scade automaticamente per la tua sicurezza."
+                ]
+            },
+            {
+                "question": "Come posso contattare il supporto?",
+                "answer": [
+                    "Non trovi quello che cerchi? Puoi contattare il nostro team Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com"
+                ]
+            },
+            {
+                "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+                "answer": [
+                    "Internxt attualmente accetta carte di debito e di credito (Mastercard, VISA, American Express, ecc.). Puoi pagare anche tramite PayPal, iDEAL, Sofort e Criptovaluta."
+                ]
+            }
+        ]
+    }
+}
