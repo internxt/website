@@ -132,6 +132,7 @@
         "GDPRCloud": "Облачное хранилище GDPR",
         "cloudPhotos": "Фото в облаке",
         "cloudVideo": "Видео в облаке",
+        "cloudDocuments": "Документы в облаке",
         "lifetime": "Пожизненное облачное хранилище",
         "freeCloudStorage": "Бесплатное облачное хранилище"
       }

@@ -44,6 +44,7 @@ export interface Features {
   cloudVideo: string;
   lifetime: string;
   freeCloudStorage: string;
+  cloudDocuments: string;
 }
 
 export interface Join {

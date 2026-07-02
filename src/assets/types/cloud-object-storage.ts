@@ -62,6 +62,7 @@ export interface HeroSection {
   title: Title;
   description: string;
   cta: string;
+  cta2: string;
 }
 
 export interface Title {

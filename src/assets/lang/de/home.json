@@ -220,55 +220,68 @@
   "EncryptedStorageSeoSection": {
     "title": "Verschlüsselter Cloud-Speicher: Funktionsweise und Bedeutung",
     "faq": [
-      {
-        "question": "Was ist Ende-zu-Ende-verschlüsselter Cloud-Speicher und wie schützt er Ihre Dateien?",
-        "answer": [
-          "Ende-zu-Ende-verschlüsselter Cloud-Speicher ist eine Methode zur Online-Dateispeicherung, bei der die Verschlüsselung und Entschlüsselung ausschließlich auf Ihrem Gerät stattfinden. Kein Dritter – weder die Plattform noch das Netzwerk noch ein Angreifer dazwischen – kann Ihre Dateiinhalte zu irgendeinem Zeitpunkt lesen.",
-          "Wenn Sie eine Datei auf eine Ende-zu-Ende-verschlüsselte Plattform hochladen, generiert Ihr Gerät lokale Verschlüsselungsschlüssel, wandelt die Datei in unlesbaren Chiffretext um und überträgt sie dann erst. Die Plattform speichert Daten, die sie grundsätzlich nicht interpretieren kann. Bei der Dateiabfrage erfolgt die Entschlüsselung lokal mit nur Ihnen zugänglichen Schlüsseln.",
-          "Internxt verwendet AES-256 in Kombination mit post-quanten Kyber-512 und bietet die beste Ende-zu-Ende-verschlüsselte Cloud-Speicherarchitektur, die derzeit verfügbar ist – überprüft durch das unabhängige Audit von Securitum im Jahr 2024."
-        ]
-      },
-      {
-        "question": "Was ist Cloud-Speicherverschlüsselung und welche Arten gibt es?",
-        "answer": [
-          "Cloud-Speicherverschlüsselung bezeichnet den Prozess der mathematischen Transformation von Daten, sodass sie ohne den korrekten Entschlüsselungsschlüssel unlesbar sind. Drei Haupttypen unterscheiden sich erheblich im Schutzniveau.",
-          "Verschlüsselung während der Übertragung: schützt Ihre Dateien während des Transfers zwischen Gerät und Cloud-Server. TLS 1.3 ist der aktuelle Standard. Verschlüsselung im Ruhezustand: schützt Dateien auf dem Server mit AES-256 – der Anbieter hält jedoch weiterhin die Schlüssel.",
-          "Ende-zu-Ende-Verschlüsselung (E2EE): verschlüsselt Dateien auf Ihrem Gerät vor dem Hochladen. Der Anbieter hält die Schlüssel nie. Dies ist die höchste Form der Cloud-Speicherverschlüsselung – die einzige, die gleichzeitig vor anbieterseitigem Zugriff, Regierungsanfragen und Datenverletzungen schützt.",
-          "Internxt implementiert alle drei: TLS 1.3 während der Übertragung, AES-256 im Ruhezustand und Ende-zu-Ende-Verschlüsselung ab dem Moment, in dem eine Datei Ihr Gerät verlässt."
-        ]
-      },
-      {
-        "question": "Was ist Cloud-Speicher mit Verschlüsselung im Vergleich zu Cloud-Speicher mit Zero-Knowledge-Verschlüsselung?",
-        "answer": [
-          "Cloud-Speicher mit Verschlüsselung ist eine breite Kategorie: Sie umfasst jede Plattform, die kryptografischen Schutz auf Ihre Daten anwendet. Große Plattformen wie Google Drive oder Dropbox fallen darunter – sie verschlüsseln, aber der Anbieter hält die Schlüssel.",
-          "Cloud-Speicher mit Zero-Knowledge-Verschlüsselung ist eine stärkere Architektur. Zero-Knowledge bedeutet: der Anbieter hat kein Wissen über Ihre Schlüssel und keine Möglichkeit, Ihre Dateien zu lesen. Schlüsselerzeugung, Verschlüsselung und Entschlüsselung finden ausschließlich lokal statt.",
-          "Der praktische Unterschied: Mit einem Standard-Anbieter kann dieser rechtlichen Anfragen nachkommen oder durch eine Datenverletzung Ihre Dateien offenlegen. Mit Zero-Knowledge-Cloud-Speicher-Ende-zu-Ende-Verschlüsselung ist das technisch unmöglich. Internxt basiert auf dieser Architektur – überprüfbar im Open-Source-Code und durch ein Drittanbieter-Audit bestätigt."
-        ]
-      },
-      {
-        "question": "Was ist Cloud-Speicher mit Zero-Knowledge-Verschlüsselung, und wer sollte ihn nutzen?",
-        "answer": [
-          "Cloud-Speicher mit Zero-Knowledge-Verschlüsselung ist für Nutzer konzipiert, die eine technische – nicht nur eine politische – Garantie benötigen, dass ihre Daten von niemandem außer ihnen selbst eingesehen werden können.",
-          "Am meisten profitieren: Journalisten und Aktivisten, die Cloud-Speicher-Ende-zu-Ende-Verschlüsselung zum Schutz von Quellen benötigen; Angehörige von Gesundheitsberufen mit HIPAA-Anforderungen; Rechtsanwälte mit vertraulichen Mandanteninformationen; Unternehmen, die personenbezogene Daten von EU-Bürgern nach DSGVO verwalten.",
-          "Internxt basiert auf einer Zero-Knowledge-Architektur: Ihre Schlüssel verlassen Ihr Gerät nie, Ihre Dateien werden vor dem Hochladen verschlüsselt, und selbst Internxt-Mitarbeiter haben keinen Zugriff auf das, was Sie speichern."
-        ]
-      },
-      {
-        "question": "Was sind verschlüsselte Cloud-Speicherlösungen und wie vergleichen sie sich?",
-        "answer": [
-          "Verschlüsselte Cloud-Speicherlösungen sind Plattformen, bei denen kryptografischer Datenschutz eine Kernfunktion ist. Sie unterscheiden sich vom Mainstream-Speicher hauptsächlich darin, wer die Schlüssel hält und welche Garantien unabhängig verifiziert werden.",
-          "Führende Lösungen: Internxt (Zero-Knowledge, E2EE, post-quanten Kyber-512 + AES-256, ISO 27001:2022, HIPAA, Open-Source, Securitum-Audit 2024), ProtonDrive (Zero-Knowledge, Schweizer Recht), Tresorit (Zero-Knowledge, ISO 27001) und Sync.com (Zero-Knowledge, HIPAA-fähig).",
-          "Internxt ist die einzige verschlüsselte Cloud-Speicherlösung, die eine post-quanten-kryptographische Schicht (Kyber-512) zusätzlich zum Standard AES-256 hinzufügt – zum Schutz vor künftigen Quantencomputer-Bedrohungen."
-        ]
-      },
-      {
-        "question": "Was sind verschlüsselte Cloud-Speicheranbieter und -dienste?",
-        "answer": [
-          "Verschlüsselte Cloud-Speicheranbieter bieten Online-Dateispeicherung auf starken kryptografischen Grundlagen – Architekturen, bei denen Benutzerdaten vom Anbieter selbst geschützt sind, nicht nur von externen Angreifern.",
-          "Nicht alle Anbieter verwenden dasselbe Modell. Bei serverseitiger Verschlüsselung hält der Anbieter die Schlüssel. Bei Ende-zu-Ende-Verschlüsselung verbleibt das Schlüsselmanagement auf Ihrem Gerät. Verschlüsselte Cloud-Speicherdienste umfassen typischerweise Dateispeicherung, Synchronisierung, Freigabe mit ablaufenden Links und Backup-Funktionalität.",
-          "Internxt bietet eine vollständige Suite verschlüsselter Cloud-Speicherdienste: Drive, Send, Backup-Tools sowie VPN, Mail, Antivirus und Meet – alles auf derselben Zero-Knowledge-, Ende-zu-Ende-verschlüsselten Grundlage. Die besten verschlüsselten Dateispeicher-Cloud-Dienste kombinieren clientseitige Verschlüsselung, Open-Source-Code und Compliance-Zertifizierungen."
-        ]
-      }
-    ]
+    {
+      "question": "Was ist verschlüsselter Cloud-Speicher?",
+      "answer": [
+        "Verschlüsselter Cloud-Speicher ist eine Methode zur Online-Dateispeicherung, bei der Ihre Daten mathematisch in ein unlesbares Format (sogenannter Chiffretext) umgewandelt werden, bevor sie an einen Server übertragen oder dort gespeichert werden, sodass nur jemand mit dem richtigen Schlüssel den Originalinhalt lesen kann.",
+        "Die meisten Mainstream-Plattformen wenden die Verschlüsselung auf Serverebene an, was bedeutet, dass der Anbieter die Schlüssel verwaltet und technisch auf Ihre Dateien zugreifen kann. Anbieter von verschlüsseltem Cloud-Speicher wie Internxt wählen einen anderen Ansatz: Dateien werden vor dem Hochladen auf Ihrem Gerät verschlüsselt, und die Verschlüsselungsschlüssel verlassen niemals Ihre Kontrolle. Selbst der Speicheranbieter kann nicht lesen, was Sie gespeichert haben.",
+        "Internxt verwendet AES-256 für Daten im Ruhezustand und TLS 1.3 für Daten während der Übertragung, zwei der am strengsten geprüften Standards in der modernen Kryptographie. Diese Implementierungen wurden in einem Sicherheitsaudit im Jahr 2024 von Securitum, einem der führenden Cybersicherheitsunternehmen Europas, unabhängig überprüft und bestätigt."
+      ]
+    },
+    {
+      "question": "Was ist Ende-zu-Ende-verschlüsselter Cloud-Speicher und wie funktioniert er?",
+      "answer": [
+        "Ende-zu-Ende-verschlüsselter Cloud-Speicher bedeutet, dass Ihre Datei an einem Ende, Ihrem Gerät, verschlüsselt wird und nur am anderen Ende, von Ihnen oder jemandem, mit dem Sie den Zugriff explizit geteilt haben, entschlüsselt werden kann. Nichts dazwischen — weder das Netzwerk, noch der Server, noch der Anbieter — kann den Dateiinhalt lesen.",
+        "Der Prozess: Wenn Sie eine Datei hochladen, generiert Ihr Gerät lokal Verschlüsselungsschlüssel und verwendet sie, um die Datei umzuwandeln, bevor sie Ihr Gerät verlässt. Der Chiffretext reist zum Cloud-Server, wo er gespeichert wird, aber völlig undurchsichtig bleibt. Wenn Sie die Datei herunterladen, wird sie abgerufen und lokal mit Ihren Schlüsseln entschlüsselt.",
+        "Dies unterscheidet sich erheblich vom Standard-Cloud-Speicher mit Verschlüsselung. In einem Standardmodell verschlüsselt der Anbieter Daten während der Übertragung und im Ruhezustand, hält aber die Verschlüsselungsschlüssel selbst. Die Ende-zu-Ende-Verschlüsselung (E2EE) entfernt den Anbieter vollständig aus der Gleichung: Er speichert Daten, die er nicht lesen kann.",
+        "Alle auf der Plattform gespeicherten Dateien sind Ende-zu-Ende verschlüsselt. Diese Architektur wurde im Securitum-Audit 2024 verifiziert und untermauert die ISO 27001:2022-Zertifizierung und HIPAA-Konformität von Internxt."
+      ]
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Cloud-Speicher-Verschlüsselung und Ende-zu-Ende-Verschlüsselung?",
+      "answer": [
+        "Cloud-Speicher-Verschlüsselung ist ein breiter Begriff: Er bedeutet mindestens, dass Daten während der Übertragung (mittels TLS) und im Ruhezustand (mittels AES-256 oder ähnlichem) geschützt sind. Dies ist der Basisstandard — praktisch jede große Cloud-Plattform bietet ihn an. Ende-zu-Ende-Verschlüsselung ist eine spezifische, stärkere Form, bei der der Anbieter niemals Zugriff auf die Schlüssel hat, die zum Schutz Ihrer Dateien verwendet werden.",
+        "Der entscheidende Unterschied liegt darin, wer die Schlüssel kontrolliert. Standard-Cloud-Speicher-Verschlüsselung: Der Anbieter verschlüsselt Ihre Daten, hält aber die Schlüssel — er kann auf Ihre Dateien zugreifen, und Regierungen können ihn zwingen, diese herauszugeben. Ende-zu-Ende-verschlüsselter Cloud-Speicher: Schlüssel werden auf Ihrem Gerät generiert und gespeichert. Der Anbieter speichert Chiffretext, den er nicht entschlüsseln kann. Der Zugriff durch Dritte ist technisch unmöglich, nicht nur durch Richtlinien verboten.",
+        "Für die meiste persönliche Nutzung ist die Standardverschlüsselung ausreichend. Für Krankenakten, rechtliche Dokumente, Finanzdaten oder alle Informationen, bei denen ein Zugriff durch Dritte inakzeptabel wäre, ist die Ende-zu-Ende-Verschlüsselung der angemessene Standard."
+      ]
+    },
+    {
+      "question": "Was ist Cloud-Speicher mit Zero-Knowledge-Verschlüsselung?",
+      "answer": [
+        "Cloud-Speicher mit Zero-Knowledge-Verschlüsselung ist eine Datenschutzarchitektur, bei der der Speicheranbieter keinerlei Kenntnis von Ihren Dateiinhalten, keinen Zugriff auf Ihre Verschlüsselungsschlüssel und keine Möglichkeit hat, Ihre Daten an Dritte weiterzugeben — selbst unter rechtlichem Druck —, weil er sie schlichtweg nicht lesen kann.",
+        "In einem Zero-Knowledge-System finden Schlüsselgenerierung, Verschlüsselung und Entschlüsselung alle lokal auf dem Gerät des Benutzers statt. Die Server des Anbieters empfangen und speichern Daten, die aus ihrer Sicht bedeutungslos sind. Es gibt keinen Hauptschlüssel, keine Hintertür und kein Überschreiben durch den Administrator.",
+        "Internxt Drive basiert auf einer Zero-Knowledge-Architektur. Das bedeutet: Wenn Sie Ihr Passwort vergessen, kann Internxt Ihre Dateien nicht in Ihrem Namen wiederherstellen, da die Plattform von Anfang an keinen Zugriff hatte. Dies ist die stärkste Datenschutzgarantie, die bei der Cloud-Dateispeicherung verfügbar ist, und sie unterscheidet Internxt von Anbietern, die sich selbst als privat bezeichnen, aber dennoch Ihre Schlüssel behalten."
+      ]
+    },
+    {
+      "question": "Warum sollte ich Cloud-Speicher mit Verschlüsselung nutzen?",
+      "answer": [
+        "Cloud-Speicher mit Verschlüsselung schützt Ihre Dateien vor drei Hauptkategorien von Risiken: Datenpannen, anbieterseitiger Zugriff und rechtliche Gefährdung — und jeder Schutz arbeitet auf einer anderen Ebene.",
+        "Datenpannen: Wenn die Server eines Cloud-Anbieters kompromittiert werden und Ihre Dateien ungeschützt oder nur durch anbieterseitig gehaltene Schlüssel geschützt sind, können Angreifer Ihre Daten möglicherweise lesen. Bei einer clientseitigen Cloud-Speicher-Verschlüsselung bringt ein Einbruch in den Server nichts ein — Angreifer würden nur Chiffretext erhalten, den sie nicht entschlüsseln können.",
+        "Anbieterzugriff: Große Cloud-Plattformen behalten sich das Recht vor, Dateiinhalte zur Durchsetzung von Richtlinien, für Werbung oder zur rechtlichen Einhaltung zu scannen. Wenn Sie einen Cloud-Speicher verwenden, der Dateien vor dem Hochladen auf Ihrem Gerät verschlüsselt, hat der Anbieter nichts zu scannen.",
+        "Rechtliche und regulatorische Gefährdung: Unternehmen, die Gesundheitsdaten (HIPAA), personenbezogene Daten von EU-Bürgern (DSGVO) oder sensible Kundeninformationen verarbeiten, haben oft gesetzliche Verpflichtungen bezüglich der Speicherung und des Zugriffs auf diese Daten. Cloud-Speicher mit Verschlüsselung auf Basis einer Zero-Knowledge-Architektur bietet eine vertretbare, prüfbare Antwort auf diese Anforderungen.",
+        "Internxt Drive adressiert alle drei Risiken mit AES-256 und TLS 1.3, einer Zero-Knowledge-Architektur, europäischen Rechenzentren unter der DSGVO, einer ISO 27001:2022-Zertifizierung und HIPAA-Konformität — jeweils verifiziert durch das unabhängige Sicherheitsaudit von Securitum im Jahr 2024."
+      ]
+    },
+    {
+      "question": "Was sind die besten Anbieter für verschlüsselten Cloud-Speicher?",
+      "answer": [
+        "Die besten Anbieter für verschlüsselten Cloud-Speicher sind diejenigen, die die Verschlüsselung auf der Client-Seite (Ihrem Gerät) durchführen, niemals Ihre Verschlüsselungsschlüssel besitzen und deren Datenschutzarchitektur von einer unabhängigen Cybersicherheitsfirma überprüft wurde — und nicht nur selbst deklariert ist.",
+        "Vergleichen Sie bei der Bewertung von verschlüsselten Cloud-Speicherdiensten: wo die Verschlüsselung stattfindet (clientseitig vs. serverseitig), ob der Anbieter Zugriff auf Ihre Schlüssel hat, welche Zertifizierungen unabhängig überprüft wurden und ob die Codebasis für eine Überprüfung durch Dritte Open-Source ist.",
+        "Zu den führenden Optionen gehören Internxt (Zero-Knowledge, clientseitiges E2EE, Post-Quanten-Kyber-512 + AES-256, ISO 27001:2022, HIPAA, Securitum-Audit 2024), Tresorit (Zero-Knowledge, ISO 27001), ProtonDrive (Zero-Knowledge, Schweizer Datenschutzrecht) und Sync.com (Zero-Knowledge, HIPAA-fähig).",
+        "Das Hauptunterscheidungsmerkmal der besten Ende-zu-Ende-verschlüsselten Cloud-Speicheroptionen im Vergleich zu Google Drive, Dropbox oder OneDrive ist das Schlüsseleigentum: Die oben aufgeführten Anbieter besitzen niemals Ihre Verschlüsselungsschlüssel. Internxt fügt als einziger eine Post-Quanten-Kryptographieschicht (Kyber-512) über AES-256 hinzu, um Ihre Dateien vor zukünftigen Bedrohungen durch Quantencomputer zu schützen."
+      ]
+    },
+    {
+      "question": "Was sind die besten verschlüsselten Cloud-Speicherlösungen für Unternehmen und Fachleute?",
+      "answer": [
+        "Die besten verschlüsselten Cloud-Speicherlösungen für den geschäftlichen und professionellen Einsatz müssen neben der persönlichen Privatsphäre drei Anforderungen erfüllen: Compliance-Zertifizierung, Audit-Trails und administrative Kontrolle — zusätzlich zur zugrundeliegenden Zero-Knowledge-Architektur.",
+        "Für das Gesundheitswesen (HIPAA): Internxt bietet einen HIPAA-konformen Tarif an. Dateien werden unter einer Zero-Knowledge-Architektur verwaltet, was bedeutet, dass Internxt selbst bei rechtlicher Verpflichtung nicht auf Patientendaten zugreifen kann.",
+        "Für Juristen: Der Zero-Knowledge-Dateispeicher schützt das Anwalt-Klient-Privileg auf technischer Ebene, sodass es vom Anbieter nicht umgangen werden kann. Die Open-Source-Codebasis ermöglicht es IT-Teams im Rechtsbereich, die Datenschutzarchitektur vor der Bereitstellung unabhängig zu überprüfen.",
+        "Für Unternehmen und Teams: Die Business-Tarife von Internxt umfassen Teamverwaltung, rollenbasierte Zugriffskontrollen und eine nach ISO 27001:2022 zertifizierte Infrastruktur — dem international anerkannten Standard für Informationssicherheitsmanagement.",
+        "Dienste, die eine Zero-Knowledge-Architektur mit verifizierbaren Compliance-Zertifizierungen und einem unabhängigen Sicherheitsaudit kombinieren, stellen die stärkste Option für Organisationen mit gesetzlichen, regulatorischen oder vertraglichen Datenschutzanforderungen dar."
+      ]
+    }
+  ]
   }
 }

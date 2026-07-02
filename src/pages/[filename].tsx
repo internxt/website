@@ -76,6 +76,7 @@ function CombinedSpecialOffer({
     lifetimePlans,
     isClubic,
     isWpcdrive,
+    isBpdrive,
     isPrivacyTutor,
     requireAnnualDiscount,
   } = useOfferConfig(pathname);
@@ -171,6 +172,7 @@ function CombinedSpecialOffer({
         image={alternativeImages}
         isClubic={isClubic}
         isWpcdrive={isWpcdrive}
+        isBpdrive={isBpdrive}
         isUltimatePlan={onlyUltimatePlan}
         specialOffer={requireAnnualDiscount}
         isPrivacyTutor={isPrivacyTutor}

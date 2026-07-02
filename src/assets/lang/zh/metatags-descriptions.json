@@ -585,5 +585,10 @@
     "id": "thankyou",
     "title": "特别优惠候补名单 — Internxt",
     "description": "订阅 Internxt，获取私密、加密云存储的专属折扣，值得信赖。"
+  },
+  {
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - 文档云存储",
+    "description": "Internxt 提供安全的文档云存储，采用后量子加密技术，以最大程度确保您的隐私。"
   }
 ]

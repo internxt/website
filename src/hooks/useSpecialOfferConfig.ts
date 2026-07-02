@@ -81,6 +81,11 @@ export const ALLOWED_PATHS = [
   'madmoneylabs',
   'wpcdrive',
   'jonatan',
+  'bpdrive',
+  'dhiarcom',
+  'gtid',
+  'bangtutorial',
+  'dea',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -124,6 +129,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alexziskind: 'en',
   eurodefence: 'en',
   wpcdrive: 'en',
+  bpdrive:'en',
   jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
@@ -135,12 +141,17 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   luca: 'it',
   saddy: 'it',
   ghareeb: 'fr',
-  madmoneylabs: 'en',
+  madmoneylabs: 'zh',
+  lukevoidx: 'zh',
+  dhiarcom: 'en',
+  gtid: 'en',
+  bangtutorial: 'en',
+  dea: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -172,7 +183,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'saddy',
   'madmoneylabs',
   'wpcdrive',
+  'bpdrive',
   'jonatan',
+  'dhiarcom',
+  'gtid',
+  'bangtutorial',
+  'dea',
 ]);
 
 export const COUPON_CODES = {
@@ -254,7 +270,12 @@ export const COUPON_CODES = {
   saddy: PromoCodeName.saddy,
   madmoneylabs: PromoCodeName.madmoneylabs,
   wpcdrive: PromoCodeName.wpcdrive,
+  bpdrive: PromoCodeName.bpdrive,
   jonatan: PromoCodeName.jonatan,
+  dhiarcom: PromoCodeName.dhiarcom,
+  gtid: PromoCodeName.gtid,
+  bangtutorial: PromoCodeName.bangtutorial,
+  dea: PromoCodeName.dea,
 };
 
 interface OfferConfig {
@@ -269,6 +290,7 @@ interface OfferConfig {
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
+  isBpdrive: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
 }
@@ -290,6 +312,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
+        isBpdrive: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
       };
@@ -304,6 +327,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
+    const isBpdrive = selectedPathname === 'bpdrive'
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
@@ -323,6 +347,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       lifetimePlans,
       isClubic,
       isWpcdrive,
+      isBpdrive,
       isPrivacyTutor,
       requireAnnualDiscount,
     };

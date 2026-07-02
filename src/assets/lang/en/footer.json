@@ -132,6 +132,7 @@
         "GDPRCloud": "GDPR Cloud Storage",
         "cloudPhotos": "Storage for photos",
         "cloudVideo": "Storage for videos",
+        "cloudDocuments": "Storage for documents",
         "lifetime": "Lifetime Cloud Storage",
         "freeCloudStorage": "Free Cloud Storage"
       }
