@@ -590,5 +590,10 @@
     "id": "cloud-storage-for-documents",
     "title": "Internxt - 文档云存储",
     "description": "Internxt 提供安全的文档云存储，采用后量子加密技术，以最大程度确保您的隐私。"
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - 安全文件传输",
+    "description": "Internxt 提供安全的文件传输服务来加密和保护文件，让您可以控制谁能访问您的数据。"
   }
 ]

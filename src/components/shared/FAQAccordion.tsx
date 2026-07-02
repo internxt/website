@@ -60,7 +60,7 @@ export default function FaqAccordion({
       <span
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg ${
+        } duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${
           textColor ? textColor : 'text-gray-60'
         } transition-all ease-in-out`}
       >

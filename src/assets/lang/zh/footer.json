@@ -134,7 +134,8 @@
         "cloudVideo": "云端视频存储",
         "cloudDocuments": "云端文档存储",
         "lifetime": "终身云存储",
-        "freeCloudStorage": "免费云存储"
+        "freeCloudStorage": "免费云存储",
+        "fileTransfer": "安全文件传输"
       }
     }
   }
