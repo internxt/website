@@ -52,6 +52,8 @@ const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLi
   </Link>
 );
 
+const isExternalLink = (href: string) => /^https?:\/\//.test(href);
+
 const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
   const menuClasses = darkMode
     ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
@@ -71,16 +73,28 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
       <div className="pointer-events-none absolute left-1/2 top-full z-50 w-max -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
         <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
-          {items.map(({ href, text }) => (
-            <Link
-              key={text}
-              href={href}
-              locale={lang}
-              className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
-            >
-              {text}
-            </Link>
-          ))}
+          {items.map(({ href, text }) =>
+            isExternalLink(href) ? (
+              <a
+                key={text}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
+              >
+                {text}
+              </a>
+            ) : (
+              <Link
+                key={text}
+                href={href}
+                locale={lang}
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
+              >
+                {text}
+              </Link>
+            ),
+          )}
         </div>
       </div>
     </div>

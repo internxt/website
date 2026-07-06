@@ -132,8 +132,10 @@
         "GDPRCloud": "Archivio conforme al GDPR",
         "cloudPhotos": "Foto nel cloud",
         "cloudVideo": "Video nel cloud",
+        "cloudDocuments": "Documenti nel cloud",
         "lifetime": "Archiviazione cloud a vita",
-        "freeCloudStorage": "Archiviazione cloud gratuita"
+        "freeCloudStorage": "Archiviazione cloud gratuita",
+        "fileTransfer": "Trasferimento file sicuro"
       }
     }
   }

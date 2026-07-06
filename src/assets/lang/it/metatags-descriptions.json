@@ -605,5 +605,15 @@
     "id": "internxt-private-cloud-storage-solutions",
     "title": "Internxt – Soluzioni di archiviazione su cloud privato",
     "description": "Scopri un'esperienza di archiviazione dati su cloud privato di altissimo livello. Offriamo soluzioni di archiviazione su cloud privato di prima classe per garantire la sicurezza e l'organizzazione dei tuoi dati. Inizia con il tuo piano gratuito!"
+  },
+  {
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - Archiviazione cloud per documenti",
+    "description": "Internxt offre un archiviazione cloud sicura per i documenti, protetta da crittografia post-quantistica per la massima privacy."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Trasferimento file sicuro",
+    "description": "Internxt offre un servizio di trasferimento file sicuro per crittografare e proteggere i tuoi file, così puoi controllare chi può accedere ai tuoi dati."
   }
 ]
