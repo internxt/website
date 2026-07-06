@@ -87,6 +87,7 @@ export const ALLOWED_PATHS = [
   'bangtutorial',
   'dea',
   'mejaunbox',
+  'tauteknologi'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -149,11 +150,12 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   bangtutorial: 'en',
   dea: 'en',
   mejaunbox: 'en',
+  tauteknologi: 'en'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -192,6 +194,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'bangtutorial',
   'dea',
   'mejaunbox',
+  'tauteknologi'
 ]);
 
 export const COUPON_CODES = {
@@ -280,6 +283,7 @@ export const COUPON_CODES = {
   bangtutorial: PromoCodeName.bangtutorial,
   dea: PromoCodeName.dea,
   mejaunbox: PromoCodeName.mejaunbox,
+  tauteknologi: PromoCodeName.tauteknologi
 };
 
 interface OfferConfig {
