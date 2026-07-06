@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 import { Info } from '@phosphor-icons/react';
 import { Inbox } from './components/InboxView';
 import {
@@ -26,9 +27,14 @@ import useWindowFocus from '@/hooks/useWindowFocus';
 import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import * as gtag from '@/lib/gtag';
+
+const GA_SESSION_TIMEOUT_MS = 30 * 60 * 1000;
 
 export const HeroSection = ({ textContent }) => {
+  const router = useRouter();
   const isFocused = useWindowFocus();
+  const lastBlurTimeRef = useRef<number | null>(null);
 
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
     useTempMailReducer();
@@ -59,6 +65,20 @@ export const HeroSection = ({ textContent }) => {
 
   useEffect(() => {
     return autoFetchEmails();
+  }, [isFocused]);
+
+  useEffect(() => {
+    if (!isFocused) {
+      lastBlurTimeRef.current = Date.now();
+      return;
+    }
+
+    const blurredAt = lastBlurTimeRef.current;
+    lastBlurTimeRef.current = null;
+
+    if (blurredAt !== null && Date.now() - blurredAt >= GA_SESSION_TIMEOUT_MS) {
+      gtag.pageview(router.asPath);
+    }
   }, [isFocused]);
 
   const settingUpTempMailData = async () => {
