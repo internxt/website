@@ -296,6 +296,7 @@ export enum PromoCodeName {
   gtid = 'GTID',
   bangtutorial = 'BANGTUTORIAL',
   dea = 'DEA',
+  mejaunbox = 'MEJAUNBOX',
 }
 
 export interface PromoCodeProps {
