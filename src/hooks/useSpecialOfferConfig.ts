@@ -89,7 +89,8 @@ export const ALLOWED_PATHS = [
   'mejaunbox',
   'tauteknologi',
   'themorpheus',
-  'morpheus'
+  'morpheus',
+  'levelup'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -154,7 +155,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   mejaunbox: 'en',
   tauteknologi: 'en',
   themorpheus: 'de',
-  morpheus: 'de'
+  morpheus: 'de',
+  levelup: 'en'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -200,7 +202,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'mejaunbox',
   'tauteknologi',
   'themorpheus',
-  'morpheus'
+  'morpheus',
+  'levelup'
 ]);
 
 export const COUPON_CODES = {
@@ -291,7 +294,8 @@ export const COUPON_CODES = {
   mejaunbox: PromoCodeName.mejaunbox,
   tauteknologi: PromoCodeName.tauteknologi,
   themorpheus: PromoCodeName.themorpheus,
-  morpheus: PromoCodeName.morpheus
+  morpheus: PromoCodeName.morpheus,
+  levelup: PromoCodeName.levelup
 };
 
 interface OfferConfig {
