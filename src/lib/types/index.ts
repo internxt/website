@@ -299,7 +299,8 @@ export enum PromoCodeName {
   mejaunbox = 'MEJAUNBOX',
   tauteknologi = 'TAUTEKNOLOGI',
   themorpheus = 'THEMORPHEUS',
-  morpheus = 'MORPHEUS'
+  morpheus = 'MORPHEUS',
+  levelup = 'LEVELUP'
 }
 
 export interface PromoCodeProps {
