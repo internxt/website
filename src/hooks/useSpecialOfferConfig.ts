@@ -90,7 +90,8 @@ export const ALLOWED_PATHS = [
   'tauteknologi',
   'themorpheus',
   'morpheus',
-  'levelup'
+  'levelup',
+  'hendrikiang'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -156,12 +157,14 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tauteknologi: 'en',
   themorpheus: 'de',
   morpheus: 'de',
-  levelup: 'en'
+  levelup: 'en',
+  hendrikiang: 'en',
+  howmation: 'fr'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi', 'hendrikiang']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -203,7 +206,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tauteknologi',
   'themorpheus',
   'morpheus',
-  'levelup'
+  'levelup',
+  'hendrikiang'
 ]);
 
 export const COUPON_CODES = {
@@ -295,7 +299,8 @@ export const COUPON_CODES = {
   tauteknologi: PromoCodeName.tauteknologi,
   themorpheus: PromoCodeName.themorpheus,
   morpheus: PromoCodeName.morpheus,
-  levelup: PromoCodeName.levelup
+  levelup: PromoCodeName.levelup,
+  hendrikiang: PromoCodeName.hendrikiang
 };
 
 interface OfferConfig {
