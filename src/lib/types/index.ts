@@ -297,7 +297,9 @@ export enum PromoCodeName {
   bangtutorial = 'BANGTUTORIAL',
   dea = 'DEA',
   mejaunbox = 'MEJAUNBOX',
-  tauteknologi = 'TAUTEKNOLOGI'
+  tauteknologi = 'TAUTEKNOLOGI',
+  themorpheus = 'THEMORPHEUS',
+  morpheus = 'MORPHEUS'
 }
 
 export interface PromoCodeProps {
