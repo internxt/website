@@ -87,7 +87,9 @@ export const ALLOWED_PATHS = [
   'bangtutorial',
   'dea',
   'mejaunbox',
-  'tauteknologi'
+  'tauteknologi',
+  'themorpheus',
+  'morpheus'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -150,7 +152,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   bangtutorial: 'en',
   dea: 'en',
   mejaunbox: 'en',
-  tauteknologi: 'en'
+  tauteknologi: 'en',
+  themorpheus: 'de',
+  morpheus: 'de'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -194,7 +198,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'bangtutorial',
   'dea',
   'mejaunbox',
-  'tauteknologi'
+  'tauteknologi',
+  'themorpheus',
+  'morpheus'
 ]);
 
 export const COUPON_CODES = {
@@ -283,7 +289,9 @@ export const COUPON_CODES = {
   bangtutorial: PromoCodeName.bangtutorial,
   dea: PromoCodeName.dea,
   mejaunbox: PromoCodeName.mejaunbox,
-  tauteknologi: PromoCodeName.tauteknologi
+  tauteknologi: PromoCodeName.tauteknologi,
+  themorpheus: PromoCodeName.themorpheus,
+  morpheus: PromoCodeName.morpheus
 };
 
 interface OfferConfig {
