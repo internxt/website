@@ -91,7 +91,8 @@ export const ALLOWED_PATHS = [
   'themorpheus',
   'morpheus',
   'levelup',
-  'hendrikiang'
+  'hendrikiang',
+  'luca'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -164,7 +165,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi', 'hendrikiang']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi', 'hendrikiang', 'howmation']);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);

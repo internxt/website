@@ -285,7 +285,7 @@ export enum PromoCodeName {
   antivirus = 'ANTIV',
   WGKAM = 'WGKAM',
   eurodefence = 'EURODEFENCE',
-  luca = 'luca',
+  luca = 'LUCA',
   saddy = 'SADDY',
   madmoneylabs = 'MADMONEYLABS',
   wpcdrive = 'WPCDRIVE',
