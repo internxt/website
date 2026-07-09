@@ -89,8 +89,8 @@ export default function Footer({
         )}
 
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
-          <div className="flex w-full flex-row items-end gap-6 lg:w-1/2 2xl:w-1/3">
-            <div className="flex flex-col items-start justify-between gap-9">
+          <div className="flex w-full flex-row items-end gap-6 lg:w-1/3 2xl:w-[40%]">
+            <div className="flex flex-col items-start justify-between gap-9 flex-1">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
                 <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
@@ -127,17 +127,19 @@ export default function Footer({
                 </div>
               </div>
             </div>
-            <Image
-              src={getImage('/images/components/AppDownload.webp')}
-              width={125}
-              height={125}
-              className="cursor-pointer"
-              alt="QR code for download Internxt APP"
-              style={{
-                maxWidth: '100%',
-                height: 'auto',
-              }}
-            />
+            <div className="flex flex-row shrink-0 hidden md:block">
+              <Image
+                src={getImage('/images/components/AppDownload.webp')}
+                width={130}
+                height={130}
+                className="cursor-pointer"
+                alt="QR code for download Internxt APP"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
           </div>
 
           {!hideNewsletter && (
@@ -739,6 +741,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.features.cloudVideo}
                     </Link>
+                    <Link
+                      href="/cloud-storage-for-documents"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudDocuments}
+                    </Link>
                     <Link href="/lifetime" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.features.lifetime}
                     </Link>
@@ -749,6 +759,14 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.freeCloudStorage}
+                    </Link>
+                    <Link
+                      href="/secure-file-transfer"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.fileTransfer}
                     </Link>
                   </div>
                 </div>
@@ -1735,6 +1753,10 @@ export default function Footer({
 
                       <Link href="/cloud-storage-for-videos" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.cloudVideo}
+                      </Link>
+
+                      <Link href="/cloud-storage-for-documents" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.cloudDocuments}
                       </Link>
 
                       <Link href="/lifetime" locale={lang} passHref>

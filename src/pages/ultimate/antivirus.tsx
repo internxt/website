@@ -25,7 +25,7 @@ import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
 
 const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
-const CLAIM_DEAL_EVENT = 'claim_deal_click';
+const CLAIM_DEAL_EVENT = 'Claim Deal';
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];

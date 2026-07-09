@@ -285,12 +285,23 @@ export enum PromoCodeName {
   antivirus = 'ANTIV',
   WGKAM = 'WGKAM',
   eurodefence = 'EURODEFENCE',
-  luca = 'luca',
+  luca = 'LUCA',
   saddy = 'SADDY',
   madmoneylabs = 'MADMONEYLABS',
   wpcdrive = 'WPCDRIVE',
+  bpdrive = 'BPDRIVE',
   jonatan = 'JONATAN',
   WEWE = 'SAVE',
+  dhiarcom = 'DHIARCOM',
+  gtid = 'GTID',
+  bangtutorial = 'BANGTUTORIAL',
+  dea = 'DEA',
+  mejaunbox = 'MEJAUNBOX',
+  tauteknologi = 'TAUTEKNOLOGI',
+  themorpheus = 'THEMORPHEUS',
+  morpheus = 'MORPHEUS',
+  levelup = 'LEVELUP',
+  hendrikiang = 'HENDRIKIANG'
 }
 
 export interface PromoCodeProps {

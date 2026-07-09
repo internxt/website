@@ -15,9 +15,9 @@ const currentLang = {
   de: 'Deutsch (DE)',
   en: 'English (EN)',
   it: 'Italiano (IT)',
-  zh: '中国 (ZH)',
+  zh: '简体中文 (ZH)',
   ru: 'Русский (RU)',
-  'zh-tw': 'Taiwan (TW)',
+  'zh-tw': '繁體中文 (TW)',
 };
 
 const selectedLang = {

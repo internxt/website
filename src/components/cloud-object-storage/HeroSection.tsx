@@ -23,12 +23,22 @@ export const HeroSection = ({ textContent }) => {
           <p className="flex lg:text-3xl">{textContent.title.line2}</p>
         </h1>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        <Link
-          href="/cloud-object-storage/checkout"
-          className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
-        >
-          {textContent.cta}
-        </Link>
+        <div className="flex flex-row gap-4">
+          <Link
+            href="/cloud-object-storage/checkout"
+            className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
+          >
+            {textContent.cta}
+          </Link>
+          <a
+            href="https://help.internxt.com/en/collections/10286865-s3"
+            className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {textContent.cta2}
+          </a>
+        </div>
       </div>
       <div className="flex">
         <Image

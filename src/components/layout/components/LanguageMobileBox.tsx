@@ -13,8 +13,8 @@ const languages = [
   { text: 'Italiano (IT)', lang: 'it' },
   { text: 'Русский (RU)', lang: 'ru' },
   { text: 'Deutsch (DE)', lang: 'de' },
-  { text: '中国人 (ZH)', lang: 'zh' },
-  { text: '中国人 (TW)', lang: 'zh-tw' },
+  { text: '简体中文 (ZH)', lang: 'zh' },
+  { text: '繁體中文 (TW)', lang: 'zh-tw' },
 ];
 
 export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) {

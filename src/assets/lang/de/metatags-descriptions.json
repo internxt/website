@@ -575,5 +575,15 @@
     "id": "thankyou",
     "title": "Warteliste für Sonderangebot — Internxt",
     "description": "Abonnieren Sie Internxt und erhalten Sie Ihren exklusiven Rabatt auf privaten, verschlüsselten Cloud-Speicher, dem Sie vertrauen können."
+  },
+  {
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - Cloud-Speicher für Dokumente",
+    "description": "Internxt ofrece un almacenamiento en la nube seguro para documentos, protegido por cifrado post-cuántico para una máxima privacidad."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Sicherer Dateiübertragungsdienst",
+    "description": "Internxt bietet einen sicheren Dateiübertragungsdienst an, um Dateien zu verschlüsseln und zu sichern, sodass Sie die Kontrolle darüber behalten, wer auf Ihre Daten zugreifen kann."
   }
 ]

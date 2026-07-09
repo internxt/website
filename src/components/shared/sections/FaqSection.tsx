@@ -31,7 +31,7 @@ const FAQSection = ({
     >
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-10 pb-16 lg:pb-10 lg:pt-20">
         <TitleTag
-          className={`text-center text-30 font-semibold lg:max-w-[850px] ${
+          className={`text-center text-[30px] font-semibold lg:max-w-[850px] ${
             textColor ? textColor : 'text- gray-100'
           } lg:text-3xl`}
         >

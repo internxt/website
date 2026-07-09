@@ -1,7 +1,8 @@
 import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import axios from 'axios';
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import debounce from 'lodash.debounce';
+import { currencyService } from '@/services/currency.service';
 
 interface ContactSalesFormProps {
   textContent: any;
@@ -140,6 +141,20 @@ export const ContactSalesForm = ({
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<FormStatus>('default');
+
+  useEffect(() => {
+    currencyService
+    .getCountry()
+    .then(({ country }) => {
+      const prefix = PHONE_PREFIXES.find((prefix) => prefix.label.includes(country));
+      if(prefix) {
+        setPhonePrefix(prefix.code);
+      }
+    })
+    .catch(() => {
+      // No OP
+    })
+  },[])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
