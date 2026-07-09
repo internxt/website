@@ -134,7 +134,8 @@
         "cloudVideo": "Storage for videos",
         "cloudDocuments": "Storage for documents",
         "lifetime": "Lifetime Cloud Storage",
-        "freeCloudStorage": "Free Cloud Storage"
+        "freeCloudStorage": "Free Cloud Storage",
+        "fileTransfer": "Secure File Transfer"
       }
     }
   }

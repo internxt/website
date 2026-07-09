@@ -750,5 +750,10 @@
     "id": "cloud-storage-for-documents",
     "title": "Internxt - 文檔雲端儲存",
     "description": "Internxt 提供安全的文檔雲端儲存，採用後量子加密技術，以最大程度確保您的隱私。"
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - 安全檔案傳輸",
+    "description": "Internxt 提供安全 my 檔案傳輸服務來加密和保護檔案，讓您可以控制誰能存取您的資料。"
   }
 ]

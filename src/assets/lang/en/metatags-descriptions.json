@@ -768,5 +768,10 @@
     "id":"cloud-storage-for-documents",
     "title":"Internxt - Cloud Storage for Documents",
     "description":"Internxt offers secure cloud storage for documents, protected by post-quantum encryption for maximum privacy."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Secure File Transfer",
+    "description": "Internxt offers a secure file transfer service to encrypt and secure files so you control who can access your data."
   }
 ]

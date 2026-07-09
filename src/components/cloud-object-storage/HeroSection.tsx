@@ -30,12 +30,14 @@ export const HeroSection = ({ textContent }) => {
           >
             {textContent.cta}
           </Link>
-          <Link
+          <a
             href="https://help.internxt.com/en/collections/10286865-s3"
             className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {textContent.cta2}
-          </Link>
+          </a>
         </div>
       </div>
       <div className="flex">
