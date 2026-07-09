@@ -210,8 +210,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'themorpheus',
   'morpheus',
   'levelup',
-  'hendrikiang',
-  'worldcup'
+  'hendrikiang'
 ]);
 
 export const COUPON_CODES = {
