@@ -7,6 +7,7 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
+import { decoratefixedUrl } from '@/lib/conversions';
 
 export const FreeCardPromoBanner = () => {
   const router = useRouter();
@@ -33,7 +34,7 @@ export const FreeCardPromoBanner = () => {
       label: 'User accepts the promo',
       value: '',
     });
-    router.push('/specialoffer/exclusiveoffer');
+    router.push(decoratefixedUrl('/specialoffer'));
     onCloseBanner();
   };
 

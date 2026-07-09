@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
+import { decoratefixedUrl } from '@/lib/conversions';
 
 export const ALLOWED_PATHS = [
   'baity',
@@ -384,7 +385,7 @@ export const usePathRedirect = (selectedPathname: string | null): void => {
   const router = useRouter();
   useEffect(() => {
     if (selectedPathname === null) {
-      router.replace('/specialoffer');
+      router.replace(decoratefixedUrl('/specialoffer'));
     }
   }, [selectedPathname, router]);
 };

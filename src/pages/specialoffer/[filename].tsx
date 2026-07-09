@@ -17,6 +17,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { decoratefixedUrl } from '@/lib/conversions';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -93,7 +94,7 @@ function CombinedSpecialOffer({
 
   useEffect(() => {
     if (!selectedPathname) {
-      router.replace('/specialoffer');
+      router.replace(decoratefixedUrl('/specialoffer'));
     }
   }, [selectedPathname, router]);
 

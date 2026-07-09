@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { INTERNXT_URL } from '@/constants';
 import { useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
-import { saveGclidToCookie } from '@/lib/cookies';
+import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -53,6 +53,10 @@ export default function Layout({
 
     if (gclid) {
       saveGclidToCookie(gclid);
+    }
+
+    if (source) {
+      saveTrackingParamsToCookies();
     }
 
     if (source !== 'Impact') return;

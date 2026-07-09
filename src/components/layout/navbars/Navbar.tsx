@@ -12,6 +12,7 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import LanguageMobileBox from '../components/LanguageMobileBox';
+import { decoratefixedUrl } from '@/lib/conversions';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -152,7 +153,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <>
                 {props.cta[0] === 'default' ? (
                   <button
-                    onClick={() => router.push('/pricing')}
+                    onClick={() => router.push(decoratefixedUrl('/pricing'))}
                     id="choose-storage-button"
                     className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                     transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -164,7 +165,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 )}
                 {props.cta[0] === 'chooseStorage' ? (
                   <button
-                    onClick={() => router.push('/pricing')}
+                    onClick={() => router.push(decoratefixedUrl('/pricing'))}
                     id="choose-storage-button"
                     className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                     transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}

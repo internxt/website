@@ -2,6 +2,7 @@ import axios from 'axios';
 import { PromoCodeProps } from './types';
 import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
 import { isCelloExpired } from '@/lib/cookies';
+import { decoratefixedUrl } from './conversions';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
@@ -91,7 +92,7 @@ const getAuthFlowLoginURL = ({
   }
 
   const searchQuery = search.toString();
-  return `${url}${searchQuery ? '?' + searchQuery : ''}`;
+  return decoratefixedUrl(`${url}${searchQuery ? '?' + searchQuery : ''}`);
 };
 
 /**
@@ -139,7 +140,7 @@ const getAuthFlowCreateUserURL = ({
   }
 
   const searchQuery = search.toString();
-  return `${url}${searchQuery ? '?' + searchQuery : ''}`;
+  return decoratefixedUrl(`${url}${searchQuery ? '?' + searchQuery : ''}`);
 };
 
 const checkAuthFlowAvailable = () => {
@@ -276,7 +277,7 @@ export function checkout({ planId, promoCodeId, planType, mode, currency, gclid 
       if (celloN) params.set('celloN', celloN);
     }
 
-    window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
+    window.location.href = decoratefixedUrl(AUTH_FLOW_URL + `${pathname}?${params.toString()}`);
   }
 
   if (IFRAME_AUTH_ENABLED) {
@@ -303,7 +304,7 @@ export function checkoutForPcComponentes({
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
     trialToken && params.set('mobileToken', trialToken);
-    const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
+    const checkoutUrl = decoratefixedUrl(AUTH_FLOW_URL + `${pathname}?${params.toString()}`);
 
     window.open(checkoutUrl, '_self', 'noopener noreferrer');
   }

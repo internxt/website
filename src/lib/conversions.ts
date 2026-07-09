@@ -1,18 +1,19 @@
+const queryParams = [
+  'utm_medium',
+  'utm_source',
+  'utm_campaign',
+  'utm_name',
+  'utm_id',
+  'gclid',
+  'irclickid',
+  'ga_campaign',
+  'ga_adgroup',
+  'ga_keyword',
+  'ga_network',
+];
 export default async function setUTM() {
   const domainsToDecorate = ['drive.internxt.com'];
-  const queryParams = [
-    'utm_medium',
-    'utm_source',
-    'utm_campaign',
-    'utm_name',
-    'utm_id',
-    'gclid',
-    'irclickid',
-    'ga_campaign',
-    'ga_adgroup',
-    'ga_keyword',
-    'ga_network',
-  ];
+
   const links = document.querySelectorAll('a');
 
   // check if links contain domain from the domainsToDecorate array and then decorates
@@ -27,37 +28,51 @@ export default async function setUTM() {
     }
   }
 
+}
   // a function that retrieves the value of a query parameter
-  function getQueryParam(name) {
-    const key = name;
-    // var storage = window.localStorage.getItem(name)
-    const storage = window.sessionStorage.getItem(name);
-    const search = new RegExp(`[?&]${encodeURIComponent(name)}=([^&]*)`).exec(window.location.search);
+function getQueryParam(name) {
+  const key = name;
+  // var storage = window.localStorage.getItem(name)
+  const storage = window.sessionStorage.getItem(name);
+  const search = new RegExp(`[?&]${encodeURIComponent(name)}=([^&]*)`).exec(window.location.search);
 
-    if (search ?? false) {
+  if (search ?? false) {
       // name is found in location.search
-      if (search?.[1] !== null) {
+    if (search?.[1] !== null) {
         // window.localStorage.setItem(key, search[1])
-        window.sessionStorage.setItem(key, search?.[1] ?? '');
+      window.sessionStorage.setItem(key, search?.[1] ?? '');
 
-        return search?.[1];
-      }
-    } else if (storage) {
-      // name is found in local storage
-
-      return storage;
+      return search?.[1];
     }
+  } else if (storage) {
+    // name is found in local storage
+
+    return storage;
   }
+}
 
   // decorates the URL with query params
-  function decorateUrl(urlToDecorate) {
-    urlToDecorate = urlToDecorate.indexOf('?') === -1 ? `${urlToDecorate}?` : `${urlToDecorate}&`;
-    const collectedQueryParams: string[] = [];
-    for (let queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
-      if (getQueryParam(queryParams[queryIndex])) {
-        collectedQueryParams.push(`${queryParams[queryIndex]}=${getQueryParam(queryParams[queryIndex])}`);
-      }
+function decorateUrl(urlToDecorate) {
+  urlToDecorate = urlToDecorate.indexOf('?') === -1 ? `${urlToDecorate}?` : `${urlToDecorate}&`;
+  const collectedQueryParams: string[] = [];
+  for (let queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
+    if (getQueryParam(queryParams[queryIndex])) {
+      collectedQueryParams.push(`${queryParams[queryIndex]}=${getQueryParam(queryParams[queryIndex])}`);
     }
-    return urlToDecorate + collectedQueryParams.join('&');
   }
+  return urlToDecorate + collectedQueryParams.join('&');
+}
+
+export function decoratefixedUrl(urlToDecorate: string) {
+  const url = new URL(urlToDecorate, window.location.origin);
+
+  queryParams.forEach((param) => {
+    const value = getQueryParam(param);
+
+    if (value && !url.searchParams.has(param)) {
+      url.searchParams.set(param, value);
+    }
+  });
+
+  return url.toString();
 }
