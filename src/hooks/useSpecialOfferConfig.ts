@@ -93,7 +93,9 @@ export const ALLOWED_PATHS = [
   'levelup',
   'hendrikiang',
   'luca',
-  'worldcup'
+  'worldcup',
+  'actionretro',
+  'kevin'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -162,7 +164,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   levelup: 'en',
   hendrikiang: 'en',
   howmation: 'fr',
-  worldcup: 'en'
+  worldcup: 'en',
+  actionretro: 'en',
+  kevin: 'de'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -210,7 +214,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'themorpheus',
   'morpheus',
   'levelup',
-  'hendrikiang'
+  'hendrikiang',
+  'actionretro',
+  'kevin'
 ]);
 
 export const COUPON_CODES = {
@@ -304,7 +310,9 @@ export const COUPON_CODES = {
   morpheus: PromoCodeName.morpheus,
   levelup: PromoCodeName.levelup,
   hendrikiang: PromoCodeName.hendrikiang,
-  worldcup: PromoCodeName.worldcup
+  worldcup: PromoCodeName.worldcup,
+  actionretro: PromoCodeName.actionretro,
+  kevin: PromoCodeName.kevin
 };
 
 interface OfferConfig {
