@@ -9,6 +9,20 @@ const GCLID_COOKIE_LIFESPAN_DAYS = 90;
 const CELLO_EXPIRATION_DAYS = 30;
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
+const TRACKING_PARAMS = [
+  'utm_medium',
+  'utm_source',
+  'utm_campaign',
+  'utm_name',
+  'utm_id',
+  'gclid',
+  'irclickid',
+  'ga_campaign',
+  'ga_adgroup',
+  'ga_keyword',
+  'ga_network',
+] as const;
+
 function parseUri(ctx: GetServerSidePropsContext) {
   const { query } = url.parse(ctx.req.url);
   const parsedQuery = queryString.parse(query);
@@ -24,7 +38,7 @@ function setCookie({
   cookieValue: string;
   expiration?: Date;
 }) {
-  const domain = process.env.NODE_ENV === 'production' ? 'internxt.com' : 'localhost';
+  const domain = process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost';
 
   const expirationDate = expiration ? new Date(expiration).toUTCString() : moment().add(100, 'days').toDate();
 
@@ -80,8 +94,37 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
 export const saveGclidToCookie = (gclid: string) => {
   const expiryDate = new Date();
   expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
-  document.cookie = `gclid=${gclid}; expires=${expiryDate.toUTCString()}; path=/`;
+  setCookie({
+    cookieName: 'gclid',
+    cookieValue: gclid,
+    expiration: expiryDate,
+  });
 };
+
+export const saveTrackingParamsToCookies = () => {
+  if (typeof window === 'undefined') return;
+
+  const params = new URLSearchParams(window.location.search);
+
+  const expiryDate = new Date();
+
+  expiryDate.setTime(
+    expiryDate.getTime() +
+      GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY,
+  );
+
+  TRACKING_PARAMS.forEach((param) => {
+    const value = params.get(param);
+
+    if (!value) return;
+
+    setCookie({
+      cookieName: param,
+      cookieValue: value,
+      expiration: expiryDate,
+    });
+  });
+}
 
 export const getGclidFromURL = (): string | null => {
   if (typeof window === 'undefined') return null;
@@ -116,4 +159,5 @@ export default {
   saveCelloFirstVisit,
   getCelloFirstVisitDate,
   isCelloExpired,
+  saveTrackingParamsToCookies
 };
