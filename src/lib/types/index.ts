@@ -301,7 +301,10 @@ export enum PromoCodeName {
   themorpheus = 'THEMORPHEUS',
   morpheus = 'MORPHEUS',
   levelup = 'LEVELUP',
-  hendrikiang = 'HENDRIKIANG'
+  hendrikiang = 'HENDRIKIANG',
+  worldcup = 'WORLDCUP',
+  actionretro = 'ACTIONRETRO',
+  kevin = 'KEVIN'
 }
 
 export interface PromoCodeProps {

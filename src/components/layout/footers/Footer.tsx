@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import setUTM from '@/lib/conversions';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 import Image from 'next/image';
 import axios from 'axios';
@@ -40,8 +39,6 @@ export default function Footer({
   const year = moment().format('YYYY');
 
   useEffect(() => {
-    setUTM();
-
     axios.get(`${window.location.origin}/api/download`).then((res) => {
       setPlatforms(res.data.platforms);
     });
