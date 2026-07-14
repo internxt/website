@@ -47,9 +47,11 @@ export const HorizontalPriceCard = ({
 
   const contentText = require(`@/assets/lang/en/priceCard.json`);
 
+  const MIN_DISCOUNT_PERCENT_TO_SHOW = 1;
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
   const discountedPrice = hasDiscount ? (Number(price) * decimalDiscountValue) / 100 : Number(price);
   const currentPrice = (Math.trunc(discountedPrice * 100) / 100).toFixed(2);
+  const showDiscount = Boolean(hasDiscount) && 100 - decimalDiscountValue! >= MIN_DISCOUNT_PERCENT_TO_SHOW;
   const cardLabel =
     {
       '5TB': contentText.productFeatures.planTypes.ultimate,
@@ -102,7 +104,7 @@ export const HorizontalPriceCard = ({
               <span>{currency}</span>
               <span className="text-sm">{contentText.perMonth}</span>
             </p>
-            {hasDiscount && (
+            {showDiscount && (
               <p className="flex flex-row items-end whitespace-nowrap font-normal text-gray-50">
                 <span className="text-xl line-through">{price}</span>
                 <span className="text-sm">{currency}</span>

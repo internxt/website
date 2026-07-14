@@ -47,7 +47,7 @@ const AlternativeHeroSection = ({ textContent, currentPrice, currency }: Alterna
         </div>
       </div>
 
-      <div className="relative flex  h-[65vh] items-center justify-center md:h-[450px] lg:flex">
+      <div className="relative flex  items-center justify-center md:h-[450px] lg:flex lg:h-[65vh]">
         <Image
           src={getImage('/images/antivirus/Internxt_Antivirus_Header.png')}
           width={490}
