@@ -95,7 +95,12 @@ export const ALLOWED_PATHS = [
   'luca',
   'worldcup',
   'actionretro',
-  'kevin'
+  'kevin',
+  'falucho',
+  'salvilla',
+  'techandtips',
+  'techchip',
+  'venomstech'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -139,7 +144,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alexziskind: 'en',
   eurodefence: 'en',
   wpcdrive: 'en',
-  bpdrive:'en',
+  bpdrive: 'en',
   jonatan: 'es',
   clubic: 'fr',
   cocadmin: 'fr',
@@ -166,12 +171,30 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   howmation: 'fr',
   worldcup: 'en',
   actionretro: 'en',
-  kevin: 'de'
+  kevin: 'de',
+  falucho: 'es',
+  salvilla: 'es'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity', 'nfire', 'devopstoolbox', 'lefiltre', 'overfl0w', 'morrolinux', 'techsagar', 'bjoern', 'bpdrive', 'dea', 'mejaunbox', 'bangtutorial', 'tauteknologi', 'hendrikiang', 'howmation']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
+  'baity',
+  'nfire',
+  'devopstoolbox',
+  'lefiltre',
+  'overfl0w',
+  'morrolinux',
+  'techsagar',
+  'bjoern',
+  'bpdrive',
+  'dea',
+  'mejaunbox',
+  'bangtutorial',
+  'tauteknologi',
+  'hendrikiang',
+  'howmation',
+]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
@@ -216,7 +239,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'levelup',
   'hendrikiang',
   'actionretro',
-  'kevin'
+  'kevin',
+  'falucho',
+  'salvilla',
+  'techandtips',
+  'techchip',
+  'venomstech'
 ]);
 
 export const COUPON_CODES = {
@@ -312,7 +340,12 @@ export const COUPON_CODES = {
   hendrikiang: PromoCodeName.hendrikiang,
   worldcup: PromoCodeName.worldcup,
   actionretro: PromoCodeName.actionretro,
-  kevin: PromoCodeName.kevin
+  kevin: PromoCodeName.kevin,
+  falucho: PromoCodeName.falucho,
+  salvilla: PromoCodeName.salvilla,
+  techandtips: PromoCodeName.techandtips,
+  techchip: PromoCodeName.techchip,
+  venomstech: PromoCodeName.venomstech
 };
 
 interface OfferConfig {
@@ -364,7 +397,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
-    const isBpdrive = selectedPathname === 'bpdrive'
+    const isBpdrive = selectedPathname === 'bpdrive';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
 
