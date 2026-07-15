@@ -97,6 +97,10 @@ export const ALLOWED_PATHS = [
   'actionretro',
   'kevin',
   'falucho',
+  'salvilla',
+  'techandtips',
+  'techchip',
+  'venomstech'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -169,6 +173,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   actionretro: 'en',
   kevin: 'de',
   falucho: 'es',
+  salvilla: 'es'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -236,6 +241,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'actionretro',
   'kevin',
   'falucho',
+  'salvilla',
+  'techandtips',
+  'techchip',
+  'venomstech'
 ]);
 
 export const COUPON_CODES = {
@@ -333,6 +342,10 @@ export const COUPON_CODES = {
   actionretro: PromoCodeName.actionretro,
   kevin: PromoCodeName.kevin,
   falucho: PromoCodeName.falucho,
+  salvilla: PromoCodeName.salvilla,
+  techandtips: PromoCodeName.techandtips,
+  techchip: PromoCodeName.techchip,
+  venomstech: PromoCodeName.venomstech
 };
 
 interface OfferConfig {
