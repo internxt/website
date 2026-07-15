@@ -100,7 +100,10 @@ export const ALLOWED_PATHS = [
   'salvilla',
   'techandtips',
   'techchip',
-  'venomstech'
+  'venomstech',
+  'cybermind',
+  'bestindotech',
+  'homefacil'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -173,7 +176,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   actionretro: 'en',
   kevin: 'de',
   falucho: 'es',
-  salvilla: 'es'
+  salvilla: 'es',
+  homefacil: 'es'
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -244,7 +248,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'salvilla',
   'techandtips',
   'techchip',
-  'venomstech'
+  'venomstech',
+  'cybermind',
+  'bestindotech',
+  'homefacil'
 ]);
 
 export const COUPON_CODES = {
@@ -345,7 +352,10 @@ export const COUPON_CODES = {
   salvilla: PromoCodeName.salvilla,
   techandtips: PromoCodeName.techandtips,
   techchip: PromoCodeName.techchip,
-  venomstech: PromoCodeName.venomstech
+  venomstech: PromoCodeName.venomstech,
+  cybermind: PromoCodeName.cybermind,
+  bestindotech: PromoCodeName.bestindotech,
+  homefacil: PromoCodeName.homefacil
 };
 
 interface OfferConfig {
