@@ -304,7 +304,8 @@ export enum PromoCodeName {
   hendrikiang = 'HENDRIKIANG',
   worldcup = 'WORLDCUP',
   actionretro = 'ACTIONRETRO',
-  kevin = 'KEVIN'
+  kevin = 'KEVIN',
+  falucho = 'FALUCHO',
 }
 
 export interface PromoCodeProps {
