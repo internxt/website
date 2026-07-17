@@ -1,0 +1,119 @@
+{
+    "HeroSection": {
+        "label": "Internxt Mail",
+        "title": "最佳加密電子郵件",
+        "description": "Internxt 使用超強加密技術保護您的電子郵件隱私與安全。",
+        "cta": "獲取 Internxt Mail",
+        "garantee": "包含在 Ultimate 方案中"
+    },
+    "DriveSection": {
+        "title": "Internxt Mail",
+        "description":  [
+            "使用 Internxt Mail 保護您的電子郵件隱私，這是一款專為您的隱私而設計的安全且加密的電子郵件。",
+            "採用開源軟體和後量子加密技術構建，保護您的電子郵件免受數位間諜、駭客的侵害，並阻止大型科技公司在線上監控您。"
+        ]
+    },
+    "CoreFeatures": {
+        "title": "替代大型科技公司的最安全電子郵件選擇",
+        "descriptions": [
+            "加入 Internxt，透過我們旨在讓您掌控個人隱私的加密、私密產品系列，共同構建更安全、更私密的高質網路體驗。",
+            "在 Windows、Mac 或 Linux 上，享受作為 Internxt Drive 計劃一部分的 Mail、Meet、Antivirus 和 VPN 服務。"
+        ],
+        "accordionCards": {
+            "titles":[
+                "歐洲隱私保護",
+                "高安全性",
+                "永續性"
+            ],
+            "descriptions":[
+                "Internxt 符合 GDPR（歐盟通用資料保護規則）標準，以最嚴格的隱私法規保護您的資料，確保您個人資訊的安全性、透明度和控制權。",
+                "Internxt 採用端對端和後量子加密，為您提供保障隱私的最佳加密電子郵件。",
+                "我們致力於創造一個更永續、更綠色的未來，因此我們的產品僅使用可再生和高效節能的電力技術。"
+            ]
+        }
+    },
+    "MailFeatureSection": {
+        "title": "依託先進技術構建的加密電子郵件",
+        "description": "Internxt Mail 使用最先進的後量子和零知識加密技術來保護您的隱私權和資料安全，確保只有您自己可以查看您的電子郵件。在 Internxt，只有您自己可以查看您的郵件和附件。",
+        "scrollableSection": {
+            "titles": [
+                "後量子密碼學",
+                "零追蹤器，零廣告",
+                "免受垃圾郵件和網路釣魚侵害",
+                "開源且經過審計"
+            ],
+            "descriptions": [
+                "先進的後量子加密提供最高級別的安全性，為您提供面向未來的、最安全的電子郵件保障。",
+                "享受安全、無廣告的電子郵件體驗。不再有追蹤，不再有在網路上形影不離的個人化廣告。只有純粹、私密的溝通。",
+                "Internxt Mail 可識別並攔截網路釣魚、垃圾郵件和廢件，保持您的收件箱清潔、井然有序，免受資料威脅。",
+                "我們的所有產品（包括 Internxt Mail）均為開源，經過獨立審計，並因其屢獲殊榮的加密技術而通過驗證。"
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "您的郵件，您的隱私。",
+        "description": "在完全隱私的狀態下發送和接收電子郵件",
+        "cta": "獲取 Internxt Mail"
+    },
+    "CtaSectionV2": {
+        "title": "您可以信賴的私密電子郵件",
+        "description": "發送郵件時，完全確信沒有人窺探您。",
+        "cta": "獲取 Internxt Mail"
+    },
+    "DesignedSection": {
+        "title": "專為滿足所有隱私需求而設計",
+        "description": "我們相信每個人都有隱私權，因此 Internxt Mail 旨在滿足每個需要安全電子郵件服務提供商的人的需求。",
+        "scrollableSection": {
+            "images": ["personal", "business", "lawyers", "medical"],
+            "titles": ["個人", "企業", "律師", "醫療"],
+            "descriptions": [
+                "加密電子郵件，保護您所有郵件和附件的隱私。",
+                "透過加密和私密的電子郵件，防止資料外洩和網路釣魚。",
+                "符合 GDPR 的加密電子郵件，防止敏感資料外洩。",
+                "給他人寫信分享和討論資訊，完全保護隱私，維護客戶特權。"
+            ]
+        }
+    },
+    "SemanticAccordion": {
+        "title": "有疑問？我們有答案",
+        "items": [
+            {
+                "question": "什麼是 Internxt Mail？",
+                "answer": [
+                    "Internxt Mail 是用於發送私密郵件的最佳加密電子郵件。透過 Internxt Mail，我們保證除了您之外沒有任何人可以訪問您的郵件或附件，這些郵件和附件均採用後量子和零知識加密技術進行保護。"
+                ]
+            },
+            {
+                "question": "為什麼我應該使用加密電子郵件？",
+                "answer": [
+                    "加密電子郵件將防止資料外洩並保護您的隱私權，因為除了您之外，任何人都無法訪問您的所有資料。依託我們先進的加密協定，使用 Internxt Mail，您可以放心發送商業機密、個人訊息或機密文件。"
+                ]
+            },
+            {
+                "question": "Internxt Mail 是 Gmail 的替代方案嗎？",
+                "answer": [
+                    "是的，Internxt Mail 是 Gmail 的安全替代方案，因為您擁有自己發送的電子郵件密鑰。相比之下，Gmail 在其用於存儲郵件的伺服器上保留這些密鑰。由於他們不提供零知識服務，他們可能會閱讀郵件內容，或在被要求時將其遞交給有關部門。"
+                ]
+            },
+            {
+                "question": "Internxt Mail 是免費的嗎？",
+                "answer": [
+                    "訂閱我們的任何黃金版尊享計劃即可使用 Internxt Mail，該計劃提供訪問我們全套專注於隱私的產品，包括 Internxt Drive、Mail、Antivirus 和 VPN。"
+                ]
+            },
+            {
+                "question": "如何聯繫客服支援？",
+                "answer": [
+                    "找不到您想要的內容？您可以透過線上對話或發送電子郵件至 hello@internxt.com 聯繫我們的客戶成功團隊。"
+                ]
+            },
+            {
+                "question": "Internxt 的退款政策是什麼？",
+                "answer": [
+                    "Internxt 對其所有的付費訂閱提供標準的 30 天退款保證，自您訂閱之日起開始計算。",
+                    "如果您對我們的服務不滿意，請發送電子郵件至 hello@internxt.com 並申請退款。"
+                ]
+            }
+        ]
+    }
+}

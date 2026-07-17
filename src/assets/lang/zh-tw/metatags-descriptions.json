@@ -755,5 +755,10 @@
     "id": "secure-file-transfer",
     "title": "Internxt - 安全檔案傳輸",
     "description": "Internxt 提供安全 my 檔案傳輸服務來加密和保護檔案，讓您可以控制誰能存取您的資料。"
+  },
+  {
+    "id": "mail",
+    "title": "Internxt Mail - 保護隱私的最佳加密電子郵件。",
+    "description": "Internxt Mail 是一款加密電子郵件解決方案，可確保您的收件箱安全。得益於後量子加密技術，Internxt 是保障隱私最安全的電子郵件服務。"
   }
 ]

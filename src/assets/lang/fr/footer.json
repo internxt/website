@@ -135,7 +135,8 @@
         "cloudDocuments": "Documents dans le cloud",
         "lifetime": "Stockage cloud à vie",
         "freeCloudStorage": "Stockage cloud gratuit",
-        "fileTransfer": "Transfert de fichiers sécurisé"
+        "fileTransfer": "Transfert de fichiers sécurisé",
+        "mail": "E-mail crypté"
       }
     }
   }
