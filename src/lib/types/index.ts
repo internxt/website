@@ -314,7 +314,8 @@ export enum PromoCodeName {
   venomstech = 'VENOMSTECH',
   cybermind = 'CYBERMIND',
   bestindotech = 'BESTINDOTECH',
-  homefacil = 'HOMEFACIL'
+  homefacil = 'HOMEFACIL',
+  kioskom = 'KIOSKOM'
 }
 
 export interface PromoCodeProps {
