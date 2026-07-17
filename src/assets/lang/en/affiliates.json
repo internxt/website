@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "label": "Internxt's Affiliate Program",
-    "title": { "normalText": " per sale", "blueText": "Earn up to $300" },
+    "title": { "normalText": " per sale", "blueText": "Earn up to {price}" },
     "description": "Join Internxt’s world-class affiliate program and earn money promoting zero-knowledge cloud storage to your audience. Let’s build a safer, fairer, and better internet together.",
     "signUp": "Sign up now",
     "logIn": "Affiliate log in"
@@ -33,7 +33,7 @@
     "title": "Why join Internxt’s Affiliate Program?",
     "cards": [
       {
-        "title": "Earn up to $300 per sale"
+        "title": "Earn up to {price} per sale"
       },
       {
         "title": "Dedicated account managers"
