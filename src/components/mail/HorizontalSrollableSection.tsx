@@ -6,10 +6,12 @@ import { MailText } from '@/assets/types/mail';
 
 interface HorizontalScrollableSectionWithPhotosProps {
   textContent: MailText['DesignedSection'];
+  needsDivider?: boolean;
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
+  needsDivider = true,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
@@ -86,7 +88,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 lg:h-min lg:gap-16 lg:pt-20"
       style={{ background: '#FFFFFF 100%' }}
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
@@ -96,7 +98,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
         </div>
       </div>
 
-      <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
+      <div className="flex h-min w-full flex-col items-center gap-4 pb-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
@@ -164,6 +166,11 @@ export default function HorizontalScrollableSectionWithPhotosSection({
           </div>
         </div>
       </div>
+      {needsDivider && (
+        <div className="w-full max-w-[1200px] px-5 lg:px-8">
+          <div className="h-px w-full bg-neutral-35" />
+        </div>
+      )}
     </section>
   );
 }

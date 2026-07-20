@@ -69,7 +69,7 @@ export const HeroSection = ({ textContent }) => {
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <div className="flex flex-col">
           <Link
-            href="/cloud-object-storage/checkout"
+            href="/pricing"
             className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
           >
             {textContent.cta}
@@ -82,7 +82,7 @@ export const HeroSection = ({ textContent }) => {
           </div>
         </div>
       </div>
-      <div className="w-full min-h-[420px] lg:min-h-[700px] lg:w-1/2 lg:justify-center lg:pt-24 lg:flex">
+      <div className="w-full min-h-[320px] lg:min-h-[700px] lg:w-1/2 lg:justify-center lg:pt-24 lg:flex">
         <Animation images={images} />
       </div>
     </section>

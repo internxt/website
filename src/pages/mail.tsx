@@ -10,8 +10,6 @@ import MailSection from '@/components/mail/MailSection';
 import FAQSection from "@/components/shared/sections/FaqSection";
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import CoreFeaturesSection from "@/components/mail/CoreFeaturesSection";
-import Link from 'next/link';
-import { Check } from '@phosphor-icons/react';
 import { MailText } from '@/assets/types/mail';
 
 
