@@ -308,6 +308,14 @@ export enum PromoCodeName {
   falucho = 'FALUCHO',
   GADS85 = 'GADS85',
   META85 = 'META85',
+  salvilla = 'SALVILLA',
+  techandtips = 'TECHANDTIPS',
+  techchip = 'TECHCHIP',
+  venomstech = 'VENOMSTECH',
+  cybermind = 'CYBERMIND',
+  bestindotech = 'BESTINDOTECH',
+  homefacil = 'HOMEFACIL',
+  kioskom = 'KIOSKOM'
 }
 
 export interface PromoCodeProps {
