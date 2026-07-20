@@ -74,7 +74,7 @@ export default function Footer({
       className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
     >
       <div
-        className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
+        className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56"
         style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
       >
         <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
@@ -86,7 +86,7 @@ export default function Footer({
         )}
 
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
-          <div className="flex w-full flex-row items-end gap-6 lg:w-1/3 2xl:w-[40%]">
+          <div className="flex w-full flex-row items-end gap-6 lg:w-[48%] xl:w-[43%] 2xl:w-[35%]">
             <div className="flex flex-col items-start justify-between gap-9 flex-1">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
