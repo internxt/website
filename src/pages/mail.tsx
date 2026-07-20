@@ -98,10 +98,8 @@ const Mail = ({
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
     const locale = ctx.locale as string;
 
-    //add metatags translation files
     const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
     const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
-    //add translation files
     const textContent = require(`@/assets/lang/${locale}/mail.json`);
     const footerText = require(`@/assets/lang/${locale}/footer.json`);
 

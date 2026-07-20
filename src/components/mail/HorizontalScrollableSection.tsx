@@ -44,7 +44,7 @@ export default function HorizontalScrollableSection({
     if (isMobile) {
       return mobileCardWidth + mobileGap;
     }
-    const cardWidthNum = parseInt(cardsWidth);
+    const cardWidthNum = Number.parseInt(cardsWidth);
     return cardWidthNum + desktopGap;
   };
 
@@ -56,7 +56,7 @@ export default function HorizontalScrollableSection({
       return paddingRight;
     }
 
-    const cardWidthNum = parseInt(cardsWidth);
+    const cardWidthNum = Number.parseInt(cardsWidth);
     const containerWidth = 850;
     const visibleWidth = 2 * cardWidthNum + desktopGap;
     const paddingRight = containerWidth - visibleWidth;
@@ -120,15 +120,6 @@ export default function HorizontalScrollableSection({
           {textContent.title}
         </TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        {textContent.cta && (
-          <span
-            onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
-            className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
-          >
-            {textContent.cta}
-            <CaretRight className="pt-[2px] text-primary" size={24} />
-          </span>
-        )}
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
@@ -146,7 +137,7 @@ export default function HorizontalScrollableSection({
         >
           {textContent.scrollableSection.titles.map((title: string, index: number) => (
             <div
-              key={index}
+              key={title}
               className="flex-shrink-0"
               style={{
                 width: isMobile ? `${mobileCardWidth}px` : cardsWidth,
@@ -166,6 +157,7 @@ export default function HorizontalScrollableSection({
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
+              type="button"
               onClick={scrollLeft}
               disabled={!canScrollLeft}
               className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
@@ -176,6 +168,7 @@ export default function HorizontalScrollableSection({
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
+              type="button"
               onClick={scrollRight}
               disabled={!canScrollRight}
               className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${

@@ -26,8 +26,8 @@ const MailSection = ({ textContent }: MailSectionProps): JSX.Element => {
         </div>
 
         <div className="flex w-full flex-col gap-4 lg:w-1/3">
-          {textContent.description.map((desc, index) => (
-            <p key={index} className="text-sm text-center font-normal leading-tight text-gray-55 lg:text-lg lg:text-left lg:pr-40">
+          {textContent.description.map((desc) => (
+            <p key={desc.slice(0,20)} className="text-sm text-center font-normal leading-tight text-gray-55 lg:text-lg lg:text-left lg:pr-40">
               {desc}
             </p>
           ))}

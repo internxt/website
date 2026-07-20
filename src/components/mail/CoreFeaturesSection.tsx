@@ -62,6 +62,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
           {textContent.accordionCards.titles.map((title: string, index: number) => (
             <button
               key={title}
+              type="button"
               onClick={() => handleAccordionClick(index)}
               className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
                 activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'

@@ -12,7 +12,7 @@ interface HorizontalScrollableSectionWithPhotosProps {
 export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
   needsDivider = true,
-}: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+}: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -146,6 +146,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
+              type="button"
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
@@ -155,6 +156,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
+              type="button"
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
