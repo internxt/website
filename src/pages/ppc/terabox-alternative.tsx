@@ -18,12 +18,14 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 
 const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'terabox-alternative');
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.TERABOX85,
+    couponCodeForLifetime: PromoCodeName.TERABOX85,
+  });
 
   const {
     products,
@@ -32,10 +34,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -79,7 +78,8 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName={'Drive Comparison'}
+        segmentName="PPC Terabox Comparison"
+        robots="noindex, follow"
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />

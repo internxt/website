@@ -18,13 +18,15 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 
 const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'proton-drive-alternative');
 
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.PROTONDRIVE,
+    couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
+  });
 
   const {
     products,
@@ -33,10 +35,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -80,7 +79,8 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName={'Drive Comparison'}
+        segmentName="PPC Proton Comparison"
+        robots="noindex, follow"
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
