@@ -40,7 +40,7 @@ interface ItemsNavigationProps {
 }
 
 const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
-  const baseClasses = 'whitespace-nowrap px-4 py-1.5 text-base font-medium transition duration-150 ease-in-out';
+  const baseClasses = 'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
   const darkModeClasses = isDarkMode ? 'text-white hover:text-gray-20' : 'text-gray-60 hover:text-primary';
 
   return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
@@ -63,7 +63,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
 
   return (
     <div
-      className={`group relative flex cursor-default items-center space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
+      className={`group relative flex cursor-default items-center space-x-1 min-[1024px]:text-sm min-[1100px]:text-base rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
     >
       <span>{label}</span>
       <CaretDown
@@ -130,9 +130,7 @@ export const ItemsNavigation = ({
             { href: '/antivirus', text: textContent.products.antivirus },
             { href: '/vpn', text: textContent.products.vpn },
             { href: '/cleaner', text: textContent.products.cleaner },
-            { href: '/meet', text: textContent.products.meet },
-            { href: 'https://ai.internxt.com/', text: textContent.products.ai },
-            { href: 'https://send.internxt.com/', text: textContent.products.send },
+            { href: '/meet', text: textContent.products.meet }
           ]}
           darkMode={darkMode}
           lang={lang}

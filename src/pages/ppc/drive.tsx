@@ -25,7 +25,7 @@ import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 
 interface DriveProps {
   textContent: DriveText;
@@ -56,8 +56,10 @@ const Drive = ({
   relationalLinksText,
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.OFFSUB,
+    couponCodeForLifetime: PromoCodeName.OFFLFT,
+  });
   const {
     products,
     loadingCards,
@@ -65,10 +67,7 @@ const Drive = ({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -106,7 +105,13 @@ const Drive = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Secure cloud storage', 'drive')}
       </Script>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="PPC Drive"
+        lang={lang}
+        robots="noindex, follow"
+      >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         <HeroSection textContent={textContent.HeroSection} download={download} />
 

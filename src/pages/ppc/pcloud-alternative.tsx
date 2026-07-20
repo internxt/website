@@ -15,12 +15,14 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 
 const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.PCLOUD85,
+    couponCodeForLifetime: PromoCodeName.PCLOUD85,
+  });
 
   const {
     products,
@@ -29,10 +31,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -73,7 +72,8 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="pCloud Comparison"
+        segmentName="PPC pCloud Comparison"
+        robots="noindex, follow"
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
