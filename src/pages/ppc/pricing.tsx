@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 import { GetServerSidePropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -41,8 +41,10 @@ const Pricing = ({
   relationalLinksText,
 }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.OFFSUB,
+    couponCodeForLifetime: PromoCodeName.OFFLFT,
+  });
 
   const {
     products,
@@ -51,10 +53,7 @@ const Pricing = ({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
@@ -120,7 +119,13 @@ const Pricing = ({
         {sm_breadcrumb('Cloud Storage Pricing', 'pricing')}
       </Script>
 
-      <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
+      <Layout
+        segmentName={`PPC ${pageName}`}
+        title={metatags[0].title}
+        description={metatags[0].description}
+        lang={lang}
+        robots="noindex, follow"
+      >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <PricingSectionWrapper

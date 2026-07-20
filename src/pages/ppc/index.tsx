@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/home/HeroSection';
@@ -28,8 +28,10 @@ interface HomeProps {
 
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.OFFSUB,
+    couponCodeForLifetime: PromoCodeName.OFFLFT,
+  });
 
   const {
     products,
@@ -38,10 +40,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
@@ -81,7 +80,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     : products?.individuals[Interval.Year][0].price.toString() || '9.99';
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="PPC Home"
+      lang={lang}
+      robots="noindex, follow"
+    >
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
