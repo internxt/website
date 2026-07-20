@@ -143,7 +143,6 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
   useEffect(() => {
       currencyService.filterCurrencyByCountry().then(({currency, currencyValue}) => {
-        console.log(currencyValue);
         setCurrency(currency);
         setCurrencyValue(currencyValue);
       })
