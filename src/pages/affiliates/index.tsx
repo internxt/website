@@ -20,8 +20,6 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
-import { currencyService } from '@/services/currency.service';
-import { useState, useEffect } from 'react';
 
 interface AffiliatesProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -138,37 +136,6 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
     },
   ];
 
-  const [currency, setCurrency] = useState("€");
-  const [currencyValue, setCurrencyValue] = useState("eur");
-
-  useEffect(() => {
-      currencyService.filterCurrencyByCountry().then(({currency, currencyValue}) => {
-        setCurrency(currency);
-        setCurrencyValue(currencyValue);
-      })
-      .catch(() => {
-        // NO OP
-      })
-    }, []);
-
-  const getPrice = () => {
-    if (currencyValue === 'usd') return 300;
-    return 263;
-  }
-
-  const price = `${currency}${getPrice()}`;
-  const HeroSectionText = langJson.HeroSection.title.blueText.replace('{price}', price);
-  const updatedWhyJoinSectionText = {
-  ...langJson.WhyJoinSection,
-  cards: [
-    {
-      ...langJson.WhyJoinSection.cards[0],
-      title: langJson.WhyJoinSection.cards[0].title.replace('{price}', price)
-    },
-    ...langJson.WhyJoinSection.cards.slice(1)
-  ]
-};
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
@@ -181,7 +148,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
             </div>
             <div className="flex w-full max-w-[533px] flex-col space-y-8">
               <h1 className="text-6xl font-semibold leading-tight">
-                <span className="text-primary">{HeroSectionText}</span>
+                <span className="text-primary">{langJson.HeroSection.title.blueText}</span>
                 {langJson.HeroSection.title.normalText}
               </h1>
               <p className="text-xl leading-tight text-gray-80">{langJson.HeroSection.description}</p>
@@ -240,7 +207,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
         }}
       />
 
-      <WhyJoinSection textContent={updatedWhyJoinSectionText} />
+      <WhyJoinSection textContent={langJson.WhyJoinSection} />
 
       <TextAndCardsGroupColumnSection
         TextComponent={
