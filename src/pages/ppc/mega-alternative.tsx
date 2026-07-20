@@ -15,13 +15,15 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
+import usePpcCoupon from '@/hooks/usePpcCoupon';
 
 const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
 
-  const router = useRouter();
-  const ppcCoupon = router.query.utm_source === 'google' ? PromoCodeName.GADS85 : PromoCodeName.META85;
+  const ppcCoupon = usePpcCoupon({
+    couponCode: PromoCodeName.Mega85,
+    couponCodeForLifetime: PromoCodeName.Mega85,
+  });
 
   const {
     products,
@@ -30,10 +32,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: ppcCoupon,
-    couponCodeForLifetime: ppcCoupon,
-  });
+  } = usePricing(ppcCoupon);
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -71,7 +70,13 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Mega alternative', 'mega-alternative')}
       </Script>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="PPC Mega Comparison"
+        lang={lang}
+        robots="noindex, follow"
+      >
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 

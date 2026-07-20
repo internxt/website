@@ -4,5 +4,6 @@ Disallow: /child-safety-book
 Disallow: /use-cases
 Disallow: /internxt-library
 Disallow: /online-privacy-ebook
+Disallow: /ppc
 Sitemap: https://internxt.com/sitemap.xml
 Sitemap: https://internxt.com/sitemap-top-urls.xml

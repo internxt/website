@@ -18,7 +18,6 @@ import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSe
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
 
-
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageSolutionsText;
@@ -89,12 +88,17 @@ const PrivateCloudStorageSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' },
+        ])}
       </Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="Private Cloud Storage Solutions"
+        segmentName="PPC Private Cloud Storage Solutions"
+        robots="noindex, follow"
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
@@ -165,7 +169,15 @@ const PrivateCloudStorageSolutions = ({
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' },
+          ]}
+        />
       </Layout>
     </>
   );
