@@ -14,11 +14,15 @@ const TRACKING_PARAMS = [
   'utm_source',
   'utm_campaign',
   'utm_id',
+  'utm_term',
+  'utm_content',
   'gclid',
   'irclickid',
   'gad_source',
   'gad_campaignid',
-  'gbraid'
+  'gbraid',
+  '_fbp',
+  '_fbc'
 ] as const;
 
 function parseUri(ctx: GetServerSidePropsContext) {
