@@ -74,7 +74,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
   const minimumPrice = decimalDiscount
-    ? (Math.floor(9.99 * (decimalDiscount / 100) * 100) / 100).toFixed(2)
+    ? (Math.floor((products?.individuals[Interval.Year][0].price || 9.99) * (decimalDiscount / 100) * 100) / 100).toFixed(2)
     : products?.individuals[Interval.Year][0].price.toString() || '9.99';
 
   return (
