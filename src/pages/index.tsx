@@ -5,7 +5,7 @@ import HeroSection from '@/components/home/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
@@ -16,7 +16,7 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
-import { useState, useEffect } from 'react';
+import { getMinimumPrice } from '@/utils/priceHelper';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -71,22 +71,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     );
   };
 
-  const [minimumPrice, setMinimumPrice] = useState<string>('9.99');
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
-
-  useEffect(() => {
-    const price = Number(products?.individuals?.[Interval.Year]?.[0]?.price);
-
-    if(!price) return;
-
-    const calculatedPrice = decimalDiscount
-    ? (Math.floor(price * (decimalDiscount / 100) * 100) / 100).toFixed(2)
-    : price.toFixed(2)
-
-    setMinimumPrice(calculatedPrice);
-  }, [products, decimalDiscount]);
+  const minimumPrice = getMinimumPrice(products, decimalDiscount);
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
