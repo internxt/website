@@ -315,7 +315,10 @@ export enum PromoCodeName {
   cybermind = 'CYBERMIND',
   bestindotech = 'BESTINDOTECH',
   homefacil = 'HOMEFACIL',
-  kioskom = 'KIOSKOM'
+  kioskom = 'KIOSKOM',
+  riki = 'RIKI',
+  kentangtech = 'KENTANGTECH',
+  wpunpas = 'WPUNPAS'
 }
 
 export interface PromoCodeProps {
