@@ -78,7 +78,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName={'Drive Comparison'}
+        segmentName={'PPC Drive Comparison'}
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />

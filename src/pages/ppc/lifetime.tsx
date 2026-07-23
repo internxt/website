@@ -107,7 +107,7 @@ function LifetimeSpecial({
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="Lifetime"
+        segmentName="PPC Lifetime"
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
       >
