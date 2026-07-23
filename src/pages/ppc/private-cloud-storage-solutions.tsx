@@ -101,7 +101,7 @@ const PrivateCloudStorageSolutions = ({
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
 
         <AnimatedHeroSection
           textComponent={

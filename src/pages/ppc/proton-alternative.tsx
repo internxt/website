@@ -83,7 +83,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} needH2 />

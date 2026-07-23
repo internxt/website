@@ -9,88 +9,88 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Lifetime cloud storage **for less**",
-    "valentinesTitle": "Love deserves **privacy**",
-    "description": "Encrypted lifetime cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
-    "subtitle": "Get {{discount}}% off now",
-    "claimDeal": "Claim deal"
+    "title": "Пожизненное облачное хранилище **дешевле**",
+    "valentinesTitle": "Любовь заслуживает **приватности**",
+    "description": "Зашифрованное пожизненное облачное хранилище по более низкой цене. Получите свою специальную скидку уже сегодня. Откройте для себя отмеченный наградами набор инструментов приватности Internxt с постквантово зашифрованным облачным хранилищем и многим другим.",
+    "subtitle": "Получите скидку {{discount}}% прямо сейчас",
+    "claimDeal": "Воспользоваться предложением"
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt is on mega-sale, has **excellent user reviews**, end-to-end and **post-quantum encryption**, and make their code completely **open source**.\"",
-    "mashable": "\"Get serious about **securing** your important data. Internxt was born with the ambition of giving people true **freedom online** by creating a more **ethical**, **secure**, **private**, and responsible digital world.\"",
-    "pcWorld": "\"Internxt's web access, file sync, and backup services are **impressive**. This **encrypted online storage** service is **easy,** and the current plans are a steal.\""
+    "pcMag": "\"Internxt проводит мега-распродажу, имеет **отличные отзывы пользователей**, сквозное и **постквантовое шифрование** и делает свой код полностью **открытым**.\"",
+    "mashable": "\"Отнеситесь серьёзно к **защите** своих важных данных. Internxt была создана с целью дать людям настоящую **свободу в интернете**, создавая более **этичный**, **безопасный**, **приватный** и ответственный цифровой мир.\"",
+    "pcWorld": "\"Веб-доступ, синхронизация файлов и службы резервного копирования Internxt **впечатляют**. Этот сервис **зашифрованного онлайн-хранилища** **прост**, а текущие тарифы — просто находка.\""
   },
   "TrustedBySection": {
     "description": "Internxt — это контроль над своими данными. С Internxt вы можете быть уверены, что ваши данные зашифрованы, защищены, а ваша цифровая жизнь принадлежит только вам."
   },
   "NextGenSection": {
-    "title": "Why choose Internxt permanent cloud storage?",
-    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
-    "cta": "Get to know us better",
+    "title": "Почему стоит выбрать постоянное облачное хранилище Internxt?",
+    "description": "Internxt возвращает вам контроль над вашей приватностью. В отличие от традиционных облачных хранилищ, мы гарантируем, что только у вас есть ключи к вашим зашифрованным данным, и мы не храним и не продаём ваши данные третьим лицам. Мы делаем всё, чтобы ваша информация оставалась в безопасности.",
+    "cta": "Узнайте нас лучше",
     "cardDescriptions": {
       "titles": [
-        "Unhackable and unleakable data",
-        "Next-generation security",
-        "Open source and transparent",
-        "Independently verified"
+        "Данные, которые невозможно взломать или слить",
+        "Безопасность нового поколения",
+        "Открытый исходный код и прозрачность",
+        "Независимо проверено"
       ],
       "descriptions": [
-        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
-        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
-        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+        "Мы не храним пароли или пользовательские данные, и все ваши данные зашифрованы при передаче и хранении. Internxt даёт вам полный контроль над вашими файлами. Ваши данные — ваше дело. Их защита — наше.",
+        "Internxt — единственное облачное хранилище, которое автоматически шифрует ваши файлы с помощью сквозной и постквантовой криптографии, а значит, доступ к вашим данным есть только у вас.",
+        "Мы гордимся тем, что делаем, поэтому наш код опубликован на GitHub, и любой может лично изучить, проверить и подтвердить его. Нам нечего скрывать, кроме ваших данных.",
+        "Мы полностью соответствуем GDPR и на 100% безопасны, но не верьте нам на слово. Internxt была независимо проверена и подтверждена Securitum, ведущей европейской компанией по тестированию на проникновение."
       ]
     }
   },
   "ctaSection": {
-    "titleWithoutDiscount": "Complete Digital Privacy Suite",
-    "title": "One time payment cloud storage",
-    "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
-    "cta": "Accept Invite"
+    "titleWithoutDiscount": "Полный набор инструментов цифровой приватности",
+    "title": "Облачное хранилище с единоразовой оплатой",
+    "description": "Обретите спокойствие с этой эксклюзивной скидкой. Полная приватность и безопасность.",
+    "cta": "Принять приглашение"
   },
   "ctaSection2": {
-    "title": "Among Internxt’s lifetime plans: Which one should I choose? 1TB, 3TB, or 5TB?",
-    "description": "All our plans give you everything you need to store your files privately in the cloud. If you want complete privacy, advanced cloud management, and all of Internxt’s features, such as Meet and Mail, the 5TB Ultimate plan is the best choice for total control and maximum privacy.",
-    "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
-    "cta": "Choose Plan"
+    "title": "Среди пожизненных тарифов Internxt: какой выбрать? 1TB, 3TB или 5TB?",
+    "description": "Все наши тарифы дают вам всё необходимое для приватного хранения файлов в облаке. Если вам нужна полная приватность, продвинутое управление облаком и все функции Internxt, такие как Meet и Mail, тариф Ultimate на 5TB — лучший выбор для полного контроля и максимальной приватности.",
+    "descriptionWithoutDisocunt": "Ощутите полную цифровую приватность с Internxt",
+    "cta": "Выбрать тариф"
   },
   "tableSection": {
-    "title": "Internxt Plans",
-    "valentinesTitle": "Secure love - ",
-    "hotLabel": "{{discount}}% off",
+    "title": "Тарифы Internxt",
+    "valentinesTitle": "Безопасная любовь - ",
+    "hotLabel": "скидка {{discount}}%",
     "planTitles": {
-      "header": "Select your lifetime plan",
-      "individuals": "Annual Plans",
-      "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
+      "header": "Выберите свой пожизненный тариф",
+      "individuals": "Годовые тарифы",
+      "homePage": "Выберите подходящий вам тариф",
+      "lifetime": "Пожизненные тарифы",
+      "business": "Бизнес-тарифы",
       "lifetimeCampaign": {
-        "blueText": "50% off",
-        "normalText": "on all our exclusive lifetime plans"
+        "blueText": "скидка 50%",
+        "normalText": "на все наши эксклюзивные пожизненные тарифы"
       }
     },
-    "lifetimeDescription": "Pay once and enjoy privacy and security for life",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
-    "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
-    "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
+    "lifetimeDescription": "Заплатите один раз и наслаждайтесь приватностью и безопасностью на всю жизнь",
+    "planDescription": "Все тарифы Internxt полнофункциональны и дают полный доступ к нашему отмеченному наградами набору инструментов приватности, включающему Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet и Mail.",
+    "businessDescription": "В настоящее время мы работаем над новыми тарифами Internxt, разработанными исключительно для защиты вашего бизнеса, ваших сотрудников и вашей прибыльности.",
+    "businessDescription2": "Обеспечьте безопасность данных вашей компании с помощью тарифов зашифрованного облачного хранилища Internxt.",
     "billingFrequency": {
-      "monthly": "Monthly",
-      "annually": "Annual",
-      "lifetime": "Lifetime",
-      "individual": "Individual",
-      "business": "Business"
+      "monthly": "Ежемесячно",
+      "annually": "Ежегодно",
+      "lifetime": "Пожизненно",
+      "individual": "Индивидуальный",
+      "business": "Бизнес"
     },
     "freePlanCard": {
-      "eyeBrow": "Free",
-      "description": "Get 1 GB of encrypted cloud storage for free",
-      "cta": "Select plan"
+      "eyeBrow": "Бесплатно",
+      "description": "Получите 1 ГБ зашифрованного облачного хранилища бесплатно",
+      "cta": "Выбрать тариф"
     },
     "features": {
-      "endToEnd": "End-to-end encryption",
-      "openSource": "Open source and audited",
-      "anonymousAccount": "Anonymous account creation",
-      "premiumSupport": "Premium customer support",
-      "guarantee": "30-day money-back guarantee"
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый код и аудит",
+      "anonymousAccount": "Анонимное создание аккаунта",
+      "premiumSupport": "Премиум-поддержка клиентов",
+      "guarantee": "Гарантия возврата денег в течение 30 дней"
     },
     "planStorage": {
       "essential": "1TB",
@@ -101,102 +101,102 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "All kinds of files, all kinds of devices"
+        "line1": "Любые файлы, любые устройства"
       }
     },
     "section2": {
       "title": {
-        "line1": "Find your files",
-        "line2": "on all your",
-        "line3": "devices"
+        "line1": "Находите свои файлы",
+        "line2": "на всех своих",
+        "line3": "устройствах"
       },
       "subtitle": {
-        "line1": "Securely access all your files from ",
-        "line2": "your computer, smartphone, tablet, ",
-        "line3": "or any device with a connection to ",
-        "line4": "the internet via the most secure ",
-        "line5": "cloud storage app."
+        "line1": "Безопасно получайте доступ ко всем своим файлам с ",
+        "line2": "компьютера, смартфона, планшета ",
+        "line3": "или любого устройства с подключением к ",
+        "line4": "интернету через самое безопасное ",
+        "line5": "приложение облачного хранилища."
       }
     },
     "section3": {
       "title": {
-        "line1": "Keep your files",
-        "line2": "organized and",
-        "line3": "accessible from",
-        "line4": "anywhere"
+        "line1": "Держите свои файлы",
+        "line2": "организованными и",
+        "line3": "доступными",
+        "line4": "откуда угодно"
       },
       "subtitle": {
-        "line1": "Internxt Drive lets you organize your",
-        "line2": "files in folders, rename them, and filter",
-        "line3": "a list of files to find what you want faster.",
-        "line4": "You can even backup your computer",
-        "line5": "folders so you always have the most",
-        "line6": "recent changes of your most important files",
+        "line1": "Internxt Drive позволяет упорядочивать",
+        "line2": "файлы по папкам, переименовывать их и фильтровать",
+        "line3": "список файлов, чтобы быстрее находить нужное.",
+        "line4": "Вы даже можете создавать резервные копии папок",
+        "line5": "компьютера, чтобы всегда иметь самые",
+        "line6": "свежие изменения ваших важнейших файлов",
         "line7": ""
       }
     },
     "section4": {
       "title": {
-        "line1": "Share your files",
-        "line2": "with ease,",
-        "line3": "security is on us"
+        "line1": "Делитесь файлами",
+        "line2": "легко,",
+        "line3": "о безопасности позаботимся мы"
       },
       "subtitle": {
-        "line1": "Internxt Drive focuses on privacy and",
-        "line2": "security, so you only have to focus on",
-        "line3": "what matters to you, like sharing files",
-        "line4": "with your coworkers, or the plane tickets",
-        "line5": "for your next holiday with family. You",
-        "line6": "choose who you want to share them with",
-        "line7": "and how many times you want",
-        "line8": "them to be downloaded."
+        "line1": "Internxt Drive сосредоточен на приватности и",
+        "line2": "безопасности, чтобы вы могли сосредоточиться только на",
+        "line3": "том, что важно для вас, например на обмене файлами",
+        "line4": "с коллегами или билетами на самолёт",
+        "line5": "для следующего семейного отпуска. Вы",
+        "line6": "выбираете, с кем хотите ими поделиться",
+        "line7": "и сколько раз вы хотите,",
+        "line8": "чтобы их скачали."
       }
     },
     "section5": {
-      "eyebrow": "NEW FEATURE",
+      "eyebrow": "НОВАЯ ФУНКЦИЯ",
       "title": {
-        "line1": "Back up what",
-        "line2": "matters to you"
+        "line1": "Создавайте резервные копии того,",
+        "line2": "что важно для вас"
       },
       "subtitle": {
-        "line1": "Now you can keep the latest draft",
-        "line2": "of that super important project",
-        "line3": "or your university homework you are",
-        "line4": "working on, safe and current in your",
+        "line1": "Теперь вы можете хранить последний черновик",
+        "line2": "того самого важного проекта",
+        "line3": "или университетской работы, над которой вы",
+        "line4": "трудитесь, в безопасности и актуальном виде в вашем",
         "line5": "Internxt Drive."
       }
     },
     "section6": {
       "title": {
-        "line1": "Sync your files in total privacy",
+        "line1": "Синхронизируйте свои файлы в полной приватности",
         "line2": ""
       }
     },
     "section7": {
       "title": {
-        "line1": "Keep your files secure",
-        "line2": "and private"
+        "line1": "Держите свои файлы в безопасности",
+        "line2": "и приватности"
       },
       "subtitle": {
-        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
-        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
+        "line1": "Приватность и безопасность лежат в основе всего, что мы делаем; мы строим наш бизнес не на данных или",
+        "line2": "рекламе, а на доверии. Мы уважаем ваши права и создаём замечательные инструменты вокруг них, а не против них."
       },
-      "cta": "Our commitment on privacy",
+      "cta": "Наша приверженность приватности",
       "card1": {
-        "title": "Next-generation security",
-        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
+        "title": "Безопасность нового поколения",
+        "subtitle": "Internxt Drive защищает ваши файлы с помощью сквозной и постквантовой криптографии. Мы первый сервис облачного хранения, защищающий данные от будущих угроз со стороны квантовых компьютеров."
       },
       "card2": {
-        "title": "Zero-knowledge technology",
-        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+        "title": "Технология нулевого разглашения",
+        "subtitle": "Мы никогда не храним и не передаём файлы, пароли пользователей или ключи шифрования в незашифрованном или нехешированном виде."
       },
       "card3": {
-        "title": "Privacy by design",
-        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+        "title": "Приватность по умолчанию",
+        "subtitle": "Мы разрабатываем наши продукты с мыслью о пользователе, и его приватность обязательна в мире, управляемом данными, в котором мы живём."
       },
       "card4": {
-        "title": "Open source and transparent",
-        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Открытый исходный код и прозрачность",
+        "subtitle": "Мы гордимся тем, что делаем, поэтому наш код опубликован на GitHub, и любой может лично изучить, проверить и подтвердить его. Нам нечего скрывать, кроме ваших данных."
       }
     }
   }

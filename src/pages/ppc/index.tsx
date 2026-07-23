@@ -87,7 +87,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed hideLanguage />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
