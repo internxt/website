@@ -155,6 +155,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
               <div className="flex flex-row items-center justify-center gap-4 pb-8 lg:items-start lg:justify-start">
                 <button
+                  type="button"
                   onClick={() => {
                     window.open(HERO_SECTION_CTA_BUTTON, '_blank', 'noopener noreferrer nofollow');
                   }}

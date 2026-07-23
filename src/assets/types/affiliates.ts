@@ -96,6 +96,6 @@ export interface WhatWeDoSection {
 
 export interface WhyJoinSection {
   title: string;
-  cards: Number1Section[];
+  cards: string[];
   cta: string;
 }
