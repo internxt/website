@@ -112,11 +112,11 @@ module.exports = {
         destination: '/about',
         permanent: false,
       },
-      {
-        source: '/:lang/lifetime',
+      ...['es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw'].map((lang) => ({
+        source: `/${lang}/lifetime`,
         destination: '/lifetime',
         permanent: false,
-      },
+      })),
       {
         source: '/:lang/team',
         destination: '/:lang/about',
