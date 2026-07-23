@@ -104,7 +104,10 @@ export const ALLOWED_PATHS = [
   'cybermind',
   'bestindotech',
   'homefacil',
-  'kioskom'
+  'kioskom',
+  'riki',
+  'kentangtech',
+  'wpunpas'
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -253,7 +256,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'cybermind',
   'bestindotech',
   'homefacil',
-  'kioskom'
+  'kioskom',
+  'riki',
+  'kentangtech',
+  'wpunpas'
 ]);
 
 export const COUPON_CODES = {
@@ -358,7 +364,10 @@ export const COUPON_CODES = {
   cybermind: PromoCodeName.cybermind,
   bestindotech: PromoCodeName.bestindotech,
   homefacil: PromoCodeName.homefacil,
-  kioskom: PromoCodeName.kioskom
+  kioskom: PromoCodeName.kioskom,
+  riki: PromoCodeName.riki,
+  kentangtech: PromoCodeName.kentangtech,
+  wpunpas: PromoCodeName.wpunpas
 };
 
 interface OfferConfig {
