@@ -135,7 +135,8 @@
         "cloudDocuments": "雲端文件儲存",
         "lifetime": "終身雲端儲存",
         "freeCloudStorage": "免費雲端儲存",
-        "fileTransfer": "安全檔案傳輸"
+        "fileTransfer": "安全檔案傳輸",
+        "mail": "加密電子郵件"
       }
     }
   }

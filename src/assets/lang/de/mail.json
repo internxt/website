@@ -1,0 +1,119 @@
+{
+    "HeroSection": {
+        "label": "Internxt Mail",
+        "title": "Die beste verschlüsselte E-Mail",
+        "description": "Internxt hält Ihre E-Mails mit einer extrem leistungsstarken Verschlüsselung privat und sicher.",
+        "cta": "Internxt Mail holen",
+        "garantee": "Inbegriffen in den Ultimate-Tarifen"
+    },
+    "DriveSection": {
+        "title": "Internxt Mail",
+        "description":  [
+            "Halten Sie Ihre E-Mails privat mit Internxt Mail, einer sicheren und verschlüsselten E-Mail, die für Ihre Privatsphäre entwickelt wurde.",
+            "Entwickelt mit Open-Source-Software und Post-Quanten-Verschlüsselung, sind Ihre E-Mails vor digitalen Spionen und Hackern geschützt, und es wird verhindert, dass Big Tech Sie online überwacht."
+        ]
+    },
+    "CoreFeatures": {
+        "title": "Die sicherste E-Mail-Alternative zu Big Tech",
+        "descriptions": [
+            "Beteiligen Sie sich gemeinsam mit Internxt am Aufbau eines sichereren, privaten Web-Erlebnisses mit unserer verschlüsselten, privaten Produktsuite, die Ihnen die Kontrolle über Ihre Privatsphäre gibt.",
+            "Nutzen Sie Mail, Meet, Antivirus und VPN als Teil Ihres Internxt Drive-Tarifs auf Windows, Mac oder Linux."
+        ],
+        "accordionCards": {
+            "titles":[
+                "Europäischer Datenschutz",
+                "Sicherheit",
+                "Nachhaltigkeit"
+            ],
+            "descriptions":[
+                "Internxt entspricht der DSGVO, die Ihre Daten mit den besten Datenschutzgesetzen für Sicherheit, Transparenz und Kontrolle über Ihre persönlichen Daten schützt.",
+                "Internxt verwendet Ende-zu-Ende- und Post-Quanten-Verschlüsselung und bietet Ihnen die beste verschlüsselte E-Mail für Ihre Privatsphäre.",
+                "Wir setzen uns für eine nachhaltigere und grünere Zukunft ein, daher nutzen unsere Produkte ausschließlich erneuerbare und energieeffiziente Energietechnologien."
+            ]
+        }
+    },
+    "MailFeatureSection": {
+        "title": "Verschlüsselte E-Mail, gebaut mit fortschrittlicher Technologie",
+        "description": "Internxt Mail verwendet modernste Post-Quanten- und Zero-Knowledge-Verschlüsselung, um Ihr Recht auf Privatsphäre und Daten zu schützen und sicherzustellen, dass nur Sie Ihre E-Mails einsehen können. Mit Internxt können nur Sie Ihre E-Mails und Anhänge sehen.",
+        "scrollableSection": {
+            "titles": [
+                "Post-Quanten-Kryptographie",
+                "Keine Tracker, keine Werbung",
+                "Sicher vor Spam und Phishing",
+                "Open Source und auditiert"
+            ],
+            "descriptions": [
+                "Die fortschrittliche Post-Quanten-Verschlüsselung bietet maximale Sicherheit und liefert Ihnen die sicherste E-Mail, die Ihre Online-Sicherheit zukunftssicher macht.",
+                "Genießen Sie ein sicheres, werbefreies E-Mail-Erlebnis. Kein Tracking mehr, keine personalisierte Werbung mehr, die Ihnen im Web folgt. Einfach reine, private Kommunikation.",
+                "Internxt Mail identifiziert und blockiert Phishing-, Spam- und Junk-E-Mails und hält Ihren Posteingang sauber, organisiert und frei von Bedrohungen für Ihre Daten.",
+                "Alle unsere Produkte, einschließlich Internxt Mail, sind Open Source, unabhängig auditiert und für ihre preisgekrönte Verschlüsselung verifiziert."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Ihre E-Mail. Ihre Angelegenheit.",
+        "description": "E-Mails in absoluter Privatsphäre senden und empfangen",
+        "cta": "Internxt Mail holen"
+    },
+    "CtaSectionV2": {
+        "title": "Die private E-Mail, der Sie vertrauen können",
+        "description": "E-Mails mit dem absoluten Vertrauen schreiben, dass niemand Sie ausspioniert.",
+        "cta": "Internxt Mail holen"
+    },
+    "DesignedSection": {
+        "title": "Entwickelt, um alle Datenschutzbedürfnisse zu erfüllen",
+        "description": "Wir glauben, dass jeder ein Recht auf Privatsphäre hat. Deshalb wurde Internxt Mail entwickelt, um den Bedürfnissen aller gerecht zu werden, die einen sicheren E-Mail-Anbieter benötigen.",
+        "scrollableSection": {
+            "images": ["personal", "business", "lawyers", "medical"],
+            "titles": ["Privat", "Unternehmen", "Anwälte", "Medizinbereich"],
+            "descriptions": [
+                "Verschlüsselte E-Mail, die all Ihre Nachrichten und Anhänge privat hält.",
+                "Verhindern Sie Datenpannen und Phishing mit verschlüsselten und privaten E-Mails.",
+                "DSGVO-konforme und verschlüsselte E-Mail, um das Durchsickern sensibler Daten zu verhindern.",
+                "E-Mails an andere senden, um Informationen in absoluter Privatsphäre auszutauschen und zu besprechen, um das Mandantenprivileg zu schützen."
+            ]
+        }
+    },
+    "SemanticAccordion": {
+        "title": "Fragen? Wir haben Antworten",
+        "items": [
+            {
+                "question": "Was ist Internxt Mail?",
+                "answer": [
+                    "Internxt Mail ist die beste verschlüsselte E-Mail zum Senden privater Nachrichten. Mit Internxt Mail garantieren wir, dass niemand außer Ihnen auf Ihre Nachrichten oder Anhänge zugreifen kann, die alle mit Post-Quanten- und Zero-Knowledge-Verschlüsselung gesichert sind."
+                ]
+            },
+            {
+                "question": "Warum sollte ich eine verschlüsselte E-Mail verwenden?",
+                "answer": [
+                    "Eine verschlüsselte E-Mail verhindert Datenpannen und schützt Ihr Recht auf Privatsphäre, da Ihre Daten für alle außer Ihnen unzugänglich sind. Mit Internxt Mail können Sie dank unserer fortschrittlichen Verschlüsselungsprotokolle Geschäftsdetails, persönliche Nachrichten oder vertrauliche Dokumente absolut sicher versenden."
+                ]
+            },
+            {
+                "question": "Ist Internxt Mail eine Alternative zu Gmail?",
+                "answer": [
+                    "Ja, Internxt Mail ist eine sichere Alternative zu Gmail, da Sie die Verschlüsselungsschlüssel für die von Ihnen gesendeten E-Mails besitzen. Im Gegensatz dazu behält Gmail diese Schlüssel auf seinen Servern, auf denen die Nachrichten gespeichert werden. Sie können deren Inhalt lesen oder sie auf Anfrage an Behörden weitergeben, da es sich nicht um einen Zero-Knowledge-Dienst handelt."
+                ]
+            },
+            {
+                "question": "Ist Internxt Mail kostenlos?",
+                "answer": [
+                    "Internxt Mail ist verfügbar, wenn Sie eines unserer Premium-Abonnements abschließen. Dies bietet Zugriff auf unsere gesamte Suite datenschutzorientierter Produkte, einschließlich Internxt Drive, Mail, Antivirus und VPN."
+                ]
+            },
+            {
+                "question": "Wie kontaktiere ich den Support?",
+                "answer": [
+                    "Sie finden nicht, wonach Sie suchen? Sie können unser Customer Success Team per Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
+                ]
+            },
+            {
+                "question": "Wie sieht die Rückerstattungsrichtlinie von Internxt aus?",
+                "answer": [
+                    "Internxt bietet für alle kostenpflichtigen Abonnements eine standardmäßige 30-Tage-Geld-zurück-Garantie, die ab dem Zeitpunkt Ihres Abonnements gilt.",
+                    "Wenn Sie jemals mit unserem Service unzufrieden sein sollten, senden Sie uns eine E-Mail an hello@internxt.com und beantragen Sie eine Rückerstattung."
+                ]
+            }
+        ]
+    }
+}

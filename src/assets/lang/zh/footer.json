@@ -135,7 +135,8 @@
         "cloudDocuments": "云端文档存储",
         "lifetime": "终身云存储",
         "freeCloudStorage": "免费云存储",
-        "fileTransfer": "安全文件传输"
+        "fileTransfer": "安全文件传输",
+        "mail": "加密电子邮件"
       }
     }
   }

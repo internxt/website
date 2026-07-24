@@ -765,6 +765,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.features.fileTransfer}
                     </Link>
+                    <Link
+                      href="/mail"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.mail}
+                    </Link>
                   </div>
                 </div>
               </div>

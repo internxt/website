@@ -573,5 +573,10 @@
     "id": "secure-file-transfer",
     "title": "Internxt - Transfert de fichiers sécurisé",
     "description": "Internxt propose un service de transfert de fichiers sécurisé pour chiffrer et protéger vos fichiers, vous permettant ainsi de contrôler qui peut accéder à vos données."
+  },
+  {
+    "id": "mail",
+    "title": "Internxt Mail - Le meilleur e-mail chiffré pour la confidentialité.",
+    "description": "Internxt Mail est une solution de messagerie chiffrée qui protège votre boîte de réception. Grâce au chiffrement post-quantique, Internxt est le service de messagerie le plus sécurisé pour la confidentialité."
   }
 ]
