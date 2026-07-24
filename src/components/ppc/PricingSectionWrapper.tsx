@@ -97,15 +97,15 @@ const HotLabel = ({ textContent, discountValue, darkMode, isValentinesMode }) =>
     return null;
   }
 
+const badgeClass = isValentinesMode
+  ? 'flex gap-0.5 bg-pink-10 text-pink-80'
+  : darkMode
+    ? 'bg-purple-100 text-purple-8'
+    : 'bg-neutral-37 text-primary';
+
   return (
     <span
-      className={`flex rounded-sm ${
-        isValentinesMode
-          ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-          : darkMode
-          ? 'bg-purple-100 text-purple-8'
-          : 'bg-neutral-37 text-primary'
-      } px-1 py-0.5 text-xl font-semibold `}
+      className={`flex rounded-sm ${badgeClass} px-1 py-0.5 text-xl font-semibold `}
     >
       {isValentinesMode ? textContent.valentinesTitle : ''}
       {formatDiscountLabel(textContent.hotLabel, discountValue)}
@@ -288,7 +288,6 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
-          isMonthly
           darkMode={darkMode}
           differentRecommended={differentRecommended}
           showPromo={showPromo}

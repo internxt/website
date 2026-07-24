@@ -2,12 +2,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowCircleDown } from '@phosphor-icons/react';
+import { ArrowCircleDown, Check } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import styles from '@/components/privacy/HeroSection.module.scss';
 import Link from 'next/link';
-import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
 
 type OSType = 'Android' | 'iPhone' | 'Windows' | 'MacOS' | 'Linux';

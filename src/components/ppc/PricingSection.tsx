@@ -9,7 +9,6 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/ppc/FreePlanCard';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
-import { PromoCodeProps } from '@/lib/types';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -23,13 +22,11 @@ interface PriceTableProps {
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
-  businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   hideSwitchSelector?: boolean;
-  lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
@@ -39,7 +36,6 @@ interface PriceTableProps {
     lifetime?: number;
     business?: number;
   };
-  isAnnual?: boolean;
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
@@ -71,7 +67,6 @@ export const PricingSection = ({
   businessStorageSelected,
   lang,
   popularPlanBySize = '3TB',
-  isFamilyPage,
   onPlanTypeChange,
   onBusinessStorageChange,
   onIndividualSwitchToggled,
@@ -88,12 +83,10 @@ export const PricingSection = ({
   premiumAndUltimatePlan = false,
   freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
-  const banner = require('@/assets/lang/en/banners.json');
 
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = '15';
   const showLoadingCards = loadingCards;
-  const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
@@ -109,9 +102,8 @@ export const PricingSection = ({
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
-  const popularPlan = differentRecommended
-    ? popularPlanBySize
-    : billingFrequency === Interval.Lifetime
+  const popularPlan =
+  differentRecommended || billingFrequency === Interval.Lifetime
     ? popularPlanBySize
     : '3TB';
 
@@ -174,10 +166,10 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(3)
+          {new Array(3)
             .fill(0)
             .map((_, i) => (
-              <CardSkeleton key={i} />
+              <CardSkeleton key={'skeleton' + i} />
             ))}
         </div>
       </Transition>

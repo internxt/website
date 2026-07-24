@@ -141,6 +141,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
         <div className="mx-auto flex w-full max-w-7xl justify-end px-6 lg:px-0">
           <div className="flex w-[120px] justify-between">
             <button
+              type="button"
               onClick={scrollLeft}
               disabled={!scrollState.canGoLeft}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
@@ -151,6 +152,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
               <CaretLeft className="text-primary" size={24} />
             </button>
             <button
+              type="button"
               onClick={scrollRight}
               disabled={!scrollState.canGoRight}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${

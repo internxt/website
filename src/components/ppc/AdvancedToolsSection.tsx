@@ -43,7 +43,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
   const scrollLeft = () => {
     if (!scrollContainerRef.current) return;
     scrollContainerRef.current.scrollBy({
-      left: -309, // 293px de card + 16px de gap
+      left: -309,
       behavior: 'smooth',
     });
   };
@@ -209,6 +209,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
           <div className="flex justify-end px-5">
             <div className="flex w-[120px] justify-between">
               <button
+                type="button"
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
                 className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
@@ -219,6 +220,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
               </button>
               <button
+                type="button"
                 onClick={scrollRight}
                 disabled={!canScrollRight}
                 className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${

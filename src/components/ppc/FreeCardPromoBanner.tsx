@@ -54,7 +54,6 @@ export const FreeCardPromoBannerPPC = () => {
          fixed bottom-0 left-0 right-0 top-0 z-50 h-screen w-full bg-black bg-opacity-50 px-5`}
     >
       <div className="flex w-full flex-col items-center justify-center">
-        {/* absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 */}
         <div
           className={`relative flex h-[457px] w-full flex-col overflow-hidden rounded-2xl
         text-neutral-900 lg:w-3/4`}
@@ -62,7 +61,7 @@ export const FreeCardPromoBannerPPC = () => {
             background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
           }}
         >
-          <button className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
+          <button type="button" className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
             <X size={32} />
           </button>
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
@@ -77,7 +76,7 @@ export const FreeCardPromoBannerPPC = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center gap-6 lg:flex-row">
-                <Button text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
+                <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
                 <button
                   className="text-xl font-medium text-primary underline hover:no-underline"
                   onClick={onContinueWithFreePlanButtonClicked}
