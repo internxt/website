@@ -97,11 +97,13 @@ const HotLabel = ({ textContent, discountValue, darkMode, isValentinesMode }) =>
     return null;
   }
 
-const badgeClass = isValentinesMode
-  ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-  : darkMode
-    ? 'bg-purple-100 text-purple-8'
-    : 'bg-neutral-37 text-primary';
+let badgeClass = 'bg-neutral-37 text-primary';
+
+if (isValentinesMode) {
+  badgeClass = 'flex gap-0.5 bg-pink-10 text-pink-80';
+} else if (darkMode) {
+  badgeClass = 'bg-purple-100 text-purple-8';
+}
 
   return (
     <span

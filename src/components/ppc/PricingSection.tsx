@@ -24,7 +24,6 @@ interface PriceTableProps {
   hideBusinessCards?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
-  isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   hideSwitchSelector?: boolean;
   isMonthly?: boolean;

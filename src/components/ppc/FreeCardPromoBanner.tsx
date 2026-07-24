@@ -78,6 +78,7 @@ export const FreeCardPromoBannerPPC = () => {
               <div className="flex flex-col items-center gap-6 lg:flex-row">
                 <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
                 <button
+                  type="button"
                   className="text-xl font-medium text-primary underline hover:no-underline"
                   onClick={onContinueWithFreePlanButtonClicked}
                 >
