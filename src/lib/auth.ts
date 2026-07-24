@@ -5,7 +5,7 @@ import { isCelloExpired } from '@/lib/cookies';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'https://1e02994d.drive-web.pages.dev';
+const AUTH_FLOW_URL = 'https://drive.internxt.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
