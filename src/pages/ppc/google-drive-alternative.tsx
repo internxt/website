@@ -21,7 +21,8 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
 const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'google-drive-alternative');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'google-drive-alternative');
+
   const ppcCoupon = usePpcCoupon({
     couponCode: PromoCodeName.gdrive,
     couponCodeForLifetime: PromoCodeName.gdrive
@@ -32,7 +33,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing(ppcCoupon);
 
@@ -76,12 +77,12 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         {sm_breadcrumb('Google drive alternative', 'google-drive-alternative')}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName={'PPC Drive Comparison'}
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage/>
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 

@@ -33,8 +33,8 @@ function LifetimeSpecial({
   footerLang,
   navbarLang,
   testimonialsJson,
-}: LifetimeSpecialProps): JSX.Element {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+}: Readonly<LifetimeSpecialProps>): JSX.Element {
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'lifetime');
   const ppcCoupon = usePpcCoupon({
     couponCode: PromoCodeName.lifetime,
     couponCodeForLifetime: PromoCodeName.lifetime
@@ -45,7 +45,7 @@ function LifetimeSpecial({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing(ppcCoupon);
 
@@ -54,10 +54,9 @@ function LifetimeSpecial({
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string' ? text.replaceAll(/{{discount}}/g, percentOff) : text;
   };
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -105,13 +104,13 @@ function LifetimeSpecial({
         ])}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="PPC Lifetime"
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed hideLanguage/>
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
         <ReviewsSection textContent={testimonialsJson.ReviewSection} />
