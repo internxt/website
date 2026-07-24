@@ -112,7 +112,7 @@ const Drive = ({
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
         <HeroSection textContent={textContent.HeroSection} download={download} />
 
         <DriveSection textContent={textContent.DriveSection} />

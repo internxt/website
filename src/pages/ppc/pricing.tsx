@@ -126,7 +126,7 @@ const Pricing = ({
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}

@@ -9,88 +9,88 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Lifetime cloud storage **for less**",
-    "valentinesTitle": "Love deserves **privacy**",
-    "description": "Encrypted lifetime cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
-    "subtitle": "Get {{discount}}% off now",
-    "claimDeal": "Claim deal"
+    "title": "Stockage cloud à vie **pour moins cher**",
+    "valentinesTitle": "L'amour mérite la **confidentialité**",
+    "description": "Stockage cloud chiffré à vie pour moins cher. Profitez de votre remise spéciale dès aujourd'hui. Accédez à la suite de confidentialité primée d'Internxt avec un stockage cloud chiffré post-quantique et bien plus encore.",
+    "subtitle": "Obtenez {{discount}}% de réduction dès maintenant",
+    "claimDeal": "Profiter de l'offre"
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt is on mega-sale, has **excellent user reviews**, end-to-end and **post-quantum encryption**, and make their code completely **open source**.\"",
-    "mashable": "\"Get serious about **securing** your important data. Internxt was born with the ambition of giving people true **freedom online** by creating a more **ethical**, **secure**, **private**, and responsible digital world.\"",
-    "pcWorld": "\"Internxt's web access, file sync, and backup services are **impressive**. This **encrypted online storage** service is **easy,** and the current plans are a steal.\""
+    "pcMag": "\"Internxt est en méga-promotion, bénéficie d'**excellents avis d'utilisateurs**, d'un chiffrement de bout en bout et **post-quantique**, et rend son code entièrement **open source**.\"",
+    "mashable": "\"Prenez au sérieux la **protection** de vos données importantes. Internxt est né avec l'ambition d'offrir aux gens une véritable **liberté en ligne** en créant un monde numérique plus **éthique**, **sûr**, **privé** et responsable.\"",
+    "pcWorld": "\"L'accès web, la synchronisation des fichiers et les services de sauvegarde d'Internxt sont **impressionnants**. Ce service de **stockage en ligne chiffré** est **simple**, et les offres actuelles sont une véritable aubaine.\""
   },
   "TrustedBySection": {
     "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
   },
   "NextGenSection": {
-    "title": "Why choose Internxt permanent cloud storage?",
-    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
-    "cta": "Get to know us better",
+    "title": "Pourquoi choisir le stockage cloud permanent d'Internxt ?",
+    "description": "Internxt vous redonne le contrôle de votre confidentialité. Contrairement au stockage cloud traditionnel, nous garantissons que vous seul détenez les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous mettons tout en œuvre pour que vos informations restent en sécurité.",
+    "cta": "Apprenez à mieux nous connaître",
     "cardDescriptions": {
       "titles": [
-        "Unhackable and unleakable data",
-        "Next-generation security",
-        "Open source and transparent",
-        "Independently verified"
+        "Des données impossibles à pirater ou à divulguer",
+        "Sécurité de nouvelle génération",
+        "Open source et transparent",
+        "Vérifié de manière indépendante"
       ],
       "descriptions": [
-        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
-        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
-        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+        "Nous ne stockons ni mots de passe ni données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données vous appartiennent. Les protéger est notre affaire.",
+        "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers grâce à la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
+        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par tous. Nous n'avons rien à cacher, si ce n'est vos données.",
+        "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié de manière indépendante par Securitum, la principale entreprise de tests d'intrusion d'Europe."
       ]
     }
   },
   "ctaSection": {
-    "titleWithoutDiscount": "Complete Digital Privacy Suite",
-    "title": "One time payment cloud storage",
-    "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
-    "cta": "Accept Invite"
+    "titleWithoutDiscount": "Suite complète de confidentialité numérique",
+    "title": "Stockage cloud en paiement unique",
+    "description": "Profitez de la tranquillité d'esprit avec cette remise exclusive. Confidentialité et sécurité totales.",
+    "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Among Internxt’s lifetime plans: Which one should I choose? 1TB, 3TB, or 5TB?",
-    "description": "All our plans give you everything you need to store your files privately in the cloud. If you want complete privacy, advanced cloud management, and all of Internxt’s features, such as Meet and Mail, the 5TB Ultimate plan is the best choice for total control and maximum privacy.",
-    "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
-    "cta": "Choose Plan"
+    "title": "Parmi les offres à vie d'Internxt : laquelle choisir ? 1TB, 3TB ou 5TB ?",
+    "description": "Toutes nos offres vous donnent tout ce dont vous avez besoin pour stocker vos fichiers en toute confidentialité dans le cloud. Si vous souhaitez une confidentialité complète, une gestion avancée du cloud et toutes les fonctionnalités d'Internxt, comme Meet et Mail, l'offre Ultimate 5TB est le meilleur choix pour un contrôle total et une confidentialité maximale.",
+    "descriptionWithoutDisocunt": "Vivez une confidentialité numérique complète avec Internxt",
+    "cta": "Choisir l'offre"
   },
   "tableSection": {
-    "title": "Internxt Plans",
-    "valentinesTitle": "Secure love - ",
-    "hotLabel": "{{discount}}% off",
+    "title": "Offres Internxt",
+    "valentinesTitle": "Amour sécurisé - ",
+    "hotLabel": "{{discount}}% de réduction",
     "planTitles": {
-      "header": "Select your lifetime plan",
-      "individuals": "Annual Plans",
-      "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
+      "header": "Sélectionnez votre offre à vie",
+      "individuals": "Offres annuelles",
+      "homePage": "Choisissez l'offre qui vous convient",
+      "lifetime": "Offres à vie",
+      "business": "Offres entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% off",
-        "normalText": "on all our exclusive lifetime plans"
+        "blueText": "50% de réduction",
+        "normalText": "sur toutes nos offres à vie exclusives"
       }
     },
-    "lifetimeDescription": "Pay once and enjoy privacy and security for life",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
-    "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
-    "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
+    "lifetimeDescription": "Payez une fois et profitez de la confidentialité et de la sécurité à vie",
+    "planDescription": "Toutes les offres Internxt sont complètes et donnent un accès total à notre suite de confidentialité primée, composée d'Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouvelles offres Internxt conçues exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les offres de stockage cloud chiffré d'Internxt.",
     "billingFrequency": {
-      "monthly": "Monthly",
-      "annually": "Annual",
-      "lifetime": "Lifetime",
-      "individual": "Individual",
-      "business": "Business"
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Entreprise"
     },
     "freePlanCard": {
-      "eyeBrow": "Free",
-      "description": "Get 1 GB of encrypted cloud storage for free",
-      "cta": "Select plan"
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner l'offre"
     },
     "features": {
-      "endToEnd": "End-to-end encryption",
-      "openSource": "Open source and audited",
-      "anonymousAccount": "Anonymous account creation",
-      "premiumSupport": "Premium customer support",
-      "guarantee": "30-day money-back guarantee"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
       "essential": "1TB",
@@ -101,102 +101,102 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "All kinds of files, all kinds of devices"
+        "line1": "Tous types de fichiers, tous types d'appareils"
       }
     },
     "section2": {
       "title": {
-        "line1": "Find your files",
-        "line2": "on all your",
-        "line3": "devices"
+        "line1": "Retrouvez vos fichiers",
+        "line2": "sur tous vos",
+        "line3": "appareils"
       },
       "subtitle": {
-        "line1": "Securely access all your files from ",
-        "line2": "your computer, smartphone, tablet, ",
-        "line3": "or any device with a connection to ",
-        "line4": "the internet via the most secure ",
-        "line5": "cloud storage app."
+        "line1": "Accédez en toute sécurité à tous vos fichiers depuis ",
+        "line2": "votre ordinateur, smartphone, tablette ",
+        "line3": "ou tout appareil disposant d'une connexion à ",
+        "line4": "internet, via l'application de ",
+        "line5": "stockage cloud la plus sûre."
       }
     },
     "section3": {
       "title": {
-        "line1": "Keep your files",
-        "line2": "organized and",
-        "line3": "accessible from",
-        "line4": "anywhere"
+        "line1": "Gardez vos fichiers",
+        "line2": "organisés et",
+        "line3": "accessibles depuis",
+        "line4": "n'importe où"
       },
       "subtitle": {
-        "line1": "Internxt Drive lets you organize your",
-        "line2": "files in folders, rename them, and filter",
-        "line3": "a list of files to find what you want faster.",
-        "line4": "You can even backup your computer",
-        "line5": "folders so you always have the most",
-        "line6": "recent changes of your most important files",
+        "line1": "Internxt Drive vous permet d'organiser vos",
+        "line2": "fichiers dans des dossiers, de les renommer et de filtrer",
+        "line3": "une liste de fichiers pour trouver plus vite ce que vous cherchez.",
+        "line4": "Vous pouvez même sauvegarder les dossiers de votre",
+        "line5": "ordinateur pour toujours disposer des",
+        "line6": "modifications les plus récentes de vos fichiers les plus importants",
         "line7": ""
       }
     },
     "section4": {
       "title": {
-        "line1": "Share your files",
-        "line2": "with ease,",
-        "line3": "security is on us"
+        "line1": "Partagez vos fichiers",
+        "line2": "en toute simplicité,",
+        "line3": "la sécurité, c'est notre affaire"
       },
       "subtitle": {
-        "line1": "Internxt Drive focuses on privacy and",
-        "line2": "security, so you only have to focus on",
-        "line3": "what matters to you, like sharing files",
-        "line4": "with your coworkers, or the plane tickets",
-        "line5": "for your next holiday with family. You",
-        "line6": "choose who you want to share them with",
-        "line7": "and how many times you want",
-        "line8": "them to be downloaded."
+        "line1": "Internxt Drive se concentre sur la confidentialité et",
+        "line2": "la sécurité, pour que vous n'ayez à vous concentrer que sur",
+        "line3": "ce qui compte pour vous, comme partager des fichiers",
+        "line4": "avec vos collègues, ou les billets d'avion",
+        "line5": "pour vos prochaines vacances en famille. Vous",
+        "line6": "choisissez avec qui vous voulez les partager",
+        "line7": "et combien de fois vous voulez",
+        "line8": "qu'ils soient téléchargés."
       }
     },
     "section5": {
-      "eyebrow": "NEW FEATURE",
+      "eyebrow": "NOUVELLE FONCTIONNALITÉ",
       "title": {
-        "line1": "Back up what",
-        "line2": "matters to you"
+        "line1": "Sauvegardez ce qui",
+        "line2": "compte pour vous"
       },
       "subtitle": {
-        "line1": "Now you can keep the latest draft",
-        "line2": "of that super important project",
-        "line3": "or your university homework you are",
-        "line4": "working on, safe and current in your",
+        "line1": "Vous pouvez désormais conserver la dernière version",
+        "line2": "de ce projet super important",
+        "line3": "ou de votre devoir universitaire sur lequel vous",
+        "line4": "travaillez, en sécurité et à jour dans votre",
         "line5": "Internxt Drive."
       }
     },
     "section6": {
       "title": {
-        "line1": "Sync your files in total privacy",
+        "line1": "Synchronisez vos fichiers en toute confidentialité",
         "line2": ""
       }
     },
     "section7": {
       "title": {
-        "line1": "Keep your files secure",
-        "line2": "and private"
+        "line1": "Gardez vos fichiers en sécurité",
+        "line2": "et privés"
       },
       "subtitle": {
-        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
-        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
+        "line1": "La confidentialité et la sécurité sont au cœur de tout ce que nous faisons ; nous ne fondons pas notre activité sur les données ou",
+        "line2": "la publicité, mais sur la confiance. Nous respectons vos droits et créons des outils formidables autour d'eux, non contre eux."
       },
-      "cta": "Our commitment on privacy",
+      "cta": "Notre engagement en matière de confidentialité",
       "card1": {
-        "title": "Next-generation security",
-        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
+        "title": "Sécurité de nouvelle génération",
+        "subtitle": "Internxt Drive protège vos fichiers grâce à la cryptographie de bout en bout et post-quantique. Nous sommes le premier service de stockage cloud à protéger les données contre les futures menaces des ordinateurs quantiques."
       },
       "card2": {
-        "title": "Zero-knowledge technology",
-        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+        "title": "Technologie zéro connaissance",
+        "subtitle": "Nous ne stockons ni ne transmettons jamais de fichiers, de mots de passe utilisateur ou de clés de chiffrement sous une forme non chiffrée ou non hachée."
       },
       "card3": {
-        "title": "Privacy by design",
-        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+        "title": "Confidentialité dès la conception",
+        "subtitle": "Nous développons nos produits en pensant à l'utilisateur, et sa confidentialité est indispensable dans le monde axé sur les données dans lequel nous vivons."
       },
       "card4": {
-        "title": "Open source and transparent",
-        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Open source et transparent",
+        "subtitle": "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par tous. Nous n'avons rien à cacher, si ce n'est vos données."
       }
     }
   }
