@@ -11,14 +11,14 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
-import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import RelationalLinks from '@/components/ppc/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
@@ -126,7 +126,7 @@ const Pricing = ({
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA/>
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -181,7 +181,7 @@ const Pricing = ({
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
-          url={'/pricing'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">

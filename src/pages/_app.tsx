@@ -11,6 +11,7 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
+import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -74,6 +75,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             key: GlobalDialog.FreeSpaceCardBanner,
             isOpen: false,
           },
+                    {
+            key: GlobalDialog.FreeSpaceCardBannerPPC,
+            isOpen: false,
+          },
           {
             key: GlobalDialog.BeforeYouGoBanner,
             isOpen: false,
@@ -135,6 +140,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ) : undefined}
         </div>
         <FreeCardPromoBanner />
+        <FreeCardPromoBannerPPC />
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

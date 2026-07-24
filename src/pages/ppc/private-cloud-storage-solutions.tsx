@@ -12,11 +12,12 @@ import FeaturesSection from '@/components/private-cloud-storage-solutions/Featur
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import RelationalLinks from '@/components/ppc/RelationalLinks';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
+import { useRouter } from 'next/router';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,7 +38,8 @@ const PrivateCloudStorageSolutions = ({
   relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
-  const CTA_URL = `/pricing`;
+  const router = useRouter();
+  const CTA_URL = `/ppc/pricing${router.asPath.includes('?') ? router.asPath.substring(router.asPath.indexOf('?')) : ''}`;
   const products = [
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
@@ -101,7 +103,7 @@ const PrivateCloudStorageSolutions = ({
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA/>
 
         <AnimatedHeroSection
           textComponent={
@@ -118,7 +120,7 @@ const PrivateCloudStorageSolutions = ({
 
                 <div className="flex flex-col items-center pt-10 lg:flex-row">
                   <Link
-                    href={'/pricing'}
+                    href={CTA_URL}
                     className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
                   >
                     {textContent.HeroSection.TitleAndOnePlan.claimDeal}
