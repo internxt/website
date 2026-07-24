@@ -77,7 +77,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed hideLanguage />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />

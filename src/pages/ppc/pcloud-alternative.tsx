@@ -76,7 +76,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed hideLanguage />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" needH2 />

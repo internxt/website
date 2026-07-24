@@ -9,88 +9,88 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Lifetime cloud storage **for less**",
-    "valentinesTitle": "Love deserves **privacy**",
-    "description": "Encrypted lifetime cloud storage for less. Claim your special discount today. Access Internxt's award-winning privacy suite with post-quantum encrypted cloud storage and much more.",
-    "subtitle": "Get {{discount}}% off now",
-    "claimDeal": "Claim deal"
+    "title": "終身雲端儲存，**更省錢**",
+    "valentinesTitle": "愛值得**隱私**",
+    "description": "以更低價格享受加密終身雲端儲存。立即領取您的專屬折扣。使用 Internxt 屢獲殊榮的隱私套件，享受後量子加密雲端儲存及更多功能。",
+    "subtitle": "立即享受 {{discount}}% 折扣",
+    "claimDeal": "領取優惠"
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt is on mega-sale, has **excellent user reviews**, end-to-end and **post-quantum encryption**, and make their code completely **open source**.\"",
-    "mashable": "\"Get serious about **securing** your important data. Internxt was born with the ambition of giving people true **freedom online** by creating a more **ethical**, **secure**, **private**, and responsible digital world.\"",
-    "pcWorld": "\"Internxt's web access, file sync, and backup services are **impressive**. This **encrypted online storage** service is **easy,** and the current plans are a steal.\""
+    "pcMag": "\"Internxt 正在進行大促銷，擁有**出色的使用者評價**、端到端和**後量子加密**，並將其程式碼完全**開源**。\"",
+    "mashable": "\"認真**保護**您的重要資料。Internxt 的誕生懷抱著一個願景：透過創造一個更**道德**、更**安全**、更**私密**、更負責任的數位世界，為人們帶來真正的**網路自由**。\"",
+    "pcWorld": "\"Internxt 的網頁存取、檔案同步和備份服務令人**印象深刻**。這項**加密線上儲存**服務非常**簡單**，而且目前的方案非常划算。\""
   },
   "TrustedBySection": {
     "description": "Internxt 讓您掌握控制權。使用 Internxt，您可以放心，您的資料已加密、受到保護，您的數位生活屬於您自己。"
   },
   "NextGenSection": {
-    "title": "Why choose Internxt permanent cloud storage?",
-    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
-    "cta": "Get to know us better",
+    "title": "為什麼選擇 Internxt 永久雲端儲存？",
+    "description": "Internxt 讓您重新掌控自己的隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，並且我們不會儲存或向第三方出售您的資料。我們竭盡全力確保您的資訊安全無虞。",
+    "cta": "進一步了解我們",
     "cardDescriptions": {
       "titles": [
-        "Unhackable and unleakable data",
-        "Next-generation security",
-        "Open source and transparent",
-        "Independently verified"
+        "無法被駭客攻擊或外洩的資料",
+        "新一代安全性",
+        "開源且透明",
+        "經獨立驗證"
       ],
       "descriptions": [
-        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
-        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
-        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜態時均已加密。Internxt 讓您完全掌控自己的檔案。您的資料是您的私事，保護它是我們的職責。",
+        "Internxt 是唯一一款使用端到端和後量子加密自動加密您檔案的雲端儲存，這意味著只有您才能存取自己的資料。",
+        "我們為自己的工作感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有任何隱瞞。",
+        "我們完全符合 GDPR 並且 100% 安全，但不必只聽我們的一面之詞。Internxt 已由歐洲領先的滲透測試公司 Securitum 進行獨立稽核和驗證。"
       ]
     }
   },
   "ctaSection": {
-    "titleWithoutDiscount": "Complete Digital Privacy Suite",
-    "title": "One time payment cloud storage",
-    "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
-    "cta": "Accept Invite"
+    "titleWithoutDiscount": "完整的數位隱私套件",
+    "title": "一次性付費雲端儲存",
+    "description": "憑藉此專屬折扣，享受安心無憂。全面的隱私與安全。",
+    "cta": "接受邀請"
   },
   "ctaSection2": {
-    "title": "Among Internxt’s lifetime plans: Which one should I choose? 1TB, 3TB, or 5TB?",
-    "description": "All our plans give you everything you need to store your files privately in the cloud. If you want complete privacy, advanced cloud management, and all of Internxt’s features, such as Meet and Mail, the 5TB Ultimate plan is the best choice for total control and maximum privacy.",
-    "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
-    "cta": "Choose Plan"
+    "title": "在 Internxt 的終身方案中：我應該選擇哪個？1TB、3TB 還是 5TB？",
+    "description": "我們所有的方案都能為您提供在雲端私密儲存檔案所需的一切。如果您想要完整的隱私、進階雲端管理以及 Internxt 的所有功能（如 Meet 和 Mail），5TB Ultimate 方案是實現全面掌控和最高隱私的最佳選擇。",
+    "descriptionWithoutDisocunt": "透過 Internxt 體驗完整的數位隱私",
+    "cta": "選擇方案"
   },
   "tableSection": {
-    "title": "Internxt Plans",
-    "valentinesTitle": "Secure love - ",
-    "hotLabel": "{{discount}}% off",
+    "title": "Internxt 方案",
+    "valentinesTitle": "安全之愛 - ",
+    "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
-      "header": "Select your lifetime plan",
-      "individuals": "Annual Plans",
-      "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
+      "header": "選擇您的終身方案",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
       "lifetimeCampaign": {
-        "blueText": "50% off",
-        "normalText": "on all our exclusive lifetime plans"
+        "blueText": "5 折優惠",
+        "normalText": "適用於我們所有專屬終身方案"
       }
     },
-    "lifetimeDescription": "Pay once and enjoy privacy and security for life",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
-    "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
-    "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
+    "lifetimeDescription": "一次付費，終身享受隱私與安全",
+    "planDescription": "所有 Internxt 方案均功能齊全，可完整存取我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發全新的 Internxt 方案，專為保護您的企業、保護您的員工並保障您的獲利能力而設計。",
+    "businessDescription2": "使用 Internxt 的加密雲端儲存方案，確保貴公司的資料安全。",
     "billingFrequency": {
-      "monthly": "Monthly",
-      "annually": "Annual",
-      "lifetime": "Lifetime",
-      "individual": "Individual",
-      "business": "Business"
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
     },
     "freePlanCard": {
-      "eyeBrow": "Free",
-      "description": "Get 1 GB of encrypted cloud storage for free",
-      "cta": "Select plan"
+      "eyeBrow": "免費",
+      "description": "免費獲得 1 GB 加密雲端儲存",
+      "cta": "選擇方案"
     },
     "features": {
-      "endToEnd": "End-to-end encryption",
-      "openSource": "Open source and audited",
-      "anonymousAccount": "Anonymous account creation",
-      "premiumSupport": "Premium customer support",
-      "guarantee": "30-day money-back guarantee"
+      "endToEnd": "端到端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名建立帳戶",
+      "premiumSupport": "進階客戶支援",
+      "guarantee": "30 天退款保證"
     },
     "planStorage": {
       "essential": "1TB",
@@ -101,102 +101,102 @@
   "FeaturesSection": {
     "section1": {
       "title": {
-        "line1": "All kinds of files, all kinds of devices"
+        "line1": "各種檔案，各種裝置"
       }
     },
     "section2": {
       "title": {
-        "line1": "Find your files",
-        "line2": "on all your",
-        "line3": "devices"
+        "line1": "找到您的檔案",
+        "line2": "在您所有的",
+        "line3": "裝置上"
       },
       "subtitle": {
-        "line1": "Securely access all your files from ",
-        "line2": "your computer, smartphone, tablet, ",
-        "line3": "or any device with a connection to ",
-        "line4": "the internet via the most secure ",
-        "line5": "cloud storage app."
+        "line1": "透過最安全的雲端儲存應用程式，",
+        "line2": "從您的電腦、智慧型手機、平板電腦，",
+        "line3": "或任何連網裝置，",
+        "line4": "安全地存取",
+        "line5": "您的所有檔案。"
       }
     },
     "section3": {
       "title": {
-        "line1": "Keep your files",
-        "line2": "organized and",
-        "line3": "accessible from",
-        "line4": "anywhere"
+        "line1": "讓您的檔案",
+        "line2": "井然有序，",
+        "line3": "隨時隨地",
+        "line4": "皆可存取"
       },
       "subtitle": {
-        "line1": "Internxt Drive lets you organize your",
-        "line2": "files in folders, rename them, and filter",
-        "line3": "a list of files to find what you want faster.",
-        "line4": "You can even backup your computer",
-        "line5": "folders so you always have the most",
-        "line6": "recent changes of your most important files",
+        "line1": "Internxt Drive 讓您將檔案",
+        "line2": "整理到資料夾中、重新命名，並篩選",
+        "line3": "檔案清單，更快找到您想要的內容。",
+        "line4": "您甚至可以備份電腦資料夾，",
+        "line5": "讓您始終擁有最重要檔案的",
+        "line6": "最新變更",
         "line7": ""
       }
     },
     "section4": {
       "title": {
-        "line1": "Share your files",
-        "line2": "with ease,",
-        "line3": "security is on us"
+        "line1": "分享您的檔案",
+        "line2": "輕鬆便捷，",
+        "line3": "安全交給我們"
       },
       "subtitle": {
-        "line1": "Internxt Drive focuses on privacy and",
-        "line2": "security, so you only have to focus on",
-        "line3": "what matters to you, like sharing files",
-        "line4": "with your coworkers, or the plane tickets",
-        "line5": "for your next holiday with family. You",
-        "line6": "choose who you want to share them with",
-        "line7": "and how many times you want",
-        "line8": "them to be downloaded."
+        "line1": "Internxt Drive 專注於隱私和",
+        "line2": "安全，讓您只需專注於",
+        "line3": "對您重要的事情，例如與同事分享檔案，",
+        "line4": "或下次家庭度假的機票。",
+        "line5": "您可以選擇",
+        "line6": "與誰分享，",
+        "line7": "以及希望它們",
+        "line8": "被下載的次數。"
       }
     },
     "section5": {
-      "eyebrow": "NEW FEATURE",
+      "eyebrow": "新功能",
       "title": {
-        "line1": "Back up what",
-        "line2": "matters to you"
+        "line1": "備份對您",
+        "line2": "重要的一切"
       },
       "subtitle": {
-        "line1": "Now you can keep the latest draft",
-        "line2": "of that super important project",
-        "line3": "or your university homework you are",
-        "line4": "working on, safe and current in your",
-        "line5": "Internxt Drive."
+        "line1": "現在，您可以將那個超級重要專案",
+        "line2": "或您正在完成的大學作業的",
+        "line3": "最新草稿，安全且即時地",
+        "line4": "儲存在您的",
+        "line5": "Internxt Drive 中。"
       }
     },
     "section6": {
       "title": {
-        "line1": "Sync your files in total privacy",
+        "line1": "在完全隱私的環境中同步您的檔案",
         "line2": ""
       }
     },
     "section7": {
       "title": {
-        "line1": "Keep your files secure",
-        "line2": "and private"
+        "line1": "讓您的檔案安全",
+        "line2": "且私密"
       },
       "subtitle": {
-        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
-        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
+        "line1": "隱私和安全是我們所做一切的核心，我們的業務不建立在資料或",
+        "line2": "廣告之上，而是建立在信任之上。我們尊重您的權利，並圍繞它們而非與之對立打造出色的工具。"
       },
-      "cta": "Our commitment on privacy",
+      "cta": "我們對隱私的承諾",
       "card1": {
-        "title": "Next-generation security",
-        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
+        "title": "新一代安全性",
+        "subtitle": "Internxt Drive 使用端到端和後量子加密保護您的檔案。我們是首個保護資料免受量子電腦未來威脅的雲端儲存服務。"
       },
       "card2": {
-        "title": "Zero-knowledge technology",
-        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+        "title": "零知識技術",
+        "subtitle": "我們絕不以未加密或未雜湊的形式儲存或傳輸檔案、使用者密碼或加密金鑰。"
       },
       "card3": {
-        "title": "Privacy by design",
-        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+        "title": "隱私設計",
+        "subtitle": "我們以使用者為中心開發產品，在我們所處的資料驅動世界中，使用者的隱私是不可或缺的。"
       },
       "card4": {
-        "title": "Open source and transparent",
-        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "開源且透明",
+        "subtitle": "我們為自己的工作感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有任何隱瞞。"
       }
     }
   }
