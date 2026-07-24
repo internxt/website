@@ -54,7 +54,7 @@ function LifetimeSpecial({
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replaceAll(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
