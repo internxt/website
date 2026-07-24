@@ -178,7 +178,7 @@ const prepareAuthFlow = (credentials: {
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain=internxt.com; Path=/`;
+  ).toUTCString()};domain=.internxt.com; Path=/`;
 
   document.cookie = cookie;
 };
