@@ -110,7 +110,7 @@ function LifetimeSpecial({
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed hideLanguage/>
+        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed hideLanguage hideCTA/>
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
         <ReviewsSection textContent={testimonialsJson.ReviewSection} />

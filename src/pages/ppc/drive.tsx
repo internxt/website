@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import HeroSection from '@/components/drive/HeroSection';
+import HeroSection from '@/components/ppc/HeroSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -12,14 +12,14 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
-import AdvancedToolsSection from '@/components/drive/AdvancedToolsSection';
+import AdvancedToolsSection from '@/components/ppc/AdvancedToolsSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
-import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import RelationalLinks from '@/components/ppc/RelationalLinks';
 import ReviewsSection from '@/components/home/ReviewsSection';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
@@ -112,7 +112,7 @@ const Drive = ({
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA/>
         <HeroSection textContent={textContent.HeroSection} download={download} />
 
         <DriveSection textContent={textContent.DriveSection} />
@@ -156,7 +156,7 @@ const Drive = ({
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
-          url={'/pricing'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">

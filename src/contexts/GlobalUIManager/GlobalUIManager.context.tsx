@@ -31,6 +31,7 @@ export enum GlobalDialog {
   TopBanner = 'TopBanner',
   BottomBanner = 'BottomBanner',
   FreeSpaceCardBanner = 'FreeSpaceCardBanner',
+  FreeSpaceCardBannerPPC = 'FreeSpaceCardBannerPPC',
   BeforeYouGoBanner = 'BeforeYouGoBanner',
   S3Banner = 'S3Banner',
 }

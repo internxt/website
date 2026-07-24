@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
@@ -82,7 +82,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage />
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage hideCTA/>
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} needH2 />
@@ -136,7 +136,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
         <FloatingCtaSectionv2
           textContent={langJson.CtaSection}
-          url={'/drive'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">

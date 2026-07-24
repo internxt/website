@@ -7,7 +7,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/services/stripe.service';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
@@ -86,7 +86,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed hideLanguage />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed hideLanguage hideCTA/>
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 

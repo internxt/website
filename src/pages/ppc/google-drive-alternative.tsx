@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import usePpcCoupon from '@/hooks/usePpcCoupon';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
@@ -82,7 +82,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
         segmentName={'PPC Drive Comparison'}
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage/>
+        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage hideCTA/>
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
@@ -130,7 +130,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
 
         <FloatingCtaSectionv2
           textContent={langJson.CtaSection}
-          url={'#pricingTable'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-28">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">

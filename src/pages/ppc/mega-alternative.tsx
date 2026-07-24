@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
@@ -77,7 +77,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed hideLanguage />
+        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed hideLanguage hideCTA/>
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
