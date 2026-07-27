@@ -1,6 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
@@ -11,31 +10,27 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'proton-drive-alternative');
-
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.PROTONDRIVE,
-    couponCodeForLifetime: PromoCodeName.PROTONDRIVE,
-  });
+const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'google-drive-alternative');
 
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.GADS85,
+    couponCodeForLifetime: PromoCodeName.GADS85,
+  });
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -73,25 +68,22 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Proton alternative', 'proton-alternative')}
-      </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
-        segmentName="PPC Proton Comparison"
-        robots="noindex, follow"
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
+        segmentName={'PPC Drive Comparison'}
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage hideCTA/>
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
+        <MinimalNavbar textContent={navbarLang} lang={locale} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} needH2 />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
+
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
-          logo={'/images/comparison/competitors/proton-drive-Letters.webp'}
+          logo={'/images/comparison/competitors/Drive-Letters.webp'}
           TableTitleTag={'h3'}
           sectionNeedsH2
           bottomSeparationBar
@@ -100,7 +92,6 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <PricingSectionWrapper
           textContent={langJson.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lifetimeCoupons={lifetimeCoupons}
@@ -111,21 +102,16 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           hideSwitchSelector
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
+          hideFreeCard
         />
 
-        <HorizontalScrollableSection
-          textContent={langJson.PrivacyViolationsSection}
-          bgGradient={privacyBgGradient}
-          needsH2
-          needsH3
-        />
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
 
         <ThreeCardsSection
           textContent={langJson.WhyNeedAlternativeSection}
           bgColor={privacyBgGradient}
           cardColor="bg-white"
-          needsH2={false}
-          bottomSeparationBar
+          TitleTag={'h3'}
         />
 
         <HorizontalScrollableSectionWithPhotosSection
@@ -139,7 +125,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           textContent={langJson.CtaSection}
           url={'#billingButtons'}
           customText={
-            <div className="flex flex-col gap-4 px-10 lg:px-32">
+            <div className="flex flex-col gap-4 px-10 lg:px-28">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
                 {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
               </p>
@@ -159,15 +145,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           needsH3={false}
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          needsH2={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Proton alternative', url: '/proton-alternative' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
     </>
   );
@@ -177,7 +155,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/proton-drive-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/google-drive-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -194,4 +172,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default ProtonComparison;
+export default GoogleDriveComparison;

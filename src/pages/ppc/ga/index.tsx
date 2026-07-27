@@ -1,11 +1,8 @@
 import { GetServerSidePropsContext } from 'next';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/home/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -18,6 +15,8 @@ import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import { getMinimumPrice } from '@/utils/priceHelper';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -29,10 +28,6 @@ interface HomeProps {
 
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
-  });
 
   const {
     products,
@@ -41,9 +36,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.GADS85,
+    couponCodeForLifetime: PromoCodeName.GADS85,
+  });
   const locale = lang as string;
-  const navbarCta = 'chooseStorage';
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -86,7 +83,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed hideLanguage hideCTA/>
+      <MinimalNavbar textContent={navbarLang} lang={locale} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
@@ -108,6 +105,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20 xl:py-32"
         freePlanNeedsH2
+        hideFreeCard
       />
 
       <TrustedSection textContent={textContent.TrustedBySection} />
@@ -130,7 +128,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
 };
