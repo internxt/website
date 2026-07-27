@@ -1,34 +1,96 @@
 {
   "HeroSection": {
-    "title": "Obtenha um plano vitalício do Internxt!",
-    "description": "Proteja todos os seus arquivos e memórias para sempre com um único pagamento único.",
-    "maintenance": "",
-    "cta1": "Obtenha ${{percent}}% de desconto",
-    "cta2": "Navegue pelas ofertas vitalícias",
-    "celebration": {
-      "brazil": {
-        "title": "Celebre hoje por uma vida de privacidade",
-        "description": "Proteja seus arquivos para sempre com seu desconto do Dia Nacional do Brasil.",
-        "cta1": "Obtenha 80% de desconto"
-      }
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Armazenamento em nuvem vitalício **por menos**",
+    "valentinesTitle": "O amor merece **privacidade**",
+    "description": "Armazenamento em nuvem criptografado vitalício por menos. Garanta hoje seu desconto especial. Acesse o premiado conjunto de privacidade da Internxt com armazenamento em nuvem criptografado pós-quântico e muito mais.",
+    "subtitle": "Ganhe {{discount}}% de desconto agora",
+    "claimDeal": "Aproveitar oferta"
+  },
+  "ReviewSection": {
+    "pcMag": "\"A Internxt está em mega-promoção, tem **excelentes avaliações de usuários**, criptografia de ponta a ponta e **pós-quântica**, e torna seu código totalmente **de código aberto**.\"",
+    "mashable": "\"Leve a sério a **proteção** dos seus dados importantes. A Internxt nasceu com a ambição de dar às pessoas verdadeira **liberdade online**, criando um mundo digital mais **ético**, **seguro**, **privado** e responsável.\"",
+    "pcWorld": "\"O acesso via web, a sincronização de arquivos e os serviços de backup da Internxt são **impressionantes**. Este serviço de **armazenamento online criptografado** é **fácil**, e os planos atuais são uma pechincha.\""
+  },
+  "TrustedBySection": {
+    "description": "A Internxt é sobre estar no controle. Com a Internxt, você tem tranquilidade sabendo que seus dados estão criptografados, protegidos e que sua vida digital pertence a você."
+  },
+  "NextGenSection": {
+    "title": "Por que escolher o armazenamento em nuvem permanente da Internxt?",
+    "description": "A Internxt devolve a você o controle da sua privacidade. Ao contrário do armazenamento em nuvem tradicional, garantimos que somente você tem as chaves dos seus dados criptografados e não armazenamos nem vendemos seus dados a terceiros. Tomamos todas as medidas para garantir que suas informações permaneçam seguras.",
+    "cta": "Conheça-nos melhor",
+    "cardDescriptions": {
+      "titles": [
+        "Dados impossíveis de hackear ou vazar",
+        "Segurança de última geração",
+        "Código aberto e transparente",
+        "Verificado de forma independente"
+      ],
+      "descriptions": [
+        "Não armazenamos senhas nem dados de usuários, e todos os seus dados são criptografados em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos. Seus dados são assunto seu. Protegê-los é assunto nosso.",
+        "A Internxt é o único armazenamento em nuvem que criptografa automaticamente seus arquivos usando criptografia de ponta a ponta e pós-quântica, o que significa que somente você pode acessar seus dados.",
+        "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder além dos seus dados.",
+        "Cumprimos totalmente o RGPD e somos 100% seguros, mas não acredite apenas em nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, a principal empresa de testes de penetração da Europa."
+      ]
     }
   },
-  "PaymentSection": {
-    "limitedOffer": "Oferta por tempo limitado!",
-    "title": {
-      "blueText": "Obtenha até ${{percent}} de desconto",
-      "normalText": " em nossos planos vitalícios exclusivos"
+  "ctaSection": {
+    "titleWithoutDiscount": "Conjunto completo de privacidade digital",
+    "title": "Armazenamento em nuvem com pagamento único",
+    "description": "Tenha tranquilidade com este desconto exclusivo. Privacidade e segurança totais.",
+    "cta": "Aceitar convite"
+  },
+  "ctaSection2": {
+    "title": "Entre os planos vitalícios da Internxt: qual devo escolher? 1TB, 3TB ou 5TB?",
+    "description": "Todos os nossos planos oferecem tudo o que você precisa para armazenar seus arquivos de forma privada na nuvem. Se você quer privacidade completa, gerenciamento avançado da nuvem e todos os recursos da Internxt, como Meet e Mail, o plano Ultimate de 5TB é a melhor escolha para controle total e máxima privacidade.",
+    "descriptionWithoutDisocunt": "Experimente a privacidade digital completa com a Internxt",
+    "cta": "Escolher plano"
+  },
+  "tableSection": {
+    "title": "Planos da Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano vitalício",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano certo para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
     },
-    "description": "Uma vida de privacidade e segurança para seus arquivos por um pagamento único e exclusivo.",
-    "normalSection": {
-      "title": "Explore todos os nossos planos vitalícios exclusivos",
-      "description": "Uma vida de privacidade e segurança para seus arquivos por um pagamento único e exclusivo."
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança por toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total ao nosso premiado conjunto de privacidade, composto por Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "Atualmente estamos trabalhando em novos planos da Internxt projetados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
     },
-    "securePayment": "Pagamento 100% seguro, com tecnologia Stripe",
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado grátis",
+      "cta": "Selecionar plano"
+    },
     "features": {
-      "endToEnd": "Criptografado de ponta a ponta",
+      "endToEnd": "Criptografia de ponta a ponta",
       "openSource": "Código aberto e auditado",
-      "anonymousAccount": "Criação de conta anônima"
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
     },
     "planStorage": {
       "essential": "1TB",
@@ -36,42 +98,106 @@
       "ultimate": "5TB"
     }
   },
-  "GetLifetimeSection": {
-    "title": "A vida não é curta! Mas esta oferta por tempo limitado é...",
-    "description": "Internxt está oferecendo um acordo sobre uma vida de privacidade e tranquilidade."
-  },
-  "FeatureSection": {
-    "title": "Por que escolher o Internxt para proteger seus arquivos?",
-    "description": "Internxt coloca você de volta no controle de sua privacidade. Ao contrário do armazenamento em nuvem tradicional, garantimos que apenas você tenha as chaves para seus dados criptografados. Tomamos todas as medidas para garantir que suas informações permaneçam seguras.",
-    "cta": "",
-    "cards": [
-      {
-        "title": "Privacidade Aprimorada",
-        "description": "Nossa poderosa criptografia protege seus dados contra acessos não autorizados. Nunca armazenamos senhas; todos os seus dados são criptografados em trânsito e em repouso."
-      },
-      {
-        "title": "Controle do Usuário",
-        "description": "Para protegê-lo de violações de dados, o Internxt protege seus dados tornando-os inacessíveis a terceiros, incluindo o Internxt."
-      },
-      {
-        "title": "Acesso Multiplataforma",
-        "description": "Trabalhe livremente e acesse todos os seus arquivos em vários dispositivos e sistemas operacionais."
-      },
-      {
-        "title": "Pagamento Único",
-        "description": "Os planos vitalícios do Internxt oferecem acesso seguro aos seus arquivos para sempre com um único pagamento antecipado. Pague uma vez para proteger seus dados para a vida sem taxas recorrentes."
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Todo tipo de arquivo, todo tipo de dispositivo"
       }
-    ]
-  },
-  "campaignCtaSection": {
-    "title": "O armazenamento em nuvem mais privado do mundo",
-    "subtitle": "Proteja as coisas realmente importantes com o armazenamento em nuvem seguro, privado e criptografado do Internxt.",
-    "cta": "Selecione um plano agora",
-    "guarantee": "Garantia de devolução de dinheiro de 30 dias"
-  },
-  "CtaSection": {
-    "title": "O armazenamento em nuvem mais privado do mundo",
-    "description": "Proteja as coisas realmente importantes com o armazenamento em nuvem seguro, privado e criptografado do Internxt.",
-    "cta": "Selecione o plano"
+    },
+    "section2": {
+      "title": {
+        "line1": "Encontre seus arquivos",
+        "line2": "em todos os seus",
+        "line3": "dispositivos"
+      },
+      "subtitle": {
+        "line1": "Acesse com segurança todos os seus arquivos do ",
+        "line2": "seu computador, smartphone, tablet ",
+        "line3": "ou qualquer dispositivo com conexão à ",
+        "line4": "internet, pelo aplicativo de ",
+        "line5": "armazenamento em nuvem mais seguro."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Mantenha seus arquivos",
+        "line2": "organizados e",
+        "line3": "acessíveis de",
+        "line4": "qualquer lugar"
+      },
+      "subtitle": {
+        "line1": "O Internxt Drive permite organizar seus",
+        "line2": "arquivos em pastas, renomeá-los e filtrar",
+        "line3": "uma lista de arquivos para encontrar o que quer mais rápido.",
+        "line4": "Você pode até fazer backup das pastas do seu",
+        "line5": "computador para ter sempre as alterações mais",
+        "line6": "recentes dos seus arquivos mais importantes",
+        "line7": ""
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Compartilhe seus arquivos",
+        "line2": "com facilidade,",
+        "line3": "a segurança é por nossa conta"
+      },
+      "subtitle": {
+        "line1": "O Internxt Drive foca na privacidade e",
+        "line2": "na segurança, para que você só precise focar no",
+        "line3": "que importa para você, como compartilhar arquivos",
+        "line4": "com seus colegas, ou as passagens aéreas",
+        "line5": "para suas próximas férias em família. Você",
+        "line6": "escolhe com quem quer compartilhá-los",
+        "line7": "e quantas vezes quer",
+        "line8": "que sejam baixados."
+      }
+    },
+    "section5": {
+      "eyebrow": "NOVO RECURSO",
+      "title": {
+        "line1": "Faça backup do que",
+        "line2": "importa para você"
+      },
+      "subtitle": {
+        "line1": "Agora você pode manter o último rascunho",
+        "line2": "daquele projeto super importante",
+        "line3": "ou do seu trabalho da faculdade em que está",
+        "line4": "trabalhando, seguro e atualizado no seu",
+        "line5": "Internxt Drive."
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Sincronize seus arquivos com total privacidade",
+        "line2": ""
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Mantenha seus arquivos seguros",
+        "line2": "e privados"
+      },
+      "subtitle": {
+        "line1": "A privacidade e a segurança estão no centro de tudo o que fazemos; não baseamos nosso negócio em dados ou",
+        "line2": "publicidade, mas na confiança. Respeitamos seus direitos e criamos ferramentas incríveis em torno deles, não contra eles."
+      },
+      "cta": "Nosso compromisso com a privacidade",
+      "card1": {
+        "title": "Segurança de última geração",
+        "subtitle": "O Internxt Drive protege seus arquivos usando criptografia de ponta a ponta e pós-quântica. Somos o primeiro serviço de armazenamento em nuvem a proteger dados contra futuras ameaças de computadores quânticos."
+      },
+      "card2": {
+        "title": "Tecnologia de conhecimento zero",
+        "subtitle": "Nunca armazenamos nem transmitimos arquivos, senhas de usuários ou chaves de criptografia de forma não criptografada ou não hasheada."
+      },
+      "card3": {
+        "title": "Privacidade por design",
+        "subtitle": "Desenvolvemos nossos produtos pensando no usuário, e sua privacidade é essencial no mundo movido a dados em que vivemos."
+      },
+      "card4": {
+        "title": "Código aberto e transparente",
+        "subtitle": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder além dos seus dados."
+      }
+    }
   }
 }

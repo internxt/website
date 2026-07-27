@@ -6,8 +6,8 @@ import HeroSection from '@/components/home/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/services/stripe.service';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
@@ -17,6 +17,7 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
+import { getMinimumPrice } from '@/utils/priceHelper';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -75,9 +76,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
-  const minimumPrice = decimalDiscount
-    ? (Math.floor(9.99 * (decimalDiscount / 100) * 100) / 100).toFixed(2)
-    : products?.individuals[Interval.Year][0].price.toString() || '9.99';
+  const minimumPrice = getMinimumPrice(products, decimalDiscount);
 
   return (
     <Layout
@@ -87,7 +86,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed hideLanguage hideCTA/>
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
