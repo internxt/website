@@ -6,7 +6,8 @@
       "line2": "Free cloud object storage"
     },
     "description": "An efficient, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
-    "cta": "Get started"
+    "cta": "Get started",
+    "cta2": "Read doumentation"
   },
   "PredictablePricingSection": {
     "title": "Simple, predictable pricing\n with zero fees and no API charges",

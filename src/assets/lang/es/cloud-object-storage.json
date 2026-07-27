@@ -6,7 +6,8 @@
       "line2": "Almacenamiento de objetos en la nube "
     },
     "description": "Una solución de almacenamiento en la nube eficiente y escalable para almacenar, acceder y gestionar datos a gran escala.",
-    "cta": "Empezar"
+    "cta": "Empezar",
+    "cta2": "Leer documentación"
   },
   "PredictablePricingSection": {
     "title": "Precios sencillos y predecibles\n sin comisiones ni cargos por API",

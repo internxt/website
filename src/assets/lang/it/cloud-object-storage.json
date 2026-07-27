@@ -6,7 +6,8 @@
       "line2": "Object storage compatibile"
     },
     "description": "Una soluzione di cloud storage efficiente e scalabile per archiviare, accedere e gestire dati su larga scala.",
-    "cta": "Inizia ora"
+    "cta": "Inizia ora",
+    "cta2": "Leggere la documentazione"
   },
   "PredictablePricingSection": {
     "title": "Prezzi semplici e prevedibili\n con zero commissioni e nessun costo API",
