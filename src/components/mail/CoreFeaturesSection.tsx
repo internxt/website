@@ -37,7 +37,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section className="flex w-full flex-col gap-6 bg-neutral-17 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
+    <section className="flex w-full flex-col gap-6 bg-neutral-17 px-5 py-10 lg:py-10 lg:pl-10 xl:pl-32 3xl:pl-80">
       <h2 className="flex flex-col text-[30px] lg:translate-x-40 lg:pl-20 lg:text-5xl lg:pr-10 lg:max-w-[1000px] font-bold leading-tight text-gray-100">{textContent.title}</h2>
       {textContent.descriptions.map((description: string) => (
         <p
@@ -48,8 +48,8 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
         </p>
       ))}
 
-      <div className="flex w-full flex-row gap-2 lg:max-w-[1500px] lg:pl-20">
-        <div className="flex w-full flex-col gap-6 lg:max-w-[500px] lg:pl-40">
+      <div className="flex w-full flex-row gap-2 lg:pt-10 lg:max-w-[1500px] lg:pl-20">
+        <div className="flex w-full flex-col gap-6 lg:max-w-[550px] lg:pl-40">
           <div className="flex flex-row items-center justify-center lg:hidden">
             <Image
               src={getImage(`/images/mail/mockup${activeIndex + 1}.webp`)}
@@ -90,8 +90,8 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             <Image
               src={getImage(`/images/mail/mockup${activeIndex + 1}.webp`)}
               alt={textContent.accordionCards.titles[activeIndex]}
-              height={520}
-              width={820}
+              height={426}
+              width={682}
               className="rounded-16 object-cover w-full h-auto"
             />
           </div>

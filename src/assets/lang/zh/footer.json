@@ -31,7 +31,8 @@
         "ai": "Internxt AI",
         "business": "Internxt 商业版",
         "family": "Internxt 家庭版",
-        "pricing": "价格"
+        "pricing": "价格",
+        "mail": "Internxt Mail(加密电子邮件)"
       },
       "company": {
         "title": "公司",
@@ -135,8 +136,7 @@
         "cloudDocuments": "云端文档存储",
         "lifetime": "终身云存储",
         "freeCloudStorage": "免费云存储",
-        "fileTransfer": "安全文件传输",
-        "mail": "加密电子邮件"
+        "fileTransfer": "安全文件传输"
       }
     }
   }

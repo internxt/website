@@ -31,7 +31,8 @@
         "ai": "Internxt AI",
         "business": "Internxt für Unternehmen",
         "family": "Internxt für Familien",
-        "pricing": "Preise"
+        "pricing": "Preise",
+        "mail": "Internxt Mail"
       },
       "company": {
         "title": "Firma",
@@ -135,8 +136,7 @@
         "cloudDocuments": "Dokumente in der Cloud",
         "lifetime": "Lebenslanger Cloud-Speicher",
         "freeCloudStorage": "Kostenloser Cloud-Speicher",
-        "fileTransfer": "Sichere Dateiübertragung",
-        "mail": "Verschlüsselte E-Mail"
+        "fileTransfer": "Sichere Dateiübertragung"
       }
     },
     "financialProject": "Projekt finanziert durch CDTI und EU-FEDER-Fonds. Internxt Mail und Internxt Meet: Sicherer E-Mail-Dienst Internxt Mail und sicherer Videoanruf-Dienst Internxt Meet, unter Verwendung von Post-Quanten-Verschlüsselung und künstlicher Intelligenz."

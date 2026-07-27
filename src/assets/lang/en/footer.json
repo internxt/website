@@ -31,7 +31,8 @@
         "ai": "Internxt AI",
         "business": "Internxt for Business",
         "family": "Internxt for Families",
-        "pricing": "Cloud storage pricing"
+        "pricing": "Cloud storage pricing",
+        "mail": "Internxt Mail"
       },
       "company": {
         "title": "Company",
@@ -135,8 +136,7 @@
         "cloudDocuments": "Storage for documents",
         "lifetime": "Lifetime Cloud Storage",
         "freeCloudStorage": "Free Cloud Storage",
-        "fileTransfer": "Secure File Transfer",
-        "mail": "Encripted Mail"
+        "fileTransfer": "Secure File Transfer"
       }
     }
   }

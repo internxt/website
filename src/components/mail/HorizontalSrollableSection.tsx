@@ -88,7 +88,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 lg:h-min lg:gap-16 lg:pt-20"
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20"
       style={{ background: '#FFFFFF 100%' }}
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
@@ -169,7 +169,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
         </div>
       </div>
       {needsDivider && (
-        <div className="w-full max-w-[1200px] px-5 lg:px-8">
+        <div className="w-full max-w-[1700px] px-5 lg:px-8">
           <div className="h-px w-full bg-neutral-35" />
         </div>
       )}

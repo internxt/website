@@ -46,7 +46,6 @@ export interface Features {
   freeCloudStorage: string;
   cloudDocuments: string;
   fileTransfer: string;
-  mail: string;
 }
 
 export interface Join {
@@ -74,6 +73,7 @@ export interface Products {
   business: string;
   family: string;
   pricing: string;
+  mail: string;
 }
 
 export interface Resources {

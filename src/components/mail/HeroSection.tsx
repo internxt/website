@@ -1,7 +1,5 @@
-// import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
-// import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Animation from '@/components/shared/Animation';
 import { ImageConfig } from '@/assets/types/mail'
@@ -63,7 +61,7 @@ export const HeroSection = ({ textContent }) => {
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>
-        <h1 className="flex flex-col text-3xl font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-6xl">
+        <h1 className="flex flex-col text-[30px] font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-6xl">
           <HighlightText text={textContent.title} />
         </h1>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
@@ -76,7 +74,7 @@ export const HeroSection = ({ textContent }) => {
           </Link>
           <div className="flex flex-row items-center justify-center gap-2 pt-3 lg:justify-start">
             <CheckCircle size={24} color="#32C356" weight="fill" />
-              <p className="whitespace-nowrap  text-lg text-gray-55">
+              <p className="whitespace-nowrap text-base lg:text-lg text-gray-55">
                 {textContent.garantee}
               </p>
           </div>
