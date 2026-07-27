@@ -6,7 +6,8 @@
       "line2": "兼容的对象存储"
     },
     "description": "一个高效、可扩展的云存储解决方案，用于存储、访问和管理大规模数据。",
-    "cta": "立即开始"
+    "cta": "立即开始",
+    "cta2": "阅读文档"
   },
   "PredictablePricingSection": {
     "title": "简单、可预测的价格\n 零手续费，无 API 费用",

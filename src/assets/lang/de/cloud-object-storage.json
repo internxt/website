@@ -6,7 +6,8 @@
       "line2": "Kompatibler Objektspeicher"
     },
     "description": "Eine effiziente, skalierbare Cloud-Speicherlösung zum Speichern, Abrufen und Verwalten großer Datenmengen.",
-    "cta": "Jetzt starten"
+    "cta": "Jetzt starten",
+    "cta2": "Dokumentation lesen"
   },
   "PredictablePricingSection": {
     "title": "Einfache, planbare Preise\n ohne Gebühren und ohne API-Kosten",

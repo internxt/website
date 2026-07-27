@@ -6,7 +6,8 @@
       "line2": "免费云对象存储"
     },
     "description": "高效、可扩展的云存储解决方案，用于大规模存储、访问和管理数据。",
-    "cta": "立即开始"
+    "cta": "立即开始",
+    "cta2": "阅读文档"
   },
   "PredictablePricingSection": {
     "title": "简单、可预测的定价\n 零手续费，无 API 费用",
