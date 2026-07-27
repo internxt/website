@@ -40,7 +40,8 @@
     "cleaner": "Internxt Cleaner",
     "meet": "Internxt Meet",
     "ai": "Internxt AI",
-    "certifications": "Сертификаты"
+    "certifications": "Сертификаты",
+    "mail": "Internxt Mail"
   },
   "Auth": {
     "SignUp": {
