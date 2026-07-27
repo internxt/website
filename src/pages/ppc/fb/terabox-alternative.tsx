@@ -1,6 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
@@ -11,21 +10,15 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'terabox-alternative');
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.TERABOX85,
-    couponCodeForLifetime: PromoCodeName.TERABOX85,
-  });
 
   const {
     products,
@@ -34,7 +27,10 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.META85,
+    couponCodeForLifetime: PromoCodeName.META85,
+  });
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -72,17 +68,14 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Terabox alternative', 'terabox-alternative')}
-      </Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
         segmentName="PPC Terabox Comparison"
-        robots="noindex, follow"
         lang={lang}
+        robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage hideCTA/>
+        <MinimalNavbar textContent={navbarLang} lang={locale} />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
 
         <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} needH2 />
@@ -110,6 +103,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           hideSwitchSelector
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
+          hideFreeCard
         />
         <HorizontalScrollableSection
           textContent={langJson.PrivacyViolationsSection}
@@ -158,15 +152,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           needsH3={false}
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          needsH2={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Terabox alternative', url: '/terabox-alternative' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
     </>
   );

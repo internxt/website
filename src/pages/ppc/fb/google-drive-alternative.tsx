@@ -1,7 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
@@ -12,22 +10,16 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { formatText } from '@/components/utils/format-text';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'google-drive-alternative');
 
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.gdrive,
-    couponCodeForLifetime: PromoCodeName.gdrive
-  });
-  
   const {
     products,
     loadingCards,
@@ -35,7 +27,10 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
     coupon: individualCoupon,
     lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.META85,
+    couponCodeForLifetime: PromoCodeName.META85,
+  });
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -73,16 +68,13 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Google drive alternative', 'google-drive-alternative')}
-      </Script>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
         segmentName={'PPC Drive Comparison'}
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed hideLanguage hideCTA/>
+        <MinimalNavbar textContent={navbarLang} lang={locale} />
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
@@ -110,6 +102,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
           hideSwitchSelector
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
+          hideFreeCard
         />
 
         <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
@@ -152,15 +145,7 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
           needsH3={false}
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          needsH2={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Google drive alternative', url: '/google-drive-alternative' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
     </>
   );

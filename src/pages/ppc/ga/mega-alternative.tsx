@@ -1,6 +1,5 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
@@ -12,17 +11,11 @@ import HorizontalScrollableSection from '@/components/comparison/HorizontalScrol
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.PCLOUD85,
-    couponCodeForLifetime: PromoCodeName.PCLOUD85,
-  });
+const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
 
   const {
     products,
@@ -31,7 +24,10 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.GADS85,
+    couponCodeForLifetime: PromoCodeName.GADS85,
+  });
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -66,20 +62,25 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('pCloud alternative', 'pcloud-alternative')}
-      </Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="PPC pCloud Comparison"
-        robots="noindex, follow"
+        segmentName="PPC Mega Comparison"
         lang={lang}
+        robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed hideLanguage hideCTA/>
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
+        <MinimalNavbar textContent={navbarLang} lang={lang} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" needH2 />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
+
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
+
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Mega'}
+          logo="/images/comparison/competitors/Mega_Letters.webp"
+          sectionNeedsH2
+        />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -95,18 +96,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           hideSwitchSelector
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
-        />
-
-        <TablesSection
-          textContent={langJson.VersusSection}
-          competitor={'pCloud'}
-          logo="/images/comparison/competitors/pCloud.webp"
-          sectionNeedsH2
-        />
-
-        <HorizontalScrollableSection
-          textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          hideFreeCard
         />
 
         <HorizontalScrollableSection
@@ -116,16 +106,20 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           needsH3
         />
 
+        <HorizontalScrollableSection
+          textContent={langJson.HorizontalScrollableSection}
+          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          needsH2
+        />
+
         <FloatingCtaSectionv2
-          textContent={langJson.CtaSection2}
-          url={'#billingButtons'}
+          textContent={langJson.CtaSection}
+          url="#billingButtons"
           customText={
-            <>
-              <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-                <h2 className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</h2>
-                <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
-              </div>
-            </>
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
+            </div>
           }
           containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
@@ -133,15 +127,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
         <FAQSection textContent={langJson.FaqSection} needsH3={false} />
 
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          needsH2={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'pCloud alternative', url: '/pcloud-alternative' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>
   );
@@ -151,7 +137,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/pcloud-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/mega-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -168,4 +154,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default PCloudComparison;
+export default MegaComparison;
