@@ -92,7 +92,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       style={{ background: '#FFFFFF 100%' }}
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
-        <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6">
+        <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6 lg:ml-20 lg:pl-14">
           <h2 className="text-[30px] font-bold leading-tight text-gray-95 lg:text-5xl">{textContent.title}</h2>
           <p className="text-base font-normal leading-tight text-gray-55 lg:text-[16px]">{textContent.description}</p>
         </div>
@@ -102,11 +102,15 @@ export default function HorizontalScrollableSectionWithPhotosSection({
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
-          className="w-full overflow-x-auto px-5 lg:max-w-[1200px] lg:px-8 [&::-webkit-scrollbar]:hidden"
+          className="w-full overflow-x-auto [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             WebkitOverflowScrolling: 'touch',
+            paddingLeft: isMobile ? '20px' : 'calc((100vw - 850px) / 2)',
+            paddingRight: isMobile
+              ? '20px'
+              : 'calc((100vw - 850px) / 2)',
           }}
         >
           <div
