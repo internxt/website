@@ -6,7 +6,8 @@
       "line2": "相容的物件儲存"
     },
     "description": "高效、可擴展的雲端儲存解決方案，專為存取與管理大規模數據而設計。",
-    "cta": "立即開始"
+    "cta": "立即開始",
+    "cta2": "閱讀文檔"
   },
   "PredictablePricingSection": {
     "title": "簡單、可預測的定價\n 零手續費，無 API 費用",

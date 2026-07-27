@@ -6,7 +6,8 @@
       "line2": "Stockage d'objets cloud gratuit"
     },
     "description": "Une solution de stockage cloud efficace et évolutive pour stocker, accéder et gérer des données à grande échelle.",
-    "cta": "Commencer"
+    "cta": "Commencer",
+    "cta2": "Lire la documentation"
   },
   "PredictablePricingSection": {
     "title": "Une tarification simple et prévisible\n sans frais ni coûts d'API",

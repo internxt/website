@@ -6,7 +6,8 @@
       "line2": "Archiviazione a oggetti cloud gratuita"
     },
     "description": "Una soluzione di archiviazione cloud efficiente e scalabile per archiviare, consultare e gestire dati su larga scala.",
-    "cta": "Inizia ora"
+    "cta": "Inizia ora",
+    "cta2": "Leggere la documentazione"
   },
   "PredictablePricingSection": {
     "title": "Prezzi semplici e prevedibili\n senza commissioni o costi API",

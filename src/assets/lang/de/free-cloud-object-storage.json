@@ -6,7 +6,8 @@
       "line2": "Kostenloser Cloud-Objektspeicher"
     },
     "description": "Eine effiziente, skalierbare Cloud-Speicherlösung zum Speichern, Abrufen und Verwalten von Daten in großem Umfang.",
-    "cta": "Jetzt starten"
+    "cta": "Jetzt starten",
+    "cta2": "Dokumentation lesen"
   },
   "PredictablePricingSection": {
     "title": "Einfache, planbare Preise\n ohne Gebühren oder API-Kosten",
