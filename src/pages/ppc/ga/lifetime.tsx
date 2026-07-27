@@ -1,8 +1,5 @@
 import Layout from '@/components/layout/Layout';
-import Footer from '@/components/layout/footers/Footer';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
 import usePricing from '@/hooks/usePricing';
-import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
@@ -14,8 +11,8 @@ import { stripeService } from '@/services/stripe.service';
 import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
-import Script from 'next/script';
-import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 
 interface LifetimeSpecialProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -35,10 +32,6 @@ function LifetimeSpecial({
   testimonialsJson,
 }: Readonly<LifetimeSpecialProps>): JSX.Element {
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'lifetime');
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.lifetime,
-    couponCodeForLifetime: PromoCodeName.lifetime
-  });
 
   const {
     products,
@@ -47,7 +40,10 @@ function LifetimeSpecial({
     coupon: individualCoupon,
     lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.GADS85,
+    couponCodeForLifetime: PromoCodeName.GADS85,
+  });
 
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
@@ -92,17 +88,9 @@ function LifetimeSpecial({
     percentOff === '0'
       ? langJson.ctaSection2.descriptionWithoutDisocunt
       : parsePercentText(langJson.ctaSection2.description);
-  const navbarCta = 'chooseStorage';
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([
-          { name: 'Encrypted Cloud Storage', url: '/' },
-          { name: 'Secure cloud storage', url: '/drive' },
-          { name: 'Lifetime cloud storage', url: '/lifetime' },
-        ])}
-      </Script>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
@@ -110,7 +98,7 @@ function LifetimeSpecial({
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed hideLanguage hideCTA/>
+        <MinimalNavbar textContent={navbarLang} lang={lang} />
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
         <ReviewsSection textContent={testimonialsJson.ReviewSection} />
@@ -150,7 +138,7 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20 pb-20"
-          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         />
 
         <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
@@ -171,18 +159,10 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-10"
-          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Secure cloud storage', url: '/drive' },
-            { name: 'Lifetime cloud storage', url: '/lifetime' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>
   );

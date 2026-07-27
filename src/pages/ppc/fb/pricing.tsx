@@ -1,13 +1,7 @@
 import { useState } from 'react';
-import Script from 'next/script';
-import usePpcCoupon from '@/hooks/usePpcCoupon';
-import { GetServerSidePropsContext } from 'next';
-import Footer from '@/components/layout/footers/Footer';
-import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
@@ -22,6 +16,9 @@ import RelationalLinks from '@/components/ppc/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { GetServerSidePropsContext } from 'next';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -41,10 +38,6 @@ const Pricing = ({
   relationalLinksText,
 }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const ppcCoupon = usePpcCoupon({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
-  });
 
   const {
     products,
@@ -53,7 +46,10 @@ const Pricing = ({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing(ppcCoupon);
+  } = usePricing({
+    couponCode: PromoCodeName.META85,
+    couponCodeForLifetime: PromoCodeName.META85,
+  });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
@@ -111,14 +107,6 @@ const Pricing = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.SchemaMarkupQuestions.faq)}
-      </Script>
-
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Cloud Storage Pricing', 'pricing')}
-      </Script>
-
       <Layout
         segmentName={`PPC ${pageName}`}
         title={metatags[0].title}
@@ -126,7 +114,7 @@ const Pricing = ({
         lang={lang}
         robots="noindex, follow"
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA/>
+        <MinimalNavbar textContent={navbarLang} lang={lang} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -158,6 +146,7 @@ const Pricing = ({
           overrideOnIndividualSwitchToggled={onIndividualSwitchToggled}
           overrideOnBusinessSwitchToggled={onBusinessSwitchToggled}
           SectionTag={'h1'}
+          hideFreeCard
         />
 
         <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 />
@@ -197,15 +186,7 @@ const Pricing = ({
           bgPadding="lg:pb-20 pb-20"
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          hideNewsletter={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Cloud Storage Pricing', url: '/pricing' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>
   );
