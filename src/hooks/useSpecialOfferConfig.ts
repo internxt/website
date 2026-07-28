@@ -107,7 +107,11 @@ export const ALLOWED_PATHS = [
   'kioskom',
   'riki',
   'kentangtech',
-  'wpunpas'
+  'wpunpas',
+  'ss87',
+  'binosha',
+  'wael',
+  'malternativ',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -181,7 +185,12 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   kevin: 'de',
   falucho: 'es',
   salvilla: 'es',
-  homefacil: 'es'
+  homefacil: 'es',
+  ss87: 'en',
+  wpunas: 'en',
+  binosha: 'en',
+  wael: 'de',
+  malternativ: 'de',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -202,6 +211,10 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'tauteknologi',
   'hendrikiang',
   'howmation',
+  'wpunas',
+  'ss87',
+  'binosha',
+  'wpunpas',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -259,7 +272,11 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'kioskom',
   'riki',
   'kentangtech',
-  'wpunpas'
+  'wpunpas',
+  'ss87',
+  'binosha',
+  'wael',
+  'malternativ',
 ]);
 
 export const COUPON_CODES = {
@@ -367,7 +384,11 @@ export const COUPON_CODES = {
   kioskom: PromoCodeName.kioskom,
   riki: PromoCodeName.riki,
   kentangtech: PromoCodeName.kentangtech,
-  wpunpas: PromoCodeName.wpunpas
+  wpunpas: PromoCodeName.wpunpas,
+  ss87: PromoCodeName.ss87,
+  binosha: PromoCodeName.binosha,
+  wael: PromoCodeName.wael,
+  malternativ: PromoCodeName.malternativ,
 };
 
 interface OfferConfig {
