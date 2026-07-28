@@ -318,7 +318,11 @@ export enum PromoCodeName {
   kioskom = 'KIOSKOM',
   riki = 'RIKI',
   kentangtech = 'KENTANGTECH',
-  wpunpas = 'WPUNPAS'
+  wpunpas = 'WPUNPAS',
+  ss87 = 'SS87',
+  binosha = 'BINOSHA',
+  wael = 'WAEL',
+  malternativ = 'MALTERNATIV',
 }
 
 export interface PromoCodeProps {
