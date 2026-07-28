@@ -108,10 +108,10 @@ export const ALLOWED_PATHS = [
   'riki',
   'kentangtech',
   'wpunpas',
-  'ss87',
   'binosha',
   'wael',
   'malternativ',
+  'ss87',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -186,7 +186,6 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   falucho: 'es',
   salvilla: 'es',
   homefacil: 'es',
-  ss87: 'en',
   wpunas: 'en',
   binosha: 'en',
   malternativ: 'de',
@@ -211,10 +210,9 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'hendrikiang',
   'howmation',
   'wpunas',
-  'ss87',
-  'binosha',
   'wpunpas',
   'wael',
+  'ss87',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -273,7 +271,6 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'riki',
   'kentangtech',
   'wpunpas',
-  'ss87',
   'binosha',
   'wael',
   'malternativ',

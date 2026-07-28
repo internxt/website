@@ -79,6 +79,8 @@ export default function HeroSection({
     ? 'https://drive.internxt.com/checkout?planId=price_1TRoAJFAOdcgaBMQveT6cebN&planType=individual&currency=eur&mode=payment'
     : '#billingButtons';
 
+  const heroImage = image === 'ss87' ? 'ss87-2' : image;
+
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
@@ -181,7 +183,7 @@ export default function HeroSection({
           </div>
         )}
 
-          {isBpdrive && (
+        {isBpdrive && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
             <Image
               src={getImage('/images/influencers/bloggerspassoin.webp')}
@@ -273,7 +275,7 @@ export default function HeroSection({
         className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}
       >
         <Image
-          src={getImage(`/images/influencers/${image}.webp`)}
+          src={getImage(`/images/influencers/${heroImage}.webp`)}
           alt="Internxt Partners HeroSection Image"
           height={529}
           width={562}
