@@ -189,7 +189,6 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   ss87: 'en',
   wpunas: 'en',
   binosha: 'en',
-  wael: 'de',
   malternativ: 'de',
 };
 
@@ -215,6 +214,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'ss87',
   'binosha',
   'wpunpas',
+  'wael',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
