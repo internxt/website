@@ -50,6 +50,7 @@ export interface Products {
   cleaner: string;
   meet: string;
   ai: string;
+  mail: string;
 }
 
 export interface Auth {

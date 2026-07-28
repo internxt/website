@@ -1,0 +1,119 @@
+{
+    "HeroSection": {
+        "label": "Internxt Mail",
+        "title": "The best encrypted email",
+        "description": "Internxt keeps your emails private and secure with ultra-powerful encryption.",
+        "cta": "Get Internxt Mail",
+        "garantee": "Included with Ultimate plans"
+    },
+    "DriveSection": {
+        "title": "Internxt Mail",
+        "description":  [
+            "Keep your emails private with Internxt Mail, a secure and encrypted email designed for your privacy.",
+            "Built with open source software and post-quantum encryption, your emails are protected from digital spies, hackers, and prevents big tech from monitoring you online."
+        ]
+    },
+    "CoreFeatures": {
+        "title": "The most secure email alternative to Big Tech",
+        "descriptions": [
+            "Join Internxt in building a more secure, private web experience with our encrypted, private suite of products designed to give you control of your privacy.",
+            "Enjoy Mail, Meet, Antivirus, and VPN as part of your Internxt Drive plan on Windows, Mac, or Linux."
+        ],
+        "accordionCards": {
+            "titles":[
+                "European privacy",
+                "Security",
+                "Sustainability"
+            ],
+            "descriptions":[
+                "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information.",
+                "Internxt uses end-to-end and post-quantum encryption, providing you with the best encrypted email for your privacy.",
+                "We are committed to a more sustainable and green future, so our products only use renewable and energy-efficient power technologies."
+            ]
+        }
+    },
+    "MailFeatureSection": {
+        "title": "Encrypted email built with advanced technology",
+        "description": "Internxt Mail uses state-of-the-art post-quantum and zero-knowledge encryption to protect your right to privacy and data and ensure that only you can view your emails. With Internxt, only you can view your emails and attachments.",
+        "scrollableSection": {
+            "titles": [
+                "Post-quantum cryptography",
+                "Zero trackers, zero ads",
+                "Safe from spam and phishing",
+                "Open source and audited"
+            ],
+            "descriptions": [
+                "Advanced post-quantum encryption offers maximum security, providing you with the most secure email that future-proofs your online security.",
+                "Enjoy a secure, ad-free email experience. No more tracking, no more personalized ads following you across the web. Just pure, private communication.",
+                "Internxt Mail identifies and blocks phishing, spam, and junk emails, keeping your inbox clean, organized, and free from threats to your data.",
+                "All our products, including Internxt Mail, are open source, independently audited, and verified for their award-winning encryption."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Your email. Your business.",
+        "description": "Send and receive emails in total privacy",
+        "cta": "Get Internxt Mail"
+    },
+    "CtaSectionV2": {
+        "title": "The private email you can trust",
+        "description": "Email with total confidence that nobody is spying on you.",
+        "cta": "Get Internxt Mail"
+    },
+    "DesignedSection": {
+        "title": "Designed to meet all privacy needs",
+        "description": "We believe everyone has the right to privacy, which is why Internxt Mail is built to meet the needs of everyone who needs a secure email provider.",
+        "scrollableSection": {
+            "images": ["personal", "business", "lawyers", "medical"],
+            "titles": ["Personal", "Business", "Lawyers", "Medical"],
+            "descriptions": [
+                "Encrypted email that keeps all your mail and attachments private.",
+                "Prevent data breaches and phishing with encrypted and private emails.",
+                "GDPR-compliant and encrypted email to prevent leaks of sensitive data.",
+                "Mail others to share and discuss information in complete privacy to protect client privileges."
+            ]
+        }
+    },
+    "SemanticAccordion": {
+        "title": "Questions? We have answers",
+        "items": [
+            {
+                "question": "What is Internxt Mail?",
+                "answer": [
+                    "Internxt Mail is the best encrypted email for sending private emails. With Internxt Mail, we guarantee that nobody but you can access your messages or attachments, which are all secured with post-quantum and zero-knowledge encryption."
+                ]
+            },
+            {
+                "question": "Why should I use an encrypted email?",
+                "answer": [
+                    "An encrypted email will prevent data breaches and protect your right to privacy, as all your data is inaccessible to everybody but you. With Internxt Mail,  you can confidently send business details, personal messages, or confidential documents thanks to our advanced encryption protocols."
+                ]
+            },
+            {
+                "question": "Is Internxt Mail an alternative to Gmail?",
+                "answer": [
+                    "Yes, Internxt Mail is a secure alternative to Gmail, as you hold the encryption keys for the emails you send. In contrast, Gmail retains these keys on its servers, which are used to store messages. They may read their contents or hand them to authorities if requested, as they are not a zero-knowledge service."
+                ]
+            },
+            {
+                "question": "Is Internxt Mail free?",
+                "answer": [
+                    "Internxt Mail is available when you subscribe to any of our premium plans, offering access to our full suite of privacy-focused products, including Internxt Drive, Mail, Antivirus, and VPN."
+                ]
+            },
+            {
+                "question": "How do I contact support?",
+                "answer": [
+                    "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+                ]
+            },
+            {
+                "question": "What is Internxt’s refund policy?",
+                "answer": [
+                    "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+                    "If you're ever unsatisfied with our service, email us at hello@internxt.com and request a refund."
+                ]
+            }
+        ]
+    }
+}

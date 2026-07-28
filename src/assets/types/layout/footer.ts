@@ -73,6 +73,7 @@ export interface Products {
   business: string;
   family: string;
   pricing: string;
+  mail: string;
 }
 
 export interface Resources {

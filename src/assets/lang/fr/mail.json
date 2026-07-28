@@ -1,0 +1,119 @@
+{
+    "HeroSection": {
+        "label": "Internxt Mail",
+        "title": "La meilleure messagerie cryptée",
+        "description": "Internxt préserve la confidentialité et la sécurité de vos e-mails grâce à un chiffrement ultra-puissant.",
+        "cta": "Obtenir Internxt Mail",
+        "garantee": "Inclus dans les abonnements Ultimate"
+    },
+    "DriveSection": {
+        "title": "Internxt Mail",
+        "description":  [
+            "Préservez la confidentialité de vos e-mails grâce à Internxt Mail, une messagerie sécurisée et cryptée conçue pour protéger votre vie privée.",
+            "Développée avec des logiciels open-source et un chiffrement post-quantique, vos e-mails sont protégés contre les espions numériques, les pirates et empêchent les géants de la tech de vous surveiller en ligne."
+        ]
+    },
+    "CoreFeatures": {
+        "title": "L'alternative de messagerie la plus sécurisée face aux Big Tech",
+        "descriptions": [
+            "Rejoignez Internxt pour construire une expérience web plus sûre et privée grâce à notre suite de produits cryptés et confidentiels, conçus pour vous donner le contrôle de votre vie privée.",
+            "Profitez de Mail, Meet, Antivirus et VPN dans le cadre de votre abonnement Internxt Drive sur Windows, Mac ou Linux."
+        ],
+        "accordionCards": {
+            "titles":[
+                "Confidentialité européenne",
+                "Sécurité",
+                "Durabilité"
+            ],
+            "descriptions":[
+                "Internxt est conforme au RGPD, qui protège vos données grâce aux meilleures lois sur la vie privée en matière de sécurité, de transparence et de contrôle de vos informations personnelles.",
+                "Internxt utilise un chiffrement de bout en bout et post-quantique, vous offrant la meilleure messagerie cryptée pour votre vie privée.",
+                "Nous nous engageons pour un avenir plus durable et écologique, c'est pourquoi nos produits utilisent uniquement des technologies d'énergie renouvelable et à haute efficacité énergétique."
+            ]
+        }
+    },
+    "MailFeatureSection": {
+        "title": "Une messagerie cryptée conçue avec une technologie de pointe",
+        "description": "Internxt Mail utilise un chiffrement post-quantique et à divulgation nulle de connaissance (zero-knowledge) de pointe pour protéger votre droit à la vie privée et à vos données, garantissant que vous seul pouvez consulter vos e-mails. Avec Internxt, vous seul pouvez voir vos e-mails et pièces jointes.",
+        "scrollableSection": {
+            "titles": [
+                "Cryptographie post-quantique",
+                "Zéro traqueur, zéro publicité",
+                "À l'abri du spam et du phishing",
+                "Open source et audité"
+            ],
+            "descriptions": [
+                "Le chiffrement post-quantique avancé offre une sécurité maximale, vous procurant la messagerie la plus sûre qui pérennise votre sécurité en ligne pour l'avenir.",
+                "Profitez d'une expérience de messagerie sécurisée et sans publicité. Plus de pistage, plus de publicités personnalisées qui vous suivent sur le web. Juste une communication pure et privée.",
+                "Internxt Mail identifie et bloque le phishing, le spam et les courriels indésirables, gardant votre boîte de réception propre, organisée et exempte de menaces pour vos données.",
+                "Tous nos produits, y compris Internxt Mail, sont open source, audités de manière indépendante et vérifiés pour leur chiffrement primé."
+            ]
+        }
+    },
+    "CtaSection": {
+        "title": "Vos e-mails. Vos affaires.",
+        "description": "Envoyez et recevez des e-mails en toute confidentialité",
+        "cta": "Obtenir Internxt Mail"
+    },
+    "CtaSectionV2": {
+        "title": "La messagerie privée en laquelle vous pouvez avoir confiance",
+        "description": "Écrivez des e-mails en toute confiance, sachant que personne ne vous espionne.",
+        "cta": "Obtenir Internxt Mail"
+    },
+    "DesignedSection": {
+        "title": "Conçue pour répondre à tous les besoins de confidentialité",
+        "description": "Nous pensons que tout le monde a droit à la vie privée, c'est pourquoi Internxt Mail est conçu pour répondre aux besoins de tous ceux qui recherchent un fournisseur de messagerie sécurisé.",
+        "scrollableSection": {
+            "images": ["personal", "business", "lawyers", "medical"],
+            "titles": ["Personnel", "Professionnel", "Avocats", "Secteur médical"],
+            "descriptions": [
+                "Une messagerie cryptée qui préserve la confidentialité de tous vos e-mails et pièces jointes.",
+                "Prévenez les violations de données et le phishing grâce à des e-mails cryptés et privés.",
+                "Messagerie cryptée et conforme au RGPD pour éviter les fuites de données sensibles.",
+                "Écrivez à vos contacts pour partager et échanger des informations en toute confidentialité afin de protéger le secret professionnel."
+            ]
+        }
+    },
+    "SemanticAccordion": {
+        "title": "Des questions ? Nous avons des réponses",
+        "items": [
+            {
+                "question": "Qu'est-ce qu'Internxt Mail ?",
+                "answer": [
+                    "Internxt Mail est la meilleure messagerie cryptée pour envoyer des e-mails privés. Avec Internxt Mail, nous garantissons que personne d'autre que vous ne peut accéder à vos messages ou pièces jointes, qui sont tous sécurisés par un chiffrement post-quantique et à divulgation nulle de connaissance."
+                ]
+            },
+            {
+                "question": "Pourquoi devrais-je utiliser une messagerie cryptée ?",
+                "answer": [
+                    "Une messagerie cryptée permet de prévenir les violations de données et de protéger votre droit à la vie privée, car vos données sont inaccessibles à quiconque sauf à vous. Avec Internxt Mail, vous pouvez envoyer des détails commerciaux, des messages personnels ou des documents confidentiels en toute confiance grâce à nos protocoles de chiffrement avancés."
+                ]
+            },
+            {
+                "question": "Internxt Mail est-il une alternative à Gmail ?",
+                "answer": [
+                    "Oui, Internxt Mail est une alternative sécurisée à Gmail, car vous détenez les clés de chiffrement des e-mails que vous envoyez. À l'inverse, Gmail conserve ces clés sur ses serveurs, qui sont utilisés pour stocker les messages. Ils peuvent lire leur contenu ou les remettre aux autorités sur demande, car ils ne proposent pas un service à divulgation nulle de connaissance."
+                ]
+            },
+            {
+                "question": "Internxt Mail est-il gratuit ?",
+                "answer": [
+                    "Internxt Mail est disponible lorsque vous vous abonnez à l'un de nos forfaits premium, offrant un accès à notre suite complète de produits axés sur la confidentialité, notamment Internxt Drive, Mail, Antivirus et VPN."
+                ]
+            },
+            {
+                "question": "Comment contacter l'assistance ?",
+                "answer": [
+                    "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un e-mail à hello@internxt.com."
+                ]
+            },
+            {
+                "question": "Quelle est la politique de remboursement d'Internxt ?",
+                "answer": [
+                    "Internxt propose une garantie standard de remboursement de 30 jours sur l'ensemble de ses abonnements payants, qui commence à courir dès que vous vous abonnez.",
+                    "Si vous n'êtes pas satisfait de nos services, envoyez-nous un e-mail à hello@internxt.com pour demander un remboursement."
+                ]
+            }
+        ]
+    }
+}

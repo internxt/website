@@ -615,5 +615,10 @@
     "id": "secure-file-transfer",
     "title": "Internxt - Trasferimento file sicuro",
     "description": "Internxt offre un servizio di trasferimento file sicuro per crittografare e proteggere i tuoi file, così puoi controllare chi può accedere ai tuoi dati."
+  },
+  {
+    "id": "mail",
+    "title": "Internxt Mail - La migliore email crittografata per la privacy.",
+    "description": "Internxt Mail è una soluzione di posta elettronica crittografata che mantiene al sicuro la tua casella di posta. Grazie alla crittografia post-quantistica, Internxt è il servizio di posta elettronica più sicuro per la privacy."
   }
 ]

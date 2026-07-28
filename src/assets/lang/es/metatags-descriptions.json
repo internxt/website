@@ -675,5 +675,10 @@
     "id": "secure-file-transfer",
     "title": "Internxt - Transferencia segura de archivos",
     "description": "Internxt ofrece un servicio de transferencia segura de archivos para cifrar y proteger tus archivos, de modo que tú controlas quién puede acceder a tus datos."
+  },
+  {
+    "id": "mail",
+    "title": "Internxt Mail - El mejor correo electrónico cifrado para la privacidad.",
+    "description": "Internxt Mail es una solución de correo electrónico cifrado que mantiene segura tu bandeja de entrada. Gracias al cifrado postcuántico, Internxt es el servicio de correo electrónico más seguro para la privacidad."
   }
 ]
