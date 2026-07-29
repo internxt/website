@@ -112,6 +112,8 @@ export const ALLOWED_PATHS = [
   'wael',
   'malternativ',
   'ss87',
+  'niklashansen',
+  'lukas',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -125,6 +127,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   neumanndigital: 'de',
   bluewin: 'de',
   simon42: 'de',
+  niklashansen: 'de',
+  lukas: 'de',
   madroz: 'fr',
   justin: 'fr',
   qinhui: 'fr',
@@ -274,6 +278,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'binosha',
   'wael',
   'malternativ',
+  'niklashansen',
+  'lukas',
 ]);
 
 export const COUPON_CODES = {
@@ -386,6 +392,8 @@ export const COUPON_CODES = {
   binosha: PromoCodeName.binosha,
   wael: PromoCodeName.wael,
   malternativ: PromoCodeName.malternativ,
+  niklashansen: PromoCodeName.niklashansen,
+  lukas: PromoCodeName.lukas,
 };
 
 interface OfferConfig {
