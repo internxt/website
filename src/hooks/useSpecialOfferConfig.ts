@@ -281,6 +281,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'malternativ',
   'niklashansen',
   'lukas',
+  'dezz',
 ]);
 
 export const COUPON_CODES = {
