@@ -217,6 +217,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'wpunpas',
   'wael',
   'ss87',
+  'binosha',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
