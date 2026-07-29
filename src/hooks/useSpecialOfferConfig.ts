@@ -108,10 +108,12 @@ export const ALLOWED_PATHS = [
   'riki',
   'kentangtech',
   'wpunpas',
-  'ss87',
   'binosha',
   'wael',
   'malternativ',
+  'ss87',
+  'niklashansen',
+  'lukas',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -125,6 +127,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   neumanndigital: 'de',
   bluewin: 'de',
   simon42: 'de',
+  niklashansen: 'de',
+  lukas: 'de',
   madroz: 'fr',
   justin: 'fr',
   qinhui: 'fr',
@@ -186,10 +190,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   falucho: 'es',
   salvilla: 'es',
   homefacil: 'es',
-  ss87: 'en',
   wpunas: 'en',
   binosha: 'en',
-  wael: 'de',
   malternativ: 'de',
 };
 
@@ -212,9 +214,10 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'hendrikiang',
   'howmation',
   'wpunas',
+  'wpunpas',
+  'wael',
   'ss87',
   'binosha',
-  'wpunpas',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -273,10 +276,11 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'riki',
   'kentangtech',
   'wpunpas',
-  'ss87',
   'binosha',
   'wael',
   'malternativ',
+  'niklashansen',
+  'lukas',
 ]);
 
 export const COUPON_CODES = {
@@ -389,6 +393,8 @@ export const COUPON_CODES = {
   binosha: PromoCodeName.binosha,
   wael: PromoCodeName.wael,
   malternativ: PromoCodeName.malternativ,
+  niklashansen: PromoCodeName.niklashansen,
+  lukas: PromoCodeName.lukas,
 };
 
 interface OfferConfig {
