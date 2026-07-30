@@ -79,7 +79,12 @@ export default function HeroSection({
     ? 'https://drive.internxt.com/checkout?planId=price_1TRoAJFAOdcgaBMQveT6cebN&planType=individual&currency=eur&mode=payment'
     : '#billingButtons';
 
-  const heroImage = image === 'ss87' ? 'ss87-2' : image;
+  const heroImage = 
+    image === 'ss87' 
+    ? 'ss87-2'
+    : image === 'wpu'
+      ? 'wpunpas'
+      : image;
 
   return (
     <section
