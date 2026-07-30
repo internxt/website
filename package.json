@@ -97,7 +97,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^9.1.0",
     "next-unused": "^0.0.6",
-    "postcss": "8.5.10",
+    "postcss": "8.5.18",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
     "reset-css": "5.0.1",
@@ -109,8 +109,9 @@
     "child_process": false
   },
   "resolutions": {
+    "tmp": "^0.2.7",
     "uuid": "14.0.0",
-    "postcss": "8.5.10",
+    "postcss": "8.5.18",
     "**/js-yaml": "^4.3.0",
     "@emotion/react/**/yaml": "1.10.3",
     "@emotion/styled/**/yaml": "1.10.3",
