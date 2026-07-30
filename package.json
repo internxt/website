@@ -109,6 +109,7 @@
     "child_process": false
   },
   "resolutions": {
+    "tmp": "^0.2.7",
     "uuid": "14.0.0",
     "postcss": "8.5.18",
     "**/js-yaml": "^4.3.0",
