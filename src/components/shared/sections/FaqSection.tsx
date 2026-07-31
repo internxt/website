@@ -10,6 +10,7 @@ interface FAQSectionProps {
   needsH3?: boolean;
   needsSpecialH3?: boolean;
   needsH2?: boolean;
+  lastItemsAsP?: number;
 }
 
 const FAQSection = ({
@@ -22,6 +23,7 @@ const FAQSection = ({
   bgGradient,
   needsSpecialH3 = false,
   needsH2 = false,
+  lastItemsAsP = 0
 }: FAQSectionProps) => {
   const TitleTag = needsH2 ? 'h2' : 'p';
   return (
@@ -50,6 +52,8 @@ const FAQSection = ({
                 needsH3={needsH3}
                 needsSpecialH3={needsSpecialH3}
                 index={index}
+                totalItems={textContent.faq.length}
+                lastItemsAsP={lastItemsAsP}
               />
             </div>
           ))}

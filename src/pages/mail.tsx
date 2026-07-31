@@ -44,6 +44,8 @@ const Mail = ({
             <HorizontalScrollableSection 
                 textContent={textContent.MailFeatureSection}
                 bgGradient='linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+                needsH2
+                needsH3
             />
 
             <FloatingCtaSectionv2
@@ -87,6 +89,7 @@ const Mail = ({
                 needsH3={false}
                 needsSpecialH3
                 needsH2
+                lastItemsAsP={2}
             />
 
             <Footer textContent={footerText} lang={lang}/>
