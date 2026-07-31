@@ -38,10 +38,15 @@ export default function FaqAccordion({
     });
   }, []);
 
-  const QuestionTag =
-    needsSpecialH3 && typeof index === 'number' && typeof totalItems === 'number'
-      ? (index < totalItems - 2 ? 'h3' : 'p') 
-      : needsH3 ? 'h3' : 'p';
+  const isSpecialParagraph = 
+    needsSpecialH3 &&
+    typeof index === 'number' &&
+    typeof totalItems === 'number' &&
+    index < totalItems - 2;
+
+  const defaultTag = needsH3 ? 'h3' : 'p';
+
+  const QuestionTag = isSpecialParagraph ? 'h3' : defaultTag;
 
   return (
     <div className="flex flex-col items-stretch justify-start">
