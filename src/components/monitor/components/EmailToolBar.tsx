@@ -41,5 +41,3 @@ export const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: 
     </div>
   );
 };
-
-export default EmailToolbar;

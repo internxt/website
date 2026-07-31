@@ -9,7 +9,7 @@ export interface SpecialOfferText {
   FeaturesSection: FeaturesSection;
 }
 
-export interface FeaturesSection {
+interface FeaturesSection {
   section1: Section;
   section2: Section2;
   section3: Section3;
@@ -19,16 +19,16 @@ export interface FeaturesSection {
   section7: Section7;
 }
 
-export interface Section {
+interface Section {
   title: Section1Title;
 }
 
-export interface Section1Title {
+interface Section1Title {
   line1: string;
   line2: string;
 }
 
-export interface Section2 {
+interface Section2 {
   title: Section4Title;
   subtitle: Section2Subtitle;
 }

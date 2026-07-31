@@ -1,7 +1,7 @@
 import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import axios from 'axios';
 import { useState, useEffect, useCallback } from 'react';
-import debounce from 'lodash.debounce';
+import debounce from 'lodash/debounce';
 import { currencyService } from '@/services/currency.service';
 
 interface ContactSalesFormProps {

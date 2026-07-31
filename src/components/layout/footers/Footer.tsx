@@ -87,7 +87,7 @@ export default function Footer({
 
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
           <div className="flex w-full flex-row items-end gap-6 lg:w-[48%] xl:w-[43%] 2xl:w-[35%]">
-            <div className="flex flex-col items-start justify-between gap-9 flex-1">
+            <div className="flex flex-1 flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
                 <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
@@ -124,7 +124,7 @@ export default function Footer({
                 </div>
               </div>
             </div>
-            <div className="flex flex-row shrink-0 hidden md:block">
+            <div className="flex shrink-0 flex-row md:block">
               <Image
                 src={getImage('/images/components/AppDownload.webp')}
                 width={130}
@@ -206,12 +206,7 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
 
-                    <Link
-                      href="/antivirus"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.antivirus}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
@@ -286,15 +281,9 @@ export default function Footer({
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
                     </Link>
 
-                    <Link
-                      href="/mail"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/mail" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.mail}
                     </Link>
-
 
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
@@ -1003,7 +992,6 @@ export default function Footer({
                       <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>
-
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -1892,14 +1880,4 @@ export default function Footer({
       </div>
     </section>
   );
-}
-
-export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
-
-  return {
-    props: {
-      lang,
-    },
-  };
 }

@@ -15,7 +15,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'GET') {
     const couponName = req.query.couponName;
-    if (!couponName) return res.status(404).end();
+    if (!couponName) {
+      res.status(404).end();
+      return;
+    }
 
     const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-info`, {
       params: {

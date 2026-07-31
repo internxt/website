@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import EmailToolbar from './components/EmailToolBar';
+import { EmailToolbar } from './components/EmailToolBar';
 import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 import PwnedStatusSection from './PwnedStatusSection';
 import LoadingPulse from '../shared/loader/LoadingPulse';

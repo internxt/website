@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
 
-export const ALLOWED_PATHS = [
+const ALLOWED_PATHS = [
   'baity',
   'xavier',
   'oscar',
@@ -197,9 +197,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   nazlouis: 'en',
 };
 
-export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
+const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
+const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'baity',
   'nfire',
   'devopstoolbox',
@@ -284,7 +284,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'lukas',
   'dezz',
   'nazlouis',
-  'ss87'
+  'ss87',
 ]);
 
 export const COUPON_CODES = {

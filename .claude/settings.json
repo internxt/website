@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"console.log\\(require\\('typescript/package.json'\\).version\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const p=require\\('typescript/package.json'\\); console.log\\(JSON.stringify\\({main:p.main,exports:p.exports,bin:p.bin},null,2\\)\\)\")"
+    ]
+  }
+}
