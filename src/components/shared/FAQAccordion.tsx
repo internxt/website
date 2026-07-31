@@ -13,7 +13,6 @@ export default function FaqAccordion({
   needsSpecialH3 = false,
   index,
   totalItems,
-  lastItemsAsP,
 }: {
   question: string;
   answer: string[];
@@ -23,8 +22,7 @@ export default function FaqAccordion({
   needsH3?: boolean;
   needsSpecialH3?: boolean;
   index?: number;
-  totalItems?: number;
-  lastItemsAsP?: number;
+  totalItems: number;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -40,37 +38,8 @@ export default function FaqAccordion({
     });
   }, []);
 
-  const getQuestionTag = ({
-    needsSpecialH3,
-    needsH3,
-    index,
-    totalItems,
-    lastItemsAsP = 0,
-  }: {
-    needsSpecialH3: boolean;
-    needsH3: boolean;
-    index?: number;
-    totalItems?: number;
-    lastItemsAsP?: number;
-  }): 'h3' | 'p' => {
-    if (!needsSpecialH3 || index === undefined) {
-      return needsH3 ? 'h3' : 'p';
-    }
-
-    if (lastItemsAsP !== undefined && lastItemsAsP > 0 && totalItems !== undefined) {
-      return index >= totalItems - lastItemsAsP ? 'p' : 'h3';
-    }
-
-    return index < 5 ? 'h3' : 'p';
-  };
-
-  const QuestionTag = getQuestionTag({
-    needsSpecialH3,
-    needsH3: needsH3 ?? false,
-    index,
-    totalItems,
-    lastItemsAsP,
-  });
+  const QuestionTag =
+    needsSpecialH3 && typeof index === 'number' ? (index < totalItems -2 ? 'h3' : 'p') : needsH3 ? 'h3' : 'p';
 
   return (
     <div className="flex flex-col items-stretch justify-start">

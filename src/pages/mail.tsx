@@ -89,7 +89,6 @@ const Mail = ({
                 needsH3={false}
                 needsSpecialH3
                 needsH2
-                lastItemsAsP={2}
             />
 
             <Footer textContent={footerText} lang={lang}/>
