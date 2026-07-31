@@ -61,7 +61,7 @@
         "cta": "獲取 Internxt Mail"
     },
     "DesignedSection": {
-        "title": "專為滿足所有隱私需求而設計",
+        "title": "專為絕對隱私設計的安全電子郵件解決方案",
         "description": "我們相信每個人都有隱私權，因此 Internxt Mail 旨在滿足每個需要安全電子郵件服務提供商的人的需求。",
         "scrollableSection": {
             "images": ["personal", "business", "lawyers", "medical"],
@@ -75,7 +75,7 @@
         }
     },
     "SemanticAccordion": {
-        "title": "有疑問？我們有答案",
+        "title": "對 Internxt Mail 有疑問？我們有答案",
         "items": [
             {
                 "question": "什麼是 Internxt Mail？",

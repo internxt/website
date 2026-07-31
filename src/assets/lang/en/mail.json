@@ -61,7 +61,7 @@
         "cta": "Get Internxt Mail"
     },
     "DesignedSection": {
-        "title": "Designed to meet all privacy needs",
+        "title": "A secure email solution designed for absolute privacy",
         "description": "We believe everyone has the right to privacy, which is why Internxt Mail is built to meet the needs of everyone who needs a secure email provider.",
         "scrollableSection": {
             "images": ["personal", "business", "lawyers", "medical"],
@@ -75,7 +75,7 @@
         }
     },
     "SemanticAccordion": {
-        "title": "Questions? We have answers",
+        "title": "Questions for Internxt Mail? We have answers",
         "items": [
             {
                 "question": "What is Internxt Mail?",

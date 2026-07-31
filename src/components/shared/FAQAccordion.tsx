@@ -12,6 +12,7 @@ export default function FaqAccordion({
   needsH3,
   needsSpecialH3 = false,
   index,
+  totalItems,
 }: {
   question: string;
   answer: string[];
@@ -21,6 +22,7 @@ export default function FaqAccordion({
   needsH3?: boolean;
   needsSpecialH3?: boolean;
   index?: number;
+  totalItems?: number;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -36,8 +38,16 @@ export default function FaqAccordion({
     });
   }, []);
 
-  const QuestionTag =
-    needsSpecialH3 && typeof index === 'number' ? (index < 5 ? 'h3' : 'p') : needsH3 ? 'h3' : 'p';
+  const isSpecialParagraph = 
+    needsSpecialH3 &&
+    typeof index === 'number' &&
+    typeof totalItems === 'number' &&
+    index < totalItems - 2;
+
+  const defaultTag = needsH3 ? 'h3' : 'p';
+
+  const QuestionTag = isSpecialParagraph ? 'h3' : defaultTag;
+
   return (
     <div className="flex flex-col items-stretch justify-start">
       <button

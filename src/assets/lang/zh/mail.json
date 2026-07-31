@@ -61,7 +61,7 @@
         "cta": "获取 Internxt Mail"
     },
     "DesignedSection": {
-        "title": "专为满足所有隐私需求而设计",
+        "title": "专为绝对隐私设计的安全电子邮件解决方案",
         "description": "我们相信每个人都有隐私权，因此 Internxt Mail 旨在满足每个需要安全电子邮件服务提供商的人的需求。",
         "scrollableSection": {
             "images": ["personal", "business", "lawyers", "medical"],
@@ -75,7 +75,7 @@
         }
     },
     "SemanticAccordion": {
-        "title": "有疑问？我们有答案",
+        "title": "对 Internxt Mail 有疑问？我们有答案",
         "items": [
             {
                 "question": "什么是 Internxt Mail？",

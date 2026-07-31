@@ -50,6 +50,7 @@ const FAQSection = ({
                 needsH3={needsH3}
                 needsSpecialH3={needsSpecialH3}
                 index={index}
+                totalItems={textContent.faq.length}
               />
             </div>
           ))}

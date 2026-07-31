@@ -61,7 +61,7 @@
         "cta": "Obtenir Internxt Mail"
     },
     "DesignedSection": {
-        "title": "Conçue pour répondre à tous les besoins de confidentialité",
+        "title": "Une solution d'email sécurisée conçue pour une confidentialité absolue",
         "description": "Nous pensons que tout le monde a droit à la vie privée, c'est pourquoi Internxt Mail est conçu pour répondre aux besoins de tous ceux qui recherchent un fournisseur de messagerie sécurisé.",
         "scrollableSection": {
             "images": ["personal", "business", "lawyers", "medical"],
@@ -75,7 +75,7 @@
         }
     },
     "SemanticAccordion": {
-        "title": "Des questions ? Nous avons des réponses",
+        "title": "Des questions sur Internxt Mail ? Nous avons les réponses",
         "items": [
             {
                 "question": "Qu'est-ce qu'Internxt Mail ?",

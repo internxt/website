@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { HighlightText } from '../components/HighlightText';
 import { CheckCircle } from '@phosphor-icons/react';
 import Animation from '@/components/shared/Animation';
 import { ImageConfig } from '@/assets/types/mail'
@@ -62,7 +61,7 @@ export const HeroSection = ({ textContent }) => {
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>
         <h1 className="flex flex-col text-[30px] font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-6xl">
-          <HighlightText text={textContent.title} />
+          {textContent.title}
         </h1>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <div className="flex flex-col">

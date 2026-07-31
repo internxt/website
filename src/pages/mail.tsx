@@ -44,6 +44,8 @@ const Mail = ({
             <HorizontalScrollableSection 
                 textContent={textContent.MailFeatureSection}
                 bgGradient='linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+                needsH2
+                needsH3
             />
 
             <FloatingCtaSectionv2
