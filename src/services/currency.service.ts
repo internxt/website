@@ -6,12 +6,22 @@ export const currency = {
   usd: '$',
   eur: '€',
   IN: '$',
+  SA: '$', // Saudi Arabia
+  AE: '$', // United Arab Emirates (UAE)
+  QA: '$', // Qatar
+  BH: '$', // Bahrain
+  OM: '$', // Oman
 };
 
 export const priceValue = {
   US: 'usd',
   CA: 'usd',
   IN: 'usd',
+  SA: 'usd', // Saudi Arabia
+  AE: 'usd', // United Arab Emirates (UAE)
+  QA: 'usd', // Qatar
+  BH: 'usd', // Bahrain
+  OM: 'usd', // Oman
 };
 
 const getCountry = async () => {
