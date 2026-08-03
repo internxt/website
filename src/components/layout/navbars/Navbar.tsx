@@ -239,20 +239,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     }`}
                   >
                     <div className="mt-4 flex flex-col text-gray-100">
-                      <Link
-                        href="/pricing"
-                        locale={props.lang}
-                        role="link"
-                        tabIndex={0}
-                        onClick={() => {
-                          setMenuState(false);
-                        }}
-                        className={`flex w-full translate-y-0 px-8 py-4 outline-none transition delay-100 duration-300 ${
-                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}
-                      >
-                        {props.textContent.links.pricing}
-                      </Link>
 
                       <Disclosure
                         as="div"
@@ -263,7 +249,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {({ open }) => (
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
-                              <span className="flex flex-row">{props.textContent.links.products}</span>
+                              <span className="flex flex-row">{props.textContent.links.suite}</span>
                               <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                               <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                             </Disclosure.Button>
@@ -278,37 +264,50 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
+                                <Link href="/pricing" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.suite.pricing}</p>
+                                </Link>
                                 <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.drive}</p>
+                                  <p>{props.textContent.suite.drive}</p>
                                 </Link>
 
+                                <Link href="/mail" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.suite.mail}</p>
+                                </Link>
+
+                                <Link href="/meet" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.suite.meet}</p>
+                                </Link>
+
+                                <Link href="/cloud-storage-for-photos" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.suite.photos}</p>
+                                </Link>                                                                
+
+                                <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.suite.cleaner}</p>
+                                </Link>                                
+
                                 <Link href="/antivirus" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.antivirus}</p>
+                                  <p>{props.textContent.suite.antivirus}</p>
                                 </Link>
 
                                 <Link href="/vpn" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.vpn}</p>
+                                  <p>{props.textContent.suite.vpn}</p>
                                 </Link>
 
-                                <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.cleaner}</p>
-                                </Link>
-                                <Link href="/meet" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.meet}</p>
-                                </Link>
                                 <Link
                                   href="https://ai.internxt.com/"
                                   locale={props.lang}
                                   className="flex flex-row space-x-2"
                                 >
-                                  <p>{props.textContent.products.ai}</p>
+                                  <p>{props.textContent.suite.ai}</p>
                                 </Link>
                                 <Link
                                   href="https://send.internxt.com/"
                                   locale={props.lang}
                                   className="flex flex-row space-x-2"
                                 >
-                                  <p>{props.textContent.products.send}</p>
+                                  <p>{props.textContent.suite.send}</p>
                                 </Link>
                               </Disclosure.Panel>
                             </Transition>
@@ -325,7 +324,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {({ open }) => (
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
-                              <span className="flex flex-row">{props.textContent.links.solutions}</span>
+                              <span className="flex flex-row">{props.textContent.links.enterprise}</span>
                               <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                               <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                             </Disclosure.Button>
@@ -341,49 +340,15 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 } space-y-8 p-4`}
                               >
                                 <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.secureCloudStorage}</p>
+                                  <p>{props.textContent.enterprise.s3}</p>
                                 </Link>
 
-                                <Link href="/lifetime" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.lifetimeCloudStorage}</p>
-                                </Link>
-
-                                <Link href="/private-cloud-storage-solutions" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.privateCloudStorage}</p>
-                                </Link>
-
-                                <Link href="/cloud-storage-for-photos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForPhotos}</p>
-                                </Link>
-                                <Link href="/cloud-storage-for-videos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForVideos}</p>
-                                </Link>
-                                <Link href="/cloud-storage-backup-solutions" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForBackup}</p>
-                                </Link>
-                                <Link href="/nas" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudNASBackup}</p>
-                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>
                         )}
                       </Disclosure>
 
-                      <Link
-                        href="/cloud-object-storage"
-                        locale={props.lang}
-                        role="link"
-                        tabIndex={0}
-                        onClick={() => {
-                          setMenuState(false);
-                        }}
-                        className={`flex w-full translate-y-0 px-8 py-4 outline-none transition delay-100 duration-300 ${
-                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}
-                      >
-                        {props.textContent.products.s3}
-                      </Link>
                       <Disclosure
                         as="div"
                         className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${

@@ -1,21 +1,20 @@
 {
   "links": {
-    "products": "Produkte",
+    "suite": "Suite",
     "about": "Über uns",
     "privacy": "Privatsphäre",
-    "ourValues": "Unsere Werte",
-    "pricing": "Preise",
+    "ourValues": "Werte",
     "blackFriday": "Black Friday",
     "login": "Log-in",
     "getStarted": "Starte jetzt",
     "chooseStorage": "Wählen",
     "checkout": "Jetzt anfordern!",
     "business": "Geschäftskunden",
-    "solutions": "Lösungen"
+    "enterprise": "Unternehmen"
   },
-  "products": {
+  "suite": {
+    "pricing": "Preise",
     "drive": "Internxt Drive",
-    "s3": "Cloud für Unternehmen",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
@@ -25,16 +24,11 @@
     "cleaner": "Internxt Cleaner",
     "meet": "Internxt Meet",
     "ai": "Internxt AI",
-    "mail": "Internxt Mail"
+    "mail": "Internxt Mail",
+    "photos": "Internxt Photos"
   },
-  "solutions": {
-    "secureCloudStorage": "Sichere Cloud-Speicherung",
-    "lifetimeCloudStorage": "Lebenslange Cloud-Speicherung",
-    "privateCloudStorage": "Private Cloud-Speicherung",
-    "cloudStorageForPhotos": "Cloud-Speicherung für Fotos",
-    "cloudStorageForVideos": "Cloud-Speicherung für Videos",
-    "cloudStorageForBackup": "Cloud-Speicherung für Backups",
-    "cloudNASBackup": "Cloud-Speicherung für NAS"
+  "enterprise": {
+    "s3": "Cloud für Unternehmen"
   },
   "ourValues": {
     "privacy": "Privatsphäre",

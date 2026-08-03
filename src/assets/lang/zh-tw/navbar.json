@@ -1,21 +1,20 @@
 {
   "links": {
-    "products": "產品",
+    "suite": "套件",
     "about": "關於我們",
-    "ourValues": "我們的價值觀",
+    "ourValues": "價值觀",
     "privacy": "隱私",
-    "pricing": "定價",
     "login": "登入",
     "getStarted": "開始使用",
     "chooseStorage": "選擇存儲",
     "checkout": "立即領取！",
     "business": "商業",
     "blackFriday": "Black Friday",
-    "solutions": "解決方案"
+    "enterprise": "企業"
   },
-  "products": {
+  "suite": {
+    "pricing": "定價",
     "drive": "Internxt Drive",
-    "s3": "企業雲",
     "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
     "vpn": "Internxt VPN",
@@ -25,7 +24,11 @@
     "cleaner": "Internxt Cleaner",
     "meet": "Internxt Meet",
     "ai": "Internxt AI",
-    "mail": "Internxt Mail"
+    "mail": "Internxt Mail",
+    "photos": "Internxt Photos"
+  },
+  "enterprise": {
+    "s3": "企業雲"
   },
   "ourValues": {
     "privacy": "隱私",
@@ -33,15 +36,6 @@
     "sustainability": "可持續性",
     "certifications": "認證",
     "about": "關於我們"
-  },
-  "solutions": {
-    "secureCloudStorage": "安全雲存儲",
-    "lifetimeCloudStorage": "終身雲存儲",
-    "privateCloudStorage": "私有雲存儲",
-    "cloudStorageForPhotos": "雲存儲照片",
-    "cloudStorageForVideos": "雲存儲視頻",
-    "cloudStorageForBackup": "雲存儲備份",
-    "cloudNASBackup": "雲存儲NAS"
   },
   "Auth": {
     "SignUp": {

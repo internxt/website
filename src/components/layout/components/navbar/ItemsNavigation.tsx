@@ -2,14 +2,6 @@ import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
 
-interface NavigationLinkProps {
-  href: string;
-  text: string;
-  isActive: boolean;
-  isDarkMode: boolean;
-  lang: string;
-}
-
 interface DropdownMenuItem {
   href: string;
   text: string;
@@ -38,19 +30,6 @@ interface ItemsNavigationProps {
     pathname: string;
   };
 }
-
-const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
-  const baseClasses = 'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
-  const darkModeClasses = isDarkMode ? 'text-white hover:text-gray-20' : 'text-gray-60 hover:text-primary';
-
-  return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
-};
-
-const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
-  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
-    {text}
-  </Link>
-);
 
 const isExternalLink = (href: string) => /^https?:\/\//.test(href);
 
@@ -105,57 +84,37 @@ export const ItemsNavigation = ({
   lang,
   darkMode,
   shouldHideItems,
-  getTitles,
   textContent,
-  router,
 }: ItemsNavigationProps) => {
   if (shouldHideItems) return null;
-
-  const currentPath = router.pathname.split('/')[1];
 
   return (
     <div className="links">
       <div className="hidden items-center space-x-0 lg:inline-flex">
-        <NavigationLink
-          href="/pricing"
-          text={textContent.links.pricing}
-          isActive={currentPath === getTitles.links.pricing.trim().toLowerCase()}
-          isDarkMode={darkMode}
-          lang={lang}
-        />
         <DropdownMenu
-          label={textContent.links.products}
+          label={textContent.links.suite}
           items={[
-            { href: '/drive', text: textContent.products.drive },
-            { href: '/antivirus', text: textContent.products.antivirus },
-            { href: '/vpn', text: textContent.products.vpn },
-            { href: '/cleaner', text: textContent.products.cleaner },
-            { href: '/meet', text: textContent.products.meet },
-            { href: '/mail', text: textContent.products.mail }
+            { href: '/pricing', text: textContent.suite.pricing },
+            { href: '/drive', text: textContent.suite.drive },
+            { href: '/mail', text: textContent.suite.mail },
+            { href: '/meet', text: textContent.suite.meet },
+            { href: '/cloud-storage-for-photos', text: textContent.suite.photos },
+            { href: '/cleaner', text: textContent.suite.cleaner },
+            { href: '/antivirus', text: textContent.suite.antivirus },
+            { href: '/vpn', text: textContent.suite.vpn },
+            { href: 'https://ai.internxt.com/', text: textContent.suite.ai },
+            { href: 'https://send.internxt.com/', text: textContent.suite.send },
           ]}
           darkMode={darkMode}
           lang={lang}
         />
 
         <DropdownMenu
-          label={textContent.links.solutions}
+          label={textContent.links.enterprise}
           items={[
-            { href: '/drive', text: textContent.solutions.secureCloudStorage },
-            { href: '/lifetime', text: textContent.solutions.lifetimeCloudStorage },
-            { href: '/private-cloud-storage-solutions', text: textContent.solutions.privateCloudStorage },
-            { href: '/cloud-storage-for-photos', text: textContent.solutions.cloudStorageForPhotos },
-            { href: '/cloud-storage-for-videos', text: textContent.solutions.cloudStorageForVideos },
-            { href: '/cloud-storage-backup-solutions', text: textContent.solutions.cloudStorageForBackup },
-            { href: '/nas', text: textContent.solutions.cloudNASBackup },
+            { href: '/cloud-object-storage', text: textContent.enterprise.s3 },
           ]}
           darkMode={darkMode}
-          lang={lang}
-        />
-        <NavigationLink
-          href="/cloud-object-storage"
-          text={textContent.products.s3}
-          isActive={currentPath === 'cloud-object-storage'}
-          isDarkMode={darkMode}
           lang={lang}
         />
         <DropdownMenu

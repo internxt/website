@@ -1,16 +1,15 @@
 {
   "links": {
-    "products": "Produits",
+    "suite": "Suite",
     "about": "Propos",
     "ourValues": "Valeurs",
-    "pricing": "Tarifs",
     "login": "Connecter",
     "blackFriday": "Black Friday",
     "getStarted": "Commencer",
     "chooseStorage": "Choisir stockage",
     "checkout": "Offre de réclamation",
     "business": "Entreprises",
-    "solutions": "Solutions"
+    "enterprise": "Enterprise"
   },
   "ourValues": {
     "openSource": "Open Source",
@@ -19,18 +18,9 @@
     "certifications": "Certifications",
     "about": "À propos de nous"
   },
-  "solutions": {
-    "secureCloudStorage": "Stockage en nuage sécurisé",
-    "lifetimeCloudStorage": "Stockage en nuage à vie",
-    "privateCloudStorage": "Stockage en nuage privé",
-    "cloudStorageForPhotos": "Stockage en nuage pour photos",
-    "cloudStorageForVideos": "Stockage en nuage pour vidéos",
-    "cloudStorageForBackup": "Stockage en nuage pour sauvegardes",
-    "cloudNASBackup": "Stockage en nuage pour NAS"
-  },
-  "products": {
+  "suite": {
+    "pricing": "Tarifs",
     "drive": "Internxt Drive",
-    "s3": "Cloud pour entreprises",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
@@ -40,7 +30,11 @@
     "cleaner": "Internxt Cleaner",
     "meet": "Internxt Meet",
     "ai": "Internxt AI",
-    "mail": "Internxt Mail"
+    "mail": "Internxt Mail",
+    "photos": "Internxt Photos"
+  },
+  "enterprise": {
+    "s3": "Cloud pour entreprises"    
   },
   "Auth": {
     "SignUp": {

@@ -666,44 +666,6 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
-                <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
-                    {textContent.FooterSection.sections.tools.title}
-                  </p>
-                  <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
-                  >
-                    <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.tools.byteConverter}
-                    </Link>
-                    <Link href="/temporary-email" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.tools.temporaryEmail}
-                    </Link>
-                    <Link href="/password-checker" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.tools.passwordChecker}
-                    </Link>
-                    <Link href="/virus-scanner" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.tools.fileVirusScan}
-                    </Link>
-                    <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.passwordGenerator}
-                    </Link>
-                    <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.fileConverter}
-                    </Link>
-                    <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                    </Link>
-                    <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.metadataRemover}
-                    </Link>
-                    <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.fileCompressor}
-                    </Link>
-                  </div>
-                </div>
-              </div>
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
@@ -1660,64 +1622,6 @@ export default function Footer({
                         className="items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.certifications}
-                      </Link>
-                    </Disclosure.Panel>
-                  </Transition>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="w-screen">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button
-                    className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
-                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
-                  >
-                    <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                  </Disclosure.Button>
-                  <Transition
-                    enter="transition duration-200 ease-out"
-                    enterFrom="-translate-y-10 opacity-0"
-                    enterTo="translate-y-0 opacity-100"
-                    leave="transition duration-200 ease-out"
-                  >
-                    <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
-                    >
-                      <Link href="/byte-converter" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.byteConverter}
-                      </Link>
-
-                      <Link href="/temporary-email" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.temporaryEmail}
-                      </Link>
-
-                      <Link href="/password-checker" locale={lang} passHref legacyBehavior>
-                        <div>{textContent.FooterSection.sections.tools.passwordChecker}</div>
-                      </Link>
-
-                      <Link href="/virus-scanner" locale={lang} passHref>
-                        {textContent.FooterSection.sections.tools.fileVirusScan}
-                      </Link>
-                      <Link href="/password-generator" locale={lang} passHref legacyBehavior>
-                        {textContent.FooterSection.sections.tools.passwordGenerator}
-                      </Link>
-                      <Link href="/file-converter" locale={lang} passHref legacyBehavior>
-                        {textContent.FooterSection.sections.tools.fileConverter}
-                      </Link>
-                      <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
-                        {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      </Link>
-                      <Link href="/metadata-remover" locale={lang} passHref legacyBehavior>
-                        {textContent.FooterSection.sections.tools.metadataRemover}
-                      </Link>
-                      <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.pricing}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

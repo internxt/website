@@ -1,13 +1,13 @@
 export interface Root {
   links: Links;
   ourValues: OurValues;
-  solutions: Solutions;
-  products: Products;
+  enterprise: Enterprise;
+  products: Suite;
   Auth: Auth;
 }
 
 export interface Links {
-  products: string;
+  suite: string;
   about: string;
   ourValues: string;
   pricing: string;
@@ -17,7 +17,7 @@ export interface Links {
   chooseStorage: string;
   checkout: string;
   business: string;
-  solutions: string;
+  enterprise: string;
 }
 
 export interface OurValues {
@@ -28,17 +28,13 @@ export interface OurValues {
   about: string;
 }
 
-export interface Solutions {
-  secureCloudStorage: string;
-  lifetimeCloudStorage: string;
-  privateCloudStorage: string;
-  cloudStorageForPhotos: string;
-  cloudStorageForVideos: string;
-  cloudStorageForBackup: string;
-  cloudNASBackup: string;
+export interface Enterprise {
+  s3: string;
+  cloudGpu: string;
 }
 
-export interface Products {
+export interface Suite {
+  pricing: string
   drive: string;
   s3: string;
   webDAV: string;
@@ -51,6 +47,7 @@ export interface Products {
   meet: string;
   ai: string;
   mail: string;
+  photos: string;
 }
 
 export interface Auth {
