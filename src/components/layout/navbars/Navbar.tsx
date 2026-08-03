@@ -40,7 +40,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
   const router = useRouter();
   const lang = router.locale;
-  const getTitles = require(`@/assets/lang/en/navbar.json`);
 
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
@@ -104,10 +103,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             </div>
             <ItemsNavigation
               darkMode={props.darkMode ?? false}
-              getTitles={getTitles}
               shouldHideItems={props.isLinksHidden ?? false}
               lang={lang as string}
-              router={router}
               textContent={props.textContent}
             />
           </div>
