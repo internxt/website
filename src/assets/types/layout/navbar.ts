@@ -10,7 +10,6 @@ export interface Links {
   suite: string;
   about: string;
   ourValues: string;
-  pricing: string;
   login: string;
   blackFriday: string;
   getStarted: string;
@@ -30,13 +29,11 @@ export interface OurValues {
 
 export interface Enterprise {
   s3: string;
-  cloudGpu: string;
 }
 
 export interface Suite {
   pricing: string
   drive: string;
-  s3: string;
   webDAV: string;
   vpn: string;
   send: string;
