@@ -18,17 +18,7 @@ interface ItemsNavigationProps {
   lang: string;
   darkMode: boolean;
   shouldHideItems: boolean;
-  getTitles: {
-    links: {
-      pricing: string;
-      about: string;
-      s3: string;
-    };
-  };
   textContent: NavigationBarText;
-  router: {
-    pathname: string;
-  };
 }
 
 const isExternalLink = (href: string) => /^https?:\/\//.test(href);
