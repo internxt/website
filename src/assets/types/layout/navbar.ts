@@ -44,7 +44,6 @@ export interface Suite {
   meet: string;
   ai: string;
   mail: string;
-  photos: string;
 }
 
 export interface Auth {

@@ -276,10 +276,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   <p>{props.textContent.suite.meet}</p>
                                 </Link>
 
-                                <Link href="/cloud-storage-for-photos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.suite.photos}</p>
-                                </Link>                                                                
-
                                 <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.suite.cleaner}</p>
                                 </Link>                                

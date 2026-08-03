@@ -88,7 +88,6 @@ export const ItemsNavigation = ({
             { href: '/drive', text: textContent.suite.drive },
             { href: '/mail', text: textContent.suite.mail },
             { href: '/meet', text: textContent.suite.meet },
-            { href: '/cloud-storage-for-photos', text: textContent.suite.photos },
             { href: '/cleaner', text: textContent.suite.cleaner },
             { href: '/antivirus', text: textContent.suite.antivirus },
             { href: '/vpn', text: textContent.suite.vpn },
