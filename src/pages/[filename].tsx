@@ -12,9 +12,10 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE } from '@/hooks/useSpecialOfferConfig';
+import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE, ALLOWED_PATHS } from '@/hooks/useSpecialOfferConfig';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -92,7 +93,6 @@ function CombinedSpecialOffer({
     couponCode: requireAnnualDiscount ? couponCode : undefined,
     couponCodeForLifetime: couponCode,
   });
-
 
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
@@ -257,8 +257,19 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
-  const pathname = ctx.params.filename;
+export const getStaticPaths: GetStaticPaths = ({ locales }) => {
+  const paths = (locales ?? []).flatMap((locale) =>
+    ALLOWED_PATHS.map((filename) => ({ params: { filename }, locale })),
+  );
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const pathname = ctx.params?.filename as string;
   const lang = ctx.locale;
 
   const enforcedLocale = ENFORCED_LOCALE[pathname];
@@ -280,6 +291,6 @@ export async function getServerSideProps(ctx) {
       hideLanguage: !!enforcedLocale,
     },
   };
-}
+};
 
 export default CombinedSpecialOffer;
