@@ -115,6 +115,7 @@ export const ALLOWED_PATHS = [
   'niklashansen',
   'lukas',
   'nazlouis',
+  'david',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -219,6 +220,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'wael',
   'ss87',
   'binosha',
+  'david',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -284,7 +286,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'lukas',
   'dezz',
   'nazlouis',
-  'ss87'
+  'ss87',
+  'david',
 ]);
 
 export const COUPON_CODES = {
@@ -400,6 +403,7 @@ export const COUPON_CODES = {
   niklashansen: PromoCodeName.niklashansen,
   lukas: PromoCodeName.lukas,
   nazlouis: PromoCodeName.nazlouis,
+  david: PromoCodeName.david,
 };
 
 interface OfferConfig {
