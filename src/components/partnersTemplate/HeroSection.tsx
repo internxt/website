@@ -245,13 +245,6 @@ export default function HeroSection({
                 }`}
               >
                 <span>{parsePercentText(textContent.subtitle)}</span>
-                {showSubtitle ? (
-                  specialOffer || annualPlans ? (
-                    <span>{textContent.subtitle2}</span>
-                  ) : (
-                    <span>{textContent.lifetimeSubtitle2}</span>
-                  )
-                ) : undefined}
               </span>
             )}
             <p
