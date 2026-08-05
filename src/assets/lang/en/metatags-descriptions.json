@@ -778,5 +778,10 @@
     "id": "mail",
     "title": "Internxt Mail - The Best Encrypted Email for Privacy.",
     "description": "Internxt Mail is an encrypted email solution that keeps your inbox safe. Thanks to post-quantum encryption, Internxt is the most secure email service for privacy."
+  },
+  {
+    "id": "photo",
+    "title": "Internxt Photos – Secure Cloud Storage for Photos",
+    "description": "Internxt Photos is a private, secure photo storage app for automatic backups and syncing. Zero-knowledge, open source, and private."
   }
 ]

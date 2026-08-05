@@ -760,5 +760,10 @@
     "id": "mail",
     "title": "Internxt Mail - 保護隱私的最佳加密電子郵件。",
     "description": "Internxt Mail 是一款加密電子郵件解決方案，可確保您的收件箱安全。得益於後量子加密技術，Internxt 是保障隱私最安全的電子郵件服務。"
+  },
+  {
+    "id": "photo",
+    "title": "Internxt 相片 – 安全的雲端相片儲存空間",
+    "description": "Internxt 相片是一款私密、安全的相片儲存應用程式，支援自動備份與同步。零知識架構、開源且重視隱私。"
   }
 ]
