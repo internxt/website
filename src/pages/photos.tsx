@@ -13,10 +13,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import HorizontalScrollableWithPhotoSection from '@/components/photo/HorizontalScrollableWithPhotoSection'
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import usePricing from '@/hooks/usePricing';
-import { PromoCodeName } from '@/lib/types';
-import { stripeService } from '@/services/stripe.service';
 
 interface PhotoProps {
     metatagsDescription: MetatagsDescription[];
@@ -37,45 +33,7 @@ const Photo = ({
 } : PhotoProps): JSX.Element => {
     const metatags = metatagsDescription.find((metatag) => metatag.id === 'photo');
     const lang = locale as string;
-    const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
-    lifetimeCoupons,
-  } = usePricing({ couponCode: PromoCodeName.OFFSUB, couponCodeForLifetime: PromoCodeName.OFFLFT });
 
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
     return (
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''}>
             <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed/>
@@ -83,25 +41,6 @@ const Photo = ({
             <HeroSection textContent={textContent.HeroSection}/>
 
             <PhotoSection textContent={textContent.PhotoSection}/>
-
-            <PricingSectionWrapper 
-                textContent={textContent.TableSection}
-                decimalDiscount={{
-                individuals: decimalDiscount,
-                lifetime: decimalDiscountForLifetime,
-                }}
-                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
-                popularPlanBySize="3TB"
-                sectionDetails="bg-white lg:py-20"
-                hideFreeCard
-            />
 
             <CoreFeaturesSection textContent={textContent.CoreFeatures}/>
 

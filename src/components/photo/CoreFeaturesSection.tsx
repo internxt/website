@@ -84,7 +84,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                 src={getImage(`/images/photos/mockup${activeIndex + 1}.webp`)}
                 alt={textContent.accordionCards.titles[activeIndex]}
                 height={450}
-                width={345}
+                width={495}
                 className="rounded-16 object-cover"
               />
             </div>
