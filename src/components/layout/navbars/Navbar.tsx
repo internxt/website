@@ -296,6 +296,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                 <Link href="/meet" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.products.meet}</p>
                                 </Link>
+                                <Link href="/mail" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.mail}</p>
+                                </Link>
+                                <Link href="/photos" locale={props.lang} className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.photos}</p>
+                                </Link>
                                 <Link
                                   href="https://ai.internxt.com/"
                                   locale={props.lang}
