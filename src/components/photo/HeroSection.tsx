@@ -7,11 +7,11 @@ export const HeroSection = ({ textContent }) => {
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-between gap-2 px-8 pt-28 lg:flex-row lg:gap-2 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
+      className="flex w-full flex-col items-center justify-between gap-8 px-8 pt-28 lg:pt-28 lg:flex-row lg:gap-10 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
     >
       <div
-        className={`z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[700px] lg:gap-8 lg:rounded-16 lg:p-8`}
+        className={`z-20 h-min flex flex-1 flex-col items-start justify-center gap-4 rounded-xl p-6 py-5 lg:py-10 shadow-soft backdrop-blur-55 lg:max-w-[600px] lg:gap-8 lg:rounded-16 lg:p-8`}
         style={{
           background: 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
         }}
@@ -38,9 +38,9 @@ export const HeroSection = ({ textContent }) => {
           </div>
         </div>
       </div>
-      <div className="w-full max-w-full shrink-0 min-h-[320px] lg:w-[750px] lg:max-w-[750px] lg:min-h-[563px] lg:justify-center lg:pt-10 lg:flex">
+      <div className="flex flex-1 items-center justify-center lg:min-w-0 lg:pt-10">
         <Image
-                className="w-full h-auto"
+                className="h-auto w-full object-contain"
                 src={getImage('/images/photos/photo.webp')}
                 alt="Internxt Drive panel interface"
                 height={563}

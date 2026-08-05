@@ -38,11 +38,11 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
 
   return (
     <section className="w-full bg-neutral-17 py-10 lg:py-20">
-      <div className="flex flex-col gap-6 px-5 lg:ml-20 lg:pl-20 xl:pl-32 3xl:pl-80">
-        <h2 className="flex flex-col text-[30px] lg:translate-x-40 lg:pl-20 lg:text-5xl lg:pr-10 lg:max-w-[1000px] font-bold leading-tight text-gray-100">{textContent.title}</h2>
-        <p className="text-base font-normal text-gray-55 lg:text-lg lg:translate-x-60 lg:max-w-[900px]">{textContent.description}</p>
-        <div className="flex w-full flex-row gap-2 lg:max-w-[1500px] lg:pl-20">
-          <div className="flex w-full flex-col gap-6 lg:max-w-[500px] lg:pl-40">
+      <div className="mx-auto w-full max-w-[1100px] flex-col gap-6 px-5 lg:flex lg:px-20">
+        <h2 className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 lg:text-5xl lg:pr-10">{textContent.title}</h2>
+        <p className="max-w-[900px] text-base font-normal text-gray-55 lg:text-lg">{textContent.description}</p>
+        <div className="flex w-full justify-center gap-16 lg:max-w-[1500px]">
+          <div className="flex w-full flex-col gap-6 lg:max-w-[420px]">
             <div className="flex flex-row items-center justify-center lg:hidden">
               <Image
                 src={getImage(`/images/photos/mobile.webp`)}
@@ -84,7 +84,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                 src={getImage(`/images/photos/mockup${activeIndex + 1}.webp`)}
                 alt={textContent.accordionCards.titles[activeIndex]}
                 height={450}
-                width={495}
+                width={395}
                 className="rounded-16 object-cover"
               />
             </div>
