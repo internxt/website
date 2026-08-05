@@ -11,6 +11,7 @@ export const currency = {
   QA: '$', // Qatar
   BH: '$', // Bahrain
   OM: '$', // Oman
+  IR: '$', // Iran
 };
 
 export const priceValue = {
@@ -22,6 +23,7 @@ export const priceValue = {
   QA: 'usd', // Qatar
   BH: 'usd', // Bahrain
   OM: 'usd', // Oman
+  IR: 'usd', // Iran
 };
 
 const getCountry = async () => {
