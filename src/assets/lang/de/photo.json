@@ -1,0 +1,164 @@
+{
+  "HeroSection": {
+    "label": "Internxt Fotos",
+    "title": "Sicherer und verschlüsselter Fotospeicher",
+    "description": "Speichern, synchronisieren, sichern und greifen Sie auf Ihre Fotos in absoluter Privatsphäre zu.",
+    "cta": "Internxt holen",
+    "garantee": "In Ultimate-Plänen enthalten"
+  },
+  "PhotoSection": {
+    "title": "Internxt Fotos",
+    "description": [
+      "Sichern und synchronisieren Sie Ihre Erinnerungen mit unserem sicheren Cloud-Speicher für Fotos. Ihre Erinnerungen werden durch Post-Quanten-Verschlüsselung geschützt und sind für vollständige Privatsphäre entwickelt."
+    ]
+  },
+  "CoreFeatures": {
+    "title": "Privater Fotospeicher: Ihre Erinnerungen, von überall erreichbar",
+    "description": "Halten Sie Ihre Fotobibliothek auf allen Geräten auf dem neuesten Stand und synchronisiert. Selbst wenn Ihr Gerät verloren geht oder ersetzt wird, bleibt Ihre Fotobibliothek sicher und zugänglich.",
+    "accordionCards": {
+      "titles": [
+        "Sicherung aller Ihrer Geräte",
+        "Keine Tracker, Werbung und KI",
+        "Automatische Synchronisierung und Backups"
+      ],
+      "descriptions": [
+        "Sichern Sie Fotos von allen Ihren Geräten automatisch und greifen Sie von jedem beliebigen Gerät sicher darauf zu, wann immer Sie sie brauchen.",
+        "Internxt Fotos bietet ein völlig werbefreies Erlebnis – frei von Daten-Tracking und ohne dass KI Ihre Fotos und Daten für maschinelles Lernen verwendet.",
+        "Ihre gesamte Fotobibliothek wird kontinuierlich in Echtzeit aktualisiert. Jede Änderung auf einem Gerät wird sofort auf allen Geräten übernommen. Dank automatischer Backups müssen Sie sich nie Sorgen um Datenverlust machen."
+      ]
+    }
+  },
+  "PhotoFeatureSection": {
+    "title": "Sicherer Cloud-Speicher für Fotos, mit Fokus auf Datenschutz",
+    "description": "Internxt Fotos nutzt Post-Quanten- und Zero-Knowledge-Verschlüsselung, um Ihre Dateien und Daten im Ruhezustand sowie bei der Übertragung zu verschlüsseln.",
+    "scrollableSection": {
+      "titles": [
+        "Vollständig verschlüsselter Tresor",
+        "Datenschutz vor Profit",
+        "Compliance",
+        "Open-Source und geprüft",
+        "Für Freiheit gebaut",
+        "Keine Hintertüren"
+      ],
+      "descriptions": [
+        "Internxt Fotos verwendet Kyber 512 Post-Quanten- und AES-256-Verschlüsselung, um den Datenschutz mit Ende-zu-Ende-Sicherheit, europäischer Privatsphäre und fortschrittlichster Technologie zu gewährleisten.",
+        "Im Gegensatz zu Google Fotos oder anderen Big-Tech-Unternehmen kann Internxt Ihre Fotos weder ansehen noch löschen. Alles wird direkt auf Ihrem Gerät verschlüsselt. Niemand, nicht einmal wir, kann auf Ihre Fotos oder Daten zugreifen.",
+        "Internxt ist DSGVO-, HIPAA-, ISO 27001- und SOC 2-konform. Egal ob Sie Cloud-Speicher für das Gesundheitswesen, Finanzen oder den privaten Gebrauch benötigen – Internxt stellt sicher, dass Ihre Daten den höchsten Schutzstandards entsprechen.",
+        "Unser gesamter Quellcode ist auf GitHub öffentlich zugänglich und wurde von externen Cybersicherheitsexperten geprüft, um eine sichere Plattform für Ihre Daten zu garantieren.",
+        "Wir geben Ihnen die volle Kontrolle über Ihre Privatsphäre. Mit unseren datenschutzorientierten Produkten liegt die Macht bei Ihnen, nicht bei Big Tech.",
+        "Wir haben keinen Zugriff auf Ihre Daten oder Dateien und teilen diese mit niemandem. Unsere Apps sind vollständig quelloffen und geprüft, um Ihre Privatsphäre zu garantieren."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Sicherer Cloud-Speicher für Fotos",
+    "description": "Holen Sie sich den besten Schutz und die höchste Sicherheit für Ihre Erinnerungen mit Internxt Fotos",
+    "cta": "Internxt holen"
+  },
+  "DesignedSection": {
+    "title": "Kernfunktionen unseres sicheren Cloud-Speichers für Fotos",
+    "scrollableSection": {
+      "images": ["partial1", "partial2", "partial3", "partial4"],
+      "titles": ["Ein vollständig privates Ökosystem", "Synchronisierung & Backups", "Ende-zu-Ende-verschlüsselt", "Verschlüsselte Backups"],
+      "descriptions": [
+        "Internxt Fotos ist in unserem Ultimate-Paket enthalten und bietet alles, was Sie zum Schutz Ihrer Privatsphäre benötigen: Verschlüsselter Cloud-Speicher, VPN, Mail, Antivirus, Meet und mehr.",
+        "Fotos werden automatisch synchronisiert und in der Cloud gesichert, sodass Ihre Erinnerungen sicher, zugänglich und geschützt bleiben.",
+        "Alle Fotos sind mit Post-Quanten- und Zero-Knowledge-Technologie verschlüsselt. Niemand außer Ihnen oder den von Ihnen ausgewählten Personen kann den Inhalt sehen.",
+        "Schützen Sie Ihre Fotos vor Ransomware und versehentlichem Verlust mit automatischen, verschlüsselten Backups, die zusätzliche Sicherheit bieten."
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "In Europa entwickelt",
+    "description": "Ihre Daten sind durch strenge europäische Datenschutzgesetze in Kombination mit preisgekrönter Verschlüsselung geschützt.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["Europäische Rechenzentren", "Redundanz", "Engagement für Nachhaltigkeit"],
+      "descriptions": [
+        "Internxt hat seinen Sitz in Valencia, Spanien. Unsere Rechenzentren befinden sich in Europa und weltweit, um Ihnen Sicherheit, Geschwindigkeit und Compliance zu bieten.",
+        "Ihre Dateien sind durch redundante Systeme, Umweltkontrollen und 24/7-Sicherheitsüberwachung vor Ort geschützt. Egal was passiert, Ihre Dateien bleiben sicher und verfügbar.",
+        "Internxt geht mit gutem Beispiel voran und setzt sich durch energieeffiziente Praktiken für eine nachhaltigere Cloud-Speicherlösung ein."
+      ]
+    }
+  },
+  "TableSection": {
+    "title": "Internxt Tarife",
+    "valentinesTitle": "Sichere Liebe – ",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Tarif",
+      "lifetimeHeader": "Wählen Sie Ihren Lifetime-Tarif",
+      "individuals": "Jahrestarife",
+      "homePage": "Wählen Sie den passenden Tarif für sich",
+      "lifetime": "Lifetime-Tarife",
+      "business": "Geschäftstarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und lebenslang Privatsphäre und Sicherheit genießen",
+    "planDescription": "Alle Internxt-Tarife bieten vollumfänglichen Zugriff auf unsere preisgekrönte Privacy-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die speziell darauf ausgelegt sind, Ihr Unternehmen zu schützen, Ihre Mitarbeiter abzusichern und Ihre Rentabilität zu gewährleisten.",
+    "businessDescription2": "Sichern Sie die Daten Ihres Unternehmens mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang",
+      "individual": "Einzelperson",
+      "business": "Unternehmen"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Sichern Sie sich 1 GB verschlüsselten Cloud-Speicher gratis",
+      "cta": "Tarif wählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Haben Sie Fragen zu Internxt Fotos? Wir haben die Antworten",
+    "items": [
+      {
+        "question": "Was ist Internxt Fotos?",
+        "answer": [
+          "Internxt Fotos ist eine Ende-zu-Ende verschlüsselte Cloud-Speicher-App für Fotos, mit der Sie Ihre Fotos und Alben in absoluter Privatsphäre speichern, synchronisieren und automatisch sichern können."
+        ]
+      },
+      {
+        "question": "In welchem Tarif ist Internxt Fotos enthalten?",
+        "answer": [
+          "Internxt Fotos ist in allen Ultimate-Jahres- und Lifetime-Tarifen enthalten. Damit erhalten Sie außerdem Zugriff auf 5 TB Cloud-Speicher und unsere gesamte Privacy-Suite."
+        ]
+      },
+      {
+        "question": "Warum sollte ich verschlüsselten Fotospeicher nutzen?",
+        "answer": [
+          "Verschlüsselter Fotospeicher ist wichtig, da die meisten herkömmlichen Cloud-Fotodienste nicht vollständig privat sind. Big-Tech-Unternehmen können Ihre privaten Fotos in bestimmten Situationen einsehen – etwa zur Moderation, KI-Verarbeitung oder aufgrund rechtlicher Anfragen."
+        ]
+      },
+      {
+        "question": "Ist Internxt Fotos eine Alternative zu Google Fotos?",
+        "answer": [
+          "Ja, Internxt Fotos ist eine private und sichere Alternative zu Google Fotos. Es schützt Ihre Bilder mit Zero-Knowledge- und Post-Quanten-Verschlüsselung, sodass niemand außer Ihnen auf Ihre Dateien zugreifen kann.",
+          "Mit Internxt Fotos erhalten Sie außerdem Zugriff auf das gesamte Produktportfolio von Internxt, darunter Drive, VPN, Meet, Mail und mehr."
+        ]
+      }
+    ]
+  }
+}

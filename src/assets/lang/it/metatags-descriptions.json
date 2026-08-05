@@ -620,5 +620,10 @@
     "id": "mail",
     "title": "Internxt Mail - La migliore email crittografata per la privacy.",
     "description": "Internxt Mail è una soluzione di posta elettronica crittografata che mantiene al sicuro la tua casella di posta. Grazie alla crittografia post-quantistica, Internxt è il servizio di posta elettronica più sicuro per la privacy."
+  },
+  {
+    "id": "photo",
+    "title": "Internxt Foto – Archiviazione cloud sicura per le foto",
+    "description": "Internxt Foto è un'app di archiviazione foto privata e sicura per il backup automatico e la sincronizzazione. Zero-knowledge, open source e privata."
   }
 ]

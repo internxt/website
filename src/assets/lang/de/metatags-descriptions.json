@@ -590,5 +590,10 @@
     "id": "mail",
     "title": "Internxt Mail - Die beste verschlüsselte E-Mail für den Datenschutz.",
     "description": "Internxt Mail ist eine verschlüsselte E-Mail-Lösung, die Ihren Posteingang schützt. Dank Post-Quanten-Verschlüsselung ist Internxt der sicherste E-Mail-Dienst für den Datenschutz."
+  },
+  {
+    "id": "photo",
+    "title": "Internxt Fotos – Sicherer Cloud-Speicher für Fotos",
+    "description": "Internxt Fotos ist eine private, sichere Foto-Speicher-App für automatische Backups und Synchronisierung. Zero-Knowledge, Open Source und privat."
   }
 ]

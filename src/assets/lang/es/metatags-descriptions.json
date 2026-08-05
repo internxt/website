@@ -680,5 +680,10 @@
     "id": "mail",
     "title": "Internxt Mail - El mejor correo electrónico cifrado para la privacidad.",
     "description": "Internxt Mail es una solución de correo electrónico cifrado que mantiene segura tu bandeja de entrada. Gracias al cifrado postcuántico, Internxt es el servicio de correo electrónico más seguro para la privacidad."
+  },
+  {
+    "id": "photo",
+    "title": "Internxt Fotos – Almacenamiento seguro en la nube para fotos",
+    "description": "Internxt Fotos es una aplicación de almacenamiento de fotos privada y segura para copias de seguridad automáticas y sincronización. Conocimiento cero, código abierto y privada."
   }
 ]

@@ -578,5 +578,10 @@
     "id": "mail",
     "title": "Internxt Mail - Le meilleur e-mail chiffré pour la confidentialité.",
     "description": "Internxt Mail est une solution de messagerie chiffrée qui protège votre boîte de réception. Grâce au chiffrement post-quantique, Internxt est le service de messagerie le plus sécurisé pour la confidentialité."
+  },
+  {
+    "id": "photo",
+    "title": "Internxt Photos – Stockage cloud sécurisé pour vos photos",
+    "description": "Internxt Photos est une application de stockage de photos privée et sécurisée pour les sauvegardes automatiques et la synchronisation. Connaissance nulle (Zero-Knowledge), open source et privée."
   }
 ]
