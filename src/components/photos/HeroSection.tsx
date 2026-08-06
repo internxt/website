@@ -7,7 +7,7 @@ export const HeroSection = ({ textContent }) => {
 
   return (
     <section
-      className="mt-20 flex w-full min-h-[60vh] flex-col items-center justify-center gap-8 px-8 py-8 lg:mt-0 lg:min-h-auto lg:flex-row lg:justify-between lg:gap-10 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
+      className="mt-20 flex w-full min-h-[60vh] flex-col items-center justify-center gap-8 px-8 py-8 lg:mt-10 lg:min-h-auto lg:flex-row lg:justify-between lg:gap-10 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
     >
       <div
