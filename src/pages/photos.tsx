@@ -42,7 +42,7 @@ const Photo = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({ couponCode: PromoCodeName.OFFSUB, couponCodeForLifetime: PromoCodeName.OFFLFT });
 
