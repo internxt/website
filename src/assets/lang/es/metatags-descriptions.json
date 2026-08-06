@@ -45,11 +45,6 @@
     "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
   },
   {
-    "id": "photos",
-    "title": "Internxt Photos – Almacenamiento seguro de fotos y videos",
-    "description": "Internxt Photos – Almacenamiento de fotos y copia de seguridad"
-  },
-  {
     "id": "affiliates",
     "title": "Internxt — Programa de Afiliados",
     "description": "¡Únete al programa de marketing de afiliados de Internxt! Cómo empezar además de detalles del programa, beneficios y ventajas."
@@ -682,7 +677,7 @@
     "description": "Internxt Mail es una solución de correo electrónico cifrado que mantiene segura tu bandeja de entrada. Gracias al cifrado postcuántico, Internxt es el servicio de correo electrónico más seguro para la privacidad."
   },
   {
-    "id": "photo",
+    "id": "photos",
     "title": "Internxt Fotos – Almacenamiento seguro en la nube para fotos",
     "description": "Internxt Fotos es una aplicación de almacenamiento de fotos privada y segura para copias de seguridad automáticas y sincronización. Conocimiento cero, código abierto y privada."
   }

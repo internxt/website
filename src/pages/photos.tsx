@@ -35,7 +35,7 @@ const Photo = ({
     locale,
     relationalLinksText,
 } : PhotoProps): JSX.Element => {
-    const metatags = metatagsDescription.find((metatag) => metatag.id === 'photo');
+    const metatags = metatagsDescription.find((metatag) => metatag.id === 'photos');
     const lang = locale as string;
     const {
     products,
@@ -156,7 +156,7 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
     const locale = ctx.locale as string;
     const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
     const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
-    const textContent = require(`@/assets/lang/${locale}/photo.json`);
+    const textContent = require(`@/assets/lang/${locale}/photos.json`);
     const footerText = require(`@/assets/lang/${locale}/footer.json`);
     const relationalLinksText = require(`@/assets/lang/${locale}/relational-links.json`);
 
