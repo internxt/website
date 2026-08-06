@@ -295,7 +295,15 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.mail}
                     </Link>
 
-
+                    <Link
+                      href="/photos"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.products.photos}
+                    </Link>
+                    
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -998,6 +1006,10 @@ export default function Footer({
 
                       <Link href="/mail" locale={lang} passHref>
                         {textContent.FooterSection.sections.products.mail}
+                      </Link>
+
+                      <Link href="/photos" locale={lang} passHref>
+                        {textContent.FooterSection.sections.products.photos}
                       </Link>
 
                       <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
