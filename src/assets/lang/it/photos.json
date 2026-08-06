@@ -1,143 +1,164 @@
 {
   "HeroSection": {
-    "eyebrow": "Internxt Photos",
-    "title": {
-      "line1": "I tuoi momenti magici,",
-      "line2": "al sicuro e sottochiave."
-    },
-    "subtitle": {
-      "line1": "Rivivi, condividi e mantieni al sicuro i tuoi ricordi più belli in un unico posto.",
-      "line2": "Con Internxt Photos che sia occupa della privacy e della sicurezza,",
-      "line3": "le tue foto sono tue e solo tue."
-    },
-    "availableSoon": "Available soon",
-    "DownloadLinks": {
-      "or": "o",
-      "downloadFor": "Scarica per",
-      "orDownloadFor": "O scarica per",
-      "downloadOnThe": "Scaricare sul sito",
-      "orDownloadOnThe": "O Scaricare sul sito",
-      "getOn": "Salire",
-      "orGetOn": "O salire",
-      "openDriveWeb": "Aprire Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+    "label": "Internxt Foto",
+    "title": "Archiviazione foto sicura e crittografata",
+    "description": "Archivia, sincronizza, esegui il backup e accedi alle tue foto in totale privacy.",
+    "cta": "Ottieni Internxt",
+    "garantee": "Incluso nei piani Ultimate"
+  },
+  "PhotoSection": {
+    "title": "Internxt Foto",
+    "description": [
+      "Esegui il backup e sincronizza i tuoi ricordi con il nostro cloud storage sicuro per foto, proteggendoli con la crittografia post-quantistica e progettato per la massima privacy."
+    ]
+  },
+  "CoreFeatures": {
+    "title": "Archiviazione foto privata: I tuoi ricordi, accessibili ovunque",
+    "description": "Mantieni la tua libreria fotografica aggiornata e sincronizzata su tutti i dispositivi. Anche in caso di smarrimento o sostituzione del dispositivo, le tue foto rimangono al sicuro.",
+    "accordionCards": {
+      "titles": [
+        "Backup di tutti i tuoi dispositivi",
+        "Zero tracker, pubblicità e IA",
+        "Sincronizzazione e backup automatici"
+      ],
+      "descriptions": [
+        "Esegui automaticamente il backup delle foto da tutti i tuoi dispositivi e accedevi in modo sicuro ogni volta che ne hai bisogno.",
+        "Internxt Photos offre un'esperienza totalmente priva di pubblicità, senza tracciamento dei dati e senza IA che utilizzi le tue foto per l'apprendimento automatico.",
+        "L'intera libreria fotografica viene aggiornata continuamente in tempo reale: qualsiasi modifica apportata su un dispositivo si riflette ovunque. I backup automatici eliminano ogni rischio di perdita dati."
+      ]
     }
   },
-  "FeaturesSection": {
-    "section1": {
-      "title": {
-        "line1": "Una galleria sincronizzata su tutti i tuoi dispositivi."
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "Caricale dal tuo",
-        "line2": "smartphone, rivedile",
-        "line3": "da dove vuoi."
-      },
-      "subtitle": {
-        "line1": "La tua collezione di foto sarà sempre aggiornata",
-        "line2": "su tutti i tuoi dispositivi. Ciò significa che, una",
-        "line3": "volta sincronizzate, puoi accedere alle tue foto",
-        "line4": "anche se il tuo dispositivo viene smarrito, rubato o rotto."
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "Condividi le tue foto",
-        "line2": "con i tuoi amici e",
-        "line3": "i tuoi famigliari."
-      },
-      "subtitle": {
-        "line1": "Genera un link di condivisione,",
-        "line2": "e potrai controllare quante volte è",
-        "line3": "possibile accedere a una foto o scaricarla."
-      }
-    },
-    "section4": {
-      "title": {
-        "line1": "Sincronizza le tue foto,",
-        "line2": "in totale privacy."
-      }
-    },
-    "section5": {
-      "title": {
-        "line1": "Tutte le tue foto,",
-        "line2": "al sicuro e private."
-      },
-      "subtitle": {
-        "line1": "La privacy e la sicurezza sono il cuore della nostra attività: la nostra azienda non è basata sull’utilizzo dei tuoi dati o sulla",
-        "line2": "pubblicità, ma sulla fiducia. Noi rispettiamo i tuoi diritti e costruiamo strumenti straordinari intorno a loro, non contro di loro."
-      },
-      "cta": "Il nostro impegno per la privacy",
-      "card1": {
-        "title": "Crittografia di livello militare.",
-        "subtitle": "Prendiamo molto sul serio la tua privacy, ecco perché i tuoi file sono crittografati in modo che solo tu possa accedervi."
-      },
-      "card2": {
-        "title": "Tecnologia zero-knowledge.",
-        "subtitle": "Non archiviamo e non trasmettiamo mai nessun file, nessuna password utente o chiave di crittografia in forma non crittografata o senza hashing."
-      },
-      "card3": {
-        "title": "Privacy by design.",
-        "subtitle": "Sviluppiamo i nostri prodotti pensando all'utente e, nel mondo basato sui dati in cui viviamo, consideriamo la sua privacy sacra."
-      },
-      "card4": {
-        "title": "Open-source e trasparente",
-        "description": "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati."
-      }
-    },
-    "DownloadLinks": {
-      "or": "o",
-      "downloadFor": "Scarica per",
-      "orDownloadFor": "O scarica per",
-      "downloadOnThe": "Scaricare sul sito",
-      "orDownloadOnThe": "O Scaricare sul sito",
-      "getOn": "Salire",
-      "orGetOn": "O salire",
-      "openDriveWeb": "Aprire Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+  "PhotoFeatureSection": {
+    "title": "Cloud storage sicuro per le foto, incentrato sulla privacy",
+    "description": "Internxt Photos utilizza la crittografia post-quantistica e Zero-Knowledge per proteggere i tuoi file e dati sia a riposo che in transito.",
+    "scrollableSection": {
+      "titles": [
+        "Cassaforte completamente crittografata",
+        "La privacy prima del profitto",
+        "Conformità",
+        "Open source e verificato",
+        "Progettato per la libertà",
+        "Nessuna backdoor"
+      ],
+      "descriptions": [
+        "Internxt Photos utilizza la crittografia post-quantistica Kyber 512 e AES-256, garantendo la protezione dei dati con sicurezza end-to-end, privacy europea e tecnologia avanzata.",
+        "A differenza di Google Foto o di altre Big Tech, Internxt non può visualizzare né eliminare le tue foto. Tutto viene crittografato direttamente sul tuo dispositivo. Nessuno, nemmeno noi, può accedere ai tuoi dati.",
+        "Internxt è conforme a GDPR, HIPAA, ISO 27001 e SOC 2. Che tu abbia bisogno di cloud storage per la sanità, la finanza o l'uso personale, garantiamo i più alti standard di protezione.",
+        "Tutto il nostro codice è disponibile pubblicamente su GitHub ed è stato verificato da esperti di cibersicurezza indipendenti per garantire la massima sicurezza.",
+        "Ti diamo la totale proprietà e il controllo della tua privacy. Con i nostri prodotti orientati alla privacy, il potere spetta a te, non alle Big Tech.",
+        "Non abbiamo alcun accesso ai tuoi file e non li condividiamo con nessuno. Le nostre app sono completamente open source e verificate, garantendo il rispetto della tua privacy."
+      ]
     }
   },
-  "FaqSection": {
-    "title": "Domande? Abbiamo le risposte",
-    "faq": [
+  "CtaSectionV2": {
+    "title": "Cloud storage sicuro per foto",
+    "description": "Ottieni la migliore protezione e sicurezza per i tuoi ricordi con Internxt Photos",
+    "cta": "Ottieni Internxt"
+  },
+  "DesignedSection": {
+    "title": "Caratteristiche principali del nostro cloud storage sicuro per foto",
+    "scrollableSection": {
+      "images": ["partial1", "partial2", "partial3", "partial4"],
+      "titles": ["Un ecosistema completamente privato", "Sincronizzazione e backup", "Crittografato end-to-end", "Backup crittografati"],
+      "descriptions": [
+        "Internxt Photos è incluso nel nostro pacchetto Ultimate, offrendoti tutto ciò di cui hai bisogno per proteggere la tua privacy: cloud storage crittografato, VPN, Mail, Antivirus, Meet e altro.",
+        "Le foto vengono sincronizzate ed eseguite in backup automaticamente nel cloud, mantenendo i tuoi ricordi al sicuro e sempre accessibili.",
+        "Tutte le foto sono crittografate con tecnologia post-quantistica e Zero-Knowledge. Nessuno tranne te, o chi autorizzi, può vederne il contenuto.",
+        "Proteggi le tue foto da ransomware e perdite accidentali grazie a backup automatici e crittografati che ti offrono la massima tranquillità."
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Prodotto in Europa",
+    "description": "I tuoi dati sono protetti da rigide normative europee abbinate a una crittografia pluripremiata.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["Data center europei", "Ridondanza", "Impegno per la sostenibilità"],
+      "descriptions": [
+        "Internxt ha sede a Valencia, Spagna, e i nostri data center si trovano in Europa e in tutto il mondo, garantendo sicurezza, velocità e conformità.",
+        "I tuoi file sono protetti tramite sistemi ridondanti, controlli ambientali e monitoraggio della sicurezza 24/7. Qualsiasi cosa accada, i tuoi file rimangono al sicuro.",
+        "Internxt guida il settore verso soluzioni cloud più sostenibili promuovendo l'efficienza energetica."
+      ]
+    }
+  },
+  "TableSection": {
+    "title": "Piani Internxt",
+    "valentinesTitle": "Amore sicuro - ",
+    "hotLabel": "{{discount}}% di sconto",
+    "planTitles": {
+      "header": "Seleziona il tuo piano",
+      "lifetimeHeader": "Seleziona il tuo piano a vita",
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano ideale per te",
+      "lifetime": "Piani a vita (Lifetime)",
+      "business": "Piani Business",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri esclusivi piani a vita"
+      }
+    },
+    "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza a vita",
+    "planDescription": "Tutti i piani Internxt offrono accesso completo alla nostra suite sulla privacy pluripremiata che include Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i dipendenti e garantire la redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di cloud storage crittografati di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Azienda"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1 GB di cloud storage crittografato gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonima",
+      "premiumSupport": "Supporto clienti Premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Hai domande su Internxt Photos? Abbiamo le risposte",
+    "items": [
       {
-        "question": "Come si sincronizzano i file e le foto in Internxt?",
+        "question": "Cos'è Internxt Photos?",
         "answer": [
-          "Per sincronizzare e crittografare le foto dalla libreria del telefono al cloud di Internxt, è sufficiente:",
-          "1.Aprire l'applicazione mobile Internxt",
-          "2.Selezionare \"Foto\" e le foto inizieranno a essere sincronizzate automaticamente."
+          "Internxt Photos è un'app di cloud storage per foto con crittografia end-to-end che ti consente di archiviare, sincronizzare ed eseguire il backup automatico delle tue foto e album nella massima privacy."
         ]
       },
       {
-        "question": "Come posso caricare i file dal mio telefono?",
+        "question": "Quale piano include Internxt Photos?",
         "answer": [
-          "Aprire l'applicazione mobile Internxt e toccare l'icona blu più (+) in basso al centro dello schermo. Selezionare \"Carica file\" o \"Carica dal rullino fotografico\" per caricare una foto."
+          "Internxt Photos è incluso in tutti i piani Ultimate annuali e a vita. Questo ti dà anche accesso a 5 TB di spazio cloud e all'intera suite sulla privacy."
+        ]
+      },
+      {
+        "question": "Perché dovrei usare l'archiviazione foto crittografata?",
+        "answer": [
+          "L'archiviazione crittografata è fondamentale perché la maggior parte dei servizi cloud tradizionali non garantisce la privacy assoluta. Le Big Tech possono accedere alle tue foto private in determinati casi, come moderazione, analisi IA o richieste legali."
+        ]
+      },
+      {
+        "question": "Internxt Photos è un'alternativa a Google Foto?",
+        "answer": [
+          "Sì, Internxt Photos è un'alternativa sicura e privata a Google Foto che protegge i tuoi ricordi con crittografia Zero-Knowledge e post-quantistica, impedendo a chiunque altro di accedere ai tuoi file.",
+          "Con Internxt Photos hai inoltre accesso all'intero ecosistema di prodotti Internxt tra cui Drive, VPN, Meet, Mail e altri."
         ]
       }
     ]
-  },
-  "FeatureSection": {
-    "title": "Proteggi i tuoi fotos con Internxt Photos",
-    "description": "Con Internxt, l'accesso completo ai vostri file è unico. Archiviate, condividete e fate il backup dei vostri dati con la massima privacy",
-    "cta": "start"
-  },
-  "CtaSection": {
-    "title": "Prova Internxt senza rischi",
-    "description": "Proteggi ciò che è veramente importante con il cloud storage sicuro, privato e criptato di Internxt",
-    "cta": "Seleziona un piano ora"
   }
 }

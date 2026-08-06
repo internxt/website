@@ -40,11 +40,6 @@
     "description": "Internxt 媒體區域 - 了解更多關於Internxt的產品和使命，並下載我們的媒體套件，包括媒體和記者的截圖和模擬。"
   },
   {
-    "id": "photos",
-    "title": "Internxt Photos – 安全的照片存儲和圖像備份",
-    "description": "使用Internxt Photos在所有設備上保存、查看和同步您的照片和圖像。端到端加密的雲端照片共享和圖像備份。"
-  },
-  {
     "id": "pricing",
     "title": "Internxt 價格 – 終身加密雲端儲存",
     "description": "Internxt 提供實惠、安全、免費和加密的雲端儲存，包含年付和終身付費計劃"
@@ -762,7 +757,7 @@
     "description": "Internxt Mail 是一款加密電子郵件解決方案，可確保您的收件箱安全。得益於後量子加密技術，Internxt 是保障隱私最安全的電子郵件服務。"
   },
   {
-    "id": "photo",
+    "id": "photos",
     "title": "Internxt 相片 – 安全的雲端相片儲存空間",
     "description": "Internxt 相片是一款私密、安全的相片儲存應用程式，支援自動備份與同步。零知識架構、開源且重視隱私。"
   }
