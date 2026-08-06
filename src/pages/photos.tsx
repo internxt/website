@@ -5,13 +5,13 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from "@/components/shared/sections/FaqSection";
 import { PhotoText, RelationalLinksText } from '@/assets/types/photos';
-import HorizontalScrollableSection from '@/components/photo/HorizontalScrollableSection';
-import { HeroSection } from '@/components/photo/HeroSection';
-import PhotoSection from '@/components/photo/PhotoSection';
-import CoreFeaturesSection from '@/components/photo/CoreFeaturesSection';
+import HorizontalScrollableSection from '@/components/photos/HorizontalScrollableSection';
+import { HeroSection } from '@/components/photos/HeroSection';
+import PhotoSection from '@/components/photos/PhotoSection';
+import CoreFeaturesSection from '@/components/photos/CoreFeaturesSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
-import HorizontalScrollableWithPhotoSection from '@/components/photo/HorizontalScrollableWithPhotoSection'
+import HorizontalScrollableWithPhotoSection from '@/components/photos/HorizontalScrollableWithPhotoSection'
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
