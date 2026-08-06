@@ -32,7 +32,7 @@ export const HeroSection = ({ textContent }) => {
           </Link>
           <div className="flex flex-row items-center justify-center gap-2 pt-3 lg:justify-start">
             <CheckCircle size={24} color="#32C356" weight="fill" />
-              <p className="whitespace-nowrap text-base lg:text-base text-gray-55">
+              <p className="whitespace-nowrap text-sm lg:text-base text-gray-55">
                 {textContent.garantee}
               </p>
           </div>
