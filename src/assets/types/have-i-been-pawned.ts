@@ -9,32 +9,32 @@ export interface HaveIbeenPwnedText {
   Breaches: Breach;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
   redirect: string;
 }
 
-export interface FeatureSection {
+interface FeatureSection {
   title: string;
   description: string;
   description2: string;
   cards: CtaSection;
 }
 
-export interface FeatureSectionV2 {
+interface FeatureSectionV2 {
   title: string;
   description: string;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle: string;
   description: string;
@@ -44,13 +44,13 @@ export interface HeroSection {
   PwnedSection: PwnedSection;
 }
 
-export interface AllGoodSection {
+interface AllGoodSection {
   title: string;
   description: string;
   StaySecure: string;
 }
 
-export interface EmailToolBar {
+interface EmailToolBar {
   placeHolder: string;
   toolTip: string;
   toolTipEmergent: string;
@@ -61,7 +61,7 @@ export interface EmailToolBar {
   checking: string;
 }
 
-export interface PwnedSection {
+interface PwnedSection {
   title: string;
   description: string;
   breaches: string;
@@ -73,25 +73,25 @@ export interface PwnedSection {
   compromisedData: string;
 }
 
-export interface BreachesSection {
+interface BreachesSection {
   title: string;
   description: string;
   linkToPasswordGenerator: LinkToPasswordGenerator;
 }
 
-export interface LinkToPasswordGenerator {
+interface LinkToPasswordGenerator {
   previousText: string;
   linkText: string;
   otherText: string;
 }
 
-export interface Breaches {
+interface Breaches {
   error405: string;
   error400: string;
   error500: string;
 }
 
-export interface InfoSection {
+interface InfoSection {
   pwnedWebsites: string;
   pwnedWebsitesData: string;
   pwnedAccounts: string;

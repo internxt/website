@@ -1,7 +1,7 @@
 import { AntivirusText } from '@/assets/types/antivirus';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-export interface FeatureSectionV2Props {
+interface FeatureSectionV2Props {
   textContent: AntivirusText['FeatureSectionV2'];
 }
 
