@@ -38,10 +38,10 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
 
   return (
     <section className="w-full bg-neutral-17 py-10 lg:py-20">
-      <div className="mx-auto w-full max-w-[1100px] flex-col gap-6 px-5 lg:flex lg:px-20">
+      <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-5 lg:gap-10 lg:px-20">
         <h2 className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 lg:text-5xl lg:pr-10">{textContent.title}</h2>
-        <p className="max-w-[900px] text-base font-normal text-gray-55 lg:text-lg">{textContent.description}</p>
-        <div className="flex w-full justify-center gap-16 lg:max-w-[1500px]">
+        <p className="max-w-[900px] leading-tight text-base font-normal text-gray-55 lg:text-lg">{textContent.description}</p>
+        <div className="flex w-full flex-col justify-center gap-6 lg:max-w-[1500px] lg:flex-row lg:gap-16">
           <div className="flex w-full flex-col gap-6 lg:max-w-[420px]">
             <div className="flex flex-row items-center justify-center lg:hidden">
               <Image
