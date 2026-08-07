@@ -334,6 +334,7 @@ export enum PromoCodeName {
   lukemiani = 'LUKEMIANI',
   macrumors = 'MACRUMORS',
   saasmaster = 'SAASMASTER',
+  cyberlab = 'CYBERLAB',
 }
 
 export interface PromoCodeProps {
