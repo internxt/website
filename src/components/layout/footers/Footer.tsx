@@ -278,21 +278,19 @@ export default function Footer({
                     </Link>
 
                     <Link
-                      href="/cloud-object-storage"
-                      locale={lang}
-                      passHref
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
-                    </Link>
-
-                    <Link
                       href="/mail"
                       locale={lang}
                       passHref
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.mail}
+                        <span
+                          className={`ml-2  h-max items-center justify-center rounded-2 ${
+                            darkMode ? 'bg-primary/10' : 'bg-primary'
+                          } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                        >
+                          {textContent.FooterSection.new}
+                        </span>
                     </Link>
 
                     <Link
@@ -302,6 +300,22 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.photos}
+                        <span
+                          className={`ml-2  h-max items-center justify-center rounded-2 ${
+                            darkMode ? 'bg-primary/10' : 'bg-primary'
+                          } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                        >
+                          {textContent.FooterSection.new}
+                        </span>
+                    </Link>
+
+                    <Link
+                      href="/cloud-object-storage"
+                      locale={lang}
+                      passHref
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
                     </Link>
                     
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
@@ -995,6 +1009,14 @@ export default function Footer({
                         {textContent.FooterSection.sections.products.ai}
                       </Link>
 
+                      <Link href="/mail" locale={lang} passHref>
+                        {textContent.FooterSection.sections.products.mail}
+                      </Link>
+
+                      <Link href="/photos" locale={lang} passHref>
+                        {textContent.FooterSection.sections.products.photos}
+                      </Link>
+
                       <Link
                         href="/cloud-object-storage"
                         locale={lang}
@@ -1002,14 +1024,6 @@ export default function Footer({
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.products.objStorage}
-                      </Link>
-
-                      <Link href="/mail" locale={lang} passHref>
-                        {textContent.FooterSection.sections.products.mail}
-                      </Link>
-
-                      <Link href="/photos" locale={lang} passHref>
-                        {textContent.FooterSection.sections.products.photos}
                       </Link>
 
                       <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
