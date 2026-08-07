@@ -10,12 +10,12 @@ export interface PrivateCloudStorageForVideoText {
   tableSection: TableSection;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
@@ -27,54 +27,54 @@ export interface FeaturesSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
 }
 
-export interface Feature {
+interface Feature {
   title: string;
   description: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   features?: string[];
   subtitle: string;
   cta: string;
 }
 
-export interface HorizontalScrollableSection {
+interface HorizontalScrollableSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
   imagesPathname: string[];
 }
 
-export interface HowToChooseSection {
+interface HowToChooseSection {
   title: string;
   description: string;
   cardDescriptions: CardDescriptions;
 }
 
-export interface CardDescriptions {
+interface CardDescriptions {
   titles: string[];
   descriptions: string[];
 }
 
-export interface SecureAndManage {
+interface SecureAndManage {
   title: string;
   description: string;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string[];
   cta: string;

@@ -82,7 +82,7 @@ function removeLocalStorage() {
 
 export {
   fetchNewEmail,
-  fetchInbox,
+  
   getMessageData,
   fetchAndFormatInbox,
   saveInfoOfMessageSelectedInLocalStorage,

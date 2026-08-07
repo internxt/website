@@ -10,28 +10,28 @@ export interface CloudStorageForDocumentsText {
   tableSection:            TableSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title:       string;
   description: string;
   cta:         string;
 }
 
-export interface CoreFeatures {
+interface CoreFeatures {
   title:          string;
   description:    string;
   accordionCards: AccordionCards;
 }
 
-export interface AccordionCards {
+interface AccordionCards {
   titles:       string[];
   descriptions: Paragraphs[];
 }
 
-export interface Paragraphs {
+interface Paragraphs {
   contents: string[]
 }
 
-export interface FeaturesInternxtSection {
+interface FeaturesInternxtSection {
   title:             string;
   description:       string;
   scrollableSection: AccordionCards;
@@ -42,42 +42,42 @@ export interface FeaturesSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
 }
 
-export interface Feature {
+interface Feature {
   title:       string;
   description: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   title:    string;
   features?: string[];
   subtitle: string;
   cta:      string;
 }
 
-export interface SecureAndManage {
+interface SecureAndManage {
   title:       string;
   description: string;
   cards:       Card[];
 }
 
-export interface Card {
+interface Card {
   title:       string;
   description: string[];
   cta:         string;
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer:   string[];
 }

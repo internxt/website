@@ -2,7 +2,7 @@ export interface ElectionsText {
   elections: Elections;
 }
 
-export interface Elections {
+interface Elections {
   CtaSection: CtaSection;
   FeatureSection: FeatureSection;
   TestimonialsSection: TestimonialsSection;
@@ -11,13 +11,13 @@ export interface Elections {
   PaymentSection: PaymentSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FeatureSection {
+interface FeatureSection {
   title: string;
   description: string;
   cta: string;
@@ -27,12 +27,12 @@ export interface FeatureSection {
   feature4: GetLifetimeSection;
 }
 
-export interface GetLifetimeSection {
+interface GetLifetimeSection {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   description: string;
   maintenance: string;
@@ -40,7 +40,7 @@ export interface HeroSection {
   cta2: string;
 }
 
-export interface PaymentSection {
+interface PaymentSection {
   limitedOffer: string;
   title: Title;
   description: Description;
@@ -50,34 +50,34 @@ export interface PaymentSection {
   PlanSelector: PlanSelector;
 }
 
-export interface PlanSelector {
+interface PlanSelector {
   Trump: string;
   Kamala: string;
 }
 
-export interface Description {
+interface Description {
   blueText: string;
   normalText: string;
   normalText2: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
 }
 
-export interface Title {
+interface Title {
   blueText: string;
   normalText: string;
 }
 
-export interface TestimonialsSection {
+interface TestimonialsSection {
   title: string;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   name: string;
   enterprise: string;
   review: string;

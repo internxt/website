@@ -33,18 +33,18 @@ export interface BannersText {
   BeforeCloseBanner: BeforeCloseBanner;
 }
 
-export interface AndroidSmartBanner {
+interface AndroidSmartBanner {
   title: string;
 }
 
-export interface BFBannerClass {
+interface BFBannerClass {
   head: string;
   title: string;
   buttonText: string;
   card: Card;
 }
 
-export interface Card {
+interface Card {
   title1: string;
   title2: string;
   title3: string;
@@ -53,20 +53,20 @@ export interface Card {
   title6: string;
 }
 
-export interface BeforeCloseBanner {
+interface BeforeCloseBanner {
   title: BeforeCloseBannerTitle;
   subtitle: string;
   cta: string;
   guarantee: string;
 }
 
-export interface BeforeCloseBannerTitle {
+interface BeforeCloseBannerTitle {
   normal1: string;
   blue: string;
   normal2: string;
 }
 
-export interface BusinessBanner {
+interface BusinessBanner {
   line1: string;
   blueText: string;
   subtitle: string;
@@ -74,7 +74,7 @@ export interface BusinessBanner {
   cta: string;
 }
 
-export interface FreeCardPromoBanner {
+interface FreeCardPromoBanner {
   title: string;
   subtitle: Subtitle;
   getDealCta: string;
@@ -84,12 +84,12 @@ export interface FreeCardPromoBanner {
   products: Products;
 }
 
-export interface Header {
+interface Header {
   primaryText: string;
   afterPrimaryText: string;
 }
 
-export interface Products {
+interface Products {
   drive: string;
   antivirus: string;
   cleaner: string;
@@ -98,41 +98,41 @@ export interface Products {
   mail: string;
 }
 
-export interface Subtitle {
+interface Subtitle {
   blue: string;
   normal: string;
 }
 
-export interface GeneralBannerClass {
+interface GeneralBannerClass {
   title: string;
   description: string;
   cta: string;
   ctaCancel?: string;
 }
 
-export interface GoogleLpBanner {
+interface GoogleLpBanner {
   line1: string;
   blueText: string;
 }
 
-export interface TopBarBanner {
+interface TopBarBanner {
   title: TopBarBannerTitle;
 }
 
-export interface TopBarBannerTitle {
+interface TopBarBannerTitle {
   boldText: string;
   normalText: string;
   cta: string;
 }
 
-export interface ChangeEmailBanner {
+interface ChangeEmailBanner {
   title: string;
   description: string[];
   actionCta: string;
   cancelCta: string;
 }
 
-export interface FeaturesBanner {
+interface FeaturesBanner {
   label: { blueText: string; text: string };
   title: string;
   subTitle: { blueText: string; text: string };
@@ -150,14 +150,14 @@ export interface FeaturesBanner {
   };
 }
 
-export interface LifetimeBanner {
+interface LifetimeBanner {
   label: string;
   title: string;
   cta: string;
   guarantee: string;
 }
 
-export interface S3StorageBanner {
+interface S3StorageBanner {
   label: string;
   title: string;
   feat: string[];

@@ -4,13 +4,13 @@ export interface ToolsSectionText {
   toolsCard: ToolsCard[];
 }
 
-export interface Title {
+interface Title {
   text1: string;
   blueText: string;
   text2: string;
 }
 
-export interface ToolsCard {
+interface ToolsCard {
   title: string;
   cta: string;
   pathname: string;

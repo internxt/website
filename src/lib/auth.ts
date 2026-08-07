@@ -4,11 +4,11 @@ import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-che
 import { isCelloExpired } from '@/lib/cookies';
 
 export const IFRAME_AUTH_ENABLED = false;
-export const REDIRECT_AUTH_ENABLED = true;
+const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
-export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
+const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
     //
   } else if (view === 'signup') {
@@ -16,7 +16,7 @@ export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   }
 };
 
-export function checkSession(): void {
+function checkSession(): void {
   if (REDIRECT_AUTH_ENABLED) {
     // CHECK SESSION
   }
@@ -182,7 +182,7 @@ const prepareAuthFlow = (credentials: {
 
   document.cookie = cookie;
 };
-export function login(data: { email: string; password: string; tfa?: string }, redirectURL: string): void {
+function login(data: { email: string; password: string; tfa?: string }, redirectURL: string): void {
   if (REDIRECT_AUTH_ENABLED) {
     checkAuthFlowAvailable();
     prepareAuthFlow(data);
@@ -230,7 +230,7 @@ export function signup(
   }
 }
 
-export function recover(data: Record<string, unknown>): void {
+function recover(data: Record<string, unknown>): void {
   if (REDIRECT_AUTH_ENABLED) {
     window.location.href = AUTH_FLOW_URL + '/remove';
   }
@@ -240,7 +240,7 @@ export function recover(data: Record<string, unknown>): void {
   }
 }
 
-export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
+function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
   window.top?.postMessage({ action: 'toggleAuthMethod', view: view }, window.location.origin);
 }
 

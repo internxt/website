@@ -45,7 +45,7 @@ export type ActionType =
 
 type FileExtensionMap = Record<string, string[]>;
 
-export enum FileExtensionGroup {
+enum FileExtensionGroup {
   Audio,
   Code,
   Figma,
@@ -231,4 +231,3 @@ const fileExtensionGroups: fileExtensionsDictionary = {
   [FileExtensionGroup.Default]: defaultExtensions,
 };
 
-export default fileExtensionGroups;
