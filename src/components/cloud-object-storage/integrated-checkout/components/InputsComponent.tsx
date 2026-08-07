@@ -4,7 +4,7 @@ import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import TextInput from '@/components/shared/TextInput';
 import PasswordInput from '@/components/shared/PasswordInput';
 
-export const MAX_PASSWORD_LENGTH = 50;
+const MAX_PASSWORD_LENGTH = 50;
 
 interface InputsComponentProps {
   textContent: IntegratedCheckoutText['authComponent'];

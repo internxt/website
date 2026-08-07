@@ -29,7 +29,7 @@ export const fileMimeTypes = {
 };
 
 // Allowed file extensions
-export const allowedExtensions = {
+const allowedExtensions = {
   mov: 'mov',
   pdf: 'pdf',
   jpg: 'jpg',
@@ -61,7 +61,7 @@ export const extensionName = {
 };
 
 // Compression descriptions
-export const compressionDescriptions = {
+const compressionDescriptions = {
   mov: 'Compress MOV files for free.',
   pdf: 'Compress PDF files for free.',
   jpg: 'Compress JPG files for free.',
@@ -78,10 +78,10 @@ export const compressionDescriptions = {
 };
 
 // Add this to src/components/file-compressor/types/index.ts
-export const imageToTextConverter = ['jpg', 'png'];
+const imageToTextConverter = ['jpg', 'png'];
 
 // Add this to src/components/file-compressor/types/index.ts
-export const imageConverter = ['jpg', 'png', 'webp'];
+const imageConverter = ['jpg', 'png', 'webp'];
 
 // Add this to src/components/file-compressor/types/index.ts
-export const fileConverter = ['pdf', 'docx', 'xlsx', 'ppt', 'mov', 'jpg', 'png'];
+const fileConverter = ['pdf', 'docx', 'xlsx', 'ppt', 'mov', 'jpg', 'png'];

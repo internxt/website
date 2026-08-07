@@ -1,7 +1,7 @@
 import { Interval } from '@/services/stripe.service';
 
-export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
-export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
+type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
+type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
 
 interface PlanSwitchProps {
   textContent: Record<string, any>;

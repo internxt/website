@@ -8,7 +8,7 @@ const macosURL = 'https://internxt.com/downloads/drive.dmg';
 const linuxURL = 'https://internxt.com/downloads/drive.deb';
 const lastReleaseURL = 'https://github.com/internxt/drive-desktop/releases';
 
-export function getOS() {
+function getOS() {
   const osList = [
     { keyword: 'Android', name: 'Android' },
     { keyword: 'iPad', name: 'iPad' },
