@@ -104,7 +104,7 @@ const handleImageToTextConverter = async (imageToConvert: File) => {
       });
 
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blob = new Blob([pdfBytes.buffer as ArrayBuffer], { type: 'application/pdf' });
       const url = window.URL.createObjectURL(blob);
 
       downloadBlob(url, filename);
