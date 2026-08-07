@@ -14,7 +14,7 @@ export const currency = {
   IR: '$', // Iran
 };
 
-export const priceValue = {
+const priceValue = {
   US: 'usd',
   CA: 'usd',
   IN: 'usd',
