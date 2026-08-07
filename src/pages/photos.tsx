@@ -132,10 +132,6 @@ const Photo = ({
                 bgPadding="lg:py-20 lg:pb-20 pb-10"
             /> 
 
-            <div className="w-full max-w-[1500px] px-5 lg:px-8 lg:translate-x-80">
-                <div className="h-px w-full bg-neutral-35" />
-            </div>
-
             <FAQSection textContent={{
                 title: textContent.SemanticAccordion.title,
                 faq: textContent.SemanticAccordion.items
