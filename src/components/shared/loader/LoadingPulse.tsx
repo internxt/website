@@ -1,9 +1,9 @@
-import './LoadingPulse.scss';
+import styles from './LoadingPulse.module.scss';
 
 export default function LoadingPulse(): JSX.Element {
   return (
-    <div className="loader-container">
-      <div className="loader06"></div>
+    <div className={styles['loader-container']}>
+      <div className={styles.loader06}></div>
     </div>
   );
 }
