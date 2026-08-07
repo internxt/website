@@ -1,4 +1,4 @@
-export interface UserData {
+interface UserData {
   id: number;
   userId: string;
   name: string;
@@ -40,7 +40,7 @@ interface HKey {
   data: number[];
 }
 
-export interface CheckIfUserHasSubscriptionResponse {
+interface CheckIfUserHasSubscriptionResponse {
   user: {
     id: number;
     userId: string;

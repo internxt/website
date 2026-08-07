@@ -21,7 +21,7 @@
 //
 /* ======================================================================================= */
 
-export const parallaxMinMax = (percentage, min, max, forceMax) => {
+const parallaxMinMax = (percentage, min, max, forceMax) => {
   const range = max - min
   if (forceMax) {
     if (range >= 0) {

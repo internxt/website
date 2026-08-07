@@ -11,12 +11,12 @@ export interface FooterSection {
   financialProject: string;
 }
 
-export interface Copyright {
+interface Copyright {
   line1: string;
   line2: string;
 }
 
-export interface Sections {
+interface Sections {
   products: Products;
   company: Company;
   join: Join;
@@ -25,7 +25,7 @@ export interface Sections {
   features: Features;
 }
 
-export interface Company {
+interface Company {
   title: string;
   about: string;
   privacy: string;
@@ -35,7 +35,7 @@ export interface Company {
   sustainability: string;
 }
 
-export interface Features {
+interface Features {
   title: string;
   privateCloud: string;
   cloudBakcup: string;
@@ -48,7 +48,7 @@ export interface Features {
   fileTransfer: string;
 }
 
-export interface Join {
+interface Join {
   title: string;
   signup: string;
   login: string;
@@ -60,7 +60,7 @@ export interface Join {
   cloudPartner: string;
 }
 
-export interface Products {
+interface Products {
   title: string;
   drive: string;
   objStorage: string;
@@ -76,7 +76,7 @@ export interface Products {
   mail: string;
 }
 
-export interface Resources {
+interface Resources {
   title: string;
   blog: string;
   comparison: string;
@@ -136,7 +136,7 @@ export interface Resources {
   certifications: string;
 }
 
-export interface Tools {
+interface Tools {
   title: string;
   byteConverter: string;
   temporaryEmail: string;

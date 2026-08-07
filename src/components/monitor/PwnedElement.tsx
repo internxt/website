@@ -1,6 +1,6 @@
 import DOMPurify from 'dompurify';
 
-export interface PwnedElementCardProps {
+interface PwnedElementCardProps {
   textContent: {
     logoPath: string;
     domain: string;
