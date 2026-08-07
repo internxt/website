@@ -221,7 +221,7 @@ async function handleWordMetadata(file: File): Promise<Blob> {
     });
 
     const buffer = await Packer.toBuffer(originalDoc);
-    return new Blob([buffer], { type: file.type });
+    return new Blob([new Uint8Array(buffer)], { type: file.type });
   } catch (error) {
     console.warn('Error copying document content:', error);
     return new Blob([arrayBuffer], { type: file.type });
