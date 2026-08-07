@@ -1839,7 +1839,7 @@ export default function Footer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   return {

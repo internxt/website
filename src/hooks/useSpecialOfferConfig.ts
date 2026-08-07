@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
 
-export const ALLOWED_PATHS = [
+const ALLOWED_PATHS = [
   'baity',
   'xavier',
   'oscar',
@@ -237,9 +237,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   madmoneylabs: 'zh',
 };
 
-export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-export const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
-export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
+const DARK_MODE_PATHS = new Set<string>(['oscar', 'rimembah', 'believemy', 'ghareeb']);
+const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'baity',
   'nfire',
   'devopstoolbox',
@@ -262,11 +262,11 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'david',
   'saddam',
 ]);
-export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
-export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
-export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
-export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
-export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
+const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
+const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
+const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
+const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
   'drop-offer',
   'morrolinux',
@@ -352,7 +352,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'dinamotech',
 ]);
 
-export const COUPON_CODES = {
+const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
   xavier: PromoCodeName.Xavier,
   oscar: PromoCodeName.Oscar,
