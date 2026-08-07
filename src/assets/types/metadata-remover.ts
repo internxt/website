@@ -8,17 +8,17 @@ export interface MetadataRemoverText {
   FaqSection: FAQSection;
   ToolsSection: ToolsSection;
 }
-export interface FeaturesSlider {
+interface FeaturesSlider {
   title: string;
   description: string;
   cards: Cards;
 }
-export interface FeaturesSliderImg {
+interface FeaturesSliderImg {
   title: string;
   description: string;
   cards: Cards;
 }
-export interface Cards {
+interface Cards {
   openSource: EndToEnd;
   endToEnd: EndToEnd;
   zeroKnowledge: EndToEnd;
@@ -27,40 +27,40 @@ export interface Cards {
   freeTools: EndToEnd;
 }
 
-export interface EndToEnd {
+interface EndToEnd {
   title: string;
   description: string;
 }
-export interface CtaSection1 {
-  title: string;
-  description: string;
-  cta: string;
-  cards?: CtaSectionCard[];
-}
-
-export interface CtaSection2 {
+interface CtaSection1 {
   title: string;
   description: string;
   cta: string;
   cards?: CtaSectionCard[];
 }
 
-export interface CtaSectionCard {
+interface CtaSection2 {
+  title: string;
+  description: string;
+  cta: string;
+  cards?: CtaSectionCard[];
+}
+
+interface CtaSectionCard {
   title: string;
   description: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeaturesSection {
+interface FeaturesSection {
   whyToScan: FreeOnlineScanner;
   virusesHatePrivacy: FreeOnlineScanner;
   stopMalware: FreeOnlineScanner;
@@ -68,12 +68,12 @@ export interface FeaturesSection {
   scanFiles: FreeOnlineScanner;
 }
 
-export interface FreeOnlineScanner {
+interface FreeOnlineScanner {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle1: string;
   subtitle2: string;
@@ -95,11 +95,11 @@ export interface HeroSection {
   error: FreeOnlineScanner;
 }
 
-export interface DropFile {
+interface DropFile {
   line1: string;
 }
 
-export interface Table {
+interface Table {
   loading: string;
   virusDetected: string;
   noVirusDetected: string;
@@ -115,19 +115,19 @@ export interface Table {
   automaticDownload: string;
 }
 
-export interface NoVirusesDetected {
+interface NoVirusesDetected {
   message: string;
   title: string;
   subtitle: string;
   cta: string;
 }
 
-export interface ToolsSection {
+interface ToolsSection {
   title: string;
   toolsCard: ToolsCard[];
 }
 
-export interface ToolsCard {
+interface ToolsCard {
   url: string;
   UrlRedirectName: string;
   width: number;

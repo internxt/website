@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { SustainabilityText } from '@/assets/types/sustainability';
 
-export interface FeatureSectionV3Props {
+interface FeatureSectionV3Props {
   textContent: SustainabilityText['FeatureSectionV3'];
 }
 const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
