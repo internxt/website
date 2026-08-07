@@ -6,11 +6,11 @@ import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import Card from '../shared/Card';
 import { RedirectButton } from '../shared/RedirectButton';
 
-export interface FeatureSectionProps {
+interface FeatureSectionProps {
   textContent: HaveIbeenPwnedText['FeatureSection'];
   lang: string;
 }
-export interface CardTextProps {
+interface CardTextProps {
   textContent: HaveIbeenPwnedText['FeatureSection']['cards'];
 }
 const CardText = ({ textContent }: CardTextProps) => {

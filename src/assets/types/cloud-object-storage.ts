@@ -13,29 +13,29 @@ export interface CloudObjectStorageText {
   HowInternxtComparesSection?: HowInternxtComparesSection;
 }
 
-export interface HowInternxtComparesSection {
+interface HowInternxtComparesSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface FaqSection {
+interface FaqSection {
   title: string;
   faq: FaqItem[];
 }
 
-export interface FaqItem {
+interface FaqItem {
   question: string;
   answer: string[];
 }
 
-export interface ContactSales {
+interface ContactSales {
   title: string;
   description: string;
   form: Form;
 }
 
-export interface Form {
+interface Form {
   name: string;
   email: string;
   company: string;
@@ -51,13 +51,13 @@ export interface Form {
   errorMessage: string;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   label: string;
   title: Title;
   description: string;
@@ -65,12 +65,12 @@ export interface HeroSection {
   cta2: string;
 }
 
-export interface Title {
+interface Title {
   line1: string;
   line2: string;
 }
 
-export interface HowMuchYouNeedSection {
+interface HowMuchYouNeedSection {
   title: string;
   description: string;
   'pay-as-you-go': string;
@@ -81,14 +81,14 @@ export interface HowMuchYouNeedSection {
   companies: string[];
 }
 
-export interface PartnersSection {
+interface PartnersSection {
   title: string;
   description: string;
   companies: string[];
   companiesInformation: CompaniesInformation[];
 }
 
-export interface CompaniesInformation {
+interface CompaniesInformation {
   logo: string;
   image: string;
   title: string;
@@ -96,18 +96,18 @@ export interface CompaniesInformation {
   cta: string;
 }
 
-export interface PredictablePricingSection {
+interface PredictablePricingSection {
   title: string;
   description: string;
   info: PayAsYouGoCard[];
 }
 
-export interface PayAsYouGoCard {
+interface PayAsYouGoCard {
   title: string;
   description: string;
 }
 
-export interface PriceCardSection {
+interface PriceCardSection {
   title: string;
   description: string;
   payAsYouGoCard: PayAsYouGoCard;
@@ -115,7 +115,7 @@ export interface PriceCardSection {
   oneTimePayment: string;
 }
 
-export interface CardText {
+interface CardText {
   label: string;
   perTB: string;
   price: string;
@@ -123,29 +123,29 @@ export interface CardText {
   whatsIncluded: WhatsIncluded;
 }
 
-export interface WhatsIncluded {
+interface WhatsIncluded {
   title: string;
   features: string[];
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer: string[];
 }
 
-export interface WhyChooseInternxtSection {
+interface WhyChooseInternxtSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
   bannerText: BannerText;
 }
 
-export interface BannerText {
+interface BannerText {
   title: string;
   description: string;
   cta: string;
@@ -153,7 +153,7 @@ export interface BannerText {
   cta2: string;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }

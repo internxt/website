@@ -11,7 +11,7 @@ export interface HomeText {
   TrustedBySection: TrustedBySection;
 }
 
-export interface Section {
+interface Section {
   title: string;
   description: string;
   subtitle?: string;
@@ -19,22 +19,22 @@ export interface Section {
   cardDescriptions?: CardDescriptions;
 }
 
-export interface CardDescriptions {
+interface CardDescriptions {
   titles: string[];
   descriptions: string[];
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   products: Products;
   SignUp: SignUp;
   title: string;
@@ -48,57 +48,57 @@ export interface HeroSection {
   guarantee: string;
 }
 
-export interface SignUp {
+interface SignUp {
   cta: Cta;
   disclaimer: Disclaimer;
   fields: Fields;
 }
 
-export interface Cta {
+interface Cta {
   title: string;
   subtitle: string;
 }
 
-export interface Disclaimer {
+interface Disclaimer {
   text: string;
   link: string;
 }
 
-export interface Fields {
+interface Fields {
   email: Email;
   password: Password;
   submit: Submit;
 }
 
-export interface Email {
+interface Email {
   label: string;
   placeholder: string;
 }
 
-export interface Password {
+interface Password {
   label: string;
   placeholder: string;
   strength: Strength;
 }
 
-export interface Strength {
+interface Strength {
   complexity: string;
   length: string;
   weak: string;
   strong: string;
 }
 
-export interface Submit {
+interface Submit {
   get: string;
   free: string;
 }
 
-export interface GiftDescription {
+interface GiftDescription {
   line1: string;
   line2: string;
 }
 
-export interface Products {
+interface Products {
   drive: string;
   antivirus: string;
   cleaner: string;
@@ -108,24 +108,24 @@ export interface Products {
   ai: string;
 }
 
-export interface StartFrom {
+interface StartFrom {
   normal1: string;
   price: string;
   normal2: string;
 }
 
-export interface Subtitle {
+interface Subtitle {
   part1: string;
   part2: string;
 }
 
-export interface OfficalCloudProvider {
+interface OfficalCloudProvider {
   title: string;
   description: string[];
   cta: string;
 }
 
-export interface ReviewSection {
+interface ReviewSection {
   forbes: string;
   deloitte: string;
   techradar: string;
@@ -133,23 +133,23 @@ export interface ReviewSection {
   trustpilot: string;
 }
 
-export interface TestimonialsSection {
+interface TestimonialsSection {
   title: Title;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   name: string;
   enterprise: string;
   review: string;
 }
 
-export interface Title {
+interface Title {
   normal: string;
   blue: string;
 }
 
-export interface TrustedBySection {
+interface TrustedBySection {
   description: string;
 }
 
@@ -167,7 +167,7 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -175,7 +175,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
@@ -183,19 +183,19 @@ export interface Features {
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -204,7 +204,7 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }

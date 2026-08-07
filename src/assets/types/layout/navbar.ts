@@ -1,4 +1,4 @@
-export interface Root {
+interface Root {
   links: Links;
   ourValues: OurValues;
   solutions: Solutions;
@@ -60,7 +60,7 @@ export interface Auth {
   Recover: Recover;
 }
 
-export interface SignUp {
+interface SignUp {
   title: string;
   or: string;
   login: string;
@@ -68,67 +68,67 @@ export interface SignUp {
   fields: Fields;
 }
 
-export interface Disclaimer {
+interface Disclaimer {
   text: string;
   link: string;
 }
 
-export interface Fields {
+interface Fields {
   email: Email;
   password: Password;
   submit: string;
 }
 
-export interface Email {
+interface Email {
   label: string;
   placeholder: string;
 }
 
-export interface Password {
+interface Password {
   label: string;
   placeholder: string;
   strength: Strength;
 }
 
-export interface Strength {
+interface Strength {
   complexity: string;
   length: string;
   weak: string;
   strong: string;
 }
 
-export interface LogIn {
+interface LogIn {
   title: string;
   or: string;
   signup: string;
   fields: Fields2;
 }
 
-export interface Fields2 {
+interface Fields2 {
   email: Email2;
   password: Password2;
   tfa: Tfa;
   submit: string;
 }
 
-export interface Email2 {
+interface Email2 {
   label: string;
   placeholder: string;
 }
 
-export interface Password2 {
+interface Password2 {
   label: string;
   placeholder: string;
   helper: string;
 }
 
-export interface Tfa {
+interface Tfa {
   label: string;
   placeholder: string;
   hint: string;
 }
 
-export interface Recover {
+interface Recover {
   title: string;
   back: string;
   disclaimer: string;
@@ -136,17 +136,17 @@ export interface Recover {
   success: Success;
 }
 
-export interface Fields3 {
+interface Fields3 {
   email: Email3;
   submit: string;
 }
 
-export interface Email3 {
+interface Email3 {
   label: string;
   placeholder: string;
 }
 
-export interface Success {
+interface Success {
   title: string;
   subtitle: string;
 }

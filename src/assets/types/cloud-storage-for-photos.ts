@@ -10,7 +10,7 @@ export interface CloudStorageForPhotosText {
   WhySwitchSection: CtaSection;
 }
 
-export interface ExplanationSection {
+interface ExplanationSection {
   title: string;
   description: string;
   costExp: ExplElement;
@@ -18,12 +18,12 @@ export interface ExplanationSection {
   extraFeaturesExp: ExplElement;
   cta: string;
 }
-export interface ExplElement {
+interface ExplElement {
   title: string;
   description: string;
 }
 
-export interface ComponentsInColumn {
+interface ComponentsInColumn {
   title: string;
   titleLine2: string;
   description: string;
@@ -31,7 +31,7 @@ export interface ComponentsInColumn {
   cards: ComponentsInColumnCards;
 }
 
-export interface ComponentsInColumnCards {
+interface ComponentsInColumnCards {
   element1: Element4Class;
   element2: Element4Class;
   element3: Element4Class;
@@ -39,11 +39,11 @@ export interface ComponentsInColumnCards {
   element5: Element4Class;
 }
 
-export interface Element4Class {
+interface Element4Class {
   title: string;
   description: string | string[];
 }
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta?: string;
@@ -51,34 +51,34 @@ export interface CtaSection {
   cards?: Array<string>;
 }
 
-export interface BetterTomorrowSection {
+interface BetterTomorrowSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeaturesSection {
+interface FeaturesSection {
   title: string;
   description: string;
   info: InfoCard[];
 }
 
-export interface InfoCard {
+interface InfoCard {
   title: string;
   description: string[] | string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   label: string;
   title: Title;
   description: string;
@@ -88,18 +88,18 @@ export interface HeroSection {
   TitleAndOnePlanV2: TitleAndOnePlanV2;
   guarantee: string;
 }
-export interface TitleAndOnePlanTitle {
+interface TitleAndOnePlanTitle {
   textBeforeBlueText: string;
   blueText: string;
   textAfterBlueText: string;
 }
-export interface TitleAndOnePlanV2 {
+interface TitleAndOnePlanV2 {
   saveLabel: string;
   title: string;
   cta: string;
   guarantee: string;
 }
-export interface TitleAndOnePlan {
+interface TitleAndOnePlan {
   title: TitleAndOnePlanTitle;
   subtitle: string;
   description: string;
@@ -109,22 +109,22 @@ export interface TitleAndOnePlan {
   guarantee: string;
 }
 
-export interface StartFrom {
+interface StartFrom {
   normal1: string;
   price: string;
   normal2: string;
 }
-export interface Title {
+interface Title {
   line1: string;
   line2: string;
 }
 
-export interface HeroSectionTitle {
+interface HeroSectionTitle {
   normalText: string;
   blueText: string;
 }
 
-export interface WhatWeDo {
+interface WhatWeDo {
   title: SignatureClass;
   subtitle: string;
   square1: BetterTomorrowSection;
@@ -132,22 +132,22 @@ export interface WhatWeDo {
   square3: BetterTomorrowSection;
 }
 
-export interface SignatureClass {
+interface SignatureClass {
   line1: string;
   line2: string;
 }
 
-export interface SubtitleClass {
+interface SubtitleClass {
   line1: string;
 }
 
-export interface Links {
+interface Links {
   desk: string;
   web: string;
   mobile: string;
 }
 
-export interface Position {
+interface Position {
   top: string;
   left: string;
   bottom?: string;
@@ -165,6 +165,6 @@ export interface ImageConfig {
   className?: string;
 }
 
-export interface AnimationProps {
+interface AnimationProps {
   images: ImageConfig[];
 }

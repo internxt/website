@@ -1,6 +1,6 @@
 import { SustainabilityText } from '@/assets/types/sustainability';
 
-export interface FeatureSectionProps {
+interface FeatureSectionProps {
   textContent: SustainabilityText['FeatureSection'];
 }
 

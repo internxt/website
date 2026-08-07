@@ -9,7 +9,7 @@ export interface VPNText {
   FaqSection: FAQSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta?: string;
@@ -18,22 +18,22 @@ export interface CtaSection {
   download?: string;
 }
 
-export interface CardClass {
+interface CardClass {
   title: string;
   description: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   label: string;
   title: Title;
   description: string;
@@ -41,7 +41,7 @@ export interface HeroSection {
   download: string;
 }
 
-export interface Title {
+interface Title {
   line1: string;
   line2: string;
 }

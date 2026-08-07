@@ -14,7 +14,7 @@ import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import { CaretUp } from '@phosphor-icons/react';
 import { PASSWORD_REGEX } from './components/InputsComponent';
 
-export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
+const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
     applePay: 'auto',
     googlePay: 'auto',

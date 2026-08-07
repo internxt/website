@@ -67,14 +67,14 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/nas',
 ];
 
-export const SNIGEL_BANNERS = {
+const SNIGEL_BANNERS = {
   DEFAULT_BANNERS: ['incontent_1', 'incontent_2', 'incontent_3', 'incontent_4', 'adhesive', 'top_leaderboard'],
   CUSTOM_BANNERS: ['sidebar_right', 'sidebar_left'],
 };
 
-export const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-checker', '/password-generator'];
+const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-checker', '/password-generator'];
 
-export const INCLUDED_PATHS_FOR_SNIGEL = [
+const INCLUDED_PATHS_FOR_SNIGEL = [
   '/temporary-email',
   '/password-generator',
   '/password-checker',
