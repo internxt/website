@@ -1,543 +1,324 @@
 {
-  "HeroSection": {
-    "title": "Terms of Service"
-  },
-  "lastUpdated": "Last updated: March 2023",
-  "title": "Terms and Conditions Overview",
-  "subtitle": "These Terms and conditions (“conditions”) are the Terms and conditions that regulate access to and use of the website and services that Internxt Universal Technologies SL (“Internxt”), a company registered in La Marina de Valencia, Muelle de la Aduana s/n, Edificio Lanzadera, 46024 Valencia, Spain, puts at the disposal of its users and clients. These Terms and conditions shall be governed and construed under Spanish Law and shall be subject to that exclusive jurisdiction should any dispute, claim or disagreement arise from them. Internxt may update and amend these Terms and Conditions at any time and without prior notice, to adapt them to current regulations and to technological or business changes. The User should frequently verify the Terms and Conditions to ensure they always have the most up to date version. By accessing or using the websites, mobile applications and online services of Internxt, including internxt.com, (collectively, the “Services”) you will be bound by these Terms of Use (“Terms”) and all terms incorporated by reference. If you do not agree to these Terms, you may not access or use the Services. If you have any questions regarding these Terms, please contact us at hello@internxt.com. Please refer to our Privacy Policy for information about how we collect, use and disclose information about you.",
-
-  "title2": "Eligibility and Authority",
-  "subtitle2": "You must be 18 years of age or older to access or use our Services. If you are using the Services on behalf of any entity: (a) you represent and warrant that you are authorized to accept these Terms on such entity’s behalf and that such entity will be responsible for breach of these Terms by you or any other employee or agent of such entity; and (b) references to “you” in these Terms refer to you and such entity, jointly.",
-
-  "title3": "Open Source Software",
-  "subtitle3": "We may make the source code for much of the software that supports our Services, including the Storage Platform, available for download as open source software. You agree to be bound by, and comply with, any license agreement that applies to this open source software. You will not indicate that you are associated with Internxt in connection with any of your modifications or distributions of this open source software. The source code we release in connection with open source software is not part of the Services, and your use of that source code without interacting with our Services is not subject to these Terms. For clarity, though, when we host any software and enable you to access and use such software as a service through our websites and apps, then these Terms will apply to such access and use.",
-
-  "title4": "Use of the Services",
-  "subtitle4": "The Services, including all text, videos, images, data, software, or other files, content, and materials contained on the Services, are the proprietary property of Internxt and our licensors. Subject to your compliance with these Terms, you may use the Services on a non-exclusive basis for your own personal use. Nothing in these Terms will be construed as conferring any right or license to any patent, trademark, copyright or other proprietary rights of Internxt or any third party, whether by estoppel, implication or otherwise. To be clear, we do not claim any ownership over the content you submit via the Services.",
-
-  "title5": "Modifications to the Services",
-  "subtitle5": "We reserve the right, in our sole discretion, to modify the Services (or any features or functionality of the Services) at any time without notice and without obligation or liability to you.",
-
-  "title6": "Repeat Infringer Policy and Copyright Complaints",
-  "subtitle6": "We have a policy of limiting access to the Service and terminating the accounts of users who infringe the intellectual property rights of others. If you believe that anything on the Services infringes any copyright that you own or control, you may notify us using the email address hello@internxt.com.",
-
-  "title7": "Trademarks",
-  "subtitle7": "“Internxt,” the Company logo, any other Company service names, logos or slogans that may appear on the Services, and the look and feel of the Services, including all page headers, custom graphics, button icons and scripts, are trademarks, service marks or trade dress of Internxt and our suppliers and our licensors, and may not be copied, imitated or used, in whole or in part, without our or the applicable trademark holder’s prior written permission. You may not use any meta tags or other “hidden text” utilizing “Internxt” or any other name, trademark or product or service name of Internxt without our prior written permission. Further, you may not use, frame or utilize framing techniques to enclose any Internxt trademark, logo or other proprietary information, including the images found on the Services, the content of any text or the layout or design of any page, or form contained on a page, on the Services without our express written consent.",
-
-  "title8": "Third-Party Content",
-  "subtitle8": "We may display third-party content, advertisements, links, promotions, logos, and other materials through the Services (collectively, “Third-Party Content”). We do not control, endorse, sponsor or adopt any third parties referenced on the Services or Third-Party Content, and we make no representations or warranties of any kind regarding such Third-Party Content, including, without limitation, regarding its accuracy or completeness. Your interactions with Third-Party Content, and any third party that provides Third-Party Content, are solely between you and such third parties, and Internxt is not responsible or liable in any manner for such interactions or Third-Party Content. When you leave the Services and enter a third-party site or service, our terms and policies no longer apply.",
-
-  "title9": "User Conduct",
-  "subtitle9": "You will comply with all applicable laws in connection with your access and use of the Services, and you are solely responsible for your conduct while accessing or using the Services. Further, you will not: engage in conduct that is harassing, threatening, intimidating, or stalking, or that we otherwise deem objectionable; use the Services in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying the Services or that could damage, disable, overburden or impair the functioning of the Services in any manner; reverse engineer any aspect of the Services or do anything that might discover the source code of the Services (other than in connection with open source software we release); violate, infringe or misappropriate any intellectual property or other third-party right or commit a tort; modify, copy (other than standard page caching), publicly perform, publicly display, sell, rent, lease, timeshare or otherwise distribute the Services, in whole or in part. This restriction does not apply to open source software we release, which you can use subject to the applicable open source software license terms; attempt to bypass or circumvent measures employed to prevent or limit access to any content, area or functionality on the Services, without providing prior notice to Internxt of the method used to bypass or circumvent; use any of the Services other than for its intended purposes; or use the Services to engage in or promote any activity that violates these Terms.",
-
-  "title10": "User Content",
-  "subtitle10": "(a) The Services include areas that allow users to create, post, upload, share or store content, including, but not limited to, photos, videos, sound, text, graphics, code, items or other information and materials, including Storage Materials (collectively, “User Content”). “Storage Materials” refers to any User Content provided or otherwise processed via our Services for storage on the Storage Platform.",
-  "subtitle102": "(b) We do not own, control or endorse any User Content that is transmitted, stored, or processed via the Services. You are solely responsible for any of your User Content and for your use of any interactive features and areas of the Services, and you represent and warrant that (i) you own all intellectual property rights (or have obtained all necessary permissions) to provide your User Content and to grant the licenses in this Agreement; (ii) your User Content will not violate any agreements or confidentiality obligations; and (iii) your User Content will not violate, infringe or misappropriate any intellectual property right or other proprietary right, including the right of publicity or privacy, of any person or entity.",
-  "subtitle103": "(c) You will not create, post, share or store User Content that: is unlawful, libelous, defamatory, harassing, threatening, invasive of privacy or publicity rights, abusive, inflammatory, fraudulent or otherwise objectionable; would constitute, encourage or provide instructions for a criminal offense, violate the rights of any party, otherwise create liability or violate any local, state, national or international law; contains or depicts any statements, remarks or claims that do not reflect your honest views and experiences; impersonates, or misrepresents your affiliation with, any person or entity (including Internxt); references or depicts Internxt or our Services but fails to disclose any material connection to us that may exist; contains any unsolicited promotions, political campaigning, advertising or solicitations; contains any viruses, corrupted data or other harmful, disruptive or destructive files or content; or in our sole judgment, is objectionable or that restricts or inhibits any other person from using or enjoying the Services, or that may expose Internxt or others to any harm or liability of any type.",
-
-  "title11": "Feedback",
-  "subtitle11": "You may submit questions, comments, suggestions, ideas, original or creative materials or other information about Internxt or the Services to us (collectively, “Feedback”). Feedback does not include User Content. We reserve the right to use Feedback for any purpose without compensation to you. Do not send us Feedback if you expect to be paid or want to continue to own or claim rights in them; your idea might be great, but we may have already had the same or a similar idea and we do not want disputes.",
-
-  "title12": "Indemnification",
-  "subtitle12": "(a) To the fullest extent permitted by applicable law, you will indemnify, defend and hold harmless Internxt and our respective past, present and future employees, officers, directors, contractors, consultants, equity holders, suppliers, vendors, service providers, parent companies, subsidiaries, affiliates, agents, representatives, predecessors, successors and assigns (the “Company Parties”) from and against all claims, damages, costs and expenses (including attorneys’ fees) that arise from or relate to: (i) your access to or use of our Services; (ii) your User Content (including any Storage Materials); (iii) any Feedback you provide; or (iv) your violation of these Terms.",
-  "subtitle122": "(b) Internxt reserves the right to exercise sole control over the defense, at your expense, of any claim subject to indemnification. This indemnity is in addition to, and not in lieu of, any other indemnities set forth in a written agreement between you and Internxt.",
-
-  "title13": "Disclaimers",
-  "subtitle13": "TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW AND EXCEPT AS OTHERWISE SPECIFIED IN THE AGREEMENT, (A) THE SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OF ANY KIND, AND WE EXPRESSLY DISCLAIM ALL IMPLIED WARRANTIES AS TO THE SERVICES, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT; (B) WE DO NOT REPRESENT OR WARRANT THAT THE SERVICES ARE ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE, MEET YOUR REQUIREMENTS, OR THAT DEFECTS IN THE SERVICES WILL BE CORRECTED; AND (C) WE CANNOT AND DO NOT REPRESENT OR WARRANT THAT THE SERVICES OR OUR SERVERS ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.",
-
-  "title14": "Limitation of Liability",
-  "subtitle14": "(A) TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW: (I) IN NO EVENT WILL INTERNXT OR ANY OF THE COMPANY PARTIES BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES OF ANY KIND (INCLUDING, BUT NOT LIMITED TO, WHERE RELATED TO LOSS OF REVENUE, INCOME OR PROFITS, LOSS OF USE OR DATA, OR DAMAGES FOR BUSINESS INTERRUPTION) ARISING OUT OF OR IN ANY WAY RELATED TO THE ACCESS OR USE OF THE SERVICES OR OTHERWISE RELATED TO THE AGREEMENT, REGARDLESS OF THE FORM OF ACTION, WHETHER BASED IN CONTRACT, TORT (INCLUDING, BUT NOT LIMITED TO, SIMPLE NEGLIGENCE, WHETHER ACTIVE, PASSIVE OR IMPUTED), OR ANY OTHER LEGAL OR EQUITABLE THEORY (EVEN IF THE PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF WHETHER SUCH DAMAGES WERE FORESEEABLE); AND (II) IN NO EVENT WILL THE AGGREGATE LIABILITY OF INTERNXT AND THE COMPANY PARTIES (JOINTLY), WHETHER IN CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE, WHETHER ACTIVE, PASSIVE OR IMPUTED), OR OTHER THEORY, ARISING OUT OF OR RELATING TO THE AGREEMENT OR THE USE OF OR INABILITY TO USE THE SERVICES, EXCEED THE GREATER OF ANY COMPENSATION YOU PAY TO US FOR USE OF THE SERVICES OR €100.",
-  "subtitle142": "(B) THE LIMITATIONS SET FORTH IN SECTION 15(A) WILL NOT LIMIT OR EXCLUDE LIABILITY FOR THE GROSS NEGLIGENCE, FRAUD OR INTENTIONAL, WILLFUL OR RECKLESS MISCONDUCT OF INTERNXT.",
-
-  "title15": "Release",
-  "subtitle15": "To the fullest extent permitted by applicable law, you release Internxt and the other Company Parties from responsibility, liability, claims, demands and/or damages (actual and consequential) of every kind and nature, known and unknown (including, but not limited to, claims of negligence), arising out of or related to disputes between users and the acts or omissions of third parties.",
-
-  "title16": "Dispute Resolution and Arbitration",
-  "subtitle16": "PLEASE READ THE FOLLOWING SECTION CAREFULLY BECAUSE IT REQUIRES YOU TO ARBITRATE CERTAIN DISPUTES AND CLAIMS WITH INTERNXT AND LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF FROM US.",
-  "subtitle162": "Except for any disputes, claims, suits, actions, causes of action, demands or proceedings (collectively, “Disputes”) in which either party seeks to bring an individual action in small claims court or seeks injunctive or other equitable relief for the alleged unlawful use of intellectual property, including, without limitation, copyrights, trademarks, trade names, logos, trade secrets or patents, you and Internxt (a) waive your and Internxt respective rights to have any and all Disputes arising from or related to this Agreement or the Services resolved in a court, and (b) waive your and Internxt's respective rights to a jury trial. Instead, you and Internxt will arbitrate Disputes through binding arbitration (which is the referral of a Dispute to one or more persons charged with reviewing the Dispute and making a final and binding determination to resolve it instead of having the Dispute decided by a judge or jury in court).",
-  "subtitle163": "Any Dispute arising out of or related to this Agreement or the Services is personal to you and Internxt, and will be resolved solely through individual arbitration and will not be brought as a class arbitration, class action or any other type of representative proceeding. There will be no class arbitration or arbitration in which an individual attempts to resolve a Dispute as a representative of another individual or group of individuals. Further, a Dispute cannot be brought as a class or other type of representative action, whether within or outside of arbitration, or on behalf of any other individual or group of individuals.",
-  "subtitle164": "Each party will notify the other party in writing of any arbitrable or small claims Dispute within thirty (30) days of the date it arises so that the parties can attempt in good faith to resolve the Dispute informally. Notice to Internxt will be sent by e-mail to Internxt at hello@internxt.com. Notice to you will be by email to the then-current email address in your Account. Your notice must include (a) your name, postal address, email address and telephone number, (b) a description in reasonable detail of the nature or basis of the Dispute, and (c) the specific relief that you are seeking. If you and Internxt cannot agree on how to resolve the Dispute within thirty (30) days after the date notice is received by the applicable party, then either you or Internxt may, as appropriate and in accordance with this Section 17, commence an arbitration proceeding or, to the extent specifically provided for in Section 17.1, file a claim in court.",
-  "subtitle165": "Any arbitration will occur in Spain. Arbitration will be conducted confidentially by a single arbitrator in accordance with the rules of the Judicial Arbitration and Mediation Services (“JAMS”), which are hereby incorporated by reference. The state and federal courts located in Spain will have exclusive jurisdiction over any appeals and the enforcement of an arbitration award. You may also litigate a Dispute in the small claims court located in the county where you reside if the Dispute meets the requirements to be heard in small claims court.",
-  "subtitle166": "This Agreement and the applicable JAMS rules, the arbitrator will have (a) the exclusive authority and jurisdiction to make all procedural and substantive decisions regarding a Dispute, including the determination of whether a Dispute is arbitrable, and (b) the authority to grant any remedy that would otherwise be available in court; provided, however, that the arbitrator does not have the authority to conduct a class arbitration or a representative action, which is prohibited by these Terms. The arbitrator may only conduct an individual arbitration and may not consolidate more than one individual’s claims, preside over any type of class or representative proceeding or preside over any proceeding involving more than one individual.",
-  "subtitle167": "The rules of JAMS and additional information about JAMS are available on the JAMS website. By agreeing to be bound by these Terms, you either (a) acknowledge and agree that you have read and understood the rules of JAMS, or (b) waive your opportunity to read the rules of JAMS and any claim that the rules of JAMS are unfair or should not apply for any reason.",
-
-  "title17": "Governing Law and Venue",
-  "subtitle17": "This Agreement and your access to and use of the Services will be governed by and construed and enforced in accordance with the laws of Spain, without regard to conflict of law rules or principles (whether of Spain any other jurisdiction) that would cause the application of the laws of any other jurisdiction. Any Dispute between the parties arising out or relating to this Agreement that is not subject to arbitration or cannot be heard in small claims court will be resolved in the courts of the Spain.",
-
-  "title18": "Severability",
-  "subtitle18": "If any term, clause or provision of this Agreement is held invalid or unenforceable, then that term, clause or provision will be severable from this Agreement and will not affect the validity or enforceability of any remaining part of that term, clause or provision, or any other term, clause or provision of this Agreement.",
-
-  "title19": "Termination or Suspension",
-  "subtitle19": "Notwithstanding anything contained in this Agreement, we reserve the right, without notice and in our sole discretion, to terminate this Agreement or suspend your right to access the Services. You may terminate this Agreement without notice by discontinuing use of the Services. All rights and licenses granted to you under this Agreement will immediately be revoked upon our termination of the Agreement or our suspension of your access to the Services, and you must immediately submit payment for any fees payable to Internxt under the Agreement (as specified in the Storage Terms). Internxt users can pay for a lifetime plan. A lifetime plan is in effect for the duration of the account owner or 99 years, whichever is shorter. Lifetime accounts do not come with a standard 30 day money-back guarantee, which covers the rest of our plans. If a user loses access to his or her lifetime account, that lifetime account will be deemed as lost. Internxt might sometimes offer “infinite” or “unlimited” lifetime memberships. These memberships are regulated under a fair-use policy, under which no user might use above 99999 GB of storage. Internxt reserves the right to prevent or stop any customer’s use of Internxt services that appears to be abusive or is unduly burdensome. For more information on how this policy applies to your service plan, please contact us.",
-
-  "title20": "Amendment",
-  "subtitle20": "We reserve the right to change the terms of this Agreement from time to time in our sole discretion. If we make changes to the Agreement, we will provide notice of such changes, such as by posting the revised Agreement terms to the Services and updating the “Last Updated” date at the top of these Terms and the Storage Terms. Your continued use of the Services will confirm your acceptance of the revised Agreement. If you do not agree to the modified Agreement, you must stop using the Services.",
-
-  "title21": "Service Level",
-  "subtitle21": "(a) Internxt will use commercially reasonable efforts to meet the following service level commitment: except for scheduled maintenance, our Storage Services will be available 99.99% of the time. We calculate availability based upon the service records we maintain. We will use reasonable efforts to notify you in advance of any scheduled maintenance.",
-  "subtitle212": "(b) Our SLA obligations do not extend to any unavailability of the Storage Services that is caused by: (i) any hardware or software that you use in connection with the Storage Services; (ii) misuse of our Storage Services or the Storage Platform, including use in breach of the Agreement or use other than in accordance with any documentation or ther instructions provided by Internxt; (iii) circumstances or events beyond the reasonable control of Internxt; or (iv) our suspension or termination of your access to the Storage Services pursuant to the rights we have reserved under the Agreement.",
-
-  "title22": "Storage Platform",
-  "subtitle22": "The Storage Services enable you to store data and other materials (“Storage Materials”) via a distributed network of third-party devices (“Storage Nodes”) that comprise the Storage Platform. The Storage Platform is an interconnected set of Storage Nodes that independently operate open-source software to facilitate the storage of your Storage Materials. Users acting as Storage Nodes acknowledge that they must comply with EU GDPR Privacy Law. The Storage Services are designed to encrypt Storage Materials locally on your device and then facilitate the distribution of such encrypted data fragments to the Storage Nodes. The Storage Platform and Storage Nodes are not operated or maintained by Internxt, and Internxt has no responsibility or liability for the Storage Platform or Storage Nodes. The Storage Services enable you to protect against loss of your Storage Materials due to the failure of any individual Storage Node by allowing you to configure the redundancy and distribution of your Storage Materials. You are solely responsible for your use of the Storage Platform, including for configurations that you deem appropriate to maintain access to your Storage Materials in a manner that meets your expectations. In order to use the Storage Services, you will need to register for an account (“Account”). In connection with your creation of any Account, you will (i) provide accurate, current and complete Account information, (ii) maintain and promptly update your Account information as necessary, (iii) maintain the security of your Account, including by not using the same password for the Storage Services that you use for third-party services, (iv) not disclose your password or private keys to any third party, and (v) immediately notify us if you discover or otherwise suspect any unauthorized activities in connection with your Account or the Storage Services. You acknowledge and agree that if you lose your password, you may not be able to recover any Storage Materials. One same person cannot hold various free Internxt accounts. Internxt offers a referral program where users can earn €5 worth of credit that can be used inside Internxt's platform. By referring a friend to join Internxt, both parties can earn €5. The person you refer must be an active Internxt user, and can sign up in any of Internxt's plans. Internxt reserves the right to review referrals and disqualify any referrals that haven't been active in the platform. A single user can earn a maximum of €100 worth of referral credit.",
-
-  "title23": "Storage Materials",
-  "subtitle23": "(a) Internxt will not be responsible for any loss, misuse, or deletion of Storage Materials or any failure of any Storage Materials to be stored or encrypted. You are solely responsible for backing up any Storage Materials.",
-  "subtitle232": "(b) You are responsible for properly configuring and using the Storage Services to store your Storage Materials via the Storage Platform, and for maintaining appropriate security of your Storage Materials, which may include the use of encryption. We reserve the right at any time, without notice, to remove, reject or delete any Storage Materials that contain plain text data or otherwise violate the terms of this Agreement (including Internxt Terms of Use relating to User Content).",
-  "subtitle233": "(c) You are solely responsible for ensuring that any processing of Storage Materials via the Storage Services is in compliance with all applicable laws. We make no representations or warranties regarding the suitability of the Storage Services for the processing of any particular types of data. You will provide all notices to, and obtain any consents from, third parties as required by applicable law in connection with the processing of Storage Materials via the Storage Services. You must not process any Storage Materials that include sensitive data that require heightened security protections, including any (i) “protected health information,” as defined under HIPAA, (ii) “cardholder data,” as defined by the PCI DSS, or (iii) “Sensitive Personal Data” as defined under the EU Directive 95/46/EC as enacted in the member states of the European Union.",
-
-  "title24": "Payment",
-  "subtitle24": "(a) We will provide notice via the Storage Services of the fees applicable to use of the Storage Services ('Fees'). All Fees are exclusive of any applicable taxes unless stated otherwise, which are your sole responsibility. We will provide notice at least 30 days in advance of any increase to the Fees.",
-  "subtitle242": "(b) Except where otherwise indicated via the Storage Services, we will charge all Fees to a payment method designated by you via the Storage Services that is acceptable to us. You represent and warrant that you are authorized to use the payment method you designate via the Storage Services and authorize us to charge all Fees to that method. If your payment method cannot be verified, is invalid, or is not otherwise acceptable, your right to use the Storage Services may be suspended automatically. Fees will be charged on a monthly basis based on the prior month’s usage. You can avoid incurring Fees at any time by discontinuing your use of the Storage Services to store your Storage Materials.",
-  "subtitle243": "(c) Users with a free account who do not log in to their account for a period of one year will be considered inactive. Users will receive an email notice 7 days prior to reaching inactive status. Once a free account reaches that status, its files will be removed from the network in order to free up space for those free users who are actively using their account.",
-  "subtitle244": "(d) Accounts on any of our premium plans who fail to renew their plan within a period of 7 days will be terminated.",
-  "subtitle245": "(e) All users who buy any of Internxt's premium plans will be eligible for a 30 day refund, unless they already receive a 30 day trial period of any of Internxt's premium plan. After those first 30 days using any of our premium plans have passed, no refund will be applicable. To request a refund, you should reach out to us via email, at hello@internxt.com.",
-  "subtitle246": "(f) Storage Nodes agree to let Internxt generate invoices on their behalf, so that both parties can legally justify the payment Internxt sends to Storage Nodes every month. The invoice will be issued by the Storage Nodes (with the personal details he specifies at sign up), to Internxt. Storage Nodes can contact us and request those invoices at any time.",
-
-  "title25": "Effect of Suspension or Termination",
-  "subtitle25": "If your access to the Storage Services is suspended or terminated, you will no longer have access to the Storage Materials processed via the Storage Services for storage in the Storage Platform, and your Storage Materials may not be recoverable. If we terminate or suspend your access to the Storage Services for reasons other than your breach of the Agreement, we will make commercially reasonable efforts to provide you an opportunity to retrieve your Storage Materials via the Storage Services. We will terminate any free accounts that have no activity for one year (this includes any account that has not uploaded, downloaded, shared or modified a file in a period of one year). We will also terminate accounts under any of our paid plans, that fail to renew their plan after 7 days from the payment renewal deadline. Appropriate notice will be given to the user to try to avoid account termination.",
-
-  "title26": "Miscellaneous",
-  "subtitle26": "The Agreement constitutes the entire agreement between you and Internxt relating to your access to and use of our Services. We may assign our rights and obligations under the Agreement. The failure of Internxt to exercise or enforce any right or provision of the Agreement will not operate as a waiver of such right or provision. We will not be liable for any delay or failure to perform any obligation under the Agreement where the delay or failure results from any cause beyond our reasonable control. Except as otherwise provided in herein, the Agreement is intended solely for the benefit of the parties and are not intended to confer third-party beneficiary rights upon any other person or entity.",
-
-  "title27": "Privacy Policy Overview",
-
-  "privacy_policy_intro_part1": "Diese Datenschutzerklärung wurde gemäß den Bestimmungen der VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung, DSGVO) und des Organgesetzes 3/2018 vom 5. Dezember über den Schutz personenbezogener Daten und die Gewährleistung digitaler Rechte (LOPDGDD) verfasst.",
-  "privacy_policy_person_responsible_title": "Who is the Person Responsible for the Treatment?",
-
-  "privacy_policy_person_responsible_part1": "The data collected or provided voluntarily through the Web Page, either by browsing it, as well as all those who can provide us in the contact forms, via email or telephone, will be collected and processed by the File Manager, whose data are indicated below:",
-
-  "privacy_policy_table_row1_column1": "Identity",
-  "privacy_policy_table_row1_column2": "Internxt Universal Technologies, S.L.",
-
-  "privacy_policy_table_row2_column1": "CIF",
-  "privacy_policy_table_row2_column2": "B98936354",
-
-  "privacy_policy_table_row3_column1": "Postal address",
-  "privacy_policy_table_row3_column2": "C/ La Travesia s/n, Edificio Angels, 46024, Valencia, España",
-
-  "privacy_policy_table_row5_column1": "E-mail",
-  "privacy_policy_table_row5_column2": "hello@internxt.com",
-
-  "privacy_policy_table_row6_column1": "DPD Contact:",
-  "privacy_policy_table_row6_column2": "legal@egida.es",
-
-  "privacy_policy_table_row7_column1": "URL:",
-  "privacy_policy_table_row7_column2": "www.internxt.com",
-
-  "privacy_policy_person_responsible_part2": "If, for any reason, you wish to contact us on any matter related to the processing of your personal data or privacy (with our Data Protection Officer), you can do so through any of the means indicated above.",
-
-  "privacy_policy_process_personal_data_title": "When, why, by whom, how, for what purpose and for how long do we process your personal data?",
-
-  "privacy_policy_process_personal_data_subtitle1": "When and why?",
-
-  "privacy_policy_process_personal_data_part1": "You can browse most of our web pages without providing any personal information, but in some cases this information is necessary to provide you with the electronic services you request from us. ",
-
-  "privacy_policy_process_personal_data_part2": "If we need to collect personal data to provide you with the service, we will process the information in accordance with the policy set out in this document and in the specific terms and conditions of the particular service in question (if any), which contain specific privacy statements about the use of the data and inform you why, for what purpose, how, for how long we process your personal data and what security measures we implement.",
-
-  "privacy_policy_process_personal_data_subtitle2": "Who collects your data?",
-
-  "privacy_policy_process_personal_data_part3": "The collection and processing of personal data that you may provide to us is carried out by our company or, where appropriate, its data processors. In relation to the latter case, these processors are third parties who are contractually required to ensure that their activity respects the law and implement appropriate security measures to protect such data.",
-
-  "privacy_policy_process_personal_data_subtitle3": "What for?",
-
-  "privacy_policy_process_personal_data_part4": "The personal data that we request from you, or that you provide to us as a result of your browsing, is used by us to manage, provide and improve the services you have requested from us.",
-
-  "privacy_policy_process_personal_data_part5": "For example, we will process your personal data in order to manage the queries you send us, to manage your participation in personnel selection processes, to send you electronic communications if you so request, and/or for the preparation of statistics.",
-
-  "privacy_policy_process_personal_data_part6": "In this sense, we ask you for an e-mail address when you use our contact forms on the web. We only collect the sender's personal data necessary to respond to you.",
-
-  "privacy_policy_process_personal_data_part7": "When you subscribe to our newsletters we also ask you for an email to provide the service, in any case you can manage your unsubscribe from the service whenever you want and we put means at your disposal to do so.",
-
-  "privacy_policy_process_personal_data_subtitle4": "How do we treat your data?",
-
-  "privacy_policy_process_personal_data_part8": "We collect personal information only to the extent necessary to achieve a specific purpose. The information will not be used for a purpose incompatible with the one described.",
-
-  "privacy_policy_process_personal_data_part9": "We only disclose the information to third parties if it is necessary for the fulfillment of the purpose of the service and only to persons who need to know them. All this in order to be able to provide the service by treating your personal data with confidentiality and reserve, in accordance with current legislation.",
-
-  "privacy_policy_process_personal_data_part10": "In any case, our company adopts security measures to protect the data against possible abuse or unauthorized access, alteration or loss.",
-
-  "privacy_policy_process_personal_data_subtitle5": "How do we treat your data?",
-
-  "privacy_policy_process_personal_data_part11": "We store data only for the time necessary to fulfill the purpose of its collection or further processing. The period of data retention will depend on the service and each service will indicate the duration of the processing of personal data.",
-
-  "privacy_policy_process_personal_data_part12": "A table with specific retention periods is provided at the end of this document.",
-
-  "privacy_policy_process_personal_data_subtitle6": "For what purposes will we process your personal data?",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_1": "Customers:",
-
-  "privacy_policy_process_personal_data_part13": "We process your personal data in order to (i) manage your purchase or service provided; (ii) maintain the contractual and pre-contractual relationship for billing, preparation of budgets and follow up on the same as well as send you information by electronic means that deal with your request; (iii) sending communications on commercial information by electronic means that may be of interest to you, provided there is express authorization; (iv) we may develop a commercial profile based on the information you provide us in order to offer products and services according to your interests. No automated decisions will be made on the basis of such a profile.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_2": "Suppliers:",
-
-  "privacy_policy_process_personal_data_part14": "We process your personal data for the purpose of (i) invoicing and (ii) maintaining business contact, (iii) as well as sending you information by electronic means about our products or services.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_3": "Web or e-mail contacts:",
-
-  "privacy_policy_process_personal_data_part15": "We process your personal data for the purpose of (i) answering your queries and requests; (ii) managing the requested service or processing your order; (iii) sending you commercial information by electronic means that may be of interest to you, we may create a commercial profile based on the information you provide us in order to offer you products and services according to your interests. No automated decisions will be made on the basis of such a profile.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_4": "Social media contacts:",
-
-  "privacy_policy_process_personal_data_part16": "We process your personal data in order to (i) answer your queries and requests, (ii) manage the requested service, answer your request or process your order and (iii) interact with you and create a community of followers.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_5": "Job seekers:",
-
-  "privacy_policy_process_personal_data_part17": "We process your personal data in order to (i) count on you in recruitment selection processes, (ii) summon you for job interviews and evaluate your candidacy, (iii) communicate your resume to group companies, collaborators or related companies with the sole purpose of involving you in their selection processes, provided that you have given us your consent.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_6": "Participants in our contests:",
-
-  "privacy_policy_process_personal_data_part18": "We process your personal data in order to manage your participation in the contests we organize as well as to publicize the winners of the contest and the awards ceremony.",
-
-  "privacy_policy_process_personal_data_part19": "Winning participants may be photographed or videotaped and disseminated in any of the media, our website or other media. Consequently it is possible that the image of the participants may be captured, recorded and/or reproduced in an ancillary way to the main activity.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_7": "Chat online:",
-
-  "privacy_policy_process_personal_data_part20": "We process your personal data in order to answer your queries and requests.",
-
-  "privacy_policy_process_personal_data_part21": "The data will be deleted from our database once the query or information requested through the chat is resolved.",
-
-  "privacy_policy_process_personal_data_sub_subtitle6_8": "Web users:",
-
-  "privacy_policy_process_personal_data_part22": "By browsing our website we collect information about your browser, your device and data from your use of our website as well as any information you provide to us when using our website. In an anonymized or aggregated form, we may record the IP address (Internet access identification number of the device, which allows devices, systems and servers to recognize and communicate with each other).",
-
-  "privacy_policy_process_personal_data_part23": "The purpose of the processing is (i) to obtain practical knowledge about how users use our website to enable us to improve it; (ii) to perform statistical analysis to help us improve our business strategy; (iii) to perform web performance analysis and (iv) for technical security and system diagnostics. ",
-
-  "privacy_policy_process_personal_data_part24": "The data we collect is not related to a specific user and will be stored in our databases.",
-
-  "privacy_policy_process_personal_data_part25": "The aforementioned data, as well as any personal data you may provide us with, are stored by means of cookies that are collected in a format pseudonymized and are subject to the presentation of objections to the processing of this personal data, as detailed in the Cookie Policy. ",
-
-  "privacy_policy_process_personal_data_part26": "You can consult the Cookies Policy in the corresponding section.",
-
-  "privacy_policy_process_personal_data_part27": "The information of your navigation can be stored by Google Analytics, so we refer to the Privacy Policy of Google, as it collects and treats such information. http://www.google.com/intl/en/policies/privacy/ ",
-
-  "privacy_policy_process_personal_data_part28": "Similarly, from our website you can provide the utility of Google Maps, which may have access to your location, in the event that it is allowed, in order to provide you with greater specificity about the distance and / or roads to our headquarters. In this regard, we refer to the privacy policy used by Google Maps, in order to know the use and processing of such data http://www.google.com/intl/en/policies/privacy/ ",
-
-  "privacy_policy_process_personal_data_part29": "In order to offer information or services of interest based on the User's location, we may access data relating to the geolocation of the User's device in those cases in which the user's configuration for this purpose so permits.",
-
-  "privacy_policy_process_personal_data_part30": "The Portal may offer functionalities to share content through third party applications, such as Facebook or Twitter. These applications may collect and process information related to the user's browsing on the different websites. Any personal information collected through these applications may be used by third party users of these applications. Your interactions are subject to the privacy policies of the companies providing the applications.",
-
-  "privacy_policy_process_personal_data_part31": "The Portal may host blogs, forums, and other social networking applications or services in order to facilitate the exchange of knowledge and content. Any personal information provided by the user may be shared with other users of that service, over which we have no control.",
-
-  "privacy_policy_process_personal_data_subtitle7": "What is the legitimacy for the processing of your data?",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_1": "Customers:",
-
-  "privacy_policy_process_personal_data_part32": "The legal basis for the processing of your data is (i) the execution of a contract and maintenance of the contractual relationship and (ii) your consent that is requested for the remission of offers of products and services through electronic means, without in any case the withdrawal of this consent conditions the execution of the contract.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_2": "Suppliers:",
-
-  "privacy_policy_process_personal_data_part33": "The legal basis for processing your data is (i) the performance of a contract to which the data subject is a party or for the implementation of pre-contractual measures.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_3": "Web or e-mail contacts:",
-
-  "privacy_policy_process_personal_data_part34": "The legal basis for the processing of your data is (i) the consent of the data subject.",
-
-  "privacy_policy_process_personal_data_part35": "In those cases where to make a request it is necessary to fill out a form and \"click\" on the submit button, the completion of the same will necessarily imply that you have been informed and have expressly given your consent to the content of the clause attached to the form or acceptance of the privacy policy.",
-
-  "privacy_policy_process_personal_data_part36": "All our forms have a check box that must be checked to access the services offered.",
-
-  "privacy_policy_process_personal_data_part37": "The purposes of the treatment will be the following:",
-
-  "privacy_policy_process_personal_data_part38": "a) Manage queries or requests for information that you send us through the Web Page, email or telephone.",
-
-  "privacy_policy_process_personal_data_part39": "b) Sending communications, special promotions, news or actions that are of interest to you or that you request from us, including by electronic means. As this is an accessory purpose to the main one, you must check the box provided for this purpose.",
-
-  "privacy_policy_process_personal_data_part40": "The personal data you provide us by this means will not be communicated to third parties, being Internxt Universal Technologies, S.L. who give, directly answer to such queries.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_4": "Social network contacts:",
-
-  "privacy_policy_process_personal_data_part41": "The legal basis for the processing of your data is the acceptance of the contractual relationship with the relevant social network provider manifested when registering in their application and in accordance with their privacy policies, which is external to us.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_5": "Work with us:",
-
-  "privacy_policy_process_personal_data_part42": "In the event that you provide us with your curriculum vitae, either by means of the Web Page, e-mail or physically at the address or any headquarters of Internxt Universal Technologies, S.L. will incorporate them into its database. The curriculum will be stored for a period of 1 year, after which, if we have not contacted you, it will be deleted.",
-
-  "privacy_policy_process_personal_data_part43": "The legal basis for the treatment will be based on the express consent given by the interested party for the processing of the data contained in the curriculum by sending it and checking the box provided for this purpose.In those cases where to make a request it is necessary to fill out a form and \"click\" on the submit button, the completion of the same will necessarily imply that you have been informed and have expressly given your consent to the content of the clause attached to the form or acceptance of the privacy policy.",
-
-  "privacy_policy_process_personal_data_part44": "The purpose of the treatment is to incorporate you to present and future selection processes of Internxt Universal Technologies, S.L. or any entity belonging to the business group.",
-
-  "privacy_policy_process_personal_data_part45": "In the event that the interested party is finally incorporated as an employee of Internxt Universal Technologies, S.L. or any of the entities belonging to the business group, your data will be incorporated into a database owned by the same, in order to internally manage the employee-employer employment relationship.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_6": "Sending Newsletter:",
-
-  "privacy_policy_process_personal_data_part46": "The Web Page allows the option of subscribing to the Newsletter of Internxt Universal Technologies, S.L. To do so, it is necessary to provide an e-mail address to which it will be sent.",
-
-  "privacy_policy_process_personal_data_part47": "Such information will be stored in a database of Internxt Universal Technologies, S.L. in which it will be registered until the interested party requests to unsubscribe from it or, where appropriate, Internxt Universal Technologies, S.L. ceases to send it.",
-
-  "privacy_policy_process_personal_data_part48": "The legal basis for the processing of this personal data is the express consent given by all interested parties who subscribe to this service by checking the box provided for this purpose.",
-
-  "privacy_policy_process_personal_data_part49": "The e-mail data will only be processed and stored for the purpose of managing the sending of the Newsletter by users who request it.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_7": "Chat online:",
-
-  "privacy_policy_process_personal_data_part50": "La base legal para procesar sus datos es su consentimiento al usar el chat.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_8": "Participants in our contests:",
-
-  "privacy_policy_process_personal_data_part51": "The legal basis for the processing of your data is your consent by registering for the contest and accepting the privacy policy and contest rules. ",
-
-  "privacy_policy_process_personal_data_part52": "The personal data collected will not be disclosed to third parties.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_9": "Web users:",
-
-  "privacy_policy_process_personal_data_part53": "The legal basis for the processing of data is our (i) legitimate interest in knowing our users' browsing modes in order to adapt to their interests and improve our relationship with them; as well as (ii) their consent when browsing our website and accepting the terms of use of cookies.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_10": "To which recipients will your data be communicated?",
-
-  "privacy_policy_process_personal_data_part54": "Your data will not be disclosed to third parties outside the service we provide, unless legally required. Specifically, they will be communicated to the State Agency of Tax Administration and to banks and financial institutions for the collection of the service provided or product purchased.",
-
-  "privacy_policy_process_personal_data_part55": "Your data may also be communicated to our service providers when necessary for the execution of the contract. In these cases, the data processor has committed itself by contract to use the data only for the purpose that justifies the processing and to maintain appropriate security measures.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_11": "International data transfers.",
-
-  "privacy_policy_process_personal_data_part56": "Due to Internxt has servers and nodes in different countries around the world, international data transfers are made. many of these transfers are made to countries declared by the European Commission to be of an adequate level, such as: Canada, Argentina or Japan.",
-
-  "privacy_policy_process_personal_data_part57": "However, there are many other countries where the data is sent, which are not declared of adequate level; the transfers that are made to these countries, have their legitimate basis in that such transfers are necessary for the execution of a contract between the data subject and the data controller, since otherwise, the service cannot be provided.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_12": "What security measures do we apply?",
-
-  "privacy_policy_process_personal_data_part58": "Rest assured, we have adopted appropriate technical and organizational measures to ensure confidentiality, integrity and availability in the processing of your personal data that we perform, in particular those that prevent the loss, misuse, alteration, unauthorized access and theft of personal data.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_13": "What are your rights when you provide us with your data?",
-
-  "privacy_policy_process_personal_data_part59": "You can exercise your rights of access, rectification, deletion, portability, limitation or opposition to the processing of your data, including the right to withdraw your consent, as detailed below: ",
-
-  "privacy_policy_process_personal_data_part60": "Right of access: you can ask us if we are processing your data and in what way.",
-
-  "privacy_policy_process_personal_data_part61": "Right of rectification: You can ask us to update your personal data if they are incorrect, and delete them if you wish.",
-
-  "privacy_policy_process_personal_data_part62": "Right to limitation of processing: In this case they will only be kept by us for the exercise or defense of claims.",
-
-  "privacy_policy_process_personal_data_part63": "Right of opposition: After your request to oppose the processing, we will stop processing the data in the manner you indicate, unless for compelling legitimate reasons or the exercise or defense of possible claims must continue to be treated.",
-
-  "privacy_policy_process_personal_data_part64": "Right to data portability: In case you want your data to be processed by another company, we will facilitate the portability of your data to the new data controller.",
-
-  "privacy_policy_process_personal_data_part65": "Right to erasure: You can request that we delete your data when it is no longer necessary for processing, you withdraw your consent, it is unlawful processing or there is a legal obligation to do so. We will analyze the case and apply the law.",
-
-  "privacy_policy_process_personal_data_part66": "If you need more information about your rights under the Law and how to exercise them, we recommend that you contact the Spanish Data Protection Agency, which is the supervisory authority for data protection.",
-
-  "privacy_policy_process_personal_data_part67": "You can contact the Data Protection Delegate prior to filing a complaint against the data controller before the AEPD.",
-
-  "privacy_policy_process_personal_data_part68": "In the event that we have not attended to the exercise of your rights you can file a complaint with the Spanish Data Protection Agency.",
-
-  "privacy_policy_process_personal_data_part69": "We have forms for the exercise of rights that can be requested to the email address mentioned above; you can also use those prepared by the Spanish Data Protection Agency or third parties. These forms must be signed electronically or be accompanied by a photocopy of the ID card. If you are acting through a representative in the same way, a copy of your ID card or an electronic signature must accompany the form.",
-
-  "privacy_policy_process_personal_data_part70": "The forms must be submitted in person or sent by mail or email to the addresses listed in the \"Responsible\" section.",
-
-  "privacy_policy_process_personal_data_part71": "The maximum time limit for a decision is one month from the receipt of your request.",
-
-  "privacy_policy_process_personal_data_sub_subtitle7_14": "How long will we keep your data?",
-
-  "privacy_policy_process_personal_data_part72": "Personal data will be kept for as long as you maintain your relationship with us. ",
-
-  "privacy_policy_process_personal_data_part73": "At the end of the same, the personal data processed for each of the purposes indicated will be kept for the legally stipulated periods of time. If there is no such legal period until the interested party requests its deletion or revokes the consent given, or during the period that a judge or court may require them according to the statute of limitations for legal actions.",
-
-  "privacy_policy_process_personal_data_part74": "For each treatment or type of data, we provide you with a specific period, which you can consult in the following table:",
-
-  "privacy_policy_table2_row1_column1": "File",
-
-  "privacy_policy_table2_row1_column2": "Document",
-
-  "privacy_policy_table2_row1_column3": "Conservation",
-
-  "privacy_policy_table2_row2_column1": "Customers",
-
-  "privacy_policy_table2_row2_column2_1": "Invoices",
-
-  "privacy_policy_table2_row2_column2_2": "Contracts",
-
-  "privacy_policy_table2_row2_column3_1": "10 years",
-
-  "privacy_policy_table2_row2_column3_2": "5 years",
-
-  "privacy_policy_table2_row3_column1": "Human Resources",
-
-  "privacy_policy_table2_row3_column2_1": "Payrolls, TC1, TC2, etc",
-
-  "privacy_policy_table2_row3_column2_2": "Curriculums",
-
-  "privacy_policy_table2_row3_column2_3": "Contratos. Temporary workers data",
-
-  "privacy_policy_table2_row3_column2_4": "Worker's file.",
-
-  "privacy_policy_table2_row3_column3_1": "10 years",
-
-  "privacy_policy_table2_row3_column3_2": "Until the end of the selection process, and 1 year more with your consent.",
-
-  "privacy_policy_table2_row3_column3_3": "4 years",
-
-  "privacy_policy_table2_row3_column3_4": "Up to 5 years after the sick leave.",
-
-  "privacy_policy_table2_row4_column1": "Marketing",
-
-  "privacy_policy_table2_row4_column2": "Databases or web visitors",
-
-  "privacy_policy_table2_row4_column3": "While the treatment lasts",
-
-  "privacy_policy_table2_row5_column1": "Suppliers",
-
-  "privacy_policy_table2_row5_column2_1": "Invoices",
-
-  "privacy_policy_table2_row5_column2_2": "Contracts",
-
-  "privacy_policy_table2_row5_column3_1": "10 years",
-
-  "privacy_policy_table2_row5_column3_2": "5 years",
-
-  "privacy_policy_table2_row6_column1": "Access control and video surveillance",
-
-  "privacy_policy_table2_row6_column2_1": "List of visitors",
-
-  "privacy_policy_table2_row6_column2_2": "Videos",
-
-  "privacy_policy_table2_row6_column3_1": "30 days",
-
-  "privacy_policy_table2_row6_column3_2": "30 days blocking. 3 years destruction",
-
-  "privacy_policy_table2_row7_column1": "Accounting",
-
-  "privacy_policy_table2_row7_column2": "Accounting books and documents.",
-
-  "privacy_policy_table2_row7_column3": "6 years",
-
-  "privacy_policy_table2_row8_column1": "Taxation",
-
-  "privacy_policy_table2_row8_column2": "Management of the company's administration, rights and obligations related to the payment of taxes.",
-
-  "privacy_policy_table2_row8_column3": "10 years",
-
-  "privacy_policy_table2_row9_column1": "Health and Safety",
-
-  "privacy_policy_table2_row9_column2": "Worker Medical Records",
-
-  "privacy_policy_table2_row9_column3": "5 years",
-
-  "privacy_policy_table2_row10_column1": "Insurance",
-
-  "privacy_policy_table2_row10_column2": "Insurance policies",
-
-  "privacy_policy_table2_row10_column3": "6 years (general rule). 2 years (damages)",
-
-  "privacy_policy_table2_row11_column1": "Shopping",
-
-  "privacy_policy_table2_row11_column2": "Registration of all deliveries of goods or services, intra-community acquisitions, imports and exports for VAT purposes.",
-
-  "privacy_policy_table2_row11_column3": "5 years",
-
-  "privacy_policy_table2_row12_column1": "Organic Law on Data Protection",
-
-  "privacy_policy_table2_row12_column2_1": "Processing of personal data.",
-
-  "privacy_policy_table2_row12_column2_2": "Personal data of employees stored in the networks, computers and communications equipment used by employees, access controls and internal management/administration systems.",
-
-  "privacy_policy_table2_row12_column3_1": "3 years",
-
-  "privacy_policy_table2_row12_column3_2": "5 years",
-
-  "title28": "Information you provide to us",
-  "subtitle28": "We collect information you provide directly to us. For example, we collect information you provide when you create an account, subscribe to our updates, respond to a survey, fill out a form, request customer support or communicate with us. The types of information we may collect include your email address, survey responses and any other information you choose to provide. If you use our Storage Services, our third-party service provider may collect your payment method information for use in connection with your payments for storage.",
-
-  "title29": "Information collected by cookies and other tracking technologies via our services.",
-  "subtitle29": "We and our service providers use various technologies to collect information when you interact with our websites and mobile apps, including cookies and web beacons. Cookies are small data files that are stored on your device when you visit a website, which enable us to collect information about your device identifiers, web browsers used to access the Services, pages or features viewed, time spent on pages, mobile app performance and links clicked. Web beacons (or pixel tags) are electronic images that may be used in our web Services or emails to help deliver cookies, count website visits, understand usage and determine the effectiveness of email marketing campaigns.",
-  "subtitle292": "We may also receive information about you from other sources, such as when logging into your Storage Services account by using your account credentials for a separate third-party service. We will receive information from that service as indicated in the relevant third party’s authorization screen.",
-  "subtitle293": "Using Internxt's Core software makes your computer part of a distributed network. This means your computer may communicate with many other computers. As part of this process, those other nodes can store some information about your computer and your interactions. None of this information is dangerous to share with the network. Your computer shares a lot of it every day when you browse the web. We firmly believe that you have the right to be aware of the information you're sharing, and be able to make decisions about your own privacy. Here's a list of some things that other people can learn about your computer. IP Address: This is your computer's address on the Internet. This needs to be shared so that other nodes' messages can reach your computer. IP-associated information: Using your IP address, it is often possible to look up an approximate location (usually what city you are likely in) as well as your ISP. Network information: When you communicate with another node, it can record how long it takes your node to respond, and test your internet connection's bandwidth. Node ID: This is a pseudonym for your computer. It's a long group of random numbers that can be used to identify a node on the network. You need to send this out so that other nodes can identify and contact your node. Disk space information: In order to negotiate storage contracts, your computer has to let other nodes know some information about how much it can store. If you are not comfortable sharing this information, we suggest you do not run Internxt's Core program.",
-  "subtitle294": "We may allow others to provide analytics services on our behalf in connection with our Services. These entities may use cookies, web beacons and other technologies to collect information about your use of the Services and other websites and apps, including your IP address, web browser, pages viewed, app performance, time spent on pages and links clicked. This information may be used by Company and others to, among other things, analyze and track data, determine the popularity of certain content and better understand your online activity.",
-
-  "title30": "Security",
-  "subtitle30": "Internxt takes reasonable measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration, and destruction.",
-
-  "title31": "Transfer of information to governing authorities",
-  "subtitle31": "Internxt is based in Spain and the information we collect is governed by Spanish law. By accessing or using our Services or otherwise providing information to us, you consent to the processing and transfer of information in and to Spain and other countries, where you may not have the same rights as you do under your local law. Where this is the case, we will take appropriate measures to protect information about you in accordance with this Privacy Policy. Since Internxt uses client-side end-to-end encryption, it cannot know the content a user has under his Drive account.",
-
-  "title32": "Cookie-Richtlinie",
-  "cookies_data_part1": "Bei INTERNXT verwenden wir Cookies und/oder ähnliche Technologien, die Informationen speichern und abrufen, wenn Sie surfen. Im Allgemeinen können diese Technologien sehr unterschiedlichen Zwecken dienen, wie zum Beispiel, Sie als Benutzer zu erkennen, Informationen über Ihre Surfgewohnheiten zu erhalten oder die Art und Weise zu personalisieren, wie Inhalte angezeigt werden.",
-  "cookies_data_part2": "Die spezifischen Verwendungen, die wir von diesen Technologien machen, werden im Folgenden beschrieben. Wir möchten Sie klar und präzise über die von uns verwendeten Cookies informieren und im Folgenden detailliert erläutern, was ein Cookie ist, wofür es verwendet wird, welche Arten von Cookies wir verwenden, welchen Zweck sie haben und wie Sie sie konfigurieren oder deaktivieren können, wenn Sie dies wünschen.",
-
-  "cookies_subtitle2": "Was ist ein Cookie und wofür wird es verwendet?",
-  "cookies_data_part3": "Ein Cookie ist eine kleine Datei, die auf dem Computer, Tablet, Smartphone oder einem anderen Gerät des Benutzers mit Informationen über das Surfen gespeichert wird. Die Gesamtheit der Cookies aller unserer Benutzer hilft uns, die Qualität unserer Website zu verbessern, indem sie uns ermöglicht, zu kontrollieren, welche Seiten nützlich sind, welche nicht und welche verbesserungswürdig sind.",
-  "cookies_data_part5": "Cookies sind für das Funktionieren des Internets unerlässlich und bieten unzählige Vorteile bei der Bereitstellung interaktiver Dienste, indem sie Ihre Navigation und Benutzerfreundlichkeit unserer Website erleichtern. Cookies können unter keinen Umständen Ihr Gerät beschädigen. Im Gegenteil, wenn sie aktiv sind, helfen sie uns, Fehler zu identifizieren und zu beheben.",
-
-  "cookies_subtitle3": "Welche Arten von Cookies verwenden wir?",
-  "cookies_subsubtitle3": "Entsprechend der verwaltenden Entität",
-  "cookies_data_part8": "Eigene Cookies",
-  "cookies_data_part8_2": "Dies sind diejenigen, die von unseren eigenen Geräten oder Domains an Ihr Gerät gesendet werden und von denen aus wir den von Ihnen angeforderten Dienst bereitstellen.",
-  "cookies_data_part9": "Cookies von Drittanbietern",
-  "cookies_data_part9_2": "Dies sind diejenigen, die von einem Gerät oder einer Domain an Ihr Gerät gesendet werden, die nicht von uns, sondern von einer anderen kooperierenden Entität verwaltet wird. Wie zum Beispiel die von sozialen Netzwerken verwendeten oder von externen Inhalten wie Google Maps.",
-
-  "cookies_sub2subtitle3": "Entsprechend dem Zeitraum, in dem sie aktiv bleiben",
-  "cookies_data_part11": "Sitzungscookies",
-  "cookies_data_part11_2": "Dies sind temporäre Cookies, die in der Cookie-Datei Ihres Browsers verbleiben, bis Sie die Website verlassen, sodass keine auf der Festplatte Ihres Computers gespeichert werden. Die durch diese Cookies gewonnenen Informationen werden verwendet, um Webverkehrsmuster zu analysieren. Langfristig ermöglicht uns dies, ein besseres Erlebnis zu bieten, um Inhalte zu verbessern und deren Nutzung zu erleichtern.",
-  "cookies_data_part12": "Persistente Cookies",
-  "cookies_data_part12_2": "Diese werden auf der Festplatte gespeichert und unsere Website liest sie bei jedem neuen Besuch. Eine persistente Website hat ein festgelegtes Ablaufdatum. Das Cookie funktioniert nach diesem Datum nicht mehr.",
-
-  "cookies_sub3subtitle3": "Entsprechend ihrem Zweck",
-  "cookies_data_part14": "Technische Cookies",
-  "cookies_data_part14_2": "Diese sind für die Navigation und das ordnungsgemäße Funktionieren unserer Website erforderlich. Sie ermöglichen beispielsweise die Kontrolle von Datenverkehr und Datenkommunikation, den Zugriff auf Bereiche mit eingeschränktem Zugang, die Durchführung des Kaufprozesses einer Bestellung, die Verwendung von Sicherheitselementen, die Speicherung von Inhalten zur Übertragung von Videos oder das Teilen von Inhalten über soziale Netzwerke.",
-  "cookies_data_part15": "Analyse-Cookies",
-  "cookies_data_part15_2": "Dies sind diejenigen, die es uns ermöglichen, die Anzahl der Benutzer zu quantifizieren und so die Messung und statistische Analyse der Nutzung durchzuführen, die Benutzer von den bereitgestellten Diensten machen. Zu diesem Zweck wird Ihr Surfen auf unserer Website analysiert, um das Angebot an Produkten und Dienstleistungen, die wir anbieten, zu verbessern.",
-  "cookies_data_part16": "Präferenz- oder Personalisierungs-Cookies",
-  "cookies_data_part16_2": "Dies sind diejenigen, die es ermöglichen, Informationen zu speichern, damit der Benutzer mit bestimmten Merkmalen auf den Dienst zugreift, die seine Erfahrung von der anderer Benutzer unterscheiden können, wie zum Beispiel die Sprache, die Anzahl der anzuzeigenden Ergebnisse, wenn der Benutzer eine Suche durchführt, das Aussehen oder den Inhalt des Dienstes je nach Browsertyp, über den der Benutzer auf den Dienst zugreift, oder der Region, von der aus er auf den Dienst zugreift, usw.",
-  "cookies_data_part17": "Verhaltensbasierte Werbe-Cookies",
-  "cookies_data_part17_2": "Dies sind diejenigen, die Informationen über das Benutzerverhalten speichern, die durch kontinuierliche Beobachtung ihrer Surfgewohnheiten gewonnen werden, was die Entwicklung eines spezifischen Profils ermöglicht, um Werbung basierend darauf anzuzeigen.",
-
-  "cookies_subtitle4": "Zweck jedes einzelnen verwendeten Cookies:",
-  "cookies_data_part19": "Im Folgenden beschreiben wir die auf unserer Website verwendeten Cookies und deren Zweck.",
-
-  "cookies_table_row1_column1": "Cookie",
-  "cookies_table_row1_column2": "Zweck oder zugehöriger Dienst",
-  "cookies_table_row1_column3": "Dauer",
-  "cookies_table_row1_column4": "Drittanbieter",
-
-  "cookies_table_row2_column1": "_ga",
-  "cookies_table_row2_column2": "Enthält eine eindeutige Kennung, die von Google Analytics verwendet wird, um festzustellen, dass zwei verschiedene Besuche demselben Benutzer in allen Browsersitzungen gehören.",
-  "cookies_table_row2_column3": "2 Jahre",
-  "cookies_table_row2_column4": "Google Analytics",
-
-  "cookies_table_row3_column1": "_ga_*",
-  "cookies_table_row3_column2": "Wird von Google Analytics verwendet, um den Sitzungsstatus aufrechtzuerhalten und Daten über das Benutzerverhalten zu sammeln.",
-  "cookies_table_row3_column3": "2 Jahre",
-  "cookies_table_row3_column4": "Google Analytics",
-
-  "cookies_table_row4_column1": "__kla_id",
-  "cookies_table_row4_column2": "Wird von Klaviyo verwendet, um das Benutzerverhalten zu verfolgen und E-Mail-Kommunikation zu personalisieren.",
-  "cookies_table_row4_column3": "2 Jahre",
-  "cookies_table_row4_column4": "Klaviyo",
-
-  "cookies_table_row5_column1": "_gcl_au",
-  "cookies_table_row5_column2": "Wird von Google AdSense verwendet, um mit der Werbeeffizienz auf Websites zu experimentieren, die ihre Dienste nutzen.",
-  "cookies_table_row5_column3": "3 Monate",
-  "cookies_table_row5_column4": "Google Ads",
-
-  "cookies_table_row6_column1": "_fbp",
-  "cookies_table_row6_column2": "Wird von Facebook verwendet, um Werbung bereitzustellen, wenn sie auf Facebook oder einer von Facebook-Werbung betriebenen digitalen Plattform sind, nachdem sie die Website besucht haben.",
-  "cookies_table_row6_column3": "3 Monate",
-  "cookies_table_row6_column4": "Facebook Pixel",
-
-  "cookies_table_row8_column1": "cookieConsent",
-  "cookies_table_row8_column2": "Wird verwendet, um die Zustimmung des Benutzers zur Verwendung von Cookies auf der Website zu speichern.",
-  "cookies_table_row8_column3": "1 Jahr",
-  "cookies_table_row8_column4": "Internxt (Eigene)",
-
-  "cookies_table_row9_column1": "cookieConsentPrefs",
-  "cookies_table_row9_column2": "Speichert die spezifischen Präferenzen des Benutzers darüber, welche Cookie-Kategorien er akzeptiert oder abgelehnt hat.",
-  "cookies_table_row9_column3": "1 Jahr",
-  "cookies_table_row9_column4": "Internxt (Eigene)",
-
-  "cookies_subtitle5": "Wie können Sie Ihre Cookies konfigurieren oder deaktivieren?",
-
-  "cookies_data_part20": "Sie können die auf Ihrem Gerät installierten Cookies zulassen, blockieren oder löschen, indem Sie die Optionen Ihres Internetbrowsers konfigurieren. Falls Sie die Installation von Cookies in Ihrem Browser nicht zulassen, können Sie möglicherweise nicht auf einige der Dienste zugreifen und Ihre Erfahrung auf unserer Website kann weniger zufriedenstellend sein. Unter den folgenden Links stehen Ihnen alle Informationen zur Verfügung, um Ihre Cookies in jedem Browser zu konfigurieren oder zu deaktivieren:",
-
-  "cookies_data_part21": "Google Chrome",
-
-  "cookies_data_part22": "Mozilla Firefox",
-
-  "cookies_subtitle41": "Internet Explorer",
-
-  "cookies_data_part23": "Safari",
-
-  "cookies_data_part24": "Safari für iOS (iPhone und iPad)",
-
-  "cookies_data_part25": "Chrome für Android",
-
-  "cookies_data_part26": "Oder Sie können auch die Schaltfläche am Anfang dieser Cookie-Richtlinie verwenden, um den Konfigurator zu öffnen und die Cookies abzulehnen, die Sie akzeptiert haben."
+    "HeroSection": {
+      "title": "Nutzungsbedingungen"
+    },
+    "lastUpdated": "Zuletzt aktualisiert: Juli 2026",
+    "title": "Übersicht der Allgemeinen Geschäftsbedingungen",
+    "subtitle": "Diese Allgemeinen Geschäftsbedingungen (\"Bedingungen\") sind die Bedingungen, die den Zugang zu und die Nutzung der Website und Dienste regeln, die Internxt Universal Technologies SL (\"Internxt\"), ein Unternehmen mit Sitz in C/ La Travesia s/n, 46024 Valencia, Spanien, seinen Nutzern und Kunden zur Verfügung stellt. Diese Allgemeinen Geschäftsbedingungen unterliegen spanischem Recht und unterliegen der ausschließlichen Gerichtsbarkeit, falls Streitigkeiten, Ansprüche oder Meinungsverschiedenheiten aus ihnen entstehen. Internxt kann diese Allgemeinen Geschäftsbedingungen jederzeit und ohne vorherige Ankündigung aktualisieren und ändern, um sie an die geltenden Vorschriften und an technologische oder geschäftliche Änderungen anzupassen. Der Nutzer sollte die Allgemeinen Geschäftsbedingungen häufig überprüfen, um sicherzustellen, dass er stets die aktuellste Version hat. Durch den Zugriff auf oder die Nutzung der Websites, mobilen Anwendungen und Online-Dienste von Internxt, einschließlich internxt.com, (gemeinsam die \"Dienste\") werden Sie durch diese Nutzungsbedingungen (\"Bedingungen\") und alle durch Verweis einbezogenen Bedingungen gebunden. Wenn Sie diesen Bedingungen nicht zustimmen, dürfen Sie nicht auf die Dienste zugreifen oder diese nutzen. Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter hello@internxt.com. Weitere Informationen darüber, wie wir Informationen über Sie sammeln, verwenden und offenlegen, finden Sie in unserer Datenschutzrichtlinie.",
+    "title2": "Berechtigung und Befugnis",
+    "subtitle2": "Sie müssen mindestens 18 Jahre alt sein, um auf unsere Dienste zugreifen oder diese nutzen zu können. Wenn Sie die Dienste im Namen einer juristischen Person nutzen: (a) erklären und garantieren Sie, dass Sie berechtigt sind, diese Bedingungen im Namen dieser juristischen Person anzunehmen und dass diese juristische Person für Verstöße gegen diese Bedingungen durch Sie oder andere Mitarbeiter oder Vertreter dieser juristischen Person verantwortlich ist; und (b) beziehen sich Verweise auf \"Sie\" in diesen Bedingungen auf Sie und diese juristische Person gemeinsam.",
+    "title3": "Open-Source-Software",
+    "subtitle3": "Wir können den Quellcode eines Großteils der Software, die unsere Dienste unterstützt, einschließlich der Storage-Plattform, als Open-Source-Software zum Download bereitstellen. Sie erklären sich damit einverstanden, an alle Lizenzvereinbarungen gebunden zu sein, die für diese Open-Source-Software gelten, und diese einzuhalten. Sie werden nicht angeben, dass Sie mit Internxt verbunden sind, wenn Sie Änderungen oder Verteilungen dieser Open-Source-Software vornehmen. Der Quellcode, den wir im Zusammenhang mit Open-Source-Software veröffentlichen, ist nicht Teil der Dienste, und Ihre Nutzung dieses Quellcodes ohne Interaktion mit unseren Diensten unterliegt nicht diesen Bedingungen. Klarstellend gilt jedoch, dass diese Bedingungen für den Zugriff auf und die Nutzung von Software gelten, die wir hosten und die Sie über unsere Websites und Apps als Dienst nutzen können.",
+    "title4": "Nutzung der Dienste",
+    "subtitle4": "Die Dienste, einschließlich aller Texte, Videos, Bilder und Software, sind Eigentum von Internxt und unseren Lizenzgebern. Vorbehaltlich Ihrer Einhaltung dieser Bedingungen dürfen Sie die Dienste auf nicht-exklusiver Basis für Ihren persönlichen Gebrauch nutzen. Nichts in diesen Bedingungen ist so auszulegen, dass Ihnen ein Recht oder eine Lizenz an Patenten, Marken, Urheberrechten oder anderen Rechten von Internxt oder Dritten gewährt wird, sei es durch Verwirkung, stillschweigend oder anderweitig. Klarstellend: Wir beanspruchen kein Eigentum an den Inhalten, die Sie in den Diensten einreichen oder speichern.",
+    "title5": "Änderungen an den Diensten",
+    "subtitle5": "Wir behalten uns das Recht vor, die Dienste (oder Funktionen oder Merkmale der Dienste) jederzeit und ohne Ankündigung sowie ohne Verpflichtung oder Haftung Ihnen gegenüber zu ändern.",
+    "title6": "Richtlinie bei wiederholten Verstößen und Urheberrechtsbeschwerden",
+    "subtitle6": "Wir verfolgen die Politik, den Zugang zum Dienst einzuschränken und die Konten von Nutzern zu kündigen, die die Rechte an geistigem Eigentum anderer verletzen. Wenn Sie glauben, dass etwas auf den Diensten ein Urheberrecht verletzt, das Ihnen gehört oder das Sie kontrollieren, können Sie uns unter der E-Mail-Adresse hello@internxt.com benachrichtigen.",
+    "title7": "Marken",
+    "subtitle7": "\"Internxt\", das Firmenlogo, andere auf den Diensten erscheinende Dienstnamen, Logos oder Slogans sowie das Erscheinungsbild der Dienste, einschließlich aller Seitenkopfzeilen, benutzerdefinierter Grafiken, Schaltflächensymbole und Skripte, sind Marken, Dienstleistungsmarken oder Geschäftsaufmachungen von Internxt, unseren Zulieferern und Lizenzgebern und dürfen ohne vorherige schriftliche Genehmigung von uns oder dem jeweiligen Markeninhaber weder ganz noch teilweise kopiert, nachgeahmt oder verwendet werden. Sie dürfen keine Meta-Tags oder anderen \"versteckten Text\" unter Verwendung von \"Internxt\" oder anderen Namen, Marken oder Produkt- oder Dienstleistungsnamen von Internxt ohne unsere vorherige schriftliche Genehmigung verwenden. Darüber hinaus dürfen Sie ohne unsere ausdrückliche schriftliche Zustimmung keine Internxt-Marken, Logos oder andere geschützte Informationen, einschließlich der auf den Diensten befindlichen Bilder, des Inhalts von Texten oder des Layouts oder Designs von Seiten oder Formularen auf den Diensten, verwenden, einrahmen oder Framing-Techniken verwenden, um sie einzurahmen.",
+    "title8": "Inhalte Dritter",
+    "subtitle8": "Wir können über die Dienste Inhalte, Werbung, Links, Werbeaktionen, Logos und andere Materialien von Dritten anzeigen (gemeinsam \"Inhalte Dritter\"). Wir kontrollieren, unterstützen, sponsern oder übernehmen keine Inhalte Dritter oder auf den Diensten genannte Dritte und geben keine Zusicherungen oder Gewährleistungen jeglicher Art in Bezug auf solche Inhalte Dritter, einschließlich, aber nicht beschränkt auf deren Richtigkeit oder Vollständigkeit. Ihre Interaktionen mit Inhalten Dritter und Dritten, die solche Inhalte bereitstellen, finden ausschließlich zwischen Ihnen und diesen Dritten statt, und Internxt ist in keiner Weise für solche Interaktionen oder Inhalte Dritter verantwortlich oder haftbar. Wenn Sie die Dienste verlassen und eine Website oder einen Dienst eines Dritten betreten, gelten unsere Bedingungen und Richtlinien nicht mehr. Ungeachtet des Vorstehenden bleibt Internxt für Schäden, Strafen und Kosten haftbar, die sich aus seiner Nichterfüllung der geltenden Datenschutzverpflichtungen gemäß der DSGVO, HIPAA oder dieser Vereinbarung ergeben.",
+    "title9": "Benutzerverhalten und Richtlinie zur fairen Nutzung",
+    "subtitle9": "Sie werden im Zusammenhang mit Ihrem Zugriff auf und Ihrer Nutzung der Dienste alle geltenden Gesetze einhalten, und Sie sind allein verantwortlich für Ihr Verhalten beim Zugriff auf oder der Nutzung der Dienste. Darüber hinaus werden Sie nicht: sich belästigend, bedrohend, einschüchternd oder nachstellend verhalten oder etwas tun, das wir sonst für anstößig halten; die Dienste in einer Weise nutzen, die andere Nutzer bei der uneingeschränkten Nutzung der Dienste beeinträchtigen, stören, negativ beeinflussen oder behindern könnte oder die die Funktionsfähigkeit der Dienste in irgendeiner Weise beschädigen, deaktivieren, überlasten oder beeinträchtigen könnte; Teile der Dienste zurückentwickeln oder etwas tun, das den Quellcode der Dienste aufdecken könnte (außer im Zusammenhang mit von uns veröffentlichter Open-Source-Software); Rechte an geistigem Eigentum oder andere Rechte Dritter verletzen oder sich einer unerlaubten Handlung schuldig machen; die Dienste ganz oder teilweise modifizieren, kopieren (außer standardmäßigem Zwischenspeichern von Seiten), öffentlich aufführen, öffentlich zeigen, verkaufen, vermieten, verleasen, Timesharing betreiben oder anderweitig vertreiben. Diese Einschränkung gilt nicht für von uns veröffentlichte Open-Source-Software, die Sie gemäß den geltenden Open-Source-Software-Lizenzbedingungen nutzen können; versuchen, Maßnahmen zu umgehen oder zu umgehen, die eingesetzt werden, um den Zugang zu Inhalten, Bereichen oder Funktionen auf den Diensten zu verhindern oder einzuschränken, ohne Internxt vorher über die verwendete Methode zur Umgehung zu informieren; die Dienste für andere als ihre vorgesehenen Zwecke zu nutzen; oder die Dienste zu nutzen, um Aktivitäten durchzuführen oder zu fördern, die gegen diese Bedingungen verstoßen. Sie dürfen die Dienste nicht zum Hochladen, Speichern oder Verarbeiten sensibler Datenkategorien nutzen, einschließlich Zahlungskartendaten, die der PCI DSS unterliegen, oder anderer hochsensibler Kategorien, die erhöhte Sicherheit erfordern. Geschützte Gesundheitsinformationen (PHI) gemäß der Definition von HIPAA, es sei denn, (i) zwischen Internxt und dem Kunden wurde eine Vereinbarung über die Zusammenarbeit als Auftragsverarbeiter (Business Associate Agreement - BAA) ordnungsgemäß unterzeichnet, und (ii) die Dienste werden gemäß den HIPAA-Anforderungen konfiguriert und genutzt. In Ermangelung einer solchen Vereinbarung bleibt die Speicherung oder Verarbeitung von PHI untersagt. Internxt bietet seine Dienste an, um zuverlässigen, privaten und nachhaltigen Cloud-Speicher zum Nutzen aller Nutzer zu ermöglichen. Um die Qualität, Leistung und wirtschaftliche Tragfähigkeit der Dienste zu erhalten, muss Ihre Nutzung innerhalb angemessener und fairer Grenzen im Verhältnis zu Ihrem Tarif und typischen Nutzungsmustern bleiben. Internxt behält sich das Recht vor, nach eigenem Ermessen den gesamten Ressourcenverbrauch (einschließlich, aber nicht beschränkt auf Speichervolumen, Bandbreite, Übertragungsvolumen, Anzahl der Dateien, API-Aufrufe oder andere Systemressourcen) zu überwachen und Maßnahmen gegen Konten zu ergreifen, deren Nutzung einen Ausreißer darstellt, der eine unverhältnismäßige Belastung der Infrastruktur darstellt oder die Nachhaltigkeit der Dienste für andere Nutzer gefährdet. Solche Maßnahmen können ohne vorherige Ankündigung, wenn erforderlich, Drosselung, vorübergehende Sperrung, dauerhafte Kündigung des Kontos oder Umstellung des Kontos auf einen geeigneteren Tarif umfassen. Lifetime- und andere Vorauszahlungstarife unterliegen ebenfalls dieser Richtlinie zur fairen Nutzung. Durch die Nutzung der Dienste erklären Sie sich damit einverstanden, dass Internxt nach eigenem Ermessen entscheiden kann, was missbräuchliche, übermäßige oder nicht nachhaltige Nutzung darstellt.",
+    "title10": "Benutzerinhalte",
+    "subtitle10": "(a) Die Dienste umfassen Bereiche, die es Nutzern ermöglichen, Inhalte zu erstellen, zu posten, hochzuladen, zu teilen oder zu speichern, einschließlich, aber nicht beschränkt auf Fotos, Videos, Ton, Text, Grafiken, Code, Elemente oder andere Informationen und Materialien, einschließlich Speichermaterialien (gemeinsam \"Benutzerinhalte\"). \"Speichermaterialien\" bezieht sich auf alle Benutzerinhalte, die über unsere Dienste zur Speicherung auf der Storage-Plattform bereitgestellt oder anderweitig verarbeitet werden.",
+    "subtitle102": "(b) Wir besitzen, kontrollieren oder unterstützen keine Benutzerinhalte, die über die Dienste übertragen, gespeichert oder verarbeitet werden. Sie sind allein verantwortlich für Ihre Benutzerinhalte und für Ihre Nutzung interaktiver Funktionen und Bereiche der Dienste, und Sie erklären und garantieren, dass (i) Sie alle Rechte an geistigem Eigentum an Ihren Benutzerinhalten besitzen (oder alle erforderlichen Genehmigungen erhalten haben), um Ihre Benutzerinhalte bereitzustellen und die Lizenzen in dieser Vereinbarung zu gewähren; (ii) Ihre Benutzerinhalte keine Vereinbarungen oder Vertraulichkeitsverpflichtungen verletzen; und (iii) Ihre Benutzerinhalte keine Rechte an geistigem Eigentum oder andere Eigentumsrechte, einschließlich des Rechts auf öffentliche Darstellung oder Privatsphäre, von Personen oder Unternehmen verletzen, beeinträchtigen oder missbrauchen.",
+    "subtitle103": "(c) Sie werden keine Benutzerinhalte erstellen, posten, teilen oder speichern, die: ungesetzlich, verleumderisch, diffamierend, belästigend, bedrohend, in die Privatsphäre oder die Rechte der öffentlichen Darstellung eingreifend, missbräuchlich, aufrührerisch, betrügerisch oder anderweitig anstößig sind; eine Straftat darstellen, dazu ermutigen oder Anleitungen dafür geben, die Rechte Dritter verletzen, anderweitig eine Haftung begründen oder gegen lokale, staatliche, nationale oder internationale Gesetze verstoßen; Aussagen, Bemerkungen oder Behauptungen enthalten oder darstellen, die nicht Ihren ehrlichen Ansichten und Erfahrungen entsprechen; eine Person oder Organisation (einschließlich Internxt) imitieren oder Ihre Zugehörigkeit zu dieser falsch darstellen; auf Internxt oder unsere Dienste verweisen oder diese darstellen, aber keine wesentliche Verbindung zu uns offenlegen, die bestehen könnte; unaufgeforderte Werbung, politische Kampagnen, Werbung oder Aufforderungen enthalten; Viren, beschädigte Daten oder andere schädliche, störende oder zerstörerische Dateien oder Inhalte enthalten; oder die nach unserem alleinigen Ermessen anstößig sind oder die andere Personen daran hindern, die Dienste zu nutzen oder zu genießen, oder die Internxt oder andere Schaden oder Haftung aussetzen könnten.",
+    "title11": "Feedback",
+    "subtitle11": "Sie können uns Fragen, Kommentare, Vorschläge, Ideen, originale oder kreative Materialien oder andere Informationen über Internxt oder die Dienste übermitteln (gemeinsam \"Feedback\"). Feedback umfasst keine Benutzerinhalte. Wir behalten uns das Recht vor, Feedback für jeden Zweck ohne Vergütung an Sie zu nutzen. Senden Sie uns kein Feedback, wenn Sie erwarten, bezahlt zu werden oder weiterhin Eigentum daran zu behalten oder Rechte daran geltend zu machen; Ihre Idee könnte großartig sein, aber wir könnten bereits dieselbe oder eine ähnliche Idee gehabt haben und möchten keine Streitigkeiten.",
+    "title12": "Freistellung",
+    "subtitle12": "(a) Im gesetzlich zulässigen Umfang werden Sie Internxt und unsere jeweiligen früheren, gegenwärtigen und zukünftigen Mitarbeiter, leitenden Angestellten, Direktoren, Auftragnehmer, Berater, Anteilseigner, Lieferanten, Anbieter, Dienstleister, Muttergesellschaften, Tochtergesellschaften, verbundene Unternehmen, Vertreter, Vorgänger, Nachfolger und Abtretungsempfänger (die \"Unternehmensparteien\") von und gegen alle Ansprüche, Schäden, Kosten und Ausgaben (einschließlich Anwaltsgebühren) freistellen, verteidigen und schadlos halten, die aus oder im Zusammenhang mit (i) Ihrem Zugriff auf oder Ihrer Nutzung unserer Dienste; (ii) Ihren Benutzerinhalten (einschließlich Speichermaterialien); (iii) Feedback, das Sie geben; oder (iv) Ihrer Verletzung dieser Bedingungen entstehen.",
+    "subtitle122": "(b) Internxt behält sich das Recht vor, die alleinige Kontrolle über die Verteidigung auf Ihre Kosten für jeden Anspruch auszuüben, der der Freistellung unterliegt. Diese Freistellung gilt zusätzlich zu und nicht anstelle von anderen Freistellungen, die in einer schriftlichen Vereinbarung zwischen Ihnen und Internxt festgelegt sind.",
+    "title13": "Haftungsausschlüsse",
+    "subtitle13": "SOWEIT GESETZLICH ZULÄSSIG UND SOFERN IN DER VEREINBARUNG NICHT ANDERS ANGEGEBEN, (A) WERDEN DIE DIENSTE OHNE GEWÄHRLEISTUNG JEGLICHER ART AUF EINER \"WIE BESEHEN\"- UND \"WIE VERFÜGBAR\"-BASIS BEREITGESTELLT, UND WIR LEHNEN AUSDRÜCKLICH ALLE STILLSCHWEIGENDEN GARANTIEN IN BEZUG AUF DIE DIENSTE AB, EINSCHLIESSLICH, OHNE EINSCHRÄNKUNG, STILLSCHWEIGENDER GARANTIEN DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK, DES EIGENTUMSRECHTS UND DER NICHTVERLETZUNG VON RECHTEN; (B) WIR GEBEN KEINE ZUSICHERUNG ODER GARANTIE, DASS DIE DIENSTE GENAU, VOLLSTÄNDIG, ZUVERLÄSSIG, AKTUELL ODER FEHLERFREI SIND, IHRE ANFORDERUNGEN ERFÜLLEN ODER DASS FEHLER IN DEN DIENSTEN BEHOBEN WERDEN; UND (C) WIR KÖNNEN NICHT ZUSICHERN ODER GARANTIEREN, DASS DIE DIENSTE ODER UNSERE SERVER FREI VON VIREN ODER ANDEREN SCHÄDLICHEN KOMPONENTEN SIND.",
+    "title14": "Haftungsbeschränkung",
+    "subtitle14": "(A) SOWEIT GESETZLICH ZULÄSSIG: (I) IST INTERNXT ODER EINE DER UNTERNEHMENSPARTEIEN IN KEINEM FALL HAFTBAR FÜR INDIREKTE, BESONDERE, ZUFÄLLIGE, FOLGE- ODER STRAF-SCHÄDEN JEGLICHER ART (EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF SCHÄDEN IM ZUSAMMENHANG MIT ENTGANGENEN EINNAHMEN, EINKÜNFTEN ODER GEWINNEN, VERLUST VON NUTZUNG ODER DATEN ODER SCHÄDEN DURCH BETRIEBSUNTERBRECHUNGEN), DIE AUS ODER IM ZUSAMMENHANG MIT DEM ZUGRIFF AUF ODER DER NUTZUNG DER DIENSTE ODER ANDERWEITIG IM ZUSAMMENHANG MIT DER VEREINBARUNG ENTSTEHEN, UNABHÄNGIG VON DER ART DER KLAGE, OB AUF VERTRAG, DELIKT (EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF EINFACHE FAHRLÄSSIGKEIT, OB AKTIV, PASSIV ODER ZUGERECHNET) ODER EINER ANDEREN RECHTS- ODER BILLIGKEITSTHEORIE (SELBST WENN DIE PARTEI AUF DIE MÖGLICHKEIT SOLCHER SCHÄDEN HINGEWIESEN WURDE UND UNABHÄNGIG DAVON, OB SOLCHE SCHÄDEN VORHERSEHBAR WAREN); UND (II) ÜBERSCHREITET DIE GESAMTHAFTUNG VON INTERNXT UND DEN UNTERNEHMENSPARTEIEN (GEMEINSAM), OB AUS VERTRAG, GARANTIE, DELIKT (EINSCHLIESSLICH FAHRLÄSSIGKEIT, OB AKTIV, PASSIV ODER ZUGERECHNET) ODER ANDERER THEORIE, DIE AUS ODER IM ZUSAMMENHANG MIT DER VEREINBARUNG ODER DER NUTZUNG ODER UNMÖGLICHKEIT DER NUTZUNG DER DIENSTE ENTSTEHT, NICHT DEN HÖHEREN BETRAG AUS IHRER AN UNS GEZAHLTEN VERGÜTUNG FÜR DIE NUTZUNG DER DIENSTE ODER 100 €.",
+    "subtitle142": "(B) DIE IN ABSCHNITT 15(A) FESTGELEGTEN BESCHRÄNKUNGEN BEGRENZEN ODER SCHLIESSEN DIE HAFTUNG FÜR GROBE FAHRLÄSSIGKEIT, BETRUG ODER VORSÄTZLICHES, WILLENTLICHES ODER RÜCKSICHTSLOSES FEHLVERHALTEN VON INTERNXT NICHT AUS.",
+    "title15": "Freigabe",
+    "subtitle15": "Im gesetzlich zulässigen Umfang entbinden Sie Internxt und die anderen Unternehmensparteien von Verantwortung, Haftung, Ansprüchen, Forderungen und/oder Schäden (tatsächlich und mittelbar) jeder Art und Natur, bekannt und unbekannt (einschließlich, aber nicht beschränkt auf Ansprüche aus Fahrlässigkeit), die aus oder im Zusammenhang mit Streitigkeiten zwischen Nutzern und Handlungen oder Unterlassungen Dritter entstehen.",
+    "title16": "Streitbeilegung und Schiedsverfahren",
+    "subtitle16": "BITTE LESEN SIE DEN FOLGENDEN ABSCHNITT SORGFÄLTIG, DA ER VON IHNEN VERLANGT, BESTIMMTE STREITIGKEITEN UND ANSPRÜCHE MIT INTERNXT DURCH SCHIEDSVERFAHREN ZU REGELN UND DIE ART UND WEISE BEGRENZT, IN DER SIE VON UNS RECHTSSCHUTZ FORDERN KÖNNEN.",
+    "subtitle162": "Mit Ausnahme von Streitigkeiten, Ansprüchen, Klagen, Verfahren, Klagegründen, Forderungen oder Verfahren (gemeinsam \"Streitigkeiten\"), bei denen eine Partei eine individuelle Klage vor einem Kleinklaimgericht einleiten oder eine einstweilige Verfügung oder andere Billigkeitsrechtsbehelfe wegen der behaupteten ungesetzlichen Nutzung von geistigem Eigentum, einschließlich, aber nicht beschränkt auf Urheberrechte, Marken, Handelsnamen, Logos, Geschäftsgeheimnisse oder Patente, beantragt, verzichten Sie und Internxt (a) auf Ihre bzw. unsere jeweiligen Rechte, alle und jede Streitigkeiten, die aus oder im Zusammenhang mit dieser Vereinbarung oder den Diensten entstehen, vor einem Gericht entscheiden zu lassen, und (b) verzichten auf Ihre bzw. unsere jeweiligen Rechte auf ein Verfahren vor einem Geschworenengericht. Stattdessen werden Sie und Internxt Streitigkeiten durch ein verbindliches Schiedsverfahren beilegen (wobei eine Streitigkeit einer oder mehreren Personen übertragen wird, die mit der Überprüfung der Streitigkeit und der endgültigen und verbindlichen Entscheidung beauftragt sind, anstatt die Streitigkeit durch einen Richter oder eine Jury vor Gericht entscheiden zu lassen).",
+    "subtitle163": "Jede Streitigkeit, die aus oder im Zusammenhang mit dieser Vereinbarung oder den Diensten entsteht, ist persönlich zwischen Ihnen und Internxt und wird ausschließlich durch ein individuelles Schiedsverfahren beigelegt und nicht als Sammelklage, Sammelschiedsverfahren oder andere Art von Vertretungsverfahren geführt. Es wird kein Sammelschiedsverfahren oder Schiedsverfahren geben, in dem eine Person versucht, eine Streitigkeit als Vertreter einer anderen Person oder Personengruppe beizulegen. Darüber hinaus kann eine Streitigkeit nicht als Sammelklage oder andere Art von Vertretungsverfahren, sei es innerhalb oder außerhalb eines Schiedsverfahrens, oder im Namen einer anderen Person oder Personengruppe geführt werden.",
+    "subtitle164": "Jede Partei wird die andere Partei schriftlich über jede schiedsfähige oder vor einem Kleinklaimgericht verhandelbare Streitigkeit innerhalb von dreißig (30) Tagen ab dem Zeitpunkt ihres Entstehens benachrichtigen, damit die Parteien versuchen können, die Streitigkeit in gutem Glauben informell beizulegen. Die Benachrichtigung an Internxt erfolgt per E-Mail an Internxt unter hello@internxt.com. Die Benachrichtigung an Sie erfolgt per E-Mail an die dann aktuelle E-Mail-Adresse in Ihrem Konto. Ihre Benachrichtigung muss (a) Ihren Namen, Ihre Postanschrift, E-Mail-Adresse und Telefonnummer, (b) eine in angemessenem Umfang detaillierte Beschreibung der Art oder Grundlage der Streitigkeit und (c) das konkrete Rechtsmittel, das Sie beantragen, enthalten. Wenn Sie und Internxt sich nicht innerhalb von dreißig (30) Tagen nach Eingang der Benachrichtigung bei der betreffenden Partei auf die Beilegung der Streitigkeit einigen können, kann entweder Sie oder Internxt gemäß diesem Abschnitt 17 ein Schiedsverfahren einleiten oder, soweit in Abschnitt 17.1 ausdrücklich vorgesehen, eine Klage vor Gericht einreichen.",
+    "subtitle165": "Jedes Schiedsverfahren findet in Spanien statt. Das Schiedsverfahren wird vertraulich von einem einzelnen Schiedsrichter gemäß den Regeln der Judicial Arbitration and Mediation Services (\"JAMS\") durchgeführt, die hiermit durch Bezugnahme einbezogen werden. Die staatlichen und bundesstaatlichen Gerichte in Spanien haben die ausschließliche Zuständigkeit für Rechtsmittel und die Vollstreckung von Schiedssprüchen. Sie können eine Streitigkeit auch vor dem Kleinklaimgericht am Ort Ihres Wohnsitzes verhandeln lassen, wenn die Streitigkeit die Voraussetzungen für eine Verhandlung vor dem Kleinklaimgericht erfüllt.",
+    "subtitle166": "Gemäß dieser Vereinbarung und den anwendbaren JAMS-Regeln hat der Schiedsrichter (a) die ausschließliche Befugnis und Zuständigkeit für alle verfahrensrechtlichen und materiellen Entscheidungen in Bezug auf eine Streitigkeit, einschließlich der Entscheidung, ob eine Streitigkeit schiedsfähig ist, und (b) die Befugnis, jedes Rechtsmittel zu gewähren, das sonst vor Gericht verfügbar wäre; vorausgesetzt jedoch, dass der Schiedsrichter nicht die Befugnis hat, ein Sammelschiedsverfahren oder ein Vertretungsverfahren durchzuführen, was durch diese Bedingungen untersagt ist. Der Schiedsrichter kann nur ein individuelles Schiedsverfahren durchführen und darf die Ansprüche von mehr als einer Person nicht zusammenfassen, keine Art von Sammel- oder Vertretungsverfahren leiten oder kein Verfahren mit mehr als einer Person leiten.",
+    "subtitle167": "Die Regeln von JAMS und weitere Informationen über JAMS sind auf der JAMS-Website verfügbar. Indem Sie sich durch diese Bedingungen binden lassen, (a) erkennen Sie an und stimmen Sie zu, dass Sie die Regeln von JAMS gelesen und verstanden haben, oder (b) verzichten Sie auf Ihre Möglichkeit, die Regeln von JAMS zu lesen, und auf jeden Anspruch, dass die Regeln von JAMS unfair sind oder aus irgendeinem Grund nicht anwendbar sein sollten.",
+    "title17": "Anwendbares Recht und Gerichtsstand",
+    "subtitle17": "Diese Vereinbarung und Ihr Zugang zu und Ihre Nutzung der Dienste unterliegen dem Recht Spaniens und werden nach diesem ausgelegt und durchgesetzt, ohne Berücksichtigung von Kollisionsnormen oder -grundsätzen (sei es Spaniens oder eines anderen Rechtsgebiets), die zur Anwendung des Rechts eines anderen Rechtsgebiets führen würden. Jede Streitigkeit zwischen den Parteien, die aus oder im Zusammenhang mit dieser Vereinbarung entsteht und nicht der Schiedsgerichtsbarkeit unterliegt oder nicht vor einem Kleinklaimgericht verhandelt werden kann, wird vor den Gerichten Spaniens entschieden.",
+    "title18": "Salvatorische Klausel",
+    "subtitle18": "Sollte eine Bestimmung dieser Vereinbarung unwirksam oder undurchsetzbar sein, bleibt die Vereinbarung im Übrigen wirksam. Die unwirksame oder undurchsetzbare Bestimmung wird durch eine wirksame und durchsetzbare Bestimmung ersetzt, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung möglichst nahekommt.",
+    "title19": "Kündigung oder Aussetzung",
+    "subtitle19": "Ungeachtet anderer Bestimmungen in dieser Vereinbarung behalten wir uns das Recht vor, diese Vereinbarung ohne Ankündigung und nach unserem alleinigen Ermessen zu kündigen oder Ihr Recht auf Zugang zu den Diensten auszusetzen. Sie können diese Vereinbarung ohne Ankündigung kündigen, indem Sie die Nutzung der Dienste einstellen. Alle Rechte und Lizenzen, die Ihnen im Rahmen dieser Vereinbarung gewährt wurden, erlöschen sofort mit unserer Kündigung der Vereinbarung oder unserer Aussetzung Ihres Zugangs zu den Diensten, und Sie müssen sofort die im Rahmen der Vereinbarung an Internxt zu zahlenden Gebühren bezahlen (wie in den Speicherbedingungen festgelegt). Internxt-Nutzer können einen Lifetime-Tarif erwerben. Lifetime-Tarife sollen den Zugang zu den Diensten für die Dauer der natürlichen Lebenszeit des Kontoinhabers ermöglichen, vorbehaltlich der hierin festgelegten Beschränkungen und Bedingungen. Für die Zwecke dieser Vereinbarung gilt die Gültigkeit eines Lifetime-Tarifs bis zum Erreichen des 99. Lebensjahres des Kontoinhabers, wie von Internxt nach Treu und Glauben auf der Grundlage verfügbarer Informationen und Überwachungspraktiken festgelegt. Um die fortlaufende Gültigkeit und Sicherheit von Lifetime-Konten zu gewährleisten, und da Internxt aus Datenschutzgründen das Alter des Kontoinhabers nicht genau überprüfen kann, behält sich Internxt das Recht vor, die Kontenaktivität regelmäßig zu überprüfen. Ein Konto gilt als inaktiv, wenn über einen Zeitraum von mehr als zwölf aufeinanderfolgenden Monaten keine Benutzeranmeldung, kein Datei-Upload, -Download oder andere wesentliche Interaktion mit den Diensten stattgefunden hat. Nach Feststellung eines Inaktivitätszeitraums sendet Internxt eine Benachrichtigungs-E-Mail an die registrierte E-Mail-Adresse des Kontoinhabers, die ihn über die Inaktivität informiert und die Bestätigung der fortgesetzten Nutzung innerhalb von dreißig (30) Tagen nach dem Benachrichtigungsdatum verlangt. Wenn der Kontoinhaber sich nicht innerhalb des angegebenen Zeitraums anmeldet oder anderweitig auf die Benachrichtigung reagiert, kann Internxt nach eigenem Ermessen davon ausgehen, dass der Kontoinhaber das 99. Lebensjahr erreicht oder überschritten hat, und das Konto kündigen, die zugehörigen Daten löschen und den Zugang zu den Diensten widerrufen. Eine solche Kündigung berechtigt den Kontoinhaber (oder seine Erben, Nachfolger oder Abtretungsempfänger) nicht zu einer Rückerstattung, Entschädigung oder Wiederherstellung der Daten. Im Falle eines Streits über das Alter des Kontos oder die Inaktivität muss der Kontoinhaber auf Verlangen überprüfbare Alters- und Identitätsnachweise vorlegen. Internxt haftet nicht für Datenverluste, Zugriffsverluste oder andere Folgen, die sich aus der Kündigung des Kontos gemäß diesem Abschnitt ergeben. Kontoinhaber sind dafür verantwortlich, ihre Kontaktinformationen auf dem neuesten Stand zu halten und regelmäßig auf ihre Konten zuzugreifen, um eine versehentliche Kündigung zu vermeiden. Diese Richtlinie dient der Förderung der Kontosicherheit, der Ressourceneffizienz und der Einhaltung der geltenden Datenschutzgesetze. Lifetime-Konten haben eine 30-tägige Geld-zurück-Garantie, die auch für unsere anderen Tarife gilt. Wenn ein Nutzer den Zugang zu seinem Lifetime-Konto verliert, gilt dieses Lifetime-Konto als verloren. Lifetime-Mitgliedschaften sind einzigartig und nicht übertragbar. Internxt behält sich das Recht vor, die Nutzung der Internxt-Dienste durch jeden Kunden zu verhindern oder zu stoppen, die missbräuchlich oder unzumutbar belastend erscheint. Weitere Informationen darüber, wie diese Richtlinie auf Ihren Service-Tarif anwendbar ist, finden Sie unter Kontakt. Nach Beendigung der Dienste können Nutzer ihre Daten möglicherweise nicht mehr abrufen. Internxt wird auf schriftlichen Antrag alle personenbezogenen Daten und PHI in einem strukturierten, gängigen elektronischen Format zurückgeben und alle verbleibenden Kopien sicher löschen, es sei denn, die Aufbewahrung ist gesetzlich vorgeschrieben. Wenn Sie nach einer Benachrichtigung zur Reduzierung der Nutzung die Datenlimits Ihres Tarifs erheblich überschreiten, können wir Ihren Zugang zu den Diensten aussetzen oder kündigen.",
+    "title20": "Änderung",
+    "subtitle20": "Wir behalten uns das Recht vor, die Bedingungen dieser Vereinbarung von Zeit zu Zeit nach unserem alleinigen Ermessen zu ändern. Wenn wir Änderungen an der Vereinbarung vornehmen, werden wir Sie über solche Änderungen informieren, z.B. durch Veröffentlichung der überarbeiteten Vereinbarungsbedingungen auf den Diensten und Aktualisierung des Datums \"Zuletzt aktualisiert\" am Anfang dieser Bedingungen und der Speicherbedingungen. Ihre fortgesetzte Nutzung der Dienste bestätigt Ihre Annahme der überarbeiteten Vereinbarung. Wenn Sie der geänderten Vereinbarung nicht zustimmen, müssen Sie die Nutzung der Dienste einstellen.",
+    "title21": "Service-Level",
+    "subtitle21": "(a) Internxt wird wirtschaftlich zumutbare Anstrengungen unternehmen, um die folgende Service-Level-Verpflichtung zu erfüllen: Mit Ausnahme von Wartungsarbeiten sind unsere Speicherdienste zu 99,99 % der Zeit verfügbar. Die Verfügbarkeit berechnen wir auf der Grundlage der von uns geführten Serviceaufzeichnungen. Wir werden angemessene Anstrengungen unternehmen, um Sie im Voraus über geplante Wartungsarbeiten zu informieren.",
+    "subtitle212": "(b) Unsere SLA-Verpflichtungen gelten nicht für eine Nichtverfügbarkeit der Speicherdienste, die verursacht wird durch: (i) Hardware oder Software, die Sie in Verbindung mit den Speicherdiensten verwenden; (ii) Missbrauch unserer Speicherdienste oder der Storage-Plattform, einschließlich der Nutzung unter Verletzung der Vereinbarung oder einer Nutzung, die nicht gemäß der Dokumentation oder anderen von Internxt bereitgestellten Anweisungen erfolgt; (iii) Umstände oder Ereignisse, die außerhalb der zumutbaren Kontrolle von Internxt liegen; oder (iv) unsere Aussetzung oder Kündigung Ihres Zugangs zu den Speicherdiensten aufgrund der uns in der Vereinbarung vorbehaltenen Rechte.",
+    "title23": "Speichermaterialien",
+    "subtitle23": "(a) Internxt ist nicht verantwortlich für Verlust, Missbrauch oder Löschung von Speichermaterialien oder für das Versagen der Speicherung oder Verschlüsselung von Speichermaterialien. Sie sind allein verantwortlich für die Sicherung Ihrer Speichermaterialien.",
+    "subtitle232": "(b) Sie sind verantwortlich für die ordnungsgemäße Konfiguration und Nutzung der Speicherdienste zur Speicherung Ihrer Speichermaterialien über die Storage-Plattform und für die Aufrechterhaltung der angemessenen Sicherheit Ihrer Speichermaterialien, was den Einsatz von Verschlüsselung umfassen kann. Wir behalten uns das Recht vor, jederzeit und ohne Ankündigung Speichermaterialien zu entfernen, abzulehnen oder zu löschen, die Klartextdaten enthalten oder anderweitig gegen die Bedingungen dieser Vereinbarung (einschließlich der Nutzungsbedingungen von Internxt in Bezug auf Benutzerinhalte) verstoßen.",
+    "subtitle233": "(c) Sie sind allein verantwortlich für die Einhaltung aller geltenden Gesetze bei der Verarbeitung von Speichermaterialien über die Speicherdienste. Wir geben keine Zusicherungen oder Gewährleistungen hinsichtlich der Eignung der Speicherdienste für die Verarbeitung bestimmter Datentypen. Sie werden alle Benachrichtigungen an Dritte, die das Gesetz im Zusammenhang mit der Verarbeitung von Speichermaterialien über die Speicherdienste vorschreibt, bereitstellen und deren Einwilligung einholen. Sie dürfen keine Speichermaterialien verarbeiten, die sensible Daten enthalten, die erhöhte Sicherheitsvorkehrungen erfordern, einschließlich (i) \"geschützte Gesundheitsinformationen\" gemäß HIPAA, (ii) \"Kartendaten\" gemäß PCI DSS oder (iii) \"sensible personenbezogene Daten\" gemäß der EU-Richtlinie 95/46/EG in den Mitgliedstaaten der Europäischen Union.",
+    "title24": "Zahlung",
+    "subtitle24": "(a) Wir werden über die Speicherdienste die für die Nutzung der Speicherdienste geltenden Gebühren ('Gebühren') bekannt geben. Alle Gebühren verstehen sich, sofern nicht anders angegeben, zuzüglich etwaiger Steuern, die ausschließlich von Ihnen zu tragen sind. Wir werden Sie mindestens 30 Tage im Voraus über jede Erhöhung der Gebühren informieren.",
+    "subtitle242": "(b) Sofern nicht über die Speicherdienste anders angegeben, belasten wir alle Gebühren einer von Ihnen über die Speicherdienste bezeichneten und für uns akzeptablen Zahlungsmethode. Sie erklären und garantieren, dass Sie zur Nutzung der von Ihnen über die Speicherdienste bezeichneten Zahlungsmethode berechtigt sind, und ermächtigen uns, alle Gebühren dieser Methode in Rechnung zu stellen. Wenn Ihre Zahlungsmethode nicht verifiziert werden kann, ungültig ist oder anderweitig nicht akzeptabel ist, kann Ihr Recht zur Nutzung der Speicherdienste automatisch ausgesetzt werden. Die Gebühren werden monatlich auf der Grundlage der Nutzung des Vormonats berechnet. Sie können die Entstehung von Gebühren jederzeit vermeiden, indem Sie die Nutzung der Speicherdienste zur Speicherung Ihrer Speichermaterialien einstellen.",
+    "subtitle243": "(c) Nutzer, die sich ein Jahr lang nicht in ihr Konto einloggen, gelten als inaktiv. Die Nutzer erhalten 7 Tage vor Erreichen des Inaktivitätsstatus eine E-Mail-Benachrichtigung. Sobald ein Konto diesen Status erreicht, werden seine Dateien aus dem Netzwerk entfernt, um Speicherplatz für aktive Nutzer von Gratiskonten freizugeben.",
+    "subtitle244": "(d) Mit Kryptowährungen getätigte Zahlungen sind aufgrund des volatilen Wertes und der Unwiderruflichkeit von Blockchain-Transaktionen nicht erstattungsfähig.",
+    "subtitle245": "(e) Alle Nutzer, die einen der Premium-Tarife von Internxt mit PayPal oder Karte kaufen, haben Anspruch auf eine 30-tägige Rückerstattung. Nach Ablauf dieser ersten 30 Tage nach Nutzung eines unserer Premium-Tarife ist keine Rückerstattung mehr möglich. Um eine Rückerstattung zu beantragen, kontaktieren Sie uns bitte per E-Mail unter hello@internxt.com. Bei Verlängerung eines Tarifs erneuert sich die Geld-zurück-Garantie nicht für weitere 30 Tage. Die Geld-zurück-Garantie gilt nur für die ersten 30 Tage ab dem ersten Kauf und beginnt mit dem ersten Tag der Nutzung unseres Dienstes. Wenn Sie vergessen haben, Ihren Tarif zu kündigen, oder wenn Sie ihn nach Belastung der Verlängerung gekündigt haben, haben Sie keinen Anspruch auf Rückerstattung. Wir behandeln alle Kunden gleich und machen keine Ausnahmen von dieser Regelung.",
+    "title25": "Auswirkungen von Aussetzung oder Kündigung",
+    "subtitle25": "Wenn Ihr Zugang zu den Speicherdiensten ausgesetzt oder gekündigt wird, haben Sie keinen Zugang mehr zu den über die Speicherdienste auf der Storage-Plattform gespeicherten Speichermaterialien, und Ihre Speichermaterialien sind möglicherweise nicht wiederherstellbar. Wenn wir Ihren Zugang zu den Speicherdiensten aus anderen Gründen als einem Verstoß gegen die Vereinbarung kündigen oder aussetzen, werden wir wirtschaftlich zumutbare Anstrengungen unternehmen, um Ihnen die Möglichkeit zu geben, Ihre Speichermaterialien über die Speicherdienste abzurufen. Wir werden alle kostenlosen Konten kündigen, die ein Jahr lang inaktiv sind (dies umfasst jedes Konto, das in einem Zeitraum von einem Jahr keine Datei hochgeladen, heruntergeladen, geteilt oder geändert hat).",
+    "title26": "Verschiedenes",
+    "subtitle26": "Die Vereinbarung stellt die gesamte Vereinbarung zwischen Ihnen und Internxt in Bezug auf Ihren Zugang zu und Ihre Nutzung unserer Dienste dar. Wir können unsere Rechte und Pflichten aus der Vereinbarung abtreten. Das Versäumnis von Internxt, ein Recht oder eine Bestimmung der Vereinbarung auszuüben oder durchzusetzen, stellt keinen Verzicht auf dieses Recht oder diese Bestimmung dar. Wir haften nicht für Verzögerungen oder Nichterfüllungen von Pflichten aus der Vereinbarung, wenn die Verzögerung oder Nichterfüllung auf Umstände zurückzuführen ist, die außerhalb unserer zumutbaren Kontrolle liegen. Sofern hierin nicht anders bestimmt, ist die Vereinbarung ausschließlich zum Nutzen der Parteien bestimmt und soll keine Rechte Dritter auf andere Personen oder Unternehmen begründen. Sofern der Kunde beabsichtigt, PHI über die Internxt-Dienste zu verarbeiten, ist eine gesonderte Vereinbarung über die Zusammenarbeit als Auftragsverarbeiter (BAA) zwischen Internxt und dem Kunden zu unterzeichnen. Die BAA regelt die zulässigen Verwendungen und Offenlegungen von PHI, Sicherheitsvorkehrungen, Meldung von Verstößen, Subunternehmer-Compliance, Kündigung und Datenrückgabe/-vernichtung. Diese BAA wird gemäß dem Health Insurance Portability and Accountability Act von 1996 (\"HIPAA\") in der durch HITECH geänderten Fassung verlangt. Sie regelt die Nutzung und Offenlegung von geschützten Gesundheitsinformationen (\"PHI\") durch Internxt, die im Namen des Kunden erstellt, empfangen, aufrechterhalten oder übermittelt werden. PHI: Geschützte Gesundheitsinformationen gemäß 45 CFR §160.103. Auftragsverarbeiter: Internxt, wenn es PHI betreffende Dienstleistungen erbringt. Gedeckte Stelle: Der Kunde. Sicherheitsvorfall, Verstoß, Regel des geringsten Umfangs: Wie in HIPAA/HITECH definiert. Internxt wird: PHI nur verwenden oder offenlegen, wie durch diese BAA erlaubt oder gesetzlich vorgeschrieben. Administrative, physische und technische Sicherheitsvorkehrungen zum Schutz von PHI gemäß 45 CFR §§164.308, 164.310 und 164.312 implementieren. Sicherstellen, dass Subunternehmer, die Zugang zu PHI haben, schriftlich dieselben Beschränkungen und Sicherheitsvorkehrungen vereinbaren. Dem Kunden jeden Verstoß gegen ungesicherte PHI oder Sicherheitsvorfall unverzüglich und spätestens 60 Kalendertage nach Entdeckung melden. PHI für Zugang, Berichtigung oder Abrechnung von Offenlegungen gemäß 45 CFR §§164.524, 164.526, 164.528 zugänglich machen. Interne Praktiken und Aufzeichnungen über PHI auf Verlangen dem Sekretär des HHS zur Verfügung stellen. Die Regel des geringsten Umfangs bei der Verwendung, Offenlegung oder Anforderung von PHI anwenden. Nach Beendigung der Vereinbarung alle PHI zurückgeben oder sicher vernichten. Wenn Rückgabe/Vernichtung nicht möglich ist, den Schutz für die aufbewahrten PHI aufrechterhalten. Internxt darf PHI verwenden oder offenlegen: Zur Erbringung von Dienstleistungen gemäß der Vereinbarung für den Kunden. Für ordnungsgemäße Verwaltung und Geschäftsführung, sofern Offenlegungen gesetzlich vorgeschrieben sind oder mit Vertraulichkeitszusicherungen erfolgen. Zur De-Identifizierung von PHI gemäß 45 CFR §164.514(b). Der Kunde wird: Nicht von Internxt verlangen, PHI in einer Weise zu verwenden oder offenzulegen, die nicht unter HIPAA erlaubt ist. Internxt alle Mitteilungen über Datenschutzpraktiken, Beschränkungen oder Einwilligungen in Bezug auf die Handhabung von PHI zur Verfügung stellen. Alle erforderlichen Einwilligungen, Genehmigungen oder rechtlichen Erlaubnisse für die Verarbeitung von PHI durch Internxt einholen. Laufzeit: Diese BAA bleibt so lange in Kraft, wie Internxt PHI im Namen des Kunden erstellt, empfängt, aufrechterhält oder übermittelt. Kündigung aus wichtigem Grund: Der Kunde kann kündigen, wenn Internxt diese BAA wesentlich verletzt hat und die Verletzung nicht innerhalb von 30 Tagen behebt. Rückgabe/Vernichtung: Nach Beendigung gibt Internxt PHI zurück oder vernichtet es wie in Abschnitt 3.8 festgelegt. Diese BAA ändert nicht die Haftungsbeschränkungen in der Vereinbarung, außer in Bezug auf die HIPAA-Konformität, wo Internxt direkt haftbar bleibt. Im Falle eines Widerspruchs zwischen dieser BAA und der Vereinbarung hat die BAA in Bezug auf PHI Vorrang. Anwendbares Recht: Spanien",
+    "title27": "Datenschutzrichtlinie Übersicht",
+    "privacy_policy_intro_part1": "Diese Datenschutzrichtlinie wurde gemäß den Bestimmungen der VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr (DSGVO) und des Organgesetzes 3/2018 vom 5. Dezember zum Datenschutz und zur Garantie digitaler Rechte (LOPDGDD) erstellt.",
+    "privacy_policy_person_responsible_title": "Wer ist der für die Verarbeitung Verantwortliche?",
+    "privacy_policy_person_responsible_part1": "Die über die Webseite, sei es durch das Surfen, oder über die Kontaktformulare, per E-Mail oder telefonisch gesammelten oder freiwillig bereitgestellten Daten werden vom Dateiverantwortlichen gesammelt und verarbeitet, dessen Daten unten angegeben sind:",
+    "privacy_policy_table_row1_column1": "Identität",
+    "privacy_policy_table_row1_column2": "Internxt Universal Technologies, S.L.",
+    "privacy_policy_table_row2_column1": "CIF",
+    "privacy_policy_table_row2_column2": "B98936354",
+    "privacy_policy_table_row3_column1": "Postanschrift",
+    "privacy_policy_table_row3_column2": "C/ La Travesia s/n, Edificio Angels, 46024, Valencia, Spanien",
+    "privacy_policy_table_row5_column1": "E-Mail",
+    "privacy_policy_table_row5_column2": "hello@internxt.com",
+    "privacy_policy_table_row6_column1": "Kontakt DPD:",
+    "privacy_policy_table_row6_column2": "legal@egida.es",
+    "privacy_policy_table_row7_column1": "URL:",
+    "privacy_policy_table_row7_column2": "www.internxt.com",
+    "privacy_policy_person_responsible_part2": "Wenn Sie aus irgendeinem Grund mit uns in Bezug auf die Verarbeitung Ihrer personenbezogenen Daten oder den Datenschutz (mit unserem Datenschutzbeauftragten) Kontakt aufnehmen möchten, können Sie dies über eine der oben angegebenen Möglichkeiten tun.",
+    "privacy_policy_process_personal_data_title": "Wann, warum, von wem, wie, zu welchem Zweck und wie lange verarbeiten wir Ihre personenbezogenen Daten?",
+    "privacy_policy_process_personal_data_subtitle1": "Wann und warum?",
+    "privacy_policy_process_personal_data_part1": "Sie können auf den meisten unserer Webseiten surfen, ohne persönliche Daten anzugeben, aber in einigen Fällen sind diese Informationen notwendig, um Ihnen die von Ihnen angeforderten elektronischen Dienste bereitzustellen. ",
+    "privacy_policy_process_personal_data_part2": "Wenn wir personenbezogene Daten sammeln müssen, um Ihnen den Dienst bereitzustellen, werden wir die Informationen gemäß den in diesem Dokument und den spezifischen Bedingungen des jeweiligen Dienstes (falls vorhanden) dargelegten Richtlinien verarbeiten, die spezifische Datenschutzerklärungen zur Nutzung der Daten enthalten und Sie darüber informieren, warum, zu welchem Zweck, wie, wie lange wir Ihre personenbezogenen Daten verarbeiten und welche Sicherheitsmaßnahmen wir implementieren.",
+    "privacy_policy_process_personal_data_subtitle2": "Wer sammelt Ihre Daten?",
+    "privacy_policy_process_personal_data_part3": "Die Erhebung und Verarbeitung personenbezogener Daten, die Sie uns möglicherweise zur Verfügung stellen, erfolgt durch unser Unternehmen oder gegebenenfalls durch seine Auftragsverarbeiter. In Bezug auf den letzteren Fall handelt es sich bei diesen Auftragsverarbeitern um Dritte, die vertraglich verpflichtet sind, sicherzustellen, dass ihre Tätigkeit dem Gesetz entspricht und angemessene Sicherheitsmaßnahmen zum Schutz solcher Daten implementiert werden. Internxt kann Auftragsverarbeiter einschalten, die vertraglich verpflichtet sind, das anwendbare Recht einzuhalten, vorausgesetzt, dass (i) Internxt eine aktuelle Liste der Subunternehmer führt und veröffentlicht, (ii) der Kunde vor der Beauftragung eines neuen Subunternehmers benachrichtigt wird, (iii) der Kunde das Recht hat, gegen diesen Subunternehmer Einspruch zu erheben, und (iv) Internxt sicherstellt, dass jeder Subunternehmer vertraglich denselben Verpflichtungen unterliegt, die in dieser Vereinbarung festgelegt sind, einschließlich der HIPAA-Verpflichtungen, sofern zutreffend.",
+    "privacy_policy_process_personal_data_subtitle3": "Wozu?",
+    "privacy_policy_process_personal_data_part4": "Die personenbezogenen Daten, die wir von Ihnen anfordern oder die Sie uns aufgrund Ihres Surfens zur Verfügung stellen, werden von uns verwendet, um die von Ihnen angeforderten Dienste zu verwalten, bereitzustellen und zu verbessern.",
+    "privacy_policy_process_personal_data_part5": "Zum Beispiel verarbeiten wir Ihre personenbezogenen Daten, um die an uns gesendeten Anfragen zu verwalten, Ihre Teilnahme an Personalauswahlverfahren zu verwalten, Ihnen elektronische Mitteilungen zu senden, wenn Sie dies wünschen, und/oder für die Erstellung von Statistiken.",
+    "privacy_policy_process_personal_data_part6": "In diesem Sinne bitten wir Sie um eine E-Mail-Adresse, wenn Sie unsere Kontaktformulare auf der Website nutzen. Wir sammeln nur die persönlichen Daten des Absenders, die zur Beantwortung notwendig sind.",
+    "privacy_policy_process_personal_data_part7": "Wenn Sie unsere Newsletter abonnieren, bitten wir Sie ebenfalls um eine E-Mail, um den Dienst bereitzustellen. In jedem Fall können Sie die Abmeldung vom Dienst jederzeit verwalten, und wir stellen Ihnen Mittel zur Verfügung, um dies zu tun.",
+    "privacy_policy_process_personal_data_subtitle4": "Wie behandeln wir Ihre Daten?",
+    "privacy_policy_process_personal_data_part8": "Wir sammeln persönliche Informationen nur in dem Umfang, der zur Erreichung eines bestimmten Zwecks erforderlich ist. Die Informationen werden nicht für einen mit dem beschriebenen unvereinbaren Zweck verwendet.",
+    "privacy_policy_process_personal_data_part9": "Wir geben Informationen nur an Dritte weiter, wenn dies für die Erfüllung des Zwecks des Dienstes erforderlich ist, und nur an Personen, die sie kennen müssen. All dies, um den Dienst durch die Behandlung Ihrer personenbezogenen Daten mit Vertraulichkeit und Diskretion gemäß der geltenden Gesetzgebung bereitstellen zu können.",
+    "privacy_policy_process_personal_data_part10": "In jedem Fall ergreift unser Unternehmen Sicherheitsmaßnahmen, um die Daten vor möglichem Missbrauch oder unbefugtem Zugriff, Änderung oder Verlust zu schützen.",
+    "privacy_policy_process_personal_data_subtitle5": "Wie lange werden Ihre Informationen aufbewahrt?",
+    "privacy_policy_process_personal_data_part11": "Wir speichern Daten nur so lange, wie es für die Erfüllung des Zwecks ihrer Erhebung oder Weiterverarbeitung erforderlich ist. Die Dauer der Datenaufbewahrung hängt vom Dienst ab, und jeder Dienst gibt die Dauer der Verarbeitung personenbezogener Daten an.",
+    "privacy_policy_process_personal_data_part12": "Am Ende dieses Dokuments finden Sie eine Tabelle mit spezifischen Aufbewahrungsfristen.",
+    "privacy_policy_process_personal_data_subtitle6": "Zu welchen Zwecken werden wir Ihre personenbezogenen Daten verarbeiten?",
+    "privacy_policy_process_personal_data_sub_subtitle6_1": "Kunden:",
+    "privacy_policy_process_personal_data_part13": "Wir verarbeiten Ihre personenbezogenen Daten, um (i) Ihren Kauf oder die erbrachte Dienstleistung zu verwalten; (ii) die vertragliche und vorvertragliche Beziehung für die Abrechnung, die Erstellung von Angeboten und deren Nachverfolgung aufrechtzuerhalten sowie Ihnen auf elektronischem Wege Informationen zu senden, die sich mit Ihrer Anfrage befassen; (iii) Ihnen auf elektronischem Wege kommerzielle Informationen zu senden, die für Sie von Interesse sein könnten, sofern eine ausdrückliche Genehmigung vorliegt; (iv) wir können ein kommerzielles Profil auf der Grundlage der von Ihnen bereitgestellten Informationen erstellen, um Produkte und Dienstleistungen entsprechend Ihren Interessen anzubieten. Es werden keine automatisierten Entscheidungen auf der Grundlage eines solchen Profils getroffen.",
+    "privacy_policy_process_personal_data_sub_subtitle6_2": "Lieferanten:",
+    "privacy_policy_process_personal_data_part14": "Wir verarbeiten Ihre personenbezogenen Daten zum Zweck der (i) Rechnungsstellung und (ii) Aufrechterhaltung des geschäftlichen Kontakts, (iii) sowie des Versands von Informationen über unsere Produkte oder Dienstleistungen auf elektronischem Wege.",
+    "privacy_policy_process_personal_data_sub_subtitle6_3": "Web- oder E-Mail-Kontakte:",
+    "privacy_policy_process_personal_data_part15": "Wir verarbeiten Ihre personenbezogenen Daten, um (i) Ihre Anfragen und Wünsche zu beantworten; (ii) den angeforderten Dienst zu verwalten oder Ihre Bestellung zu bearbeiten; (iii) Ihnen auf elektronischem Wege kommerzielle Informationen zu senden, die für Sie von Interesse sein könnten. Wir können ein kommerzielles Profil auf der Grundlage der von Ihnen bereitgestellten Informationen erstellen, um Ihnen Produkte und Dienstleistungen entsprechend Ihren Interessen anzubieten. Es werden keine automatisierten Entscheidungen auf der Grundlage eines solchen Profils getroffen.",
+    "privacy_policy_process_personal_data_sub_subtitle6_4": "Kontakte in sozialen Netzwerken:",
+    "privacy_policy_process_personal_data_part16": "Wir verarbeiten Ihre personenbezogenen Daten, um (i) Ihre Anfragen und Wünsche zu beantworten, (ii) den angeforderten Dienst zu verwalten, Ihre Anfrage zu beantworten oder Ihre Bestellung zu bearbeiten und (iii) mit Ihnen zu interagieren und eine Gemeinschaft von Followern aufzubauen.",
+    "privacy_policy_process_personal_data_sub_subtitle6_5": "Bewerber:",
+    "privacy_policy_process_personal_data_part17": "Wir verarbeiten Ihre personenbezogenen Daten, um (i) Sie in Personalauswahlverfahren zu berücksichtigen, (ii) Sie zu Vorstellungsgesprächen einzuladen und Ihre Kandidatur zu bewerten, (iii) Ihren Lebenslauf an Konzernunternehmen, Partner oder verbundene Unternehmen weiterzuleiten, mit dem alleinigen Zweck, Sie in deren Auswahlverfahren einzubeziehen, sofern Sie uns Ihre Einwilligung gegeben haben.",
+    "privacy_policy_process_personal_data_sub_subtitle6_6": "Teilnehmer an unseren Wettbewerben:",
+    "privacy_policy_process_personal_data_part18": "Wir verarbeiten Ihre personenbezogenen Daten, um Ihre Teilnahme an den von uns organisierten Wettbewerben zu verwalten und die Gewinner der Wettbewerbe sowie die Preisverleihung bekannt zu geben.",
+    "privacy_policy_process_personal_data_part19": "Gewinner können fotografiert oder gefilmt und in den Medien, auf unserer Website oder in anderen Medien verbreitet werden. Folglich kann das Bild der Teilnehmer in einer dem Hauptgeschehen untergeordneten Weise erfasst, aufgezeichnet und/oder reproduziert werden.",
+    "privacy_policy_process_personal_data_sub_subtitle6_7": "Online-Chat:",
+    "privacy_policy_process_personal_data_part20": "Wir verarbeiten Ihre personenbezogenen Daten, um Ihre Anfragen und Wünsche zu beantworten.",
+    "privacy_policy_process_personal_data_part21": "Die Daten werden aus unserer Datenbank gelöscht, sobald die Anfrage oder die über den Chat angeforderte Information geklärt ist.",
+    "privacy_policy_process_personal_data_sub_subtitle6_8": "Rechtsgrundlage für Webnutzer:",
+    "privacy_policy_process_personal_data_part22": "Durch das Surfen auf unserer Website sammeln wir Informationen über Ihren Browser, Ihr Gerät und Daten aus Ihrer Nutzung unserer Website sowie alle Informationen, die Sie uns bei der Nutzung unserer Website zur Verfügung stellen. In anonymisierter oder aggregierter Form können wir die IP-Adresse (Internet-Zugangsidentifikationsnummer des Geräts, die es Geräten, Systemen und Servern ermöglicht, sich gegenseitig zu erkennen und zu kommunizieren) aufzeichnen.",
+    "privacy_policy_process_personal_data_part23": "Der Zweck der Verarbeitung ist (i) praktische Kenntnisse darüber zu gewinnen, wie Nutzer unsere Website nutzen, um sie verbessern zu können; (ii) statistische Analysen durchzuführen, um unsere Geschäftsstrategie zu verbessern; (iii) Web-Performance-Analysen durchzuführen und (iv) für technische Sicherheit und Systemdiagnose.",
+    "privacy_policy_process_personal_data_part24": "Die von uns gesammelten Daten werden keinem bestimmten Nutzer zugeordnet und in unseren Datenbanken gespeichert.",
+    "privacy_policy_process_personal_data_part25": "Die oben genannten Daten sowie alle personenbezogenen Daten, die Sie uns zur Verfügung stellen, werden mittels Cookies gespeichert, die in pseudonymisierter Form gesammelt werden, und unterliegen der Möglichkeit, der Verarbeitung dieser personenbezogenen Daten zu widersprechen, wie in der Cookie-Richtlinie beschrieben.",
+    "privacy_policy_process_personal_data_part26": "Sie können die Cookie-Richtlinie im entsprechenden Abschnitt einsehen.",
+    "privacy_policy_process_personal_data_part27": "Die Informationen über Ihr Surfen können von Google Analytics gespeichert werden. Wir verweisen daher auf die Datenschutzrichtlinie von Google, da diese solche Informationen sammelt und verarbeitet. http://www.google.com/intl/en/policies/privacy/",
+    "privacy_policy_process_personal_data_part28": "Ebenso können Sie auf unserer Website die Funktion von Google Maps nutzen, die möglicherweise Zugriff auf Ihren Standort hat, falls dies erlaubt ist, um Ihnen eine genauere Information über die Entfernung und/oder Routen zu unserem Firmensitz zu geben. In diesem Zusammenhang verweisen wir auf die von Google Maps verwendete Datenschutzrichtlinie, um die Nutzung und Verarbeitung solcher Daten zu erfahren. http://www.google.com/intl/en/policies/privacy/",
+    "privacy_policy_process_personal_data_part29": "Um Informationen oder Dienstleistungen von Interesse basierend auf dem Standort des Nutzers anbieten zu können, können wir auf Daten zugreifen, die sich auf die Geolokalisierung des Geräts des Nutzers beziehen, in den Fällen, in denen die Konfiguration des Nutzers dies zulässt.",
+    "privacy_policy_process_personal_data_part30": "Das Portal kann Funktionalitäten zum Teilen von Inhalten über Anwendungen Dritter wie Facebook oder Twitter bieten. Diese Anwendungen können Informationen über das Surfen des Nutzers auf den verschiedenen Websites sammeln und verarbeiten. Alle persönlichen Informationen, die über diese Anwendungen gesammelt werden, können von anderen Nutzern dieser Anwendungen verwendet werden. Ihre Interaktionen unterliegen den Datenschutzrichtlinien der Unternehmen, die die Anwendungen bereitstellen.",
+    "privacy_policy_process_personal_data_part31": "Das Portal kann Blogs, Foren und andere soziale Netzwerkanwendungen oder -dienste hosten, um den Austausch von Wissen und Inhalten zu erleichtern. Alle persönlichen Informationen, die der Nutzer bereitstellt, können mit anderen Nutzern dieses Dienstes geteilt werden, über die wir keine Kontrolle haben.",
+    "privacy_policy_process_personal_data_subtitle7": "Was ist die Rechtsgrundlage für die Verarbeitung Ihrer Daten?",
+    "privacy_policy_process_personal_data_sub_subtitle7_1": "Kunden:",
+    "privacy_policy_process_personal_data_part32": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist (i) die Erfüllung eines Vertrags und die Aufrechterhaltung der vertraglichen Beziehung und (ii) Ihre Einwilligung, die für den Versand von Angeboten für Produkte und Dienstleistungen auf elektronischem Wege eingeholt wird, wobei der Widerruf dieser Einwilligung in keinem Fall die Vertragserfüllung beeinträchtigt.",
+    "privacy_policy_process_personal_data_sub_subtitle7_2": "Lieferanten:",
+    "privacy_policy_process_personal_data_part33": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist (i) die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder die Durchführung vorvertraglicher Maßnahmen.",
+    "privacy_policy_process_personal_data_sub_subtitle7_3": "Web- oder E-Mail-Kontakte:",
+    "privacy_policy_process_personal_data_part34": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist (i) die Einwilligung der betroffenen Person.",
+    "privacy_policy_process_personal_data_part35": "In den Fällen, in denen für eine Anfrage das Ausfüllen eines Formulars und das \"Klicken\" auf die Schaltfläche \"Senden\" erforderlich ist, bedeutet das Ausfüllen, dass Sie über den Inhalt der dem Formular beigefügten Klausel informiert wurden und Ihre ausdrückliche Einwilligung dazu oder zur Annahme der Datenschutzrichtlinie gegeben haben.",
+    "privacy_policy_process_personal_data_part36": "Alle unsere Formulare haben ein Kontrollkästchen, das zur Nutzung der angebotenen Dienste angekreuzt werden muss.",
+    "privacy_policy_process_personal_data_part37": "Die Zwecke der Verarbeitung sind folgende:",
+    "privacy_policy_process_personal_data_part38": "a) Verwaltung von Anfragen oder Informationswünschen, die Sie uns über die Webseite, E-Mail oder Telefon senden.",
+    "privacy_policy_process_personal_data_part39": "b) Versand von Mitteilungen, Sonderaktionen, Neuigkeiten oder Aktionen, die für Sie von Interesse sind oder die Sie von uns anfordern, auch auf elektronischem Wege. Da es sich um einen untergeordneten Zweck handelt, müssen Sie das entsprechende Feld ankreuzen.",
+    "privacy_policy_process_personal_data_part40": "Die von Ihnen auf diesem Wege bereitgestellten personenbezogenen Daten werden nicht an Dritte weitergegeben; Internxt Universal Technologies, S.L. beantwortet solche Anfragen direkt.",
+    "privacy_policy_process_personal_data_sub_subtitle7_4": "Kontakte in sozialen Netzwerken:",
+    "privacy_policy_process_personal_data_part41": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist die Annahme der vertraglichen Beziehung mit dem jeweiligen Anbieter des sozialen Netzwerks, die sich bei der Registrierung in deren Anwendung und gemäß deren Datenschutzrichtlinien manifestiert, die außerhalb unseres Einflussbereichs liegen.",
+    "privacy_policy_process_personal_data_sub_subtitle7_5": "Arbeiten Sie mit uns:",
+    "privacy_policy_process_personal_data_part42": "Wenn Sie uns Ihren Lebenslauf zur Verfügung stellen, sei es über die Webseite, per E-Mail oder physisch an der Adresse oder einer Niederlassung von Internxt Universal Technologies, S.L., wird dieser in deren Datenbank aufgenommen. Der Lebenslauf wird für einen Zeitraum von einem Jahr gespeichert, danach wird er, wenn wir keinen Kontakt zu Ihnen aufgenommen haben, gelöscht.",
+    "privacy_policy_process_personal_data_part43": "Die Rechtsgrundlage für die Verarbeitung ist die ausdrückliche Einwilligung der betroffenen Person zur Verarbeitung der im Lebenslauf enthaltenen Daten durch dessen Zusendung und Ankreuzen des dafür vorgesehenen Feldes. In den Fällen, in denen für eine Anfrage das Ausfüllen eines Formulars und das \"Klicken\" auf die Schaltfläche \"Senden\" erforderlich ist, bedeutet das Ausfüllen, dass Sie über den Inhalt der dem Formular beigefügten Klausel informiert wurden und Ihre ausdrückliche Einwilligung dazu oder zur Annahme der Datenschutzrichtlinie gegeben haben.",
+    "privacy_policy_process_personal_data_part44": "Der Zweck der Verarbeitung ist die Aufnahme in gegenwärtige und zukünftige Auswahlverfahren von Internxt Universal Technologies, S.L. oder einer dem Unternehmensverbund angehörenden Einheit.",
+    "privacy_policy_process_personal_data_part45": "Wenn die betroffene Person schließlich als Mitarbeiter von Internxt Universal Technologies, S.L. oder einer der zum Unternehmensverbund gehörenden Einheiten eingestellt wird, werden Ihre Daten in eine Datenbank desselben aufgenommen, um das Arbeitsverhältnis intern zu verwalten.",
+    "privacy_policy_process_personal_data_sub_subtitle7_6": "Versand von Newslettern:",
+    "privacy_policy_process_personal_data_part46": "Die Webseite bietet die Möglichkeit, den Newsletter von Internxt Universal Technologies, S.L. zu abonnieren. Dazu ist die Angabe einer E-Mail-Adresse erforderlich, an die dieser gesendet wird.",
+    "privacy_policy_process_personal_data_part47": "Diese Informationen werden in einer Datenbank von Internxt Universal Technologies, S.L. gespeichert, in der sie verbleiben, bis die betroffene Person ihre Abmeldung beantragt oder, gegebenenfalls, Internxt Universal Technologies, S.L. den Versand einstellt.",
+    "privacy_policy_process_personal_data_part48": "Die Rechtsgrundlage für die Verarbeitung dieser personenbezogenen Daten ist die ausdrückliche Einwilligung aller Teilnehmer, die diesen Dienst durch Ankreuzen des entsprechenden Feldes abonnieren.",
+    "privacy_policy_process_personal_data_part49": "Die E-Mail-Daten werden nur zum Zweck der Verwaltung des Versands des Newsletters an die Nutzer verarbeitet und gespeichert, die ihn anfordern.",
+    "privacy_policy_process_personal_data_sub_subtitle7_7": "Online-Chat:",
+    "privacy_policy_process_personal_data_part50": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist Ihre Einwilligung bei der Nutzung des Chats.",
+    "privacy_policy_process_personal_data_sub_subtitle7_8": "Teilnehmer an unseren Wettbewerben:",
+    "privacy_policy_process_personal_data_part51": "Die Rechtsgrundlage für die Verarbeitung Ihrer Daten ist Ihre Einwilligung durch die Registrierung für den Wettbewerb und die Annahme der Datenschutzrichtlinie und der Wettbewerbsbedingungen.",
+    "privacy_policy_process_personal_data_part52": "Die gesammelten personenbezogenen Daten werden nicht an Dritte weitergegeben.",
+    "privacy_policy_process_personal_data_sub_subtitle7_9": "Surfen auf der Website:",
+    "privacy_policy_process_personal_data_part53": "Die Rechtsgrundlage für die Verarbeitung der Daten ist unser (i) berechtigtes Interesse daran, die Surfgewohnheiten unserer Nutzer zu kennen, um sie an ihre Interessen anzupassen und unsere Beziehung zu ihnen zu verbessern; sowie (ii) ihre Einwilligung beim Surfen auf unserer Website und der Annahme der Cookie-Nutzungsbedingungen.",
+    "privacy_policy_process_personal_data_sub_subtitle7_10": "An welche Empfänger werden Ihre Daten übermittelt?",
+    "privacy_policy_process_personal_data_part54": "Ihre Daten werden nicht an Dritte außerhalb des von uns erbrachten Dienstes weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben. Im Besonderen werden sie an die Staatliche Steuerbehörde und an Banken und Finanzinstitute zur Einziehung der erbrachten Dienstleistung oder des gekauften Produkts übermittelt.",
+    "privacy_policy_process_personal_data_part55": "Ihre Daten können auch an unsere Dienstleister übermittelt werden, wenn dies für die Ausführung des Vertrags erforderlich ist. In diesen Fällen hat sich der Auftragsverarbeiter vertraglich verpflichtet, die Daten nur für den Zweck zu verwenden, der die Verarbeitung rechtfertigt, und angemessene Sicherheitsmaßnahmen aufrechtzuerhalten.",
+    "privacy_policy_process_personal_data_sub_subtitle7_11": "Internationale Datenübermittlungen.",
+    "privacy_policy_process_personal_data_part56": "Da Internxt Server und Knoten in verschiedenen Ländern der Welt unterhält, werden internationale Datenübermittlungen durchgeführt. Alle diese Übermittlungen erfolgen in Länder, die von der Europäischen Kommission als Länder mit angemessenem Datenschutzniveau eingestuft wurden.",
+    "privacy_policy_process_personal_data_part57": "Es gibt jedoch viele andere Länder, in die die Daten gesendet werden und die nicht als Länder mit angemessenem Datenschutzniveau eingestuft sind. Die Übermittlungen in diese Länder haben ihre Rechtsgrundlage darin, dass solche Übermittlungen für die Ausführung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich sind, da der Dienst sonst nicht erbracht werden kann.",
+    "privacy_policy_process_personal_data_sub_subtitle7_12": "Welche Sicherheitsmaßnahmen wenden wir an?",
+    "privacy_policy_process_personal_data_part58": "Seien Sie versichert, wir haben angemessene technische und organisatorische Maßnahmen ergriffen, um die Vertraulichkeit, Integrität und Verfügbarkeit bei der Verarbeitung Ihrer personenbezogenen Daten zu gewährleisten, insbesondere solche, die Verlust, Missbrauch, Veränderung, unbefugten Zugriff und Diebstahl personenbezogener Daten verhindern.",
+    "privacy_policy_process_personal_data_sub_subtitle7_13": "Welche Rechte haben Sie, wenn Sie uns Ihre Daten zur Verfügung stellen?",
+    "privacy_policy_process_personal_data_part59": "Sie können Ihre Rechte auf Auskunft, Berichtigung, Löschung, Übertragbarkeit, Einschränkung oder Widerspruch gegen die Verarbeitung Ihrer Daten ausüben, einschließlich des Rechts, Ihre Einwilligung zu widerrufen, wie unten beschrieben:",
+    "privacy_policy_process_personal_data_part60": "Recht auf Auskunft: Sie können uns fragen, ob wir Ihre Daten verarbeiten und in welcher Weise.",
+    "privacy_policy_process_personal_data_part61": "Recht auf Berichtigung: Sie können uns bitten, Ihre personenbezogenen Daten zu aktualisieren, wenn diese falsch sind, und sie zu löschen, wenn Sie dies wünschen.",
+    "privacy_policy_process_personal_data_part62": "Recht auf Einschränkung der Verarbeitung: In diesem Fall werden sie von uns nur für die Ausübung oder Verteidigung von Ansprüchen aufbewahrt.",
+    "privacy_policy_process_personal_data_part63": "Recht auf Widerspruch: Nach Ihrem Antrag auf Widerspruch gegen die Verarbeitung werden wir die Verarbeitung der Daten in der von Ihnen angegebenen Weise einstellen, es sei denn, es liegen zwingende schutzwürdige Gründe vor oder die Ausübung oder Verteidigung möglicher Ansprüche erfordert eine weitere Verarbeitung.",
+    "privacy_policy_process_personal_data_part64": "Recht auf Datenübertragbarkeit: Falls Sie möchten, dass Ihre Daten von einem anderen Unternehmen verarbeitet werden, erleichtern wir die Übertragbarkeit Ihrer Daten an den neuen Verantwortlichen.",
+    "privacy_policy_process_personal_data_part65": "Recht auf Löschung: Sie können die Löschung Ihrer Daten beantragen, wenn sie für die Verarbeitung nicht mehr erforderlich sind, Sie Ihre Einwilligung widerrufen, es sich um eine unrechtmäßige Verarbeitung handelt oder eine gesetzliche Verpflichtung zur Löschung besteht. Wir werden den Fall prüfen und das Gesetz anwenden.",
+    "privacy_policy_process_personal_data_part66": "Wenn Sie weitere Informationen über Ihre Rechte gemäß dem Gesetz und deren Ausübung benötigen, empfehlen wir Ihnen, sich an die spanische Datenschutzbehörde zu wenden, die die Aufsichtsbehörde für den Datenschutz ist.",
+    "privacy_policy_process_personal_data_part67": "Sie können sich vor der Einreichung einer Beschwerde gegen den Verantwortlichen bei der AEPD an den Datenschutzbeauftragten wenden.",
+    "privacy_policy_process_personal_data_part68": "Falls wir die Ausübung Ihrer Rechte nicht beachtet haben, können Sie eine Beschwerde bei der spanischen Datenschutzbehörde einreichen.",
+    "privacy_policy_process_personal_data_part69": "Wir haben Formulare für die Ausübung der Rechte, die unter der oben genannten E-Mail-Adresse angefordert werden können; Sie können auch die von der spanischen Datenschutzbehörde oder Dritten bereitgestellten Formulare verwenden. Diese Formulare müssen elektronisch signiert oder von einer Fotokopie des Personalausweises begleitet sein. Wenn Sie durch einen Vertreter handeln, muss dem Formular ebenfalls eine Kopie Ihres Personalausweises oder eine elektronische Signatur beigefügt werden.",
+    "privacy_policy_process_personal_data_part70": "Die Formulare müssen persönlich oder per Post oder E-Mail an die im Abschnitt \"Verantwortlicher\" aufgeführten Adressen eingereicht werden.",
+    "privacy_policy_process_personal_data_part71": "Die maximale Frist für eine Entscheidung beträgt einen Monat ab Eingang Ihrer Anfrage.",
+    "privacy_policy_process_personal_data_sub_subtitle7_14": "Wie lange bewahren wir Ihre Daten auf?",
+    "privacy_policy_process_personal_data_part72": "Personenbezogene Daten werden so lange aufbewahrt, wie Sie Ihre Beziehung zu uns aufrechterhalten.",
+    "privacy_policy_process_personal_data_part73": "Nach deren Beendigung werden die für die einzelnen Zwecke verarbeiteten personenbezogenen Daten für die gesetzlich vorgeschriebenen Zeiträume aufbewahrt. Wenn es keinen solchen gesetzlichen Zeitraum gibt, bis die betroffene Person ihre Löschung beantragt oder die erteilte Einwilligung widerruft, oder während des Zeitraums, in dem ein Richter oder Gericht sie gemäß den Verjährungsfristen für rechtliche Schritte benötigen könnte.",
+    "privacy_policy_process_personal_data_part74": "Für jede Verarbeitung oder Datenart geben wir Ihnen eine spezifische Frist an, die Sie in der folgenden Tabelle einsehen können:",
+    "privacy_policy_table2_row1_column1": "Datei",
+    "privacy_policy_table2_row1_column2": "Dokument",
+    "privacy_policy_table2_row1_column3": "Aufbewahrung",
+    "privacy_policy_table2_row2_column1": "Kunden",
+    "privacy_policy_table2_row2_column2_1": "Rechnungen",
+    "privacy_policy_table2_row2_column2_2": "Verträge",
+    "privacy_policy_table2_row2_column3_1": "10 Jahre",
+    "privacy_policy_table2_row2_column3_2": "5 Jahre",
+    "privacy_policy_table2_row3_column1": "Personalwesen",
+    "privacy_policy_table2_row3_column2_1": "Gehaltsabrechnungen, TC1, TC2, etc.",
+    "privacy_policy_table2_row3_column2_2": "Lebensläufe",
+    "privacy_policy_table2_row3_column2_3": "Verträge. Daten von Leiharbeitnehmern",
+    "privacy_policy_table2_row3_column2_4": "Personalakte.",
+    "privacy_policy_table2_row3_column3_1": "10 Jahre",
+    "privacy_policy_table2_row3_column3_2": "Bis zum Abschluss des Auswahlverfahrens und 1 Jahr darüber hinaus mit Ihrer Einwilligung.",
+    "privacy_policy_table2_row3_column3_3": "4 Jahre",
+    "privacy_policy_table2_row3_column3_4": "Bis zu 5 Jahre nach Ende der Krankheit.",
+    "privacy_policy_table2_row4_column1": "Marketing",
+    "privacy_policy_table2_row4_column2": "Datenbanken oder Webseitenbesucher",
+    "privacy_policy_table2_row4_column3": "Für die Dauer der Verarbeitung",
+    "privacy_policy_table2_row5_column1": "Lieferanten",
+    "privacy_policy_table2_row5_column2_1": "Rechnungen",
+    "privacy_policy_table2_row5_column2_2": "Verträge",
+    "privacy_policy_table2_row5_column3_1": "10 Jahre",
+    "privacy_policy_table2_row5_column3_2": "5 Jahre",
+    "privacy_policy_table2_row6_column1": "Zugangskontrolle und Videoüberwachung",
+    "privacy_policy_table2_row6_column2_1": "Besucherliste",
+    "privacy_policy_table2_row6_column2_2": "Videos",
+    "privacy_policy_table2_row6_column3_1": "30 Tage",
+    "privacy_policy_table2_row6_column3_2": "30 Tage Sperrung. 3 Jahre Vernichtung",
+    "privacy_policy_table2_row7_column1": "Buchhaltung",
+    "privacy_policy_table2_row7_column2": "Bücher und Dokumente der Buchhaltung.",
+    "privacy_policy_table2_row7_column3": "6 Jahre",
+    "privacy_policy_table2_row8_column1": "Steuern",
+    "privacy_policy_table2_row8_column2": "Verwaltung der Unternehmensführung, Rechte und Pflichten im Zusammenhang mit der Zahlung von Steuern.",
+    "privacy_policy_table2_row8_column3": "10 Jahre",
+    "privacy_policy_table2_row9_column1": "Gesundheit und Sicherheit",
+    "privacy_policy_table2_row9_column2": "Medizinische Akten der Arbeitnehmer",
+    "privacy_policy_table2_row9_column3": "5 Jahre",
+    "privacy_policy_table2_row10_column1": "Versicherung",
+    "privacy_policy_table2_row10_column2": "Versicherungspolicen",
+    "privacy_policy_table2_row10_column3": "6 Jahre (allgemeine Regel). 2 Jahre (Schäden)",
+    "privacy_policy_table2_row11_column1": "Einkäufe",
+    "privacy_policy_table2_row11_column2": "Registrierung aller Lieferungen von Waren oder Dienstleistungen, innergemeinschaftlicher Erwerbe, Importe und Exporte für Mehrwertsteuerzwecke.",
+    "privacy_policy_table2_row11_column3": "5 Jahre",
+    "privacy_policy_table2_row12_column1": "Organgesetz zum Datenschutz",
+    "privacy_policy_table2_row12_column2_1": "Verarbeitung personenbezogener Daten.",
+    "privacy_policy_table2_row12_column2_2": "Personenbezogene Daten von Mitarbeitern, die in den Netzwerken, Computern und Kommunikationsgeräten gespeichert sind, die von Mitarbeitern verwendet werden, Zugangskontrollen und interne Verwaltungs-/Managementsysteme.",
+    "privacy_policy_table2_row12_column3_1": "3 Jahre",
+    "privacy_policy_table2_row12_column3_2": "5 Jahre",
+    "title28": "Informationen, die Sie uns zur Verfügung stellen",
+    "subtitle28": "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen. Zum Beispiel sammeln wir Informationen, die Sie angeben, wenn Sie ein Konto erstellen, unsere Updates abonnieren, an einer Umfrage teilnehmen, ein Formular ausfüllen, Kundensupport anfordern oder mit uns kommunizieren. Zu den Arten von Informationen, die wir sammeln können, gehören Ihre E-Mail-Adresse, Ihre Antworten auf Umfragen und alle anderen Informationen, die Sie uns zur Verfügung stellen. Wenn Sie unsere Speicherdienste nutzen, kann unser Drittanbieter Ihre Zahlungsinformationen für die Verwendung im Zusammenhang mit Ihren Zahlungen für den Speicherplatz erfassen. Gemäß der DSGVR handelt Internxt als Auftragsverarbeiter in Bezug auf Kundendaten, sofern nicht anders angegeben. Gemäß HIPAA, wenn PHI gemäß einer unterzeichneten BAA verarbeitet wird, handelt Internxt als Business Associate, und der Kunde handelt als Covered Entity oder Business Associate.",
+    "title29": "Informationen, die von Cookies und anderen Tracking-Technologien über unsere Dienste gesammelt werden.",
+    "subtitle29": "Wir und unsere Dienstleister verwenden verschiedene Technologien, um Informationen zu sammeln, wenn Sie mit unseren Websites und mobilen Apps interagieren, einschließlich Cookies und Web-Beacons. Cookies sind kleine Datendateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen, die es uns ermöglichen, Informationen über Ihre Gerätekennungen, Webbrowser, die für den Zugriff auf die Dienste verwendet werden, besuchte Seiten oder Funktionen, verbrachte Zeit auf Seiten, Leistung mobiler Apps und angeklickte Links zu sammeln. Web-Beacons (oder Pixel-Tags) sind elektronische Bilder, die in unseren Webdiensten oder E-Mails verwendet werden können, um Cookies zu setzen, Website-Besuche zu zählen, die Nutzung zu verstehen und die Wirksamkeit von E-Mail-Marketingkampagnen zu bestimmen.",
+    "subtitle292": "Wir können auch Informationen über Sie von anderen Quellen erhalten, z.B. wenn Sie sich bei Ihrem Storage Services-Konto anmelden, indem Sie Ihre Kontodaten für einen separaten Dienst eines Drittanbieters verwenden. Wir erhalten Informationen von diesem Dienst, wie auf dem Autorisierungsbildschirm des betreffenden Drittanbieters angegeben.",
+    "subtitle293": "Die Verwendung von Internxt Core Software macht Ihren Computer zu einem Teil eines verteilten Netzwerks. Das bedeutet, dass Ihr Computer mit vielen anderen Computern kommunizieren kann. Im Rahmen dieses Prozesses können diese anderen Knoten einige Informationen über Ihren Computer und Ihre Interaktionen speichern. Es ist nicht gefährlich, diese Informationen mit dem Netzwerk zu teilen. Ihr Computer teilt täglich eine Menge davon, wenn Sie im Internet surfen. Wir sind der festen Überzeugung, dass Sie das Recht haben, über die Informationen, die Sie teilen, informiert zu sein und Entscheidungen über Ihre eigene Privatsphäre treffen zu können. Hier ist eine Liste einiger Dinge, die andere Personen über Ihren Computer erfahren können. IP-Adresse: Dies ist die Adresse Ihres Computers im Internet. Diese muss geteilt werden, damit Nachrichten anderer Knoten Ihren Computer erreichen können. IP-bezogene Informationen: Anhand Ihrer IP-Adresse ist es oft möglich, einen ungefähren Standort (normalerweise Ihre wahrscheinliche Stadt) sowie Ihren ISP zu ermitteln. Netzwerkinformationen: Wenn Sie mit einem anderen Knoten kommunizieren, kann dieser aufzeichnen, wie lange Ihr Knoten zum Antworten benötigt, und die Bandbreite Ihrer Internetverbindung testen. Knoten-ID: Dies ist ein Pseudonym für Ihren Computer. Es handelt sich um eine lange Gruppe zufälliger Zahlen, die verwendet werden können, um einen Knoten im Netzwerk zu identifizieren. Sie müssen diese senden, damit andere Knoten Ihren Knoten identifizieren und kontaktieren können. Speicherplatzinformationen: Um Speicherverträge aushandeln zu können, muss Ihr Computer anderen Knoten einige Informationen darüber mitteilen, wie viel er speichern kann. Wenn Sie sich nicht wohl dabei fühlen, diese Informationen zu teilen, empfehlen wir, das Programm Internxt Core nicht auszuführen.",
+    "subtitle294": "Wir können Dritten erlauben, Analysedienste in unserem Auftrag im Zusammenhang mit unseren Diensten zu erbringen. Diese Unternehmen können Cookies, Web-Beacons und andere Technologien verwenden, um Informationen über Ihre Nutzung der Dienste und anderer Websites und Apps zu sammeln, einschließlich Ihrer IP-Adresse, Ihres Webbrowsers, besuchter Seiten, App-Leistung, verbrachter Zeit auf Seiten und angeklickter Links. Diese Informationen können von Unternehmen und anderen verwendet werden, um unter anderem Daten zu analysieren und zu verfolgen, die Beliebtheit bestimmter Inhalte zu bestimmen und Ihre Online-Aktivitäten besser zu verstehen.",
+    "title30": "Sicherheit",
+    "subtitle30": "Internxt ergreift angemessene Maßnahmen, um Informationen über Sie vor Verlust, Diebstahl, Missbrauch und unbefugtem Zugriff, Offenlegung, Veränderung und Zerstörung zu schützen. Darüber hinaus ergreift Internxt geeignete technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten und, sofern zutreffend, von PHI gemäß Artikel 32 der DSGVO und der HIPAA-Sicherheitsregel (45 CFR §164.308, §164.310, §164.312). Diese Sicherheitsvorkehrungen umfassen administrative, physische und technische Maßnahmen zur Gewährleistung von Vertraulichkeit, Integrität und Verfügbarkeit. Internxt wird den Kunden unverzüglich und spätestens 72 Stunden nach der DSGVO oder 60 Kalendertage nach der HIPAA nach Kenntnis einer Datenschutzverletzung oder eines Sicherheitsvorfalls mit PHI benachrichtigen. Diese Benachrichtigung umfasst die Art der Verletzung, die Kategorien und die ungefähre Anzahl der betroffenen Personen, die ergriffenen Abhilfemaßnahmen und Maßnahmen zur Minderung möglicher nachteiliger Auswirkungen.",
+    "title31": "Übermittlung von Informationen an Regierungsbehörden",
+    "subtitle31": "Internxt hat seinen Sitz in Spanien, und die von uns gesammelten Informationen unterliegen spanischem Recht. Durch den Zugriff auf oder die Nutzung unserer Dienste oder die anderweitige Übermittlung von Informationen an uns erklären Sie sich mit der Verarbeitung und Übermittlung von Informationen nach Spanien und in andere Länder einverstanden, in denen Sie möglicherweise nicht dieselben Rechte haben wie unter Ihrem lokalen Recht. Wo dies der Fall ist, werden wir angemessene Maßnahmen zum Schutz von Informationen über Sie gemäß dieser Datenschutzrichtlinie ergreifen. Da Internxt Client-seitige Ende-zu-Ende-Verschlüsselung verwendet, kann es den Inhalt, den ein Benutzer in seinem Drive-Konto hat, nicht kennen.",
+    "title32": "Cookie-Richtlinie",
+    "cookies_data_part1": "Bei INTERNXT verwenden wir Cookies und/oder ähnliche Technologien, die beim Surfen Informationen speichern und abrufen. Im Allgemeinen können diese Technologien sehr unterschiedliche Zwecke erfüllen, wie z.B. die Erkennung als Benutzer, die Gewinnung von Informationen über Ihre Surfgewohnheiten oder die Personalisierung der Darstellung von Inhalten.",
+    "cookies_data_part2": "Die spezifischen Verwendungen, die wir von diesen Technologien machen, werden unten beschrieben. Wir möchten Sie klar und präzise über die von uns verwendeten Cookies informieren und im Folgenden beschreiben, was ein Cookie ist, wofür es verwendet wird, welche Arten von Cookies wir verwenden, welchen Zweck sie haben und wie Sie sie bei Bedarf konfigurieren oder deaktivieren können.",
+    "cookies_subtitle2": "Was ist ein Cookie und wofür wird es verwendet?",
+    "cookies_data_part3": "Ein Cookie ist eine kleine Datei, die auf dem Computer, Tablet, Smartphone oder einem anderen Gerät des Benutzers mit Informationen über das Surfen gespeichert wird. Die Gesamtheit der Cookies aller unserer Nutzer hilft uns, die Qualität unserer Website zu verbessern, indem wir kontrollieren können, welche Seiten nützlich sind, welche nicht und welche verbesserungswürdig sind.",
+    "cookies_data_part5": "Cookies sind für das Funktionieren des Internets unerlässlich und bieten unzählige Vorteile bei der Bereitstellung interaktiver Dienste, indem sie Ihre Navigation und die Benutzerfreundlichkeit unserer Website erleichtern. Unter keinen Umständen können Cookies Ihr Gerät beschädigen. Im Gegenteil, ihre Aktivierung hilft uns, Fehler zu identifizieren und zu beheben.",
+    "cookies_subtitle3": "Welche Arten von Cookies verwenden wir?",
+    "cookies_subsubtitle3": "Nach der verantwortlichen Stelle",
+    "cookies_data_part8": "Eigene Cookies",
+    "cookies_data_part8_2": "Dies sind solche, die von unseren eigenen Geräten oder Domains an Ihr Gerät gesendet werden und von denen aus wir den von Ihnen angeforderten Dienst bereitstellen.",
+    "cookies_data_part9": "Cookies Dritter",
+    "cookies_data_part9_2": "Dies sind solche, die von einem Gerät oder einer Domain an Ihr Gerät gesendet werden, die nicht von uns verwaltet wird, sondern von einem anderen kooperierenden Unternehmen. Wie die von sozialen Netzwerken oder externen Inhalten wie Google Maps verwendeten.",
+    "cookies_sub2subtitle3": "Nach der Dauer ihrer Aktivität",
+    "cookies_data_part11": "Sitzungs-Cookies",
+    "cookies_data_part11_2": "Dies sind temporäre Cookies, die in der Cookie-Datei Ihres Browsers verbleiben, bis Sie die Website verlassen, so dass keine auf Ihrer Festplatte aufgezeichnet werden. Die durch diese Cookies gewonnenen Informationen werden verwendet, um Web-Traffic-Muster zu analysieren. Langfristig ermöglicht uns dies, ein besseres Erlebnis zu bieten, um Inhalte zu verbessern und deren Nutzung zu erleichtern.",
+    "cookies_data_part12": "Persistente Cookies",
+    "cookies_data_part12_2": "Diese werden auf der Festplatte gespeichert und unsere Website liest sie jedes Mal, wenn Sie einen neuen Besuch machen. Eine persistente Website hat ein bestimmtes Ablaufdatum. Das Cookie funktioniert nach diesem Datum nicht mehr.",
+    "cookies_sub3subtitle3": "Nach ihrem Zweck",
+    "cookies_data_part14": "Technische Cookies",
+    "cookies_data_part14_2": "Diese sind für die Navigation und das ordnungsgemäße Funktionieren unserer Website notwendig. Sie ermöglichen es beispielsweise, den Datenverkehr und die Datenkommunikation zu kontrollieren, auf eingeschränkte Bereiche zuzugreifen, den Kaufprozess einer Bestellung durchzuführen, Sicherheitselemente zu verwenden, Inhalte zu speichern, um Videos auszustrahlen oder Inhalte über soziale Netzwerke zu teilen.",
+    "cookies_data_part15": "Analyse-Cookies",
+    "cookies_data_part15_2": "Dies sind solche, die es uns ermöglichen, die Anzahl der Nutzer zu quantifizieren und so die Messung und statistische Analyse der Nutzung der angebotenen Dienste durchzuführen. Dazu wird Ihr Surfen auf unserer Website analysiert, um das Angebot an Produkten und Dienstleistungen zu verbessern.",
+    "cookies_data_part16": "Präferenz- oder Personalisierungs-Cookies",
+    "cookies_data_part16_2": "Dies sind solche, die es ermöglichen, Informationen zu speichern, damit der Benutzer mit bestimmten Merkmalen auf den Dienst zugreift, die seine Erfahrung von der anderer Nutzer unterscheiden können, wie z.B. die Sprache, die Anzahl der anzuzeigenden Ergebnisse bei einer Suche, das Erscheinungsbild oder der Inhalt des Dienstes je nach Browsertyp oder der Region, von der aus auf den Dienst zugegriffen wird, etc.",
+    "cookies_data_part17": "Verhaltensbezogene Werbe-Cookies",
+    "cookies_data_part17_2": "Dies sind solche, die Informationen über das Nutzerverhalten speichern, die durch die kontinuierliche Beobachtung ihrer Surfgewohnheiten gewonnen werden, was die Entwicklung eines spezifischen Profils ermöglicht, um darauf basierende Werbung anzuzeigen.",
+    "cookies_subtitle4": "Zweck der einzelnen verwendeten Cookies:",
+    "cookies_data_part19": "Im Folgenden beschreiben wir die auf unserer Website verwendeten Cookies und ihren Zweck.",
+    "cookies_table_row1_column1": "Cookie",
+    "cookies_table_row1_column2": "Zweck oder zugehöriger Dienst",
+    "cookies_table_row1_column3": "Dauer",
+    "cookies_table_row1_column4": "Dritte",
+    "cookies_table_row2_column1": "_ga",
+    "cookies_table_row2_column2": "Enthält eine eindeutige Kennung, die von Google Analytics verwendet wird, um festzustellen, dass zwei verschiedene Besuche über alle Browsing-Sitzungen hinweg demselben Nutzer gehören.",
+    "cookies_table_row2_column3": "2 Jahre",
+    "cookies_table_row2_column4": "Google Analytics",
+    "cookies_table_row3_column1": "_ga_*",
+    "cookies_table_row3_column2": "Wird von Google Analytics verwendet, um den Sitzungsstatus aufrechtzuerhalten und Daten über das Nutzerverhalten zu sammeln.",
+    "cookies_table_row3_column3": "2 Jahre",
+    "cookies_table_row3_column4": "Google Analytics",
+    "cookies_table_row4_column1": "__kla_id",
+    "cookies_table_row4_column2": "Wird von Klaviyo verwendet, um das Nutzerverhalten zu verfolgen und E-Mail-Kommunikationen zu personalisieren.",
+    "cookies_table_row4_column3": "2 Jahre",
+    "cookies_table_row4_column4": "Klaviyo",
+    "cookies_table_row5_column1": "_gcl_au",
+    "cookies_table_row5_column2": "Wird von Google AdSense verwendet, um mit der Werbeeffizienz auf Websites zu experimentieren, die deren Dienste nutzen.",
+    "cookies_table_row5_column3": "3 Monate",
+    "cookies_table_row5_column4": "Google Ads",
+    "cookies_table_row6_column1": "_fbp",
+    "cookies_table_row6_column2": "Wird von Facebook verwendet, um Werbung auszuliefern, wenn sie auf Facebook oder einer von Facebook betriebenen digitalen Plattform sind, nachdem sie die Website besucht haben.",
+    "cookies_table_row6_column3": "3 Monate",
+    "cookies_table_row6_column4": "Facebook Pixel",
+    "cookies_table_row8_column1": "cookieConsent",
+    "cookies_table_row8_column2": "Wird verwendet, um die Einwilligung des Nutzers bezüglich der Verwendung von Cookies auf der Website zu speichern.",
+    "cookies_table_row8_column3": "1 Jahr",
+    "cookies_table_row8_column4": "Internxt (Eigen)",
+    "cookies_table_row9_column1": "cookieConsentPrefs",
+    "cookies_table_row9_column2": "Speichert die spezifischen Präferenzen des Nutzers, welche Cookie-Kategorien er akzeptiert oder abgelehnt hat.",
+    "cookies_table_row9_column3": "1 Jahr",
+    "cookies_table_row9_column4": "Internxt (Eigen)",
+    "cookies_subtitle5": "Wie können Sie Ihre Cookies konfigurieren oder deaktivieren?",
+    "cookies_data_part20": "Sie können die auf Ihrem Gerät installierten Cookies zulassen, blockieren oder löschen, indem Sie die Optionen Ihres Internetbrowsers konfigurieren. Wenn Sie die Installation von Cookies in Ihrem Browser nicht zulassen, können Sie möglicherweise nicht auf einige Dienste zugreifen, und Ihre Erfahrung auf unserer Website könnte weniger zufriedenstellend sein. In den folgenden Links finden Sie alle Informationen zur Konfiguration oder Deaktivierung Ihrer Cookies in jedem Browser:",
+    "cookies_data_part21": "Google Chrome",
+    "cookies_data_part22": "Mozilla Firefox",
+    "cookies_subtitle41": "Internet Explorer",
+    "cookies_data_part23": "Safari",
+    "cookies_data_part24": "Safari für IOS (iPhone und iPad)",
+    "cookies_data_part25": "Chrome für Android",
+    "cookies_data_part26": "Oder Sie können auch den Button am Anfang dieser Cookie-Richtlinie verwenden, um den Konfigurator zu öffnen und die von Ihnen akzeptierten Cookies abzulehnen."
 }
