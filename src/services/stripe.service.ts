@@ -17,7 +17,7 @@ export enum Interval {
   Lifetime = 'lifetime',
 }
 
-export enum Products {
+enum Products {
   'free' = 'free',
   '20GB' = '20GB',
   '200GB' = '200GB',

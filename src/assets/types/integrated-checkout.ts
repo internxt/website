@@ -13,13 +13,13 @@ export interface IntegratedCheckoutText {
   invalidCoupon: string;
 }
 
-export interface AddressBilling {
+interface AddressBilling {
   optionalData: string;
   companyName: string;
   companyVatId: string;
 }
 
-export interface AuthComponent {
+interface AuthComponent {
   signup: Login;
   login: Login;
   title: Title;
@@ -27,16 +27,16 @@ export interface AuthComponent {
   privacyGuarantee: string;
 }
 
-export interface Login {
+interface Login {
   emailAddress: string;
   password: string;
 }
 
-export interface Title {
+interface Title {
   signUp: string;
 }
 
-export interface ProductCard {
+interface ProductCard {
   title: string;
   selectedPlan: string;
   plan: Billed;
@@ -49,19 +49,19 @@ export interface ProductCard {
   withAnnualBilling: string;
 }
 
-export interface AddCoupon {
+interface AddCoupon {
   buttonTitle: string;
   inputText: string;
   applyCodeButtonTitle: string;
 }
 
-export interface Billed {
+interface Billed {
   month: string;
   year: string;
   lifetime: string;
 }
 
-export interface PlanDetails {
+interface PlanDetails {
   title: string;
   features: string[];
 }

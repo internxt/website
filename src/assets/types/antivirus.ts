@@ -10,7 +10,7 @@ export interface AntivirusText {
   InfoSectionV2: InfoSectionV2;
 }
 
-export interface ComponentsInColumn {
+interface ComponentsInColumn {
   title: string;
   titleLine2: string;
   description: string;
@@ -18,45 +18,45 @@ export interface ComponentsInColumn {
   cards: ComponentsInColumnCards;
 }
 
-export interface ComponentsInColumnCards {
+interface ComponentsInColumnCards {
   element1: Element4Class;
   element2: Element4Class;
   element3: Element4Class;
   element4: Element4Class;
 }
 
-export interface Element4Class {
+interface Element4Class {
   title: string;
   description: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeatureSectionV2 {
+interface FeatureSectionV2 {
   title: string;
   description: string;
   cards: FeatureSectionV2Cards;
 }
 
-export interface FeatureSectionV2Cards {
+interface FeatureSectionV2Cards {
   element1: PurpleElement;
   element2: PurpleElement;
   element3: PurpleElement;
 }
 
-export interface PurpleElement {
+interface PurpleElement {
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   blueText: string;
   description: string;
@@ -66,14 +66,14 @@ export interface HeroSection {
   priceAnnual?: string;
 }
 
-export interface DownloadLinks {
+interface DownloadLinks {
   downloadTitle: string;
   downloadForMac: string;
   downloadForWindows: string;
   downloadForLinux: string;
 }
 
-export interface InfoSection {
+interface InfoSection {
   Percentage: string;
   PercentageText: string;
   MalwareRegisteredDaily: string;
@@ -82,13 +82,13 @@ export interface InfoSection {
   MalwareAttacksText: string;
 }
 
-export interface InfoSectionV2 {
+interface InfoSectionV2 {
   AntivirusProtection: string;
   RemoveMalware: string;
   DeviceProtection: string;
 }
 
-export interface Cta {
+interface Cta {
   title: string;
   subtitle: string;
   cta: string;

@@ -139,7 +139,7 @@ export const saveCelloFirstVisit = (): void => {
   }
 };
 
-export const getCelloFirstVisitDate = (): string | null => {
+const getCelloFirstVisitDate = (): string | null => {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('cello_first_visit');
 };

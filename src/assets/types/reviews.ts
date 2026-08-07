@@ -9,17 +9,17 @@ export interface ReviewsTextPage {
   tableSection: TableSection;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface ReviewFromIndustrySection {
+interface ReviewFromIndustrySection {
   title: string;
   description: string;
   underStars: string;
@@ -28,28 +28,28 @@ export interface ReviewFromIndustrySection {
   readMore: string;
 }
 
-export interface TechReviews {
+interface TechReviews {
   titles: string[];
   description: string[];
   authors: string[];
 }
 
-export interface ReviewFromIndustrySectionReviewers {
+interface ReviewFromIndustrySectionReviewers {
   reviewers: ReviewersReviewers;
   TruspilotReviews: TruspilotReviews;
 }
 
-export interface TruspilotReviews {
+interface TruspilotReviews {
   reviews: string[];
   authors: string[];
 }
 
-export interface ReviewersReviewers {
+interface ReviewersReviewers {
   Trustpilot: string;
   Techexperts: string;
 }
 
-export interface ReviewSection {
+interface ReviewSection {
   forbes: string;
   deloitte: string;
   techradar: string;
@@ -57,36 +57,36 @@ export interface ReviewSection {
   trustpilot: string;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle: string;
   features: string[];
   cta: string;
 }
 
-export interface SupportSection {
+interface SupportSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   card1: Card;
   card2: Card;
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string;
 }
 
-export interface VideoSection {
+interface VideoSection {
   company: string;
   description: string;
 }
