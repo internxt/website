@@ -152,10 +152,6 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
 
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part53}</p>
 
-            <h5 className=" text-2.5xl mb-6">{textContent.privacy_policy_process_personal_data_sub_subtitle7_9}</h5>
-
-            <p className="mb-6">{textContent.privacy_policy_process_personal_data_part53}</p>
-
             <h5 className=" text-2.5xl mb-6">{textContent.privacy_policy_process_personal_data_sub_subtitle7_10}</h5>
 
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part54}</p>
@@ -176,7 +172,6 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part60}</p>
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part61}</p>
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part62}</p>
-            <p className="mb-6">{textContent.privacy_policy_process_personal_data_part63}</p>
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part63}</p>
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part64}</p>
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part65}</p>
