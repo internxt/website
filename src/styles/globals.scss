@@ -10,6 +10,14 @@
     @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-full bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
   }
 
+  .input-primary {
+    @apply h-11 w-full rounded-md border border-gray-40 bg-transparent px-4 text-lg font-normal text-gray-80 placeholder-gray-30 outline-none ring-primary ring-opacity-10 focus:border-primary focus:ring-2 disabled:border-gray-10 disabled:text-gray-40 disabled:placeholder-gray-20;
+  }
+
+  .input-error {
+    @apply h-11 w-full rounded-md border border-gray-40 bg-transparent px-4 text-lg font-normal text-gray-80 placeholder-gray-30 outline-none ring-red ring-opacity-10 focus:border-red focus:ring-2 disabled:border-gray-10 disabled:text-gray-40 disabled:placeholder-gray-20;
+  }
+
   .markdown {
     a {
       @apply text-primary underline;

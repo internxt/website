@@ -1,5 +1,4 @@
 import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-form';
-import './TextInput.scss';
 import { IFormValues } from '../../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 
 interface InputProps {
