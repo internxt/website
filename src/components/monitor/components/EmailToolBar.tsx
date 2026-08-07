@@ -41,3 +41,5 @@ const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: Readonl
     </div>
   );
 };
+
+export default EmailToolbar;
