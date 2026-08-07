@@ -120,6 +120,9 @@ export const ALLOWED_PATHS = [
   'arxid',
   'switchandclick',
   'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -204,6 +207,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   arxid: 'en',
   switchandclick: 'en',
   nikias: 'en',
+  lukemiani: 'en',
+  macrumors: 'en',
+  saasmaster: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -301,6 +307,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'arxid',
   'switchandclick',
   'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
 ]);
 
 export const COUPON_CODES = {
@@ -421,6 +430,9 @@ export const COUPON_CODES = {
   arxid: PromoCodeName.arxid,
   switchandclick: PromoCodeName.switchandclick,
   nikias: PromoCodeName.nikias,
+  lukemiani: PromoCodeName.lukemiani,
+  macrumors: PromoCodeName.macrumors,
+  saasmaster: PromoCodeName.saasmaster,
 };
 
 interface OfferConfig {
