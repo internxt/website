@@ -24,7 +24,7 @@ interface AnnualProps {
 }
 
 const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLang }: AnnualProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const locale = lang as string;
 
   const {
@@ -32,7 +32,7 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
@@ -69,8 +69,7 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
   };
 
   return (
-    <>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+      <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
         <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
@@ -103,7 +102,6 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
-    </>
   );
 };
 
