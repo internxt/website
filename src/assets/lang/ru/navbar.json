@@ -1,16 +1,15 @@
 {
   "links": {
-    "products": "Продукты",
+    "suite": "комплект",
     "about": "О нас",
-    "ourValues": "Наши ценности",
-    "pricing": "Тарифы",
+    "ourValues": "Ценности",
     "login": "Войти",
     "getStarted": "Начать",
     "chooseStorage": "Xранилище",
     "checkout": "Оформить заказ сейчас!",
     "business": "Для бизнеса",
     "blackFriday": "Black Friday",
-    "solutions": "Решения"
+    "enterprise": "предприятий"
   },
   "ourValues": {
     "openSource": "открытого исходного кода",
@@ -19,18 +18,9 @@
     "certifications": "Сертификаты",
     "about": "О нас"
   },
-  "solutions": {
-    "secureCloudStorage": "Безопасное облачное хранилище",
-    "lifetimeCloudStorage": "Пожизненное облачное хранилище",
-    "privateCloudStorage": "Частное облачное хранилище",
-    "cloudStorageForPhotos": "Облачное хранилище для фотографий",
-    "cloudStorageForVideos": "Облачное хранилище для видео",
-    "cloudStorageForBackup": "Облачное хранилище для резервных копий",
-    "cloudNASBackup": "Облачное хранилище для NAS"
-  },
-  "products": {
+  "suite": {
+    "pricing": "Тарифы",
     "drive": "Internxt Drive",
-    "s3": "Облако для предприятий",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
@@ -42,6 +32,9 @@
     "ai": "Internxt AI",
     "certifications": "Сертификаты",
     "mail": "Internxt Mail"
+  },
+  "enterprise": {
+    "s3": "Облако для предприятий"
   },
   "Auth": {
     "SignUp": {

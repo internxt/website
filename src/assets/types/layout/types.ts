@@ -1,5 +1,5 @@
 import { DownloadApp, FooterSection, NewsletterSection } from './footer';
-import { Auth, Links, OurValues, Products, Solutions } from './navbar';
+import { Auth, Links, OurValues, Suite, Enterprise } from './navbar';
 
 export interface MetatagsDescription {
   id: string;
@@ -8,9 +8,9 @@ export interface MetatagsDescription {
 }
 
 export interface NavigationBarText {
-  solutions: Solutions;
+  enterprise: Enterprise;
   links: Links;
-  products: Products;
+  suite: Suite;
   ourValues: OurValues;
   Auth: Auth;
   MinimalNavbar: {
