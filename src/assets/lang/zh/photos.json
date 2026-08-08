@@ -1,145 +1,164 @@
 {
   "HeroSection": {
-    "eyebrow": "Internxt Photos",
-    "title": {
-      "line1": "你的风景如画的时刻、",
-      "line2": "牢牢锁定"
-    },
-    "subtitle": {
-      "line1": "在一个地方重温、分享和保护你最好的记忆。",
-      "line2": "Internxt Photos专注于隐私和安全、",
-      "line3": "你的照片只属于你自己。"
-    },
-    "availableSoon": "Available soon",
-    "DownloadLinks": {
-      "downloadTitle": "下载Internxt Drive",
-      "or": "或",
-      "downloadFor": "为<>下载",
-      "orDownloadFor": "或为<>下载",
-      "downloadOnThe": "在<>上下载",
-      "orDownloadOnThe": "或在<>上下载",
-      "getOn": "从<>上获取",
-      "orGetOn": "或从<>上获取",
-      "openDriveWeb": "打开 Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+    "label": "Internxt 相册",
+    "title": "安全加密的照片云存储",
+    "description": "在绝对隐私的环境中，安全地存储、同步、备份和访问您的照片。",
+    "cta": "获取 Internxt",
+    "garantee": "包含于 Ultimate 终极方案中"
+  },
+  "PhotoSection": {
+    "title": "Internxt 相册",
+    "description": [
+      "利用我们的安全照片云存储备份并同步您的珍贵回忆，采用后量子加密技术，专为实现完全隐私而打造。"
+    ]
+  },
+  "CoreFeatures": {
+    "title": "私密照片存储：随时随地访问您的回忆",
+    "description": "让您的照片库在所有设备间保持最新和同步。即使您的设备丢失或更换，您的照片库依然安全且随时可访问。",
+    "accordionCards": {
+      "titles": [
+        "备份您的所有设备",
+        "零追踪、零广告、无 AI 介入",
+        "自动同步与备份"
+      ],
+      "descriptions": [
+        "自动备份您所有设备上的照片，并可随时通过任何设备安全地访问它们。",
+        "Internxt 相册提供完全无广告的体验，没有数据追踪，也不会使用您的照片和数据训练机器学习 AI。",
+        "您的整个照片库都会实时持续更新，在一个设备上所做的更改会立即反映在所有设备上。自动备份让您无需担心数据丢失。"
+      ]
     }
   },
-  "FeaturesSection": {
-    "section1": {
-      "title": {
-        "line1": "一个可以在所有设备上同步的画廊 在你所有的设备上同步"
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "从你的",
-        "line2": "手机和访问",
-        "line3": "随时随地"
-      },
-      "subtitle": {
-        "line1": "你的画廊将永远是最新的",
-        "line2": "在你的所有设备上都是最新的。这意味着",
-        "line3": "即使你的设备丢失、被盗或损坏、",
-        "line4": "你仍然可以访问同步的照片。"
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "分享你的照片",
-        "line2": "与你的朋友",
-        "line3": "和家人。"
-      },
-      "subtitle": {
-        "line1": "生成一个分享链接，以便你可以",
-        "line2": "控制你的照片被访问和下载的次数",
-        "line3": "被访问和下载的次数。"
-      }
-    },
-    "section4": {
-      "title": {
-        "line1": "同步你的照片",
-        "line2": "在完全保密的情况下"
-      }
-    },
-    "section5": {
-      "title": {
-        "line1": "您的所有照片，",
-        "line2": "安全且私密"
-      },
-      "subtitle": {
-        "line1": "隐私和安全是我们所做的一切的核心，我们不以数据或广告为基础开展业务--我们是基于",
-        "line2": "信任。我们尊重你的权利，并围绕它们建立伟大的工具，而不是反对它们。"
-      },
-      "cta": "我们对隐私的承诺",
-      "card1": {
-        "title": "军用级加密",
-        "subtitle": "我们非常重视您的隐私，这就是为什么您的文件是端到端加密的，因此只有您可以访问您的文件。"
-      },
-      "card2": {
-        "title": "零知识技术",
-        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
-      },
-      "card3": {
-        "title": "为隐私而生",
-        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
-      },
-      "card4": {
-        "title": "开源和透明化",
-        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
-      }
-    },
-    "DownloadLinks": {
-      "downloadTitle": "下载Internxt Drive",
-      "or": "或",
-      "downloadFor": "为<>下载",
-      "orDownloadFor": "或为<>下载",
-      "downloadOnThe": "在<>上下载",
-      "orDownloadOnThe": "或在<>上下载",
-      "getOn": "从<>上获取",
-      "orGetOn": "或从<>上获取",
-      "openDriveWeb": "打开 Drive Web",
-      "iPhone": "App Store",
-      "iPad": "App Store",
-      "Android": "Play Store",
-      "Windows": "Windows",
-      "Linux": "Linux",
-      "UNIX": "Linux",
-      "MacOS": "Mac"
+  "PhotoFeatureSection": {
+    "title": "专注于隐私保护的安全照片云存储",
+    "description": "Internxt 相册采用后量子加密与零知识加密技术，保障您的文件和数据在传输和存储时均处于加密状态。",
+    "scrollableSection": {
+      "titles": [
+        "完全加密的金库",
+        "隐私高于利润",
+        "合规认证",
+        "开源且经过审计",
+        "为自由而生",
+        "无后门程序"
+      ],
+      "descriptions": [
+        "Internxt 相册采用 Kyber 512 后量子加密及 AES-256 加密，结合端到端安全性、欧洲标准隐私和先进技术，确保数据受到高度保护。",
+        "与 Google Photos 或其他科技巨头不同，Internxt 无法查看或删除您的照片。所有内容均在您的设备上直接加密，包括我们在内的任何人都无法访问您的照片或数据。",
+        "Internxt 符合 GDPR、HIPAA、ISO 27001 和 SOC 2 标准。无论您需要用于医疗、金融还是个人用途的云存储，Internxt 都能确保数据符合高标准。",
+        "我们的所有代码均已在 GitHub 上公开，并经过外部网络安全专家审核，确保为您的数据提供安全的平台。",
+        "我们赋予您对个人隐私的完全所有权和控制权。借助我们专注于隐私的产品，掌控权始终在您手中，而非科技巨头。",
+        "我们无法访问您的数据或文件，也不会与任何人共享。我们的应用程序完全开源并经过审计，切实保障您的隐私。"
+      ]
     }
   },
-  "FeatureSection": {
-    "title": "使用 Internxt Photos 保护您的文件",
-    "description": "使用 Internxt，您绝对是唯一可以访问您的文件的人。 以完全隐私的方式存储、共享和备份您的数据。",
-    "cta": "开始吧"
+  "CtaSectionV2": {
+    "title": "安全的照片云存储",
+    "description": "使用 Internxt 相册，为您的回忆提供出色的保护和安全屏障",
+    "cta": "获取 Internxt"
   },
-  "FaqSection": {
-    "title": "问题？我们有答案",
-    "faq": [
+  "DesignedSection": {
+    "title": "安全照片云存储的核心功能",
+    "scrollableSection": {
+      "images": ["partial1", "partial2", "partial3", "partial4"],
+      "titles": ["完全私密的生态系统", "同步与备份", "端到端加密", "加密备份"],
+      "descriptions": [
+        "Internxt 相册包含在我们的 Ultimate 套餐中，提供保护隐私所需的一切，包括加密云存储、VPN、邮箱、杀毒、会议等。",
+        "照片会自动同步并备份至云端，确保您的回忆安全、可访问且受到保护。",
+        "所有照片均使用后量子及零知识技术加密。除了您或您选择共享的人之外，没有人能查看其内容。",
+        "通过自动加密备份提供额外保护，防止勒索软件侵袭和意外丢失，让您安枕无忧。"
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "欧洲制造",
+    "description": "您的数据受到严格的欧洲合规法律以及屡获殊荣的加密技术的双重保护。",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["欧洲数据中心", "冗余备份", "可持续发展承诺"],
+      "descriptions": [
+        "Internxt 总部位于西班牙巴伦西亚，我们的数据中心遍布欧洲及全球其他地区，为您提供安全、高速和合规的服务。",
+        "您的文件通过冗余系统、环境控制和 24/7 全天候现场安全监控受到保护。无论发生什么，您的文件都将始终安全且可访问。",
+        "Internxt 以身作则，通过采用节能举措，致力于提供更环保、可持续的云存储解决方案。"
+      ]
+    }
+  },
+  "TableSection": {
+    "title": "Internxt 方案与套餐",
+    "valentinesTitle": "安全的爱 - ",
+    "hotLabel": "享 {{discount}}% 优惠",
+    "planTitles": {
+      "header": "选择您的方案",
+      "lifetimeHeader": "选择您的终身方案",
+      "individuals": "年度方案",
+      "homePage": "选择适合您的方案",
+      "lifetime": "终身方案",
+      "business": "企业方案",
+      "lifetimeCampaign": {
+        "blueText": "5折优惠",
+        "normalText": "适用于我们所有独家终身方案"
+      }
+    },
+    "lifetimeDescription": "一次付费，终身享有隐私与安全保障",
+    "planDescription": "所有 Internxt 方案均可完整体验我们屡获殊荣的隐私产品套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "businessDescription": "我们目前正在开发全新的 Internxt 商业方案，旨在专门捍卫您的企业安全、保护员工并保障盈利。",
+    "businessDescription2": "借助 Internxt 加密云存储方案，确保您公司的数据安全。",
+    "billingFrequency": {
+      "monthly": "按月",
+      "annually": "按年",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获取 1 GB 加密云存储空间",
+      "cta": "选择方案"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名创建账户",
+      "premiumSupport": "优质客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "关于 Internxt 相册有疑问？我们为您解答",
+    "items": [
       {
-        "question": "我如何在Internxt中同步我的文件和照片？",
+        "question": "什么是 Internxt 相册？",
         "answer": [
-          "要从你的手机库中同步和加密你的照片到Internxt云，只需：",
-          "1.打开Internxt手机应用程序",
-          "2.选择'照片'，你的照片将开始自动同步"
+          "Internxt 相册是一款端到端加密的照片云存储应用程序，允许您在完全隐私的状态下存储、同步和自动备份照片及相册。"
         ]
       },
       {
-        "question": "我如何从我的手机上传文件？",
+        "question": "哪些方案包含 Internxt 相册？",
         "answer": [
-          "打开Internxt手机应用程序，并点击屏幕底部中央的蓝色加号（+）图标。选择 \"上传文件\" 或 \"从相机卷上传\" 来上传照片。"
+          "所有 Ultimate 年度及终身方案均包含 Internxt 相册。此外，您还将获得 5TB 的云存储空间以及完整的隐私套件使用权。"
+        ]
+      },
+      {
+        "question": "为什么我应该使用加密照片存储？",
+        "answer": [
+          "使用加密存储非常重要，因为大多数主流相册服务并非完全私密。大型科技公司在某些情况下（如审核、AI 处理或法律要求）可以查看您的私人照片和相册。"
+        ]
+      },
+      {
+        "question": "Internxt 相册可以替代 Google Photos 吗？",
+        "answer": [
+          "是的，Internxt 相册是 Google Photos 的私密且安全的替代品，它通过零知识和后量子加密来保护您的照片，除您之外没人能访问您的文件。",
+          "使用 Internxt 相册，您还可以访问 Internxt 的全线产品，包括 Drive、VPN、Meet、Mail 等。"
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "无风险试用 Internxt",
-    "description": "使用 Internxt 的安全、私密和加密的云存储来保护真正重要的东西。",
-    "cta": "立即选择一个计划"
   }
 }

@@ -193,16 +193,6 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/photos',
-        destination: '/drive',
-        permanent: false,
-      },
-      {
-        source: '/:lang/photos',
-        destination: '/:lang/drive',
-        permanent: false,
-      },
-      {
         source: '/coingate',
         destination: '/redeem/coingate',
         permanent: false,
