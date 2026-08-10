@@ -45,11 +45,6 @@
     "description": "Rejoignez le programme de marketing d'affiliation d'Internxt ! Comment commencer plus les détails du programme, avantages et privilèges."
   },
   {
-    "id": "photos",
-    "title": "Internxt – Photos",
-    "description": "Alternative cryptée, privée, gratuite et sécurisée à zéro connaissance à Google Photos. Stockez gratuitement vos photos sur le cloud en toute sécurité."
-  },
-  {
     "id": "open-source",
     "title": "Internxt – Open Source and Secure Cloud Storage",
     "description": "Learn the benefits of open source (OSS) software and why Internxt uses it to provide cloud storage that secures and protects your data."
@@ -578,5 +573,10 @@
     "id": "mail",
     "title": "Internxt Mail - Le meilleur e-mail chiffré pour la confidentialité.",
     "description": "Internxt Mail est une solution de messagerie chiffrée qui protège votre boîte de réception. Grâce au chiffrement post-quantique, Internxt est le service de messagerie le plus sécurisé pour la confidentialité."
+  },
+  {
+    "id": "photos",
+    "title": "Internxt Photos – Stockage cloud sécurisé pour vos photos",
+    "description": "Internxt Photos est une application de stockage de photos privée et sécurisée pour les sauvegardes automatiques et la synchronisation. Connaissance nulle (Zero-Knowledge), open source et privée."
   }
 ]

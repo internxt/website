@@ -74,6 +74,7 @@ export interface Products {
   family: string;
   pricing: string;
   mail: string;
+  photos: string;
 }
 
 export interface Resources {
