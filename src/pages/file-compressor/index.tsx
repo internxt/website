@@ -11,7 +11,6 @@ import CtaSection from '@/components/shared/CtaSection';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-
 const FileConverter = ({
   metatagsDescriptions,
   navbarLang,
@@ -25,36 +24,44 @@ const FileConverter = ({
 
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('File compressor', 'file-compressor')}
       </Script>
-<Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <FeaturesSection
-        textContent={textContent.FeaturesSection}
-        bannerText={bannerLang.SignUpFileCompressorBanner}
-        lang={lang}
-      />
+        <FeaturesSection
+          textContent={textContent.FeaturesSection}
+          bannerText={bannerLang.SignUpFileCompressorBanner}
+          lang={lang}
+        />
 
-      <CtaSection
-        textContent={textContent.CtaSection}
-        url={'https://internxt.com/drive'}
-        customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
-      />
+        <CtaSection
+          textContent={textContent.CtaSection}
+          url={'https://internxt.com/drive'}
+          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
+        />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <QASection textContent={textContent.QASection} />
+        <QASection textContent={textContent.QASection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} />
-    </Layout>
-  </>);
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'File compressor', url: '/file-compressor' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

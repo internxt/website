@@ -3,10 +3,9 @@ import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection'
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
@@ -17,7 +16,6 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
-
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -82,7 +80,11 @@ const CloudStorageBackupSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' },
+        ])}
       </Script>
       <Layout
         title={metatags[0].title}
@@ -135,7 +137,9 @@ const CloudStorageBackupSolutions = ({
         />
         {textContent.NewBlock1 && (
           <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">{textContent.NewBlock1.title}</h2>
+            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+              {textContent.NewBlock1.title}
+            </h2>
             <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
               {textContent.NewBlock1.intro}
             </p>
@@ -152,7 +156,9 @@ const CloudStorageBackupSolutions = ({
 
         {textContent.NewBlock2 && (
           <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">{textContent.NewBlock2.title}</h2>
+            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+              {textContent.NewBlock2.title}
+            </h2>
             <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
               {textContent.NewBlock2.intro}
             </p>
@@ -171,13 +177,21 @@ const CloudStorageBackupSolutions = ({
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -186,8 +200,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

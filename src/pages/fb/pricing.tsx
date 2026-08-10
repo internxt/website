@@ -18,7 +18,7 @@ import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -192,15 +192,13 @@ const Pricing = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

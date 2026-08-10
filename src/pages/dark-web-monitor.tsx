@@ -1,5 +1,4 @@
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
 import CtaSection from '@/components/shared/CtaSection';
@@ -18,7 +17,6 @@ import { ToolsSectionText } from '@/assets/types/components/toolsSection';
 import { BannersText } from '@/assets/types/components/banners';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-
 
 interface MonitorProps {
   lang: GetServerSidePropsContext['locale'];
@@ -64,56 +62,64 @@ const Monitor = ({
   ];
   return (
     <>
-
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Monitor the dark web', 'dark-web-monitor')}
       </Script>
-<Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
-      <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
+        <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <InfoSection textContent={langJson.InfoSection} />
+        <InfoSection textContent={langJson.InfoSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} lang={locale} />
+        <FeatureSection textContent={langJson.FeatureSection} lang={locale} />
 
-      <CtaSection
-        textContent={langJson.CtaSection}
-        customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
-        url="https://internxt.com/drive"
-      />
+        <CtaSection
+          textContent={langJson.CtaSection}
+          customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
+          url="https://internxt.com/drive"
+        />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
-              <p className="font-regular text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex w-full flex-col items-center gap-9">
+              <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+                <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
+                <p className="font-regular text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
+              </div>
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center space-y-12">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
-            <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={locale} />
-          </div>
-        }
-        backgroundColor="bg-gray-1"
-      />
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center space-y-12">
+              <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
+              <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={locale} />
+            </div>
+          }
+          backgroundColor="bg-gray-1"
+        />
 
-      <CtaSection
-        textContent={langJson.CtaSection2}
-        customDescription={<p className="font-regular text-xl">{langJson.CtaSection2.description}</p>}
-        url={''}
-      />
+        <CtaSection
+          textContent={langJson.CtaSection2}
+          customDescription={<p className="font-regular text-xl">{langJson.CtaSection2.description}</p>}
+          url={''}
+        />
 
-      <ToolsSection textContent={toolsContent} lang={locale} />
+        <ToolsSection textContent={toolsContent} lang={locale} />
 
-      <Footer textContent={footerLang} lang={locale} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Monitor the dark web', url: '/dark-web-monitor' }]} />
-    </Layout>
-  </>);
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Monitor the dark web', url: '/dark-web-monitor' },
+          ]}
+        />
+      </Layout>
+    </>
+  );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -123,7 +129,6 @@ export async function getServerSideProps(ctx) {
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

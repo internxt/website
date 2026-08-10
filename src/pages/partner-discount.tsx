@@ -8,7 +8,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
-import { GetServerSidePropsContext } from 'next';
+import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
@@ -48,7 +48,7 @@ const PartnerDiscount = ({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <span className="inline-block bg-gray-200 h-4 w-16 animate-pulse rounded"></span>;
+      return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -160,7 +160,7 @@ const PartnerDiscount = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

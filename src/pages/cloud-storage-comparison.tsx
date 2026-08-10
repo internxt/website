@@ -6,7 +6,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -15,7 +14,6 @@ import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
-
 
 const URL_REDIRECT = 'https://internxt.com/specialoffer';
 
@@ -78,21 +76,27 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
-        <Footer textContent={footerLang} lang={lang} darkMode={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          darkMode={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/comparison.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

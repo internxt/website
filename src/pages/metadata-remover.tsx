@@ -105,7 +105,11 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Metadata Remover', url: '/metadata-remover' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
@@ -140,12 +144,21 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
 
       <FAQSection textContent={langJson.FaqSection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }]} />
+      <Footer
+        textContent={footerLang}
+        lang={lang}
+        hideNewsletter={false}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Metadata Remover', url: '/metadata-remover' },
+        ]}
+      />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/metadata-remover.json`);
