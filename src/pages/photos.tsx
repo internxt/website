@@ -103,7 +103,7 @@ const Photo = ({
                 hideFreeCard
             />
 
-            <CoreFeaturesSection textContent={textContent.CoreFeatures}/>
+            <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider/>
 
             <HorizontalScrollableSection 
                 textContent={textContent.PhotoFeatureSection}

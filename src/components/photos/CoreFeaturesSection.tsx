@@ -5,9 +5,10 @@ import { getImage } from '@/lib/getImage';
 
 interface CoreFeaturesSectionProps {
   textContent: PhotoText['CoreFeatures'];
+  needsDivider?: boolean;
 }
 
-const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Element => {
+const CoreFeaturesSection = ({ textContent, needsDivider }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -37,7 +38,10 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section className="w-full bg-neutral-17 py-10 lg:py-20">
+    <section className="relative w-full bg-neutral-17 py-10 lg:py-20">
+      {needsDivider && (
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      )}
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-5 lg:gap-10 lg:px-20">
         <h2 className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 lg:text-5xl lg:pr-10">{textContent.title}</h2>
         <p className="max-w-[900px] leading-tight text-base font-normal text-gray-55 lg:text-lg">{textContent.description}</p>
