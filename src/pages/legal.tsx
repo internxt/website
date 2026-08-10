@@ -1,7 +1,6 @@
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import TermsAndConditionsOverview from '@/components/legal/TermsAndConditionsOverview';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
@@ -12,26 +11,37 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
   return (
     <Layout segmentName="Legal" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Legal Terms and Conditions', url: '/legal' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Legal Terms and Conditions', url: '/legal' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <TermsAndConditionsOverview textContent={textContent} lang={lang} />
 
-      <Footer lang={lang} textContent={footerLang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Legal Terms and Conditions', url: '/legal' }]} />
+      <Footer
+        lang={lang}
+        textContent={footerLang}
+        hideNewsletter={false}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Legal Terms and Conditions', url: '/legal' },
+        ]}
+      />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/terms-and-conditions.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

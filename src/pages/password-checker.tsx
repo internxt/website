@@ -13,7 +13,6 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
 
-
 const PasswordChecker = ({
   metatagsDescriptions,
   toolsContent,
@@ -83,13 +82,21 @@ const PasswordChecker = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Password security checker', url: '/password-checker' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

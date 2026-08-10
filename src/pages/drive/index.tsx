@@ -194,7 +194,7 @@ const Drive = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
@@ -203,8 +203,6 @@ export async function getServerSideProps(ctx) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

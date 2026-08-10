@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
@@ -7,7 +7,6 @@ import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { CouponPageText } from '@/assets/types/couponsPage';
 import HeroSection from '@/components/coupons/HeroSection';
@@ -80,7 +79,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Coupons', url: '/coupons' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Coupons', url: '/coupons' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
@@ -154,20 +157,26 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Coupons', url: '/coupons' }]} />
+      <Footer
+        textContent={footerLang}
+        lang={locale}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Coupons', url: '/coupons' },
+        ]}
+      />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/coupons.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

@@ -93,7 +93,6 @@ function CombinedSpecialOffer({
     couponCodeForLifetime: couponCode,
   });
 
-
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
   usePathRedirect(selectedPathname);

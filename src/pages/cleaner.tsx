@@ -1,11 +1,10 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetServerSidePropsContext, GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import cookies from '@/lib/cookies';
 import HeroSection from '@/components/cleaner/HeroSection';
 import { CleanerText } from '@/assets/types/cleaner';
 import HowItWorksSection from '@/components/cleaner/HowItWorksSection';
@@ -40,65 +39,77 @@ const CleanerPage = ({
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Cleaner', url: '/cleaner' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Cleaner', url: '/cleaner' },
+        ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+        <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-      <div className="lg:py-18">
-        <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
-      </div>
+        <div className="lg:py-18">
+          <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
+        </div>
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col gap-4 px-6 text-center">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
-            <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
-              {textContent.CtaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="py-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col gap-4 px-6 text-center">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
+              <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
+                {textContent.CtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientColor="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="py-10"
+        />
 
-      <HowItWorksSection textContent={textContent.HowItWorksSection} />
+        <HowItWorksSection textContent={textContent.HowItWorksSection} />
 
-      <WhenToUseSection textContent={textContent.WhenToUseSection} />
+        <WhenToUseSection textContent={textContent.WhenToUseSection} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection2}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="py-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection2}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientColor="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="py-10"
+        />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Cleaner', url: '/cleaner' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Internxt Cleaner', url: '/cleaner' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -106,8 +117,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
