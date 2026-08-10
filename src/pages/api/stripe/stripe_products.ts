@@ -11,7 +11,7 @@ export interface Product {
 
 const PRODUCTS_URL = `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<any> {
   if (req.method === 'GET') {
     const { currency } = req.query;
 

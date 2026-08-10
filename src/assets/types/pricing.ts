@@ -10,7 +10,7 @@ export interface PricingText {
   lastCtaSection: InfoSection;
 }
 
-export interface BestStorageSection {
+interface BestStorageSection {
   title: string;
   description: string;
   card1: Card1Class;
@@ -20,11 +20,11 @@ export interface BestStorageSection {
   card5: Card1Class;
 }
 
-export interface Card1Class {
+interface Card1Class {
   title: string;
 }
 
-export interface ComparisonTable {
+interface ComparisonTable {
   title: string;
   cta: string;
   billedAnnualy: string;
@@ -47,30 +47,30 @@ export interface Feature {
   hideIcons?: boolean;
 }
 
-export interface Avalability {
+interface Avalability {
   [key: string]: boolean;
   Essential: boolean;
   Premium: boolean;
   Ultimate: boolean;
 }
 
-export interface Plan {
+interface Plan {
   id: string;
   name: string;
   order: number;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface InfoSection {
+interface InfoSection {
   title: string;
   description: string;
   cta: string;
@@ -78,21 +78,21 @@ export interface InfoSection {
   cards?: CardElement[];
 }
 
-export interface CardElement {
+interface CardElement {
   title: string;
   description: string;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface SchemaMarkupQuestions {
+interface SchemaMarkupQuestions {
   faq: FAQ[];
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -107,7 +107,7 @@ export interface TableSection {
   ctaCompare?: string;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   individual: string;
@@ -115,7 +115,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
@@ -123,20 +123,20 @@ export interface Features {
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   mobileDescription: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   lifetime: string;

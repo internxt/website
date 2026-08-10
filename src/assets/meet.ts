@@ -8,48 +8,48 @@ export interface MeetPageText {
   FaqSection: FAQSection;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   label?: string;
   title: string;
   description: string;
   cta: string;
 }
 
-export interface AccordionSection {
+interface AccordionSection {
   title: string;
   description: string;
   accordionSection: Section;
 }
 
-export interface Section {
+interface Section {
   titles: string[];
   descriptions: string[];
 }
 
-export interface DesginedSection {
+interface DesginedSection {
   title: string;
   subtitle?: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   images: string[];
   titles: string[];
   descriptions: string[];
 }
 
-export interface EnjoyPrivacySection {
+interface EnjoyPrivacySection {
   title: string;
   description: string;
   scrollableSection: Section;

@@ -10,7 +10,7 @@ interface EmailToolBarProps {
   handleCheckEmail: (email: string | undefined) => void;
 }
 
-export const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: Readonly<EmailToolBarProps>) => {
+const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: Readonly<EmailToolBarProps>) => {
   const [email, setEmail] = useState<string | undefined>(undefined);
 
   return (

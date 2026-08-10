@@ -1,4 +1,4 @@
-export interface UserData {
+interface UserData {
   id: number;
   userId: string;
   name: string;
@@ -40,7 +40,7 @@ interface HKey {
   data: number[];
 }
 
-export interface CheckIfUserHasSubscriptionResponse {
+interface CheckIfUserHasSubscriptionResponse {
   user: {
     id: number;
     userId: string;
@@ -335,6 +335,10 @@ export enum PromoCodeName {
   macrumors = 'MACRUMORS',
   saasmaster = 'SAASMASTER',
   cyberlab = 'CYBERLAB',
+  offerblogen = 'OFFERBLOGEN',
+  offerbloges = 'OFFERBLOGES',
+  offerblogde = 'OFFERBLOGDE',
+  offerblogfr = 'OFFERBLOGFR',
 }
 
 export interface PromoCodeProps {
