@@ -124,6 +124,10 @@ export const ALLOWED_PATHS = [
   'macrumors',
   'saasmaster',
   'cyberlab',
+  'offerblogen',
+  'offerbloges',
+  'offerblogde',
+  'offerblogfr',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -313,6 +317,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'macrumors',
   'saasmaster',
   'cyberlab',
+  'offerblogen',
+  'offerbloges',
+  'offerblogde',
+  'offerblogfr',
 ]);
 
 export const COUPON_CODES = {
@@ -437,6 +445,10 @@ export const COUPON_CODES = {
   macrumors: PromoCodeName.macrumors,
   saasmaster: PromoCodeName.saasmaster,
   cyberlab: PromoCodeName.cyberlab,
+  offerblogen: PromoCodeName.offerblogen,
+  offerbloges: PromoCodeName.offerbloges,
+  offerblogde: PromoCodeName.offerblogde,
+  offerblogfr: PromoCodeName.offerblogfr,
 };
 
 interface OfferConfig {
