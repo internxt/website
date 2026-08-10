@@ -116,6 +116,13 @@ export const ALLOWED_PATHS = [
   'lukas',
   'nazlouis',
   'david',
+  'saddam',
+  'arxid',
+  'switchandclick',
+  'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -196,6 +203,13 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   binosha: 'en',
   malternativ: 'de',
   nazlouis: 'en',
+  saddam: 'en',
+  arxid: 'en',
+  switchandclick: 'en',
+  nikias: 'en',
+  lukemiani: 'en',
+  macrumors: 'en',
+  saasmaster: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -221,6 +235,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'ss87',
   'binosha',
   'david',
+  'saddam',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -288,6 +303,13 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'nazlouis',
   'ss87',
   'david',
+  'saddam',
+  'arxid',
+  'switchandclick',
+  'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
 ]);
 
 export const COUPON_CODES = {
@@ -404,6 +426,13 @@ export const COUPON_CODES = {
   lukas: PromoCodeName.lukas,
   nazlouis: PromoCodeName.nazlouis,
   david: PromoCodeName.david,
+  saddam: PromoCodeName.saddam,
+  arxid: PromoCodeName.arxid,
+  switchandclick: PromoCodeName.switchandclick,
+  nikias: PromoCodeName.nikias,
+  lukemiani: PromoCodeName.lukemiani,
+  macrumors: PromoCodeName.macrumors,
+  saasmaster: PromoCodeName.saasmaster,
 };
 
 interface OfferConfig {

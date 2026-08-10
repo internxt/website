@@ -327,6 +327,13 @@ export enum PromoCodeName {
   lukas = 'LUKAS',
   nazlouis = 'NAZLOUIS',
   david = 'DAVID',
+  saddam = 'SADDAM',
+  arxid = 'ARXID',
+  switchandclick = 'SWITCHANDCLICK',
+  nikias = 'NIKIAS',
+  lukemiani = 'LUKEMIANI',
+  macrumors = 'MACRUMORS',
+  saasmaster = 'SAASMASTER',
 }
 
 export interface PromoCodeProps {
