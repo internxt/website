@@ -103,7 +103,7 @@ const Photo = ({
                 hideFreeCard
             />
 
-            <CoreFeaturesSection textContent={textContent.CoreFeatures}/>
+            <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider/>
 
             <HorizontalScrollableSection 
                 textContent={textContent.PhotoFeatureSection}
@@ -131,10 +131,6 @@ const Photo = ({
                 containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
                 bgPadding="lg:py-20 lg:pb-20 pb-10"
             /> 
-
-            <div className="w-full max-w-[1500px] px-5 lg:px-8 lg:translate-x-80">
-                <div className="h-px w-full bg-neutral-35" />
-            </div>
 
             <FAQSection textContent={{
                 title: textContent.SemanticAccordion.title,

@@ -105,7 +105,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   if (cards.length === 0) return null;
 
   return (
-    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20">
+    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-5 lg:py-20">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
         <p className="mb-8 text-center text-4xl font-semibold text-gray-100 lg:mb-14 lg:text-5xl">
           {textContent.title}

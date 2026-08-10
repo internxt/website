@@ -6,12 +6,10 @@ import { PhotoText } from '@/assets/types/photos';
 
 interface HorizontalScrollableSectionWithPhotosProps {
   textContent: PhotoText['DesignedSection'];
-  needsDivider?: boolean;
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
-  needsDivider = true,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
@@ -88,7 +86,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20"
+      className="flex h-min w-full flex-col items-center justify-center gap-2 py-5 pt-14 lg:h-min lg:gap-14 lg:pt-20"
       style={{ background: '#FFFFFF 100%' }}
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">

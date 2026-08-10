@@ -41,7 +41,8 @@
     "meet": "Internxt Meet",
     "ai": "Internxt AI",
     "certifications": "Сертификаты",
-    "mail": "Internxt Mail"
+    "mail": "Internxt Mail",
+    "photos": "Internxt Photos"
   },
   "Auth": {
     "SignUp": {
