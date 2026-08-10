@@ -118,6 +118,12 @@ export const ALLOWED_PATHS = [
   'david',
   'saddam',
   'arxid',
+  'switchandclick',
+  'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
+  'cyberlab',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -200,6 +206,12 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   nazlouis: 'en',
   saddam: 'en',
   arxid: 'en',
+  switchandclick: 'en',
+  nikias: 'en',
+  lukemiani: 'en',
+  macrumors: 'en',
+  saasmaster: 'en',
+  cyberlab: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -295,6 +307,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'david',
   'saddam',
   'arxid',
+  'switchandclick',
+  'nikias',
+  'lukemiani',
+  'macrumors',
+  'saasmaster',
+  'cyberlab',
 ]);
 
 export const COUPON_CODES = {
@@ -413,6 +431,12 @@ export const COUPON_CODES = {
   david: PromoCodeName.david,
   saddam: PromoCodeName.saddam,
   arxid: PromoCodeName.arxid,
+  switchandclick: PromoCodeName.switchandclick,
+  nikias: PromoCodeName.nikias,
+  lukemiani: PromoCodeName.lukemiani,
+  macrumors: PromoCodeName.macrumors,
+  saasmaster: PromoCodeName.saasmaster,
+  cyberlab: PromoCodeName.cyberlab,
 };
 
 interface OfferConfig {
