@@ -123,6 +123,7 @@ export const ALLOWED_PATHS = [
   'lukemiani',
   'macrumors',
   'saasmaster',
+  'cyberlab',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -210,6 +211,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   lukemiani: 'en',
   macrumors: 'en',
   saasmaster: 'en',
+  cyberlab: 'en',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -310,6 +312,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'lukemiani',
   'macrumors',
   'saasmaster',
+  'cyberlab',
 ]);
 
 export const COUPON_CODES = {
@@ -433,6 +436,7 @@ export const COUPON_CODES = {
   lukemiani: PromoCodeName.lukemiani,
   macrumors: PromoCodeName.macrumors,
   saasmaster: PromoCodeName.saasmaster,
+  cyberlab: PromoCodeName.cyberlab,
 };
 
 interface OfferConfig {
