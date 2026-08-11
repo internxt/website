@@ -1074,16 +1074,6 @@ export default function Footer({
                         {textContent.FooterSection.sections.join.support}
                       </Link>
 
-                      <a
-                        href={getImage(`/whitepaper/internxt-white-paper-1.pdf`)}
-                        target="_blank"
-                        rel="noreferrer"
-                        download={true}
-                        className="hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.join.whitePaper}
-                      </a>
-
                       <Link
                         href="https://github.com/internxt"
                         target="_blank"
