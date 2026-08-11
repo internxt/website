@@ -30,7 +30,6 @@ export const RangeSlider = ({
         className={color ? `text-${color}` : 'text-primary'}
         defaultValue={0}
         valueLabelDisplay="auto"
-        valueLabelFormat={valueLabelFormat}
         step={1}
         min={min}
         max={max}
