@@ -64,12 +64,12 @@ export default function HeroSection({
       text: textContent.products.meet,
     },
     {
-      icon: Envelope,
-      text: textContent.products.mail,
-    },
-    {
       icon: Aperture,
       text: textContent.products.photos,
+    },
+    {
+      icon: Envelope,
+      text: textContent.products.mail,
     },
   ];
 
