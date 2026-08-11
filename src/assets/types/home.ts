@@ -105,7 +105,7 @@ export interface Products {
   vpn: string;
   meet: string;
   mail: string;
-  ai: string;
+  photos: string;
 }
 
 export interface StartFrom {

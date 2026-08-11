@@ -3,11 +3,11 @@
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
-      "cleaner": "Pulitore",
+      "cleaner": "Cleaner",
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai": "AI"
+      "photos": "Photos"
     },
     "SignUp": {
       "cta": {
