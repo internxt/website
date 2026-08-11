@@ -213,13 +213,6 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.antivirus}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
 
                     <a
@@ -233,48 +226,14 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
+
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
-                    <Link
-                      href="https://ai.internxt.com/"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.products.ai}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
-                    </Link>
+
                     <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
 
                     <Link
@@ -399,16 +358,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.join.support}
                     </Link>
-
-                    <a
-                      href={`/whitepaper/internxt-white-paper-1.pdf`}
-                      target="_blank"
-                      rel="noreferrer"
-                      download={true}
-                      className="hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.join.whitePaper}
-                    </a>
 
                     <Link
                       href="https://github.com/internxt"
@@ -999,14 +948,6 @@ export default function Footer({
                       </Link>
                       <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.meet}
-                      </Link>
-                      <Link
-                        href="https://ai.internxt.com/"
-                        locale={lang}
-                        passHref
-                        className="items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.products.ai}
                       </Link>
 
                       <Link href="/mail" locale={lang} passHref>

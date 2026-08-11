@@ -1,13 +1,13 @@
 {
   "HeroSection": {
     "products": {
-      "drive": "Диск",
-      "antivirus": "Антивирус",
-      "cleaner": "Очистка",
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
       "vpn": "VPN",
-      "meet": "Встречи",
-      "mail": "Почта",
-      "ai": "AI"
+      "meet": "Meet",
+      "mail": "Mail",
+      "photos": "Photos"
     },
     "SignUp": {
       "cta": {
