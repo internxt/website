@@ -59,7 +59,12 @@
     "title": "Fonctionnalités clés de notre stockage cloud sécurisé pour photos",
     "scrollableSection": {
       "images": ["partial1", "partial2", "partial3", "partial4"],
-      "titles": ["Un écosystème entièrement privé", "Synchronisation et sauvegardes", "Chiffré de bout en bout", "Sauvegardes chiffrées"],
+      "titles": [
+        "Un écosystème entièrement privé",
+        "Synchronisation et sauvegardes",
+        "Chiffré de bout en bout",
+        "Sauvegardes chiffrées"
+      ],
       "descriptions": [
         "Internxt Photos est inclus dans notre formule Ultimate, vous offrant tout le nécessaire pour protéger votre vie privée : stockage cloud chiffré, VPN, Mail, Antivirus, Meet et plus encore.",
         "Les photos sont automatiquement synchronisées et sauvegardées dans le cloud, gardant vos souvenirs en sécurité et accessibles.",
@@ -103,7 +108,7 @@
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez d'une confidentialité et sécurité à vie",
-    "planDescription": "Tous les forfaits Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
+    "planDescription": "Tous les forfaits Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nuevos forfaits conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les forfaits de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {

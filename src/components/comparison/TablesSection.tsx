@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { InxtTable } from './pCloud-alternative/components/InxtTable';
 import { CompetitorTable } from './pCloud-alternative/components/CompetitorTable';
 import { CaretDown, CaretUp } from '@phosphor-icons/react';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 type TablesSectionProps = {
   textContent: {
@@ -35,6 +36,7 @@ type TablesSectionProps = {
   };
   logo?: string;
   competitor: string;
+  percentage?: number;
   sectionNeedsH2?: boolean;
   TableTitleTag?: React.ElementType;
   TableNameTag?: React.ElementType;
@@ -46,6 +48,7 @@ export const TablesSection = ({
   textContent,
   logo,
   competitor,
+  percentage,
   sectionNeedsH2 = false,
   TableTitleTag = 'p',
   TableNameTag = 'p',
@@ -90,7 +93,8 @@ export const TablesSection = ({
     }));
   };
 
-  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text);
+  const replacements = { competitor, percentage, discount: percentage };
+  const parseText = (text?: string) => parseDynamicText(text, replacements);
   const SectionTitleTag = sectionNeedsH2 ? 'h2' : 'p';
 
   return (
@@ -114,20 +118,25 @@ export const TablesSection = ({
             <div className="flex flex-col items-center justify-center">
               {textContent.mainTable.title && (
                 <TableNameTag className="pb-6 pt-8 text-30 font-semibold text-gray-100 lg:text-3xl">
-                  {textContent.mainTable.title}
+                  {parseText(textContent.mainTable.title)}
                 </TableNameTag>
               )}
               {textContent.mainTable.description && (
                 <p className="w-[330px]  text-base text-gray-80 lg:w-[832px] lg:text-xl">
-                  {textContent.mainTable.description}
+                  {parseText(textContent.mainTable.description)}
                 </p>
               )}
               <div className="flex h-full w-screen flex-row items-center justify-center pb-6 pt-6">
-                <InxtTable textContent={textContent.mainTable.inxtTable} TableTitleTag={TableTitleTag} />
+                <InxtTable
+                  textContent={textContent.mainTable.inxtTable}
+                  TableTitleTag={TableTitleTag}
+                  replacements={replacements}
+                />
                 <CompetitorTable
                   textContent={textContent.mainTable.competitorTable}
                   logo={logo}
                   TableTitleTag={TableTitleTag}
+                  replacements={replacements}
                 />
               </div>
             </div>
@@ -149,7 +158,7 @@ export const TablesSection = ({
                   aria-expanded={isOpen}
                   aria-controls={`section-content-${index}`}
                 >
-                  <span>{section.title}</span>
+                  <span>{parseText(section.title)}</span>
                   {isOpen ? (
                     <CaretDown className="h-8 w-8 shrink-0 text-primary" />
                   ) : (
@@ -159,7 +168,7 @@ export const TablesSection = ({
 
                 <div className="flex flex-col gap-6">
                   <h3 className="hidden w-[330px] text-center text-3xl font-semibold text-gray-100 lg:block lg:w-full lg:pb-10">
-                    {section.title}
+                    {parseText(section.title)}
                   </h3>
 
                   {section.data.description && (
@@ -175,11 +184,16 @@ export const TablesSection = ({
                   } lg:block lg:max-h-none lg:opacity-100`}
                 >
                   <div className="flex h-full w-screen flex-row justify-center sm:min-w-full">
-                    <InxtTable textContent={section.data.inxtTable} TableTitleTag={TableTitleTag} />
+                    <InxtTable
+                      textContent={section.data.inxtTable}
+                      TableTitleTag={TableTitleTag}
+                      replacements={replacements}
+                    />
                     <CompetitorTable
                       textContent={section.data.competitorTable}
                       logo={logo}
                       TableTitleTag={TableTitleTag}
+                      replacements={replacements}
                     />
                   </div>
                 </div>

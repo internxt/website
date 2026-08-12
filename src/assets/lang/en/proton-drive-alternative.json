@@ -180,7 +180,7 @@
         "question": "Is Internxt a more secure and private alternative to Proton Drive?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption. Proton Drive manages the encryption keys on its own servers, which theoretically allows potential access to files under specific legal requests.",
-          "Additional features such as Antivirus, Device Cleaner, and Dark Web Monitor offer protection not available with Proton Drive."
+          "Additional features such as Antivirus, Device Cleaner, and offer protection not available with Proton Drive."
         ]
       },
       {

@@ -257,7 +257,7 @@
   {
     "id": "internxt-monitor",
     "title": "Internxt Monitor: ¿He sido comprometido?",
-    "description": "Internxt Dark Web Monitor es un servicio de '¿he sido comprometido?' que verifica si tu correo electrónico ha sido filtrado en alguna violación de datos en línea."
+    "description": "Internxt es un servicio de '¿he sido comprometido?' que verifica si tu correo electrónico ha sido filtrado en alguna violación de datos en línea."
   },
   {
     "id": "cloud-object-storage",

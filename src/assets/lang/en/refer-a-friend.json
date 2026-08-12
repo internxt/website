@@ -50,7 +50,7 @@
       }
     },
     "lifetimeDescription": "Pay once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet and Mail.",
     "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
     "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -89,7 +89,9 @@
       },
       {
         "question": "Who is eligible to make a referral?",
-        "answer": ["The program is open to everyone who has a paid Internxt plan, has had their account for at least 30 days, and has a verified email address."]
+        "answer": [
+          "The program is open to everyone who has a paid Internxt plan, has had their account for at least 30 days, and has a verified email address."
+        ]
       },
       {
         "question": "Who is eligible to get a referral link?",

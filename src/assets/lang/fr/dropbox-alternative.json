@@ -232,7 +232,7 @@
       {
         "question": "Quelles fonctionnalités supplémentaires Internxt offre-t-il que Dropbox n'a pas ?",
         "answer": [
-          "Internxt inclut des fonctionnalités comme un VPN intégré, un antivirus, un nettoyeur d'appareil, un moniteur de dark web et un e-mail privé (Mail).",
+          "Internxt inclut des fonctionnalités comme un VPN intégré, un antivirus, un nettoyeur d'appareil, et un e-mail privé (Mail).",
           "Ces outils ajoutent des couches supplémentaires de sécurité et de confidentialité non disponibles avec Dropbox."
         ]
       },

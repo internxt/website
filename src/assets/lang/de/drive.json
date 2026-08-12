@@ -45,7 +45,7 @@
       }
     },
     "lifetimeDescription": "Einmal zahlen und lebenslang Datenschutz und Sicherheit genießen",
-    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail. ",
+    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail. ",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
     "businessDescription2": "Gewährleisten Sie die Sicherheit Ihrer Unternehmensdaten mit Internxts verschlüsselten Cloud-Speicher-Tarifen.",
     "billingFrequency": {
@@ -118,11 +118,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "End-to-End verschlüsselt",
-        "Zugriffskontrollen",
-        "Verschlüsselte Backups"
-      ],
+      "titles": ["End-to-End verschlüsselt", "Zugriffskontrollen", "Verschlüsselte Backups"],
       "descriptions": [
         "Alle Dateien werden mit Post-Quanten- und Zero-Knowledge-Verschlüsselung verschlüsselt. Niemand außer Ihnen oder denen, mit denen Sie Dateien teilen möchten, kann deren Inhalt sehen.",
         "Sie kontrollieren genau, wer auf Ihre freigegebenen Dateien zugreifen kann, mit verschlüsselten, passwortgeschützten Links, die Sie jederzeit widerrufen können.",
@@ -133,12 +129,7 @@
   "AllInOnePrivacySection": {
     "title": "Ihre All-in-One-Lösung für die Privatsphäre",
     "scrollableSection": {
-      "titles": [
-        "Vollständige Privacy Suite",
-        "Für Unternehmen",
-        "Für Familien",
-        "Unübertroffene Preise"
-      ],
+      "titles": ["Vollständige Privacy Suite", "Für Unternehmen", "Für Familien", "Unübertroffene Preise"],
       "descriptions": [
         "Gehen Sie über den Cloud-Speicher hinaus und nehmen Sie VPN, Antivirus, Cleaner, Meet und Mail in Ihr Privatsphäre-Paket auf.",
         "Schützen Sie Ihr Unternehmen vor Ransomware und Datenlecks mit unserem Cloud-Speicher für Unternehmen.",
@@ -151,31 +142,19 @@
     "title": "Hergestellt in Europa",
     "description": "Ihre Daten sind durch strenge europäische Compliance-Gesetze und -Vorschriften in Kombination mit preisgekrönter Verschlüsselung geschützt.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Europäische Rechenzentren",
-        "Redundanz",
-        "Engagement für Nachhaltigkeit"
-      ],
+      "titles": ["Europäische Rechenzentren", "Redundanz", "Engagement für Nachhaltigkeit"],
       "descriptions": [
         "Internxt hat seinen Sitz in Valencia, Spanien, und unsere Rechenzentren befinden sich in Europa und an anderen Standorten weltweit, was Ihnen Sicherheit, Geschwindigkeit und Konformität bietet.",
         "Ihre Dateien sind durch redundante Systeme, Umgebungskontrollen und 24/7-Sicherheitsüberwachung vor Ort geschützt. Egal, was passiert, Ihre Dateien bleiben immer sicher und zugänglich.",
         "Internxt geht mit gutem Beispiel voran und arbeitet an einer nachhaltigeren Cloud-Speicherlösung durch energieeffiziente Praktiken für eine sauberere und nachhaltigere Cloud-Speicherlösung."
       ],
-      "cta": [
-        "Mehr erfahren",
-        "",
-        "Mehr erfahren"
-      ]
+      "cta": ["Mehr erfahren", "", "Mehr erfahren"]
     }
   },
   "OfficalCloudProvider": {

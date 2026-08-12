@@ -66,11 +66,7 @@
     "title": "Why you need a private alternative to Whereby",
     "description": "What Whereby demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
     "cards": {
-      "titles": [
-        "Privacy",
-        "Lack of end-to-end encryption",
-        "Data harvesting"
-      ],
+      "titles": ["Privacy", "Lack of end-to-end encryption", "Data harvesting"],
       "descriptions": [
         "Whereby, its third parties, and app integration can access a high amount of your personal data. With Internxt Meet, there are no trackers, no AI scanning, and no hidden backdoors. Internxt has no access to your calls, chats, or any of your personal information. You have full control over your meetings, cloud storage, and more.",
         "Whereby manages encryption keys on its servers, giving it total control of your data. As a result, hosting your meetings with Whereby poses a huge risk for your privacy, as its employees could access your calls, chats, or audio at any time.",
@@ -130,20 +126,8 @@
     "title": "Why Internxt is the best alternative to Whereby",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Advanced tools"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
         "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
         "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
@@ -191,7 +175,7 @@
         "question": "Is Internxt a more secure and private alternative to Whereby?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your calls. Whereby manages the encryption keys on its own servers, meaning it could access your files or give access to the government or law enforcement.",
-          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail also offer you additional protection from hackers and data breaches."
+          "Additional features such as VPN, Antivirus, Device Cleaner, Meet, and Mail also offer you additional protection from hackers and data breaches."
         ]
       },
       {

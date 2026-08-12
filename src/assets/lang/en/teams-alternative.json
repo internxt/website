@@ -163,7 +163,7 @@
         "question": "Is Internxt a more secure and private Microsoft Teams alternative?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files. Microsoft manages the encryption keys on its own servers for OneDrive, Outlook, and Teams, meaning it could access your files or give access to the government or law enforcement.",
-          "Internxt also offers VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail for its plans, giving you enhanced privacy and additional protection from hackers and data breaches."
+          "Internxt also offers VPN, Antivirus, Device Cleaner, Meet, and Mail for its plans, giving you enhanced privacy and additional protection from hackers and data breaches."
         ]
       },
       {

@@ -58,7 +58,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
   };
 
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
 
   return (
     <>

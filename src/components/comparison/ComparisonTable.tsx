@@ -2,6 +2,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 interface ComparisonTableProps {
   textContent: {
@@ -57,17 +58,23 @@ interface ComparisonTableProps {
     | 'mcafee'
     | 'norton'
     | 'totalav';
+  percentage?: number;
   hideTooltip?: boolean;
   needH2?: boolean;
 }
 
-export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false }: ComparisonTableProps) => {
+export const ComparisonTable = ({
+  textContent,
+  logo,
+  competitor,
+  percentage,
+  needH2 = false,
+}: ComparisonTableProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const parseText = (text: string): string => {
-    return typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text;
-  };
+  const replacements = { competitor, percentage, discount: percentage };
+  const parseText = (text?: string) => parseDynamicText(text, replacements);
 
   useEffect(() => {
     const scrollElement = scrollRef.current;
@@ -263,7 +270,7 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
                       index % 2 === 0 ? 'bg-neutral-10' : 'bg-white'
                     } ${index === 0 ? 'rounded-tl-2xl' : ''} ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}
                   >
-                    <p className="text-xs font-normal leading-tight text-gray-95 lg:text-base">{row.title}</p>
+                    <p className="text-xs font-normal leading-tight text-gray-95 lg:text-base">{parseText(row.title)}</p>
                   </div>
                 ))}
               </div>
@@ -311,7 +318,7 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
                         }`}
                       >
                         <span className="text-center text-xs font-semibold text-gray-100 lg:text-base">
-                          {row.internxtFeature}
+                          {parseText(row.internxtFeature)}
                         </span>
                       </div>
                     </div>
@@ -323,7 +330,7 @@ export const ComparisonTable = ({ textContent, logo, competitor, needH2 = false 
                         } ${index === tableRows.length - 1 ? 'rounded-br-2xl' : ''}`}
                       >
                         <span className="text-center text-xs font-normal text-gray-100 lg:text-base">
-                          {row.competitorFeature}
+                          {parseText(row.competitorFeature)}
                         </span>
                       </div>
                     </div>

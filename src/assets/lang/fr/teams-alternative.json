@@ -163,7 +163,7 @@
         "question": "Internxt est-il une alternative plus sécurisée et privée à Microsoft Teams ?",
         "answer": [
           "Oui, Internxt utilise un chiffrement post-quantique et Zero-Knowledge qui garantit que personne d'autre que vous ne peut voir vos fichiers. Microsoft gère les clés de chiffrement sur ses propres serveurs pour OneDrive, Outlook et Teams, ce qui signifie qu'il pourrait accéder à vos fichiers ou donner accès au gouvernement ou aux forces de l'ordre.",
-          "Internxt propose également VPN, Antivirus, Nettoyeur d'appareil, Surveillance du Dark Web, Meet et Mail dans ses forfaits, vous offrant une confidentialité améliorée et une protection supplémentaire contre les pirates et les violations de données."
+          "Internxt propose également VPN, Antivirus, Nettoyeur d'appareil, , Meet et Mail dans ses forfaits, vous offrant une confidentialité améliorée et une protection supplémentaire contre les pirates et les violations de données."
         ]
       },
       {

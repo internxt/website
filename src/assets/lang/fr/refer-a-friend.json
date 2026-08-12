@@ -50,7 +50,7 @@
       }
     },
     "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours.",
-    "planDescription": "Tous les plans Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner, Moniteur du Dark Web, Meet et Mail.",
+    "planDescription": "Tous les plans Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner,, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffré d'Internxt.",
     "billingFrequency": {
@@ -101,9 +101,7 @@
       },
       {
         "question": "Combien puis-je gagner ?",
-        "answer": [
-          "Vous pouvez gagner jusqu'à 100€ par parrainage, selon le plan acheté avec votre lien."
-        ]
+        "answer": ["Vous pouvez gagner jusqu'à 100€ par parrainage, selon le plan acheté avec votre lien."]
       },
       {
         "question": "Puis-je payer avec une carte de crédit, PayPal ou des crypto-monnaies ?",

@@ -13,7 +13,7 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
-import { formatText } from '@/components/utils/format-text';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
@@ -62,7 +62,7 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
   const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
   const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
 
@@ -134,10 +134,10 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
               <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
             </div>
           }

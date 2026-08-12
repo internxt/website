@@ -28,12 +28,7 @@
     "description": "Internxt 让您重新掌控自己的隐私。与传统云存储不同，我们确保只有您拥有加密数据的密钥，并且我们不会存储或向第三方出售您的数据。我们竭尽全力确保您的信息安全无虞。",
     "cta": "进一步了解我们",
     "cardDescriptions": {
-      "titles": [
-        "无法被黑客攻击或泄露的数据",
-        "新一代安全性",
-        "开源且透明",
-        "经独立验证"
-      ],
+      "titles": ["无法被黑客攻击或泄露的数据", "新一代安全性", "开源且透明", "经独立验证"],
       "descriptions": [
         "我们不存储密码或用户数据，您的所有数据在传输和静态时均已加密。Internxt 让您完全掌控自己的文件。您的数据是您的私事，保护它是我们的职责。",
         "Internxt 是唯一一款使用端到端和后量子加密自动加密您文件的云存储，这意味着只有您才能访问自己的数据。",
@@ -70,7 +65,7 @@
       }
     },
     "lifetimeDescription": "一次付费，终身享受隐私与安全",
-    "planDescription": "所有 Internxt 套餐均功能齐全，可完整访问我们屡获殊荣的隐私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "planDescription": "所有 Internxt 套餐均功能齐全，可完整访问我们屡获殊荣的隐私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
     "businessDescription": "我们目前正在开发全新的 Internxt 套餐，专为保护您的企业、保护您的员工并保障您的盈利能力而设计。",
     "businessDescription2": "使用 Internxt 的加密云存储套餐，确保贵公司的数据安全。",
     "billingFrequency": {

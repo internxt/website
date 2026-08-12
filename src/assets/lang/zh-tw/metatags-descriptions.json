@@ -340,11 +340,6 @@
     "description": "Internxt 萬聖節活動：所有年度計劃享 8 折優惠。一次支付，終生保護您的文件。"
   },
   {
-    "id": "internxt-monitor",
-    "title": "Internxt 監控：我是否被駭？",
-    "description": "Internxt 深網監控是一項「我是否被駭」的服務，檢查您的電子郵件是否在任何線上資料洩露中被泄露。"
-  },
-  {
     "id": "cloud-object-storage",
     "title": "安全雲端物件儲存 (相容 S3) — Internxt S3",
     "description": "Internxt S3 提供安全、私密且實惠的雲端物件儲存。使用我們的 S3 相容雲端物件儲存解決方案擴展您的儲存需求。"
