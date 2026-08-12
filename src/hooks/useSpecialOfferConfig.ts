@@ -128,6 +128,9 @@ export const ALLOWED_PATHS = [
   'offerbloges',
   'offerblogde',
   'offerblogfr',
+  'kioskomputer',
+  'midu',
+  'josema',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
@@ -321,6 +324,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'offerbloges',
   'offerblogde',
   'offerblogfr',
+  'kioskomputer',
+  'midu',
+  'josema',
 ]);
 
 export const COUPON_CODES = {
@@ -449,6 +455,9 @@ export const COUPON_CODES = {
   offerbloges: PromoCodeName.offerbloges,
   offerblogde: PromoCodeName.offerblogde,
   offerblogfr: PromoCodeName.offerblogfr,
+  kioskomputer: PromoCodeName.kioskomputer,
+  midu: PromoCodeName.midu,
+  josema: PromoCodeName.josema,
 };
 
 interface OfferConfig {
