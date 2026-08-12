@@ -131,6 +131,7 @@ export const ALLOWED_PATHS = [
   'kioskomputer',
   'midu',
   'josema',
+  'jvscholz',
 ];
 export const ENFORCED_LOCALE: Record<string, string> = {
   baity: 'es',
