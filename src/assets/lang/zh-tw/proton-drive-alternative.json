@@ -167,13 +167,6 @@
     "title": "常見問題解答",
     "faq": [
       {
-        "question": "Internxt 是比 Proton Drive 更安全、更私密的替代方案嗎？",
-        "answer": [
-          "是的，Internxt 使用後量子和零知識加密。Proton Drive 在其伺服器上管理加密金鑰，理論上在特定法律要求下可能允許存取檔案。",
-          "防毒軟體、裝置清理器和暗網監控等額外功能提供了 Proton Drive 所不具備的保護。"
-        ]
-      },
-      {
         "question": "什麼是後量子加密？它更安全嗎？",
         "answer": [
           "與 Proton Drive 使用的標準加密不同，PQE 演算法旨在抵抗強大量子計算攻擊，確保您的數據在未來依然安全。",
