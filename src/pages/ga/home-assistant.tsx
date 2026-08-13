@@ -8,7 +8,7 @@ import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/home-assistant/HeroSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService, Interval } from '@/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import { HomeAssistantText } from '@/assets/types/home-assistant';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import ConfigurationSection from '@/components/home-assistant/ConfigurationSection';

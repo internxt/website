@@ -9,7 +9,6 @@ import {
   ShieldPlus,
   Sparkle,
   VideoConference,
-  X,
 } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
