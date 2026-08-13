@@ -1,0 +1,86 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Spazio cloud sicuro per i tuoi **backup di Home Assistant**",
+    "description": "Backup esterni automatizzati a conoscenza zero (zero-knowledge). Creato in Europa per il massimo controllo dei dati e della privacy.",
+    "subtitle": "Ottieni il {{discount}}% di sconto",
+    "claimDeal": "Ottieni 3 TB a 2,99 €/mese"
+  },
+  "TableSection": {
+    "title": "Piani Internxt",
+    "valentinesTitle": "Amore sicuro - ",
+    "hotLabel": "{{discount}}% di sconto",
+    "planTitles": {
+      "header": "Seleziona il tuo piano",
+      "lifetimeHeader": "Seleziona il tuo piano a vita",
+      "individuals": "Piani annuali",
+      "homePage": "Scegli il piano ideale per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani aziendali",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri esclusivi piani a vita"
+      }
+    },
+    "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza per tutta la vita",
+    "planDescription": "Tutti i piani Internxt includono l'accesso completo alla nostra premiata suite per la privacy composta da Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e tutelare la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di archiviazione cloud crittografata di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Aziendale"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratis",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e sottoposto ad audit",
+      "anonymousAccount": "Creazione di account anonimo",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso entro 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Valori fondanti",
+    "cards": {
+      "titles": ["Crittografia Zero-Knowledge", "Ripristino affidabile", "Privacy prima di tutto"],
+      "descriptions": [
+        "Crittografia end-to-end lato client. I tuoi file di configurazione e le chiavi API rimangono strettamente privati.",
+        "Conserva una copia esterna sicura degli snapshot di HA in caso di guasti hardware o problemi di aggiornamento.",
+        "Ospitato nell'UE, totalmente conforme al GDPR e indipendente dai colossi tech."
+      ]
+    }
+  },
+  "ConfigurationSection": {
+    "title": "Invia i tuoi snapshot offsite senza inviare le tue chiavi",
+    "description": "Punta /backup a un server remoto Internxt tramite WebDAV o rclone. Gli archivi vengono crittografati sul tuo hardware prima che il primo byte lasci la rete locale: archiviamo testo cifrato e non possediamo mai la chiave.",
+    "accordionCard": {
+      "titles": ["Crea credenziali WebDAV", "Inserisci lo snippet", "Verifica e poi dimenticati"],
+      "descriptions": [
+        "In Internxt → Impostazioni > WebDAV, genera un token dedicato. Salva l'URL, l'utente e la password oscurata in secrets.yaml – mai in una configurazione pubblica.",
+        "Incolla in configuration.yaml (o esegui l'add-on rclone dallo store di Supervisor), quindi esegui ha core restart. Esegui un test con --dry-run per confermare il collegamento con il remoto.",
+        "Ogni file .tar viene crittografato lato client con AES-256 e suddiviso in frammenti prima del caricamento. I ripristini scaricano l'archivio in /backup e lo decrittografano localmente con la tua chiave."
+      ]
+    },
+    "features": ["zero-knowledge", "rclone 1.66+", "gestione di !secret", "API di backup HA 2024.11"]
+  }
+}
