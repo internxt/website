@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Comme Gemini, \n mais **privé**",
     "description": "Passez à Internxt AI, la meilleure alternative à Gemini qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Oui, chiffré sur votre appareil",
         "Jamais",
-        "Stockage gratuit, annuel et à vie jusqu'à 5 To",
+        "Stockage gratuit, annuel et à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Les chats ne sont jamais utilisés pour entraîner notre IA",
         "Ne peut jamais accéder à vos chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Pas de chiffrement de bout en bout",
         "Oui",
-        "Forfaits annuels ou mensuels plus chers, jusqu'à 6 To",
+        "Forfaits annuels ou mensuels plus chers, jusqu'à 6 To",
         "Gemini, Drive et Google Workspace",
         "Audits de sécurité réguliers",
         "Vos chats sont utilisés pour entraîner et améliorer Gemini",
         "Des humains peuvent accéder à vos chats et les réviser",
-        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
       ]
     }
   },
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement zéro connaissance et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Internxt AI est gratuit et peut être combiné avec les forfaits à vie Internxt Drive jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+            "description": "Internxt AI est gratuit et peut être combiné avec les forfaits à vie Internxt Drive jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Gemini : Qu'en est-il de votre vie privée ?",
+        "title": "Gemini : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Basé sur l'abonnement",
-            "description": "Les forfaits payants vont de 7,99 €/mois à 274,99 €/mois."
+            "description": "Les forfaits payants vont de 7,99 €/mois à 274,99 €/mois."
           }
         ]
       }
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choisissez Internxt pour la meilleure alternative à Gemini",
-    "description": "IA privée chiffrée plus stockage cloud sécurisé et une suite complète de confidentialité avec {{percentage}}% de réduction",
+    "description": "IA privée chiffrée plus stockage cloud sécurisé et une suite complète de confidentialité avec {{percentage}} % de réduction",
     "cta": "Faire le changement"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -164,60 +164,60 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt AI est-il une alternative à Gemini plus sécurisée et privée ?",
+        "question": "Internxt AI est-il une alternative à Gemini plus sécurisée et privée ?",
         "answer": [
           "Oui, Internxt chiffre tous vos chats et ne stocke jamais vos conversations. Gemini ne chiffre pas les chats et peut les utiliser pour entraîner son IA.",
           "Internxt inclut également Drive, VPN, Antivirus, Cleaner, Meet et Mail pour offrir une protection supplémentaire contre les pirates et les violations de données."
         ]
       },
       {
-        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
+        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
         "answer": [
           "Oui, vous pouvez utiliser Internxt AI gratuitement sans vous connecter ni fournir d'informations personnelles ou de coordonnées de paiement."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sûr ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sûr ?",
         "answer": [
           "Le chiffrement post-quantique est conçu pour résister aux futures attaques quantiques, ce qui en fait une alternative plus sûre au chiffrement standard.",
           "Internxt utilise cette technologie pour protéger vos données et vos forfaits de stockage à vie contre les futures cybermenaces sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, et respecte le RGPD et les lois européennes strictes sur la confidentialité pour protéger vos données."
         ]
       },
       {
-        "question": "Gemini est-il plus cher qu'Internxt ?",
+        "question": "Gemini est-il plus cher qu'Internxt ?",
         "answer": [
-          "Internxt AI est gratuit à utiliser, et avec votre réduction exclusive de {{percentage}}%, tous les forfaits sont moins chers tout en offrant un stockage cloud sécurisé et une suite complète de confidentialité."
+          "Internxt AI est gratuit à utiliser, et avec votre réduction exclusive de {{percentage}} %, tous les forfaits sont moins chers tout en offrant un stockage cloud sécurisé et une suite complète de confidentialité."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez besoin d'aide, contactez hello@internxt.com et notre équipe Customer Success se fera un plaisir de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à jour votre forfait depuis les paramètres de votre compte Internxt ou acheter des forfaits supplémentaires et votre stockage se cumulera automatiquement."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
         "answer": [
           "Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."
         ]

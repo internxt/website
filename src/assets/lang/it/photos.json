@@ -59,7 +59,12 @@
     "title": "Caratteristiche principali del nostro cloud storage sicuro per foto",
     "scrollableSection": {
       "images": ["partial1", "partial2", "partial3", "partial4"],
-      "titles": ["Un ecosistema completamente privato", "Sincronizzazione e backup", "Crittografato end-to-end", "Backup crittografati"],
+      "titles": [
+        "Un ecosistema completamente privato",
+        "Sincronizzazione e backup",
+        "Crittografato end-to-end",
+        "Backup crittografati"
+      ],
       "descriptions": [
         "Internxt Photos è incluso nel nostro pacchetto Ultimate, offrendoti tutto ciò di cui hai bisogno per proteggere la tua privacy: cloud storage crittografato, VPN, Mail, Antivirus, Meet e altro.",
         "Le foto vengono sincronizzate ed eseguite in backup automaticamente nel cloud, mantenendo i tuoi ricordi al sicuro e sempre accessibili.",
@@ -103,7 +108,7 @@
       }
     },
     "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza a vita",
-    "planDescription": "Tutti i piani Internxt offrono accesso completo alla nostra suite sulla privacy pluripremiata che include Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "planDescription": "Tutti i piani Internxt offrono accesso completo alla nostra suite sulla privacy pluripremiata che include Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
     "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i dipendenti e garantire la redditività.",
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di cloud storage crittografati di Internxt.",
     "billingFrequency": {

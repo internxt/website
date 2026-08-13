@@ -13,7 +13,7 @@ import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import { TablesSection } from '@/components/comparison/TablesSection';
 import { HeroSection } from '@/components/comparison/HeroSection';
-import { formatText } from '@/components/utils/format-text';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/shared/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { AlternativePageText } from '@/assets/types/alternative';
@@ -144,7 +144,7 @@ export const ComparisonPage = ({
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
   const locale = lang as string;
 
   const {
@@ -165,7 +165,7 @@ export const ComparisonPage = ({
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} />
 
         {isS3Alternative && langJson.PriceCardSection ? (
           <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
@@ -198,7 +198,7 @@ export const ComparisonPage = ({
           />
         )}
 
-        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} logo={logo} />
+        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
@@ -211,10 +211,10 @@ export const ComparisonPage = ({
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-0">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {formatText(langJson.CtaSection.title, { percentage: percentageDiscount?.toString() ?? '70' })}
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
               <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {formatText(langJson.CtaSection.description, { percentage: percentageDiscount?.toString() ?? '70' })}
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
             </div>
           }

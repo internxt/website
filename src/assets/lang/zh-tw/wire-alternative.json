@@ -66,11 +66,7 @@
     "title": "Why you need a private alternative to Wire",
     "description": "What Wire demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
     "cards": {
-      "titles": [
-        "Limited device protection",
-        "Not fully zero-knowledge",
-        "Lack of post-quantum encryption"
-      ],
+      "titles": ["Limited device protection", "Not fully zero-knowledge", "Lack of post-quantum encryption"],
       "descriptions": [
         "Internxt offers a full suite of privacy-focused products, including Internxt Drive, Antivirus, Cleaner, Meet and Mail. These features are not currently available with a Wire account, meaning by choosing Internxt, you get full protection and protection for your files, video calls, and data.",
         "While Wire encrypts messages, files, and calls end-to-end, it still stores certain metadata on its servers, including account information, contact lists, timestamps, and group membership. This means Wire has access to information about who is communicating and when, even if it cannot read the content itself.",
@@ -130,20 +126,8 @@
     "title": "Why Internxt is the best alternative to Wire",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Advanced tools"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
         "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
         "Internxt’s VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely knowing your personal information, passwords, and accounts are protected.",
@@ -191,7 +175,7 @@
         "question": "Is Internxt a more secure and private alternative to Wire?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your calls. Wire manages the encryption keys on its own servers, meaning it could access your files or give access to the government or law enforcement.",
-          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail also offer you additional protection from hackers and data breaches."
+          "Additional features such as VPN, Antivirus, Device Cleaner, Meet, and Mail also offer you additional protection from hackers and data breaches."
         ]
       },
       {

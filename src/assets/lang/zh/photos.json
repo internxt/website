@@ -8,19 +8,13 @@
   },
   "PhotoSection": {
     "title": "Internxt 相册",
-    "description": [
-      "利用我们的安全照片云存储备份并同步您的珍贵回忆，采用后量子加密技术，专为实现完全隐私而打造。"
-    ]
+    "description": ["利用我们的安全照片云存储备份并同步您的珍贵回忆，采用后量子加密技术，专为实现完全隐私而打造。"]
   },
   "CoreFeatures": {
     "title": "私密照片存储：随时随地访问您的回忆",
     "description": "让您的照片库在所有设备间保持最新和同步。即使您的设备丢失或更换，您的照片库依然安全且随时可访问。",
     "accordionCards": {
-      "titles": [
-        "备份您的所有设备",
-        "零追踪、零广告、无 AI 介入",
-        "自动同步与备份"
-      ],
+      "titles": ["备份您的所有设备", "零追踪、零广告、无 AI 介入", "自动同步与备份"],
       "descriptions": [
         "自动备份您所有设备上的照片，并可随时通过任何设备安全地访问它们。",
         "Internxt 相册提供完全无广告的体验，没有数据追踪，也不会使用您的照片和数据训练机器学习 AI。",
@@ -32,14 +26,7 @@
     "title": "专注于隐私保护的安全照片云存储",
     "description": "Internxt 相册采用后量子加密与零知识加密技术，保障您的文件和数据在传输和存储时均处于加密状态。",
     "scrollableSection": {
-      "titles": [
-        "完全加密的金库",
-        "隐私高于利润",
-        "合规认证",
-        "开源且经过审计",
-        "为自由而生",
-        "无后门程序"
-      ],
+      "titles": ["完全加密的金库", "隐私高于利润", "合规认证", "开源且经过审计", "为自由而生", "无后门程序"],
       "descriptions": [
         "Internxt 相册采用 Kyber 512 后量子加密及 AES-256 加密，结合端到端安全性、欧洲标准隐私和先进技术，确保数据受到高度保护。",
         "与 Google Photos 或其他科技巨头不同，Internxt 无法查看或删除您的照片。所有内容均在您的设备上直接加密，包括我们在内的任何人都无法访问您的照片或数据。",
@@ -103,7 +90,7 @@
       }
     },
     "lifetimeDescription": "一次付费，终身享有隐私与安全保障",
-    "planDescription": "所有 Internxt 方案均可完整体验我们屡获殊荣的隐私产品套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "planDescription": "所有 Internxt 方案均可完整体验我们屡获殊荣的隐私产品套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
     "businessDescription": "我们目前正在开发全新的 Internxt 商业方案，旨在专门捍卫您的企业安全、保护员工并保障盈利。",
     "businessDescription2": "借助 Internxt 加密云存储方案，确保您公司的数据安全。",
     "billingFrequency": {

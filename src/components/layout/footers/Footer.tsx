@@ -38,6 +38,13 @@ export default function Footer({
 
   const year = moment().format('YYYY');
 
+  // La puntuación final se saca fuera del enlace (regla tipográfica FR y buena práctica general)
+  const privacyLinkTrailingPunctuation =
+    textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
+  const privacyLinkText = privacyLinkTrailingPunctuation
+    ? textContent.NewsletterSection.privacyLink.slice(0, -privacyLinkTrailingPunctuation.length)
+    : textContent.NewsletterSection.privacyLink;
+
   useEffect(() => {
     axios.get(`${window.location.origin}/api/download`).then((res) => {
       setPlatforms(res.data.platforms);
@@ -87,7 +94,7 @@ export default function Footer({
 
         <div className="flex w-full flex-col gap-6 p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-0">
           <div className="flex w-full flex-row items-end gap-6 lg:w-[48%] xl:w-[43%] 2xl:w-[35%]">
-            <div className="flex flex-col items-start justify-between gap-9 flex-1">
+            <div className="flex flex-1 flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
                 <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
@@ -124,7 +131,7 @@ export default function Footer({
                 </div>
               </div>
             </div>
-            <div className="flex flex-row shrink-0 hidden md:block">
+            <div className="flex hidden shrink-0 flex-row md:block">
               <Image
                 src={getImage('/images/components/AppDownload.webp')}
                 width={130}
@@ -182,8 +189,9 @@ export default function Footer({
               <span className="text-sm text-gray-40">
                 {textContent.NewsletterSection.privacy}{' '}
                 <Link href="/legal" locale={lang} className="underline hover:text-gray-30">
-                  {textContent.NewsletterSection.privacyLink}
+                  {privacyLinkText}
                 </Link>
+                {privacyLinkTrailingPunctuation}
               </span>
             </div>
           )}
@@ -206,20 +214,8 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
 
-                    <Link
-                      href="/antivirus"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.antivirus}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
 
                     <a
@@ -233,41 +229,18 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
+
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
-                    <Link
-                      href="https://ai.internxt.com/"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.products.ai}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
-                    </Link>
+
                     <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
+                    </Link>
+
+                    <Link href="/mail" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.products.mail}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
                           darkMode ? 'bg-primary/10' : 'bg-primary'
@@ -277,36 +250,15 @@ export default function Footer({
                       </span>
                     </Link>
 
-                    <Link
-                      href="/mail"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.products.mail}
-                        <span
-                          className={`ml-2  h-max items-center justify-center rounded-2 ${
-                            darkMode ? 'bg-primary/10' : 'bg-primary'
-                          } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                        >
-                          {textContent.FooterSection.new}
-                        </span>
-                    </Link>
-
-                    <Link
-                      href="/photos"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/photos" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.photos}
-                        <span
-                          className={`ml-2  h-max items-center justify-center rounded-2 ${
-                            darkMode ? 'bg-primary/10' : 'bg-primary'
-                          } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
-                        >
-                          {textContent.FooterSection.new}
-                        </span>
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
 
                     <Link
@@ -317,7 +269,7 @@ export default function Footer({
                     >
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
                     </Link>
-                    
+
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -399,16 +351,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.join.support}
                     </Link>
-
-                    <a
-                      href={`/whitepaper/internxt-white-paper-1.pdf`}
-                      target="_blank"
-                      rel="noreferrer"
-                      download={true}
-                      className="hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.join.whitePaper}
-                    </a>
 
                     <Link
                       href="https://github.com/internxt"
@@ -714,9 +656,7 @@ export default function Footer({
                     <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
-                    <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                    </Link>
+
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
                     </Link>
@@ -1000,14 +940,6 @@ export default function Footer({
                       <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.meet}
                       </Link>
-                      <Link
-                        href="https://ai.internxt.com/"
-                        locale={lang}
-                        passHref
-                        className="items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.products.ai}
-                      </Link>
 
                       <Link href="/mail" locale={lang} passHref>
                         {textContent.FooterSection.sections.products.mail}
@@ -1029,7 +961,6 @@ export default function Footer({
                       <Link href="/pricing" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>
-
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -1132,16 +1063,6 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.join.support}
                       </Link>
-
-                      <a
-                        href={getImage(`/whitepaper/internxt-white-paper-1.pdf`)}
-                        target="_blank"
-                        rel="noreferrer"
-                        download={true}
-                        className="hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.join.whitePaper}
-                      </a>
 
                       <Link
                         href="https://github.com/internxt"
@@ -1736,9 +1657,7 @@ export default function Footer({
                       <Link href="/file-converter" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.fileConverter}
                       </Link>
-                      <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
-                        {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      </Link>
+
                       <Link href="/metadata-remover" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.metadataRemover}
                       </Link>

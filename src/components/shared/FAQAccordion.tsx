@@ -2,13 +2,16 @@ import { useEffect, useState } from 'react';
 import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 import { formatText } from '../utils/format-text';
+import { parseDynamicText } from '../utils/parse-dynamic-text';
+
+const PLACEHOLDER_REGEX = /\{\{\w+\}\}/;
 
 export default function FaqAccordion({
   question,
   answer,
   isQuestionBigger = false,
   textColor,
-  percentageDiscount = '70',
+  percentageDiscount,
   needsH3,
   needsSpecialH3 = false,
   index,
@@ -25,6 +28,7 @@ export default function FaqAccordion({
   totalItems?: number;
 }): JSX.Element {
   const [active, setActive] = useState(false);
+  const isDiscountPending = !percentageDiscount || percentageDiscount === '0';
 
   useEffect(() => {
     const bulletedList = document.querySelectorAll('.markdown ul');
@@ -75,9 +79,21 @@ export default function FaqAccordion({
         } transition-all ease-in-out`}
       >
         {(Array.isArray(answer) ? answer : [answer]).map((text) => {
+          const hasPlaceholder = typeof text === 'string' && PLACEHOLDER_REGEX.test(text);
+
+          // The discount comes from a client-only Stripe fetch, so it is unknown while the
+          // page is rendered on the server. ReactMarkdown only accepts a string, so in that
+          // window the answer is rendered as plain text with a skeleton where the number
+          // goes, instead of leaking "{{percentage}}" or a 0% discount into the HTML.
+          if (hasPlaceholder && isDiscountPending) {
+            return <p key={text}>{parseDynamicText(text, { percentage: undefined, discount: undefined })}</p>;
+          }
+
           return (
             <ReactMarkdown key={text}>
-              {formatText(text, { percentage: percentageDiscount?.toString() ?? '70' })}
+              {hasPlaceholder
+                ? formatText(text, { percentage: percentageDiscount as string, discount: percentageDiscount as string })
+                : text}
             </ReactMarkdown>
           );
         })}

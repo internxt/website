@@ -60,40 +60,40 @@
     "cta": "Stockage cloud sécurisé"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'Internxt Meet ?",
+        "question": "Qu'est-ce qu'Internxt Meet ?",
         "answer": [
           "Internxt Meet est la plateforme de visioconférence la plus sécurisée où vous pouvez parler, chatter et organiser des réunions en toute confidentialité. Avec Internxt Meet, toutes vos conversations et appels sont tenus en parfaite confidentialité grâce à notre chiffrement avancé et primé. Tous les appels entre vous et votre équipe sont gardés privés et sécurisés."
         ]
       },
       {
-        "question": "Internxt Meet est-il une alternative à Google Meet ?",
+        "question": "Internxt Meet est-il une alternative à Google Meet ?",
         "answer": [
           "Oui, Internxt Meet est une alternative sécurisée à Google Meet, Zoom et Teams. Nous utilisons un chiffrement à connaissance nulle avec cryptographie post-quantique pour garantir que vous seul pouvez entendre ou voir vos appels vidéo. Même Internxt n'a pas accès à vos chats ou appels."
         ]
       },
       {
-        "question": "Internxt Meet est-il gratuit ?",
+        "question": "Internxt Meet est-il gratuit ?",
         "answer": [
           "Internxt Meet is available when you subscribe to our Ultimate plans, offering access to our full suite of privacy-focused products, including Internxt Drive, Mail, Antivirus, and VPN."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un email à hello@internxt.com."
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un email à hello@internxt.com."
         ]
       },
       {
-        "question": "Puis-je payer par Carte, PayPal ou Crypto ?",
+        "question": "Puis-je payer par Carte, PayPal ou Crypto ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc). Vous pouvez également payer via PayPal, Crypto, Klarna et autres."
         ]
       },
       {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie standard de remboursement de 30 jours sur tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
           "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."

@@ -47,11 +47,6 @@
       "pathname": "/metadata-remover"
     },
     {
-      "title": "暗網監控",
-      "cta": "立即檢查",
-      "pathname": "/dark-web-monitor"
-    },
-    {
       "title": "AI 偵測器",
       "cta": "立即檢查",
       "pathname": "/ai-detector"

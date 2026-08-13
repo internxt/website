@@ -176,7 +176,7 @@
         "question": "Is Internxt a more secure and private Google Drive alternative?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your files. Google Drive manages the encryption keys on its own servers, meaning it could access your files or give access to the government or law enforcement.",
-          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail also offer you additional protection from hackers and data breaches."
+          "Additional features such as VPN, Antivirus, Device Cleaner, Meet, and Mail also offer you additional protection from hackers and data breaches."
         ]
       },
       {

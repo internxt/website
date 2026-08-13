@@ -71,6 +71,14 @@ export default function Layout({
     });
   }, [segmentName]);
 
+  useEffect(() => {
+    const banner = document.getElementById('cookieBanner');
+    const cookieBannerApi = (globalThis as any).cookieBanner;
+    if (!banner || !cookieBannerApi) return;
+    banner.remove();
+    cookieBannerApi.init();
+  }, [router.locale]);
+
   return (
     <>
       <Head>

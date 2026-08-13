@@ -59,7 +59,12 @@
     "title": "Kernfunktionen unseres sicheren Cloud-Speichers für Fotos",
     "scrollableSection": {
       "images": ["partial1", "partial2", "partial3", "partial4"],
-      "titles": ["Ein vollständig privates Ökosystem", "Synchronisierung & Backups", "Ende-zu-Ende-verschlüsselt", "Verschlüsselte Backups"],
+      "titles": [
+        "Ein vollständig privates Ökosystem",
+        "Synchronisierung & Backups",
+        "Ende-zu-Ende-verschlüsselt",
+        "Verschlüsselte Backups"
+      ],
       "descriptions": [
         "Internxt Fotos ist in unserem Ultimate-Paket enthalten und bietet alles, was Sie zum Schutz Ihrer Privatsphäre benötigen: Verschlüsselter Cloud-Speicher, VPN, Mail, Antivirus, Meet und mehr.",
         "Fotos werden automatisch synchronisiert und in der Cloud gesichert, sodass Ihre Erinnerungen sicher, zugänglich und geschützt bleiben.",
@@ -103,7 +108,7 @@
       }
     },
     "lifetimeDescription": "Einmal zahlen und lebenslang Privatsphäre und Sicherheit genießen",
-    "planDescription": "Alle Internxt-Tarife bieten vollumfänglichen Zugriff auf unsere preisgekrönte Privacy-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
+    "planDescription": "Alle Internxt-Tarife bieten vollumfänglichen Zugriff auf unsere preisgekrönte Privacy-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail.",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die speziell darauf ausgelegt sind, Ihr Unternehmen zu schützen, Ihre Mitarbeiter abzusichern und Ihre Rentabilität zu gewährleisten.",
     "businessDescription2": "Sichern Sie die Daten Ihres Unternehmens mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
     "billingFrequency": {

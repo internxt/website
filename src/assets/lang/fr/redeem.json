@@ -45,7 +45,7 @@
         "password": {
           "label": "Mot de passe",
           "placeholder": "Mot de passe",
-          "helper": "Mot de passe oublié ?"
+          "helper": "Mot de passe oublié ?"
         },
         "tfa": {
           "label": "Authentification à deux facteurs",
@@ -73,40 +73,40 @@
     }
   },
   "PaymentSection": {
-    "limitedOffer": "Offre à durée limitée !",
+    "limitedOffer": "Offre à durée limitée !",
     "title": { "blueText": "", "normalText": "Découvrez tous nos plans à vie exclusifs" },
-    "title2": { "blueText": "Obtenez ${{percent}}% de réduction", "normalText": " sur nos plans à vie exclusifs" },
+    "title2": { "blueText": "Obtenez ${{percent}} % de réduction", "normalText": " sur nos plans à vie exclusifs" },
     "description": "Achetez une fois et obtenez la confidentialité et la sécurité pour toujours.",
     "description2": "Une vie de confidentialité et de sécurité pour vos fichiers pour un paiement unique et exclusif.",
     "normalSection": {
       "title": "Découvrez tous nos plans à vie exclusifs",
-      "description": "Cette semaine seulement : achetez une fois et obtenez la confidentialité et la sécurité pour toujours."
+      "description": "Cette semaine seulement : achetez une fois et obtenez la confidentialité et la sécurité pour toujours."
     },
-    "securePayment": "Paiement 100% sécurisé, propulsé par Stripe",
+    "securePayment": "Paiement 100 % sécurisé, propulsé par Stripe",
     "features": {
       "endToEnd": "Chiffrement de bout en bout",
       "openSource": "Open source et audité",
       "anonymousAccount": "Création de compte anonyme"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "GetLifetimeSection": {
-    "title": "La vie n'est pas courte ! Mais cette offre limitée dans le temps l'est...",
+    "title": "La vie n'est pas courte ! Mais cette offre limitée dans le temps l'est...",
     "description": "Internxt propose une offre d'une semaine pour une vie entière de confidentialité et de tranquillité d'esprit.",
     "cta": "Sélectionner le plan"
   },
   "FeatureSection": {
-    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers ?",
+    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers ?",
     "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul possédiez les clés de vos données chiffrées.",
     "cta": "",
     "cards": [
       {
         "title": "Confidentialité améliorée",
-        "description": "Notre puissant chiffrement protège vos données contre les accès non autorisés. Nous ne stockons jamais de mots de passe ; toutes vos données sont chiffrées."
+        "description": "Notre puissant chiffrement protège vos données contre les accès non autorisés. Nous ne stockons jamais de mots de passe ; toutes vos données sont chiffrées."
       },
       {
         "title": "Contrôle utilisateur",

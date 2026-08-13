@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt, une alternative \n **sécurisée** à Drime",
     "description": "Passez à Internxt pour une alternative totalement privée à Drime. \n Stockage cloud crypté post-quantique et zéro-connaissance.",
-    "getPrivacy": "Obtenez une confidentialité \n avec {{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité \n avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,7 +24,7 @@
         "Open source",
         "AES-256 et Kyber-512",
         "Oui",
-        "Compétitif, pas de coûts cachés, jusqu'à 5 To",
+        "Compétitif, pas de coûts cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail et plus",
         "Audits de sécurité réguliers",
         "Oui",
@@ -35,7 +35,7 @@
         "Code source fermé",
         "AES-256",
         "Non",
-        "Plans plus chers, jusqu'à 6 To",
+        "Plans plus chers, jusqu'à 6 To",
         "Drive, partage de fichiers, envoi et signature de documents",
         "Aucun audit de sécurité publié",
         "Non",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Qu'en est-il de votre vie privée ?",
+        "title": "Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Code source fermé",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Abonnement et à vie",
-            "description": "Drime propose des plans mensuels, annuels et à vie jusqu'à 6 To à des prix plus élevés qu'Internxt."
+            "description": "Drime propose des plans mensuels, annuels et à vie jusqu'à 6 To à des prix plus élevés qu'Internxt."
           }
         ]
       }
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Votre vie privée, vos conditions",
-    "description": "Protection complète avec {{percentage}}% de réduction",
+    "description": "Protection complète avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction  ",
+    "hotLabel": "{{discount}} % de réduction  ",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -155,7 +155,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud crypté gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud crypté gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -164,54 +164,54 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée à Drime ?",
+        "question": "Internxt est-il une alternative plus sécurisée à Drime ?",
         "answer": [
           "Oui, Internxt utilise un chiffrement post-quantique et zéro-connaissance qui garantit que personne d'autre que vous ne peut consulter vos fichiers. Tous vos fichiers sont protégés par ce chiffrement, sans avoir besoin de les stocker dans un coffre séparé, car Internxt Drive sert de coffre-fort complet de stockage cloud crypté.",
           "Des fonctionnalités supplémentaires telles que VPN, Antivirus, Nettoyeur d'Appareil (Device Cleaner), support NAS, Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les violations de données dans le cadre de votre plan de stockage cloud avec Internxt."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, ce qui fait du CPQ une alternative plus sécurisée à Drime.",
           "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre plan de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les plans sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre vie privée."
         ]
       },
       {
-        "question": "Drime est-il plus cher qu'Internxt ?",
+        "question": "Drime est-il plus cher qu'Internxt ?",
         "answer": [
-          "Drime coûte 105€ par an pour 1 To de stockage cloud. Avec Internxt, vous pouvez obtenir 5 To de stockage crypté post-quantique, plus VPN, Antivirus, Meet, Mail et plus pour 36€ la première année. Avec votre réduction exclusive de {{percentage}}%, Internxt offre un stockage cloud et une vaste gamme de fonctionnalités non disponibles chez d'autres fournisseurs de cloud, y compris Drime."
+          "Drime coûte 105 € par an pour 1 To de stockage cloud. Avec Internxt, vous pouvez obtenir 5 To de stockage crypté post-quantique, plus VPN, Antivirus, Meet, Mail et plus pour 36 € la première année. Avec votre réduction exclusive de {{percentage}} %, Internxt offre un stockage cloud et une vaste gamme de fonctionnalités non disponibles chez d'autres fournisseurs de cloud, y compris Drime."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou besoin d'assistance, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre plan à partir des paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau plan sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Oui, Internxt accepte actuellement les cartes de débit et de crédit Mastercard, VISA, American Express, etc. Vous pouvez également payer via PayPal, iDEAL, Sofort, Cryptomonnaie et Klarna."
         ]

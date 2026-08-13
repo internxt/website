@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme Terabox, mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à Terabox qui respecte votre vie privée",
-    "getPrivacy": " Choisissez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Choisissez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,18 +24,18 @@
         "Open-source",
         "Chiffré sur votre appareil",
         "Oui",
-        "Compétitif, sans frais cachés, jusqu'à 5To",
+        "Compétitif, sans frais cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Chiffré par Terabox",
         "Non",
-        "Forfaits limités à 2To",
+        "Forfaits limités à 2 To",
         "Stockage cloud et outils IA",
         "Aucun audit publié",
         "Non",
@@ -68,8 +68,8 @@
     "cards": {
       "titles": ["Vraie Confidentialité", "Chiffrement Zéro-Knowledge", "Pas de collecte de données"],
       "descriptions": [
-        "Terabox peut scanner ou analyser vos fichiers. Internxt n'a ni traqueurs, ni scan IA, ni accès dérobé. Vos photos et documents restent 100 % privés.",
-        "Terabox gère les clés sur ses serveurs, gardant un contrôle total. Internxt utilise le chiffrement côté client : vous seul détenez les clés de votre contenu.",
+        "Terabox peut scanner ou analyser vos fichiers. Internxt n'a ni traqueurs, ni scan IA, ni accès dérobé. Vos photos et documents restent 100 % privés.",
+        "Terabox gère les clés sur ses serveurs, gardant un contrôle total. Internxt utilise le chiffrement côté client : vous seul détenez les clés de votre contenu.",
         "Terabox collecte des données via les interactions et des tiers. Leurs fonctions IA analysent vos fichiers, ce qui signifie que vos données sont traitées directement par leurs systèmes."
       ]
     }
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité inégalée grâce au chiffrement post-quantique et zéro-knowledge.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements avec un paiement unique pour des plans jusqu'à 5To. Accès permanent avec {{percentage}}% de réduction."
+            "description": "Évitez les abonnements avec un paiement unique pour des plans jusqu'à 5 To. Accès permanent avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Terabox : Qu'en est-il de votre vie privée ?",
+        "title": "Terabox : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Basé sur l'abonnement",
-            "description": "Ne propose que des abonnements mensuels ou annuels avec un stockage limité à 2To, sans option de propriété à vie."
+            "description": "Ne propose que des abonnements mensuels ou annuels avec un stockage limité à 2 To, sans option de propriété à vie."
           }
         ]
       }
@@ -139,12 +139,12 @@
   },
   "CtaSection": {
     "title": "Stockage cloud européen",
-    "description": "Protection totale des données à -{{percentage}}%",
+    "description": "Protection totale des données à -{{percentage}} %",
     "cta": "Profiter de l'offre"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "-{{percentage}}%",
+    "hotLabel": "-{{percentage}} %",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir ce plan"
     },
     "features": {
@@ -163,54 +163,54 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il plus sûr que Terabox ?",
+        "question": "Internxt est-il plus sûr que Terabox ?",
         "answer": [
           "Oui, Internxt utilise le chiffrement post-quantique et zéro-knowledge, garantissant que vous seul voyez vos fichiers.",
           "Terabox gère les clés sur ses serveurs, ce qui signifie qu'ils pourraient accéder à vos données ou les transmettre aux autorités."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique ?",
         "answer": [
           "Contrairement au chiffrement standard, ces algorithmes résistent aux attaques d'ordinateurs quantiques puissants.",
           "Cette méthode garantit que votre plan à vie vous protège contre les menaces futures, sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD soumise aux lois strictes de l'UE."
         ]
       },
       {
-        "question": "Terabox est-il plus cher qu'Internxt ?",
+        "question": "Terabox est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre remise exclusive de {{percentage}}%, nos forfaits sont moins chers que ceux de Terabox, avec bien plus de confidentialité."
+          "Avec votre remise exclusive de {{percentage}} %, nos forfaits sont moins chers que ceux de Terabox, avec bien plus de confidentialité."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Pour toute question, contactez hello@internxt.com. Notre équipe de Customer Success se fera un plaisir de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez augmenter votre stockage dans vos paramètres ou acheter un nouveau plan qui se cumulera automatiquement."
         ]
       },
       {
-        "question": "Puis-je payer par carte, PayPal ou crypto ?",
+        "question": "Puis-je payer par carte, PayPal ou crypto ?",
         "answer": [
           "Internxt accepte les cartes (Mastercard, VISA, etc.), PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."
         ]

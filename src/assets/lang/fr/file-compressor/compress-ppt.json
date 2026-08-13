@@ -6,26 +6,26 @@
   "FeaturesSection": {
     "howToConvert": {
       "title": "Comment compresser un fichier PPT",
-      "description": "Pour compresser un fichier PPT, suivez ces étapes :",
+      "description": "Pour compresser un fichier PPT, suivez ces étapes :",
       "steps": [
         {
-          "step": "Étape 1 :",
-          "description": "Téléversez votre fichier PPT : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil."
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier PPT : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil."
         },
         {
-          "step": "Étape 2 :",
-          "description": "Cliquez sur « Compresser le fichier PPT »"
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier PPT »"
         },
         {
-          "step": "Étape 3 :",
+          "step": "Étape 3 :",
           "description": "Téléchargez votre fichier."
         }
       ],
       "outro": "Avec cet outil, vous pouvez compresser vos fichiers PPT gratuitement à tout moment. Tous les fichiers sont protégés grâce à un téléversement chiffré pour assurer la confidentialité de vos présentations."
     },
     "whyConvert": {
-      "title": "Pourquoi compresser un fichier PPT ?",
-      "intro": "Il est courant d’envoyer un fichier PPT par e-mail pour un projet de groupe ou une présentation d’équipe, mais les fichiers volumineux peuvent être bloqués par certaines limites de taille. Avec Internxt, il suffit de choisir votre fichier pour :",
+      "title": "Pourquoi compresser un fichier PPT ?",
+      "intro": "Il est courant d’envoyer un fichier PPT par e-mail pour un projet de groupe ou une présentation d’équipe, mais les fichiers volumineux peuvent être bloqués par certaines limites de taille. Avec Internxt, il suffit de choisir votre fichier pour :",
       "bullets": [
         "Compresser, partager et modifier rapidement vos fichiers PPT",
         "Respecter les limites de taille des téléchargements",

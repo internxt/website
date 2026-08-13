@@ -13,7 +13,7 @@
     ]
   },
   "CoreFeatures": {
-    "title": "Stockage photo privé : Vos souvenirs, accessibles de partout",
+    "title": "Stockage photo privé : Vos souvenirs, accessibles de partout",
     "description": "Conservez votre photothèque à jour et synchronisée sur tous vos appareils. Même si votre appareil est perdu ou remplacé, votre photothèque reste en sécurité et accessible.",
     "accordionCards": {
       "titles": [
@@ -24,7 +24,7 @@
       "descriptions": [
         "Sauvegardez automatiquement les photos de tous vos appareils et accédez-y en toute sécurité dès que vous en avez besoin.",
         "Internxt Photos offre une expérience totalement sans publicité, sans suivi de données et sans IA utilisant vos photos pour de l'apprentissage automatique.",
-        "Votre photothèque est continuellement mise à jour en temps réel : toute modification sur un appareil est répercutée partout. Les sauvegardes automatiques vous évitent toute crainte de perte de données."
+        "Votre photothèque est continuellement mise à jour en temps réel : toute modification sur un appareil est répercutée partout. Les sauvegardes automatiques vous évitent toute crainte de perte de données."
       ]
     }
   },
@@ -59,9 +59,14 @@
     "title": "Fonctionnalités clés de notre stockage cloud sécurisé pour photos",
     "scrollableSection": {
       "images": ["partial1", "partial2", "partial3", "partial4"],
-      "titles": ["Un écosystème entièrement privé", "Synchronisation et sauvegardes", "Chiffré de bout en bout", "Sauvegardes chiffrées"],
+      "titles": [
+        "Un écosystème entièrement privé",
+        "Synchronisation et sauvegardes",
+        "Chiffré de bout en bout",
+        "Sauvegardes chiffrées"
+      ],
       "descriptions": [
-        "Internxt Photos est inclus dans notre formule Ultimate, vous offrant tout le nécessaire pour protéger votre vie privée : stockage cloud chiffré, VPN, Mail, Antivirus, Meet et plus encore.",
+        "Internxt Photos est inclus dans notre formule Ultimate, vous offrant tout le nécessaire pour protéger votre vie privée : stockage cloud chiffré, VPN, Mail, Antivirus, Meet et plus encore.",
         "Les photos sont automatiquement synchronisées et sauvegardées dans le cloud, gardant vos souvenirs en sécurité et accessibles.",
         "Toutes les photos sont chiffrées avec des technologies post-quantiques et Zero-Knowledge. Seul vous, ou les personnes avec qui vous choisissez de les partager, pouvez accéder au contenu.",
         "Protégez vos photos contre les raticiels (ransomware) et les pertes accidentelles grâce à des sauvegardes automatiques et chiffrées qui garantissent votre tranquillité d'esprit."
@@ -89,7 +94,7 @@
   "TableSection": {
     "title": "Forfaits Internxt",
     "valentinesTitle": "Un amour sécurisé - ",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Sélectionnez votre forfait",
       "lifetimeHeader": "Sélectionnez votre forfait à vie",
@@ -98,12 +103,12 @@
       "lifetime": "Forfaits à vie",
       "business": "Forfaits Entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos forfaits à vie exclusifs"
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez d'une confidentialité et sécurité à vie",
-    "planDescription": "Tous les forfaits Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
+    "planDescription": "Tous les forfaits Internxt incluent un accès complet à notre suite de confidentialité primée : Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nuevos forfaits conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les forfaits de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -115,7 +120,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez gratuitement 1 Go de stockage cloud chiffré",
+      "description": "Obtenez gratuitement 1 Go de stockage cloud chiffré",
       "cta": "Choisir le forfait"
     },
     "features": {
@@ -126,34 +131,34 @@
       "guarantee": "Garantie satisfied ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "SemanticAccordion": {
-    "title": "Des questions sur Internxt Photos ? Nous avons les réponses",
+    "title": "Des questions sur Internxt Photos ? Nous avons les réponses",
     "items": [
       {
-        "question": "Qu'est-ce qu'Internxt Photos ?",
+        "question": "Qu'est-ce qu'Internxt Photos ?",
         "answer": [
           "Internxt Photos est une application de stockage cloud pour photos chiffrée de bout en bout, vous permettant de stocker, synchroniser et sauvegarder automatiquement vos photos et albums en toute confidentialité."
         ]
       },
       {
-        "question": "Quel forfait inclut Internxt Photos ?",
+        "question": "Quel forfait inclut Internxt Photos ?",
         "answer": [
-          "Internxt Photos est inclus dans tous les forfaits Ultimate annuels et à vie. Cela vous donne également accès à 5 To de stockage cloud et à l'ensemble de notre suite de confidentialité."
+          "Internxt Photos est inclus dans tous les forfaits Ultimate annuels et à vie. Cela vous donne également accès à 5 To de stockage cloud et à l'ensemble de notre suite de confidentialité."
         ]
       },
       {
-        "question": "Pourquoi devrais-je utiliser un stockage de photos chiffré ?",
+        "question": "Pourquoi devrais-je utiliser un stockage de photos chiffré ?",
         "answer": [
           "Le stockage chiffré est essentiel car la plupart des services grand public ne garantissent pas una confidentialité totale. Les géants de la tech peuvent accéder à vos photos pour de la modération, du traitement d'IA ou des requêtes légales."
         ]
       },
       {
-        "question": "Internxt Photos est-il une alternative à Google Photos ?",
+        "question": "Internxt Photos est-il une alternative à Google Photos ?",
         "answer": [
           "Oui, Internxt Photos est une alternative privée et sécurisée à Google Photos qui protège vos clichés avec un chiffrement Zero-Knowledge et post-quantique, garantissant que personne d'autre que vous ne puisse y accéder.",
           "Avec Internxt Photos, vous bénéficiez également d'un accès à toute la gamme de produits Internxt comprenant Drive, VPN, Meet, Mail et bien plus."

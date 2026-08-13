@@ -33,19 +33,19 @@
   },
   "tableSection": {
     "title": "Plans Internxt",
-    "hotLabel": "{{discount}}% remise",
+    "hotLabel": "{{discount}} % remise",
     "planTitles": {
       "header": "Choisissez votre plan",
       "homePage": "Choisissez le plan qui vous convient",
       "lifetime": "Plans à vie",
       "business": "Plans entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez de confidentialité et sécurité à vie",
-    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail. ",
+    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail. ",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -57,7 +57,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -68,16 +68,16 @@
       "guarantee": "Garantie satisfait ou remboursé 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "DriveSection": {
     "title": "Internxt Drive",
     "description": [
       "Google Drive, iCloud, OneDrive, Dropbox, et d'autres peuvent déchiffrer, consulter et partager vos données avec les gouvernements et les tiers.",
-      "Internxt Drive vous donne un contrôle total et la confidentialité de votre stockage cloud grâce au chiffrement post-quantique et à connaissance zéro. Nous ne pouvons pas accéder à vos fichiers ; vous conservez la pleine propriété, l'accès et le contrôle de vos données."
+      "Internxt Drive vous donne un contrôle total et la confidentialité de votre stockage cloud grâce au chiffrement post-quantique et à connaissance zéro. Nous ne pouvons pas accéder à vos fichiers ; vous conservez la pleine propriété, l'accès et le contrôle de vos données."
     ]
   },
   "EncryptedCloudStorageSection": {
@@ -204,7 +204,7 @@
       },
       "available": "Disponible sur",
       "learnMore": {
-        "title": "En savoir plus sur Internxt CLI :",
+        "title": "En savoir plus sur Internxt CLI :",
         "GitHub": "GitHub ReadMe",
         "learnMore": "En Savoir Plus"
       }
@@ -233,41 +233,41 @@
     "trustpilot": "Des tonnes d'espace privé et sécurisé. Excellent support. Vraiment rentable."
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'Internxt Drive ?",
+        "question": "Qu'est-ce qu'Internxt Drive ?",
         "answer": [
           "Internxt Drive est un service de stockage de fichiers à connaissance zéro conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données ou fichiers personnels. Au lieu de cela, il est conçu pour vous redonner le contrôle de vos fichiers et vous protéger des collecteurs de données."
         ]
       },
       {
-        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
         "answer": [
-          "Oui, Internxt s'engage en faveur du cloud computing vert, offrant des solutions de stockage respectueuses de l'environnement pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
+          "Oui, Internxt s'engage en faveur du cloud computing vert, offrant des solutions de stockage respectueuses de l'environnement pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
           "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. En savoir plus"
         ]
       },
       {
-        "question": "Comment créer un compte Internxt ?",
+        "question": "Comment créer un compte Internxt ?",
         "answer": [
-          "Rendez-vous sur notre site Web et cliquez sur « Démarrer » dans le coin supérieur droit. Remplissez le formulaire d'inscription en entrant une adresse e-mail, puis créez votre mot de passe. Aucune vérification d'identité ou d'e-mail n'est requise pour commencer à utiliser les services d'Internxt."
+          "Rendez-vous sur notre site Web et cliquez sur « Démarrer » dans le coin supérieur droit. Remplissez le formulaire d'inscription en entrant une adresse e-mail, puis créez votre mot de passe. Aucune vérification d'identité ou d'e-mail n'est requise pour commencer à utiliser les services d'Internxt."
         ]
       },
       {
-        "question": "Comment télécharger des fichiers sur Internxt Drive ?",
+        "question": "Comment télécharger des fichiers sur Internxt Drive ?",
         "answer": [
-          "Visitez Drive Web et connectez-vous. Faites glisser et déposez les fichiers ou photos choisis directement dans la fenêtre du navigateur. Vous pouvez également cliquer sur « Nouveau » dans le coin droit du navigateur, ce qui ouvrira l'Explorateur ou le Finder, et sélectionner les fichiers que vous souhaitez télécharger."
+          "Visitez Drive Web et connectez-vous. Faites glisser et déposez les fichiers ou photos choisis directement dans la fenêtre du navigateur. Vous pouvez également cliquer sur « Nouveau » dans le coin droit du navigateur, ce qui ouvrira l'Explorateur ou le Finder, et sélectionner les fichiers que vous souhaitez télécharger."
         ]
       },
       {
-        "question": "Comment installer l'application Internxt ?",
+        "question": "Comment installer l'application Internxt ?",
         "answer": [
-          "Allez sur le site Web d'Internxt, faites défiler la page d'accueil vers le bas et sélectionnez « Télécharger les applications ». L'application Internxt est également disponible sur le Play Store ou l'App Store. Une fois le processus de téléchargement terminé, il vous sera demandé d'exécuter notre application de stockage. Le téléchargement de notre application Drive vous permet de mieux utiliser l'écosystème d'Internxt."
+          "Allez sur le site Web d'Internxt, faites défiler la page d'accueil vers le bas et sélectionnez « Télécharger les applications ». L'application Internxt est également disponible sur le Play Store ou l'App Store. Une fois le processus de téléchargement terminé, il vous sera demandé d'exécuter notre application de stockage. Le téléchargement de notre application Drive vous permet de mieux utiliser l'écosystème d'Internxt."
         ]
       },
       {
-        "question": "Puis-je configurer l'authentification à deux facteurs (2FA) avec Internxt ?",
+        "question": "Puis-je configurer l'authentification à deux facteurs (2FA) avec Internxt ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs (2FA) pour votre compte Internxt à partir de l'application Drive Web. De plus, vous pouvez utiliser Authy ou tout autre outil 2FA pour générer votre code 2FA avec Internxt, afin de vous connecter à notre application Drive en ligne."
         ]
@@ -275,51 +275,51 @@
     ]
   },
   "SecureStorageSeoSection": {
-    "title": "Stockage cloud sécurisé : comment Internxt protège vos données",
+    "title": "Stockage cloud sécurisé : comment Internxt protège vos données",
     "faq": [
       {
-        "question": "Qu'est-ce que le stockage cloud sécurisé de fichiers et qu'est-ce qui le différencie ?",
+        "question": "Qu'est-ce que le stockage cloud sécurisé de fichiers et qu'est-ce qui le différencie ?",
         "answer": [
-          "Le stockage cloud sécurisé de fichiers est un stockage en ligne conçu avec la protection des données comme exigence principale, pas comme une fonctionnalité secondaire. La différence repose sur deux facteurs techniques : où se produit le chiffrement et qui contrôle les clés.",
+          "Le stockage cloud sécurisé de fichiers est un stockage en ligne conçu avec la protection des données comme exigence principale, pas comme une fonctionnalité secondaire. La différence repose sur deux facteurs techniques : où se produit le chiffrement et qui contrôle les clés.",
           "Le stockage cloud standard chiffre les données en transit et au repos, mais le fournisseur gère les clés. Cela signifie qu'il peut accéder à vos fichiers, répondre à des demandes légales et potentiellement exposer vos données.",
-          "Une plateforme construite sur une architecture à connaissance zéro fonctionne différemment : le chiffrement a lieu sur votre appareil, le fournisseur ne reçoit que du texte chiffré. Même sous contrainte légale, il ne peut pas fournir un contenu lisible.",
-          "Internxt Drive est conçu selon ce modèle : architecture à connaissance zéro, AES-256 et Kyber-512 post-quantique, centres de données européens, ISO 27001:2022, conformité HIPAA et audit Securitum 2024."
+          "Une plateforme construite sur une architecture à connaissance zéro fonctionne différemment : le chiffrement a lieu sur votre appareil, le fournisseur ne reçoit que du texte chiffré. Même sous contrainte légale, il ne peut pas fournir un contenu lisible.",
+          "Internxt Drive est conçu selon ce modèle : architecture à connaissance zéro, AES-256 et Kyber-512 post-quantique, centres de données européens, ISO 27001:2022, conformité HIPAA et audit Securitum 2024."
         ]
       },
       {
-        "question": "Comment fonctionne la sécurité du stockage cloud au niveau technique ?",
+        "question": "Comment fonctionne la sécurité du stockage cloud au niveau technique ?",
         "answer": [
           "La sécurité du stockage cloud est une pile de couches de protection, chacune adressant une surface de menace différente.",
-          "Chiffrement en transit (TLS 1.3) : prévient l'interception réseau. Chiffrement au repos (AES-256) : protège en cas de compromission physique. Contrôles d'accès : authentification multi-facteurs, permissions basées sur les rôles, révocation des accès aux fichiers partagés.",
-          "Architecture de confidentialité : la mesure la plus significative est de savoir si le fournisseur peut accéder à vos données. Les plateformes à connaissance zéro protègent les données du fournisseur lui-même.",
-          "Internxt Drive couvre toutes les couches : TLS 1.3, AES-256 plus Kyber-512 post-quantique, contrôles d'accès granulaires, architecture à connaissance zéro et dossier complet de conformité confirmé par Securitum 2024."
+          "Chiffrement en transit (TLS 1.3) : prévient l'interception réseau. Chiffrement au repos (AES-256) : protège en cas de compromission physique. Contrôles d'accès : authentification multi-facteurs, permissions basées sur les rôles, révocation des accès aux fichiers partagés.",
+          "Architecture de confidentialité : la mesure la plus significative est de savoir si le fournisseur peut accéder à vos données. Les plateformes à connaissance zéro protègent les données du fournisseur lui-même.",
+          "Internxt Drive couvre toutes les couches : TLS 1.3, AES-256 plus Kyber-512 post-quantique, contrôles d'accès granulaires, architecture à connaissance zéro et dossier complet de conformité confirmé par Securitum 2024."
         ]
       },
       {
-        "question": "Qu'est-ce que la sécurité du stockage cloud et pourquoi est-elle importante ?",
+        "question": "Qu'est-ce que la sécurité du stockage cloud et pourquoi est-elle importante ?",
         "answer": [
-          "La sécurité du stockage cloud couvre toutes les mesures techniques et organisationnelles qui protègent les données sur une infrastructure distante : transmission, stockage, accès et récupération.",
-          "Les trois exigences : confidentialité (qui peut lire vos fichiers), intégrité (si les fichiers peuvent être altérés) et disponibilité (si vos fichiers restent accessibles).",
+          "La sécurité du stockage cloud couvre toutes les mesures techniques et organisationnelles qui protègent les données sur une infrastructure distante : transmission, stockage, accès et récupération.",
+          "Les trois exigences : confidentialité (qui peut lire vos fichiers), intégrité (si les fichiers peuvent être altérés) et disponibilité (si vos fichiers restent accessibles).",
           "Une plateforme qui conserve les clés n'adresse la confidentialité que partiellement. L'architecture à connaissance zéro l'adresse complètement, excluant techniquement le fournisseur.",
-          "Internxt Drive adresse les trois : chiffrement à connaissance zéro pour la confidentialité, vérifications d'intégrité cryptographique et centres de données européens redondants pour la disponibilité."
+          "Internxt Drive adresse les trois : chiffrement à connaissance zéro pour la confidentialité, vérifications d'intégrité cryptographique et centres de données européens redondants pour la disponibilité."
         ]
       },
       {
-        "question": "Qu'est-ce que le stockage cloud sécurisé et comment l'évaluer ?",
+        "question": "Qu'est-ce que le stockage cloud sécurisé et comment l'évaluer ?",
         "answer": [
           "Le stockage cloud sécurisé est un stockage distant où la protection des données est une exigence de conception. Cinq questions vérifiables aident à l'évaluer.",
-          "Premièrement : où se produit le chiffrement ? Côté client est plus robuste que côté serveur. Deuxièmement : qui détient les clés ? Le modèle à connaissance zéro maintient les clés localement. Troisièmement : quelles certifications indépendantes existent ?",
-          "Quatrièmement : le code est-il ouvert à la revue ? L'open-source permet une vérification indépendante. Cinquièmement : un test de pénétration tiers a-t-il été réalisé et publié ?",
-          "Internxt Drive répond aux cinq : chiffrement côté client, gestion des clés à connaissance zéro, ISO 27001:2022 et HIPAA, code source entièrement ouvert et audit Securitum 2024."
+          "Premièrement : où se produit le chiffrement ? Côté client est plus robuste que côté serveur. Deuxièmement : qui détient les clés ? Le modèle à connaissance zéro maintient les clés localement. Troisièmement : quelles certifications indépendantes existent ?",
+          "Quatrièmement : le code est-il ouvert à la revue ? L'open-source permet une vérification indépendante. Cinquièmement : un test de pénétration tiers a-t-il été réalisé et publié ?",
+          "Internxt Drive répond aux cinq : chiffrement côté client, gestion des clés à connaissance zéro, ISO 27001:2022 et HIPAA, code source entièrement ouvert et audit Securitum 2024."
         ]
       },
       {
-        "question": "Qu'est-ce que le stockage cloud sécurisé et qu'offre-t-il par rapport aux options standard ?",
+        "question": "Qu'est-ce que le stockage cloud sécurisé et qu'offre-t-il par rapport aux options standard ?",
         "answer": [
           "Le stockage cloud sécurisé va au-delà d'un mot de passe ou du HTTPS. Il signifie que l'architecture sous-jacente empêche techniquement tout accès non autorisé, même de la plateforme qui héberge vos fichiers.",
-          "Les plateformes standard peuvent être contraintes par des tribunaux de produire des données ou être compromises lors d'une violation. L'architecture à connaissance zéro élimine cette vulnérabilité : les fichiers sont chiffrés avant l'envoi, le fournisseur ne stocke que du texte chiffré illisible.",
-          "Ce que le stockage cloud sécurisé offre en pratique : vos fichiers ne quittent l'appareil que chiffrés ; en cas de violation du fournisseur, les attaquants obtiennent des données illisibles ; les demandes judiciaires ne peuvent être satisfaites car le fournisseur n'a pas accès.",
-          "Internxt Drive est conçu dès le départ comme un stockage cloud sécurisé : connaissance zéro, chiffrement de bout en bout, open-source et audité de manière indépendante."
+          "Les plateformes standard peuvent être contraintes par des tribunaux de produire des données ou être compromises lors d'une violation. L'architecture à connaissance zéro élimine cette vulnérabilité : les fichiers sont chiffrés avant l'envoi, le fournisseur ne stocke que du texte chiffré illisible.",
+          "Ce que le stockage cloud sécurisé offre en pratique : vos fichiers ne quittent l'appareil que chiffrés ; en cas de violation du fournisseur, les attaquants obtiennent des données illisibles ; les demandes judiciaires ne peuvent être satisfaites car le fournisseur n'a pas accès.",
+          "Internxt Drive est conçu dès le départ comme un stockage cloud sécurisé : connaissance zéro, chiffrement de bout en bout, open-source et audité de manière indépendante."
         ]
       }
     ]

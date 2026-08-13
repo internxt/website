@@ -27,7 +27,7 @@
     "aiCheckerTitle": "Détecteur d'IA gratuit d'Internxt",
     "aiCheckerDescription": "Détectez le contenu IA de ChatGPT ou d'autres textes générés par intelligence artificielle avec notre détecteur d'IA gratuit. Téléversez un fichier ou collez votre texte pour obtenir des résultats instantanés, afin d'apporter toute modification avant de publier ou d'envoyer votre contenu.\n\nNous ne stockons aucun contenu ni information dans notre détecteur d'IA. Notre outil recherche uniquement des motifs générés par l'IA sans stocker le contenu que vous soumettez. Ainsi, nous gardons votre contenu sécurisé et privé, à l'abri des outils d'IA qui utilisent vos données pour entraîner leurs propres modèles d'apprentissage automatique.",
     "aiDetectorTitle": "Détecteur d'IA ZeroGPT pour ChatGPT, Gemini, CoPilot et autres",
-    "aiDetectorDescription": "L'outil de détection d'IA d'Internxt analyse avec précision et rapidité le contenu généré par des outils d'intelligence artificielle populaires, tels que ChatGPT et Gemini, entre autres. Une fois analysé, il fournit un retour et différencie le texte généré par des humains de celui généré par l'IA, vous offrant une analyse détaillée du texte.\n\nNotre détecteur d'IA avancé et gratuit détecte les derniers modèles d'IA, comme GPT-4, avec une grande précision. Notez qu'aucun vérificateur d'IA n'est précis à 100 % en raison de l'évolution des modèles de langage IA, mais nous nous efforçons de vous offrir une analyse aussi avancée et précise que possible."
+    "aiDetectorDescription": "L'outil de détection d'IA d'Internxt analyse avec précision et rapidité le contenu généré par des outils d'intelligence artificielle populaires, tels que ChatGPT et Gemini, entre autres. Une fois analysé, il fournit un retour et différencie le texte généré par des humains de celui généré par l'IA, vous offrant une analyse détaillée du texte.\n\nNotre détecteur d'IA avancé et gratuit détecte les derniers modèles d'IA, comme GPT-4, avec une grande précision. Notez qu'aucun vérificateur d'IA n'est précis à 100 % en raison de l'évolution des modèles de langage IA, mais nous nous efforçons de vous offrir une analyse aussi avancée et précise que possible."
   },
   "CtaSection": {
     "title": "Internxt Drive",
@@ -40,28 +40,28 @@
     "cta": "Obtenez Internxt"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Comment fonctionne le détecteur d'IA d'Internxt ?",
+        "question": "Comment fonctionne le détecteur d'IA d'Internxt ?",
         "answer": [
           "Lorsque vous soumettez votre contenu, le logiciel analyse les motifs courants dans le contenu généré par l'IA, tels que le vocabulaire, la structure et la grammaire. Ces modèles d'apprentissage sont entraînés pour détecter les différences entre l'IA et l'écriture humaine."
         ]
       },
       {
-        "question": "Quelle est la précision du détecteur de texte IA ?",
+        "question": "Quelle est la précision du détecteur de texte IA ?",
         "answer": [
-          "Nos algorithmes avancés peuvent détecter le contenu écrit par l'IA avec un haut niveau de succès, mais aucun outil de détection d'IA ne peut détecter le texte IA avec une précision de 100 %."
+          "Nos algorithmes avancés peuvent détecter le contenu écrit par l'IA avec un haut niveau de succès, mais aucun outil de détection d'IA ne peut détecter le texte IA avec une précision de 100 %."
         ]
       },
       {
-        "question": "L'outil de détection d'IA d'Internxt peut-il suggérer des améliorations ?",
+        "question": "L'outil de détection d'IA d'Internxt peut-il suggérer des améliorations ?",
         "answer": [
           "Non, il peut seulement mettre en évidence le contenu écrit par l'IA et indiquer la quantité de texte qui a probablement été rédigée par une personne réelle."
         ]
       },
       {
-        "question": "Pourquoi choisir le détecteur Internxt plutôt que d'autres outils de détection d'IA ?",
+        "question": "Pourquoi choisir le détecteur Internxt plutôt que d'autres outils de détection d'IA ?",
         "answer": [
           "L'outil gratuit de détection d'IA d'Internxt vous permet d'analyser du contenu qui n'est ni stocké ni partagé avec d'autres entreprises, ni utilisé pour entraîner des modèles de langage IA, ce qui en fait une ressource précieuse pour vérifier l'IA sans compromettre votre vie privée."
         ]
@@ -69,7 +69,7 @@
     ]
   },
   "ToolsSection": {
-    "title": "Essayez les outils de sécurité en ligne gratuits d'Internxt :",
+    "title": "Essayez les outils de sécurité en ligne gratuits d'Internxt :",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",
@@ -144,7 +144,7 @@
       {
         "title": "Analyses illimitées",
         "description": [
-          "Effectuez des analyses de texte IA gratuitement, à tout moment. Nous ne cachons pas ce service derrière des paywalls ; nous offrons un outil de détection d'IA sécurisé et privé, disponible gratuitement chaque fois que vous devez authentifier votre propre travail ou celui des autres."
+          "Effectuez des analyses de texte IA gratuitement, à tout moment. Nous ne cachons pas ce service derrière des paywalls ; nous offrons un outil de détection d'IA sécurisé et privé, disponible gratuitement chaque fois que vous devez authentifier votre propre travail ou celui des autres."
         ]
       },
       {
@@ -168,7 +168,7 @@
       {
         "title": "Aucun enregistrement",
         "description": [
-          "Notre détecteur d'IA est 100 % gratuit et sans limite d'utilisation. Pas besoin de créer un compte ni d'abonnement premium, il suffit de téléverser ou de coller le contenu à analyser, et c'est tout !"
+          "Notre détecteur d'IA est 100 % gratuit et sans limite d'utilisation. Pas besoin de créer un compte ni d'abonnement premium, il suffit de téléverser ou de coller le contenu à analyser, et c'est tout !"
         ]
       }
     ]

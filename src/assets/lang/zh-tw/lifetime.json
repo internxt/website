@@ -28,12 +28,7 @@
     "description": "Internxt 讓您重新掌控自己的隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，並且我們不會儲存或向第三方出售您的資料。我們竭盡全力確保您的資訊安全無虞。",
     "cta": "進一步了解我們",
     "cardDescriptions": {
-      "titles": [
-        "無法被駭客攻擊或外洩的資料",
-        "新一代安全性",
-        "開源且透明",
-        "經獨立驗證"
-      ],
+      "titles": ["無法被駭客攻擊或外洩的資料", "新一代安全性", "開源且透明", "經獨立驗證"],
       "descriptions": [
         "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜態時均已加密。Internxt 讓您完全掌控自己的檔案。您的資料是您的私事，保護它是我們的職責。",
         "Internxt 是唯一一款使用端到端和後量子加密自動加密您檔案的雲端儲存，這意味著只有您才能存取自己的資料。",
@@ -70,7 +65,7 @@
       }
     },
     "lifetimeDescription": "一次付費，終身享受隱私與安全",
-    "planDescription": "所有 Internxt 方案均功能齊全，可完整存取我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "planDescription": "所有 Internxt 方案均功能齊全，可完整存取我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
     "businessDescription": "我們目前正在開發全新的 Internxt 方案，專為保護您的企業、保護您的員工並保障您的獲利能力而設計。",
     "businessDescription2": "使用 Internxt 的加密雲端儲存方案，確保貴公司的資料安全。",
     "billingFrequency": {

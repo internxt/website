@@ -335,6 +335,20 @@ export enum PromoCodeName {
   macrumors = 'MACRUMORS',
   saasmaster = 'SAASMASTER',
   cyberlab = 'CYBERLAB',
+  offerblogen = 'OFFERBLOGEN',
+  offerbloges = 'OFFERBLOGES',
+  offerblogde = 'OFFERBLOGDE',
+  offerblogfr = 'OFFERBLOGFR',
+  kioskomputer = 'KIOSKOMPUTER',
+  midu = 'MIDU',
+  josema = 'JOSEMA',
+  jvscholz = 'JVSCHOLZ',
+  ctechmedia = 'CTECHMEDIA',
+  verdrahtet = 'VERDRAHTET',
+  aimentors = 'AIMENTORS',
+  alessandro = 'ALESSANDRO',
+  lomotica = 'LOMOTICA',
+  dinamotech = 'DINAMOTECH',
 }
 
 export interface PromoCodeProps {

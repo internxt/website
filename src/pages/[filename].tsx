@@ -151,6 +151,8 @@ function CombinedSpecialOffer({
       lang={lang}
       robots={
         pathname === 'world-backup-day' || pathname === 'earth-day' || pathname === 'drop-offer'
+         || pathname === 'offerblogen' || pathname === 'offerbloges' || pathname === 'offerblogde'
+         || pathname === 'offerblogfr'
           ? 'noindex,follow'
           : undefined
       }

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme Filen, \n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à Filen qui respecte votre vie privée avec une sécurité post-quantique",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -70,7 +70,7 @@
       "descriptions": [
         "Internxt est le premier cloud à implémenter le chiffrement post-quantique (Kyber-512), protégeant vos données contre les futures attaques d'ordinateurs quantiques qui briseront le standard AES-256.",
         "Internxt va au-delà du stockage, offrant un écosystème complet (VPN, Antivirus, Meet) pour protéger votre appareil et votre identité en ligne avec un seul abonnement sécurisé.",
-        "Contrairement à Filen, qui a retiré la plupart de ses plans Pro à vie, Internxt continue de proposer un accès vitalice abordable jusqu'à 5To avec une garantie de remboursement de 30 jours."
+        "Contrairement à Filen, qui a retiré la plupart de ses plans Pro à vie, Internxt continue de proposer un accès vitalice abordable jusqu'à 5 To avec une garantie de remboursement de 30 jours."
       ]
     }
   },
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité inégalée grâce au chiffrement post-quantique, vous offrant la meilleure protection contre les futures cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open Source Audité",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Plans à Vie Flexibles",
-            "description": "Paiement unique pour un accès à vie jusqu'à 5To. Plans cumulables pour étendre votre stockage à tout moment avec {{percentage}}% de réduction."
+            "description": "Paiement unique pour un accès à vie jusqu'à 5 To. Plans cumulables pour étendre votre stockage à tout moment avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Filen : Qu'en est-il de votre vie privée ?",
+        "title": "Filen : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Open source, sans audit",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Focus sur l'abonnement",
-            "description": "S'éloigne des modèles à vie ; les plans Pro Lifetime sont de plus en plus restreints ou retirés."
+            "description": "S'éloigne des modèles à vie ; les plans Pro Lifetime sont de plus en plus restreints ou retirés."
           }
         ]
       }
@@ -139,12 +139,12 @@
   },
   "CtaSection": {
     "title": "Stockage cloud européen",
-    "description": "Protection totale des données avec {{percentage}}% de réduction",
+    "description": "Protection totale des données avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction ",
+    "hotLabel": "{{discount}} % de réduction ",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir ce plan"
     },
     "features": {
@@ -163,53 +163,53 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sûre et plus privée que Filen ?",
+        "question": "Internxt est-il une alternative plus sûre et plus privée que Filen ?",
         "answer": [
           "Oui, Internxt est le premier à proposer le chiffrement post-quantique en plus des politiques zéro-knowledge, et il est audité par des firmes de sécurité indépendantes.",
           "Alors que Filen est sûr, Internxt offre une suite de confidentialité plus large incluant VPN, Antivirus et appels Meet privés."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sûr ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sûr ?",
         "answer": [
           "Contrairement à l'AES-256 standard utilisé par Filen, le chiffrement post-quantique (PQE) résiste aux attaques des ordinateurs quantiques, pérennisant vos données pour la prochaine décennie."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, respectant les lois strictes du RGPD et de l'UE sur la protection des données."
         ]
       },
       {
-        "question": "Filen est-il plus cher qu'Internxt ?",
+        "question": "Filen est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec notre remise exclusive de {{percentage}}%, les plans annuels et à vie d'Internxt sont très compétitifs et offrent plus de fonctionnalités que le modèle de stockage seul de Filen."
+          "Avec notre remise exclusive de {{percentage}} %, les plans annuels et à vie d'Internxt sont très compétitifs et offrent plus de fonctionnalités que le modèle de stockage seul de Filen."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Vous pouvez nous joindre à hello@internxt.com. Notre équipe Success offre un support en direct, contrairement à de nombreux petits fournisseurs."
         ]
       },
       {
-        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
         "answer": [
           "Oui, le stockage est cumulable. Vous pouvez mettre à jour ou ajouter de nouveaux plans à tout moment depuis vos paramètres."
         ]
       },
       {
-        "question": "Puis-je payer par carte, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte les cartes de débit/crédit, PayPal, iDEAL, Sofort, les cryptomonnaies et Klarna pour une flexibilité maximale."
         ]

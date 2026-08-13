@@ -75,40 +75,40 @@
         }
     },
     "SemanticAccordion": {
-        "title": "Des questions sur Internxt Mail ? Nous avons les réponses",
+        "title": "Des questions sur Internxt Mail ? Nous avons les réponses",
         "items": [
             {
-                "question": "Qu'est-ce qu'Internxt Mail ?",
+                "question": "Qu'est-ce qu'Internxt Mail ?",
                 "answer": [
                     "Internxt Mail est la meilleure messagerie cryptée pour envoyer des e-mails privés. Avec Internxt Mail, nous garantissons que personne d'autre que vous ne peut accéder à vos messages ou pièces jointes, qui sont tous sécurisés par un chiffrement post-quantique et à divulgation nulle de connaissance."
                 ]
             },
             {
-                "question": "Pourquoi devrais-je utiliser une messagerie cryptée ?",
+                "question": "Pourquoi devrais-je utiliser une messagerie cryptée ?",
                 "answer": [
                     "Une messagerie cryptée permet de prévenir les violations de données et de protéger votre droit à la vie privée, car vos données sont inaccessibles à quiconque sauf à vous. Avec Internxt Mail, vous pouvez envoyer des détails commerciaux, des messages personnels ou des documents confidentiels en toute confiance grâce à nos protocoles de chiffrement avancés."
                 ]
             },
             {
-                "question": "Internxt Mail est-il une alternative à Gmail ?",
+                "question": "Internxt Mail est-il une alternative à Gmail ?",
                 "answer": [
                     "Oui, Internxt Mail est une alternative sécurisée à Gmail, car vous détenez les clés de chiffrement des e-mails que vous envoyez. À l'inverse, Gmail conserve ces clés sur ses serveurs, qui sont utilisés pour stocker les messages. Ils peuvent lire leur contenu ou les remettre aux autorités sur demande, car ils ne proposent pas un service à divulgation nulle de connaissance."
                 ]
             },
             {
-                "question": "Internxt Mail est-il gratuit ?",
+                "question": "Internxt Mail est-il gratuit ?",
                 "answer": [
                     "Internxt Mail est disponible lorsque vous vous abonnez à l'un de nos forfaits premium, offrant un accès à notre suite complète de produits axés sur la confidentialité, notamment Internxt Drive, Mail, Antivirus et VPN."
                 ]
             },
             {
-                "question": "Comment contacter l'assistance ?",
+                "question": "Comment contacter l'assistance ?",
                 "answer": [
-                    "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un e-mail à hello@internxt.com."
+                    "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en direct ou en envoyant un e-mail à hello@internxt.com."
                 ]
             },
             {
-                "question": "Quelle est la politique de remboursement d'Internxt ?",
+                "question": "Quelle est la politique de remboursement d'Internxt ?",
                 "answer": [
                     "Internxt propose une garantie standard de remboursement de 30 jours sur l'ensemble de ses abonnements payants, qui commence à courir dès que vous vous abonnez.",
                     "Si vous n'êtes pas satisfait de nos services, envoyez-nous un e-mail à hello@internxt.com pour demander un remboursement."

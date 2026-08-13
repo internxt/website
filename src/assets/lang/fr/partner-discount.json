@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Rejoignez Internxt, la meilleure alternative à Google Drive, et obtenez ",
-      "blue": "85% DE RÉDUCTION ",
+      "blue": "85 % DE RÉDUCTION ",
       "normal1": "sur tout plan à vie. Stockez et partagez vos fichiers en toute sécurité et confidentialité."
     },
     "cta": "Choisir un plan"
@@ -19,12 +19,12 @@
       "lifetime": "Plans à vie",
       "business": "Plans pour entreprises",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
     "lifetimeDescription": "Payez une fois et obtenez une confidentialité et une sécurité à vie",
-    "planDescription": "Tous les plans Internxt donnent accès à notre suite de solutions privées dotée des dernières technologies de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
+    "planDescription": "Tous les plans Internxt donnent accès à notre suite de solutions privées dotée des dernières technologies de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
@@ -40,13 +40,13 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FeatureSection": {
-    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers ?",
+    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers ?",
     "description": "Internxt vous redonne le contrôle de votre confidentialité. Contrairement aux solutions de stockage cloud traditionnelles, nous garantissons que vous êtes le seul à posséder les clés de vos données cryptées et nous ne stockons ni ne vendons vos informations à des tiers. Nous faisons tout pour assurer la sécurité de vos informations.",
     "cta": "Choisissez la taille de stockage",
     "cards": [
@@ -64,14 +64,14 @@
       },
       {
         "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne vous fiez pas qu’à nos paroles. Internxt a été audité et vérifié indépendamment par la principale entreprise européenne de tests de pénétration, Securitum."
+        "description": "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne vous fiez pas qu’à nos paroles. Internxt a été audité et vérifié indépendamment par la principale entreprise européenne de tests de pénétration, Securitum."
       }
     ]
   },
   "TestimonialsSection": {
     "title": {
       "normal": "Des centaines de milliers abandonnent iCloud, Google Drive et Dropbox pour ",
-      "blue": "le stockage cloud le plus sécurisé : Internxt Drive"
+      "blue": "le stockage cloud le plus sécurisé : Internxt Drive"
     },
     "cards": [
       {
@@ -82,7 +82,7 @@
       {
         "name": "Cristian M.",
         "enterprise": "Avis de GetApp",
-        "review": "La meilleure alternative cryptée à Dropbox. En général : Nous avions besoin d’une alternative pour stocker les fichiers clients et de travail (fichiers réseaux sociaux) et Internxt, respectueux du RGPD, a parfaitement répondu à nos attentes."
+        "review": "La meilleure alternative cryptée à Dropbox. En général : Nous avions besoin d’une alternative pour stocker les fichiers clients et de travail (fichiers réseaux sociaux) et Internxt, respectueux du RGPD, a parfaitement répondu à nos attentes."
       },
       {
         "name": "Josep Carrizo",
@@ -92,13 +92,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Obtenez une année complète de stockage avec 85% de réduction maintenant !",
+    "title": "Obtenez une année complète de stockage avec 85 % de réduction maintenant !",
     "description": "Internxt propose une réduction exclusive avec confidentialité et sécurité garanties.",
     "cta": "Choisissez un plan"
   },
   "CtaSection1": {
     "title": "Le stockage cloud le plus privé au monde",
-    "description": "Profitez de votre réduction exclusive de 85% pour accéder au stockage cloud sécurisé, privé et crypté d'Internxt pendant une année entière.",
+    "description": "Profitez de votre réduction exclusive de 85 % pour accéder au stockage cloud sécurisé, privé et crypté d'Internxt pendant une année entière.",
     "cta": "Trouvez votre plan"
   }
 }

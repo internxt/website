@@ -170,11 +170,6 @@
     "description": "Internxt Halloween-Kampagne: 80 % Rabatt auf all unsere Jahrespläne. Sichern Sie Ihre Dateien ein Leben lang mit nur einer Zahlung."
   },
   {
-    "id": "internxt-monitor",
-    "title": "Internxt Monitor: Wurde ich gehackt?",
-    "description": "Der Internxt Dark Web Monitor ist ein 'Wurde ich gehackt?'-Dienst, der überprüft, ob Ihre E-Mail in irgendwelchen Online-Datenpannen geleakt wurde."
-  },
-  {
     "id": "cloud-object-storage",
     "title": "Sicherer Cloud-Objektspeicher (S3-kompatibel) — Internxt S3",
     "description": "Internxt S3 bietet sicheren, privaten und erschwinglichen Cloud-Objektspeicher. Skalieren Sie Ihren Speicherbedarf mit unserer S3-kompatiblen Cloud-basierten Objektspeicherlösung."

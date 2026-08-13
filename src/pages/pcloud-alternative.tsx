@@ -59,7 +59,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   };
 
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
 
   return (
     <>
@@ -75,7 +75,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -96,6 +96,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'pCloud'}
+          percentage={percentageDiscount}
           logo="/images/comparison/competitors/pCloud.webp"
           sectionNeedsH2
         />

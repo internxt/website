@@ -172,13 +172,6 @@
     "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Internxt è un'alternativa più sicura e privata a Proton Drive?",
-        "answer": [
-          "Sì, Internxt utilizza la crittografia post-quantistica e zero-knowledge. Proton Drive gestisce le chiavi di crittografia sui propri server, il che teoricamente permette l'accesso ai file in caso di specifiche richieste legali.",
-          "Funzionalità aggiuntive come Antivirus, Device Cleaner e Dark Web Monitor offrono una protezione non disponibile con Proton Drive."
-        ]
-      },
-      {
         "question": "Cos'è la crittografia post-quantistica ed è più sicura?",
         "answer": [
           "A differenza della crittografia standard utilizzata da Proton Drive, gli algoritmi PQE sono costruiti per resistere a potenti attacchi quantistici, garantendo la sicurezza futura dei tuoi dati.",

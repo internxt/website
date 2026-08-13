@@ -17,7 +17,7 @@
     "loading": "Chargement...",
     "maxFileSize": {
       "title": "Limite de taille de fichier dépassée",
-      "description": "Taille maximale de fichier de 100MB"
+      "description": "Taille maximale de fichier de 100 Mo"
     },
     "table": {
       "loading": "Chargement...",
@@ -41,7 +41,7 @@
       "title": "Suppresseur de métadonnées gratuit d'Internxt",
       "description": [
         "Protégez vos informations personnelles contre les fuites de données avec notre nettoyeur de métadonnées. Notre outil gratuit supprime les données cachées de vos fichiers, y compris les informations sur l'auteur, les balises de localisation et les détails de l'appareil.",
-        "Utilisez notre suppresseur de métadonnées en ligne gratuit pour garder vos fichiers anonymes et sécurisés avant de les partager. Les fichiers téléchargés sont nettoyés instantanément de leurs métadonnées puis supprimés définitivement. Nous ne stockons jamais vos données ; nous les gardons simplement privées."
+        "Utilisez notre suppresseur de métadonnées en ligne gratuit pour garder vos fichiers anonymes et sécurisés avant de les partager. Les fichiers téléchargés sont nettoyés instantanément de leurs métadonnées puis supprimés définitivement. Nous ne stockons jamais vos données ; nous les gardons simplement privées."
       ]
     },
     "howToUse": {
@@ -62,7 +62,7 @@
       ]
     },
     "whatIs": {
-      "title": "Qu'est-ce qu'un suppresseur de métadonnées ?",
+      "title": "Qu'est-ce qu'un suppresseur de métadonnées ?",
       "description": [
         "Les métadonnées sont des données qui décrivent des informations sur d'autres données. Lorsque vous partagez ou stockez un fichier, les métadonnées contiennent des informations sur les fichiers, comme les détails de l'appareil, la localisation, l'auteur, l'historique des modifications, etc.",
         "Un nettoyeur de métadonnées d'images ou de photos est un outil de confidentialité en ligne qui supprime les données cachées des fichiers. Le suppresseur de métadonnées d'Internxt supprime rapidement les informations liées à vos fichiers. C'est un moyen simple, gratuit et sécurisé d'augmenter votre anonymat en ligne."
@@ -80,46 +80,46 @@
     "cta": "Choisissez votre plan"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Que sont les métadonnées et pourquoi devrais-je les supprimer ?",
+        "question": "Que sont les métadonnées et pourquoi devrais-je les supprimer ?",
         "answer": [
           "Les métadonnées sont simplement des données qui décrivent des informations sur d'autres données. Lorsque vous partagez ou stockez des fichiers, ce type de métadonnées contient des informations sur les fichiers, les détails de l'appareil, la localisation, l'auteur, l'historique des modifications, etc.",
           "Vous devez supprimer ces informations à l'aide d'un suppresseur de métadonnées pour éviter que des tiers n'accèdent à des informations personnelles que vous préférez garder privées."
         ]
       },
       {
-        "question": "Quels types de fichiers contiennent des métadonnées ?",
+        "question": "Quels types de fichiers contiennent des métadonnées ?",
         "answer": [
           "Presque tous les fichiers que vous créez en ligne contiennent des métadonnées. Word, Excel, PDF, vidéos, images, etc., tous contiennent des métadonnées d'une manière ou d'une autre.",
           "Le type de métadonnées contenues dans ces fichiers varie selon leur contenu, donc si vous avez un fichier que vous souhaitez garder privé, l'utilisation d'un nettoyeur de métadonnées supprimera rapidement et en toute sécurité ces informations."
         ]
       },
       {
-        "question": "Est-il sûr de télécharger des fichiers confidentiels ?",
+        "question": "Est-il sûr de télécharger des fichiers confidentiels ?",
         "answer": [
           "Avec le suppresseur de métadonnées d'Internxt, oui. Les fichiers sont chiffrés, traités en toute sécurité et tout est supprimé définitivement une fois les métadonnées supprimées. Nous ne pouvons ni stocker ni voir le contenu de vos fichiers, nous supprimons uniquement les métadonnées."
         ]
       },
       {
-        "question": "La suppression des métadonnées modifie-t-elle le contenu de mon fichier ?",
+        "question": "La suppression des métadonnées modifie-t-elle le contenu de mon fichier ?",
         "answer": [
           "Non, seules les métadonnées sont supprimées. Nous n'ajoutons pas de filigranes, nous ne compressons pas vos fichiers et nous n'apportons aucune autre modification inutile à vos fichiers. Une fois les métadonnées supprimées, vous obtenez exactement la même version de vos fichiers sans modifications."
         ]
       },
       {
-        "question": "Que se passe-t-il avec mes fichiers après leur nettoyage ?",
+        "question": "Que se passe-t-il avec mes fichiers après leur nettoyage ?",
         "answer": [
           "Une fois que vous avez téléchargé et supprimé les données, tout est automatiquement supprimé de notre système pour garantir votre confidentialité et la conformité au RGPD."
         ]
       },
       {
-        "question": "Comment savoir si un fichier contient des métadonnées ?",
+        "question": "Comment savoir si un fichier contient des métadonnées ?",
         "answer": [
-          "Tous les fichiers contiennent des métadonnées. Sous Windows, vous pouvez les voir en faisant un clic droit sur le fichier et en sélectionnant « Propriétés ».",
-          "Les utilisateurs de Mac doivent également faire un clic droit sur le fichier, sélectionner « Obtenir des informations » puis aller dans la section « Détails » pour voir les métadonnées.",
-          "Enfin, vous pouvez voir les métadonnées des fichiers PDF en les ouvrant dans Adobe Acrobat et en allant dans « Fichier » > « Propriétés » > « Description »."
+          "Tous les fichiers contiennent des métadonnées. Sous Windows, vous pouvez les voir en faisant un clic droit sur le fichier et en sélectionnant « Propriétés ».",
+          "Les utilisateurs de Mac doivent également faire un clic droit sur le fichier, sélectionner « Obtenir des informations » puis aller dans la section « Détails » pour voir les métadonnées.",
+          "Enfin, vous pouvez voir les métadonnées des fichiers PDF en les ouvrant dans Adobe Acrobat et en allant dans « Fichier » > « Propriétés » > « Description »."
         ]
       }
     ]
@@ -129,7 +129,7 @@
     "description": "Vos documents, photos, vidéos ou fichiers PDF peuvent contenir plus d'informations que vous ne le pensez. Lorsque vous partagez ces fichiers en ligne, vous courez le risque que ces métadonnées tombent entre de mauvaises mains, ce qui pourrait entraîner des fuites de données. Notre nettoyeur de métadonnées supprime ces informations gratuitement aussi souvent que nécessaire.",
     "info": [
       {
-        "title": "100% gratuit et illimité",
+        "title": "100 % gratuit et illimité",
         "description": [
           "Utilisez ce nettoyeur de métadonnées gratuitement sans avoir besoin de créer un compte. Il fonctionne directement dans votre navigateur, vous pouvez donc supprimer les métadonnées de tous les fichiers que vous souhaitez sans limitation."
         ]
@@ -161,13 +161,13 @@
       {
         "title": "Aucune altération des fichiers",
         "description": [
-          "Tout ce que nous faisons, c'est supprimer les métadonnées de vos fichiers pour augmenter la confidentialité ; les photos, vidéos ou contenus restent inchangés. Nous ne compressons pas vos fichiers, nous ne laissons pas de filigranes et nous n'apportons aucune autre modification sauf celles nécessaires à la suppression des métadonnées, vous laissant un fichier privé et inchangé."
+          "Tout ce que nous faisons, c'est supprimer les métadonnées de vos fichiers pour augmenter la confidentialité ; les photos, vidéos ou contenus restent inchangés. Nous ne compressons pas vos fichiers, nous ne laissons pas de filigranes et nous n'apportons aucune autre modification sauf celles nécessaires à la suppression des métadonnées, vous laissant un fichier privé et inchangé."
         ]
       }
     ]
   },
   "FeaturesSliderImg": {
-    "title": "Quand utiliser un suppresseur de métadonnées ?",
+    "title": "Quand utiliser un suppresseur de métadonnées ?",
     "description": "Protéger votre vie privée en ligne est devenu un aspect essentiel de notre vie sur Internet. En supprimant les métadonnées de vos documents, photos ou vidéos, vous pouvez préserver la confidentialité de votre vie personnelle et professionnelle, éviter les fuites de données et profiter d'une plus grande confidentialité et anonymat.",
     "info": [
       {
@@ -197,7 +197,7 @@
     ]
   },
   "ToolsSection": {
-    "title": "Essayez les outils de sécurité en ligne gratuits d'Internxt :",
+    "title": "Essayez les outils de sécurité en ligne gratuits d'Internxt :",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",

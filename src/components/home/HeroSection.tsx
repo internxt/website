@@ -3,7 +3,7 @@ import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import dynamic from 'next/dynamic';
 import {
-  Brain,
+  Aperture,
   CellTower,
   Check,
   CloudArrowUp,
@@ -64,12 +64,12 @@ export default function HeroSection({
       text: textContent.products.meet,
     },
     {
-      icon: Envelope,
-      text: textContent.products.mail,
+      icon: Aperture,
+      text: textContent.products.photos,
     },
     {
-      icon: Brain,
-      text: textContent.products.ai,
+      icon: Envelope,
+      text: textContent.products.mail,
     },
   ];
 
@@ -111,15 +111,15 @@ export default function HeroSection({
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[564px] lg:w-[566px] lg:justify-between">
-        <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[566px] lg:flex-nowrap lg:justify-between">
+      <div className="flex h-min w-[325px] flex-col justify-center gap-5 lg:h-[534px] lg:w-[536px] lg:justify-between">
+        <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[536px] lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-1.5 lg:py-1"
+              className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1"
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-5 lg:w-5" />
-              <p className="whitespace-nowrap text-xs font-medium leading-tight text-gray-80">{feature.text}</p>
+              <p className="whitespace-nowrap text-[12px] font-medium leading-tight text-gray-80">{feature.text}</p>
             </div>
           ))}
         </div>
