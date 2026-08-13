@@ -81,11 +81,12 @@ const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Koofr'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Koofr'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Koofr'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/Koofr-Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

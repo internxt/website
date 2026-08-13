@@ -81,11 +81,12 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'sync'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'sync'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'sync'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/sync-Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

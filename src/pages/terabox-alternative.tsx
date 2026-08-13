@@ -81,11 +81,12 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/terabox-Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

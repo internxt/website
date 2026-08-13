@@ -78,11 +78,12 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/competitors/Drive-Letters.webp'}
           TableTitleTag={'h3'}
           sectionNeedsH2

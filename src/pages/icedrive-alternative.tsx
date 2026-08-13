@@ -81,11 +81,12 @@ const IcedriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Icedrive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Icedrive'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Icedrive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Icedrive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/icedrive-Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

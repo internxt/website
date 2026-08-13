@@ -81,11 +81,12 @@ const DegooComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Degoo'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Degoo'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Degoo'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/competitors/Degoo_Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

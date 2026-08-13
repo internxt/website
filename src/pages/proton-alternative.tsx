@@ -81,11 +81,12 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/competitors/proton-drive-Letters.webp'}
           TableTitleTag={'h3'}
           sectionNeedsH2

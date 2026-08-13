@@ -81,11 +81,12 @@ const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'FileJump'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/FileJump_Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

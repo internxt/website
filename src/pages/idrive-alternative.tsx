@@ -81,11 +81,12 @@ const IDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'idrive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'idrive'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'idrive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/idrive-Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

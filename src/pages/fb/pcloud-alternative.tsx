@@ -73,7 +73,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -95,6 +95,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'pCloud'}
+          percentage={percentageDiscount}
           logo="/images/comparison/competitors/pCloud.webp"
           sectionNeedsH2
         />

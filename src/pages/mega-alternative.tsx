@@ -70,11 +70,12 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Mega'}
+          percentage={percentageDiscount}
           logo="/images/comparison/competitors/Mega_Letters.webp"
           sectionNeedsH2
         />

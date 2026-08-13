@@ -81,11 +81,12 @@ const DrimeComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drime'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drime'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drime'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison//Drime_Letters.webp'}
           sectionNeedsH2
           bottomSeparationBar

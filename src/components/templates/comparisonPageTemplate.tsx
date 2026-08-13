@@ -165,7 +165,7 @@ export const ComparisonPage = ({
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} />
 
         {isS3Alternative && langJson.PriceCardSection ? (
           <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
@@ -198,7 +198,7 @@ export const ComparisonPage = ({
           />
         )}
 
-        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} logo={logo} />
+        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}

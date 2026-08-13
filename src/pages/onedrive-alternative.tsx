@@ -81,11 +81,12 @@ const OneDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, 
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'OneDrive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'OneDrive'} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'OneDrive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Drive'}
+          percentage={percentageDiscount}
           logo={'/images/comparison/OneDrive-Letters.webp'}
           TableTitleTag={'h3'}
           sectionNeedsH2
