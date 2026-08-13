@@ -7,7 +7,7 @@
     "cta": "Obtenir Internxt"
   },
   "WhatIsNASSection": {
-    "title": "Qu'est-ce qu'un périphérique NAS et pourquoi devrais-je l'utiliser ?",
+    "title": "Qu'est-ce qu'un périphérique NAS et pourquoi devrais-je l'utiliser ?",
     "description": [
       "Un NAS (Network Attached Storage) est un système de stockage dédié qui se connecte à votre réseau domestique ou professionnel, agissant comme un serveur personnel pour vos fichiers. L'utiliser avec Internxt vous permet de sauvegarder, synchroniser et gérer les données en toute sécurité tout en gardant le contrôle total et la propriété de vos fichiers.",
       "Vos données sont chiffrées et sécurisées avec le chiffrement post-quantique d'Internxt, et les clés sont gérées sur votre appareil. Cela offre la commodité des périphériques NAS avec la sécurité et la confidentialité d'Internxt Drive."
@@ -64,7 +64,7 @@
   },
   "howSetupSection": {
     "title": "Comment configurer votre périphérique NAS avec Internxt",
-    "description": "Instructions pour configurer votre périphérique NAS avec Internxt Drive :",
+    "description": "Instructions pour configurer votre périphérique NAS avec Internxt Drive :",
     "cards": {
       "titles": ["Lisez-moi", "Guide de l'utilisateur", "Open source"],
       "descriptions": [
@@ -81,45 +81,45 @@
     "cta": "Obtenir Internxt"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne. Internxt dispose de nombreux centres de données cloud européens pour stocker vos données conformément au RGPD et à d'autres réglementations de conformité."
         ]
       },
       {
-        "question": "Où sont situés les centres de données cloud d'Internxt ?",
+        "question": "Où sont situés les centres de données cloud d'Internxt ?",
         "answer": [
           "Internxt utilise une stratégie de réseau multi-cloud, garantissant que les fichiers sont stockés dans plusieurs centres de données cloud européens pour vous assurer les meilleures performances, sécurité et protection pour vos fichiers."
         ]
       },
       {
-        "question": "Comment fonctionnent les centres de données d'Internxt ?",
+        "question": "Comment fonctionnent les centres de données d'Internxt ?",
         "answer": [
           "Internxt s'associe à OVHcloud, qui possède des centres de données cloud européens et plusieurs sites à travers le monde pour stocker vos données cloud.",
           "Ces infrastructures de centres de données hébergent des milliers de serveurs pour garantir la disponibilité, la performance et la redondance afin d'assurer un accès rapide et sécurisé aux fichiers tout en gardant vos fichiers en sécurité."
         ]
       },
       {
-        "question": "Qu'est-ce qu'une zone de disponibilité ?",
+        "question": "Qu'est-ce qu'une zone de disponibilité ?",
         "answer": [
           "Les zones de disponibilité sont un ensemble d'un ou plusieurs centres de données situés dans une région. Chaque zone de disponibilité fonctionne de manière indépendante et dispose de sa propre alimentation, de son propre refroidissement et de son propre réseau pour éviter les pannes de courant ou d'autres événements tels qu'une défaillance de l'infrastructure.",
           "Les zones d'une région sont liées pour offrir une disponibilité plus élevée et des connexions à faible latence, garantissant que les applications peuvent rester en ligne même si une zone subit une défaillance."
         ]
       },
       {
-        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non, personne, y compris Internxt, ne peut accéder à vos fichiers. Tous vos fichiers et données sont chiffrés sur votre appareil avec un chiffrement post-quantique. Comme les clés sont stockées et gérées sur votre appareil et non par nous ou nos prestataires de services, vous seul ou les personas avec qui vous choisissez de partager des fichiers pouvez les déchiffrer.",
           "Tous les fichiers stockés dans nos centres de données sont chiffrés, de sorte qu'aucun employé ou hacker ne peut voir leur contenu."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou par e-mail à hello@internxt.com"
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou par e-mail à hello@internxt.com"
         ]
       }
     ]

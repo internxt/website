@@ -17,7 +17,7 @@
     "loading": "Chargement...",
     "maxFileSize": {
       "title": "Limite de taille de fichier dépassée",
-      "description": "Taille maximale de 1 Go"
+      "description": "Taille maximale de 1 Go"
     },
     "table": {
       "loading": "Loading...",
@@ -70,34 +70,34 @@
     "cta": "Stockage sécurisé basé sur le cloud"
   },
   "FaqSection": {
-    "title": "Questions ? Nous avons les réponses",
+    "title": "Questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Comment vérifier si un fichier est infecté ?",
+        "question": "Comment vérifier si un fichier est infecté ?",
         "answer": [
           "Le scanner de virus gratuit d'Internxt est un outil qui vous aide à localiser les virus qui ont pu compromettre vos fichiers. Notre antivirus gratuit a été conçu pour vous aider à éviter les infections et à identifier les logiciels malveillants dans vos fichiers."
         ]
       },
       {
-        "question": "Comment savoir si vos fichiers contiennent des logiciels malveillants ?",
+        "question": "Comment savoir si vos fichiers contiennent des logiciels malveillants ?",
         "answer": [
-          "Soumettez vos fichiers pour confirmer qu'ils sont en sécurité. L'utilisation de notre scanner de virus est une pratique sûre pour éviter un cauchemar en matière de protection de la vie privée. Scannez avant de cliquer !"
+          "Soumettez vos fichiers pour confirmer qu'ils sont en sécurité. L'utilisation de notre scanner de virus est une pratique sûre pour éviter un cauchemar en matière de protection de la vie privée. Scannez avant de cliquer !"
         ]
       },
       {
-        "question": "Comment rechercher des virus dans un fichier ?",
+        "question": "Comment rechercher des virus dans un fichier ?",
         "answer": [
           "Notre scanner de virus gratuit a été conçu pour vous aider à éviter les infections et à identifier les logiciels malveillants dans vos documents et vos photos. Déposez le fichier choisi dans la barre d'outils du scanner de virus, et il analysera automatiquement le fichier à la recherche de virus ou de logiciels malveillants."
         ]
       },
       {
-        "question": "Comment analyser un fichier en ligne ?",
+        "question": "Comment analyser un fichier en ligne ?",
         "answer": [
           "Avec le Scanner de Virus d'Internxt, vous pouvez glisser et déposer des fichiers suspects dans la barre d'outils pour détecter gratuitement les logiciels malveillants."
         ]
       },
       {
-        "question": "Comment scanner un fichier PDF ?",
+        "question": "Comment scanner un fichier PDF ?",
         "answer": [
           "Glissez le PDF dans la barre d'outils comme vous le feriez avec n'importe quel autre fichier. Avec le Scanner de Virus d'Internxt, vous pouvez scanner n'importe quel document, image, PDF ou autre type de fichier. Assurez-vous que vos fichiers sont sûrs et exempts de virus avant de les ouvrir avec le Scanner de Virus d'Internxt."
         ]
@@ -105,11 +105,11 @@
     ]
   },
   "BannersSection": {
-    "title": "Essayez les outils en ligne gratuits d'Internxt :",
+    "title": "Essayez les outils en ligne gratuits d'Internxt :",
     "passwordCheckerBanner": {}
   },
   "ToolsSection": {
-    "title": "Essayez les outils en ligne gratuits d'Internxt :",
+    "title": "Essayez les outils en ligne gratuits d'Internxt :",
     "toolsCard": [
       {
         "url": "/images/temp-email/password-checker.svg",

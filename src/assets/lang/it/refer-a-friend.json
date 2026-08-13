@@ -50,7 +50,7 @@
       }
     },
     "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre.",
-    "planDescription": "Tutti i piani Internxt includono l'accesso completo alla nostra pluripremiata suite per la privacy: Internxt Drive, Send, VPN, Antivirus, Cleaner, Monitor del Dark Web, Meet e Mail.",
+    "planDescription": "Tutti i piani Internxt includono l'accesso completo alla nostra pluripremiata suite per la privacy: Internxt Drive, Send, VPN, Antivirus, Cleaner,Meet e Mail.",
     "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
     "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di archiviazione cloud crittografata di Internxt.",
     "billingFrequency": {
@@ -101,9 +101,7 @@
       },
       {
         "question": "Quanto posso guadagnare?",
-        "answer": [
-          "Puoi guadagnare fino a 100€ per segnalazione, a seconda del piano acquistato con il tuo link."
-        ]
+        "answer": ["Puoi guadagnare fino a 100€ per segnalazione, a seconda del piano acquistato con il tuo link."]
       },
       {
         "question": "Posso pagare tramite carta di credito, PayPal o criptovalute?",

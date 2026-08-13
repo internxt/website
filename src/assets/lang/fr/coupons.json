@@ -10,7 +10,7 @@
       "ai": "AI"
     },
     "title": "**Réductions** et **promotions** Internxt",
-    "subtitle": "Vous avez débloqué {{discount}}% de réduction ! Obtenez votre code promo Internxt ici",
+    "subtitle": "Vous avez débloqué {{discount}} % de réduction ! Obtenez votre code promo Internxt ici",
     "descriptionNormal": "tous les forfaits",
     "features": [
       "Suite de confidentialité complète",
@@ -33,7 +33,7 @@
   },
   "tableSection": {
     "title": "Forfaits Internxt",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Sélectionnez votre forfait"
     },
@@ -48,7 +48,7 @@
     "discountLabel": "Code promo {{coupon}} appliqué avec succès",
     "freePlanCard": {
       "eyeBrow": "Internxt Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le forfait"
     },
     "features": {
@@ -57,24 +57,24 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "howToRedeemSection": {
     "title": "Comment utiliser les codes promo Internxt",
-    "description": "Réclamez votre code promo Internxt en suivant ces trois étapes simples :",
+    "description": "Réclamez votre code promo Internxt en suivant ces trois étapes simples :",
     "cards": {
       "titles": [
         "Choisissez votre forfait",
         "Allez au checkout",
-        "Confirmez et profitez !"
+        "Confirmez et profitez !"
       ],
       "descriptions": [
         "Choisissez parmi nos 3 forfaits annuels ou à vie dans notre tableau ci-dessus et cliquez sur 'Sélectionner le forfait' pour utiliser votre code promo Internxt.",
-        "Une fois que vous allez au checkout, votre code promo Internxt est automatiquement appliqué ! À partir de là, vous devez juste saisir vos détails pour procéder au paiement.",
-        "Une fois que vous cliquez sur 'Payer', votre paiement sera traité, et vous serez prêt à profiter de votre nouveau compte Internxt et de toutes ses fonctionnalités !"
+        "Une fois que vous allez au checkout, votre code promo Internxt est automatiquement appliqué ! À partir de là, vous devez juste saisir vos détails pour procéder au paiement.",
+        "Une fois que vous cliquez sur 'Payer', votre paiement sera traité, et vous serez prêt à profiter de votre nouveau compte Internxt et de toutes ses fonctionnalités !"
       ]
     }
   },
@@ -93,7 +93,7 @@
         "Nous ne stockons pas les mots de passe ou les données utilisateur et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne un contrôle total sur vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
         "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
         "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien à cacher sauf vos données.",
-        "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale entreprise de tests de pénétration d'Europe, Securitum."
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale entreprise de tests de pénétration d'Europe, Securitum."
       ]
     }
   },
@@ -131,56 +131,56 @@
   },
   "ctaSection": {
     "title": "Réclamez votre code promo Internxt exclusif",
-    "description": "Obtenez une confidentialité maximale pour 85% de moins",
+    "description": "Obtenez une confidentialité maximale pour 85 % de moins",
     "cta": "Réclamer l'offre"
   },
   "ctaSectionV2": {
-    "title": "Confidentialité complète pour 85% de moins",
+    "title": "Confidentialité complète pour 85 % de moins",
     "description": "Obtenez l'offre de votre vie avec votre code promo Internxt",
     "cta": "Réclamer l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non. Internxt, ainsi que toute autre tierce partie, ne peut pas accéder à vos fichiers, photos ou données.",
           "Les services Internxt disposent d'un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez accéder et déchiffrer vos données et informations privées. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos informations de toute menace."
         ]
       },
       {
-        "question": "Internxt stocke-t-il mon mot de passe ?",
+        "question": "Internxt stocke-t-il mon mot de passe ?",
         "answer": [
           "Non. En tant que tel, Internxt ne peut pas stocker votre mot de passe.",
           "Votre mot de passe Internxt vous est unique et est utilisé pour chiffrer et déchiffrer vos données Internxt. Mais si vous voulez changer votre mot de passe, vous pouvez le faire depuis notre application."
         ]
       },
       {
-        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
+        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web Internxt.",
           "Vous pouvez également utiliser Authy ou d'autres outils 2FA pour générer un code 2FA personnel avec Internxt."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna.",
           "Sur demande, nous acceptons également les cryptomonnaies. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie standard de remboursement de 30 jours sur tous les abonnements payants, qui commence à compter dès que vous vous abonnez.",
           "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
         ]
       },
       {
-        "question": "Comment puis-je contacter le support ?",
+        "question": "Comment puis-je contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un email à [hello@internxt.com](mailto:hello@internxt.com)."
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       }
     ]

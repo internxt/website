@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Comme DeepSeek, \n mais **privé**",
     "description": "Passez à Internxt AI, la meilleure alternative à DeepSeek qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Faites le changement"
   },
   "HeaderSection": {
@@ -24,12 +24,12 @@
         "Open-source",
         "Oui, chiffré sur votre appareil",
         "Jamais",
-        "Stockage gratuit, annuel et à vie jusqu'à 5 To",
+        "Stockage gratuit, annuel et à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Les chats ne sont jamais utilisés pour entraîner notre IA",
         "Ne peut jamais accéder à vos chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement zero-knowledge et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Internxt AI est gratuit et peut être combiné avec les plans à vie Internxt Drive jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+            "description": "Internxt AI est gratuit et peut être combiné avec les plans à vie Internxt Drive jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "DeepSeek : Qu'en est-il de votre vie privée ?",
+        "title": "DeepSeek : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choisissez Internxt pour la meilleure alternative à DeepSeek",
-    "description": "Une IA privée chiffrée plus un stockage cloud sécurisé et une suite complète de confidentialité avec {{percentage}}% de réduction",
+    "description": "Une IA privée chiffrée plus un stockage cloud sécurisé et une suite complète de confidentialité avec {{percentage}} % de réduction",
     "cta": "Faites le changement"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -164,60 +164,60 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt AI est-il une alternative à DeepSeek plus sûre et privée ?",
+        "question": "Internxt AI est-il une alternative à DeepSeek plus sûre et privée ?",
         "answer": [
           "Oui, Internxt chiffre tous vos chats et ne stocke jamais vos conversations. DeepSeek ne chiffre pas les chats et peut les utiliser pour entraîner son IA.",
           "Internxt inclut également Drive, VPN, Antivirus, Cleaner, Meet et Mail pour offrir une protection supplémentaire contre les pirates et les fuites de données."
         ]
       },
       {
-        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
+        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
         "answer": [
           "Oui, vous pouvez utiliser Internxt AI gratuitement sans vous connecter ni fournir d'informations personnelles ou de coordonnées de paiement."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sûr ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sûr ?",
         "answer": [
           "Le chiffrement post-quantique est conçu pour résister aux futures attaques quantiques, ce qui en fait une alternative plus sûre au chiffrement standard.",
           "Internxt utilise cette technologie pour protéger vos données et vos plans de stockage à vie contre les futures cybermenaces sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, et respecte le RGPD ainsi que les lois européennes strictes sur la vie privée pour protéger vos données."
         ]
       },
       {
-        "question": "DeepSeek est-il plus cher qu'Internxt ?",
+        "question": "DeepSeek est-il plus cher qu'Internxt ?",
         "answer": [
-          "Internxt AI est gratuit, et avec votre réduction exclusive de {{percentage}}%, tous les plans sont moins chers tout en offrant un stockage sécurisé et une suite de confidentialité complète."
+          "Internxt AI est gratuit, et avec votre réduction exclusive de {{percentage}} %, tous les plans sont moins chers tout en offrant un stockage sécurisé et une suite de confidentialité complète."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez besoin d'aide, contactez hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre plan depuis les paramètres de votre compte ou acheter des plans supplémentaires, votre stockage se cumulera automatiquement."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, les cryptomonnaies et Klarna."
         ]

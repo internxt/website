@@ -1,16 +1,16 @@
 {
   "HeroSection": {
-    "mainTitle": "What Does Google Know About Me?",
+    "mainTitle": "What Does Google Know About Me ?",
     "section1": {
       "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
       "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
     },
     "section2": {
-      "title": "What does Google know about me based on Google activity?",
+      "title": "What does Google know about me based on Google activity ?",
       "bulletedList": {
-        "title": "When you search on Google, they collect all the following data:",
+        "title": "When you search on Google, they collect all the following data :",
         "list": [
-          "Personal information: Your name, phone number, gender, date of birth",
+          "Personal information : Your name, phone number, gender, date of birth",
           "Your email addresses",
           "Where you live",
           "Where you work",
@@ -29,7 +29,7 @@
       }
     },
     "section3": {
-      "title": "Why does Google collect your data?",
+      "title": "Why does Google collect your data ?",
       "description": "In short, it's a form of exploitation. Google’s motivation is to target ads and ‘personalize’ your experience with their services. By giving up your data, you are allowing hundreds of thousands of advertisers to bid on displaying you their adverts based on your sensitive personal data by letting Google collect all of this information. "
     },
     "footer": {
@@ -72,7 +72,7 @@
       "title": "YouTube History",
       "description": [
         "Google also keeps a history of your YouTube searches, the date when you watched the video, and the device you used to view the content.",
-        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
+        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1) : Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
       ]
     },
     "section5": {
@@ -90,7 +90,7 @@
       "title": "Google Chrome cookies and bookmarks",
       "description": [
         "[Web cookies](https://blog.internxt.com/web-cookies-explained/) are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
-        "In Google Chrome, you can check settings at chrome://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
+        "In Google Chrome, you can check settings at chrome ://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
         "Also, Google Chrome also has an Incognito mode that deletes your browser history and clears cookies after you close the open windows."
       ]
     },
@@ -114,7 +114,7 @@
     }
   },
   "CtaSection1": {
-    "title": "Done being tracked?",
+    "title": "Done being tracked ?",
     "description": "Give Google the slip and take back your freedom with Internxt.",
     "cta": "Join Internxt"
   },
@@ -124,8 +124,8 @@
     "section1": {
       "title": "Delete Google Web & App Activity",
       "description": [
-        "You’d be surprised at how much information Google saves: Google Pay information, YouTube channel subscriptions, YouTube 'not interested' feedback, YouTube survey answers, comments on YouTube, comment likes and dislikes on YouTube, YouTube purchase activity, Google Word Coach, Google survey answers, interests and notifications, Google Play library, news preferences, data archive history, product price tracking, and more.",
-        "By selecting ‘Web & App Activity’ you can delete your activity by clicking on the ‘Delete’ button in the middle of the page selecting: Last hour, Last day, Always, or Custom range. In the Web & App Activity’ page you can also disable future data collection by selecting “Saving activity’ and then clicking ‘Turn off’."
+        "You’d be surprised at how much information Google saves : Google Pay information, YouTube channel subscriptions, YouTube 'not interested' feedback, YouTube survey answers, comments on YouTube, comment likes and dislikes on YouTube, YouTube purchase activity, Google Word Coach, Google survey answers, interests and notifications, Google Play library, news preferences, data archive history, product price tracking, and more.",
+        "By selecting ‘Web & App Activity’ you can delete your activity by clicking on the ‘Delete’ button in the middle of the page selecting : Last hour, Last day, Always, or Custom range. In the Web & App Activity’ page you can also disable future data collection by selecting “Saving activity’ and then clicking ‘Turn off’."
       ]
     },
     "section2": {
@@ -140,18 +140,18 @@
     },
     "section3": {
       "title": "Disable and delete Youtube History",
-      "description": "Are you a big YouTube fan? You can delete your Youtube history and disable further history collection by selecting ‘YouTube History’ in ‘Controls’ and clicking on ‘Turn Off.’ You should also enable auto-delete at the bottom of the page."
+      "description": "Are you a big YouTube fan ? You can delete your Youtube history and disable further history collection by selecting ‘YouTube History’ in ‘Controls’ and clicking on ‘Turn Off.’ You should also enable auto-delete at the bottom of the page."
     },
     "section4": {
       "title": "Delete and disable Google Fit data",
       "description": [
-        "Do you own a device connected to Google Fit? While this is helpful for tracking weight loss and exercise, Fit gathers a ton of personal health information that probably should not be kept online. ",
+        "Do you own a device connected to Google Fit ? While this is helpful for tracking weight loss and exercise, Fit gathers a ton of personal health information that probably should not be kept online. ",
         "Adjust and disable Fit’s data-collecting permissions by selecting ‘Manage Google Fit privacy’ and deselect any options you’re uncomfortable with–or turn off Fit completely."
       ]
     },
     "section5": {
       "title": "Manage Google email preferences",
-      "description": "Sick of targeted emails from Google like price alerts and travel tips? Turn them off by adjusting your email settings by clicking ‘Manage email preferences’ under the “Emails from Google services’ tab."
+      "description": "Sick of targeted emails from Google like price alerts and travel tips ? Turn them off by adjusting your email settings by clicking ‘Manage email preferences’ under the “Emails from Google services’ tab."
     },
     "section6": {
       "title": "Google Ads personalization",
@@ -183,7 +183,7 @@
   "ToolsSection": {
     "title": "Other privacy resources from Internxt",
     "description": [
-      "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
+      "Want to know more about protecting your data online ? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
     ],
     "tools": [
       {
@@ -223,19 +223,19 @@
   },
   "tableSection": {
     "title": "Plans Internxt",
-    "hotLabel": "{{discount}}% remise",
+    "hotLabel": "{{discount}} % remise",
     "planTitles": {
       "header": "Choisissez votre plan",
       "homePage": "Choisissez le plan qui vous convient",
       "lifetime": "Plans à vie",
       "business": "Plans entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez de confidentialité et sécurité à vie",
-    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail. ",
+    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail. ",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -247,7 +247,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -258,9 +258,9 @@
       "guarantee": "Garantie satisfait ou remboursé 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   }
 }

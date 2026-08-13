@@ -59,7 +59,12 @@
     "title": "Características principales de nuestro almacenamiento seguro en la nube para fotos",
     "scrollableSection": {
       "images": ["partial1", "partial2", "partial3", "partial4"],
-      "titles": ["Un ecosistema totalmente privado", "Sincronización y copias de seguridad", "Encriptado de extremo a extremo", "Copias de seguridad encriptadas"],
+      "titles": [
+        "Un ecosistema totalmente privado",
+        "Sincronización y copias de seguridad",
+        "Encriptado de extremo a extremo",
+        "Copias de seguridad encriptadas"
+      ],
       "descriptions": [
         "Internxt Fotos está incluido en nuestro paquete Ultimate, ofreciéndole todo lo necesario para proteger su privacidad. Desde almacenamiento en la nube encriptado, VPN, Correo, Antivirus, Meet y más.",
         "Las fotos se sincronizan y respaldan automáticamente en la nube, manteniendo sus recuerdos seguros, accesibles y protegidos.",
@@ -103,7 +108,7 @@
       }
     },
     "lifetimeDescription": "Pague una vez y disfrute de privacidad y seguridad de por vida",
-    "planDescription": "Todos los planes de Internxt cuentan con acceso completo a nuestra galardonada suite de privacidad que incluye Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
+    "planDescription": "Todos los planes de Internxt cuentan con acceso completo a nuestra galardonada suite de privacidad que incluye Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet y Mail.",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su empresa, proteger a sus empleados y asegurar su rentabilidad.",
     "businessDescription2": "Garantice la seguridad de los datos de su empresa con los planes de almacenamiento en la nube encriptados de Internxt.",
     "billingFrequency": {

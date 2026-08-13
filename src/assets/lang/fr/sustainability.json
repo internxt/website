@@ -14,7 +14,7 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt : l'avenir de la confidentialité et de la durabilité",
+    "title": "Internxt : l'avenir de la confidentialité et de la durabilité",
     "cta": "Choisissez votre plan"
   },
   "CtaSection2": {
@@ -55,7 +55,7 @@
       },
       "water": {
         "title": "Eau",
-        "description": "Cette mesure évalue l'efficacité de l'utilisation de l'eau ; les valeurs proches de 0 indiquent une performance optimale.",
+        "description": "Cette mesure évalue l'efficacité de l'utilisation de l'eau ; les valeurs proches de 0 indiquent une performance optimale.",
         "value": "0.37",
         "unit": "L/kWh IT"
       },
@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Renouvelables",
         "description": "Cela fait référence au pourcentage de l'énergie renouvelable utilisée dans nos centres de données.",
-        "value": "92%",
+        "value": "92 %",
         "unit": "REF"
       }
     }

@@ -1,12 +1,16 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { parseDynamicText, Replacements } from '@/components/utils/parse-dynamic-text';
 
 interface InxtTableProps {
   textContent: any;
   TableTitleTag?: React.ElementType;
+  replacements?: Replacements;
 }
 
-export const InxtTable = ({ textContent, TableTitleTag = 'p' }: InxtTableProps) => {
+export const InxtTable = ({ textContent, TableTitleTag = 'p', replacements = {} }: InxtTableProps) => {
+  const parseText = (text: string) => parseDynamicText(text, replacements);
+
   return (
     <div className="flex h-min w-[180.5px] flex-col rounded-l-16  lg:w-[570px]">
       <div className="flex h-[46.5px] w-full flex-col items-center justify-center gap-3 rounded-tl-16 bg-green-110 ring-[1px] ring-green-120 lg:h-[112px]">
@@ -24,7 +28,9 @@ export const InxtTable = ({ textContent, TableTitleTag = 'p' }: InxtTableProps) 
           alt="Internxt icon"
           className="flex lg:hidden"
         />
-        <TableTitleTag className="hidden text-lg font-normal text-gray-95 lg:flex">{textContent.title}</TableTitleTag>
+        <TableTitleTag className="hidden text-lg font-normal text-gray-95 lg:flex">
+          {parseText(textContent.title)}
+        </TableTitleTag>
       </div>
 
       <div className="flex flex-col justify-between">
@@ -40,10 +46,10 @@ export const InxtTable = ({ textContent, TableTitleTag = 'p' }: InxtTableProps) 
               } flex flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
             >
               <p className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-base">
-                {item.title}
+                {parseText(item.title)}
               </p>
               <p className="w-[156.5px] text-start text-10 font-normal leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-sm">
-                {item.description}
+                {parseText(item.description)}
               </p>
             </div>
           );

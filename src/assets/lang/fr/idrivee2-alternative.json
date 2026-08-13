@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux fichiers sous certaines conditions.",
-        "Moins de confidentialité: U.S. Data Privacy Framework"
+        "Moins de confidentialité : U.S. Data Privacy Framework"
       ]
     }
   },
@@ -104,7 +104,7 @@
         ]
       },
       "competitorTable": {
-        "title": "IDrive\nQu'en est-il de votre vie privée ?",
+        "title": "IDrive\nQu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -144,7 +144,7 @@
       ],
       "descriptions": [
         "Internxt S3 offre un chiffrement de bout en bout intégré et un verrouillage des objets immuable pour protéger les données contre la perte, la corruption ou les ransomwares. Avec une durabilité de 11×9s, tous les fichiers sont conservés en sécurité dans plusieurs régions.",
-        "Internxt S3 est une solution de stockage cloud hot à 100 %, ainsi tous les fichiers sont immédiatement disponibles au téléchargement. Cette disponibilité instantanée garantit des temps de réponse rapides pour toutes les charges de travail.",
+        "Internxt S3 est une solution de stockage cloud hot à 100 %, ainsi tous les fichiers sont immédiatement disponibles au téléchargement. Cette disponibilité instantanée garantit des temps de réponse rapides pour toutes les charges de travail.",
         "Internxt S3 utilise une tarification forfaitaire sans frais cachés. Les utilisateurs savent exactement ce qu'ils paieront chaque mois sans se soucier des frais de requête, des téléchargements ou des coûts de réplication. Cela est plus simple et prévisible que IDrive, où la facturation peut être variable.",
         "Les utilisateurs paient un simple coût par gigaoctet avec Internxt S3, et la tarification ne change pas selon la fréquence d'accès ou les transferts. Ce modèle prévisible réduit les dépenses totales, contrairement à IDrive où les frais de stockage, de récupération et de sortie de données impactent le coût par gigaoctet."
       ]
@@ -157,9 +157,9 @@
   },
   "tableSection": {
     "title": "Sélectionnez votre forfait",
-    "hotLabel": "Jusqu'à 80% moins cher 🔥",
+    "hotLabel": "Jusqu'à 80 % moins cher 🔥",
     "planTitles": {
-      "header": "Stockage cloud 100% hot"
+      "header": "Stockage cloud 100 % hot"
     },
     "billingFrequency": {
       "annually": "Annuel",
@@ -176,40 +176,40 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous y répondons",
+    "title": "Des questions ? Nous y répondons",
     "faq": [
       {
-        "question": "Qu'est-ce que le stockage d'objets ?",
+        "question": "Qu'est-ce que le stockage d'objets ?",
         "answer": [
           "Le stockage d'objets est une manière de stocker les données en tant qu'unités discrètes appelées objets, chacune avec ses propres métadonnées et un identifiant unique. Le stockage d'objets Internxt S3 offre un accès rapide aux grands ensembles de données, ce qui en fait une solution abordable et évolutive."
         ]
       },
       {
-        "question": "Quelle est la meilleure alternative à IDrive ?",
+        "question": "Quelle est la meilleure alternative à IDrive ?",
         "answer": [
           "Internxt est la meilleure alternative à IDrive si vous avez besoin d'un stockage d'objets avec une tarification prévisible et évolutive, et d'un accès rapide et efficace à de grandes quantités de données."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage d'objets cloud conforme au RGPD respectant des lois strictes pour garantir la protection de vos données et de votre vie privée."
         ]
       },
       {
-        "question": "Est-ce que IDrive est plus cher qu'Internxt ?",
+        "question": "Est-ce que IDrive est plus cher qu'Internxt ?",
         "answer": [
           "Comme Internxt offre un stockage avec paiement à l'usage, il n'y a pas de frais supplémentaires pour le transfert de données vers et en dehors du cloud. Plus vous utilisez IDrive et ses services, plus les coûts de votre stockage peuvent être élevés."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez plus de questions, requêtes ou besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe du service client se fera un plaisir de vous aider."
         ]
@@ -220,7 +220,7 @@
     "title": "Le stockage d'objets cloud d'Internxt\n combine sécurité et efficacité",
     "description": "Le stockage d'objets Internxt est une solution abordable et performante révolutionnant le stockage de données en ligne, parfaite pour les personnes ou organisations nécessitant une infrastructure fiable et sécurisée à un coût minime.",
     "payAsYouGoCard": {
-      "title": "Paiement à l'usage !",
+      "title": "Paiement à l'usage !",
       "description": "Payez uniquement pour le stockage que vous utilisez."
     },
     "cardText": {
@@ -242,6 +242,6 @@
         ]
       }
     },
-    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
+    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
   }
 }

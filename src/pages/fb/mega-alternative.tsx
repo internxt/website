@@ -58,7 +58,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
   };
 
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
 
   return (
     <>
@@ -73,11 +73,12 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
 
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Mega'}
+          percentage={percentageDiscount}
           logo="/images/comparison/competitors/Mega_Letters.webp"
           sectionNeedsH2
         />

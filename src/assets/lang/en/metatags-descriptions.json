@@ -469,11 +469,7 @@
     "title": "Make Internxt Great Again",
     "description": "Internxt's Elections Campaign 2024"
   },
-  {
-    "id": "internxt-monitor",
-    "title": "Internxt Dark Web Monitor",
-    "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
-  },
+
   {
     "id": "green-cloud-computing",
     "title": "Internxt — A Commitment to Green Cloud Computing and Sustainability",
@@ -760,9 +756,9 @@
     "description": "Subscribe to Internxt to receive your exclusive discount for private, encrypted cloud storage you can trust."
   },
   {
-    "id":"cloud-storage-for-documents",
-    "title":"Internxt - Cloud Storage for Documents",
-    "description":"Internxt offers secure cloud storage for documents, protected by post-quantum encryption for maximum privacy."
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - Cloud Storage for Documents",
+    "description": "Internxt offers secure cloud storage for documents, protected by post-quantum encryption for maximum privacy."
   },
   {
     "id": "secure-file-transfer",

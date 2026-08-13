@@ -5,13 +5,13 @@
   "perMonth": "/mois",
   "cta": "Sélectionner le plan",
   "gifts": {
-    "line1": "Participez maintenant !",
+    "line1": "Participez maintenant !",
     "outCard": "Gagnez une carte cadeau (Amazon, Apple...) ou Visa.",
     "prices": {
-      "essentials": "Gagnez une carte de 100€",
+      "essentials": "Gagnez une carte de 100 €",
       "standard": "Standard",
-      "premium": "Gagnez une carte de 300€",
-      "ultimate": "Gagnez une carte de 1 000€"
+      "premium": "Gagnez une carte de 300 €",
+      "ultimate": "Gagnez une carte de 1 000 €"
     }
   },
   "renewsInfo": "Forfait annuel, facturé {{priceNow}} pour le premier mois, puis renouvelé à {{price}}/mois",
@@ -31,7 +31,7 @@
     "individualPlans": {
       "1TB": [
         {
-          "name": "**1To** de stockage chiffré",
+          "name": "**1 To** de stockage chiffré",
           "status": "available"
         },
         {
@@ -69,7 +69,7 @@
       ],
       "3TB": [
         {
-          "name": "**3To** de stockage chiffré",
+          "name": "**3 To** de stockage chiffré",
           "status": "available"
         },
         {
@@ -123,7 +123,7 @@
       ],
       "5TB": [
         {
-          "name": "**5To** de stockage chiffré",
+          "name": "**5 To** de stockage chiffré",
           "status": "available"
         },
         {
@@ -195,7 +195,7 @@
     "business": {
       "1TB": [
         {
-          "name": "**1To** de stockage chiffré par utilisateur",
+          "name": "**1 To** de stockage chiffré par utilisateur",
           "status": "available"
         },
         {
@@ -249,7 +249,7 @@
       ],
       "2TB": [
         {
-          "name": "**2To** de stockage chiffré par utilisateur",
+          "name": "**2 To** de stockage chiffré par utilisateur",
           "status": "available"
         },
         {

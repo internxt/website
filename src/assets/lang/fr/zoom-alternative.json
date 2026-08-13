@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt Meet. Comme Zoom, mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à Zoom qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait à {{percentage}}% de réduction 🔥 ",
+    "getPrivacy": " Sélectionnez votre forfait à {{percentage}} % de réduction 🔥 ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,18 +24,18 @@
         "Open-source",
         "Chiffré sur votre appareil",
         "Oui",
-        "Compétitif, pas de frais cachés, jusqu'à 5 To",
+        "Compétitif, pas de frais cachés, jusqu'à 5 To",
         "Appels vidéo privés, Drive, Mail, VPN, Antivirus, et plus encore",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder au contenu de vos vidéos, audios, chats ou fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire (fermé)",
         "Chiffré par Zoom",
         "Non",
-        "Forfaits plus chers, 10 Go de stockage cloud",
+        "Forfaits plus chers, 10 Go de stockage cloud",
         "Appels vidéo, stockage cloud, Mail",
         "Audits de sécurité réguliers",
         "Fonctionnalité payante",
@@ -79,7 +79,7 @@
     "description": "Internxt offre des appels vidéo privés inégalés et une suite complète de services de confidentialité, ce qui en fait la meilleure alternative à Zoom.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Forfaits à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Zoom : Qu'en est-il de votre vie privée ?",
+        "title": "Zoom : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir le forfait"
     },
     "features": {
@@ -163,55 +163,55 @@
       "guarantee": "Garantie satisfait ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée que Zoom ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée que Zoom ?",
         "answer": [
           "Oui, Internxt utilise le chiffrement post-quantique et zero-knowledge qui garantit que personne d'autre que vous ne peut voir vos appels. Zoom gère les clés sur ses serveurs.",
           "Des fonctionnalités comme le VPN, l'Antivirus et le Cleaner vous offrent une protection supplémentaire contre les violations de données."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes post-quantiques sont conçus pour résister aux attaques des futurs ordinateurs quantiques.",
           "Cette méthode est utilisée par Internxt pour vous protéger contre les futures cybermenaces, sans coût supplémentaire."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD qui suit les lois strictes de l'UE pour protéger vos données."
         ]
       },
       {
-        "question": "Zoom est-il plus cher qu'Internxt ?",
+        "question": "Zoom est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de 85%, tous nos forfaits sont moins chers que Zoom, tout en offrant beaucoup plus de fonctions de confidentialité.",
+          "Avec votre réduction exclusive de 85 %, tous nos forfaits sont moins chers que Zoom, tout en offrant beaucoup plus de fonctions de confidentialité.",
           "Vous pouvez également éviter les frais d'abonnement récurrents en choisissant un forfait à vie Internxt."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Pour toute question ou assistance, contactez hello@internxt.com et notre équipe Customer Success sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à jour votre forfait depuis les paramètres de votre compte Internxt, le stockage sera automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte, PayPal ou crypto-monnaie ?",
         "answer": [
           "Internxt accepte les cartes de débit/crédit (Mastercard, VISA, etc.), PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."
         ]

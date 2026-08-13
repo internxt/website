@@ -59,7 +59,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   };
 
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
 
   return (
     <>
@@ -75,11 +75,12 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
           competitor={'Dropbox'}
+          percentage={percentageDiscount}
           logo="/images/comparison/competitors/Dropbox_Letters.webp"
           sectionNeedsH2
           TableNameTag={'h3'}

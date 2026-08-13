@@ -1,17 +1,20 @@
 import Link from 'next/link';
-import { formatText } from '@/components/utils/format-text';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { HighlightText } from '@/components/components/HighlightText';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 interface HeroSectionProps {
   textContent: any;
-  percentage: number;
+  percentage?: number;
   competitor: string;
 }
 
 export const HeroSection = ({ textContent, percentage, competitor }: HeroSectionProps) => {
+  // HighlightText needs a plain string, and {{competitor}} is always known at render time.
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text);
+  const parseDiscountText = (text?: string) =>
+    parseDynamicText(text, { competitor, percentage, discount: percentage });
 
   return (
     <div
@@ -30,7 +33,7 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
           </p>
 
           <p className="items-center justify-center text-lg font-semibold text-gray-95 lg:text-2xl">
-            {formatText(parseText(textContent.getPrivacy), { percentage: percentage?.toString() ?? '70' })}
+            {parseDiscountText(textContent.getPrivacy)}
           </p>
 
           <Link
@@ -71,7 +74,7 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
             quality={100}
           />
           <p className="items-center justify-center whitespace-pre-line text-lg font-semibold text-gray-95 lg:text-2xl">
-            {formatText(parseText(textContent.getPrivacy), { percentage: percentage?.toString() ?? '70' })}
+            {parseDiscountText(textContent.getPrivacy)}
           </p>
 
           <Link

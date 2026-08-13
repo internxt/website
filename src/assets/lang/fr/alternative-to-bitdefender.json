@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme Bitdefender,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à Bitdefender qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Oui, crypté sur votre appareil",
         "Jamais",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Les chats ne sont jamais utilisés pour entraîner notre IA",
         "Ne peut jamais accéder à vos chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Pas de cryptage de bout en bout",
         "Oui",
-        "Forfait gratuit ou 30 €/mois",
+        "Forfait gratuit ou 30 €/mois",
         "Fonctions IA avancées, mode voix, génération d'images illimitée",
         "Audits de sécurité réguliers",
         "Vos données peuvent être utilisées pour entraîner des modèles d'IA",
         "Des humains peuvent accéder à vos interactions et les examiner",
-        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
       ]
     }
   },
@@ -74,7 +74,7 @@
       "descriptions": [
         "Internxt est entièrement open source et audité de manière indépendante, vous pouvez donc être assuré qu'il n'y a pas de portes dérobées et que vos informations sont traitées de manière transparente. Tout le monde peut examiner le code.",
         "Internxt offre Cleaner et un écosystème de confidentialité complet pour vous donner tout ce dont vous avez besoin pour nettoyer les fichiers inutiles, stocker et partager des fichiers avec un cryptage zero-knowledge, en plus du VPN, Meet, et Mail.",
-        "Commencez avec Internxt pour seulement 1,60 € par mois, ou évitez les abonnements avec nos forfaits à vie abordables : payez une seule fois et utilisez pour toujours. Accédez aux fonctionnalités de votre forfait en permanence."
+        "Commencez avec Internxt pour seulement 1,60 € par mois, ou évitez les abonnements avec nos forfaits à vie abordables : payez une seule fois et utilisez pour toujours. Accédez aux fonctionnalités de votre forfait en permanence."
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au cryptage zero-knowledge et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -99,12 +99,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Internxt AI est gratuit et peut être combiné avec les forfaits à vie Internxt Drive jusqu'à 5 To. Accédez à nos services avec {{percentage}}% de réduction."
+            "description": "Internxt AI est gratuit et peut être combiné avec les forfaits à vie Internxt Drive jusqu'à 5 To. Accédez à nos services avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Bitdefender : Et votre vie privée ?",
+        "title": "Bitdefender : Et votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -163,7 +163,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -182,53 +182,53 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sûre et privée que Bitdefender ?",
+        "question": "Internxt est-il une alternative plus sûre et privée que Bitdefender ?",
         "answer": [
           "Oui, Internxt utilise le cryptage post-quantique et zero-knowledge qui garantit que vous seul pouvez voir vos fichiers.",
           "Internxt Drive inclut VPN, Antivirus, Cleaner, Meet et Mail, offrant plus de services que Bitdefender pour votre sécurité en ligne."
         ]
       },
       {
-        "question": "Qu'est-ce que le cryptage post-quantique ?",
+        "question": "Qu'est-ce que le cryptage post-quantique ?",
         "answer": [
           "Contrairement au cryptage standard, les algorithmes post-quantiques sont conçus pour résister aux futures cyberattaques quantiques puissantes."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD respectant des lois strictes de protection des données."
         ]
       },
       {
-        "question": "Bitdefender est-il plus cher qu'Internxt ?",
+        "question": "Bitdefender est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de 85%, nos forfaits sont plus avantageux que les prix actuels de Bitdefender, avec plus de fonctionnalités incluses."
+          "Avec votre réduction exclusive de 85 %, nos forfaits sont plus avantageux que les prix actuels de Bitdefender, avec plus de fonctionnalités incluses."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Pour toute question, contactez hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter du stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter du stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à jour votre forfait dans les paramètres ou en acheter un nouveau qui se cumulera automatiquement."
         ]
       },
       {
-        "question": "Puis-je payer par carte, PayPal ou crypto ?",
+        "question": "Puis-je payer par carte, PayPal ou crypto ?",
         "answer": [
           "Internxt accepte les cartes bancaires, PayPal, iDEAL, Sofort, les cryptomonnaies et Klarna."
         ]

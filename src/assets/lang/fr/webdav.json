@@ -125,48 +125,48 @@
     "cta": "Obtenir Internxt"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qu'est-ce que rclone ?",
+        "question": "Qu'est-ce que rclone ?",
         "answer": [
           "Rclone est un outil en ligne de commande open source qui vous permet de gérer, synchroniser et transférer des fichiers entre votre ordinateur et les services de stockage en nuage."
         ]
       },
       {
-        "question": "Comment puis-je connecter Internxt à rclone ?",
+        "question": "Comment puis-je connecter Internxt à rclone ?",
         "answer": [
           "Tout d'abord, vous devez télécharger rclone sur le site officiel, puis vous pouvez suivre les étapes d'installation de notre centre d'aide."
         ]
       },
       {
-        "question": "Qu'est-ce que l'Internxt CLI ?",
+        "question": "Qu'est-ce que l'Internxt CLI ?",
         "answer": [
           "L'interface de ligne de commande (CLI) d'Internxt interagit avec un programme informatique en tapant des commandes textuelles au lieu d'utiliser une souris et une interface graphique (GUI)."
         ]
       },
       {
-        "question": "Qu'est-ce que WebDAV ?",
+        "question": "Qu'est-ce que WebDAV ?",
         "answer": [
           "WebDAV signifie Web Distributed Authoring and Versioning. Sa fonctionnalité de base comprend le partage, la copie, le déplacement et la modification de fichiers via un serveur web. WebDAV utilise couramment des protocoles de sécurité HTTP pour garantir une communication sécurisée entre les clients et les serveurs."
         ]
       },
       {
-        "question": "Comment puis-je installer l'Internxt CLI ?",
+        "question": "Comment puis-je installer l'Internxt CLI ?",
         "answer": [
           "Pour installer notre CLI sur votre ordinateur et commencer à utiliser WebDAV, vous pouvez suivre les étapes d'installation de notre page GitHub."
         ]
       },
       {
-        "question": "WebDAV est-il sécurisé ?",
+        "question": "WebDAV est-il sécurisé ?",
         "answer": [
           "Oui. Lorsqu'elle est activée, la fonction WebDAV utilise un serveur local uniquement sur votre machine, grâce à notre CLI. Nous mettons en œuvre les mêmes méthodes de zero-knowledge et de cryptage de bout en bout pour garantir la confidentialité et la sécurité de vos fichiers."
         ]
       },
       {
-        "question": "Quels sont les clients WebDAV supportés par Internxt ?",
+        "question": "Quels sont les clients WebDAV supportés par Internxt ?",
         "answer": [
-          "Nous supportons les clients WebDAV suivants :",
+          "Nous supportons les clients WebDAV suivants :",
           "* CyberDuck",
           "* Transmit",
           "* Cadaver",
@@ -174,7 +174,7 @@
         ]
       },
       {
-        "question": "Dois-je m'inquiéter des certificats auto-signés ?",
+        "question": "Dois-je m'inquiéter des certificats auto-signés ?",
         "answer": [
           "Internxt utilise des certificats auto-signés pour le serveur local WebDAV. Bien que certains clients WebDAV puissent émettre un avertissement concernant ces certificats, ils peuvent être ignorés en toute sécurité. Le cryptage protège vos données quoi qu'il en soit."
         ]

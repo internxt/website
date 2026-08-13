@@ -50,7 +50,7 @@
       }
     },
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre.",
-    "planDescription": "Todos los planes de Internxt incluyen acceso completo a nuestra galardonada suite de privacidad: Internxt Drive, Send, VPN, Antivirus, Cleaner, Monitor de la Dark Web, Meet y Mail.",
+    "planDescription": "Todos los planes de Internxt incluyen acceso completo a nuestra galardonada suite de privacidad: Internxt Drive, Send, VPN, Antivirus, Cleaner,, Meet y Mail.",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu empresa, proteger a tus empleados y asegurar tu rentabilidad.",
     "businessDescription2": "Garantiza la seguridad de los datos de tu empresa con los planes de almacenamiento en la nube cifrado de Internxt.",
     "billingFrequency": {
@@ -101,9 +101,7 @@
       },
       {
         "question": "¿Cuánto puedo ganar?",
-        "answer": [
-          "Puedes ganar hasta 100€ por referido, dependiendo del plan comprado con tu enlace."
-        ]
+        "answer": ["Puedes ganar hasta 100€ por referido, dependiendo del plan comprado con tu enlace."]
       },
       {
         "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme CCleaner,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à CCleaner qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction  ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction  ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,12 +24,12 @@
         "Open-source",
         "Cryptage de bout en bout",
         "Collecte de données minimale",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Nettoyeur sûr et intelligent intégré",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Nettoyage système standard",
         "Historique d'incidents de sécurité et confidentialité",
-        "Moins de confidentialité : Soumis aux lois US/Globales sur les données"
+        "Moins de confidentialité : Soumis aux lois US/Globales sur les données"
       ]
     }
   },
@@ -58,7 +58,7 @@
         "CCleaner a été critiqué pour la collecte de données utilisateur étendues à des fins d'analyse et de publicité, compromettant la vie privée.",
         "Au fil des ans, CCleaner a subi des failles de sécurité majeures ayant exposé des millions d'utilisateurs à des logiciels malveillants.",
         "CCleaner inclut souvent des logiciels supplémentaires non sollicités lors de l'installation, ce qui peut ralentir votre appareil.",
-        "CCleaner ne propose qu'un seul produit principal. Si vous avez besoin de protection avancée, de stockage cloud ou de communication privée, vous devez payer pour plusieurs abonnements.\nManque de confidentialité avancée\nCCleaner ne crypte pas votre trafic ; son focus est le nettoyage, alors qu'Internxt Drive inclut un VPN et un cryptage total."
+        "CCleaner ne propose qu'un seul produit principal. Si vous avez besoin de protection avancée, de stockage cloud ou de communication privée, vous devez payer pour plusieurs abonnements.\nManque de confidentialité avancée\nCCleaner ne crypte pas votre trafic ; son focus est le nettoyage, alors qu'Internxt Drive inclut un VPN et un cryptage total."
       ]
     }
   },
@@ -74,7 +74,7 @@
       "descriptions": [
         "Internxt est entièrement open source et audité de manière indépendante, garantissant l'absence de portes dérobées.",
         "Internxt offre Cleaner et un écosystème de confidentialité complet pour nettoyer, stocker et partager vos fichiers avec cryptage zero-knowledge.",
-        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie abordables."
+        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie abordables."
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au cryptage zero-knowledge et post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -99,12 +99,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Accédez à nos services avec les forfaits à vie et {{percentage}}% de réduction."
+            "description": "Accédez à nos services avec les forfaits à vie et {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "CCleaner : Et votre vie privée ?",
+        "title": "CCleaner : Et votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -163,7 +163,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -182,35 +182,35 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus privée que CCleaner ?",
+        "question": "Internxt est-il une alternative plus privée que CCleaner ?",
         "answer": [
           "Oui, Internxt utilise le cryptage post-quantique et zero-knowledge et est entièrement open source.",
           "Internxt inclut Drive, VPN, Antivirus et Cleaner pour une sécurité complète."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, respectant strictement le RGPD."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Contactez hello@internxt.com et notre équipe vous aidera avec plaisir."
         ]
       },
       {
-        "question": "Puis-je payer en crypto ?",
+        "question": "Puis-je payer en crypto ?",
         "answer": [
           "Oui, nous acceptons les cartes, PayPal, les cryptomonnaies et Klarna."
         ]

@@ -8,19 +8,13 @@
   },
   "PhotoSection": {
     "title": "Internxt 相片",
-    "description": [
-      "使用我們的安全相片雲端儲存備份並同步您的珍貴回憶，採用後量子加密技術，專為保障完全隱私而打造。"
-    ]
+    "description": ["使用我們的安全相片雲端儲存備份並同步您的珍貴回憶，採用後量子加密技術，專為保障完全隱私而打造。"]
   },
   "CoreFeatures": {
     "title": "私密相片儲存：隨時隨地存取您的回憶",
     "description": "讓您的相片庫在所有裝置間保持最新與同步。即使裝置遺失或更換，您的相片庫依然安全且可隨時存取。",
     "accordionCards": {
-      "titles": [
-        "備份您的所有裝置",
-        "零追蹤器、零廣告、無 AI 介入",
-        "自動同步與備份"
-      ],
+      "titles": ["備份您的所有裝置", "零追蹤器、零廣告、無 AI 介入", "自動同步與備份"],
       "descriptions": [
         "自動備份您所有裝置上的相片，並可隨時透過任何裝置安全地存取它們。",
         "Internxt 相片提供完全無廣告的體驗，沒有資料追蹤，也不會使用您的相片和資料來訓練機器學習 AI。",
@@ -32,14 +26,7 @@
     "title": "專注於隱私保護的安全相片雲端儲存",
     "description": "Internxt 相片採用後量子加密與零知識加密技術，保障您的檔案和資料在傳輸與靜止狀態下皆處於加密狀態。",
     "scrollableSection": {
-      "titles": [
-        "完全加密的金庫",
-        "隱私高於利潤",
-        "合規認證",
-        "開源且經過審計",
-        "為自由而生",
-        "無後門程式"
-      ],
+      "titles": ["完全加密的金庫", "隱私高於利潤", "合規認證", "開源且經過審計", "為自由而生", "無後門程式"],
       "descriptions": [
         "Internxt 相片採用 Kyber 512 後量子加密及 AES-256 加密，結合端到端安全性、歐洲標準隱私與先進技術，確保資料受到高度保護。",
         "與 Google Photos 或其他科技巨頭不同，Internxt 無法檢視或刪除您的相片。所有內容均在您的裝置上直接加密，包括我們在內的任何人都無法存取您的相片或資料。",
@@ -103,7 +90,7 @@
       }
     },
     "lifetimeDescription": "一次付費，終身享有隱私與安全保障",
-    "planDescription": "所有 Internxt 方案均可完整體驗我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "planDescription": "所有 Internxt 方案均可完整體驗我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
     "businessDescription": "我們目前正在開發全新的 Internxt 商業方案，旨在專門捍衛您的企業安全、保護員工並保障盈利。",
     "businessDescription2": "借助 Internxt 加密雲端儲存方案，確保您公司的資料安全。",
     "billingFrequency": {

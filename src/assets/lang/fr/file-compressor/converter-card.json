@@ -2,7 +2,7 @@
   "title": "Compresser le fichier {{pathFrom}}",
   "secureUpload": "Téléversements sécurisés garantis par la protection de la vie privée d'Internxt. Aucune information n'est stockée.",
   "dragNDropArea": {
-    "maxFileSize": "Taille maximale : 1 Go",
+    "maxFileSize": "Taille maximale : 1 Go",
     "dragYourFile": "Glissez-déposez votre fichier {{pathFrom}} ici",
     "cta": "Choisir le fichier {{pathFrom}}",
     "draggingFile": "Déposez le fichier ici"

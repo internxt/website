@@ -7,7 +7,7 @@
     "description": "Chez Internxt, nous nous engageons à fournir aux gens le plus haut niveau de confidentialité et de sécurité. Cette approche fait partie de notre philosophie qui consiste à construire des technologies qui protègent votre vie privée et gardent vos données en sécurité."
   },
   "WhatIsOSS": {
-    "title": "Qu'est-ce qu'un logiciel Open Source?",
+    "title": "Qu'est-ce qu'un logiciel Open Source ?",
     "description": "Les logiciels libres, ou Open source (OSS), sont des codes informatiques utilisés pour créer des projets et mis gratuitement à la disposition du public. Vous pouvez voir le code qui a construit le site web et, avec les connaissances appropriées, modifier ou améliorer sa sécurité, corriger ou ajouter de nouvelles fonctionnalités",
     "imgHeader": "Nous utilisons des logiciels libres dans nos applications Drive, Photos et Send, ce qui nous permet de mettre à jour et d'améliorer constamment notre code source. Cet engagement nous permet de vous offrir la meilleure expérience possible.",
     "section": [
@@ -16,7 +16,7 @@
     ]
   },
   "WhatAreTheBenefits": {
-    "title": "Quels sont les avantages des logiciels libres ?",
+    "title": "Quels sont les avantages des logiciels libres ?",
     "description": "Les logiciels open source présentent de nombreux avantages qui s'alignent sur notre vision d'un internet où la vie privée de l'utilisateur passe avant tout",
     "cards": [
       {
@@ -33,7 +33,7 @@
       },
       {
         "title": "Longévité",
-        "description": "Le logiciel open source reste accessible au public même si l'entreprise disparaît, ce qui permet aux gens de continuer à travailler sur le code ; cela garantit la continuité et élimine la nécessité de payer pour un nouveau service ou la perte de données."
+        "description": "Le logiciel open source reste accessible au public même si l'entreprise disparaît, ce qui permet aux gens de continuer à travailler sur le code ; cela garantit la continuité et élimine la nécessité de payer pour un nouveau service ou la perte de données."
       },
       {
         "title": "Agilité",
@@ -59,8 +59,8 @@
     ]
   },
   "DifferencesBetweenOpenAndCloseSS": {
-    "title": "Quelles sont les différences entre les logiciels à source ouverte et à source fermée ?",
-    "description": "Les avantages et les inconvénients des logiciels open source sont essentiels pour choisir le logiciel qui vous convient le mieux. Les principales différences entre les logiciels open source et les logiciels fermés sont les suivantes :",
+    "title": "Quelles sont les différences entre les logiciels à source ouverte et à source fermée ?",
+    "description": "Les avantages et les inconvénients des logiciels open source sont essentiels pour choisir le logiciel qui vous convient le mieux. Les principales différences entre les logiciels open source et les logiciels fermés sont les suivantes :",
     "table": {
       "OpenSource": {
         "title": "Open Source",

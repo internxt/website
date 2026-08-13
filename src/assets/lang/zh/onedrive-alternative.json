@@ -170,7 +170,7 @@
         "question": "Internxt 是更安全、更私密的 OneDrive 替代方案嗎？",
         "answer": [
           "是的，Internxt 使用後量子和零知識加密，保證除了您之外的任何人都無法查看您的檔案。Microsoft 在其自己的伺服器上管理加密金鑰，這意味著它可能存取您的檔案或向政府或執法部門提供存取權限。",
-          "VPN、Antivirus、Device Cleaner (裝置清理)、Dark Web Monitor、Meet 和 Mail 等附加功能也為您提供了額外的保護，防止駭客和資料洩露。"
+          "VPN、Antivirus、Device Cleaner (裝置清理)、Meet 和 Mail 等附加功能也為您提供了額外的保護，防止駭客和資料洩露。"
         ]
       },
       {

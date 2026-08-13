@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": "Internxt S3, comme Azure S3 \nmais **privé**",
-    "description": "Stockage d'objets pay-as-you-go jusqu'à 80 % moins cher qu'Azure",
+    "description": "Stockage d'objets pay-as-you-go jusqu'à 80 % moins cher qu'Azure",
     "getPrivacy": "Passez à Internxt, le meilleur stockage cloud d'entreprise et l'alternative à Azure",
     "cta": "Obtenir Internxt S3"
   },
@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux fichiers dans certaines circonstances.",
-        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
       ]
     }
   },
@@ -104,7 +104,7 @@
         ]
       },
       "competitorTable": {
-        "title": "Azure\nEt votre confidentialité ?",
+        "title": "Azure\nEt votre confidentialité ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -144,7 +144,7 @@
       ],
       "descriptions": [
         "Internxt S3 fournit un chiffrement de bout en bout intégré et un verrouillage d'objet immuable pour protéger les données de la perte, de la corruption ou des ransomwares. Avec une durabilité de 11×9s, tous les fichiers sont conservés en toute sécurité dans plusieurs régions.",
-        "Internxt S3 est une solution de stockage cloud 100 % chaude, tous les fichiers sont donc immédiatement disponibles pour le téléchargement. Il n'y a pas de stockage à froid ni de récupération différée, contrairement à Microsoft S3 Glacier, où l'accès aux données peut prendre des heures. Cette disponibilité instantanée garantit des temps de réponse rapides pour toutes les charges de travail.",
+        "Internxt S3 est une solution de stockage cloud 100 % chaude, tous les fichiers sont donc immédiatement disponibles pour le téléchargement. Il n'y a pas de stockage à froid ni de récupération différée, contrairement à Microsoft S3 Glacier, où l'accès aux données peut prendre des heures. Cette disponibilité instantanée garantit des temps de réponse rapides pour toutes les charges de travail.",
         "Internxt S3 utilise une tarification forfaitaire sans frais cachés. Les utilisateurs savent exactement ce qu'ils paieront chaque mois sans se soucier des frais de demande, des téléchargements ou des coûts de réplication. Cela est plus simple et plus prévisible que Microsoft S3, où la facturation peut être confuse et variable.",
         "Les utilisateurs paient un simple coût par gigaoctet avec Internxt S3, et les prix ne changent en fonction de la fréquence d'accès ou de transfert. Ce modèle prévisible réduit les dépenses totales, contrairement à Microsoft S3, où les frais de stockage, de récupération et de sortie de données affectent tous le coût par gigaoctet."
       ]
@@ -157,7 +157,7 @@
   },
   "tableSection": {
     "title": "Sélectionnez votre forfait",
-    "hotLabel": "Jusqu'à 80 % moins cher 🔥",
+    "hotLabel": "Jusqu'à 80 % moins cher 🔥",
     "planTitles": {
       "header": "Gestion des données et vitesse supérieures"
     },
@@ -176,40 +176,40 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qu'est-ce que le stockage d'objets ?",
+        "question": "Qu'est-ce que le stockage d'objets ?",
         "answer": [
           "Le stockage d'objets est un moyen de stocker des données sous forme d'unités discrètes appelées objets, chacune ayant ses propres métadonnées et un identifiant unique. Le stockage d'objets Internxt S3 offre un accès rapide à d'importants ensembles de données, ce qui en fait une solution de stockage cloud abordable et évolutive."
         ]
       },
       {
-        "question": "Quelle est la meilleure alternative à Azure ?",
+        "question": "Quelle est la meilleure alternative à Azure ?",
         "answer": [
           "Internxt est la meilleure alternative à Azure si vous avez besoin d'un stockage d'objets avec des prix prévisibles et évolutifs, et d'un accès rapide et efficace à de grandes quantités de données."
         ]
       },
       {
-        "question": "Où Internxt est-il basé ?",
+        "question": "Où Internxt est-il basé ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage d'objets cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre confidentialité."
         ]
       },
       {
-        "question": "Microsoft Azure est-il plus cher qu'Internxt ?",
+        "question": "Microsoft Azure est-il plus cher qu'Internxt ?",
         "answer": [
-          "Étant donné qu'Internxt propose un stockage pay-as-you-go, aucun frais supplémentaire n'est facturé pour l'entrée ou la sortie des données du cloud, ce qui rend Internxt S3 jusqu'à 80 % moins cher qu'Amazon, Azure ou Google Cloud."
+          "Étant donné qu'Internxt propose un stockage pay-as-you-go, aucun frais supplémentaire n'est facturé pour l'entrée ou la sortie des données du cloud, ce qui rend Internxt S3 jusqu'à 80 % moins cher qu'Amazon, Azure ou Google Cloud."
         ]
       },
       {
-        "question": "Comment puis-je contacter l'assistance ?",
+        "question": "Comment puis-je contacter l'assistance ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou si vous avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de réussite client se fera un plaisir de vous aider."
         ]
@@ -220,7 +220,7 @@
     "title": "Le stockage cloud d'objets Internxt\n combine sécurité et efficacité",
     "description": "Le stockage d'objets Internxt est une solution abordable et performante révolutionnant le stockage de données en ligne, parfaite pour les particuliers ou les organisations ayant besoin d'une infrastructure fiable et sécurisée à un coût minime.",
     "payAsYouGoCard": {
-      "title": "Payez au fur et à mesure !",
+      "title": "Payez au fur et à mesure !",
       "description": "Payez uniquement pour le stockage que vous utilisez."
     },
     "cardText": {
@@ -242,6 +242,6 @@
         ]
       }
     },
-    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
+    "oneTimePayment": "*Des frais uniques de 1 € sont requis pour la vérification du compte"
   }
 }

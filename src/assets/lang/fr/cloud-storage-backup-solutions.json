@@ -33,7 +33,7 @@
     },
     "square2": {
       "title": "Internxt S3",
-      "description": "Internxt S3 est un service de stockage d'objets évolutif et chiffré de bout en bout permettant aux entreprises ou aux PME de gérer de grandes quantités de données à moindre coût. Sans frais d'entrée et de sortie, nos plans de stockage d'objets sont jusqu'à 90 % moins chers que ceux des autres fournisseurs.",
+      "description": "Internxt S3 est un service de stockage d'objets évolutif et chiffré de bout en bout permettant aux entreprises ou aux PME de gérer de grandes quantités de données à moindre coût. Sans frais d'entrée et de sortie, nos plans de stockage d'objets sont jusqu'à 90 % moins chers que ceux des autres fournisseurs.",
       "cta": "Obtenir Internxt S3"
     }
   },
@@ -78,29 +78,29 @@
     "cta": "Acheter votre plan"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Comment Internxt protège-t-il mes données ?",
+        "question": "Comment Internxt protège-t-il mes données ?",
         "answer": [
           "Internxt utilise la cryptographie post-quantique primée Kyber-512 et le chiffrement à connaissance nulle pour garantir que vous seul avez accès à vos fichiers. Tous vos fichiers sont chiffrés sur votre appareil avant d'être envoyés dans le cloud, empêchant quiconque, y compris Internxt, de voir le contenu.",
           "Vous pouvez également activer l'authentification à deux facteurs pour empêcher tout accès non autorisé à votre compte."
         ]
       },
       {
-        "question": "À quelle fréquence dois-je effectuer une sauvegarde dans le stockage cloud ?",
+        "question": "À quelle fréquence dois-je effectuer une sauvegarde dans le stockage cloud ?",
         "answer": [
           "Avec Internxt, vous pouvez sauvegarder vos dossiers à différents intervalles pour répondre à vos besoins. Plus vous sauvegardez vos fichiers fréquemment, moins vous perdrez de données en cas d'urgence. Pour cette raison, nous recommandons des sauvegardes quotidiennes pour une protection maximale ou plus fréquentes en fonction de la modification de vos données."
         ]
       },
       {
-        "question": "Comment restaurer mes données à partir du stockage cloud ?",
+        "question": "Comment restaurer mes données à partir du stockage cloud ?",
         "answer": [
           "Pour restaurer vos sauvegardes, vous devez acheter l'un de nos plans payants. Connectez-vous à votre compte Internxt Drive via notre site Web, naviguez jusqu'aux sauvegardes et sélectionnez l'appareil et le dossier que vous souhaitez télécharger pour accéder aux dossiers sauvegardés."
         ]
       },
       {
-        "question": "Quelle est la différence entre le stockage cloud et les solutions de sauvegarde de stockage cloud ?",
+        "question": "Quelle est la différence entre le stockage cloud et les solutions de sauvegarde de stockage cloud ?",
         "answer": [
           "Le stockage cloud se concentre sur l'enregistrement et la gestion des fichiers qui doivent être consultés ou partagés régulièrement dans le cloud.",
           "Le stockage cloud pour les sauvegardes, comme Internxt Drive, vous permet également de créer des copies de vos dossiers pour une protection supplémentaire des données, garantissant qu'elles peuvent être récupérées en cas de suppression accidentelle, de perte de données ou de cyberattaques.",
@@ -108,13 +108,13 @@
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en ligne ou en envoyant un e-mail à hello@internxt.com."
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en ligne ou en envoyant un e-mail à hello@internxt.com."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
         "answer": [
           "Oui, Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et crypto-monnaie."
         ]
@@ -144,7 +144,7 @@
         "title": "Facile à utiliser",
         "description": [
           "La gestion manuelle des sauvegardes peut prendre beaucoup de temps et être difficile pour plusieurs dossiers. Le processus devient beaucoup plus simple une fois que vous configurez des sauvegardes avec des fournisseurs de stockage cloud comme Internxt.",
-          "Internxt Drive peut exécuter automatiquement vos sauvegardes dans le cloud sans nécessiter d'action ; chaque fois que vous avez besoin de récupérer l'accès, vous pouvez restaurer votre fichier en quelques clics. Vous pouvez vous protéger contre les cyberattaques avancées avec des solutions de sauvegarde de stockage cloud, quelles que soient vos compétences techniques."
+          "Internxt Drive peut exécuter automatiquement vos sauvegardes dans le cloud sans nécessiter d'action ; chaque fois que vous avez besoin de récupérer l'accès, vous pouvez restaurer votre fichier en quelques clics. Vous pouvez vous protéger contre les cyberattaques avancées avec des solutions de sauvegarde de stockage cloud, quelles que soient vos compétences techniques."
         ]
       },
       "element4": {

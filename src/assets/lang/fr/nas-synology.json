@@ -7,7 +7,7 @@
     "cta": "Obtenir Internxt"
   },
   "WhatIsNASSection": {
-    "title": "Qu'est-ce qu'un périphérique Synology NAS et pourquoi devrais-je l'utiliser ?",
+    "title": "Qu'est-ce qu'un périphérique Synology NAS et pourquoi devrais-je l'utiliser ?",
     "description": [
       "La sauvegarde cloud NAS est une solution de stockage cloud chiffrée qui copie vos données sur votre appareil et dans le cloud pour protéger vos fichiers contre les pannes matérielles, le vol ou les catastrophes locales.",
       "Internxt se connecte à votre périphérique Synology via un conteneur Docker, de sorte que les sauvegardes quittant le réseau sont déjà chiffrées avec AES-256 et la cryptographie post-quantique Kyber-512 grâce à une architecture à connaissance nulle.",
@@ -78,34 +78,34 @@
     "cta": "Obtenir Internxt"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'un service de sauvegarde cloud NAS Synology ?",
+        "question": "Qu'est-ce qu'un service de sauvegarde cloud NAS Synology ?",
         "answer": [
           "Il s'agit d'une solution de sauvegarde qui copie en continu ou périodiquement les données de votre périphérique NAS Synology vers un environnement cloud sécurisé. Cela crée une copie hors site de vos fichiers afin qu'ils restent en sécurité même si le NAS physique est endommagé, perdu ou compromis."
         ]
       },
       {
-        "question": "Pourquoi devrais-je sauvegarder mon NAS Synology dans le cloud ?",
+        "question": "Pourquoi devrais-je sauvegarder mon NAS Synology dans le cloud ?",
         "answer": [
           "La sauvegarde cloud protège contre de multiples risques, notamment les pannes matérielles, le vol, les attaques par ransomware, la suppression accidentelle et les catastrophes sur site comme les incendies ou les inondations. Elle garantit que vous disposez toujours d'une copie externe de vos données pouvant être restaurée en cas de besoin."
         ]
       },
       {
-        "question": "Mes données sont-elles chiffrées ?",
+        "question": "Mes données sont-elles chiffrées ?",
         "answer": [
           "Oui, Internxt chiffre vos données avec AES-256 et le chiffrement post-quantique et à connaissance nulle Kyber-512. Toutes vos données sont chiffrées avant de quitter votre NAS et restent chiffrées pendant le transfert et lors du stockage dans le cloud. Les clés de chiffrement sont conservées sur votre NAS, de sorte que personne ne peut accéder à vos fichiers."
         ]
       },
       {
-        "question": "Internxt fonctionne-t-il avec tous les périphériques NAS Synology ?",
+        "question": "Internxt fonctionne-t-il avec tous les périphériques NAS Synology ?",
         "answer": [
           "Oui, il est compatible avec la plupart des modèles NAS Synology qui prennent en charge les versions DSM modernes et les outils de sauvegarde tels que Hyper Backup ou Synology Cloud Sync. Certains modèles plus anciens ou d'entrée de gamme peuvent avoir des fonctionnalités limitées."
         ]
       },
       {
-        "question": "Quelles applications Synology sont utilisées pour la sauvegarde cloud ?",
+        "question": "Quelles applications Synology sont utilisées pour la sauvegarde cloud ?",
         "answer": [
           "Les principaux outils Synology sont Hyper Backup pour les sauvegardes complètes versionnées et Cloud Sync pour la synchronisation en temps réel avec les fournisseurs de stockage cloud."
         ]

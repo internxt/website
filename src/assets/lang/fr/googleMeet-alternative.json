@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme Google Meet, mais **privé**",
     "description": "Dégooglisez votre vie avec Internxt, la meilleure alternative à Google Meet qui respecte votre vie privée",
-    "getPrivacy": " Choisissez votre forfait et profitez de {{percentage}}% de réduction ",
+    "getPrivacy": " Choisissez votre forfait et profitez de {{percentage}} % de réduction ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Vidéos chiffrées sur votre appareil",
         "Oui",
-        "Compétitif, sans frais cachés, jusqu'à 5To",
+        "Compétitif, sans frais cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos vidéos ou chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Vidéos chiffrées par Google",
         "Non",
-        "Forfaits plus chers, jusqu'à 2To",
+        "Forfaits plus chers, jusqu'à 2 To",
         "Drive, Google Workspace, intégration IA, Mail et Meet",
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux vidéos et chats dans certaines circonstances",
-        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
       ]
     }
   },
@@ -50,10 +50,10 @@
     "scrollableSection": {
       "titles": ["Violations du RGPD", "Scandale Gmail et publicités", "Droit à l'oubli", "Dark patterns"],
       "descriptions": [
-        "10 millions d'euros : L'autorité espagnole de protection des données a condamné Google pour avoir violé le RGPD en transmettant des données personnelles à des tiers sans consentement.",
-        "325 millions d'euros : En 2025, la CNIL (France) a de nouveau condamné Google pour avoir affiché des publicités entre les e-mails de Gmail et placé des cookies sans consentement valide.",
-        "7 millions d'euros : L'autorité suédoise a infligé une amende à Google pour violation du droit à l'oubli, après son échec à supprimer des résultats de recherche sensibles.",
-        "90 millions d'euros : La CNIL a condamné Google pour avoir rendu difficile le refus des cookies, une pratique visant à favoriser son modèle publicitaire basé sur le traçage."
+        "10 millions d'euros : L'autorité espagnole de protection des données a condamné Google pour avoir violé le RGPD en transmettant des données personnelles à des tiers sans consentement.",
+        "325 millions d'euros : En 2025, la CNIL (France) a de nouveau condamné Google pour avoir affiché des publicités entre les e-mails de Gmail et placé des cookies sans consentement valide.",
+        "7 millions d'euros : L'autorité suédoise a infligé une amende à Google pour violation du droit à l'oubli, après son échec à supprimer des résultats de recherche sensibles.",
+        "90 millions d'euros : La CNIL a condamné Google pour avoir rendu difficile le refus des cookies, une pratique visant à favoriser son modèle publicitaire basé sur le traçage."
       ]
     }
   },
@@ -63,8 +63,8 @@
     "cards": {
       "titles": ["La vie privée d'abord", "Chiffrement de bout en bout", "Pas de collecte de données"],
       "descriptions": [
-        "Google Meet lie des métadonnées : avec qui vous communiquez, à quelle fréquence et sur quels appareils. Internxt n'a ni traqueurs, ni scan IA, ni accès dérobé.",
-        "Google gère les clés de chiffrement sur ses serveurs, gardant un contrôle total. Internxt utilise le zéro-knowledge : vous seul accédez à vos données.",
+        "Google Meet lie des métadonnées : avec qui vous communiquez, à quelle fréquence et sur quels appareils. Internxt n'a ni traqueurs, ni scan IA, ni accès dérobé.",
+        "Google gère les clés de chiffrement sur ses serveurs, gardant un contrôle total. Internxt utilise le zéro-knowledge : vous seul accédez à vos données.",
         "Avec Google, vos activités sont analysées pour construire un profil et générer du profit. Avec Internxt, vous êtes le propriétaire, pas le produit."
       ]
     }
@@ -74,7 +74,7 @@
     "description": "Internxt offre une sécurité inégalée avec des fonctionnalités que Google Meet ne peut égaler, comme le chiffrement post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -90,12 +90,12 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements récurrents avec un paiement unique pour des forfaits allant jusqu'à 5To. Accès illimité avec {{discount}}% de réduction."
+            "description": "Évitez les abonnements récurrents avec un paiement unique pour des forfaits allant jusqu'à 5 To. Accès illimité avec {{discount}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Google Meet : Qu'en est-il de votre vie privée ?",
+        "title": "Google Meet : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -139,7 +139,7 @@
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction ",
+    "hotLabel": "{{discount}} % de réduction ",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -149,7 +149,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir ce plan"
     },
     "features": {
@@ -158,54 +158,54 @@
       "guarantee": "Garantie satisfait ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sûre à Google Meet ?",
+        "question": "Internxt est-il une alternative plus sûre à Google Meet ?",
         "answer": [
           "Oui, Internxt utilise le chiffrement post-quantique et zéro-knowledge, garantissant que vous seul voyez vos fichiers.",
           "Google gère les clés sur ses serveurs, ce qui signifie qu'ils pourraient accéder à vos données ou les transmettre aux autorités."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique ?",
         "answer": [
           "Contrairement au chiffrement standard, ces algorithmes résistent aux attaques d'ordinateurs quantiques puissants.",
           "Cette méthode garantit que votre plan à vie vous protège contre les menaces futures, sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD soumise aux lois strictes de l'UE."
         ]
       },
       {
-        "question": "Google Meet est-il plus cher qu'Internxt ?",
+        "question": "Google Meet est-il plus cher qu'Internxt ?",
         "answer": [
-          "Google Meet a une version gratuite, mais pour des fonctions professionnelles, Internxt est plus avantageux grâce à notre remise de {{percentage}}% et nos plans à vie."
+          "Google Meet a une version gratuite, mais pour des fonctions professionnelles, Internxt est plus avantageux grâce à notre remise de {{percentage}} % et nos plans à vie."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Pour toute question, contactez hello@internxt.com. Notre équipe de Customer Success se fera un plaisir de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez augmenter votre stockage dans vos paramètres ou acheter un nouveau plan qui se cumulera automatiquement."
         ]
       },
       {
-        "question": "Quels sont les modes de paiement ?",
+        "question": "Quels sont les modes de paiement ?",
         "answer": [
           "Nous acceptons les cartes bancaires (Mastercard, VISA, etc.), PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."
         ]

@@ -342,6 +342,13 @@ export enum PromoCodeName {
   kioskomputer = 'KIOSKOMPUTER',
   midu = 'MIDU',
   josema = 'JOSEMA',
+  jvscholz = 'JVSCHOLZ',
+  ctechmedia = 'CTECHMEDIA',
+  verdrahtet = 'VERDRAHTET',
+  aimentors = 'AIMENTORS',
+  alessandro = 'ALESSANDRO',
+  lomotica = 'LOMOTICA',
+  dinamotech = 'DINAMOTECH',
 }
 
 export interface PromoCodeProps {

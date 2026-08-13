@@ -82,7 +82,7 @@
         "password": {
           "label": "mot de passe",
           "placeholder": "mot de passe",
-          "helper": "¿Oublié votre mot de passe?"
+          "helper": "¿Oublié votre mot de passe ?"
         },
         "tfa": {
           "label": "Authentification à deux facteurs",

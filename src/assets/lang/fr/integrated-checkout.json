@@ -1,5 +1,5 @@
 {
-  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité ",
+  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité ",
   "pay": "Payer",
   "paying": "Paiement en cours...",
   "checkout": "Commander",
@@ -16,7 +16,7 @@
       "signUp": "Créer un compte"
     },
     "emailMustNotBeEmpty": "L'email ne doit pas être vide",
-    "privacyGuarantee": "Garantie de confidentialité : Nous ne partageons pas vos informations et ne vous contacterons que si nécessaire pour fournir notre service."
+    "privacyGuarantee": "Garantie de confidentialité : Nous ne partageons pas vos informations et ne vous contacterons que si nécessaire pour fournir notre service."
   },
   "addressBillingTitle": "Facturation d'Adresse",
   "addressBilling": {
@@ -38,12 +38,12 @@
       "year": "Facturé annuellement",
       "lifetime": "Paiement unique"
     },
-    "saving": "Vous économisez {{percent}}%",
+    "saving": "Vous économisez {{percent}} %",
     "planDetails": {
-      "title": "Détails du plan :",
+      "title": "Détails du plan :",
       "features": [
-        "Charge mensuelle minimale de 7€",
-        "Stockage minimum de 1TB",
+        "Charge mensuelle minimale de 7 €",
+        "Stockage minimum de 1 To",
         "Compatible avec AWS S3 et IAM API",
         "Vitesse accrue",
         "Stockage flexible",
@@ -62,6 +62,6 @@
     "withAnnualBilling": "avec facturation annuelle"
   },
   "invalidCoupon": "Coupon invalide",
-  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte",
+  "oneTimePayment": "*Un frais unique de 1 € est requis pour la vérification du compte",
   "error500": "Veuillez saisir un numéro de TVA valide"
 }
