@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Comme ChatGPT, \n mais **privé**",
     "description": "Passez à Internxt AI, la meilleure alternative à ChatGPT qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de 85 % de réduction ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de 85 % de réduction ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,12 +24,12 @@
         "Open-source",
         "Oui, chiffrés sur votre appareil",
         "Jamais",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Les chats ne sont jamais utilisés pour entraîner notre IA",
         "Ne peut jamais accéder à vos chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire (fermé)",
@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Vos chats sont utilisés pour entraîner et améliorer ChatGPT",
         "Des humains peuvent accéder à vos chats et les examiner",
-        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
       ]
     }
   },
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité inégalée grâce au chiffrement zero-knowledge et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive avec des plans à vie jusqu'à 5 To à -85 %."
+            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive avec des plans à vie jusqu'à 5 To à -85 %."
           }
         ]
       },
       "competitorTable": {
-        "title": "ChatGPT : Qu'en est-il de votre vie privée ?",
+        "title": "ChatGPT : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Basé sur l'abonnement",
-            "description": "Les plans payants vont de 8 €/mois à 229 €/mois."
+            "description": "Les plans payants vont de 8 €/mois à 229 €/mois."
           }
         ]
       }
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choisissez Internxt pour la meilleure alternative à ChatGPT",
-    "description": "Internxt propose une IA chiffrée et privée, plus un stockage cloud sécurisé et une suite complète à -85 %.",
+    "description": "Internxt propose une IA chiffrée et privée, plus un stockage cloud sécurisé et une suite complète à -85 %.",
     "cta": "Faire le changement"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "-85 % 🔥",
+    "hotLabel": "-85 % 🔥",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -164,60 +164,60 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt AI est-il une alternative à ChatGPT plus sûre et privée ?",
+        "question": "Internxt AI est-il une alternative à ChatGPT plus sûre et privée ?",
         "answer": [
           "Oui, Internxt chiffre tous vos chats et ne stocke jamais vos conversations. ChatGPT ne chiffre pas vos chats y peut les utiliser pour entraîner son IA.",
           "Les fonctionnalités additionnelles incluent Drive, VPN, Antivirus et Meet, offrant une protection supplémentaire contre les violations de données."
         ]
       },
       {
-        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
+        "question": "L'utilisation d'Internxt AI est-elle gratuite ?",
         "answer": [
           "Oui, vous pouvez utiliser notre IA gratuitement sans vous connecter, sans entrer d'informations personnelles ni de coordonnées bancaires."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique ?",
         "answer": [
           "Ces algorithmes sont conçus pour résister aux attaques d'ordinateurs quantiques puissants, faisant d'Internxt une alternative pérenne.",
           "Cette méthode est incluse dans tous nos plans sans surcoût pour protéger votre stockage à vie contre les menaces futures."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD suivant des lois strictes de protection des données."
         ]
       },
       {
-        "question": "ChatGPT est-il plus cher qu'Internxt ?",
+        "question": "ChatGPT est-il plus cher qu'Internxt ?",
         "answer": [
-          "Internxt AI est gratuit, et avec notre remise de 85 %, nos plans sont moins chers que les options actuelles de ChatGPT tout en offrant une suite de sécurité complète."
+          "Internxt AI est gratuit, et avec notre remise de 85 %, nos plans sont moins chers que les options actuelles de ChatGPT tout en offrant une suite de sécurité complète."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Pour toute question, contactez hello@internxt.com et notre équipe Customer Success sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter du stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à jour votre forfait depuis vos paramètres ou acheter un nouveau plan sur internxt.com/pricing, le stockage sera cumulé."
         ]
       },
       {
-        "question": "Quels sont les modes de paiement acceptés ?",
+        "question": "Quels sont les modes de paiement acceptés ?",
         "answer": ["Nous acceptons les cartes bancaires, PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."]
       }
     ]

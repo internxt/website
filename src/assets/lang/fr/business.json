@@ -19,7 +19,7 @@
       },
       { "title": "73 M", "description": "Dossiers clients d'AT&T divulgués en 2024" },
       { "title": "258 jours", "description": "Temps moyen pour identifier une violation de données" },
-      { "title": "46%", "description": "Des attaques de ransomware ciblent les entreprises" }
+      { "title": "46 %", "description": "Des attaques de ransomware ciblent les entreprises" }
     ],
     "footerText": "*Données collectées à partir du rapport IBM Security Cost of a Data Breach 2024."
   },
@@ -31,7 +31,7 @@
     ]
   },
   "WhatCanWeDo": {
-    "title": "Que pouvez-vous faire avec Internxt ?",
+    "title": "Que pouvez-vous faire avec Internxt ?",
     "description": "Optimisez la gestion, la sécurité et la confidentialité des fichiers de votre organisation avec notre stockage cloud sécurisé pour les entreprises.",
     "scrollableSection": {
       "imagesPathname": [
@@ -58,7 +58,7 @@
     }
   },
   "PriceTable": {
-    "hotLabel": "{{discount}}% remise",
+    "hotLabel": "{{discount}} % remise",
     "planTitles": {
       "header": "Choisissez votre plan",
       "business": "Plans d'entreprise"
@@ -73,8 +73,8 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud crypté gratuitement",
-      "mobileDescription": "Obtenez jusqu'à 1 Go de stockage cloud crypté et profitez de notre écosystème privé",
+      "description": "Obtenez 1 Go de stockage cloud crypté gratuitement",
+      "mobileDescription": "Obtenez jusqu'à 1 Go de stockage cloud crypté et profitez de notre écosystème privé",
       "cta": "Sélectionner un plan"
     },
     "features": {
@@ -85,22 +85,22 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB",
-      "standard": "1TB",
-      "pro": "2TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To",
+      "standard": "1 To",
+      "pro": "2 To"
     }
   },
   "WhyChooseInternxt": {
-    "title": "Pourquoi choisir Internxt ?",
+    "title": "Pourquoi choisir Internxt ?",
     "description": "Notre solution de stockage cloud est conçue pour tout le monde, offrant une suite de produits sécurisée, facile à comprendre et à utiliser, même si vous n'êtes pas un expert en technologie. Internxt propose un stockage cloud crypté puissant mais intuitif, parfait pour une utilisation quotidienne dans divers secteurs.",
     "scrollableSection": {
       "titles": [
         "Conforme au RGPD",
         "Aucun accès, cryptage maximum",
         "Vous contrôlez vos données",
-        "100 % transparent et sécurisé"
+        "100 % transparent et sécurisé"
       ],
       "descriptions": [
         "Le Règlement Général sur la Protection des Données (RGPD) et d'autres lois européennes sur la confidentialité imposent une protection stricte des données. En suivant ces lois, Internxt prend toutes les mesures pour protéger les données de votre entreprise.",
@@ -140,7 +140,7 @@
       {
         "imageBrandName": "ffstoppers",
         "brand": "Fstoppers",
-        "review": "Pourquoi choisir Internxt ? Je dirais la nature simplifiée et simple de son fonctionnement. C'est simplement une option de stockage cloud crypté en 256 bits sans fioritures que tout le monde peut utiliser."
+        "review": "Pourquoi choisir Internxt ? Je dirais la nature simplifiée et simple de son fonctionnement. C'est simplement une option de stockage cloud crypté en 256 bits sans fioritures que tout le monde peut utiliser."
       },
       {
         "imageBrandName": "guru99",
@@ -150,36 +150,36 @@
     ]
   },
   "FaqSection": {
-    "title": "Questions ? Nous avons des réponses",
+    "title": "Questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'Internxt pour les entreprises ?",
+        "question": "Qu'est-ce qu'Internxt pour les entreprises ?",
         "answer": [
           "Notre stockage cloud pour les entreprises offre aux entreprises de toutes tailles une solution de stockage cloud sécurisé qui protège les fichiers d'entreprise contre les violations de données. Les plans d'entreprise incluent l'accès à Internxt Drive, VPN et Send, ainsi que nos nouveaux produits à venir, Internxt Mail et Meet."
         ]
       },
       {
-        "question": "Internxt est-il le bon stockage cloud pour mon entreprise ?",
+        "question": "Internxt est-il le bon stockage cloud pour mon entreprise ?",
         "answer": [
           "Internxt est conçu pour tout le monde, y compris les entreprises de toutes tailles à la recherche d'une solution de stockage cloud sécurisé qui garde les informations personnelles et confidentielles privées.",
           "Notre suite de produits cryptés comprend les normes de sécurité les plus élevées de l'industrie pour les entreprises qui doivent partager des fichiers ou des dossiers sans se soucier des fuites de données."
         ]
       },
       {
-        "question": "Internxt est-il plus sécurisé que d'autres services de stockage cloud ?",
+        "question": "Internxt est-il plus sécurisé que d'autres services de stockage cloud ?",
         "answer": [
           "Contrairement aux grandes entreprises technologiques, Internxt est de confiance pour fournir un stockage de fichiers sécurisé pour les entreprises car vos données d'entreprise sont cryptées sur votre appareil pour une sécurité maximale.",
           "Pour prévenir la menace des violations de données, Internxt fournit des mesures de sécurité supplémentaires, y compris le partage de fichiers cryptés, l'authentification à deux facteurs, le générateur de mot de passe, et plus encore."
         ]
       },
       {
-        "question": "Que se passe-t-il si j'atteins la limite de stockage de mon plan ?",
+        "question": "Que se passe-t-il si j'atteins la limite de stockage de mon plan ?",
         "answer": [
           "Nos plans sont entièrement flexibles pour répondre aux besoins de votre entreprise. Vous pouvez facilement ajouter plus d'utilisateurs ou augmenter votre capacité de stockage si nécessaire, garantissant ainsi évolutivité et rentabilité."
         ]
       },
       {
-        "question": "Quel niveau de support technique fournissez-vous ?",
+        "question": "Quel niveau de support technique fournissez-vous ?",
         "answer": [
           "Nous avons une équipe de support client dédiée qui peut répondre à toutes les questions ou préoccupations ou fournir des informations supplémentaires en fonction de vos besoins. Vous pouvez visiter notre centre d'aide ou nous contacter à [hello@internxt.com](mailto:hello@internxt.com), et notre équipe se fera un plaisir de vous assister."
         ]
@@ -194,21 +194,21 @@
       "email": "Adresse e-mail",
       "company": "Nom de l'entreprise",
       "phone": "Numéro de téléphone",
-      "howMuchStorage": "De combien de stockage avez-vous besoin?",
+      "howMuchStorage": "De combien de stockage avez-vous besoin ?",
       "totalCharacters": " /1000",
       "options": [
         "Sélectionner",
-        "1 - 10TB",
-        "15 - 25TB",
-        "25 - 50 To",
-        "50 - 100 To",
-        "100 - 150 To",
-        "150 - 200 To",
-        "250 - 500 To",
-        "1 - 20 Po",
+        "1 - 10 To",
+        "15 - 25 To",
+        "25 - 50 To",
+        "50 - 100 To",
+        "100 - 150 To",
+        "150 - 200 To",
+        "250 - 500 To",
+        "1 - 20 Po",
         "20+ Po"
       ],
-      "howWeCanHelp": "Comment pouvons-nous vous aider? (Optionnel)",
+      "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
       "howWeCanHelpPlaceHolder": "Parlez-nous davantage des besoins de votre entreprise",
       "cta": "Envoyer le message",
       "ctaSending": "Envoi...",

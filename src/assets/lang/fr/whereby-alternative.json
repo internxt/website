@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt Meet\nLike Whereby, but **private.**",
     "description": "Switch to Internxt, the best alternative to Whereby that respects your privacy",
-    "getPrivacy": " Select your plan {{percentage}}% off 🔥 ",
+    "getPrivacy": " Select your plan {{percentage}} % off 🔥 ",
     "cta": "Claim deal"
   },
   "HeaderSection": {
@@ -24,8 +24,8 @@
         "Open-source",
         "Encrypted on your device",
         "Yes",
-        "Start from €16 annually, or lifetime plans",
-        "5TB cloud storage, Antivirus, VPN, Cleaner, and more",
+        "Start from 16 € annually, or lifetime plans",
+        "5 To cloud storage, Antivirus, VPN, Cleaner, and more",
         "Regular security audits",
         "Yes",
         "Can never access your video, audio, chat, or file content",
@@ -35,8 +35,8 @@
         "Closed-source",
         "Encrypted by Whereby",
         "No",
-        "€9.99/month or custom monthly plans",
-        "30GB video storage, call transcripts, breakout rooms",
+        "9,99 €/month or custom monthly plans",
+        "30 Go video storage, call transcripts, breakout rooms",
         "Regular security audits",
         "Paid feature",
         "Accessible under certain circumstances",
@@ -79,7 +79,7 @@
     "description": "Internxt offers unrivaled private video calls and a full suite of privacy services, making it the best alternative to Whereby.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt: Total privacy, transparency, and trust",
+        "title": "Internxt : Total privacy, transparency, and trust",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Lifetime plans",
-            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5TB. Access our services forever for {{discount}}% off."
+            "description": "Avoid repeated subscriptions with a one-time payment for plans up to 5 To. Access our services forever for {{discount}} % off."
           }
         ]
       },
       "competitorTable": {
-        "title": "Whereby: What about your privacy?",
+        "title": "Whereby : What about your privacy ?",
         "features": [
           {
             "title": "Proprietary software",
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Your all-in-one privacy ally",
-    "hotLabel": "{{discount}}% off  ",
+    "hotLabel": "{{discount}} % off  ",
     "planTitles": {
       "header": "Your all-in-one privacy ally"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Free",
-      "description": "Get 1GB of encrypted cloud storage for free",
+      "description": "Get 1 Go of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
@@ -163,54 +163,54 @@
       "guarantee": "30-day money-back guarantee"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "Questions ? We have answers",
     "faq": [
       {
-        "question": "Is Internxt a more secure and private alternative to Whereby?",
+        "question": "Is Internxt a more secure and private alternative to Whereby ?",
         "answer": [
           "Yes, Internxt uses post-quantum and zero-knowledge encryption that guarantees nobody but you can view your calls. Whereby manages the encryption keys on its own servers, meaning it could access your files or give access to the government or law enforcement.",
           "Additional features such as VPN, Antivirus, Device Cleaner, Meet, and Mail also offer you additional protection from hackers and data breaches."
         ]
       },
       {
-        "question": "What is post-quantum encryption, and is it more secure?",
+        "question": "What is post-quantum encryption, and is it more secure ?",
         "answer": [
           "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure Whereby alternative.",
           "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
         ]
       },
       {
-        "question": "Where is Internxt based?",
+        "question": "Where is Internxt based ?",
         "answer": [
           "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
         ]
       },
       {
-        "question": "Is Whereby more expensive than Internxt?",
+        "question": "Is Whereby more expensive than Internxt ?",
         "answer": [
-          "With your exclusive {{percentage}}% discount, all our plans are cheaper than Whereby’s pricing options currently available, with the benefit of offering many more features and privacy than Whereby."
+          "With your exclusive {{percentage}} % discount, all our plans are cheaper than Whereby’s pricing options currently available, with the benefit of offering many more features and privacy than Whereby."
         ]
       },
       {
-        "question": "How do I contact support?",
+        "question": "How do I contact support ?",
         "answer": [
           "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
         ]
       },
       {
-        "question": "Can I add more storage to my lifetime plan?",
+        "question": "Can I add more storage to my lifetime plan ?",
         "answer": [
           "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage. Or purchase a new plan at internxt.com/pricing with your current Internxt account, and your storage will be automatically stacked."
         ]
       },
       {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency ?",
         "answer": [
           "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, Cryptocurrency, and Klarna."
         ]

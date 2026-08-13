@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme CleanMyMac,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à CleanMyMac qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction  ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction  ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Cryptage de bout en bout",
         "Collecte de données minimale",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Nettoyage intelligent sans perte de données",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Pas de cryptage des données",
         "Collecte de données d'utilisation",
-        "Env. 35 €/an",
+        "Env. 35 €/an",
         "Recherche de fichiers lourds, désinstallateur",
         "Audits de sécurité réguliers",
         "Nettoyage système profond",
         "Logiciel avec accès système profond",
-        "Moins de confidentialité : Soumis aux politiques de données corporatives"
+        "Moins de confidentialité : Soumis aux politiques de données corporatives"
       ]
     }
   },
@@ -57,7 +57,7 @@
       "descriptions": [
         "Étant un logiciel propriétaire, les utilisateurs ne peuvent pas vérifier indépendamment quelles données sont collectées en arrière-plan.",
         "CleanMyMac requiert des permissions étendues. Une mauvaise utilisation peut entraîner la suppression de fichiers système importants, rendant le système instable.",
-        "Contrairement à Internxt, CleanMyMac ne protège pas vos fichiers personnels avec un cryptage zero-knowledge ; il se concentre uniquement sur la gestion de fichiers.",
+        "Contrairement à Internxt, CleanMyMac ne protège pas vos fichiers personnels avec un cryptage zero-knowledge ; il se concentre uniquement sur la gestion de fichiers.",
         "CleanMyMac ne propose qu'un seul produit de maintenance. Si vous avez besoin de stockage cloud sécurisé ou de communications privées, vous devez payer pour des abonnements supplémentaires.\nApplications contrefaites\nIl existe des sites proposant des versions piratées avec malware. Chez Internxt, vous bénéficiez toujours d'un logiciel sûr et vérifié."
       ]
     }
@@ -74,7 +74,7 @@
       "descriptions": [
         "Internxt est entièrement open source et audité de manière indépendante, garantissant l'absence de portes dérobées.",
         "Internxt offre Cleaner et un écosystème de confidentialité complet pour nettoyer, stocker et partager vos fichiers avec cryptage zero-knowledge.",
-        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie abordables."
+        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie abordables."
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au cryptage zero-knowledge et post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -99,12 +99,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Accédez à nos services avec les forfaits à vie et {{percentage}}% de réduction."
+            "description": "Accédez à nos services avec les forfaits à vie et {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "CleanMyMac : Et votre vie privée ?",
+        "title": "CleanMyMac : Et votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -163,7 +163,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -182,35 +182,35 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus privée que CleanMyMac ?",
+        "question": "Internxt est-il une alternative plus privée que CleanMyMac ?",
         "answer": [
           "Oui, Internxt utilise le cryptage post-quantique et zero-knowledge et est entièrement open source.",
           "Internxt inclut Drive, VPN, Antivirus et Cleaner pour une sécurité complète."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, respectant strictement le RGPD."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Contactez hello@internxt.com et notre équipe vous aidera avec plaisir."
         ]
       },
       {
-        "question": "Puis-je payer avec PayPal ?",
+        "question": "Puis-je payer avec PayPal ?",
         "answer": [
           "Oui, nous acceptons les cartes, PayPal, les cryptomonnaies et Klarna."
         ]

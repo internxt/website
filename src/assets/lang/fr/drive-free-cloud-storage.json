@@ -35,7 +35,7 @@
     "title": "Internxt Drive",
     "description": [
       "Google Drive, iCloud, OneDrive, Dropbox et consorts peuvent décrypter, consulter et partager vos données avec des gouvernements et des tiers.",
-      "Internxt Drive vous offre un contrôle total et une confidentialité absolue sur votre stockage cloud grâce au chiffrement zero-knowledge et post-quantique. Nous ne pouvons pas accéder à vos fichiers ; vous conservez la pleine propriété, l'accès et le contrôle de vos données."
+      "Internxt Drive vous offre un contrôle total et une confidentialité absolue sur votre stockage cloud grâce au chiffrement zero-knowledge et post-quantique. Nous ne pouvons pas accéder à vos fichiers ; vous conservez la pleine propriété, l'accès et le contrôle de vos données."
     ]
   },
   "EncryptedCloudStorageSection": {
@@ -93,7 +93,7 @@
         "Allez au-delà du stockage cloud et intégrez VPN, Antivirus, Cleaner, Meet et Mail dans votre pack de confidentialité.",
         "Protégez votre entreprise contre les rançongiciels et les violations de données avec notre stockage cloud pour professionnels.",
         "Stockez et partagez vos photos, vidéos et souvenirs de famille, et gardez-les en sécurité pour toujours.",
-        "Pas de frais cachés : choisissez votre forfait et profitez de toutes ses fonctionnalités et du chiffrement complet à un prix fixe."
+        "Pas de frais cachés : choisissez votre forfait et profitez de toutes ses fonctionnalités et du chiffrement complet à un prix fixe."
       ]
     }
   },
@@ -162,7 +162,7 @@
       },
       "available": "Disponible sur",
       "learnMore": {
-        "title": "En savoir plus sur l'interface CLI d'Internxt :",
+        "title": "En savoir plus sur l'interface CLI d'Internxt :",
         "GitHub": "GitHub ReadMe",
         "learnMore": "En savoir plus"
       }
@@ -191,42 +191,42 @@
     "trustpilot": "Des tonnes d'espace privé et sécurisé. Excellent support. Vraiment rentable."
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'Internxt Drive ?",
+        "question": "Qu'est-ce qu'Internxt Drive ?",
         "answer": [
           "Internxt Drive est un service de stockage de fichiers zero-knowledge conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données. Il est conçu pour vous redonner le contrôle et vous protéger des collecteurs de données."
         ]
       },
       {
-        "question": "Comment créer un compte Internxt ?",
+        "question": "Comment créer un compte Internxt ?",
         "answer": [
           "Rendez-vous sur notre site et cliquez sur 'Commencer' en haut à droite. Remplissez le formulaire avec une adresse e-mail et créez votre mot de passe. Aucune vérification d'identité n'est requise pour commencer à utiliser nos services."
         ]
       },
       {
-        "question": "Comment importer des fichiers sur Internxt Drive ?",
+        "question": "Comment importer des fichiers sur Internxt Drive ?",
         "answer": [
           "Connectez-vous sur Drive Web. Glissez-déposez vos fichiers ou photos directement dans le navigateur. Vous pouvez aussi cliquer sur 'Nouveau' pour ouvrir votre explorateur de fichiers et sélectionner les éléments à importer."
         ]
       },
       {
-        "question": "Comment installer l'application Internxt ?",
+        "question": "Comment installer l'application Internxt ?",
         "answer": [
           "Allez sur le site d'Internxt, descendez en bas de page et sélectionnez 'Télécharger les applications'. L'app est aussi sur le Play Store et l'App Store. Une fois téléchargée, lancez-la pour profiter pleinement de l'écosystème Internxt."
         ]
       },
       {
-        "question": "Puis-je configurer la 2FA avec Internxt ?",
+        "question": "Puis-je configurer la 2FA avec Internxt ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs (2FA) depuis l'application web Drive. Vous pouvez utiliser Authy ou tout autre outil 2FA pour générer votre code de connexion."
         ]
       },
       {
-        "question": "Internxt est-il une solution de stockage cloud durable ?",
+        "question": "Internxt est-il une solution de stockage cloud durable ?",
         "answer": [
-          "Oui, Internxt s'engage pour un cloud écologique. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et conçus pour minimiser les émissions de carbone et les déchets électroniques.",
+          "Oui, Internxt s'engage pour un cloud écologique. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et conçus pour minimiser les émissions de carbone et les déchets électroniques.",
           "Nos efforts contribuent à l'objectif de neutralité carbone d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
         ]
       }

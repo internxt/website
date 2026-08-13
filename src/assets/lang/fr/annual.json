@@ -12,7 +12,7 @@
     "title": "Le stockage cloud le plus sécurisé **pour moins cher**",
     "valentinesTitle": "L'amour mérite **vie privée**",
     "description": "Stockage cloud sécurisé pour moins cher. Réclamez votre remise spéciale dès aujourd'hui. Accédez à la suite de confidentialité primée d'Internxt avec un stockage cloud chiffré post-quantique et bien plus encore.",
-    "subtitle": "Obtenez {{discount}}% de réduction maintenant",
+    "subtitle": "Obtenez {{discount}} % de réduction maintenant",
     "claimDeal": "Réclamer l'offre"
   },
   "ReviewSection": {
@@ -24,7 +24,7 @@
     "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
   },
   "NextGenSection": {
-    "title": "Pourquoi choisir le stockage cloud annuel d'Internxt ?",
+    "title": "Pourquoi choisir le stockage cloud annuel d'Internxt ?",
     "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous nous assurons que vous seul avez les clés de vos données chiffrées et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour nous assurer que vos informations restent sécurisées.",
     "cta": "Apprenez à mieux nous connaître",
     "cardDescriptions": {
@@ -38,7 +38,7 @@
         "Nous ne stockons pas les mots de passe ou les données utilisateur et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
         "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant une cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
         "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien à cacher sauf vos données.",
-        "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne vous fiez pas seulement à notre parole. Internxt a été indépendamment audité et vérifié par la principale entreprise de tests de pénétration d'Europe, Securitum."
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne vous fiez pas seulement à notre parole. Internxt a été indépendamment audité et vérifié par la principale entreprise de tests de pénétration d'Europe, Securitum."
       ]
     }
   },
@@ -49,14 +49,14 @@
     "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Parmi les forfaits annuels d'Internxt : Lequel dois-je choisir ? 1 To, 3 To ou 5 To ?",
-    "description": "Réclamez votre remise exclusive de {{discount}}% pour accéder à la suite de confidentialité d'Internxt pendant un an",
+    "title": "Parmi les forfaits annuels d'Internxt : Lequel dois-je choisir ? 1 To, 3 To ou 5 To ?",
+    "description": "Réclamez votre remise exclusive de {{discount}} % pour accéder à la suite de confidentialité d'Internxt pendant un an",
     "descriptionWithoutDisocunt": "Découvrez la confidentialité numérique complète avec Internxt",
     "cta": "Choisir un forfait"
   },
   "tableSection": {
     "title": "Forfaits Internxt",
-    "hotLabel": "{{discount}}% remise",
+    "hotLabel": "{{discount}} % remise",
     "valentinesTitle": "Amour sécurisé - ",
     "planTitles": {
       "header": "Choisissez votre plan",
@@ -65,7 +65,7 @@
       "lifetime": "Forfaits annuels",
       "business": "Forfaits Entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos forfaits annuels exclusifs"
       }
     },
@@ -82,7 +82,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le forfait"
     },
     "features": {
@@ -93,9 +93,9 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FeaturesSection": {

@@ -12,7 +12,7 @@
     "SignUp": {
       "cta": {
         "title": "Commencez à travailler avec Internxt",
-        "subtitle": "Créez un compte maintenant et obtenez 1 GB GRATUIT"
+        "subtitle": "Créez un compte maintenant et obtenez 1 Go GRATUIT"
       },
       "disclaimer": {
         "text": "En créant un compte, vous acceptez les",
@@ -34,8 +34,8 @@
           }
         },
         "submit": {
-          "get": "Obtenez 1 GB",
-          "free": "Gratuit !"
+          "get": "Obtenez 1 Go",
+          "free": "Gratuit !"
         }
       }
     },
@@ -44,10 +44,10 @@
       "part1": "C'est Internxt - ",
       "part2": "Stockage cloud chiffré"
     },
-    "description": "Obtenez {{discount}}% de réduction ",
+    "description": "Obtenez {{discount}} % de réduction ",
     "descriptionNormal": "sur tous les plans",
     "giftDescription": {
-      "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
+      "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
       "line2": "Rejoignez Internxt et participez au tirage de Noël"
     },
     "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
@@ -61,19 +61,19 @@
   },
   "tableSection": {
     "title": "Plans Internxt",
-    "hotLabel": "{{discount}}% remise",
+    "hotLabel": "{{discount}} % remise",
     "planTitles": {
       "header": "Choisissez votre plan",
       "homePage": "Choisissez le plan qui vous convient",
       "lifetime": "Plans à vie",
       "business": "Plans entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez de confidentialité et sécurité à vie",
-    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail. ",
+    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail. ",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -85,7 +85,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -96,53 +96,53 @@
       "guarantee": "Garantie satisfait ou remboursé 30 jours"
     },
     "planStorage": {
-      "essential": "1To",
-      "premium": "3To",
-      "ultimate": "5To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non. Internxt, ainsi que toute autre partie tierce, ne peut pas accéder à vos fichiers, photos ou données.",
           "Les services d'Internxt disposent d'un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez accéder et déchiffrer vos données et informations privées. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos informations de toute menace. "
         ]
       },
       {
-        "question": "Internxt stocke-t-il mon mot de passe ?",
+        "question": "Internxt stocke-t-il mon mot de passe ?",
         "answer": [
           "Non. En tant que tel, Internxt ne peut pas stocker votre mot de passe.",
           "Votre mot de passe Internxt vous est unique et est utilisé pour chiffrer et déchiffrer vos données Internxt. Mais si vous voulez changer votre mot de passe, vous pouvez le faire depuis notre application."
         ]
       },
       {
-        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
+        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web Internxt.",
           "Vous pouvez également utiliser Authy ou d'autres outils 2FA pour générer un code 2FA personnel avec Internxt."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Bancontact et Klarna.",
           "Sur demande, nous acceptons également les cryptomonnaies. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie standard de remboursement de 30 jours sur tous les abonnements payants, qui commence à compter dès que vous vous abonnez.",
           "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
         ]
       },
       {
-        "question": "Comment puis-je contacter le support ?",
+        "question": "Comment puis-je contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un email à [hello@internxt.com](mailto:hello@internxt.com)."
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       }
     ]
@@ -206,7 +206,7 @@
         "Nous ne stockons pas de mots de passe ni de données utilisateur et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données vous appartiennent. Les protéger, c'est notre affaire.",
         "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
         "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par quiconque. Nous n'avons rien à cacher sauf vos données.",
-        "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale société européenne de tests de pénétration, Securitum."
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale société européenne de tests de pénétration, Securitum."
       ]
     }
   },
@@ -214,35 +214,35 @@
     "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
   },
   "EncryptedStorageSeoSection": {
-    "title": "Stockage cloud chiffré : fonctionnement et importance",
+    "title": "Stockage cloud chiffré : fonctionnement et importance",
     "faq": [
       {
-        "question": "Qu'est-ce que le stockage cloud chiffré ?",
+        "question": "Qu'est-ce que le stockage cloud chiffré ?",
         "answer": [
           "Le stockage cloud chiffré est une méthode de stockage de fichiers en ligne qui transforme mathématiquement vos données dans un format illisible (appelé texte chiffré) avant qu'elles ne soient transmises ou enregistrées sur un serveur, de sorte que seule une personne disposant de la bonne clé puisse lire le contenu original.",
-          "La plupart des plateformes grand public appliquent le chiffrement au niveau du serveur, ce qui signifie que le fournisseur gère les clés et peut techniquement accéder à vos fichiers. Les fournisseurs de stockage cloud chiffré comme Internxt adoptent une approche différente : les fichiers sont chiffrés sur votre appareil avant le téléchargement, et les clés de chiffrement ne quittent jamais votre contrôle. Même le fournisseur de stockage ne peut pas lire ce que vous avez stocké.",
+          "La plupart des plateformes grand public appliquent le chiffrement au niveau du serveur, ce qui signifie que le fournisseur gère les clés et peut techniquement accéder à vos fichiers. Les fournisseurs de stockage cloud chiffré comme Internxt adoptent une approche différente : les fichiers sont chiffrés sur votre appareil avant le téléchargement, et les clés de chiffrement ne quittent jamais votre contrôle. Même le fournisseur de stockage ne peut pas lire ce que vous avez stocké.",
           "Internxt utilise l'AES-256 pour les fichiers au repos et le TLS 1.3 pour les fichiers en transit, deux des normes les plus rigoureusement testées de la cryptographie moderne. Ces implémentations ont été examinées et confirmées de manière indépendante lors d'un audit de sécurité réalisé en 2024 por Securitum, l'une des principales entreprises de cybersécurité en Europe."
         ]
       },
       {
-        "question": "Qu'est-ce que le stockage cloud chiffré de bout en bout et comment fonctionne-t-il ?",
+        "question": "Qu'est-ce que le stockage cloud chiffré de bout en bout et comment fonctionne-t-il ?",
         "answer": [
           "Le stockage cloud chiffré de bout en bout signifie que votre fichier est chiffré à une extrémité, votre appareil, et ne peut être déchiffré qu'à l'autre extrémité, par vous ou par une personne avec qui vous avez explicitement partagé l'accès. Rien entre les deux — ni le réseau, ni le serveur, ni le fournisseur — ne peut lire le contenu du fichier.",
-          "Le processus : lorsque vous importez un fichier, votre appareil génère des clés de chiffrement localement et les utilise pour transformer le fichier avant qu'il ne quitte votre machine. Le texte chiffré voyage vers le serveur cloud, où il est stocké mais reste totalement opaque. Lorsque vous le téléchargez, le fichier est récupéré et déchiffré localement à l'aide de vos clés.",
-          "C'est radicalement différent du stockage cloud standard avec chiffrement. Dans un modèle standard, le fournisseur chiffre les données en transit et au repos, mais détient lui-même les clés de chiffrement. Le chiffrement de bout en bout (E2EE) supprime complètement le fournisseur de l'équation : il stocke des données qu'il ne peut pas lire.",
+          "Le processus : lorsque vous importez un fichier, votre appareil génère des clés de chiffrement localement et les utilise pour transformer le fichier avant qu'il ne quitte votre machine. Le texte chiffré voyage vers le serveur cloud, où il est stocké mais reste totalement opaque. Lorsque vous le téléchargez, le fichier est récupéré et déchiffré localement à l'aide de vos clés.",
+          "C'est radicalement différent du stockage cloud standard avec chiffrement. Dans un modèle standard, le fournisseur chiffre les données en transit et au repos, mais détient lui-même les clés de chiffrement. Le chiffrement de bout en bout (E2EE) supprime complètement le fournisseur de l'équation : il stocke des données qu'il ne peut pas lire.",
           "Tous les fichiers stockés sur la plateforme sont chiffrés de bout en bout. Cette architecture a été vérifiée lors de l'audit Securitum de 2024 et sous-tend la certification ISO 27001:2022 et la conformité HIPAA d'Internxt."
         ]
       },
       {
-        "question": "Quelle est la différence entre le chiffrement du stockage cloud et le chiffrement de bout en bout ?",
+        "question": "Quelle est la différence entre le chiffrement du stockage cloud et le chiffrement de bout en bout ?",
         "answer": [
-          "Le chiffrement du stockage cloud est un terme large : au minimum, il signifie que les données sont protégées en transit (via TLS) et au repos (via AES-256 ou similaire). C'est la norme de base — pratiquement toutes les grandes plateformes cloud la proposent. Le chiffrement de bout en bout est une forme spécifique et plus forte où le fournisseur n'a jamais accès aux clés utilisées pour protéger vos fichiers.",
-          "La différence critique réside dans le contrôle des clés. Chiffrement du stockage cloud standard : le fournisseur chiffre vos données mais détient les clés — il peut accéder à vos fichiers, et les gouvernements peuvent le contraindre à les produire. Stockage cloud chiffré de bout en bout : les clés sont générées et stockées sur votre appareil. Le fournisseur stocke un texte chiffré qu'il ne peut pas décoder. L'accès par un tiers est techniquement impossible, et pas seulement interdit par une politique.",
+          "Le chiffrement du stockage cloud est un terme large : au minimum, il signifie que les données sont protégées en transit (via TLS) et au repos (via AES-256 ou similaire). C'est la norme de base — pratiquement toutes les grandes plateformes cloud la proposent. Le chiffrement de bout en bout est une forme spécifique et plus forte où le fournisseur n'a jamais accès aux clés utilisées pour protéger vos fichiers.",
+          "La différence critique réside dans le contrôle des clés. Chiffrement du stockage cloud standard : le fournisseur chiffre vos données mais détient les clés — il peut accéder à vos fichiers, et les gouvernements peuvent le contraindre à les produire. Stockage cloud chiffré de bout en bout : les clés sont générées et stockées sur votre appareil. Le fournisseur stocke un texte chiffré qu'il ne peut pas décoder. L'accès par un tiers est techniquement impossible, et pas seulement interdit par une politique.",
           "Pour la plupart des utilisations personnelles, le chiffrement standard est adéquat. Pour les dossiers médicaux, les documents juridiques, les données financières ou toute information pour laquelle l'accès d'un tiers serait inacceptable, le chiffrement de bout en bout est la norme appropriée."
         ]
       },
       {
-        "question": "Qu'est-ce que le stockage cloud avec chiffrement à connaissance zéro (Zero-Knowledge) ?",
+        "question": "Qu'est-ce que le stockage cloud avec chiffrement à connaissance zéro (Zero-Knowledge) ?",
         "answer": [
           "Le stockage cloud avec chiffrement à connaissance zéro est une architecture de confidentialité dans laquelle le fournisseur de stockage n'a aucune connaissance du contenu de vos fichiers, aucun accès à vos clés de chiffrement et aucune capacité à transmettre vos données à un tiers — même sous la pression de la justice — parce qu'il est techniquement incapable de les lire.",
           "Dans un système à connaissance zéro, la génération des clés, le chiffrement et le déchiffrement se produisent tous localement sur l'appareil de l'utilisateur. Les serveurs du fournisseur reçoivent et stockent des données qui, de leur point de vue, n'ont aucun sens. Il n'y a pas de clé maîtresse, pas de porte dérobée et pas de dérogation administrative.",
@@ -250,31 +250,31 @@
         ]
       },
       {
-        "question": "Pourquoi devrais-je utiliser un stockage cloud avec chiffrement ?",
+        "question": "Pourquoi devrais-je utiliser un stockage cloud avec chiffrement ?",
         "answer": [
-          "Le stockage cloud avec chiffrement protège vos fichiers contre trois grandes catégories de risques : les violations de données, l'accès côté fournisseur et l'exposition juridique — et chaque protection fonctionne à une couche différente.",
-          "Violations de données : si les serveurs d'un fournisseur cloud sont compromis et que vos fichiers sont stockés sans protection ou protégés uniquement par des clés détenues par le fournisseur, les attaquants pourraient lire vos données. Avec le chiffrement du stockage cloud côté client, une faille sur le serveur ne donne rien d'exploitable — les attaquants n'obtiendraient que du texte chiffré qu'ils ne peuvent pas décoder.",
-          "Accès du fournisseur : les grandes plateformes cloud se réservent le droit d'analyser le contenu des fichiers pour l'application des politiques, la publicité ou la conformité légale. Lorsque vous utilisez un stockage cloud qui chiffre les fichiers sur votre appareil avant de les importer, le fournisseur n'a rien à analyser.",
-          "Exposition juridique et réglementaire : les entreprises qui gèrent des données de santé (HIPAA), des données personnelles de résidents de l'UE (RGPD) ou des informations confidentielles de clients ont souvent des obligations légales concernant la manière dont ces données sont stockées et qui peut y accéder. Le stockage cloud avec chiffrement basé sur une architecture à connaissance zéro apporte une réponse défendable et vérifiable à ces exigences.",
+          "Le stockage cloud avec chiffrement protège vos fichiers contre trois grandes catégories de risques : les violations de données, l'accès côté fournisseur et l'exposition juridique — et chaque protection fonctionne à une couche différente.",
+          "Violations de données : si les serveurs d'un fournisseur cloud sont compromis et que vos fichiers sont stockés sans protection ou protégés uniquement par des clés détenues par le fournisseur, les attaquants pourraient lire vos données. Avec le chiffrement du stockage cloud côté client, une faille sur le serveur ne donne rien d'exploitable — les attaquants n'obtiendraient que du texte chiffré qu'ils ne peuvent pas décoder.",
+          "Accès du fournisseur : les grandes plateformes cloud se réservent le droit d'analyser le contenu des fichiers pour l'application des politiques, la publicité ou la conformité légale. Lorsque vous utilisez un stockage cloud qui chiffre les fichiers sur votre appareil avant de les importer, le fournisseur n'a rien à analyser.",
+          "Exposition juridique et réglementaire : les entreprises qui gèrent des données de santé (HIPAA), des données personnelles de résidents de l'UE (RGPD) ou des informations confidentielles de clients ont souvent des obligations légales concernant la manière dont ces données sont stockées et qui peut y accéder. Le stockage cloud avec chiffrement basé sur une architecture à connaissance zéro apporte une réponse défendable et vérifiable à ces exigences.",
           "Internxt Drive répond à ces trois problématiques grâce à l'AES-256 et au TLS 1.3, une architecture à connaissance zéro, des centres de données européens soumis au RGPD, la certification ISO 27001:2022 et la conformité HIPAA — chacun étant vérifié par l'audit indépendant de Securitum en 2024."
         ]
       },
       {
-        "question": "Quels sont les meilleurs fournisseurs de stockage cloud chiffré ?",
+        "question": "Quels sont les meilleurs fournisseurs de stockage cloud chiffré ?",
         "answer": [
           "Les meilleurs fournisseurs de stockage cloud chiffré sont ceux qui effectuent le chiffrement du côté client (votre appareil), ne détiennent jamais vos clés de chiffrement et ont fait vérifier leur architecture de confidentialité de manière indépendante par un cabinet de cybersécurité tiers — et pas seulement par auto-déclaration.",
-          "Lors de l'évaluation des services de stockage cloud chiffré, comparez : l'endroit où le chiffrement a lieu (côté client vs côté serveur), si le fournisseur a accès à vos clés, quelles certifications ont été vérifiées de manière indépendante et si le code source est ouvert pour un examen par des tiers.",
+          "Lors de l'évaluation des services de stockage cloud chiffré, comparez : l'endroit où le chiffrement a lieu (côté client vs côté serveur), si le fournisseur a accès à vos clés, quelles certifications ont été vérifiées de manière indépendante et si le code source est ouvert pour un examen par des tiers.",
           "Les options de premier plan incluent Internxt (connaissance zéro, E2EE côté client, post-quantique Kyber-512 + AES-256, ISO 27001:2022, HIPAA, audit Securitum 2024), Tresorit (connaissance zéro, ISO 27001), ProtonDrive (connaissance zéro, droit suisse de la protection des données) et Sync.com (connaissance zéro, compatible HIPAA).",
-          "Le principal facteur de différenciation des meilleures options de stockage cloud chiffré de bout en bout par rapport à Google Drive, Dropbox ou OneDrive est la propriété des clés : les fournisseurs listés ci-dessus ne détiennent jamais vos clés de chiffrement. Internxt est le seul à ajouter une couche de cryptographie post-quantique (Kyber-512) en plus de l'AES-256, protégeant vos fichiers contre les futures menaces de l'informatique quantique."
+          "Le principal facteur de différenciation des meilleures options de stockage cloud chiffré de bout en bout par rapport à Google Drive, Dropbox ou OneDrive est la propriété des clés : les fournisseurs listés ci-dessus ne détiennent jamais vos clés de chiffrement. Internxt est le seul à ajouter une couche de cryptographie post-quantique (Kyber-512) en plus de l'AES-256, protégeant vos fichiers contre les futures menaces de l'informatique quantique."
         ]
       },
       {
-        "question": "Quelles sont les meilleures solutions de stockage cloud chiffré pour les entreprises et les professionnels ?",
+        "question": "Quelles sont les meilleures solutions de stockage cloud chiffré pour les entreprises et les professionnels ?",
         "answer": [
-          "Les meilleures solutions de stockage cloud chiffré pour un usage professionnel et commercial doivent satisfaire à trois exigences allant au-delà de la confidentialité personnelle : une certification de conformité, des pistes d'audit et un contrôle administratif — en plus de l'architecture sous-jacente à connaissance zéro.",
-          "Pour le secteur de la santé (HIPAA) : Internxt propose un forfait conforme à la norme HIPAA. Les fichiers sont gérés selon une architecture à connaissance zéro, ce qui signifie qu'Internxt ne peut pas accéder aux données des patients, même en cas de contrainte légale.",
-          "Pour les professionnels du droit : le stockage de fichiers à connaissance zéro protège le secret professionnel de l'avocat au niveau technique, de sorte qu'il ne peut pas être contourné par le fournisseur. Son code source ouvert permet aux équipes informatiques juridiques de vérifier de manière indépendante l'architecture de confidentialité avant le déploiement.",
-          "Pour les entreprises et les équipes : les forfaits professionnels d'Internxt incluent la gestion d'équipe, des contrôles d'accès basés sur les rôles et une infrastructure certifiée ISO 27001:2022 — la norme internationalement reconnue pour la gestion de la sécurité de l'information.",
+          "Les meilleures solutions de stockage cloud chiffré pour un usage professionnel et commercial doivent satisfaire à trois exigences allant au-delà de la confidentialité personnelle : une certification de conformité, des pistes d'audit et un contrôle administratif — en plus de l'architecture sous-jacente à connaissance zéro.",
+          "Pour le secteur de la santé (HIPAA) : Internxt propose un forfait conforme à la norme HIPAA. Les fichiers sont gérés selon une architecture à connaissance zéro, ce qui signifie qu'Internxt ne peut pas accéder aux données des patients, même en cas de contrainte légale.",
+          "Pour les professionnels du droit : le stockage de fichiers à connaissance zéro protège le secret professionnel de l'avocat au niveau technique, de sorte qu'il ne peut pas être contourné par le fournisseur. Son code source ouvert permet aux équipes informatiques juridiques de vérifier de manière indépendante l'architecture de confidentialité avant le déploiement.",
+          "Pour les entreprises et les équipes : les forfaits professionnels d'Internxt incluent la gestion d'équipe, des contrôles d'accès basés sur les rôles et une infrastructure certifiée ISO 27001:2022 — la norme internationalement reconnue pour la gestion de la sécurité de l'information.",
           "Les services qui associent une architecture à connaissance zéro à des certifications de conformité vérifiables et à un audit de sécurité indépendant représentent l'option la plus solide pour les organisations ayant des exigences légales, réglementaires ou contractuelles en matière de protection des données."
         ]
       }

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Comme **Microsoft Teams**, mais privé.",
     "description": "Profitez d'appels vidéo entièrement privés avec Internxt Meet, la meilleure alternative à Microsoft Teams qui respecte votre vie privée.",
-    "getPrivacy": " Choisissez votre forfait avec {{percentage}}% de réduction 🔥 ",
+    "getPrivacy": " Choisissez votre forfait avec {{percentage}} % de réduction 🔥 ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Vidéos chiffrées sur votre appareil",
         "Oui",
-        "Compétitif, sans frais cachés, jusqu'à 5 To",
+        "Compétitif, sans frais cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail, et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos vidéos ou chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code source fermé",
         "Vidéos chiffrées par Microsoft",
         "Non",
-        "Forfaits plus chers, jusqu'à 6 To",
+        "Forfaits plus chers, jusqu'à 6 To",
         "Drive, Microsoft 365, CoPilot, Outlook et Teams",
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux vidéos et chats dans certaines circonstances",
-        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
       ]
     }
   },
@@ -67,7 +67,7 @@
     "description": "Internxt offre une sécurité inégalée avec des fonctionnalités que Microsoft Teams ne peut égaler, telles que le Zero-Knowledge, le chiffrement post-quantique et la protection contre les pirates.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open Source",
@@ -83,12 +83,12 @@
           },
           {
             "title": "Forfaits à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec 85% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec 85 % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Microsoft Teams : Qu'en est-il de votre vie privée ?",
+        "title": "Microsoft Teams : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -104,7 +104,7 @@
           },
           {
             "title": "Basé sur abonnement",
-            "description": "Offre uniquement des abonnements mensuels ou annuels avec un stockage maximum de 6 To."
+            "description": "Offre uniquement des abonnements mensuels ou annuels avec un stockage maximum de 6 To."
           }
         ]
       }
@@ -132,7 +132,7 @@
   },
   "tableSection": {
     "title": "Votre vie privée, vos conditions",
-    "hotLabel": "{{discount}}% de réduction ",
+    "hotLabel": "{{discount}} % de réduction ",
     "planTitles": {
       "header": "Votre vie privée, vos conditions"
     },
@@ -142,7 +142,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir le forfait"
     },
     "features": {
@@ -151,54 +151,54 @@
       "guarantee": "Garantie satisfait ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée à Microsoft Teams ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée à Microsoft Teams ?",
         "answer": [
           "Oui, Internxt utilise un chiffrement post-quantique et Zero-Knowledge qui garantit que personne d'autre que vous ne peut voir vos fichiers. Microsoft gère les clés de chiffrement sur ses propres serveurs pour OneDrive, Outlook et Teams, ce qui signifie qu'il pourrait accéder à vos fichiers ou donner accès au gouvernement ou aux forces de l'ordre.",
           "Internxt propose également VPN, Antivirus, Nettoyeur d'appareil, , Meet et Mail dans ses forfaits, vous offrant une confidentialité améliorée et une protection supplémentaire contre les pirates et les violations de données."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique, et est-ce plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-ce plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, faisant du PQE une alternative plus sécurisée à Microsoft Teams.",
           "Cette méthode de cryptographie est utilisée par Internxt pour s'assurer que votre forfait de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre vie privée."
         ]
       },
       {
-        "question": "Microsoft Teams est-il plus cher qu'Internxt ?",
+        "question": "Microsoft Teams est-il plus cher qu'Internxt ?",
         "answer": [
-          "Microsoft Teams est gratuit, mais avec votre réduction exclusive de {{discount}}%, tous nos forfaits sont moins chers que les options de tarification de Microsoft actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que OneDrive, Teams et Outlook."
+          "Microsoft Teams est gratuit, mais avec votre réduction exclusive de {{discount}} %, tous nos forfaits sont moins chers que les options de tarification de Microsoft actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que OneDrive, Teams et Outlook."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de réussite client sera heureuse de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau forfait sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Crypto-monnaie et Klarna."
         ]

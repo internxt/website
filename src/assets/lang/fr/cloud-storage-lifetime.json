@@ -10,7 +10,7 @@
       "ai": "AI"
     },
     "title": "Les meilleures offres de stockage cloud Internxt **à vie**",
-    "subtitle": "{{discount}}% de réduction sur tous les plans. Paiement unique. Confidentialité à vie",
+    "subtitle": "{{discount}} % de réduction sur tous les plans. Paiement unique. Confidentialité à vie",
     "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {
       "normal1": "À partir de ",
@@ -29,20 +29,20 @@
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Offres Internxt — économisez {{discount}}% sur tous les forfaits",
+        "title": "Offres Internxt — économisez {{discount}} % sur tous les forfaits",
         "description": "Découvrez des réductions exclusives sur toutes les applications et services Internxt",
         "cta": "Voir toutes les offres"
       },
       "card2": {
         "title": "Offres de stockage cloud gratuit",
-        "description": "Commencez avec un stockage chiffré gratuit et passez à la version supérieure avec jusqu'à {{discount}}% de réduction",
+        "description": "Commencez avec un stockage chiffré gratuit et passez à la version supérieure avec jusqu'à {{discount}} % de réduction",
         "cta": "Voir les offres de stockage"
       }
     }
   },
   "tableSection": {
     "title": "Plans Internxt",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Votre allié tout-en-un pour la confidentialité",
       "individuals": "Plans Annuels",
@@ -50,7 +50,7 @@
       "lifetime": "Plans à Vie",
       "business": "Plans Business",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur tous nos plans à vie exclusifs"
       }
     },
@@ -67,7 +67,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -78,14 +78,14 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "CtaSection": {
     "title": "Dites adieu aux abonnements",
-    "description": "Payez une fois, utilisez pour toujours avec {{percentage}}% de réduction",
+    "description": "Payez une fois, utilisez pour toujours avec {{percentage}} % de réduction",
     "cta": "Obtenir l'offre"
   },
   "WhatsIncludedSection": {
@@ -106,7 +106,7 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Pourquoi choisir les plans à vie d'Internxt ?",
+    "title": "Pourquoi choisir les plans à vie d'Internxt ?",
     "description": "Nos offres de stockage cloud à vie vous redonnent le contrôle de votre confidentialité. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul ayez les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour garantir que vos informations restent sécurisées.",
     "cta": "Apprenez à mieux nous connaître",
     "scrollableSection": {
@@ -125,62 +125,62 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Confidentialité totale pour {{percentage}}% de réduction",
+    "title": "Confidentialité totale pour {{percentage}} % de réduction",
     "description": "Obtenez l'offre de votre vie avec Internxt",
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qui peut bénéficier de ces offres de stockage cloud à vie ?",
+        "question": "Qui peut bénéficier de ces offres de stockage cloud à vie ?",
         "answer": [
-          "Ces offres Internxt sont destinées aux nouveaux clients ou aux clients avec un compte gratuit, ou aux clients qui souhaitent mettre à niveau leur plan à vie actuel avec 85% de réduction pour accéder à nos nouvelles fonctionnalités."
+          "Ces offres Internxt sont destinées aux nouveaux clients ou aux clients avec un compte gratuit, ou aux clients qui souhaitent mettre à niveau leur plan à vie actuel avec 85 % de réduction pour accéder à nos nouvelles fonctionnalités."
         ]
       },
       {
-        "question": "Puis-je utiliser une offre Internxt si j'ai déjà un plan à vie ?",
+        "question": "Puis-je utiliser une offre Internxt si j'ai déjà un plan à vie ?",
         "answer": [
           "Si vous avez actuellement un plan à vie et souhaitez cumuler du stockage sur votre compte actuel et accéder aux fonctionnalités d'un plan Premium ou Ultimate, vous pouvez utiliser cette offre pour mettre à niveau votre compte."
         ]
       },
       {
-        "question": "Que se passe-t-il lorsque mon offre expire ?",
+        "question": "Que se passe-t-il lorsque mon offre expire ?",
         "answer": [
           "Si vous achetez un plan annuel avec votre offre Internxt, cela s'applique uniquement à la première année. Une fois votre première année expirée, votre plan se renouvellera automatiquement au prix complet indiqué dans notre section tarification.",
           "Si vous souhaitez éviter les frais d'abonnement, vous pouvez acheter un plan à vie avec un paiement unique et ne plus jamais payer, sauf si vous choisissez de mettre à niveau votre stockage."
         ]
       },
       {
-        "question": "Comment puis-je mettre à niveau ou ajouter plus de stockage plus tard ?",
+        "question": "Comment puis-je mettre à niveau ou ajouter plus de stockage plus tard ?",
         "answer": [
           "Si vous avez un plan à vie, vous pouvez cumuler ou mettre à niveau votre plan à tout moment pour obtenir plus de stockage. Il n'est pas possible de mettre à niveau ou d'ajouter plus de stockage pour les plans annuels. Gardez un œil sur notre site web pour les derniers codes promo et offres."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, cryptomonnaie ou diviser le paiement de votre plan à vie avec Klarna.",
           "Si vous avez des questions sur les modes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com"
         ]
       },
       {
-        "question": "Puis-je diviser mon paiement à vie ?",
+        "question": "Puis-je diviser mon paiement à vie ?",
         "answer": [
-          "Oui, vous pouvez maintenant diviser vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un plan à vie avec la facilité de le payer en versements pratiques !"
+          "Oui, vous pouvez maintenant diviser vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un plan à vie avec la facilité de le payer en versements pratiques !"
         ]
       },
       {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie standard de remboursement de 30 jours sur tous les abonnements payants, qui commence à compter dès que vous vous abonnez.",
           "Et si jamais vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
         ]
       },
       {
-        "question": "Comment puis-je contacter le support ?",
+        "question": "Comment puis-je contacter le support ?",
         "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
         ]
       }
     ]

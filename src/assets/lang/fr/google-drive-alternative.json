@@ -1,8 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt : Comme Google Drive, mais **privé**",
+    "title": "Internxt : Comme Google Drive, mais **privé**",
     "description": "DéGooglez votre vie avec Internxt, la meilleure alternative à Google Drive qui respecte votre vie privée",
-    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Chiffré sur votre appareil",
         "Oui",
-        "Compétitif, pas de coûts cachés, jusqu'à 5 To",
+        "Compétitif, pas de coûts cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail, et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, Lois Espagnoles sur la Protection des Données"
+        "Confidentialité totale : RGPD, Lois Espagnoles sur la Protection des Données"
       ],
       "competitorFeatures": [
         "Closed-source (Propriétaire)",
         "Chiffré par Google",
         "Non",
-        "Plans plus chers, jusqu'à 2 To",
+        "Plans plus chers, jusqu'à 2 To",
         "Drive, Google Workspace, Intégration IA, Mail et Meet",
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux fichiers sous certaines circonstances",
-        "Moins de confidentialité : Cadre de Confidentialité des Données UE-États-Unis"
+        "Moins de confidentialité : Cadre de Confidentialité des Données UE-États-Unis"
       ]
     }
   },
@@ -90,12 +90,12 @@
           },
           {
             "title": "Plans à vie (Lifetime)",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Qu'en est-il de votre vie privée ?",
+        "title": "Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -111,7 +111,7 @@
           },
           {
             "title": "Basé sur abonnement",
-            "description": "N'offre que des abonnements mensuels ou annuels avec un stockage maximum de 2 To."
+            "description": "N'offre que des abonnements mensuels ou annuels avec un stockage maximum de 2 To."
           }
         ]
       }
@@ -135,12 +135,12 @@
   },
   "CtaSection": {
     "title": "Votre confidentialité, vos conditions",
-    "description": "Protection complète avec {{percentage}}% de réduction",
+    "description": "Protection complète avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction  ",
+    "hotLabel": "{{discount}} % de réduction  ",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -150,7 +150,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -159,54 +159,54 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée à Google Drive ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée à Google Drive ?",
         "answer": [
           "Oui, Internxt utilise le chiffrement post-quantique et Zero-Knowledge qui garantit que personne d'autre que vous ne peut consulter vos fichiers. Google Drive gère les clés de chiffrement sur ses propres serveurs, ce qui signifie qu'il pourrait accéder à vos fichiers ou donner accès au gouvernement ou aux forces de l'ordre.",
           "Des fonctionnalités supplémentaires telles que VPN, Antivirus, Nettoyeur d'appareil (Device Cleaner), , Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les fuites de données."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, ce qui fait de l'EPC une alternative plus sûre à Google Drive.",
           "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre plan de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les plans sans coût supplémentaire."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir que vos données et votre vie privée sont protégées."
         ]
       },
       {
-        "question": "Google Drive est-il plus cher qu'Internxt ?",
+        "question": "Google Drive est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de {{percentage}}%, tous nos plans sont moins chers que les options de tarification de Google actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que Google Drive."
+          "Avec votre réduction exclusive de {{percentage}} %, tous nos plans sont moins chers que les options de tarification de Google actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que Google Drive."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre Équipe Succès Client se fera un plaisir de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre plan depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau plan sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Crypto-monnaie et Klarna."
         ]

@@ -1,12 +1,12 @@
 {
   "HeroSection": {
     "title": "Programme revendeur Internxt",
-    "description": "Stockage cloud à chaud 100 % compatible S3",
+    "description": "Stockage cloud à chaud 100 % compatible S3",
     "cta": "Devenir revendeur"
   },
   "FeatureSection": {
     "title": "Internxt S3",
-    "description": "Avec le programme de partenariat Internxt, vous offrez à vos clients un accès rapide à d'importants volumes de stockage cloud à un coût fixe et compétitif, sans frais supplémentaires. Économisez jusqu'à 80 % par rapport aux autres fournisseurs cloud majeurs."
+    "description": "Avec le programme de partenariat Internxt, vous offrez à vos clients un accès rapide à d'importants volumes de stockage cloud à un coût fixe et compétitif, sans frais supplémentaires. Économisez jusqu'à 80 % par rapport aux autres fournisseurs cloud majeurs."
   },
   "AccordionSection": {
     "title": "Avantages du programme revendeur d'Internxt",
@@ -14,7 +14,7 @@
     "accordionSection": {
       "titles": ["Stockage objet de niveau entreprise", "Tarification et évolutivité", "Accès API"],
       "descriptions": [
-        "Répondez aux dernières normes en matière de conformité et de gestion des données avec une durabilité des données de 99,999999999 % (onze 9) pour garantir un accès sécurisé et fiable à des pétaoctets de données avec des téléchargements et des transferts rapides. Revendez des pétaoctets de stockage avec des vitesses de transfert rapides depuis votre console web.",
+        "Répondez aux dernières normes en matière de conformité et de gestion des données avec une durabilité des données de 99,999999999 % (onze 9) pour garantir un accès sécurisé et fiable à des pétaoctets de données avec des téléchargements et des transferts rapides. Revendez des pétaoctets de stockage avec des vitesses de transfert rapides depuis votre console web.",
         "Gérez les comptes clients depuis un tableau de bord unique et profitez d'une tarification fixe à l'usage sans frais supplémentaires. Ajoutez autant de stockage que nécessaire pour répondre aux demandes des partenaires. Nous offrons une structure de coûts incroyablement abordable pour que vous puissiez réaliser des marges élevées tout en revendant notre solution.",
         "L'accès API vous permet de gérer facilement vos partenaires, de contrôler l'emplacement de stockage des données et d'accéder aux ressources de manière sécurisée, le tout depuis une interface unique. Centralisez la gestion des utilisateurs, améliorez le contrôle des données et permettez un accès au stockage sécurisé et sur mesure."
       ]
@@ -44,10 +44,10 @@
       "email": "Adresse e-mail",
       "company": "Nom de l'entreprise",
       "phone": "Numéro de téléphone",
-      "howMuchStorage": "De combien de stockage avez-vous besoin ?",
+      "howMuchStorage": "De combien de stockage avez-vous besoin ?",
       "totalCharacters": " /1000",
-      "options": ["Sélectionner", "Moins de 10 To", "10 To - 50 To", "50 To - 100 To", "Plus de 100 To"],
-      "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
+      "options": ["Sélectionner", "Moins de 10 To", "10 To - 50 To", "50 To - 100 To", "Plus de 100 To"],
+      "howWeCanHelp": "Comment pouvons-nous vous aider ? (Optionnel)",
       "howWeCanHelpPlaceHolder": "Dites-nous en plus sur vos besoins",
       "cta": "Envoyer un message",
       "ctaSending": "Envoi en cours...",

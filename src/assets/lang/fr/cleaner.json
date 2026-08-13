@@ -59,42 +59,42 @@
     "cta": "Sécurité du stockage cloud"
   },
   "FaqSection": {
-    "title": "Des doutes ? Nous avons réponses",
+    "title": "Des doutes ? Nous avons réponses",
     "faq": [
       {
-        "question": "Qu’est-ce qu’un nettoyeur d’appareil et comment fonctionne-t-il ?",
+        "question": "Qu’est-ce qu’un nettoyeur d’appareil et comment fonctionne-t-il ?",
         "answer": [
           "Internxt Cleaner est un outil conçu pour supprimer les fichiers inutiles et optimiser les performances de votre PC ou Mac, afin de garder votre stockage libre et votre appareil fluide."
         ]
       },
       {
-        "question": "Internxt Cleaner est-il gratuit ?",
+        "question": "Internxt Cleaner est-il gratuit ?",
         "answer": [
           "Internxt Cleaner fait partie des plans payants annuels ou à vie d’Internxt Drive.",
           "Internxt Cleaner est disponible lors de l’achat de n’importe quel plan Premium ou Ultimate, qui inclut de nombreuses autres fonctionnalités pour protéger votre appareil et vos données en ligne."
         ]
       },
       {
-        "question": "Un nettoyeur d’appareil est-il sûr à utiliser ?",
+        "question": "Un nettoyeur d’appareil est-il sûr à utiliser ?",
         "answer": [
           "Oui, nous ne supprimons jamais de fichiers sans votre autorisation, vous donnant un contrôle total sur les fichiers que vous souhaitez conserver ou supprimer, afin d’optimiser le stockage et maintenir la santé de votre système et de votre appareil."
         ]
       },
       {
-        "question": "Comment commencer à utiliser le service ?",
+        "question": "Comment commencer à utiliser le service ?",
         "answer": [
           "Vous pouvez utiliser notre nettoyeur d’appareil en créant un compte Internxt Drive et en souscrivant à un plan Premium ou Ultimate, à vie ou par abonnement, qui inclut Drive, VPN, Cleaner, Meet et Mail."
         ]
       },
       {
-        "question": "À quelle fréquence dois-je exécuter le nettoyeur d’appareil ?",
+        "question": "À quelle fréquence dois-je exécuter le nettoyeur d’appareil ?",
         "answer": [
           "Si vous remarquez que votre appareil surchauffe, ralentit ou que votre batterie se décharge de manière inattendue, cela peut indiquer que votre ordinateur est surchargé par trop de fichiers inutiles ou d’applications exigeantes.",
           "Dans ce cas, vous devriez lancer une analyse avec Internxt Cleaner pour identifier et supprimer les fichiers inutiles, mais il est recommandé d’exécuter une analyse mensuelle pour maintenir la santé de votre appareil."
         ]
       },
       {
-        "question": "Un nettoyeur d’appareil supprimera-t-il mes fichiers importants ?",
+        "question": "Un nettoyeur d’appareil supprimera-t-il mes fichiers importants ?",
         "answer": [
           "Non. Internxt Cleaner est conçu pour identifier et supprimer uniquement les fichiers temporaires.",
           "Vous pouvez examiner et sélectionner les fichiers à supprimer afin de vous assurer que rien d’important ne soit effacé."

@@ -1,6 +1,6 @@
 {
   "changeEmailBanner": {
-    "title": "Changer d'adresse e-mail ?",
+    "title": "Changer d'adresse e-mail ?",
     "description": [
       "Cette action supprimera votre adresse e-mail actuelle ${{email}} et tous les e-mails de votre boîte de réception.",
       "Vous recevrez immédiatement une nouvelle adresse e-mail temporaire."
@@ -9,9 +9,9 @@
     "cancelCta": "Annuler"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtenez une remise exclusive!",
+    "title": "Obtenez une remise exclusive !",
     "subtitle": {
-      "blue": "Offre spéciale :",
+      "blue": "Offre spéciale :",
       "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
     },
     "getDealCta": "Obtenez l'offre",
@@ -20,12 +20,12 @@
   },
   "featuresBanner": {
     "label": {
-      "blueText": "Get 85% off",
+      "blueText": "Get 85 % off",
       "text": "in all Plans"
     },
-    "title": "Claim your exclusive discount!",
+    "title": "Claim your exclusive discount !",
     "subTitle": {
-      "blueText": "Special offer:",
+      "blueText": "Special offer :",
       "text": "store files in privacy for even less"
     },
     "ctaGet": "Accept invite",
@@ -42,14 +42,14 @@
     }
   },
   "s3StorageBanner": {
-    "label": "Disponible maintenant !",
+    "label": "Disponible maintenant !",
     "title": "Stockage d'objets compatible S3",
     "feat": [
-      "Jusqu'à 80% moins cher que AWS",
+      "Jusqu'à 80 % moins cher que AWS",
       "Sécurisé, évolutif, compatible S3",
       "Support natif de Rclone"
     ],
-    "cta": "Obtenez 1TB gratuitement",
+    "cta": "Obtenez 1 To gratuitement",
     "offerEnds": "*Offre valable uniquement pour le premier mois"
   },
   "tryOutInternxtGeneralBanner": {
@@ -107,7 +107,7 @@
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
-    "description": "Bénéficiez de 80% de réduction sur notre plan 2 To pendant un an.",
+    "description": "Bénéficiez de 80 % de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
   },
@@ -124,7 +124,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Rejoignez Internxt cette saison avec 85 % de réduction et participez à notre tirage au sort de cartes-cadeaux de Noël.",
+      "normalText": "Rejoignez Internxt cette saison avec 85 % de réduction et participez à notre tirage au sort de cartes-cadeaux de Noël.",
       "cta": "Choisissez votre forfait "
     }
   },
@@ -136,12 +136,12 @@
   },
   "BeforeCloseBanner": {
     "title": {
-      "normal1": "Attendez! Offre spéciale ",
-      "blue": "80% DE RÉDUCTION ",
+      "normal1": "Attendez ! Offre spéciale ",
+      "blue": "80 % DE RÉDUCTION ",
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "80% DE RÉDUCTION",
+    "cta": "80 % DE RÉDUCTION",
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "SignUpFileCompressorBanner": {

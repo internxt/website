@@ -6,18 +6,18 @@
   "FeaturesSection": {
     "howToConvert": {
       "title": "Comment compresser un fichier PDF",
-      "description": "Pour compresser un fichier PDF, suivez ces étapes :",
+      "description": "Pour compresser un fichier PDF, suivez ces étapes :",
       "steps": [
         {
-          "step": "Étape 1 :",
-          "description": "Téléversez votre fichier PDF : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil pour démarrer la conversion."
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier PDF : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil pour démarrer la conversion."
         },
         {
-          "step": "Étape 2 :",
-          "description": "Cliquez sur « Compresser le PDF »"
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le PDF »"
         },
         {
-          "step": "Étape 3 :",
+          "step": "Étape 3 :",
           "description": "Téléchargez votre fichier."
         }
       ],
@@ -25,13 +25,13 @@
     },
     "whyConvert": {
       "title": "Pourquoi compresser de gros fichiers PDF",
-      "intro": "L’envoi de fichiers PDF volumineux peut poser problème à cause des limites d’email, de partage ou de stockage. Cet outil gratuit vous permet de compresser plusieurs PDF et de bénéficier de ces avantages :",
+      "intro": "L’envoi de fichiers PDF volumineux peut poser problème à cause des limites d’email, de partage ou de stockage. Cet outil gratuit vous permet de compresser plusieurs PDF et de bénéficier de ces avantages :",
       "bullets": [
         "Optimiser les fichiers pour une lecture web ou mobile",
         "Éviter les limites de taille de téléchargement",
         "Économiser de l’espace de stockage"
       ],
-      "outro": "Cet outil est sans limite : vous pouvez compresser des PDF jusqu’à X Go et traiter plusieurs fichiers sans inscription ni restrictions quotidiennes."
+      "outro": "Cet outil est sans limite : vous pouvez compresser des PDF jusqu’à X Go et traiter plusieurs fichiers sans inscription ni restrictions quotidiennes."
     }
   },
   "CtaSection": {

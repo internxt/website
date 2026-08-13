@@ -38,6 +38,13 @@ export default function Footer({
 
   const year = moment().format('YYYY');
 
+  // La puntuación final se saca fuera del enlace (regla tipográfica FR y buena práctica general)
+  const privacyLinkTrailingPunctuation =
+    textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
+  const privacyLinkText = privacyLinkTrailingPunctuation
+    ? textContent.NewsletterSection.privacyLink.slice(0, -privacyLinkTrailingPunctuation.length)
+    : textContent.NewsletterSection.privacyLink;
+
   useEffect(() => {
     axios.get(`${window.location.origin}/api/download`).then((res) => {
       setPlatforms(res.data.platforms);
@@ -182,8 +189,9 @@ export default function Footer({
               <span className="text-sm text-gray-40">
                 {textContent.NewsletterSection.privacy}{' '}
                 <Link href="/legal" locale={lang} className="underline hover:text-gray-30">
-                  {textContent.NewsletterSection.privacyLink}
+                  {privacyLinkText}
                 </Link>
+                {privacyLinkTrailingPunctuation}
               </span>
             </div>
           )}

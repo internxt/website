@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt AI. Comme Copilot, \n mais **privé**",
     "description": "Passez à Internxt AI, la meilleure alternative à Copilot qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre plan et profitez de -85 % ",
+    "getPrivacy": " Sélectionnez votre plan et profitez de -85 % ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Oui, chiffrés sur votre appareil",
         "Jamais",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Les chats ne sont jamais utilisés pour entraîner notre IA",
         "Ne peut jamais accéder à vos chats",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Pas de chiffrement de bout en bout",
         "Oui",
-        "Stockage cloud jusqu'à 6 To, de 1,99 € à 12,99 €/mois",
+        "Stockage cloud jusqu'à 6 To, de 1,99 € à 12,99 €/mois",
         "Microsoft Copilot, OneDrive et Office",
         "Audits de sécurité réguliers",
         "Vos chats sont utilisés pour entraîner et améliorer Copilot",
         "Des humains peuvent accéder à vos chats et les examiner",
-        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de protection des données UE-États-Unis"
       ]
     }
   },
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité inégalée grâce au chiffrement à connaissance zéro (zero-knowledge) et post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Plans gratuits et abordables",
-            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive via des plans à vie jusqu'à 5 To avec -85 % de réduction."
+            "description": "Internxt AI est gratuit, et vous pouvez le combiner avec Internxt Drive via des plans à vie jusqu'à 5 To avec -85 % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Copilot : Qu'en est-il de votre vie privée ?",
+        "title": "Copilot : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -116,7 +116,7 @@
           },
           {
             "title": "Basé sur l'abonnement",
-            "description": "Les plans payants vont de 1,99 €/mois à 19,99 €/mois."
+            "description": "Les plans payants vont de 1,99 €/mois à 19,99 €/mois."
           }
         ]
       }
@@ -140,12 +140,12 @@
   },
   "CtaSection": {
     "title": "Choisissez Internxt pour la meilleure alternative à Copilot",
-    "description": "IA privée chiffrée, stockage cloud sécurisé et suite complète de confidentialité à -85 %.",
+    "description": "IA privée chiffrée, stockage cloud sécurisé et suite complète de confidentialité à -85 %.",
     "cta": "Faire le changement"
   },
   "tableSection": {
     "title": "Votre allié confidentialité tout-en-un",
-    "hotLabel": "-85 % 🔥",
+    "hotLabel": "-85 % 🔥",
     "planTitles": {
       "header": "Votre allié confidentialité tout-en-un"
     },
@@ -164,35 +164,35 @@
       "guarantee": "Garantie satisfait ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt AI est-il plus sûr et privé que Copilot ?",
+        "question": "Internxt AI est-il plus sûr et privé que Copilot ?",
         "answer": [
           "Oui, Internxt chiffre tous vos chats et ne les stocke jamais. Copilot ne les chiffre pas et peut les utiliser pour entraîner son IA.",
           "Internxt inclut aussi Drive, VPN, Antivirus et Meet pour une protection complète contre les violations de données."
         ]
       },
       {
-        "question": "Internxt AI est-il gratuit ?",
+        "question": "Internxt AI est-il gratuit ?",
         "answer": [
           "Oui, vous pouvez utiliser notre IA gratuitement sans connexion et sans entrer de coordonnées bancaires."
         ]
       },
       {
-        "question": "C'est quoi le chiffrement post-quantique ?",
+        "question": "C'est quoi le chiffrement post-quantique ?",
         "answer": [
           "C'est une méthode conçue pour résister aux attaques des futurs ordinateurs quantiques, offrant une sécurité à long terme."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": ["Internxt est basé à Valence, en Espagne, et respecte strictement le RGPD."]
       }
     ]

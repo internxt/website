@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme TotalAV,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à TotalAV qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction  ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction  ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,18 +24,18 @@
         "Open-source",
         "Chiffré sur votre appareil",
         "Oui",
-        "Compétitif, sans coûts cachés, jusqu'à 5 To",
+        "Compétitif, sans coûts cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
         "Certaines fonctionnalités, chiffrées par TotalAV",
         "Non",
-        "Plans mensuels ou annuels à partir de 11 €/mois",
+        "Plans mensuels ou annuels à partir de 11 €/mois",
         "Antivirus, VPN, gestionnaire de mots de passe",
         "Aucun audit de sécurité publié",
         "Non",
@@ -74,7 +74,7 @@
       "descriptions": [
         "Internxt est entièrement open source et audité de manière indépendante, vous pouvez donc être certain qu'il n'y a pas de backdoors vers vos données et que vos informations sont gérées de manière transparente.",
         "Internxt offre Cleaner et un écosystème de confidentialité complet pour nettoyer les fichiers indésirables, stocker et partager des fichiers avec un chiffrement zero-knowledge avec Drive, et plus d'avantages incluant VPN, Meet, Mail et plus.",
-        "Commencez avec Internxt pour seulement 1,60 € par mois, ou évitez les abonnements avec nos forfaits à vie abordables."
+        "Commencez avec Internxt pour seulement 1,60 € par mois, ou évitez les abonnements avec nos forfaits à vie abordables."
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement zero-knowledge et post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -99,12 +99,12 @@
           },
           {
             "title": "Forfaits à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Obtenez tout avec {{percentage}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Obtenez tout avec {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "TotalAV : Et votre vie privée ?",
+        "title": "TotalAV : Et votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -160,7 +160,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -179,54 +179,54 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée à TotalAV ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée à TotalAV ?",
         "answer": [
           "Oui, Internxt utilise le chiffrement post-quantique et zero-knowledge qui garantit que personne d'autre que vous ne peut voir vos fichiers.",
           "Internxt Drive inclut VPN, Antivirus, Cleaner, Meet et Mail, vous offrant plus de services que TotalAV."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques.",
           "Internxt utilise cette méthode pour garantir que votre plan à vie vous protège contre les futures menaces cybersécurité."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD."
         ]
       },
       {
-        "question": "TotalAV est-il plus cher qu'Internxt ?",
+        "question": "TotalAV est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre remise exclusive de 87%, tous nos forfaits sont moins chers que les options tarifaires de TotalAV, avec l'avantage d'offrir beaucoup plus de fonctionnalités."
+          "Avec votre remise exclusive de 87 %, tous nos forfaits sont moins chers que les options tarifaires de TotalAV, avec l'avantage d'offrir beaucoup plus de fonctionnalités."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Contactez hello@internxt.com et notre équipe sera heureuse de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, mettez à niveau votre forfait depuis les paramètres de votre compte Internxt, ou achetez un nouveau forfait sur internxt.com/pricing."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, cryptomonnaie et Klarna."
         ]

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme Sync,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à Sync qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait à {{percentage}}% de réduction 🔥 ",
+    "getPrivacy": " Sélectionnez votre forfait à {{percentage}} % de réduction 🔥 ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -45,7 +45,7 @@
     }
   },
   "PrivacyViolationsSection": {
-    "title": "Besoin d'une alternative à Sync ?",
+    "title": "Besoin d'une alternative à Sync ?",
     "description": "Choisissez Internxt pour une sécurité totale de vos fichiers et données personnelles",
     "scrollableSection": {
       "titles": [
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement zero-knowledge et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source et audité",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Forfaits à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des forfaits jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "Sync : Qu'en est-il de votre vie privée ?",
+        "title": "Sync : Qu'en est-il de votre vie privée ?",
         "features": [
           {
             "title": "Code fermé",
@@ -144,7 +144,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir le forfait"
     },
     "features": {
@@ -163,55 +163,55 @@
       "guarantee": "Garantie satisfait ou remboursé de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée que Sync ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée que Sync ?",
         "answer": [
           "Oui, Internxt utilise un chiffrement post-quantique et zero-knowledge qui garantit que personne d'autre que vous ne peut consulter vos fichiers.",
           "Sync gère les clés de chiffrement sur ses propres serveurs, ce qui signifie qu'il pourrait potentiellement accéder à vos fichiers."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-ce plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard utilisé par Sync, les algorithmes de chiffrement post-quantique (PQE) sont conçus pour résister aux attaques des puissants ordinateurs quantiques.",
           "Cela garantit que vos données restent à l'abri des futures cybermenaces. Disponible sur tous les forfaits Internxt sans frais supplémentaires."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution conforme au RGPD qui suit les lois strictes de l'UE pour protéger votre vie privée."
         ]
       },
       {
-        "question": "Sync est-il plus cher qu'Internxt ?",
+        "question": "Sync est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de {{percentage}}%, les forfaits Internxt sont moins chers que les tarifs actuels de Sync, avec de nombreuses fonctionnalités en plus.",
+          "Avec votre réduction exclusive de {{percentage}} %, les forfaits Internxt sont moins chers que les tarifs actuels de Sync, avec de nombreuses fonctionnalités en plus.",
           "De plus, Internxt propose des forfaits à vie pour éviter les frais d'abonnement pour toujours, ce que Sync ne propose pas."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Vous pouvez contacter hello@internxt.com et notre équipe Customer Success sera ravie de vous aider pour toute question."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à jour votre forfait depuis vos paramètres ou en acheter un nouveau pour que votre stockage soit automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
         "answer": ["Internxt accepte les cartes de débit/crédit, PayPal, iDEAL, Sofort, les crypto-monnaies et Klarna."]
       }
     ]

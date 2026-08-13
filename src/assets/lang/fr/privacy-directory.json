@@ -55,7 +55,7 @@
         "id": "center-for-democracy-and-technology",
         "name": "Centre Pour la Démocratie et la Technologie",
         "short": "CDT",
-        "description": "Le CDT promeut les valeurs démocratiques dans l'élaboration de la politique et de l'architecture technologiques, en se focalisant sur les droits de l'individu; il assure le leadership et la défense des intérêts pour aider à façonner la politique publique et les meilleures pratiques de l'industrie tout en offrant un forum de dialogue entre les parties prenantes.",
+        "description": "Le CDT promeut les valeurs démocratiques dans l'élaboration de la politique et de l'architecture technologiques, en se focalisant sur les droits de l'individu ; il assure le leadership et la défense des intérêts pour aider à façonner la politique publique et les meilleures pratiques de l'industrie tout en offrant un forum de dialogue entre les parties prenantes.",
         "url": "https://cdt.org/"
       },
       {
@@ -222,7 +222,7 @@
       "paragraph1": "Le droit de l'humanité à la vie privée doit être protégé à tout prix. Ce n'est qu'en travaillant ensemble que nous pouvons garantir les droits fondamentaux à la propriété des données et à la vie privée numérique.",
       "paragraph2": {
         "regular": "Internxt s'engage à soutenir les organisations non lucratives qui s'efforcent de rendre l'Internet meilleur. Si vous travaillez pour un internet plus libre et plus éthique, vous pouvez bénéficier de",
-        "semibold": "50% de réduction sur les abonnements en nous contactant."
+        "semibold": "50 % de réduction sur les abonnements en nous contactant."
       },
       "cta": {
         "line1": "Contactez nous pour obtenir des prix",
@@ -231,10 +231,10 @@
     }
   },
   "FaqSection": {
-    "title": "Questions ? Nous avons les réponses",
+    "title": "Questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Qu'est-ce qu'un annuaire de protection de la vie privée?",
+        "question": "Qu'est-ce qu'un annuaire de protection de la vie privée ?",
         "answer": [
           "L'annuaire des organisations de défense de la vie privée d'Internxt présente les organisations de défense des droits numériques, les institutions et les ONG qui travaillent aux côtés d'Internxt pour faire progresser, soutenir et défendre la vie privée pour tous."
         ]

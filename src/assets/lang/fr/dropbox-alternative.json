@@ -7,7 +7,7 @@
       "Chiffrement post-quantique et à connaissance nulle",
       "Open source et audité"
     ],
-    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}} % de réduction",
     "cta": "Choisir un plan"
   },
   "HeaderSection": {
@@ -34,7 +34,7 @@
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité complète : RGPD, Lois espagnoles de protection des données"
+        "Confidentialité complète : RGPD, Lois espagnoles de protection des données"
       ],
       "competitorFeatures": [
         "Code fermé",
@@ -45,7 +45,7 @@
         "Audits de sécurité réguliers",
         "Fonctionnalité payante",
         "Peut accéder aux fichiers dans certaines circonstances",
-        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
       ]
     }
   },
@@ -72,7 +72,7 @@
         ]
       },
       "competitorTable": {
-        "title": "Qu'en est-il de votre confidentialité ?",
+        "title": "Qu'en est-il de votre confidentialité ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -97,7 +97,7 @@
         "features": [
           {
             "title": "Plans raisonnables",
-            "description": "Offre exclusive de {{percentage}}%, sans frais cachés."
+            "description": "Offre exclusive de {{percentage}} %, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -105,7 +105,7 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services pour toujours avec {{percentage}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour accéder à nos services pour toujours avec {{percentage}} % de réduction."
           }
         ]
       },
@@ -122,7 +122,7 @@
           },
           {
             "title": "Basé sur l'abonnement",
-            "description": "Plans 5TB 14% plus chers, et ne propose que des abonnements mensuels ou annuels."
+            "description": "Plans 5 To 14 % plus chers, et ne propose que des abonnements mensuels ou annuels."
           }
         ]
       }
@@ -135,7 +135,7 @@
   },
   "tableSection": {
     "title": "Plans Internxt",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Choisissez votre Plan"
     },
@@ -145,7 +145,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Choisir un plan"
     },
     "features": {
@@ -154,20 +154,20 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "HorizontalScrollableSection": {
-    "title": "Dropbox est-il sûr ?",
-    "description": "Depuis 2011, Dropbox a fait face à de nombreuses violations de sécurité. Ne risquez pas vos données ; sécurisez-les avec Internxt Drive et protégez votre confidentialité en ligne.",
+    "title": "Dropbox est-il sûr ?",
+    "description": "Depuis 2011, Dropbox a fait face à de nombreuses violations de sécurité. Ne risquez pas vos données ; sécurisez-les avec Internxt Drive et protégez votre confidentialité en ligne.",
     "scrollableSection": {
       "titles": [
-        "2011 : Bug des mots de passe",
-        "2012 : Violation des mots de passe",
-        "2018 : Données partagées sans consentement",
-        "2022 : Attaque de phishing"
+        "2011 : Bug des mots de passe",
+        "2012 : Violation des mots de passe",
+        "2018 : Données partagées sans consentement",
+        "2022 : Attaque de phishing"
       ],
       "descriptions": [
         "En juin 2011, Dropbox a subi une violation majeure de sécurité à cause d'un bug qui permettait à n'importe quel mot de passe d'accéder à n'importe quel compte pendant quatre heures, à condition qu'un pirate ait accès à l'e-mail ou au nom d'utilisateur. Pendant ces quatre heures, tous les comptes Dropbox étaient vulnérables.",
@@ -178,7 +178,7 @@
     }
   },
   "HorizontalScrollableSectionV2": {
-    "title": "Pourquoi devriez-vous choisir Internxt comme alternative à Dropbox ?",
+    "title": "Pourquoi devriez-vous choisir Internxt comme alternative à Dropbox ?",
     "description": "Internxt prend toutes les mesures pour sécuriser vos fichiers et votre droit à la confidentialité, en faisant l'alternative la plus sécurisée à Dropbox.",
     "scrollableSection": {
       "titles": [
@@ -200,50 +200,50 @@
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée à Dropbox ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée à Dropbox ?",
         "answer": [
           "Oui, Internxt est conçu pour être une alternative plus sécurisée et privée à Dropbox. Grâce au chiffrement à connaissance nulle et post-quantique, vous seul pouvez accéder et déchiffrer vos fichiers.",
           "Contrairement à Dropbox, Internxt ne scanne, ne suit ni ne vend vos données, garantissant une confidentialité complète pour toutes vos informations."
         ]
       },
       {
-        "question": "Dropbox utilise-t-il le chiffrement à connaissance nulle ?",
+        "question": "Dropbox utilise-t-il le chiffrement à connaissance nulle ?",
         "answer": [
           "Non, Dropbox n'offre pas de chiffrement à connaissance nulle. Cela signifie que les employés de Dropbox ou des tiers pourraient potentiellement accéder à vos fichiers stockés.",
           "Internxt garantit que personne, même pas notre équipe, ne peut voir vos données."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, et se conforme aux réglementations strictes européennes de confidentialité RGPD.",
           "Cela garantit des normes de confidentialité plus élevées par rapport à des fournisseurs comme Dropbox, qui sont basés aux États-Unis et peuvent être soumis aux lois de surveillance."
         ]
       },
       {
-        "question": "La tarification d'Internxt est-elle moins chère que celle de Dropbox ?",
+        "question": "La tarification d'Internxt est-elle moins chère que celle de Dropbox ?",
         "answer": [
           "Oui, avec nos réductions exclusives, les plans Internxt sont plus abordables que ceux de Dropbox, tout en incluant des fonctionnalités supplémentaires axées sur la confidentialité sans coût supplémentaire."
         ]
       },
       {
-        "question": "Quelles fonctionnalités supplémentaires Internxt offre-t-il que Dropbox n'a pas ?",
+        "question": "Quelles fonctionnalités supplémentaires Internxt offre-t-il que Dropbox n'a pas ?",
         "answer": [
           "Internxt inclut des fonctionnalités comme un VPN intégré, un antivirus, un nettoyeur d'appareil, et un e-mail privé (Mail).",
           "Ces outils ajoutent des couches supplémentaires de sécurité et de confidentialité non disponibles avec Dropbox."
         ]
       },
       {
-        "question": "Comment puis-je contacter le support Internxt ?",
+        "question": "Comment puis-je contacter le support Internxt ?",
         "answer": [
           "Si vous avez besoin d'aide, vous pouvez contacter notre équipe Customer Success en envoyant un e-mail à hello@internxt.com ou en utilisant le chat en direct sur notre site web."
         ]
       },
       {
-        "question": "Puis-je payer avec une carte de crédit, PayPal ou une cryptomonnaie ?",
+        "question": "Puis-je payer avec une carte de crédit, PayPal ou une cryptomonnaie ?",
         "answer": [
           "Oui, Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort et la cryptomonnaie."
         ]

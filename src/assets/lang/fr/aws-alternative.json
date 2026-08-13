@@ -1,12 +1,12 @@
 {
   "HeroSection": {
     "title": "Internxt S3, comme AWS S3 \nmais **privé**",
-    "description": "Le stockage objet à l'usage (pay-as-you-go) jusqu'à 80% moins cher qu'AWS",
+    "description": "Le stockage objet à l'usage (pay-as-you-go) jusqu'à 80 % moins cher qu'AWS",
     "getPrivacy": "Passez à Internxt, la meilleure alternative à AWS pour les entreprises",
     "cta": "Obtenir Internxt S3"
   },
   "HeaderSection": {
-    "title": "Internxt vs AWS : aperçu",
+    "title": "Internxt vs AWS : aperçu",
     "description": "Découvrez les différences et caractéristiques clés qui permettent à Internxt de vous redonner le contrôle de vos données.",
     "tableSection": {
       "comparisons": [
@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux fichiers dans certaines circonstances",
-        "Moins de confidentialité: accord EU-US Data Privacy Framework"
+        "Moins de confidentialité : accord EU-US Data Privacy Framework"
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt garantit une confidentialité totale face à toute attaque informatique via son chiffrement post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité absolue",
+        "title": "Internxt : Confidentialité absolue",
         "features": [
           {
             "title": "Open source",
@@ -104,7 +104,7 @@
         ]
       },
       "competitorTable": {
-        "title": "AWS : Et votre confidentialité ?",
+        "title": "AWS : Et votre confidentialité ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -144,7 +144,7 @@
       ],
       "descriptions": [
         "Chiffrement de bout en bout et immuabilité pour combattre les ransomwares.",
-        "Stockage 100% chaud pour un accès sans les délais interminables que connaissent S3 Glacier ou Deep Archive.",
+        "Stockage 100 % chaud pour un accès sans les délais interminables que connaissent S3 Glacier ou Deep Archive.",
         "Pas de frais variables ou enchevêtrés. Un plan tarifaire linéaire simple.",
         "Abonnez-vous à un coût mensuel par utilisateur clair."
       ]
@@ -157,7 +157,7 @@
   },
   "tableSection": {
     "title": "Choisissez votre abonnement",
-    "hotLabel": "Jusqu'à 80% d'économies 🔥",
+    "hotLabel": "Jusqu'à 80 % d'économies 🔥",
     "planTitles": {
       "header": "Vitesse et de gestion de la donnée supérieure"
     },
@@ -176,40 +176,40 @@
       "guarantee": "30 jours garantis ou remboursés"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Questions ? Réponses",
+    "title": "Questions ? Réponses",
     "faq": [
       {
-        "question": "Qu'est ce que le stockage objet ?",
+        "question": "Qu'est ce que le stockage objet ?",
         "answer": [
           "Format idéal pour des volumes de fichiers où les données et métadonnées sont séparées."
         ]
       },
       {
-        "question": "Pourquoi éviter AWS ?",
+        "question": "Pourquoi éviter AWS ?",
         "answer": [
-          "Coût élevé à l'usage, confidentialité réduite, interfaces ultra complexes : Internxt règle ces failles."
+          "Coût élevé à l'usage, confidentialité réduite, interfaces ultra complexes : Internxt règle ces failles."
         ]
       },
       {
-        "question": "Où sont les serveurs ?",
+        "question": "Où sont les serveurs ?",
         "answer": [
           "Internxt est basé en Espagne, au respect du RGPD avec des serveurs protégés au niveau européen."
         ]
       },
       {
-        "question": "Quel coût a Internxt vs AWS ?",
+        "question": "Quel coût a Internxt vs AWS ?",
         "answer": [
-          "Jusqu'à 80% de gain financier sans taxe de transfert cachée."
+          "Jusqu'à 80 % de gain financier sans taxe de transfert cachée."
         ]
       },
       {
-        "question": "Me contacter ?",
+        "question": "Me contacter ?",
         "answer": [
           "Une aide vous sera apportée via hello@internxt.com"
         ]
@@ -229,7 +229,7 @@
       "price": "7",
       "cta": "Choisir plan",
       "whatsIncluded": {
-        "title": "Notre service comporte :",
+        "title": "Notre service comporte :",
         "features": [
           "Plan Mensuel",
           "Chiffrement SSE",
@@ -241,6 +241,6 @@
         ]
       }
     },
-    "oneTimePayment": "*Frais de 1 € facturés une seule fois pour vérifier votre identité"
+    "oneTimePayment": "*Frais de 1 € facturés une seule fois pour vérifier votre identité"
   }
 }

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme AVG,\n mais **privé**",
     "description": "Passez à Internxt, la meilleure alternative à AVG qui respecte votre vie privée",
-    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}}% de réduction  ",
+    "getPrivacy": " Sélectionnez votre forfait et profitez de {{percentage}} % de réduction  ",
     "cta": "Faire le changement"
   },
   "HeaderSection": {
@@ -24,12 +24,12 @@
         "Open-source",
         "Cryptage de bout en bout",
         "Collecte de données minimale",
-        "Gratuit, stockage à vie jusqu'à 5 To",
+        "Gratuit, stockage à vie jusqu'à 5 To",
         "Internxt AI, Drive, VPN, Antivirus, Cleaner, Meet, Mail et Send",
         "Audits de sécurité réguliers",
         "Faible impact sur le système",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Code propriétaire",
@@ -40,7 +40,7 @@
         "Audits de sécurité réguliers",
         "Ralentissement de l'appareil",
         "Historique de vente de données",
-        "Moins de confidentialité : Soumis aux lois américaines"
+        "Moins de confidentialité : Soumis aux lois américaines"
       ]
     }
   },
@@ -74,7 +74,7 @@
       "descriptions": [
         "Internxt est entièrement open source et audité de manière indépendante, garantissant votre vie privée.",
         "Internxt offre Cleaner et un écosystème de confidentialité complet pour nettoyer, stocker et partager avec cryptage zero-knowledge.",
-        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie."
+        "Commencez avec Internxt pour seulement 1,60 € par mois ou évitez les abonnements avec nos forfaits à vie."
       ]
     }
   },
@@ -83,7 +83,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au cryptage zero-knowledge et post-quantique.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -99,12 +99,12 @@
           },
           {
             "title": "Forfaits gratuits et abordables",
-            "description": "Accédez à nos services pour toujours avec les forfaits à vie et {{percentage}}% de réduction."
+            "description": "Accédez à nos services pour toujours avec les forfaits à vie et {{percentage}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "AVG : Et votre vie privée ?",
+        "title": "AVG : Et votre vie privée ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -163,7 +163,7 @@
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction 🔥",
+    "hotLabel": "{{discount}} % de réduction 🔥",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -182,29 +182,29 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il plus sûr qu'AVG ?",
+        "question": "Internxt est-il plus sûr qu'AVG ?",
         "answer": [
           "Oui, Internxt utilise le cryptage zero-knowledge et est entièrement open source.",
           "Internxt inclut Drive, VPN, Antivirus et Cleaner pour une sécurité intégrale."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, respectant strictement le RGPD."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Contactez hello@internxt.com et notre équipe vous aidera avec plaisir."
         ]

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Comparaison de la sécurité du stockage en nuage",
     "description": "Comparez toutes les options pour choisir la solution de stockage en nuage la plus sûre.",
-    "cta": "Obtenez 85% de réduction sur Internxt",
+    "cta": "Obtenez 85 % de réduction sur Internxt",
     "noCredirCardNeeded": "Pas de carte de crédit requise",
 
     "table": {
@@ -73,13 +73,13 @@
     }
   },
   "FeatureSection": {
-    "title": "Pourquoi choisir Internxt?",
+    "title": "Pourquoi choisir Internxt ?",
     "description": "Internxt crée des services de cloud privé sécurisés conçus pour vous rendre le contrôle de vos données. Protégeant vos fichiers et votre droit fondamental à la vie privée, tous les services Internxt sont conçus dès le départ pour une sécurité totale.",
     "cta": "Créer un compte gratuit"
   },
   "InfoSection": {
     "title": "Stockage en nuage sécurisé avec une confidentialité incomparable",
-    "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiés à la protection de vos données en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données contre l'exploitation.",
+    "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiés à la protection de vos données en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données contre l'exploitation.",
     "cta": "Présentation de l'équipe d'Internxt",
     "cards": [
       {
@@ -96,12 +96,12 @@
       },
       {
         "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+        "description": "Nous sommes entièrement conformes au GDPR et 100 % sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
       }
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Obtenez 1 Go gratuitement !",
+    "title": "Obtenez 1 Go gratuitement !",
     "description": "Créez votre compte gratuit maintenant et obtenez un accès complet à notre suite de services de protection de la vie privée en ligne.",
     "cta": "Commencer"
   },
@@ -116,7 +116,7 @@
       {
         "name": "Cristian M.",
         "enterprise": "Avis de GetApp",
-        "review": "La meilleure alternative cryptée à Dropbox. Dans l'ensemble : Nous avions besoin d'une alternative qui nous permette de stocker des fichiers clients et du travail (fichiers de médias sociaux) et comme Internxt est compatible avec le GDPR, il nous convient parfaitement !"
+        "review": "La meilleure alternative cryptée à Dropbox. Dans l'ensemble : Nous avions besoin d'une alternative qui nous permette de stocker des fichiers clients et du travail (fichiers de médias sociaux) et comme Internxt est compatible avec le GDPR, il nous convient parfaitement !"
       },
       {
         "name": "Josep C.",
@@ -126,43 +126,43 @@
       {
         "name": "Pat G.",
         "enterprise": "Avis de Capterra",
-        "review": "Je stocke des fichiers pour une organisation à but non lucratif et la collaboration avec Internxt a été merveilleuse ! Ce disque a été très facile à utiliser. Je n'ai rien eu à faire d'autre que de charger et de télécharger. Le programme et le lecteur ont fait le reste !"
+        "review": "Je stocke des fichiers pour une organisation à but non lucratif et la collaboration avec Internxt a été merveilleuse ! Ce disque a été très facile à utiliser. Je n'ai rien eu à faire d'autre que de charger et de télécharger. Le programme et le lecteur ont fait le reste !"
       },
       {
         "name": "Luca C.",
         "enterprise": "Avis de GetApp",
-        "review": "L'avenir du stockage en nuage ! J'adore le fait que nous ayons enfin un logiciel de stockage chiffré et sécurisé abordable qui a également un look très cool et qui est convivial."
+        "review": "L'avenir du stockage en nuage ! J'adore le fait que nous ayons enfin un logiciel de stockage chiffré et sécurisé abordable qui a également un look très cool et qui est convivial."
       },
       {
         "name": "Binet S.",
         "enterprise": "Avis de Trustpilot",
-        "review": "Rapide, fiable et peu coûteux - les meilleurs éléments de tout produit ! Le grand espace de stockage est vraiment apprécié ! J'ai assez d'espace pour sauvegarder toutes mes photos et tous mes fichiers. J'apprécie également la simplicité avec laquelle il est possible de partager des fichiers."
+        "review": "Rapide, fiable et peu coûteux - les meilleurs éléments de tout produit ! Le grand espace de stockage est vraiment apprécié ! J'ai assez d'espace pour sauvegarder toutes mes photos et tous mes fichiers. J'apprécie également la simplicité avec laquelle il est possible de partager des fichiers."
       }
     ]
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Quel est le service de stockage cloud le plus sécurisé ?",
+        "question": "Quel est le service de stockage cloud le plus sécurisé ?",
         "answer": [
           "Si vous comparez Internxt avec tous les autres services, vous constaterez qu'Internxt est l'alternative la plus privée et sécurisée à Google Drive, Dropbox et autres services populaires."
         ]
       },
       {
-        "question": "Quel service de stockage cloud est le plus privé ?",
+        "question": "Quel service de stockage cloud est le plus privé ?",
         "answer": [
           "Internxt n'a aucun moyen d'accéder à vos informations stockées et est le service cloud le plus privé sur le marché aujourd'hui. Alors que de nombreux services cloud offrent des fonctionnalités de sécurité avancées, très peu d'entre eux n'ont pas accès à vos informations."
         ]
       },
       {
-        "question": "Qu'est-ce qu'un service de stockage cloud open source ?",
+        "question": "Qu'est-ce qu'un service de stockage cloud open source ?",
         "answer": [
           "Un [service de stockage cloud open source](https://internxt.com/fr/open-source) diffère d'un service traditionnel en ce que le code source du service est rendu public. Cela permet aux individus de vérifier de manière indépendante que le service fait ce qu'il prétend faire. Internxt est entièrement open source, et notre code est publié publiquement sur GitHub."
         ]
       },
       {
-        "question": "Quels fournisseurs de cloud ont accès à vos données stockées ?",
+        "question": "Quels fournisseurs de cloud ont accès à vos données stockées ?",
         "answer": [
           "Il est difficile de savoir avec certitude quelles entreprises n'ont pas accès à vos données car très peu d'entre elles conservent leur code source en privé, mais presque aucune ne prétend jamais accéder à vos données. En revanche, Internxt n'accédera jamais à vos données, et cette affirmation peut être vérifiée en vérifiant notre code source."
         ]

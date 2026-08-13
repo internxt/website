@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Internxt. Comme OneDrive, mais **privé**.",
     "description": "Passez à Internxt, la meilleure alternative à OneDrive qui respecte votre vie privée",
-    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}}% de réduction  ",
+    "getPrivacy": "Sélectionnez votre forfait avec {{percentage}} % de réduction  ",
     "cta": "Profiter de l'offre"
   },
   "HeaderSection": {
@@ -24,23 +24,23 @@
         "Open-source",
         "Chiffré sur votre appareil",
         "Oui",
-        "Compétitif, sans frais cachés, jusqu'à 5 To",
+        "Compétitif, sans frais cachés, jusqu'à 5 To",
         "Drive, VPN, Antivirus, Cleaner, Meet, Mail, et plus",
         "Audits de sécurité réguliers",
         "Oui",
         "Nous ne pouvons jamais accéder à vos fichiers",
-        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
+        "Confidentialité totale : RGPD, lois espagnoles sur la protection des données"
       ],
       "competitorFeatures": [
         "Closed-source (Code fermé)",
         "Chiffré par OneDrive",
         "Non",
-        "Plans plus chers, jusqu'à 6 To",
+        "Plans plus chers, jusqu'à 6 To",
         "Drive, SharePoint, Outlook et Teams",
         "Audits de sécurité réguliers",
         "Non",
         "Peut accéder aux fichiers dans certaines circonstances.",
-        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
+        "Moins de confidentialité : Cadre de confidentialité des données UE-États-Unis"
       ]
     }
   },
@@ -79,7 +79,7 @@
     "description": "Internxt offre une confidentialité et une sécurité inégalées grâce au chiffrement à connaissance zéro et post-quantique, vous offrant la meilleure protection contre les cyberattaques.",
     "mainTable": {
       "inxtTable": {
-        "title": "Internxt : Confidentialité totale, transparence et confiance",
+        "title": "Internxt : Confidentialité totale, transparence et confiance",
         "features": [
           {
             "title": "Open source",
@@ -95,12 +95,12 @@
           },
           {
             "title": "Plans à vie",
-            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}}% de réduction."
+            "description": "Évitez les abonnements répétés avec un paiement unique pour des plans allant jusqu'à 5 To. Accédez à nos services pour toujours avec {{discount}} % de réduction."
           }
         ]
       },
       "competitorTable": {
-        "title": "OneDrive : Qu'en est-il de votre confidentialité ?",
+        "title": "OneDrive : Qu'en est-il de votre confidentialité ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -112,11 +112,11 @@
           },
           {
             "title": "Données stockées aux États-Unis",
-            "description": "Données stockées sur des serveurs basés aux États-Unis : Les données stockées dans le cloud de Microsoft sont soumises aux lois de surveillance du gouvernement américain qui accèdent à vos données sous certaines conditions."
+            "description": "Données stockées sur des serveurs basés aux États-Unis : Les données stockées dans le cloud de Microsoft sont soumises aux lois de surveillance du gouvernement américain qui accèdent à vos données sous certaines conditions."
           },
           {
             "title": "Basé sur abonnement",
-            "description": "N'offre que des abonnements mensuels ou annuels avec un stockage maximum de 6 To, partagé entre 6 personnes."
+            "description": "N'offre que des abonnements mensuels ou annuels avec un stockage maximum de 6 To, partagé entre 6 personnes."
           }
         ]
       }
@@ -139,12 +139,12 @@
   },
   "CtaSection": {
     "title": "Votre confidentialité, vos conditions",
-    "description": "Protection totale avec {{percentage}}% de réduction",
+    "description": "Protection totale avec {{percentage}} % de réduction",
     "cta": "Profiter de l'offre"
   },
   "tableSection": {
     "title": "Votre allié de confidentialité tout-en-un",
-    "hotLabel": "{{discount}}% de réduction  ",
+    "hotLabel": "{{discount}} % de réduction  ",
     "planTitles": {
       "header": "Votre allié de confidentialité tout-en-un"
     },
@@ -154,7 +154,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
@@ -163,54 +163,54 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative à OneDrive plus sécurisée et privée ?",
+        "question": "Internxt est-il une alternative à OneDrive plus sécurisée et privée ?",
         "answer": [
           "Oui, Internxt utilise un chiffrement post-quantique et à connaissance zéro qui garantit que personne d'autre que vous ne peut voir vos fichiers. Microsoft gère les clés de chiffrement sur ses propres serveurs, ce qui signifie qu'il pourrait accéder à vos fichiers ou donner accès au gouvernement ou aux forces de l'ordre.",
           "Des fonctionnalités supplémentaires telles que VPN, Antivirus, Nettoyeur d'Appareil (*Device Cleaner*), , Meet et Mail vous offrent également une protection supplémentaire contre les pirates et les fuites de données."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique et est-il plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, faisant du CPQ une alternative à OneDrive plus sécurisée.",
           "Cette méthode de cryptographie est utilisée par Internxt pour garantir que votre plan de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans coût supplémentaire."
         ]
       },
       {
-        "question": "Où est basé Internxt ?",
+        "question": "Où est basé Internxt ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, ce qui en fait une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir la protection de vos données et de votre confidentialité."
         ]
       },
       {
-        "question": "OneDrive est-il plus cher qu'Internxt ?",
+        "question": "OneDrive est-il plus cher qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de {{percentage}}%, tous nos plans sont moins chers que les options tarifaires de OneDrive actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que OneDrive."
+          "Avec votre réduction exclusive de {{percentage}} %, tous nos plans sont moins chers que les options tarifaires de OneDrive actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que OneDrive."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou avez besoin d'aide, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage. Ou achetez un nouveau forfait sur internxt.com/pricing avec votre compte Internxt actuel, et votre stockage sera automatiquement cumulé."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Cryptomonnaie et Klarna."
         ]

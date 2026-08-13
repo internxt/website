@@ -1,13 +1,13 @@
 {
   "HeroSection": {
     "title": "Internxt, une alternative **sécurisée** à {{competitor}}",
-    "description": "Vous cherchez une alternative à pCloud ? Internxt propose le chiffrement post-quantique et une suite de confidentialité complète.",
+    "description": "Vous cherchez une alternative à pCloud ? Internxt propose le chiffrement post-quantique et une suite de confidentialité complète.",
     "features": [
       "Stockez vos vidéos en privé",
       "Chiffrement post-quantique et zéro connaissance",
       "Open source et audité"
     ],
-    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}}% de réduction",
+    "getPrivacy": "Obtenez une confidentialité totale avec {{percentage}} % de réduction",
     "cta": "Sélectionner un forfait"
   },
   "HeaderSection": {
@@ -34,7 +34,7 @@
         "Audits de sécurité réguliers",
         "Oui",
         "Ne peut jamais accéder à vos fichiers",
-        "Confidentialité complète : RGPD, Lois espagnoles de protection des données"
+        "Confidentialité complète : RGPD, Lois espagnoles de protection des données"
       ],
       "competitorFeatures": [
         "Code fermé",
@@ -71,7 +71,7 @@
         ]
       },
       "competitorTable": {
-        "title": "Qu'en est-il de votre confidentialité ?",
+        "title": "Qu'en est-il de votre confidentialité ?",
         "features": [
           {
             "title": "Logiciel propriétaire",
@@ -83,7 +83,7 @@
           },
           {
             "title": "Préoccupations concernant le stockage des mots de passe",
-            "description": "Sans vérification open source, comment pouvez-vous être sûr que pCloud ne sauvegarde pas votre mot de passe ou que d'autres personnes ne peuvent pas y accéder ?"
+            "description": "Sans vérification open source, comment pouvez-vous être sûr que pCloud ne sauvegarde pas votre mot de passe ou que d'autres personnes ne peuvent pas y accéder ?"
           }
         ]
       }
@@ -95,7 +95,7 @@
         "features": [
           {
             "title": "Forfaits raisonnables",
-            "description": "Offre exclusive de 85%, sans frais cachés."
+            "description": "Offre exclusive de 85 %, sans frais cachés."
           },
           {
             "title": "Protection complète",
@@ -189,7 +189,7 @@
     }
   },
   "CtaSection": {
-    "title": "Passez à Internxt avec 85% de réduction",
+    "title": "Passez à Internxt avec 85 % de réduction",
     "description": "Le seul stockage cloud dont vous avez besoin pour une confidentialité complète en ligne",
     "cta": "Obtenir Internxt"
   },
@@ -200,7 +200,7 @@
   },
   "tableSection": {
     "title": "Forfaits Internxt",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Sélectionnez votre forfait"
     },
@@ -210,7 +210,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le forfait"
     },
     "features": {
@@ -219,13 +219,13 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1 To",
-      "premium": "3 To",
-      "ultimate": "5 To"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "HorizontalScrollableSection": {
-    "title": "pCloud est-il sûr ?",
+    "title": "pCloud est-il sûr ?",
     "description": "Le chiffrement à code fermé de pCloud rend difficile la vérification de son efficacité sécuritaire, soulevant des préoccupations concernant l'accès à vos fichiers.",
     "scrollableSection": {
       "titles": ["E-mails suspects", "Chiffrement", "Analyse de contenu", "Trackers"],
@@ -238,7 +238,7 @@
     }
   },
   "HorizontalScrollableSectionV2": {
-    "title": "Pourquoi devriez-vous choisir Internxt comme alternative à pCloud ?",
+    "title": "Pourquoi devriez-vous choisir Internxt comme alternative à pCloud ?",
     "description": "Découvrez les fonctionnalités d'Internxt qui font de nous une alternative pCloud plus sécurisée et privée",
     "scrollableSection": {
       "titles": [
@@ -260,48 +260,48 @@
     }
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Internxt est-il une alternative plus sécurisée et privée à pCloud ?",
+        "question": "Internxt est-il une alternative plus sécurisée et privée à pCloud ?",
         "answer": [
           "Oui, Internxt offre des fonctionnalités plus avancées pour protéger vos données sans vous facturer en extra pour elles. Le chiffrement post-quantique et zéro connaissance garantit que personne d'autre que vous ne peut voir vos fichiers.",
           "Des fonctionnalités supplémentaires comme VPN, Antivirus, Nettoyeur d'appareil, , Meet et Mail, fonctionnalités actuellement non disponibles avec pCloud, vous offrent également une protection supplémentaire contre les pirates et les violations de données."
         ]
       },
       {
-        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sécurisé ?",
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sécurisé ?",
         "answer": [
           "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, faisant du PQE une alternative plus sécurisée à pCloud.",
           "Cette méthode cryptographique est utilisée par Internxt pour s'assurer que votre forfait de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans coût supplémentaire."
         ]
       },
       {
-        "question": "Où Internxt est-il basé ?",
+        "question": "Où Internxt est-il basé ?",
         "answer": [
           "Internxt est basé à Valence, en Espagne, en faisant une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir que vos données et votre confidentialité sont protégées."
         ]
       },
       {
-        "question": "La tarification de pCloud est-elle plus chère qu'Internxt ?",
+        "question": "La tarification de pCloud est-elle plus chère qu'Internxt ?",
         "answer": [
-          "Avec votre réduction exclusive de 85%, tous nos forfaits sont moins chers que les options tarifaires de pCloud actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que pCloud."
+          "Avec votre réduction exclusive de 85 %, tous nos forfaits sont moins chers que les options tarifaires de pCloud actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que pCloud."
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support ?",
         "answer": [
           "Si vous avez d'autres questions, demandes ou avez besoin d'assistance, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
         "answer": [
           "Oui, vous pouvez mettre à niveau votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Cryptomonnaie."
         ]

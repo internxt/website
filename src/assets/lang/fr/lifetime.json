@@ -12,7 +12,7 @@
     "title": "Stockage cloud à vie **pour moins cher**",
     "valentinesTitle": "L'amour mérite la **confidentialité**",
     "description": "Stockage cloud chiffré à vie pour moins cher. Profitez de votre remise spéciale dès aujourd'hui. Accédez à la suite de confidentialité primée d'Internxt avec un stockage cloud chiffré post-quantique et bien plus encore.",
-    "subtitle": "Obtenez {{discount}}% de réduction dès maintenant",
+    "subtitle": "Obtenez {{discount}} % de réduction dès maintenant",
     "claimDeal": "Profiter de l'offre"
   },
   "ReviewSection": {
@@ -24,7 +24,7 @@
     "description": "Internxt, c'est avant tout une question de contrôle. Avec Internxt, vous avez l'esprit tranquille en sachant que vos données sont chiffrées, protégées et que votre vie numérique vous appartient."
   },
   "NextGenSection": {
-    "title": "Pourquoi choisir le stockage cloud permanent d'Internxt ?",
+    "title": "Pourquoi choisir le stockage cloud permanent d'Internxt ?",
     "description": "Internxt vous redonne le contrôle de votre confidentialité. Contrairement au stockage cloud traditionnel, nous garantissons que vous seul détenez les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous mettons tout en œuvre pour que vos informations restent en sécurité.",
     "cta": "Apprenez à mieux nous connaître",
     "cardDescriptions": {
@@ -38,7 +38,7 @@
         "Nous ne stockons ni mots de passe ni données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données vous appartiennent. Les protéger est notre affaire.",
         "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers grâce à la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
         "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par tous. Nous n'avons rien à cacher, si ce n'est vos données.",
-        "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié de manière indépendante par Securitum, la principale entreprise de tests d'intrusion d'Europe."
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié de manière indépendante par Securitum, la principale entreprise de tests d'intrusion d'Europe."
       ]
     }
   },
@@ -49,15 +49,15 @@
     "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Parmi les offres à vie d'Internxt : laquelle choisir ? 1TB, 3TB ou 5TB ?",
-    "description": "Toutes nos offres vous donnent tout ce dont vous avez besoin pour stocker vos fichiers en toute confidentialité dans le cloud. Si vous souhaitez une confidentialité complète, une gestion avancée du cloud et toutes les fonctionnalités d'Internxt, comme Meet et Mail, l'offre Ultimate 5TB est le meilleur choix pour un contrôle total et une confidentialité maximale.",
+    "title": "Parmi les offres à vie d'Internxt : laquelle choisir ? 1 To, 3 To ou 5 To ?",
+    "description": "Toutes nos offres vous donnent tout ce dont vous avez besoin pour stocker vos fichiers en toute confidentialité dans le cloud. Si vous souhaitez une confidentialité complète, une gestion avancée du cloud et toutes les fonctionnalités d'Internxt, comme Meet et Mail, l'offre Ultimate 5 To est le meilleur choix pour un contrôle total et une confidentialité maximale.",
     "descriptionWithoutDisocunt": "Vivez une confidentialité numérique complète avec Internxt",
     "cta": "Choisir l'offre"
   },
   "tableSection": {
     "title": "Offres Internxt",
     "valentinesTitle": "Amour sécurisé - ",
-    "hotLabel": "{{discount}}% de réduction",
+    "hotLabel": "{{discount}} % de réduction",
     "planTitles": {
       "header": "Sélectionnez votre offre à vie",
       "individuals": "Offres annuelles",
@@ -65,7 +65,7 @@
       "lifetime": "Offres à vie",
       "business": "Offres entreprise",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
+        "blueText": "50 % de réduction",
         "normalText": "sur toutes nos offres à vie exclusives"
       }
     },
@@ -82,7 +82,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner l'offre"
     },
     "features": {
@@ -93,9 +93,9 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
     }
   },
   "FeaturesSection": {
@@ -178,7 +178,7 @@
         "line2": "et privés"
       },
       "subtitle": {
-        "line1": "La confidentialité et la sécurité sont au cœur de tout ce que nous faisons ; nous ne fondons pas notre activité sur les données ou",
+        "line1": "La confidentialité et la sécurité sont au cœur de tout ce que nous faisons ; nous ne fondons pas notre activité sur les données ou",
         "line2": "la publicité, mais sur la confiance. Nous respectons vos droits et créons des outils formidables autour d'eux, non contre eux."
       },
       "cta": "Notre engagement en matière de confidentialité",
