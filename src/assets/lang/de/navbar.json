@@ -10,32 +10,22 @@
     "getStarted": "Starte jetzt",
     "chooseStorage": "Wählen",
     "checkout": "Jetzt anfordern!",
-    "business": "Geschäftskunden",
-    "solutions": "Lösungen"
+    "business": "Geschäftskunden"
   },
   "products": {
-    "drive": "Internxt Drive",
+    "drive": { "name": "Internxt Drive", "title": "privater cloud speicher"},
     "s3": "Cloud für Unternehmen",
     "webDAV": "Internxt WebDAV",
-    "vpn": "Internxt VPN",
+    "vpn": { "name": "Internxt VPN", "title": "sicheres vpn"},
     "send": "Internxt Send",
     "comingSoon": "Demnächst",
     "new": "Neu",
     "antivirus": "Internxt Antivirus",
     "cleaner": "Internxt Cleaner",
-    "meet": "Internxt Meet",
+    "meet": { "name": "Internxt Meet", "title": "sichere videokonferenzen"},
     "ai": "Internxt AI",
-    "mail": "Internxt Mail",
-    "photos": "Internxt Photos"
-  },
-  "solutions": {
-    "secureCloudStorage": "Sichere Cloud-Speicherung",
-    "lifetimeCloudStorage": "Lebenslange Cloud-Speicherung",
-    "privateCloudStorage": "Private Cloud-Speicherung",
-    "cloudStorageForPhotos": "Cloud-Speicherung für Fotos",
-    "cloudStorageForVideos": "Cloud-Speicherung für Videos",
-    "cloudStorageForBackup": "Cloud-Speicherung für Backups",
-    "cloudNASBackup": "Cloud-Speicherung für NAS"
+    "mail": { "name": "Internxt Mail", "title": "verschlüsselte e-mail"},
+    "photos": { "name": "Internxt Photos", "title": "cloud speicher für fotos"}
   },
   "ourValues": {
     "privacy": "Privatsphäre",
