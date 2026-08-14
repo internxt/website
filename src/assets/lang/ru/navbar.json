@@ -9,8 +9,7 @@
     "chooseStorage": "Xранилище",
     "checkout": "Оформить заказ сейчас!",
     "business": "Для бизнеса",
-    "blackFriday": "Black Friday",
-    "solutions": "Решения"
+    "blackFriday": "Black Friday"
   },
   "ourValues": {
     "openSource": "открытого исходного кода",
@@ -19,30 +18,21 @@
     "certifications": "Сертификаты",
     "about": "О нас"
   },
-  "solutions": {
-    "secureCloudStorage": "Безопасное облачное хранилище",
-    "lifetimeCloudStorage": "Пожизненное облачное хранилище",
-    "privateCloudStorage": "Частное облачное хранилище",
-    "cloudStorageForPhotos": "Облачное хранилище для фотографий",
-    "cloudStorageForVideos": "Облачное хранилище для видео",
-    "cloudStorageForBackup": "Облачное хранилище для резервных копий",
-    "cloudNASBackup": "Облачное хранилище для NAS"
-  },
   "products": {
-    "drive": "Internxt Drive",
+    "drive": { "name": "Internxt Drive" },
     "s3": "Облако для предприятий",
     "webDAV": "Internxt WebDAV",
-    "vpn": "Internxt VPN",
+    "vpn": { "name": "Internxt VPN" },
     "send": "Internxt Send",
     "comingSoon": "В разработке",
     "new": "Новый",
     "antivirus": "Internxt Antivirus",
     "cleaner": "Internxt Cleaner",
-    "meet": "Internxt Meet",
+    "meet": { "name": "Internxt Meet" },
     "ai": "Internxt AI",
     "certifications": "Сертификаты",
-    "mail": "Internxt Mail",
-    "photos": "Internxt Photos"
+    "mail": { "name": "Internxt Mail" },
+    "photos": { "name": "Internxt Photos" }
   },
   "Auth": {
     "SignUp": {

@@ -9,8 +9,7 @@
     "getStarted": "Commencer",
     "chooseStorage": "Choisir stockage",
     "checkout": "Offre de réclamation",
-    "business": "Entreprises",
-    "solutions": "Solutions"
+    "business": "Entreprises"
   },
   "ourValues": {
     "openSource": "Open Source",
@@ -19,29 +18,20 @@
     "certifications": "Certifications",
     "about": "À propos de nous"
   },
-  "solutions": {
-    "secureCloudStorage": "Stockage en nuage sécurisé",
-    "lifetimeCloudStorage": "Stockage en nuage à vie",
-    "privateCloudStorage": "Stockage en nuage privé",
-    "cloudStorageForPhotos": "Stockage en nuage pour photos",
-    "cloudStorageForVideos": "Stockage en nuage pour vidéos",
-    "cloudStorageForBackup": "Stockage en nuage pour sauvegardes",
-    "cloudNASBackup": "Stockage en nuage pour NAS"
-  },
   "products": {
-    "drive": "Internxt Drive",
+    "drive": { "name": "Internxt Drive", "title": "stockage dans un cloud privé"},
     "s3": "Cloud pour entreprises",
     "webDAV": "Internxt WebDAV",
-    "vpn": "Internxt VPN",
+    "vpn": { "name": "Internxt VPN", "title": "vpn sécurisé"},
     "send": "Internxt Send",
     "comingSoon": "Proximité",
     "new": "Nouveau",
     "antivirus": "Internxt Antivirus",
     "cleaner": "Internxt Cleaner",
-    "meet": "Internxt Meet",
+    "meet": { "name": "Internxt Meet", "title": "vidéo privée en ligne"},
     "ai": "Internxt AI",
-    "mail": "Internxt Mail",
-    "photos": "Internxt Photos"
+    "mail": { "name": "Internxt Mail", "title": "e-mail crypté"},
+    "photos": { "name": "Internxt Photos", "title": "stockage de photos en ligne"}
   },
   "Auth": {
     "SignUp": {
