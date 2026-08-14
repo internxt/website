@@ -12,6 +12,7 @@ import { stripeService } from '@/services/stripe.service';
 import { HomeAssistantText } from '@/assets/types/home-assistant';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import ConfigurationSection from '@/components/home-assistant/ConfigurationSection';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 
 interface HomeAssistantProps {
     lang: GetServerSidePropsContext['locale'];
@@ -97,6 +98,12 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
                 textContent={langJson.ThreeCardsSection}
                 bgColor='white'
             />
+
+            <HorizontalScrollableSection
+                textContent={langJson.NextGenSection} 
+                bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+                needsDivider={false}
+                />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
