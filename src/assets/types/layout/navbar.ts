@@ -16,7 +16,6 @@ export interface Links {
   chooseStorage: string;
   checkout: string;
   business: string;
-  solutions: string;
 }
 
 export interface OurValues {
