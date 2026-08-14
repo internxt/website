@@ -82,5 +82,24 @@
       ]
     },
     "features": ["zero-knowledge", "rclone 1.66+", "gestión de !secret", "API de backup de HA 2024.11"]
+  },
+  "NextGenSection": {
+    "title": "¿Por qué elegir Internxt?",
+    "description": "Internxt te devuelve el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, nos aseguramos de que solo tú tengas las llaves de tus datos encriptados y no almacenamos ni vendemos tus datos a terceros. Tomamos todas las medidas para garantizar que tu información permanezca segura.",
+    "cta": "Conócenos mejor",
+    "scrollableSection": {
+      "titles": [
+        "Datos invulnerables e infiltrables",
+        "Seguridad de nueva generación",
+        "Código abierto y transparente",
+        "Verificado independientemente"
+      ],
+      "descriptions": [
+        "No almacenamos contraseñas ni datos de usuarios y todos tus datos están encriptados en tránsito y en reposo. Internxt te pone en control total de tus archivos. Tus datos son tu negocio. Protegerlos es el nuestro.",
+        "Internxt es el único almacenamiento en la nube que encripta automáticamente tus archivos usando criptografía de extremo a extremo y post-cuántica, lo que significa que solo tú puedes acceder a tus datos.",
+        "Estamos orgullosos de lo que hacemos, por lo que nuestro código se hace público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar excepto tus datos.",
+        "Cumplimos completamente con GDPR y somos 100% seguros, pero no te fíes solo de nuestra palabra. Internxt ha sido auditado y verificado independientemente por la empresa líder de pruebas de penetración de Europa, Securitum."
+      ]
+    }
   }
 }

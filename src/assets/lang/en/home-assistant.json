@@ -82,5 +82,24 @@
       ]
     },
     "features": ["zero-knowledge", "rclone 1.66+", "!secret handling", "HA 2024.11 backup API"]
+  },
+  "NextGenSection": {
+    "title": "Why choose Internxt permanent cloud storage?",
+    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
+    "cta": "Get to know us better",
+    "scrollableSection": {
+      "titles": [
+        "Unhackable and unleakable data",
+        "Next-generation security",
+        "Open source and transparent",
+        "Independently verified"
+      ],
+      "descriptions": [
+        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
+        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+      ]
+    }
   }
 }
