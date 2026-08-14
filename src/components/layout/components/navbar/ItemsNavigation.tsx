@@ -13,6 +13,7 @@ interface NavigationLinkProps {
 interface DropdownMenuItem {
   href: string;
   text: string;
+  title?: string;
 }
 
 interface DropdownMenuProps {
@@ -73,11 +74,12 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
       <div className="pointer-events-none absolute left-1/2 top-full z-50 w-max -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
         <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
-          {items.map(({ href, text }) =>
+          {items.map(({ href, text, title }) =>
             isExternalLink(href) ? (
               <a
                 key={text}
                 href={href}
+                title={title || undefined}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
@@ -88,6 +90,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
               <Link
                 key={text}
                 href={href}
+                title={title || undefined}
                 locale={lang}
                 className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
               >
@@ -126,28 +129,13 @@ export const ItemsNavigation = ({
         <DropdownMenu
           label={textContent.links.products}
           items={[
-            { href: '/drive', text: textContent.products.drive },
+            { href: '/drive', text: textContent.products.drive.name, title: textContent.products.drive.title },
             { href: '/antivirus', text: textContent.products.antivirus },
-            { href: '/vpn', text: textContent.products.vpn },
+            { href: '/vpn', text: textContent.products.vpn.name, title: textContent.products.vpn.title },
             { href: '/cleaner', text: textContent.products.cleaner },
-            { href: '/meet', text: textContent.products.meet },
-            { href: '/mail', text: textContent.products.mail },
-            { href: '/photos', text: textContent.products.photos }
-          ]}
-          darkMode={darkMode}
-          lang={lang}
-        />
-
-        <DropdownMenu
-          label={textContent.links.solutions}
-          items={[
-            { href: '/drive', text: textContent.solutions.secureCloudStorage },
-            { href: '/lifetime', text: textContent.solutions.lifetimeCloudStorage },
-            { href: '/private-cloud-storage-solutions', text: textContent.solutions.privateCloudStorage },
-            { href: '/cloud-storage-for-photos', text: textContent.solutions.cloudStorageForPhotos },
-            { href: '/cloud-storage-for-videos', text: textContent.solutions.cloudStorageForVideos },
-            { href: '/cloud-storage-backup-solutions', text: textContent.solutions.cloudStorageForBackup },
-            { href: '/nas', text: textContent.solutions.cloudNASBackup },
+            { href: '/meet', text: textContent.products.meet.name, title: textContent.products.meet.title },
+            { href: '/mail', text: textContent.products.mail.name, title: textContent.products.mail.title },
+            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title }
           ]}
           darkMode={darkMode}
           lang={lang}
