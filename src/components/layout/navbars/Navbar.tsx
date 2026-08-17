@@ -278,90 +278,29 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
-                                <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.drive}</p>
+                                <Link href="/drive" locale={props.lang} title={props.textContent.products.drive.title || undefined } className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.drive.name}</p>
                                 </Link>
 
                                 <Link href="/antivirus" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.products.antivirus}</p>
                                 </Link>
 
-                                <Link href="/vpn" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.vpn}</p>
+                                <Link href="/vpn" locale={props.lang} title={props.textContent.products.vpn.title || undefined } className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.vpn.name}</p>
                                 </Link>
 
                                 <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.products.cleaner}</p>
                                 </Link>
-                                <Link href="/meet" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.meet}</p>
+                                <Link href="/meet" locale={props.lang} title={props.textContent.products.meet.title || undefined } className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.meet.name}</p>
                                 </Link>
-                                 <Link href="/mail" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.mail}</p>
+                                 <Link href="/mail" locale={props.lang} title={props.textContent.products.mail.title || undefined } className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.mail.name}</p>
                                 </Link>
-                                <Link href="/photos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.products.photos}</p>
-                                </Link>
-                                <Link
-                                  href="https://send.internxt.com/"
-                                  locale={props.lang}
-                                  className="flex flex-row space-x-2"
-                                >
-                                  <p>{props.textContent.products.send}</p>
-                                </Link>
-                              </Disclosure.Panel>
-                            </Transition>
-                          </>
-                        )}
-                      </Disclosure>
-
-                      <Disclosure
-                        as="div"
-                        className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
-                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
-                        }`}
-                      >
-                        {({ open }) => (
-                          <>
-                            <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
-                              <span className="flex flex-row">{props.textContent.links.solutions}</span>
-                              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                            </Disclosure.Button>
-                            <Transition
-                              enter="transition duration-200 ease-out"
-                              enterFrom="-translate-y-10 opacity-0"
-                              enterTo="translate-y-0 opacity-100"
-                              leave="transition duration-200 ease-out"
-                            >
-                              <Disclosure.Panel
-                                className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
-                                } space-y-8 p-4`}
-                              >
-                                <Link href="/drive" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.secureCloudStorage}</p>
-                                </Link>
-
-                                <Link href="/lifetime" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.lifetimeCloudStorage}</p>
-                                </Link>
-
-                                <Link href="/private-cloud-storage-solutions" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.privateCloudStorage}</p>
-                                </Link>
-
-                                <Link href="/cloud-storage-for-photos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForPhotos}</p>
-                                </Link>
-                                <Link href="/cloud-storage-for-videos" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForVideos}</p>
-                                </Link>
-                                <Link href="/cloud-storage-backup-solutions" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudStorageForBackup}</p>
-                                </Link>
-                                <Link href="/nas" locale={props.lang} className="flex flex-row space-x-2">
-                                  <p>{props.textContent.solutions.cloudNASBackup}</p>
+                                <Link href="/photos" locale={props.lang} title={props.textContent.products.drive.title || undefined } className="flex flex-row space-x-2">
+                                  <p>{props.textContent.products.photos.name}</p>
                                 </Link>
                               </Disclosure.Panel>
                             </Transition>

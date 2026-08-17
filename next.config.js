@@ -173,6 +173,16 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/cloud-storage-for-photos',
+        destination: '/photos',
+        permanent: true,
+      },
+      {
+        source: '/:lang/cloud-storage-for-photos',
+        destination: '/:lang/photos',
+        permanent: true,
+      },
+      {
         source: '/:lang/virus-scanner',
         destination: '/virus-scanner',
         permanent: false,
