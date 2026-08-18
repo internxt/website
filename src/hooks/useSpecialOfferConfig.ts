@@ -138,6 +138,7 @@ const ALLOWED_PATHS = [
   'alessandro',
   'lomotica',
   'dinamotech',
+  'claridadartificial',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -208,6 +209,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   salvilla: 'es',
   tukaram: 'es',
   xataka: 'es',
+  claridadartificial: 'es',
 
   // fr
   benjamin: 'fr',
@@ -350,6 +352,7 @@ const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'alessandro',
   'lomotica',
   'dinamotech',
+  'claridadartificial',
 ]);
 
 const COUPON_CODES = {
@@ -488,6 +491,7 @@ const COUPON_CODES = {
   alessandro: PromoCodeName.alessandro,
   lomotica: PromoCodeName.lomotica,
   dinamotech: PromoCodeName.dinamotech,
+  claridadartificial: PromoCodeName.claridadartificial,
 };
 
 interface OfferConfig {

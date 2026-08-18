@@ -1,7 +1,6 @@
 interface Root {
   links: Links;
   ourValues: OurValues;
-  solutions: Solutions;
   products: Products;
   Auth: Auth;
 }
@@ -17,7 +16,6 @@ export interface Links {
   chooseStorage: string;
   checkout: string;
   business: string;
-  solutions: string;
 }
 
 export interface OurValues {
@@ -28,30 +26,25 @@ export interface OurValues {
   about: string;
 }
 
-export interface Solutions {
-  secureCloudStorage: string;
-  lifetimeCloudStorage: string;
-  privateCloudStorage: string;
-  cloudStorageForPhotos: string;
-  cloudStorageForVideos: string;
-  cloudStorageForBackup: string;
-  cloudNASBackup: string;
-}
-
 export interface Products {
-  drive: string;
+  drive: ProductProp;
   s3: string;
   webDAV: string;
-  vpn: string;
+  vpn: ProductProp;
   send: string;
   comingSoon: string;
   new: string;
   antivirus: string;
   cleaner: string;
-  meet: string;
+  meet: ProductProp;
   ai: string;
-  mail: string;
-  photos: string;
+  mail: ProductProp;
+  photos: ProductProp;
+}
+
+export interface ProductProp {
+  name: string;
+  title?: string;
 }
 
 export interface Auth {

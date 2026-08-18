@@ -10,32 +10,22 @@
     "chooseStorage": "选择存储",
     "checkout": "现在宣称！",
     "business": "商业",
-    "blackFriday": "Black Friday",
-    "solutions": "解决方案"
+    "blackFriday": "Black Friday"
   },
   "products": {
-    "drive": "Internxt Drive",
+    "drive": { "name": "Internxt Drive" },
     "s3": "企业云",
     "webDAV": "Internxt WebDAV",
-    "vpn": "Internxt VPN",
+    "vpn": { "name": "Internxt VPN" },
     "send": "Internxt Send",
     "comingSoon": "即将推出",
-    "new": "新的",
+    "new": "新",
     "antivirus": "Internxt Antivirus",
     "cleaner": "Internxt Cleaner",
-    "meet": "Internxt Meet",
+    "meet": { "name": "Internxt Meet" },
     "ai": "Internxt AI",
-    "mail": "Internxt Mail",
-    "photos": "Internxt Photos"
-  },
-  "solutions": {
-    "secureCloudStorage": "安全云存储",
-    "lifetimeCloudStorage": "终身云存储",
-    "privateCloudStorage": "私有云存储",
-    "cloudStorageForPhotos": "云存储照片",
-    "cloudStorageForVideos": "云存储视频",
-    "cloudStorageForBackup": "云存储备份",
-    "cloudNASBackup": "云存储NAS"
+    "mail": { "name": "Internxt Mail" },
+    "photos": { "name": "Internxt Photos" }
   },
   "ourValues": {
     "privacy": "隐私",

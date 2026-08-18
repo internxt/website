@@ -695,14 +695,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.features.GDPRCloud}
                     </Link>
                     <Link
-                      href="/cloud-storage-for-photos"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.features.cloudPhotos}
-                    </Link>
-                    <Link
                       href="/cloud-storage-for-videos"
                       locale={lang}
                       passHref
@@ -1702,10 +1694,6 @@ export default function Footer({
 
                       <Link href="/gdpr-cloud-storage" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.GDPRCloud}
-                      </Link>
-
-                      <Link href="/cloud-storage-for-photos" locale={lang} passHref>
-                        {textContent.FooterSection.sections.features.cloudPhotos}
                       </Link>
 
                       <Link href="/cloud-storage-for-videos" locale={lang} passHref>

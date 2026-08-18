@@ -349,6 +349,7 @@ export enum PromoCodeName {
   alessandro = 'ALESSANDRO',
   lomotica = 'LOMOTICA',
   dinamotech = 'DINAMOTECH',
+  claridadartificial = 'CLARIDADARTIFICIAL',
 }
 
 export interface PromoCodeProps {
