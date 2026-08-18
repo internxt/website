@@ -18,7 +18,7 @@ const ConfigurationSection = ({ textContent }: ConfigurationSectionProps): JSX.E
           {textContent.description}
         </p>
         <div className="flex w-full flex-col justify-center gap-6 lg:flex-row lg:items-stretch lg:gap-16">
-              <div className="w-full min-w-0 lg:w-[56%] lg:flex-shrink-0 lg:-ml-6 xl:-ml-12 xl:h-[620px] xl:flex xl:items-center">
+              <div className="w-full min-w-0 lg:w-[56%] lg:flex-shrink-0 lg:-ml-6 lg:h-[560px] lg:flex lg:items-center xl:-ml-12 xl:h-[620px] xl:flex xl:items-center">
             <Image
               src={getImage(`/images/home-assistant/configuration.webp`)}
               alt="configuration-image"
@@ -27,7 +27,7 @@ const ConfigurationSection = ({ textContent }: ConfigurationSectionProps): JSX.E
               className="h-full w-full rounded object-contain"
             />
           </div>
-              <div className="flex w-full min-w-0 flex-col gap-2 lg:flex-1 lg:justify-between lg:gap-4">
+              <div className="flex w-full min-w-0 flex-col gap-2 lg:flex-1 lg:h-[560px] lg:justify-between xl:h-[620px] lg:gap-4">
             {textContent.accordionCard.titles.map((title: string, index: number) => (
               <div key={title} className="ha-config-card border-gray-300 flex flex-col gap-2 rounded-16 border bg-white p-3 text-left lg:gap-4 lg:p-5 xl:gap-6 xl:p-6">
                 <span className="flex flex-row items-center gap-3 text-base font-medium text-primary lg:gap-4 lg:text-xl xl:gap-6 xl:text-2xl">
@@ -54,35 +54,6 @@ const ConfigurationSection = ({ textContent }: ConfigurationSectionProps): JSX.E
           </div>
         </div>
       </div>
-      <style jsx>{`
-          @media (min-width: 1025px) and (max-width: 1380px) {
-          .ha-config-image {
-            height: 560px;
-            display: flex;
-            align-items: center;
-          }
-            .ha-config-right {
-              height: 560px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-            }
-          .ha-config-card {
-            padding: 0.75rem !important;
-            gap: 0.5rem !important;
-          }
-          .ha-config-card h3 {
-            font-size: 1rem !important;
-          }
-          .ha-config-title {
-            font-size: 2.6rem !important;
-          }
-          .ha-config-feature {
-            padding: 0.4rem !important;
-            font-size: 12px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };

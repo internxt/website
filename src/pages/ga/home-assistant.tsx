@@ -8,11 +8,12 @@ import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/home-assistant/HeroSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { HomeAssistantText } from '@/assets/types/home-assistant';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import ConfigurationSection from '@/components/home-assistant/ConfigurationSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import { get3TBPrice } from '@/utils/priceHelper';
 
 interface HomeAssistantProps {
     lang: GetServerSidePropsContext['locale'];
@@ -30,6 +31,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
     const {
         products,
         loadingCards,
+        currency,
         currencyValue,
         coupon: individualCoupon,
         lifetimeCoupon,
@@ -39,6 +41,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
     const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
     const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
     const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+    const price = get3TBPrice(products, decimalDiscount);
 
     const onCheckoutButtonClicked = async (
         priceId: string,
@@ -72,7 +75,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
             <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
-            <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+            <HeroSection textContent={langJson.HeroSection} price={price} currency={currency} percentOff={percentOff} />
 
             <PricingSectionWrapper
                 textContent={langJson.TableSection}
@@ -87,7 +90,9 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 hideBusinessCards
                 hideBusinessSelector
-                popularPlanBySize="5TB"
+                startFromPlan='Individuals'
+                startIndividualPlansFromInterval={Interval.Year}
+                popularPlanBySize="3TB"
                 sectionDetails="bg-white lg:py-20"
                 hideFreeCard
             />

@@ -12,7 +12,7 @@
     "title": "Spazio cloud sicuro per i tuoi **backup di Home Assistant**",
     "description": "Backup esterni automatizzati a conoscenza zero (zero-knowledge). Creato in Europa per il massimo controllo dei dati e della privacy.",
     "subtitle": "Ottieni il {{discount}}% di sconto",
-    "claimDeal": "Ottieni 3 TB a 2,99 €/mese"
+    "claimDeal": "Ottieni 3 TB a {{price}} {{currency}}/mese"
   },
   "TableSection": {
     "title": "Piani Internxt",
