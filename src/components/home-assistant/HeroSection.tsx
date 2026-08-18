@@ -11,31 +11,23 @@ import {
   VideoConference,
 } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { currencyService } from '@/services/currency.service';
-import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
   percentOff: string;
+  price: string;
+  currency: string;
   darkMode?: boolean;
 }
 
 export default function HeroSection({
   textContent,
   percentOff,
+  price,
+  currency,
   darkMode = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
-  const [currency, setCurrency] = useState<string>('€');
-
-  useEffect(() => {
-    currencyService
-      .filterCurrencyByCountry()
-      .then((currency) => {
-        setCurrency(currency.currency);
-      })
-      .catch(() => { });
-  }, []);
 
   const products = [
     { icon: CloudArrowUp, text: textContent.products.drive },
@@ -53,7 +45,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-12 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-16 lg:pl-10 lg:pr-4 xl:gap-20 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-40`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-12 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-16 lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-40`}
       style={{
         background: darkMode
           ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
@@ -109,7 +101,10 @@ export default function HeroSection({
               href={'#billingButtons'}
               className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary-dark"
             >
-              {textContent.claimDeal}
+              {textContent.claimDeal
+              .replace('{{price}}', price)
+              .replace('{{currency}}', currency)
+              }
             </Link>
           </div>
         </div>
