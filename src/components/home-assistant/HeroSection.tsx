@@ -71,8 +71,8 @@ export default function HeroSection({
           ))}
         </div>
         <h1
-          className={`text-[28px] font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-[44px]`}
+          className={`text-[34px] font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-[38px] xl:text-[40px] 2xl:text-[42px] 3xl:text[44px]`}
         >
           <HighlightText text={textContent.title} />
         </h1>
