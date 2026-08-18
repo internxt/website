@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';

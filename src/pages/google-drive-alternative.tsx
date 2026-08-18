@@ -1,7 +1,6 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import cookies from '@/lib/cookies';
 import { GetStaticPropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';

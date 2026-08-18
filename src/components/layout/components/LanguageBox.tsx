@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { CaretDown, Globe } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useState } from 'react';
-import cookies from '@/lib/cookies';
 
 interface LanguageMobileProps {
   singlesDay?: boolean;
@@ -44,7 +43,6 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
   };
 
   function changeLang(lang: string) {
-    cookies.setCookie({ cookieName: 'i18next', cookieValue: lang });
     setCurrentLangText(selectedLang[lang]);
   }
 

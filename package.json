@@ -38,7 +38,6 @@
     "axios": "^1.18.0",
     "browser-image-compression": "^2.0.2",
     "bytes": "^3.1.0",
-    "cookies": "^0.8.0",
     "docx": "^9.5.1",
     "dompurify": "^3.4.13",
     "dotenv": "^8.2.0",

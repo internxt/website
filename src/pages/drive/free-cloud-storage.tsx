@@ -4,7 +4,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';

@@ -4,7 +4,6 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import cookies from '@/lib/cookies';
 import { NASPageText } from '@/assets/types/nas';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';

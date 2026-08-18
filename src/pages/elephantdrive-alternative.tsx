@@ -1,5 +1,4 @@
 import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { GetStaticPropsContext } from 'next';
 

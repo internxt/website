@@ -2,7 +2,6 @@
 import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import usePricing from '@/hooks/usePricing';

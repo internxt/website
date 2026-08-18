@@ -8,7 +8,6 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
-import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';

@@ -2,7 +2,6 @@
 import HeroSection from '@/components/ppc/HeroSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
