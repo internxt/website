@@ -1,14 +1,12 @@
 import Script from 'next/script';
-
 import HeroSection from '@/components/cloud-storage-for-photos/HeroSection';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { CloudStorageForPhotosText } from '@/assets/types/cloud-storage-for-photos';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
@@ -17,7 +15,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
-
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -88,7 +85,11 @@ const CloudStorageBackupSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' },
+        ])}
       </Script>
       <Layout
         title={metatags[0].title}
@@ -130,13 +131,21 @@ const CloudStorageBackupSolutions = ({
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -145,8 +154,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

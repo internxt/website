@@ -1,5 +1,4 @@
 import Script from 'next/script';
-
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/converter-tool/HeroSection';
@@ -10,10 +9,8 @@ import ConversionTableSection from '@/components/converter-tool/ConversionTableS
 import FaqSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
-
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
-
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -59,13 +56,20 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
         <FaqSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Byte converter', url: '/byte-converter' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

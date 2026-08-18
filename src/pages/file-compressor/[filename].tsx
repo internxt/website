@@ -7,7 +7,6 @@ import Footer from '@/components/layout/footers/Footer';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { ConverterSection } from '@/components/file-compressor/ConverterSection';
 import { FeaturesSection } from '@/components/file-compressor/FeaturesSection';
-import CtaSection from '@/components/file-compressor/CtaSection';
 
 const FileConverter = ({
   metatagsDescriptions,

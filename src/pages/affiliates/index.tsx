@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CalendarBlank, ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
-
 import FaqSection from '@/components/shared/sections/FaqSection';
 import FeatureSection from '@/components/affiliates/FeatureSection';
 import { HeroSection } from '@/components/shared/components/HeroSection';
@@ -325,7 +324,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

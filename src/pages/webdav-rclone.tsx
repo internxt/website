@@ -16,64 +16,78 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' },
+        ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
-      <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
-      <HeroSection textContent={langJson.HeroSection} />
+        <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
+        <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
 
-      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
+        <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {langJson.CtaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding=" px-20 py-10"
-        bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
-      />
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {langJson.CtaSection.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {langJson.CtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding=" px-20 py-10"
+          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+        />
 
-      <DownloadCLISection textContent={langJson.DownloadCLISection} />
+        <DownloadCLISection textContent={langJson.DownloadCLISection} />
 
-      <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
+        <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
 
-      <FloatingCtaSectionv2
-        textContent={langJson.CtaSection2}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {langJson.CtaSection2.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {langJson.CtaSection2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding=" px-20 py-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={langJson.CtaSection2}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {langJson.CtaSection2.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {langJson.CtaSection2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding=" px-20 py-10"
+        />
 
-      <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} />
 
-      <Footer textContent={footerLang} lang={'en'} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={'en'}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Internxt Rclone, CLI and WebDAV', url: '/webdav-rclone' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

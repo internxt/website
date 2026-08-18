@@ -1,8 +1,7 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import cookies from '@/lib/cookies';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
@@ -75,7 +74,12 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor="Dropbox"
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -149,15 +153,13 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/dropbox-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

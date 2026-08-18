@@ -6,10 +6,6 @@ import ManageGoogleDataSection from '@/components/what-does-google-know-about-me
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 import { GetServerSidePropsContext } from 'next';
-import RevealY from '@/components/components/RevealY';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
-import Link from 'next/link';
 import CtaSection from '@/components/affiliates/CtaSection';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
@@ -129,7 +125,7 @@ const WhatDoesGoogleKnowAboutMe = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -1,7 +1,6 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
@@ -81,7 +80,12 @@ const DegooComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Degoo'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Degoo'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor={'Degoo'}
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -137,10 +141,16 @@ const DegooComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
               <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
             </div>
           }
@@ -169,15 +179,13 @@ const DegooComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/degoo-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

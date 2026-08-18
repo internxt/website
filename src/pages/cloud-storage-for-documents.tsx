@@ -1,6 +1,6 @@
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-documents';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -14,17 +14,13 @@ import { Check } from '@phosphor-icons/react';
 import SecureAndManageSection from '@/components/cloud-storage-for-documents/SecureAndManageSection';
 import CoreFeaturesSection from '@/components/cloud-storage-for-documents/CoreFeaturesSection';
 
-
-
-
 interface CloudStorageForDocumentsProps {
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudStorageForDocumentsText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
 }
-
 
 const CloudStorageForDocuments = ({
   metatagsDescription,
@@ -37,44 +33,44 @@ const CloudStorageForDocuments = ({
   const lang = locale as string;
 
   return (
-      <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''}>
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-        <AnimatedHeroSection
-              textComponent={
-                  <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
-                    <h1 className="w-[323px] text-30 font-semibold leading-tight text-white lg:w-full lg:text-5xl">
-                      {textContent.HeroSection.title}
-                    </h1>
-                    <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
-                      {textContent.HeroSection.features?.map((feat) => (
-                        <div key={feat} className="flex flex-row gap-2">
-                          <Check className="hidden pt-2 text-green-1 lg:flex lg:pt-0" weight="bold" size={24} />
-                          <Check className="flex text-green-1 lg:hidden lg:pt-0" weight="bold" size={20} />
-                          <p className="text-left text-sm font-medium text-white lg:text-lg lg:font-semibold ">{feat}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
-                      {textContent.HeroSection.subtitle}{' '}
-                    </p>
-                    <Link
-                      href={'/pricing'}
-                      className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
-                    >
-                      {textContent.HeroSection.cta}
-                    </Link>
-                  </div>
-              }
-              width="w-[580px] "
-              bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
-            /> 
+      <AnimatedHeroSection
+        textComponent={
+          <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
+            <h1 className="w-[323px] text-30 font-semibold leading-tight text-white lg:w-full lg:text-5xl">
+              {textContent.HeroSection.title}
+            </h1>
+            <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
+              {textContent.HeroSection.features?.map((feat) => (
+                <div key={feat} className="flex flex-row gap-2">
+                  <Check className="hidden pt-2 text-green-1 lg:flex lg:pt-0" weight="bold" size={24} />
+                  <Check className="flex text-green-1 lg:hidden lg:pt-0" weight="bold" size={20} />
+                  <p className="text-left text-sm font-medium text-white lg:text-lg lg:font-semibold ">{feat}</p>
+                </div>
+              ))}
+            </div>
+            <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
+              {textContent.HeroSection.subtitle}{' '}
+            </p>
+            <Link
+              href={'/pricing'}
+              className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+            >
+              {textContent.HeroSection.cta}
+            </Link>
+          </div>
+        }
+        width="w-[580px] "
+        bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+      />
 
       <FeatureSection textContent={textContent.FeaturesSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
         customText={
-          <div className="w-[302px] items-center justify-center  text-center lg:w-full flex flex-col gap-4">
+          <div className="flex w-[302px] flex-col  items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSection.title}</h2>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection.description}</p>
           </div>
@@ -87,7 +83,7 @@ const CloudStorageForDocuments = ({
       />
 
       <CoreFeaturesSection textContent={textContent.CoreFeatures} />
-      
+
       <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
       <HorizontalScrollableSection
@@ -101,7 +97,7 @@ const CloudStorageForDocuments = ({
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
         customText={
-          <div className="w-[302px] items-center justify-center text-center lg:w-full gap-4 flex flex-col">
+          <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSectionV2.title}</h2>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
           </div>
@@ -111,7 +107,7 @@ const CloudStorageForDocuments = ({
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
       />
-     
+
       <FAQSection
         textContent={{
           title: textContent.SemanticAccordion.title,
@@ -122,13 +118,12 @@ const CloudStorageForDocuments = ({
         needsH2
       />
 
-
-      <Footer textContent={footerText} lang={lang}/>
+      <Footer textContent={footerText} lang={lang} />
     </Layout>
   );
-}
+};
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

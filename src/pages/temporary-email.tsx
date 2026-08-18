@@ -16,7 +16,6 @@ import FeaturesBanner from '@/components/banners/FeaturesBanner';
 import { setup } from '@/lib/csrf';
 import { GetServerSidePropsContext } from 'next';
 
-
 const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
   const dialogAction = useGlobalDialog();
 
@@ -47,7 +46,15 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
 
         <QASection textContent={textContent.QASection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Temp email', url: '/temporary-email' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Temp email', url: '/temporary-email' },
+          ]}
+        />
       </Layout>
     </>
   );
