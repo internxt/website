@@ -33,7 +33,6 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
         currencyValue,
         coupon: individualCoupon,
         lifetimeCoupon,
-        // lifetimeCoupons,
     } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
     const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
@@ -74,6 +73,13 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
 
             <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
+            <ConfigurationSection textContent={langJson.ConfigurationSection} />
+
+            <ThreeCardsIconsSection
+                textContent={langJson.ThreeCardsSection}
+                bgColor='white'
+            />
+
             <ComparativePricingSection
                 textContent={langJson.TableSection}
                 products={products}
@@ -85,14 +91,6 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
                     lifetime: decimalDiscountForLifetime,
                 }}
                 targetStorage='5TB'
-            />
-            
-
-            <ConfigurationSection textContent={langJson.ConfigurationSection} />
-
-            <ThreeCardsIconsSection
-                textContent={langJson.ThreeCardsSection}
-                bgColor='white'
             />
 
             <HorizontalScrollableSection
