@@ -139,6 +139,7 @@ export const ALLOWED_PATHS = [
   'lomotica',
   'dinamotech',
   'claridadartificial',
+  'thelinuxexp',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -176,6 +177,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   wpcdrive: 'en',
   wpunas: 'en',
   worldcup: 'en',
+  thelinuxexp: 'en',
 
   // de
   aimentors: 'de',
@@ -353,6 +355,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'lomotica',
   'dinamotech',
   'claridadartificial',
+  'thelinuxexp',
 ]);
 
 export const COUPON_CODES = {
@@ -492,6 +495,7 @@ export const COUPON_CODES = {
   lomotica: PromoCodeName.lomotica,
   dinamotech: PromoCodeName.dinamotech,
   claridadartificial: PromoCodeName.claridadartificial,
+  thelinuxexp: PromoCodeName.thelinuxexp,
 };
 
 interface OfferConfig {
