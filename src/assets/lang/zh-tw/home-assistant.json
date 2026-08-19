@@ -12,7 +12,7 @@
     "title": "為您的 **Home Assistant 備份** 提供安全的雲端儲存空間",
     "description": "自動化的零知識 (Zero-Knowledge) 異地備份。源自歐洲，專為最大化隱私與數據控制而打造。",
     "subtitle": "獲取 {{discount}}% 折扣",
-    "claimDeal": "只需 {{price}} {{currency}}/月 即可獲得 3 TB"
+    "claimDeal": "領取優惠"
   },
   "TableSection": {
     "title": "Internxt 方案",

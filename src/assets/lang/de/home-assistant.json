@@ -12,7 +12,7 @@
     "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant-Backups**",
     "description": "Automatisierte Offsite-Backups nach dem Zero-Knowledge-Prinzip. Entwickelt in Europa für maximale Privatsphäre und Datenkontrolle.",
     "subtitle": "Holen Sie sich {{discount}}% Rabatt",
-    "claimDeal": "Holen Sie sich 3 TB für {{price}} {{currency}}/Monat"
+    "claimDeal": "Angebot sichern"
   },
   "TableSection": {
     "title": "Internxt-Tarife",

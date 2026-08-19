@@ -16,16 +16,12 @@ import { HighlightText } from '../components/HighlightText';
 interface HeroSectionForPartnerProps {
   textContent: any;
   percentOff: string;
-  price: string;
-  currency: string;
   darkMode?: boolean;
 }
 
 export default function HeroSection({
   textContent,
   percentOff,
-  price,
-  currency,
   darkMode = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
 
@@ -101,10 +97,7 @@ export default function HeroSection({
               href={'#billingButtons'}
               className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary-dark"
             >
-              {textContent.claimDeal
-              .replace('{{price}}', price)
-              .replace('{{currency}}', currency)
-              }
+              {textContent.claimDeal}
             </Link>
           </div>
         </div>
