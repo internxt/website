@@ -7,12 +7,12 @@ import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/home-assistant/HeroSection';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { HomeAssistantText } from '@/assets/types/home-assistant';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import ConfigurationSection from '@/components/home-assistant/ConfigurationSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import ComparativePricingSection from '@/components/shared/pricing/ComparativePricingSection';
 
 interface HomeAssistantProps {
     lang: GetServerSidePropsContext['locale'];
@@ -33,7 +33,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
         currencyValue,
         coupon: individualCoupon,
         lifetimeCoupon,
-        lifetimeCoupons,
+        // lifetimeCoupons,
     } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
     const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
@@ -74,24 +74,19 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
 
             <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-            <PricingSectionWrapper
+            <ComparativePricingSection
                 textContent={langJson.TableSection}
+                products={products}
+                loadingCards={loadingCards}
+                lang={locale}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
                 decimalDiscount={{
                     individuals: decimalDiscount,
                     lifetime: decimalDiscountForLifetime,
                 }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={locale}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
-                popularPlanBySize="5TB"
-                onlyUltimatePlan
-                sectionDetails="bg-white lg:py-20"
-                hideFreeCard
+                targetStorage='5TB'
             />
+            
 
             <ConfigurationSection textContent={langJson.ConfigurationSection} />
 
