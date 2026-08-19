@@ -350,6 +350,7 @@ export enum PromoCodeName {
   lomotica = 'LOMOTICA',
   dinamotech = 'DINAMOTECH',
   claridadartificial = 'CLARIDADARTIFICIAL',
+  thelinuxexp = 'THELINUXEXP',
 }
 
 export interface PromoCodeProps {
