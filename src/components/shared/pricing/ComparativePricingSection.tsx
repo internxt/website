@@ -36,14 +36,18 @@ const HotLabel = ({
     return null;
   }
 
+  const labelColorClass = isValentinesMode
+    ? 'flex gap-0.5 bg-pink-10 text-pink-80'
+    : 'bg-neutral-37 text-primary';
+
+  const darkModeLabelClass = darkMode
+    ? 'bg-purple-100 text-purple-8'
+    : labelColorClass;
+
   return (
     <span
       className={`flex items-center justify-center rounded-sm ${
-        isValentinesMode
-          ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-          : darkMode
-          ? 'bg-purple-100 text-purple-8'
-          : 'bg-neutral-37 text-primary'
+        isValentinesMode ? labelColorClass : darkModeLabelClass
       } px-2 py-0.5 text-lg font-semibold lg:text-xl`}
     >
       {isValentinesMode ? textContent.valentinesTitle : ''}
