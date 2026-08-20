@@ -15,8 +15,8 @@ const SignUpBanner = ({
 
   return (
     <section className="flex h-auto w-full flex-col overflow-hidden rounded-16 bg-gradient-to-br from-blue-20 to-white px-4 py-8 md:min-h-[400px] md:flex-row md:items-center md:px-0 md:py-10 lg:min-h-[330px] lg:max-w-[1000px] lg-xl:max-w-[1075px] 2xl:max-w-[1250px]">
-      <div className="flex w-full min-w-0 flex-col items-center justify-center md:w-max md:flex-row">
-        <div className="flex w-full min-w-0 flex-col items-center justify-center space-y-6 md:ml-11 md:w-[600px] md:max-w-full md:items-start md:space-y-8 lg:w-[600px]">
+      <div className="flex w-full min-w-0 flex-col items-center justify-center md:w-full md:flex-row">
+        <div className="flex w-full min-w-0 flex-col items-center justify-center space-y-6 md:ml-11 md:w-[600px] md:max-w-full md:shrink-0 md:items-start md:space-y-8 lg:w-[600px]">
           <div className="w-full text-center md:text-left">
             <p className="text-30 font-semibold leading-tight hyphens-auto break-words md:text-3xl">
               {changeTextOrder ? (
@@ -37,8 +37,8 @@ const SignUpBanner = ({
         </div>
 
         {/* Imagen oculta en móvil, visible desde md */}
-        <div className="relative hidden shrink-0 self-center md:flex md:items-center">
-          <div className="relative left-20 flex flex-col object-contain pt-10">
+        <div className="relative hidden min-w-0 flex-1 self-center md:flex md:items-center">
+          <div className="relative left-20 flex w-full min-w-0 flex-col object-contain pt-10">
             <Image
               src={getImage('/banners/components_for_banners/Grid.webp')}
               width={527}
@@ -46,8 +46,7 @@ const SignUpBanner = ({
               draggable="false"
               quality={100}
               loading="eager"
-              className="object-contain"
-              layout="intrinsic"
+              className="h-auto w-full max-w-[527px] object-contain"
               alt="Internxt Grid"
             />
           </div>
