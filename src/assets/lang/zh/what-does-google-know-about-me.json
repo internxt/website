@@ -1,267 +1,267 @@
 {
-  "HeroSection": {
-    "mainTitle": "What Does Google Know About Me?",
-    "section1": {
-      "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
-      "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
+    "HeroSection": {
+      "mainTitle": "Google 了解我多少信息？",
+      "section1": {
+        "description": "隐私组织对 Google 收集个人数据表示警惕，每个人也都听说过 Google 的诸多侵犯隐私行为。",
+        "footer": "Google 收集个人信息并通过 Chrome、Google 搜索、Google Play 应用、Google 地图、YouTube 等跟踪用户，这早已不是秘密。通过调整 Google 控制和设置，阻止 Google 访问您的数据。"
+      },
+      "section2": {
+        "title": "根据 Google 活动记录，Google 了解我哪些信息？",
+        "bulletedList": {
+          "title": "当您在 Google 上搜索时，他们会收集以下所有数据：",
+          "list": [
+            "个人信息：您的姓名、电话号码、性别、出生日期",
+            "您的电子邮件地址",
+            "您的居住地",
+            " your 工作地点",
+            "您的兴趣",
+            "您搜索的内容",
+            "您访问的网站",
+            "您观看的视频",
+            "您点击或点击的广告",
+            "您的位置信息",
+            "您在世界各地去过的地点",
+            "设备信息",
+            "IP 地址和 Cookie 数据",
+            "您的 YouTube 搜索历史记录和最近观看的视频",
+            "您与 Google 助理互动的内容（包括通过智能音箱）"
+          ]
+        }
+      },
+      "section3": {
+        "title": "Google 为什么要收集您的数据？",
+        "description": "简而言之，这是一种剥削形式。Google 的动机是投放精准广告并“个性化”您使用其服务的体验。让 Google 收集所有这些信息，就等于允许成千上万的广告商基于您的敏感个人数据竞标向您展示广告。"
+      },
+      "footer": {
+        "line1": "除了您之外，参与其中的每个人都从您的信息中获益。",
+        "line2": "您才是产品。"
+      }
     },
-    "section2": {
-      "title": "What does Google know about me based on Google activity?",
-      "bulletedList": {
-        "title": "When you search on Google, they collect all the following data:",
-        "list": [
-          "Personal information: Your name, phone number, gender, date of birth",
-          "Your email addresses",
-          "Where you live",
-          "Where you work",
-          "Your interests",
-          "Things you search for",
-          "Websites you visit",
-          "Videos you watch",
-          "Ads you click on or tap",
-          "Your location",
-          "Places you've visited around the world",
-          "Device information",
-          "IP address and cookie data",
-          "Your YouTube search history and recently watched videos",
-          "What you've said to the Google Assistant, including via smart speakers"
+    "CtaSection": {
+      "title": "掌控您的数据",
+      "description": "选择保护您数据而不是将数据变现的服务。",
+      "cta": "切换到 Internxt"
+    },
+    "WhatGoogleKnowsSection": {
+      "title": "探索 Google 了解您的哪些信息",
+      "description": "Google 主要从您的 Google 活动历史记录中收集大量关于您的信息，但出于各种法律原因，他们必须将这些信息提供给您。要了解他们到底收集了多少数据以及具体有哪些数据，您必须打开 Google 设置并深入挖掘一下。",
+      "section1": {
+        "title": "查找存储在您 Google 账号中的所有数据摘要",
+        "numberedList": [
+          "登录您的 Google 账号",
+          "在导航面板上，选择“数据和隐私”或选择“隐私和个性化”标签",
+          "在那里，您将能够查看来自您使用的 Google 应用获取的数据以及从 Google 服务保存的内容"
+        ],
+        "footer": "您还可以在控制面板的“您做过的事情和去过的地点”下找到 Google 每个主要服务的名称，以查看每个具体服务的数据。您还可以选择每个服务旁边的右箭号来管理和更改设置。"
+      },
+      "section2": {
+        "title": "Google 网络与应用活动记录",
+        "description": [
+          "在位于“活动控制”下的 [我的活动](https://myactivity.google.com/myactivity) 中，您将能够看到进行的每一次搜索以及访问过的网站（感谢 Google Analytics）。",
+          "如果您曾经使用过 Google 应用，该数据也会显示。您的所有 Google 活动历史记录均按日期、时间和使用的应用进行显示。"
+        ]
+      },
+      "section3": {
+        "title": "Google 位置记录",
+        "description": [
+          "每次您留下评价或使用位置服务时，您的位置隐私都会受到影响。在 [此处](https://maps.google.com/locationhistory) 查找您的 Google 位置记录和 Google 地图时间轴。",
+          "Google 的位置历史记录页面提供了您去过地点的完整列表（可能保存在 Google 地图中）。还有 Google 地图的“时间轴”，地图将显示 Google 知道您去过的所有区域。"
+        ]
+      },
+      "section4": {
+        "title": "YouTube 历史记录",
+        "description": [
+          "Google 还会保留您的 YouTube 搜索历史记录、观看视频的日期以及用于查看内容的设备。",
+          "登录您的 Google 账号并在 [此处](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1) 查看：选择“YouTube 观看和搜索历史记录”并将其设置为每 3 个月或 6 个月自动删除，或者选择完全不保存任何数据的选项。"
+        ]
+      },
+      "section5": {
+        "title": "您与他人共享的 Google 信息",
+        "description": "如果您想探索他人可见的个人资料和位置共享信息，可以通过点击下面显示的相应标签来实现。在其中您还可以编辑这些信息并调整权限。"
+      },
+      "section6": {
+        "title": "从 Google 服务和第三方应用保存的内容",
+        "description": [
+          "当您安装第三方（非 Google）应用和扩展程序时，许多应用会提供 Google 登录选项以直接使用您的 Google 账号登录简化流程，这是他们访问这些应用数据的方式之一。",
+          "登录您的 Google 账号，并在“您使用的应用和服务的数据”部分下 [发现所有正在访问您 Google 数据的应用和扩展程序](https://security.google.com/settings/security/permissions)。在那里，您会找到服务和第三方应用的摘要，以及浏览和限制数据的设置。"
+        ]
+      },
+      "section7": {
+        "title": "Google Chrome Cookie 和书签",
+        "description": [
+          "[Web Cookie](https://blog.internxt.com/web-cookies-explained/) 是计算机接收的数据集，包含旨在使您访问的网站更加个性化的信息。Cookie 通常用于识别某人何时访问网站并记录此活动。",
+          "在 Google Chrome 中，您可以通过 chrome://settings/cookies 检查设置，以删除现有 Cookie、允许或阻止所有 Cookie 以及设置网站的 Cookie 偏好。您可以允许所有 Cookie、阻止第三方 Cookie、清除已打开窗口中的 Cookie、阻止所有 Cookie（推荐），甚至选择哪些网页绝不允许存储 Cookie。",
+          "此外，Google Chrome 还具有无痕模式，可以在您关闭已打开的窗口后删除浏览历史记录并清除 Cookie。"
+        ]
+      },
+      "section8": {
+        "title": "将您的所有数据导出 Google",
+        "description": "您可以通过找到“下载或删除您的数据”标签并选择所需的具体操作，导出并删除 Google 账号保存的数据。然后，您可以按照以下说明选择要导出或删除的数据。",
+        "numberedList": [
+          {
+            "title": "选择要包含的数据",
+            "description": "您可以选择要导出的所有数据以及来自哪些平台的数据。"
+          },
+          {
+            "title": "选择文件类型、频率和目的地",
+            "description": "选择文件类型、导出文件的频率以及目的地（电子邮件、Internxt、Dropbox、OneDrive、Box 或 Google Drive）。"
+          },
+          {
+            "title": "创建导出",
+            "description": "在这最后一步中，您可以检查所选数据项的数量（如访问日志活动、搜索贡献或您的活动记录）以及可用的截止日期。"
+          }
         ]
       }
     },
-    "section3": {
-      "title": "Why does Google collect your data?",
-      "description": "In short, it's a form of exploitation. Google’s motivation is to target ads and ‘personalize’ your experience with their services. By giving up your data, you are allowing hundreds of thousands of advertisers to bid on displaying you their adverts based on your sensitive personal data by letting Google collect all of this information. "
+    "CtaSection1": {
+      "title": "受够了被追踪？",
+      "description": "摆脱 Google，使用 Internxt 找回您的自由。",
+      "cta": "获取 Internxt"
     },
-    "footer": {
-      "line1": "Everyone involved benefits from your information except for you.",
-      "line2": "You are the product."
-    }
-  },
-  "CtaSection": {
-    "title": "Own your data",
-    "description": "Choose a service that protects your data instead of monetizing it.",
-    "cta": "Switch to Internxt"
-  },
-  "WhatGoogleKnowsSection": {
-    "title": "Explore what Google knows about you",
-    "description": "Google collects a ton of information on you primarily from your Google activity history, but they must make it available to you for various legal reasons. To understand just how much they collect and what data specifically they have on you, you must open your Google settings and dig a little.",
-    "section1": {
-      "title": "Find a summary of all the data stored in your Google Account",
-      "numberedList": [
-        "Log in to your Google Account",
-        "On the navigation panel, select “Data & privacy” or select the tab ‘Privacy & personalization.’",
-        "There, you will be able to view data from acquired by Google apps you use and the content saved from Google services"
+    "ManageGoogleDataSection": {
+      "title": "删除您的 Google 数据并调整您的 Google 隐私设置",
+      "description": "既然您已经了解了自己的 Google 活动历史记录，是时候从源头上阻止他们收集所有这些个人数据了。以下说明将帮助您编辑隐私设置、选择退出部分数据收集，并限制 Google 存储的个人信息量。",
+      "section1": {
+        "title": "删除 Google 网络与应用活动记录",
+        "description": [
+          "您可能会对 Google 保存的信息量感到惊讶：Google Pay 信息、YouTube 频道订阅、YouTube“不感兴趣”反馈、YouTube 调查问卷答案、YouTube 评论、YouTube 评论的点赞和踩、YouTube 购买活动、Google Word Coach、Google 调查答案、兴趣和通知、Google Play 图书馆、新闻偏好、数据归档历史记录、产品价格跟踪等。",
+          "通过选择“网络与应用活动记录”，您可以点击页面中间的“删除”按钮来删除您的活动，选择：过去一小时、过去一天、所有时间或自定义范围。在“网络与应用活动记录”页面中，您还可以通过选择“保存活动记录”然后点击“关闭”来禁用未来的数据收集。"
+        ]
+      },
+      "section2": {
+        "title": "禁用并删除 Google 位置记录",
+        "description": "位置记录可能是 Google 收集的最令人担忧的数据。您可以点击 Google“位置记录”来禁用跟踪并开启自动删除，以清除之前保存的任何位置数据。",
+        "numberedList": [
+          "前往“位置记录”",
+          "选择“关闭”",
+          "在页面底部的“自动删除”下，选择“删除保留时间超过 3 个月的活动记录”",
+          "选择您偏好的选项，然后点击“下一步”保存您的设置并清除较旧的位置数据"
+        ]
+      },
+      "section3": {
+        "title": "禁用并删除 YouTube 历史记录",
+        "description": "您是 YouTube 的忠实粉丝吗？您可以通过在“控制”中选择“YouTube 历史记录”并点击“关闭”来删除您的 YouTube 历史记录并禁用后续的历史记录收集。您还应该开启页面底部的自动删除。"
+      },
+      "section4": {
+        "title": "删除并禁用 Google Fit 数据",
+        "description": [
+          "您拥有连接到 Google Fit 的设备吗？虽然这有助于跟踪减肥和运动，但 Fit 收集了大量不应该保存在网络上的个人健康信息。",
+          "通过选择“管理 Google Fit 隐私”并取消选中您感到不适的任何选项，调整并禁用 Fit 的数据收集权限，或者彻底关闭 Fit。"
+        ]
+      },
+      "section5": {
+        "title": "管理 Google 电子邮件偏好设置",
+        "description": "厌倦了来自 Google 的定向电子邮件（如价格提醒和旅行提示）？通过点击“来自 Google 服务的电子邮件”标签下的“管理电子邮件偏好设置”来调整您的电子邮件设置并将其关闭。"
+      },
+      "section6": {
+        "title": "Google 广告个性化",
+        "description": [
+          "您可以在 [“我的广告中心”](http://www.google.com/settings/ads/) 的“个性化广告”下查看 Google 了解您的哪些信息，在那里您可以找到有关您的年龄范围、语言、教育程度等信息。您还可以通过点击“我的广告中心”页面右上角的按钮选择关闭所有个性化广告。",
+          "或者，您可以选择自定义个性化广告或进一步管理广告隐私设置，但只要启用了个性化广告，Google 仍会与广告商共享您的部分信息。"
+        ]
+      },
+      "section7": {
+        "title": "移除第三方对您 Google 数据的访问权限",
+        "description": [
+          "当您将 Google 账号连接到第三方账号时，第三方账号有能力从 Google 提取信息。事实上，Google 每天传输我们的个人数据 700 亿次。您应该检查哪些公司可以访问您的数据并管理隐私设置。",
+          "某些第三方账号可能不允许您直接取消第三方账号与 Google 账号的关联，因此要管理这些账号，您必须在这些服务网站上检查设置选项。",
+          "要禁用第三方对单个应用和服务的访问权限，请向下滚动隐私页面并找到写有“具有账号访问权限的第三方应用”的标签。选择它，您将在那里找到哪些第三方可以访问您的账号并管理设置。点击您想要编辑权限的服务，然后选择禁用访问的选项。"
+        ]
+      },
+      "section8": {
+        "title": "从 Google 搜索中移除您的个人数据",
+        "description": "如果您不希望在有人搜索您时，您的个人 Google 账号信息出现在 Google 搜索中，只需找到“搜索中的个人结果”标签，点击它，然后选择开关滑块以关闭搜索是否可以根据您 Google 账号中的信息向您显示个人结果。"
+      },
+      "section9": {
+        "title": "如何删除 Google 账号",
+        "description": [
+          "如果您受够了、决定完全停用 Google 并且只想彻底退出，可以通过滚动到隐私页面的底部，在“更多选项”下选择“删除您的 Google 账号”。",
+          "只需按照提示进行操作即可。请确保您已准备好删除所有信息，因为一旦完成此操作，将无法撤销。"
+        ]
+      }
+    },
+    "ToolsSection": {
+      "title": "Internxt 的其他隐私资源",
+      "description": [
+        "想了解更多关于在网络上保护数据的信息吗？Google 并不是唯一收集您个人信息的公司。请访问我们的 [网络安全意识](https://internxt.com/cyber-awareness) 页面，获取大量最佳实践和策略，使在线浏览更安全、更私密。"
       ],
-      "footer": "You will also find the name of each of Google’s primary services in your dashboard under ‘Things you’ve done and places you’ve been’ to see data for each specific service. You may also select the right-pointing arrow next to each service to manage and change settings."
-    },
-    "section2": {
-      "title": "Google Web & App Activity",
-      "description": [
-        "In [My Activity](https://myactivity.google.com/myactivity), located under ‘History settings’ you will be able to see every search made and the websites you've visited (thanks to Google Analytics).",
-        "If you've ever used a Google app, that data will appear as well. All of your Google activity history is displayed by date, hour, and app used."
-      ]
-    },
-    "section3": {
-      "title": "Google Location History",
-      "description": [
-        "Your location privacy is compromised every time you leave a review or access a location service. Find your Google Location History and Google Maps Timeline [here](https://maps.google.com/locationhistory).",
-        "Google's location history page offers a complete list of where you've been, which you may have saved in Google Maps (specifically found in ‘Location History’). There is also Google ‘Maps Timeline,’ and the map will display all the areas Google knows you've visited."
-      ]
-    },
-    "section4": {
-      "title": "YouTube History",
-      "description": [
-        "Google also keeps a history of your YouTube searches, the date when you watched the video, and the device you used to view the content.",
-        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
-      ]
-    },
-    "section5": {
-      "title": "Google info you share with others",
-      "description": "If you would like to explore the personal profile and location-sharing information made viewable to others, you can do so by clicking the respective tabs shown below. There you can also edit this information and adjust permissions."
-    },
-    "section6": {
-      "title": "Content saved from Google services and third-party apps",
-      "description": [
-        "When you install third-party (non-Google) apps and extensions, many give you a Google sign in option to log in directly with your Google account to facilitate the process, this is one of the ways they access the data of those apps.",
-        "Log into your Google account and [discover all the apps and extensions that are accessing your Google data](https://security.google.com/settings/security/permissions) under the section ‘Data from apps and services you use.’ There you’ll find a summary of services and third-party apps, as well as settings to browse and restrict your data."
-      ]
-    },
-    "section7": {
-      "title": "Google Chrome cookies and bookmarks",
-      "description": [
-        "[Web cookies](https://blog.internxt.com/web-cookies-explained/) are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
-        "In Google Chrome, you can check settings at chrome://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
-        "Also, Google Chrome also has an Incognito mode that deletes your browser history and clears cookies after you close the open windows."
-      ]
-    },
-    "section8": {
-      "title": "Export all of your data out of Google",
-      "description": "You can export and delete data saved by your Google account by finding the ‘Download or delete your data’ tab and selecting the necessary action. Then you can choose what data to export or delete by following the direction below.",
-      "numberedList": [
+      "tools": [
         {
-          "title": "Select the data to include",
-          "description": "You can select all the data you want to export and from which platforms."
+          "url": "/images/temp-email/password-checker.svg",
+          "UrlRedirectName": "password-checker",
+          "title": "免费密码强度检查器",
+          "width": 125,
+          "description": "立即检查"
         },
         {
-          "title": "Choose file type, frequency and destination",
-          "description": "Choose the type of file, the frequency of exporting the files and the destination (email, Internxt, Dropbox, OneDrive, Box, or Google Drive)"
+          "url": "/images/temp-email/virus-scanner.svg",
+          "UrlRedirectName": "virus-scanner",
+          "title": "免费病毒扫描程序",
+          "width": 105,
+          "description": "立即扫描"
         },
         {
-          "title": "Create export",
-          "description": "In this final step, you can check the number of data items selected (as the access log activity, search contributions, or your activity) and the date until which it will be available."
+          "url": "/images/temp-email/byte-converter.svg",
+          "UrlRedirectName": "byte-converter",
+          "title": "免费字节转换器",
+          "width": 95,
+          "description": "立即转换"
+        },
+        {
+          "url": "/images/temp-email/temporary-email.svg",
+          "UrlRedirectName": "temporary-email",
+          "title": "临时电子邮件",
+          "width": 95,
+          "description": "立即发送邮件"
         }
       ]
-    }
-  },
-  "CtaSection1": {
-    "title": "Done being tracked?",
-    "description": "Give Google the slip and take back your freedom with Internxt.",
-    "cta": "Join Internxt"
-  },
-  "ManageGoogleDataSection": {
-    "title": "Delete your Google data and adjust your Google privacy settings",
-    "description": "Now that you know your Google activity history, it’s time to stop them from gathering all that personal data in the first place. Below are instructions to help you edit your privacy settings, opt out of some data collection, and limit the amount of your personal info Google stores.",
-    "section1": {
-      "title": "Delete Google Web & App Activity",
-      "description": [
-        "You’d be surprised at how much information Google saves: Google Pay information, YouTube channel subscriptions, YouTube 'not interested' feedback, YouTube survey answers, comments on YouTube, comment likes and dislikes on YouTube, YouTube purchase activity, Google Word Coach, Google survey answers, interests and notifications, Google Play library, news preferences, data archive history, product price tracking, and more.",
-        "By selecting ‘Web & App Activity’ you can delete your activity by clicking on the ‘Delete’ button in the middle of the page selecting: Last hour, Last day, Always, or Custom range. In the Web & App Activity’ page you can also disable future data collection by selecting “Saving activity’ and then clicking ‘Turn off’."
-      ]
     },
-    "section2": {
-      "title": "Disable and delete Google Location History",
-      "description": "Location history may be the scariest data Google collects. You can click on Google location ‘Location History’ to disable tracking and turn on auto-delete to remove any previous saved location data.",
-      "numberedList": [
-        "Go to ‘Location History’",
-        "Select ‘Turn off’",
-        "On the bottom of the page, under ‘Auto-delete’, choose ‘Delete activity older that 3 months’",
-        "Select your preferred options, then click ‘Next’ to save your setting and erase older location data"
-      ]
+    "CtaSection2": {
+      "title": "值得您信赖的云存储",
+      "description": "Internxt 的工作是保护您的数据，而不是利用数据牟利。",
+      "cta": "创建免费账号"
     },
-    "section3": {
-      "title": "Disable and delete Youtube History",
-      "description": "Are you a big YouTube fan? You can delete your Youtube history and disable further history collection by selecting ‘YouTube History’ in ‘Controls’ and clicking on ‘Turn Off.’ You should also enable auto-delete at the bottom of the page."
-    },
-    "section4": {
-      "title": "Delete and disable Google Fit data",
-      "description": [
-        "Do you own a device connected to Google Fit? While this is helpful for tracking weight loss and exercise, Fit gathers a ton of personal health information that probably should not be kept online. ",
-        "Adjust and disable Fit’s data-collecting permissions by selecting ‘Manage Google Fit privacy’ and deselect any options you’re uncomfortable with–or turn off Fit completely."
-      ]
-    },
-    "section5": {
-      "title": "Manage Google email preferences",
-      "description": "Sick of targeted emails from Google like price alerts and travel tips? Turn them off by adjusting your email settings by clicking ‘Manage email preferences’ under the “Emails from Google services’ tab."
-    },
-    "section6": {
-      "title": "Google Ads personalization",
-      "description": [
-        "You can check what Google knows about you under ‘Personalized ads’ in ['My Ad Center’](http://www.google.com/settings/ads/), where you can find information about your age range, languages, education and so on. You also have the option to turn-off all personalized ads by clicking a button located in the upper-right side of the ‘My Ad Center’ page.",
-        "Or you can choose to customize your personalized ads or further manage your ad privacy setting, but as long as personalized ads are enabled, Google will still share some of your information with advertisers. "
-      ]
-    },
-    "section7": {
-      "title": "Remove third-party access of your Google data",
-      "description": [
-        "When you link your Google Account to a third-party account, the third-party account has the ability to extract information from Google. In fact, Google transmits our personal data 70 billion times a day. You should check which companies have access to your data and manage privacy settings.",
-        "Some third-party accounts may not allow you to unlink your third-party account from your Google Account, so for managing that you will have to check the settings options on those services websites.",
-        "To disable third-party access to individual apps and services, navigate down the privacy page and find the tab that says ‘Third-party apps with account access.’ Select it and there you will find which third parties have access to your account and manage settings. Click the services you would like to edit permissions of and then select the option to disable access."
-      ]
-    },
-    "section8": {
-      "title": "Remove your personal data from Google Search",
-      "description": "If you don’t want your personal Google Account info showing up in Google Search if someone decides to search you, simply find the tab ‘Personal results in Search,’ click on it, then select the check mark slider to turn off whether Search can show you personal results based on info in your Google Account. "
-    },
-    "section9": {
-      "title": "How to Delete Google Account",
-      "description": [
-        "If you have had enough, are completely done with Google, and just want out, you can delete Google Account by navigating to the bottom of the privacy page under ‘More options’ and select ‘Delete your Google Account.’ ",
-        "Simply follow the directions from there. Be sure you are ready to delete all your information, because once this action is completed it cannot be undone. "
-      ]
-    }
-  },
-  "ToolsSection": {
-    "title": "Other privacy resources from Internxt",
-    "description": [
-      "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
-    ],
-    "tools": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
-        "title": "Free Password Strength Checker",
-        "width": 125,
-        "description": "Check now"
+    "tableSection": {
+      "title": "Internxt 套餐",
+      "hotLabel": "优惠 {{discount}}%",
+      "planTitles": {
+        "header": "选择您的套餐",
+        "individuals": "年度套餐",
+        "homePage": "选择适合您的套餐",
+        "lifetime": "终身套餐",
+        "business": "企业套餐",
+        "lifetimeCampaign": {
+          "blueText": "50% 优惠",
+          "normalText": "适用于我们所有独家终身套餐"
+        }
       },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
-        "title": "Free Virus Scanner",
-        "width": 105,
-        "description": "Scan now"
+      "lifetimeDescription": "一次付费，永久享有隐私与安全保障。",
+      "planDescription": "所有 Internxt 套餐均包含对我们屡获殊荣的隐私套件的完全访问权限，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
+      "businessDescription": "我们目前正在开发专门旨在捍卫您的业务、保护您的员工并确保您的盈利能力的全新 Internxt 套餐。",
+      "businessDescription2": "使用 Internxt 的加密云存储套餐确保您公司的数据安全。",
+      "billingFrequency": {
+        "monthly": "按月",
+        "annually": "按年",
+        "lifetime": "终身",
+        "individual": "个人",
+        "business": "企业"
       },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
-        "title": "Free Byte Converter",
-        "width": 95,
-        "description": "Convert now"
+      "freePlanCard": {
+        "eyeBrow": "获取免费加密云存储",
+        "description": "免费获取 1 GB 加密云存储",
+        "cta": "选择套餐"
       },
-      {
-        "url": "/images/temp-email/temporary-email.svg",
-        "UrlRedirectName": "temporary-email",
-        "title": "Temporary Email",
-        "width": 95,
-        "description": "Mail now"
+      "features": {
+        "endToEnd": "端到端加密",
+        "openSource": "开源且经过审计",
+        "anonymousAccount": "匿名创建账号",
+        "premiumSupport": "高级客户支持",
+        "guarantee": "30 天退款保证"
+      },
+      "planStorage": {
+        "essential": "1TB",
+        "premium": "3TB",
+        "ultimate": "5TB"
       }
-    ]
-  },
-  "CtaSection2": {
-    "title": "A cloud you can trust",
-    "description": "Internxt’s job is to protect your data, not exploit it.",
-    "cta": "Create free account"
-  },
-  "tableSection": {
-    "title": "Internxt 方案",
-    "hotLabel": "{{discount}}% 折扣",
-    "planTitles": {
-      "header": "选择您的计划 ",
-      "individuals": "年度计划",
-      "homePage": "選擇適合您的方案",
-      "lifetime": "終身方案",
-      "business": "企業方案",
-      "lifetimeCampaign": {
-        "blueText": "5 折優惠",
-        "normalText": "所有專屬終身方案"
-      }
-    },
-    "lifetimeDescription": "一次付費，終身享受隱私和安全保護",
-    "planDescription": "所有 Internxt 方案都可完整存取我們的私密解決方案套件，配備最新安全技術：Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet 和 Mail。",
-    "businessDescription": "我們目前正在開發專為保護您的事業、保護員工和確保獲利而設計的全新 Internxt 企業方案。",
-    "businessDescription2": "使用 Internxt 加密雲端儲存方案確保企業資料安全。",
-    "billingFrequency": {
-      "monthly": "月付",
-      "annually": "年付",
-      "lifetime": "終身",
-      "individual": "個人",
-      "business": "企業"
-    },
-    "freePlanCard": {
-      "eyeBrow": "免費版",
-      "description": "免費獲得 1GB 加密雲端儲存空間",
-      "cta": "選擇方案"
-    },
-    "features": {
-      "endToEnd": "端對端加密",
-      "openSource": "開源且經過稽核",
-      "anonymousAccount": "匿名帳戶建立",
-      "premiumSupport": "高級客戶支援",
-      "guarantee": "30 天退款保證"
-    },
-    "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
     }
   }
-}
