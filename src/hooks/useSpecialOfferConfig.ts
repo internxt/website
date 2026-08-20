@@ -140,6 +140,8 @@ export const ALLOWED_PATHS = [
   'dinamotech',
   'claridadartificial',
   'thelinuxexp',
+  'jawara',
+  'ahui',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -356,6 +358,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'dinamotech',
   'claridadartificial',
   'thelinuxexp',
+  'jawara',
+  'ahui',
 ]);
 
 export const COUPON_CODES = {
@@ -496,6 +500,8 @@ export const COUPON_CODES = {
   dinamotech: PromoCodeName.dinamotech,
   claridadartificial: PromoCodeName.claridadartificial,
   thelinuxexp: PromoCodeName.thelinuxexp,
+  jawara: PromoCodeName.jawara,
+  ahui: PromoCodeName.ahui,
 };
 
 interface OfferConfig {
