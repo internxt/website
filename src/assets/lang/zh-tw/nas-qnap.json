@@ -77,6 +77,51 @@
     "description": "使用 Internxt Drive 管理您的 QNAP NAS",
     "cta": "獲取 Internxt"
   },
+  "tableSection": {
+    "title": "Internxt方案",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的愛 - ",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "lifetimeHeader": "選擇您的終身計畫",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付費，終身享受隱私和安全",
+    "planDescription": "所有Internxt方案功能齊全，完整存取我們屢獲殊榮的隱私套件，包括Internxt Drive、Send、VPN、防毒軟體、清理工具、暗網監控、Meet和郵件。",
+    "businessDescription": "我們目前正在開發專為保護您的企業、保護員工和確保獲利能力而設計的新Internxt方案。",
+    "businessDescription2": "使用Internxt的加密雲端儲存方案確保公司資料安全。",
+    "billingFrequency": {
+      "monthly": "月繳",
+      "annually": "年繳",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "商業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt免費版",
+      "description": "免費獲取1GB加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "有問題？我們有答案",
     "faq": [
