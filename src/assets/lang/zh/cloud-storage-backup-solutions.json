@@ -73,6 +73,51 @@
     "description": "全面防范勒索软件、数据丢失或损坏",
     "cta": "购买您的计划"
   },
+  "tableSection": {
+    "title": "Internxt套餐",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的爱 - ",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "lifetimeHeader": "选择您的终身计划",
+      "individuals": "年度套餐",
+      "homePage": "选择适合您的套餐",
+      "lifetime": "终身套餐",
+      "business": "商业套餐",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有独家终身套餐"
+      }
+    },
+    "lifetimeDescription": "一次付费，终身享受隐私和安全",
+    "planDescription": "所有Internxt套餐功能齐全，完整访问我们屡获殊荣的隐私套件，包括Internxt Drive、Send、VPN、杀毒软件、清理工具、暗网监控、Meet和邮箱。",
+    "businessDescription": "我们目前正在开发专为保护您的企业、保护员工和确保盈利能力而设计的新Internxt套餐。",
+    "businessDescription2": "使用Internxt的加密云存储套餐确保公司数据安全。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "商业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt免费版",
+      "description": "免费获取1GB加密云存储",
+      "cta": "选择套餐"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "有问题？我们有答案",
     "faq": [
@@ -117,8 +162,8 @@
   },
   "FeatureSection": {
     "title": "云备份解决方案",
-    "titleLine2": "无论您的设备发生什么，备份您的文件意味着您的重要照片、文件和记忆可以永远恢复。选择 Internxt 进行安全备份和数据冗余，保护您的文件免受勒索软件和设备故障的威胁。",
-    "description": "投资于您的隐私，确保您始终拥有文件的副本，安心无忧。",
+    "titleLine2": "",
+    "description": "无论您的设备发生什么，备份您的文件意味着您的重要照片、文件和记忆可以永远恢复。选择 Internxt 进行安全备份和数据冗余，保护您的文件免受勒索软件和设备故障的威胁。投资于您的隐私，确保您始终拥有文件的副本，安心无忧。",
     "cta": "获取 Internxt",
     "cards": {
       "element1": {

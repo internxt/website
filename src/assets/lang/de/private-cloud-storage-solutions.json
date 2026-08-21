@@ -78,6 +78,51 @@
     "description": "Ihre Dateien sicher mit modernster Post-Quanten-Verschlüsselung.",
     "cta": "Internxt erhalten"
   },
+  "tableSection": {
+    "title": "Internxt Tarife",
+    "hotLabel": "{{discount}}% Rabatt",
+    "valentinesTitle": "Sichere Liebe - ",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Plan",
+      "lifetimeHeader": "Wählen Sie Ihren lebenslangen Plan",
+      "individuals": "Jahrestärife",
+      "homePage": "Wählen Sie den richtigen Tarif für Sie",
+      "lifetime": "Lebenslange Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven lebenslangen Tarife"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und lebenslang Privatsphäre und Sicherheit genießen",
+    "planDescription": "Alle Internxt-Tarife sind vollständig ausgestattet mit komplettem Zugang zu unserer preisgekrönten Privatsphäre-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Stellen Sie die Datensicherheit Ihres Unternehmens mit Internxts verschlüsselten Cloud-Speicher-Tarifen sicher.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang",
+      "individual": "Individuell",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source und auditiert",
+      "anonymousAccount": "Anonyme Kontenerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [
