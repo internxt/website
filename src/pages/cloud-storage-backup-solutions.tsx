@@ -17,6 +17,10 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 
 interface PrivacyProps {
@@ -38,7 +42,7 @@ const CloudStorageBackupSolutions = ({
   relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
-  const CTA_URL = `/pricing`;
+  const CTA_URL = `#billingButtons`;
   const cardsData: FeatureCard[] = [
     {
       title: textContent.FeatureSection.cards.element1.title,
@@ -61,20 +65,61 @@ const CloudStorageBackupSolutions = ({
       image: '/images/cloud-storage-backup-solutions/internxt_cross_platforms.webp',
     },
   ];
-  const products = [
+  const product = [
     {
       imageUrl: '/images/cloud-storage-backup-solutions/internxt_drive.webp',
       animationDirection: 'left',
-      redirect: '/drive',
+      redirect: '#billingButtons',
       textContent: textContent.WhatWeDo.square1,
     },
     {
       imageUrl: '/images/cloud-storage-backup-solutions/internxt_s3.webp',
       animationDirection: 'left',
-      redirect: '/cloud-object-storage',
+      redirect: '/cloud-object-storage/checkout',
       textContent: textContent.WhatWeDo.square2,
     },
   ];
+
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -115,7 +160,7 @@ const CloudStorageBackupSolutions = ({
                 ))}
               </div>
               <Link
-                href={'/pricing'}
+                href={'#billingButtons'}
                 className={`z-10 mb-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark lg:text-xl`}
               >
                 {textContent.HeroSection.TitleAndOnePlan.claimDeal}
@@ -130,7 +175,7 @@ const CloudStorageBackupSolutions = ({
           subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
           ctaText={textContent.FeatureSection.cta}
-          ctaLink="/signup"
+          ctaLink="#billingButtons"
           cards={cardsData}
         />
         {textContent.NewBlock1 && (
@@ -141,6 +186,24 @@ const CloudStorageBackupSolutions = ({
             </p>
           </div>
         )}
+
+        <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-white lg:py-20"
+                hideFreeCard
+        />
 
         <CtaSection
           textContent={textContent.CtaSection1}
@@ -165,7 +228,7 @@ const CloudStorageBackupSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
 
         <FAQSection textContent={textContent.FaqSection} />
 
