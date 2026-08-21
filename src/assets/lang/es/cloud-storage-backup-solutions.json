@@ -169,8 +169,8 @@
   },
   "FeatureSection": {
     "title": "Solución de cloud backup o copia de seguridad en la nube",
-    "titleLine2": "No importa lo que le suceda a tu dispositivo, hacer una copia de seguridad de tus archivos significa que tus fotos, archivos y recuerdos importantes pueden recuperarse para siempre. Elige Internxt para copias de seguridad seguras y redundancia de datos, protegiendo tus archivos contra ransomware y fallos del dispositivo.",
-    "description": "Invierte en tu privacidad y ten la tranquilidad de saber que siempre tendrás una copia de tus archivos.",
+    "titleLine2": "",
+    "description": "No importa lo que le suceda a tu dispositivo, hacer una copia de seguridad de tus archivos significa que tus fotos, archivos y recuerdos importantes pueden recuperarse para siempre. Elige Internxt para copias de seguridad seguras y redundancia de datos, protegiendo tus archivos contra ransomware y fallos del dispositivo. Invierte en tu privacidad y ten la tranquilidad de saber que siempre tendrás una copia de tus archivos.",
     "cta": "Obtén Internxt",
     "cards": {
       "element1": {
