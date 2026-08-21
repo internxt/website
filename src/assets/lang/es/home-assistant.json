@@ -1,0 +1,86 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Almacenamiento en la nube seguro para tus **copias de seguridad de Home Assistant**",
+    "description": "Copias de seguridad externas automatizadas con conocimiento cero (zero-knowledge). Creado en Europa para el máximo control de datos y privacidad.",
+    "subtitle": "Consigue un {{discount}}% de descuento",
+    "claimDeal": "Consigue 3 TB por 2,99 €/mes"
+  },
+  "TableSection": {
+    "title": "Planes de Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de descuento",
+    "planTitles": {
+      "header": "Selecciona tu plan",
+      "lifetimeHeader": "Selecciona tu plan de por vida",
+      "individuals": "Planes anuales",
+      "homePage": "Elige el plan adecuado para ti",
+      "lifetime": "Planes de por vida",
+      "business": "Planes para empresas",
+      "lifetimeCampaign": {
+        "blueText": "50% de descuento",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      }
+    },
+    "lifetimeDescription": "Paga una sola vez y disfruta de privacidad y seguridad de por vida",
+    "planDescription": "Todos los planes de Internxt cuentan con acceso completo a nuestra galardonada suite de privacidad que incluye Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
+    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu empresa, proteger a tus empleados y asegurar tu rentabilidad.",
+    "businessDescription2": "Garantiza la seguridad de los datos de tu empresa con los planes de almacenamiento en la nube encriptados de Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "lifetime": "De por vida",
+      "individual": "Individual",
+      "business": "Empresa"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Consigue 1 GB de almacenamiento en la nube encriptado gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "endToEnd": "Encriptado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima",
+      "premiumSupport": "Soporte al cliente premium",
+      "guarantee": "Garantía de devolución de dinero de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Valores fundamentales",
+    "cards": {
+      "titles": ["Encriptado Zero-Knowledge", "Recuperación fiable", "Prioridad a la privacidad"],
+      "descriptions": [
+        "Encriptado en el lado del cliente de extremo a extremo. Tus archivos de configuración y claves API se mantienen estrictamente privados.",
+        "Conserva una copia externa segura de tus capturas de HA en caso de fallos de hardware o problemas de actualización.",
+        "Alojado en la UE, totalmente conforme con el RGPD e independiente de las grandes tecnológicas."
+      ]
+    }
+  },
+  "ConfigurationSection": {
+    "title": "Envía tus capturas fuera de la red local sin enviar tus claves",
+    "description": "Apunta /backup a un remoto de Internxt a través de WebDAV o rclone. Los archivos se encriptan en tu hardware antes de que el primer byte salga de la LAN: almacenamos texto cifrado y nunca conservamos la clave.",
+    "accordionCard": {
+      "titles": ["Crea credenciales WebDAV", "Añade el fragmento de código", "Verifica y olvídate"],
+      "descriptions": [
+        "En Internxt → Ajustes > WebDAV, genera un token específico. Guarda la URL, el usuario y la contraseña oculta en secrets.yaml, nunca en una configuración expuesta.",
+        "Pega el código en configuration.yaml (o ejecuta el add-on de rclone desde la tienda de Supervisor) y luego ejecuta ha core restart. Haz una prueba con --dry-run para confirmar que el remoto responde.",
+        "Cada archivo .tar se encripta con AES-256 en el lado del cliente y se fragmenta antes de subirse. Las restauraciones descargan el archivo de nuevo a /backup y lo desencriptan localmente con tu clave."
+      ]
+    },
+    "features": ["zero-knowledge", "rclone 1.66+", "gestión de !secret", "API de backup de HA 2024.11"]
+  }
+}
