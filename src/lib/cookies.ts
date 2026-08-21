@@ -1,9 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
-
-const Cookies = require('cookies');
 const moment = require('moment');
-const url = require('url');
-const queryString = require('querystring');
 
 const GCLID_COOKIE_LIFESPAN_DAYS = 90;
 const CELLO_EXPIRATION_DAYS = 30;
@@ -23,13 +18,7 @@ const TRACKING_PARAMS = [
   'ga_network',
 ] as const;
 
-function parseUri(ctx: GetServerSidePropsContext) {
-  const { query } = url.parse(ctx.req.url);
-  const parsedQuery = queryString.parse(query);
-  return parsedQuery;
-}
-
-function setCookie({
+export function setCookie({
   cookieName,
   cookieValue,
   expiration,
@@ -45,50 +34,6 @@ function setCookie({
   const cookie = `${cookieName}=${cookieValue};expires=${expirationDate};domain=${domain}; Path=/`;
 
   document.cookie = cookie;
-}
-
-function getCookie(cookieName: string): string {
-  const cookie = {};
-  if (typeof document !== 'undefined') {
-    document.cookie.split(';').forEach((el) => {
-      const [key, value] = el.split('=');
-      cookie[key.trim()] = value;
-    });
-  }
-  return cookie[cookieName];
-}
-
-function setReferralCookie(ctx: GetServerSidePropsContext): void {
-  const parsedUri = parseUri(ctx);
-
-  if (!parsedUri.ref) {
-    return;
-  }
-
-  const referralId = parsedUri.ref;
-
-  const expires = moment().add(2, 'days').toDate();
-  const cookies = new Cookies(ctx.req, ctx.res);
-
-  cookies.set('REFERRAL', referralId, {
-    domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-    expires,
-    overwrite: true,
-    httpOnly: false,
-  });
-
-  // httpOnly must be false in order to be accesible by JavaScript
-}
-
-function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string, expires: Date): void {
-  const cookies = new Cookies(ctx.req, ctx.res);
-
-  cookies.set(name, value, {
-    domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-    expires,
-    overwrite: true,
-    httpOnly: false,
-  });
 }
 
 export const saveGclidToCookie = (gclid: string) => {
@@ -107,11 +52,7 @@ export const saveTrackingParamsToCookies = () => {
   const params = new URLSearchParams(window.location.search);
 
   const expiryDate = new Date();
-
-  expiryDate.setTime(
-    expiryDate.getTime() +
-      GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY,
-  );
+  expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
 
   TRACKING_PARAMS.forEach((param) => {
     const value = params.get(param);
@@ -124,7 +65,7 @@ export const saveTrackingParamsToCookies = () => {
       expiration: expiryDate,
     });
   });
-}
+};
 
 export const getGclidFromURL = (): string | null => {
   if (typeof window === 'undefined') return null;
@@ -148,16 +89,4 @@ export const isCelloExpired = (): boolean => {
   const storedDate = getCelloFirstVisitDate();
   if (!storedDate) return false;
   return Date.now() - new Date(storedDate).getTime() > CELLO_EXPIRATION_DAYS * MILLISECONDS_PER_DAY;
-};
-
-export default {
-  parseUri,
-  setCookie,
-  getCookie,
-  setReferralCookie,
-  setPublicCookie,
-  saveCelloFirstVisit,
-  getCelloFirstVisitDate,
-  isCelloExpired,
-  saveTrackingParamsToCookies
 };

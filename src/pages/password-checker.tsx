@@ -1,5 +1,4 @@
 import Script from 'next/script';
-
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -7,12 +6,10 @@ import HeroSection from '@/components/password-checker/HeroSection';
 import FeaturesSection from '@/components/password-checker/FeaturesSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
-
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
-
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -83,13 +80,21 @@ const PasswordChecker = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          hideNewsletter={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Password security checker', url: '/password-checker' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -1,9 +1,7 @@
 import Layout from '@/components/layout/Layout';
-
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
-
 import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
@@ -156,7 +154,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
@@ -169,7 +167,6 @@ export async function getServerSideProps(ctx) {
       metatagsDescriptions,
       navbarLang,
       langJson,
-
       footerLang,
     },
   };

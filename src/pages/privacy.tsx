@@ -1,13 +1,10 @@
 import Script from 'next/script';
-
 import HeroSection from '@/components/privacy/HeroSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import ManifestoSection from '@/components/privacy/ManifestoSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
-
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import SecuritumSection from '@/components/privacy/SecuritumSection';
 import InxtAppsSection from '@/components/privacy/InxtAppsSection';
@@ -16,7 +13,7 @@ import BetterTomorrowSection from '@/components/privacy/BetterTomorrowSection';
 import FeatureSection from '@/components/privacy/FeatureSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PrivacyText } from '@/assets/types/privacy';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
@@ -37,7 +34,11 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Privacy', url: '/privacy' },
+        ])}
       </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
@@ -58,21 +59,27 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
 
         <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Internxt Privacy', url: '/privacy' },
+          ]}
+        />
       </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/privacy.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

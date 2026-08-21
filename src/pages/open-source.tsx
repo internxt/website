@@ -22,35 +22,47 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Open source cloud storage', url: '/open-source' },
+        ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Open Source" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={langJson.HeroSection} />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <FileParallaxSection />
+        <FileParallaxSection />
 
-      <WhatIsOSS textContent={langJson.WhatIsOSS} />
+        <WhatIsOSS textContent={langJson.WhatIsOSS} />
 
-      <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} />
+        <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} />
+        <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} />
 
-      <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} />
+        <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} />
 
-      <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} />
+        <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
+        <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
-      <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
+        <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Open source cloud storage', url: '/open-source' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const download = await downloadDriveLinks();
 

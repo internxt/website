@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
 import { getDealsProps } from '@/lib/helpers/deals';
@@ -7,7 +7,7 @@ const BlackFridayPage = (props) => {
   return <BlackFridayDealsTemplate {...props} />;
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   return getDealsProps(
     ctx,
     {

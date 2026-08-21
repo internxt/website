@@ -1,14 +1,11 @@
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import TrustedSection from '@/components/home/TrustedSection';
@@ -18,7 +15,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface PartnerDiscountProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -48,7 +45,7 @@ const PartnerDiscount = ({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <span className="inline-block bg-gray-200 h-4 w-16 animate-pulse rounded"></span>;
+      return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -160,7 +157,7 @@ const PartnerDiscount = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

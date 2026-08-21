@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Script from 'next/script';
-
 import { PromoCodeName } from '@/lib/types';
 import { saveCelloFirstVisit, isCelloExpired } from '@/lib/cookies';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
-
 import Navbar from '@/components/layout/navbars/Navbar';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
@@ -174,7 +172,7 @@ function SpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);

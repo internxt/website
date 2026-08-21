@@ -93,7 +93,6 @@ function CombinedSpecialOffer({
     couponCodeForLifetime: couponCode,
   });
 
-
   const ultimatePlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '5TB');
 
   usePathRedirect(selectedPathname);
@@ -150,9 +149,13 @@ function CombinedSpecialOffer({
       segmentName="Partners"
       lang={lang}
       robots={
-        pathname === 'world-backup-day' || pathname === 'earth-day' || pathname === 'drop-offer'
-         || pathname === 'offerblogen' || pathname === 'offerbloges' || pathname === 'offerblogde'
-         || pathname === 'offerblogfr'
+        pathname === 'world-backup-day' ||
+        pathname === 'earth-day' ||
+        pathname === 'drop-offer' ||
+        pathname === 'offerblogen' ||
+        pathname === 'offerbloges' ||
+        pathname === 'offerblogde' ||
+        pathname === 'offerblogfr'
           ? 'noindex,follow'
           : undefined
       }
