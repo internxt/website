@@ -12,14 +12,14 @@
     "title": "Secure cloud storage for your **Home Assistant Backups**",
     "description": "Automated, zero-knowledge offsite backups. Built in Europe for maximum privacy and data control.",
     "subtitle": "Get {{discount}}% of discount ",
-    "claimDeal": "Get 3 TB for €2.99/mo"
+    "claimDeal": "Claim deal"
   },
   "TableSection": {
     "title": "Internxt Plans",
     "valentinesTitle": "Secure love - ",
     "hotLabel": "{{discount}}% off",
     "planTitles": {
-      "header": "Select your plan",
+      "header": "Choose how you want to pay",
       "lifetimeHeader": "Select your lifetime plan",
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",

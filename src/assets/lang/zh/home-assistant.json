@@ -12,14 +12,14 @@
     "title": "为您的 **Home Assistant 备份** 提供安全的云存储",
     "description": "自动化的零知识 (Zero-Knowledge) 异地备份。源自欧洲，专为最大化隐私与数据控制而打造。",
     "subtitle": "获取 {{discount}}% 折扣",
-    "claimDeal": "仅需 €2.99/月 即可获得 3 TB"
+    "claimDeal": "领取优惠"
   },
   "TableSection": {
     "title": "Internxt 套餐计划",
     "valentinesTitle": "守护挚爱 - ",
     "hotLabel": "{{discount}}% 优惠",
     "planTitles": {
-      "header": "选择您的套餐",
+      "header": "选择你的支付方式",
       "lifetimeHeader": "选择您的终身套餐",
       "individuals": "年度套餐",
       "homePage": "选择最适合您的套餐",

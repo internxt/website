@@ -11,8 +11,6 @@ import {
   VideoConference,
 } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { currencyService } from '@/services/currency.service';
-import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
 
 interface HeroSectionForPartnerProps {
@@ -26,16 +24,6 @@ export default function HeroSection({
   percentOff,
   darkMode = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
-  const [currency, setCurrency] = useState<string>('€');
-
-  useEffect(() => {
-    currencyService
-      .filterCurrencyByCountry()
-      .then((currency) => {
-        setCurrency(currency.currency);
-      })
-      .catch(() => { });
-  }, []);
 
   const products = [
     { icon: CloudArrowUp, text: textContent.products.drive },
@@ -53,14 +41,14 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-8 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-12 lg:pl-10 lg:pr-4 xl:gap-16 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-12 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-16 lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-40`}
       style={{
         background: darkMode
           ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[606px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[800px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
@@ -79,8 +67,8 @@ export default function HeroSection({
           ))}
         </div>
         <h1
-          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-[44px]`}
+          className={`text-[34px] font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-[38px] xl:text-[40px] 2xl:text-[42px] 3xl:text[44px]`}
         >
           <HighlightText text={textContent.title} />
         </h1>
@@ -117,12 +105,13 @@ export default function HeroSection({
 
       <div className={'hidden justify-center lg:flex'}>
         <Image
-          src={getImage(`/images/home-assistant/hero.webp`)}
+          src={getImage(`/images/home-assistant/hero2.webp`)}
           alt="Internxt Partners HeroSection Image"
-          width={829}
-          height={620}
+          width={1200}
+          height={960}
           quality={100}
-          className="rounded"
+          loading='eager'
+          className="h-auto rounded object-cover"
         />
       </div>
     </section>

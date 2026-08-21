@@ -12,14 +12,14 @@
     "title": "Almacenamiento en la nube seguro para tus **copias de seguridad de Home Assistant**",
     "description": "Copias de seguridad externas automatizadas con conocimiento cero (zero-knowledge). Creado en Europa para el máximo control de datos y privacidad.",
     "subtitle": "Consigue un {{discount}}% de descuento",
-    "claimDeal": "Consigue 3 TB por 2,99 €/mes"
+    "claimDeal": "Reclamar oferta"
   },
   "TableSection": {
     "title": "Planes de Internxt",
     "valentinesTitle": "Amor seguro - ",
     "hotLabel": "{{discount}}% de descuento",
     "planTitles": {
-      "header": "Selecciona tu plan",
+      "header": "Elige cómo quieres pagar",
       "lifetimeHeader": "Selecciona tu plan de por vida",
       "individuals": "Planes anuales",
       "homePage": "Elige el plan adecuado para ti",
