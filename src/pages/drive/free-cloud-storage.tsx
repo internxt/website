@@ -20,6 +20,10 @@ import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 interface DriveProps {
   textContent: DriveText;
@@ -49,6 +53,46 @@ const Drive = ({
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-cloud-storage');
 
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -72,6 +116,24 @@ const Drive = ({
 
       <FileParallaxSection />
 
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-neutral-17 lg:py-20"
+                hideFreeCard
+        />
+
       <CoreFeaturesSection textContent={textContent.CoreFeatures} />
 
       <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
@@ -85,7 +147,7 @@ const Drive = ({
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
-        url={'/drive'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">

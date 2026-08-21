@@ -18,6 +18,10 @@ import ImportanceSection from '@/components/gdpr-cloud-storage/ImportanceSection
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 
 interface PrivacyProps {
@@ -39,20 +43,13 @@ const PrivateCloudStorageSolutions = ({
   relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-gdpr-cloud-storage');
-  const CTA_URL = `/pricing`;
-  const products = [
+  const CTA_URL = `#billingButtons`;
+  const product = [
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
       animationDirection: 'left',
-      redirect: '/drive',
+      redirect: '#billingButtons',
       textContent: textContent.WhatWeDo.square1,
-    },
-    {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
-      animationDirection: 'right',
-      redirect: '/business',
-      textContent: textContent.WhatWeDo.square2,
-      imagePosition: 'right',
     },
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
@@ -83,6 +80,46 @@ const PrivateCloudStorageSolutions = ({
       image: '/images/GDPR_cloud_storage/internxt_data_minimization.webp',
     },
   ];
+
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
 
   return (
     <>
@@ -116,7 +153,7 @@ const PrivateCloudStorageSolutions = ({
 
                 <div className="flex flex-col items-center pt-10 lg:flex-row">
                   <Link
-                    href={'/pricing'}
+                    href={'#billingButtons'}
                     className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark lg:text-xl`}
                   >
                     {textContent.HeroSection.TitleAndOnePlan.claimDeal}
@@ -137,6 +174,24 @@ const PrivateCloudStorageSolutions = ({
         <ImportanceSection textContent={textContent.Importance} ctaLink={CTA_URL} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
+
+        <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-white lg:py-20"
+                hideFreeCard
+            />
 
         <CtaSection
           textContent={textContent.CtaSection1}
@@ -159,7 +214,7 @@ const PrivateCloudStorageSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
 
         <CtaSection
           textContent={textContent.CtaSection3}
