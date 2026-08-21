@@ -13,7 +13,7 @@ export type GlobalUIManagerContextShape = {
   openDialog: (key: GlobalDialog, config?: GlobalDialogActionConfig) => void;
   closeDialog: (key: GlobalDialog, config?: GlobalDialogActionConfig) => void;
 };
-export const GlobalUIManagerContext = React.createContext<GlobalUIManagerContextShape>({
+const GlobalUIManagerContext = React.createContext<GlobalUIManagerContextShape>({
   dialogs: [],
   openDialog: () => {
     throw new Error('GlobalUIManagerContext not ready');

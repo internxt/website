@@ -9,7 +9,7 @@ export interface SecureFileTransferText {
     SemanticAccordion:       SemanticAccordion;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title:    string;
   features?: string[];
   cta:      string;
@@ -20,57 +20,57 @@ export interface FeaturesSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
 }
 
-export interface Feature {
+interface Feature {
   title:       string;
   description: string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title:       string;
   description: string;
   cta:         string;
 }
 
-export interface HowToChooseSection {
+interface HowToChooseSection {
   title:          string;
   accordionCards: AccordionCards;
 }
 
-export interface AccordionCards {
+interface AccordionCards {
   titles:       string[];
   descriptions: string[];
 }
 
-export interface SecureAndManage {
+interface SecureAndManage {
   title:       string;
   description: string;
   cards:       Card[];
 }
 
-export interface Card {
+interface Card {
   title:       string;
   description: string[];
   cta:         string;
 }
 
-export interface SecureFeaturesSection {
+interface SecureFeaturesSection {
   title:             string;
   descriptions:      string;
   scrollableSection: AccordionCards;
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer:   string[];
 }

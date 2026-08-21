@@ -9,28 +9,28 @@ export interface CleanerText {
   FaqSection: FAQSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeatureSection {
+interface FeatureSection {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   topLabel: string;
   cta: string;
   title: string;
@@ -38,24 +38,24 @@ export interface HeroSection {
   subTitle: string;
 }
 
-export interface HowItWorksSection {
+interface HowItWorksSection {
   title: string;
   description: string;
   features: Features;
 }
 
-export interface Features {
+interface Features {
   titles: string[];
   descriptions: string[];
 }
 
-export interface WhenToUseSection {
+interface WhenToUseSection {
   title: string;
   description: string;
   features: string[];
 }
 
-export interface WhyUseSection {
+interface WhyUseSection {
   title: string;
   description: string;
   scrollableSection: Features;

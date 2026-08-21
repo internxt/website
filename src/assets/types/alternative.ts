@@ -13,86 +13,86 @@ export interface AlternativePageText {
   PriceCardSection?: CloudObjectStorageText['PriceCardSection'];
 }
 
-export interface Section {
+interface Section {
   title: string;
   description: string;
   cta: string;
   getPrivacy?: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeaderSection {
+interface HeaderSection {
   title: string;
   description: string;
   tableSection: HeaderSectionTableSection;
 }
 
-export interface HeaderSectionTableSection {
+interface HeaderSectionTableSection {
   comparisons: string[];
   internxtFeatures: string[];
   competitorFeatures: string[];
 }
 
-export interface PrivacyViolationsSection {
+interface PrivacyViolationsSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface VersusSection {
+interface VersusSection {
   title: string;
   description: string;
   mainTable: MainTable;
 }
 
-export interface MainTable {
+interface MainTable {
   inxtTable: Table;
   competitorTable: Table;
 }
 
-export interface Table {
+interface Table {
   title: string;
   features: Feature[];
 }
 
-export interface Feature {
+interface Feature {
   title: string;
   description: string;
 }
 
-export interface WhyBestAlternativeSection {
+interface WhyBestAlternativeSection {
   title: string;
   description: string;
   scrollableSection: WhyBestAlternativeSectionScrollableSection;
 }
 
-export interface WhyBestAlternativeSectionScrollableSection {
+interface WhyBestAlternativeSectionScrollableSection {
   imagesPathname: string[];
   titles: string[];
   descriptions: string[];
 }
 
-export interface WhyNeedAlternativeSection {
+interface WhyNeedAlternativeSection {
   title: string;
   description: string;
   cards: ScrollableSection;
 }
 
-export interface IcedriveAlternativePageTextTableSection {
+interface IcedriveAlternativePageTextTableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -102,29 +102,29 @@ export interface IcedriveAlternativePageTextTableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   annually: string;
   lifetime: string;
 }
 
-export interface Features {
+interface Features {
   openSource: string;
   premiumSupport: string;
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
 }

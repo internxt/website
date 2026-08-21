@@ -7,51 +7,51 @@ export interface CloudPartnerText {
   ContactSales: ContactSales;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FeatureSection {
+interface FeatureSection {
   title: string;
   description: string;
 }
 
-export interface AccordionSection {
+interface AccordionSection {
   title: string;
   description: string;
   accordionSection: AccordionSection2;
 }
 
-export interface AccordionSection2 {
+interface AccordionSection2 {
   titles: string[];
   descriptions: string[];
 }
 
-export interface ThreeCardsSection {
+interface ThreeCardsSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   titles: string[];
   descriptions: string[];
 }
 
-export interface TrustedSection {
+interface TrustedSection {
   title: string;
   description: string;
 }
 
-export interface ContactSales {
+interface ContactSales {
   title: string;
   description: string;
   form: Form;
 }
 
-export interface Form {
+interface Form {
   name: string;
   email: string;
   company: string;

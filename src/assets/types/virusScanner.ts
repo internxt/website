@@ -6,23 +6,23 @@ export interface VirusScannerText {
   ToolsSection: ToolsSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeaturesSection {
+interface FeaturesSection {
   whyToScan: FreeOnlineScanner;
   virusesHatePrivacy: FreeOnlineScanner;
   stopMalware: FreeOnlineScanner;
@@ -30,12 +30,12 @@ export interface FeaturesSection {
   scanFiles: FreeOnlineScanner;
 }
 
-export interface FreeOnlineScanner {
+interface FreeOnlineScanner {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle1: string;
   subtitle2: string;
@@ -54,11 +54,11 @@ export interface HeroSection {
   error: FreeOnlineScanner;
 }
 
-export interface DropFile {
+interface DropFile {
   line1: string;
 }
 
-export interface Table {
+interface Table {
   loading: string;
   virusDetected: string;
   noVirusDetected: string;
@@ -72,19 +72,19 @@ export interface Table {
   detection: string;
 }
 
-export interface NoVirusesDetected {
+interface NoVirusesDetected {
   message: string;
   title: string;
   subtitle: string;
   cta: string;
 }
 
-export interface ToolsSection {
+interface ToolsSection {
   title: string;
   toolsCard: ToolsCard[];
 }
 
-export interface ToolsCard {
+interface ToolsCard {
   url: string;
   UrlRedirectName: string;
   width: number;
