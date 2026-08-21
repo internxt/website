@@ -178,8 +178,8 @@
   },
   "FeatureSection": {
     "title": "Cloud storage backup solutions",
-    "titleLine2": "Cloud storage backup solutions keep encrypted copies of your files on remote servers, so if your laptop fails, gets stolen, or runs into ransomware, you can pull the files back without paying anyone or losing your work. The job is straightforward: protect, automate, recover, and reach the files from wherever you are. Internxt covers all four with AES-256 encryption on your device, Kyber-512 post-quantum key exchange, scheduled backups at hourly through daily cadence, multi-server replication in OVHcloud's EU data centers, and a 30-day money-back window if it isn't for you.",
-    "description": "",
+    "titleLine2": "",
+    "description": "Cloud storage backup solutions keep encrypted copies of your files on remote servers, so if your laptop fails, gets stolen, or runs into ransomware, you can pull the files back without paying anyone or losing your work. The job is straightforward: protect, automate, recover, and reach the files from wherever you are. Internxt covers all four with AES-256 encryption on your device, Kyber-512 post-quantum key exchange, scheduled backups at hourly through daily cadence, multi-server replication in OVHcloud's EU data centers, and a 30-day money-back window if it isn't for you.",
     "cta": "Get Internxt",
     "cards": {
       "element1": {

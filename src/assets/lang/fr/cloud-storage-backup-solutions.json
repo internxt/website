@@ -168,8 +168,8 @@
   },
   "FeatureSection": {
     "title": "Solution de sauvegarde cloud",
-    "titleLine2": "Peu importe ce qui arrive à votre appareil, sauvegarder vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent être récupérés pour toujours. Choisissez Internxt pour des sauvegardes sécurisées et la redondance des données, protégeant vos fichiers contre les ransomwares et les pannes d'appareil.",
-    "description": "Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vous aurez toujours une copie de vos fichiers.",
+    "titleLine2": "",
+    "description": "Peu importe ce qui arrive à votre appareil, sauvegarder vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent être récupérés pour toujours. Choisissez Internxt pour des sauvegardes sécurisées et la redondance des données, protégeant vos fichiers contre les ransomwares et les pannes d'appareil. Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vous aurez toujours une copie de vos fichiers.",
     "cta": "Obtenir Internxt",
     "cards": {
       "element1": {
