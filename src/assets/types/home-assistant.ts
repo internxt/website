@@ -3,6 +3,7 @@ export interface HomeAssistantText {
     TableSection: TableSection;
     ConfigurationSection: ConfigurationSection;
     ThreeCardsSection: ThreeCardsSection;
+    NextGenSection: NextGenSection;
 }
 
 export interface HeroSection {
@@ -97,6 +98,20 @@ export interface ThreeCardsSection {
 }
 
 export interface Cards {
+  titles: string[];
+  descriptions: string[];
+}
+
+export interface NextGenSection {
+  title: string;
+  description: string;
+  cta: string;
+  scrollableSection?: ScrollableSection;
+  titleWithoutDiscount?: string;
+  descriptionWithoutDisocunt?: string;
+}
+
+export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }

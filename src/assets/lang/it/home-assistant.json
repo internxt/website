@@ -82,5 +82,24 @@
       ]
     },
     "features": ["zero-knowledge", "rclone 1.66+", "gestione di !secret", "API di backup HA 2024.11"]
+  },
+  "NextGenSection": {
+    "title": "Perché scegliere Internxt?",
+    "description": "Internxt ti restituisce il controllo della tua privacy. A differenza del cloud storage tradizionale, ci assicuriamo che solo tu abbia le chiavi dei tuoi dati crittografati e non archiviamo né vendiamo i tuoi dati a terze parti. Prendiamo ogni misura per garantire che le tue informazioni rimangano sicure.",
+    "cta": "Conoscici meglio",
+    "scrollableSection": {
+      "titles": [
+        "Dati inviolabili e non trapelabili",
+        "Sicurezza di nuova generazione",
+        "Open source e trasparente",
+        "Verificato indipendentemente"
+      ],
+      "descriptions": [
+        "Non archiviamo password o dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti dà il pieno controllo dei tuoi file. I tuoi dati sono affari tuoi. Proteggerli è il nostro lavoro.",
+        "Internxt è l'unico cloud storage che crittografa automaticamente i tuoi file utilizzando crittografia end-to-end e post-quantica, il che significa che solo tu puoi accedere ai tuoi dati.",
+        "Siamo orgogliosi di quello che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente recensito, verificato e controllato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati.",
+        "Siamo completamente conformi al GDPR e sicuri al 100%, ma non credere solo alla nostra parola. Internxt è stato verificato e controllato indipendentemente dalla principale azienda di penetration testing d'Europa, Securitum."
+      ]
+    }
   }
 }
