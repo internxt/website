@@ -13,8 +13,10 @@ import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import SecureAndManageSection from '@/components/cloud-storage-for-documents/SecureAndManageSection';
 import CoreFeaturesSection from '@/components/cloud-storage-for-documents/CoreFeaturesSection';
-
-
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 
 interface CloudStorageForDocumentsProps {
@@ -35,6 +37,46 @@ const CloudStorageForDocuments = ({
 }: CloudStorageForDocumentsProps): JSX.Element => {
   const metatags = metatagsDescription.find((metatag) => metatag.id === 'cloud-storage-for-documents');
   const lang = locale as string;
+
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
 
   return (
       <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''}>
@@ -58,7 +100,7 @@ const CloudStorageForDocuments = ({
                       {textContent.HeroSection.subtitle}{' '}
                     </p>
                     <Link
-                      href={'/pricing'}
+                      href={'#billingButtons'}
                       className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
                     >
                       {textContent.HeroSection.cta}
@@ -79,7 +121,7 @@ const CloudStorageForDocuments = ({
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection.description}</p>
           </div>
         }
-        url="/pricing"
+        url="#billingButtons"
         bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
@@ -87,6 +129,24 @@ const CloudStorageForDocuments = ({
       />
 
       <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-neutral-17 lg:py-20"
+                hideFreeCard
+      />
       
       <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
@@ -106,7 +166,7 @@ const CloudStorageForDocuments = ({
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
           </div>
         }
-        url="/pricing"
+        url="#billingButtons"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
