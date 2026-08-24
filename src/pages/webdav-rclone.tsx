@@ -10,7 +10,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
-const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
+const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
 
   return (
@@ -24,7 +24,7 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX
 
       <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
 
-      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
+      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} lang={lang} />
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
@@ -87,6 +87,7 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
+      lang,
     },
   };
 }
