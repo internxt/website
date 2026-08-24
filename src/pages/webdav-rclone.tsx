@@ -28,7 +28,7 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
@@ -49,7 +49,7 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection2}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">

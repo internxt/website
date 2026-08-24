@@ -172,10 +172,7 @@ const CloudStorageBackupSolutions = ({
 
         <FeatureSection
           title={textContent.FeatureSection.title}
-          subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
-          ctaText={textContent.FeatureSection.cta}
-          ctaLink="#billingButtons"
           cards={cardsData}
         />
         {textContent.NewBlock1 && (
