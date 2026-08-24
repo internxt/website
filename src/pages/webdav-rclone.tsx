@@ -24,7 +24,7 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
 
       <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
 
-      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} lang={lang}/>
+      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} lang={lang} />
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
