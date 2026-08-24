@@ -50,9 +50,9 @@ export default function HeroSection({
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[600px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
-          {products.map((feature, index) => (
+          {products.map((feature) => (
             <div
-              key={index}
+              key={feature.text}
               className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${darkMode ? 'bg-white/10' : 'bg-white/50'
                 }  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
             >
