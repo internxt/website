@@ -18,6 +18,10 @@ import SecureAndManageSection from '@/components/private-cloud-storage-for-video
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 
 interface CloudStorageForVideosProps {
@@ -37,6 +41,46 @@ const CloudStorageForVideos = ({
   lang,
 }: CloudStorageForVideosProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-for-videos');
+
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
 
   return (
     <>
@@ -70,7 +114,7 @@ const CloudStorageForVideos = ({
                 {textContent.HeroSection.subtitle}{' '}
               </p>
               <Link
-                href={'/pricing'}
+                href={'#billingButtons'}
                 className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
               >
                 {textContent.HeroSection.cta}
@@ -84,6 +128,26 @@ const CloudStorageForVideos = ({
 
       <FeatureSection textContent={textContent.FeaturesSection} />
 
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="lg:py-20"
+                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
+                hideFreeCard
+                
+            />
+
       <FloatingCtaSectionv2
         textContent={textContent.cta}
         customText={
@@ -92,7 +156,7 @@ const CloudStorageForVideos = ({
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
           </div>
         }
-        url="/pricing"
+        url="#billingButtons"
         bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
@@ -113,7 +177,7 @@ const CloudStorageForVideos = ({
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
           </div>
         }
-        url="/pricing"
+        url="#billingButtons"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"

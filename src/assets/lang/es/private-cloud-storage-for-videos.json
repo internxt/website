@@ -104,6 +104,51 @@
     "subtitle": "Protegido por cifrado postcuántico",
     "cta": "Obtén Internxt"
   },
+    "tableSection": {
+    "title": "Planes de Internxt",
+    "hotLabel": "{{discount}}% de descuento",
+    "valentinesTitle": "Amor seguro - ",
+    "planTitles": {
+      "header": "Elige tu plan",
+      "lifetimeHeader": "Elige tu plan de por vida",
+      "individuals": "Planes Anuales",
+      "homePage": "Elige el plan adecuado para ti",
+      "lifetime": "Planes de Por Vida",
+      "business": "Planes Empresariales",
+      "lifetimeCampaign": {
+        "blueText": "50% de descuento",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      }
+    },
+    "lifetimeDescription": "Paga una vez y disfruta de privacidad y seguridad de por vida",
+    "planDescription": "Todos los planes de Internxt incluyen funcionalidades completas con acceso total a nuestra galardonada suite de privacidad que consiste en Internxt Drive, Send, VPN, Antivirus, Cleaner, , Meet y Mail.",
+    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu negocio, proteger a tus empleados y asegurar tu rentabilidad.",
+    "businessDescription2": "Asegura la seguridad de datos de tu empresa con los planes de almacenamiento en la nube encriptado de Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "lifetime": "De por vida",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Obtén 1 GB de almacenamiento en la nube encriptado gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "endToEnd": "Cifrado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima",
+      "premiumSupport": "Soporte premium al cliente",
+      "guarantee": "Garantía de devolución de dinero de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "¿Preguntas? tenemos respuestas",
     "faq": [

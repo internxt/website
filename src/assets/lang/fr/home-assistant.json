@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Stockage cloud sécurisé para vos **sauvegardes Home Assistant**",
+    "description": "Sauvegardes distantes automatisées à connaissance nulle (zero-knowledge). Conçu en Europe pour une confidentialité et un contrôle des données maximaux.",
+    "subtitle": "Obtenez {{discount}}% de réduction ",
+    "claimDeal": "Profiter de l'offre"
+  },
+  "TableSection": {
+    "title": "Offres Internxt",
+    "valentinesTitle": "Un amour sécurisé - ",
+    "hotLabel": "{{discount}}% de réduction",
+    "planTitles": {
+      "header": "Choisissez votre mode de paiement",
+      "lifetimeHeader": "Sélectionnez votre offre à vie",
+      "individuals": "Offres annuelles",
+      "homePage": "Choisissez l'offre qui vous convient",
+      "lifetime": "Offres à vie",
+      "business": "Offres Entreprise",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur toutes nos offres exclusives à vie"
+      }
+    },
+    "lifetimeDescription": "Payez une seule fois et profitez de la confidentialité et de la sécurité à vie",
+    "planDescription": "Toutes les offres Internxt incluent un accès complet à notre suite de confidentialité primée comprenant Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouvelles offres Internxt conçues exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Assurez la sécurité des données de votre entreprise grâce aux offres de stockage cloud chiffré d'Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Entreprise"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez gratuitement 1 Go de stockage cloud chiffré",
+      "cta": "Choisir cette offre"
+    },
+    "features": {
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie satisfait ou remboursé de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Valeurs fondamentales",
+    "cards": {
+      "titles": ["Chiffrement Zero-Knowledge", "Restauration fiable", "Priorité à la vie privée"],
+      "descriptions": [
+        "Chiffrement côté client de bout en bout. Vos fichiers de configuration et clés API restent strictement confidentiels.",
+        "Conservez une copie distante sécurisée de vos instantanés HA en cas de panne matérielle ou de problème de mise à jour.",
+        "Hébergé dans l'UE, totalement conforme au RGPD et indépendant des Big Tech."
+      ]
+    }
+  },
+  "ConfigurationSection": {
+    "title": "Expédiez vos instantanés au loin sans exposer vos clés",
+    "description": "Pointez /backup vers un serveur distant Internxt via WebDAV ou rclone. Les archives sont chiffrées sur votre matériel avant que le premier octet ne quitte le réseau local — nous stockons le texte chiffré et ne possédons jamais la clé.",
+    "accordionCard": {
+      "titles": ["Générer des identifiants WebDAV", "Insérer le extrait de code", "Vérifier, puis oublier"],
+      "descriptions": [
+        "Dans Internxt → Paramètres > WebDAV, génerez un jeton dédié. Enregistrez l'URL, l'utilisateur et le mot de passe masqué dans secrets.yaml — jamais dans une configuration publiée.",
+        "Collez dans configuration.yaml (ou lancez le module complémentaire rclone depuis le magasin Supervisor), puis exécutez ha core restart. Faites un essai avec --dry-run pour confirmer la connexion au serveur distant.",
+        "Chaque fichier .tar est chiffré en AES-256 côté client et fragmenté avant le téléversement. Les restaurations rapatrient l'archive dans /backup et la déchiffrent localement avec votre clé."
+      ]
+    },
+    "features": ["zero-knowledge", "rclone 1.66+", "gestion des !secret", "API de sauvegarde HA 2024.11"]
+  },
+  "NextGenSection": {
+    "title": "Pourquoi choisir Internxt?",
+    "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous nous assurons que vous seul avez les clés de vos données chiffrées et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour nous assurer que vos informations restent sécurisées.",
+    "cta": "Apprenez à mieux nous connaître",
+    "scrollableSection": {
+      "titles": [
+        "Données inviolables et sans fuite",
+        "Sécurité de nouvelle génération",
+        "Open source et transparent",
+        "Vérifié indépendamment"
+      ],
+      "descriptions": [
+        "Nous ne stockons pas les mots de passe ou les données utilisateur et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
+        "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant une cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
+        "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien à cacher sauf vos données.",
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne vous fiez pas seulement à notre parole. Internxt a été indépendamment audité et vérifié par la principale entreprise de tests de pénétration d'Europe, Securitum."
+      ]
+    }
+  }
+}

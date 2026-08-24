@@ -80,7 +80,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
 
           <div className="flex w-1/2 flex-row gap-3 lg:w-5/6">
             <Link
-              href={'/pricing'}
+              href={'#billingButtons'}
               className="flex h-[48px] w-min flex-1 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white transition-colors hover:bg-primary-dark"
             >
               {textContent.cta}

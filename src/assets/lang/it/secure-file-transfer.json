@@ -97,6 +97,51 @@
         "description": "Condivisione file sicura dall'inizio alla fine",
         "cta": "Ottieni Internxt"
     },
+    "tableSection": {
+    "title": "Piani Internxt",
+    "hotLabel": "{{discount}}% sconto",
+    "valentinesTitle": "Amore sicuro - ",
+    "planTitles": {
+      "header": "Scegli il tuo piano",
+      "lifetimeHeader": "Scegli il tuo piano a vita",
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a Vita",
+      "business": "Piani Business",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri piani a vita esclusivi"
+      }
+    },
+    "lifetimeDescription": "Paga una volta e goditi privacy e sicurezza a vita",
+    "planDescription": "Tutti i piani Internxt sono completamente equipaggiati con accesso completo alla nostra pluripremiata suite per la privacy composta da Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di cloud storage crittografato di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1 GB di cloud storage crittografato gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonima",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
     "SemanticAccordion": {
         "title": "Domande? Abbiamo le risposte",
         "items": [

@@ -355,6 +355,7 @@ export enum PromoCodeName {
   ahui = 'AHUI',
   shafa = 'SHAFA',
   mrbibbo = 'MRBIBBO',
+  seolp = 'SEOLP',
 }
 
 export interface PromoCodeProps {
