@@ -13,6 +13,9 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
+import { PromoCodeName } from '@/lib/types';
+
+const CHECKOUT_COUPON = PromoCodeName.seolp;
 
 interface FreeCloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -43,9 +46,9 @@ const FreeCloudObjectStorage = ({
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} couponCode={CHECKOUT_COUPON} />
 
-      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
+      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} couponCode={CHECKOUT_COUPON} />
 
       <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
 
