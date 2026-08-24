@@ -17,7 +17,6 @@ import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generato
 import Script from 'next/script';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 import { PartnersSection } from '@/components/cloud-object-storage/PartnersSection';
-import { PromoCodeName } from '@/lib/types';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -39,7 +38,6 @@ const CloudObjectStorage = ({
   const metatags = metatagsDescription.filter((metatag) => metatag.id === 'cloud-object-storage')[0];
 
   const lang = locale as string;
-  const couponCode = PromoCodeName.seolp;
 
   return (
     <>
@@ -51,7 +49,7 @@ const CloudObjectStorage = ({
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
         <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-        <HeroSection textContent={textContent.HeroSection} couponCode={couponCode} />
+        <HeroSection textContent={textContent.HeroSection} />
 
         <CertificationsSection />
 
@@ -59,7 +57,7 @@ const CloudObjectStorage = ({
 
         <PartnersSection textContent={textContent.PartnersSection} />
 
-        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} couponCode={couponCode} />
+        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
         <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
 
