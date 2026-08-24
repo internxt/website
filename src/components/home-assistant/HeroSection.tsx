@@ -41,14 +41,14 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-12 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-16 lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-40`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center gap-12 overflow-hidden py-10 lg:mt-16 lg:h-[700px] lg:justify-between lg:gap-16 lg:pl-10 lg:pr-4 xl:pl-16 xl:pr-8 2.5xl:pl-32 2.5xl:pr-16 3xl:pl-80 3xl:pr-40`}
       style={{
         background: darkMode
           ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[800px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[600px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
@@ -105,13 +105,11 @@ export default function HeroSection({
 
       <div className={'hidden justify-center lg:flex'}>
         <Image
-          src={getImage(`/images/home-assistant/hero2.webp`)}
+          src={getImage('/images/home-assistant/hero.webp')}
           alt="Internxt Partners HeroSection Image"
           width={1200}
-          height={960}
-          quality={100}
-          loading='eager'
-          className="h-auto rounded object-cover"
+          height={727}
+          className="h-auto rounded"
         />
       </div>
     </section>
