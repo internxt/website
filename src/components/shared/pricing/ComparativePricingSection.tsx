@@ -206,7 +206,7 @@ export const ComparativePricingSection = ({
         {!loadingCards && (
           <div className="content flex w-full flex-col items-center justify-center gap-6 sm:gap-8 md:flex-row md:items-stretch md:justify-center">
             {annualPlan && (
-              <div className="w-full max-w-sm md:w-auto md:max-w-none">
+              <div className="w-full max-w-sm md:min-w-0 md:max-w-[367px] md:flex-1">
                 <PriceCard
                   isCheckoutForLifetime={false}
                   product={annualPlan}
@@ -223,7 +223,7 @@ export const ComparativePricingSection = ({
             )}
 
             {lifetimePlan && (
-              <div className="w-full max-w-sm md:w-auto md:max-w-none">
+              <div className="w-full max-w-sm md:min-w-0 md:max-w-[367px] md:flex-1">
                 <PriceCard
                   isCheckoutForLifetime={true}
                   product={lifetimePlan}
