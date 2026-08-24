@@ -3,7 +3,7 @@ import crypto from 'crypto';
 
 import { MessageObjProps } from '@/components/temp-email/types/types';
 
-const MAIL_TM_API = 'https://api.mail.tm';
+const MAIL_TM_API = 'https://api.mail.gw';
 
 const mailTm = axios.create({
   baseURL: MAIL_TM_API,
