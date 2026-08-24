@@ -10,7 +10,7 @@ export const ReviewersSelector = ({
   activeSwitchPlan,
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex h-[38px] w-full flex-row rounded-lg bg-neutral-90/10 lg:w-[423.67px]`}>
+  <div id="reviewersButtons" className={`flex h-[38px] w-full flex-row rounded-lg bg-neutral-90/10 lg:w-[423.67px]`}>
     <button
       type="button"
       onClick={() => {
