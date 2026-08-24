@@ -142,6 +142,8 @@ export const ALLOWED_PATHS = [
   'thelinuxexp',
   'jawara',
   'ahui',
+  'shafa',
+  'mrbibbo',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -360,6 +362,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'thelinuxexp',
   'jawara',
   'ahui',
+  'shafa',
+  'mrbibbo',
 ]);
 
 export const COUPON_CODES = {
@@ -502,6 +506,8 @@ export const COUPON_CODES = {
   thelinuxexp: PromoCodeName.thelinuxexp,
   jawara: PromoCodeName.jawara,
   ahui: PromoCodeName.ahui,
+  shafa: PromoCodeName.shafa,
+  mrbibbo: PromoCodeName.mrbibbo,
 };
 
 interface OfferConfig {
