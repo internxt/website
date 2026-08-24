@@ -14,6 +14,10 @@ import HorizontalScrollableSection from '@/components/reviews/HorizontalScrollab
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import ReviewsSection from '@/components/home/ReviewsSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 interface CleanerProps {
   lang: GetServerSidePropsContext['locale'];
@@ -34,6 +38,46 @@ const CleanerPage = ({
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -47,13 +91,31 @@ const CleanerPage = ({
 
       <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} />
 
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={locale}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-neutral-17 lg:py-20"
+                hideFreeCard
+        />
+
       <VideotSection textContent={textContent.videoSection} />
 
       <SupportSection textContent={textContent.supportSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSection}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.ctaSection.title}</p>

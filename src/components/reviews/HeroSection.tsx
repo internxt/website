@@ -36,7 +36,7 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionDealsPr
           </div>
         </div>
         <Link
-          href={'/pricing'}
+          href={'#billingButtons'}
           className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
         >
           {textContent.cta}

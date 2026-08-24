@@ -77,6 +77,51 @@
     "description": "Protection totale contre les ransomwares, la perte de données ou la corruption",
     "cta": "Acheter votre plan"
   },
+  "tableSection": {
+    "title": "Forfaits Internxt",
+    "hotLabel": "{{discount}} % remise",
+    "valentinesTitle": "Amour sécurisé - ",
+    "planTitles": {
+      "header": "Choisissez votre plan",
+      "lifetimeHeader": "Choisissez votre plan à vie",
+      "individuals": "Forfaits Annuels",
+      "homePage": "Choisissez le bon forfait pour vous",
+      "lifetime": "Forfaits À Vie",
+      "business": "Forfaits Entreprise",
+      "lifetimeCampaign": {
+        "blueText": "50 % de réduction",
+        "normalText": "sur tous nos forfaits à vie exclusifs"
+      }
+    },
+    "lifetimeDescription": "Payez une fois et profitez de la confidentialité et de la sécurité à vie",
+    "planDescription": "Tous les forfaits Internxt sont entièrement équipés avec un accès complet à notre suite de confidentialité primée composée d'Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux forfaits Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les forfaits de stockage cloud chiffré d'Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Entreprise"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
   "FaqSection": {
     "title": "Des questions ? Nous avons des réponses",
     "faq": [
@@ -123,8 +168,8 @@
   },
   "FeatureSection": {
     "title": "Solution de sauvegarde cloud",
-    "titleLine2": "Peu importe ce qui arrive à votre appareil, sauvegarder vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent être récupérés pour toujours. Choisissez Internxt pour des sauvegardes sécurisées et la redondance des données, protégeant vos fichiers contre les ransomwares et les pannes d'appareil.",
-    "description": "Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vous aurez toujours une copie de vos fichiers.",
+    "titleLine2": "",
+    "description": "Peu importe ce qui arrive à votre appareil, sauvegarder vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent être récupérés pour toujours. Choisissez Internxt pour des sauvegardes sécurisées et la redondance des données, protégeant vos fichiers contre les ransomwares et les pannes d'appareil. Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vous aurez toujours une copie de vos fichiers.",
     "cta": "Obtenir Internxt",
     "cards": {
       "element1": {
