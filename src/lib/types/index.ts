@@ -353,6 +353,8 @@ export enum PromoCodeName {
   thelinuxexp = 'THELINUXEXP',
   jawara = 'JAWARA',
   ahui = 'AHUI',
+  shafa = 'SHAFA',
+  mrbibbo = 'MRBIBBO',
 }
 
 export interface PromoCodeProps {
