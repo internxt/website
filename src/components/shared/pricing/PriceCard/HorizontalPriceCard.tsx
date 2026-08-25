@@ -55,6 +55,7 @@ export const HorizontalPriceCard = ({
   const cardLabel =
     {
       '5TB': contentText.productFeatures.planTypes.ultimate,
+      '1TB': contentText.productFeatures.planTypes.essentials,
     }[storage] || null;
 
   const iconsFeatures = [
