@@ -55,15 +55,6 @@ export interface ProductsDataProps {
   };
 }
 
-export interface PlanById {
-  priceId: string;
-  storage: string;
-  price: number;
-  currency: string;
-  currencyValue: string;
-  interval: Interval;
-}
-
 async function getPrices(currencySpecified?: string) {
   const currency = await getCurrency(currencySpecified);
   const data = await fetchProductData(currency);
@@ -139,45 +130,6 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   console.log(transformedData);
 
   return transformedData;
-}
-
-/**
- * Fetches a single Stripe price by its priceId, for prices that are not part of
- * the curated list returned by `getPrices` (antivirus, partner deals, etc).
- */
-async function getPlanById(priceId: string, currencySpecified?: string): Promise<PlanById | undefined> {
-  const currency = await getCurrency(currencySpecified);
-
-  const fetchPrice = async (currencyValue: string) => {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/object-storage/price`, {
-      params: { planId: priceId, currency: currencyValue },
-    });
-    return res.data;
-  };
-
-  try {
-    let price;
-
-    try {
-      price = await fetchPrice(currency);
-    } catch (error) {
-      price = await fetchPrice('eur');
-    }
-
-    const normalizedPrice: PlanById = {
-      priceId: price.id,
-      storage: bytes(price.bytes),
-      price: price.decimalAmount,
-      currency: CURRENCY_MAP[price.currency] ?? price.currency,
-      currencyValue: price.currency,
-      interval: price.interval,
-    };
-
-    return normalizedPrice;
-  } catch (error) {
-    console.error('Error fetching price by id:', error);
-    return undefined;
-  }
 }
 
 async function getSelectedPrice(
@@ -300,7 +252,6 @@ const redirectToCheckoutForPcComponentes = (
 
 export const stripeService = {
   getPrices,
-  getPlanById,
   getSelectedPrice,
   getCoupon,
   getLifetimeCoupons,

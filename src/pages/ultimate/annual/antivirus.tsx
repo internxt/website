@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
+import axios from 'axios';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
@@ -20,12 +21,13 @@ import { downloadDriveLinks } from '@/lib/get-download-url';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 import usePricing from '@/hooks/usePricing';
-import { PlanById, stripeService } from '@/services/stripe.service';
+import { PlanById, normalizePlanById } from '@/utils/priceHelper';
 import { analyticsService } from '@/services/ga.services';
 import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
 
 const ESSENTIAL_PLAN_PRICE_ID = 'price_1U6Ev3FAOdcgaBMQHxOAmWPO';
+const DEFAULT_CURRENCY = 'eur';
 const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
 const CLAIM_DEAL_EVENT = 'Claim Deal';
 
@@ -118,9 +120,30 @@ const AntivirusPage = ({
 
     let isStale = false;
 
-    stripeService.getPlanById(ESSENTIAL_PLAN_PRICE_ID, currencyValue).then((plan) => {
-      if (!isStale) setEssentialPlan(plan);
-    });
+    const fetchPrice = async (currencyToFetch: string) => {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/object-storage/price`, {
+        params: { planId: ESSENTIAL_PLAN_PRICE_ID, currency: currencyToFetch },
+      });
+      return res.data;
+    };
+
+    const fetchEssentialPlan = async () => {
+      try {
+        let price;
+
+        try {
+          price = await fetchPrice(currencyValue ?? DEFAULT_CURRENCY);
+        } catch (error) {
+          price = await fetchPrice(DEFAULT_CURRENCY);
+        }
+
+        if (!isStale) setEssentialPlan(normalizePlanById(price));
+      } catch (error) {
+        console.error('Error fetching price by id:', error);
+      }
+    };
+
+    fetchEssentialPlan();
 
     return () => {
       isStale = true;
