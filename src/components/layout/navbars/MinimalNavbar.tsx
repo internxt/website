@@ -10,9 +10,10 @@ export interface MinimalNavbarProps {
   isOffer?: boolean;
   textContent?: NavigationBarText;
   price?: string;
+  isAnnual?: boolean;
 }
 
-export const MinimalNavbar = ({ isOffer, textContent, price }: MinimalNavbarProps) => {
+export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }: MinimalNavbarProps) => {
   const [scrolled, setScrolled] = useState<boolean>(true);
   const [currencySymbol, setCurrencySymbol] = useState<string>('€');
 
@@ -29,9 +30,11 @@ export const MinimalNavbar = ({ isOffer, textContent, price }: MinimalNavbarProp
     });
   }, []);
 
-  const priceLabel = textContent?.MinimalNavbar.price
-    .replace('{currency}', currencySymbol)
-    .replace('{price}', price || '');
+  const priceText = isAnnual
+    ? textContent?.MinimalNavbar.priceAnnual ?? textContent?.MinimalNavbar.price
+    : textContent?.MinimalNavbar.price;
+
+  const priceLabel = priceText?.replace('{currency}', currencySymbol).replace('{price}', price || '');
 
   return (
     <div

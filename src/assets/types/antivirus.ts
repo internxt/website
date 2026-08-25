@@ -62,6 +62,8 @@ export interface HeroSection {
   description: string;
   eyeBrow: string;
   DownloadLinks: DownloadLinks;
+  price?: string;
+  priceAnnual?: string;
 }
 
 export interface DownloadLinks {
