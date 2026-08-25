@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
@@ -19,11 +20,12 @@ import { downloadDriveLinks } from '@/lib/get-download-url';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 import usePricing from '@/hooks/usePricing';
-import { Interval } from '@/services/stripe.service';
+import { PlanById, stripeService } from '@/services/stripe.service';
 import { analyticsService } from '@/services/ga.services';
 import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
 
+const ESSENTIAL_PLAN_PRICE_ID = 'price_1U6Ev3FAOdcgaBMQHxOAmWPO';
 const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
 const CLAIM_DEAL_EVENT = 'Claim Deal';
 
@@ -105,11 +107,26 @@ const AntivirusPage = ({
     },
   ];
 
-  const { products, currency, currencyValue, lifetimeCoupon } = usePricing({
+  const { currency, currencyValue, lifetimeCoupon, loadingCards } = usePricing({
     couponCodeForLifetime: PromoCodeName.antivirus,
   });
 
-  const essentialPlan = products?.individuals?.[Interval.Year]?.find((plan: any) => plan.storage === '1TB');
+  const [essentialPlan, setEssentialPlan] = useState<PlanById>();
+
+  useEffect(() => {
+    if (loadingCards) return;
+
+    let isStale = false;
+
+    stripeService.getPlanById(ESSENTIAL_PLAN_PRICE_ID, currencyValue).then((plan) => {
+      if (!isStale) setEssentialPlan(plan);
+    });
+
+    return () => {
+      isStale = true;
+    };
+  }, [loadingCards, currencyValue]);
+
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
   const handleClaimDealClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -126,13 +143,11 @@ const AntivirusPage = ({
 
     handleImpactEvent({ event: CLAIM_DEAL_EVENT, properties: ctaProperties });
 
-    if (!essentialPlan) return;
-
     event.preventDefault();
     event.stopPropagation();
 
     checkout({
-      planId: essentialPlan.priceId,
+      planId: ESSENTIAL_PLAN_PRICE_ID,
       mode: 'payment',
       planType: 'individual',
       currency: currencyValue ?? 'eur',
@@ -143,12 +158,19 @@ const AntivirusPage = ({
   return (
     <div onClickCapture={handleClaimDealClick}>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-        <MinimalNavbar lang={locale} isOffer textContent={navbarLang} price={essentialPlan?.price.toString()} />
+        <MinimalNavbar
+          lang={locale}
+          isOffer
+          isAnnual
+          textContent={navbarLang}
+          price={essentialPlan?.price.toString()}
+        />
 
         <AlternativeHeroSection
           textContent={langJson.HeroSection}
           currentPrice={essentialPlan?.price.toString()}
           currency={currency}
+          isAnnual
         />
 
         <InfoSection
@@ -176,6 +198,7 @@ const AntivirusPage = ({
               planId={essentialPlan.priceId}
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
+              interval={essentialPlan.interval}
             />
           </div>
         )}

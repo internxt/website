@@ -12,7 +12,8 @@
       "downloadForLinux": "Scarica per Linux"
     },
     "cta": "Ottieni Internxt",
-    "price": "Da {currency}{price}/mese"
+    "price": "Da {currency}{price}/mese",
+    "priceAnnual": "Da {currency}{price}/anno"
   },
   "cta1": {
     "title": "Internxt Antivirus",

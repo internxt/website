@@ -16,6 +16,7 @@ export interface NavigationBarText {
     secondaryEyeBrow: string;
     cta: string;
     price: string;
+    priceAnnual: string;
   };
 }
 

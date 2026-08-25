@@ -18,6 +18,7 @@ import {
 } from '@phosphor-icons/react';
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
+import { Interval } from '@/services/stripe.service';
 
 export interface HorizontalPriceCardProps {
   decimalDiscountValue?: number;
@@ -29,6 +30,7 @@ export interface HorizontalPriceCardProps {
   planId: string;
   currencyValue: string;
   coupon: PromoCodeProps | undefined;
+  interval?: Interval;
 }
 
 export const HorizontalPriceCard = ({
@@ -40,6 +42,7 @@ export const HorizontalPriceCard = ({
   planId,
   currencyValue,
   coupon,
+  interval = Interval.Month,
 }: HorizontalPriceCardProps): JSX.Element | null => {
   if (!storage) {
     return null;
@@ -57,6 +60,12 @@ export const HorizontalPriceCard = ({
       '5TB': contentText.productFeatures.planTypes.ultimate,
       '1TB': contentText.productFeatures.planTypes.essentials,
     }[storage] || null;
+  const intervalLabel =
+    {
+      [Interval.Month]: contentText.perMonth,
+      [Interval.Year]: contentText.perYear,
+      [Interval.Lifetime]: '',
+    }[interval] ?? contentText.perMonth;
 
   const iconsFeatures = [
     Database,
@@ -103,13 +112,13 @@ export const HorizontalPriceCard = ({
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
               <span className="text-4xl font-bold">{currentPrice}</span>
               <span>{currency}</span>
-              <span className="text-sm">{contentText.perMonth}</span>
+              <span className="text-sm">{intervalLabel}</span>
             </p>
             {showDiscount && (
               <p className="flex flex-row items-end whitespace-nowrap font-normal text-gray-50">
                 <span className="text-xl line-through">{price}</span>
                 <span className="text-sm">{currency}</span>
-                <span className="text-sm">{contentText.perMonth}</span>
+                <span className="text-sm">{intervalLabel}</span>
               </p>
             )}
           </div>
