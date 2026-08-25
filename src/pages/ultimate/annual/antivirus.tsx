@@ -38,12 +38,6 @@ interface AntivirusProps {
   navbarLang: NavigationBarText;
   langJson: AntivirusText;
   footerLang: FooterText;
-  relationalLinksText: any;
-  download: {
-    Windows: any;
-    MacOS: any;
-    Linux: any;
-  };
   isGetAntivirus?: boolean;
 }
 
@@ -55,7 +49,7 @@ const AntivirusPage = ({
   navbarLang,
   isGetAntivirus,
 }: AntivirusProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
 
   const cardsForComponentsIncolumn = [
@@ -155,7 +149,7 @@ const AntivirusPage = ({
 
   return (
     <div onClickCapture={handleClaimDealClick}>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+      <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
         <MinimalNavbar lang={locale} isOffer textContent={navbarLang} price={ultimatePlan?.price.toString()} isAnnual />
 
         <AlternativeHeroSection
@@ -168,8 +162,8 @@ const AntivirusPage = ({
         <InfoSection
           FirstComponent={
             <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:gap-32">
-              {infoSectionData.map((item, index) => (
-                <div key={index} className="flex flex-col items-center justify-center text-center">
+              {infoSectionData.map((item) => (
+                <div key={item.title} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
                   <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80">{item.description}</p>
                 </div>
@@ -200,8 +194,8 @@ const AntivirusPage = ({
         <InfoSection
           FirstComponent={
             <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20 md:space-y-0">
-              {InfoSectionV2.map((item, index) => (
-                <div key={index} className="flex flex-col items-center justify-center px-5 text-center">
+              {InfoSectionV2.map((item) => (
+                <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
                   <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
                 </div>
