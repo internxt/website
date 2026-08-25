@@ -6,9 +6,15 @@ interface AlternativeHeroSectionProps {
   textContent: any;
   currentPrice?: string;
   currency?: string;
+  isAnnual?: boolean;
 }
 
-const AlternativeHeroSection = ({ textContent, currentPrice, currency }: AlternativeHeroSectionProps) => (
+const AlternativeHeroSection = ({
+  textContent,
+  currentPrice,
+  currency,
+  isAnnual = false,
+}: AlternativeHeroSectionProps) => (
   <section
     className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
@@ -42,7 +48,9 @@ const AlternativeHeroSection = ({ textContent, currentPrice, currency }: Alterna
           </Link>
 
           <span className="h-min rounded-2 bg-green-100 px-1 py-0.5 text-sm font-semibold text-green-0">
-            {textContent.price?.replace('{currency}', currency || '').replace('{price}', currentPrice || '')}
+            {(isAnnual ? textContent.priceAnnual ?? textContent.price : textContent.price)
+              ?.replace('{currency}', currency || '')
+              .replace('{price}', currentPrice || '')}
           </span>
         </div>
       </div>

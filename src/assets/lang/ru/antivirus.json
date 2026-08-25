@@ -12,7 +12,8 @@
       "downloadForLinux": "Скачать для Linux"
     },
     "cta": "Получить Internxt",
-    "price": "От {currency}{price}/мес"
+    "price": "От {currency}{price}/мес",
+    "priceAnnual": "От {currency}{price}/год"
   },
   "cta1": {
     "title": "Internxt Antivirus",
