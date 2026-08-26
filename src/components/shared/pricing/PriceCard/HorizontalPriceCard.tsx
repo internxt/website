@@ -22,28 +22,80 @@ import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
 
 const FEATURE_ICONS: Record<string, Icon> = {
-  '**1TB** encrypted storage': Database,
-  '**3TB** encrypted storage': Database,
-  '**5TB** encrypted storage': Database,
-  'Try risk-free for 30 days': CurrencyCircleDollar,
-  'Post-quantum encryption': Key,
-  'Zero-knowledge encryption': LockSimple,
-  'Two-factor authentication': Fingerprint,
-  'Backup your computer': ArrowsClockwise,
-  'Password-protected file sharing': Password,
-  'Invite, share & collaborate': CirclesThreePlus,
-  'File versioning': Files,
+  '1TB-storage': Database,
+  '3TB-storage': Database,
+  '5TB-storage': Database,
+  'risk-free': CurrencyCircleDollar,
+  'encryption': Key,
+  'Zero-knowledge': LockSimple,
+  'authentication': Fingerprint,
+  'Backup': ArrowsClockwise,
+  'Password': Password,
+  'Invite': CirclesThreePlus,
+  'File': Files,
   'Photos': Image,
-  'CLI & WebDav support': CodeBlock,
-  'NAS & Rclone support': Code,
-  'Encrypted VPN': CellTower,
+  'WebDav': CodeBlock,
+  'NAS-Rclone': Code,
+  'VPN': CellTower,
   'Antivirus': Shield,
   'Cleaner': Sparkle,
   'Meet': VideoCamera,
   'Mail': Envelope,
 };
 
-const getFeatureIcon = (featureName: string): Icon => FEATURE_ICONS[featureName.trim()] ?? Sparkle;
+const iconsToShow: Record<string, string[]> = {
+  '1TB': [
+    '1TB-storage',
+    'risk-free',
+    'encryption',
+    'Zero-knowledge',
+    'authentication',
+    'Backup',
+    'Password',
+    'VPN',
+    'Antivirus',
+  ],
+  '3TB': [
+    '3TB-storage',
+    'risk-free',
+    'encryption',
+    'Zero-knowledge',
+    'authentication',
+    'Backup',
+    'Password',
+    'Invite',
+    'File',
+    'VPN',
+    'Antivirus',
+    'Cleaner',
+    'Meet',
+  ],
+  '5TB': [
+    '5TB-storage',
+    'risk-free',
+    'encryption',
+    'Zero-knowledge',
+    'authentication',
+    'Backup',
+    'Password',
+    'Invite',
+    'File',
+    'Photos',
+    'WebDav',
+    'NAS-Rclone',
+    'VPN',
+    'Antivirus',
+    'Cleaner',
+    'Meet',
+    'Mail',
+  ],
+};
+
+const getFeatureIcon = (storage: string, featureIndex: number): Icon => {
+  const iconId = iconsToShow[storage]?.[featureIndex];
+
+  return (iconId ? FEATURE_ICONS[iconId] : undefined) ?? Sparkle;
+};
 
 export interface HorizontalPriceCardProps {
   decimalDiscountValue?: number;
@@ -142,8 +194,8 @@ export const HorizontalPriceCard = ({
         <div
           className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}
         >
-          {planFeatures.map((feature) => {
-            const FeatureIcon = getFeatureIcon(feature.name);
+          {planFeatures.map((feature, index) => {
+            const FeatureIcon = getFeatureIcon(storage, index);
             const isComingSoon = feature.status === 'Coming soon';
             const formattedName = feature.name.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
