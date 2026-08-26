@@ -7,7 +7,7 @@ import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import cookies from '@/lib/cookies';
+import cookies, { getTrackingParams } from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
@@ -144,6 +144,7 @@ const AntivirusPage = ({
       planType: 'individual',
       currency: currencyValue ?? 'eur',
       promoCodeId: lifetimeCoupon?.name,
+      trackingParams: getTrackingParams(),
     });
   };
 
