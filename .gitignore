@@ -48,3 +48,6 @@ public/*.pdf
 core
 logs.txt
 token.txt
+
+#typescript
+next-env.d.ts
