@@ -32,15 +32,15 @@ function LifetimeSpecial({
   footerLang,
   navbarLang,
   testimonialsJson,
-}: LifetimeSpecialProps): JSX.Element {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+}: Readonly<LifetimeSpecialProps>): JSX.Element {
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'lifetime');
 
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCodeForLifetime: PromoCodeName.lftem,
@@ -101,8 +101,8 @@ function LifetimeSpecial({
         ])}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Lifetime"
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
