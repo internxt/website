@@ -9,7 +9,7 @@ const GCLID_COOKIE_LIFESPAN_DAYS = 90;
 const CELLO_EXPIRATION_DAYS = 30;
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
-const TRACKING_PARAMS = [
+export const TRACKING_PARAMS = [
   'utm_medium',
   'utm_source',
   'utm_campaign',
@@ -21,6 +21,8 @@ const TRACKING_PARAMS = [
   'ga_adgroup',
   'ga_keyword',
   'ga_network',
+  'irgwc',
+  'afsrc',
 ] as const;
 
 function parseUri(ctx: GetServerSidePropsContext) {
@@ -126,6 +128,28 @@ export const saveTrackingParamsToCookies = () => {
   });
 }
 
+/**
+ * Returns the tracking params (utm_*, gclid, irclickid, ga_*) that are present,
+ * reading them from the current URL first and falling back to the cookies
+ * stored on the first visit by `saveTrackingParamsToCookies`.
+ */
+export const getTrackingParams = (): Record<string, string> => {
+  if (typeof window === 'undefined') return {};
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const trackingParams: Record<string, string> = {};
+
+  TRACKING_PARAMS.forEach((param) => {
+    const value = urlParams.get(param) ?? getCookie(param);
+
+    if (value) {
+      trackingParams[param] = value;
+    }
+  });
+
+  return trackingParams;
+};
+
 export const getGclidFromURL = (): string | null => {
   if (typeof window === 'undefined') return null;
   const params = new URLSearchParams(window.location.search);
@@ -150,7 +174,7 @@ export const isCelloExpired = (): boolean => {
   return Date.now() - new Date(storedDate).getTime() > CELLO_EXPIRATION_DAYS * MILLISECONDS_PER_DAY;
 };
 
-export default {
+const cookies = {
   parseUri,
   setCookie,
   getCookie,
@@ -159,5 +183,8 @@ export default {
   saveCelloFirstVisit,
   getCelloFirstVisitDate,
   isCelloExpired,
-  saveTrackingParamsToCookies
+  saveTrackingParamsToCookies,
+  getTrackingParams,
 };
+
+export default cookies;
