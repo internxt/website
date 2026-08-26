@@ -364,6 +364,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'ahui',
   'shafa',
   'mrbibbo',
+  'gentiluomodigitale'
 ]);
 
 export const COUPON_CODES = {
