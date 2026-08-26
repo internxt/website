@@ -255,6 +255,14 @@ type PaymentCheckoutConfig = {
   trackingParams?: Record<string, string>;
 };
 
+function appendTrackingParams(params: URLSearchParams, trackingParams?: Record<string, string>): void {
+  Object.entries(trackingParams ?? {}).forEach(([key, value]) => {
+    if (value && !params.has(key)) {
+      params.set(key, value);
+    }
+  });
+}
+
 export function checkout({
   planId,
   promoCodeId,
@@ -275,11 +283,7 @@ export function checkout({
     mode && params.set('mode', mode ? mode : 'subscription');
     gclid && params.set('gclid', gclid);
 
-    Object.entries(trackingParams ?? {}).forEach(([key, value]) => {
-      if (value && !params.has(key)) {
-        params.set(key, value);
-      }
-    });
+    appendTrackingParams(params, trackingParams);
 
     if (!isCelloExpired()) {
       const currentParams = new URLSearchParams(globalThis.location.search);
