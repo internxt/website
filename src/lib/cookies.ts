@@ -128,11 +128,6 @@ export const saveTrackingParamsToCookies = () => {
   });
 }
 
-/**
- * Returns the tracking params (utm_*, gclid, irclickid, ga_*) that are present,
- * reading them from the current URL first and falling back to the cookies
- * stored on the first visit by `saveTrackingParamsToCookies`.
- */
 export const getTrackingParams = (): Record<string, string> => {
   if (typeof window === 'undefined') return {};
 
