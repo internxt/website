@@ -21,28 +21,29 @@ import {
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
 
-const FEATURE_ICONS: { match: RegExp; icon: Icon }[] = [
-  { match: /encrypted storage/i, icon: Database },
-  { match: /risk-free|risk free|money.?back|guarantee/i, icon: CurrencyCircleDollar },
-  { match: /post-quantum/i, icon: Key },
-  { match: /zero-knowledge/i, icon: LockSimple },
-  { match: /two-factor|2fa/i, icon: Fingerprint },
-  { match: /backup/i, icon: ArrowsClockwise },
-  { match: /password-protected/i, icon: Password },
-  { match: /invite|collaborate|share/i, icon: CirclesThreePlus },
-  { match: /versioning/i, icon: Files },
-  { match: /photos/i, icon: Image },
-  { match: /cli|webdav/i, icon: CodeBlock },
-  { match: /nas|rclone/i, icon: Code },
-  { match: /vpn/i, icon: CellTower },
-  { match: /antivirus/i, icon: Shield },
-  { match: /cleaner/i, icon: Sparkle },
-  { match: /meet/i, icon: VideoCamera },
-  { match: /mail/i, icon: Envelope },
-];
+const FEATURE_ICONS: Record<string, Icon> = {
+  '**1TB** encrypted storage': Database,
+  '**3TB** encrypted storage': Database,
+  '**5TB** encrypted storage': Database,
+  'Try risk-free for 30 days': CurrencyCircleDollar,
+  'Post-quantum encryption': Key,
+  'Zero-knowledge encryption': LockSimple,
+  'Two-factor authentication': Fingerprint,
+  'Backup your computer': ArrowsClockwise,
+  'Password-protected file sharing': Password,
+  'Invite, share & collaborate': CirclesThreePlus,
+  'File versioning': Files,
+  'Photos': Image,
+  'CLI & WebDav support': CodeBlock,
+  'NAS & Rclone support': Code,
+  'Encrypted VPN': CellTower,
+  'Antivirus': Shield,
+  'Cleaner': Sparkle,
+  'Meet': VideoCamera,
+  'Mail': Envelope,
+};
 
-const getFeatureIcon = (featureName: string): Icon =>
-  FEATURE_ICONS.find(({ match }) => match.test(featureName))?.icon ?? Sparkle;
+const getFeatureIcon = (featureName: string): Icon => FEATURE_ICONS[featureName.trim()] ?? Sparkle;
 
 export interface HorizontalPriceCardProps {
   decimalDiscountValue?: number;
@@ -88,8 +89,9 @@ export const HorizontalPriceCard = ({
     }[storage] || null;
 
   const planFeatures: { name: string; status: string }[] = contentText.productFeatures.individualPlans[storage] ?? [];
+  const minorGap = planFeatures.length <= 13 ? 'lg:gap-y-5' : 'lg:gap-y-4'
   const featuresRowGap =
-    planFeatures.length <= 9 ? 'lg:gap-y-6' : planFeatures.length <= 13 ? 'lg:gap-y-5' : 'lg:gap-y-4';
+    planFeatures.length <= 9 ? 'lg:gap-y-6' : minorGap;
 
   function onCheckoutButtonClicked() {
     checkout({
@@ -140,13 +142,13 @@ export const HorizontalPriceCard = ({
         <div
           className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}
         >
-          {planFeatures.map((feature, index: number) => {
+          {planFeatures.map((feature) => {
             const FeatureIcon = getFeatureIcon(feature.name);
             const isComingSoon = feature.status === 'Coming soon';
             const formattedName = feature.name.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
             return (
-              <div key={index} className="flex items-center gap-2">
+              <div key={feature.name} className="flex items-center gap-2">
                 <FeatureIcon size={24} className="shrink-0 text-primary" />
                 <div className="flex flex-row items-center gap-2">
                   <p
