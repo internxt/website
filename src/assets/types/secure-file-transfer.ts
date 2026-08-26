@@ -1,23 +1,23 @@
 export interface SecureFileTransferText {
-    HeroSection:             HeroSection;
-    FeaturesSection:         FeaturesSection;
-    CtaSection:              CtaSection;
-    CtaSectionV2:            CtaSection;
-    HowToChooseSection:      HowToChooseSection;
-    SecureAndManage:         SecureAndManage;
-    SecureFeaturesSection:   SecureFeaturesSection;
-    SemanticAccordion:       SemanticAccordion;
-    tableSection:            TableSection;
+  HeroSection: HeroSection;
+  FeaturesSection: FeaturesSection;
+  CtaSection: CtaSection;
+  CtaSectionV2: CtaSection;
+  HowToChooseSection: HowToChooseSection;
+  SecureAndManage: SecureAndManage;
+  SecureFeaturesSection: SecureFeaturesSection;
+  SemanticAccordion: SemanticAccordion;
+  tableSection: TableSection;
 }
 
 interface HeroSection {
-  title:    string;
+  title: string;
   features?: string[];
-  cta:      string;
+  cta: string;
 }
 
 export interface FeaturesSection {
-  intro:    string;
+  intro: string;
   features: Features;
 }
 
@@ -28,41 +28,41 @@ interface Features {
 }
 
 interface Feature {
-  title:       string;
+  title: string;
   description: string[];
 }
 
 interface CtaSection {
-  title:       string;
+  title: string;
   description: string;
-  cta:         string;
+  cta: string;
 }
 
 interface HowToChooseSection {
-  title:          string;
+  title: string;
   accordionCards: AccordionCards;
 }
 
 interface AccordionCards {
-  titles:       string[];
+  titles: string[];
   descriptions: string[];
 }
 
 interface SecureAndManage {
-  title:       string;
+  title: string;
   description: string;
-  cards:       Card[];
+  cards: Card[];
 }
 
 interface Card {
-  title:       string;
+  title: string;
   description: string[];
-  cta:         string;
+  cta: string;
 }
 
 interface SecureFeaturesSection {
-  title:             string;
-  descriptions:      string;
+  title: string;
+  descriptions: string;
   scrollableSection: AccordionCards;
 }
 
@@ -73,7 +73,7 @@ interface SemanticAccordion {
 
 interface Item {
   question: string;
-  answer:   string[];
+  answer: string[];
 }
 
 export interface TableSection {
@@ -124,7 +124,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;

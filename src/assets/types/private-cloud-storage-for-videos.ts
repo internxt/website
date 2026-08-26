@@ -27,7 +27,7 @@ export interface FeaturesSection {
   features: Features;
 }
 
-interface Features {
+export interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
