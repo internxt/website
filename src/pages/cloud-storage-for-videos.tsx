@@ -17,6 +17,10 @@ import SecureAndManageSection from '@/components/private-cloud-storage-for-video
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 interface CloudStorageForVideosProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -35,6 +39,46 @@ const CloudStorageForVideos = ({
   lang,
 }: CloudStorageForVideosProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-for-videos');
+
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
 
   return (
     <>
@@ -78,61 +122,83 @@ const CloudStorageForVideos = ({
                   {textContent.HeroSection.cta}
                 </Link>
               </div>
-            </>
-          }
-          width="w-[580px] "
-          bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
-        />
-
-        <FeatureSection textContent={textContent.FeaturesSection} />
-
-        <FloatingCtaSectionv2
-          textContent={textContent.cta}
-          customText={
-            <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-              <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
+              <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
+                {textContent.HeroSection.subtitle}{' '}
+              </p>
+              <Link
+                href={'#billingButtons'}
+                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+              >
+                {textContent.HeroSection.cta}
+              </Link>
             </div>
-          }
-          url="/pricing"
-          bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:py-20 py-10"
-        />
+          </>
+        }
+        width="w-[580px] "
+        bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+      />
 
-        <HowToChooseSection textContent={textContent.HowToChooseSection} />
+      <FeatureSection textContent={textContent.FeaturesSection} />
 
-        <SecureAndManageSection textContent={textContent.SecureAndManage} />
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="lg:py-20"
+                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
+                hideFreeCard
+                
+            />
 
-        <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
+      <FloatingCtaSectionv2
+        textContent={textContent.cta}
+        customText={
+          <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
+            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
+            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
+          </div>
+        }
+        url="#billingButtons"
+        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20 py-10"
+      />
 
-        <FloatingCtaSectionv2
-          textContent={textContent.cta}
-          customText={
-            <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-              <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
-            </div>
-          }
-          url="/pricing"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:py-20"
-        />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Secure cloud storage', url: '/drive' },
-            { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' },
-          ]}
-        />
-      </Layout>
+      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
+
+      <FloatingCtaSectionv2
+        textContent={textContent.cta}
+        customText={
+          <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
+            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
+            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
+          </div>
+        }
+        url="#billingButtons"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20"
+      />
+
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }]} />
+    </Layout>
     </>
   );
 };

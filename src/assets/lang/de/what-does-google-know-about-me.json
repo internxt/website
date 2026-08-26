@@ -1,266 +1,267 @@
 {
-  "HeroSection": {
-    "mainTitle": "What Does Google Know About Me?",
-    "section1": {
-      "description": "Privacy groups have expressed alarm over Google's collection of personal data and everyone's heard of Google’s many privacy violations.",
-      "footer": "It's no secret that Google collects personal information and tracks its users through Chrome, Google Search, Google Play apps, Google Maps, Youtube, and more. Prevent Google from accessing your data by adjusting your Google controls and settings."
+    "HeroSection": {
+      "mainTitle": "Was weiß Google über mich?",
+      "section1": {
+        "description": "Datenschutzgruppen haben besorgt auf die Erfassung personenbezogener Daten durch Google reagiert, und jeder hat schon von den zahlreichen Datenschutzverstößen von Google gehört.",
+        "footer": "Es ist kein Geheimnis, dass Google persönliche Informationen sammelt und seine Nutzer über Chrome, die Google-Suche, Google Play-Apps, Google Maps, YouTube und mehr verfolgt. Verhindern Sie, dass Google auf Ihre Daten zugreift, indem Sie Ihre Google-Einstellungen anpassen."
+      },
+      "section2": {
+        "title": "Was weiß Google basierend auf meinen Google-Aktivitäten über mich?",
+        "bulletedList": {
+          "title": "Wenn Sie auf Google suchen, werden die folgenden Daten erfasst:",
+          "list": [
+            "Persönliche Informationen: Ihr Name, Ihre Telefonnummer, Ihr Geschlecht, Ihr Geburtsdatum",
+            "Ihre E-Mail-Adressen",
+            "Wo Sie wohnen",
+            "Wo Sie arbeiten",
+            "Ihre Interessen",
+            "Wonach Sie suchen",
+            "Websites, die Sie besuchen",
+            "Videos, die Sie ansehen",
+            "Anzeigen, auf die Sie klicken oder tippen",
+            "Ihr Standort",
+            "Orte, die Sie weltweit besucht haben",
+            "Geräteinformationen",
+            "IP-Adresse und Cookie-Daten",
+            "Ihr YouTube-Suchverlauf und kürzlich gesehene Videos",
+            "Was Sie dem Google Assistant gesagt haben, auch über Smart-Speaker"
+          ]
+        }
+      },
+      "section3": {
+        "title": "Warum sammelt Google Ihre Daten?",
+        "description": "Kurz gesagt, es ist eine Form der Ausbeutung. Googles Motivation ist es, Werbung gezielt zu schalten und Ihre Erfahrung mit seinen Diensten zu „personalisieren“. Indem Sie Ihre Daten preisgeben, erlauben Sie Hunderttausenden von Werbetreibenden, auf der Grundlage Ihrer sensiblen persönlichen Daten um die Anzeige von Werbung zu bieten."
+      },
+      "footer": {
+        "line1": "Alle Beteiligten profitieren von Ihren Informationen, außer Ihnen selbst.",
+        "line2": "Sie sind das Produkt."
+      }
     },
-    "section2": {
-      "title": "What does Google know about me based on Google activity?",
-      "bulletedList": {
-        "title": "When you search on Google, they collect all the following data:",
-        "list": [
-          "Personal information: Your name, phone number, gender, date of birth",
-          "Your email addresses",
-          "Where you live",
-          "Where you work",
-          "Your interests",
-          "Things you search for",
-          "Websites you visit",
-          "Videos you watch",
-          "Ads you click on or tap",
-          "Your location",
-          "Places you've visited around the world",
-          "Device information",
-          "IP address and cookie data",
-          "Your YouTube search history and recently watched videos",
-          "What you've said to the Google Assistant, including via smart speakers"
+    "CtaSection": {
+      "title": "Übernehmen Sie die Kontrolle über Ihre Daten",
+      "description": "Wählen Sie einen Dienst, der Ihre Daten schützt, anstatt sie zu monetarisieren.",
+      "cta": "Zu Internxt wechseln"
+    },
+    "WhatGoogleKnowsSection": {
+      "title": "Entdecken Sie, was Google über Sie weiß",
+      "description": "Google sammelt eine Menge Informationen über Sie, hauptsächlich aus Ihrem Google-Aktivitätsverlauf. Aus verschiedenen rechtlichen Gründen müssen diese Daten jedoch für Sie zugänglich sein. Um zu verstehen, wie viel genau gesammelt wird, müssen Sie Ihre Google-Einstellungen öffnen und ein wenig nachforschen.",
+      "section1": {
+        "title": "Finden Sie eine Übersicht aller in Ihrem Google-Konto gespeicherten Daten",
+        "numberedList": [
+          "Melden Sie sich in Ihrem Google-Konto an",
+          "Wählen Sie im Navigationsbereich „Daten & Datenschutz“ oder den Tab „Datenschutz & Personalisierung“",
+          "Dort können Sie Daten aus von Ihnen genutzten Google-Apps und gespeicherte Inhalte aus Google-Diensten einsehen"
+        ],
+        "footer": "Sie finden auch den Namen jedes primären Google-Dienstes in Ihrem Dashboard unter „Meine Aktivitäten und bisherige Orte“, um Daten für jeden spezifischen Dienst anzuzeigen. Sie können auch den Pfeil nach rechts neben jedem Dienst auswählen, um Einstellungen zu verwalten und zu ändern."
+      },
+      "section2": {
+        "title": "Google Web- & App-Aktivitäten",
+        "description": [
+          "Unter [Meine Aktivität](https://myactivity.google.com/myactivity), zu finden unter „Aktivitätseinstellungen“, können Sie jede getätigte Suche und die von Ihnen besuchten Websites sehen (dank Google Analytics).",
+          "Wenn Sie jemals eine Google-App verwendet haben, werden diese Daten ebenfalls angezeigt. Ihr gesamter Google-Aktivitätsverlauf wird nach Datum, Uhrzeit und verwendeter App aufgeführt."
+        ]
+      },
+      "section3": {
+        "title": "Google Standortverlauf",
+        "description": [
+          "Ihre Standortdaten werden jedes Mal gefährdet, wenn Sie eine Bewertung abgeben oder auf einen Standortdienst zugreifen. Ihren Google Standortverlauf und Ihre Google Maps Zeitachse finden Sie [hier](https://maps.google.com/locationhistory).",
+          "Die Google-Standortverlaufsseite bietet eine vollständige Liste der Orte, an denen Sie gewesen sind. Auf der Google „Maps Zeitachse“ zeigt die Karte alle Bereiche an, von denen Google weiß, dass Sie sie besucht haben."
+        ]
+      },
+      "section4": {
+        "title": "YouTube-Verlauf",
+        "description": [
+          "Google speichert auch einen Verlauf Ihrer YouTube-Suchanfragen, das Datum, an dem Sie das Video angesehen haben, und das verwendete Gerät.",
+          "Melden Sie sich in Ihrem Google-Konto an und prüfen Sie [hier](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Wählen Sie „YouTube-Wiedergabe- und Suchverlauf“ und stellen Sie ein, dass dieser alle 3 oder 6 Monate automatisch gelöscht wird, oder wählen Sie die Option, überhaupt keine Daten zu speichern."
+        ]
+      },
+      "section5": {
+        "title": "Google-Informationen, die Sie mit anderen teilen",
+        "description": "Wenn Sie das persönliche Profil und die Standortfreigabe-Informationen erkunden möchten, die für andere sichtbar sind, können Sie dies tun, indem Sie auf die unten angezeigten entsprechenden Tabs klicken. Dort können Sie diese Informationen auch bearbeiten und Berechtigungen anpassen."
+      },
+      "section6": {
+        "title": "Gespeicherte Inhalte aus Google-Diensten und Drittanbieter-Apps",
+        "description": [
+          "Wenn Sie Apps und Erweiterungen von Drittanbietern installieren, bieten viele eine Anmeldeoption über Google an. Dies ist einer der Wege, wie sie auf die Daten dieser Apps zugreifen.",
+          "Melden Sie sich in Ihrem Google-Konto an und [entdecken Sie alle Apps und Erweiterungen, die auf Ihre Google-Daten zugreifen](https://security.google.com/settings/security/permissions), unter dem Bereich „Daten von Apps und Diensten, die Sie nutzen“. Dort finden Sie eine Zusammenfassung der Dienste und Drittanbieter-Apps sowie Einstellungen zum Durchsuchen und Einschränken Ihrer Daten."
+        ]
+      },
+      "section7": {
+        "title": "Google Chrome-Cookies und -Lesezeichen",
+        "description": [
+          "[Web-Cookies](https://blog.internxt.com/web-cookies-explained/) sind Datensätze, die ein Computer empfängt und die Informationen enthalten, um die von Ihnen besuchten Websites zu personalisieren. Cookies werden häufig verwendet, um festzustellen, wann jemand eine Website besucht, und diese Aktivität aufzuzeichnen.",
+          "In Google Chrome können Sie die Einstellungen unter chrome://settings/cookies überprüfen, um vorhandene Cookies zu löschen, alle Cookies zuzulassen oder zu blockieren und Cookie-Einstellungen für Websites festzulegen. Sie können alle Cookies zulassen, Drittanbieter-Cookies blockieren, die Cookies in Ihren geöffneten Fenstern löschen, alle Cookies blockieren (empfohlen) und sogar auswählen, welche Webseiten niemals Cookies speichern dürfen.",
+          "Außerdem verfügt Google Chrome über einen Inkognito-Modus, der Ihren Browserverlauf löscht und Cookies entfernt, nachdem Sie die geöffneten Fenster schließen."
+        ]
+      },
+      "section8": {
+        "title": "Exportieren Sie alle Ihre Daten aus Google",
+        "description": "Sie können von Ihrem Google-Konto gespeicherte Daten exportieren und löschen, indem Sie den Tab „Daten herunterladen oder löschen“ suchen und die erforderliche Aktion auswählen. Anschließend können Sie auswählen, welche Daten exportiert oder gelöscht werden sollen, indem Sie den folgenden Anweisungen folgen.",
+        "numberedList": [
+          {
+            "title": "Auszuwählende Daten festlegen",
+            "description": "Sie können alle Daten auswählen, die Sie exportieren möchten, und festlegen, von welchen Plattformen."
+          },
+          {
+            "title": "Dateityp, Häufigkeit und Zielort auswählen",
+            "description": "Wählen Sie den Dateityp, die Häufigkeit des Dateiexports und das Ziel (E-Mail, Internxt, Dropbox, OneDrive, Box oder Google Drive)."
+          },
+          {
+            "title": "Export erstellen",
+            "description": "In diesem letzten Schritt können Sie die Anzahl der ausgewählten Datenelemente (wie Zugriffsprotokollaktivitäten, Suchbeiträge oder Ihre Aktivitäten) und das Datum überprüfen, bis zu dem sie verfügbar sein werden."
+          }
         ]
       }
     },
-    "section3": {
-      "title": "Why does Google collect your data?",
-      "description": "In short, it's a form of exploitation. Google’s motivation is to target ads and ‘personalize’ your experience with their services. By giving up your data, you are allowing hundreds of thousands of advertisers to bid on displaying you their adverts based on your sensitive personal data by letting Google collect all of this information. "
+    "CtaSection1": {
+      "title": "Genug vom Tracking?",
+      "description": "Entkommen Sie Google und erlangen Sie Ihre Freiheit mit Internxt zurück.",
+      "cta": "Internxt holen"
     },
-    "footer": {
-      "line1": "Everyone involved benefits from your information except for you.",
-      "line2": "You are the product."
-    }
-  },
-  "CtaSection": {
-    "title": "Own your data",
-    "description": "Choose a service that protects your data instead of monetizing it.",
-    "cta": "Switch to Internxt"
-  },
-  "WhatGoogleKnowsSection": {
-    "title": "Explore what Google knows about you",
-    "description": "Google collects a ton of information on you primarily from your Google activity history, but they must make it available to you for various legal reasons. To understand just how much they collect and what data specifically they have on you, you must open your Google settings and dig a little.",
-    "section1": {
-      "title": "Find a summary of all the data stored in your Google Account",
-      "numberedList": [
-        "Log in to your Google Account",
-        "On the navigation panel, select “Data & privacy” or select the tab ‘Privacy & personalization’",
-        "There, you will be able to view data from acquired by Google apps you use and the content saved from Google services"
+    "ManageGoogleDataSection": {
+      "title": "Löschen Sie Ihre Google-Daten und passen Sie Ihre Google-Datenschutzeinstellungen an",
+      "description": "Nachdem Sie nun Ihren Google-Aktivitätsverlauf kennen, ist es an der Zeit, Google von vornherein daran zu hindern, all diese persönlichen Daten zu sammeln. Nachfolgend finden Sie Anweisungen, die Ihnen helfen, Ihre Datenschutzeinstellungen zu bearbeiten, die Datenerfassung teilweise zu deaktivieren und die Menge der von Google gespeicherten persönlichen Daten zu begrenzen.",
+      "section1": {
+        "title": "Google Web- & App-Aktivitäten löschen",
+        "description": [
+          "Sie wären überrascht, wie viele Informationen Google speichert: Google Pay-Informationen, YouTube-Kanalabonnements, YouTube 'Kein Interesse'-Feedback, YouTube-Umfrageantworten, Kommentare auf YouTube, Like- und Dislike-Bewertungen auf YouTube, YouTube-Kaufaktivitäten, Google Word Coach, Google-Umfrageantworten, Interessen und Benachrichtigungen, Google Play-Bibliothek, Nachrichteneinstellungen, Datenarchivverlauf, Produktpreisverfolgung und mehr.",
+          "Durch Auswählen von „Web- & App-Aktivitäten“ können Sie Ihre Aktivitäten löschen, indem Sie auf die Schaltfläche „Löschen“ in der Mitte der Seite klicken und Folgendes auswählen: Letzte Stunde, Letzter Tag, Gesamtzeitraum oder Benutzerdefinierter Bereich. Auf der Seite „Web- & App-Aktivitäten“ können Sie auch die zukünftige Datenerfassung deaktivieren, indem Sie „Aktivität speichern“ auswählen und dann auf „Deaktivieren“ klicken."
+        ]
+      },
+      "section2": {
+        "title": "Google Standortverlauf deaktivieren und löschen",
+        "description": "Der Standortverlauf ist möglicherweise die beängstigendste Datensammlung von Google. Sie können auf „Standortverlauf“ klicken, um das Tracking zu deaktivieren und die automatische Löschung zu aktivieren, um zuvor gespeicherte Standortdaten zu entfernen.",
+        "numberedList": [
+          "Gehen Sie zu „Standortverlauf“",
+          "Wählen Sie „Deaktivieren“",
+          "Wählen Sie unten auf der Seite unter „Automatisch löschen“ die Option „Aktivitäten löschen, die älter als 3 Monate sind“",
+          "Wählen Sie Ihre bevorzugten Optionen aus und klicken Sie auf „Weiter“, um Ihre Einstellung zu speichern und ältere Standortdaten zu löschen"
+        ]
+      },
+      "section3": {
+        "title": "YouTube-Verlauf deaktivieren und löschen",
+        "description": "Sind Sie ein großer YouTube-Fan? Sie können Ihren YouTube-Verlauf löschen und die weitere Verlaufsaufzeichnung deaktivieren, indem Sie unter „Einstellungen“ die Option „YouTube-Verlauf“ auswählen und auf „Deaktivieren“ klicken. Sie sollten auch die automatische Löschung unten auf der Seite aktivieren."
+      },
+      "section4": {
+        "title": "Google Fit-Daten löschen und deaktivieren",
+        "description": [
+          "Besitzen Sie ein mit Google Fit verbundenes Gerät? Während dies für die Verfolgung von Gewichtsverlust und Bewegung nützlich ist, sammelt Fit eine Menge persönlicher Gesundheitsdaten, die wahrscheinlich nicht online gespeichert werden sollten.",
+          "Passen Sie die Datenerfassungsberechtigungen von Fit an und deaktivieren Sie sie, indem Sie „Google Fit-Datenschutz verwalten“ auswählen und alle Optionen abwählen, mit denen Sie sich unwohl fühlen – oder schalten Sie Fit vollständig aus."
+        ]
+      },
+      "section5": {
+        "title": "Google E-Mail-Einstellungen verwalten",
+        "description": "Haben Sie genug von zielgerichteten E-Mails von Google wie Preisbenachrichtigungen und Reisetipps? Schalten Sie diese aus, indem Sie Ihre E-Mail-Einstellungen anpassen und unter dem Tab „E-Mails von Google-Diensten“ auf „E-Mail-Einstellungen verwalten“ klicken."
+      },
+      "section6": {
+        "title": "Personalisierte Google-Werbung",
+        "description": [
+          "Sie können unter „Personalisierte Werbung“ in [„Mein Ad Center“](http://www.google.com/settings/ads/) überprüfen, was Google über Sie weiß. Dort finden Sie Informationen zu Ihrer Altersgruppe, Sprache, Ausbildung usw. Sie haben auch die Möglichkeit, alle personalisierten Anzeigen zu deaktivieren, indem Sie oben rechts auf der Seite „Mein Ad Center“ auf eine Schaltfläche klicken.",
+          "Oder Sie können Ihre personalisierten Anzeigen anpassen oder Ihre Einstellungen für Anzeigendaten weiter verwalten. Solange personalisierte Anzeigen aktiviert sind, teilt Google jedoch weiterhin einige Ihrer Informationen mit Werbetreibenden."
+        ]
+      },
+      "section7": {
+        "title": "Drittanbieterzugriff auf Ihre Google-Daten entfernen",
+        "description": [
+          "Wenn Sie Ihr Google-Konto mit einem Drittanbieterkonto verknüpfen, kann das Drittanbieterkonto Informationen aus Google extrahieren. Tatsächlich übermittelt Google unsere persönlichen Daten 70 Milliarden Mal am Tag. Sie sollten überprüfen, welche Unternehmen Zugriff auf Ihre Daten haben, und die Datenschutzeinstellungen verwalten.",
+          "Einige Drittanbieterkonten erlauben es Ihnen möglicherweise nicht, die Verknüpfung über das Google-Konto aufzuheben. Um dies zu verwalten, müssen Sie die Einstellungsoptionen auf den Websites dieser Dienste überprüfen.",
+          "Um den Zugriff von Drittanbietern auf einzelne Apps und Dienste zu deaktivieren, navigieren Sie auf der Datenschutzseite nach unten zum Tab „Apps von Drittanbietern mit Kontozugriff“. Wählen Sie ihn aus, um zu sehen, welche Drittanbieter Zugriff auf Ihr Konto haben, und verwalten Sie die Einstellungen. Klicken Sie auf die Dienste, deren Berechtigungen Sie bearbeiten möchten, und wählen Sie die Option zum Deaktivieren des Zugriffs."
+        ]
+      },
+      "section8": {
+        "title": "Ihre persönlichen Daten aus der Google-Suche entfernen",
+        "description": "Wenn Sie nicht möchten, dass Ihre persönlichen Google-Kontoinformationen in der Google-Suche erscheinen, falls jemand nach Ihnen sucht, finden Sie einfach den Tab „Persönliche Ergebnisse in der Suche“, klicken darauf und deaktivieren den Schalter, um festzulegen, ob die Suche Ihnen persönliche Ergebnisse basierend auf den Informationen in Ihrem Google-Konto anzeigen darf."
+      },
+      "section9": {
+        "title": "So löschen Sie Ihr Google-Konto",
+        "description": [
+          "Wenn Sie genug haben, komplett mit Google fertig sind und einfach nur aussteigen wollen, können Sie Ihr Google-Konto löschen, indem Sie unten auf der Datenschutzseite unter „Weitere Optionen“ navigieren und „Google-Konto löschen“ auswählen.",
+          "Folgen Sie einfach den Anweisungen von dort aus. Stellen Sie sicher, dass Sie bereit sind, alle Ihre Informationen zu löschen, denn sobald diese Aktion abgeschlossen ist, kann sie nicht mehr rückgängig gemacht werden."
+        ]
+      }
+    },
+    "ToolsSection": {
+      "title": "Weitere Datenschutz-Ressourcen von Internxt",
+      "description": [
+        "Möchten Sie mehr über den Schutz Ihrer Daten im Internet erfahren? Google ist nicht der Einzige, der Ihre persönlichen Daten sammelt. Besuchen Sie unsere Seite [Cyber Awareness](https://internxt.com/cyber-awareness) für viele Best Practices und Strategien, um das Surfen im Internet sicherer und privater zu machen."
       ],
-      "footer": "You will also find the name of each of Google’s primary services in your dashboard under ‘Things you’ve done and places you’ve been’ to see data for each specific service. You may also select the right-pointing arrow next to each service to manage and change settings."
-    },
-    "section2": {
-      "title": "Google Web & App Activity",
-      "description": [
-        "In [My Activity](https://myactivity.google.com/myactivity), located under ‘History settings’ you will be able to see every search made and the websites you've visited (thanks to Google Analytics).",
-        "If you've ever used a Google app, that data will appear as well. All of your Google activity history is displayed by date, hour, and app used."
-      ]
-    },
-    "section3": {
-      "title": "Google Location History",
-      "description": [
-        "Your location privacy is compromised every time you leave a review or access a location service. Find your Google Location History and Google Maps Timeline [here](https://maps.google.com/locationhistory).",
-        "Google's location history page offers a complete list of where you've been, which you may have saved in Google Maps (specifically found in ‘Location History’). There is also Google ‘Maps Timeline,’ and the map will display all the areas Google knows you've visited."
-      ]
-    },
-    "section4": {
-      "title": "YouTube History",
-      "description": [
-        "Google also keeps a history of your YouTube searches, the date when you watched the video, and the device you used to view the content.",
-        "Log into your Google account and check [here](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): Select ‘YouTube watch and search history' and set it to auto-delete every 3 or 6 months, or select the option to not save any data at all."
-      ]
-    },
-    "section5": {
-      "title": "Google info you share with others",
-      "description": "If you would like to explore the personal profile and location-sharing information made viewable to others, you can do so by clicking the respective tabs shown below. There you can also edit this information and adjust permissions."
-    },
-    "section6": {
-      "title": "Content saved from Google services and third-party apps",
-      "description": [
-        "When you install third-party (non-Google) apps and extensions, many give you a Google sign in option to log in directly with your Google account to facilitate the process, this is one of the ways they access the data of those apps.",
-        "Log into your Google account and [discover all the apps and extensions that are accessing your Google data](https://security.google.com/settings/security/permissions) under the section ‘Data from apps and services you use.’ There you’ll find a summary of services and third-party apps, as well as settings to browse and restrict your data."
-      ]
-    },
-    "section7": {
-      "title": "Google Chrome cookies and bookmarks",
-      "description": [
-        "[Web cookies](https://blog.internxt.com/web-cookies-explained/) are data sets that a computer receives that contain information aimed to make the websites you visit more personalized. Cookies are commonly used to identify when someone visits a website and record this activity.",
-        "In Google Chrome, you can check settings at chrome://settings/cookies to delete existing cookies, allow or block all cookies, and set cookie preferences for websites. You can allow all cookies, block third-party cookies, clear the cookies in your opened windows, block all cookies (recommended), and even select which web pages are never allowed to store cookies.",
-        "Also, Google Chrome also has an Incognito mode that deletes your browser history and clears cookies after you close the open windows."
-      ]
-    },
-    "section8": {
-      "title": "Export all of your data out of Google",
-      "description": "You can export and delete data saved by your Google account by finding the ‘Download or delete your data’ tab and selecting the necessary action. Then you can choose what data to export or delete by following the direction below.",
-      "numberedList": [
+      "tools": [
         {
-          "title": "Select the data to include",
-          "description": "You can select all the data you want to export and from which platforms."
+          "url": "/images/temp-email/password-checker.svg",
+          "UrlRedirectName": "password-checker",
+          "title": "Kostenloser Passwort-Stärke-Tester",
+          "width": 125,
+          "description": "Jetzt prüfen"
         },
         {
-          "title": "Choose file type, frequency and destination",
-          "description": "Choose the type of file, the frequency of exporting the files and the destination (email, Internxt, Dropbox, OneDrive, Box, or Google Drive.)"
+          "url": "/images/temp-email/virus-scanner.svg",
+          "UrlRedirectName": "virus-scanner",
+          "title": "Kostenloser Virenscanner",
+          "width": 105,
+          "description": "Jetzt scannen"
         },
         {
-          "title": "Create export",
-          "description": "In this final step, you can check the number of data items selected (as the access log activity, search contributions, or your activity) and the date until which it will be available."
+          "url": "/images/temp-email/byte-converter.svg",
+          "UrlRedirectName": "byte-converter",
+          "title": "Kostenloser Byte-Konverter",
+          "width": 95,
+          "description": "Jetzt konvertieren"
+        },
+        {
+          "url": "/images/temp-email/temporary-email.svg",
+          "UrlRedirectName": "temporary-email",
+          "title": "Temporäre E-Mail",
+          "width": 95,
+          "description": "Jetzt mailen"
         }
       ]
-    }
-  },
-  "CtaSection1": {
-    "title": "Done being tracked?",
-    "description": "Give Google the slip and take back your freedom with Internxt.",
-    "cta": "Join Internxt"
-  },
-  "ManageGoogleDataSection": {
-    "title": "Delete your Google data and adjust your Google privacy settings",
-    "description": "Now that you know your Google activity history, it’s time to stop them from gathering all that personal data in the first place. Below are instructions to help you edit your privacy settings, opt out of some data collection, and limit the amount of your personal info Google stores.",
-    "section1": {
-      "title": "Delete Google Web & App Activity",
-      "description": [
-        "You’d be surprised at how much information Google saves: Google Pay information, YouTube channel subscriptions, YouTube 'not interested' feedback, YouTube survey answers, comments on YouTube, comment likes and dislikes on YouTube, YouTube purchase activity, Google Word Coach, Google survey answers, interests and notifications, Google Play library, news preferences, data archive history, product price tracking, and more.",
-        "By selecting ‘Web & App Activity’ you can delete your activity by clicking on the ‘Delete’ button in the middle of the page selecting: Last hour, Last day, Always, or Custom range. In the Web & App Activity’ page you can also disable future data collection by selecting “Saving activity’ and then clicking ‘Turn off’."
-      ]
     },
-    "section2": {
-      "title": "Disable and delete Google Location History",
-      "description": "Location history may be the scariest data Google collects. You can click on Google location ‘Location History’ to disable tracking and turn on auto-delete to remove any previous saved location data.",
-      "numberedList": [
-        "Go to ‘Location History’",
-        "Select ‘Turn off’",
-        "On the bottom of the page, under ‘Auto-delete’, choose ‘Delete activity older that 3 months’",
-        "Select your preferred options, then click ‘Next’ to save your setting and erase older location data"
-      ]
+    "CtaSection2": {
+      "title": "Eine Cloud, der Sie vertrauen können",
+      "description": "Die Aufgabe von Internxt ist es, Ihre Daten zu schützen, nicht sie auszubeuten.",
+      "cta": "Kostenloses Konto erstellen"
     },
-    "section3": {
-      "title": "Disable and delete Youtube History",
-      "description": "Are you a big YouTube fan? You can delete your Youtube history and disable further history collection by selecting ‘YouTube History’ in ‘Controls’ and clicking on ‘Turn Off.’ You should also enable auto-delete at the bottom of the page."
-    },
-    "section4": {
-      "title": "Delete and disable Google Fit data",
-      "description": [
-        "Do you own a device connected to Google Fit? While this is helpful for tracking weight loss and exercise, Fit gathers a ton of personal health information that probably should not be kept online. ",
-        "Adjust and disable Fit’s data-collecting permissions by selecting ‘Manage Google Fit privacy’ and deselect any options you’re uncomfortable with–or turn off Fit completely."
-      ]
-    },
-    "section5": {
-      "title": "Manage Google email preferences",
-      "description": "Sick of targeted emails from Google like price alerts and travel tips? Turn them off by adjusting your email settings by clicking ‘Manage email preferences’ under the “Emails from Google services’ tab."
-    },
-    "section6": {
-      "title": "Google Ads personalization",
-      "description": [
-        "You can check what Google knows about you under ‘Personalized ads’ in ['My Ad Center’](http://www.google.com/settings/ads/), where you can find information about your age range, languages, education and so on. You also have the option to turn-off all personalized ads by clicking a button located in the upper-right side of the ‘My Ad Center’ page.",
-        "Or you can choose to customize your personalized ads or further manage your ad privacy setting, but as long as personalized ads are enabled, Google will still share some of your information with advertisers. "
-      ]
-    },
-    "section7": {
-      "title": "Remove third-party access of your Google data",
-      "description": [
-        "When you link your Google Account to a third-party account, the third-party account has the ability to extract information from Google. In fact, Google transmits our personal data 70 billion times a day. You should check which companies have access to your data and manage privacy settings.",
-        "Some third-party accounts may not allow you to unlink your third-party account from your Google Account, so for managing that you will have to check the settings options on those services websites.",
-        "To disable third-party access to individual apps and services, navigate down the privacy page and find the tab that says ‘Third-party apps with account access.’ Select it and there you will find which third parties have access to your account and manage settings. Click the services you would like to edit permissions of and then select the option to disable access."
-      ]
-    },
-    "section8": {
-      "title": "Remove your personal data from Google Search",
-      "description": "If you don’t want your personal Google Account info showing up in Google Search if someone decides to search you, simply find the tab ‘Personal results in Search,’ click on it, then select the check mark slider to turn off whether Search can show you personal results based on info in your Google Account. "
-    },
-    "section9": {
-      "title": "How to Delete Google Account",
-      "description": [
-        "If you have had enough, are completely done with Google, and just want out, you can delete Google Account by navigating to the bottom of the privacy page under ‘More options’ and select ‘Delete your Google Account.’ ",
-        "Simply follow the directions from there. Be sure you are ready to delete all your information, because once this action is completed it cannot be undone. "
-      ]
-    }
-  },
-  "ToolsSection": {
-    "title": "Other privacy resources from Internxt",
-    "description": [
-      "Want to know more about protecting your data online? Google isn’t the only one harvesting your personal information. Visit our [Cyber Awareness](https://internxt.com/cyber-awareness) page for tons of best practices and strategies to make browsing online safer and more private."
-    ],
-    "tools": [
-      {
-        "url": "/images/temp-email/password-checker.svg",
-        "UrlRedirectName": "password-checker",
-        "title": "Free Password Strength Checker",
-        "width": 125,
-        "description": "Check now"
+    "tableSection": {
+      "title": "Internxt-Tarife",
+      "hotLabel": "{{discount}}% Rabatt",
+      "planTitles": {
+        "header": "Wählen Sie Ihren Tarif",
+        "individuals": "Jahrestarife",
+        "homePage": "Wählen Sie den passenden Tarif für sich",
+        "lifetime": "Lebenslange Tarife",
+        "business": "Geschäftstarife",
+        "lifetimeCampaign": {
+          "blueText": "50% Rabatt",
+          "normalText": "auf alle unsere exklusiven lebenslangen Tarife"
+        }
       },
-      {
-        "url": "/images/temp-email/virus-scanner.svg",
-        "UrlRedirectName": "virus-scanner",
-        "title": "Free Virus Scanner",
-        "width": 105,
-        "description": "Scan now"
+      "lifetimeDescription": "Einmal zahlen und für immer Datenschutz und Sicherheit erhalten.",
+      "planDescription": "Alle Internxt-Tarife bieten vollen Zugriff auf unsere preisgekrönte Datenschutz-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail.",
+      "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die speziell darauf ausgelegt sind, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+      "businessDescription2": "Sichern Sie die Datensicherheit Ihres Unternehmens mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
+      "billingFrequency": {
+        "monthly": "Monatlich",
+        "annually": "Jährlich",
+        "lifetime": "Lebenslang",
+        "individual": "Einzelperson",
+        "business": "Geschäftlich"
       },
-      {
-        "url": "/images/temp-email/byte-converter.svg",
-        "UrlRedirectName": "byte-converter",
-        "title": "Free Byte Converter",
-        "width": 95,
-        "description": "Convert now"
+      "freePlanCard": {
+        "eyeBrow": "Kostenlose verschlüsselte Cloud erhalten",
+        "description": "Holen Sie sich 1 GB verschlüsselten Cloud-Speicher kostenlos",
+        "cta": "Tarif auswählen"
       },
-      {
-        "url": "/images/temp-email/temporary-email.svg",
-        "UrlRedirectName": "temporary-email",
-        "title": "Temporary Email",
-        "width": 95,
-        "description": "Mail now"
+      "features": {
+        "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+        "openSource": "Open Source und auditiert",
+        "anonymousAccount": "Anonyme Kontoerstellung",
+        "premiumSupport": "Premium-Kundensupport",
+        "guarantee": "30 Tage Geld-zurück-Garantie"
+      },
+      "planStorage": {
+        "essential": "1TB",
+        "premium": "3TB",
+        "ultimate": "5TB"
       }
-    ]
-  },
-  "CtaSection2": {
-    "title": "A cloud you can trust",
-    "description": "Internxt’s job is to protect your data, not exploit it.",
-    "cta": "Create free account"
-  },
-  "tableSection": {
-    "title": "Internxt Tarife",
-    "hotLabel": "{{discount}}% Rabatt",
-    "planTitles": {
-      "header": "Wählen Sie Ihren Plan",
-      "homePage": "Wählen Sie den richtigen Tarif für Sie",
-      "lifetime": "Lifetime-Tarife",
-      "business": "Business-Tarife",
-      "lifetimeCampaign": {
-        "blueText": "50% Rabatt",
-        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
-      }
-    },
-    "lifetimeDescription": "Einmal zahlen und lebenslang Datenschutz und Sicherheit genießen",
-    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail. ",
-    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
-    "businessDescription2": "Gewährleisten Sie die Sicherheit Ihrer Unternehmensdaten mit Internxts verschlüsselten Cloud-Speicher-Tarifen.",
-    "billingFrequency": {
-      "monthly": "Monatlich",
-      "annually": "Jährlich",
-      "lifetime": "Lifetime",
-      "individual": "Einzelperson",
-      "business": "Business"
-    },
-    "freePlanCard": {
-      "eyeBrow": "Kostenlos",
-      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
-      "cta": "Tarif auswählen"
-    },
-    "features": {
-      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
-      "openSource": "Open Source und geprüft",
-      "anonymousAccount": "Anonyme Kontoerstellung",
-      "premiumSupport": "Premium-Kundensupport",
-      "guarantee": "30 Tage Geld-zurück-Garantie"
-    },
-    "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB"
     }
   }
-}

@@ -14,6 +14,10 @@ import HeroSection from '@/components/nas/HeroSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 interface NASPageProps {
   lang: GetStaticPropsContext['locale'];
@@ -36,6 +40,46 @@ const SynologyNASPage = ({
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -54,9 +98,27 @@ const SynologyNASPage = ({
 
         <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
 
+        <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={locale}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-neutral-17 lg:py-20"
+                hideFreeCard
+          />
+
         <FloatingCtaSectionv2
           textContent={textContent.ctaSection}
-          url={'/pricing'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center">
               <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
@@ -84,7 +146,7 @@ const SynologyNASPage = ({
 
         <FloatingCtaSectionv2
           textContent={textContent.ctaSectionV2}
-          url={'/pricing'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">

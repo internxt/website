@@ -28,7 +28,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
             <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{title}</h2>
-            <div className="flex flex-col space-y-6 lg:max-w-[800px]">
+            <div className="flex flex-col space-y-6 lg:max-w-[950px]">
               {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
               {description && (
                 <p

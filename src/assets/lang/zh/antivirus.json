@@ -12,7 +12,8 @@
       "downloadForLinux": "下载适用于 Linux"
     },
     "cta": "获取 Internxt",
-    "price": "从 {currency}{price}/月起"
+    "price": "从 {currency}{price}/月起",
+    "priceAnnual": "从 {currency}{price}/年起"
   },
   "cta1": {
     "title": "Internxt Antivirus",

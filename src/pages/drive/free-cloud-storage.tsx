@@ -19,6 +19,10 @@ import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 
 interface DriveProps {
   textContent: DriveText;
@@ -48,6 +52,46 @@ const Drive = ({
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-cloud-storage');
 
+  const {
+        products,
+        loadingCards,
+        currencyValue,
+        coupon: individualCoupon,
+        lifetimeCoupon,
+        lifetimeCoupons,
+    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+
+    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+    const onCheckoutButtonClicked = async (
+        priceId: string,
+        isCheckoutForLifetime: boolean,
+        interval: string,
+        storage: string,
+    ) => {
+        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+        const finalPrice = await stripeService.calculateFinalPrice(
+            priceId,
+            interval,
+            currencyValue,
+            'individuals',
+            couponCodeForCheckout,
+        );
+
+        stripeService.redirectToCheckout(
+            priceId,
+            finalPrice,
+            currencyValue,
+            'individual',
+            isCheckoutForLifetime,
+            interval,
+            storage,
+            couponCodeForCheckout?.name,
+        );
+    };
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -60,76 +104,81 @@ const Drive = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
-      <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
-        segmentName="FreeCloudStorage"
-        lang={lang}
-      >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
 
-        <DriveSection textContent={textContent.DriveSection} />
+      <DriveSection textContent={textContent.DriveSection} />
 
-        <HorizontalScrollableSection
-          textContent={textContent.EncryptedCloudStorageSection}
-          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          needsH2
-          needsH3
+      <HorizontalScrollableSection
+        textContent={textContent.EncryptedCloudStorageSection}
+        bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+        needsH2
+        needsH3
+      />
+
+      <FileParallaxSection />
+
+      <PricingSectionWrapper
+                textContent={textContent.tableSection}
+                decimalDiscount={{
+                    individuals: decimalDiscount,
+                    lifetime: decimalDiscountForLifetime,
+                }}
+                lifetimeCoupons={lifetimeCoupons}
+                lang={lang}
+                products={products}
+                loadingCards={loadingCards}
+                onCheckoutButtonClicked={onCheckoutButtonClicked}
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                sectionDetails="bg-neutral-17 lg:py-20"
+                hideFreeCard
         />
 
-        <FileParallaxSection />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
 
-        <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
-        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
+      <ThreeCardsSection
+        textContent={textContent.MadeInEuropeSection}
+        bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+      />
 
-        <ThreeCardsSection
-          textContent={textContent.MadeInEuropeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        />
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
-        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
+      <FloatingCtaSectionv2
+        textContent={textContent.CtaSection}
+        url={'#billingButtons'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {textContent.CtaSection.title}
+            </h2>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              {textContent.CtaSection.description}
+            </p>
+          </div>
+        }
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20"
+      />
 
-        <FloatingCtaSectionv2
-          textContent={textContent.CtaSection}
-          url={'/drive'}
-          customText={
-            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-                {textContent.CtaSection.title}
-              </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.CtaSection.description}
-              </p>
-            </div>
-          }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:py-20"
-        />
+      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
 
-        <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
-        <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
+      <ReviewsSection
+        textContent={textContent.ReviewSection}
+        bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+      />
 
-        <ReviewsSection
-          textContent={textContent.ReviewSection}
-          bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-        />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
-
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Secure cloud storage', url: '/drive' },
-            { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' },
-          ]}
-        />
-      </Layout>
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }]} />
+    </Layout>
     </>
   );
 };

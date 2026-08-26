@@ -29,6 +29,7 @@ export interface HorizontalPriceCardProps {
   planId: string;
   currencyValue: string;
   coupon: PromoCodeProps | undefined;
+  isAnnual?: boolean;
 }
 
 export const HorizontalPriceCard = ({
@@ -40,12 +41,15 @@ export const HorizontalPriceCard = ({
   planId,
   currencyValue,
   coupon,
+  isAnnual = false,
 }: HorizontalPriceCardProps): JSX.Element | null => {
   if (!storage) {
     return null;
   }
 
   const contentText = require(`@/assets/lang/en/priceCard.json`);
+
+  const billingPeriodLabel = isAnnual ? contentText.perYear : contentText.perMonth;
 
   const MIN_DISCOUNT_PERCENT_TO_SHOW = 1;
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
@@ -55,6 +59,7 @@ export const HorizontalPriceCard = ({
   const cardLabel =
     {
       '5TB': contentText.productFeatures.planTypes.ultimate,
+      '1TB': contentText.productFeatures.planTypes.essentials,
     }[storage] || null;
 
   const iconsFeatures = [
@@ -102,13 +107,13 @@ export const HorizontalPriceCard = ({
             <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
               <span className="text-4xl font-bold">{currentPrice}</span>
               <span>{currency}</span>
-              <span className="text-sm">{contentText.perMonth}</span>
+              <span className="text-sm">{billingPeriodLabel}</span>
             </p>
             {showDiscount && (
               <p className="flex flex-row items-end whitespace-nowrap font-normal text-gray-50">
                 <span className="text-xl line-through">{price}</span>
                 <span className="text-sm">{currency}</span>
-                <span className="text-sm">{contentText.perMonth}</span>
+                <span className="text-sm">{billingPeriodLabel}</span>
               </p>
             )}
           </div>

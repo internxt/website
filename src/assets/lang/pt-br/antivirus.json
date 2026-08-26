@@ -12,7 +12,8 @@
       "downloadForLinux": "Baixar para Linux"
     },
     "cta": "Obter Internxt",
-    "price": "A partir de {currency}{price}/mês"
+    "price": "A partir de {currency}{price}/mês",
+    "priceAnnual": "A partir de {currency}{price}/ano"
   },
   "cta1": {
     "title": "Internxt Antivirus",

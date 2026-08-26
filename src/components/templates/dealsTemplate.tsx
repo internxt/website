@@ -54,7 +54,7 @@ const DealsTemplate = ({
     lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCodeForLifetime: config.couponCodeForLifetime,
+    couponCodeForLifetime: PromoCodeName.seolp,
   });
 
   const navbarCta = 'chooseStorage';

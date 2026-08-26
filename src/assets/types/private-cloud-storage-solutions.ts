@@ -7,6 +7,7 @@ export interface PrivateCloudStorageSolutionsText {
   CtaSection1: BetterTomorrowSection;
   CtaSection2: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
+  tableSection: TableSection;
 }
 interface ComponentsInColumn {
   title: string;
@@ -159,4 +160,60 @@ export interface ImageConfig {
 
 interface AnimationProps {
   images: ImageConfig[];
+}
+
+export interface TableSection {
+  title: string;
+  hotLabel: string;
+  planTitles: PlanTitles;
+  lifetimeDescription: string;
+  planDescription: string;
+  businessDescription: string;
+  businessDescription2: string;
+  billingFrequency: BillingFrequency;
+  freePlanCard: FreePlanCard;
+  features: Features;
+  planStorage: PlanStorage;
+}
+
+export interface FreePlanCard {
+  eyeBrow: string;
+  description: string;
+  cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
+}
+
+export interface PlanTitles {
+  header: string;
+  individuals: string;
+  homePage: string;
+  lifetime: string;
+  business: string;
+  lifetimeCampaign: LifetimeCampaign;
+}
+
+export interface LifetimeCampaign {
+  blueText: string;
+  normalText: string;
+}
+
+export interface BillingFrequency {
+  monthly: string;
+  annually: string;
+  lifetime: string;
+  individual: string;
+  business: string;
+}
+
+export interface Features {
+  endToEnd: string;
+  openSource: string;
+  anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }

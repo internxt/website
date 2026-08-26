@@ -62,6 +62,8 @@ interface HeroSection {
   description: string;
   eyeBrow: string;
   DownloadLinks: DownloadLinks;
+  price?: string;
+  priceAnnual?: string;
 }
 
 interface DownloadLinks {

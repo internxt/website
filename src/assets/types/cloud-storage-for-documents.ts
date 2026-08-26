@@ -7,6 +7,7 @@ export interface CloudStorageForDocumentsText {
   FeaturesInternxtSection: FeaturesInternxtSection;
   CtaSectionV2:            CtaSection;
   SemanticAccordion:       SemanticAccordion;
+  tableSection:            TableSection;
 }
 
 interface CtaSection {
@@ -79,4 +80,60 @@ interface SemanticAccordion {
 interface Item {
   question: string;
   answer:   string[];
+}
+
+export interface TableSection {
+  title: string;
+  hotLabel: string;
+  planTitles: PlanTitles;
+  lifetimeDescription: string;
+  planDescription: string;
+  businessDescription: string;
+  businessDescription2: string;
+  billingFrequency: BillingFrequency;
+  freePlanCard: FreePlanCard;
+  features: Features;
+  planStorage: PlanStorage;
+}
+
+export interface FreePlanCard {
+  eyeBrow: string;
+  description: string;
+  cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
+}
+
+export interface PlanTitles {
+  header: string;
+  individuals: string;
+  homePage: string;
+  lifetime: string;
+  business: string;
+  lifetimeCampaign: LifetimeCampaign;
+}
+
+export interface LifetimeCampaign {
+  blueText: string;
+  normalText: string;
+}
+
+export interface BillingFrequency {
+  monthly: string;
+  annually: string;
+  lifetime: string;
+  individual: string;
+  business: string;
+}
+
+export interface Features {
+  endToEnd: string;
+  openSource: string;
+  anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }
