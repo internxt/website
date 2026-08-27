@@ -1,25 +1,92 @@
 {
   "HeroSection": {
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail",
-      "ai": "AI"
-    },
-    "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant-Backups**",
-    "description": "Automatisierte Offsite-Backups nach dem Zero-Knowledge-Prinzip. Entwickelt in Europa für maximale Privatsphäre und Datenkontrolle.",
-    "subtitle": "Erhalten Sie {{discount}}% Rabatt",
+    "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant Backups**",
+    "description": "Automatisierte Offsite-Backups mit Zero-Knowledge-Verschlüsselung. In Europa entwickelt für maximale Privatsphäre und Datenkontrolle.",
     "claimDeal": "Angebot sichern"
+  },
+  "MadeInEuropeSection": {
+    "title": "Made in Europe",
+    "description": "Ihre Daten sind durch strenge europäische Datenschutzgesetze und -bestimmungen in Kombination mit preisgekrönter Verschlüsselung geschützt.",
+    "cards": {
+      "images": [
+        "/images/drive/GDPR.webp",
+        "/images/drive/redundancy.webp",
+        "/images/drive/sustainability.webp"
+      ],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": [
+        "Europäische Rechenzentren",
+        "Redundanz",
+        "Engagement für Nachhaltigkeit "
+      ],
+      "descriptions": [
+        "Internxt hat seinen Sitz in Valencia, Spanien, und unsere Rechenzentren befinden sich in Europa und anderen Standorten weltweit. Sie bieten Ihnen Sicherheit, Geschwindigkeit und Konformität.",
+        "Ihre Dateien sind durch redundante Systeme, Umweltkontrollen und eine 24/7-Sicherheitsüberwachung vor Ort geschützt. Egal was passiert, Ihre Dateien bleiben immer sicher und zugänglich.",
+        "Internxt geht mit gutem Beispiel voran und setzt sich durch energieeffiziente Praktiken für eine sauberere und nachhaltigere Cloud-Speicherlösung ein."
+      ],
+      "cta": [
+        "Mehr erfahren",
+        "",
+        "Mehr erfahren"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "description": "Bei Internxt geht es darum, die Kontrolle zu haben. Mit Internxt haben Sie die Gewissheit, dass Ihre Daten verschlüsselt und geschützt sind und Ihr digitales Leben Ihnen gehört."
+  },
+  "ThreeCardsSection": {
+    "title": "Kernwerte",
+    "cards": {
+      "titles": [
+        "Zero-Knowledge-Verschlüsselung",
+        "Zuverlässige Wiederherstellung",
+        "Privatsphäre an erster Stelle"
+      ],
+      "descriptions": [
+        "Ende-zu-Ende-Verschlüsselung auf Client-Seite. Ihre Konfigurationsdateien und API-Schlüssel bleiben streng vertraulich.",
+        "Bewahren Sie eine sichere Offsite-Kopie Ihrer HA-Snapshots für den Fall von Hardwarefehlern oder Update-Problemen auf.",
+        "In der EU gehostet, vollständig DSGVO-konform und unabhängig von Big Tech."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Hauptmerkmale unseres sicheren Cloud-Speichers",
+    "description": "Vollständige Sicherheit für Ihre Daten – alles, was Sie brauchen, um Ihre Dateien sicher und vertraulich zu halten",
+    "accordionCards": {
+      "titles": [
+        "Ein vollständig privates Ökosystem",
+        "Sichere Zusammenarbeit",
+        "Ihre Cloud wie ein lokales Laufwerk"
+      ],
+      "descriptions": [
+        "Internxt bündelt verschlüsselten Speicher, Backups, VPN, Antivirus, Cleaner, Meet, Mail & mehr – alles, um sich von Big Tech zu befreien.",
+        "Senden Sie Dateien mit verschlüsselten Links, Passwörtern und Zugriffskontrollen. Arbeiten Sie in Echtzeit mit Ihrem Team zusammen und halten Sie Daten vertraulich.",
+        "Nutzen Sie Internxt als virtuelles Laufwerk zum nahtlosen Synchronisieren, Hochladen und Zugreifen auf Dateien – genau wie auf Ihrem Computer, aber vollständig sicher und immer auf dem neuesten Stand."
+      ]
+    },
+    "cards": {
+      "titles": [
+        "Ende-zu-Ende verschlüsselt",
+        "Zugriffskontrollen",
+        "Verschlüsselte Backups"
+      ],
+      "descriptions": [
+        "Alle Dateien werden mit Post-Quanten- und Zero-Knowledge-Verschlüsselung verschlüsselt. Niemand außer Ihnen oder den Personen, mit denen Sie Dateien teilen, kann den Inhalt sehen.",
+        "Sie steuern genau, wer auf Ihre geteilten Dateien zugreifen kann – mit verschlüsselten, passwortgeschützten Links, die Sie jederzeit widerrufen können.",
+        "Stellen Sie sicher, dass Ihre Dateien vor Ransomware und versehentlichem Verlust geschützt sind durch geplante, verschlüsselte Backups, die zusätzlichen Schutz und Sorgenfreiheit bieten."
+      ]
+    }
   },
   "TableSection": {
     "title": "Internxt-Tarife",
-    "valentinesTitle": "Sichere Liebe – ",
+    "valentinesTitle": "Sichere Liebe - ",
     "hotLabel": "{{discount}}% Rabatt",
     "planTitles": {
-      "header": "Wähle deine Zahlungsart",
+      "header": "Wählen Sie Ihren Tarif",
       "lifetimeHeader": "Wählen Sie Ihren Lebenslangen Tarif",
       "individuals": "Jahrestarife",
       "homePage": "Wählen Sie den passenden Tarif für sich",
@@ -27,13 +94,13 @@
       "business": "Geschäftstarife",
       "lifetimeCampaign": {
         "blueText": "50% Rabatt",
-        "normalText": "auf alle unsere exklusiven lebenslangen Tarife"
+        "normalText": "auf alle unsere exklusiven Lebenslangen Tarife"
       }
     },
     "lifetimeDescription": "Einmal zahlen und ein Leben lang Privatsphäre und Sicherheit genießen",
-    "planDescription": "Alle Internxt-Tarife bieten vollständigen Zugriff auf unsere preisgekrönte Datenschutz-Suite, bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
-    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die speziell entwickelt wurden, um Ihr Unternehmen zu schützen, Ihre Mitarbeiter abzusichern und Ihre Rentabilität zu gewährleisten.",
-    "businessDescription2": "Sichern Sie die Unternehmensdaten Ihres Betriebes mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
+    "planDescription": "Alle Internxt-Tarife bieten vollen Zugriff auf unsere preisgekrönte Datenschutz-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv entwickelt wurden, um Ihr Unternehmen zu schützen, Ihre Mitarbeiter abzusichern und Ihre Rentabilität zu gewährleisten.",
+    "businessDescription2": "Sichern Sie die Daten Ihres Unternehmens mit den verschlüsselten Cloud-Speichertarifen von Internxt.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
@@ -43,15 +110,15 @@
     },
     "freePlanCard": {
       "eyeBrow": "Kostenlos",
-      "description": "Sichern Sie sich 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "description": "Holen Sie sich 1 GB verschlüsselten Cloud-Speicher kostenlos",
       "cta": "Tarif auswählen"
     },
     "features": {
       "endToEnd": "Ende-zu-Ende-Verschlüsselung",
-      "openSource": "Open-Source und auditiert",
+      "openSource": "Open Source und geprüft",
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
-      "guarantee": "30 Tage Geld-zurück-Garantie"
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
     },
     "planStorage": {
       "essential": "1TB",
@@ -59,47 +126,11 @@
       "ultimate": "5TB"
     }
   },
-  "ThreeCardsSection": {
-    "title": "Kernwerte",
-    "cards": {
-      "titles": ["Zero-Knowledge-Verschlüsselung", "Zuverlässige Wiederherstellung", "Datenschutz an erster Stelle"],
-      "descriptions": [
-        "Ende-zu-Ende-clientseitige Verschlüsselung. Ihre Konfigurationsdateien und API-Schlüssel bleiben streng vertraulich.",
-        "Bewahren Sie eine sichere Offsite-Kopie Ihrer HA-Snapshots für den Fall von Hardwarefehlern oder Update-Problemen auf.",
-        "Gehostet in der EU, vollständig DSGVO-konform und unabhängig von Big Tech."
-      ]
-    }
-  },
-  "ConfigurationSection": {
-    "title": "Sichern Sie Ihre Snapshots extern, ohne Ihre Schlüssel zu übertragen",
-    "description": "Richten Sie /backup über WebDAV oder rclone auf einen Internxt-Remotespeicher aus. Archive werden auf Ihrer Hardware verschlüsselt, bevor das erste Byte das LAN verlässt – wir speichern Geheimtext und besitzen niemals den Schlüssel.",
-    "accordionCard": {
-      "titles": ["WebDAV-Zugangsdaten erstellen", "Code-Snippet einfügen", "Überprüfen, dann vergessen"],
-      "descriptions": [
-        "Generieren Sie in Internxt → Einstellungen > WebDAV einen zweckgebundenen Token. Speichern Sie URL, Benutzer und verschleiertes Passwort in secrets.yaml – niemals in einer veröffentlichten Konfiguration.",
-        "Fügen Sie es in configuration.yaml ein (oder führen Sie das rclone-Add-on aus dem Supervisor-Store aus) und starten Sie dann ha core restart. Führen Sie einmal einen Testlauf mit --dry-run durch, um zu bestätigen, dass das Remote-Ziel erreichbar ist.",
-        "Jedes .tar-Archiv wird clientseitig mit AES-256 verschlüsselt und vor dem Upload aufgeteilt. Wiederherstellungen laden das Archiv zurück nach /backup und entschlüsseln es lokal mit Ihrem Schlüssel."
-      ]
-    },
-    "features": ["Zero-Knowledge", "rclone 1.66+", "!secret-Handhabung", "HA 2024.11 Backup-API"]
-  },
-  "NextGenSection": {
-    "title": "Warum Internxt wählen?",
-    "description": "Internxt gibt Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichen Cloud-Speichern stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben und wir speichern oder verkaufen Ihre Daten nicht an Dritte. Wir unternehmen jeden Schritt, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
-    "cta": "Lernen Sie uns besser kennen",
-    "scrollableSection": {
-      "titles": [
-        "Unhackbare und unleckbare Daten",
-        "Sicherheit der nächsten Generation",
-        "Open Source und transparent",
-        "Unabhängig verifiziert"
-      ],
-      "descriptions": [
-        "Wir speichern keine Passwörter oder Nutzerdaten und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihr Geschäft. Sie zu schützen ist unseres.",
-        "Internxt ist der einzige Cloud-Speicher, der Ihre Dateien automatisch mit Ende-zu-Ende- und Post-Quanten-Kryptographie verschlüsselt, was bedeutet, dass nur Sie auf Ihre Daten zugreifen können.",
-        "Wir sind stolz auf das, was wir tun, deshalb wird unser Code auf GitHub öffentlich gemacht und kann von jedem persönlich überprüft, auditiert und verifiziert werden. Wir haben nichts zu verbergen außer Ihren Daten.",
-        "Wir sind vollständig DSGVO-konform und 100% sicher, aber verlassen Sie sich nicht nur auf unser Wort. Internxt wurde unabhängig auditiert und verifiziert von Europas führendem Penetration-Testing-Unternehmen, Securitum."
-      ]
-    }
+  "ReviewSection": {
+    "forbes": "Internxt festigt seine Position als europäische Alternative zu den Tech-Giganten",
+    "deloitte": "Ausgezeichnet mit dem Deloitte Fast 50 Award für die am schnellsten wachsenden Unternehmen",
+    "techradar": "Internxt ist ein hervorragender Cloud-Speicherdienst; erschwinglich, intuitiv und zuverlässig",
+    "fortune": "Internxt baut ein Internet auf, in dem Privatsphäre und Sicherheit an erster Stelle stehen",
+    "trustpilot": "Hervorragendes Preis-Leistungs-Verhältnis angesichts der gebotenen Sicherheit und Funktionen. Exzellenter Service und Support."
   }
 }

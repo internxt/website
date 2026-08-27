@@ -1,57 +1,124 @@
 {
   "HeroSection": {
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail",
-      "ai": "AI"
-    },
-    "title": "Almacenamiento en la nube seguro para tus **copias de seguridad de Home Assistant**",
-    "description": "Copias de seguridad externas automatizadas con conocimiento cero (zero-knowledge). Creado en Europa para el máximo control de datos y privacidad.",
-    "subtitle": "Obtén un {{discount}}% de descuento",
+    "title": "Almacenamiento en la nube seguro para tus **Copias de seguridad de Home Assistant**",
+    "description": "Copias de seguridad externas automatizadas y con conocimiento cero. Creado en Europa para el máximo control de datos y privacidad.",
     "claimDeal": "Reclamar oferta"
+  },
+  "MadeInEuropeSection": {
+    "title": "Creado en Europa",
+    "description": "Tus datos están protegidos con estrictas leyes y regulaciones de cumplimiento europeas combinadas con un cifrado galardonado.",
+    "cards": {
+      "images": [
+        "/images/drive/GDPR.webp",
+        "/images/drive/redundancy.webp",
+        "/images/drive/sustainability.webp"
+      ],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": [
+        "Centros de datos europeos",
+        "Redundancia",
+        "Compromiso con la sostenibilidad "
+      ],
+      "descriptions": [
+        "Internxt tiene su sede en Valencia, España, y nuestros centros de datos están ubicados en Europa y otras ubicaciones del mundo, ofreciéndote seguridad, velocidad y cumplimiento legal.",
+        "Tus archivos están protegidos mediante sistemas redundantes, controles ambientales y supervisión de seguridad in situ las 24 horas, los 7 días de la semana. Pase lo que pase, tus archivos permanecerán siempre seguros y accesibles.",
+        "Internxt lidera con el ejemplo al trabajar por una solución de almacenamiento en la nube más sostenible mediante prácticas de eficiencia energética."
+      ],
+      "cta": [
+        "Saber más",
+        "",
+        "Saber más"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "description": "Internxt consiste en tener el control. Con Internxt obtienes la tranquilidad de saber que tus datos están cifrados, protegidos y que tu vida digital te pertenece."
+  },
+  "ThreeCardsSection": {
+    "title": "Valores fundamentales",
+    "cards": {
+      "titles": [
+        "Cifrado de conocimiento cero",
+        "Recuperación confiable",
+        "La privacidad es lo primero"
+      ],
+      "descriptions": [
+        "Cifrado de extremo a extremo en el lado del cliente. Tus archivos de configuración y claves API permanecen estrictamente privados.",
+        "Conserva una copia externa segura de tus capturas de HA en caso de fallos de hardware o problemas de actualización.",
+        "Alojado en la UE, totalmente compatible con el RGPD e independiente de las grandes empresas tecnológicas."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Características principales de nuestro almacenamiento seguro en la nube",
+    "description": "Seguridad completa para tus datos, todo lo que necesitas para mantener tus archivos seguros y privados",
+    "accordionCards": {
+      "titles": [
+        "Un ecosistema totalmente privado",
+        "Colaboración segura",
+        "Tu nube, como un disco local"
+      ],
+      "descriptions": [
+        "Internxt combina almacenamiento cifrado, copias de seguridad, VPN, antivirus, limpiador, Meet, Mail y más: todo para liberarte de las grandes tecnológicas.",
+        "Envía archivos con enlaces cifrados, contraseñas y controles de acceso. Trabaja con tu equipo en tiempo real manteniendo los datos privados.",
+        "Utiliza Internxt como una unidad virtual para sincronizar, subir y acceder a archivos sin problemas, como en tu ordenador, pero totalmente seguro y siempre actualizado."
+      ]
+    },
+    "cards": {
+      "titles": [
+        "Cifrado de extremo a extremo",
+        "Controles de acceso",
+        "Copias de seguridad cifradas"
+      ],
+      "descriptions": [
+        "Todos los archivos están cifrados con cifrado post-cuántico y de conocimiento cero. Nadie más que tú, o quienes elijas, podrá ver su contenido.",
+        "Tú controlas exactamente quién puede acceder a tus archivos compartidos mediante enlaces cifrados y protegidos por contraseña que puedes revocar en cualquier momento.",
+        "Asegúrate de que tus archivos estén a salvo del ransomware y pérdidas accidentales con copias de seguridad cifradas y programadas."
+      ]
+    }
   },
   "TableSection": {
     "title": "Planes de Internxt",
     "valentinesTitle": "Amor seguro - ",
     "hotLabel": "{{discount}}% de descuento",
     "planTitles": {
-      "header": "Elige cómo quieres pagar",
-      "lifetimeHeader": "Selecciona tu plan de por vida",
+      "header": "Selecciona tu plan",
+      "lifetimeHeader": "Selecciona tu plan vitalicio",
       "individuals": "Planes anuales",
       "homePage": "Elige el plan adecuado para ti",
-      "lifetime": "Planes de por vida",
+      "lifetime": "Planes vitalicios",
       "business": "Planes para empresas",
       "lifetimeCampaign": {
         "blueText": "50% de descuento",
-        "normalText": "en todos nuestros planes exclusivos de por vida"
+        "normalText": "en todos nuestros planes vitalicios exclusivos"
       }
     },
-    "lifetimeDescription": "Paga una sola vez y disfruta de privacidad y seguridad de por vida",
-    "planDescription": "Todos los planes de Internxt cuentan con acceso completo a nuestra galardonada suite de privacidad que incluye Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
+    "lifetimeDescription": "Paga una vez y disfruta de privacidad y seguridad de por vida",
+    "planDescription": "Todos los planes de Internxt incluyen acceso completo a nuestra galardonada suite de privacidad: Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu empresa, proteger a tus empleados y asegurar tu rentabilidad.",
-    "businessDescription2": "Garantiza la seguridad de los datos de tu empresa con los planes de almacenamiento en la nube encriptados de Internxt.",
+    "businessDescription2": "Garantiza la seguridad de los datos de tu empresa con los planes de almacenamiento en la nube cifrados de Internxt.",
     "billingFrequency": {
       "monthly": "Mensual",
       "annually": "Anual",
-      "lifetime": "De por vida",
+      "lifetime": "Vitalicio",
       "individual": "Individual",
       "business": "Empresa"
     },
     "freePlanCard": {
       "eyeBrow": "Gratis",
-      "description": "Consigue 1 GB de almacenamiento en la nube encriptado gratis",
+      "description": "Consigue 1 GB de almacenamiento en la nube cifrado gratis",
       "cta": "Seleccionar plan"
     },
     "features": {
-      "endToEnd": "Encriptado de extremo a extremo",
+      "endToEnd": "Cifrado de extremo a extremo",
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de reembolso de 30 días"
     },
     "planStorage": {
       "essential": "1TB",
@@ -59,47 +126,11 @@
       "ultimate": "5TB"
     }
   },
-  "ThreeCardsSection": {
-    "title": "Valores fundamentales",
-    "cards": {
-      "titles": ["Encriptado Zero-Knowledge", "Recuperación fiable", "Prioridad a la privacidad"],
-      "descriptions": [
-        "Encriptado en el lado del cliente de extremo a extremo. Tus archivos de configuración y claves API se mantienen estrictamente privados.",
-        "Conserva una copia externa segura de tus capturas de HA en caso de fallos de hardware o problemas de actualización.",
-        "Alojado en la UE, totalmente conforme con el RGPD e independiente de las grandes tecnológicas."
-      ]
-    }
-  },
-  "ConfigurationSection": {
-    "title": "Envía tus capturas fuera de la red local sin enviar tus claves",
-    "description": "Apunta /backup a un remoto de Internxt a través de WebDAV o rclone. Los archivos se encriptan en tu hardware antes de que el primer byte salga de la LAN: almacenamos texto cifrado y nunca conservamos la clave.",
-    "accordionCard": {
-      "titles": ["Crea credenciales WebDAV", "Añade el fragmento de código", "Verifica y olvídate"],
-      "descriptions": [
-        "En Internxt → Ajustes > WebDAV, genera un token específico. Guarda la URL, el usuario y la contraseña oculta en secrets.yaml, nunca en una configuración expuesta.",
-        "Pega el código en configuration.yaml (o ejecuta el add-on de rclone desde la tienda de Supervisor) y luego ejecuta ha core restart. Haz una prueba con --dry-run para confirmar que el remoto responde.",
-        "Cada archivo .tar se encripta con AES-256 en el lado del cliente y se fragmenta antes de subirse. Las restauraciones descargan el archivo de nuevo a /backup y lo desencriptan localmente con tu clave."
-      ]
-    },
-    "features": ["zero-knowledge", "rclone 1.66+", "gestión de !secret", "API de backup de HA 2024.11"]
-  },
-  "NextGenSection": {
-    "title": "¿Por qué elegir Internxt?",
-    "description": "Internxt te devuelve el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, nos aseguramos de que solo tú tengas las llaves de tus datos encriptados y no almacenamos ni vendemos tus datos a terceros. Tomamos todas las medidas para garantizar que tu información permanezca segura.",
-    "cta": "Conócenos mejor",
-    "scrollableSection": {
-      "titles": [
-        "Datos invulnerables e infiltrables",
-        "Seguridad de nueva generación",
-        "Código abierto y transparente",
-        "Verificado independientemente"
-      ],
-      "descriptions": [
-        "No almacenamos contraseñas ni datos de usuarios y todos tus datos están encriptados en tránsito y en reposo. Internxt te pone en control total de tus archivos. Tus datos son tu negocio. Protegerlos es el nuestro.",
-        "Internxt es el único almacenamiento en la nube que encripta automáticamente tus archivos usando criptografía de extremo a extremo y post-cuántica, lo que significa que solo tú puedes acceder a tus datos.",
-        "Estamos orgullosos de lo que hacemos, por lo que nuestro código se hace público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar excepto tus datos.",
-        "Cumplimos completamente con GDPR y somos 100% seguros, pero no te fíes solo de nuestra palabra. Internxt ha sido auditado y verificado independientemente por la empresa líder de pruebas de penetración de Europa, Securitum."
-      ]
-    }
+  "ReviewSection": {
+    "forbes": "Internxt consolida su posición como alternativa europea a los gigantes tecnológicos",
+    "deloitte": "Galardonado con el premio Deloitte Fast 50, que reconoce a las empresas de más rápido crecimiento",
+    "techradar": "Internxt es un excelente servicio de almacenamiento en la nube; asequible, intuitivo y confiable",
+    "fortune": "Internxt está construyendo un internet donde la privacidad y la seguridad son lo primero",
+    "trustpilot": "Valor extraordinario dada la seguridad y las funciones ofrecidas. Servicio y soporte excelentes."
   }
 }

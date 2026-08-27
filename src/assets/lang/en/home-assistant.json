@@ -1,25 +1,68 @@
 {
-  "HeroSection": {
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail",
-      "ai": "AI"
-    },
+    "HeroSection": {
     "title": "Secure cloud storage for your **Home Assistant Backups**",
     "description": "Automated, zero-knowledge offsite backups. Built in Europe for maximum privacy and data control.",
-    "subtitle": "Get {{discount}}% off ",
     "claimDeal": "Claim deal"
+    },
+    "MadeInEuropeSection": {
+    "title": "Made in Europe",
+    "description": "Your data is protected with strict European compliance laws and regulations combined with award-winning encryption.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["European data centers", "Redundancy", "Commitment to sustainability "],
+      "descriptions": [
+        "Internxt is based in Valencia, Spain, and our data centers are based in Europe and other locations worldwide, offering you security, speed, and compliance.",
+        "Your files are protected through redundant systems, environmental controls, and 24/7 onsite security monitoring. No matter what happens, your files always remain safe and accessible.",
+        "Internxt leads by example in working for a more sustainable cloud storage solution through energy-efficient practices for a cleaner and more sustainable cloud storage solution."
+      ],
+      "cta": ["Learn more", "", "Learn more"]
+    }
+  },
+  "TrustedBySection": {
+    "description": "Internxt is about being in control. With Internxt, you get peace of mind knowing that your data is encrypted, protected and your digital life belongs to you."
+  },
+  "ThreeCardsSection": {
+    "title": "Core Values",
+    "cards": {
+      "titles": ["Zero-Knowledge Encryption", "Reliable Recovery", "Privacy-First"],
+      "descriptions": [
+        "End-to-end client-side encryption. Your config files and API keys remain strictly private.",
+        "Keep a safe offsite copy of your HA snapshots in case of hardware failure or update issues.",
+        "Hosted in the EU, fully GDPR-compliant, and independent from Big Tech."
+      ]
+    }
+  },
+    "CoreFeatures": {
+    "title": "Core Features of our cloud secure storage",
+    "description": "Complete security for your data, everything you need to keep your files secure and private",
+    "accordionCards": {
+      "titles": ["A fully private ecosystem", "Secure collaboration", "Your cloud, like a local drive"],
+      "descriptions": [
+        "Internxt bundles encrypted storage, backups, VPN, Antivirus, Cleaner, Meet, Mail & more—everything to break free from Big Tech.",
+        "Send files with encrypted links, passwords, and controls. Work with your team in real time while keeping data private.",
+        "Use Internxt as a virtual drive to sync, upload, and access files seamlessly—just like on your computer, but fully secure and always up to date."
+      ]
+    },
+    "cards": {
+      "titles": ["End-to-end encrypted", "Access controls", "Encrypted backups"],
+      "descriptions": [
+        "All files are encrypted with post-quantum and zero-knowledge encryption. Nobody but you, or those you choose to share files with, can see its contents.",
+        "You control exactly who can access your shared files with encrypted, password-protected links you can revoke anytime.",
+        "Ensure your files stay safe from ransomware and accidental loss with scheduled, encrypted backups that provide extra protection and peace of mind."
+      ]
+    }
   },
   "TableSection": {
     "title": "Internxt Plans",
     "valentinesTitle": "Secure love - ",
     "hotLabel": "{{discount}}% off",
     "planTitles": {
-      "header": "Choose how you want to pay",
+      "header": "Select your plan",
       "lifetimeHeader": "Select your lifetime plan",
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
@@ -59,47 +102,11 @@
       "ultimate": "5TB"
     }
   },
-  "ThreeCardsSection": {
-    "title": "Core Values",
-    "cards": {
-      "titles": ["Zero-Knowledge Encryption", "Reliable Recovery", "Privacy-First"],
-      "descriptions": [
-        "End-to-end client-side encryption. Your config files and API keys remain strictly private.",
-        "Keep a safe offsite copy of your HA snapshots in case of hardware failure or update issues.",
-        "Hosted in the EU, fully GDPR-compliant, and independent from Big Tech."
-      ]
-    }
-  },
-  "ConfigurationSection": {
-    "title": "Ship your snapshots offsite without shipping your keys",
-    "description": "Point /backup at an Internxt remote over WebDAV or rclone. Archives are encrypted on your hardware before the first byte leaves the LAN - we store ciphertext and never hold the key.",
-    "accordionCard": {
-      "titles": ["Mint WebDAV credentials", "Drop in the snippet", "Verify, then forget it"],
-      "descriptions": [
-        "In Internxt → Settings > WebDAV, generate a scoped token. Store the URL, user and obscure pass in secrets.yaml - never in a committed config.",
-        "Paste into configuration.yaml (or run the rclone add-on from the Supervisor store), then ha core restart. Dry-run once with --dry-run to confirm the remote resolves.",
-        "Every .tar is AES-256 encrypted client-side and sharded before upload. Restores pull the archive back to /backup and decrypt locally with your key."
-      ]
-    },
-    "features": ["zero-knowledge", "rclone 1.66+", "!secret handling", "HA 2024.11 backup API"]
-  },
-  "NextGenSection": {
-    "title": "Why choose Internxt permanent cloud storage?",
-    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
-    "cta": "Get to know us better",
-    "scrollableSection": {
-      "titles": [
-        "Unhackable and unleakable data",
-        "Next-generation security",
-        "Open source and transparent",
-        "Independently verified"
-      ],
-      "descriptions": [
-        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
-        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
-        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
-      ]
-    }
+  "ReviewSection": {
+    "forbes": "Internxt consolidates its position as an European alternative to the tech giants",
+    "deloitte": "Received Deloitte Fast 50 Award, which recognizes fastest-growing companies",
+    "techradar": "Internxt is an excellent cloud storage service; affordable, intuitive, and reliable",
+    "fortune": "Internxt is building an internet where privacy and security come first",
+    "trustpilot": "Outstanding value given the security and features offered. Excellent service and support."
   }
 }

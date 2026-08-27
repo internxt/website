@@ -1,39 +1,106 @@
 {
   "HeroSection": {
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail",
-      "ai": "AI"
+    "title": "適用於 **Home Assistant 備份** 的安全雲端儲存",
+    "description": "全自動、零知識異地備份。在歐洲構建，為您的資料提供極致的隱私與控制權。",
+    "claimDeal": "獲取優惠"
+  },
+  "MadeInEuropeSection": {
+    "title": "歐洲製造",
+    "description": "結合獲獎無數的加密技術，您的資料受歐洲嚴格的合規法律法規保護。",
+    "cards": {
+      "images": [
+        "/images/drive/GDPR.webp",
+        "/images/drive/redundancy.webp",
+        "/images/drive/sustainability.webp"
+      ],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": [
+        "歐洲資料中心",
+        "備份備援",
+        "致力於永續發展 "
+      ],
+      "descriptions": [
+        "Internxt 總部位於西班牙瓦倫西亞，我們的資料中心位於歐洲及全球其他地區，為您提供安全、高速與合規的服務。",
+        "您的檔案透過備援系統、環境控制和 24/7 全天候現場安全監控獲得全面保護。無論發生什麼事，您的檔案將始終保持安全並可隨時存取。",
+        "Internxt 率先推行高效能節能做法，致力於打造更清潔、更永續的雲端儲存解決方案。"
+      ],
+      "cta": [
+        "了解更多",
+        "",
+        "了解更多"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "description": "Internxt 旨在讓您掌握掌控權。有了 Internxt，您可以安心無憂，因為您的資料經過加密保護，數位生活完全屬於您自己。"
+  },
+  "ThreeCardsSection": {
+    "title": "核心價值",
+    "cards": {
+      "titles": [
+        "零知識加密",
+        "可靠的資料復原",
+        "隱私至上"
+      ],
+      "descriptions": [
+        "端到端用戶端加密。您的設定檔和 API 金鑰保持嚴格私密。",
+        "妥善保存 HA 快照的安全異地副本，以防硬體故障或升級問題。",
+        "託管於歐盟，完全符合 GDPR 規範，獨立於科技巨頭。"
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "我們安全雲端儲存的核心功能",
+    "description": "全面保護您的資料安全，滿足您保持檔案安全和私密所需的一切",
+    "accordionCards": {
+      "titles": [
+        "完全私密的生態系統",
+        "安全協作",
+        "像本地硬碟一樣的雲端硬碟"
+      ],
+      "descriptions": [
+        "Internxt 集成了加密儲存、備份、VPN、防毒軟體、清理工具、Meet、Mail 等——助您徹底擺脫科技巨頭的束縛。",
+        "透過加密連結、密碼和存取控制傳送檔案。在保持資料私密的同時與團隊進行即時協作。",
+        "將 Internxt 用作虛擬硬碟，無縫同步、上傳和存取檔案——就像在電腦上一樣方便，但更加安全且時刻保持最新。"
+      ]
     },
-    "title": "為您的 **Home Assistant 備份** 提供安全的雲端儲存空間",
-    "description": "自動化的零知識 (Zero-Knowledge) 異地備份。源自歐洲，專為最大化隱私與數據控制而打造。",
-    "subtitle": "獲取 {{discount}}% 折扣",
-    "claimDeal": "領取優惠"
+    "cards": {
+      "titles": [
+        "端到端加密",
+        "存取控制",
+        "加密備份"
+      ],
+      "descriptions": [
+        "所有檔案均採用後量子和零知識加密技術進行加密。除了您或您選擇分享的對象外，沒有人可以檢視其內容。",
+        "您可以精準控制誰可以存取分享的檔案，支援隨時撤銷加密且帶密碼保護的連結。",
+        "透過定期的加密備份，確保您的檔案免受勒索軟體和意外遺失的影響，提供額外的安全保障。"
+      ]
+    }
   },
   "TableSection": {
     "title": "Internxt 方案",
-    "valentinesTitle": "守護摯愛 - ",
-    "hotLabel": "{{discount}}% 優惠",
+    "valentinesTitle": "安全之愛 - ",
+    "hotLabel": "享 {{discount}}% 折扣",
     "planTitles": {
-      "header": "選擇你的支付方式",
+      "header": "選擇您的方案",
       "lifetimeHeader": "選擇您的終身方案",
       "individuals": "年度方案",
       "homePage": "選擇最適合您的方案",
       "lifetime": "終身方案",
       "business": "企業方案",
       "lifetimeCampaign": {
-        "blueText": "50% 優惠",
-        "normalText": "適用於所有獨家終身方案"
+        "blueText": "50% 折扣",
+        "normalText": "適用於我們所有專屬終身方案"
       }
     },
-    "lifetimeDescription": "一次付費，終身享受隱私與安全保障",
-    "planDescription": "所有 Internxt 方案均包含我們屢獲殊榮的隱私軟體套件的完整存取權限，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 與 Mail。",
-    "businessDescription": "我們目前正在開發全新的 Internxt 企業方案，專為保護您的業務、員工及提升盈利能力而設計。",
-    "businessDescription2": "利用 Internxt 加密雲端儲存方案，確保您公司的數據安全。",
+    "lifetimeDescription": "一次付費，終身享有隱私與安全",
+    "planDescription": "所有 Internxt 方案均包含完整功能，可全面使用我們獲獎無數的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發全新的 Internxt 企業方案，專為保護您的業務、員工和盈利能力而設計。",
+    "businessDescription2": "使用 Internxt 的加密雲端儲存方案，確保您公司的資料安全。",
     "billingFrequency": {
       "monthly": "按月",
       "annually": "按年",
@@ -43,15 +110,15 @@
     },
     "freePlanCard": {
       "eyeBrow": "免費",
-      "description": "免費獲得 1 GB 加密雲端儲存空間",
+      "description": "免費獲取 1 GB 加密雲端儲存空間",
       "cta": "選擇方案"
     },
     "features": {
       "endToEnd": "端到端加密",
       "openSource": "開源且經過審計",
-      "anonymousAccount": "匿名帳戶註冊",
-      "premiumSupport": "尊榮客戶支援",
-      "guarantee": "30 天無條件退款保證"
+      "anonymousAccount": "匿名建立帳戶",
+      "premiumSupport": "尊享客戶支援",
+      "guarantee": "30 天退款保證"
     },
     "planStorage": {
       "essential": "1TB",
@@ -59,42 +126,11 @@
       "ultimate": "5TB"
     }
   },
-  "ThreeCardsSection": {
-    "title": "核心價值",
-    "cards": {
-      "titles": ["零知識加密", "可靠復原", "隱私優先"],
-      "descriptions": [
-        "用戶端端到端加密。您的設定檔和 API 金鑰保持絕對私密。",
-        "在異地安全保存 HA 快照副本，防止硬體故障或更新出現問題。",
-        "伺服器位於歐盟，完全符合 GDPR 標準，獨立於大型科技巨頭。"
-      ]
-    }
-  },
-  "ConfigurationSection": {
-    "title": "無需傳輸金鑰即可將快照安全備份至異地",
-    "description": "透過 WebDAV 或 rclone 將 /backup 路徑指向 Internxt 遠端儲存。在第一個位元組離開區域網路之前，歸檔檔案已在您的硬體裝置上完成加密——我們僅儲存密文，絕不掌握金鑰。",
-    "accordionCard": {
-      "titles": ["產生 WebDAV 憑證", "貼上程式碼片段", "驗證並保持運作"],
-      "descriptions": [
-        "在 Internxt → 設定 > WebDAV 中產生專屬 Token。將 URL、使用者名稱和混淆後的密碼儲存在 secrets.yaml 中——絕不要直接放在公開設定中。",
-        "貼上至 configuration.yaml 中（或從 Supervisor 商店執行 rclone 附加元件），然後執行 ha core restart。先執行帶有 --dry-run 的測試指令，確認遠端連線正常。",
-        "每個 .tar 檔案都會在用戶端進行 AES-256 加密並分片，然後再上傳。復原時會將歸檔下載回 /backup 並使用您的金鑰在本地解密。"
-      ]
-    },
-    "features": ["零知識", "rclone 1.66+", "!secret 金鑰處理", "HA 2024.11 備份 API"]
-  },
-  "NextGenSection": {
-    "title": "為何選擇Internxt？",
-    "description": "Internxt讓您重新掌控隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，我們不會儲存或向第三方出售您的資料。我們採取一切措施確保您的資訊保持安全。",
-    "cta": "更深入地了解我們",
-    "scrollableSection": {
-      "titles": ["不可破解和不可洩露的資料", "新世代安全性", "開源且透明", "獨立驗證"],
-      "descriptions": [
-        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜止狀態下都經過加密。Internxt讓您完全控制檔案。您的資料是您的事務。保護它們是我們的責任。",
-        "Internxt是唯一自動使用端對端和後量子加密技術加密檔案的雲端儲存，這意味著只有您可以存取您的資料。",
-        "我們為所做的工作感到驕傲，因此我們的程式碼在GitHub上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有什麼需要隱藏的。",
-        "我們完全符合GDPR規定，100%安全，但不要僅僅相信我們的話。Internxt已經由歐洲領先的滲透測試公司Securitum進行了獨立稽核和驗證。"
-      ]
-    }
+  "ReviewSection": {
+    "forbes": "Internxt 鞏固了其作為科技巨頭之歐洲替代方案的地位",
+    "deloitte": "榮獲 Deloitte Fast 50 大獎，表彰成長最快的企業",
+    "techradar": "Internxt 是一款出色的雲端儲存服務：實惠、直觀且可靠",
+    "fortune": "Internxt 正在構建一個隱私和安全至上的網際網路",
+    "trustpilot": "考量到所提供的安全性與豐富功能，具有極高性價比。卓越的服務與支援。"
   }
 }
