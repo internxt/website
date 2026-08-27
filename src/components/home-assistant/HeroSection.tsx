@@ -41,7 +41,7 @@ export default function HeroSection({
             {textContent.description}
         </p>
 
-        <div className="mx-auto flex flex-col lg:mx-0">
+        <div className="flex w-full flex-col items-start">
           {textContent.features.map((feat) => (
             <div key={feat} className="flex flex-row gap-2">
               <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
