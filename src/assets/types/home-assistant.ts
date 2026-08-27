@@ -10,7 +10,9 @@ export interface HomeAssistantText {
 
 export interface HeroSection {
   title: string;
+  description: string;
   features: string[];
+  guarantee: string;
   claimDeal: string;
 }
 

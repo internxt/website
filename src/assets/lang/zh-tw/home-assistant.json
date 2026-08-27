@@ -1,8 +1,14 @@
 {
   "HeroSection": {
-    "title": "適用於 **Home Assistant 備份** 的安全雲端儲存",
-    "description": "全自動、零知識異地備份。在歐洲構建，為您的資料提供極致的隱私與控制權。",
-    "claimDeal": "獲取優惠"
+    "title": "為您的 **Home Assistant 備份** 提供安全的雲端儲存",
+    "description": "自動化的零知識異地備份。源自歐洲，為您提供極高的隱私保障與數據控制權。",
+    "features": [
+      "排程您的備份",
+      "跨多台伺服器備份",
+      "開源且經過安全審計"
+    ],
+    "guarantee": "30天退款保證",
+    "claimDeal": "領取優惠"
   },
   "MadeInEuropeSection": {
     "title": "歐洲製造",

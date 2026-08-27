@@ -1,7 +1,13 @@
 {
   "HeroSection": {
     "title": "Stockage cloud sécurisé pour vos **sauvegardes Home Assistant**",
-    "description": "Sauvegardes hors site automatisées et à connaissance nulle (zero-knowledge). Conçu en Europe pour une confidentialité et un contrôle des données maximaux.",
+    "description": "Sauvegardes hors site automatisées à connaissance nulle (zero-knowledge). Conçu en Europe pour une confidentialité et un contrôle des données maximaux.",
+    "features": [
+      "Planifiez vos sauvegardes",
+      "Sauvegardé sur plusieurs serveurs",
+      "Open source et audité"
+    ],
+    "guarantee": "Garantie satisfait ou remboursé de 30 jours",
     "claimDeal": "Profiter de l'offre"
   },
   "MadeInEuropeSection": {

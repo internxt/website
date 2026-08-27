@@ -38,7 +38,6 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
         lifetimeCoupon,
     } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
-    // const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
     const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
     const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 

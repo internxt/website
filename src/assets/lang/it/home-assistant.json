@@ -1,8 +1,14 @@
 {
   "HeroSection": {
-    "title": "Archiviazione cloud sicura per i tuoi **Backup di Home Assistant**",
-    "description": "Backup esterni automatizzati a conoscenza zero. Creato in Europa per la massima privacy e il controllo dei dati.",
-    "claimDeal": "Approfitta dell'offerta"
+    "title": "Archiviazione cloud sicura per i tuoi **backup di Home Assistant**",
+    "description": "Backup esterni automatizzati a conoscenza zero. Sviluppato in Europa per la massima privacy e controllo dei dati.",
+    "features": [
+      "Pianifica i tuoi backup",
+      "Backup salvati su più server",
+      "Open source e verificato"
+    ],
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "claimDeal": "Richiedi offerta"
   },
   "MadeInEuropeSection": {
     "title": "Prodotto in Europa",

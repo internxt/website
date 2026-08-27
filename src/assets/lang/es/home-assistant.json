@@ -1,7 +1,13 @@
 {
   "HeroSection": {
-    "title": "Almacenamiento en la nube seguro para tus **Copias de seguridad de Home Assistant**",
-    "description": "Copias de seguridad externas automatizadas y con conocimiento cero. Creado en Europa para el máximo control de datos y privacidad.",
+    "title": "Almacenamiento seguro en la nube para tus **copias de seguridad de Home Assistant**",
+    "description": "Copias de seguridad externas automatizadas y con cifrado de conocimiento cero. Diseñado en Europa para la máxima privacidad y control de datos.",
+    "features": [
+      "Programa tus copias de seguridad",
+      "Copias de seguridad distribuidas en varios servidores",
+      "De código abierto y auditado"
+    ],
+    "guarantee": "Garantía de devolución de dinero de 30 días",
     "claimDeal": "Reclamar oferta"
   },
   "MadeInEuropeSection": {

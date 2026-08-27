@@ -2,6 +2,12 @@
     "HeroSection": {
     "title": "Secure cloud storage for your **Home Assistant Backups**",
     "description": "Automated, zero-knowledge offsite backups. Built in Europe for maximum privacy and data control.",
+    "features": [
+      "Schedule your backups",
+      "Backed up across multiple servers",
+      "Open source and audited"
+    ],
+    "guarantee": "30-day money-back guarantee",
     "claimDeal": "Claim deal"
     },
     "MadeInEuropeSection": {

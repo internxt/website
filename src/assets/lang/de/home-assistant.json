@@ -1,7 +1,13 @@
 {
   "HeroSection": {
-    "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant Backups**",
+    "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant-Backups**",
     "description": "Automatisierte Offsite-Backups mit Zero-Knowledge-Verschlüsselung. In Europa entwickelt für maximale Privatsphäre und Datenkontrolle.",
+    "features": [
+      "Planen Sie Ihre Backups",
+      "Gesichert auf mehreren Servern",
+      "Open-Source und geprüft"
+    ],
+    "guarantee": "30-Tage-Geld-zurück-Garantie",
     "claimDeal": "Angebot sichern"
   },
   "MadeInEuropeSection": {

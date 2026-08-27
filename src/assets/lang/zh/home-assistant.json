@@ -1,7 +1,13 @@
 {
   "HeroSection": {
-    "title": "适用于 **Home Assistant 备份** 的安全云存储",
-    "description": "全自动、零知识异地备份。在欧洲构建，为您的数据提供极致的隐私 protection 和控制权。",
+    "title": "为您的 **Home Assistant 备份** 提供安全的云存储",
+    "description": "自动化的零知识异地备份。源自欧洲，为您提供极高的隐私保障与数据控制权。",
+    "features": [
+      "定时计划您的备份",
+      "跨多个服务器分布式备份",
+      "开源且经过安全审计"
+    ],
+    "guarantee": "30天退款保证",
     "claimDeal": "获取优惠"
   },
   "MadeInEuropeSection": {
