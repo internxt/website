@@ -34,5 +34,12 @@
   },
   "types": ["cypress", "node"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "node10",
+      "ignoreDeprecations": "6.0"
+    }
+  }
 }
