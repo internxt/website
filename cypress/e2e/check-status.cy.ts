@@ -28,7 +28,7 @@ const nameFiles = [
   'coupons',
   'google-drive-alternative',
   'icedrive-alternative',
-  'koofr-altertnative',
+  'koofr-alternative',
   'onedrive-alternative',
   'pcloud-alternative',
   'dropbox-alternative',
