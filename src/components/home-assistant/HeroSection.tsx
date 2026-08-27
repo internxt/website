@@ -24,7 +24,7 @@ export default function HeroSection({
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-start gap-6 lg:w-[606px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-start gap-3 lg:gap-6 lg:w-[606px] lg:justify-between">
         <h1
           className={`text-balance text-4xl font-semibold leading-tight ${
             darkMode ? 'text-white-95' : 'text-gray-100'
