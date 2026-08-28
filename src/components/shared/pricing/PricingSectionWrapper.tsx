@@ -332,6 +332,7 @@ export const PricingSectionWrapper = ({
           showPromo={showPromo}
           isValentinesMode={isValentinesMode}
           hideFreeCard={hideFreeCard}
+          onlyUltimatePlan={onlyUltimatePlan}
         />
         {textContent.ctaCompare && (
           <a
