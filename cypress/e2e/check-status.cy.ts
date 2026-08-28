@@ -41,7 +41,6 @@ const nameFiles = [
   'filen-alternative',
   'alternative-to-google-meet',
   'idrive-alternative',
-  'alternative-to-proton-drive',
   'sync-alternative',
   'terabox-alternative',
   'alternative-to-zoom',
