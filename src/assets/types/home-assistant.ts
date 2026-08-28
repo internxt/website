@@ -1,27 +1,64 @@
 export interface HomeAssistantText {
     HeroSection: HeroSection;
+    MadeInEuropeSection: MadeInEuropeSection;
     TableSection: TableSection;
-    ConfigurationSection: ConfigurationSection;
+    TrustedBySection: TrustedBySection;
     ThreeCardsSection: ThreeCardsSection;
-    NextGenSection: NextGenSection;
+    CoreFeatures: CoreFeatures;
+    ReviewSection: ReviewSection;
 }
 
 export interface HeroSection {
-  products: Products;
   title: string;
   description: string;
-  subtitle: string;
-  subtitle2: string;
+  features: string[];
+  guarantee: string;
   claimDeal: string;
 }
 
-export interface Products {
-  drive: string;
-  antivirus: string;
-  cleaner: string;
-  vpn: string;
-  meet: string;
-  mail: string;
+export interface ReviewSection {
+  forbes: string;
+  deloitte: string;
+  techradar: string;
+  fortune: string;
+  trustpilot: string;
+}
+
+export interface MadeInEuropeSection {
+  title: string;
+  description: string;
+  cards: Sections;
+}
+
+export interface Sections {
+  images: string[];
+  imagesMobile: string[];
+  titles: string[];
+  descriptions: string[];
+  cta: string[];
+}
+
+export interface ThreeCardsSection {
+  title: string;
+  description: string;
+  cards: Cards;
+}
+
+export interface Cards {
+  titles: string[];
+  descriptions: string[];
+}
+
+export interface CoreFeatures {
+  title: string;
+  description: string;
+  accordionCards: ScrollableSection;
+  cards: ScrollableSection;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
 }
 
 export interface TableSection {
@@ -79,39 +116,6 @@ export interface LifetimeCampaign {
   normalText: string;
 }
 
-export interface ConfigurationSection {
-    title: string;
-    description: string;
-    accordionCard: AccordionCards;
-    features: string[];
-}
-
-export interface AccordionCards {
-  titles: string[];
-  descriptions: string[];
-}
-
-export interface ThreeCardsSection {
-  title: string;
+export interface TrustedBySection {
   description: string;
-  cards: Cards;
-}
-
-export interface Cards {
-  titles: string[];
-  descriptions: string[];
-}
-
-export interface NextGenSection {
-  title: string;
-  description: string;
-  cta: string;
-  scrollableSection?: ScrollableSection;
-  titleWithoutDiscount?: string;
-  descriptionWithoutDisocunt?: string;
-}
-
-export interface ScrollableSection {
-  titles: string[];
-  descriptions: string[];
 }

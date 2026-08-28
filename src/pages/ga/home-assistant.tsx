@@ -6,23 +6,25 @@ import { PromoCodeName } from '@/lib/types';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
-import HeroSection from '@/components/home-assistant/HeroSection';
-import { stripeService } from '@/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { HomeAssistantText } from '@/assets/types/home-assistant';
+import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
+import TrustedSection from '@/components/home/TrustedSection';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
-import ConfigurationSection from '@/components/home-assistant/ConfigurationSection';
-import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
-import ComparativePricingSection from '@/components/shared/pricing/ComparativePricingSection';
+import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import ReviewsSection from '@/components/home/ReviewsSection';
+import HeroSection from '@/components/home-assistant/HeroSection';
 
 interface HomeAssistantProps {
     lang: GetServerSidePropsContext['locale'];
     metatagsDescriptions: MetatagsDescription[];
     navbarLang: NavigationBarText;
-    langJson: HomeAssistantText;
+    textContent: HomeAssistantText;
     footerLang: FooterText;
 }
 
-const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
+const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
 
     const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
     const locale = lang as string;
@@ -31,11 +33,11 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
         products,
         loadingCards,
         currencyValue,
+        lifetimeCoupons,
         coupon: individualCoupon,
         lifetimeCoupon,
     } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
-    const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
     const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
     const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
@@ -69,40 +71,56 @@ const HomeAssistantPage = ({ metatagsDescriptions, langJson, lang, footerLang, n
 
     return (
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
-            <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
+            <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
 
-            <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+            <HeroSection textContent={textContent.HeroSection} />
 
-            <ConfigurationSection textContent={langJson.ConfigurationSection} />
+            <ReviewsSection textContent={textContent.ReviewSection} />
 
-            <ThreeCardsIconsSection
-                textContent={langJson.ThreeCardsSection}
-                bgColor='white'
-            />
-
-            <ComparativePricingSection
-                textContent={langJson.TableSection}
+            <PricingSectionWrapper 
+                textContent={textContent.TableSection}
+                decimalDiscount={{
+                individuals: decimalDiscount,
+                lifetime: decimalDiscountForLifetime,
+                }}
+                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+                lifetimeCoupons={lifetimeCoupons}
+                lang={locale}
                 products={products}
                 loadingCards={loadingCards}
-                lang={locale}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                targetStorage='5TB'
+                hideBusinessCards
+                hideBusinessSelector
+                popularPlanBySize="5TB"
+                onlyUltimatePlan
+                startFromPlan='Individuals'
+                startIndividualPlansFromInterval={Interval.Year}
+                sectionDetails="bg-white lg:py-20"
+                hideFreeCard
             />
 
-            <HorizontalScrollableSection
-                textContent={langJson.NextGenSection} 
-                bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-                needsDivider={false}
-                />
+            <ThreeCardsIconsSection
+                textContent={textContent.ThreeCardsSection}
+                cardColor='bg-white'
+            />
+
+            <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+
+            <TrustedSection
+                textContent={textContent.TrustedBySection}
+                bottomBar={true}
+                bgColor='bg-neutral-17'
+            />
+
+            <ThreeCardsSection
+                textContent={textContent.MadeInEuropeSection}
+                bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+            />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
                 lang={locale}
-                bgColor='bg-neutral-17'
+                bgColor='bg-white'
             />
 
         </Layout>
@@ -123,7 +141,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
         props: {
             lang,
             metatagsDescriptions,
-            langJson,
+            textContent: langJson,
             navbarLang,
             footerLang,
         },

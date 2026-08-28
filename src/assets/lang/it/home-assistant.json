@@ -1,55 +1,128 @@
 {
   "HeroSection": {
-    "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
-      "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail",
-      "ai": "AI"
+    "title": "Archiviazione cloud sicura per i tuoi **backup di Home Assistant**",
+    "description": "Backup esterni automatizzati a conoscenza zero. Sviluppato in Europa per la massima privacy e controllo dei dati.",
+    "features": [
+      "Pianifica i tuoi backup",
+      "Backup salvati su più server",
+      "Open source e verificato"
+    ],
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "claimDeal": "Richiedi offerta"
+  },
+  "MadeInEuropeSection": {
+    "title": "Prodotto in Europa",
+    "description": "I tuoi dati sono protetti da rigide normative ed esigenze di conformità europee, combinate con una crittografia pluripremiata.",
+    "cards": {
+      "images": [
+        "/images/drive/GDPR.webp",
+        "/images/drive/redundancy.webp",
+        "/images/drive/sustainability.webp"
+      ],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": [
+        "Data center europei",
+        "Ridondanza",
+        "Impegno per la sostenibilità "
+      ],
+      "descriptions": [
+        "Internxt ha sede a Valencia, in Spagna, e i nostri data center si trovano in Europa e in altre località in tutto il mondo, offrendoti sicurezza, velocità e conformità.",
+        "I tuoi file sono protetti da sistemi ridondanti, controlli ambientali e monitoraggio della sicurezza in loco 24/7. Qualsiasi cosa accada, i tuoi file rimangono sempre al sicuro e accessibili.",
+        "Internxt dà il buon esempio lavorando per una soluzione di archiviazione cloud più sostenibile attraverso pratiche ad efficienza energetica."
+      ],
+      "cta": [
+        "Scopri di più",
+        "",
+        "Scopri di più"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "description": "Internxt significa avere il controllo. Con Internxt hai la tranquillità di sapere che i tuoi dati sono crittografati, protetti e che la tua vita digitale appartiene solo a te."
+  },
+  "ThreeCardsSection": {
+    "title": "Valori Fondamentali",
+    "cards": {
+      "titles": [
+        "Crittografia Zero-Knowledge",
+        "Ripristino Affidabile",
+        "Privacy al Primo Posto"
+      ],
+      "descriptions": [
+        "Crittografia end-to-end lato client. I tuoi file di configurazione e le chiavi API rimangono strettamente privati.",
+        "Conserva una copia esterna sicura dei tuoi snapshot di HA in caso di guasti hardware o problemi di aggiornamento.",
+        "Ospitato nell'UE, completamente conforme al GDPR e indipendente dalle Big Tech."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Caratteristiche principali del nostro cloud storage sicuro",
+    "description": "Sicurezza completa per i tuoi dati, tutto ciò di cui hai bisogno per mantenere i tuoi file sicuri e privati",
+    "accordionCards": {
+      "titles": [
+        "Un ecosistema totalmente privato",
+        "Collaborazione sicura",
+        "Il tuo cloud, come un disco locale"
+      ],
+      "descriptions": [
+        "Internxt unisce archiviazione crittografata, backup, VPN, Antivirus, Cleaner, Meet, Mail e altro ancora: tutto per liberarsi dalle Big Tech.",
+        "Invia file con link crittografati, password e controlli di accesso. Lavora con il tuo team in tempo reale mantenendo i dati privati.",
+        "Usa Internxt come un disco virtuale per sincronizzare, caricare e accedere ai file in modo fluido, proprio come sul tuo computer, ma in totale sicurezza e sempre aggiornato."
+      ]
     },
-    "title": "Spazio cloud sicuro per i tuoi **backup di Home Assistant**",
-    "description": "Backup esterni automatizzati a conoscenza zero (zero-knowledge). Creato in Europa per il massimo controllo dei dati e della privacy.",
-    "subtitle": "Ottieni il {{discount}}% di sconto",
-    "claimDeal": "Riscatta l'offerta"
+    "cards": {
+      "titles": [
+        "Crittografia End-to-End",
+        "Controlli di accesso",
+        "Backup crittografati"
+      ],
+      "descriptions": [
+        "Tutti i file sono crittografati con tecnologia post-quantistica e zero-knowledge. Nessuno tranne te, o chi scegli di autorizzare, può vederne il contenuto.",
+        "Controlli esattamente chi può accedere ai tuoi file condivisi tramite link crittografati e protetti da password che puoi revocare in qualsiasi momento.",
+        "Assicurati che i tuoi file rimangano al sicuro da ransomware e perdite accidentali grazie a backup programmati e crittografati."
+      ]
+    }
   },
   "TableSection": {
     "title": "Piani Internxt",
     "valentinesTitle": "Amore sicuro - ",
     "hotLabel": "{{discount}}% di sconto",
     "planTitles": {
-      "header": "Scegli come vuoi pagare",
+      "header": "Seleziona il tuo piano",
       "lifetimeHeader": "Seleziona il tuo piano a vita",
-      "individuals": "Piani annuali",
-      "homePage": "Scegli il piano ideale per te",
-      "lifetime": "Piani a vita",
-      "business": "Piani aziendali",
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano più adatto a te",
+      "lifetime": "Piani a Vita",
+      "business": "Piani Business",
       "lifetimeCampaign": {
         "blueText": "50% di sconto",
         "normalText": "su tutti i nostri esclusivi piani a vita"
       }
     },
-    "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza per tutta la vita",
-    "planDescription": "Tutti i piani Internxt includono l'accesso completo alla nostra premiata suite per la privacy composta da Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
-    "businessDescription": "Stiamo attualmente lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e tutelare la tua redditività.",
-    "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di archiviazione cloud crittografata di Internxt.",
+    "lifetimeDescription": "Paga una sola volta e goditi privacy e sicurezza per tutta la vita",
+    "planDescription": "Tutti i piani Internxt sono completi e offrono l'accesso totale alla nostra pluripremiata suite per la privacy composta da Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "Stiamo lavorando a nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e salvaguardare la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografata di Internxt.",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",
       "lifetime": "A vita",
       "individual": "Individuale",
-      "business": "Aziendale"
+      "business": "Business"
     },
     "freePlanCard": {
       "eyeBrow": "Gratis",
-      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratis",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
       "cta": "Seleziona piano"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open source e sottoposto ad audit",
-      "anonymousAccount": "Creazione di account anonimo",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione di un account anonimo",
       "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso entro 30 giorni"
     },
@@ -59,47 +132,11 @@
       "ultimate": "5TB"
     }
   },
-  "ThreeCardsSection": {
-    "title": "Valori fondanti",
-    "cards": {
-      "titles": ["Crittografia Zero-Knowledge", "Ripristino affidabile", "Privacy prima di tutto"],
-      "descriptions": [
-        "Crittografia end-to-end lato client. I tuoi file di configurazione e le chiavi API rimangono strettamente privati.",
-        "Conserva una copia esterna sicura degli snapshot di HA in caso di guasti hardware o problemi di aggiornamento.",
-        "Ospitato nell'UE, totalmente conforme al GDPR e indipendente dai colossi tech."
-      ]
-    }
-  },
-  "ConfigurationSection": {
-    "title": "Invia i tuoi snapshot offsite senza inviare le tue chiavi",
-    "description": "Punta /backup a un server remoto Internxt tramite WebDAV o rclone. Gli archivi vengono crittografati sul tuo hardware prima che il primo byte lasci la rete locale: archiviamo testo cifrato e non possediamo mai la chiave.",
-    "accordionCard": {
-      "titles": ["Crea credenziali WebDAV", "Inserisci lo snippet", "Verifica e poi dimenticati"],
-      "descriptions": [
-        "In Internxt → Impostazioni > WebDAV, genera un token dedicato. Salva l'URL, l'utente e la password oscurata in secrets.yaml – mai in una configurazione pubblica.",
-        "Incolla in configuration.yaml (o esegui l'add-on rclone dallo store di Supervisor), quindi esegui ha core restart. Esegui un test con --dry-run per confermare il collegamento con il remoto.",
-        "Ogni file .tar viene crittografato lato client con AES-256 e suddiviso in frammenti prima del caricamento. I ripristini scaricano l'archivio in /backup e lo decrittografano localmente con la tua chiave."
-      ]
-    },
-    "features": ["zero-knowledge", "rclone 1.66+", "gestione di !secret", "API di backup HA 2024.11"]
-  },
-  "NextGenSection": {
-    "title": "Perché scegliere Internxt?",
-    "description": "Internxt ti restituisce il controllo della tua privacy. A differenza del cloud storage tradizionale, ci assicuriamo che solo tu abbia le chiavi dei tuoi dati crittografati e non archiviamo né vendiamo i tuoi dati a terze parti. Prendiamo ogni misura per garantire che le tue informazioni rimangano sicure.",
-    "cta": "Conoscici meglio",
-    "scrollableSection": {
-      "titles": [
-        "Dati inviolabili e non trapelabili",
-        "Sicurezza di nuova generazione",
-        "Open source e trasparente",
-        "Verificato indipendentemente"
-      ],
-      "descriptions": [
-        "Non archiviamo password o dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti dà il pieno controllo dei tuoi file. I tuoi dati sono affari tuoi. Proteggerli è il nostro lavoro.",
-        "Internxt è l'unico cloud storage che crittografa automaticamente i tuoi file utilizzando crittografia end-to-end e post-quantica, il che significa che solo tu puoi accedere ai tuoi dati.",
-        "Siamo orgogliosi di quello che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente recensito, verificato e controllato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati.",
-        "Siamo completamente conformi al GDPR e sicuri al 100%, ma non credere solo alla nostra parola. Internxt è stato verificato e controllato indipendentemente dalla principale azienda di penetration testing d'Europa, Securitum."
-      ]
-    }
+  "ReviewSection": {
+    "forbes": "Internxt consolida la sua posizione come alternativa europea ai giganti della tecnologia",
+    "deloitte": "Vincitore del premio Deloitte Fast 50, che riconosce le aziende a più rapida crescita",
+    "techradar": "Internxt è un eccellente servizio di cloud storage; economico, intuitivo e affidabile",
+    "fortune": "Internxt sta costruendo un'Internet in cui la privacy e la sicurezza vengono al primo posto",
+    "trustpilot": "Valore eccezionale considerata la sicurezza e le funzionalità offerte. Servizio e supporto eccellenti."
   }
 }
