@@ -23,15 +23,15 @@ interface CloudWardsProps {
   lang: string;
 }
 
-function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
-  const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
+function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: Readonly<CloudWardsProps>): JSX.Element {
+  const metatags = metatagsDescriptions.find((item) => item.id === 'cloudwards');
 
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.CLOUDWARDS,
@@ -77,7 +77,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
   };
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection

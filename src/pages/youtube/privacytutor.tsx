@@ -31,13 +31,13 @@ function PrivacyTutor({
   footerLang,
   navbarLang,
   hideLanguage,
-}: PrivacyTutorProps): JSX.Element {
+}: Readonly<PrivacyTutorProps>): JSX.Element {
 
   const {
     products,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.privacyTutor,
