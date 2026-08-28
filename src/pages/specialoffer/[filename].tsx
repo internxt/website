@@ -50,7 +50,7 @@ const ALLOWED_PATHS = [
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
-const ANNUAL_DISCOUNT_PLANS_PATHS = ['grabon'];
+const ANNUAL_DISCOUNT_PLANS_PATHS = ['grabon', 'pcmag'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
