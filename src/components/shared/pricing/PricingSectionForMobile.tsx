@@ -27,6 +27,7 @@ interface PriceTableProps {
   businessBillingFrequency?: Interval;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
+  onlyUltimatePlan?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
   showPromo?: boolean;
@@ -77,6 +78,7 @@ export const PricingSectionForMobile = ({
   isAffiliate,
   hideBillingController,
   isValentinesMode = false,
+  onlyUltimatePlan = false,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -122,7 +124,13 @@ export const PricingSectionForMobile = ({
     }
   };
 
-  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
+  const planStorage = onlyUltimatePlan
+    ? '5TB'
+    : storageSelected === 'Essential'
+    ? '1TB'
+    : storageSelected === 'Premium'
+    ? '3TB'
+    : '5TB';
   const businessPlanStorage = businessStorageSelected === 'Standard' ? '1TB' : '2TB';
 
   return (
@@ -138,6 +146,7 @@ export const PricingSectionForMobile = ({
           darkMode={darkMode}
           activeStoragePlan={storageSelected}
           hideBillingController={hideBillingController}
+          hideStorageSelector={onlyUltimatePlan}
         />
       )}
       {activeSwitchPlan !== 'Lifetime' && (

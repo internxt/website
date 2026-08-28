@@ -12,6 +12,7 @@ interface PlanSwitchProps {
   isMonthly?: boolean;
   darkMode?: boolean;
   hideBillingController?: boolean;
+  hideStorageSelector?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
   onStorageChange: (activeStoragePlan: string) => void;
 }
@@ -26,6 +27,7 @@ export const PlanSelectorForMobile = ({
   darkMode,
 
   hideBillingController,
+  hideStorageSelector,
 }: PlanSwitchProps): JSX.Element => (
   <>
     {!hideBillingController && (
@@ -72,51 +74,53 @@ export const PlanSelectorForMobile = ({
       </div>
     )}
 
-    <div
-      id="billingButtons"
-      className={`flex w-[345px] flex-row justify-between rounded-lg ${
-        darkMode ? 'bg-neutral-90/10' : 'bg-cool-gray-10'
-      } p-0.5`}
-    >
-      <button
-        type="button"
-        onClick={() => {
-          onStorageChange('Essential');
-        }}
-        className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-          activeStoragePlan === 'Essential'
-            ? `bg-white font-semibold text-primary shadow-sm`
-            : `font-regular text-cool-gray-50 `
-        }`}
+    {!hideStorageSelector && (
+      <div
+        id="billingButtons"
+        className={`flex w-[345px] flex-row justify-between rounded-lg ${
+          darkMode ? 'bg-neutral-90/10' : 'bg-cool-gray-10'
+        } p-0.5`}
       >
-        {textContent.planStorage.essential}
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          onStorageChange('Premium');
-        }}
-        className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-          activeStoragePlan === 'Premium'
-            ? `bg-white font-semibold text-primary shadow-sm`
-            : `font-regular text-cool-gray-50`
-        }`}
-      >
-        {textContent.planStorage.premium}
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          onStorageChange('Ultimate');
-        }}
-        className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-          activeStoragePlan === 'Ultimate'
-            ? `bg-white font-semibold text-primary shadow-sm`
-            : `font-regular text-cool-gray-50`
-        }`}
-      >
-        {textContent.planStorage.ultimate}
-      </button>
-    </div>
+        <button
+          type="button"
+          onClick={() => {
+            onStorageChange('Essential');
+          }}
+          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+            activeStoragePlan === 'Essential'
+              ? `bg-white font-semibold text-primary shadow-sm`
+              : `font-regular text-cool-gray-50 `
+          }`}
+        >
+          {textContent.planStorage.essential}
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            onStorageChange('Premium');
+          }}
+          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+            activeStoragePlan === 'Premium'
+              ? `bg-white font-semibold text-primary shadow-sm`
+              : `font-regular text-cool-gray-50`
+          }`}
+        >
+          {textContent.planStorage.premium}
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            onStorageChange('Ultimate');
+          }}
+          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+            activeStoragePlan === 'Ultimate'
+              ? `bg-white font-semibold text-primary shadow-sm`
+              : `font-regular text-cool-gray-50`
+          }`}
+        >
+          {textContent.planStorage.ultimate}
+        </button>
+      </div>
+    )}
   </>
 );
