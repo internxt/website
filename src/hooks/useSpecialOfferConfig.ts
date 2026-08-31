@@ -144,6 +144,8 @@ export const ALLOWED_PATHS = [
   'ahui',
   'shafa',
   'mrbibbo',
+  'micha',
+  'windowsarea',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -201,6 +203,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   simon42: 'de',
   themorpheus: 'de',
   verdrahtet: 'de',
+  micha: 'de',
+  windowsarea: 'de',
 
   // es
   alejavi: 'es',
@@ -364,7 +368,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'ahui',
   'shafa',
   'mrbibbo',
-  'gentiluomodigitale'
+  'gentiluomodigitale',
+  'micha',
+  'windowsarea',
 ]);
 
 export const COUPON_CODES = {
@@ -509,6 +515,8 @@ export const COUPON_CODES = {
   ahui: PromoCodeName.ahui,
   shafa: PromoCodeName.shafa,
   mrbibbo: PromoCodeName.mrbibbo,
+  micha: PromoCodeName.micha,
+  windowsarea: PromoCodeName.windowsarea,
 };
 
 interface OfferConfig {

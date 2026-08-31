@@ -357,6 +357,8 @@ export enum PromoCodeName {
   mrbibbo = 'MRBIBBO',
   seolp = 'SEOLP',
   lftem = 'LFTEM',
+  micha = 'MICHA',
+  windowsarea = 'WINDOWSAREA',
 }
 
 export interface PromoCodeProps {
