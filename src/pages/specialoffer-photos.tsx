@@ -32,7 +32,7 @@ function SpecialOffer({
   metatagsDescriptions,
   footerLang,
   navbarLang,
-}: SpecialOfferProps): JSX.Element {
+}: Readonly<SpecialOfferProps>): JSX.Element {
   const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(true);
 
   useEffect(() => {
@@ -40,14 +40,14 @@ function SpecialOffer({
     setIsCelloAttributionExpired(isCelloExpired());
   }, []);
 
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({ couponCode: PromoCodeName.emailphotos, couponCodeForLifetime: PromoCodeName.emailphotos });
 
@@ -90,7 +90,7 @@ function SpecialOffer({
   };
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang} robots="noindex,follow">
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Partners" lang={lang} robots="noindex,follow">
       {!isCelloAttributionExpired && (
         <Script
           src="https://assets.cello.so/attribution/latest/cello-attribution.js"
