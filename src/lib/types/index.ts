@@ -357,6 +357,7 @@ export enum PromoCodeName {
   mrbibbo = 'MRBIBBO',
   seolp = 'SEOLP',
   lftem = 'LFTEM',
+  emailphotos = 'EMAILPHOTOS',
 }
 
 export interface PromoCodeProps {
