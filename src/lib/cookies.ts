@@ -110,10 +110,7 @@ export const saveTrackingParamsToCookies = () => {
 
   const expiryDate = new Date();
 
-  expiryDate.setTime(
-    expiryDate.getTime() +
-      GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY,
-  );
+  expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
 
   TRACKING_PARAMS.forEach((param) => {
     const value = params.get(param);
@@ -126,7 +123,7 @@ export const saveTrackingParamsToCookies = () => {
       expiration: expiryDate,
     });
   });
-}
+};
 
 export const getTrackingParams = (): Record<string, string> => {
   if (typeof window === 'undefined') return {};

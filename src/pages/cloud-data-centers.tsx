@@ -1,10 +1,9 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import cookies from '@/lib/cookies';
 import { CloudDataCentersPageText } from '@/assets/types/cloud-data-centers';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { HeroSection } from '@/components/data-centers/HeroSection';
@@ -16,7 +15,7 @@ import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface CloudDataCentersPageProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: CloudDataCentersPageText;
@@ -42,7 +41,11 @@ const CloudDataCentersPage = ({
       lang={lang}
     >
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Data Centers and Certifications', url: '/cloud-data-centers' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
@@ -95,20 +98,26 @@ const CloudDataCentersPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }]} />
+      <Footer
+        textContent={footerLang}
+        lang={locale}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Data Centers and Certifications', url: '/cloud-data-centers' },
+        ]}
+      />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/cloud-data-centers.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

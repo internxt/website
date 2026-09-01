@@ -1,5 +1,5 @@
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -26,7 +26,7 @@ export interface PhotosProps {
   navbarText: NavigationBarText;
   textContent: PhotoText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
   relationalLinksText: RelationalLinksText;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
