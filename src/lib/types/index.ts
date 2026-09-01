@@ -360,6 +360,7 @@ export enum PromoCodeName {
   micha = 'MICHA',
   windowsarea = 'WINDOWSAREA',
   emailphotos = 'EMAILPHOTOS',
+  kudettech = 'KUDETTECH',
 }
 
 export interface PromoCodeProps {
