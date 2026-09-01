@@ -359,6 +359,7 @@ export enum PromoCodeName {
   lftem = 'LFTEM',
   micha = 'MICHA',
   windowsarea = 'WINDOWSAREA',
+  emailphotos = 'EMAILPHOTOS',
 }
 
 export interface PromoCodeProps {
