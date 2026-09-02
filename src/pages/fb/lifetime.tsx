@@ -1,8 +1,15 @@
-import { PPCLifetimePage } from '@/components/templates/ppcLifetimePageTemplate';
+import { LifetimePage } from '@/components/templates/lifetimePageTemplate';
 import { PromoCodeName } from '@/lib/types';
 
 const PPCLifetimePageFB = (props) => (
-  <PPCLifetimePage {...props} couponCodeName={PromoCodeName.META85} />
+  <LifetimePage
+    {...props}
+    couponCode={PromoCodeName.META85}
+    couponCodeForLifetime={PromoCodeName.META85}
+    minimalLayout
+    segmentName="PPC Lifetime"
+    ctaBgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+  />
 );
 
 export async function getStaticProps(ctx) {
