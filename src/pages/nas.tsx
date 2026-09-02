@@ -1,161 +1,18 @@
 import { GetStaticPropsContext } from 'next';
-import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import Footer from '@/components/layout/footers/Footer';
-import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
-import FAQSection from '@/components/shared/sections/FaqSection';
-import { NASPageText } from '@/assets/types/nas';
-import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
-import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
-import SynologyQNAPSection from '@/components/nas/SynologyQNAPSection';
-import WhatIsNASSection from '@/components/shared/components/TitleAndDescriptionSection';
-import HeroSection from '@/components/nas/HeroSection';
-import Script from 'next/script';
-import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
-import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { PromoCodeName } from '@/lib/types';
-import usePricing from '@/hooks/usePricing';
-import useCheckout from '@/hooks/useCheckout';
+import { NASPage, NASPageProps } from '@/components/templates/nasPageTemplate';
 
-interface NASPageProps {
-  lang: GetStaticPropsContext['locale'];
-  metatagsDescriptions: MetatagsDescription[];
-  navbarLang: NavigationBarText;
-  textContent: NASPageText;
-  footerLang: FooterText;
-  relationalLinksText: any;
-}
-
-const NASPage = ({
-  metatagsDescriptions,
-  textContent,
-  lang,
-  navbarLang,
-  footerLang,
-  relationalLinksText,
-}: NASPageProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas');
-  const locale = lang as string;
-  const navbarCta = 'chooseStorage';
-
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupon,
-    lifetimeCoupons,
-  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
-
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
-  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
-
-  return (
-    <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([
-          { name: 'Encrypted Cloud Storage', url: '/' },
-          { name: 'Secure cloud storage', url: '/drive' },
-          { name: 'NAS Cloud Backup', url: '/nas' },
-        ])}
-      </Script>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.FaqSection.faq)}
-      </Script>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-        <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
-
-        <WhatIsNASSection textContent={textContent.WhatIsNASSection} />
-
-        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
-
-        <PricingSectionWrapper
-          textContent={textContent.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscountForLifetime,
-          }}
-          lifetimeCoupons={lifetimeCoupons}
-          lang={locale}
-          products={products}
-          loadingCards={loadingCards}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
-          popularPlanBySize="5TB"
-          sectionDetails="bg-neutral-17 lg:py-20"
-          hideFreeCard
-        />
-
-        <FloatingCtaSectionv2
-          textContent={textContent.ctaSection}
-          url={'#billingButtons'}
-          customText={
-            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-                {textContent.ctaSection.title}
-              </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.ctaSection.description}
-              </p>
-            </div>
-          }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-          bgPadding="bg-neutral-17 px-10"
-        />
-
-        <HorizontalScrollableSection
-          textContent={textContent.horizontalScrollableSection}
-          needsDivider={false}
-          cardsHeight="330px"
-        />
-
-        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
-
-        <ThreeCardsSection textContent={textContent.howSetupSection} />
-
-        <FloatingCtaSectionv2
-          textContent={textContent.ctaSectionV2}
-          url={'#billingButtons'}
-          customText={
-            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-                {textContent.ctaSectionV2.title}
-              </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.ctaSectionV2.description}
-              </p>
-            </div>
-          }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
-          containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-          bgPadding="lg:pb-20"
-        />
-
-        <FAQSection textContent={textContent.FaqSection} />
-
-        <RelationalLinks textContent={relationalLinksText} />
-
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Secure cloud storage', url: '/drive' },
-            { name: 'NAS Cloud Backup', url: '/nas' },
-          ]}
-        />
-      </Layout>
-    </>
-  );
-};
+const NASLandingPage = (props: Omit<NASPageProps, 'metaTagId' | 'breadcrumbItems'>): JSX.Element => (
+  <NASPage
+    {...props}
+    metaTagId="nas"
+    breadcrumbItems={[
+      { name: 'Encrypted Cloud Storage', url: '/' },
+      { name: 'Secure cloud storage', url: '/drive' },
+      { name: 'NAS Cloud Backup', url: '/nas' },
+    ]}
+    includeFaqSchema
+  />
+);
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
@@ -178,4 +35,4 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
   };
 }
 
-export default NASPage;
+export default NASLandingPage;
