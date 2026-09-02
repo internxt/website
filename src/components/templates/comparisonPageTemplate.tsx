@@ -22,6 +22,8 @@ import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 import { Fragment } from 'react';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Footer from '../layout/footers/Footer';
 
 type CompetitorType =
@@ -130,6 +132,9 @@ interface ComparisonPageProps {
   tablesCompetitor?: string;
   heroCompetitor?: string;
   faqSkipPercentage?: boolean;
+  minimalLayout?: boolean;
+  hideFreeCard?: boolean;
+  robots?: string;
 }
 
 export const ComparisonPage = ({
@@ -165,6 +170,9 @@ export const ComparisonPage = ({
   tablesCompetitor = 'Drive',
   heroCompetitor,
   faqSkipPercentage = false,
+  minimalLayout = false,
+  hideFreeCard = false,
+  robots,
   threeCardsBgColor = 'linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)',
   threeCardsTopSeparationBar,
   threeCardsBottomSeparationBar = true,
@@ -219,6 +227,7 @@ export const ComparisonPage = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hideSwitchSelector
           hideBusinessSelector
+          hideFreeCard={hideFreeCard}
           sectionDetails="bg-white lg:py-20 py-10"
         />
       ),
@@ -285,8 +294,18 @@ export const ComparisonPage = ({
           {sm_breadcrumb(breadcrumbName, urlSlug)}
         </Script>
       )}
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName={segmentName}
+        lang={lang}
+        robots={robots}
+      >
+        {minimalLayout ? (
+          <MinimalNavbar textContent={navbarLang} lang={locale} />
+        ) : (
+          <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
+        )}
 
         <HeroSection
           textContent={langJson.HeroSection}
@@ -339,19 +358,23 @@ export const ComparisonPage = ({
           needsH3={headings.faqH3}
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          needsH2={headings.footerH2}
-          breadcrumbItems={
-            breadcrumbName && urlSlug
-              ? [
-                  { name: 'Encrypted Cloud Storage', url: '/' },
-                  { name: breadcrumbName, url: `/${urlSlug}` },
-                ]
-              : undefined
-          }
-        />
+        {minimalLayout ? (
+          <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+        ) : (
+          <Footer
+            textContent={footerLang}
+            lang={locale}
+            needsH2={headings.footerH2}
+            breadcrumbItems={
+              breadcrumbName && urlSlug
+                ? [
+                    { name: 'Encrypted Cloud Storage', url: '/' },
+                    { name: breadcrumbName, url: `/${urlSlug}` },
+                  ]
+                : undefined
+            }
+          />
+        )}
       </Layout>
     </>
   );
