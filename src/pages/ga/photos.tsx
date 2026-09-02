@@ -1,7 +1,14 @@
 import { Photos, PhotosProps } from '@/components/templates/photosTemplate';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 
-const PhotosLP = (props: PhotosProps) => <Photos {...props} />;
+const GaPhotos = (props: PhotosProps) => (
+  <Photos
+    {...props}
+    couponCode={PromoCodeName.GADS85}
+    couponCodeForLifetime={PromoCodeName.GADS85}
+  />
+);
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
@@ -23,4 +30,4 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default PhotosLP;
+export default GaPhotos;
