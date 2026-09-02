@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage } from './common';
+export type { FAQ, FAQSection, PlanStorage };
 export interface PrivateCloudStorageForVideoText {
   HeroSection: HeroSection;
   HowToChooseSection: HowToChooseSection;
@@ -8,16 +10,6 @@ export interface PrivateCloudStorageForVideoText {
   cta2: HeroSection;
   FaqSection: FAQSection;
   tableSection: TableSection;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeaturesSection {
@@ -98,12 +90,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

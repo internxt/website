@@ -1,3 +1,5 @@
+import type { PlanStorage } from './common';
+export type { PlanStorage };
 export interface PhotoText {
     HeroSection:             HeroSection;
     PhotoSection:            PhotoSection;
@@ -121,12 +123,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

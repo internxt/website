@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection } from './common';
+export type { FAQ, FAQSection };
 export interface VirusScannerText {
   HeroSection: HeroSection;
   FeaturesSection: FeaturesSection;
@@ -10,16 +12,6 @@ export interface CtaSection {
   title: string;
   description: string;
   cta: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeaturesSection {

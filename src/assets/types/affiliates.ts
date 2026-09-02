@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection } from './common';
+export type { FAQ, FAQSection };
 export interface AffiliatesText {
   HeroSection: HeroSection;
   FeatureSection: FeatureSection;
@@ -43,16 +45,6 @@ export interface Drive {
 export interface Feat {
   title: string;
   description: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeatureSection {

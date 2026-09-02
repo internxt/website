@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage } from './common';
+export type { FAQ, FAQSection, PlanStorage };
 export interface PricingText {
   tableSection: TableSection;
   ComparisonTable: ComparisonTable;
@@ -60,16 +62,6 @@ export interface Plan {
   order: number;
 }
 
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
-}
-
 export interface InfoSection {
   title: string;
   description: string;
@@ -128,12 +120,6 @@ export interface FreePlanCard {
   description: string;
   mobileDescription: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

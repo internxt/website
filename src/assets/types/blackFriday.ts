@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage } from './common';
+export type { FAQ, FAQSection, PlanStorage };
 export interface BlackFridayText {
   HeroSection: HeroSection;
   DontMissSection: DontMissSection;
@@ -19,16 +21,6 @@ export interface CtaSection {
 export interface DontMissSection {
   title: string;
   description: string[];
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface HeroSection {
@@ -97,12 +89,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {
