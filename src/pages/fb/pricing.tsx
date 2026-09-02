@@ -4,8 +4,8 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -73,33 +73,7 @@ const Pricing = ({
     setIsBusiness(isBusiness);
   };
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;

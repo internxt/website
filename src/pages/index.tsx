@@ -5,10 +5,10 @@ import HeroSection from '@/components/home/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 import { PromoCodeName } from '@/lib/types';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
@@ -42,33 +42,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;

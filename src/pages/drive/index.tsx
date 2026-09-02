@@ -20,8 +20,8 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 import { PromoCodeName } from '@/lib/types';
-import { stripeService } from '@/services/stripe.service';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
@@ -66,33 +66,7 @@ const Drive = ({
     couponCodeForLifetime: PromoCodeName.OFFLFT,
   });
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;

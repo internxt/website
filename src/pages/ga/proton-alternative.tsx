@@ -4,7 +4,7 @@ import { GetStaticPropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { stripeService } from '@/services/stripe.service';
+import useCheckout from '@/hooks/useCheckout';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
@@ -31,33 +31,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     couponCodeForLifetime: PromoCodeName.GADS85,
   });
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;

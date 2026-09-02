@@ -2,8 +2,8 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 import { PromoCodeName } from '@/lib/types';
-import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -56,33 +56,7 @@ const PartnerDiscount = ({
   const locale = lang as string;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>

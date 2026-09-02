@@ -18,9 +18,9 @@ import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSe
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -91,33 +91,7 @@ const PrivateCloudStorageSolutions = ({
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   return (
     <>

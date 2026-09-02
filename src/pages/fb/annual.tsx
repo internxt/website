@@ -5,13 +5,14 @@ import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import usePricing from '@/hooks/usePricing';
+import useCheckout from '@/hooks/useCheckout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/partnersTemplate/HeroSection';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import TrustedSection from '@/components/home/TrustedSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService, Interval } from '@/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface AnnualProps {
@@ -39,33 +40,7 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   return (
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
