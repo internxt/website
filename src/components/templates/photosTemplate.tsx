@@ -30,7 +30,6 @@ export interface PhotosProps {
   relationalLinksText: RelationalLinksText;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
-  segmentName?: string;
 }
 
 export const Photos = ({
@@ -42,7 +41,6 @@ export const Photos = ({
   relationalLinksText,
   couponCode = PromoCodeName.OFFSUB,
   couponCodeForLifetime = PromoCodeName.OFFLFT,
-  segmentName,
 }: PhotosProps): JSX.Element => {
   const metatags = metatagsDescription.find((metatag) => metatag.id === 'photos');
   const lang = locale as string;
@@ -100,7 +98,6 @@ export const Photos = ({
     <Layout
       title={metatags?.title ?? ''}
       description={metatags?.description ?? ''}
-      segmentName={segmentName}
       lang={lang}
     >
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />

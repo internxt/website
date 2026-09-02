@@ -7,7 +7,6 @@ const FbPhotos = (props: PhotosProps) => (
     {...props}
     couponCode={PromoCodeName.META85}
     couponCodeForLifetime={PromoCodeName.META85}
-    segmentName="PPC FB Photos"
   />
 );
 
