@@ -11,14 +11,17 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import ComparisonScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import { TablesSection } from '@/components/comparison/TablesSection';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/shared/HorizontalScrollableSectionWithPhotos';
+import CouponsScrollableWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
+import { Fragment } from 'react';
 import Footer from '../layout/footers/Footer';
 
 type CompetitorType =
@@ -65,6 +68,10 @@ type CompetitorType =
   | 'norton'
   | 'totalav';
 
+type SectionName = 'pricing' | 'scrollable' | 'threeCards' | 'tables' | 'withPhotos';
+
+const DEFAULT_SECTIONS_ORDER: SectionName[] = ['pricing', 'scrollable', 'threeCards', 'tables', 'withPhotos'];
+
 interface ComparisonPageProps {
   competitor: CompetitorType;
   metaTagId: string;
@@ -84,6 +91,45 @@ interface ComparisonPageProps {
   isS3Alternative?: boolean;
   breadcrumbName?: string;
   urlSlug?: string;
+  headings?: {
+    comparisonTableH2?: boolean;
+    tablesSectionH2?: boolean;
+    tableTitleTag?: React.ElementType;
+    tableNameTag?: React.ElementType;
+    scrollableH2?: boolean;
+    scrollableH3?: boolean;
+    threeCardsH2?: boolean;
+    threeCardsTitleTag?: React.ElementType;
+    faqH3?: boolean;
+    withPhotosTitleTag?: React.ElementType;
+    withPhotosTitleCardTag?: React.ElementType;
+    footerH2?: boolean;
+  };
+  sectionsOrder?: SectionName[];
+  threeCardsBgColor?: string;
+  threeCardsTopSeparationBar?: boolean;
+  threeCardsBottomSeparationBar?: boolean;
+  useComparisonScrollable?: boolean;
+  useCouponsWithPhotos?: boolean;
+  scrollableSections?: {
+    key: keyof AlternativePageText;
+    bgGradient?: string;
+    needsH2?: boolean;
+    needsH3?: boolean;
+  }[];
+  ctaUrl?: string;
+  ctaCustomTextPadding?: string;
+  ctaTextKey?: 'CtaSection' | 'CtaSection2';
+  ctaTitleTag?: React.ElementType;
+  ctaTitleClass?: string;
+  ctaDescriptionClass?: string;
+  ctaContainerDetails?: string;
+  ctaBgPadding?: string;
+  ctaSkipDynamicText?: boolean;
+  tablesBottomSeparationBar?: boolean;
+  tablesCompetitor?: string;
+  heroCompetitor?: string;
+  faqSkipPercentage?: boolean;
 }
 
 export const ComparisonPage = ({
@@ -101,6 +147,27 @@ export const ComparisonPage = ({
   isS3Alternative = false,
   breadcrumbName,
   urlSlug,
+  headings = {},
+  sectionsOrder = DEFAULT_SECTIONS_ORDER,
+  useComparisonScrollable = false,
+  useCouponsWithPhotos = false,
+  scrollableSections,
+  ctaUrl = '/pricing',
+  ctaCustomTextPadding = 'px-10 lg:px-0',
+  ctaTextKey = 'CtaSection',
+  ctaTitleTag: CtaTitleTag = 'p',
+  ctaTitleClass = 'text-2xl font-semibold text-gray-95 lg:text-4xl',
+  ctaDescriptionClass = 'text-base font-normal text-gray-55 lg:text-xl',
+  ctaContainerDetails = 'shadow-lg backdrop-blur-[55px] bg-white',
+  ctaBgPadding = 'px-20 py-10',
+  ctaSkipDynamicText = false,
+  tablesBottomSeparationBar = false,
+  tablesCompetitor = 'Drive',
+  heroCompetitor,
+  faqSkipPercentage = false,
+  threeCardsBgColor = 'linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)',
+  threeCardsTopSeparationBar,
+  threeCardsBottomSeparationBar = true,
 }: ComparisonPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === metaTagId);
   const {
@@ -153,6 +220,90 @@ export const ComparisonPage = ({
     alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)',
   } = customSections;
 
+  const ScrollableSection = useComparisonScrollable ? ComparisonScrollableSection : HorizontalScrollableSection;
+  const ctaText = langJson[ctaTextKey] ?? langJson.CtaSection;
+
+  const carousels = scrollableSections ?? [
+    { key: 'PrivacyViolationsSection' as keyof AlternativePageText, bgGradient: privacyBgGradient },
+  ];
+
+  const sections: Record<SectionName, JSX.Element | null> = {
+    pricing:
+      isS3Alternative && langJson.PriceCardSection ? (
+        <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
+      ) : (
+        <PricingSectionWrapper
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+          hideBusinessSelector
+          sectionDetails="bg-white lg:py-20 py-10"
+        />
+      ),
+
+    scrollable: (
+      <>
+        {carousels.map((carousel) => (
+          <ScrollableSection
+            key={carousel.key as string}
+            textContent={langJson[carousel.key]}
+            bgGradient={carousel.bgGradient ?? privacyBgGradient}
+            needsH2={carousel.needsH2 ?? headings.scrollableH2}
+            needsH3={carousel.needsH3 ?? headings.scrollableH3}
+          />
+        ))}
+      </>
+    ),
+
+    threeCards:
+      showThreeCards && langJson.WhyNeedAlternativeSection ? (
+        <ThreeCardsSection
+          textContent={langJson.WhyNeedAlternativeSection}
+          bgColor={threeCardsBgColor}
+          cardColor="bg-white"
+          topSeparationBar={threeCardsTopSeparationBar}
+          bottomSeparationBar={threeCardsBottomSeparationBar}
+          needsH2={headings.threeCardsH2}
+          TitleTag={headings.threeCardsTitleTag}
+        />
+      ) : null,
+
+    tables: (
+      <TablesSection
+        textContent={langJson.VersusSection}
+        competitor={tablesCompetitor}
+        percentage={percentageDiscount}
+        logo={logo}
+        sectionNeedsH2={headings.tablesSectionH2}
+        TableTitleTag={headings.tableTitleTag}
+        TableNameTag={headings.tableNameTag}
+        bottomSeparationBar={tablesBottomSeparationBar}
+      />
+    ),
+
+    withPhotos: useCouponsWithPhotos ? (
+      <CouponsScrollableWithPhotosSection
+        textContent={langJson.WhyBestAlternativeSection}
+        bgColor={alternativeBgColor}
+        TitleTag={headings.withPhotosTitleTag}
+        TitleCardTag={headings.withPhotosTitleCardTag}
+      />
+    ) : (
+      <HorizontalScrollableSectionWithPhotosSection
+        textContent={langJson.WhyBestAlternativeSection}
+        bgColor={alternativeBgColor}
+      />
+    ),
+  };
+
   return (
     <>
       {breadcrumbName && urlSlug && (
@@ -163,82 +314,61 @@ export const ComparisonPage = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
-
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} />
-
-        {isS3Alternative && langJson.PriceCardSection ? (
-          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
-        ) : (
-          <PricingSectionWrapper
-            textContent={langJson.tableSection}
-            decimalDiscount={{
-              individuals: decimalDiscount,
-              lifetime: decimalDiscount,
-            }}
-            lifetimeCoupons={lifetimeCoupons}
-            lang={locale}
-            products={products}
-            loadingCards={loadingCards}
-            onCheckoutButtonClicked={onCheckoutButtonClicked}
-            hideSwitchSelector
-            hideBusinessSelector
-            sectionDetails="bg-white lg:py-20 py-10"
-          />
-        )}
-
-        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
-
-        {showThreeCards && langJson.WhyNeedAlternativeSection && (
-          <ThreeCardsSection
-            textContent={langJson.WhyNeedAlternativeSection}
-            bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
-            cardColor="bg-white"
-            bottomSeparationBar={true}
-          />
-        )}
-
-        <TablesSection
-          textContent={langJson.VersusSection}
-          competitor={'Drive'}
+        <HeroSection
+          textContent={langJson.HeroSection}
           percentage={percentageDiscount}
-          logo={logo}
+          competitor={heroCompetitor ?? competitor}
         />
 
-        <HorizontalScrollableSectionWithPhotosSection
-          textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColor}
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor={competitor}
+          percentage={percentageDiscount}
+          needH2={headings.comparisonTableH2}
         />
+
+        {sectionsOrder.map((name) => (
+          <Fragment key={name}>{sections[name]}</Fragment>
+        ))}
 
         <FloatingCtaSectionv2
-          textContent={langJson.CtaSection}
-          url={'/pricing'}
+          textContent={ctaText}
+          url={ctaUrl}
           customText={
-            <div className="flex flex-col gap-4 px-10 lg:px-0">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
-              </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
+            <div className={`flex flex-col gap-4 ${ctaCustomTextPadding}`}>
+              <CtaTitleTag className={ctaTitleClass}>
+                {ctaSkipDynamicText
+                  ? ctaText.title
+                  : parseDynamicText(ctaText.title, {
+                      percentage: percentageDiscount,
+                      discount: percentageDiscount,
+                    })}
+              </CtaTitleTag>
+              <p className={ctaDescriptionClass}>
+                {ctaSkipDynamicText
+                  ? ctaText.description
+                  : parseDynamicText(ctaText.description, {
+                      percentage: percentageDiscount,
+                      discount: percentageDiscount,
+                    })}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          containerDetails={ctaContainerDetails}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgPadding="px-20 py-10"
+          bgPadding={ctaBgPadding}
         />
 
-        <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
+        <FAQSection
+          textContent={langJson.FaqSection}
+          percentageDiscount={faqSkipPercentage ? undefined : percentageDiscount?.toString()}
+          needsH3={headings.faqH3}
+        />
 
         <Footer
           textContent={footerLang}
           lang={locale}
+          needsH2={headings.footerH2}
           breadcrumbItems={
             breadcrumbName && urlSlug
               ? [
