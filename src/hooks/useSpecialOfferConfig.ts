@@ -147,6 +147,7 @@ export const ALLOWED_PATHS = [
   'micha',
   'windowsarea',
   'kudettech',
+  'niklas',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -206,6 +207,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   verdrahtet: 'de',
   micha: 'de',
   windowsarea: 'de',
+  niklas: 'de',
 
   // es
   alejavi: 'es',
@@ -373,6 +375,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'micha',
   'windowsarea',
   'kudettech',
+  'niklas',
 ]);
 
 export const COUPON_CODES = {
@@ -520,6 +523,7 @@ export const COUPON_CODES = {
   micha: PromoCodeName.micha,
   windowsarea: PromoCodeName.windowsarea,
   kudettech: PromoCodeName.kudettech,
+  niklas: PromoCodeName.niklas,
 };
 
 interface OfferConfig {
