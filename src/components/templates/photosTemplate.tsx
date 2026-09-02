@@ -12,7 +12,7 @@ import CoreFeaturesSection from '@/components/photos/CoreFeaturesSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import HorizontalScrollableWithPhotoSection from '@/components/photos/HorizontalScrollableWithPhotoSection';
-import RelationalLinks from '@/components/ppc/RelationalLinks';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
