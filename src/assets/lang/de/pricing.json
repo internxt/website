@@ -379,12 +379,7 @@
               "Premium": false,
               "Ultimate": true
             }
-          }
-        ]
-      },
-      {
-        "name": "Kommt bald",
-        "features": [
+          },
           {
             "id": "mail",
             "name": "Mail",
@@ -395,6 +390,10 @@
             }
           }
         ]
+      },
+      {
+        "name": "Kommt bald",
+        "features": []
       }
     ]
   },
