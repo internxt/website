@@ -13,6 +13,9 @@ interface RelationalLinksProps {
     title: string;
     links: Card[];
   };
+  /** PPC landings run without the mobile padding step and open links in a new tab. */
+  sectionPadding?: string;
+  openLinksInNewTab?: boolean;
 }
 
 const shuffleData = (data: Card[]): Card[] => {
@@ -24,7 +27,11 @@ const shuffleData = (data: Card[]): Card[] => {
   return shuffled;
 };
 
-const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
+const RelationalLinks = ({
+  textContent,
+  sectionPadding = 'py-5 lg:py-20',
+  openLinksInNewTab = false,
+}: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
   const router = useRouter();
 
@@ -105,7 +112,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   if (cards.length === 0) return null;
 
   return (
-    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-5 lg:py-20">
+    <section className={`flex w-full flex-col items-center justify-center overflow-hidden ${sectionPadding}`}>
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
         <p className="mb-8 text-center text-4xl font-semibold text-gray-100 lg:mb-14 lg:text-5xl">
           {textContent.title}
@@ -132,7 +139,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
               }}
             >
               <div className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 p-10 transition-colors hover:bg-neutral-20">
-                <LinkTo linkToRedirect={card.link} text={card.cta} />
+                <LinkTo linkToRedirect={card.link} text={card.cta} openInNewTab={openLinksInNewTab} />
               </div>
             </div>
           ))}
@@ -141,6 +148,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
         <div className="mx-auto flex w-full max-w-7xl justify-end px-6 lg:px-0">
           <div className="flex w-[120px] justify-between">
             <button
+              type="button"
               onClick={scrollLeft}
               disabled={!scrollState.canGoLeft}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
@@ -151,6 +159,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
               <CaretLeft className="text-primary" size={24} />
             </button>
             <button
+              type="button"
               onClick={scrollRight}
               disabled={!scrollState.canGoRight}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${

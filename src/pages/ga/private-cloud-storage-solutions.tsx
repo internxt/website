@@ -11,7 +11,7 @@ import FeaturesSection from '@/components/private-cloud-storage-solutions/Featur
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import RelationalLinks from '@/components/ppc/RelationalLinks';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
@@ -170,7 +170,7 @@ const PrivateCloudStorageSolutions = ({
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} sectionPadding="py-20" openLinksInNewTab />
 
         <Footer
           textContent={footerLang}

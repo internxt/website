@@ -3,7 +3,7 @@ import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/home/HeroSection';
 import Layout from '@/components/layout/Layout';
-import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import useCheckout from '@/hooks/useCheckout';

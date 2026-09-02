@@ -5,13 +5,13 @@ import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
 import useCheckout from '@/hooks/useCheckout';
-import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
-import RelationalLinks from '@/components/ppc/RelationalLinks';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
@@ -139,7 +139,7 @@ const Pricing = ({
 
         <FAQSection textContent={faqSection} needsH3={false} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} sectionPadding="py-20" openLinksInNewTab />
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}

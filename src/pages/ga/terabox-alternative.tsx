@@ -1,7 +1,7 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
 import { GetStaticPropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import useCheckout from '@/hooks/useCheckout';

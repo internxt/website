@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import HeroSection from '@/components/ppc/HeroSection';
+import HeroSection from '@/components/drive/HeroSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Layout from '@/components/layout/Layout';
 import { downloadDriveLinks } from '@/lib/get-download-url';
@@ -13,8 +13,8 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import DriveSection from '@/components/drive/Drivesection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
-import RelationalLinks from '@/components/ppc/RelationalLinks';
-import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import useCheckout from '@/hooks/useCheckout';
 import { PromoCodeName } from '@/lib/types';
@@ -135,7 +135,7 @@ const Drive = ({
           needsH3
           bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
         />
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} sectionPadding="py-20" openLinksInNewTab />
         <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>

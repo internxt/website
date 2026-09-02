@@ -4,9 +4,16 @@ interface FreePlanCardProps {
   textContent: any;
   darkMode?: boolean;
   freePlanNeedsH2?: boolean;
+  /** PPC landings open their own banner dialog. */
+  dialog?: GlobalDialog;
 }
 
-const FreePlanCard = ({ textContent, darkMode, freePlanNeedsH2 = false }: FreePlanCardProps): JSX.Element => {
+const FreePlanCard = ({
+  textContent,
+  darkMode,
+  freePlanNeedsH2 = false,
+  dialog = GlobalDialog.FreeSpaceCardBanner,
+}: FreePlanCardProps): JSX.Element => {
   const { openDialog } = useGlobalDialog();
 
   const TitleTag = freePlanNeedsH2 ? 'h2' : 'p';
@@ -32,7 +39,7 @@ const FreePlanCard = ({ textContent, darkMode, freePlanNeedsH2 = false }: FreePl
               darkMode ? 'bg-[#1C1C1C] hover:bg-gray-90 ' : 'bg-white hover:bg-gray-1'
             } px-6 py-2 text-center text-lg font-medium text-primary `}
             onClick={() => {
-              openDialog(GlobalDialog.FreeSpaceCardBanner, { data: { darkMode } });
+              openDialog(dialog, { data: { darkMode } });
             }}
           >
             {textContent.cta}
@@ -58,7 +65,7 @@ const FreePlanCard = ({ textContent, darkMode, freePlanNeedsH2 = false }: FreePl
             darkMode ? 'bg-[#1C1C1C] hover:bg-[#111111]/10 ' : 'bg-white hover:bg-gray-1'
           } px-6 py-2 text-center text-lg font-medium text-primary `}
           onClick={() => {
-            openDialog(GlobalDialog.FreeSpaceCardBanner, { data: { darkMode } });
+            openDialog(dialog, { data: { darkMode } });
           }}
         >
           {textContent.cta}

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import { WarningCircle } from '@phosphor-icons/react';
-import { Errors } from '../types';
+/** Same union in file-converter/types and file-compressor/types. */
+export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
 
 interface ErrorStateProps {
   textContent: any;
