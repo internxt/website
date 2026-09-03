@@ -381,7 +381,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'windowsarea',
   'kudettech',
   'niklas',
-  'zackshutt',
+  'zackshutt', 
 ]);
 
 export const COUPON_CODES = {
