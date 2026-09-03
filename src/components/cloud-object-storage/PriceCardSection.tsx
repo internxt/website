@@ -6,13 +6,18 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Code, CodeBlock, Gauge, HandCoins, Headset, LockSimple, Resize, Star } from '@phosphor-icons/react';
 import { currencyService } from '@/services/currency.service';
+import { PromoCodeName } from '@/lib/types';
 import { useEffect, useState } from 'react';
 
 interface PriceCardSectionProps {
   textContent: CloudObjectStorageText['PriceCardSection'];
+  couponCode?: PromoCodeName;
 }
 
-export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSectionProps): JSX.Element => {
+export const CloudObjectStoragePriceCardSection = ({
+  textContent,
+  couponCode,
+}: PriceCardSectionProps): JSX.Element => {
   const router = useRouter();
   const iconMap = [HandCoins, LockSimple, CodeBlock, Gauge, Resize, Code, Star, Headset];
   const [currency, setCurrency] = useState("€");
@@ -27,6 +32,10 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
       // NO OP
     })
   }, []);
+
+  const checkoutUrl = couponCode
+    ? `/cloud-object-storage/checkout?couponCode=${couponCode}`
+    : '/cloud-object-storage/checkout';
 
   const getPrice = (currencyValue: string) => {
   if (currencyValue === 'usd') return 8;
@@ -72,7 +81,7 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               <Button
                 className="!w-full"
                 text={textContent.cardText.cta}
-                onClick={() => router.push('/cloud-object-storage/checkout')}
+                onClick={() => router.push(checkoutUrl)}
               />
             </div>
 
