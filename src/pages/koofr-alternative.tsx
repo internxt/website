@@ -1,182 +1,37 @@
-import { TablesSection } from '@/components/comparison/TablesSection';
-import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
-import { GetStaticPropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import { PromoCodeName } from '@/lib/types';
-import usePricing from '@/hooks/usePricing';
-import { stripeService } from '@/services/stripe.service';
-import FAQSection from '@/components/shared/sections/FaqSection';
-import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
-import { ComparisonTable } from '@/components/comparison/ComparisonTable';
-import { HeroSection } from '@/components/comparison/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
-import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
-import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
-import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
-import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import Script from 'next/script';
+import { GetStaticPropsContext } from 'next';
 
-const KoofrComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'koofr-alternative');
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
-    lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.KOOFR,
-    couponCodeForLifetime: PromoCodeName.KOOFR,
-  });
-
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
-
-  const locale = lang as string;
-  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
-  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
-
-  return (
-    <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Koofr alternative', 'koofr-alternative')}
-      </Script>
-      <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
-        segmentName={'Drive Comparison'}
-        lang={lang}
-      >
-        <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Koofr'} />
-
-        <ComparisonTable
-          textContent={langJson.HeaderSection}
-          competitor={'Koofr'}
-          percentage={percentageDiscount}
-          needH2
-        />
-
-        <TablesSection
-          textContent={langJson.VersusSection}
-          competitor={'Drive'}
-          percentage={percentageDiscount}
-          logo={'/images/comparison/Koofr-Letters.webp'}
-          sectionNeedsH2
-          bottomSeparationBar
-        />
-
-        <PricingSectionWrapper
-          textContent={langJson.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
-          }}
-          lifetimeCoupons={lifetimeCoupons}
-          lang={locale}
-          products={products}
-          loadingCards={loadingCards}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideSwitchSelector
-          hideBusinessSelector
-          sectionDetails="bg-white lg:py-20 py-10"
-        />
-
-        {langJson.WhyNeedAlternativeSection && (
-          <ThreeCardsSection
-            textContent={langJson.WhyNeedAlternativeSection}
-            bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
-            cardColor="bg-white"
-            bottomSeparationBar={true}
-          />
-        )}
-
-        <HorizontalScrollableSectionWithPhotosSection
-          textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColor}
-          TitleCardTag={'h3'}
-          TitleTag={'h2'}
-        />
-
-        <HorizontalScrollableSection
-          textContent={langJson.PrivacyViolationsSection}
-          bgGradient={privacyBgGradient}
-          needsH2
-        />
-
-        <FloatingCtaSectionv2
-          textContent={langJson.CtaSection}
-          url={'#pricingTable'}
-          customText={
-            <div className="flex flex-col gap-4 px-10 lg:px-32">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
-              </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
-              </p>
-            </div>
-          }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgPadding="px-20 py-10"
-        />
-
-        <FAQSection
-          textContent={langJson.FaqSection}
-          percentageDiscount={percentageDiscount?.toString()}
-          needsH3={false}
-        />
-
-        <Footer
-          textContent={footerLang}
-          lang={locale}
-          needsH2={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Koofr alternative', url: '/koofr-alternative' },
-          ]}
-        />
-      </Layout>
-    </>
-  );
-};
+const KoofrComparison = (props) => (
+  <ComparisonPage
+    {...props}
+    competitor="Koofr"
+    metaTagId="koofr-alternative"
+    segmentName="Drive Comparison"
+    logo="/images/comparison/Koofr-Letters.webp"
+    couponCodeName={PromoCodeName.KOOFR}
+    breadcrumbName="Koofr alternative"
+    urlSlug="koofr-alternative"
+    ctaUrl="#pricingTable"
+    ctaCustomTextPadding="px-10 lg:px-32"
+    sectionsOrder={["tables", "pricing", "threeCards", "withPhotos", "scrollable"]}
+    useComparisonScrollable
+    useCouponsWithPhotos
+    customSections={{ showThreeCards: true }}
+    threeCardsBgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
+    threeCardsBottomSeparationBar
+    tablesBottomSeparationBar
+    headings={{
+      comparisonTableH2: true,
+      tablesSectionH2: true,
+      scrollableH2: true,
+      faqH3: false,
+      withPhotosTitleTag: 'h2',
+      withPhotosTitleCardTag: 'h3',
+      footerH2: false,
+    }}
+  />
+);
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

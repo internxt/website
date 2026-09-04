@@ -15,7 +15,7 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
-import { stripeService } from '@/services/stripe.service';
+import useCheckout from '@/hooks/useCheckout';
 import { PromoCodeName } from '@/lib/types';
 
 const URL_REDIRECT = '/pricing';
@@ -43,33 +43,7 @@ const WhatDoesGoogleKnowAboutMe = ({
     couponCodeForLifetime: PromoCodeName.WGKAM,
   });
 
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
+  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;

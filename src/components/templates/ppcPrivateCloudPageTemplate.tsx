@@ -2,7 +2,6 @@ import Script from 'next/script';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetStaticPropsContext } from 'next';
@@ -17,10 +16,7 @@ import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection'
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Link from 'next/link';
 import { ShieldCheck } from '@phosphor-icons/react';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { PromoCodeName } from '@/lib/types';
-import usePricing from '@/hooks/usePricing';
-import useCheckout from '@/hooks/useCheckout';
+import { useRouter } from 'next/router';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -32,7 +28,7 @@ interface PrivacyProps {
   relationalLinksText: any;
 }
 
-const PrivateCloudStorageSolutions = ({
+export const PPCPrivateCloudPage = ({
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -41,13 +37,23 @@ const PrivateCloudStorageSolutions = ({
   relationalLinksText,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
-  const CTA_URL = `#billingButtons`;
-  const product = [
+  const router = useRouter();
+  const CTA_URL = `/ppc/pricing${
+    router.asPath.includes('?') ? router.asPath.substring(router.asPath.indexOf('?')) : ''
+  }`;
+  const products = [
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
       animationDirection: 'left',
-      redirect: '#billingButtons',
+      redirect: '/drive',
       textContent: textContent.WhatWeDo.square1,
+    },
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
+      animationDirection: 'right',
+      redirect: '/business',
+      textContent: textContent.WhatWeDo.square2,
+      imagePosition: 'right',
     },
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
@@ -78,21 +84,6 @@ const PrivateCloudStorageSolutions = ({
       image: '/images/privacy-cloud-storage-solutions/internxt_european_laws.webp',
     },
   ];
-
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupon,
-    lifetimeCoupons,
-  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
-
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
-  const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
-
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -109,10 +100,11 @@ const PrivateCloudStorageSolutions = ({
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="Private Cloud Storage Solutions"
+        segmentName="PPC Private Cloud Storage Solutions"
+        robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA />
 
         <AnimatedHeroSection
           textComponent={
@@ -129,7 +121,7 @@ const PrivateCloudStorageSolutions = ({
 
                 <div className="flex flex-col items-center pt-10 lg:flex-row">
                   <Link
-                    href={'#billingButtons'}
+                    href={CTA_URL}
                     className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
                   >
                     {textContent.HeroSection.TitleAndOnePlan.claimDeal}
@@ -156,24 +148,6 @@ const PrivateCloudStorageSolutions = ({
           cards={cardsData}
         />
 
-        <PricingSectionWrapper
-          textContent={textContent.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscountForLifetime,
-          }}
-          lifetimeCoupons={lifetimeCoupons}
-          lang={lang}
-          products={products}
-          loadingCards={loadingCards}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
-          popularPlanBySize="5TB"
-          sectionDetails="bg-white lg:py-20"
-          hideFreeCard
-        />
-
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
@@ -192,11 +166,11 @@ const PrivateCloudStorageSolutions = ({
           }
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} sectionPadding="py-20" openLinksInNewTab />
 
         <Footer
           textContent={footerLang}
@@ -212,27 +186,3 @@ const PrivateCloudStorageSolutions = ({
   );
 };
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
-  const lang = ctx.locale;
-
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/private-cloud-storage-solutions.json`);
-  const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  return {
-    props: {
-      lang,
-      metatagsDescriptions,
-      textContent,
-      bannerJson,
-      navbarLang,
-      footerLang,
-      relationalLinksText,
-    },
-  };
-}
-
-export default PrivateCloudStorageSolutions;

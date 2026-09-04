@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage } from './common';
+export type { FAQ, FAQSection, PlanStorage };
 export interface ReviewsTextPage {
   heroSection: HeroSection;
   ReviewSection: ReviewSection;
@@ -7,16 +9,6 @@ export interface ReviewsTextPage {
   ctaSection: CtaSection;
   FaqSection: FAQSection;
   tableSection: TableSection;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface ReviewFromIndustrySection {
@@ -109,12 +101,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

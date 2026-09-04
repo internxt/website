@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage } from './common';
+export type { FAQ, FAQSection, PlanStorage };
 import { CloudObjectStorageText } from './cloud-object-storage';
 
 export interface AlternativePageText {
@@ -18,16 +20,6 @@ export interface Section {
   description: string;
   cta: string;
   getPrivacy?: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface HeaderSection {
@@ -117,12 +109,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

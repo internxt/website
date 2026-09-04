@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, StartFrom, SubtitleClass } from './common';
+export type { FAQ, FAQSection, StartFrom, SubtitleClass };
 export interface CloudStorageForPhotosText {
   HeroSection: HeroSection;
   FeatureSection: ComponentsInColumn;
@@ -57,16 +59,6 @@ export interface BetterTomorrowSection {
   cta: string;
 }
 
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
-}
-
 export interface FeaturesSection {
   title: string;
   description: string;
@@ -109,11 +101,6 @@ export interface TitleAndOnePlan {
   guarantee: string;
 }
 
-export interface StartFrom {
-  normal1: string;
-  price: string;
-  normal2: string;
-}
 export interface Title {
   line1: string;
   line2: string;
@@ -135,10 +122,6 @@ export interface WhatWeDo {
 export interface SignatureClass {
   line1: string;
   line2: string;
-}
-
-export interface SubtitleClass {
-  line1: string;
 }
 
 export interface Links {

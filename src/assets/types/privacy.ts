@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, SubtitleClass } from './common';
+export type { FAQ, FAQSection, SubtitleClass };
 export interface PrivacyText {
   HeroSection: HeroSection;
   ManifestoSection: ManifestoSection;
@@ -13,16 +15,6 @@ export interface BetterTomorrowSection {
   title: string;
   description: string;
   cta: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeatureSection {
@@ -77,10 +69,6 @@ export interface Section1 {
   title: SubtitleClass;
   subtitle: SubtitleClass;
   signature: SignatureClass;
-}
-
-export interface SubtitleClass {
-  line1: string;
 }
 
 export interface SecuritumSection {

@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection } from './common';
+export type { FAQ, FAQSection };
 export interface AntivirusText {
   HeroSection: HeroSection;
   cta1: Cta;
@@ -28,16 +30,6 @@ export interface ComponentsInColumnCards {
 export interface Element4Class {
   title: string;
   description: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeatureSectionV2 {

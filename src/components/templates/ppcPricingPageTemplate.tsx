@@ -1,11 +1,6 @@
 import { useState } from 'react';
-import Script from 'next/script';
-import { GetStaticPropsContext } from 'next';
-import Footer from '@/components/layout/footers/Footer';
-import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
@@ -20,8 +15,12 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { GetStaticPropsContext } from 'next';
 
 interface PricingProps {
+  couponCodeName: PromoCodeName;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   footerLang: FooterText;
@@ -30,7 +29,8 @@ interface PricingProps {
   relationalLinksText: any;
 }
 
-const Pricing = ({
+export const PPCPricingPage = ({
+  couponCodeName,
   metatagsDescriptions,
   navbarLang,
   footerLang,
@@ -48,11 +48,11 @@ const Pricing = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
+    couponCode: couponCodeName,
+    couponCodeForLifetime: couponCodeName,
   });
 
-  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [pageName, setPageName] = useState('PPCPricingPage Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
   const {
@@ -82,16 +82,14 @@ const Pricing = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.SchemaMarkupQuestions.faq)}
-      </Script>
-
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Cloud Storage Pricing', 'pricing')}
-      </Script>
-
-      <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Layout
+        segmentName={`PPC ${pageName}`}
+        title={metatags[0].title}
+        description={metatags[0].description}
+        lang={lang}
+        robots="noindex, follow"
+      >
+        <MinimalNavbar textContent={navbarLang} lang={lang} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -123,6 +121,7 @@ const Pricing = ({
           overrideOnIndividualSwitchToggled={onIndividualSwitchToggled}
           overrideOnBusinessSwitchToggled={onBusinessSwitchToggled}
           SectionTag={'h1'}
+          hideFreeCard
         />
 
         <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 />
@@ -142,11 +141,11 @@ const Pricing = ({
 
         <FAQSection textContent={faqSection} needsH3={false} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} sectionPadding="py-20" openLinksInNewTab />
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
-          url={'/pricing'}
+          url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
@@ -162,38 +161,9 @@ const Pricing = ({
           bgPadding="lg:pb-20 pb-20"
         />
 
-        <Footer
-          textContent={footerLang}
-          lang={lang}
-          hideNewsletter={false}
-          breadcrumbItems={[
-            { name: 'Encrypted Cloud Storage', url: '/' },
-            { name: 'Cloud Storage Pricing', url: '/pricing' },
-          ]}
-        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>
   );
 };
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
-  const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/pricing.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  return {
-    props: {
-      metatagsDescriptions,
-      footerLang,
-      navbarLang,
-      lang,
-      textContent,
-      relationalLinksText,
-    },
-  };
-}
-
-export default Pricing;

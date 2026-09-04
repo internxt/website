@@ -10,12 +10,12 @@ import {
   imageToTextConverter,
 } from './types';
 
-import InitialState from './states/InitialState';
-import SelectedFile from './states/SelectedFile';
+import InitialState from '@/components/shared/file-states/InitialState';
+import SelectedFile from '@/components/shared/file-states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
-import DownloadFileState from './states/DownloadFileState';
+import DownloadFileState from '@/components/shared/file-states/DownloadFileState';
 import fileConverterService from '@/services/file-converter.service';
-import { ErrorState } from './states/ErrorState';
+import { ErrorState } from '@/components/shared/file-states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
 

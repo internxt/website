@@ -3,12 +3,12 @@ import { createRef, useCallback, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { Errors, MAX_FILE_SIZE, extensionName, compressionTypes, fileMimeTypes } from './types';
 
-import InitialState from './states/InitialState';
-import SelectedFile from './states/SelectedFile';
+import InitialState from '@/components/shared/file-states/InitialState';
+import SelectedFile from '@/components/shared/file-states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
-import DownloadFileState from './states/DownloadFileState';
+import DownloadFileState from '@/components/shared/file-states/DownloadFileState';
 import fileCompressorService from '@/services/file-compressor.service';
-import { ErrorState } from './states/ErrorState';
+import { ErrorState } from '@/components/shared/file-states/ErrorState';
 import { CaretLeft, ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
 
@@ -155,6 +155,8 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             isDragging={isDragging}
             setIsDragging={setIsDragging}
             handleOpenFileExplorer={handleOpenFileExplorer}
+            maxFileSizeBadgeClass="bg-orange-100"
+            maxFileSizeTextClass="font-semibold text-orange-1"
           />
         );
       case 'selectedFileState':
@@ -186,6 +188,14 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             textContent={formattedConverterText.fileConverted}
             onConvertMoreFilesButtonPressed={resetViewToInitialState}
             onDownloadFile={handleCompression}
+            homeUrl="/file-compressor"
+            successBannerClass="items-center bg-green-40 text-center text-green-dark md:text-start"
+            successLabelClass=""
+            checkIconClass="hidden shrink-0 md:flex"
+            checkIconWeight="fill"
+            againLabel={
+              formattedConverterText.fileConverted.compressAnother ?? formattedConverterText.fileConverted.convertAnother
+            }
           />
         );
       case 'errorState':

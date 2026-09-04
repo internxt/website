@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection } from './common';
+export type { FAQ, FAQSection };
 export interface MetadataRemoverText {
   HeroSection: HeroSection;
   FeaturesSection: FeaturesSection;
@@ -48,16 +50,6 @@ export interface CtaSection2 {
 export interface CtaSectionCard {
   title: string;
   description: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface FeaturesSection {

@@ -1,3 +1,5 @@
+import type { PlanStorage } from './common';
+export type { PlanStorage };
 export interface HomeAssistantText {
     HeroSection: HeroSection;
     MadeInEuropeSection: MadeInEuropeSection;
@@ -103,12 +105,6 @@ export interface Features {
   anonymousAccount: string;
   premiumSupport: string;
   guarantee: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface LifetimeCampaign {

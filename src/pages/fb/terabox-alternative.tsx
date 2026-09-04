@@ -1,173 +1,39 @@
-import { TablesSection } from '@/components/comparison/TablesSection';
-import Layout from '@/components/layout/Layout';
-import { GetStaticPropsContext } from 'next';
-import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
+import { ComparisonPage } from '@/components/templates/comparisonPageTemplate';
 import { PromoCodeName } from '@/lib/types';
-import usePricing from '@/hooks/usePricing';
-import { stripeService } from '@/services/stripe.service';
-import FAQSection from '@/components/shared/sections/FaqSection';
-import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
-import { ComparisonTable } from '@/components/comparison/ComparisonTable';
-import { HeroSection } from '@/components/comparison/HeroSection';
-import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
-import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
-import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
-import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
-import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { GetStaticPropsContext } from 'next';
 
-const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'terabox-alternative');
-
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
-    lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.META85,
-    couponCodeForLifetime: PromoCodeName.META85,
-  });
-
-  const onCheckoutButtonClicked = async (
-    priceId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => {
-    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-    const finalPrice = await stripeService.calculateFinalPrice(
-      priceId,
-      interval,
-      currencyValue,
-      'individuals',
-      couponCodeForCheckout,
-    );
-
-    stripeService.redirectToCheckout(
-      priceId,
-      finalPrice,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      interval,
-      storage,
-      couponCodeForCheckout?.name,
-    );
-  };
-
-  const locale = lang as string;
-  const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
-  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
-
-  return (
-    <>
-      <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
-        segmentName="PPC Terabox Comparison"
-        lang={lang}
-        robots="noindex, follow"
-      >
-        <MinimalNavbar textContent={navbarLang} lang={locale} />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
-
-        <ComparisonTable
-          textContent={langJson.HeaderSection}
-          competitor={'Terabox'}
-          percentage={percentageDiscount}
-          needH2
-        />
-
-        <TablesSection
-          textContent={langJson.VersusSection}
-          competitor={'Drive'}
-          percentage={percentageDiscount}
-          logo={'/images/comparison/terabox-Letters.webp'}
-          sectionNeedsH2
-          bottomSeparationBar
-          TableTitleTag={'h3'}
-        />
-
-        <PricingSectionWrapper
-          textContent={langJson.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
-          }}
-          lifetimeCoupons={lifetimeCoupons}
-          lang={locale}
-          products={products}
-          loadingCards={loadingCards}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideSwitchSelector
-          hideBusinessSelector
-          sectionDetails="bg-white lg:py-20 py-10"
-          hideFreeCard
-        />
-        <HorizontalScrollableSection
-          textContent={langJson.PrivacyViolationsSection}
-          bgGradient={privacyBgGradient}
-          needsH2
-          needsH3
-        />
-
-        {langJson.WhyNeedAlternativeSection && (
-          <ThreeCardsSection
-            textContent={langJson.WhyNeedAlternativeSection}
-            bgColor={alternativeBgColor}
-            cardColor="bg-white"
-            bottomSeparationBar={true}
-            needsH2={false}
-          />
-        )}
-
-        <HorizontalScrollableSectionWithPhotosSection
-          textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColor}
-          TitleTag={'h2'}
-        />
-
-        <FloatingCtaSectionv2
-          textContent={langJson.CtaSection}
-          url={'#billingButtons'}
-          customText={
-            <div className="flex flex-col gap-4 px-10 lg:px-40">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
-              </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, {
-                  percentage: percentageDiscount,
-                  discount: percentageDiscount,
-                })}
-              </p>
-            </div>
-          }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgPadding="px-20 py-10"
-        />
-
-        <FAQSection
-          textContent={langJson.FaqSection}
-          percentageDiscount={percentageDiscount?.toString()}
-          needsH3={false}
-        />
-
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
-      </Layout>
-    </>
-  );
-};
+const TeraboxComparison = (props) => (
+  <ComparisonPage
+    {...props}
+    competitor="Terabox"
+    metaTagId="terabox-alternative"
+    segmentName="PPC Terabox Comparison"
+    logo="/images/comparison/terabox-Letters.webp"
+    couponCodeName={PromoCodeName.META85}
+    minimalLayout
+    hideFreeCard
+    ctaUrl="#billingButtons"
+    ctaCustomTextPadding="px-10 lg:px-40"
+    sectionsOrder={["tables", "pricing", "scrollable", "threeCards", "withPhotos"]}
+    useComparisonScrollable
+    useCouponsWithPhotos
+    threeCardsBgColor="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+    threeCardsBottomSeparationBar
+    customSections={{ showThreeCards: true }}
+    robots="noindex, follow"
+    tablesBottomSeparationBar
+    headings={{
+      comparisonTableH2: true,
+      tablesSectionH2: true,
+      tableTitleTag: 'h3',
+      scrollableH2: true,
+      scrollableH3: true,
+      threeCardsH2: false,
+      faqH3: false,
+      withPhotosTitleTag: 'h2',
+    }}
+  />
+);
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

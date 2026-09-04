@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection, PlanStorage, StartFrom } from './common';
+export type { FAQ, FAQSection, PlanStorage, StartFrom };
 export interface HomeText {
   HeroSection: HeroSection;
   tableSection: TableSection;
@@ -22,16 +24,6 @@ export interface Section {
 export interface CardDescriptions {
   titles: string[];
   descriptions: string[];
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface HeroSection {
@@ -108,12 +100,6 @@ export interface Products {
   photos: string;
 }
 
-export interface StartFrom {
-  normal1: string;
-  price: string;
-  normal2: string;
-}
-
 export interface Subtitle {
   part1: string;
   part2: string;
@@ -187,12 +173,6 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
-}
-
-export interface PlanStorage {
-  essential: string;
-  premium: string;
-  ultimate: string;
 }
 
 export interface PlanTitles {

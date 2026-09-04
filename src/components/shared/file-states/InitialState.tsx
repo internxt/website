@@ -9,6 +9,9 @@ interface InitialStateProps {
   handleFileDrop: (files: FileList) => void;
   setIsDragging: (isDragging: boolean) => void;
   handleOpenFileExplorer: () => void;
+  /** The compressor tints this badge orange. */
+  maxFileSizeBadgeClass?: string;
+  maxFileSizeTextClass?: string;
 }
 
 const InitialState = ({
@@ -18,6 +21,8 @@ const InitialState = ({
   handleFileDrop,
   setIsDragging,
   handleOpenFileExplorer,
+  maxFileSizeBadgeClass = 'bg-primary/7',
+  maxFileSizeTextClass = 'font-medium text-gray-80',
 }: InitialStateProps) => {
   return (
     <DropArea onItemsDropped={handleFileDrop} isDragging={isDragging} setIsDragging={setIsDragging}>
@@ -29,8 +34,8 @@ const InitialState = ({
           </div>
         ) : (
           <>
-            <div className="flex flex-col rounded-lg bg-orange-100 px-4 py-2">
-              <p className="font-semibold text-orange-1">{textContent.maxFileSize}</p>
+            <div className={`flex flex-col rounded-lg px-4 py-2 ${maxFileSizeBadgeClass}`}>
+              <p className={maxFileSizeTextClass}>{textContent.maxFileSize}</p>
             </div>
             <p className="text-3xl font-semibold text-gray-100">
               {formatText(textContent.dragYourFile, {

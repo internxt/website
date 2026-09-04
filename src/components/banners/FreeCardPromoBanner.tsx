@@ -8,7 +8,15 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
 
-export const FreeCardPromoBanner = () => {
+interface FreeCardPromoBannerProps {
+  dialog?: GlobalDialog;
+  dealRedirectUrl?: string;
+}
+
+export const FreeCardPromoBanner = ({
+  dialog = GlobalDialog.FreeSpaceCardBanner,
+  dealRedirectUrl = '/specialoffer/exclusiveoffer',
+}: FreeCardPromoBannerProps = {}) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -16,14 +24,14 @@ export const FreeCardPromoBanner = () => {
   const [shouldShowBanner, setShouldShowBanner] = useState<boolean>(false);
   const bannerText = require(`@/assets/lang/${lang}/banners.json`);
 
-  const isDialogOpen = dialogIsOpen(GlobalDialog.FreeSpaceCardBanner);
+  const isDialogOpen = dialogIsOpen(dialog);
 
   useEffect(() => {
-    setShouldShowBanner(dialogIsOpen(GlobalDialog.FreeSpaceCardBanner));
+    setShouldShowBanner(dialogIsOpen(dialog));
   }, [isDialogOpen]);
 
   const onCloseBanner = () => {
-    closeDialog(GlobalDialog.FreeSpaceCardBanner);
+    closeDialog(dialog);
   };
 
   const onGetTheDealButtonClicked = () => {
@@ -33,7 +41,7 @@ export const FreeCardPromoBanner = () => {
       label: 'User accepts the promo',
       value: '',
     });
-    router.push('/specialoffer/exclusiveoffer');
+    router.push(dealRedirectUrl);
     onCloseBanner();
   };
 

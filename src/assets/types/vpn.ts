@@ -1,3 +1,5 @@
+import type { FAQ, FAQSection } from './common';
+export type { FAQ, FAQSection };
 export interface VPNText {
   HeroSection: HeroSection;
   EncryptedVPNSection: CtaSection;
@@ -21,16 +23,6 @@ export interface CtaSection {
 export interface CardClass {
   title: string;
   description: string;
-}
-
-export interface FAQSection {
-  title: string;
-  faq: FAQ[];
-}
-
-export interface FAQ {
-  question: string;
-  answer: string[];
 }
 
 export interface HeroSection {

@@ -2,9 +2,7 @@ import { GetStaticPropsContext } from 'next';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/home/HeroSection';
-import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/navbars/Navbar';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
@@ -16,8 +14,11 @@ import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
 import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import { getMinimumPrice } from '@/utils/priceHelper';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 interface HomeProps {
+  couponCodeName: PromoCodeName;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -25,7 +26,8 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+export const PPCHomePage = ({
+  couponCodeName, metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const {
@@ -36,11 +38,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.OFFSUB,
-    couponCodeForLifetime: PromoCodeName.OFFLFT,
+    couponCode: couponCodeName,
+    couponCodeForLifetime: couponCodeName,
   });
   const locale = lang as string;
-  const navbarCta = 'chooseStorage';
 
   const onCheckoutButtonClicked = useCheckout({ individualCoupon, lifetimeCoupon, currencyValue });
 
@@ -50,8 +51,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const minimumPrice = getMinimumPrice(products, decimalDiscount);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="PPC Home"
+      lang={lang}
+      robots="noindex, follow"
+    >
+      <MinimalNavbar textContent={navbarLang} lang={locale} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
@@ -73,6 +80,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         popularPlanBySize="3TB"
         sectionDetails="bg-white lg:py-20 xl:py-32"
         freePlanNeedsH2
+        hideFreeCard
       />
 
       <TrustedSection textContent={textContent.TrustedBySection} />
@@ -95,28 +103,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
 };
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
-  const lang = ctx.locale;
-
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/home.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  return {
-    props: {
-      lang,
-      metatagsDescriptions,
-      textContent,
-      navbarLang,
-      footerLang,
-    },
-  };
-}
-
-export default HomePage;
