@@ -379,12 +379,7 @@
               "Premium": false,
               "Ultimate": true
             }
-          }
-        ]
-      },
-      {
-        "name": "Bientôt disponible",
-        "features": [
+          },
           {
             "id": "mail",
             "name": "Mail",
@@ -395,6 +390,10 @@
             }
           }
         ]
+      },
+      {
+        "name": "Bientôt disponible",
+        "features": []
       }
     ]
   },

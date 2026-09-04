@@ -357,7 +357,17 @@ export enum PromoCodeName {
   mrbibbo = 'MRBIBBO',
   seolp = 'SEOLP',
   lftem = 'LFTEM',
+  micha = 'MICHA',
+  windowsarea = 'WINDOWSAREA',
   emailphotos = 'EMAILPHOTOS',
+  kudettech = 'KUDETTECH',
+  niklas = 'NIKLAS',
+  zackshutt = 'ZACKSHUTT',
+  fajrul = 'FAJRUL',
+  enricojo = 'ENRICOJO',
+  timo = 'TIMO',
+  ultimate94 = 'ULTIMATE94',
+  nauval = 'NAUVAL',
 }
 
 export interface PromoCodeProps {

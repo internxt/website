@@ -144,6 +144,15 @@ export const ALLOWED_PATHS = [
   'ahui',
   'shafa',
   'mrbibbo',
+  'micha',
+  'windowsarea',
+  'kudettech',
+  'niklas',
+  'zackshutt',
+  'fajrul',
+  'enricojo',
+  'timo',
+  'nauval',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -182,6 +191,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   wpunas: 'en',
   worldcup: 'en',
   thelinuxexp: 'en',
+  zackshutt: 'en',
 
   // de
   aimentors: 'de',
@@ -201,6 +211,10 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   simon42: 'de',
   themorpheus: 'de',
   verdrahtet: 'de',
+  micha: 'de',
+  windowsarea: 'de',
+  niklas: 'de',
+  timo: 'de',
 
   // es
   alejavi: 'es',
@@ -243,6 +257,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
 
   // zh
   madmoneylabs: 'zh',
+
+  // zh-tw
+  ahui: 'zh-tw',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -364,7 +381,16 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'ahui',
   'shafa',
   'mrbibbo',
-  'gentiluomodigitale'
+  'gentiluomodigitale',
+  'micha',
+  'windowsarea',
+  'kudettech',
+  'niklas',
+  'zackshutt',
+  'fajrul',
+  'enricojo',
+  'timo',
+  'nauval',
 ]);
 
 export const COUPON_CODES = {
@@ -509,6 +535,15 @@ export const COUPON_CODES = {
   ahui: PromoCodeName.ahui,
   shafa: PromoCodeName.shafa,
   mrbibbo: PromoCodeName.mrbibbo,
+  micha: PromoCodeName.micha,
+  windowsarea: PromoCodeName.windowsarea,
+  kudettech: PromoCodeName.kudettech,
+  niklas: PromoCodeName.niklas,
+  zackshutt: PromoCodeName.zackshutt,
+  fajrul: PromoCodeName.fajrul,
+  enricojo: PromoCodeName.enricojo,
+  timo: PromoCodeName.timo,
+  nauval: PromoCodeName.nauval,
 };
 
 interface OfferConfig {

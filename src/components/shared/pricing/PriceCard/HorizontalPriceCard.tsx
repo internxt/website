@@ -20,6 +20,7 @@ import {
 } from '@phosphor-icons/react';
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
+import { getTrackingParams } from '@/lib/cookies';
 
 const iconList: Record<string, Icon[]> = {
   '1TB': [
@@ -124,6 +125,7 @@ export const HorizontalPriceCard = ({
       planType: 'individual',
       currency: currencyValue ?? 'eur',
       promoCodeId: coupon?.name,
+      trackingParams: getTrackingParams(),
     });
   }
   return (

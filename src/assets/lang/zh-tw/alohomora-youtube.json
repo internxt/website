@@ -1,0 +1,213 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "防毒軟體",
+      "cleaner": "清理工具",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "郵件"
+    },
+    "title": "最安全的雲端儲存**價格更優**",
+    "valentinesTitle": "爱值得**隐私**",
+    "description": "更優價格的安全雲端儲存。立即獲取您的專屬折扣。存取Internxt屢獲殊榮的隱私套件，包含後量子加密雲端儲存及更多功能。",
+    "subtitle": "享受{{discount}}%折扣",
+    "subtitle2": "適用於所有方案",
+    "claimDeal": "領取優惠"
+  },
+  "ReviewSection": {
+    "forbes": "Internxt鞏固了其作為歐洲科技巨頭替代方案的地位",
+    "deloitte": "榮獲德勤Fast 50大獎，表彰成長最快的企業",
+    "techradar": "注重隱私和安全的雲端儲存服務商",
+    "fortune": "Internxt正在構建一個以隱私和安全為先的網際網路",
+    "trustpilot": "大量私密、安全的儲存空間。出色的支援。絕對物有所值。"
+  },
+  "TrustedBySection": {
+    "description": "\"在這個行業中，大多數關於隱私的聲明都是無法核實的，因此我更看重有據可查的內容。Internxt 是完全開源的，我的意思是連伺服器端程式碼也開源了，而不僅僅是應用程式。此外，它還連續第二次通過了 Securitum 的獨立安全審計，而 Securitum 正是審計 Proton 的同一家機構。再加上位於西班牙的總部以及 GDPR 的有力保障，在我看來，這就是你希望從一款隱私產品中獲得的可靠憑據\""
+  },
+  "NextGenSection": {
+    "title": "為何選擇Internxt？",
+    "description": "Internxt讓您重新掌控隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，我們不會儲存或向第三方出售您的資料。我們採取一切措施確保您的資訊保持安全。",
+    "cta": "更深入地了解我們",
+    "scrollableSection": {
+      "titles": ["不可破解和不可洩露的資料", "新世代安全性", "開源且透明", "獨立驗證"],
+      "descriptions": [
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜止狀態下都經過加密。Internxt讓您完全控制檔案。您的資料是您的事務。保護它們是我們的責任。",
+        "Internxt是唯一自動使用端對端和後量子加密技術加密檔案的雲端儲存，這意味著只有您可以存取您的資料。",
+        "我們為所做的工作感到驕傲，因此我們的程式碼在GitHub上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有什麼需要隱藏的。",
+        "我們完全符合GDPR規定，100%安全，但不要僅僅相信我們的話。Internxt已經由歐洲領先的滲透測試公司Securitum進行了獨立稽核和驗證。"
+      ]
+    }
+  },
+  "ctaSection": {
+    "titleWithoutDiscount": "完整數位隱私套件",
+    "title": "最大隱私保護享{{discount}}%折扣",
+    "description": "透過這個獨家折扣獲得內心平靜。完全的隱私和安全。",
+    "cta": "接受邀請"
+  },
+  "ctaSection2": {
+    "title": "全球最私密的雲端儲存",
+    "description": "領取您的獨家{{discount}}%折扣，享用Internxt隱私套件一整年",
+    "descriptionWithoutDisocunt": "使用Internxt體驗完整的數位隱私",
+    "cta": "選擇方案"
+  },
+  "tableSection": {
+    "title": "Internxt方案",
+    "hotLabel": "{{discount}}% 折扣 ",
+    "valentinesTitle": "安全的愛 - ",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "lifetimeHeader": "選擇您的終身計畫",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付費，終身享受隱私和安全",
+    "planDescription": "所有Internxt方案功能齊全，完整存取我們屢獲殊榮的隱私套件，包括Internxt Drive、Send、VPN、防毒軟體、清理工具、暗網監控、Meet和郵件。",
+    "businessDescription": "我們目前正在開發專為保護您的企業、保護員工和確保獲利能力而設計的新Internxt方案。",
+    "businessDescription2": "使用Internxt的加密雲端儲存方案確保公司資料安全。",
+    "billingFrequency": {
+      "monthly": "月繳",
+      "annually": "年繳",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "商業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt免費版",
+      "description": "免費獲取1GB加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "各種文件， 各種設備"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "在您的所有",
+        "line2": "設備上查找",
+        "line3": "您的文件"
+      },
+      "subtitle": {
+        "line1": "從您的電腦、智能手機、平板電腦",
+        "line2": "或任何連接到互聯網的設備中，安全",
+        "line3": "訪問您的所有文件，通過最安全的",
+        "line4": "雲存儲應用程序。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "使您的文件",
+        "line2": "有序並且可以",
+        "line3": "從任何地方",
+        "line4": "訪問"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive允許您將文件組織在",
+        "line2": "文件夾中、重命名它們，並篩選",
+        "line3": "文件列表以更快地找到所需的內容。",
+        "line4": "您甚至可以備份您的計算機文件，",
+        "line5": "以便始終擁有您最重要文件的最新更改。",
+        "line6": ""
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "輕鬆分享您的文件",
+        "line2": "安全由我們來負責"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive注重隱私和",
+        "line2": "安全，因此您只需專注於",
+        "line3": "對您重要的事情，例如與同事分享",
+        "line4": "文件，或者是下一次與家人度假的",
+        "line5": "機票。您可以選擇與誰分享",
+        "line6": "以及要下載多少次。"
+      }
+    },
+    "section5": {
+      "eyebrow": "新功能",
+      "title": {
+        "line1": "備份",
+        "line2": "對您來說至關重要的"
+      },
+      "subtitle": {
+        "line1": "現在，您可以將超級重要項目的",
+        "line2": "最新草稿或您正在進行的大學",
+        "line3": "作業安全且及時地保存在您的",
+        "line4": "Internxt Drive中。"
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "在完全隱私中同步您的文件",
+        "line2": ""
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "保護您的文件安全",
+        "line2": "和私密"
+      },
+      "subtitle": {
+        "line1": "隱私和安全是我們一切的核心，我們不通過數據或",
+        "line2": "廣告來運營我們的業務，而是建立在信任的基礎上。我們尊重您的權利，並圍繞這些權利",
+        "line3": "構建了出色的工具，而不是反對它們。"
+      },
+      "cta": "我們對隱私的承諾",
+      "card1": {
+        "title": "下一代安全",
+        "subtitle": "Internxt Drive 使用端對端和後量子加密來保護您的檔案。我們是第一個保護資料免受量子電腦未來威脅的雲端儲存服務。"
+      },
+      "card2": {
+        "title": "零知識技術",
+        "subtitle": "我們從不以未加密或未雜湊的形式存儲或傳輸文件、用戶密碼或加密密鑰。"
+      },
+      "card3": {
+        "title": "隱私設計",
+        "subtitle": "我們為用戶設計產品，他們的隱私是我們生活在數據驅動世界中的必要條件。"
+      },
+      "card4": {
+        "title": "開源和透明",
+        "subtitle": "我們對我們所做的事情感到自豪，因此我們的代碼在GitHub上公開，任何人都可以進行個人審查、審核和驗證。我們除了您的數據外，沒有什麼可隱藏的。"
+      }
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下載",
+      "orDownloadFor": "或下載",
+      "downloadOnThe": "在",
+      "orDownloadOnThe": "或在",
+      "getOn": "下載",
+      "orGetOn": "或在",
+      "openDriveWeb": "打開 Drive 網頁",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  }
+}

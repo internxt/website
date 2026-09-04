@@ -1,8 +1,9 @@
 import { UltimateAnnualTemplate, UltimateAnnualTemplateProps } from "@/components/templates/ultimateAnnualTemplate";
 import { GetServerSidePropsContext } from "next";
 import cookies from "@/lib/cookies";
+import { PromoCodeName } from "@/lib/types";
 
-const AnnualUltimate = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} />
+const AnnualUltimateNinetyFour = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} couponCodeForLifetime={PromoCodeName.ultimate94}/>
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
@@ -25,4 +26,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default AnnualUltimate;
+export default AnnualUltimateNinetyFour;

@@ -2,8 +2,14 @@ import Link from 'next/link';
 import { CheckCircle } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { HeroSection as HeroSectionText } from '@/assets/types/photos';
 
-export const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: HeroSectionText;
+  url?: string;
+}
+
+export const HeroSection = ({ textContent, url = '/pricing' }: Readonly<HeroSectionProps>) => {
 
   return (
     <section
@@ -25,7 +31,7 @@ export const HeroSection = ({ textContent }) => {
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <div className="flex flex-col gap-2">
           <Link
-            href="/pricing"
+            href={url}
             className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
           >
             {textContent.cta}
