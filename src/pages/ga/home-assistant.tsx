@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
@@ -12,7 +12,7 @@ import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIcons
 import ComparativePricingSection from '@/components/shared/pricing/ComparativePricingSection';
 
 interface HomeAssistantProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: HomeAssistantText;
@@ -95,7 +95,7 @@ const HomeAssistantPage = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
