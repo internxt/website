@@ -3,7 +3,7 @@ import { GetServerSidePropsContext } from "next";
 import cookies from "@/lib/cookies";
 import { PromoCodeName } from "@/lib/types";
 
-const AnnualUltimate94 = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} couponCodeForLifetime={PromoCodeName.ultimate94}/>
+const AnnualUltimateNinetyFour = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} couponCodeForLifetime={PromoCodeName.ultimate94}/>
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
@@ -26,4 +26,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default AnnualUltimate94;
+export default AnnualUltimateNinetyFour;
