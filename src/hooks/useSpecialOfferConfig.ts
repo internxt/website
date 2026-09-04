@@ -151,6 +151,7 @@ export const ALLOWED_PATHS = [
   'zackshutt',
   'fajrul',
   'enricojo',
+  'timo',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -212,6 +213,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   micha: 'de',
   windowsarea: 'de',
   niklas: 'de',
+  timo: 'de',
 
   // es
   alejavi: 'es',
@@ -386,6 +388,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'zackshutt',
   'fajrul',
   'enricojo',
+  'timo',
 ]);
 
 export const COUPON_CODES = {
@@ -537,6 +540,7 @@ export const COUPON_CODES = {
   zackshutt: PromoCodeName.zackshutt,
   fajrul: PromoCodeName.fajrul,
   enricojo: PromoCodeName.enricojo,
+  timo: PromoCodeName.timo,
 };
 
 interface OfferConfig {
