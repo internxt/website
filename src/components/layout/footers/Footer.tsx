@@ -80,6 +80,17 @@ export default function Footer({
       id="footer"
       className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
     >
+      {lang === 'es' && (
+        <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
+          <Image
+            src={getImage('/images/footer/proyecto.webp')}
+            alt="Proyecto Financiado por la generalitat"
+            width={440}
+            height={182}
+            unoptimized
+          />
+        </div>
+      )}
       <div
         className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56"
         style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
