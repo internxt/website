@@ -363,6 +363,9 @@ export enum PromoCodeName {
   kudettech = 'KUDETTECH',
   niklas = 'NIKLAS',
   zackshutt = 'ZACKSHUTT',
+  fajrul = 'FAJRUL',
+  enricojo = 'ENRICOJO',
+  timo = 'TIMO',
   ultimate94 = 'ULTIMATE94',
 }
 
