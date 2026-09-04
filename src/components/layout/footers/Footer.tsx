@@ -39,8 +39,7 @@ export default function Footer({
   const year = moment().format('YYYY');
 
   // La puntuación final se saca fuera del enlace (regla tipográfica FR y buena práctica general)
-  const privacyLinkTrailingPunctuation =
-    textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
+  const privacyLinkTrailingPunctuation = textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
   const privacyLinkText = privacyLinkTrailingPunctuation
     ? textContent.NewsletterSection.privacyLink.slice(0, -privacyLinkTrailingPunctuation.length)
     : textContent.NewsletterSection.privacyLink;
@@ -1827,7 +1826,7 @@ export default function Footer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   return {

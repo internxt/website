@@ -10,7 +10,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 
@@ -19,7 +19,7 @@ interface FreeCloudObjectStorageProps {
   navbarText: NavigationBarText;
   textContent: CloudObjectStorageText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
 }
 
 const FreeCloudObjectStorage = ({
@@ -36,84 +36,96 @@ const FreeCloudObjectStorage = ({
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Cloud object storage', url: '/cloud-object-storage' },
+          { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' },
+        ])}
       </Script>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
-      <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+        <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
+        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
-      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+        <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
 
-      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+        <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection}
-        url={'#storageSection'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSection.title}
-            </h2>
-            <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
-            </h2>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="bg-neutral-17 px-10"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection}
+          url={'#storageSection'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.CtaSection.title}
+              </h2>
+              <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
+                {textContent.CtaSection.description}
+              </h2>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="bg-neutral-17 px-10"
+        />
 
-      <HorizontalScrollableSection
-        textContent={textContent.WhyChooseInternxtSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-        needsDivider={false}
-      />
-
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSectionV2}
-        url={'#storageSection'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSectionV2.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="px-10"
-      />
-
-      {textContent.HowInternxtComparesSection && (
         <HorizontalScrollableSection
-          textContent={textContent.HowInternxtComparesSection}
+          textContent={textContent.WhyChooseInternxtSection}
           bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
           needsH2
           needsH3
           needsDivider={false}
         />
-      )}
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSectionV2}
+          url={'#storageSection'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.CtaSectionV2.title}
+              </h2>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
+                {textContent.CtaSectionV2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="px-10"
+        />
 
-      <Footer textContent={footerText} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }]} />
-    </Layout>
+        {textContent.HowInternxtComparesSection && (
+          <HorizontalScrollableSection
+            textContent={textContent.HowInternxtComparesSection}
+            bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+            needsH2
+            needsH3
+            needsDivider={false}
+          />
+        )}
+
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+
+        <Footer
+          textContent={footerText}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud object storage', url: '/cloud-object-storage' },
+            { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

@@ -1,7 +1,6 @@
 import { TablesSection } from '@/components/comparison/TablesSection';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/ppc/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
@@ -77,7 +76,12 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <MinimalNavbar textContent={navbarLang} lang={locale} />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor={'Terabox'}
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -134,10 +138,16 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
               <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
             </div>
           }
@@ -158,15 +168,13 @@ const TeraboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/terabox-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

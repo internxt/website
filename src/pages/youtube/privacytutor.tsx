@@ -32,7 +32,6 @@ function PrivacyTutor({
   navbarLang,
   hideLanguage,
 }: Readonly<PrivacyTutorProps>): JSX.Element {
-
   const {
     products,
     currencyValue,
@@ -85,12 +84,7 @@ function PrivacyTutor({
   };
 
   return (
-    <Layout
-      title={metatags!.title}
-      description={metatags!.description}
-      segmentName="Partners"
-      lang={lang}
-    >
+    <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar
         lang={lang}
         textContent={navbarLang}
@@ -101,12 +95,7 @@ function PrivacyTutor({
         hideLanguage={hideLanguage}
       />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        percentOff={percentOff}
-        isPrivacyTutor
-        image={'alohomora'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} isPrivacyTutor image={'alohomora'} />
 
       <ReviewsSection textContent={langJson.ReviewSection} />
 
@@ -128,19 +117,14 @@ function PrivacyTutor({
         popularPlanBySize="5TB"
         sectionDetails={`lg:py-20`}
         hideFreeCard
-        backgroundGradientColor='linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        backgroundGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <FeaturesSection
-        textContent={langJson.FeaturesSection}
-        lang={lang}
-        download={false}
-        showLastSection={false}
-      />
+      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
 
       <FloatingCtaSectionv2
-          textContent={langJson.ctaSection}
-          customText={
+        textContent={langJson.ctaSection}
+        customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {parsePercentText(langJson.ctaSection.title)}
@@ -150,16 +134,16 @@ function PrivacyTutor({
             </p>
           </div>
         }
-          url="#billingButtons"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor='linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:py-20"
-        />
+        url="#billingButtons"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20"
+      />
 
-      <HorizontalScrollableSection 
+      <HorizontalScrollableSection
         textContent={langJson.NextGenSection}
-        bgGradient='linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
+        bgGradient="linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)"
       />
 
       <Footer textContent={footerLang} lang={lang} />
@@ -167,7 +151,7 @@ function PrivacyTutor({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

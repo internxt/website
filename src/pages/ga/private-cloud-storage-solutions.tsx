@@ -2,10 +2,9 @@ import Script from 'next/script';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/private-cloud-storage-solutions/FeaturesSection';
@@ -39,7 +38,9 @@ const PrivateCloudStorageSolutions = ({
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
   const router = useRouter();
-  const CTA_URL = `/ppc/pricing${router.asPath.includes('?') ? router.asPath.substring(router.asPath.indexOf('?')) : ''}`;
+  const CTA_URL = `/ppc/pricing${
+    router.asPath.includes('?') ? router.asPath.substring(router.asPath.indexOf('?')) : ''
+  }`;
   const products = [
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
@@ -103,7 +104,7 @@ const PrivateCloudStorageSolutions = ({
         robots="noindex, follow"
         lang={lang}
       >
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA/>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed hideLanguage hideCTA />
 
         <AnimatedHeroSection
           textComponent={
@@ -185,7 +186,7 @@ const PrivateCloudStorageSolutions = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -194,8 +195,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

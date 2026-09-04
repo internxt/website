@@ -1,11 +1,10 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import cookies from '@/lib/cookies';
 import { MeetPageText } from '@/assets/meet';
 import HeroSection from '@/components/meet/HeroSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -16,7 +15,7 @@ import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface CleanerProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: MeetPageText;
@@ -39,72 +38,84 @@ const CleanerPage = ({
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Meet', url: '/meet' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Meet', url: '/meet' },
+        ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="meet" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+        <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <HorizontalScrollableSection
-        textContent={textContent.enjoyPrivacySection}
-        bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-        cardsHeight="245px"
-        cardsWidth="352px"
-        needsH2={true}
-        needsH3={true}
-      />
+        <HorizontalScrollableSection
+          textContent={textContent.enjoyPrivacySection}
+          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          cardsHeight="245px"
+          cardsWidth="352px"
+          needsH2={true}
+          needsH3={true}
+        />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.ctaSection}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.ctaSection.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.ctaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="bg-neutral-17 px-8"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.ctaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.ctaSection.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.ctaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
+          bgPadding="bg-neutral-17 px-8"
+        />
 
-      <AccordionSection textContent={textContent.accordionSection} />
+        <AccordionSection textContent={textContent.accordionSection} />
 
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} />
+        <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.ctaSectionV2}
-        url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.ctaSectionV2.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.ctaSectionV2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 bg-white px-8"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.ctaSectionV2}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.ctaSectionV2.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.ctaSectionV2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
+          bgPadding="lg:pb-20 bg-white px-8"
+        />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Meet', url: '/meet' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Internxt Meet', url: '/meet' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -112,8 +123,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

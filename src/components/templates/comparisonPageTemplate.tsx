@@ -198,7 +198,12 @@ export const ComparisonPage = ({
           />
         )}
 
-        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} />
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Drive'}
+          percentage={percentageDiscount}
+          logo={logo}
+        />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
@@ -211,10 +216,16 @@ export const ComparisonPage = ({
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-0">
               <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
               <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
             </div>
           }

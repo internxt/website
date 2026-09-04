@@ -1,5 +1,5 @@
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -12,7 +12,7 @@ import CoreFeaturesSection from '@/components/photos/CoreFeaturesSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsWithImagesSection';
 import HorizontalScrollableWithPhotoSection from '@/components/photos/HorizontalScrollableWithPhotoSection';
-import RelationalLinks from '@/components/ppc/RelationalLinks';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
@@ -26,7 +26,7 @@ export interface PhotosProps {
   navbarText: NavigationBarText;
   textContent: PhotoText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
   relationalLinksText: RelationalLinksText;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;

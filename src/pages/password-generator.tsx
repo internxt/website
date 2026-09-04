@@ -1,4 +1,3 @@
-import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -10,7 +9,6 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -54,7 +52,14 @@ const PasswordGenerator = ({
 
         <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Password generator', url: '/password-generator' },
+          ]}
+        />
       </Layout>
     </>
   );
@@ -71,8 +76,6 @@ export async function getServerSideProps(ctx) {
   const bannerText = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

@@ -2,7 +2,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 interface ThankyouText {
   HeroSection: {
@@ -15,7 +15,7 @@ interface ThankyouText {
 }
 
 interface ThankyouProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: ThankyouText;
@@ -27,7 +27,13 @@ const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang
   const locale = lang as string;
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang} robots="noindex">
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Thankyou"
+      lang={lang}
+      robots="noindex"
+    >
       <Navbar lang={locale} textContent={navbarLang} cta={['default']} isLinksHidden hideCTA />
 
       <section className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-24 text-center">
@@ -45,7 +51,7 @@ const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

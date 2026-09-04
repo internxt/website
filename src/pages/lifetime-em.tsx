@@ -10,7 +10,6 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
-import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import Script from 'next/script';
@@ -106,7 +105,7 @@ function LifetimeSpecial({
         segmentName="Lifetime"
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-        robots='noindex,follow'
+        robots="noindex,follow"
       >
         <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
@@ -186,15 +185,13 @@ function LifetimeSpecial({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {
