@@ -85,8 +85,8 @@ export default function Footer({
           <Image
             src={getImage('/images/footer/proyecto.webp')}
             alt="Proyecto Financiado por la generalitat"
-            width={200}
-            height={90}
+            width={440}
+            height={182}
           />
         </div>
       )}
