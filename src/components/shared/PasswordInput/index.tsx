@@ -1,6 +1,5 @@
 import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-form';
 
-import './PasswordInput.scss';
 import { Eye, EyeSlash } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { IFormValues } from '@/components/cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
