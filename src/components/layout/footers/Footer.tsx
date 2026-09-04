@@ -87,6 +87,7 @@ export default function Footer({
             alt="Proyecto Financiado por la generalitat"
             width={440}
             height={182}
+            unoptimized
           />
         </div>
       )}
