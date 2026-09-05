@@ -1,11 +1,15 @@
 {
-  "include": ["**/*.ts"],
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["cypress"],
-    "lib": ["es2015", "dom"],
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "module": "CommonJS",
+    "moduleResolution": "node10",
+    "ignoreDeprecations": "6.0",
     "isolatedModules": false,
     "allowJs": true,
-    "noEmit": true
-  }
+    "noEmit": true,
+    "types": ["cypress", "node"]
+  },
+  "include": ["**/*.ts", "../cypress.config.ts"]
 }

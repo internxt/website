@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/.",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/pages/*": ["pages/*"],
-      "@/styles/*": ["styles/*"],
-      "@/utils/*": ["utils/*"],
-      "@/lib/*": ["lib/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/contexts/*": ["contexts/*"],
-      "@/assets/*": ["assets/*"],
-      "@/*": ["./*"]
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/contexts/*": ["./src/contexts/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/*": ["././src/*"]
     },
-    "target": "es5",
+    "target": "es2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -21,7 +20,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -35,5 +34,12 @@
   },
   "types": ["cypress", "node"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "moduleResolution": "node10",
+      "ignoreDeprecations": "6.0"
+    }
+  }
 }
