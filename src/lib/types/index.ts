@@ -367,6 +367,7 @@ export enum PromoCodeName {
   enricojo = 'ENRICOJO',
   timo = 'TIMO',
   ultimate94 = 'ULTIMATE94',
+  nauval = 'NAUVAL',
 }
 
 export interface PromoCodeProps {

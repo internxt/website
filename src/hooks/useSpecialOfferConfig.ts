@@ -152,6 +152,7 @@ export const ALLOWED_PATHS = [
   'fajrul',
   'enricojo',
   'timo',
+  'nauval',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -389,6 +390,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'fajrul',
   'enricojo',
   'timo',
+  'nauval',
 ]);
 
 export const COUPON_CODES = {
@@ -541,6 +543,7 @@ export const COUPON_CODES = {
   fajrul: PromoCodeName.fajrul,
   enricojo: PromoCodeName.enricojo,
   timo: PromoCodeName.timo,
+  nauval: PromoCodeName.nauval,
 };
 
 interface OfferConfig {
