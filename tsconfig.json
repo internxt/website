@@ -32,6 +32,8 @@
     ],
     "strictNullChecks": true
   },
+  "ignoreDeprecations": "6.0",
+
   "types": ["cypress", "node"],
   "include": [
     "next-env.d.ts",
