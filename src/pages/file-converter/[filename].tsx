@@ -1,5 +1,6 @@
 'use client';
 
+import fs from 'fs';
 import path from 'path';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -51,7 +52,25 @@ const FileConverter = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+// Shared JSON files in the folder that are not converter pages
+const NON_PAGE_JSON = ['converter-card', 'errorState', 'file-converter'];
+
+export async function getStaticPaths({ locales }) {
+  const dir = path.join(process.cwd(), 'src/assets/lang/en/file-converter');
+
+  const filenames = fs
+    .readdirSync(dir)
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => file.replace(/\.json$/, ''))
+    .filter((slug) => !NON_PAGE_JSON.includes(slug));
+
+  return {
+    paths: locales.flatMap((locale) => filenames.map((filename) => ({ params: { filename }, locale }))),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
   const rawFilename = ctx.params.filename;

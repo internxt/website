@@ -1,6 +1,6 @@
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { SecureFileTransferText } from '@/assets/types/secure-file-transfer';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -23,7 +23,7 @@ interface SecureFileTransferProps {
     navbarText: NavigationBarText;
     textContent: SecureFileTransferText;
     footerText: FooterText;
-    locale: GetServerSidePropsContext['locale'];
+    locale: GetStaticPropsContext['locale'];
 }
 
 const SecureFileTransfer = ({
@@ -174,7 +174,7 @@ const SecureFileTransfer = ({
     );
 }
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
     const locale = ctx.locale as string;
 
     const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

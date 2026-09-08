@@ -1,11 +1,10 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
-import cookies from '@/lib/cookies';
 import { MeetPageText } from '@/assets/meet';
 import HeroSection from '@/components/meet/HeroSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
@@ -16,7 +15,7 @@ import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
 interface CleanerProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: MeetPageText;
@@ -104,7 +103,7 @@ const CleanerPage = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -112,9 +111,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,

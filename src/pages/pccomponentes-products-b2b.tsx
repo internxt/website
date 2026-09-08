@@ -2,7 +2,7 @@ import Layout from '@/components/layout/Layout';
 import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
@@ -63,7 +63,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   let lang = ctx.locale;
 
   if (!ALLOWED_LANGUAGES.includes(lang)) {

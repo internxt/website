@@ -12,7 +12,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE } from '@/hooks/useSpecialOfferConfig';
+import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE, ALLOWED_PATHS } from '@/hooks/useSpecialOfferConfig';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 
@@ -259,7 +259,19 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+// Slugs shadowed by a real page under src/pages, so this catch-all never serves them
+const SHADOWED_PATHS = ['lifetime'];
+
+export async function getStaticPaths({ locales }) {
+  const filenames = ALLOWED_PATHS.filter((filename) => !SHADOWED_PATHS.includes(filename));
+
+  return {
+    paths: locales.flatMap((locale) => filenames.map((filename) => ({ params: { filename }, locale }))),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(ctx) {
   const pathname = ctx.params.filename;
   const lang = ctx.locale;
 

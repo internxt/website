@@ -7,6 +7,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
+import { saveReferralToCookie } from '@/lib/cookies';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
@@ -16,10 +17,7 @@ import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
-  '/pccomponentes-products',
-  '/pccomponentes-business',
   '/pccomponentes-products-b2b',
-  '/lifetime/celebration/[filename]',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -29,6 +27,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
+
+  useEffect(() => {
+    saveReferralToCookie();
+  }, [router.asPath]);
 
   useEffect(() => {
     const handleRouteChange = (url) => {

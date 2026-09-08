@@ -1,4 +1,3 @@
-import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -60,7 +59,7 @@ const PasswordGenerator = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const downloadURL = await downloadDriveLinks();
 
   const lang = ctx.locale;
@@ -71,9 +70,6 @@ export async function getServerSideProps(ctx) {
   const bannerText = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,

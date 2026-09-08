@@ -18,7 +18,7 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/shared/Ho
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '../layout/footers/Footer';
 
 type CompetitorType =
@@ -70,7 +70,7 @@ interface ComparisonPageProps {
   metaTagId: string;
   segmentName: string;
   logo: string;
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: AlternativePageText;

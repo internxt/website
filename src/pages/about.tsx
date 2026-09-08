@@ -4,7 +4,6 @@ import FeatureSection from '@/components/about/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import cookies from '@/lib/cookies';
 import HorizontalScrollableSection from '@/components/about/HorizontalScrollableSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
@@ -32,14 +31,12 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const textContent = require(`@/assets/lang/${lang}/about.json`);
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,

@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { ElectionsText } from '@/assets/types/elections';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
@@ -20,7 +19,7 @@ import { SwitchButtonOptions } from '@/components/elections/PlanSelector';
 
 interface ElectionsProps {
   metatagsDescriptions: MetatagsDescription[];
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   navbarLang: NavigationBarText;
   langJson: ElectionsText;
   footerLang: FooterText;
@@ -136,17 +135,17 @@ const Elections = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/elections.json`);
+  // elections.json and the 'elections-campaign' metatags only exist in English
+  const electionsLang = 'en';
+
+  const metatagsDescriptions = require(`@/assets/lang/${electionsLang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${electionsLang}/elections.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,

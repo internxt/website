@@ -1,7 +1,7 @@
 import Countdown from '@/components/components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import { Check } from '@phosphor-icons/react';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '@/components/privacy/HeroSection.module.scss';
@@ -12,7 +12,7 @@ interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
   header?: JSX.Element;
   footer?: JSX.Element;
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   percentOff: string;
   minimumPrice: string;
 }

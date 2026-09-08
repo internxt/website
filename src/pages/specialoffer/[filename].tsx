@@ -302,7 +302,14 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths({ locales }) {
+  return {
+    paths: locales.flatMap((locale) => ALLOWED_PATHS.map((filename) => ({ params: { filename }, locale }))),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const pathname = ctx.params.filename;
 

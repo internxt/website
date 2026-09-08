@@ -145,7 +145,7 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/metadata-remover.json`);

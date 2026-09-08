@@ -14,7 +14,7 @@ import { ActionBanner } from '@/components/temp-email/components/ActionBanner';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
 import { setup } from '@/lib/csrf';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 
 const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
@@ -53,7 +53,7 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
   );
 };
 
-export const getServerSideProps = setup(async (ctx: GetServerSidePropsContext) => {
+export const getServerSideProps = setup(async (ctx: GetStaticPropsContext) => {
   const lang = ctx.locale || 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

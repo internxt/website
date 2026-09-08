@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
@@ -15,7 +15,7 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import TrustedSection from '@/components/home/TrustedSection';
 
 export interface UltimateAnnualTemplateProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;

@@ -1,12 +1,12 @@
 import { Check } from '@phosphor-icons/react';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Link from 'next/link';
 
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
   header?: JSX.Element;
   footer?: JSX.Element;
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
 }
 
 const TitleAndOnePlan = ({ textContent, header }: TitleAndOnePlanProps): JSX.Element => {

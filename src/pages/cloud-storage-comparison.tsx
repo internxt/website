@@ -6,7 +6,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -147,16 +146,13 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/comparison.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
-
   return {
     props: {
       lang,
