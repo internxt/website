@@ -11,7 +11,7 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
   return (
     <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
       <div className={'flex xl:hidden'}>
-        <Marquee gradientColor={[255, 255, 255]} className={bgColor} gradientWidth="32px" speed={30}>
+        <Marquee gradientColor="rgb(255, 255, 255)" className={bgColor} gradientWidth="32px" speed={30}>
           <div className="featured flex w-full flex-row items-center space-x-10 p-6">
             <Image
               loading="lazy"
