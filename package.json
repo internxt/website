@@ -16,7 +16,8 @@
     "cypress:run": "cypress run --browser chrome",
     "lint": "eslint --quiet './**/*.{js,ts,tsx}'",
     "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc",
-    "vercel:install": "yarn run add:npmrc && yarn install"
+    "vercel:install": "yarn run add:npmrc && yarn install",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@coderosh/images-to-pdf": "^2.1.0",
@@ -73,7 +74,7 @@
     "@svgr/webpack": "^8.1.0",
     "@types/jest": "^29.4.0",
     "@types/memory-cache": "^0.2.1",
-    "@types/node": "^15.0.1",
+    "@types/node": "^26.5.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "cypress": "^13.12.0",
@@ -83,7 +84,7 @@
     "postcss": "8.5.23",
     "sass": "1.41.0",
     "tailwindcss": "^3.4.10",
-    "typescript": "^4.1.5"
+    "typescript": "^6.0.3"
   },
   "browser": {
     "child_process": false
