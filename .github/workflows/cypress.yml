@@ -31,6 +31,7 @@ jobs:
           start: yarn start
           browser: chrome
         env:
+          TS_NODE_COMPILER_OPTIONS: '{"ignoreDeprecations":"6.0"}'
           RECAPTCHA_V3: ${{ secrets.RECAPTCHA_V3 }}
           RECAPTCHA_V3_ENDPOINT: ${{ secrets.RECAPTCHA_V3_ENDPOINT }}
           RECAPTCHA_V3_SCORE_THRESHOLD: ${{ secrets.RECAPTCHA_V3_SCORE_THRESHOLD }}
