@@ -370,6 +370,8 @@ export enum PromoCodeName {
   nauval = 'NAUVAL',
   utsav = 'UTSAV',
   josh = 'JOSH',
+  nextuniverz = 'NEXTUNIVERZ',
+  techmanis = 'TECHMANIS',
 }
 
 export interface PromoCodeProps {
