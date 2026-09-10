@@ -11,56 +11,56 @@ export interface AffiliatesText {
   CtaSection: CtaSection;
 }
 
-export interface CommissionStructureSection {
+interface CommissionStructureSection {
   title: string;
   startEarning: string;
   cards: Card[];
   cta: string;
 }
 
-export interface Card {
+interface Card {
   OFF: string;
   plans: string;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta?: string;
 }
 
-export interface DescribingPlansSection {
+interface DescribingPlansSection {
   drive: Drive;
   s3: Drive;
   feat: Feat[];
 }
 
-export interface Drive {
+interface Drive {
   title: string;
   description: string[];
 }
 
-export interface Feat {
+interface Feat {
   title: string;
   description: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface FeatureSection {
+interface FeatureSection {
   title: string;
   cards: CtaSection[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   label: string;
   title: Title;
   description: string;
@@ -68,12 +68,12 @@ export interface HeroSection {
   logIn: string;
 }
 
-export interface Title {
+interface Title {
   normalText: string;
   blueText: string;
 }
 
-export interface Number1Section {
+interface Number1Section {
   title: {
     line1: string;
     blue: string;
@@ -81,20 +81,20 @@ export interface Number1Section {
   };
 }
 
-export interface WhatIsInternxtSection {
+interface WhatIsInternxtSection {
   title: string;
   subtitle: string;
   description: string;
 }
 
-export interface WhatWeDoSection {
+interface WhatWeDoSection {
   title: string;
   description: string;
   cards: Feat[];
   recognized: string;
 }
 
-export interface WhyJoinSection {
+interface WhyJoinSection {
   title: string;
   cards: string[];
   cta: string;
