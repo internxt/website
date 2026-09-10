@@ -15,8 +15,10 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "lint": "eslint --quiet './**/*.{js,ts,tsx}'",
-    "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc",
-    "vercel:install": "yarn run add:npmrc && yarn install"
+    "deploy": "node ./scripts/check-envs.js && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "node ./scripts/check-envs.js && opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc"
   },
   "dependencies": {
     "@coderosh/images-to-pdf": "^2.1.0",
@@ -28,6 +30,7 @@
     "@iconscout/react-unicons": "^1.1.6",
     "@internxt/sdk": "1.11.12",
     "@mui/material": "^5.15.21",
+    "@opennextjs/cloudflare": "^1.20.6",
     "@phosphor-icons/react": "^2.1.5",
     "@sendgrid/mail": "^8.1.0",
     "@stripe/react-stripe-js": "^2.7.3",
@@ -79,6 +82,7 @@
     "react-tooltip": "^5.27.0",
     "tesseract.js": "^7.0.0",
     "useragent": "^2.3.0",
+    "wrangler": "^4.130.0",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {

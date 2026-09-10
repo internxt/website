@@ -6,6 +6,7 @@ module.exports = {
   experimental: {
     //swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
     scrollRestoration: true,
+    optimizePackageImports: ['@phosphor-icons/react', '@iconscout/react-unicons', '@mui/material', 'lodash'],
   },
   webpack(config) {
     config.module.rules.push({
@@ -260,7 +261,6 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST, 'haveibeenpwned.com'],
     remotePatterns: [
       {
         protocol: 'https',
