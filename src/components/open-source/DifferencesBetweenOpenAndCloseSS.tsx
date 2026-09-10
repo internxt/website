@@ -1,5 +1,5 @@
 import { getImage } from '@/lib/getImage';
-import { Check, X } from '@phosphor-icons/react';
+import { Check, X, Keyhole } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
@@ -18,7 +18,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
             {/* Table 1 */}
             <div className="flex h-full max-w-[387px] flex-1 flex-col">
               <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
-                <Image src={getImage('/images/open-source/open-source.svg')} width={32} height={32} alt="Open Source" />
+                <Keyhole size={32} className="text-gray-100" weight="bold" />
                 <p className="text-lg font-semibold text-gray-100">{textContent.table.OpenSource.title}</p>
               </div>
               <div className="flex h-full flex-col">

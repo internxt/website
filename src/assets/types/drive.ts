@@ -15,7 +15,7 @@ export interface DriveText {
   SecureStorageSeoSection: FAQSection;
 }
 
-export interface AdvancedToolsSection {
+interface AdvancedToolsSection {
   title: string;
   description: string;
   powerUsers: PowerUsers;
@@ -24,13 +24,13 @@ export interface AdvancedToolsSection {
   NAS: CtaSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   cta: string;
   description: string;
 }
 
-export interface PowerUsers {
+interface PowerUsers {
   title: string;
   description: string;
   install: Install;
@@ -38,35 +38,35 @@ export interface PowerUsers {
   learnMore: LearnMore;
 }
 
-export interface Install {
+interface Install {
   title: string;
   command: string;
 }
 
-export interface LearnMore {
+interface LearnMore {
   title: string;
   GitHub: string;
   learnMore: string;
 }
 
-export interface AllInOnePrivacySection {
+interface AllInOnePrivacySection {
   title: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface CoreFeatures {
+interface CoreFeatures {
   title: string;
   description: string;
   accordionCards: ScrollableSection;
   cards: ScrollableSection;
 }
 
-export interface DownloadSection {
+interface DownloadSection {
   downloadTitle: string;
   Desktop: string;
   Web: string;
@@ -88,28 +88,28 @@ export interface DownloadSection {
   MacOS: string;
 }
 
-export interface DriveSection {
+interface DriveSection {
   title: string;
   description: string[];
 }
 
-export interface EncryptedCloudStorageSection {
+interface EncryptedCloudStorageSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -118,13 +118,13 @@ export interface HeroSection {
   DownloadSection: DownloadSection;
 }
 
-export interface MadeInEuropeSection {
+interface MadeInEuropeSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   images: string[];
   imagesMobile: string[];
   titles: string[];
@@ -132,13 +132,13 @@ export interface Cards {
   cta: string[];
 }
 
-export interface OfficalCloudProvider {
+interface OfficalCloudProvider {
   title: string;
   description: string[];
   cta: string;
 }
 
-export interface ReviewSection {
+interface ReviewSection {
   forbes: string;
   deloitte: string;
   techradar: string;
@@ -146,7 +146,7 @@ export interface ReviewSection {
   trustpilot: string;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -160,7 +160,7 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -168,7 +168,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
@@ -176,19 +176,19 @@ export interface Features {
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -197,7 +197,7 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }

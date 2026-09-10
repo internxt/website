@@ -155,9 +155,10 @@ export const ALLOWED_PATHS = [
   'nauval',
   'utsav',
   'josh',
-  'nextuniverz',
-  'techmanis',
+<<<<<<< Updated upstream
   'sunchannel',
+=======
+>>>>>>> Stashed changes
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -401,9 +402,6 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'nauval',
   'utsav',
   'josh',
-  'nextuniverz',
-  'techmanis',
-  'sunchannel',
 ]);
 
 export const COUPON_CODES = {
@@ -559,9 +557,6 @@ export const COUPON_CODES = {
   nauval: PromoCodeName.nauval,
   utsav: PromoCodeName.utsav,
   josh: PromoCodeName.josh,
-  nextuniverz: PromoCodeName.nextuniverz,
-  techmanis: PromoCodeName.techmanis,
-  sunchannel: PromoCodeName.sunchannel,
 };
 
 interface OfferConfig {

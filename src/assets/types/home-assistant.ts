@@ -8,7 +8,7 @@ export interface HomeAssistantText {
     ReviewSection: ReviewSection;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   description: string;
   features: string[];
@@ -16,7 +16,7 @@ export interface HeroSection {
   claimDeal: string;
 }
 
-export interface ReviewSection {
+interface ReviewSection {
   forbes: string;
   deloitte: string;
   techradar: string;
@@ -24,13 +24,13 @@ export interface ReviewSection {
   trustpilot: string;
 }
 
-export interface MadeInEuropeSection {
+interface MadeInEuropeSection {
   title: string;
   description: string;
   cards: Sections;
 }
 
-export interface Sections {
+interface Sections {
   images: string[];
   imagesMobile: string[];
   titles: string[];
@@ -38,30 +38,30 @@ export interface Sections {
   cta: string[];
 }
 
-export interface ThreeCardsSection {
+interface ThreeCardsSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   titles: string[];
   descriptions: string[];
 }
 
-export interface CoreFeatures {
+interface CoreFeatures {
   title: string;
   description: string;
   accordionCards: ScrollableSection;
   cards: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -75,7 +75,7 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -84,20 +84,20 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
   individual: string;
   business: string;
 }
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
@@ -105,17 +105,17 @@ export interface Features {
   guarantee: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
 
-export interface TrustedBySection {
+interface TrustedBySection {
   description: string;
 }

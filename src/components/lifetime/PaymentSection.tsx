@@ -1,6 +1,5 @@
 import PriceTable from './PriceTable';
-import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
-import OpenSource from '../../../public/icons/open-source.svg';
+import { CurrencyCircleDollar, Lifebuoy, Keyhole } from '@phosphor-icons/react';
 import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
@@ -47,7 +46,7 @@ const PaymentSection = ({
   const features = [
     { icon: Lifebuoy, text: textContent.features.endToEnd },
     { icon: CurrencyCircleDollar, text: textContent.features.anonymousAccount },
-    { icon: OpenSource, text: textContent.features.openSource },
+    { icon: Keyhole, text: textContent.features.openSource },
   ];
 
   const title =
