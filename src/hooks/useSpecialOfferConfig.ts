@@ -155,12 +155,9 @@ export const ALLOWED_PATHS = [
   'nauval',
   'utsav',
   'josh',
-<<<<<<< Updated upstream
   'nextuniverz',
   'techmanis',
   'sunchannel',
-=======
->>>>>>> Stashed changes
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {

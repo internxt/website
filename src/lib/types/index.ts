@@ -295,12 +295,9 @@ export enum PromoCodeName {
   nauval = 'NAUVAL',
   utsav = 'UTSAV',
   josh = 'JOSH',
-<<<<<<< Updated upstream
   nextuniverz = 'NEXTUNIVERZ',
   techmanis = 'TECHMANIS',
   sunchannel = 'SUNCHANNEL',
-=======
->>>>>>> Stashed changes
 }
 
 export interface PromoCodeProps {
