@@ -1,6 +1,3 @@
-import React from 'react';
-import styles from '@/components/techradar-discount/Background.module.scss';
-
 const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
@@ -18,9 +15,7 @@ const CtaSection = ({ textContent }) => {
           <p className="text-base font-semibold text-primary">{textContent.cta}</p>
         </button>
       </div>
-      <div
-        className={`absolute left-0 top-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}
-      />
+      <div className={`pointer-events-none absolute left-0 top-0 -z-10 flex h-full w-full origin-center bg-primary`} />
     </section>
   );
 };
