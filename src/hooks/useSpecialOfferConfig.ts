@@ -559,9 +559,6 @@ export const COUPON_CODES = {
   nauval: PromoCodeName.nauval,
   utsav: PromoCodeName.utsav,
   josh: PromoCodeName.josh,
-  nextuniverz: PromoCodeName.nextuniverz,
-  techmanis: PromoCodeName.techmanis,
-  sunchannel: PromoCodeName.sunchannel,
 };
 
 interface OfferConfig {

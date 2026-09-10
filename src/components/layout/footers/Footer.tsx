@@ -39,8 +39,7 @@ export default function Footer({
   const year = moment().format('YYYY');
 
   // La puntuación final se saca fuera del enlace (regla tipográfica FR y buena práctica general)
-  const privacyLinkTrailingPunctuation =
-    textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
+  const privacyLinkTrailingPunctuation = textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
   const privacyLinkText = privacyLinkTrailingPunctuation
     ? textContent.NewsletterSection.privacyLink.slice(0, -privacyLinkTrailingPunctuation.length)
     : textContent.NewsletterSection.privacyLink;
@@ -636,12 +635,6 @@ export default function Footer({
                     </Link>
                     <Link href="/cloud-data-centers" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.certifications}
-                    </Link>
-                    <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
                     </Link>
                   </div>
                 </div>
@@ -1616,12 +1609,6 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.certifications}
                       </Link>
-                      <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
-                    </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
