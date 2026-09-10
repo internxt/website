@@ -43,17 +43,19 @@ const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerat
 
     let passphrase = '';
 
-    wordListLength.forEach((word) => {
-      if (wordListLength.indexOf(word) !== wordListLength.length - 1 && separator !== '') {
-        word += separator;
-      }
+    if (Array.isArray(wordListLength) && wordListLength.length > 0) {
+      wordListLength.forEach((word) => {
+        if (wordListLength.indexOf(word) !== wordListLength.length - 1 && separator !== '') {
+          word += separator;
+        }
 
-      if (capitalize) {
-        word = word.charAt(0).toUpperCase() + word.slice(1);
-      }
+        if (capitalize) {
+          word = word.charAt(0).toUpperCase() + word.slice(1);
+        }
 
-      passphrase += word;
-    });
+        passphrase += word;
+      });
+    }
 
     // Add number in random position
     if (number) {

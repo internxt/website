@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import { CircleWavyCheckIcon, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 
 interface Feature {
   icon: React.ComponentType<any>;
@@ -35,12 +35,11 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
       title: textContent.card4.title,
     },
     {
-      icon: CircleWavyCheck,
+      icon: CircleWavyCheckIcon,
       title: textContent.card5.title,
     },
   ];
 
- 
   const formatText = (text: string) => {
     const firstSpaceIndex = text.indexOf(' ');
     if (firstSpaceIndex === -1) return text;

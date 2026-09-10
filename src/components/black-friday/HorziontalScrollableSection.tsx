@@ -1,4 +1,4 @@
-import { CaretLeft, CaretRight, CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight, CircleWavyCheckIcon, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 
 interface HorizontalScrollableProps {
@@ -77,7 +77,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
       title: textContent.features[3],
     },
     {
-      icon: CircleWavyCheck,
+      icon: CircleWavyCheckIcon,
       title: textContent.features[4],
     },
   ];

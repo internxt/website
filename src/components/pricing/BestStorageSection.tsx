@@ -1,4 +1,4 @@
-import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import { CircleWavyCheckIcon, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 
 interface BestStorageSectionProps {
   textContent: Record<string, any>;
@@ -24,7 +24,7 @@ const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorag
       title: textContent.card4.title,
     },
     {
-      icon: CircleWavyCheck,
+      icon: CircleWavyCheckIcon,
       title: textContent.card5.title,
     },
   ];
