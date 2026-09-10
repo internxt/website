@@ -296,6 +296,8 @@ export enum PromoCodeName {
   utsav = 'UTSAV',
   josh = 'JOSH',
 <<<<<<< Updated upstream
+  nextuniverz = 'NEXTUNIVERZ',
+  techmanis = 'TECHMANIS',
   sunchannel = 'SUNCHANNEL',
 =======
 >>>>>>> Stashed changes
