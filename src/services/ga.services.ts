@@ -1,4 +1,4 @@
-export interface PlanDetails {
+interface PlanDetails {
   planId: string;
   planPrice: number;
   currency: string;
@@ -8,7 +8,7 @@ export interface PlanDetails {
   promoCodeId?: string;
 }
 
-export interface AdsConversionParams {
+interface AdsConversionParams {
   url?: string;
   elementConversion: string;
   tag?: string;
@@ -26,7 +26,7 @@ export interface AdsConversionParams {
   }>;
 }
 
-export interface PurchaseParams extends PlanDetails {
+interface PurchaseParams extends PlanDetails {
   transactionId: string;
 }
 

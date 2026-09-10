@@ -19,7 +19,7 @@ const CtaSection = ({ textContent }) => {
         </button>
       </div>
       <div
-        className={`absolute left-0 top-16 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
+        className={`pointer-events-none absolute left-0 top-16 -z-10 flex h-screen w-screen origin-center bg-primary`}
       />
     </section>
   );

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
 
-export interface FeatureSectionProps {
+interface FeatureSectionProps {
   textContent: AntivirusText['FeatureSection'];
   isGetAntivirus?: boolean;
   showPlan?: boolean;
