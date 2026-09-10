@@ -36,7 +36,7 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
