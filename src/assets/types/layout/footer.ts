@@ -135,6 +135,8 @@ export interface Resources {
   coupons: string;
   reviews: string;
   certifications: string;
+  deals: string;
+  blackFridayCloudStorage: string;
 }
 
 export interface Tools {
