@@ -82,6 +82,7 @@ export default function HeroSection({
   const heroImageMap: Record<string, string> = {
     ss87: 'ss87-2',
     wpu: 'wpunpas',
+    themorpheus: 'morpheus',
   };
 
   const heroImage = heroImageMap[image] ?? image;
