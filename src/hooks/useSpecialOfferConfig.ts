@@ -158,6 +158,10 @@ export const ALLOWED_PATHS = [
   'nextuniverz',
   'techmanis',
   'sunchannel',
+  'marko',
+  'gamermeld',
+  'apfeltalk',
+  'mobiflip',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -197,6 +201,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   worldcup: 'en',
   thelinuxexp: 'en',
   zackshutt: 'en',
+  marko: 'en',
+  gamermeld: 'en',
 
   // de
   aimentors: 'de',
@@ -220,6 +226,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   windowsarea: 'de',
   niklas: 'de',
   timo: 'de',
+  apfeltalk: 'de',
+  mobiflip: 'de',
 
   // es
   alejavi: 'es',
@@ -404,6 +412,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'nextuniverz',
   'techmanis',
   'sunchannel',
+  'marko',
+  'gamermeld',
+  'apfeltalk',
+  'mobiflip',
 ]);
 
 export const COUPON_CODES = {
@@ -562,6 +574,10 @@ export const COUPON_CODES = {
   nextuniverz: PromoCodeName.nextuniverz,
   techmanis: PromoCodeName.techmanis,
   sunchannel: PromoCodeName.sunchannel,
+  marko: PromoCodeName.marko,
+  gamermeld: PromoCodeName.gamermeld,
+  apfeltalk: PromoCodeName.apfeltalk,
+  mobiflip: PromoCodeName.mobiflip,
 };
 
 interface OfferConfig {
