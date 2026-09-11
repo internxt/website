@@ -7,4 +7,3 @@ const GA_TAGS = {
   type GA_TAGS = typeof GA_TAGS;
   
   export default GA_TAGS;
-
