@@ -12,7 +12,7 @@ export interface NASPageText {
   tableSection: TableSection;
 }
 
-export interface Breadcrumbs {
+interface Breadcrumbs {
   home: string;
   drive: string;
   nas: string;
@@ -20,17 +20,17 @@ export interface Breadcrumbs {
   synology: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   label: string;
   title: string;
   subtitle: string;
@@ -38,60 +38,60 @@ export interface HeroSection {
   cta: string;
 }
 
-export interface InternxtNASIntegrations {
+interface InternxtNASIntegrations {
   title: string;
   description: string;
   synologyBox: Box;
   QNAPBox: Box;
 }
 
-export interface Box {
+interface Box {
   title: string;
   description: string;
   image: string;
 }
 
-export interface WhatIsNASSection {
+interface WhatIsNASSection {
   title: string;
   description: string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface HorizontalScrollableSection {
+interface HorizontalScrollableSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface HowSetupSection {
+interface HowSetupSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   titles: string[];
   descriptions: string[];
   cta: string[];
 }
 
-export interface WhatInternxtOffersSection {
+interface WhatInternxtOffersSection {
   title: string;
   description: string;
   cards: ScrollableSection;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -105,19 +105,19 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -126,12 +126,12 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -139,7 +139,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;

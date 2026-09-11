@@ -20,63 +20,63 @@ export interface HeroSection {
   garantee:       string;
 }
 
-export interface PhotoSection {
+interface PhotoSection {
   title:         string;
   description:  string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title:       string;
   description: string;
   cta:         string;
 }
 
-export interface PhotoFeatureSection {
+interface PhotoFeatureSection {
   title:             string;
   description:       string;
   scrollableSection: AccordionCards;
 }
 
-export interface CoreFeatures {
+interface CoreFeatures {
   title:          string;
   description:    string;
   accordionCards: AccordionCards;
   cards:          AccordionCards;
 }
 
-export interface DesignedSection {
+interface DesignedSection {
   title: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   images: string[];
   titles: string[];
   descriptions: string[];
 }
 
-export interface AccordionCards {
+interface AccordionCards {
   titles:       string[];
   descriptions: string[];
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer:   string[];
 }
 
-export interface MadeInEuropeSection {
+interface MadeInEuropeSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   images: string[];
   imagesMobile: string[];
   titles: string[];
@@ -90,12 +90,12 @@ export interface RelationalLinksText {
   links: Link[];
 }
 
-export interface Link {
+interface Link {
   cta: string;
   link: string;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -109,7 +109,7 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -117,19 +117,19 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -138,12 +138,12 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;

@@ -9,59 +9,59 @@ export interface CloudDataCentersPageText {
   FaqSection: FAQSection;
 }
 
-export interface CompilanceAndCertificationsSection {
+interface CompilanceAndCertificationsSection {
   title: string;
   description: string;
   features: Cards;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   titles: string[];
   description: string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   description: string;
   features: string[];
 }
 
-export interface HorizontalScrllableSection {
+interface HorizontalScrllableSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface SecureCloudStorgaeSection {
+interface SecureCloudStorgaeSection {
   title: string;
   description: string;
   card: Card;
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string[];
   cta: string;
 }
 
-export interface WhatIsDataCenterSection {
+interface WhatIsDataCenterSection {
   title: string;
   description: string[];
 }

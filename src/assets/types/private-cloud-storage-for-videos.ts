@@ -10,12 +10,12 @@ export interface PrivateCloudStorageForVideoText {
   tableSection: TableSection;
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
@@ -27,60 +27,60 @@ export interface FeaturesSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
 }
 
-export interface Feature {
+interface Feature {
   title: string;
   description: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   features?: string[];
   subtitle: string;
   cta: string;
 }
 
-export interface HorizontalScrollableSection {
+interface HorizontalScrollableSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
   imagesPathname: string[];
 }
 
-export interface HowToChooseSection {
+interface HowToChooseSection {
   title: string;
   description: string;
   cardDescriptions: CardDescriptions;
 }
 
-export interface CardDescriptions {
+interface CardDescriptions {
   titles: string[];
   descriptions: string[];
 }
 
-export interface SecureAndManage {
+interface SecureAndManage {
   title: string;
   description: string;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string[];
   cta: string;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -94,19 +94,19 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -115,12 +115,12 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -128,7 +128,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
