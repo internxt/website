@@ -10,28 +10,28 @@ export interface BlackFridayText {
   FaqSection: FAQSection;
 }
 
-export interface CtaSection {
+interface CtaSection {
   title: string;
   description: string;
   cta: string;
 }
 
-export interface DontMissSection {
+interface DontMissSection {
   title: string;
   description: string[];
 }
 
-export interface FAQSection {
+interface FAQSection {
   title: string;
   faq: FAQ[];
 }
 
-export interface FAQ {
+interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface HeroSection {
+interface HeroSection {
   products: Products;
   title: string;
   subtitle: string;
@@ -40,7 +40,7 @@ export interface HeroSection {
   claimDeal: string;
 }
 
-export interface Products {
+interface Products {
   drive: string;
   antivirus: string;
   cleaner: string;
@@ -49,30 +49,30 @@ export interface Products {
   mail: string;
 }
 
-export interface HorizontalScrollableSection {
+interface HorizontalScrollableSection {
   title: string;
   description: string;
   features: string[];
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
 
-export interface MoreDealsSection {
+interface MoreDealsSection {
   title: string;
   description: string;
   cards: Cards;
 }
 
-export interface Cards {
+interface Cards {
   card1: CtaSection;
   card2: CtaSection;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -82,37 +82,37 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   annually: string;
   lifetime: string;
 }
 
-export interface Features {
+interface Features {
   openSource: string;
   premiumSupport: string;
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   lifetime: string;
   business: string;
 }
 
-export interface WhyChooseSection {
+interface WhyChooseSection {
   title: string;
   cards: ScrollableSection;
 }
