@@ -12,7 +12,7 @@ export interface FeatureCard {
   altText?: string;
 }
 
-export interface FeatureSectionProps {
+interface FeatureSectionProps {
   title: string;
   subtitle?: string;
   description?: string;

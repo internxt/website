@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { MeetPageText } from '@/assets/meet';
+import { MeetPageText } from '@/assets/types/meet';
 
 interface AccordionSectionProps {
   textContent: any;

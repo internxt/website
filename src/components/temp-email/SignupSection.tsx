@@ -17,8 +17,6 @@ export const SignupSection = ({ textContent }) => (
         <p className="text-base font-semibold text-primary">{textContent.createAccount}</p>
       </button>
     </div>
-    <div
-      className={`absolute left-0 top-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}
-    />
+    <div className={`pointer-events-none absolute left-0 top-0 -z-10 flex h-full w-full origin-center bg-primary`} />
   </section>
 );
