@@ -8,36 +8,36 @@ export interface ReferAFriendText {
   FaqSection: FaqSection;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle: string;
   features: string[];
   cta: string;
 }
 
-export interface RewardsSection {
+interface RewardsSection {
   title: string;
   subtitle: string;
   features: string[];
 }
 
-export interface HowItWorks {
+interface HowItWorks {
   title: string;
   subtitle: string;
   cards: Card[];
 }
 
-export interface Card {
+interface Card {
   title: string;
   description: string;
 }
 
-export interface FaqSection {
+interface FaqSection {
   title: string;
   faq: Faq[];
 }
 
-export interface Faq {
+interface Faq {
   question: string;
   answer: string[];
 }

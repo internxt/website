@@ -8,44 +8,44 @@ export interface RedeemText {
   MostSecureSection: Section;
 }
 
-export interface Auth {
+interface Auth {
   SignUp: SignUp;
   LogIn: LogIn;
   Recover: Recover;
 }
 
-export interface LogIn {
+interface LogIn {
   title: string;
   or: string;
   signup: string;
   fields: LogInFields;
 }
 
-export interface LogInFields {
+interface LogInFields {
   email: Email;
   password: PurplePassword;
   tfa: Tfa;
   submit: string;
 }
 
-export interface Email {
+interface Email {
   label: string;
   placeholder: string;
 }
 
-export interface PurplePassword {
+interface PurplePassword {
   label: string;
   placeholder: string;
   helper: string;
 }
 
-export interface Tfa {
+interface Tfa {
   label: string;
   placeholder: string;
   hint: string;
 }
 
-export interface Recover {
+interface Recover {
   title: string;
   back: string;
   disclaimer: string;
@@ -53,17 +53,17 @@ export interface Recover {
   success: Success;
 }
 
-export interface RecoverFields {
+interface RecoverFields {
   email: Email;
   submit: string;
 }
 
-export interface Success {
+interface Success {
   title: string;
   subtitle: string;
 }
 
-export interface SignUp {
+interface SignUp {
   title: string;
   or: string;
   login: string;
@@ -71,43 +71,43 @@ export interface SignUp {
   fields: SignUpFields;
 }
 
-export interface Disclaimer {
+interface Disclaimer {
   text: string;
   link: string;
 }
 
-export interface SignUpFields {
+interface SignUpFields {
   email: Email;
   password: FluffyPassword;
   submit: string;
 }
 
-export interface FluffyPassword {
+interface FluffyPassword {
   label: string;
   placeholder: string;
   strength: Strength;
 }
 
-export interface Strength {
+interface Strength {
   complexity: string;
   length: string;
   weak: string;
   strong: string;
 }
 
-export interface Section {
+interface Section {
   title: string;
   description: string;
   cta: string;
   cards?: NormalSection[];
 }
 
-export interface NormalSection {
+interface NormalSection {
   title: string;
   description: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title: string;
   subtitle: string;
   description: string;
@@ -115,7 +115,7 @@ export interface HeroSection {
   cta: string;
 }
 
-export interface PaymentSection {
+interface PaymentSection {
   limitedOffer: string;
   title: Title;
   title2: Title;
@@ -126,13 +126,13 @@ export interface PaymentSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
 }
 
-export interface Title {
+interface Title {
   blueText: string;
   normalText: string;
 }

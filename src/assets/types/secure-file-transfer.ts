@@ -10,7 +10,7 @@ export interface SecureFileTransferText {
     tableSection:            TableSection;
 }
 
-export interface HeroSection {
+interface HeroSection {
   title:    string;
   features?: string[];
   cta:      string;
@@ -21,62 +21,62 @@ export interface FeaturesSection {
   features: Features;
 }
 
-export interface Features {
+interface Features {
   feature1: Feature;
   feature2: Feature;
   feature3: Feature;
 }
 
-export interface Feature {
+interface Feature {
   title:       string;
   description: string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title:       string;
   description: string;
   cta:         string;
 }
 
-export interface HowToChooseSection {
+interface HowToChooseSection {
   title:          string;
   accordionCards: AccordionCards;
 }
 
-export interface AccordionCards {
+interface AccordionCards {
   titles:       string[];
   descriptions: string[];
 }
 
-export interface SecureAndManage {
+interface SecureAndManage {
   title:       string;
   description: string;
   cards:       Card[];
 }
 
-export interface Card {
+interface Card {
   title:       string;
   description: string[];
   cta:         string;
 }
 
-export interface SecureFeaturesSection {
+interface SecureFeaturesSection {
   title:             string;
   descriptions:      string;
   scrollableSection: AccordionCards;
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer:   string[];
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -90,19 +90,19 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -111,12 +111,12 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -124,7 +124,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;

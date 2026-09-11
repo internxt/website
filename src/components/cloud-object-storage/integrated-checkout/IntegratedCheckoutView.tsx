@@ -148,6 +148,7 @@ export const IntegratedCheckoutView = ({
                       )}
                     </Menu.Button>
                     <Transition
+                      as="div"
                       className={'left-0 w-full'}
                       enter="transition duration-50 ease-out"
                       enterFrom="scale-98 opacity-0"

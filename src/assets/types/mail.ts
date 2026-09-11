@@ -9,7 +9,7 @@ export interface MailText {
     SemanticAccordion:       SemanticAccordion;
 }
 
-export interface HeroSection {
+interface HeroSection {
   label:          string;
   title:          string;
   description:    string;
@@ -17,52 +17,52 @@ export interface HeroSection {
   garantee:       string;
 }
 
-export interface DriveSection {
+interface DriveSection {
   title:         string;
   description:  string[];
 }
 
-export interface CtaSection {
+interface CtaSection {
   title:       string;
   description: string;
   cta:         string;
 }
 
-export interface MailFeatureSection {
+interface MailFeatureSection {
   title:             string;
   descriptions:      string;
   scrollableSection: AccordionCards;
 }
 
-export interface CoreFeatures {
+interface CoreFeatures {
   title:          string;
   descriptions:    string[];
   accordionCards: AccordionCards;
 }
 
-export interface DesignedSection {
+interface DesignedSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
 }
 
-export interface ScrollableSection {
+interface ScrollableSection {
   images: string[];
   titles: string[];
   descriptions: string[];
 }
 
-export interface AccordionCards {
+interface AccordionCards {
   titles:       string[];
   descriptions: string[];
 }
 
-export interface SemanticAccordion {
+interface SemanticAccordion {
   title: string;
   items: Item[];
 }
 
-export interface Item {
+interface Item {
   question: string;
   answer:   string[];
 }
@@ -79,12 +79,12 @@ export interface ImageConfig {
   className?: string;
 }
 
-export interface Position {
+interface Position {
   top: string;
   left: string;
   bottom?: string;
 }
 
-export interface AnimationProps {
+interface AnimationProps {
   images: ImageConfig[];
 }

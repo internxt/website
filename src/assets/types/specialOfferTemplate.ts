@@ -9,7 +9,7 @@ export interface SpecialOfferText {
   FeaturesSection: FeaturesSection;
 }
 
-export interface FeaturesSection {
+interface FeaturesSection {
   section1: Section;
   section2: Section2;
   section3: Section3;
@@ -19,21 +19,21 @@ export interface FeaturesSection {
   section7: Section7;
 }
 
-export interface Section {
+interface Section {
   title: Section1Title;
 }
 
-export interface Section1Title {
+interface Section1Title {
   line1: string;
   line2: string;
 }
 
-export interface Section2 {
+interface Section2 {
   title: Section4Title;
   subtitle: Section2Subtitle;
 }
 
-export interface Section2Subtitle {
+interface Section2Subtitle {
   line1: string;
   line2: string;
   line3: string;
@@ -41,18 +41,18 @@ export interface Section2Subtitle {
   line5?: string;
 }
 
-export interface Section4Title {
+interface Section4Title {
   line1: string;
   line2: string;
   line3: string;
 }
 
-export interface Section3 {
+interface Section3 {
   title: Section2Subtitle;
   subtitle: Subtitle;
 }
 
-export interface Subtitle {
+interface Subtitle {
   line1: string;
   line2: string;
   line3: string;
@@ -63,18 +63,18 @@ export interface Subtitle {
   line8?: string;
 }
 
-export interface Section4 {
+interface Section4 {
   title: Section4Title;
   subtitle: Subtitle;
 }
 
-export interface Section5 {
+interface Section5 {
   eyebrow: string;
   title: Section1Title;
   subtitle: Section2Subtitle;
 }
 
-export interface Section7 {
+interface Section7 {
   title: Section1Title;
   subtitle: Section1Title;
   cta: string;
@@ -84,12 +84,12 @@ export interface Section7 {
   card4: Card;
 }
 
-export interface Card {
+interface Card {
   title: string;
   subtitle: string;
 }
 
-export interface HeroSection {
+interface HeroSection {
   products: Products;
   title: string;
   description: string;
@@ -98,7 +98,7 @@ export interface HeroSection {
   claimDeal: string;
 }
 
-export interface Products {
+interface Products {
   drive: string;
   antivirus: string;
   cleaner: string;
@@ -107,7 +107,7 @@ export interface Products {
   mail: string;
 }
 
-export interface NextGenSection {
+interface NextGenSection {
   title: string;
   description: string;
   cta: string;
@@ -116,12 +116,12 @@ export interface NextGenSection {
   descriptionWithoutDisocunt?: string;
 }
 
-export interface CardDescriptions {
+interface CardDescriptions {
   titles: string[];
   descriptions: string[];
 }
 
-export interface ReviewSection {
+interface ReviewSection {
   forbes: string;
   deloitte: string;
   techradar: string;
@@ -129,11 +129,11 @@ export interface ReviewSection {
   trustpilot: string;
 }
 
-export interface TrustedBySection {
+interface TrustedBySection {
   description: string;
 }
 
-export interface TableSection {
+interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
@@ -147,7 +147,7 @@ export interface TableSection {
   planStorage: PlanStorage;
 }
 
-export interface BillingFrequency {
+interface BillingFrequency {
   monthly: string;
   annually: string;
   lifetime: string;
@@ -155,7 +155,7 @@ export interface BillingFrequency {
   business: string;
 }
 
-export interface Features {
+interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
@@ -163,19 +163,19 @@ export interface Features {
   guarantee: string;
 }
 
-export interface FreePlanCard {
+interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
 }
 
-export interface PlanStorage {
+interface PlanStorage {
   essential: string;
   premium: string;
   ultimate: string;
 }
 
-export interface PlanTitles {
+interface PlanTitles {
   header: string;
   individuals: string;
   homePage: string;
@@ -184,7 +184,7 @@ export interface PlanTitles {
   lifetimeCampaign: LifetimeCampaign;
 }
 
-export interface LifetimeCampaign {
+interface LifetimeCampaign {
   blueText: string;
   normalText: string;
 }
