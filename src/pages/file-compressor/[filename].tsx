@@ -1,6 +1,5 @@
 'use client';
 
-import path from 'path';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
@@ -54,7 +53,14 @@ const FileConverter = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const rawFilename = ctx.params.filename;
 
@@ -64,7 +70,7 @@ export async function getServerSideProps(ctx) {
     };
   }
 
-  const pathname = path.basename(rawFilename);
+  const pathname = rawFilename;
 
   if (!/^[a-z0-9-]+$/.test(pathname)) {
     return {

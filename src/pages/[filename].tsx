@@ -259,7 +259,14 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const pathname = ctx.params.filename;
   const lang = ctx.locale;
 
