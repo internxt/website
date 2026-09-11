@@ -155,9 +155,6 @@ export const ALLOWED_PATHS = [
   'nauval',
   'utsav',
   'josh',
-  'nextuniverz',
-  'techmanis',
-  'sunchannel',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -291,9 +288,6 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'binosha',
   'david',
   'saddam',
-  'morpheus',
-  'themorpheus',
-  'thelinuxexp',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -401,9 +395,6 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'nauval',
   'utsav',
   'josh',
-  'nextuniverz',
-  'techmanis',
-  'sunchannel',
 ]);
 
 export const COUPON_CODES = {
@@ -559,9 +550,6 @@ export const COUPON_CODES = {
   nauval: PromoCodeName.nauval,
   utsav: PromoCodeName.utsav,
   josh: PromoCodeName.josh,
-  nextuniverz: PromoCodeName.nextuniverz,
-  techmanis: PromoCodeName.techmanis,
-  sunchannel: PromoCodeName.sunchannel,
 };
 
 interface OfferConfig {

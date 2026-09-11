@@ -6,7 +6,6 @@ import ManifestoSection from '@/components/privacy/ManifestoSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import cookies from '@/lib/cookies';
 
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import SecuritumSection from '@/components/privacy/SecuritumSection';
@@ -16,7 +15,7 @@ import BetterTomorrowSection from '@/components/privacy/BetterTomorrowSection';
 import FeatureSection from '@/components/privacy/FeatureSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PrivacyText } from '@/assets/types/privacy';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
@@ -64,15 +63,13 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/privacy.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

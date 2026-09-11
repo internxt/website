@@ -5,7 +5,7 @@ import HeroSection from '@/components/what-does-google-know-about-me/HeroSection
 import ManageGoogleDataSection from '@/components/what-does-google-know-about-me/ManageGoogleDataSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
@@ -129,7 +129,7 @@ const WhatDoesGoogleKnowAboutMe = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

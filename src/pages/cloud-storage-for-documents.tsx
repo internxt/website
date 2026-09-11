@@ -1,6 +1,6 @@
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-documents';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -24,7 +24,7 @@ interface CloudStorageForDocumentsProps {
   navbarText: NavigationBarText;
   textContent: CloudStorageForDocumentsText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
 }
 
 
@@ -188,7 +188,7 @@ const CloudStorageForDocuments = ({
   );
 }
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

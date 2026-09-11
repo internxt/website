@@ -112,7 +112,16 @@ const SpecialOfferPage = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+// Plantillas que aceptan cualquier filename: `fallback: 'blocking'` las resuelve
+// bajo demanda y las cachea, conservando el comportamiento actual.
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const pathname = ctx.params.filename;
 

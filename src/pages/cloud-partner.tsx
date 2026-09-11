@@ -2,7 +2,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 import { TrustedObjectStorageSection } from '@/components/cloud-partner/TrustedObjectStorageSection';
 import { CloudPartnerText } from '@/assets/types/cloud-partner';
@@ -16,7 +16,7 @@ interface CloudPartnerProps {
   navbarText: NavigationBarText;
   textContent: CloudPartnerText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
   relationalLinksText: any;
 }
 
@@ -63,7 +63,7 @@ const CloudPartner = ({
   );
 };
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

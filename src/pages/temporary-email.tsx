@@ -53,6 +53,8 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
   );
 };
 
+// Esta página sigue siendo SSR: setup() de next-csrf necesita los headers de la
+// petición, que no existen en build. Se podrá convertir cuando se sustituya csrf.
 export const getServerSideProps = setup(async (ctx: GetServerSidePropsContext) => {
   const lang = ctx.locale || 'en';
 

@@ -1,9 +1,9 @@
 import { Photos, PhotosProps } from '@/components/templates/photosTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 const PhotosLP = (props: PhotosProps) => <Photos {...props} />;
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
   const navbarText = require(`@/assets/lang/${locale}/navbar.json`);

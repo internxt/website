@@ -637,12 +637,6 @@ export default function Footer({
                     <Link href="/cloud-data-centers" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.certifications}
                     </Link>
-                    <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -1616,12 +1610,6 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.certifications}
                       </Link>
-                      <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
-                    </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>

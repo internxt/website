@@ -1,7 +1,7 @@
 import { SustainabilityText } from '@/assets/types/sustainability';
 import { Database, GlobeHemisphereWest, Heart, Leaf, Sun } from '@phosphor-icons/react';
 
-export interface HeroSectionsProps {
+interface HeroSectionsProps {
   textContent: SustainabilityText['HeroSection'];
 }
 

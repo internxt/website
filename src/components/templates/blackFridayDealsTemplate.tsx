@@ -100,8 +100,6 @@ const BlackFridayDealsTemplate = ({
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
 
-      {lang==='en' && ( <div className="klaviyo-form-S8qPMC"></div> )}
-
       <PricingSectionWrapper
         textContent={textContent.TableSection}
         decimalDiscount={{
