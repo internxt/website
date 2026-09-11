@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Script from 'next/script';
 
 import {
@@ -23,7 +23,7 @@ import { stripeService } from '@/services/stripe.service';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
   textContent: IntegratedCheckoutText;
 }
 
@@ -308,7 +308,7 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
   );
 };
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale;
 
   const textContent = require(`@/assets/lang/${locale}/integrated-checkout.json`);

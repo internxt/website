@@ -50,7 +50,7 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const download = await downloadDriveLinks();
 
@@ -68,6 +68,8 @@ export async function getServerSideProps(ctx) {
       footerLang,
       download,
     },
+    // Los enlaces de descarga vienen de releases de GitHub: se refrescan por ISR.
+    revalidate: 3600,
   };
 }
 
