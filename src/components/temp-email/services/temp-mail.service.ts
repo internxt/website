@@ -2,6 +2,7 @@ import axios from 'axios';
 
 import { MessageObjProps, UserProps } from '../types/types';
 import rateLimitClientMiddleware from '@/components/utils/rate-limit';
+import { createAccount, getInbox, getMessage } from '@/lib/mail-tm';
 
 export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -12,36 +13,62 @@ export const SELECTED_MESSAGE = 'selectedMessage';
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
+const isUnreachable = (err: unknown) => axios.isAxiosError(err) && err.response === undefined;
+
+const withServerFallback = async <T>(direct: () => Promise<T>, viaServer: () => Promise<T>): Promise<T> => {
+  try {
+    return await direct();
+  } catch (err) {
+    if (!isUnreachable(err)) throw err;
+
+    return viaServer();
+  }
+};
+
 const fetchNewEmail = async (): Promise<UserProps> => {
   return rateLimitClientMiddleware(
     'create-email-limiter',
-    async () => {
-      const { data } = await axios.get<UserProps>('/api/temp-mail/create-email');
+    async () =>
+      withServerFallback(
+        () => createAccount(),
+        async () => {
+          const { data } = await axios.get<UserProps>('/api/temp-mail/create-email');
 
-      return data;
-    },
+          return data;
+        },
+      ),
     4,
   );
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  return rateLimitClientMiddleware('fetch-inbox-limiter', async () => {
-    const { data } = await axios.get<MessageObjProps[]>('/api/temp-mail/get-inbox', {
-      params: { email, token },
-    });
+  return rateLimitClientMiddleware('fetch-inbox-limiter', async () =>
+    withServerFallback(
+      () => getInbox(email, token),
+      async () => {
+        const { data } = await axios.get<MessageObjProps[]>('/api/temp-mail/get-inbox', {
+          params: { email, token },
+        });
 
-    return data;
-  });
+        return data;
+      },
+    ),
+  );
 };
 
 const getMessageData = async (email: string, token: string, messageId: string): Promise<MessageObjProps> => {
-  return rateLimitClientMiddleware('get-message-limiter', async () => {
-    const { data } = await axios.get<MessageObjProps>('/api/temp-mail/get-message', {
-      params: { email, token, messageId },
-    });
+  return rateLimitClientMiddleware('get-message-limiter', async () =>
+    withServerFallback(
+      () => getMessage(email, token, messageId),
+      async () => {
+        const { data } = await axios.get<MessageObjProps>('/api/temp-mail/get-message', {
+          params: { email, token, messageId },
+        });
 
-    return data;
-  });
+        return data;
+      },
+    ),
+  );
 };
 
 const fetchAndFormatInbox = async (email: string, userToken: string): Promise<MessageObjProps[] | undefined> => {
