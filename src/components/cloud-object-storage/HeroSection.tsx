@@ -2,8 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { getImage } from '@/lib/getImage';
+import { PromoCodeName } from '@/lib/types';
 
-export const HeroSection = ({ textContent }) => {
+export const HeroSection = ({ textContent, couponCode }: { textContent; couponCode?: PromoCodeName }) => {
+  const checkoutUrl = couponCode
+    ? `/cloud-object-storage/checkout?couponCode=${couponCode}`
+    : '/cloud-object-storage/checkout';
+
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 pt-28 lg:flex-row lg:gap-16 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
@@ -25,7 +30,7 @@ export const HeroSection = ({ textContent }) => {
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <div className="flex flex-row gap-4">
           <Link
-            href="/cloud-object-storage/checkout"
+            href={checkoutUrl}
             className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
           >
             {textContent.cta}

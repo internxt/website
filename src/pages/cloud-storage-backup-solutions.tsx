@@ -75,7 +75,7 @@ const CloudStorageBackupSolutions = ({
     {
       imageUrl: '/images/cloud-storage-backup-solutions/internxt_s3.webp',
       animationDirection: 'left',
-      redirect: '/cloud-object-storage/checkout',
+      redirect: `/cloud-object-storage/checkout?couponCode=${PromoCodeName.seolp}`,
       textContent: textContent.WhatWeDo.square2,
     },
   ];
