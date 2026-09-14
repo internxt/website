@@ -1,11 +1,8 @@
-import { Slider } from '@mui/material';
-import { ReactNode } from 'react';
-
 interface PricingRangeSliderProps {
   max: number;
   min?: number;
-  color?: string;
-  valueLabelFormat: (value: number, index: number) => ReactNode;
+  value: number;
+  onChange: (value: number) => void;
   rangeItems: string[];
 }
 
@@ -13,8 +10,8 @@ export const RangeSlider = ({
   max,
   min = 0,
   rangeItems,
-  valueLabelFormat,
-  color,
+  value,
+  onChange,
 }: PricingRangeSliderProps): JSX.Element => {
   return (
     <div className="flex w-full max-w-[840px] flex-col gap-2">
@@ -25,15 +22,15 @@ export const RangeSlider = ({
           </span>
         ))}
       </div>
-      <Slider
+      <input
+        type="range"
         aria-label="Storage"
-        className={color ? `text-${color}` : 'text-primary'}
-        defaultValue={0}
-        valueLabelDisplay="auto"
-        valueLabelFormat={valueLabelFormat}
+        className="flex w-full cursor-pointer accent-primary"
+        value={value}
         step={1}
         min={min}
         max={max}
+        onChange={(e) => onChange(Number(e.target.value))}
       />
     </div>
   );

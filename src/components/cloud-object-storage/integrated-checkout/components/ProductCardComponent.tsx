@@ -103,6 +103,7 @@ export const ProductFeaturesComponent = ({
                   {textContent.addCoupon.buttonTitle}
                 </button>
                 <Transition
+                  as="div"
                   show={openCouponCodeDropdown}
                   className="left-0"
                   enter="transition duration-50 ease-out"

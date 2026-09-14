@@ -124,16 +124,6 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
 
   const maxPrice = Math.max(costs.internxt.cost, costs.azure.cost, costs.aws.cost, costs.google.cost);
 
-  function storageAmountValueLabelFormat(itemValue: number) {
-    setStorageAmountValue(itemValue);
-    return itemValue;
-  }
-
-  function percentDownloadValueLabelFormat(percentage: number) {
-    setPercentDownloadValue(percentage);
-    return percentage;
-  }
-
   return (
     <section className="hidden overflow-hidden bg-neutral-17 px-5 py-20 lg:flex">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
@@ -167,7 +157,13 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               <p className="font-medium text-gray-100">{textContent.storageAmount}</p>
 
               <div className="flex flex-row items-end gap-4">
-                <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} />
+                <RangeSlider
+                  min={1}
+                  max={10240}
+                  rangeItems={[]}
+                  value={storageAmountValue}
+                  onChange={setStorageAmountValue}
+                />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
                   <p className="font-medium text-gray-100">{storageAmountValue}TB</p>
                 </div>
@@ -175,7 +171,13 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
 
               <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
               <div className="flex flex-row items-end gap-4">
-                <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
+                <RangeSlider
+                  min={1}
+                  max={100}
+                  rangeItems={[]}
+                  value={percentDownloadValue}
+                  onChange={setPercentDownloadValue}
+                />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
                   <p className="font-medium text-gray-100">{percentDownloadValue}%</p>
                 </div>

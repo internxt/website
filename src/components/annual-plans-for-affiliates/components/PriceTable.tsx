@@ -72,6 +72,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
         {/* Render cards */}
         <Transition
+          as="div"
           id="payment"
           show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"
