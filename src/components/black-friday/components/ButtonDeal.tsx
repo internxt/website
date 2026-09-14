@@ -11,6 +11,7 @@ const ButtonDeal = ({ lang }) => {
     it: 'Scegli un piano',
     zh: '选择一个计划',
     'zh-tw': '選擇一個計劃',
+    'pt-br': 'Escolha um plano',
   };
   const selectedText = translations[lang] || translations.en;
   return (

@@ -1,0 +1,186 @@
+{
+  "heroSection": {
+    "title": "O que as pessoas estão **dizendo** sobre a Internxt",
+    "subtitle": "Descubra por que as pessoas confiam seus dados à Internxt",
+    "features": [
+      "Conjunto completo de privacidade",
+      "Criptografia pós-quântica",
+      "Código aberto e auditado"
+    ],
+    "cta": "Obtenha a Internxt"
+  },
+  "ReviewSection": {
+    "forbes": "A Internxt consolida sua posição como alternativa europeia às gigantes da tecnologia",
+    "deloitte": "Recebeu o prêmio Deloitte Fast 50, que reconhece as empresas que mais crescem",
+    "techradar": "A Internxt é um excelente serviço de armazenamento em nuvem: acessível, intuitivo e confiável",
+    "fortune": "A Internxt está construindo uma internet em que privacidade e segurança vêm em primeiro lugar",
+    "trustpilot": "Custo-benefício excepcional considerando a segurança e os recursos oferecidos. Serviço e suporte excelentes."
+  },
+  "ReviewFromIndustrySection": {
+    "title": "Avaliações de especialistas do setor e de usuários",
+    "description": "A Internxt tem mais de 1 milhão de usuários satisfeitos, que avaliaram o serviço com 4 de 5 estrelas ",
+    "underStars": "Google Reviews",
+    "reviewers": {
+      "reviewers": {
+        "Trustpilot": "Trustpilot",
+        "Techexperts": "Especialistas em tecnologia"
+      },
+      "TruspilotReviews": {
+        "reviews": [
+          "Migrei meus arquivos do Google Drive para a Internxt porque finalmente queria privacidade de verdade. Com criptografia pós-quântica e de conhecimento zero, sei que ninguém além de mim pode acessar meus dados.",
+          "Guardar meus arquivos na Internxt é livre de estresse. Ótima privacidade, servidores confiáveis na UE e código aberto me deixam tranquilo de que meus arquivos estão seguros e privados.",
+          "Adoro que a Internxt tenha tomado a iniciativa de tornar o serviço à prova de ataques de computadores quânticos; isso me faz sentir realmente seguro. Minha experiência com o suporte também foi satisfatória, pois responderam muito rápido. Estou muito feliz com a Internxt.",
+          "Gosto muito de como a Internxt é transparente. O código aberto mostra que eles não têm nada a esconder, o que me faz confiar ainda mais neles com meus dados.",
+          "Uma empresa que nunca decepciona. Privacidade e segurança online estão entre minhas prioridades, e é por isso que uso a Internxt há vários anos. Eles estão sempre buscando crescer e melhorar, cuidando do usuário e oferecendo um excelente atendimento ao cliente.",
+          "O código aberto da Internxt, disponível no GitHub, garante total transparência. Os usuários podem verificar a segurança do serviço, o que reforça a confiança em uma plataforma comprometida com a privacidade e a integridade.",
+          "Atendimento personalizado excelente na hora de contratar o plano oferecido. Comunicação tranquila por e-mail e fácil de usar. O aspecto da privacidade é, claro, incrível e confiável. Super recomendo.",
+          "Suporte muito bom. Resolveram meus problemas de forma profissional, gentil e muito eficiente. Compre o plano vitalício e aproveite.",
+          "Sinceramente, a Internxt é supersimples de usar. Instalei e em um minuto já estava enviando minhas coisas. Não foi nada complicado, e eu valorizo isso."
+        ],
+        "authors": [
+          "Brian Carter",
+          "Fiona Nelson",
+          "Jose Maria GL",
+          "Ethan Foster",
+          "Guillermo Gwebs",
+          "Brian Jimenez",
+          "Juan",
+          "doMfree",
+          "Javier Caldea"
+        ]
+      }
+    },
+    "TechReviews": {
+      "titles": [
+        "Armazenamento fantasticamente acessível",
+        "Um provedor de nuvem que leva a privacidade e a segurança a sério",
+        "A Internxt oferece excelente segurança e privacidade"
+      ],
+      "description": [
+        "A combinação intuitiva de acesso web, sincronização de arquivos e backup (espelhamento) da Internxt é impressionante. No entanto, os planos vitalícios incrivelmente acessíveis são de longe o aspecto mais notável.",
+        "A Internxt é um excelente serviço de armazenamento em nuvem graças aos seus planos de preços acessíveis, à interface intuitiva e ao suporte confiável. Ela se destaca nas medidas de segurança e no compromisso com a privacidade, o que a torna uma das melhores escolhas.",
+        "A Internxt é uma solução de armazenamento em nuvem focada em privacidade que oferece criptografia no lado do cliente, segurança pós-quântica, software de código aberto e servidores na UE, entregando armazenamento seguro e em conformidade com um excelente custo-benefício."
+      ],
+      "authors": [
+        "Jon Jacobi - {{company}}",
+        "Craig Hale - {{company}}",
+        "Aleksandar Kochovski - {{company}}"
+      ]
+    },
+    "readMore": "Leia mais avaliações no Trustpilot"
+  },
+  "videoSection": {
+    "company": "Cloudwards",
+    "description": "31,6 mil inscritos"
+  },
+  "supportSection": {
+    "title": "Suporte sempre que você precisar",
+    "description": "Precisa de ajuda? A Internxt oferece atendimento ao cliente ao vivo para apoiar você no que for preciso.",
+    "cards": {
+      "card1": {
+        "title": "Equipe de atendimento ao cliente",
+        "description": "Nossa equipe experiente de atendimento está aqui para ajudar você a configurar sua conta Internxt e com qualquer outra coisa que precisar, para que você tenha a melhor experiência possível."
+      },
+      "card2": {
+        "title": "Central de ajuda completa",
+        "description": "Encontre o que precisa em nossa central de ajuda, com tutoriais passo a passo, respostas para dúvidas comuns e soluções rápidas de problemas, facilitando que você aproveite ao máximo a Internxt."
+      }
+    }
+  },
+  "ctaSection": {
+    "title": "Pronto para mudar para a privacidade?",
+    "description": "Junte-se a 1.000.000 de usuários satisfeitos que se afastaram das Big Tech",
+    "cta": "Obtenha a Internxt"
+  },
+  "tableSection": {
+    "title": "Planos da Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Escolha seu plano",
+      "lifetimeHeader": "Escolha seu plano vitalício",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano certo para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total ao nosso conjunto de privacidade premiado, composto por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento estamos desenvolvendo novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Atendimento premium ao cliente",
+      "guarantee": "Garantia de reembolso em 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "A Internxt pode acessar meus arquivos?",
+        "answer": [
+          "Não. A Internxt, assim como qualquer outro terceiro, não pode acessar seus arquivos, suas fotos ou seus dados.",
+          "Os serviços da Internxt contam com criptografia de conhecimento zero, o que significa que somente você pode acessar e descriptografar seus dados e informações privadas. Além disso, a Internxt usa criptografia pós-quântica, a tecnologia mais avançada disponível para proteger suas informações de qualquer ameaça. "
+        ]
+      },
+      {
+        "question": "A Internxt armazena minha senha?",
+        "answer": [
+          "Não. Sendo assim, a Internxt não pode armazenar sua senha.",
+          "Sua senha da Internxt é exclusiva sua e é usada para criptografar e descriptografar seus dados na Internxt. Mas, se quiser alterar sua senha, você pode fazer isso pelo nosso aplicativo."
+        ]
+      },
+      {
+        "question": "Posso ativar a autenticação de dois fatores (2FA)?",
+        "answer": [
+          "Sim. Você pode configurar a autenticação de dois fatores para sua conta pelo aplicativo web da Internxt.",
+          "Você também pode usar o Authy ou outras ferramentas de 2FA para gerar um código pessoal de 2FA com a Internxt."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar por PayPal, criptomoedas e Klarna.",
+          "Mediante solicitação, também aceitamos criptomoedas. Se tiver dúvidas sobre formas de pagamento, basta nos enviar um e-mail para [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "Todas as assinaturas pagas incluem garantia de reembolso de 30 dias a partir da data da compra.",
+          "Se, por qualquer motivo, você não ficar totalmente satisfeito nesses primeiros 30 dias, basta entrar em contato pelo [hello@internxt.com](mailto:hello@internxt.com) que processaremos seu reembolso."
+        ]
+      },
+      {
+        "question": "Como posso entrar em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode falar com nossa equipe de suporte técnico pelo chat ao vivo ou enviando um e-mail para [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "HeroSection": {
+    "title": "Garanta um plano vitalício Internxt!",
+    "description": "Proteja todos os seus arquivos e memórias para sempre com um único pagamento.",
+    "cta": "Resgatar código"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Criar uma conta Internxt",
+      "or": "ou",
+      "login": "Entrar",
+      "disclaimer": {
+        "text": "Ao criar uma conta, você aceita os",
+        "link": "termos e condições"
+      },
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "strength": {
+            "complexity": "A senha não é complexa o suficiente",
+            "length": "A senha precisa ter pelo menos 8 caracteres",
+            "weak": "Senha fraca",
+            "strong": "Senha forte"
+          }
+        },
+        "submit": "Começar"
+      }
+    },
+    "LogIn": {
+      "title": "Entrar na Internxt",
+      "or": "ou",
+      "signup": "Criar conta",
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "helper": "Esqueceu sua senha?"
+        },
+        "tfa": {
+          "label": "Autenticação de dois fatores",
+          "placeholder": "Código 2FA",
+          "hint": "O código 2FA deve ter 6 dígitos"
+        },
+        "submit": "Entrar"
+      }
+    },
+    "Recover": {
+      "title": "Recuperar conta",
+      "back": "Voltar para o login",
+      "disclaimer": "Conforme indicado nas configurações do aplicativo, somente você tem acesso à sua senha e, por isso, não conseguimos restaurar sua conta sem ela. Você pode se cadastrar novamente inserindo seu e-mail abaixo para que possamos excluir sua conta e todos os seus arquivos.",
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "submit": "Enviar e-mail de confirmação"
+      },
+      "success": {
+        "title": "Verifique seu e-mail",
+        "subtitle": "Enviamos um link de redefinição de conta para"
+      }
+    }
+  },
+  "PriceTable": {
+    "title": "Conheça todos os nossos planos vitalícios exclusivos",
+    "subtitle": "Compre uma vez e tenha privacidade e segurança para sempre.",
+    "priceCard": {
+      "mostPopular": "Mais popular",
+      "billedAnnually": "Cobrado anualmente",
+      "cta": "Resgatar código",
+      "features": {
+        "200GB": [
+          "200GB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "2TB": [
+          "2TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "5TB": [
+          "5TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "10TB": [
+          "10TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ]
+      }
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "Oferta por tempo limitado!",
+    "title": {
+      "blueText": "",
+      "normalText": "Conheça todos os nossos planos vitalícios exclusivos"
+    },
+    "description": "Compre uma vez e tenha privacidade e segurança para sempre.",
+    "normalSection": {
+      "title": "Conheça todos os nossos planos vitalícios exclusivos",
+      "description": "Só esta semana: compre uma vez e tenha privacidade e segurança para sempre."
+    },
+    "securePayment": "Pagamento 100% seguro, com tecnologia Stripe",
+    "firstFeed": "Garantia de reembolso de 30 dias",
+    "secondFeed": "Pagamento 100% seguro",
+    "thirdFeed": "Criação de conta anônima"
+  },
+  "GetLifetimeSection": {
+    "title": "A vida não é curta! Mas esta oferta por tempo limitado é...",
+    "description": "A Internxt está com uma oferta de uma semana para uma vida inteira de privacidade e tranquilidade."
+  },
+  "FeatureSection": {
+    "title": "Armazenamento em nuvem seguro com privacidade incomparável",
+    "description": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais totalmente dedicada a proteger você na internet. Tudo o que fazemos e cada decisão que tomamos giram em torno de impedir que seus dados sejam explorados.",
+    "cta": "O compromisso da Internxt com a privacidade",
+    "cards": [
+      {
+        "title": "Privado por concepção",
+        "description": "Não armazenamos senhas nem dados de usuários, e todas as suas informações são criptografadas em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos. Seus dados são assunto seu. Protegê-los é o nosso."
+      },
+      {
+        "title": "Segurança sem concessões",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de sair do seu dispositivo. Graças à criptografia AES-256 de conhecimento zero, você é absolutamente a única pessoa com acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser analisado, auditado e verificado por qualquer pessoa. Não temos nada a esconder além dos seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Estamos totalmente em conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar só na nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Seus arquivos seguros e privados para sempre",
+    "description": "Tratamos nossos usuários como família, e família é para sempre!",
+    "cta": "Escolha um plano agora"
+  }
+}

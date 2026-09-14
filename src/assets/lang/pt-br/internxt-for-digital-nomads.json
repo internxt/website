@@ -1,0 +1,48 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "nômades digitais ",
+      "normalText": "conquistam a liberdade de trabalhar de qualquer lugar"
+    },
+    "description": "O número de nômades digitais disparou em todo o mundo e, embora esse ainda seja um fenômeno relativamente novo, o estilo de vida nômade digital veio para ficar. Por isso, gerenciar ferramentas de informação é essencial para proteger o trabalho deles.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "Internxt_for_digital_nomads.webp",
+      "alt": "Internxt para nômades digitais"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "Os nômades digitais enfrentam os mesmos problemas ao longo deste estudo de caso, independentemente de suas preferências de viagem, sobretudo em relação à segurança e à privacidade online. Mudar de uma região para outra expõe os nômades digitais a ataques cibernéticos e vazamentos de dados. Embora muitos nômades digitais usem uma rede privada virtual para se proteger, são necessárias mais medidas para reduzir os riscos de perda de dados ou ataques cibernéticos.",
+        "Os nômades digitais costumam lidar com custos imprevistos, esgotamento, condições de moradia desconhecidas, preocupações com a renda a longo prazo, vistos, impostos, solidão e furtos. Além disso, sem medidas adequadas para proteger e fazer backup dos dados de forma eficiente, os nômades digitais também correm o risco de perder seus dados ou sua privacidade.",
+        "Outro desafio que este caso de uso precisa considerar é o rastreamento de localização. Como os nômades digitais estão sempre em movimento, seus dados têm mais chances de serem coletados, rastreados e vendidos. O monitoramento online é uma das formas mais polêmicas de violação de privacidade, por isso manter esses dados protegidos de terceiros é fundamental para este estudo de caso."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "A Internxt facilita que os nômades digitais usem o armazenamento em nuvem para guardar seus arquivos de trabalho ou documentos.",
+        "Os recursos de backup oferecem aos nômades digitais uma opção segura e confiável caso percam os arquivos armazenados. Uma opção de backup confiável garante que os nômades digitais não percam informações de trabalho essenciais ou sensíveis e possam restaurar dados importantes de forma fácil e rápida sempre que necessário.",
+        "O armazenamento em nuvem elimina as preocupações com as soluções de backup tradicionais, como pen drives e discos rígidos. As mídias físicas trazem riscos maiores de corrupção de dados, furto ou quebra do dispositivo; se algo acontecer com o aparelho, os dados são praticamente perdidos para sempre.",
+        "A Internxt resolve isso para os nômades digitais ao estar acessível em todos os dispositivos, de Windows, MacOS, Android, iOS e Linux, eliminando a necessidade de dispositivos de armazenamento físicos volumosos e caros.",
+        "A maioria dos nômades digitais está mais familiarizada com tecnologia e com a ideia de usar armazenamento em nuvem do que em outros estudos de caso; ainda assim, a Internxt projetou sua interface para ser clara, simples e fácil de usar para todos. O foco na facilidade de uso permite que este caso de uso se concentre em outros benefícios para os nômades digitais.",
+        "Um plano Internxt permite que os usuários compartilhem arquivos com o restante da equipe de trabalho e colaborem neles de qualquer lugar. Também facilita o aprendizado e o treinamento remotos, tornando a comunicação entre departamentos mais simples, escalando o processo de aprendizagem e acompanhando a produtividade dentro da equipe."
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "Os nômades digitais usam o armazenamento em nuvem da Internxt para guardar arquivos, calendários, modelos, cronogramas e muito mais a partir de qualquer dispositivo. Como resultado, seu processo de trabalho fica mais fácil de gerenciar, e a produtividade e a eficiência melhoram drasticamente graças à facilidade de colaboração e compartilhamento de arquivos com seus clientes ou dentro da empresa.",
+        "A nuvem da Internxt permite que façam isso com segurança, o que ajuda a reduzir a preocupação de se tornarem vítimas de phishing, malware ou ransomware, as três principais ameaças que podem corromper, danificar ou roubar os dados e arquivos sensíveis de um nômade digital."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt: seu passaporte para a privacidade online",
+    "description": "Proteja seu trabalho, onde quer que você esteja.",
+    "cta": "Faça a mudança para a privacidade"
+  }
+}

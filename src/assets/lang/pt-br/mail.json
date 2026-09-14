@@ -1,0 +1,129 @@
+{
+  "HeroSection": {
+    "label": "Internxt Mail",
+    "title": "O melhor e-mail criptografado",
+    "description": "A Internxt mantém seus e-mails privados e seguros com uma criptografia ultrapotente.",
+    "cta": "Obtenha o Internxt Mail",
+    "garantee": "Incluído nos planos Ultimate"
+  },
+  "DriveSection": {
+    "title": "Internxt Mail",
+    "description": [
+      "Mantenha seus e-mails privados com o Internxt Mail, um e-mail seguro e criptografado projetado para a sua privacidade.",
+      "Desenvolvido com software de código aberto e criptografia pós-quântica, seus e-mails ficam protegidos de espiões digitais e hackers, e as big techs não conseguem monitorar você online."
+    ]
+  },
+  "CoreFeatures": {
+    "title": "A alternativa de e-mail mais segura às Big Tech",
+    "descriptions": [
+      "Junte-se à Internxt na construção de uma web mais segura e privada com nosso conjunto de produtos criptografados, criado para dar a você o controle da sua privacidade.",
+      "Aproveite Mail, Meet, Antivirus e VPN como parte do seu plano Internxt Drive no Windows, no Mac ou no Linux."
+    ],
+    "accordionCards": {
+      "titles": [
+        "Privacidade europeia",
+        "Segurança",
+        "Sustentabilidade"
+      ],
+      "descriptions": [
+        "A Internxt está em conformidade com o GDPR, que protege seus dados com as melhores leis de privacidade em termos de segurança, transparência e controle sobre suas informações pessoais.",
+        "A Internxt usa criptografia de ponta a ponta e pós-quântica, oferecendo a você o melhor e-mail criptografado para sua privacidade.",
+        "Temos o compromisso com um futuro mais sustentável e verde, por isso nossos produtos usam apenas tecnologias de energia renovável e eficiente."
+      ]
+    }
+  },
+  "MailFeatureSection": {
+    "title": "E-mail criptografado construído com tecnologia avançada",
+    "description": "O Internxt Mail usa criptografia pós-quântica e de conhecimento zero de última geração para proteger seu direito à privacidade e aos seus dados, garantindo que somente você possa ver seus e-mails. Com a Internxt, apenas você visualiza seus e-mails e anexos.",
+    "scrollableSection": {
+      "titles": [
+        "Criptografia pós-quântica",
+        "Zero rastreadores, zero anúncios",
+        "Protegido contra spam e phishing",
+        "Código aberto e auditado"
+      ],
+      "descriptions": [
+        "A criptografia pós-quântica avançada oferece segurança máxima, proporcionando a você o e-mail mais seguro e preparado para o futuro da sua segurança online.",
+        "Aproveite uma experiência de e-mail segura e sem anúncios. Chega de rastreamento e de anúncios personalizados perseguindo você pela web. Apenas comunicação pura e privada.",
+        "O Internxt Mail identifica e bloqueia phishing, spam e e-mails indesejados, mantendo sua caixa de entrada limpa, organizada e livre de ameaças aos seus dados.",
+        "Todos os nossos produtos, incluindo o Internxt Mail, são de código aberto, auditados de forma independente e verificados por sua criptografia premiada."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Seu e-mail. Seus assuntos.",
+    "description": "Envie e receba e-mails com total privacidade",
+    "cta": "Obtenha o Internxt Mail"
+  },
+  "CtaSectionV2": {
+    "title": "O e-mail privado em que você pode confiar",
+    "description": "Envie e-mails com a confiança total de que ninguém está espionando você.",
+    "cta": "Obtenha o Internxt Mail"
+  },
+  "DesignedSection": {
+    "title": "Uma solução de e-mail seguro projetada para privacidade absoluta",
+    "description": "Acreditamos que todos têm direito à privacidade, e é por isso que o Internxt Mail foi criado para atender às necessidades de quem precisa de um provedor de e-mail seguro.",
+    "scrollableSection": {
+      "images": [
+        "personal",
+        "business",
+        "lawyers",
+        "medical"
+      ],
+      "titles": [
+        "Pessoal",
+        "Empresas",
+        "Advogados",
+        "Área médica"
+      ],
+      "descriptions": [
+        "E-mail criptografado que mantém todas as suas mensagens e anexos privados.",
+        "Previna vazamentos de dados e phishing com e-mails criptografados e privados.",
+        "E-mail criptografado e em conformidade com o GDPR para evitar vazamentos de dados sensíveis.",
+        "Envie e-mails para compartilhar e discutir informações com total privacidade e proteger o sigilo profissional com seus clientes."
+      ]
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Dúvidas sobre o Internxt Mail? Temos as respostas",
+    "items": [
+      {
+        "question": "O que é o Internxt Mail?",
+        "answer": [
+          "O Internxt Mail é o melhor e-mail criptografado para enviar mensagens privadas. Com o Internxt Mail, garantimos que ninguém além de você possa acessar suas mensagens ou anexos, todos protegidos com criptografia pós-quântica e de conhecimento zero."
+        ]
+      },
+      {
+        "question": "Por que eu deveria usar um e-mail criptografado?",
+        "answer": [
+          "Um e-mail criptografado previne vazamentos de dados e protege seu direito à privacidade, já que todos os seus dados ficam inacessíveis para qualquer pessoa além de você. Com o Internxt Mail,  você pode enviar com confiança informações de negócios, mensagens pessoais ou documentos confidenciais graças aos nossos protocolos avançados de criptografia."
+        ]
+      },
+      {
+        "question": "O Internxt Mail é uma alternativa ao Gmail?",
+        "answer": [
+          "Sim, o Internxt Mail é uma alternativa segura ao Gmail, pois você é quem detém as chaves de criptografia dos e-mails que envia. Em contrapartida, o Gmail mantém essas chaves em seus servidores, usados para armazenar as mensagens. Eles podem ler o conteúdo ou entregá-lo às autoridades caso solicitado, já que não são um serviço de conhecimento zero."
+        ]
+      },
+      {
+        "question": "O Internxt Mail é gratuito?",
+        "answer": [
+          "O Internxt Mail está disponível ao assinar qualquer um dos nossos planos premium, que oferecem acesso a todo o nosso conjunto de produtos focados em privacidade, incluindo Internxt Drive, Mail, Antivirus e VPN."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode falar com nossa equipe de Customer Success pelo chat ao vivo ou enviando um e-mail para hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "A Internxt oferece a garantia padrão de reembolso em 30 dias em todas as suas assinaturas pagas, com a contagem começando no momento em que você assina.",
+          "Se em algum momento você não estiver satisfeito com nosso serviço, envie um e-mail para hello@internxt.com e solicite o reembolso."
+        ]
+      }
+    ]
+  }
+}

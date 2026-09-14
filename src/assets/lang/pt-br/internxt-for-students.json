@@ -1,0 +1,49 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "estudantes ",
+      "normalText": "se preparam e se mantêm organizados"
+    },
+    "description": "Os estudantes precisam de um ponto de acesso seguro e acessível aos seus arquivos para trabalhar, compartilhar e colaborar com outras pessoas. Para reduzir os riscos de perder seus trabalhos, os estudantes podem usar o armazenamento em nuvem para organizar suas tarefas e mantê-las privadas.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "Internxt_for_students.webp",
+      "alt": "Internxt para estudantes"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "Antigamente, os estudantes dependiam de discos rígidos ou pen drives para armazenar seus dados, mas isso trazia o risco de esquecer ou perder o dispositivo e ficar sem nada para apresentar. Além disso, por se deslocarem regularmente de casa para a escola e entre as salas de aula, os estudantes correm ainda mais risco de terem seus dispositivos roubados, corrompidos ou quebrados.",
+        "Há muitos provedores de armazenamento em nuvem disponíveis no mercado hoje, e vários dos mais populares oferecem infinitas opções de colaboração e integrações extremamente úteis em um ambiente estudantil.",
+        "No entanto, nem todas as nuvens de armazenamento têm opções seguras de criptografia, e as que têm podem não operar com tecnologia de conhecimento zero, o que significa que o provedor de armazenamento detém a chave para descriptografar e ver os arquivos ou dados de um estudante.",
+        "A falta de criptografia também gera problemas para a escola ou universidade e seus funcionários, já que essas instituições guardam informações pessoais identificáveis (PII) de estudantes que podem ter apenas 11 anos. Outras informações sensíveis, como e-mails, endereços e telefones de alunos e professores, também ficam em risco na área da educação se não forem protegidas de forma eficiente."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "Os estudantes precisam de um canal seguro para transferir arquivos entre colegas e professores sem o risco de que um terceiro, seja um hacker ou outro aluno, roube ou plagie seus trabalhos.",
+        "Este estudo de caso destaca a eficácia de um plano Internxt como forma de permitir que os usuários compartilhem documentos criptografados em repouso e em trânsito, que podem ser protegidos ainda mais restringindo o acesso e as permissões aos arquivos, possibilitando uma colaboração segura com os colegas de classe.",
+        "Com a tranquilidade de saber que seu trabalho está seguro, os estudantes podem se concentrar em produzir com uma conta Internxt e aproveitar a coordenação com professores e colegas, usando ferramentas de colaboração, incentivando o diálogo, otimizando a organização escolar e compartilhando ideias.",
+        "Os estudantes podem aproveitar essas vantagens fora do ambiente escolar ou universitário, de modo que, se precisarem trabalhar de casa ou em um projeto mais tarde, a Internxt lhes dá essa flexibilidade no trabalho.",
+        "Muitos casos de uso destacam que o custo do armazenamento em nuvem seguro pode ser um problema para os estudantes, já que é mais uma despesa a caber no orçamento. Com a Internxt, os estudantes têm direito a um desconto especial em qualquer plano de assinatura Internxt. Entre em contato conosco se você tiver direito!"
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "Um provedor de armazenamento em nuvem seguro beneficia os estudantes porque eles podem enviar e compartilhar documentos de forma privada com seus colegas ou companheiros de turma.",
+        "A Internxt torna possível armazenar e compartilhar arquivos criptografados e acessá-los de qualquer dispositivo com segurança. Ela facilita a comunicação diária entre estudantes, professores e pais e está alinhada às regras do sistema educacional para a proteção dos dados dos alunos.",
+        "A importância de qualquer caso de uso na educação mostra que, à medida que a tecnologia cresce dentro da sala de aula, ela se torna mais essencial para a experiência de aprendizagem do aluno. As escolas que usam a Internxt garantem que o futuro da educação continue privado e seguro para estudantes, professores e pais."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Mergulhe nos estudos e proteja seus arquivos com a Internxt",
+    "description": "Garanta seu desconto de estudante.",
+    "cta": "Experimente a Internxt sem riscos"
+  }
+}

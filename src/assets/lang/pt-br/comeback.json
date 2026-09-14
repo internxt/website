@@ -1,0 +1,186 @@
+{
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "A Internxt pode acessar meus arquivos?",
+        "answer": [
+          "Não. A Internxt, assim como qualquer outro terceiro, não pode acessar seus arquivos, fotos ou dados.",
+          "Os serviços da Internxt contam com criptografia de conhecimento zero, ou seja, apenas você pode realmente acessar seus dados privados. Além disso, a arquitetura da Internxt fragmenta seus arquivos antes de criptografá-los, de modo que um servidor nunca guarda um arquivo inteiro, apenas um fragmento criptografado dele, que só você consegue descriptografar."
+        ]
+      },
+      {
+        "question": "A Internxt armazena minha senha?",
+        "answer": [
+          "Não. A Internxt não armazena (e nem consegue armazenar) sua senha.",
+          "Sua senha Internxt é exclusiva e serve para criptografar e descriptografar seus dados na Internxt. Mas, se quiser alterá-la, você pode fazer isso pelo nosso aplicativo."
+        ]
+      },
+      {
+        "question": "Posso ativar a 2FA?",
+        "answer": [
+          "Sim. Você pode configurar a autenticação de dois fatores para sua conta pelo aplicativo web da Internxt.",
+          "Você também pode usar o Authy ou qualquer outra ferramenta de 2FA para gerar um código 2FA pessoal com a Internxt."
+        ]
+      },
+      {
+        "question": "Como crio uma conta Internxt?",
+        "answer": [
+          "Para criar uma conta Internxt gratuita, basta clicar no plano ideal acima e seguir as instruções.",
+          "Ou acesse nossa página inicial e clique em “Começar”. Você recebe na hora 1GB de armazenamento gratuito para sempre com uma assinatura gratuita da Internxt. Você pode usar essa assinatura gratuita para acessar todos os nossos serviços. Para se cadastrar, basta informar seu nome e e-mail. Não é necessário verificar identidade nem e-mail para começar a usar os serviços da Internxt."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar via PayPal, iDEAL, Sofort e criptomoedas."
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "Todas as assinaturas pagas incluem garantia de reembolso de 30 dias a partir da data da compra.",
+          "Se por qualquer motivo você não ficar totalmente satisfeito nesses primeiros 30 dias, basta escrever para [hello@internxt.com](mailto:hello@internxt.com) e processaremos seu reembolso."
+        ]
+      },
+      {
+        "question": "Como cancelo minha assinatura?",
+        "answer": [
+          "Cancelar sua assinatura é simples. Abra o aplicativo Internxt, vá até as configurações e selecione 'Cancelar assinatura'. Essa ação encerra sua assinatura imediatamente, e sua conta volta para o plano gratuito.",
+          "Observe que o tempo restante da sua assinatura paga atual não será reembolsado nem transferido. Por exemplo, se você cancelar um plano de um ano com quatro meses restantes, perderá o acesso a esses quatro meses.",
+          "Você também pode cancelar um plano pago e sua conta Internxt nas configurações, o que apagará sua assinatura, sua conta e todos os seus arquivos."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode falar com nossa equipe de Sucesso do Cliente pelo chat ao vivo ou enviando um e-mail para [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "A Internxt tem planos vitalícios?",
+        "answer": [
+          "Oferecemos planos vitalícios que você pode comprar em nosso site. Eles garantem acesso vitalício aos nossos planos, com até 10TB de armazenamento por um único pagamento."
+        ]
+      },
+      {
+        "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
+        "answer": [
+          "Sim, você pode adicionar quanto armazenamento quiser à sua assinatura vitalícia Internxt. Os planos vitalícios da Internxt são acumuláveis. Basta comprá-los com o mesmo endereço de e-mail e entrar em contato conosco pelo hello@internxt.com para que possamos juntá-los na mesma conta."
+        ]
+      }
+    ]
+  },
+  "FirstFeaturesSection": {
+    "title": "Por que escolher a Internxt?",
+    "subtitle": "A Internxt devolve a você o controle dos seus dados com criptografia de conhecimento zero e nível militar. ",
+    "description": "Usamos código aberto, permitindo a verificação independente das nossas práticas de segurança. A Internxt dá a você o poder de ser dono dos seus dados, oferecendo privacidade e tranquilidade incomparáveis.",
+    "cta": "Escolher armazenamento"
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Centenas de milhares de pessoas estão trocando iCloud, Google Drive e Dropbox pelo ",
+      "blue": "armazenamento em nuvem mais seguro: o Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Jornalista da FixThePhoto.com",
+        "review": "A Internxt é um serviço de armazenamento em nuvem prático para clientes preocupados com a privacidade. Tem uma interface enxuta e uma equipe de suporte confiável, o que a torna uma ótima opção para quem precisa guardar seus arquivos com segurança."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Avaliação no GetApp",
+        "review": "A melhor alternativa criptografada ao Dropbox. No geral: precisávamos de uma alternativa que nos permitisse guardar arquivos de clientes e de trabalho (arquivos de redes sociais) e, como a Internxt está em conformidade com o GDPR, ela caiu como uma luva para nós!"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Avaliação no Trustpilot",
+        "review": "Usei o Google Drive por vários anos, mas precisava de uma alternativa que me garantisse a privacidade dos meus dados. Algo que o Google ou outras plataformas conhecidas não conseguem oferecer. Por isso migrei para a Internxt."
+      }
+    ]
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Experimente a nova Internxt e tenha acesso aos nossos novos produtos e recursos",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Experimente a nova Internxt e tenha acesso aos nossos novos produtos e recursos",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Ganhe 50% DE DESCONTO",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Compre uma vez e tenha privacidade e segurança para sempre.",
+    "planDescription": "Trabalhamos sem parar para entregar a Internxt que você merece desde que você foi embora. Como agradecimento por nos dar mais uma chance, estamos oferecendo um enorme desconto de 85% para você conhecer essas novidades e melhorias.",
+    "businessDescription": "Estamos trabalhando em novos planos Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir seus resultados.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ChooseStorageSizeSection": {
+    "title": "Vazamentos de dados podem levar à perda do emprego, a problemas jurídicos e a chantagens",
+    "description": "Nosso armazenamento em nuvem mantém seus arquivos seguros, mesmo que seu dispositivo seja roubado ou hackeado.",
+    "peaceOfMind": "Tranquilidade garantida com a Internxt.",
+    "cta": "Escolha o tamanho do armazenamento"
+  },
+  "WhyComebackToInternxt": {
+    "title": "Por que voltar para a Internxt? Novos recursos, atualizações e correções",
+    "description": "O Internxt Drive recebeu melhorias significativas em todos os nossos aplicativos para Mac, Windows e Linux. Esta é a oportunidade perfeita para experimentar nosso produto novo e aprimorado antes que seu desconto de 85% expire. ",
+    "features": [
+      {
+        "title": "Aplicativos atualizados e aprimorados",
+        "description": "As atualizações para Windows, Mac, Linux e Web corrigiram diversos problemas de desempenho, entregando o Internxt Drive mais estável e aprimorado até hoje. "
+      },
+      {
+        "title": "Novos produtos",
+        "description": "A Internxt VPN e o Antivirus estão incluídos no seu desconto de 85%, oferecendo tudo o que você precisa para uma experiência online mais privada e proteção contra malware, ransomware e outros ataques cibernéticos."
+      },
+      {
+        "title": "Acesso futuro ao Meet e ao Mail",
+        "description": "Se você comprar um plano Ultimate, também terá acesso ao Internxt Meet, uma plataforma segura de videoconferência, e ao Internxt Mail, um e-mail criptografado e privado. Invista em um futuro mais privado com a Internxt antes que seu desconto exclusivo acabe! "
+      },
+      {
+        "title": "A criptografia mais avançada disponível",
+        "description": "A Internxt é o primeiro armazenamento em nuvem a usar criptografia pós-quântica. Oferecemos a nuvem mais segura, que protege seus dados contra futuras ameaças dos computadores quânticos."
+      }
+    ]
+  },
+  "HeroSection": {
+    "title": "Volte e veja as novidades!",
+    "subtitle": "Mais desempenho, a mesma privacidade incomparável",
+    "features": [
+      "Drive, Meet, Mail, VPN, Antivirus e muito mais",
+      "Criptografia pós-quântica de conhecimento zero",
+      "Código aberto e auditado"
+    ],
+    "cta1": "Garanta 85% DE DESCONTO"
+  },
+  "CtaSection": {
+    "title": "Mais uma chance?",
+    "description": "Experimente o novo Drive, a VPN e o Antivirus. Economize em todos os planos anuais e vitalícios.",
+    "cta": "Ganhe 85% DE DESCONTO"
+  }
+}

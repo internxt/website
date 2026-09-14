@@ -50,7 +50,7 @@
       {
         "question": "Posso adquirir somente o Internxt Antivirus?",
         "answer": [
-          "Não, o Internxt Antivirus faz parte dos nossos planos de assinatura pagos e não pode ser comprado separadamente. Com uma assinatura mensal de 9,99€, você obtém armazenamento em nuvem privado, antivirus, VPN e muito mais."
+          "Não, o Internxt Antivirus faz parte dos nossos planos de assinatura pagos e não pode ser comprado separadamente. Com uma assinatura mensal de US$ 10,99, você obtém armazenamento em nuvem privado, antivirus, VPN e muito mais."
         ]
       },
       {
@@ -108,7 +108,8 @@
         "title": "Segurança em todas as plataformas",
         "description": "Proteção antivirus para Windows, Mac e Linux integrada à sua assinatura premium do Drive. Garantimos que seus arquivos permaneçam limpos para obter o máximo de desempenho do seu dispositivo, independentemente de onde estejam armazenados."
       }
-    }
+    },
+    "titleLine2": "Analise. Detecte. Proteja."
   },
   "FeatureSectionV2": {
     "title": "O que é software de antivirus?",

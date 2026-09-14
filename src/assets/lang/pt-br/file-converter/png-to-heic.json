@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Um conversor seguro de PNG para HEIC para preservar a qualidade das suas imagens",
+    "secureUpload": "Uploads seguros protegidos por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como converter um arquivo PNG para HEIC",
+      "description": "Criamos nosso conversor de arquivos para ser o mais fácil de usar possível. Converter seu PNG em HEIC envolve três passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu PNG: arraste e solte o arquivo na área acima para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Converter para HEIC”: isso converte o formato do seu arquivo de PNG para HEIC."
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por que converter imagens PNG para HEIC",
+      "paragraphs": [
+        "Converter arquivos PNG para HEIC traz possíveis vantagens de armazenamento em iPhones. O HEIC usa um método de compressão mais eficiente que o PNG, resultando em arquivos menores com qualidade de imagem semelhante.",
+        "Experimente o conversor de arquivos de PNG para HEIC da Internxt para aproveitar ao máximo o armazenamento das suas fotos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Cansado de arquivos incompatíveis?",
+    "description": "Converta para os arquivos de que você precisa com a Internxt",
+    "cta": "Criar conta"
+  }
+}

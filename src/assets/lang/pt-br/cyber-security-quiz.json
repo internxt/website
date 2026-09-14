@@ -1,0 +1,161 @@
+{
+  "QuizSection": {
+    "title": "Quiz de cibersegurança da Internxt ",
+    "subtitle": "Neste Mês da Conscientização Cibernética, teste seus conhecimentos no nosso quiz de cibersegurança!",
+    "description": "Nosso quiz de cibersegurança é uma forma divertida e interativa de aprender sobre segurança digital e se manter protegido online. Você tem o que é preciso para gabaritar este teste? Vamos descobrir!",
+    "cta": "Começar o quiz!",
+    "question": "Pergunta",
+    "nextQuestion": "Próxima pergunta",
+    "correctAnswers": [
+      "B",
+      "C",
+      "B",
+      "C",
+      "A",
+      "C",
+      "A",
+      "B"
+    ],
+    "questions": [
+      {
+        "title": "A que se refere o termo \"phishing\" no contexto da cibersegurança?",
+        "A": "Um tipo de malware que criptografa seus arquivos e exige um resgate.",
+        "B": "Um ataque de engenharia social em que os criminosos se passam por uma entidade legítima.",
+        "C": "Uma senha forte e difícil de quebrar."
+      },
+      {
+        "title": "Entre as senhas a seguir, qual é a mais segura?",
+        "A": "1q2w3e4r",
+        "B": "D00R8377",
+        "C": "Bi%DuIn!So57Lo"
+      },
+      {
+        "title": "Ao considerar um armazenamento em nuvem seguro, qual é o fator principal a priorizar?",
+        "A": "A capacidade de armazenamento ilimitada oferecida pelo provedor.",
+        "B": "A garantia de privacidade dos dados e de criptografia.",
+        "C": "Armazenar dados apenas quando você está offline."
+      },
+      {
+        "title": "Qual das opções a seguir é um método padrão para proteger seu computador contra malware?",
+        "A": "Executar imediatamente anexos de e-mail desconhecidos.",
+        "B": "Desativar as atualizações automáticas de software.",
+        "C": "Baixar softwares apenas de fontes confiáveis."
+      },
+      {
+        "title": "Para que serve uma VPN (rede privada virtual) na cibersegurança?",
+        "A": "Criptografar seu tráfego de internet e garantir privacidade online.",
+        "B": "Aumentar a velocidade da sua conexão de internet.",
+        "C": "Apagar seu histórico de navegação."
+      },
+      {
+        "title": "Qual das opções a seguir é um exemplo de autenticação de dois fatores (2FA)?",
+        "A": "Usar uma senha forte.",
+        "B": "Digitar seu nome em letras maiúsculas.",
+        "C": "Fornecer sua impressão digital e um PIN para acessar uma conta."
+      },
+      {
+        "title": "O que significa \"IoT\" no contexto da cibersegurança?",
+        "A": "Internet das Coisas.",
+        "B": "Internet das Ameaças.",
+        "C": "Internet das Tecnologias.",
+        "D": "Internet das Teorias."
+      },
+      {
+        "title": "Última pergunta! Qual é o objetivo principal da criptografia de dados?",
+        "A": "Garantir uma conexão de internet mais rápida.",
+        "B": "Embaralhar os dados em uma forma ilegível.",
+        "C": "Melhorar a comunicação por e-mail."
+      }
+    ],
+    "quizCompleted": {
+      "title": "Você conseguiu!",
+      "subtitle": "Mas antes de ver sua pontuação...",
+      "description": "Agora que você concluiu nosso teste de cibersegurança, não deixe de conferir nossos outros recursos com mais dicas e truques de segurança digital.",
+      "cyberAwareness": "Conscientização cibernética",
+      "cyberSecurityChecklist": "Checklist de cibersegurança",
+      "whatGoogleKnows": "O que o Google sabe",
+      "passwordGenerator": "Gerador de senhas",
+      "freeVirusScanner": "Verificador de vírus gratuito",
+      "passwordChecker": "Verificador de senhas",
+      "cta": "Ver meus resultados"
+    }
+  },
+  "CheckQuestions": {
+    "lessThan3": {
+      "title": "É hora de revisar seus conhecimentos básicos de cibersegurança.",
+      "subtitle": "Conhecer os fundamentos de uma boa cibersegurança protege suas informações pessoais, seus dados e seus dispositivos contra ameaças e vulnerabilidades online. Confira [nossa página sobre conscientização cibernética](https://internxt.com/cyber-awareness) para revisar o básico de segurança digital."
+    },
+    "lessThan5": {
+      "title": "Você foi bem e conhece parte do básico de cibersegurança.",
+      "subtitle": "Seu conhecimento em cibersegurança está acima da média, mas ainda há áreas em que você pode aprender mais. Confira nossa [página de conscientização cibernética](https://internxt.com/cyber-awareness) para conseguir a pontuação perfeita!"
+    },
+    "moreThan6": {
+      "title": "Impressionante! Você realmente domina o básico da cibersegurança.",
+      "subtitle": "Você entende bem de cibersegurança e sabe se proteger online com eficácia. Que tal ir além do básico e aprender mais no nosso [blog de cibersegurança](https://blog.internxt.com/tag/cybersecurity/)? Descubra artigos práticos e dicas focadas nos melhores métodos para proteger sua privacidade online."
+    },
+    "totalQuestions": "/8",
+    "shareTheResults": "Compartilhe este quiz de cibersegurança com seus amigos para ver se eles superam sua pontuação!",
+    "shareYourResults": "Compartilhe seus resultados:",
+    "QuestionsSection": {
+      "title": "Confira seus resultados:",
+      "faq": [
+        {
+          "question": "Pergunta número 1",
+          "answer": [
+            "**1. A que se refere o termo \"phishing\" no contexto da cibersegurança?**",
+            "C) Um ataque de engenharia social em que os criminosos se passam por uma entidade legítima para induzir você a revelar informações sensíveis."
+          ]
+        },
+        {
+          "question": "Pergunta número 2",
+          "answer": [
+            "**2. Entre as senhas a seguir, qual é a mais segura?**",
+            "B) Bi%DuIn!So57Lo (Para serem seguras, as senhas devem ser longas, únicas e complexas.)"
+          ]
+        },
+        {
+          "question": "Pergunta número 3",
+          "answer": [
+            "**3. Ao considerar um armazenamento em nuvem seguro, qual é o fator principal a priorizar?**",
+            "B) A garantia de privacidade dos dados e de criptografia."
+          ]
+        },
+        {
+          "question": "Pergunta número 4",
+          "answer": [
+            "**4. Qual das opções a seguir é um método padrão para proteger seu computador contra malware?**",
+            "C) Baixar softwares apenas de fontes confiáveis."
+          ]
+        },
+        {
+          "question": "Pergunta número 5",
+          "answer": [
+            "**5. Para que serve uma VPN (rede privada virtual) na cibersegurança?**",
+            "A) Criptografar seu tráfego de internet e garantir privacidade online."
+          ]
+        },
+        {
+          "question": "Pergunta número 6",
+          "answer": [
+            "**6. Qual das opções a seguir é um exemplo de autenticação de dois fatores (2FA)?**",
+            "C) Fornecer sua impressão digital e um PIN para acessar uma conta."
+          ]
+        },
+        {
+          "question": "Pergunta número 7",
+          "answer": [
+            "**7. O que significa \"IoT\" no contexto da cibersegurança?**",
+            "A) Internet das Coisas."
+          ]
+        },
+        {
+          "question": "Pergunta número 8",
+          "answer": [
+            "**8. Qual é o objetivo principal da criptografia de dados?**",
+            "B) Embaralhar os dados em uma forma ilegível."
+          ]
+        }
+      ]
+    }
+  }
+}

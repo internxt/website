@@ -1,0 +1,81 @@
+{
+  "template": {
+    "HeroSection": {
+      "coupon": {
+        "before": "GANHE OS PRIMEIROS 30 DIAS GRÁTIS USANDO",
+        "after": "O CUPOM NA FINALIZAÇÃO DA COMPRA"
+      },
+      "partnershipWith": "Parceria com",
+      "title": {
+        "line1": "Guarde seus arquivos com",
+        "line2": "total privacidade, com",
+        "line3": "os primeiros 30 dias grátis."
+      },
+      "description": {
+        "line1": "O Internxt Drive cuida de toda a segurança e privacidade.",
+        "line2": "Concentre-se no que importa para você: envie, compartilhe,",
+        "line3": "baixe ou faça backup de arquivos de qualquer tipo e tamanho."
+      }
+    },
+    "FeatureSection": {
+      "title": {
+        "line1": "Projetado para proteger você.",
+        "line2": "Sinta-se seguro de novo."
+      },
+      "features": {
+        "privacy": {
+          "title": "Privado por padrão",
+          "description": {
+            "line1": "A Internxt mantém seus dados privados,",
+            "line2": "longe de terceiros e criminosos; seus",
+            "line3": "arquivos e fotos são só seus."
+          }
+        },
+        "speed": {
+          "title": "Sincronização rápida",
+          "description": {
+            "line1": "A Internxt encontra a melhor opção de servidor",
+            "line2": "possível, para que você envie e baixe arquivos",
+            "line3": "na velocidade mais rápida e estável."
+          }
+        },
+        "security": {
+          "title": "Segurança desde o núcleo",
+          "description": {
+            "line1": "Fique seguro ao gerenciar seus arquivos:",
+            "line2": "a Internxt protege seus dados com tecnologias",
+            "line3": "de criptografia como o conhecimento zero."
+          }
+        },
+        "multiplatform": {
+          "title": "Multiplataforma",
+          "description": {
+            "line1": "A Internxt funciona nas principais plataformas, incluindo",
+            "line2": "Windows, macOS, Linux, Android e iOS.",
+            "line3": "Você pode até acessá-la pelo navegador."
+          }
+        },
+        "support": {
+          "title": "Suporte premium",
+          "description": {
+            "line1": "Precisa de ajuda? Nossos profissionais e",
+            "line2": "simpáticos agentes de suporte técnico estão aqui",
+            "line3": "para ajudar você sempre que precisar."
+          }
+        }
+      },
+      "buyNowSection": {
+        "title": {
+          "line1": "Por que começar a usar a Internxt?"
+        },
+        "description": {
+          "line1": "Ao contrário de outros concorrentes, a publicidade não é o nosso modelo de negócio.",
+          "line2": "Seus dados devem ser só seus. Focamos na segurança e na privacidade",
+          "line3": "de você, dos seus arquivos e das suas fotos. Com a Internxt, você se sente seguro de novo."
+        },
+        "cta": "Aproveitar a oferta",
+        "freemonth": "Ganhe 30 dias grátis"
+      }
+    }
+  }
+}

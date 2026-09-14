@@ -1,0 +1,141 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento em nuvem seguro e privado",
+    "subtitle": "que protege seu direito à privacidade",
+    "description": "O armazenamento em nuvem web3 e de código aberto da Internxt protege sua privacidade com criptografia pós-quântica de conhecimento zero.",
+    "info": "Resgate seu plano vitalício exclusivo da Internxt em {{enterpise}}. Basta clicar em <strong>Resgatar código</strong> e inserir seu código de compra.",
+    "cta": "Resgatar código"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Crie uma conta Internxt",
+      "or": "ou",
+      "login": "Entrar",
+      "disclaimer": {
+        "text": "Ao criar uma conta, você aceita os",
+        "link": "termos e condições"
+      },
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "strength": {
+            "complexity": "A senha não é complexa o suficiente",
+            "length": "A senha deve ter pelo menos 8 caracteres",
+            "weak": "A senha é fraca",
+            "strong": "A senha é forte"
+          }
+        },
+        "submit": "Começar"
+      }
+    },
+    "LogIn": {
+      "title": "Entrar na Internxt",
+      "or": "ou",
+      "signup": "Criar conta",
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "helper": "Esqueceu sua senha?"
+        },
+        "tfa": {
+          "label": "Autenticação de dois fatores",
+          "placeholder": "Código 2FA",
+          "hint": "O código 2FA deve ter 6 dígitos"
+        },
+        "submit": "Entrar"
+      }
+    },
+    "Recover": {
+      "title": "Recuperar conta",
+      "back": "Voltar para o login",
+      "disclaimer": "Conforme especificado nas configurações do aplicativo, somente você tem acesso à sua senha, portanto não podemos restaurar sua conta sem ela. Você pode se cadastrar novamente informando seu e-mail abaixo para que possamos excluir sua conta e todos os seus arquivos.",
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "submit": "Enviar e-mail de confirmação"
+      },
+      "success": {
+        "title": "Verifique seu e-mail",
+        "subtitle": "Enviamos um link de redefinição de conta para"
+      }
+    }
+  },
+  "PaymentSection": {
+    "limitedOffer": "Oferta por tempo limitado!",
+    "title": {
+      "blueText": "",
+      "normalText": "Explore todos os nossos planos vitalícios exclusivos"
+    },
+    "title2": {
+      "blueText": "Ganhe ${{percent}}% DE DESCONTO",
+      "normalText": " nos nossos planos vitalícios exclusivos"
+    },
+    "description": "Compre uma vez e tenha privacidade e segurança para sempre.",
+    "description2": "Uma vida inteira de privacidade e segurança para seus arquivos com um pagamento único.",
+    "normalSection": {
+      "title": "Explore todos os nossos planos vitalícios exclusivos",
+      "description": "Somente esta semana: compre uma vez e tenha privacidade e segurança para sempre."
+    },
+    "securePayment": "Pagamento 100% seguro, processado pela Stripe",
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "GetLifetimeSection": {
+    "title": "A vida não é curta! Mas esta oferta por tempo limitado é...",
+    "description": "A Internxt está com uma oferta de uma semana para uma vida inteira de privacidade e tranquilidade.",
+    "cta": "Escolher plano"
+  },
+  "FeatureSection": {
+    "title": "Por que escolher a Internxt para proteger seus arquivos?",
+    "description": "A Internxt devolve a você o controle da sua privacidade. Diferentemente do armazenamento em nuvem tradicional, garantimos que somente você tenha as chaves dos seus dados criptografados. Tomamos todas as medidas para que suas informações permaneçam seguras.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Privacidade reforçada",
+        "description": "Nossa criptografia poderosa protege seus dados contra acessos não autorizados. Nunca armazenamos senhas; todos os seus dados são criptografados em trânsito e em repouso."
+      },
+      {
+        "title": "Controle do usuário",
+        "description": "Para proteger você de vazamentos de dados, a Internxt protege suas informações tornando-as inacessíveis a terceiros, inclusive à própria Internxt."
+      },
+      {
+        "title": "Acesso multiplataforma",
+        "description": "Trabalhe com liberdade e acesse todos os seus arquivos em diversos dispositivos e sistemas operacionais."
+      },
+      {
+        "title": "Pagamento único",
+        "description": "Os planos vitalícios da Internxt oferecem acesso seguro aos seus arquivos para sempre com um único pagamento antecipado.  Pague uma vez e proteja seus dados por toda a vida, sem taxas recorrentes."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "O armazenamento em nuvem mais privado do mundo",
+    "description": "Proteja o que realmente importa com o armazenamento em nuvem seguro, privado e criptografado da Internxt.",
+    "cta": "Escolher plano"
+  },
+  "MostSecureSection": {
+    "title": "O armazenamento em nuvem mais seguro para seus arquivos, fotos e muito mais",
+    "description": "O Internxt Drive é uma solução de armazenamento em nuvem de código aberto e com criptografia de ponta a ponta para guardar, fazer backup e compartilhar seus arquivos com total privacidade. O Internxt Drive oferece criptografia premiada e controle sobre seus dados. ",
+    "cta": "Resgatar código"
+  }
+}

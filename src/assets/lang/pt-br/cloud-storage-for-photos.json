@@ -134,7 +134,7 @@
     "title": "Obtenha o armazenamento em nuvem mais seguro para fotos para manter seus álbuns e memórias protegidos para sempre",
     "titleLine2": "",
     "description": "O armazenamento em nuvem para fotos é um armazenamento on-line onde os arquivos de imagem são criptografados em seu dispositivo antes do upload, para que o provedor possa armazenar os dados, mas não possa visualizar, escanear ou entregar o conteúdo. Com o Google Fotos, Dropbox ou OneDrive, o provedor detém as chaves e reserva o direito, sob os termos de serviço, de escanear o conteúdo do álbum para moderação de conteúdo, direcionamento de anúncios ou treinamento de IA. O Internxt detém apenas o texto cifrado.\n\nUma nuvem de fotos privada mantém cada compartilhamento dentro desse limite, seja um álbum de família enviado aos avós, fotos de férias compartilhadas com amigos ou uma galeria de clientes entregue a um revisor não técnico. Cada álbum permanece criptografado com AES-256 e a chave de criptografia nunca sai do seu dispositivo. Os cinco blocos abaixo cobrem a arquitetura: como funcionam as senhas, como os links de compartilhamento viajam, como as pastas compartilhadas lidam com uma biblioteca de 5 TB, onde os arquivos residem e como o plano escala.",
-    "cta": "Get Internxt",
+    "cta": "Obtenha o Internxt",
     "cards": {
       "element1": {
         "title": "Proteção por senha",
