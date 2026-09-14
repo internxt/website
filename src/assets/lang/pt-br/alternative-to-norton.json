@@ -1,0 +1,239 @@
+{
+  "HeroSection": {
+    "title": "Internxt. Como o Norton,\n mas **privado**",
+    "description": "Mude para a Internxt, a melhor alternativa ao Norton que respeita a sua privacidade",
+    "getPrivacy": " Escolha seu plano e ganhe {{percentage}}% de desconto  ",
+    "cta": "Faça a mudança"
+  },
+  "HeaderSection": {
+    "title": "Visão geral: Internxt vs Norton",
+    "description": "Conheça os principais recursos e diferenças que permitem à Internxt devolver a você o controle sobre seus dados",
+    "tableSection": {
+      "comparisons": [
+        "Código aberto",
+        "Privacidade de conhecimento zero",
+        "Coleta de dados",
+        "Preço e recursos",
+        "Outros recursos",
+        "Auditorias de segurança",
+        "Desempenho do sistema",
+        "Política de privacidade",
+        "Leis de privacidade"
+      ],
+      "internxtFeatures": [
+        "Sim",
+        "Sim, criptografia de conhecimento zero",
+        "Nenhum",
+        "Planos anuais e vitalícios acessíveis",
+        "Inclui Drive, VPN, Antivirus, Cleaner, Meet e mais",
+        "Auditorias de segurança regulares",
+        "Impacto mínimo no sistema",
+        "Política rigorosa de não registro de logs",
+        "Privacidade total: GDPR e leis espanholas de proteção de dados"
+      ],
+      "competitorFeatures": [
+        "Não",
+        "Sem criptografia de conhecimento zero",
+        "Telemetria e dados de uso extensivos",
+        "Renovação anual cara",
+        "Ferramentas padrão de antivírus e limpeza",
+        "Raramente auditado",
+        "Alto consumo de recursos",
+        "Compartilhamento de dados com parceiros",
+        "Menos privacidade: leis de vigilância dos EUA"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "Por que você precisa de uma alternativa ao Norton",
+    "description": "A Norton é um nome conhecido em segurança, mas suas práticas já levantaram diversas preocupações de privacidade. Mude para a Internxt e tenha um pacote de segurança abrangente que coloca a privacidade em primeiro lugar.",
+    "scrollableSection": {
+      "titles": [
+        "Polêmica da mineração de criptomoedas",
+        "Grande impacto no sistema",
+        "Práticas de coleta de dados",
+        "Conjunto de produtos limitado"
+      ],
+      "descriptions": [
+        "A Norton já enfrentou críticas por incluir um minerador de criptomoedas em seu software, algo que muitos usuários consideraram intrusivo e um uso inadequado dos recursos de seus sistemas.",
+        "A Norton é frequentemente criticada por consumir muitos recursos, reduzindo significativamente o desempenho do sistema e a velocidade de inicialização em comparação com soluções mais leves como a Internxt.",
+        "Pertencente à Gen Digital, a Norton faz parte de um grande conglomerado que coleta enormes volumes de telemetria e dados de uso dos usuários para fins de desenvolvimento de produtos e marketing.",
+        "O foco da Norton está principalmente na proteção do dispositivo. A Internxt oferece um ecossistema completo e criptografado que inclui armazenamento na nuvem, VPN e antivírus, dando a você proteção total em um só plano."
+      ]
+    }
+  },
+  "WhyNeedAlternativeSection": {
+    "title": "Recursos",
+    "description": "",
+    "cards": {
+      "titles": [
+        "Código aberto e auditado",
+        "Conjunto completo de produtos",
+        "Planos acessíveis"
+      ],
+      "descriptions": [
+        "A Internxt é totalmente de código aberto e auditada de forma independente, então você pode ficar tranquilo: não há portas dos fundos para seus dados e suas informações são tratadas com transparência. Qualquer pessoa pode revisar o código, o que garante o máximo de confiança e responsabilidade.",
+        "A Internxt oferece o Cleaner e um ecossistema completo de privacidade com tudo o que você precisa para eliminar arquivos inúteis do seu dispositivo, armazenar e compartilhar arquivos com criptografia de conhecimento zero no Drive, além de outros benefícios como VPN, Meet, Mail e mais.",
+        "Comece a usar a Internxt por apenas € 1,60 por mês ou fuja das assinaturas com nossos planos vitalícios acessíveis: pague uma vez e use para sempre. Com os planos vitalícios, você tem acesso a todos os recursos para sempre e pode fazer upgrade sempre que precisar."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Norton",
+    "description": "A Internxt oferece privacidade e segurança incomparáveis graças à criptografia de conhecimento zero e pós-quântica, garantindo a melhor proteção contra ciberataques.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: privacidade, transparência e confiança totais",
+        "features": [
+          {
+            "title": "Código aberto",
+            "description": "A Internxt publica seu código no GitHub, garantindo transparência e evitando vulnerabilidades ocultas ou portas dos fundos."
+          },
+          {
+            "title": "Criptografia de conhecimento zero",
+            "description": "Seus arquivos e dados são criptografados no seu dispositivo, garantindo que somente você possa acessá-los."
+          },
+          {
+            "title": "Sede na Europa",
+            "description": "A Internxt tem sede na Espanha e cumpre as rigorosas leis do GDPR, garantindo que suas informações pessoais estejam protegidas por lei."
+          },
+          {
+            "title": "Planos gratuitos e acessíveis",
+            "description": "Você começa a usar a Internxt gratuitamente e conta com planos vitalícios acessíveis de até 5TB. Tenha acesso para sempre ao nosso conjunto completo de ferramentas de privacidade com {{percentage}}% de desconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Norton: e a sua privacidade?",
+        "features": [
+          {
+            "title": "Software proprietário",
+            "description": "Por ser um software de código fechado, é impossível para os usuários verificarem como seus dados são tratados ou se existem vulnerabilidades de segurança."
+          },
+          {
+            "title": "Sem criptografia de conhecimento zero",
+            "description": "A Norton não oferece criptografia do lado do cliente para os seus dados, o que significa que ela pode acessá-los em determinadas condições."
+          },
+          {
+            "title": "Sediada nos EUA",
+            "description": "A Norton está sujeita às leis de vigilância e de dados dos EUA, que podem permitir o acesso do governo às informações dos usuários."
+          },
+          {
+            "title": "Renovações caras",
+            "description": "Conhecida pelos altos preços de renovação anual, que aumentam significativamente após o primeiro ano de assinatura."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por que a Internxt é a melhor alternativa ao Norton",
+    "description": "A Internxt oferece um pacote completo de produtos ao lado do seu antivírus privado e das suas ferramentas de segurança para dar a você uma alternativa segura ao Norton.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "hero"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Ferramentas avançadas"
+      ],
+      "descriptions": [
+        "O Internxt Drive oferece armazenamento na nuvem seguro, com criptografia de conhecimento zero e pós-quântica, além de compartilhamento avançado, versionamento e suporte a NAS e rclone.",
+        "O Internxt Antivirus vem integrado diretamente ao seu aplicativo para proteger você contra malware, ransomware e spyware com verificações completas ou personalizadas.",
+        "A Internxt VPN criptografa sua conexão, bloqueia anúncios e rastreadores e protege sua identidade enquanto você navega na internet.",
+        "O Internxt Cleaner ajuda você a identificar e remover arquivos inúteis ou duplicados para manter seu armazenamento organizado e eficiente.",
+        "O Internxt Meet permite videochamadas seguras e privadas, protegidas por criptografia pós-quântica e livres de rastreadores ou anúncios.",
+        "Disponível para Windows, Mac, Linux e celular, com suporte a WebDAV, Rclone e NAS para usuários avançados."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Escolha a Internxt como a melhor alternativa ao Norton",
+    "description": "A Internxt oferece criptografia privada completa por padrão, software de código aberto transparente e um conjunto completo de privacidade para manter seus dados e arquivos seguros na internet.",
+    "cta": "Faça a mudança"
+  },
+  "tableSection": {
+    "title": "Seu aliado completo em privacidade",
+    "hotLabel": "{{discount}}% de desconto 🔥",
+    "planTitles": {
+      "header": "Seu aliado completo em privacidade"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "Vitalício"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Use a Internxt gratuitamente, com armazenamento privado criptografado e ferramentas de antivírus",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "openSource": "Código aberto e auditado",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "A Internxt é uma alternativa mais segura e privada ao Norton?",
+        "answer": [
+          "Sim, a Internxt usa criptografia pós-quântica e de conhecimento zero, o que garante que ninguém além de você possa ver seus arquivos.",
+          "O Internxt Drive inclui VPN, Antivirus, Cleaner, Meet e Mail, oferecendo mais serviços do que a Norton para garantir a você a melhor segurança e privacidade online."
+        ]
+      },
+      {
+        "question": "O que é criptografia pós-quântica e ela é mais segura?",
+        "answer": [
+          "Diferentemente da criptografia convencional, os algoritmos de criptografia pós-quântica são criados para resistir a ataques quânticos poderosos.",
+          "A Internxt usa esse método de criptografia para garantir que seu plano vitalício de armazenamento na nuvem proteja você contra futuras ameaças de cibersegurança, e ele está disponível em todos os planos sem custo adicional."
+        ]
+      },
+      {
+        "question": "Onde fica a sede da Internxt?",
+        "answer": [
+          "A Internxt tem sede em Valência, na Espanha, o que a torna uma solução de armazenamento na nuvem em conformidade com o GDPR, seguindo leis rigorosas para garantir a proteção dos seus dados e da sua privacidade."
+        ]
+      },
+      {
+        "question": "A Norton é mais cara do que a Internxt?",
+        "answer": [
+          "Com o seu desconto exclusivo de 85%, todos os nossos planos são mais baratos do que as opções de preço da Norton disponíveis atualmente, com a vantagem de oferecer muito mais recursos."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Se você tiver mais dúvidas, solicitações ou precisar de ajuda, entre em contato pelo e-mail hello@internxt.com e nossa equipe de Sucesso do Cliente terá prazer em ajudar."
+        ]
+      },
+      {
+        "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
+        "answer": [
+          "Sim, você pode fazer upgrade do seu plano nas configurações da sua conta Internxt se precisar de mais armazenamento. Ou compre um novo plano em internxt.com/pricing com sua conta Internxt atual, e seu armazenamento será somado automaticamente."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar com PayPal, iDEAL, Sofort, criptomoedas e Klarna."
+        ]
+      }
+    ]
+  }
+}

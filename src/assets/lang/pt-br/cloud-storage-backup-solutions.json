@@ -7,7 +7,11 @@
         "textAfterBlueText": "seus dados"
       },
       "description": "O Internxt Drive permite que você faça backup de seus arquivos e os proteja contra perdas e ransomware",
-      "features": ["Agende seus backups", "Backup em vários servidores", "Código aberto e auditado"],
+      "features": [
+        "Agende seus backups",
+        "Backup em vários servidores",
+        "Código aberto e auditado"
+      ],
       "claimDeal": "Ver planos"
     },
     "TitleAndOnePlanV2": {
@@ -16,10 +20,17 @@
       "cta": "Ver planos"
     }
   },
+  "WhySwitchSection": {
+    "title": "Por que você deve migrar para soluções de armazenamento em nuvem privada",
+    "subtitle": "Migrar para soluções de armazenamento em nuvem privada garante que seus dados permaneçam privados e protegidos de hackers e corporações. Ao contrário de Google, Apple ou Microsoft, a Internxt não coleta, vende nem faz uso indevido dos seus dados. Você tem controle completo sobre seus arquivos.",
+    "description": "Invista na sua privacidade e tenha a tranquilidade de saber que seus arquivos e dados estão protegidos contra vazamentos de dados.",
+    "cta": "Obtenha o Internxt"
+  },
   "WhatWeDo": {
     "title": {
       "line1": "A Internxt oferece soluções de armazenamento",
-      "line2": "em nuvem privada para indivíduos, PMEs e grandes empresas."
+      "line2": "em nuvem privada para indivíduos, PMEs e grandes empresas.",
+      "line3": "uso pessoal, comercial ou corporativo"
     },
     "subtitle": "Escolha a Internxt para armazenamento seguro em nuvem para que seus arquivos estejam sempre com backup, facilmente recuperáveis e protegidos contra perda de dados.",
     "square1": {
@@ -63,6 +74,14 @@
       }
     ]
   },
+  "NewBlock1": {
+    "title": "Tenha armazenamento em nuvem e faça backup dos seus arquivos com a Internxt",
+    "intro": "Armazenamento em nuvem e backup não precisam ser dois produtos diferentes. Na Internxt, eles são uma única conta criptografada. Seus arquivos de trabalho ficam no Internxt Drive: abra, edite, compartilhe e sincronize no Windows, Mac, Linux, iOS, Android, WebDAV e Rclone. A mesma conta agenda backups versionados de qualquer pasta na frequência que funcionar para você: diária, de hora em hora, a cada seis horas ou a cada doze. O AES-256 criptografa seus arquivos no seu dispositivo antes que eles saiam dele, a troca de chaves pós-quântica Kyber-512 os protege no caminho e em repouso, e uma janela de reembolso de 30 dias cobre o plano completo."
+  },
+  "NewBlock2": {
+    "title": "O melhor armazenamento de backup em nuvem: faça backup com confiança",
+    "intro": "Armazenamento de backup em nuvem significa manter cópias versionadas e criptografadas no dispositivo dos seus arquivos em servidores remotos, para que você possa recuperá-las se seu notebook quebrar, for roubado ou for atingido por ransomware. A mesma tarefa atende ao notebook de um freelancer, à biblioteca de uma equipe de pequena empresa e a um arquivo de conformidade corporativo. Três coisas tornam um backup em nuvem seguro: criptografia antes de os arquivos saírem do dispositivo, replicação em vários data centers e uma auditoria atual e identificada. Backblaze, iDrive e Carbonite citam criptografia de 256 bits; somente a Internxt também cita a pós-quântica Kyber-512, uma auditoria da Securitum de 2024 certificando a ISO 27001:2022, jurisdição da UE via OVHcloud e código aberto no GitHub. Planos a partir de € 2 por mês, reembolso em 30 dias."
+  },
   "CtaSection1": {
     "title": "Faça backup da sua nuvem com o Internxt Drive",
     "description": "Recuperação instantânea de dados para quando você mais precisa",
@@ -73,6 +92,51 @@
     "description": "Proteção total contra ransomware, perda de dados ou corrupção",
     "cta": "Compre seu plano"
   },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento, estamos trabalhando em novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Perguntas? Temos respostas",
     "faq": [
@@ -80,19 +144,24 @@
         "question": "Como a Internxt protege meus dados?",
         "answer": [
           "A Internxt usa a premiada criptografia pós-quântica Kyber-512 e criptografia de conhecimento zero para garantir que apenas você tenha acesso aos seus arquivos. Todos os seus arquivos são criptografados em seu dispositivo antes de serem enviados para a nuvem, impedindo que alguém, incluindo a Internxt, veja o conteúdo.",
-          "Você também pode ativar a autenticação de dois fatores para impedir o acesso não autorizado à sua conta."
+          "Você também pode ativar a autenticação de dois fatores para impedir o acesso não autorizado à sua conta.",
+          "Ninguém além de você pode ler seus arquivos, nem mesmo nós."
         ]
       },
       {
         "question": "Com que frequência devo fazer backup no armazenamento em nuvem?",
         "answer": [
-          "Com a Internxt, você pode fazer backup de suas pastas em diferentes intervalos para atender às suas necessidades. Quanto mais frequentemente você fizer backup de seus arquivos, menos dados você perderá em caso de emergência. Por esse motivo, recomendamos backups diários para proteção máxima ou com mais frequência, dependendo da alteração de seus dados."
+          "Com a Internxt, você pode fazer backup de suas pastas em diferentes intervalos para atender às suas necessidades. Quanto mais frequentemente você fizer backup de seus arquivos, menos dados você perderá em caso de emergência. Por esse motivo, recomendamos backups diários para proteção máxima ou com mais frequência, dependendo da alteração de seus dados.",
+          "Para arquivos que mudam mais devagar, uma vez por dia é suficiente. A Internxt permite definir o agendamento por pasta, então uma única conta pode executar várias frequências.",
+          "A regra geral: qualquer perda de dados entre backups é uma perda com a qual você decidiu que consegue conviver."
         ]
       },
       {
         "question": "Como faço para restaurar meus dados do armazenamento em nuvem?",
         "answer": [
-          "Para restaurar seus backups, você precisa comprar um de nossos planos pagos. Faça login em sua conta do Internxt Drive através do nosso site, navegue até backups e selecione o dispositivo e a pasta que você deseja baixar para acessar as pastas com backup."
+          "Para restaurar seus backups, você precisa comprar um de nossos planos pagos. Faça login em sua conta do Internxt Drive através do nosso site, navegue até backups e selecione o dispositivo e a pasta que você deseja baixar para acessar as pastas com backup.",
+          "As soluções de backup em armazenamento na nuvem mantêm snapshots versionados de pastas para recuperação após exclusão, corrupção ou ransomware.",
+          "O Internxt Drive faz as duas coisas em uma única conta criptografada, então a sincronização e o backup usam a mesma estrutura de criptografia e o mesmo plano."
         ]
       },
       {
@@ -101,18 +170,6 @@
           "O armazenamento em nuvem se concentra em salvar e gerenciar os arquivos que precisam ser acessados ou compartilhados regularmente na nuvem.",
           "O armazenamento em nuvem para backups, como o Internxt Drive, também permite criar cópias de suas pastas para maior proteção de dados, garantindo que elas possam ser recuperadas em caso de exclusão acidental, perda de dados ou ataques cibernéticos.",
           "As soluções de backup são projetadas para criar cópias seguras de seus dados para proteção. As soluções de backup armazenam dados automaticamente em intervalos regulares, garantindo que eles possam ser recuperados em caso de perda de dados devido a falhas ou acidentes."
-        ]
-      },
-      {
-        "question": "Como faço para entrar em contato com o suporte?",
-        "answer": [
-          "Não encontrou o que está procurando? Você pode entrar em contato com nossa equipe de suporte ao cliente através do chat online ou enviando um e-mail para hello@internxt.com."
-        ]
-      },
-      {
-        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
-        "answer": [
-          "Sim, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express, etc.). Você também pode pagar através do PayPal, iDEAL, Sofort e criptomoeda."
         ]
       }
     ]
@@ -133,7 +190,8 @@
       "element2": {
         "title": "Recupere seus arquivos",
         "description": [
-          "Quando você faz backup dos seus arquivos com o Internxt, backups em nuvem e cópias de segurança são feitas dos arquivos em vários servidores para maior segurança, proteção e recuperação de dados. Isso oferece uma maneira confiável, rápida e fácil de recuperar o acesso aos seus arquivos e garantir sua proteção no futuro."
+          "Quando você faz backup dos seus arquivos com o Internxt, backups em nuvem e cópias de segurança são feitas dos arquivos em vários servidores para maior segurança, proteção e recuperação de dados. Isso oferece uma maneira confiável, rápida e fácil de recuperar o acesso aos seus arquivos e garantir sua proteção no futuro.",
+          "Para recuperar, entre no Drive, navegue pela árvore de dispositivos e pastas em Backups, escolha uma versão (a mais recente ou qualquer anterior) e faça o download. Os arquivos são restaurados na mesma forma criptografada e descriptografados no seu dispositivo quando você os abre. Nada sai do texto cifrado no caminho."
         ]
       },
       "element3": {

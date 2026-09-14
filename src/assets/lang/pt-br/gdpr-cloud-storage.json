@@ -101,6 +101,51 @@
     "description": "Armazenamento em nuvem privado para armazenar e compartilhar seus dados com segurança",
     "cta": "Obtenha o Internxt"
   },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento, estamos trabalhando em novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Dúvidas? Temos as respostas",
     "faq": [
@@ -140,6 +185,12 @@
         "answer": [
           "O Internxt aceita atualmente cartões de débito e crédito (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort e criptomoedas."
         ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express, etc). Você também pode pagar via PayPal, iDEAL, Sofort e criptomoedas."
+        ]
       }
     ]
   },
@@ -152,8 +203,7 @@
         "title": "Criptografia ponta a ponta",
         "description": [
           "A criptografia ponta a ponta protege seus arquivos de hackers, mas muitas empresas gerenciam essas chaves de criptografia e podem ser obrigadas a fornecer acesso às autoridades, quando solicitado.",
-          "O Internxt usa criptografia de Conhecimento Zero e pós-quântica, garantindo que as chaves sejam armazenadas apenas em seu dispositivo, para que ninguém mais possa acessar seus dados.",
-          "Nossa criptografia premiada oferece a máxima segurança online e atende aos padrões do GDPR para proteção de dados pessoais."
+          "O Internxt usa criptografia de Conhecimento Zero e pós-quântica, garantindo que as chaves sejam armazenadas apenas em seu dispositivo, para que ninguém mais possa acessar seus dados."
         ]
       },
       "element2": {

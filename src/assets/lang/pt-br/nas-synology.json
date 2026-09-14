@@ -3,7 +3,11 @@
     "label": "Synology NAS",
     "title": "Backup em nuvem do Synology NAS para o **Internxt Drive**",
     "subtitle": "Proteja e faça backup dos seus arquivos com o Internxt Drive e o Synology",
-    "features": ["Backup em nuvem NAS para Synology", "Transferências seguras", "Sincronização e backups criptografados"],
+    "features": [
+      "Backup em nuvem NAS para Synology",
+      "Transferências seguras",
+      "Sincronização e backups criptografados"
+    ],
     "cta": "Obtenha o Internxt"
   },
   "WhatIsNASSection": {
@@ -38,7 +42,12 @@
     "title": "Faça backup do seu Synology NAS na nuvem",
     "description": "O backup em nuvem NAS envia os dados do seu Synology NAS para armazenamento externo criptografado, onde os arquivos sobrevivem a falhas de hardware, roubo, ransomware ou exclusão acidental. O suporte NAS do Internxt funciona ao lado do seu fluxo de trabalho existente com o Synology Hyper Backup. Cada upload é criptografado no seu dispositivo com Kyber-512 e AES-256 antes de sair da rede, e suas chaves de criptografia nunca saem do seu hardware.",
     "scrollableSection": {
-      "titles": ["Proteção contra perda de dados", "Sincronização em tempo real", "Segurança", "Seja dono dos seus dados"],
+      "titles": [
+        "Proteção contra perda de dados",
+        "Sincronização em tempo real",
+        "Segurança",
+        "Seja dono dos seus dados"
+      ],
       "descriptions": [
         "O backup em nuvem do Synology inclui recursos como proteção RAID, ajudando a manter os arquivos acessíveis mesmo se um disco falhar, enquanto os recursos de snapshot e histórico de versões possibilitam recuperar arquivos excluídos ou alterados. O Internxt com suporte ao Synology NAS ajuda a proteger contra perda de dados mantendo todos os seus arquivos armazenados em um local seguro e centralizado. Ele suporta backups automáticos de computadores, telefones, servidores e drives externos, reduzindo o risco de perda de dados importantes.",
         "Os recursos de sincronização em tempo real do Synology incluem atualizações automáticas de arquivos entre dispositivos e locais de backup, ajudando a manter os arquivos atualizados e acessíveis em todos os sistemas. O Internxt com suporte ao Synology NAS garante que todas as alterações sejam sincronizadas em tempo real, reduzindo o risco de versões desatualizadas, atualizações perdidas ou substituições acidentais.",
@@ -51,7 +60,11 @@
     "title": "O que o Internxt oferece com suporte ao Synology NAS",
     "description": "O Internxt oferece suporte NAS para Synology para fazer upload, sincronizar, compartilhar e fazer backup dos seus arquivos na nuvem para protegê-los contra perda de dados e ransomware.",
     "cards": {
-      "titles": ["Synology", "Acesso de qualquer dispositivo", "Proteção contra ransomware"],
+      "titles": [
+        "Synology",
+        "Acesso de qualquer dispositivo",
+        "Proteção contra ransomware"
+      ],
       "descriptions": [
         "O suporte NAS do Internxt para Synology é executado por meio da imagem Docker da CLI do Internxt. O Internxt se integra ao Synology NAS via aplicativo Docker, permitindo a conexão com ferramentas de backup padrão como Hyper Backup ou métodos de sincronização em nível de arquivo, possibilitando que os usuários enviem dados do NAS diretamente para o armazenamento em nuvem criptografado do Internxt para backup externo e recuperação de desastres. Essa integração simplifica os backups, mantendo o controle total do seu fluxo de trabalho existente e adicionando armazenamento em nuvem seguro com criptografia de conhecimento zero Kyber-512 e AES-256 do Internxt.",
         "O acesso remoto criptografado permite que você acesse com segurança os mesmos arquivos na nuvem de qualquer dispositivo com o Internxt instalado. Os aplicativos para web, Windows, macOS, Linux, iOS e Android descriptografam seus arquivos localmente usando sua própria chave, para que somente você possa ver seus dados. Isso mantém tudo em um lugar seguro para o seu NAS, computador ou telefone.",
@@ -63,19 +76,72 @@
     "title": "Configure os backups em nuvem do seu Synology NAS",
     "description": "Você pode configurar os backups em nuvem do seu Synology NAS em três etapas usando nossos tutoriais detalhados do nosso GitHub de código aberto para guiá-lo em cada etapa. Saiba mais sobre nosso armazenamento em nuvem de código aberto em internxt.com/open-source.",
     "cards": {
-      "titles": ["ReadMe", "Guia do usuário", "Código aberto"],
+      "titles": [
+        "ReadMe",
+        "Guia do usuário",
+        "Código aberto"
+      ],
       "descriptions": [
         "O ReadMe explica como conectar seu dispositivo NAS ao aplicativo Docker para começar a usar o Internxt Drive e o NAS Synology com o comando Docker run, portas necessárias, montagens de volumes e outros controles de segurança adicionais.",
         "No Synology, instale o Docker (ou o Container Manager no DSM 7.2+), obtenha a imagem do Internxt, configure as variáveis de ambiente para sua conta e adicione o ponto de montagem como destino do Hyper Backup. Você pode encontrar instruções mais detalhadas em nosso centro de ajuda.",
         "O repositório da CLI do Internxt em github.com/internxt/cli contém todos os arquivos do cliente que o contêiner Docker executa e as notas de lançamento de cada versão. O armazenamento em nuvem de código aberto do Internxt e todos os seus produtos são de código aberto e transparentes, e a segurança de criptografia ou manipulação de chaves pode ser verificada a partir da nossa base de código publicamente disponível."
       ],
-      "cta": ["Ler guia", "Saiba mais", "Ver detalhes"]
+      "cta": [
+        "Ler guia",
+        "Saiba mais",
+        "Ver detalhes"
+      ]
     }
   },
   "ctaSectionV2": {
     "title": "Backup em nuvem do Synology NAS",
     "description": "Gerencie seu Synology NAS com o Internxt Drive",
     "cta": "Obtenha o Internxt"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento, estamos trabalhando em novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
   },
   "FaqSection": {
     "title": "Perguntas? Temos respostas",

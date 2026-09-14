@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprima arquivos Excel (XLS) com a Internxt para uma forma mais fácil e produtiva de colaborar em planilhas e apresentar dados essenciais.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo Excel",
+      "description": "Para comprimir um arquivo PPT, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo Excel (XLS): arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo Excel”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com esta ferramenta, você pode comprimir vários arquivos Excel gratuitamente sempre que precisar. Ao comprimir arquivos Excel, eles são automaticamente protegidos com uploads criptografados para garantir a privacidade dos seus documentos."
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir arquivos Excel",
+      "intro": "Ao elaborar textos longos, relatórios, documentos, contratos etc., o tamanho dos anexos logo aumenta, dificultando o compartilhamento de vários documentos em um só arquivo. Comprimir arquivos Excel pode reduzir bastante o tamanho dos seus arquivos, facilitando a colaboração e permitindo: ",
+      "bullets": [
+        "Comprimir arquivos Excel para compartilhar e enviar com mais facilidade",
+        "Ficar dentro dos limites de upload e de tamanho de e-mail",
+        "Colaborar em projetos baseados em dados"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter seus arquivos Excel privados, assim você pode comprimir, armazenar e compartilhar seus arquivos Excel com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos Excel",
+    "cta": "Obter a Internxt"
+  }
+}

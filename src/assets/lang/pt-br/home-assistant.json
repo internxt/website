@@ -1,0 +1,142 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento em nuvem seguro para seus **backups do Home Assistant**",
+    "description": "Backups externos automatizados e de conhecimento zero. Criados na Europa para máxima privacidade e controle dos dados.",
+    "features": [
+      "Agende seus backups",
+      "Backup replicado em vários servidores",
+      "Código aberto e auditado"
+    ],
+    "guarantee": "Garantia de reembolso em 30 dias",
+    "claimDeal": "Resgatar oferta"
+  },
+  "MadeInEuropeSection": {
+    "title": "Feito na Europa",
+    "description": "Seus dados são protegidos por rigorosas leis e regulamentações europeias de conformidade, combinadas a uma criptografia premiada.",
+    "cards": {
+      "images": [
+        "/images/drive/GDPR.webp",
+        "/images/drive/redundancy.webp",
+        "/images/drive/sustainability.webp"
+      ],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": [
+        "Data centers europeus",
+        "Redundância",
+        "Compromisso com a sustentabilidade "
+      ],
+      "descriptions": [
+        "A Internxt fica em Valência, na Espanha, e nossos data centers estão na Europa e em outros locais pelo mundo, oferecendo a você segurança, velocidade e conformidade.",
+        "Seus arquivos são protegidos por sistemas redundantes, controles ambientais e monitoramento de segurança no local 24 horas por dia, 7 dias por semana. Aconteça o que acontecer, seus arquivos permanecem sempre seguros e acessíveis.",
+        "A Internxt lidera pelo exemplo ao trabalhar por uma solução de armazenamento em nuvem mais sustentável, adotando práticas de eficiência energética para uma nuvem mais limpa e sustentável."
+      ],
+      "cta": [
+        "Saiba mais",
+        "",
+        "Saiba mais"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "description": "A Internxt existe para colocar você no controle. Com a Internxt, você tem tranquilidade sabendo que seus dados estão criptografados, protegidos e que sua vida digital pertence a você."
+  },
+  "ThreeCardsSection": {
+    "title": "Valores fundamentais",
+    "cards": {
+      "titles": [
+        "Criptografia de conhecimento zero",
+        "Recuperação confiável",
+        "Privacidade em primeiro lugar"
+      ],
+      "descriptions": [
+        "Criptografia de ponta a ponta no lado do cliente. Seus arquivos de configuração e suas chaves de API permanecem estritamente privados.",
+        "Mantenha uma cópia externa segura dos seus snapshots do HA em caso de falha de hardware ou problemas em atualizações.",
+        "Hospedado na UE, em total conformidade com o GDPR e independente das Big Tech."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Recursos principais do nosso armazenamento seguro na nuvem",
+    "description": "Segurança completa para seus dados: tudo o que você precisa para manter seus arquivos seguros e privados",
+    "accordionCards": {
+      "titles": [
+        "Um ecossistema totalmente privado",
+        "Colaboração segura",
+        "Sua nuvem, como um disco local"
+      ],
+      "descriptions": [
+        "A Internxt reúne armazenamento criptografado, backups, VPN, Antivirus, Cleaner, Meet, Mail e muito mais: tudo para você se libertar das Big Tech.",
+        "Envie arquivos com links criptografados, senhas e controles. Trabalhe com sua equipe em tempo real mantendo os dados privados.",
+        "Use a Internxt como um disco virtual para sincronizar, enviar e acessar arquivos sem complicação, como no seu computador, mas totalmente seguro e sempre atualizado."
+      ]
+    },
+    "cards": {
+      "titles": [
+        "Criptografia de ponta a ponta",
+        "Controles de acesso",
+        "Backups criptografados"
+      ],
+      "descriptions": [
+        "Todos os arquivos são criptografados com criptografia pós-quântica e de conhecimento zero. Ninguém além de você, ou de quem você escolher compartilhar, pode ver o conteúdo.",
+        "Você controla exatamente quem pode acessar seus arquivos compartilhados, com links criptografados e protegidos por senha que podem ser revogados a qualquer momento.",
+        "Garanta que seus arquivos fiquem protegidos contra ransomware e perdas acidentais com backups criptografados e agendados, que oferecem proteção extra e tranquilidade."
+      ]
+    }
+  },
+  "TableSection": {
+    "title": "Planos da Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Escolha seu plano",
+      "lifetimeHeader": "Escolha seu plano vitalício",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano certo para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total ao nosso conjunto de privacidade premiado, composto por Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "No momento estamos desenvolvendo novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Atendimento premium ao cliente",
+      "guarantee": "Garantia de reembolso em 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ReviewSection": {
+    "forbes": "A Internxt consolida sua posição como alternativa europeia às gigantes da tecnologia",
+    "deloitte": "Recebeu o prêmio Deloitte Fast 50, que reconhece as empresas que mais crescem",
+    "techradar": "A Internxt é um excelente serviço de armazenamento em nuvem: acessível, intuitivo e confiável",
+    "fortune": "A Internxt está construindo uma internet em que privacidade e segurança vêm em primeiro lugar",
+    "trustpilot": "Custo-benefício excepcional considerando a segurança e os recursos oferecidos. Serviço e suporte excelentes."
+  }
+}

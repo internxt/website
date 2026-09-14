@@ -1,0 +1,171 @@
+{
+  "HeroSection": {
+    "title": "E-mail temporário gratuito",
+    "subtitle": "Receba e-mails anonimamente com nosso gerador de endereços de e-mail temporários gratuito, privado e seguro.",
+    "generatingEmail": "Gerando e-mail aleatório...",
+    "copyEmail": "Copiar endereço de e-mail",
+    "deleteEmail": "Alterar e-mail",
+    "expireEmail": {
+      "normal": "O endereço de e-mail e a caixa de entrada expirarão após ",
+      "bold": "3 horas de inatividade"
+    },
+    "inbox": {
+      "refresh": "Atualizar",
+      "refreshInbox": "Atualizar caixa de entrada",
+      "title": "Caixa de entrada",
+      "withoutMessages": {
+        "youHave": "Você tem",
+        "newMessages": "novas mensagens"
+      },
+      "withMessages": "Você tem novas mensagens",
+      "waitingEmail": "Atualize seus e-mails ou aproveite a paz e o silêncio",
+      "selectMessage": "Selecione uma mensagem para abrir",
+      "attachment": "Anexos",
+      "downloadAll": "Baixar todos",
+      "noSubject": "(sem assunto)"
+    }
+  },
+  "InfoSection": {
+    "title": "O e-mail temporário gratuito da Internxt",
+    "subtitle": "Chega de spam, anúncios, newsletters, promoções, hackers, golpistas e bots. Mantenha sua caixa de entrada real limpa, segura e livre de e-mails suspeitos. Nosso gerador de contas de e-mail descartáveis é a mais nova ferramenta de privacidade da Internxt, criada para fornecer endereços gratuitos, anônimos, temporários e aleatórios sem armazenar nenhum dos seus dados pessoais.",
+    "steps": {
+      "title": "Como usar o gerador de endereços de e-mail temporários da Internxt",
+      "steps": [
+        {
+          "title": "Passo 1",
+          "description": "Copie seu endereço de e-mail descartável"
+        },
+        {
+          "title": "Passo 2",
+          "description": "Use o endereço no serviço desejado"
+        },
+        {
+          "title": "Passo 3",
+          "description": "Aguarde alguns instantes por uma resposta ou e-mail de verificação"
+        },
+        {
+          "title": "Passo 4",
+          "description": "Todos os e-mails recebidos aparecerão na sua caixa de entrada acima"
+        }
+      ]
+    },
+    "whatIsTempMail": {
+      "title": "O que é um endereço de e-mail temporário?",
+      "description": "Um endereço de e-mail temporário ou descartável é uma ferramenta que permite a um usuário com um endereço de e-mail próprio obter um endereço temporário para o contato atual. Um serviço de e-mail temporário permite criar um novo endereço de e-mail com a validade necessária para se cadastrar em serviços, newsletters ou contas de sites sem precisar entregar sua identidade real."
+    },
+    "whyUseDisposableMail": {
+      "title": "Por que usar serviços de e-mail temporário?",
+      "description": "Seu endereço de e-mail é como sua identidade online: você não deveria entregá-lo a qualquer um. Proteja sua conta principal e mantenha sua caixa de entrada limpa usando um endereço de e-mail temporário para comunicações pontuais ou de curto prazo.",
+      "infoCards": [
+        {
+          "title": "Evite spam e assinaturas irritantes",
+          "description": "Cadastre-se em qualquer serviço sem comprometer sua conta de e-mail real nem sobrecarregar sua caixa de entrada pessoal. Perfeito para conseguir cupons de desconto e ofertas de cadastro."
+        },
+        {
+          "title": "Oculte informações pessoais com uma conta de e-mail temporária",
+          "description": "Os destinatários não terão acesso ao seu nome, à sua foto, ao seu número de telefone, ao seu endereço de e-mail nem a qualquer outra informação pessoal associada à sua conta real."
+        },
+        {
+          "title": "Receba mensagens em uma caixa de entrada temporária",
+          "description": "Receba instantaneamente os e-mails que você espera. É um e-mail temporário, não um e-mail descartado na hora."
+        },
+        {
+          "title": "Cadastre-se anonimamente com um endereço aleatório",
+          "description": "Não tem certeza se o destinatário é confiável? O site com o qual você quer entrar em contato parece suspeito? Com medo de malware? Use um endereço aleatório graças ao gerador de endereços falsos da Internxt."
+        },
+        {
+          "title": "Sem precisar de uma conta temporária ou de um novo Gmail",
+          "description": "Chega de fazer malabarismo com contas reais. Com o e-mail falso da Internxt, basta criar uma conta, usá-la e descartá-la quando quiser. Não se sobrecarregue gerenciando várias contas."
+        },
+        {
+          "title": "Ganhe benefícios de indicação sem convidar amigos",
+          "description": "Quer conseguir um desconto ou vantagens extras em um serviço online, mas não se sente à vontade para entregar os e-mails dos seus amigos? Convide seu e-mail temporário!"
+        }
+      ]
+    },
+    "whenUseTempMail": {
+      "title": "Quando usar um endereço de e-mail temporário?",
+      "description": "Os casos de uso de uma caixa de entrada temporária são praticamente infinitos. Qualquer coisa que exija um e-mail pode ser feita instantaneamente de forma anônima e sem compromisso com um endereço de e-mail temporário. Veja abaixo os melhores exemplos de quando usar um e-mail falso:",
+      "bulletedList": [
+        "Cadastrar-se em testes gratuitos",
+        "Testar seu aplicativo",
+        "Criar uma segunda (ou várias) contas",
+        "Eliminar spam",
+        "Cadastrar-se em programas de fidelidade de lojas",
+        "Comunicar-se com contas suspeitas",
+        "Criar contas anônimas",
+        "Experimentar serviços online sem riscos",
+        "Verificar contas sem importância",
+        "Pregar peças nos amigos"
+      ]
+    }
+  },
+  "QASection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "Por quanto tempo os e-mails são mantidos?",
+        "answer": [
+          "Os e-mails são mantidos enquanto você continuar usando seu endereço de e-mail temporário. Assim que você fechar seu endereço temporário, seus e-mails serão excluídos junto com a conta temporária."
+        ]
+      },
+      {
+        "question": "Os e-mails continuam privados?",
+        "answer": [
+          "A Internxt não tem nenhum acesso ao seu e-mail temporário. Não armazenamos nenhuma das suas informações pessoais nem nenhum dos e-mails que você recebe."
+        ]
+      },
+      {
+        "question": "Onde vejo se recebi um e-mail?",
+        "answer": [
+          "Os e-mails recebidos na sua caixa de entrada temporária serão exibidos na caixa de entrada localizada no topo desta página."
+        ]
+      },
+      {
+        "question": "Como altero o endereço de e-mail?",
+        "answer": [
+          "Altere seu e-mail temporário atualizando a página para gerar um novo endereço de e-mail, que aparecerá na barra de ferramentas no topo da página."
+        ]
+      },
+      {
+        "question": "É possível recuperar e-mails excluídos?",
+        "answer": [
+          "Não. Infelizmente, quando você exclui os e-mails enviados ou recebidos com o domínio usado, eles desaparecem para sempre. Fazemos isso para proteger sua privacidade e evitar que seus e-mails excluídos fiquem expostos."
+        ]
+      },
+      {
+        "question": "O que é um e-mail temporário?",
+        "answer": [
+          "Um e-mail temporário é um endereço de e-mail descartável que só é válido por um curto período antes de ser destruído automaticamente. O e-mail temporário também é chamado às vezes de e-mail transitório. O E-mail Temporário da Internxt é um e-mail descartável gratuito criado para manter suas informações pessoais privadas."
+        ]
+      },
+      {
+        "question": "Por que usar um e-mail temporário?",
+        "answer": [
+          "Mantenha sua conta de e-mail limpa, segura e livre de mensagens indesejadas com o E-mail Temporário gratuito da Internxt. Receba e-mails anonimamente abrindo uma caixa de entrada temporária e gerando endereços de e-mail aleatórios para usar como quiser. Guarde sua conta de e-mail real para o que realmente importa."
+        ]
+      }
+    ]
+  },
+  "SignupSection": {
+    "title": "Internxt Drive",
+    "description": "O lugar mais seguro para suas fotos, seus documentos e seus arquivos.",
+    "createAccount": "Armazenamento seguro na nuvem"
+  },
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "O que é um e-mail temporário?",
+        "answer": [
+          "Um e-mail que só é válido por um curto período antes de ser destruído automaticamente é chamado de e-mail transitório. O E-mail Temporário da Internxt é um e-mail descartável gratuito e muito útil."
+        ]
+      },
+      {
+        "question": "Por que usar um e-mail temporário?",
+        "answer": [
+          "Mantenha sua conta de e-mail limpa, segura e livre de mensagens indesejadas com o E-mail Temporário gratuito da Internxt. Envie e-mails anonimamente abrindo uma caixa de entrada temporária e gerando endereços de e-mail aleatórios para usar como quiser. Guarde sua conta real para o que realmente importa."
+        ]
+      }
+    ]
+  }
+}

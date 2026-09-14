@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Reduza o tamanho de arquivos ZIP grandes de forma rápida e segura com nosso compressor de ZIP online",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo ZIP",
+      "description": "Para comprimir um arquivo PPT, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo ZIP: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo ZIP”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com este compressor de ZIP online, você pode comprimir vários arquivos ZIP gratuitamente sempre que precisar. Todos os arquivos são protegidos com uploads criptografados para garantir a privacidade dos seus vídeos. "
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar de um compressor de ZIP online ",
+      "intro": "Infelizmente, enviar arquivos de vídeo grandes online pode ser difícil por causa dos limites de upload de serviços de e-mail, compartilhamento de arquivos ou armazenamento em nuvem. Ao usar o compressor de ZIP online da Internxt, você ganha uma ferramenta gratuita e segura que, ao terminar, permite: ",
+      "bullets": [
+        "Enviar arquivos ZIP mais rápido e economizar banda",
+        "Manter a qualidade dos seus arquivos",
+        "Economizar armazenamento e manter os arquivos dentro dos limites de upload"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter seus vídeos privados, assim você pode comprimir, armazenar e compartilhar seus arquivos com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos ZIP",
+    "cta": "Obter a Internxt"
+  }
+}

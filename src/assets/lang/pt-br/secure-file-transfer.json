@@ -1,0 +1,197 @@
+{
+  "HeroSection": {
+    "title": "Uma plataforma de transferência de arquivos privada e segura",
+    "features": [
+      "Compartilhe fotos, vídeos e documentos",
+      "Criptografia pós-quântica e de conhecimento zero",
+      "Código aberto e auditado"
+    ],
+    "cta": "Obtenha o Internxt"
+  },
+  "FeaturesSection": {
+    "intro": "A Internxt oferece recursos de transferência segura de arquivos para você enviar seus arquivos com total privacidade, protegidos de hackers e vazamentos de dados.",
+    "features": {
+      "features1": {
+        "title": "Proteção pós-quântica",
+        "description": [
+          "A Internxt é a primeira solução de armazenamento na nuvem a oferecer proteção contra a ameaça dos computadores quânticos com criptografia pós-quântica. Usar um serviço de transferência de arquivos grandes com métodos de criptografia tradicionais pode colocar suas informações sensíveis em risco.",
+          "Escolher compartilhar seus arquivos com a Internxt protege seus dados agora e no futuro, mesmo conforme os hackers passam a ter acesso a ferramentas mais poderosas."
+        ]
+      },
+      "features2": {
+        "title": "Compartilhamento de arquivos seguro e gratuito",
+        "description": [
+          "A Internxt oferece uma forma segura de compartilhar arquivos gratuitamente, sem assinatura, para arquivos de até 5 GB com o Internxt Send. O Internxt Drive inclui compartilhamento protegido por senha, com segurança extra, para arquivos de até 10 GB.",
+          "Seus arquivos permanecem seguros graças à criptografia de ponta a ponta do início ao fim, para máxima segurança: livre para compartilhar, livre de IA, livre de anúncios e sem acesso de terceiros aos seus dados, com privacidade completa online."
+        ]
+      },
+      "features3": {
+        "title": "Segurança nas suas mãos",
+        "description": [
+          "Tenha o máximo de controle no seu serviço de transferência de arquivos grandes, personalizando como quer compartilhar seus arquivos.",
+          "Escolha entre um link criptografado ou email. Impeça o acesso não autorizado aos seus arquivos com proteção adicional por senha, e monitore e remova o acesso sempre que quiser parar de compartilhar. Seus arquivos. Suas regras."
+        ]
+      }
+    }
+  },
+  "HowToChooseSection": {
+    "title": "Como escolher um serviço de transferência segura de arquivos",
+    "accordionCards": {
+      "titles": ["Método de criptografia", "Privacidade", "Conformidade"],
+      "descriptions": [
+        "Muitas empresas usam criptografia de ponta a ponta, mas ainda controlam suas chaves de criptografia. Isso significa que seus arquivos podem continuar acessíveis nos servidores delas. Mesmo com criptografia AES-256, provedores que gerenciam suas chaves podem ler, escanear ou compartilhar seus dados — voluntariamente ou por exigência legal. Sem criptografia de conhecimento zero, sua privacidade não está totalmente protegida.",
+        "Muitas empresas criptografam seus arquivos, mas ainda controlam as chaves de criptografia. Isso significa que seus dados podem ser acessados, escaneados ou compartilhados — mesmo criptografados. Com a criptografia de conhecimento zero, os arquivos são criptografados no seu dispositivo e somente você tem as chaves. Nem as gigantes da tecnologia, nem terceiros, nem mesmo a Internxt podem acessar seus dados.",
+        "Se você compartilha documentos sensíveis ou confidenciais online, privacidade, segurança e conformidade sólidas são essenciais. Um provedor de compartilhamento de arquivos em conformidade com o GDPR protege seu direito à privacidade, reduz o risco de violações de dados e dá a você controle sobre como seus dados são tratados. Para empresas, também ajuda a atender exigências legais e do setor, construir confiança e evitar multas custosas."
+      ]
+    }
+  },
+  "SecureAndManage": {
+    "title": "Tenha compartilhamento seguro de arquivos com a Internxt",
+    "description": "O Internxt Drive e o Internxt Send oferecem um serviço seguro de transferência de arquivos grandes para enviar arquivos gratuitamente e com privacidade, graças à criptografia de conhecimento zero.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "O Internxt Drive oferece armazenamento na nuvem e compartilhamento de arquivos com criptografia pós-quântica e de conhecimento zero, para compartilhar vídeos, fotos e arquivos com máxima privacidade.",
+          "Com o Drive, você pode compartilhar arquivos com um limite generoso de 10 GB, suficiente para enviar grandes projetos e arquivos sem se preocupar com compressão e perda de qualidade do seu conteúdo. Para segurança adicional, o Drive também inclui compartilhamento protegido por senha e controles de acesso, então você tem controle total sobre quem pode acessar seus arquivos compartilhados.",
+          "A transferência segura de arquivos está incluída na suíte de produtos da Internxt, que conta com VPN, Antivirus, Cleaner, Meet, Mail e muito mais. Tenha a proteção mais avançada para sua privacidade online com um plano anual ou vitalício da Internxt."
+        ],
+        "cta": "Obtenha o Internxt Drive"
+      },
+      {
+        "title": "Internxt Send",
+        "description": [
+          "O Internxt Send é um serviço de transferência segura de arquivos para enviar arquivos de até 5 GB com privacidade, por link ou email. Ele oferece a mesma criptografia de conhecimento zero que a Internxt usa em todos os seus produtos para garantir a privacidade dos seus arquivos.",
+          "O Send é totalmente gratuito e pode ser usado quantas vezes você quiser, sem necessidade de cartão de crédito ou dados de login. Diferente de outras plataformas, as chaves de criptografia são gerenciadas no seu dispositivo, então somente você e as pessoas que escolher podem ver seus arquivos.",
+          "A Internxt também mantém seus dados longe de terceiros, livres de rastreadores, e não usa seu conteúdo para treinar modelos de inteligência artificial e aprendizado de máquina.",
+          "Comece gratuitamente e passe a compartilhar arquivos com total privacidade usando a Internxt."
+        ],
+        "cta": "Experimente o Internxt Send"
+      }
+    ]
+  },
+  "SecureFeaturesSection": {
+    "title": "Recursos de transferência segura de arquivos",
+    "scrollableSection": {
+      "titles": [
+        "Criptografia",
+        "Compartilhamento de arquivos grandes",
+        "Recursos avançados de compartilhamento",
+        "Código aberto e auditado"
+      ],
+      "descriptions": [
+        "A Internxt protege seus arquivos com criptografia pós-quântica, mantendo-os a salvo de futuros ciberataques capazes de quebrar os métodos atuais. Para máxima privacidade, usamos criptografia de conhecimento zero — seus arquivos são criptografados no seu dispositivo, então somente você e as pessoas com quem compartilhar podem acessá-los, nem mesmo a Internxt.",
+        "O Internxt Drive aceita envios de até 40 GB e permite compartilhar arquivos de até 10 GB com segurança, inclusive com pessoas que não têm conta na Internxt. 10 GB são suficientes para cerca de 6,5 horas de vídeo em HD, 2.000 fotos ou 10.000 documentos. Diferente de compactar ou dividir arquivos, a Internxt garante que eles mantenham a qualidade original ao serem compartilhados com segurança pelo Send e pelo Drive.",
+        "Colabore com sua equipe com total segurança, usando controles avançados de compartilhamento como proteção por senha e controles de acesso. Ao compartilhar arquivos, você pode conceder permissões de edição ou apenas de visualização, para uma colaboração segura em equipe. Com o Drive, você pode monitorar e restringir o acesso sempre que precisar, impedindo acessos não autorizados a pastas compartilhadas.",
+        "O Internxt Drive e todos os nossos serviços são de código aberto. Nosso código está disponível no GitHub para que qualquer pessoa verifique, confira a segurança e confirme que não existem portas dos fundos capazes de comprometer seus dados. Nossa plataforma também é auditada por uma das principais empresas europeias de testes de invasão, garantindo que esteja protegida contra hackers e ameaças de cibersegurança."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Transferência segura de arquivos",
+    "description": "Compartilhe fotos, vídeos e documentos com privacidade",
+    "cta": "Obtenha o Internxt"
+  },
+  "CtaSectionV2": {
+    "title": "Transfira com confiança",
+    "description": "Compartilhamento seguro de arquivos do início ao fim",
+    "cta": "Obtenha o Internxt"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Dúvidas? Temos respostas",
+    "items": [
+      {
+        "question": "Qual é o melhor serviço de transferência segura de arquivos?",
+        "answer": [
+          "A Internxt oferece compartilhamento seguro de arquivos integrado ao seu armazenamento na nuvem com o Internxt Drive, ou como plataforma gratuita com o Internxt Send.",
+          "As duas opções permitem enviar arquivos grandes e compartilhá-los com privacidade incomparável, graças à criptografia pós-quântica e de conhecimento zero.",
+          "Comece a usar o Internxt Drive a partir de apenas € 3 por mês e tenha o armazenamento na nuvem mais seguro e privado para seus arquivos de vídeo."
+        ]
+      },
+      {
+        "question": "Quais são os limites de tamanho ao compartilhar arquivos?",
+        "answer": [
+          "O Internxt Drive permite compartilhar arquivos de até 10 GB, e o Internxt Send tem limite de 5 GB. Com esses limites, você pode enviar vídeos grandes, álbuns de fotos e documentos quantas vezes quiser, por meio de um link seguro ou convite por email."
+        ]
+      },
+      {
+        "question": "Preciso de uma conta Internxt para compartilhar arquivos?",
+        "answer": [
+          "O Internxt Drive tem um plano gratuito que você pode usar para sempre, então dá para compartilhar quantos arquivos quiser sem custo.",
+          "O Internxt Send é 100% gratuito e pode ser usado quantas vezes você precisar, sem limites. Não é necessário cartão de crédito nem login para o Send, então você tem o melhor compartilhamento seguro de arquivos na nuvem de graça."
+        ]
+      },
+      {
+        "question": "Preciso de uma conta para ver arquivos compartilhados?",
+        "answer": [
+          "Se você compartilhar um arquivo por link com o Internxt Drive, o destinatário não precisa criar uma conta para visualizar ou baixar o arquivo. Se você enviar por email, o destinatário receberá uma notificação pedindo que crie uma conta Internxt, o que pode ser feito gratuitamente.",
+          "O Internxt Send cria um link ou email seguro, que qualquer pessoa pode usar, tenha ou não uma conta Internxt."
+        ]
+      },
+      {
+        "question": "Os links compartilhados expiram?",
+        "answer": [
+          "A Internxt garante controle no seu serviço de transferência de arquivos grandes, permitindo que você gerencie e restrinja o acesso a arquivos compartilhados pela sua conta do Internxt Drive.",
+          "Com o Internxt Send, seu link fica válido por um período e depois expira automaticamente, para sua segurança."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode entrar em contato com nossa equipe de Sucesso do Cliente pelo chat ao vivo ou enviando um email para hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoedas?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar via PayPal, iDEAL, Sofort e criptomoedas."
+        ]
+      }
+    ]
+  }
+}

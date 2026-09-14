@@ -1,0 +1,216 @@
+{
+  "HeroSection": {
+    "label": "Armazenamento de Objetos",
+    "title": {
+      "line1": "**Internxt S3**",
+      "line2": "Armazenamento de objetos na nuvem grátis"
+    },
+    "description": "Uma solução de armazenamento na nuvem eficiente e escalável para armazenar, acessar e gerenciar dados em larga escala.",
+    "cta": "Começar",
+    "cta2": "Ler a documentação"
+  },
+  "PredictablePricingSection": {
+    "title": "Preços simples e previsíveis\n sem taxas e sem cobranças de API",
+    "description": "Evite o transtorno de contas de armazenamento imprevisíveis. A Internxt oferece uma tarifa direta pela capacidade de armazenamento, sem taxas ocultas.",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "Ultrarrápido e acessível instantaneamente"
+      },
+      {
+        "title": "Até 80%",
+        "description": "Mais acessível que a AWS"
+      },
+      {
+        "title": "Zero taxas",
+        "description": "Transferência de dados gratuita"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "O armazenamento de objetos gratuito da Internxt \n combina segurança e eficiência",
+    "description": "O armazenamento de objetos da Internxt é uma solução acessível e de alto desempenho que está revolucionando o armazenamento de dados online, perfeita para pessoas ou organizações que precisam de uma infraestrutura confiável e segura a um custo mínimo.",
+    "payAsYouGoCard": {
+      "title": "Pague conforme o uso!",
+      "description": "Pague apenas pelo armazenamento que usar."
+    },
+    "cardText": {
+      "label": "S3",
+      "perTB": "Por TB/Cobrado mensalmente",
+      "price": "7",
+      "cta": "Selecionar plano",
+      "whatsIncluded": {
+        "title": "O que está incluído",
+        "features": [
+          "Cobrado mensalmente",
+          "Criptografia no lado do servidor",
+          "Compatível com as APIs AWS S3 e IAM",
+          "Maior velocidade",
+          "Armazenamento flexível",
+          "Código aberto",
+          "Em conformidade com o GDPR",
+          "Suporte premium ao cliente"
+        ]
+      }
+    },
+    "oneTimePayment": "*É necessária uma taxa única de € 1 para verificação da conta"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "De quanto armazenamento você precisa?",
+    "description": "Descubra quanto você pode economizar com o armazenamento de objetos da Internxt. Use nossa calculadora de custos para ver como nos comparamos aos hiperescaladores.",
+    "pay-as-you-go": "Preço conforme o uso",
+    "perMonth": "/por mês",
+    "perYear": "/por ano",
+    "storageAmount": "Quantidade de armazenamento",
+    "percentDownloadPerMonth": "Percentual de download por mês",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Por que escolher o armazenamento de objetos da Internxt?",
+    "description": "O armazenamento de objetos na nuvem gratuito da Internxt se resume a quatro tipos de “grátis” que compradores de S3 costumam pagar em outros lugares: transferência de dados gratuita, sem taxas por operação, um teste de 30 dias com garantia de reembolso e um protocolo S3 de código aberto do qual você pode sair quando quiser. Junte isso a uma durabilidade de 11 noves, data centers na UE e criptografia AES-256, e você tem um serviço de buckets que cabe no orçamento de um projeto paralelo e também numa lista de requisitos de compras ISO 27001. O cartão de preços acima mostra o piso: € 7/TB, mínimo de 1 TB, cobrado mensalmente. O restante desta seção é o que você recebe por isso.",
+    "scrollableSection": {
+      "titles": [
+        "Zero taxas de entrada e saída",
+        "Sem cobranças por API ou operação",
+        "Teste gratuito de 30 dias com garantia de reembolso",
+        "Compatibilidade com as APIs S3 e IAM",
+        "Residência de dados sob jurisdição da UE",
+        "Durabilidade de 11 noves e velocidade de camada hot"
+      ],
+      "descriptions": [
+        "Transferência de dados gratuita significa que você paga € 0 para enviar dados aos buckets da Internxt e € 0 para baixar ou transmitir para fora, independentemente do volume. A AWS S3 cobra cerca de US$ 0,09 por GB nos primeiros 10 TB de tráfego de saída a cada mês, então, num mês com 5 TB de saída, são aproximadamente US$ 450 que você não paga aqui. A conta também vale para a entrada: enviar sua primeira sincronização via aws-cli, rclone ou qualquer ferramenta compatível com S3 não custa nada. Combine isso com uma tarifa mensal previsível de armazenamento e sua fatura para de oscilar quando seu tráfego dispara.",
+        "Sem taxas de API significa que requisições PUT, GET, COPY, LIST e DELETE não aparecem na sua fatura. Apenas o armazenamento em si aparece. Na AWS S3, requisições da classe PUT são cobradas a US$ 0,005 por 1.000 e as da classe GET a US$ 0,0004 por 1.000. Uma carga de trabalho de backup que envia um milhão de PUTs por mês já acumula uma conta de requisições antes de um único byte de armazenamento ser precificado. A Internxt dispensa essa linha. O mínimo mensal é o que você paga, e não há um medidor de operações rodando por baixo.",
+        "Grátis para testar significa uma garantia completa de reembolso de 30 dias em todos os planos de armazenamento de objetos da Internxt. Cadastre-se pelo checkout S3 da Internxt, envie seus dados via aws-cli ou rclone, execute sua carga de trabalho real (não um ambiente de teste) e, se não servir, escreva para o suporte da Internxt dentro de 30 dias e você receberá os € 7 de volta integralmente. Não é um plano gratuito (não existe um), e o piso mensal de 1 TB / € 7 continua valendo durante o período de teste. Mas seu primeiro mês é reversível, o que basta para validar de verdade a economia com saída de dados e a compatibilidade com S3.",
+        "A compatibilidade com as APIs S3 e IAM significa que o serviço de buckets da Internxt fala o conjunto de APIs AWS S3 e IAM, de modo que clientes criados em torno de chamadas S3 padrão funcionam sem alterações de código. Isso cobre os mais comuns: aws-cli, boto3, rclone (a Internxt publica a documentação de configuração na página de integração do rclone), clientes MinIO, Cyberduck, s3cmd, FileZilla Pro e o recurso aws_s3_bucket do Terraform. Aponte suas ferramentas atuais para o endpoint da Internxt, troque as chaves de acesso e os buckets se comportarão como seus scripts esperam. O código está aberto no repositório da Internxt no GitHub, então a implementação do protocolo é auditável. Se decidir migrar para AWS, R2, Backblaze ou qualquer outro lugar, seus buckets continuam no formato S3 e portáveis. Esse é outro tipo de liberdade: livre de dependência de fornecedor.",
+        "Armazenamento privado de objetos na nuvem na UE significa que seus buckets ficam em data centers parceiros da OVHcloud dentro da União Europeia, sob o GDPR, sem exposição ao CLOUD Act para clientes europeus. Os dados são criptografados em trânsito com TLS 1.3 e em repouso com AES-256, e há suporte a criptografia no lado do servidor com chaves fornecidas pelo cliente (SSE-C) para equipes que mantêm suas próprias chaves. A plataforma é auditada de forma independente e possui certificação ISO 27001:2022, atestado SOC 2, conformidade com a HIPAA e conformidade com o GDPR. Nada disso fica por sua conta operar. É o que vem junto com o bucket.",
+        "A durabilidade de 99,999999999% (ou seja, 11 noves, a mesma meta publicada pela AWS S3) vem da replicação de cada objeto em vários servidores europeus. Se um disco falhar, seus dados já estão em outro rack. Tudo fica em uma única camada hot: não há atraso de recuperação no estilo Glacier, nem janela de reidratação, nem uma linha separada de arquivamento frio na fatura. Você pode executar operações paralelas de leitura e escrita no mesmo bucket, e a camada de metadados aguenta o acesso em rajada. Somando tudo, uma única tarifa fixa cobre durabilidade, disponibilidade e acesso instantâneo em uma só linha."
+      ]
+    },
+    "bannerText": {
+      "title": "Armazenamento de objetos na nuvem da Internxt",
+      "description": "Experimente gerenciamento de dados, velocidade e eficiência superiores",
+      "cta": "Começar",
+      "separator": "|",
+      "cta2": "Fale conosco"
+    }
+  },
+  "HowInternxtComparesSection": {
+    "title": "Como a Internxt se compara ao nível gratuito da AWS S3",
+    "description": "Armazenamento de objetos na nuvem gratuito é um plano baseado em uso em que armazenamento, transferência ou operações são gratuitos até um limite definido. AWS, IBM, Oracle e Cloudflare têm versões disso. A Internxt não oferece um nível de “GB grátis”. O que ela oferece é transferência de dados gratuita, sem taxas por operação, um teste de 30 dias com garantia de reembolso acima de um piso de € 7/TB e um protocolo S3 de código aberto do qual você pode sair quando quiser. Veja como isso se compara ao nível gratuito da AWS S3 e onde cada tipo de “grátis” realmente acaba.",
+    "scrollableSection": {
+      "titles": [
+        "O nível gratuito da AWS S3 e o que acaba",
+        "Transferência de dados gratuita vs. hiperescaladores com taxa de saída",
+        "Sem taxas por operação: como PUT, GET e LIST funcionam na Internxt",
+        "A garantia de reembolso de 30 dias como caminho de teste gratuito",
+        "Código aberto mais protocolo S3 significa liberdade da dependência de fornecedor"
+      ],
+      "descriptions": [
+        "O nível gratuito da AWS S3 é um plano introdutório de 12 meses: 5 GB de armazenamento S3 Standard, 20.000 requisições GET e 2.000 requisições PUT/COPY/POST/LIST por mês. A AWS também concede a cada conta 100 GB de saída para a internet gratuitos por mês em todos os serviços. No mês 13, as linhas de armazenamento e de requisições passam para a tarifa pública. O limite de 5 GB serve para um tutorial do Postman. Não serve para uma carga de backup, um data warehouse de análise ou uma biblioteca de mídia. O piso de € 7/TB da Internxt é a contrapartida. Não há uma faixa de 5 GB, mas também não há o abismo do mês 13. A mesma tarifa que cobriu seu primeiro TB cobre os 10 seguintes.",
+        "A saída de dados é onde as faturas dos hiperescaladores ficam imprevisíveis. AWS S3, Azure Blob e Google Cloud Storage cobram cerca de US$ 0,09 por GB nos primeiros 10 TB de saída para a internet a cada mês, com redução em faixas maiores. O Cloudflare R2 oferece saída zero com um modelo de custo diferente; a Internxt faz o mesmo. Envie uma biblioteca de mídia de 2 TB para uma CDN uma vez por mês e a AWS cobra cerca de US$ 180 só de trânsito. Na Internxt, essa linha marca € 0. O “grátis” aqui é a saída: todo mês, todo TB, sem recálculo no mês 13.",
+        "A AWS S3 precifica operações de objeto em três faixas: PUT/COPY/POST/LIST a US$ 0,005 por 1.000 requisições, GET/SELECT a US$ 0,0004 por 1.000 e uma linha separada para transições de ciclo de vida. Um job de backup de alta frequência que envia 1 milhão de PUTs e lê 3 milhões de GETs em um mês gera cerca de US$ 6,20 só em requisições, antes do armazenamento. A Internxt não precifica requisições. PUT, GET, COPY, LIST, DELETE, upload multiparte: todas contam apenas na sua tarifa mensal de armazenamento e em nada mais. Não há medidor de operações para monitorar, nem alarme do CloudWatch para contas de requisições, nem picos surpresa quando o tráfego dobra.",
+        "A garantia de reembolso de 30 dias é o mais próximo de um teste gratuito no armazenamento de objetos da Internxt. Não há franquia de GB grátis (o mínimo mensal de € 7/TB vale desde o primeiro dia), mas cada euro cobrado nos primeiros 30 dias é reembolsável se você escrever ao suporte da Internxt dentro do prazo. Isso torna o teste real: você pode rodar sua carga de trabalho de verdade no bucket, validar o comportamento da API S3 com suas ferramentas, medir a economia de saída no seu perfil de tráfego e sair sem prejuízo se não servir. O fluxo de checkout S3 da Internxt leva alguns minutos, e o cancelamento é manual, mas processado rapidamente.",
+        "O armazenamento compatível com S3 e de código aberto é o tipo de “grátis” que não aparece na fatura. A Internxt publica a stack em seu repositório no GitHub, os buckets falam as APIs AWS S3 e IAM ao pé da letra, e migrar de ou para outro provedor S3 é questão de trocar o endpoint e as chaves de acesso. Não há cliente proprietário, nem agente de sincronização fechado, nem conversão de formato. Se você superar a Internxt e migrar para R2, B2 ou Wasabi, seus scripts não mudam. Se ficar, os mesmos scripts continuam valendo. Esse é o tipo de “grátis” que se acumula."
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "O que é armazenamento de objetos na nuvem?",
+        "answer": [
+          "Armazenamento de objetos na nuvem é uma arquitetura de armazenamento em que cada arquivo é guardado como um objeto autocontido (dados, metadados e um ID único) em um namespace plano endereçável via HTTP. Ele escala horizontalmente entre servidores distribuídos, o que o torna adequado para backups, bibliotecas de mídia, data lakes de análise e qualquer carga de trabalho medida em TB em vez de GB."
+        ]
+      },
+      {
+        "question": "O que é o protocolo S3 e a Internxt é compatível com ele?",
+        "answer": [
+          "O protocolo S3 é o conjunto de APIs baseado em HTTP que a Amazon Web Services publicou para seu Simple Storage Service, hoje o padrão de fato para armazenamento de objetos na nuvem. A Internxt é compatível com as APIs AWS S3 e IAM, então qualquer cliente criado para a AWS S3 (aws-cli, boto3, rclone, MinIO, Cyberduck, módulo S3 do Terraform) funciona com a Internxt apenas alterando o endpoint."
+        ]
+      },
+      {
+        "question": "O armazenamento de objetos na nuvem gratuito é realmente gratuito?",
+        "answer": [
+          "Armazenamento de objetos na nuvem gratuito geralmente significa gratuito até um limite (transferência gratuita, operações gratuitas ou um período de teste gratuito), não gratuito para sempre. O nível gratuito da AWS S3 cobre 5 GB por 12 meses. A versão da Internxt é diferente: transferência de dados gratuita, sem cobranças de API e um teste de 30 dias com garantia de reembolso acima de um piso mensal de armazenamento."
+        ]
+      },
+      {
+        "question": "Posso integrar o armazenamento de objetos da Internxt às minhas ferramentas AWS S3 atuais?",
+        "answer": [
+          "Sim. A Internxt é compatível com as APIs AWS S3 e IAM, então clientes criados para o conjunto padrão de APIs S3 funcionam sem alterações de código. Os mais comuns: aws-cli, boto3 / botocore, rclone (documentação de configuração publicada pela Internxt), clientes MinIO, Cyberduck, s3cmd, FileZilla Pro e o recurso aws_s3_bucket do Terraform. Troque a URL do endpoint e as chaves de acesso, e as chamadas em si não mudam."
+        ]
+      },
+      {
+        "question": "Qual é a política de armazenamento mensal mínimo da Internxt?",
+        "answer": [
+          "Mínimo de 1 TB por 30 dias. Cada objeto armazenado conta para uma janela de retenção de 30 dias, então, se você excluir um arquivo antes do dia 30, ainda será cobrado pelos dias restantes. As classes Standard-IA e One Zone-IA da AWS S3 têm a mesma regra de duração mínima de 30 dias, e o Glacier tem 90. Isso mantém o preço do armazenamento previsível para os dois lados."
+        ]
+      },
+      {
+        "question": "A Internxt cobra um mínimo mensal de armazenamento?",
+        "answer": [
+          "Sim. O mínimo mensal é de € 7, que cobre 1 TB de armazenamento. Armazenar menos de 1 TB ainda é cobrado pela tarifa de 1 TB, e não há proporcionalidade abaixo do piso. Acima de 1 TB, a tarifa permanece em € 7 por TB por mês, cobrada mensalmente. O valor de € 7 é o que aparece em toda fatura, a menos que você ultrapasse o piso."
+        ]
+      },
+      {
+        "question": "Como a Internxt trata arquivos menores que 4 KB?",
+        "answer": [
+          "Objetos menores que 4 KB são cobrados como 4 KB. Se você enviar uma linha de log de 500 bytes como um objeto próprio, a linha de armazenamento a contabiliza como 4 KB. As classes Standard-IA e Glacier da AWS S3 usam o mesmo padrão de tamanho mínimo de objeto, com limiares maiores (128 KB na Standard-IA). A solução, quando isso importa, é agrupar objetos pequenos em arquivos maiores antes do envio."
+        ]
+      },
+      {
+        "question": "Quanto custa sobrescrever um arquivo sem versionamento?",
+        "answer": [
+          "Sobrescrever sem versionamento move o objeto antigo para a faixa de duração mínima de 30 dias. Se você enviar file.pdf hoje e substituí-lo amanhã, será cobrado por um dia de armazenamento ativo da v1, 29 dias de retenção de armazenamento excluído da v1, mais o armazenamento ativo da v2 a partir do segundo dia. A saída é ativar o versionamento do bucket ou agrupar atualizações além da janela de 30 dias."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte ou cancelo meu plano de armazenamento de objetos da Internxt?",
+        "answer": [
+          "Escreva para o suporte da Internxt para obter ajuda, solicitar reembolsos dentro da janela de 30 dias e fazer cancelamentos. O chat ao vivo está disponível no produto. O cancelamento é processado manualmente: você envia um email, a equipe confirma e a assinatura é encerrada no próximo ciclo de cobrança. Se você excluir objetos antes do dia 30, a política de duração mínima de 30 dias ainda cobra os dias restantes, então o momento do cancelamento importa se seu armazenamento for recente."
+        ]
+      }
+    ]
+  },
+  "ContactSales": {
+    "title": "Fale com vendas",
+    "description": "Preencha o formulário de contato e a equipe entrará em contato em breve.",
+    "form": {
+      "name": "Nome completo",
+      "email": "Endereço de email",
+      "company": "Nome da empresa",
+      "phone": "Número de telefone",
+      "howMuchStorage": "De quanto armazenamento você precisa?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Selecione",
+        "1 - 10TB",
+        "15 - 25TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Como podemos ajudar você? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Conte-nos mais sobre suas  necessidades",
+      "cta": "Enviar mensagem",
+      "ctaSending": "Enviando...",
+      "successMessage": "Sua mensagem foi enviada com sucesso.",
+      "errorMessage": "Ocorreu um erro. Tente novamente."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt S3: armazenamento de objetos na nuvem grátis",
+    "description": "Os serviços gratuitos de armazenamento de objetos da Internxt combinam segurança e eficiência",
+    "cta": "Começar"
+  },
+  "CtaSectionV2": {
+    "title": "Armazenamento de objetos na nuvem gratuito da Internxt",
+    "description": "As soluções de armazenamento de objetos na nuvem da Internxt combinam segurança e eficiência",
+    "cta": "Começar"
+  }
+}

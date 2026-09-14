@@ -1,0 +1,117 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Obtenha a Internxt",
+    "title": "Otimização de dispositivos integrada ao Internxt Drive",
+    "features": [
+      "Menos lixo digital",
+      "Remova ameaças",
+      "Mais armazenamento"
+    ],
+    "subTitle": "Aumente a velocidade, a resposta e a saúde do seu dispositivo"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Encontre e elimine arquivos inúteis para aumentar a velocidade, a resposta e o desempenho do dispositivo. O Internxt Cleaner mantém seu dispositivo como novo, sem que você precise organizar e excluir arquivos indesejados manualmente."
+  },
+  "WhyUseSection": {
+    "title": "Por que usar um limpador de dispositivo para eliminar arquivos inúteis",
+    "description": "Arquivos antigos e indesejados deixam seu dispositivo lento e ocupam um espaço de armazenamento valioso. Descubra o que está ocupando seu espaço em disco com o Internxt Cleaner, uma forma segura e confiável de otimizar o armazenamento no PC e no Mac.",
+    "scrollableSection": {
+      "titles": [
+        "Libere armazenamento",
+        "Melhore a velocidade",
+        "Proteja sua privacidade"
+      ],
+      "descriptions": [
+        "Muitos arquivos podem ficar no seu dispositivo sem que você perceba, ocupando memória e reduzindo o desempenho. O Internxt Cleaner é uma das melhores ferramentas para encontrar arquivos duplicados e eliminar arquivos inúteis, liberando um armazenamento valioso.",
+        "Limpe sua memória RAM e seu armazenamento para reduzir a carga sobre os recursos do sistema, deixando seu dispositivo com a sensação de novo outra vez.",
+        "Arquivos residuais e dados de aplicativos podem conter informações pessoais que representam um risco aos seus dados caso o dispositivo seja perdido, roubado ou comprometido."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Otimize seu dispositivo para o máximo desempenho",
+    "description": "Elimine arquivos inúteis para aumentar a vida útil do seu PC ou Mac",
+    "cta": "Obtenha a Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "Como funciona",
+    "description": "O Internxt Cleaner oferece o melhor localizador e removedor de arquivos duplicados, dando a você espaço extra para o que importa e um dispositivo limpo e otimizado.",
+    "cardDescriptions": {
+      "titles": [
+        "Limpeza inteligente",
+        "Melhore a saúde do dispositivo",
+        "Seguro e protegido"
+      ],
+      "descriptions": [
+        "Usamos algoritmos avançados para ajudar você a identificar e eliminar arquivos inúteis. Ajudamos você a priorizar quais arquivos ou dados remover com o mínimo de esforço e o máximo de segurança.",
+        "Evite o superaquecimento do seu dispositivo, reduza o desgaste do hardware e melhore a saúde da bateria, deixando seu dispositivo com a sensação de novo com o Internxt Cleaner.",
+        "Só você decide o que excluir, o que lhe dá controle completo sobre seu espaço de armazenamento e a privacidade dos seus dados."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Quando usar um limpador de dispositivo",
+    "description": "Para ampliar o potencial do seu PC ou Mac, um limpador de dispositivo faz a limpeza digital e evita problemas de armazenamento e desempenho.",
+    "features": [
+      "Dispositivo lento ou travando",
+      "Pouco espaço de armazenamento",
+      "Depois de desinstalar aplicativos",
+      "Travamentos ou congelamentos frequentes",
+      "Consumo excessivo de bateria",
+      "Superaquecimento do dispositivo",
+      "Desempenho lento dos aplicativos",
+      "Demora para iniciar"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Internxt Drive",
+    "description": "Armazene suas informações sensíveis sem rastreamento nem vazamentos.",
+    "cta": "Armazenamento seguro na nuvem"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O que é um limpador de dispositivo e como ele funciona?",
+        "answer": [
+          "O Internxt Cleaner é uma ferramenta criada para eliminar arquivos inúteis e otimizar o desempenho do seu PC ou Mac, mantendo seu armazenamento livre e seu dispositivo funcionando sem travamentos."
+        ]
+      },
+      {
+        "question": "O Internxt Cleaner é gratuito?",
+        "answer": [
+          "O Internxt Cleaner faz parte dos nossos planos pagos anuais ou vitalícios do Internxt Drive.",
+          "O Internxt Cleaner está disponível ao adquirir qualquer plano Premium ou Ultimate, que incluem muitos outros recursos para proteger seu dispositivo e seus dados online."
+        ]
+      },
+      {
+        "question": "É seguro usar um limpador de dispositivo?",
+        "answer": [
+          "Sim, nós nunca excluímos arquivos: você tem controle total sobre os arquivos que deseja manter ou apagar, o que ajuda a otimizar o armazenamento e a manter a saúde do seu sistema e do seu dispositivo."
+        ]
+      },
+      {
+        "question": "Como começo a usar o serviço?",
+        "answer": [
+          "Você pode usar nosso limpador de dispositivo criando uma conta no Internxt Drive e adquirindo um plano Premium ou Ultimate, vitalício ou por assinatura, que inclui Drive, VPN, Cleaner, Meet e Mail."
+        ]
+      },
+      {
+        "question": "Com que frequência devo executar o limpador de dispositivo?",
+        "answer": [
+          "Se você notar que seu dispositivo está superaquecendo, funcionando lentamente ou que a bateria está acabando mais rápido do que o normal, pode ser um sinal de que o computador está sobrecarregado por excesso de arquivos inúteis ou aplicativos exigentes.",
+          "Nesse caso, você deve executar uma verificação com o Internxt Cleaner para identificar e excluir os arquivos desnecessários, mas o recomendado é fazer uma verificação mensal para manter a saúde do seu dispositivo."
+        ]
+      },
+      {
+        "question": "Um limpador de dispositivo vai excluir meus arquivos importantes?",
+        "answer": [
+          "Não. O Internxt Cleaner foi projetado para identificar e remover apenas arquivos temporários.",
+          "Você pode revisar e selecionar os arquivos que deseja excluir para garantir que nada importante seja removido."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "advogados ",
+      "normalText": "protegem os dados dos clientes e as informações de processos futuros"
+    },
+    "description": "Os advogados lidam regularmente com dados sensíveis e confidenciais de clientes, e o manuseio incorreto desses dados pode expor advogados ou escritórios de advocacia a multas elevadas e responsabilidades legais por má gestão ou perda das informações dos clientes.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "internxt_for_lawyers.webp",
+      "alt": "Internxt para advogados"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "O setor jurídico precisa alcançar o mundo dos negócios, pois advogados e escritórios de advocacia têm demorado mais do que outros casos de uso para adotar o armazenamento em nuvem em sua prática jurídica. No entanto, desde a COVID-19 e o crescimento das reuniões e audiências online, a profissão jurídica vem adotando a nuvem mais rapidamente do que antes.",
+        "Os advogados que adotam a nuvem como solução de armazenamento ainda enfrentam muitos desafios para proteger seus dados contra ataques cibernéticos, incluindo ransomware e vazamentos de dados.",
+        "Os escritórios de advocacia também têm ideias preconcebidas sobre as dificuldades que acreditam existir na migração para o armazenamento em nuvem. Por exemplo, eles relutam em guardar seus arquivos na nuvem por acreditarem que o processo é complexo, demorado e caro."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "Desde 2020, porém, os escritórios de advocacia começaram a adotar o armazenamento em nuvem mais rapidamente, apesar das preocupações anteriores. Os advogados estão digitalizando seus arquivos antigos e recentes e se preparando para enviá-los à nuvem. Os escritórios preferem a Internxt por sua interface limpa e fácil de usar, planos de armazenamento acessíveis e flexíveis e altas velocidades de upload de arquivos grandes.",
+        "Como este caso de uso está relacionado à área jurídica, a Internxt oferece benefícios adicionais para escritórios de advocacia que utilizam armazenamento em nuvem. Do ponto de vista legal, empresas como a Internxt seguem as leis de privacidade do Regulamento Geral sobre a Proteção de Dados (GDPR), que rege como as empresas podem usar, processar e armazenar dados pessoais.",
+        "O GDPR tem reputação global de proteger os dados dos usuários por meio de suas muitas políticas criadas para minimizar vazamentos de dados e outros ataques cibernéticos. Isso não só ajuda a construir confiança com os clientes ao demonstrar compromisso com o tratamento de informações confidenciais, como também ajuda a proteger os escritórios de advocacia em caso de ataque, já que o GDPR prevê ações rápidas para minimizar os efeitos de um ataque cibernético."
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "À medida que mais escritórios e advogados digitalizam seus arquivos antigos e migram para o armazenamento em nuvem, a Internxt pode oferecer os serviços necessários para tornar essa mudança o mais fácil, acessível e segura possível.",
+        "Graças à ênfase em segurança e privacidade, muitos profissionais do direito se beneficiaram do armazenamento em nuvem seguro e criptografado da Internxt e de outros aplicativos focados em privacidade, como o Internxt Send, para garantir comunicação segura e proteção de dados entre clientes e outros profissionais da área.",
+        "Dentro da profissão jurídica, portanto, assim como em outros estudos de caso da Internxt, garantir o tratamento seguro de dados sensíveis é essencial, não apenas para a reputação do escritório de advocacia, mas também para os clientes que ele representa.",
+        "A Internxt é uma solução que se encaixa bem na segurança e na diligência exigidas pelos escritórios de advocacia para proteger dados, graças aos seus altos padrões de criptografia, à autenticação de dois fatores e aos métodos de controle de acesso a arquivos e documentos específicos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Privacidade: o direito legal de todos",
+    "description": "Defenda seus arquivos com a Internxt.",
+    "cta": "Saiba mais sobre a Internxt"
+  }
+}
