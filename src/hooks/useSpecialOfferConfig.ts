@@ -163,6 +163,7 @@ export const ALLOWED_PATHS = [
   'apfeltalk',
   'mobiflip',
   'mindplace',
+  'gian',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -268,6 +269,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   nfire: 'it',
   saddy: 'it',
   speciale: 'it',
+  gian: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -418,6 +420,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'apfeltalk',
   'mobiflip',
   'mindplace',
+  'gian',
 ]);
 
 export const COUPON_CODES = {
@@ -581,6 +584,7 @@ export const COUPON_CODES = {
   apfeltalk: PromoCodeName.apfeltalk,
   mobiflip: PromoCodeName.mobiflip,
   mindplace: PromoCodeName.mindplace,
+  gian: PromoCodeName.gian,
 };
 
 interface OfferConfig {

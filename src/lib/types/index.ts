@@ -378,6 +378,7 @@ export enum PromoCodeName {
   apfeltalk = 'APFELTALK',
   mobiflip = 'MOBIFLIP',
   mindplace = 'MINDPLACE',
+  gian = 'GIAN',
 }
 
 export interface PromoCodeProps {
