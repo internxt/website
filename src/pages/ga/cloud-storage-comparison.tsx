@@ -2,11 +2,16 @@ import {
   CloudStorageComparisonTemplate,
   CloudStorageComparisonTemplateProps,
 } from '@/components/templates/cloudStorageComparisonTemplate';
+import { PromoCodeName } from '@/lib/types';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 
-const CloudStorageComparison = (props: CloudStorageComparisonTemplateProps): JSX.Element => (
-  <CloudStorageComparisonTemplate {...props} />
+const GaCloudStorageComparison = (props: CloudStorageComparisonTemplateProps): JSX.Element => (
+  <CloudStorageComparisonTemplate
+    {...props}
+    couponCode={PromoCodeName.GADS85}
+    couponCodeForLifetime={PromoCodeName.GADS85}
+  />
 );
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
@@ -30,4 +35,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default CloudStorageComparison;
+export default GaCloudStorageComparison;
