@@ -162,6 +162,7 @@ export const ALLOWED_PATHS = [
   'gamermeld',
   'apfeltalk',
   'mobiflip',
+  'mindplace',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -416,6 +417,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'gamermeld',
   'apfeltalk',
   'mobiflip',
+  'mindplace',
 ]);
 
 export const COUPON_CODES = {
@@ -578,6 +580,7 @@ export const COUPON_CODES = {
   gamermeld: PromoCodeName.gamermeld,
   apfeltalk: PromoCodeName.apfeltalk,
   mobiflip: PromoCodeName.mobiflip,
+  mindplace: PromoCodeName.mindplace,
 };
 
 interface OfferConfig {

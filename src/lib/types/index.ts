@@ -377,6 +377,7 @@ export enum PromoCodeName {
   gamermeld = 'GAMERMELD',
   apfeltalk = 'APFELTALK',
   mobiflip = 'MOBIFLIP',
+  mindplace = 'MINDPLACE',
 }
 
 export interface PromoCodeProps {
