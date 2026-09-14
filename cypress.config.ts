@@ -9,9 +9,6 @@ export default defineConfig({
       // with any changed environment variables
       return config;
     },
-    reporterOptions: {
-      reportDir: '.nyc_output',
-    },
     fileServerFolder: '.',
     specPattern: ['**/*.spec.ts', '**/*.cy.ts'],
     baseUrl: 'http://localhost:3000',
@@ -19,10 +16,5 @@ export default defineConfig({
     viewportHeight: 970,
     scrollBehavior: 'center',
     chromeWebSecurity: false,
-    env: {
-      codeCoverage: {
-        url: 'http://localhost:3000/coverage',
-      },
-    },
   },
 });
