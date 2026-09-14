@@ -24,7 +24,6 @@ const Dropdown = ({
         {open ? <CaretUp size={20} /> : <CaretDown size={20} />}
       </Menu.Button>
       <Transition
-        as="div"
         className={'left-0'}
         enter="transition duration-50 ease-out"
         enterFrom="scale-98 opacity-0"

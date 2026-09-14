@@ -72,7 +72,6 @@ const SelectFeatureInfoSection = ({
           ))}
         </div>
         <Transition
-          as="div"
           appear={true}
           show={!isTransitioning}
           enter="transition-opacity duration-200"

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
-import { CaretDown } from '@phosphor-icons/react';
+import Select from 'react-select';
 
 const allOptions = [
   { value: 'bit', label: 'Bits (bit)' },
@@ -173,31 +172,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                     placeholder="0"
                     onChange={handleInput1Change}
                   />
-                  <Listbox
+                  <Select
+                    className="inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     value={allOptions.find((option) => option.value === convertFrom)}
+                    id="from-unit-dropdown"
+                    menuPosition="absolute"
                     onChange={handleFromUnitChange}
-                  >
-                    <div className="relative inline-block w-screen max-w-[180px] flex-shrink-0 p-2">
-                      <ListboxButton
-                        id="from-unit-dropdown"
-                        className="flex w-full items-center justify-between rounded-lg border border-gray-10 bg-white px-3 py-2 text-left text-base text-gray-100 focus:outline-none"
-                      >
-                        {allOptions.find((option) => option.value === convertFrom)?.label}
-                        <CaretDown size={20} className="text-gray-60" />
-                      </ListboxButton>
-                      <ListboxOptions className="absolute left-0 right-0 z-30 mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {allOptions.map((option) => (
-                          <ListboxOption
-                            key={option.value}
-                            value={option}
-                            className="cursor-pointer px-3 py-2 text-gray-100 data-[focus]:bg-gray-5"
-                          >
-                            {option.label}
-                          </ListboxOption>
-                        ))}
-                      </ListboxOptions>
-                    </div>
-                  </Listbox>
+                    options={allOptions}
+                    instanceId="from-unit-dropdown"
+                    isSearchable={false}
+                  />
                 </div>
               </div>
 
@@ -212,31 +196,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                     placeholder="0"
                     onChange={handleInput2Change}
                   />
-                  <Listbox
+                  <Select
+                    className="inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg border-gray-10 p-2"
                     value={allOptions.find((option) => option.value === convertTo)}
+                    id="to-unit-dropdown"
+                    menuPosition="absolute"
+                    options={allOptions}
                     onChange={handleToUnitChange}
-                  >
-                    <div className="relative inline-block w-screen max-w-[180px] flex-shrink-0 p-2">
-                      <ListboxButton
-                        id="to-unit-dropdown"
-                        className="flex w-full items-center justify-between rounded-lg border border-gray-10 bg-white px-3 py-2 text-left text-base text-gray-100 focus:outline-none"
-                      >
-                        {allOptions.find((option) => option.value === convertTo)?.label}
-                        <CaretDown size={20} className="text-gray-60" />
-                      </ListboxButton>
-                      <ListboxOptions className="absolute left-0 right-0 z-30 mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {allOptions.map((option) => (
-                          <ListboxOption
-                            key={option.value}
-                            value={option}
-                            className="cursor-pointer px-3 py-2 text-gray-100 data-[focus]:bg-gray-5"
-                          >
-                            {option.label}
-                          </ListboxOption>
-                        ))}
-                      </ListboxOptions>
-                    </div>
-                  </Listbox>
+                    instanceId="to-unit-dropdown"
+                    isSearchable={false}
+                  />
                 </div>
               </div>
             </div>

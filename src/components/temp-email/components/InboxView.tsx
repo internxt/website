@@ -144,7 +144,6 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
       </div>
 
       <Transition
-        as="div"
         show={true}
         enter="transition-opacity easy-in-out duration-800"
         enterFrom="opacity-0"
@@ -181,9 +180,8 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
     <div className="flex h-[480px] w-full  flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard">
       {messages?.length > 0 ? (
         //Render message selected
-        <>
+        (<>
           <Transition
-            as="div"
             show={isMessageOpen}
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
@@ -210,7 +208,6 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
           </Transition>
           {/* Render messages list */}
           <Transition
-            as="div"
             show={!isMessageOpen}
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
@@ -267,7 +264,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
               </div>
             </div>
           </Transition>
-        </>
+        </>)
       ) : (
         !selectedMessage && (
           <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
