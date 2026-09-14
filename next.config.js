@@ -260,7 +260,6 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST, 'haveibeenpwned.com'],
     remotePatterns: [
       {
         protocol: 'https',
