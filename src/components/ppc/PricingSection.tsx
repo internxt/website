@@ -82,7 +82,6 @@ export const PricingSection = ({
   premiumAndUltimatePlan = false,
   freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
-
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = '15';
   const showLoadingCards = loadingCards;
@@ -101,10 +100,7 @@ export const PricingSection = ({
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
-  const popularPlan =
-  differentRecommended || billingFrequency === Interval.Lifetime
-    ? popularPlanBySize
-    : '3TB';
+  const popularPlan = differentRecommended || billingFrequency === Interval.Lifetime ? popularPlanBySize : '3TB';
 
   const features = [
     {
@@ -165,15 +161,14 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {new Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <CardSkeleton key={'skeleton' + i} />
-            ))}
+          {new Array(3).fill(0).map((_, i) => (
+            <CardSkeleton key={'skeleton' + i} />
+          ))}
         </div>
       </Transition>
 
       <Transition
+        as="div"
         show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"

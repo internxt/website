@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import Image from "next/image";
+import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Parallax } from 'react-parallax';
 
@@ -35,6 +35,7 @@ const FeaturesSection = ({
               } lg:my-10 lg:text-3xl`}
             >
               <Transition
+                as="div"
                 show={anim.trigger(percentage)}
                 className="w-full text-center"
                 enter="transition-all duration-500"
@@ -48,6 +49,7 @@ const FeaturesSection = ({
               </Transition>
               {textContent.section1.title.line2 && (
                 <Transition
+                  as="div"
                   show={anim.trigger(percentage)}
                   className="w-full text-center"
                   enter="transition-all duration-500 delay-250"
@@ -170,10 +172,11 @@ const FeaturesSection = ({
                 draggable={false}
                 alt="Document folders"
                 style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                  objectFit: 'cover',
+                }}
+              />
             </RevealX>
           </div>
         </div>
@@ -193,10 +196,11 @@ const FeaturesSection = ({
                 draggable={false}
                 alt="File sharing"
                 style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                  objectFit: 'cover',
+                }}
+              />
             </RevealX>
           </div>
 

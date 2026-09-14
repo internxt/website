@@ -112,8 +112,8 @@ export const PricingSection = ({
   const popularPlan = differentRecommended
     ? popularPlanBySize
     : billingFrequency === Interval.Lifetime
-    ? popularPlanBySize
-    : '3TB';
+      ? popularPlanBySize
+      : '3TB';
 
   const features = [
     {
@@ -183,6 +183,7 @@ export const PricingSection = ({
       </Transition>
 
       <Transition
+        as="div"
         show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
