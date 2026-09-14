@@ -1,6 +1,3 @@
-import React from 'react';
-import styles from '../../components/techradar-discount/Background.module.scss';
-
 export const SignupSection = ({ textContent }) => (
   <section className="overflow-hidden">
     <div className="flex flex-col items-center justify-center space-y-8 px-4 py-14 text-white">
@@ -17,8 +14,6 @@ export const SignupSection = ({ textContent }) => (
         <p className="text-base font-semibold text-primary">{textContent.createAccount}</p>
       </button>
     </div>
-    <div
-      className={`absolute left-0 top-0 -z-10 flex h-full w-full ${styles.partnerHeroSection} pointer-events-none origin-center`}
-    />
+    <div className="absolute left-0 top-0 -z-10 flex h-full w-full bg-primary pointer-events-none origin-center" />
   </section>
 );
