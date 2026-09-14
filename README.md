@@ -5,7 +5,6 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=internxt_website&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=internxt_website)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=internxt_website&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=internxt_website)
 
-
 # Project Manteinance
 
 We aim to have:
@@ -43,10 +42,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### `yarn cypress`
 
 - Runs tests with [cypress](https://www.cypress.io/)
-
-### `yarn find:unused`
-
-Get a list with the unused files the project has with [next-unused](https://github.com/pacocoursey/next-unused)
 
 ## Learn More
 
