@@ -373,6 +373,11 @@ export enum PromoCodeName {
   nextuniverz = 'NEXTUNIVERZ',
   techmanis = 'TECHMANIS',
   sunchannel = 'SUNCHANNEL',
+  marko = 'MARKO',
+  gamermeld = 'GAMERMELD',
+  apfeltalk = 'APFELTALK',
+  mobiflip = 'MOBIFLIP',
+  mindplace = 'MINDPLACE',
 }
 
 export interface PromoCodeProps {
