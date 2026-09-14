@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Um conversor seguro de PPTX para PDF para compartilhar conteúdo de páginas da web com facilidade.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como converter um arquivo PPTX para PDF",
+      "description": "Criamos nosso conversor de arquivos para ser o mais fácil de usar possível. Converter seu PPTX em um documento PDF envolve três passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu PPTX: arraste e solte o arquivo na área acima para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Converter para PDF”: isso converte seu arquivo de PPTX para PDF."
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por que converter arquivos PPTX para PDF",
+      "paragraphs": [
+        "Um conversor de PowerPoint para PDF torna suas apresentações universalmente acessíveis em diferentes plataformas e dispositivos, facilitando o compartilhamento de arquivos. O arquivo PDF também aceita recursos de segurança como proteção por senha e permissões restritas.",
+        "Usar a solução de PowerPoint para PDF da Internxt é uma ferramenta valiosa para integrar ao seu fluxo de trabalho, com uma solução segura e versátil para armazenar, compartilhar e apresentar seus arquivos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Cansado de arquivos incompatíveis?",
+    "description": "Converta para os arquivos de que você precisa com a Internxt",
+    "cta": "Criar conta"
+  }
+}

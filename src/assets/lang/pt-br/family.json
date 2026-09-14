@@ -1,0 +1,162 @@
+{
+  "HeroSection": {
+    "title": "Segurança e privacidade totais para sua família",
+    "subtitle": "Proteja a privacidade online da sua família com os planos familiares da Internxt.",
+    "description": "Tenha até 2TB de armazenamento em nuvem criptografado para cada membro da família, garantindo que os dados de todos fiquem protegidos e facilmente acessíveis.",
+    "cta": "Assinar a Internxt para famílias"
+  },
+  "ProtectYourFamilySection": {
+    "title": "Proteja a privacidade online da sua família com o armazenamento em nuvem da Internxt",
+    "description": "A Internxt oferece armazenamento em nuvem criptografado para toda a família guardar e compartilhar arquivos, fotos e vídeos, tudo gerenciado em uma única plataforma segura."
+  },
+  "PriceTable": {
+    "planTitles": {
+      "business": "Planos familiares"
+    },
+    "businessDescription2": "Gerencie, compartilhe e proteja os arquivos, documentos e muito mais da sua família com nosso armazenamento em nuvem seguro e criptografado.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anualmente",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Business"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhatMakesInternxtPerfectSection": {
+    "title": "O que torna a Internxt perfeita para famílias?",
+    "description": "Os planos de armazenamento em nuvem familiar da Internxt oferecem um espaço seguro com acesso zero e criptografia de ponta a ponta para impedir acessos não autorizados e garantir a privacidade da sua família.",
+    "features": [
+      {
+        "title": "Gerenciamento familiar",
+        "description": "A Internxt permite que o administrador da conta adicione membros, personalize o armazenamento e cuide da cobrança, ajudando as famílias a se manterem organizadas. Cada membro tem seu próprio espaço e pode alternar facilmente entre a nuvem familiar e sua conta pessoal."
+      },
+      {
+        "title": "Compartilhe arquivos da família com segurança",
+        "description": "A Internxt permite que os membros da família colaborem com facilidade mantendo suas informações sensíveis protegidas. Com recursos para proteger com senha e restringir o acesso, você garante que os dados importantes da família permaneçam seguros e acessíveis apenas a quem você confia."
+      },
+      {
+        "title": "Monitore as sessões",
+        "description": "Tenha uma visão detalhada das sessões, com notificações de login em tempo real e monitoramento minucioso das sessões remotas dos membros da família, sistemas operacionais, IP, localização e última atividade. Essa segurança de alto nível detecta acessos não autorizados e protege os dados sensíveis da sua família."
+      },
+      {
+        "title": "Alocação flexível de armazenamento",
+        "description": "Com um plano de armazenamento em nuvem familiar, você adiciona usuários e amplia o armazenamento conforme necessário, garantindo eficiência de custos, escalabilidade e uso ideal dos recursos. Cada membro da família tem o espaço de que precisa, e os dados da sua família ficam organizados e facilmente acessíveis."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Escolha o plano em nuvem mais seguro para sua família",
+    "description": "Proteja o que mais importa com a Internxt",
+    "cta": "Escolher plano"
+  },
+  "WhyChooseInternxt": {
+    "title": "Por que escolher a Internxt?",
+    "description": "O armazenamento em nuvem familiar da Internxt oferece uma solução direta que qualquer pessoa pode usar, independentemente do conhecimento técnico. Com um armazenamento criptografado poderoso e ao mesmo tempo simples, sua família pode gerenciar e acessar arquivos importantes com facilidade e segurança.",
+    "cards": [
+      {
+        "title": "Verificado de forma independente",
+        "description": "A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa, para comprovar que os arquivos da sua família estão protegidos contra hackers. Como empresa em conformidade com o GDPR, também seguimos leis rigorosas para manter os dados da sua família privados."
+      },
+      {
+        "title": "Acesso zero, criptografia máxima",
+        "description": "A criptografia de ponta a ponta protege seus arquivos criptografando tudo no seu dispositivo. Ninguém, nem mesmo a Internxt, consegue ver seus arquivos. Na improvável hipótese de um vazamento de dados, os hackers não conseguem descriptografar nem roubar nenhuma informação da sua família."
+      },
+      {
+        "title": "Você controla seus dados",
+        "description": "Ao contrário do Google Drive, Dropbox e OneDrive, a Internxt não tem nenhum rastreador e nunca compartilha dados com terceiros. Os dados da sua família permanecem privados e protegidos com as mais altas medidas de segurança disponíveis."
+      },
+      {
+        "title": "100% transparente e seguro",
+        "description": "Todos os nossos produtos são criados com código aberto. O código que usamos para proteger dados está disponível para qualquer pessoa inspecionar. Não temos nada a esconder além dos seus dados."
+      }
+    ]
+  },
+  "MaximumSecuritySection": {
+    "title": "Segurança e criptografia máximas para proteger sua família",
+    "description": "A Internxt protege os arquivos da sua família durante o compartilhamento e o armazenamento, garantindo que documentos sensíveis e memórias familiares permaneçam seguros e privados.",
+    "cta": "Assinar a Internxt para famílias"
+  },
+  "TestimonialsSection": {
+    "title": "O que os especialistas dizem sobre nós",
+    "testimonials": [
+      {
+        "imageBrandName": "techradar",
+        "brand": "Techradar",
+        "review": "A Internxt é um excelente serviço de armazenamento em nuvem graças aos seus planos acessíveis e à interface intuitiva. Ela se destaca nas medidas de segurança e no compromisso com a privacidade, tornando-se uma das melhores escolhas para famílias que priorizam segurança."
+      },
+      {
+        "imageBrandName": "PCWorld",
+        "brand": "PCWorld",
+        "review": "A combinação intuitiva de acesso web, sincronização de arquivos e serviços de backup de verdade da Internxt é impressionante. Esse serviço de armazenamento e backup online é fácil, cobre todas as frentes, e os planos vitalícios são uma pechincha."
+      },
+      {
+        "imageBrandName": "cloudwards",
+        "brand": "Cloudwards",
+        "review": "A Internxt é conhecida como uma solução de armazenamento em nuvem segura que prioriza a privacidade do usuário. Se privacidade e segurança são suas maiores preocupações com armazenamento em nuvem, vale muito a pena considerar a Internxt."
+      },
+      {
+        "imageBrandName": "bitcatcha",
+        "brand": "Bitcatcha",
+        "review": "A Internxt vai muito além na proteção dos usuários e devolve a você a propriedade dos seus dados, por isso é excelente para empresas. Recomendada para quem valoriza a privacidade."
+      },
+      {
+        "imageBrandName": "ffstoppers",
+        "brand": "Fstoppers",
+        "review": "Por que escolher a Internxt? Eu diria que pela forma simples e enxuta como funciona. É simplesmente uma opção direta de armazenamento em nuvem com criptografia de 256 bits que qualquer pessoa pode usar."
+      },
+      {
+        "imageBrandName": "guru99",
+        "brand": "Guru99",
+        "review": "O Internxt Drive é o melhor serviço de armazenamento em nuvem seguro em privacidade e criptografia. Ele permite que você e sua equipe guardem diferentes tipos de arquivos com total segurança."
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O que é a Internxt para famílias?",
+        "answer": [
+          "Um plano de armazenamento em nuvem familiar oferece uma solução de armazenamento compartilhada para vários membros da família. Ele permite guardar, gerenciar e compartilhar arquivos com segurança em todos os dispositivos, com até 100 usuários."
+        ]
+      },
+      {
+        "question": "A Internxt é o armazenamento em nuvem certo para minha família?",
+        "answer": [
+          "A Internxt é a solução perfeita para famílias que buscam um armazenamento em nuvem seguro que mantenha informações pessoais e confidenciais privadas.",
+          "Nossa suíte de produtos criptografados segue os mais altos padrões de segurança do setor, permitindo que as famílias compartilhem arquivos ou pastas sem se preocupar com vazamentos de dados."
+        ]
+      },
+      {
+        "question": "Como funciona o espaço de armazenamento?",
+        "answer": [
+          "Dependendo do plano escolhido, cada membro que você adicionar ao seu plano familiar receberá 1TB ou 2TB. Quando os membros da sua família aceitarem o convite, eles serão adicionados à sua conta de armazenamento em nuvem familiar e receberão seu próprio espaço pessoal na nuvem."
+        ]
+      },
+      {
+        "question": "Outros membros do meu plano Internxt Family podem ver minhas informações?",
+        "answer": [
+          "Cada membro do seu plano Internxt Family tem uma conta separada com 2TB de armazenamento. Todos os arquivos são criptografados com uma chave privada. Você não consegue ver os arquivos dos outros membros da família, a menos que eles compartilhem o acesso com você."
+        ]
+      },
+      {
+        "question": "Que nível de suporte técnico vocês oferecem?",
+        "answer": [
+          "Temos uma equipe dedicada de atendimento ao cliente que pode responder a qualquer dúvida ou preocupação e fornecer informações adicionais conforme suas necessidades. Você pode visitar nossa central de ajuda ou falar conosco pelo [hello@internxt.com](mailto:hello@internxt.com), e nossa equipe terá prazer em ajudar."
+        ]
+      }
+    ]
+  }
+}

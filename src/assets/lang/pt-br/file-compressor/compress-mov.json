@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprima um arquivo MOV para reduzir o tamanho e compartilhar vídeos sem perder qualidade com a Internxt. ",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo MOV",
+      "description": "Para comprimir um arquivo MOV, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo MOV: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo MOV”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com esta ferramenta, você pode comprimir vários arquivos MOV gratuitamente sempre que precisar. Todos os arquivos são protegidos com uploads criptografados para garantir a privacidade dos seus vídeos. "
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir um arquivo MOV",
+      "intro": "Infelizmente, enviar arquivos de vídeo grandes online pode ser difícil por causa dos limites de upload de serviços de e-mail, compartilhamento de arquivos ou armazenamento em nuvem. Ao usar a Internxt para comprimir um arquivo MOV, você ganha uma ferramenta gratuita e segura que, ao terminar, permite:",
+      "bullets": [
+        "Enviar vídeos mais rápido e economizar banda",
+        "Manter a alta qualidade do vídeo",
+        "Manter os vídeos dentro dos limites de upload"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter seus vídeos privados, assim você pode comprimir, armazenar e compartilhar seus arquivos com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos MOV",
+    "cta": "Obter a Internxt"
+  }
+}

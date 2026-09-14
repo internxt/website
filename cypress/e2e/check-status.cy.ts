@@ -84,6 +84,7 @@ const langs = {
   ru: 'Russian',
   zh: 'Chinese',
   'zh-tw': 'Taiwan',
+  'pt-br': 'Portuguese',
 };
 
 describe('Verify that pages do not produce a 500 error', () => {

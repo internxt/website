@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprima arquivos PPT com a Internxt para uma forma mais fácil e produtiva de colaborar e apresentar slides.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo PPT",
+      "description": "Para comprimir um arquivo PPT, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo PPT: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo PPT”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com esta ferramenta, você pode comprimir vários arquivos PPT gratuitamente sempre que precisar. Todos os arquivos são protegidos com uploads criptografados para garantir a privacidade dos seus vídeos.  "
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir um arquivo PPT",
+      "intro": "É comum precisarmos enviar um arquivo PPT por e-mail para trabalhos em grupo ou apresentações de equipe, mas apresentações maiores podem esbarrar em restrições dos provedores de e-mail ou de compartilhamento de arquivos. Para comprimir arquivos PPT com a Internxt, basta escolher seu arquivo, e você poderá:",
+      "bullets": [
+        "Comprimir, compartilhar e editar arquivos PPT rapidamente",
+        "Ficar dentro dos limites de tamanho de upload ",
+        "Gerenciar trabalhos em grupo"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter seus arquivos PPT privados, assim você pode comprimir, armazenar e compartilhar suas apresentações com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos PPT",
+    "cta": "Obter a Internxt"
+  }
+}

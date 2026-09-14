@@ -1,0 +1,81 @@
+{
+  "HeroSection": {
+    "title1": {
+      "line1": "Armazenamento em nuvem seguro e privado",
+      "line2": "que protege seu direito à privacidade"
+    },
+    "subtitle1": "Não esqueça de usar o cupom exclusivo TECHRADAR",
+    "cta": "Escolha seu plano"
+  },
+  "tableSection": {
+    "header": "Privacidade total com 82% DE DESCONTO",
+    "planTitles": {
+      "individuals": "Anual",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Ganhe 50% DE DESCONTO",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Compre uma vez e tenha privacidade e segurança para sempre",
+    "planDescription": "Todos os planos Internxt são completos, com acesso total à nossa premiada suíte de privacidade formada por Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir seus resultados.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ScrollableSection": {
+    "title": "Armazenamento em nuvem seguro com privacidade incomparável",
+    "subtitle": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais totalmente dedicada a proteger você na internet. Tudo o que fazemos e cada decisão que tomamos giram em torno de impedir que seus dados sejam explorados.",
+    "elements": [
+      {
+        "title": "Privacidade incomparável",
+        "description": "Proteger sua privacidade é nossa maior prioridade; nunca armazenamos senhas nem dados pessoais. Seus arquivos são criptografados em trânsito e em repouso, dando a você controle total sobre suas informações. "
+      },
+      {
+        "title": "Segurança sem concessões",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de sair do seu dispositivo. Graças à criptografia de conhecimento zero e pós-quântica, você é a única pessoa com acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser analisado, auditado e verificado por qualquer pessoa. Não temos nada a esconder além dos seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Estamos totalmente em conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar só na nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "\"Usuários individuais e empresas que priorizam a segurança vão aproveitar recursos avançados de segurança e o compromisso com a privacidade\""
+  },
+  "CtaSection2": {
+    "title": "Tenha o armazenamento em nuvem mais seguro do mundo",
+    "description": "A criptografia de conhecimento zero da Internxt dá a você controle total da sua privacidade.",
+    "cta": "Escolha seu plano"
+  }
+}

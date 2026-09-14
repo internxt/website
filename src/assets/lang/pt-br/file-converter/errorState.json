@@ -1,0 +1,18 @@
+{
+  "bigFile": {
+    "label": "O tamanho do arquivo excede o limite.",
+    "selectFile": "Selecione um arquivo menor"
+  },
+  "internalError": {
+    "label": {
+      "bold": "Algo deu errado. ",
+      "normal": "Tente novamente."
+    }
+  },
+  "unsupportedFormat": {
+    "label": {
+      "bold": "Formato de arquivo não compatível. ",
+      "normal": "Envie um arquivo ${{pathFrom}} válido."
+    }
+  }
+}

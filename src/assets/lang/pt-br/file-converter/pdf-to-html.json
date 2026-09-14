@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Um conversor seguro de PDF para HTML para otimizar conteúdo para públicos online.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como converter arquivos PDF para HTML",
+      "description": "Criamos nosso conversor de arquivos para ser o mais fácil de usar possível. Converter seu PDF em um arquivo PowerPoint envolve três passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu PDF: arraste e solte o arquivo na área acima para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Converter para HTML”: isso converte seu arquivo de PDF para HTML"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por que escolher um conversor de PDF para HTML",
+      "paragraphs": [
+        "Otimize suas páginas da web convertendo seus arquivos PDF para HTML e torne seu conteúdo acessível para navegadores e indexável para mecanismos de busca. Nosso conversor de PDF oferece uma plataforma segura para converter seus PDFs em HTML instantaneamente.",
+        "Se quiser converter arquivos HTML em um documento seguro, use nossa ferramenta gratuita de HTML para PDF para proteger a privacidade dos seus documentos."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Cansado de arquivos incompatíveis?",
+    "description": "Converta para os arquivos de que você precisa com a Internxt",
+    "cta": "Criar conta"
+  }
+}

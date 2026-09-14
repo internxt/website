@@ -95,6 +95,14 @@ const BottomBanner = () => {
             line2: 'ist hier!',
           },
         };
+      case 'pt-br':
+        return {
+          title1: 'Economize 80%',
+          title2: {
+            line1: 'As ofertas de Natal',
+            line2: 'chegaram!',
+          },
+        };
       default:
         return {
           title1: 'Save 80%',
@@ -124,6 +132,8 @@ const BottomBanner = () => {
         return '領取優惠';
       case 'de':
         return 'Angebot sichern';
+      case 'pt-br':
+        return 'Garanta sua oferta';
       default:
         return 'Choose plan';
     }

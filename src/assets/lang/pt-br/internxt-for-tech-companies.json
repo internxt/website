@@ -1,0 +1,52 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "empresas de tecnologia ",
+      "normalText": "protegem as informações dos clientes e os dados do negócio"
+    },
+    "description": "As empresas de tecnologia costumam armazenar na nuvem informações sensíveis relacionadas a seus clientes, funcionários e outras necessidades do negócio. Dependendo das suas necessidades, muitas empresas de tecnologia de grande porte podem combinar armazenamento em nuvem privada, pública ou híbrida.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "Internxt_for_tech_companies.webp",
+      "alt": "Internxt para empresas de tecnologia"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "Para este estudo de caso B2B, a Internxt oferece uma solução para que as empresas de tecnologia reduzam os ataques com vazamento de dados. Muitas empresas de tecnologia já foram vítimas de vazamentos de dados por causa de erro humano. Um estudo de caso B2B sobre cibersegurança é essencial para que todas as empresas de tecnologia conheçam e conscientizem seus funcionários de forma eficaz sobre como proteger os dados dos clientes e do negócio.",
+        "As infecções por malware aumentaram substancialmente nos últimos dez anos, e as empresas de tecnologia e outros negócios sofrem centenas de ataques cibernéticos por ano devido aos dados sensíveis que armazenam.",
+        "Uma empresa de tecnologia pode se tornar um alvo fácil para cibercriminosos e agentes maliciosos roubarem dados. Eles podem deixar seu sistema lento e roubar os dados dos seus computadores, reduzindo a velocidade das operações em andamento.",
+        "Um vazamento de dados afeta não só a sua empresa, mas também terceiros atingidos indiretamente, como clientes, fornecedores etc.",
+        "Além disso, o custo associado à perda de dados para qualquer empresa e à correção dos problemas causados por um ataque cibernético pode resultar em prejuízos e danos enormes."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "Para se protegerem contra perda, vazamento ou violação de dados, as empresas de tecnologia devem guardar as informações em uma plataforma de armazenamento em nuvem segura e fazer backup dos arquivos regularmente, já que assim os cibercriminosos terão menos chances de manter seus dados em troca de resgates altos.",
+        "Se os clientes tiverem certeza de que seus dados estão seguros, isso gera confiança na empresa e cria uma marca baseada em segurança, ajudando na retenção de clientes e na conquista de novos.",
+        "Uma solução de armazenamento em nuvem segura responde à ameaça dos ataques cibernéticos que vêm se espalhando nos últimos anos, pois estabelece ambientes de trabalho seguros em um espaço compartilhado para os funcionários.",
+        "Um estudo de caso B2B costuma destacar a melhor forma de armazenar e proteger dados. Para as empresas de tecnologia, a melhor solução é usar criptografia de ponta a ponta.",
+        "A Internxt criptografa cada arquivo que você envia, fragmentando os dados e mantendo-os ilegíveis. A chave de criptografia só pode ser usada por você para descriptografar e ler o arquivo. Também é possível compartilhar arquivos com um link criptografado, no qual apenas quem o possui pode baixar o conteúdo com segurança.",
+        "É também uma questão de ética; a ética profissional determina que os serviços de segurança sejam protegidos desde a base. As empresas de tecnologia têm padrões rigorosos para manter arquivos de trabalho confidenciais que contêm dados extremamente sensíveis, às vezes regulados pela CCPA ou pelo GDPR e até mesmo prejudiciais. Por isso, precisavam usar uma plataforma de compartilhamento de arquivos criptografada que restringisse o acesso dos usuários a informações sensíveis."
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "A Internxt ajuda a proteger os dados das empresas de tecnologia na nuvem e promove mais conscientização sobre segurança por meio de outras ferramentas gratuitas dentro deste estudo de caso B2B.",
+        "Um gerador de senhas seguras permite que os funcionários protejam seus e-mails de trabalho e outras contas, resultando em menos falhas de segurança e ataques cibernéticos, já que uma senha forte combinada com métodos de autenticação reduz significativamente a probabilidade de um ataque.",
+        "Além disso, a ferramenta de verificação de vírus garante que nenhum funcionário armazene malware nos computadores da empresa e que os vírus não se espalhem, já que os e-mails de phishing são o método mais comum usado pelos cibercriminosos para atacar empresas e disseminar malware.",
+        "Ao usar um provedor de armazenamento em nuvem seguro como a Internxt, que oferece ferramentas de segurança gratuitas, como compartilhamento seguro de arquivos, controles de acesso e autenticação de dois fatores, as empresas de tecnologia podem construir uma cultura corporativa baseada em privacidade e segurança."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Seus dados, seu negócio",
+    "description": "Proteja os dados da sua empresa com a Internxt.",
+    "cta": "Pronto para trabalhar com segurança?"
+  }
+}

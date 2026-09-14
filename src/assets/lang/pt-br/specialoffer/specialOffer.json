@@ -1,0 +1,80 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento na nuvem seguro e privado",
+    "subtitle": "que protege o seu direito à privacidade",
+    "description": "O armazenamento na nuvem web3 e de código aberto da Internxt protege sua privacidade com criptografia pós-quântica de conhecimento zero.",
+    "info": "Garanta seu desconto <strong>exclusivo de {{discount}}%</strong> em todos os planos anuais e vitalícios da Internxt!",
+    "cta": "Ganhe {{discount}}% DE DESCONTO"
+  },
+  "MostSecureSection": {
+    "title": "O armazenamento na nuvem mais seguro para seus arquivos, fotos e muito mais",
+    "description": "O Internxt Drive é uma solução de armazenamento na nuvem de código aberto e criptografada de ponta a ponta para armazenar, fazer backup e compartilhar seus arquivos com total privacidade. O Internxt Drive oferece criptografia premiada e controle sobre os seus dados. ",
+    "cta": "Garantir oferta"
+  },
+  "ScrollableSection": {
+    "title": "Armazenamento na nuvem seguro com privacidade incomparável",
+    "description": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais totalmente dedicada a proteger você online. Tudo o que fazemos e cada decisão que tomamos tem como foco proteger seus dados contra exploração.",
+    "elements": [
+      {
+        "title": "Privacidade incomparável",
+        "description": "Proteger sua privacidade é nossa maior prioridade; nunca armazenamos senhas nem dados pessoais. Seus arquivos são criptografados em trânsito e em repouso, dando a você controle total sobre suas informações."
+      },
+      {
+        "title": "Segurança de última geração",
+        "description": "A Internxt é o único armazenamento na nuvem que criptografa automaticamente seus arquivos usando criptografia de ponta a ponta e pós-quântica, o que significa que somente você pode acessar seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Nosso código-fonte é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder, exceto os seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Seguimos rigorosamente as regulamentações do GDPR e mantemos um ambiente 100% seguro. Para comprovar nossas afirmações, a Internxt passou por uma auditoria independente da Securitum, líder confiável em testes de invasão na Europa."
+      }
+    ]
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "Planos anuais de armazenamento",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "Ganhe 50% DE DESCONTO",
+        "normalText": "em todos os nossos planos exclusivos"
+      }
+    },
+    "header": "Privacidade total com {{discount}}% de desconto",
+    "lifetimeDescription": "Com um pagamento único, você garante privacidade para toda a vida. Você terá acesso para sempre a todos os recursos focados em privacidade da Internxt e ao armazenamento na nuvem criptografado.",
+    "planDescription": "Todos os planos da Internxt incluem acesso completo aos nossos recursos focados em privacidade. Assine a Internxt e garanta um ano de armazenamento na nuvem criptografado. ",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe até 1 GB de armazenamento na nuvem criptografado e aproveite nosso ecossistema privado: VPN (FR), CLI/WebDav/Rclone e muito mais.",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografado de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection1": {
+    "title": "O armazenamento na nuvem mais privado do mundo",
+    "description": "Garanta seu desconto exclusivo de 82% para acessar o armazenamento na nuvem seguro, privado e criptografado da Internxt por um ano inteiro.",
+    "cta": "Encontre seu plano"
+  }
+}

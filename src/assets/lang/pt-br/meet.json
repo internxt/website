@@ -1,0 +1,119 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "Videoconferência segura",
+    "description": "O Internxt Meet oferece chamadas de vídeo totalmente privadas com criptografia pós-quântica, garantindo que suas reuniões sejam seguras, privadas e confidenciais.",
+    "cta": "Obtenha a Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "Chamada de vídeo privada",
+    "description": "Converse com outras pessoas em nossa plataforma de vídeo criptografada, com reuniões privadas protegidas pela criptografia pós-quântica mais avançada.",
+    "scrollableSection": {
+      "titles": [
+        "Chamadas de vídeo privadas",
+        "Chamada de vídeo com criptografia de ponta a ponta",
+        "Mais velocidade e qualidade de vídeo",
+        "Videoconferência criptografada e de código aberto"
+      ],
+      "descriptions": [
+        "Use o Internxt Meet para chamadas de vídeo ou áudio que você quer manter privadas. Zero rastreadores. Zero coleta de dados e nada que ligue você ou qualquer outra pessoa às suas chamadas.",
+        "Todas as suas conversas, vídeos, chats e mensagens ficam protegidos com criptografia de conhecimento zero. Damos a você controle total da sua privacidade e nunca acessamos suas conversas ou mensagens.",
+        "A IA proporciona chamadas de vídeo nítidas e ultrarrápidas, otimizando a largura de banda e a qualidade, ao mesmo tempo em que garante criptografia de ponta a ponta para privacidade total.",
+        "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder, exceto os seus dados."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Reúna-se com privacidade total",
+    "description": "Conecte-se com tranquilidade.",
+    "cta": "Obtenha o Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "O Internxt Meet é uma videoconferência com criptografia de ponta a ponta",
+    "description": "Junte-se à Internxt na construção de uma web mais segura e privada com nosso conjunto de produtos criptografados, criado para dar a você o controle da sua privacidade.  \n\nAproveite Mail, Meet, Antivirus, Cleaner, Drive e VPN como parte do seu plano Internxt.",
+    "accordionSection": {
+      "titles": [
+        "Privacidade europeia",
+        "Segurança",
+        "Sustentabilidade"
+      ],
+      "descriptions": [
+        "A Internxt está em conformidade com o GDPR, que protege seus dados com as melhores leis de privacidade em termos de segurança e transparência sobre suas informações pessoais.",
+        "A Internxt usa criptografia de ponta a ponta e pós-quântica, oferecendo a você a plataforma de videoconferência mais segura para sua privacidade.",
+        "Temos o compromisso com um futuro mais sustentável e verde, por isso nossos produtos usam apenas tecnologias de energia renovável e eficiente. "
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "Chamada em conferência segura",
+    "subtitle": "Criado para atender a todas as necessidades de privacidade",
+    "description": "O Internxt Meet foi desenvolvido para atender às necessidades de todos que buscam se comunicar e colaborar com privacidade e segurança garantidas.",
+    "scrollableSection": {
+      "images": [
+        "personal",
+        "business",
+        "lawyers",
+        "medical"
+      ],
+      "titles": [
+        "Pessoal",
+        "Empresas",
+        "Advogados",
+        "Área médica"
+      ],
+      "descriptions": [
+        "Faça chamadas de vídeo privadas por meio de um link seguro e converse com seus convidados sabendo que suas conversas estão protegidas.",
+        "Reúna-se com privacidade com seus clientes, sua equipe ou seus departamentos para manter informações sensíveis ou confidenciais protegidas contra vazamentos.",
+        "Reúna-se com outras pessoas para compartilhar e discutir informações com total privacidade e proteger o sigilo profissional com seus clientes.",
+        "Reduza o risco de vazamento de dados médicos realizando e compartilhando suas próprias chamadas de vídeo privadas com os pacientes."
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Internxt Drive",
+    "description": "Assuma o controle dos seus dados com criptografia de nível militar.",
+    "cta": "Armazenamento seguro na nuvem"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O que é o Internxt Meet?",
+        "answer": [
+          "O Internxt Meet é a plataforma de videoconferência mais segura, onde você pode falar, conversar e realizar reuniões com total privacidade. Com o Internxt Meet, todas as suas conversas e chamadas acontecem com privacidade total graças à nossa criptografia avançada e premiada. Todas as chamadas entre você e sua equipe permanecem privadas e seguras."
+        ]
+      },
+      {
+        "question": "O Internxt Meet é uma alternativa ao Google Meet?",
+        "answer": [
+          "Sim, o Internxt Meet é uma alternativa segura ao Google Meet, ao Zoom e ao Teams. Usamos criptografia de conhecimento zero com criptografia pós-quântica para garantir que somente você possa ouvir ou ver suas chamadas de vídeo. Nem mesmo a Internxt tem acesso aos seus chats ou chamadas. "
+        ]
+      },
+      {
+        "question": "O Internxt Meet é gratuito?",
+        "answer": [
+          "O Internxt Meet está disponível ao assinar nossos planos Ultimate, que oferecem acesso a todo o nosso conjunto de produtos focados em privacidade, incluindo Internxt Drive, Mail, Antivirus, Meet, Cleaner e VPN."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode falar com nossa equipe de Customer Success pelo chat ao vivo ou enviando um e-mail para hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão, PayPal ou cripto?",
+        "answer": [
+          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar via PayPal, criptomoedas, Klarna e outros meios."
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "Todas as assinaturas pagas incluem garantia de reembolso de 30 dias a partir da data da compra.",
+          "Se, por qualquer motivo, você não ficar totalmente satisfeito nesses primeiros 30 dias, basta entrar em contato pelo [hello@internxt.com](mailto:hello@internxt.com) que processaremos seu reembolso."
+        ]
+      }
+    ]
+  }
+}

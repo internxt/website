@@ -15,6 +15,7 @@ const languages = [
   { text: 'Deutsch (DE)', lang: 'de' },
   { text: '简体中文 (ZH)', lang: 'zh' },
   { text: '繁體中文 (TW)', lang: 'zh-tw' },
+  { text: 'Português (BR)', lang: 'pt-br' },
 ];
 
 export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) {

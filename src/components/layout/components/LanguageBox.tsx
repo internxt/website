@@ -18,6 +18,7 @@ const currentLang = {
   zh: '简体中文 (ZH)',
   ru: 'Русский (RU)',
   'zh-tw': '繁體中文 (TW)',
+  'pt-br': 'Português (BR)',
 };
 
 const selectedLang = {
@@ -29,6 +30,7 @@ const selectedLang = {
   zh: 'ZH',
   ru: 'RU',
   'zh-tw': 'TW',
+  'pt-br': 'BR',
 };
 
 export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProps) {
@@ -91,6 +93,14 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
                 onClick={() => changeLang('zh-tw')}
               >
                 {currentLang['zh-tw']}
+              </Link>
+              <Link
+                href={correctPath}
+                locale="pt-br"
+                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                onClick={() => changeLang('pt-br')}
+              >
+                {currentLang['pt-br']}
               </Link>
             </>
           ) : (
@@ -158,6 +168,14 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
                 onClick={() => changeLang('zh-tw')}
               >
                 {currentLang['zh-tw']}
+              </Link>
+              <Link
+                href={correctPath}
+                locale="pt-br"
+                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                onClick={() => changeLang('pt-br')}
+              >
+                {currentLang['pt-br']}
               </Link>
             </>
           )}
