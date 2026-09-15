@@ -24,9 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ status: 'Error' });
   }
 
-  // Previously an in-memory 2s per-IP throttle, which does not persist across
-  // Workers isolates. The Rate Limiting binding only supports a 10s or 60s
-  // period, so this is now 1 request / 10s: stricter than the original 2s.
   const ip = getClientIp(req);
 
   try {
@@ -41,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
   } catch (error) {
-    // No Cloudflare context (e.g. plain `next dev`): fail open.
+    //
   }
 
   const { email, name, company, phone, storage, help, locale } = req.body;

@@ -8,10 +8,6 @@ const path = require('path');
 const fs = require('fs');
 const envExample = require('dotenv').config({ path: path.join(__dirname, '..', '.env.local.example') }).parsed;
 
-// On Vercel and on Cloudflare Workers builds there is no .env.local on disk:
-// the values are injected into the environment by the CI/build platform.
-// `CF_PAGES`/`CLOUDFLARE_BUILD` cover Cloudflare's own CI, and `SKIP_ENV_FILE`
-// is the manual escape hatch for local `opennextjs-cloudflare build` runs.
 const envLocalPath = path.join(__dirname, '..', '.env.local');
 const useProcessEnv =
   process.env.VERCEL === '1' ||
@@ -34,15 +30,9 @@ keysExample.forEach((envName) => {
   }
 });
 
-// Used by the code but absent from .env.local.example, so they were never
-// validated. They are required at runtime (CSRF_SECRET, STATIC_CONTENT_SERVING_URL)
-// or at build time (CLOUDFLARE_STATIC_ASSETS_HOST, read while evaluating
-// next.config.js), so surface them as warnings rather than failing existing builds.
 [
   'CSRF_SECRET',
   'STATIC_CONTENT_SERVING_URL',
-  // subscribe.ts throws at module scope without these two, which turns the
-  // whole route into a 500.
   'KLAVIYO_PRIVATE_API_KEY',
   'NEXT_PUBLIC_KLAVIYO_LIST_ID',
   'KLAVIYO_S3_CONTACT_LIST_ID',

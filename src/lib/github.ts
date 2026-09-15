@@ -1,6 +1,5 @@
 const CACHE_TTL_SECONDS = 5 * 60;
-// Cache API keys must be a full URL; this host is never fetched, it is only a
-// namespace for the cache entry.
+
 const CACHE_KEY_PREFIX = 'https://internxt-cache.invalid/github-release';
 
 interface LatestReleaseInfo {
@@ -13,11 +12,6 @@ interface LatestReleaseInfo {
   cached: boolean;
 }
 
-/**
- * The Cache API is only available inside the Workers runtime. Outside it
- * (plain `next dev`, tests) this resolves to undefined and the fetch is
- * simply not cached.
- */
 function getCache(): Cache | undefined {
   try {
     return typeof caches !== 'undefined' ? (caches as unknown as { default: Cache }).default : undefined;

@@ -11,37 +11,29 @@
   "observability": {
     "enabled": true
   },
-  // Rate limiting bindings. The platform only accepts a `period` of 10 or 60
-  // seconds, so the original in-memory windows are mapped onto that granularity.
+
   "ratelimits": [
     {
-      // src/pages/api/contact.ts - was a 2s per-IP throttle (1 req / 2s).
-      // Not expressible; mapped to 1 req / 10s (stricter than before).
       "name": "CONTACT_LIMITER",
       "namespace_id": "1001",
       "simple": { "limit": 1, "period": 10 }
     },
     {
-      // src/pages/api/collect/sheet.ts - rateLimitMiddleware(handler, 'sheet-event', 10)
-      // with the default 60s window. Preserved exactly.
       "name": "SHEET_LIMITER",
       "namespace_id": "1002",
       "simple": { "limit": 10, "period": 60 }
     },
     {
-      // src/pages/api/temp-mail/create-email.ts - limit 2, default 60s window.
       "name": "TEMP_MAIL_CREATE_LIMITER",
       "namespace_id": "1003",
       "simple": { "limit": 2, "period": 60 }
     },
     {
-      // src/pages/api/temp-mail/get-inbox.ts - limit 15, default 60s window.
       "name": "TEMP_MAIL_INBOX_LIMITER",
       "namespace_id": "1004",
       "simple": { "limit": 15, "period": 60 }
     },
     {
-      // src/pages/api/temp-mail/get-message.ts - limit 20, default 60s window.
       "name": "TEMP_MAIL_MESSAGE_LIMITER",
       "namespace_id": "1005",
       "simple": { "limit": 20, "period": 60 }

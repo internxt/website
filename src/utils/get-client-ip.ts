@@ -1,12 +1,5 @@
 import { NextApiRequest } from 'next';
 
-/**
- * Resolves the client IP behind Cloudflare.
- *
- * `CF-Connecting-IP` is set by Cloudflare on every request reaching the Worker
- * and cannot be spoofed by the client, so it is preferred over
- * `x-forwarded-for`. `req.socket.remoteAddress` does not exist on Workers.
- */
 export function getClientIp(req: NextApiRequest): string {
   const cfConnectingIp = req.headers['cf-connecting-ip'];
 

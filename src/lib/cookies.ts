@@ -25,11 +25,6 @@ export const TRACKING_PARAMS = [
   'afsrc',
 ] as const;
 
-/**
- * The `cookies` package infers the Secure flag from `req.connection.encrypted`,
- * which does not exist on Cloudflare Workers (there is no node socket), so it
- * throws. Passing `secure` explicitly short-circuits that detection.
- */
 function isSecureRequest(ctx: GetServerSidePropsContext): boolean {
   const forwardedProto = ctx.req.headers['x-forwarded-proto'];
   const proto = Array.isArray(forwardedProto) ? forwardedProto[0] : forwardedProto;
@@ -126,10 +121,7 @@ export const saveTrackingParamsToCookies = () => {
 
   const expiryDate = new Date();
 
-  expiryDate.setTime(
-    expiryDate.getTime() +
-      GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY,
-  );
+  expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
 
   TRACKING_PARAMS.forEach((param) => {
     const value = params.get(param);
@@ -142,7 +134,7 @@ export const saveTrackingParamsToCookies = () => {
       expiration: expiryDate,
     });
   });
-}
+};
 
 export const getTrackingParams = (): Record<string, string> => {
   if (typeof window === 'undefined') return {};

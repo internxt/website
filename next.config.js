@@ -1,5 +1,7 @@
 const { initOpenNextCloudflareForDev } = require('@opennextjs/cloudflare');
 
+// Makes the Cloudflare bindings (rate limiting, assets) available during
+// `next dev`, so API routes behave the same locally as on Workers.
 initOpenNextCloudflareForDev();
 
 module.exports = {
@@ -264,6 +266,10 @@ module.exports = {
     ];
   },
   images: {
+    // On Workers there is no Next.js image optimizer: resizing is delegated to
+    // Cloudflare Image Resizing via ./image-loader.ts. A custom loader ignores
+    // `remotePatterns` (kept here for the non-Workers/local build path) —
+    // allowed origins must be authorised in the Cloudflare dashboard.
     loader: 'custom',
     loaderFile: './image-loader.ts',
     remotePatterns: [
