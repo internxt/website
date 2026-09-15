@@ -9,8 +9,8 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Oferta de **Black Friday**",
-    "subtitle": "Consigue la mejor oferta de Black Friday 2025 con un 85% de descuento en todos los planes de Internxt",
+    "title": "Oferta de **Black Friday** de Internxt",
+    "subtitle": "Consigue la mejor oferta de Black Friday de 2026\n con un 87% de descuento en todos los planes de Internxt",
     "description": "¡Obtén un {{discount}}% de descuento ahora!",
     "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "claimDeal": "Reclamar oferta"
@@ -19,12 +19,12 @@
     "title": "¡No te pierdas tu oferta de Black Friday!",
     "description": [
       "Protege tus datos online con Internxt gracias a nuestra suite de privacidad totalmente equipada que incluye copias de seguridad, Antivirus, VPN, Cleaner, Meet, Mail y mucho más.",
-      "Consigue la mejor privacidad y seguridad online con el descuento del 85% de Black Friday de Internxt."
+      "Consigue la mejor privacidad y seguridad online con el descuento del 87% de Black Friday de Internxt."
     ]
   },
   "MoreDealsSection": {
     "title": "Más ofertas de Internxt",
-    "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
+    "description": "Encuentra la oferta de Black Friday que mejor se adapta a tus necesidades de almacenamiento en la nube y privacidad",
     "cards": {
       "card1": {
         "title": "Ofertas de Black Friday en almacenamiento en la nube",
@@ -70,17 +70,21 @@
   "WhyChooseSection": {
     "title": "¿Por qué elegir la oferta de Black Friday de Internxt?",
     "cards": {
-      "titles": ["Un ecosistema completamente privado", "La encriptación más avanzada", "Nuestra oferta mas grande"],
+      "titles": [
+        "Un ecosistema completamente privado",
+        "La encriptación más avanzada",
+        "Nuestra mayor oferta de Black Friday hasta la fecha"
+      ],
       "descriptions": [
-        "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
+        "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet, Mail y Photos, todo lo que necesitas para estar seguro online.",
         "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
-        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo del 85%, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo del 87%, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
       ]
     }
   },
   "CtaSection": {
     "title": "Descubre enormes descuentos de Black Friday",
-    "description": "85% de descuento en todos nuestros planes premium",
+    "description": "87% de descuento en TODOS nuestros planes premium",
     "cta": "Reclamar oferta"
   },
   "HorizontalScrollableSection": {
@@ -110,7 +114,7 @@
   },
   "CtaSectionV2": {
     "title": "Las mejores ofertas de Black Friday",
-    "description": "85% de descuento en todos los planes",
+    "description": "87% de descuento en todos los planes",
     "cta": "Reclamar oferta"
   },
   "FaqSection": {
@@ -119,12 +123,12 @@
       {
         "question": "¿Cómo obtengo el descuento de Black Friday de Internxt?",
         "answer": [
-          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 85% se aplica automáticamente al finalizar la compra."
+          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 87% se aplica automáticamente al finalizar la compra."
         ]
       },
       {
         "question": "¿Cuándo termina la oferta de Black Friday de Internxt?",
-        "answer": ["La venta de Black Friday termina el 3 de diciembre de 2025."]
+        "answer": ["La venta de Black Friday termina el 3 de diciembre de 2026."]
       },
       {
         "question": "¿Quién es elegible para este descuento?",
@@ -135,19 +139,29 @@
       {
         "question": "¿Mantendré mi descuento cuando termine mi plan?",
         "answer": [
-          "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+          "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción al final del primer mes. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
         ]
       },
       {
-        "question": "¿Qué métodos de pago acepta Internxt?",
+        "question": "¿Qué métodos de pago aceptáis?",
         "answer": [
-          "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluyendo Mastercard, VISA, American Express y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
+          "Actualmente, Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.); también puedes pagar con Paypal, con criptomonedas y dividir el coste de tu plan de por vida en pagos mensuales con Klarna."
         ]
       },
       {
-        "question": "¿Tienes más preguntas?",
+        "question": "¿Puedo dividir el pago de mi plan de por vida?",
+        "answer": "Sí, ahora puedes dividir el pago de tu plan de por vida en varios plazos sin intereses con Klarna. ¡Disfruta de un plan de por vida con la comodidad de pagarlo a plazos!"
+      },
+      {
+        "question": "¿Cómo contacto con el soporte?",
         "answer": [
-          "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en redes sociales. ¡Siempre estamos encantados de saber de ti!"
+          "No dudes en escribirnos a [hello@internxt.com](mailto:hello@internxt.com) o visitar nuestro [centro de ayuda](https://help.internxt.com/)"
+        ]
+      },
+      {
+        "question": "¿Cuál es la política de reembolso de Internxt?",
+        "answer": [
+          "Internxt ofrece una garantía de devolución de 30 días en todas sus suscripciones de pago, que empieza a contar desde el momento en que te suscribes. Si en algún momento no estás satisfecho con nuestro servicio, escríbenos a hello@internxt.com y solicita el reembolso."
         ]
       }
     ]
