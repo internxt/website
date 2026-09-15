@@ -1,11 +1,37 @@
-import cache from 'memory-cache';
+const CACHE_TTL_SECONDS = 5 * 60;
 
-export async function getLatestReleaseInfo(user: string, repo: string) {
-  const cachedData = cache.get(`${user}/${repo}`);
+const CACHE_KEY_PREFIX = 'https://internxt-cache.invalid/github-release';
 
-  if (cachedData) {
-    cachedData.cached = true;
-    return cachedData;
+interface LatestReleaseInfo {
+  version: string;
+  links: {
+    windows: string | null;
+    linux: string | null;
+    macos: string | null;
+  };
+  cached: boolean;
+}
+
+function getCache(): Cache | undefined {
+  try {
+    return typeof caches !== 'undefined' ? (caches as unknown as { default: Cache }).default : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+export async function getLatestReleaseInfo(user: string, repo: string): Promise<LatestReleaseInfo> {
+  const cacheKey = `${CACHE_KEY_PREFIX}/${user}/${repo}`;
+  const cache = getCache();
+
+  if (cache) {
+    const cachedResponse = await cache.match(cacheKey);
+
+    if (cachedResponse) {
+      const cachedData = (await cachedResponse.json()) as LatestReleaseInfo;
+      cachedData.cached = true;
+      return cachedData;
+    }
   }
 
   const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases/latest`;
@@ -15,11 +41,7 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
     throw Error('Latest release information not found');
   }
 
-  const latestRelease = await res.json();
-
-  let windows = null;
-  let linux = null;
-  let macos = null;
+  const latestRelease = (await res.json()) as { name: string; assets: { browser_download_url: string }[] };
 
   const latestAssets = {
     exe: null,
@@ -37,21 +59,27 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
     }
   });
 
-  windows = latestAssets.exe || null;
-  linux = latestAssets.deb || null;
-  macos = latestAssets.dmg || null;
-
-  const newCachedData = {
+  const newCachedData: LatestReleaseInfo = {
     version: latestRelease.name,
     links: {
-      windows,
-      linux,
-      macos,
+      windows: latestAssets.exe || null,
+      linux: latestAssets.deb || null,
+      macos: latestAssets.dmg || null,
     },
     cached: false,
   };
 
-  cache.put(`${user}/${repo}`, newCachedData, 1000 * 60 * 5); // 5 minutes
+  if (cache) {
+    await cache.put(
+      cacheKey,
+      new Response(JSON.stringify(newCachedData), {
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': `max-age=${CACHE_TTL_SECONDS}`,
+        },
+      }),
+    );
+  }
 
   return newCachedData;
 }
