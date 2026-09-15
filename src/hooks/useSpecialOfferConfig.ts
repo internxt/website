@@ -164,6 +164,9 @@ export const ALLOWED_PATHS = [
   'mobiflip',
   'mindplace',
   'gian',
+  'kamarjeri',
+  'lsc',
+  'kkworld',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -421,6 +424,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'mobiflip',
   'mindplace',
   'gian',
+  'kamarjeri',
+  'lsc',
+  'kkworld',
 ]);
 
 export const COUPON_CODES = {
@@ -585,6 +591,9 @@ export const COUPON_CODES = {
   mobiflip: PromoCodeName.mobiflip,
   mindplace: PromoCodeName.mindplace,
   gian: PromoCodeName.gian,
+  kamarjeri: PromoCodeName.kamarjeri,
+  lsc: PromoCodeName.lsc,
+  kkworld: PromoCodeName.kkworld,
 };
 
 interface OfferConfig {
