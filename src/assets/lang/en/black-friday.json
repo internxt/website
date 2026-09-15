@@ -9,8 +9,8 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "**Black Friday** deal",
-    "subtitle": "Get the best Black Friday deal of 2025\n with 85% off all Internxt plans",
+    "title": "**Black Friday** Internxt deal",
+    "subtitle": "Get the best Black Friday deal of 2026\n with 87% off all Internxt plans",
     "description": "Get {{discount}}% off now!",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "claimDeal": "Claim deal"
@@ -19,7 +19,7 @@
     "title": "Don’t miss your Black Friday deal!",
     "description": [
       "Protect your data online with Internxt with our fully equipped privacy suite that includes backups, Antivirus, VPN, Cleaner, Meet, Mail, and more.",
-      "Get the best privacy and security online with Internxt’s 85% Black Friday discount."
+      "Get the best privacy and security online with Internxt’s 87% Black Friday discount."
     ]
   },
   "TableSection": {
@@ -59,17 +59,17 @@
   "WhyChooseSection": {
     "title": "Why choose Internxt’s Black Friday deal?",
     "cards": {
-      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest Black Friday deal"],
+      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest Black Friday deal ever"],
       "descriptions": [
-        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, and Mail, everything you need to stay secure online.",
+        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, Mail and Photos, everything you need to stay secure online.",
         "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
-        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive 85% off, now is the perfect time to get the best value on secure and private cloud storage, and more! "
+        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive 87% off, now is the perfect time to get the best value on secure and private cloud storage, and more!"
       ]
     }
   },
   "CtaSection": {
     "title": "Unlock massive Black Friday savings",
-    "description": "85% off all our premium plans",
+    "description": "87% off ALL our premium plans",
     "cta": "Claim deal"
   },
   "HorizontalScrollableSection": {
@@ -94,12 +94,12 @@
   },
   "CtaSectionV2": {
     "title": "The best Black Friday deals",
-    "description": "85% off all plans",
+    "description": "87% off all plans",
     "cta": "Claim deal"
   },
   "MoreDealsSection": {
     "title": "More Internxt deals",
-    "description": "Expand your protection with exclusive discounts across all Internxt products",
+    "description": "Find the right Black Friday deal to meet your cloud storage and privacy needs",
     "cards": {
       "card1": {
         "title": "Cloud storage Black Friday deals",
@@ -119,12 +119,12 @@
       {
         "question": "How do I get the Internxt Black Friday Discount?",
         "answer": [
-          "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your 85% discount is automatically applied at checkout."
+          "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your 87% discount is automatically applied at checkout."
         ]
       },
       {
         "question": "When does the Black Friday Internxt Deal end?",
-        "answer": ["The Black Friday sale ends December 3rd, 2025."]
+        "answer": ["The Black Friday sale ends December 3rd, 2026."]
       },
       {
         "question": "Who is eligible for this discount?",
@@ -135,19 +135,29 @@
       {
         "question": "Will I keep my discount when my plan ends?",
         "answer": [
-          "The Black Friday deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the year. As lifetime plans only require one payment, your discount will last forever."
+          "The Black Friday deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of first month. As lifetime plans only require one payment, your discount will last forever."
         ]
       },
       {
-        "question": "What payment methods does Internxt accept?",
+        "question": "What payment methods do you accept?",
         "answer": [
-          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc), you can also pay through Paypal, Crypto, and split the cost of your lifetime plan into monthly payments with Klarna."
         ]
       },
       {
-        "question": "Have more questions?",
+        "question": "Can I split my lifetime payment?",
+        "answer": "Yes, you can now split your lifetime payments into multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
+      },
+      {
+        "question": "How do I contact support??",
         "answer": [
-          "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+          "Feel free to contact us at [hello@internxt.com](mailto:hello@internxt.com) or visit our [help center](https://help.internxt.com/)"
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe. If you're ever unsatisfied with our service, reach out to us at hello@internxt.com and request a refund."
         ]
       }
     ]

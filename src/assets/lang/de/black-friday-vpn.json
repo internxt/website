@@ -9,9 +9,9 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Beste **Black Friday** Persönliche Cloud-Speicher-Angebote",
-    "subtitle": "Sichern Sie sich das beste Black Friday Angebot für persönlichen Cloud-Speicher 2026\n mit 87% Rabatt auf alle Tarife!",
-    "description": "Jetzt {{discount}}% Rabatt sichern!",
+    "title": "Internxt **Black Friday** VPN-Angebote",
+    "subtitle": "Sichern Sie sich die besten VPN Black Friday Angebote 2026, 87% Rabatt auf verschlüsselten Cloud-Speicher, VPN und mehr",
+    "description": "{{discount}}% Rabatt sichern",
     "features": ["Komplette Privacy-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "claimDeal": "Angebot sichern",
     "moreDeals": {
@@ -23,33 +23,33 @@
           "url": "/deals/black-friday-internxt"
         },
         {
-          "text": "Black Friday Cloud-Speicher-Angebote",
-          "url": "/deals/black-friday-cloud-storage"
+          "text": "Black Friday persönliche Cloud-Speicher-Angebote",
+          "url": "/deals/black-friday-personal-cloud-storage"
         }
       ]
     }
   },
   "MoreDealsSection": {
-    "title": "Weitere Internxt Black Friday Speicher-Angebote",
+    "title": "Weitere VPN Black Friday Angebote",
     "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
     "cards": {
       "card1": {
-        "title": "Cloud-Speicher Black Friday-Angebote",
-        "description": "Sparen Sie groß bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
-        "cta": "Speicher-Angebote ansehen"
+        "title": "Alle Internxt Black Friday Angebote 2026",
+        "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
+        "cta": "Alle Angebote ansehen"
       },
       "card2": {
-        "title": "Cloud-Speicher Black Friday-Angebote",
-        "description": "Exklusiver Rabatt für Einzelpersonen und persönliche Tarife",
+        "title": "Persönlicher Cloud-Speicher Black Friday Angebote",
+        "description": "Exklusive Rabatte für Einzelpersonen und persönliche Tarife",
         "cta": "Persönliche Angebote ansehen"
       }
     }
   },
   "DontMissSection": {
-    "title": "Internxts größter Black Friday Rabatt auf Cloud-Speicher!",
+    "title": "Internxt Black Friday VPN-Angebote",
     "description": [
-      "Schützen Sie Ihre Privatsphäre mit unseren Black Friday Speicher-Angeboten und erhalten Sie eine vollständig ausgestattete Privacy-Suite mit verschlüsseltem Cloud-Speicher, Backups, Antivirus, VPN, Meet, Mail, Photos und mehr.",
-      "Erhalten Sie alles, was Sie brauchen, mit Internxts Black Friday Cloud-Speicher und Privacy-Suite zu 87% Rabatt."
+      "Sichern Sie sich Ihr Black Friday VPN-Angebot, das alles enthält, was Sie zum Schutz Ihrer Privatsphäre online brauchen, darunter Internxt Drive, Meet, Mail, Photos und mehr.",
+      "Holen Sie sich das beste Angebot für Ihre Privatsphäre und Sicherheit mit Internxts 87% Black Friday Rabatt."
     ]
   },
   "TableSection": {
@@ -87,29 +87,29 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Lohnt sich persönlicher Cloud-Speicher am Black Friday?",
-    "description": "Mit dem Angebot von Internxt für persönlichen Cloud-Speicher: ja. Unsere Tarife enthalten alles, was Sie brauchen, um Ihre Dateien in post-quanten-verschlüsseltem Cloud-Speicher abzulegen, und alles, was Sie zum Schutz Ihres Geräts und Ihrer Privatsphäre online benötigen.",
+    "title": "Warum Sie sich für Internxts Black Friday VPN-Angebote entscheiden sollten",
+    "description": "Sichern Sie sich das beste Privacy-Paket mit unserem bisher größten Rabatt auf alle Tarife",
     "cards": {
       "titles": [
         "Ein vollständig privates Ökosystem",
         "Die fortschrittlichste Verschlüsselung",
-        "Unser größtes Black Friday Cloud-Speicher-Angebot"
+        "Unsere bisher größten VPN Black Friday Angebote"
       ],
       "descriptions": [
-        "Alle bezahlten Internxt-Tarife beinhalten post-quanten-verschlüsselten Speicher, Backups und Antivirus. Für vollständigen Online-Schutz erhalten Sie auch VPN, Cleaner, Meet und Mail – alles, was Sie für Sicherheit online benötigen.",
+        "Alle bezahlten Internxt-Tarife beinhalten post-quanten-verschlüsselten Speicher, Backups und Antivirus. Für vollständigen Online-Schutz wählen Sie den Ultimate-Tarif mit Zugang zu Meet, Mail, Photos, NAS, WebDAV und Rclone-Unterstützung.",
         "Erhalten Sie den ersten Cloud-Speicher mit Post-Quanten-Verschlüsselung, um Ihre Dateien in absoluter Privatsphäre hochzuladen, zu speichern und zu teilen mit unserem Ende-zu-Ende-verschlüsselten Cloud-Service. Sichern und synchronisieren Sie Ihre Dateien, um Datenverlust zu verhindern und eine reibungslose Zusammenarbeit mit Freunden, Familie oder Kollegen zu gewährleisten.",
         "Nutzen Sie unser bisher größtes Black Friday-Angebot mit noch mehr Funktionen zum Schutz Ihrer Daten und Dateien online. Mit massiven 87% Rabatt ist jetzt der perfekte Zeitpunkt, um das beste Preis-Leistungs-Verhältnis für sicheren und privaten Cloud-Speicher und mehr zu erhalten!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Cloud-Speicher am Black Friday von Internxt",
-    "description": "87% Rabatt auf alle Tarife",
+    "title": "Internxt VPN Black Friday Sale",
+    "description": "87% Rabatt auf alle Monats- und Lifetime-Tarife",
     "cta": "Angebot sichern"
   },
   "HorizontalScrollableSection": {
-    "title": "Black Friday Cloud-Speicher-Angebote, die auf Datenschutz aufbauen",
-    "description": "Wir entwickeln alle unsere Produkte mit Fokus auf Privatsphäre. Wir betreiben unser Geschäft nicht mit Daten oder Werbung; wir bauen es auf Vertrauen auf. Unsere Post-Quanten- und Zero-Knowledge-Verschlüsselung stellt sicher, dass Sie und nur Sie auf Ihre Dateien zugreifen können.",
+    "title": "Die besten Black Friday VPN-Angebote und mehr",
+    "description": "Unser VPN Black Friday Angebot umfasst sichere Produkte, die mit Fokus auf Privatsphäre entwickelt wurden. Wir betreiben unser Geschäft nicht mit Daten oder Werbung; wir bauen es auf Vertrauen auf. Unsere Post-Quanten- und Zero-Knowledge-Verschlüsselung stellt sicher, dass Sie und nur Sie auf Ihre Dateien zugreifen können.",
     "features": [
       "Jederzeit kündbar",
       "Quantensichere Verschlüsselung",
@@ -133,15 +133,19 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Die besten Black Friday Cloud-Speicher-Angebote",
+    "title": "Internxt VPN Black Friday Angebot",
     "description": "87% Rabatt auf alle Tarife",
     "cta": "Angebot sichern"
   },
   "FaqSection": {
-    "title": "Erfahren Sie mehr über unseren Black Friday Rabatt auf Cloud-Speicher",
+    "title": "Möchten Sie mehr über unsere VPN Black Friday Angebote erfahren?",
     "faq": [
       {
-        "question": "Wie erhalte ich den Internxt Black Friday Rabatt auf Cloud-Speicher?",
+        "question": "Was ist in Internxts VPN Black Friday Angeboten enthalten?",
+        "answer": "Alle kostenpflichtigen Tarife beinhalten Zugang zu unserem verschlüsselten Cloud-Speicher, VPN, Antivirus und Backups. Für den Zugriff auf alle Funktionen von Internxt bieten unsere Ultimate-Tarife Zugang zu unserer gesamten Produktsuite."
+      },
+      {
+        "question": "Wie erhalte ich den Internxt Black Friday Rabatt?",
         "answer": [
           "Um Ihren Rabatt in Anspruch zu nehmen, wählen Sie einen unserer Pläne Essential, Premium oder Ultimate und gehen Sie zur Checkout-Seite. Ihr 87%-Rabatt wird beim Bezahlen automatisch angewendet."
         ]
@@ -153,19 +157,19 @@
       {
         "question": "Wer ist für diesen Rabatt berechtigt?",
         "answer": [
-          "Wenn Sie ein neuer Benutzer sind, können Sie diesen Rabatt genießen, indem Sie ein Konto erstellen. Wenn Sie einen Lifetime-Plan haben, können Sie ein Upgrade durchführen, um mehr Speicherplatz und zusätzliche Funktionen wie Cleaner, Meet und Mail zu erhalten."
+          "Wenn Sie ein neuer Benutzer sind, können Sie diesen Rabatt genießen, indem Sie ein Konto erstellen. Wenn Sie einen Lifetime-Plan haben, können Sie ein Upgrade durchführen, und der Speicherplatz und die Funktionen des gewählten Tarifs werden Ihrem Konto automatisch hinzugefügt."
         ]
       },
       {
-        "question": "Behalte ich mein Black Friday Cloud-Speicher-Angebot bei der Verlängerung meines Abonnements?",
+        "question": "Behalte ich meinen Rabatt, wenn mein Plan endet?",
         "answer": [
-          "Das Black Friday Angebot gilt nur für den ersten Monat. Ihr Abonnement wird automatisch zum regulären Preis verlängert, sobald dieser Abonnementzeitraum am Ende des ersten Monats endet. Da Lifetime-Pläne nur eine Zahlung erfordern, gilt Ihr Rabatt für immer."
+          "Das Black Friday Angebot gilt bei Jahrestarifen für den ersten Monat. Ihr Abonnement wird automatisch zum regulären Preis verlängert, sobald dieser erste Monat endet. Da Lifetime-Pläne nur eine Zahlung erfordern, gilt Ihr Rabatt für immer."
         ]
       },
       {
         "question": "Welche Zahlungsmethoden akzeptiert Internxt?",
         "answer": [
-          "Derzeit akzeptieren wir Zahlungen per Kredit- und Debitkarten (einschließlich Mastercard, VISA, American Express und mehr), und wir akzeptieren auch Paypal, bankcontact, iDEAL und SOFORT. Die Kosten eines Lifetime-Tarifs können Sie mit Klarna aufteilen oder mit Krypto bezahlen."
+          "Derzeit akzeptieren wir Zahlungen per Kredit- und Debitkarten (einschließlich Mastercard, VISA, American Express und mehr), und wir akzeptieren auch Paypal, bankcontact, iDEAL und SOFORT. Außerdem akzeptieren wir Paypal, Klarna und Kryptowährung."
         ]
       },
       {
