@@ -1,3 +1,7 @@
+const { initOpenNextCloudflareForDev } = require('@opennextjs/cloudflare');
+
+initOpenNextCloudflareForDev();
+
 module.exports = {
   i18n: {
     locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw', 'pt-br'],
@@ -260,6 +264,8 @@ module.exports = {
     ];
   },
   images: {
+    loader: 'custom',
+    loaderFile: './image-loader.ts',
     remotePatterns: [
       {
         protocol: 'https',

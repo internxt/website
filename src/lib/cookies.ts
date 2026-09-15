@@ -25,6 +25,22 @@ export const TRACKING_PARAMS = [
   'afsrc',
 ] as const;
 
+/**
+ * The `cookies` package infers the Secure flag from `req.connection.encrypted`,
+ * which does not exist on Cloudflare Workers (there is no node socket), so it
+ * throws. Passing `secure` explicitly short-circuits that detection.
+ */
+function isSecureRequest(ctx: GetServerSidePropsContext): boolean {
+  const forwardedProto = ctx.req.headers['x-forwarded-proto'];
+  const proto = Array.isArray(forwardedProto) ? forwardedProto[0] : forwardedProto;
+
+  if (proto) {
+    return proto.split(',')[0].trim() === 'https';
+  }
+
+  return process.env.NODE_ENV === 'production';
+}
+
 function parseUri(ctx: GetServerSidePropsContext) {
   const { query } = url.parse(ctx.req.url);
   const parsedQuery = queryString.parse(query);
@@ -70,7 +86,7 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
   const referralId = parsedUri.ref;
 
   const expires = moment().add(2, 'days').toDate();
-  const cookies = new Cookies(ctx.req, ctx.res);
+  const cookies = new Cookies(ctx.req, ctx.res, { secure: isSecureRequest(ctx) });
 
   cookies.set('REFERRAL', referralId, {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
@@ -83,7 +99,7 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
 }
 
 function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string, expires: Date): void {
-  const cookies = new Cookies(ctx.req, ctx.res);
+  const cookies = new Cookies(ctx.req, ctx.res, { secure: isSecureRequest(ctx) });
 
   cookies.set(name, value, {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
