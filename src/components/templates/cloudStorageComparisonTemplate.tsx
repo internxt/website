@@ -45,7 +45,7 @@ export const CloudStorageComparisonTemplate = ({
   couponCode = PromoCodeName.seolp,
   couponCodeForLifetime = PromoCodeName.seolp,
 }: CloudStorageComparisonTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'comparison');
   const locale = lang as string;
 
   const cardsData = [
@@ -130,8 +130,8 @@ export const CloudStorageComparisonTemplate = ({
       </Script>
 
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Cloud Storage Comparison"
         lang={locale}
       >
