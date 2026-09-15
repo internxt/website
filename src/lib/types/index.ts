@@ -379,6 +379,9 @@ export enum PromoCodeName {
   mobiflip = 'MOBIFLIP',
   mindplace = 'MINDPLACE',
   gian = 'GIAN',
+  kamarjeri = 'KAMARJERI',
+  lsc = 'LSC',
+  kkworld = 'KKWORLD',
 }
 
 export interface PromoCodeProps {
