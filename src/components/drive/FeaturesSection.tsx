@@ -35,6 +35,7 @@ const FeaturesSection = ({
               } lg:my-10 lg:text-3xl`}
             >
               <Transition
+                as="div"
                 show={anim.trigger(percentage)}
                 className="w-full text-center"
                 enter="transition-all duration-500"
@@ -48,6 +49,7 @@ const FeaturesSection = ({
               </Transition>
               {textContent.section1.title.line2 && (
                 <Transition
+                  as="div"
                   show={anim.trigger(percentage)}
                   className="w-full text-center"
                   enter="transition-all duration-500 delay-250"
