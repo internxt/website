@@ -9,9 +9,9 @@
       "mail": "Mail",
       "ai": "AI"
     },
-    "title": "Best **Black Friday** Personal Cloud Storage Deals",
-    "subtitle": "Get the best Black Friday personal cloud storage deal of 2026\n with 87% off all plans!",
-    "description": "Get {{discount}}% off now!",
+    "title": "Internxt **Black Friday** VPN Deals",
+    "subtitle": "Get the best VPN Black Friday deals of 2026, 87% off encrypted cloud storage, VPN, and more",
+    "description": "Get {{discount}}% off",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "claimDeal": "Claim deal",
     "moreDeals": {
@@ -23,17 +23,17 @@
           "url": "/deals/black-friday-internxt"
         },
         {
-          "text": "Black Friday cloud storage deals",
-          "url": "/deals/black-friday-cloud-storage"
+          "text": "Black Friday personal cloud storage deals",
+          "url": "/deals/black-friday-personal-cloud-storage"
         }
       ]
     }
   },
   "DontMissSection": {
-    "title": "Internxt’s biggest Black Friday cloud storage discount!",
+    "title": "Internxt Black Friday VPN deals",
     "description": [
-      "Protect your privacy with our Black Friday storage deals and get a fully equipped privacy suite of encrypted cloud storage, backups, Antivirus, VPN, Meet, Mail, Photos, and more.",
-      "Get everything you need with Internxt’s Black Friday cloud storage and privacy suite for 87% off."
+      "Claim your Black Friday VPN deal, which includes everything you need to protect your online privacy, including Internxt Drive, Meet, Mail, Photos, and more.",
+      "Get the best deal for your privacy and security with Internxt's 87% Black Friday discount."
     ]
   },
   "TableSection": {
@@ -71,25 +71,29 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Is Black Friday personal cloud storage worth it?",
-    "description": "With Internxt’s personal cloud storage deal, yes. Our plans include everything you need to store your files with post-quantum, encrypted cloud storage and everything you need to protect your device and privacy online.",
+    "title": "Why you should choose Internxt’s Black Friday VPN deals",
+    "description": "Get the best privacy bundle with our biggest discount yet on all plans",
     "cards": {
-      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest Black Friday cloud storage deal"],
+      "titles": [
+        "A fully private ecosystem",
+        "The most advanced encryption",
+        "Our biggest VPN Black Friday deals ever"
+      ],
       "descriptions": [
-        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, and Mail, everything you need to stay secure online.",
+        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, choose the Ultimate plan to access Meet, Mail, Photos, NAS, WebDAV, and Rclone support.",
         "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
         "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive 87% off, now is the perfect time to get the best value on secure and private cloud storage, and more!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Black Friday cloud storage from Internxt",
-    "description": "87% off all plans",
+    "title": "Internxt VPN Black Friday sale",
+    "description": "87% off all monthly and lifetime plans",
     "cta": "Claim deal"
   },
   "HorizontalScrollableSection": {
-    "title": "Black Friday cloud storage deals built on privacy",
-    "description": "We build all our products with privacy in mind. We don't run our business on data or advertising; we build it on trust. Our post-quantum and zero-knowledge encryption ensures you, and only you, can access your files.",
+    "title": "The best Black Friday VPN deals, and more",
+    "description": "Our VPN Black Friday deal includes secure products with privacy in mind. We don't run our business on data or advertising; we build it on trust. Our post-quantum and zero-knowledge encryption ensures you, and only you, can access your files.",
     "features": [
       "Cancel Anytime",
       "Post-quantum encryption",
@@ -108,31 +112,35 @@
     }
   },
   "CtaSectionV2": {
-    "title": "The best Black Friday cloud storage deals",
+    "title": "Internxt VPN Black Friday deal",
     "description": "87% off all plans",
     "cta": "Claim deal"
   },
   "MoreDealsSection": {
-    "title": "More Internxt Black Friday storage deals",
+    "title": "More VPN Black Friday deals",
     "description": "Expand your protection with exclusive discounts across all Internxt products",
     "cards": {
       "card1": {
-        "title": "Cloud storage Black Friday deals",
-        "description": "Save big on encrypted cloud storage for your files",
-        "cta": "See storage deals"
+        "title": "All Internxt BlackFriday deals 2026",
+        "description": "Discover all offers across our privacy tools and storage solutions",
+        "cta": "View all deals"
       },
       "card2": {
-        "title": "Cloud storage Black Friday deals",
-        "description": "Exclusive discount for individuals and personal plans",
+        "title": "Personal cloud storage Black Friday offers",
+        "description": "Exclusive discounts for individuals and personal plans",
         "cta": "View personal deals"
       }
     }
   },
   "FaqSection": {
-    "title": "Learn more about our Black Friday cloud storage discount",
+    "title": "Want to know more about our VPN Black Friday deals?",
     "faq": [
       {
-        "question": "How do I get the Internxt Black Friday cloud storage discount?",
+        "question": "What’s included in Internxt’s VPN Black Friday deals?",
+        "answer": "All paid plans include access to our encrypted cloud storage, VPN, Antivirus, and backups. For access to all of Internxt’s features, our Ultimate plans give you access to our full product suite."
+      },
+      {
+        "question": "How do I get the Internxt Black Friday Discount?",
         "answer": [
           "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your 87% discount is automatically applied at checkout."
         ]
@@ -144,19 +152,19 @@
       {
         "question": "Who is eligible for this discount?",
         "answer": [
-          "If you're a new user, you can enjoy this discount by creating an account. If you have a lifetime plan, you can upgrade to get more storage and the extra features such as Cleaner, Meet, and Mail."
+          "If you're a new user, you can enjoy this discount by creating an account. If you have a lifetime plan, you can upgrade, and the storage and features of your chosen plan will automatically be added to your account."
         ]
       },
       {
-        "question": "Will I keep my Black Friday cloud storage deal when my subscription renews?",
+        "question": "Will I keep my discount when my plan ends?",
         "answer": [
-          "The Black Friday deal is valid for the first month only. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the first month. As lifetime plans only require one payment, your discount will last forever."
+          "The Black Friday deal is valid for the first month for annual plans. Your subscription will automatically renew at the regular price once this first month ends. As lifetime plans only require one payment, your discount will last forever."
         ]
       },
       {
         "question": "What payment methods does Internxt accept?",
         "answer": [
-          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT. You can split the cost of a lifetime plan with Klarna, or pay with crypto."
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT. We also accept Paypal, Klarna, and Cryptocurrency."
         ]
       },
       {
