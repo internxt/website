@@ -16,6 +16,12 @@
       "guarantee": "Garantia de reembolso de 30 dias"
     }
   },
+  "WhySwitchSection": {
+    "title": "Por que você deve migrar para soluções de armazenamento em nuvem privada",
+    "subtitle": "Migrar para soluções de armazenamento em nuvem privada garante que seus dados permaneçam privados e protegidos de hackers e corporações. Ao contrário de Google, Apple ou Microsoft, a Internxt não coleta, vende nem faz uso indevido dos seus dados. Você tem controle completo sobre seus arquivos.",
+    "description": "Invista na sua privacidade e tenha a tranquilidade de saber que seus arquivos e dados estão protegidos contra vazamentos de dados.",
+    "cta": "Obtenha o Internxt"
+  },
   "WhatWeDo": {
     "title": {
       "line1": "A Internxt oferece soluções de armazenamento",
@@ -78,6 +84,51 @@
     "description": "Seus arquivos seguros com criptografia pós-quântica de última geração.",
     "cta": "Obtenha a Internxt"
   },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento, estamos trabalhando em novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
   "FaqSection": {
     "title": "Perguntas? Temos respostas",
     "faq": [
@@ -139,7 +190,10 @@
     "cards": {
       "element1": {
         "title": "Maior privacidade para seus dados",
-        "description": "Os serviços focados na privacidade priorizam a segurança de seus dados, garantindo que eles sejam criptografados tanto em trânsito quanto em repouso. Ao contrário dos provedores de nuvem pública tradicionais, os serviços como o Internxt Drive não podem acessar suas chaves de criptografia, para que ninguém além de você possa visualizar ou vender seus dados."
+        "description": [
+          "Um serviço seguro de armazenamento em nuvem privada criptografa seus arquivos localmente com AES-256 antes que eles saiam do seu dispositivo. O arquivo criptografado então trafega por TLS 1.3 e fica em repouso nos servidores da Internxt na mesma forma criptografada. A chave de criptografia é gerada localmente e nunca sai do seu dispositivo. Sem ela, o arquivo é apenas ruído matemático ilegível.",
+          "A Internxt não pode descriptografar seus dados, entregá-los em resposta a uma intimação nem analisá-los para publicidade. Não temos a capacidade técnica. Essa é a diferença entre uma política de privacidade e uma arquitetura de conhecimento zero: uma nuvem pública armazena seus arquivos em uma forma que o provedor pode ler; uma nuvem privada os armazena em uma forma que só você pode ler."
+        ]
       },
       "element2": {
         "title": "Redução da espionagem corporativa",

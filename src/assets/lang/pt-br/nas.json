@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "label": "NAS",
+    "title": "**Suporte a NAS** QNAP e Synology",
+    "subtitle": "Proteja e faça backup dos seus arquivos com o Internxt Drive e o QNAP",
+    "features": [
+      "Backup na nuvem para NAS QNAP e Synology",
+      "Transferências seguras",
+      "Sincronização e backups criptografados"
+    ],
+    "cta": "Obtenha o Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "O que é um dispositivo NAS e por que devo usá-lo?",
+    "description": [
+      "O backup NAS na nuvem é uma solução de armazenamento na nuvem criptografado que copia seus dados no dispositivo e na nuvem para proteger os arquivos contra falhas de hardware, roubo ou desastres locais.",
+      "A Internxt se conecta ao seu dispositivo Synology ou QNAP por meio de um contêiner Docker, então os backups que saem da rede já estão criptografados com AES-256 e criptografia pós-quântica Kyber-512, em uma arquitetura de conhecimento zero.",
+      "Embora os NAS QNAP e Synology sejam eficazes para armazenar dados, eles ainda estão sujeitos a riscos, incluindo falhas de hardware, perdas acidentais, ransomware e eventos ambientais. Usar backup na nuvem ajuda a proteger seus dados e torna a recuperação possível a qualquer momento."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Integrações NAS da Internxt",
+    "description": "A Internxt é instalada no seu NAS por meio de um contêiner Docker, usando nossa CLI de código aberto que conecta seu sistema à sua conta e cria um destino de backup seguro para seus arquivos. Isso expõe um ponto de montagem dentro do Synology DSM 7+ ou do QNAP DSM 7+ e configura o Hyper Backup, ou o HBS3, como destino de backup. Seus dados são criptografados antes do envio, então somente arquivos criptografados chegam aos nossos data centers europeus.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "A Synology é uma marca popular de NAS para backups na nuvem que oferece um sistema fácil de usar para gerenciar, fazer backup, sincronizar e compartilhar dados. Os dispositivos NAS da Synology oferecem um sistema seguro e centralizado para armazenar e gerenciar todos os seus arquivos em um só lugar. Conectar seu dispositivo Synology à nuvem criptografada do Internxt Drive garante que todos os dados sejam criptografados diretamente no seu dispositivo, e somente o seu NAS Synology consegue descriptografar seus arquivos. A Internxt nunca pode visualizar nem acessar seus arquivos. As chaves de criptografia são suas.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "O NAS QNAP é um sistema seguro e fácil de usar para armazenamento centralizado de arquivos, backups e compartilhamento de dados entre dispositivos. Ele tem controles mais avançados, o que o torna mais adequado para usuários que querem maior flexibilidade, personalização e controle sobre seu armazenamento e seu backup NAS na nuvem. Os backups de NAS QNAP oferecem a mesma criptografia e segurança, então seus arquivos ficam protegidos pela criptografia pós-quântica e de conhecimento zero da Internxt, e seu NAS é o único dispositivo que guarda as chaves para descriptografar seus dados.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Solução de backup para NAS",
+    "description": "Uma solução confiável de backup na nuvem como o Internxt Drive é uma estratégia essencial para proteger os dados do seu NAS. A Internxt oferece integração com o QNAP Hyper Backup e o QNAP Cloud Sync para garantir que seus arquivos permaneçam seguros, acessíveis e recuperáveis a qualquer momento.",
+    "cta": "Obtenha o Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Faça backup do seu NAS na nuvem",
+    "description": "O backup NAS na nuvem envia os dados do seu NAS para um armazenamento externo criptografado, onde os arquivos sobrevivem a falhas de hardware, roubo, ransomware ou exclusão acidental. O suporte a NAS da Internxt funciona junto com seu fluxo atual de Synology Hyper Backup ou QNAP HBS3. Cada envio é criptografado no seu dispositivo com Kyber-512 e AES-256 antes de sair da rede, e suas chaves de criptografia nunca saem do seu hardware. Saiba mais sobre soluções de backup na nuvem em internxt.com/cloud-storage-backup-solutions.",
+    "scrollableSection": {
+      "titles": ["Proteção contra perda de dados", "Sincronização em tempo real", "Segurança", "Seus dados são seus"],
+      "descriptions": [
+        "Os recursos do backup na nuvem do QNAP incluem proteção RAID, que ajuda a manter os arquivos acessíveis mesmo se um disco falhar, enquanto os recursos de snapshot e histórico de versões permitem recuperar arquivos excluídos ou alterados. A Internxt com suporte a NAS QNAP ajuda a proteger contra a perda de dados mantendo todos os seus arquivos em um local seguro e centralizado, com suporte a backups automáticos de computadores, celulares, servidores e discos externos.",
+        "Os recursos de sincronização em tempo real do QNAP incluem atualizações automáticas de arquivos entre dispositivos e locais de backup, ajudando a manter os arquivos atualizados e acessíveis em todos os sistemas. A Internxt com suporte a NAS QNAP garante que todas as alterações sejam sincronizadas em tempo real, reduzindo o risco de versões desatualizadas, atualizações perdidas ou sobrescritas acidentais.",
+        "O NAS QNAP reduz a dependência de provedores de nuvem menos privados, dando a você controle total sobre sua própria nuvem, com recursos extras de segurança como permissões de usuário, 2FA e gerenciamento de senhas. Ao combinar um NAS QNAP com o Internxt Drive, você tem criptografia de conhecimento zero com Kyber-512 e AES-256. Como a Internxt é totalmente de código aberto e auditada de forma independente, você tem a tranquilidade de saber que seus dados estão protegidos pela melhor segurança e criptografia.",
+        "Tenha seus dados sob seu controle com o NAS QNAP, armazenando tudo no seu próprio dispositivo para ter controle total sobre onde seus arquivos ficam e como são acessados. A Internxt criptografa todos os seus arquivos e dados do seu lado, então somente você pode acessá-los, dando a você controle total sobre seus dados e seu armazenamento privado na nuvem."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "O que a Internxt oferece com dispositivos NAS",
+    "description": "A Internxt oferece suporte a NAS para QNAP e Synology para enviar, sincronizar, compartilhar e fazer backup dos seus arquivos na nuvem, protegendo-os contra perda de dados e ransomware.",
+    "cards": {
+      "titles": ["Synology e QNAP", "Acesso de qualquer dispositivo", "Proteção contra ransomware"],
+      "descriptions": [
+        "A integração com Synology e QNAP funciona por meio da imagem Docker da CLI da Internxt. No QNAP DSM 7+, o contêiner aparece como destino do Hyper Backup. Essa integração simplifica os backups mantendo o controle total do seu fluxo de trabalho atual e acrescentando o armazenamento seguro na nuvem com a criptografia de conhecimento zero Kyber-512 e AES-256 da Internxt.",
+        "O acesso remoto criptografado permite acessar com segurança os mesmos arquivos na nuvem a partir de qualquer dispositivo com a Internxt instalada. Os aplicativos para web, Windows, macOS, Linux, iOS e Android descriptografam seus arquivos localmente usando sua própria chave, então somente você vê seus dados. Isso mantém tudo em um único lugar seguro para seu NAS, computador ou celular.",
+        "A recuperação de ransomware em um NAS depende de os backups estarem ou não acessíveis ao invasor. A Internxt evita isso mantendo os backups na nuvem criptografados com chaves armazenadas no seu dispositivo, e não no NAS nem na nuvem. Mesmo que um dispositivo QNAP seja comprometido, os invasores só conseguem criptografar os dados locais, enquanto os backups na nuvem permanecem protegidos e inacessíveis. Os snapshots versionados também permitem recuperar versões limpas dos arquivos anteriores à infecção."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Como configurar o backup do seu NAS com a Internxt",
+    "description": "Configure a Internxt com um NAS Synology ou QNAP em três passos, usando nossos tutoriais detalhados do nosso GitHub de código aberto para guiar você em cada etapa. Saiba mais sobre nosso armazenamento na nuvem de código aberto em internxt.com/open-source.",
+    "cards": {
+      "titles": ["ReadMe", "Guia do usuário", "Código aberto"],
+      "descriptions": [
+        "O ReadMe explica como conectar seu dispositivo NAS ao aplicativo Docker para você começar a usar o Internxt Drive com o NAS QNAP, incluindo o comando docker run, as portas necessárias, as montagens de volume e outros controles adicionais de segurança.",
+        "No QNAP, instale o Docker (ou o Container Manager no DSM 7.2+), baixe a imagem da Internxt, configure as variáveis de ambiente da sua conta e adicione a montagem como destino do Hyper Backup. Você encontra instruções mais detalhadas na nossa central de ajuda.",
+        "O repositório da CLI da Internxt em github.com/internxt/cli contém todos os arquivos de cliente que o contêiner Docker executa e as notas de cada versão. O armazenamento na nuvem de código aberto da Internxt e todos os seus produtos são abertos e transparentes, e a segurança da criptografia ou do tratamento de chaves pode ser verificada em nosso código publicamente disponível."
+      ],
+      "cta": ["Ler o guia", "Saiba mais", "Ver detalhes"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Backup na nuvem para NAS QNAP",
+    "description": "Gerencie seu NAS QNAP com o Internxt Drive",
+    "cta": "Obtenha o Internxt"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "O NAS pode ser usado como armazenamento na nuvem?",
+        "answer": [
+          "Um NAS pode funcionar como armazenamento na nuvem para dispositivos da sua rede local — ele guarda os arquivos de forma centralizada e os serve pela LAN. Para acesso externo e proteção contra incêndio, roubo ou falha de hardware, você também precisa de uma cópia criptografada na nuvem. A regra de backup 3-2-1 trata o NAS como a cópia local e a nuvem como a cópia externa."
+        ]
+      },
+      {
+        "question": "Um NAS é melhor que o armazenamento na nuvem?",
+        "answer": [
+          "NAS e armazenamento na nuvem são complementares, não concorrentes. Um NAS oferece acesso local rápido, controle total e nenhuma mensalidade. O armazenamento na nuvem oferece proteção externa, redundância geográfica e acesso de qualquer lugar. A regra de backup 3-2-1 usa os dois: três cópias de cada arquivo, dois tipos de mídia, uma fora do local. A Internxt é a cópia externa criptografada para configurações Synology e QNAP."
+        ]
+      },
+      {
+        "question": "Quais são as desvantagens de um NAS?",
+        "answer": [
+          "Um NAS é um ponto único de falha para os dados dos seus discos. Falhas de hardware, incêndios, roubos e ransomware que comprometa o NAS podem destruir as cópias locais. Um NAS também não tem redundância geográfica: se o prédio cair, os dados caem junto. Combinar um NAS com backup criptografado na nuvem cobre as duas lacunas e atende à regra de backup 3-2-1."
+        ]
+      },
+      {
+        "question": "A Internxt funciona com Synology e QNAP?",
+        "answer": [
+          "Sim. O suporte a NAS da Internxt roda como um contêiner Docker no Synology DSM 7+ e no QNAP QTS 5+. O contêiner expõe uma montagem que o Hyper Backup, o Cloud Sync ou o HBS3 podem usar como destino de backup. Os arquivos são criptografados no NAS com Kyber-512 e AES-256 antes do envio, e as chaves de criptografia nunca saem do seu hardware."
+        ]
+      },
+      {
+        "question": "Como fazer backup do NAS na nuvem?",
+        "answer": [
+          "O backup NAS na nuvem acontece em três passos: instale o contêiner Docker da CLI da Internxt no Synology DSM 7+ ou no QNAP QTS 5+, monte um volume do NAS no contêiner e aponte o Hyper Backup, o Cloud Sync ou o HBS3 para o destino montado. Os arquivos são criptografados no NAS com Kyber-512 e AES-256 antes do envio, e os snapshots incrementais seguem a programação definida na ferramenta do seu NAS."
+        ]
+      }
+    ]
+  },
+  "Breadcrumbs": {
+    "home": "Armazenamento na Nuvem Criptografado",
+    "drive": "Armazenamento na nuvem seguro",
+    "nas": "Backup na Nuvem para NAS",
+    "qnap": "Backup na Nuvem para QNAP",
+    "synology": "Backup na Nuvem para NAS Synology"
+  }
+}

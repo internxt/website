@@ -1,0 +1,208 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento privado na nuvem para documentos",
+    "features": [
+      "Armazene seus documentos com privacidade",
+      "Criptografia pós-quântica e de conhecimento zero",
+      "Código aberto e auditado"
+    ],
+    "subtitle": "Tenha o primeiro armazenamento na nuvem com criptografia pós-quântica para armazenar, compartilhar e organizar seus arquivos.",
+    "cta": "Obtenha o Internxt"
+  },
+
+  "FeaturesSection": {
+    "intro": "A Internxt oferece armazenamento na nuvem para documentos importantes, usando criptografia de conhecimento zero com privacidade garantida. Impeça que a IA e as gigantes da tecnologia escaneiem seus documentos com nossa suíte de produtos seguros.",
+    "features": {
+      "feature1": {
+        "title": "Todos os seus documentos em uma nuvem segura",
+        "description": [
+          "Acesse seus arquivos de qualquer lugar com nosso suporte para Windows, Mac, Linux, dispositivos móveis e WebDAV. Armazene, organize e compartilhe arquivos importantes com criptografia de ponta a ponta e sincronização em tempo real."
+        ]
+      },
+      "feature2": {
+        "title": "Até 5 TB de armazenamento",
+        "description": [
+          "Nunca mais se preocupe com limites de armazenamento. Aproveite até 5 TB para todos os seus contratos, planilhas, apresentações e muito mais. Faça upgrade do seu plano com facilidade sempre que precisar de mais espaço."
+        ]
+      },
+      "feature3": {
+        "title": "Compartilhamento privado de arquivos",
+        "description": [
+          "Compartilhe documentos criptografados e protegidos por senha para ter mais controle sobre quem pode acessá-los. Tudo é criptografado no seu dispositivo, com total privacidade."
+        ]
+      }
+    }
+  },
+
+  "CtaSection": {
+    "title": "Armazenamento na nuvem seguro para documentos",
+    "description": "Guarde seus arquivos com privacidade completa",
+    "cta": "Obtenha o Internxt"
+  },
+
+  "CoreFeatures": {
+    "title": "Como escolher o melhor armazenamento na nuvem para documentos",
+    "description": "Encontrar armazenamento na nuvem para documentos importantes deveria ser simples, mas nem todos os serviços oferecem a privacidade, a acessibilidade ou o controle de que você precisa. Veja o que observar ao escolher o provedor certo.",
+    "accordionCards": {
+      "titles": ["Custo", "Privacidade", "Recursos extras"],
+      "descriptions": [
+        {
+          "contents": [
+            "O armazenamento na nuvem gratuito para documentos costuma ser suficiente, já que documentos normalmente não ocupam muito espaço. Os serviços gratuitos vêm com restrições, e alguns provedores cobram à parte pela criptografia de conhecimento zero. Por isso, é importante comparar preços e recursos para saber se atendem às suas necessidades. ",
+            "Se você quer armazenamento na nuvem para documentos importantes, além de VPN, Antivirus, Mail, Meet e muito mais, a Internxt oferece tudo isso em planos acessíveis. Comece gratuitamente ou a partir de € 3 por mês em planos anuais ou vitalícios, ou armazene petabytes de documentos com o armazenamento de objetos Internxt S3 por € 7/TB/mês."
+          ]
+        },
+        {
+          "contents": [
+            "Google Drive, Dropbox e outros não oferecem a mesma criptografia de conhecimento zero da Internxt. Em vez disso, as gigantes da tecnologia gerenciam as chaves de criptografia em seus servidores, o que significa que poderiam descriptografar e acessar seus documentos confidenciais.",
+            "Escolher um armazenamento na nuvem com criptografia de conhecimento zero significa que as chaves são gerenciadas no seu dispositivo, oferecendo privacidade máxima, já que ninguém além de você pode ver o conteúdo dos seus documentos."
+          ]
+        },
+        {
+          "contents": [
+            "O armazenamento na nuvem gratuito para documentos muitas vezes custa a sua privacidade, com empresas que usam seus dados pessoais para maximizar os lucros. Em troca, você recebe armazenamento gratuito, mas com anúncios direcionados de terceiros, o que aumenta o risco de vazamento dos seus dados.",
+            "O plano gratuito da Internxt oferece 1 GB de armazenamento na nuvem, concebido como uma solução totalmente privada para seus arquivos. A Internxt nunca compartilha seus dados com ninguém, e você tem criptografia pós-quântica, além de uma VPN para uma localização incluída na sua conta gratuita."
+          ]
+        }
+      ]
+    }
+  },
+
+  "SecureAndManage": {
+    "title": "Proteja e gerencie seus documentos com a Internxt",
+    "description": "Seja para armazenar relatórios, PDFs ou arquivos pessoais, o Internxt Drive e o armazenamento de objetos S3 oferecem desempenho privado, flexível e rápido de qualquer lugar.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "O Internxt Drive é um armazenamento na nuvem de código aberto e em conformidade com o GDPR, com a visão de oferecer às pessoas uma alternativa focada em privacidade às gigantes da tecnologia. Além de oferecer armazenamento na nuvem seguro para documentos, os planos pagos incluem VPN, Antivirus, Meet, Mail e muito mais.",
+          "Todos os seus arquivos são protegidos por uma criptografia pós-quântica premiada e podem ser acessados de qualquer lugar, graças ao suporte em várias plataformas. Junte-se à Internxt a partir de apenas € 3/mês ou tenha privacidade online para sempre com nossos planos vitalícios acessíveis."
+        ],
+        "cta": "Obtenha o Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Para empresas que precisam armazenar grandes volumes de dados, o armazenamento S3 é o melhor armazenamento na nuvem para documentos seguros. O armazenamento de objetos S3 é uma solução de nuvem hot que permite armazenar e acessar arquivos instantaneamente, graças à baixa latência.",
+          "Mantenha o controle total do seu orçamento de nuvem com um modelo de preço fixo conforme o uso, de apenas € 7/TB/mês e zero taxas de transferência de dados, economizando até 80% em relação à AWS e a outros concorrentes."
+        ],
+        "cta": "Obtenha o Internxt S3"
+      }
+    ]
+  },
+
+  "FeaturesInternxtSection": {
+    "title": "Recursos do armazenamento na nuvem para documentos da Internxt",
+    "description": "Mantenha seus documentos seguros, organizados e fáceis de acessar, com compartilhamento seguro, backups e criptografia pós-quântica.",
+    "scrollableSection": {
+      "titles": [
+        "Limites generosos de envio",
+        "Backups criptografados",
+        "Disco virtual",
+        "Mais transparência"
+      ],
+      "descriptions": [
+        "O Internxt Drive tem um limite de envio de 40 GB para até 3.000 arquivos, para que você armazene, gerencie e organize seus documentos com eficiência em uma única plataforma segura na nuvem. Você também pode compartilhar arquivos de até 10 GB com amigos, familiares ou colegas, e definir seus controles de privacidade para mais segurança.",
+        "O ransomware é a maior ameaça enfrentada por pessoas e empresas. Proteja seus documentos contra ransomware com os backups criptografados da Internxt. Programe seus backups a cada hora, a cada 6 horas, diariamente ou manualmente, para garantir que você sempre tenha uma cópia dos arquivos, evitar perda de dados e ter mais proteção contra ciberataques.",
+        "Libere espaço no seu dispositivo com o aplicativo de disco virtual da Internxt. Ele funciona como o seu disco local, mas armazena e sincroniza seus documentos diretamente na nuvem. Assim, você pode usar nosso disco virtual para guardar documentos importantes como se estivesse salvando localmente, sem se preocupar em ficar sem espaço.",
+        "A Internxt é auditada por especialistas em cibersegurança e certificada como uma plataforma segura e confiável que protege você contra violações de dados. O código-fonte de todos os nossos produtos está disponível na nossa página do GitHub, o que traz mais tranquilidade e transparência de que não há nada que possa comprometer seus dados."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Armazenamento privado na nuvem com criptografia pós-quântica",
+    "description": "Armazene, compartilhe e organize seus documentos",
+    "cta": "Obtenha o Internxt"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Dúvidas? Temos respostas",
+    "items": [
+      {
+        "question": "Qual é o melhor armazenamento na nuvem para documentos?",
+        "answer": [
+          "Escolher o armazenamento na nuvem para documentos ideal para você depende de vários fatores, como necessidades, orçamento e eventuais recursos adicionais. O que importa, no entanto, ao escolher um armazenamento na nuvem é optar por um com criptografia de conhecimento zero.",
+          "A Internxt oferece muitos recursos para você considerar como seu armazenamento de documentos importantes. Inclui armazenamento na nuvem, VPN, Antivirus, Meet, Mail e muito mais, tudo com criptografia pós-quântica e de conhecimento zero.",
+          "Experimente gratuitamente ou escolha entre qualquer um dos nossos planos, que começam em apenas € 3 por mês."
+        ]
+      },
+      {
+        "question": "De quanto armazenamento na nuvem gratuito para documentos eu preciso?",
+        "answer": [
+          "1 GB de armazenamento na nuvem gratuito para documentos comporta uma quantidade generosa de arquivos.",
+          "Se seus documentos forem principalmente arquivos de texto simples ou PDFs com cerca de 100 KB cada, 1 GB de armazenamento gratuito guardará em torno de 10.000 documentos.",
+          "Para arquivos de cerca de 1 MB, como PDFs com muitas imagens ou documentos digitalizados, você armazenará algo próximo de 1.000 documentos."
+        ]
+      },
+      {
+        "question": "Posso fazer backup dos meus documentos com a Internxt?",
+        "answer": [
+          "Sim, os backups estão disponíveis em qualquer um dos nossos planos Essential, Premium ou Ultimate, anuais ou vitalícios, oferecendo tanto armazenamento na nuvem seguro para documentos quanto backups criptografados para proteger contra ransomware e outros ciberataques."
+        ]
+      },
+      {
+        "question": "O que é criptografia pós-quântica e por que ela é importante?",
+        "answer": [
+          "A criptografia pós-quântica é um tipo de criptografia projetada para proteger seus dados contra computadores quânticos, uma tecnologia que em breve poderá quebrar os protocolos de criptografia atuais.",
+          "A Internxt usa criptografia pós-quântica selecionada pelo Instituto Nacional de Padrões e Tecnologia (NIST) como um dos métodos de criptografia mais seguros disponíveis para a nuvem."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode entrar em contato com nossa equipe de Sucesso do Cliente pelo chat ao vivo ou enviando um email para hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoedas?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar via PayPal, iDEAL, Sofort e criptomoedas."
+        ]
+      }
+    ]
+  }
+}

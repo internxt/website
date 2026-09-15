@@ -1,0 +1,169 @@
+{
+  "HeroSection": {
+    "label": "Internxt Photos",
+    "title": "Armazenamento de Fotos Seguro e Criptografado",
+    "description": "Armazene, sincronize, faça backup e acesse suas fotos com total privacidade e segurança.",
+    "cta": "Obtenha o Internxt",
+    "garantee": "Incluído nos planos Ultimate"
+  },
+  "PhotoSection": {
+    "title": "Internxt Photos",
+    "description": [
+      "Faça backup e sincronize suas memórias com nosso armazenamento na nuvem seguro para fotos, protegendo suas lembranças com criptografia pós-quântica e projetado para privacidade completa."
+    ]
+  },
+  "CoreFeatures": {
+    "title": "Armazenamento privado de fotos: suas memórias, acessíveis de qualquer lugar",
+    "description": "Mantenha sua biblioteca de fotos atualizada e sincronizada em todos os dispositivos. Mesmo que seu dispositivo seja perdido ou substituído, sua biblioteca de fotos permanece segura e acessível.",
+    "accordionCards": {
+      "titles": [
+        "Backup de todos os seus dispositivos",
+        "Zero rastreadores, anúncios e IA",
+        "Sincronização e backups automáticos"
+      ],
+      "descriptions": [
+        "Faça backup automático das fotos de todos os seus dispositivos e acesse-as com segurança sempre que precisar, a partir de qualquer dispositivo. ",
+        "O Internxt Photos oferece uma experiência totalmente livre de anúncios, sem rastreamento de dados e sem IA usando suas fotos e dados para aprendizado de máquina.",
+        "Toda a sua biblioteca de fotos é atualizada continuamente em tempo real, então qualquer alteração feita em um dispositivo é refletida em todos os outros. Backups automáticos significam que você nunca precisa se preocupar com perda de dados."
+      ]
+    }
+  },
+  "PhotoFeatureSection": {
+    "title": "Armazenamento na nuvem seguro para fotos, focado na privacidade",
+    "description": "O Internxt Photos usa criptografia pós-quântica e de conhecimento zero para criptografar seus arquivos e dados em repouso e em trânsito.",
+    "scrollableSection": {
+      "titles": [
+        "Cofre totalmente criptografado",
+        "Privacidade acima do lucro",
+        "Conformidade",
+        "Código aberto e auditado",
+        "Criado para a liberdade",
+        "Sem portas dos fundos"
+      ],
+      "descriptions": [
+        "O Internxt Photos usa criptografia pós-quântica Kyber 512 e AES-256, garantindo proteção de dados com segurança de ponta a ponta, privacidade europeia e tecnologia avançada.",
+        "Diferente do Google Photos ou de outras gigantes da tecnologia, a Internxt não pode visualizar nem excluir suas fotos. Tudo é criptografado diretamente no seu dispositivo.  Ninguém, nem mesmo nós, pode acessar suas fotos ou dados.",
+        "A Internxt está em conformidade com GDPR, HIPAA, ISO 27001 e SOC 2. Seja para armazenamento na nuvem na área da saúde, no setor financeiro ou para uso pessoal, a Internxt garante que seus dados e arquivos atendam aos mais altos padrões de proteção de dados.",
+        "Todo o nosso código está publicamente disponível no GitHub e foi verificado por especialistas externos em cibersegurança para garantir que é uma plataforma segura para os seus dados.",
+        "Damos a você propriedade e controle totais sobre sua privacidade. Com nossos produtos focados em privacidade, o poder está com você, não com as gigantes da tecnologia.",
+        "Não temos acesso aos seus dados ou arquivos e não os compartilhamos com ninguém. Nossos aplicativos são totalmente de código aberto e auditados, garantindo que sua privacidade seja respeitada."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Armazenamento na nuvem seguro para fotos",
+    "description": "Tenha a melhor proteção e segurança para suas memórias com o Internxt Photos",
+    "cta": "Obtenha o Internxt"
+  },
+  "DesignedSection": {
+    "title": "Principais recursos do nosso armazenamento na nuvem seguro para fotos",
+    "scrollableSection": {
+      "images": ["partial1", "partial2", "partial3", "partial4"],
+      "titles": [
+        "Um ecossistema totalmente privado",
+        "Sincronização e backups",
+        "Criptografado de ponta a ponta",
+        "Backups criptografados"
+      ],
+      "descriptions": [
+        "O Internxt Photos está incluído no nosso pacote Ultimate, oferecendo tudo o que você precisa para proteger sua privacidade. De armazenamento na nuvem criptografado a VPN, Mail, Antivirus, Meet e muito mais.",
+        "As fotos são sincronizadas e copiadas automaticamente na nuvem, mantendo suas memórias seguras, acessíveis e protegidas.",
+        "Todas as fotos são criptografadas com criptografia pós-quântica e de conhecimento zero. Ninguém além de você, ou de quem você escolher compartilhar, pode ver o conteúdo.",
+        "Garanta que suas fotos fiquem protegidas contra ransomware e perdas acidentais com backups automáticos e criptografados que oferecem proteção extra e tranquilidade."
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Feito na Europa",
+    "description": "Seus dados são protegidos por rígidas leis e regulamentações europeias de conformidade, combinadas com criptografia premiada.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["Data centers europeus", "Redundância", "Compromisso com a sustentabilidade "],
+      "descriptions": [
+        "A Internxt fica em Valência, na Espanha, e nossos data centers estão na Europa e em outros locais do mundo, oferecendo a você segurança, velocidade e conformidade.",
+        "Seus arquivos são protegidos por sistemas redundantes, controles ambientais e monitoramento de segurança presencial 24 horas por dia. Não importa o que aconteça, seus arquivos permanecem sempre seguros e acessíveis.",
+        "A Internxt lidera pelo exemplo, trabalhando por uma solução de armazenamento na nuvem mais sustentável por meio de práticas energeticamente eficientes, para uma nuvem mais limpa e sustentável."
+      ]
+    }
+  },
+  "TableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "SemanticAccordion": {
+    "title": "Tem dúvidas sobre o Internxt Photos? Temos respostas",
+    "items": [
+      {
+        "question": "O que é o Internxt Photos?",
+        "answer": [
+          "O Internxt Photos é um aplicativo de armazenamento na nuvem para fotos criptografado de ponta a ponta, que permite armazenar, sincronizar e fazer backup automático das suas fotos e álbuns com total privacidade."
+        ]
+      },
+      {
+        "question": "Qual plano inclui o Internxt Photos?",
+        "answer": [
+          "O Internxt Photos está incluído em todos os planos Ultimate anuais e vitalícios. Isso também dá acesso a 5 TB de armazenamento na nuvem e à nossa suíte completa de privacidade."
+        ]
+      },
+      {
+        "question": "Por que devo usar armazenamento de fotos criptografado?",
+        "answer": [
+          "O armazenamento de fotos criptografado é importante porque a maioria dos serviços de fotos na nuvem convencionais não é totalmente privada. Grandes empresas de tecnologia podem visualizar suas fotos e álbuns privados em determinadas situações, como moderação, processamento por IA ou solicitações judiciais, dependendo de como o serviço foi projetado."
+        ]
+      },
+      {
+        "question": "O Internxt Photos é uma alternativa ao Google Photos?",
+        "answer": [
+          "Sim, o Internxt Photos é uma alternativa privada e segura ao Google Photos que protege suas fotos com criptografia de conhecimento zero e pós-quântica, para que ninguém além de você possa acessar seus arquivos. ",
+          "Com o Internxt Photos, você também tem acesso à suíte completa de produtos da Internxt, que inclui Drive, VPN, Meet, Mail e muito mais."
+        ]
+      }
+    ]
+  }
+}

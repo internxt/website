@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "A Internxt oferece a melhor forma de comprimir vários arquivos PDF gratuitamente online. Proteja e compartilhe PDFs sem se preocupar com limites de anexos.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo PDF",
+      "description": "Para comprimir um arquivo PDF, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo PDF: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo PDF”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com esta ferramenta, você pode comprimir vários arquivos PDF gratuitamente sempre que precisar. Todos os arquivos são protegidos com uploads criptografados para garantir a privacidade dos seus vídeos.  "
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir arquivos PDF grandes",
+      "intro": "Enviar arquivos PDF grandes pode gerar problemas com limites de e-mail ou de compartilhamento de arquivos, limites de upload ou velocidades de envio mais lentas. Com esta ferramenta gratuita, você pode comprimir vários arquivos PDF de graça e aproveitar estes benefícios: ",
+      "bullets": [
+        "Otimize arquivos para visualização na web ou no celular",
+        "Contorne restrições de tamanho de upload",
+        "Economize espaço de armazenamento"
+      ],
+      "outro": "Não há limites nesta ferramenta, então você pode comprimir arquivos PDF grandes de até XGB e lidar com vários arquivos sem se cadastrar nem esbarrar em restrições diárias."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos PDF",
+    "cta": "Obter a Internxt"
+  }
+}

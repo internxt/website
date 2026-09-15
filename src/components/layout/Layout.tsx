@@ -119,6 +119,7 @@ export default function Layout({
         <link rel="alternate" hrefLang="ru-RU" href={`https://internxt.com/ru${pathname}`} />
         <link rel="alternate" hrefLang="zh-CN" href={`https://internxt.com/zh${pathname}`} />
         <link rel="alternate" hrefLang="zh-TW" href={`https://internxt.com/zh-tw${pathname}`} />
+        <link rel="alternate" hrefLang="pt-BR" href={`https://internxt.com/pt-br${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href={`https://internxt.com${pathname}`} />
         <link rel="stylesheet" href="/cookiebanner.style.css" />
       </Head>

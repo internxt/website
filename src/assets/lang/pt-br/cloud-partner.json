@@ -1,0 +1,72 @@
+{
+  "HeroSection": {
+    "title": "Programa de revenda da Internxt",
+    "description": "Armazenamento em nuvem 100% hot e compatível com S3",
+    "cta": "Torne-se revendedor"
+  },
+  "FeatureSection": {
+    "title": "Internxt S3",
+    "description": "Com o Programa de Parceiros da Internxt, você oferece aos seus clientes acesso rápido a grandes volumes de armazenamento em nuvem por um custo fixo e competitivo, sem taxas adicionais. Economize até 80% em comparação com outros hiperescaladores. "
+  },
+  "AccordionSection": {
+    "title": "Vantagens do programa de revenda da Internxt ",
+    "description": "Nosso programa de revenda oferece uma solução de baixo custo e alto impacto para acesso, backup e arquivamento de dados.",
+    "accordionSection": {
+      "titles": [
+        "Armazenamento de objetos de nível empresarial",
+        "Preços e escalabilidade",
+        "Acesso à API"
+      ],
+      "descriptions": [
+        "Atenda aos mais recentes padrões de conformidade e gestão de dados com 11 noves de durabilidade, garantindo acesso seguro e confiável a petabytes de dados com uploads e downloads rápidos.  Revenda petabytes de armazenamento com altas velocidades de upload e download a partir do seu console web.",
+        "Gerencie contas de clientes em um único painel e aproveite preços fixos no modelo pay-as-you-go, sem taxas adicionais. Adicione todo o armazenamento de que precisar para atender às demandas dos parceiros. Oferecemos uma estrutura de custos incrivelmente acessível para que você obtenha altas margens ao revender nossa solução.",
+        "O acesso à API facilita gerenciar parceiros, controlar onde os dados são armazenados e acessar recursos com segurança, tudo em uma única interface. Centralize a gestão de usuários, melhore o controle dos dados e habilite um acesso ao armazenamento seguro e personalizado."
+      ]
+    }
+  },
+  "ThreeCardsSection": {
+    "title": "Escale seu negócio de armazenamento com facilidade",
+    "description": "Simplifique a forma como você vende, gerencia e escala o armazenamento de todos os seus clientes. ",
+    "cards": {
+      "titles": [
+        "Automação de contas",
+        "Configuração e gestão",
+        "Faturamento simplificado"
+      ],
+      "descriptions": [
+        "Simplifique a gestão de contas lidando com testes gratuitos, faturamento e ajustes de políticas de forma automática, o que ajuda você a crescer sem complexidade extra. ",
+        "Ofereça entrega rápida aos seus clientes. Não há longas esperas de configuração ou implantação, então você pode começar a lucrar imediatamente com nosso programa de revenda.  ",
+        "Reúna o faturamento de todas as suas contas e canais em uma única fatura, facilitando o acompanhamento, a gestão e a conciliação dos pagamentos. "
+      ]
+    }
+  },
+  "TrustedSection": {
+    "title": "Armazenamento de objetos europeu e confiável",
+    "description": "Obtenha o melhor em armazenamento de objetos em conformidade, proteção de dados e segurança para todos os setores. Habilitamos armazenamento redundante que replica e distribui os dados por vários servidores, garantindo latência ultrabaixa e acesso ultrarrápido aos dados. "
+  },
+  "ContactSales": {
+    "title": "Fale com vendas",
+    "description": "Preencha o formulário de contato e a equipe entrará em contato com você em breve.",
+    "form": {
+      "name": "Nome completo",
+      "email": "Endereço de e-mail",
+      "company": "Nome da empresa",
+      "phone": "Número de telefone",
+      "howMuchStorage": "De quanto armazenamento você precisa?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Selecione",
+        "Menos de 10 TB",
+        "10 TB - 50 TB",
+        "50 TB - 100 TB",
+        "Mais de 100 TB"
+      ],
+      "howWeCanHelp": "Como podemos ajudar você? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Conte-nos mais sobre suas necessidades",
+      "cta": "Enviar mensagem",
+      "ctaSending": "Enviando...",
+      "successMessage": "Sua mensagem foi enviada com sucesso.",
+      "errorMessage": "Ocorreu um erro. Tente novamente."
+    }
+  }
+}

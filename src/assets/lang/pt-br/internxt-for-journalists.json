@@ -1,0 +1,44 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "jornalistas ",
+      "normalText": "protegem suas fontes e armazenam informações com segurança"
+    },
+    "description": "Os jornalistas lidam diariamente com montanhas de informações sensíveis e precisam atualizar constantemente uma enorme quantidade de dados online. Por isso, gerenciar e armazenar dados online é uma prática comum e crítica em seu dia a dia de trabalho.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "internxt_for_journalists.webp",
+      "alt": "Internxt para jornalistas"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "O primeiro de nossos estudos de caso explora como a chegada da era digital transformou radicalmente os métodos de trabalho, especialmente para os jornalistas.",
+        "Muitos serviços tradicionais de armazenamento em nuvem guardam as chaves de descriptografia dos seus dados e, portanto, carecem de privacidade e segurança. Assim, uma empresa que detém essas chaves pode, em teoria, acessar as informações sensíveis em que os jornalistas estão trabalhando, causando vazamentos de dados ou violações de informações altamente confidenciais. Por isso, os jornalistas precisam ser ainda mais cuidadosos ao escolher como armazenam seus dados.",
+        "Os aplicativos focados em segurança também estão cada vez mais presentes no mundo do jornalismo, principalmente em países onde é mais perigoso trabalhar como jornalista. Jornalistas que atuam onde a censura é comum na imprensa precisam de um lugar para armazenar suas informações com segurança, protegidas de partes que possam se opor ao conteúdo e à eventual publicação de uma reportagem."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "A Internxt usa o AES (Advanced Encryption Standard) para sua criptografia, amplamente reconhecido como o método mais robusto para proteger informações sensíveis. A tecnologia de criptografia transforma dados legíveis (texto simples) em uma forma ilegível (texto cifrado).",
+        "O software de criptografia de dados é o padrão do setor usado pelas empresas para proteger dados em trânsito ou armazenados em um dispositivo, porque eles ficam ilegíveis para quem não possui a chave de descriptografia, de modo que ninguém consegue ver ou roubar os dados em sua forma legível caso obtenha acesso não autorizado.",
+        "Outro aspecto crítico deste caso de uso para jornalistas é a tecnologia de conhecimento zero oferecida pela Internxt. Graças a essas tecnologias de conhecimento zero, as informações dos jornalistas não podem ser acessadas por terceiros de nenhuma forma. Todas as informações são totalmente criptografadas, fragmentadas e distribuídas em uma vasta rede peer-to-peer, tornando os vazamentos praticamente impossíveis."
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "Graças à nuvem segura da Internxt, os jornalistas podem realizar seu trabalho com segurança, sem cair na paranoia nem se preocupar com arquivos comprometidos. Ao adotar a Internxt, eles podem enviar e baixar informações confidenciais de qualquer dispositivo e definir permissões de acesso rigorosas. A reportagem e as fontes permanecem seguras, e a liberdade de expressão segue protegida."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Liberdade de expressão, liberdade de privacidade",
+    "description": "Proteja suas reportagens com a Internxt",
+    "cta": "Experimente a Internxt sem riscos"
+  }
+}

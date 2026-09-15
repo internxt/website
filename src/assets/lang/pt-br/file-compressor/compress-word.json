@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprima arquivos Word (DOC) com a Internxt para uma forma mais fácil e produtiva de compartilhar e colaborar em documentos importantes.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo DOC",
+      "description": "Para comprimir um arquivo DOC, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo DOC: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo DOC”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Com esta ferramenta, você pode comprimir vários arquivos Word gratuitamente sempre que precisar. Ao comprimir seus documentos, eles são automaticamente protegidos com uploads criptografados para garantir a privacidade dos seus documentos."
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir arquivos Word",
+      "intro": "Ao elaborar textos longos, relatórios, documentos, contratos etc., o tamanho dos anexos logo aumenta, dificultando o compartilhamento de vários documentos em um só arquivo. Comprimir arquivos Doc pode reduzir bastante o tamanho dos seus arquivos, facilitando a colaboração e permitindo:",
+      "bullets": [
+        "Comprimir arquivos Word para compartilhar com mais facilidade",
+        "Ficar dentro dos limites de tamanho de upload",
+        "Gerenciar e colaborar em trabalhos em grupo"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter seus arquivos Word privados, assim você pode comprimir, armazenar e compartilhar seus documentos com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos Word",
+    "cta": "Obter a Internxt"
+  }
+}

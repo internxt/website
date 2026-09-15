@@ -1,0 +1,45 @@
+{
+  "title": "Você também pode se interessar",
+  "links": [
+    {
+      "cta": "Armazenamento seguro\n na nuvem",
+      "link": "/drive"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n gratuito",
+      "link": "/drive/free-cloud-storage"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n vitalício",
+      "link": "/lifetime"
+    },
+    {
+      "cta": "Preços de armazenamento\n na nuvem",
+      "link": "/pricing"
+    },
+    {
+      "cta": "Armazenamento privado\n na nuvem",
+      "link": "/private-cloud-storage-solutions"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n de código aberto",
+      "link": "/open-source"
+    },
+    {
+      "cta": "Backup na nuvem",
+      "link": "/cloud-storage-backup-solutions"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n em conformidade com o GDPR",
+      "link": "/gdpr-cloud-storage"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n para fotos",
+      "link": "/photos"
+    },
+    {
+      "cta": "Armazenamento na nuvem\n para vídeos",
+      "link": "/cloud-storage-for-videos"
+    }
+  ]
+}

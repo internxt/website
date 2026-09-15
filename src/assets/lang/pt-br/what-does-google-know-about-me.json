@@ -1,0 +1,267 @@
+{
+  "HeroSection": {
+    "mainTitle": "O que o Google sabe sobre mim?",
+    "section1": {
+      "description": "Grupos de defesa da privacidade têm manifestado preocupação com a coleta de dados pessoais pelo Google, e todo mundo já ouviu falar das muitas violações de privacidade da empresa.",
+      "footer": "Não é segredo que o Google coleta informações pessoais e rastreia seus usuários pelo Chrome, pela Busca do Google, pelos aplicativos do Google Play, pelo Google Maps, pelo YouTube e muito mais. Impeça o Google de acessar seus dados ajustando seus controles e configurações."
+    },
+    "section2": {
+      "title": "O que o Google sabe sobre mim com base na minha atividade?",
+      "bulletedList": {
+        "title": "Quando você faz uma busca no Google, eles coletam todos estes dados:",
+        "list": [
+          "Informações pessoais: seu nome, telefone, gênero, data de nascimento",
+          "Seus endereços de email",
+          "Onde você mora",
+          "Onde você trabalha",
+          "Seus interesses",
+          "O que você pesquisa",
+          "Sites que você visita",
+          "Vídeos que você assiste",
+          "Anúncios em que você clica ou toca",
+          "Sua localização",
+          "Lugares que você visitou pelo mundo",
+          "Informações do dispositivo",
+          "Endereço IP e dados de cookies",
+          "Seu histórico de buscas no YouTube e os vídeos assistidos recentemente",
+          "O que você disse ao Google Assistente, inclusive por meio de alto-falantes inteligentes"
+        ]
+      }
+    },
+    "section3": {
+      "title": "Por que o Google coleta seus dados?",
+      "description": "Em resumo, é uma forma de exploração. A motivação do Google é direcionar anúncios e “personalizar” sua experiência com os serviços deles. Ao entregar seus dados, você permite que centenas de milhares de anunciantes disputem a exibição de anúncios com base nas suas informações pessoais sensíveis, deixando que o Google colete tudo isso. "
+    },
+    "footer": {
+      "line1": "Todos os envolvidos se beneficiam das suas informações, menos você.",
+      "line2": "Você é o produto."
+    }
+  },
+  "CtaSection": {
+    "title": "Seus dados são seus",
+    "description": "Escolha um serviço que protege seus dados em vez de monetizá-los.",
+    "cta": "Mudar para a Internxt"
+  },
+  "WhatGoogleKnowsSection": {
+    "title": "Descubra o que o Google sabe sobre você",
+    "description": "O Google coleta uma enorme quantidade de informações sobre você, principalmente a partir do seu histórico de atividades, mas precisa disponibilizá-las a você por diversas razões legais. Para entender quanto eles coletam e quais dados especificamente têm sobre você, é preciso abrir suas configurações do Google e investigar um pouco.",
+    "section1": {
+      "title": "Encontre um resumo de todos os dados armazenados na sua Conta do Google",
+      "numberedList": [
+        "Faça login na sua Conta do Google",
+        "No painel de navegação, selecione “Dados e privacidade” ou a aba “Privacidade e personalização”",
+        "Ali você poderá ver os dados obtidos pelos aplicativos do Google que você usa e o conteúdo salvo pelos serviços do Google"
+      ],
+      "footer": "Você também encontrará o nome de cada um dos principais serviços do Google no seu painel, em “Coisas que você fez e lugares onde esteve”, para ver os dados de cada serviço específico. Também é possível selecionar a seta à direita de cada serviço para gerenciar e alterar as configurações."
+    },
+    "section2": {
+      "title": "Atividade na Web e em aplicativos do Google",
+      "description": [
+        "Em [Minha Atividade](https://myactivity.google.com/myactivity), na seção “Configurações de histórico”, você poderá ver todas as buscas feitas e os sites que visitou (graças ao Google Analytics).",
+        "Se você já usou algum aplicativo do Google, esses dados também aparecerão. Todo o seu histórico de atividades do Google é exibido por data, hora e aplicativo usado."
+      ]
+    },
+    "section3": {
+      "title": "Histórico de localização do Google",
+      "description": [
+        "A privacidade da sua localização é comprometida toda vez que você deixa uma avaliação ou acessa um serviço de localização. Encontre seu Histórico de Localização do Google e a Linha do Tempo do Google Maps [aqui](https://maps.google.com/locationhistory).",
+        "A página de histórico de localização do Google oferece uma lista completa dos lugares onde você esteve, que podem estar salvos no Google Maps (especificamente em “Histórico de Localização”). Há também a “Linha do Tempo” do Maps, e o mapa exibirá todas as áreas que o Google sabe que você visitou."
+      ]
+    },
+    "section4": {
+      "title": "Histórico do YouTube",
+      "description": [
+        "O Google também mantém um histórico das suas buscas no YouTube, a data em que você assistiu ao vídeo e o dispositivo usado para ver o conteúdo.",
+        "Faça login na sua conta do Google e confira [aqui](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1): selecione “Histórico de exibição e pesquisa do YouTube” e configure a exclusão automática a cada 3 ou 6 meses, ou escolha a opção de não salvar nenhum dado."
+      ]
+    },
+    "section5": {
+      "title": "Informações do Google que você compartilha com outras pessoas",
+      "description": "Se quiser explorar o perfil pessoal e as informações de compartilhamento de localização visíveis a outras pessoas, basta clicar nas respectivas abas mostradas abaixo. Ali você também pode editar essas informações e ajustar as permissões."
+    },
+    "section6": {
+      "title": "Conteúdo salvo de serviços do Google e aplicativos de terceiros",
+      "description": [
+        "Quando você instala aplicativos e extensões de terceiros (não pertencentes ao Google), muitos oferecem a opção de entrar diretamente com sua conta do Google para facilitar o processo; essa é uma das formas pelas quais eles acessam os dados desses aplicativos.",
+        "Faça login na sua conta do Google e [descubra todos os aplicativos e extensões que estão acessando seus dados](https://security.google.com/settings/security/permissions) na seção “Dados de aplicativos e serviços que você usa”. Ali você encontrará um resumo dos serviços e aplicativos de terceiros, além de configurações para consultar e restringir seus dados."
+      ]
+    },
+    "section7": {
+      "title": "Cookies e favoritos do Google Chrome",
+      "description": [
+        "[Os cookies](https://blog.internxt.com/web-cookies-explained/) são conjuntos de dados que um computador recebe com informações destinadas a tornar os sites que você visita mais personalizados. Os cookies são comumente usados para identificar quando alguém visita um site e registrar essa atividade.",
+        "No Google Chrome, você pode acessar as configurações em chrome://settings/cookies para excluir cookies existentes, permitir ou bloquear todos os cookies e definir preferências por site. É possível permitir todos os cookies, bloquear cookies de terceiros, limpar os cookies das janelas abertas, bloquear todos os cookies (recomendado) e até escolher quais páginas nunca poderão armazenar cookies.",
+        "Além disso, o Google Chrome tem o modo anônimo, que apaga seu histórico de navegação e limpa os cookies depois que você fecha as janelas abertas."
+      ]
+    },
+    "section8": {
+      "title": "Exporte todos os seus dados do Google",
+      "description": "Você pode exportar e excluir os dados salvos pela sua conta do Google acessando a aba “Baixar ou excluir seus dados” e selecionando a ação desejada. Depois, é possível escolher quais dados exportar ou excluir seguindo as instruções abaixo.",
+      "numberedList": [
+        {
+          "title": "Selecione os dados a incluir",
+          "description": "Você pode selecionar todos os dados que quer exportar e de quais plataformas."
+        },
+        {
+          "title": "Escolha o tipo de arquivo, a frequência e o destino",
+          "description": "Escolha o tipo de arquivo, a frequência de exportação e o destino (email, Internxt, Dropbox, OneDrive, Box ou Google Drive)."
+        },
+        {
+          "title": "Crie a exportação",
+          "description": "Nesta etapa final, você pode conferir a quantidade de itens de dados selecionados (como o registro de atividades de acesso, contribuições de busca ou sua atividade) e a data até a qual ficará disponível."
+        }
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "Cansado de ser rastreado?",
+    "description": "Escape do Google e retome sua liberdade com a Internxt.",
+    "cta": "Obtenha o Internxt"
+  },
+  "ManageGoogleDataSection": {
+    "title": "Exclua seus dados do Google e ajuste suas configurações de privacidade",
+    "description": "Agora que você conhece seu histórico de atividades no Google, é hora de impedir que eles coletem todos esses dados pessoais desde o início. Abaixo estão instruções para ajudar você a editar suas configurações de privacidade, sair de parte da coleta de dados e limitar a quantidade de informações pessoais que o Google armazena.",
+    "section1": {
+      "title": "Excluir a atividade na Web e em aplicativos do Google",
+      "description": [
+        "Você se surpreenderia com a quantidade de informações que o Google salva: dados do Google Pay, inscrições em canais do YouTube, feedback de “não tenho interesse” no YouTube, respostas a pesquisas do YouTube, comentários no YouTube, curtidas e descurtidas em comentários, atividade de compras no YouTube, Google Word Coach, respostas a pesquisas do Google, interesses e notificações, biblioteca do Google Play, preferências de notícias, histórico de arquivamento de dados, acompanhamento de preços de produtos e muito mais.",
+        "Ao selecionar “Atividade na Web e em Apps”, você pode excluir sua atividade clicando no botão “Excluir” no meio da página e escolhendo: Última hora, Último dia, Sempre ou Período personalizado. Na página “Atividade na Web e em Apps” também é possível desativar a coleta futura de dados selecionando “Salvar atividade” e clicando em “Desativar”."
+      ]
+    },
+    "section2": {
+      "title": "Desativar e excluir o histórico de localização do Google",
+      "description": "O histórico de localização talvez seja o dado mais assustador que o Google coleta. Você pode clicar em “Histórico de Localização” para desativar o rastreamento e ativar a exclusão automática, removendo dados de localização salvos anteriormente.",
+      "numberedList": [
+        "Acesse “Histórico de Localização”",
+        "Selecione “Desativar”",
+        "No fim da página, em “Exclusão automática”, escolha “Excluir atividade com mais de 3 meses”",
+        "Selecione as opções desejadas e clique em “Avançar” para salvar a configuração e apagar os dados de localização antigos"
+      ]
+    },
+    "section3": {
+      "title": "Desativar e excluir o histórico do YouTube",
+      "description": "Você é fã do YouTube? Pode excluir seu histórico e desativar a coleta futura selecionando “Histórico do YouTube” em “Controles” e clicando em “Desativar”. Também vale ativar a exclusão automática no fim da página."
+    },
+    "section4": {
+      "title": "Excluir e desativar os dados do Google Fit",
+      "description": [
+        "Você tem algum dispositivo conectado ao Google Fit? Embora seja útil para acompanhar perda de peso e exercícios, o Fit reúne uma enorme quantidade de informações pessoais de saúde que provavelmente não deveriam ficar online. ",
+        "Ajuste e desative as permissões de coleta de dados do Fit selecionando “Gerenciar a privacidade do Google Fit” e desmarque as opções com que não se sinta confortável — ou desative o Fit por completo."
+      ]
+    },
+    "section5": {
+      "title": "Gerenciar preferências de email do Google",
+      "description": "Cansado de emails direcionados do Google, como alertas de preço e dicas de viagem? Desative-os ajustando suas configurações de email: clique em “Gerenciar preferências de email” na aba “Emails dos serviços do Google”."
+    },
+    "section6": {
+      "title": "Personalização de anúncios do Google",
+      "description": [
+        "Você pode conferir o que o Google sabe sobre você em “Anúncios personalizados”, na [“Central de Anúncios”](http://www.google.com/settings/ads/), onde encontra informações sobre sua faixa etária, idiomas, escolaridade e assim por diante. Também é possível desativar todos os anúncios personalizados clicando no botão localizado no canto superior direito da página.",
+        "Ou você pode personalizar seus anúncios e gerenciar melhor as configurações de privacidade publicitária, mas, enquanto os anúncios personalizados estiverem ativados, o Google continuará compartilhando parte das suas informações com anunciantes. "
+      ]
+    },
+    "section7": {
+      "title": "Remover o acesso de terceiros aos seus dados do Google",
+      "description": [
+        "Quando você vincula sua Conta do Google a uma conta de terceiros, essa conta passa a poder extrair informações do Google. Na prática, o Google transmite nossos dados pessoais 70 bilhões de vezes por dia. Vale conferir quais empresas têm acesso aos seus dados e gerenciar as configurações de privacidade.",
+        "Algumas contas de terceiros podem não permitir desvincular a conta da sua Conta do Google, então, para gerenciar isso, será preciso verificar as opções de configuração nos sites desses serviços.",
+        "Para desativar o acesso de terceiros a aplicativos e serviços específicos, desça na página de privacidade e encontre a aba “Apps de terceiros com acesso à conta”. Selecione-a e ali você verá quais terceiros têm acesso à sua conta e poderá gerenciar as configurações. Clique nos serviços cujas permissões quer editar e escolha a opção de desativar o acesso."
+      ]
+    },
+    "section8": {
+      "title": "Remover seus dados pessoais da Busca do Google",
+      "description": "Se você não quer que as informações da sua Conta do Google apareçam na Busca caso alguém pesquise seu nome, basta encontrar a aba “Resultados pessoais na Busca”, clicar nela e usar o seletor para desativar a exibição de resultados pessoais com base nas informações da sua Conta do Google. "
+    },
+    "section9": {
+      "title": "Como excluir a Conta do Google",
+      "description": [
+        "Se você já teve o bastante, terminou de vez com o Google e só quer sair, pode excluir sua Conta do Google indo até o fim da página de privacidade, em “Mais opções”, e selecionando “Excluir sua Conta do Google”. ",
+        "A partir daí, basta seguir as instruções. Tenha certeza de que está pronto para excluir todas as suas informações, porque, uma vez concluída, essa ação não pode ser desfeita. "
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "Outros recursos de privacidade da Internxt",
+    "description": [
+      "Quer saber mais sobre como proteger seus dados online? O Google não é o único coletando suas informações pessoais. Visite nossa página de [Conscientização Cibernética](https://internxt.com/cyber-awareness) para conhecer muitas boas práticas e estratégias que tornam a navegação mais segura e privada."
+    ],
+    "tools": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "title": "Verificador de Força de Senha Gratuito",
+        "width": 125,
+        "description": "Verificar agora"
+      },
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "title": "Verificador de Vírus Gratuito",
+        "width": 105,
+        "description": "Analisar agora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "title": "Conversor de Bytes Gratuito",
+        "width": 95,
+        "description": "Converter agora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Email Temporário",
+        "width": 95,
+        "description": "Criar agora"
+      }
+    ]
+  },
+  "CtaSection2": {
+    "title": "Uma nuvem em que você pode confiar",
+    "description": "O trabalho da Internxt é proteger seus dados, não explorá-los.",
+    "cta": "Criar conta gratuita"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e tenha privacidade e segurança para sempre.",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Tenha uma Nuvem Criptografada Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

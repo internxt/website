@@ -9,13 +9,34 @@
     "getStarted": "Obtenha o Internxt",
     "chooseStorage": "Obtenha o Internxt",
     "checkout": "Reivindique agora!",
-    "business": "Negócios"
+    "business": "Negócios",
+    "blackFriday": "Black Friday"
   },
   "products": {
-    "drive": "Internxt Drive",
+    "drive": {
+      "name": "Internxt Drive",
+      "title": "Armazenamento em nuvem privado"
+    },
     "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
-    "vpn": "Internxt VPN",
+    "vpn": {
+      "name": "Internxt VPN",
+      "title": "VPN segura e privada"
+    },
+    "mail": {
+      "name": "Internxt Mail",
+      "title": "E-mail criptografado"
+    },
+    "meet": {
+      "name": "Internxt Meet",
+      "title": "Videoconferência segura"
+    },
+    "photos": {
+      "name": "Internxt Photos",
+      "title": "armazenamento de fotos com criptografia de ponta a ponta"
+    },
+    "ai": "Internxt AI",
+    "cleaner": "Internxt Cleaner",
     "send": "Internxt Send",
     "comingSoon": "Em breve",
     "new": "Novo",
@@ -24,7 +45,9 @@
   "ourValues": {
     "privacy": "Privacidade",
     "openSource": "Código Aberto",
-    "sustainability": "Sustentabilidade"
+    "sustainability": "Sustentabilidade",
+    "about": "Sobre Nós",
+    "certifications": "Certificações"
   },
   "Auth": {
     "SignUp": {
@@ -95,7 +118,7 @@
   "MinimalNavbar": {
     "secondaryEyeBrow": "Antivirus",
     "cta": "Obtenha o Internxt",
-    "price": "A partir de {currency}29,99/mês",
+    "price": "A partir de {currency}{price}/mês",
     "priceAnnual": "A partir de {currency}{price}/ano"
   }
 }

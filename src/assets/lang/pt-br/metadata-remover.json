@@ -8,8 +8,8 @@
     },
     "fileSelected": "Arquivo carregado com sucesso",
     "cancel": "Novo arquivo",
-    "removeMetadata": "Remover metadados",
     "download": "Baixar",
+    "removeMetadata": "Remover metadados",
     "close": "Fechar",
     "scanNow": "Remover metadados",
     "selectFile": "Selecionar arquivo",
@@ -37,6 +37,26 @@
     }
   },
   "FeaturesSection": {
+    "whyToScan": {
+      "title": "Por que é essencial usar um verificador de vírus",
+      "description": "Escaneie primeiro, pergunte depois. Detecte vírus antes que eles se infiltrem nos seus dispositivos."
+    },
+    "virusesHatePrivacy": {
+      "title": "Os vírus odeiam sua privacidade",
+      "description": "Um vírus potente pode roubar informações sensíveis, como suas credenciais ou senhas, criptografar seus dados e bloquear seu acesso a eles, realizar transações individuais dentro de aplicativos, monitorar seu computador e até atacar outros dispositivos em redes conectadas. Um vírus tem o potencial de acessar quase tudo o que está guardado no seu hardware."
+    },
+    "stopMalware": {
+      "title": "Detenha o malware antes que ele detenha você",
+      "description": "Depois que um vírus se propaga, ele pode infectar todos os seus programas e aplicativos sem distinção. Seu código destrutivo pode se espalhar por toda parte, e provavelmente vai. É por isso que é fundamental usar um verificador de vírus."
+    },
+    "freeOnlineScanner": {
+      "title": "Um verificador de vírus online gratuito em que você pode confiar",
+      "description": "Proteja sua privacidade com nosso verificador de vírus gratuito, criado para ajudar você a evitar infecções e proteger seu computador."
+    },
+    "scanFiles": {
+      "title": "Verifique vírus em arquivos com total confiança",
+      "description": "A Internxt sempre colocou e sempre colocará a privacidade e a segurança dos usuários em primeiro lugar. Temos o compromisso de criar uma internet mais justa, mais livre e mais transparente para todos. Por isso criamos nosso verificador de vírus online gratuito, para iluminar vírus furtivos e expor malwares maliciosos."
+    },
     "hero": {
       "title": "Removedor de metadados gratuito da Internxt",
       "description": [
@@ -58,6 +78,10 @@
         {
           "step": 3,
           "text": "O download começará automaticamente."
+        },
+        {
+          "step": 4,
+          "text": "Todos os e-mails recebidos aparecerão na sua caixa de entrada acima"
         }
       ]
     },
