@@ -20,7 +20,6 @@ import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
-
 const URL_REDIRECT = '#billingButtons';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
@@ -50,44 +49,44 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
   ];
 
   const {
-        products,
-        loadingCards,
-        currencyValue,
-        coupon: individualCoupon,
-        lifetimeCoupon,
-        lifetimeCoupons,
-    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
 
-    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-    const onCheckoutButtonClicked = async (
-        priceId: string,
-        isCheckoutForLifetime: boolean,
-        interval: string,
-        storage: string,
-    ) => {
-        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
-        const finalPrice = await stripeService.calculateFinalPrice(
-            priceId,
-            interval,
-            currencyValue,
-            'individuals',
-            couponCodeForCheckout,
-        );
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
-        stripeService.redirectToCheckout(
-            priceId,
-            finalPrice,
-            currencyValue,
-            'individual',
-            isCheckoutForLifetime,
-            interval,
-            storage,
-            couponCodeForCheckout?.name,
-        );
-    };
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
 
   return (
     <>
@@ -108,28 +107,27 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
         <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
 
-        <TableSection textContent={langJson.HeroSection} />
+        {/* <TableSection textContent={langJson.HeroSection} /> */}
 
         <FeatureSection textContent={langJson.FeatureSection} />
 
         <PricingSectionWrapper
-                textContent={langJson.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
-                popularPlanBySize="5TB"
-                sectionDetails="bg-white lg:py-20"
-                hideFreeCard
-                
-            />
+          textContent={langJson.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessCards
+          hideBusinessSelector
+          popularPlanBySize="5TB"
+          sectionDetails="bg-white lg:py-20"
+          hideFreeCard
+        />
 
         <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="/privacy" cards={cardsData} />
 
@@ -141,7 +139,15 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
-        <Footer textContent={footerLang} lang={lang} darkMode={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          darkMode={false}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' },
+          ]}
+        />
       </Layout>
     </>
   );
