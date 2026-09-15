@@ -21,6 +21,7 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
+    "ignoreDeprecations": "6.0",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -33,7 +34,7 @@
     "strictNullChecks": true,
     "types": ["cypress", "node"]
   },
-  "ignoreDeprecations": "6.0",
+
   "include": [
     "next-env.d.ts",
     "**/*.ts",
