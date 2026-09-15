@@ -30,14 +30,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         business: businessProductsData,
       };
 
-      return res.status(200).json(productsData);
+      res.status(200).json(productsData);
     } catch (err) {
       const error = err as Error;
-      return res.status(500).send({
+      res.status(500).send({
         message: error.message,
       });
     }
   } else {
-    return res.status(405).end();
+    res.status(405).end();
   }
 }
