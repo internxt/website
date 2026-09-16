@@ -7,10 +7,11 @@
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai": "AI"
+      "ai": "AI",
+      "photos": "Photos"
     },
     "title": "Internxt **黑色星期五**云存储优惠",
-    "subtitle": "获取2025年最佳黑色星期五优惠，所有Internxt计划享受85%折扣",
+    "subtitle": "获取2026年最佳黑色星期五云存储优惠，\n所有计划享受87%折扣！",
     "description": "立即获得{{discount}}%折扣！",
     "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"],
     "claimDeal": "领取优惠",
@@ -30,20 +31,20 @@
     }
   },
   "DontMissSection": {
-    "title": "Internxt的黑色星期五云存储优惠！",
+    "title": "Internxt有史以来最大的黑色星期五云存储折扣",
     "description": [
-      "使用Internxt的全套隐私套件在线保护您的数据，包括备份、杀毒软件、VPN、Cleaner、Meet、Mail等。",
-      "通过Internxt的85%黑色星期五折扣，获得最佳的在线隐私和安全。"
+      "使用我们的黑色星期五存储优惠保护您的隐私，获得全套隐私套件，包括加密云存储、备份、杀毒软件、VPN、Meet、Mail、Photos等。",
+      "通过Internxt的黑色星期五云存储和隐私套件，以87%的折扣获得您所需的一切。"
     ]
   },
   "MoreDealsSection": {
-    "title": "更多 Internxt 優惠",
-    "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
+    "title": "更多Internxt黑色星期五存储优惠",
+    "description": "通过所有 Internxt 产品的独家折扣扩展您的保护",
     "cards": {
       "card1": {
-        "title": "Internxt 2025年黑色星期五全部优惠",
-        "description": "探索我们隐私工具和存储解决方案的所有优惠",
-        "cta": "查看所有优惠"
+        "title": "云存储黑色星期五优惠",
+        "description": "在加密云存储上大省一笔，保护您的文件",
+        "cta": "查看存储优惠"
       },
       "card2": {
         "title": "个人云存储黑色星期五优惠",
@@ -87,23 +88,24 @@
     }
   },
   "WhyChooseSection": {
-    "title": "为什么选择我们的黑色星期五云存储优惠？",
+    "title": "为什么选择Internxt的黑色星期五云存储？",
+    "description": "通过Internxt的黑色星期五云存储优惠，您可以获得后量子加密云存储，以及保护您的设备和在线隐私所需的一切。",
     "cards": {
-      "titles": ["完全私密的生态系统", "最先进的加密技术", "我们有史以来最大的黑色星期五优惠"],
+      "titles": ["完全私密的生态系统", "最先进的加密技术", "我们最大的黑色星期五云存储优惠"],
       "descriptions": [
-        "所有Internxt付费计划都包括后量子加密存储、备份和杀毒软件。为了获得完整的在线保护，您还可以获得VPN、Cleaner、Meet和Mail——在线安全所需的一切。",
+        "所有Internxt付费计划都包括后量子加密存储、备份和杀毒软件。为了获得完整的在线保护，您还可以获得VPN、Cleaner、Meet、Mail、Photos以及在线安全所需的一切。",
         "获得第一个具有后量子加密的云存储，通过我们的端到端加密云服务以完全隐私的方式上传、存储和共享您的文件。备份和同步您的文件以防止数据丢失，并确保与朋友、家人或同事的顺畅协作。",
-        "利用我们迄今为止最大的黑色星期五优惠，获得更多功能来保护您的在线数据和文件。凭借高达85%的折扣，现在是获得安全和私密云存储以及更多服务的最佳价值的完美时机！"
+        "利用我们迄今为止最大的黑色星期五优惠，获得更多功能来保护您的在线数据和文件。凭借高达87%的折扣，现在是获得安全和私密云存储以及更多服务的最佳价值的完美时机！"
       ]
     }
   },
   "CtaSection": {
-    "title": "解锁黑色星期五巨大优惠",
-    "description": "所有高级计划享受85%折扣",
+    "title": "Internxt的黑色星期五云存储",
+    "description": "所有计划享受87%折扣",
     "cta": "领取优惠"
   },
   "HorizontalScrollableSection": {
-    "title": "最安全的云存储及更多，价格更低",
+    "title": "以隐私为基础打造的黑色星期五云存储优惠",
     "description": "我们在设计所有产品时都考虑到隐私。我们不依赖数据或广告开展业务；我们建立在信任之上。我们的后量子和零知识加密确保只有您可以访问您的文件。",
     "features": ["随时取消", "后量子加密", "可持续能源", "开源代码", "独立验证"],
     "scrollableSection": {
@@ -118,21 +120,21 @@
   },
   "CtaSectionV2": {
     "title": "最佳黑色星期五优惠",
-    "description": "所有计划享受85%折扣",
+    "description": "所有计划享受87%折扣",
     "cta": "领取优惠"
   },
   "FaqSection": {
-    "title": "有问题？我们有答案",
+    "title": "了解更多关于我们黑色星期五云存储折扣的信息",
     "faq": [
       {
         "question": "如何获得Internxt黑色星期五折扣？",
         "answer": [
-          "要获取折扣，请从我们的Essential、Premium或Ultimate计划中进行选择，然后前往结账页面。您的85%折扣将在结账时自动应用。"
+          "要获取折扣，请从我们的Essential、Premium或Ultimate计划中进行选择，然后前往结账页面。您的87%折扣将在结账时自动应用。"
         ]
       },
       {
         "question": "Internxt黑色星期五优惠何时结束？",
-        "answer": ["黑色星期五促销活动将于2025年12月3日结束。"]
+        "answer": ["黑色星期五促销活动将于2026年12月3日结束。"]
       },
       {
         "question": "谁有资格享受此折扣？",
@@ -149,7 +151,7 @@
       {
         "question": "Internxt接受哪些付款方式？",
         "answer": [
-          "目前，我们接受信用卡和借记卡付款（包括Mastercard、VISA、American Express等），我们还接受Paypal、bankcontact、iDEAL和SOFORT。"
+          "目前，我们接受信用卡和借记卡付款（包括Mastercard、VISA、American Express等），我们还接受Paypal、bankcontact、iDEAL和SOFORT。您可以使用Klarna分期支付终身计划的费用，或使用加密货币付款。"
         ]
       },
       {

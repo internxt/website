@@ -7,10 +7,11 @@
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai": "AI"
+      "ai": "AI",
+      "photos": "Photos"
     },
     "title": "Offres de Stockage Cloud **Black Friday** d'Internxt",
-    "subtitle": "Obtenez la meilleure offre du Black Friday 2025 avec 85 % de réduction sur tous les forfaits Internxt",
+    "subtitle": "Obtenez la meilleure offre de stockage cloud du Black Friday 2026\n avec 87 % de réduction sur tous les forfaits !",
     "description": "Obtenez {{discount}} % de réduction maintenant !",
     "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
     "claimDeal": "Obtenir l'offre",
@@ -30,20 +31,20 @@
     }
   },
   "DontMissSection": {
-    "title": "Offres de stockage cloud du Black Friday chez Internxt !",
+    "title": "La plus grande réduction Black Friday d'Internxt sur le stockage cloud",
     "description": [
-      "Protégez vos données en ligne avec Internxt grâce à notre suite de confidentialité entièrement équipée qui comprend les sauvegardes, l'Antivirus, le VPN, le Cleaner, Meet, Mail et plus encore.",
-      "Obtenez la meilleure confidentialité et sécurité en ligne avec la réduction de 85 % du Black Friday d'Internxt."
+      "Protégez votre vie privée avec nos offres de stockage du Black Friday et bénéficiez d'une suite de confidentialité entièrement équipée : stockage cloud chiffré, sauvegardes, Antivirus, VPN, Meet, Mail, Photos et plus encore.",
+      "Obtenez tout ce dont vous avez besoin avec le stockage cloud et la suite de confidentialité du Black Friday d'Internxt à -87 %."
     ]
   },
   "MoreDealsSection": {
-    "title": "Plus d'offres Internxt",
+    "title": "Plus d'offres de stockage Internxt pour le Black Friday",
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Toutes les offres Black Friday Internxt 2025",
-        "description": "Découvrez toutes les offres sur nos outils de confidentialité et solutions de stockage",
-        "cta": "Voir toutes les offres"
+        "title": "Offres Black Friday stockage cloud",
+        "description": "Économisez gros sur le stockage cloud chiffré pour vos fichiers",
+        "cta": "Voir les offres de stockage"
       },
       "card2": {
         "title": "Offres Black Friday stockage cloud personnel",
@@ -87,27 +88,28 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Pourquoi choisir nos offres de stockage cloud du Black Friday ?",
+    "title": "Pourquoi choisir le stockage cloud du Black Friday d'Internxt ?",
+    "description": "Avec une offre de stockage cloud du Black Friday d'Internxt, vous bénéficiez d'un stockage cloud chiffré et post-quantique, ainsi que de tout ce dont vous avez besoin pour protéger votre appareil et votre vie privée en ligne.",
     "cards": {
       "titles": [
         "Un écosystème entièrement privé",
         "Le chiffrement le plus avancé",
-        "Notre plus grande offre du Black Friday"
+        "Notre plus grande offre de stockage cloud du Black Friday"
       ],
       "descriptions": [
-        "Tous les forfaits payants d'Internxt incluent un stockage chiffré post-quantique, des sauvegardes et un Antivirus. Pour une protection en ligne complète, vous bénéficiez également du VPN, du Cleaner, de Meet et de Mail, tout ce dont vous avez besoin pour rester en sécurité en ligne.",
+        "Tous les forfaits payants d'Internxt incluent un stockage chiffré post-quantique, des sauvegardes et un Antivirus. Pour une protection en ligne complète, vous bénéficiez également du VPN, du Cleaner, de Meet, de Mail, de Photos et de tout ce dont vous avez besoin pour rester en sécurité en ligne.",
         "Obtenez le premier stockage cloud avec chiffrement post-quantique pour télécharger, stocker et partager vos fichiers en toute confidentialité avec notre service cloud chiffré de bout en bout. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et assurer une collaboration fluide avec vos amis, votre famille ou vos collègues.",
-        "Profitez de notre plus grande offre du Black Friday à ce jour avec encore plus de fonctionnalités pour protéger vos données et fichiers en ligne. Avec une réduction massive de 85 %, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix sur un stockage cloud sécurisé et privé, et plus encore !"
+        "Profitez de notre plus grande offre du Black Friday à ce jour avec encore plus de fonctionnalités pour protéger vos données et fichiers en ligne. Avec une réduction massive de 87 %, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix sur un stockage cloud sécurisé et privé, et plus encore !"
       ]
     }
   },
   "CtaSection": {
-    "title": "Débloquez des économies massives du Black Friday",
-    "description": "85 % de réduction sur TOUS nos forfaits premium",
+    "title": "Le stockage cloud du Black Friday par Internxt",
+    "description": "87 % de réduction sur tous les forfaits",
     "cta": "Obtenir l'offre"
   },
   "HorizontalScrollableSection": {
-    "title": "Le stockage cloud le plus sécurisé, et plus, pour moins",
+    "title": "Des offres de stockage cloud du Black Friday fondées sur la confidentialité",
     "description": "Nous construisons tous nos produits en pensant à la confidentialité. Nous ne basons pas notre activité sur les données ou la publicité ; nous la construisons sur la confiance. Notre chiffrement post-quantique et à connaissance nulle garantit que vous, et vous seul, pouvez accéder à vos fichiers.",
     "features": [
       "Annulez à tout moment",
@@ -128,21 +130,21 @@
   },
   "CtaSectionV2": {
     "title": "Les meilleures offres du Black Friday",
-    "description": "85 % de réduction sur tous les forfaits",
+    "description": "87 % de réduction sur tous les forfaits",
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "En savoir plus sur notre réduction Black Friday sur le stockage cloud",
     "faq": [
       {
         "question": "Comment obtenir la réduction Black Friday d'Internxt ?",
         "answer": [
-          "Pour bénéficier de votre réduction, choisissez parmi nos plans Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 85 % est automatiquement appliquée lors du paiement."
+          "Pour bénéficier de votre réduction, choisissez parmi nos plans Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 87 % est automatiquement appliquée lors du paiement."
         ]
       },
       {
         "question": "Quand se termine l'offre Black Friday d'Internxt ?",
-        "answer": ["Les soldes du Black Friday se terminent le 3 décembre 2025."]
+        "answer": ["Les soldes du Black Friday se terminent le 3 décembre 2026."]
       },
       {
         "question": "Qui est éligible à cette réduction ?",
@@ -159,7 +161,7 @@
       {
         "question": "Quels modes de paiement Internxt accepte-t-il ?",
         "answer": [
-          "Actuellement, nous acceptons les paiements par cartes de crédit et de débit (y compris Mastercard, VISA, American Express, et plus), et nous acceptons également Paypal, bankcontact, iDEAL et SOFORT."
+          "Actuellement, nous acceptons les paiements par cartes de crédit et de débit (y compris Mastercard, VISA, American Express, et plus), et nous acceptons également Paypal, bankcontact, iDEAL et SOFORT. Vous pouvez échelonner le coût d'un forfait à vie avec Klarna ou payer en crypto."
         ]
       },
       {

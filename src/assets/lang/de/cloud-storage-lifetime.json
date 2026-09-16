@@ -25,18 +25,18 @@
     "pcWorld": "\"Internxts **intuitiver Web-Zugang**, **Dateisynchronisierung** und **Backup-Services** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Service ist **einfach**, deckt alle Grundlagen ab, und die aktuellen **Lifetime-Pläne** sind ein **Schnäppchen**.\""
   },
   "MoreDealsSection": {
-    "title": "Weitere Internxt-Angebote",
+    "title": "Weitere Black Friday Angebote für lebenslangen Cloud-Speicher",
     "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
     "cards": {
       "card1": {
-        "title": "Internxt-Angebote — {{discount}}% Rabatt auf alle Tarife",
-        "description": "Entdecken Sie exklusive Rabatte auf alle Internxt-Apps und -Dienste",
-        "cta": "Alle Angebote ansehen"
+        "title": "Black Friday Angebote für Cloud-Speicher",
+        "description": "Spare richtig viel bei verschlüsseltem Cloud-Speicher für deine Dateien",
+        "cta": "Speicher-Angebote ansehen"
       },
       "card2": {
-        "title": "Kostenlose Cloud-Speicher-Angebote",
-        "description": "Starten Sie mit kostenlosem verschlüsseltem Speicher und upgraden Sie mit bis zu {{discount}}% Rabatt",
-        "cta": "Speicher-Angebote ansehen"
+        "title": "Black Friday Angebote für persönlichen Cloud-Speicher",
+        "description": "Exklusive Rabatte für Privatpersonen und persönliche Tarife",
+        "cta": "Persönliche Angebote ansehen"
       }
     }
   },
@@ -85,8 +85,8 @@
     }
   },
   "CtaSection": {
-    "title": "Verabschieden Sie sich von Abonnements",
-    "description": "Einmal zahlen, für immer nutzen mit {{percentage}}% Rabatt",
+    "title": "Internxt Black Friday Angebot für lebenslangen Cloud-Speicher",
+    "description": "87 % Rabatt auf alle Tarife",
     "cta": "Angebot sichern"
   },
   "WhatsIncludedSection": {
@@ -107,81 +107,64 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Warum Internxts Lifetime-Pläne wählen?",
-    "description": "Unsere Lifetime-Cloud-Speicher-Angebote geben Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichem Cloud-Speicher stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben, und wir speichern oder verkaufen Ihre Daten nicht an Dritte. Wir unternehmen alle Schritte, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
+    "title": "Warum lebenslangen Cloud-Speicher am Black Friday wählen?",
+    "description": "Mit einem Internxt Black Friday Cloud-Speicher-Angebot erhältst du post-quantenverschlüsselten Cloud-Speicher und alles, was du brauchst, um dein Gerät und deine Privatsphäre online zu schützen. Schluss mit Abos: Hol dir alles, was du brauchst, mit einer einmaligen Zahlung.",
     "cta": "Lernen Sie uns besser kennen",
     "scrollableSection": {
       "titles": [
         "Einmal zahlen und für immer nutzen",
-        "Unhackbare und unleckbare Daten",
-        "Sicherheit der nächsten Generation",
-        "Open Source und transparent"
+        "Die fortschrittlichste Verschlüsselung",
+        "Unser größtes Black Friday Cloud-Speicher-Angebot"
       ],
       "descriptions": [
         "Verabschieden Sie sich von Abonnementmodellen und unvorhersehbaren Verlängerungskosten mit unseren Cloud-Speicher Lifetime-Angeboten. Mit einer Zahlung können Sie für immer auf Ihren Speicher und Ihre Funktionen zugreifen, ohne weitere Zahlungen.",
-        "Wir speichern keine Passwörter oder Benutzerdaten, und alle Ihre Daten werden während der Übertragung und im Ruhezustand mit Post-Quanten- und Zero-Knowledge-Verschlüsselung verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihr Geschäft. Sie zu schützen ist unseres.",
-        "Internxt ist der einzige Cloud-Speicher, der Ihre Dateien automatisch mit End-to-End- und Post-Quanten-Kryptographie verschlüsselt, was bedeutet, dass nur Sie auf Ihre Daten zugreifen können.",
-        "Wir sind stolz auf das, was wir tun, daher ist unser Code auf GitHub öffentlich und kann von jedem persönlich überprüft, geprüft und verifiziert werden. Wir haben nichts zu verbergen außer Ihren Daten."
+        "Hol dir den ersten Cloud-Speicher mit Post-Quanten-Verschlüsselung, um deine Dateien mit unserem Ende-zu-Ende-verschlüsselten Cloud-Dienst in völliger Privatsphäre hochzuladen, zu speichern und zu teilen. Sichere und synchronisiere deine Dateien, um Datenverlust zu vermeiden und reibungslos mit Freunden, Familie oder Kollegen zusammenzuarbeiten.",
+        "Nutze unser bisher größtes Black Friday Angebot mit noch mehr Funktionen zum Schutz deiner Daten und Dateien im Internet. Mit satten 87 % Rabatt ist jetzt der perfekte Zeitpunkt, um das beste Preis-Leistungs-Verhältnis für sicheren und privaten Cloud-Speicher zu bekommen, und vieles mehr!"
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Vollständige Privatsphäre für {{percentage}}% Rabatt",
-    "description": "Holen Sie sich das Angebot Ihres Lebens mit Internxt",
+    "title": "Der beste lebenslange Cloud-Speicher am Black Friday",
+    "description": "87 % Rabatt auf alle Tarife",
     "cta": "Angebot sichern"
   },
   "FaqSection": {
-    "title": "Fragen? Wir haben Antworten",
+    "title": "Erfahre mehr über unseren lebenslangen Cloud-Speicher am Black Friday",
     "faq": [
       {
-        "question": "Wer kann diese Cloud-Speicher Lifetime-Angebote in Anspruch nehmen?",
+        "question": "Wie erhalte ich den Black Friday Rabatt auf lebenslangen Cloud-Speicher?",
         "answer": [
-          "Diese Internxt-Angebote sind für Neukunden oder Kunden mit einem kostenlosen Konto oder Kunden, die ihren aktuellen Lifetime-Plan mit 85% Rabatt upgraden möchten, um Zugang zu unseren neuen Funktionen zu erhalten."
+          "Um deinen Rabatt zu erhalten, wähle einen unserer Essential-, Premium- oder Ultimate-Tarife und gehe zur Kasse. Dein Rabatt von 87 % wird beim Bezahlvorgang automatisch angewendet."
         ]
       },
       {
-        "question": "Kann ich ein Internxt-Angebot nutzen, wenn ich bereits einen Lifetime-Plan habe?",
+        "question": "Wann endet das Black Friday Angebot für lebenslangen Cloud-Speicher?",
         "answer": [
-          "Wenn Sie derzeit einen Lifetime-Plan haben und Speicherplatz zu Ihrem aktuellen Konto hinzufügen und auf die Funktionen eines Premium- oder Ultimate-Plans zugreifen möchten, können Sie dieses Angebot nutzen, um Ihr Konto zu upgraden."
+          "Der Black Friday Sale endet am 3. Dezember 2026."
         ]
       },
       {
-        "question": "Was passiert, wenn mein Angebot abläuft?",
+        "question": "Wer kann diesen Rabatt nutzen?",
         "answer": [
-          "Wenn Sie einen Jahresplan mit Ihrem Internxt-Angebot kaufen, gilt dies nur für das erste Jahr. Sobald Ihr erstes Jahr abläuft, wird Ihr Plan automatisch zum vollen Preis verlängert, der in unserem Preisbereich aufgeführt ist.",
-          "Wenn Sie Abonnementgebühren vermeiden möchten, können Sie einen Lifetime-Plan mit einer einmaligen Zahlung erwerben und nie wieder bezahlen, es sei denn, Sie entscheiden sich, Ihren Speicher zu upgraden."
+          "Wenn du ein neuer Nutzer bist, kannst du diesen Rabatt nutzen, indem du ein Konto erstellst. Wenn du bereits einen lebenslangen Tarif hast, kannst du upgraden, um mehr Speicher und zusätzliche Funktionen wie Cleaner, Meet und Mail zu erhalten."
         ]
       },
       {
-        "question": "Wie kann ich später upgraden oder mehr Speicher hinzufügen?",
+        "question": "Behalte ich mein Black Friday Angebot für lebenslangen Cloud-Speicher für immer?",
         "answer": [
-          "Wenn Sie einen Lifetime-Plan haben, können Sie Ihren Plan jederzeit stapeln oder upgraden, um mehr Speicher zu erhalten. Es ist nicht möglich, mehr Speicher für Jahrespläne zu upgraden oder hinzuzufügen. Behalten Sie unsere Website im Auge für die neuesten Gutscheincodes und Angebote."
+          "Ja, wenn du dich für einen lebenslangen Tarif entscheidest, ist nur eine einzige Zahlung nötig. Nach der Zahlung musst du nichts mehr bezahlen, es sei denn, du möchtest später deinen Tarif upgraden oder mehr Speicher hinzufügen."
         ]
       },
       {
-        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "question": "Welche Zahlungsmethoden akzeptiert Internxt?",
         "answer": [
-          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, Kryptowährung bezahlen oder die Zahlung Ihres Lifetime-Plans mit Klarna aufteilen.",
-          "Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an hello@internxt.com"
+          "Derzeit akzeptieren wir Zahlungen per Kredit- und Debitkarte (darunter Mastercard, VISA, American Express und weitere) sowie PayPal, Bancontact, iDEAL und SOFORT. Du kannst die Kosten für einen lebenslangen Tarif mit Klarna aufteilen oder mit Krypto bezahlen."
         ]
       },
       {
-        "question": "Kann ich meine Lifetime-Zahlung aufteilen?",
+        "question": "Hast du weitere Fragen?",
         "answer": [
-          "Ja, Sie können jetzt Ihre Lifetime-Zahlungen in mehrere zinsfreie Raten mit Klarna aufteilen. Genießen Sie einen Lifetime-Plan mit der Leichtigkeit, ihn in bequemen Raten zu bezahlen!"
-        ]
-      },
-      {
-        "question": "Was ist Internxts Rückerstattungsrichtlinie?",
-        "answer": [
-          "Internxt bietet eine standardmäßige 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Abonnements, die ab dem Moment der Anmeldung zu zählen beginnt.",
-          "Und wenn Sie jemals mit unserem Service unzufrieden sind, kontaktieren Sie uns unter hello@internxt.com und fordern Sie eine Rückerstattung an."
-        ]
-      },
-      {
-        "question": "Wie kann ich den Support kontaktieren?",
-        "answer": [
-          "Können Sie nicht finden, wonach Sie suchen? Sie können unser technisches Support-Team über Live-Chat kontaktieren oder eine E-Mail an hello@internxt.com senden"
+          "Schreib uns jederzeit an hello@internxt.com oder sag Hallo in den sozialen Medien. Wir freuen uns immer, von dir zu hören!"
         ]
       }
     ]

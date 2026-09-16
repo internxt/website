@@ -7,10 +7,11 @@
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai": "AI"
+      "ai": "AI",
+      "photos": "Photos"
     },
-    "title": "**黑色星期五**优惠",
-    "subtitle": "以 85% 的折扣获得 2025 年最佳黑色星期五优惠，适用于所有 Internxt 方案",
+    "title": "**黑色星期五** Internxt 优惠",
+    "subtitle": "获得 2026 年最佳黑色星期五优惠，\n所有 Internxt 方案享 87% 折扣",
     "description": "立即获得 {{discount}}% 折扣！",
     "features": ["私人数字套件", "后量子加密", "开源且经过审核"],
     "claimDeal": "领取优惠"
@@ -19,12 +20,12 @@
     "title": "别错过您的黑色星期五优惠！",
     "description": [
       "使用 Internxt 保护您的在线数据，我们完整的隐私套件包括备份、杀毒软件、VPN、Cleaner、Meet、Mail 等更多功能。",
-      "通过 Internxt 的 85% 黑色星期五折扣，获得最佳的在线隐私和安全性。"
+      "通过 Internxt 的 87% 黑色星期五折扣，获得最佳的在线隐私和安全性。"
     ]
   },
   "MoreDealsSection": {
-    "title": "更多 Internxt 優惠",
-    "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
+    "title": "更多 Internxt 优惠",
+    "description": "找到最适合您云存储和隐私需求的黑色星期五优惠",
     "cards": {
       "card1": {
         "title": "云存储黑色星期五优惠",
@@ -70,17 +71,17 @@
   "WhyChooseSection": {
     "title": "为什么选择 Internxt 的黑色星期五优惠?",
     "cards": {
-      "titles": ["完全私密的生态系统", "最先进的加密技术", "我们最大的优惠"],
+      "titles": ["完全私密的生态系统", "最先进的加密技术", "我们有史以来最大的黑色星期五优惠"],
       "descriptions": [
-        "所有 Internxt 付费方案都包含后量子加密存储、备份和杀毒软件。为了获得完整的在线保护，您还可以获得 VPN、Cleaner、Meet 和 Mail，这是您在线保持安全所需的一切。",
+        "所有 Internxt 付费方案都包含后量子加密存储、备份和杀毒软件。为了获得完整的在线保护，您还可以获得 VPN、Cleaner、Meet、Mail 和 Photos，这是您在线保持安全所需的一切。",
         "获得首个具有后量子加密的云存储，通过我们的端到端加密云服务，以完全隐私的方式上传、存储和分享您的文件。备份和同步您的文件以防止数据丢失，并确保与朋友、家人或同事顺畅协作。",
-        "利用我们迄今为止最大的黑色星期五优惠，获得更多功能来保护您的在线数据和文件。凭借高达 85% 的巨额折扣，现在是获得安全且私密的云存储最佳性价比的完美时机，还有更多优惠！"
+        "利用我们迄今为止最大的黑色星期五优惠，获得更多功能来保护您的在线数据和文件。凭借高达 87% 的巨额折扣，现在是获得安全且私密的云存储最佳性价比的完美时机，还有更多优惠！"
       ]
     }
   },
   "CtaSection": {
     "title": "发现黑色星期五的巨大优惠",
-    "description": "所有优质方案 85% 折扣",
+    "description": "所有优质方案均享 87% 折扣",
     "cta": "领取优惠"
   },
   "HorizontalScrollableSection": {
@@ -99,7 +100,7 @@
   },
   "CtaSectionV2": {
     "title": "最佳黑色星期五优惠",
-    "description": "所有方案 85% 折扣",
+    "description": "所有方案 87% 折扣",
     "cta": "领取优惠"
   },
   "FaqSection": {
@@ -108,12 +109,12 @@
       {
         "question": "如何获得Internxt黑色星期五折扣？",
         "answer": [
-          "要获取折扣，请从我们的Essential、Premium或Ultimate计划中进行选择，然后前往结账页面。您的85%折扣将在结账时自动应用。"
+          "要获取折扣，请从我们的 Essential、Premium 或 Ultimate 计划中进行选择，然后前往结账页面。您的 87% 折扣将在结账时自动应用。"
         ]
       },
       {
         "question": "Internxt黑色星期五优惠何时结束？",
-        "answer": ["黑色星期五促销活动将于2025年12月3日结束。"]
+        "answer": ["黑色星期五促销活动将于 2026 年 12 月 3 日结束。"]
       },
       {
         "question": "谁有资格享受此折扣？",
@@ -124,19 +125,29 @@
       {
         "question": "计划结束后我还能保留折扣吗？",
         "answer": [
-          "黑色星期五优惠在订阅期结束前有效。订阅期在年底结束后，您的订阅将自动以正常价格续订。由于终身计划只需一次付款，您的折扣将永久有效。"
+          "黑色星期五优惠在订阅期结束前有效。订阅期在第一个月结束后，您的订阅将自动以正常价格续订。由于终身计划只需一次付款，您的折扣将永久有效。"
         ]
       },
       {
-        "question": "Internxt接受哪些付款方式？",
+        "question": "你们接受哪些付款方式？",
         "answer": [
-          "目前，我们接受信用卡和借记卡付款（包括Mastercard、VISA、American Express等），我们还接受Paypal、bankcontact、iDEAL和SOFORT。"
+          "Internxt 目前接受借记卡和信用卡（Mastercard、VISA、American Express 等），您也可以通过 Paypal、加密货币付款，还可以使用 Klarna 将终身计划的费用分成按月支付。"
         ]
       },
       {
-        "question": "还有其他问题？",
+        "question": "我可以分期支付终身计划吗？",
+        "answer": "可以，您现在可以使用 Klarna 将终身计划的费用分成多期免息付款。轻松分期，即可享受终身计划！"
+      },
+      {
+        "question": "如何联系客服？",
         "answer": [
-          "欢迎通过[hello@internxt.com](mailto:hello@internxt.com)与我们联系，或在社交媒体上打招呼。我们随时乐意听到您的声音！"
+          "欢迎通过 [hello@internxt.com](mailto:hello@internxt.com) 与我们联系，或访问我们的[帮助中心](https://help.internxt.com/)"
+        ]
+      },
+      {
+        "question": "Internxt 的退款政策是什么？",
+        "answer": [
+          "Internxt 为所有付费订阅提供标准的 30 天退款保证，自您订阅之日起计算。如果您对我们的服务不满意，请通过 hello@internxt.com 联系我们申请退款。"
         ]
       }
     ]

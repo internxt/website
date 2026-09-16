@@ -7,10 +7,11 @@
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail",
-      "ai": "AI"
+      "ai": "AI",
+      "photos": "Photos"
     },
     "title": "Meilleures Offres de Stockage Cloud Personnel du **Black Friday**",
-    "subtitle": "Obtenez la meilleure offre du Black Friday 2025 avec 85% de réduction sur tous les forfaits Internxt",
+    "subtitle": "Получите лучшее предложение на персональное облачное хранилище в Черную пятницу 2026 года\n со скидкой 87% на все тарифы!",
     "description": "Obtenez {{discount}}% de réduction maintenant !",
     "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
     "claimDeal": "Obtenir l'offre",
@@ -30,26 +31,26 @@
     }
   },
   "MoreDealsSection": {
-    "title": "Больше предложений Internxt",
+    "title": "Больше предложений Internxt на хранилище в Черную пятницу",
     "description": "Расширьте свою защиту с эксклюзивными скидками на все продукты Internxt",
     "cards": {
       "card1": {
-        "title": "Все предложения Internxt на Черную пятницу 2025",
-        "description": "Откройте для себя все предложения на наши инструменты конфиденциальности и решения для хранения",
-        "cta": "Посмотреть все предложения"
+        "title": "Предложения Черной пятницы на облачное хранилище",
+        "description": "Большая экономия на зашифрованном облачном хранилище для ваших файлов",
+        "cta": "Посмотреть предложения хранилища"
       },
       "card2": {
         "title": "Предложения Черной пятницы на облачное хранилище",
-        "description": "Сэкономьте на зашифрованном облачном хранилище для ваших файлов",
-        "cta": "Посмотреть предложения хранилища"
+        "description": "Эксклюзивная скидка для частных лиц и персональных тарифов",
+        "cta": "Посмотреть персональные предложения"
       }
     }
   },
   "DontMissSection": {
-    "title": "Offres de stockage cloud personnel du Black Friday chez Internxt !",
+    "title": "Самая большая скидка Internxt на облачное хранилище в Черную пятницу!",
     "description": [
-      "Protégez vos données en ligne avec Internxt grâce à notre suite de confidentialité entièrement équipée qui comprend les sauvegardes, l'Antivirus, le VPN, le Cleaner, Meet, Mail et plus encore.",
-      "Obtenez la meilleure confidentialité et sécurité en ligne avec la réduction de 85% du Black Friday d'Internxt."
+      "Защитите свою конфиденциальность с нашими предложениями на хранилище в Черную пятницу и получите полностью оснащенный набор для конфиденциальности: зашифрованное облачное хранилище, резервное копирование, Антивирус, VPN, Meet, Mail, Photos и многое другое.",
+      "Получите все, что вам нужно, с облачным хранилищем и набором для конфиденциальности Internxt в Черную пятницу со скидкой 87%."
     ]
   },
   "TableSection": {
@@ -87,27 +88,28 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Pourquoi choisir nos offres de stockage cloud personnel du Black Friday ?",
+    "title": "Стоит ли покупать персональное облачное хранилище в Черную пятницу?",
+    "description": "С предложением Internxt на персональное облачное хранилище — да. Наши тарифы включают все необходимое для хранения файлов в зашифрованном облачном хранилище с постквантовым шифрованием, а также все, что нужно для защиты вашего устройства и конфиденциальности в интернете.",
     "cards": {
       "titles": [
         "Un écosystème entièrement privé",
         "Le chiffrement le plus avancé",
-        "Notre plus grande offre du Black Friday"
+        "Наше самое большое предложение на облачное хранилище в Черную пятницу"
       ],
       "descriptions": [
         "Tous les forfaits payants d'Internxt incluent un stockage chiffré post-quantique, des sauvegardes et un Antivirus. Pour une protection en ligne complète, vous bénéficiez également du VPN, du Cleaner, de Meet et de Mail, tout ce dont vous avez besoin pour rester en sécurité en ligne.",
         "Obtenez le premier stockage cloud avec chiffrement post-quantique pour télécharger, stocker et partager vos fichiers en toute confidentialité avec notre service cloud chiffré de bout en bout. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et assurer une collaboration fluide avec vos amis, votre famille ou vos collègues.",
-        "Profitez de notre plus grande offre du Black Friday à ce jour avec encore plus de fonctionnalités pour protéger vos données et fichiers en ligne. Avec une réduction massive de 85%, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix sur un stockage cloud sécurisé et privé, et plus encore !"
+        "Воспользуйтесь нашим самым большим предложением Черной пятницы с еще большим количеством функций для защиты ваших данных и файлов онлайн. С огромной скидкой 87% сейчас идеальное время, чтобы получить лучшее соотношение цены и качества для безопасного и приватного облачного хранилища и многого другого!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Débloquez des économies massives du Black Friday",
-    "description": "85% de réduction sur TOUS nos forfaits premium",
+    "title": "Облачное хранилище от Internxt в Черную пятницу",
+    "description": "87% скидка на все тарифы",
     "cta": "Obtenir l'offre"
   },
   "HorizontalScrollableSection": {
-    "title": "Le stockage cloud le plus sécurisé, et plus, pour moins",
+    "title": "Предложения на облачное хранилище в Черную пятницу, построенные на конфиденциальности",
     "description": "Nous construisons tous nos produits en pensant à la confidentialité. Nous ne basons pas notre activité sur les données ou la publicité ; nous la construisons sur la confiance. Notre chiffrement post-quantique et à connaissance nulle garantit que vous, et vous seul, pouvez accéder à vos fichiers.",
     "features": [
       "Annulez à tout moment",
@@ -127,22 +129,22 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Les meilleures offres du Black Friday",
-    "description": "85% de réduction sur tous les forfaits",
+    "title": "Лучшие предложения на облачное хранилище в Черную пятницу",
+    "description": "87% скидка на все тарифы",
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Вопросы? У нас есть ответы",
+    "title": "Узнайте больше о нашей скидке на облачное хранилище в Черную пятницу",
     "faq": [
       {
-        "question": "Как получить скидку Black Friday от Internxt?",
+        "question": "Как получить скидку Internxt на облачное хранилище в Черную пятницу?",
         "answer": [
-          "Чтобы получить скидку, выберите один из планов Essential, Premium или Ultimate и перейдите на страницу оформления заказа. Ваша скидка 85% применяется автоматически при оформлении заказа."
+          "Чтобы получить скидку, выберите один из планов Essential, Premium или Ultimate и перейдите на страницу оформления заказа. Ваша скидка 87% применяется автоматически при оформлении заказа."
         ]
       },
       {
         "question": "Когда заканчивается предложение Black Friday от Internxt?",
-        "answer": ["Распродажа Black Friday заканчивается 3 декабря 2025 года."]
+        "answer": ["Распродажа Black Friday заканчивается 3 декабря 2026 года."]
       },
       {
         "question": "Кто имеет право на эту скидку?",
@@ -151,15 +153,15 @@
         ]
       },
       {
-        "question": "Сохраню ли я свою скидку по окончании плана?",
+        "question": "Сохранится ли моя скидка на облачное хранилище при продлении подписки?",
         "answer": [
-          "Предложение Black Friday действует до конца периода подписки. Ваша подписка автоматически продлится по обычной цене после окончания этого периода подписки в конце года. Поскольку пожизненные планы требуют только одного платежа, ваша скидка будет действовать навсегда."
+          "Предложение Black Friday действует только первый месяц. Ваша подписка автоматически продлится по обычной цене после окончания этого периода подписки в конце первого месяца. Поскольку пожизненные планы требуют только одного платежа, ваша скидка будет действовать навсегда."
         ]
       },
       {
         "question": "Какие способы оплаты принимает Internxt?",
         "answer": [
-          "В настоящее время мы принимаем платежи кредитными и дебетовыми картами (включая Mastercard, VISA, American Express и другие), а также принимаем Paypal, bankcontact, iDEAL и SOFORT."
+          "В настоящее время мы принимаем платежи кредитными и дебетовыми картами (включая Mastercard, VISA, American Express и другие), а также принимаем Paypal, bankcontact, iDEAL и SOFORT. Вы можете разделить стоимость пожизненного тарифа с помощью Klarna или оплатить криптовалютой."
         ]
       },
       {
