@@ -598,7 +598,7 @@ export const COUPON_CODES = {
   kamarjeri: PromoCodeName.kamarjeri,
   lsc: PromoCodeName.lsc,
   kkworld: PromoCodeName.kkworld,
-  drive85: PromoCodeName.drive85,
+  drive85: PromoCodeName.DRIVE85,
   drive87: PromoCodeName.drive87,
 };
 
