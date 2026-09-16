@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import {
-  Brain,
+  Aperture,
   CellTower,
   Check,
   CloudArrowUp,
@@ -48,12 +48,12 @@ export default function HeroSection({
       text: textContent.products.meet,
     },
     {
-      icon: Envelope,
-      text: textContent.products.mail,
+      icon: Aperture,
+      text: textContent.products.photos,
     },
     {
-      icon: Brain,
-      text: textContent.products.ai,
+      icon: Envelope,
+      text: textContent.products.mail,
     },
   ];
 
@@ -96,7 +96,7 @@ export default function HeroSection({
           ))}
         </div>
 
-        <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
+        <div className="flex w-full flex-col justify-center gap-3 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
               className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${
@@ -112,18 +112,18 @@ export default function HeroSection({
             >
               {parsePercentText(textContent.subtitle)}
             </h2>
+            {textContent.description && (
+              <span
+                className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
+                  darkMode ? 'text-gray-100' : 'text-gray-100'
+                }`}
+              >
+                <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
+                  {parsePercentText(textContent.description)}
+                </p>
+              </span>
+            )}
           </div>
-          {textContent.description && (
-            <span
-              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
-                darkMode ? 'text-gray-100' : 'text-gray-100'
-              }`}
-            >
-              <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
-                {parsePercentText(textContent.description)}
-              </p>
-            </span>
-          )}
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
