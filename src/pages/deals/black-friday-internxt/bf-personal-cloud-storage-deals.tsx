@@ -20,7 +20,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
       moreDealsUrls: {
         card1: '/deals/black-friday-internxt',
-        card2: 'bf-cloud-storage-deals',
+        card2: 'bf-personal-cloud-storage-deals',
       },
     },
     {
