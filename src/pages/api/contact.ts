@@ -1,13 +1,13 @@
 import axios, { AxiosError } from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getCloudflareContext } from '@opennextjs/cloudflare';
-
-import { getClientIp } from '@/utils/get-client-ip';
 
 const KLAVIYO_PRIVATE_API_KEY = process.env.KLAVIYO_PRIVATE_API_KEY;
 const KLAVIYO_S3_LIST_ID = process.env.KLAVIYO_S3_CONTACT_LIST_ID;
 const KLAVIYO_API_URL = 'https://a.klaviyo.com/api';
 const KLAVIYO_API_REVISION = '2024-10-15';
+
+const THROTTLE_TIME = 2 * 1000;
+const requestTimestamps = new Map<string, number>();
 
 const klaviyoAxios = axios.create({
   baseURL: KLAVIYO_API_URL,
@@ -24,22 +24,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ status: 'Error' });
   }
 
-  const ip = getClientIp(req);
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress || 'unknown';
+  const now = Date.now();
+  const lastRequest = requestTimestamps.get(ip) || 0;
 
-  try {
-    const { env } = await getCloudflareContext({ async: true });
-    const limiter = env.CONTACT_LIMITER as unknown as RateLimit | undefined;
-
-    if (limiter) {
-      const { success } = await limiter.limit({ key: ip });
-
-      if (!success) {
-        return res.status(429).json({ status: 'Error' });
-      }
-    }
-  } catch (error) {
-    //
+  if (now - lastRequest < THROTTLE_TIME) {
+    return res.status(429).json({ status: 'Error' });
   }
+
+  requestTimestamps.set(ip, now);
 
   const { email, name, company, phone, storage, help, locale } = req.body;
 

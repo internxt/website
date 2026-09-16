@@ -1,52 +1,55 @@
 import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
-import { getCloudflareContext } from '@opennextjs/cloudflare';
 
-import { getClientIp } from './get-client-ip';
+const CLEANUP_INTERVAL_MS = 5 * 60 * 1000;
+let lastCleanup = Date.now();
 
-const LIMITER_BY_PATH: Record<string, keyof CloudflareEnv> = {
-  'sheet-event': 'SHEET_LIMITER',
-  'create-email': 'TEMP_MAIL_CREATE_LIMITER',
-  'get-inbox': 'TEMP_MAIL_INBOX_LIMITER',
-  'get-message': 'TEMP_MAIL_MESSAGE_LIMITER',
-};
+const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
+
+function cleanUpOldKeys(windowMs: number) {
+  const now = Date.now();
+  if (now - lastCleanup < CLEANUP_INTERVAL_MS) return;
+
+  rateLimitMap.forEach((value, key) => {
+    if (now - value.lastReset > windowMs) {
+      rateLimitMap.delete(key);
+    }
+  });
+
+  lastCleanup = now;
+}
 
 export default function rateLimitMiddleware(
   handler: NextApiHandler,
   path: string,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   limit: number,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   windowMs: number = 60 * 1000,
 ) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    const bindingName = LIMITER_BY_PATH[path];
+    cleanUpOldKeys(windowMs);
 
-    if (!bindingName) {
-      console.warn('[rate-limiter] no rate limiting binding configured for path: %s', path);
-      return handler(req, res);
+    const forwarded = req.headers['x-forwarded-for'];
+    const ip = typeof forwarded === 'string' ? forwarded.split(',')[0] : forwarded?.[0] || 'unknown';
+    const mapIdentifier = `${ip}-${path}`;
+
+    if (!rateLimitMap.has(mapIdentifier)) {
+      rateLimitMap.set(mapIdentifier, {
+        count: 0,
+        lastReset: Date.now(),
+      });
     }
 
-    let limiter: RateLimit | undefined;
+    const ipData = rateLimitMap.get(mapIdentifier)!;
 
-    try {
-      const { env } = await getCloudflareContext({ async: true });
-      limiter = env[bindingName] as unknown as RateLimit | undefined;
-    } catch (error) {
-      console.warn('[rate-limiter] Cloudflare context unavailable, skipping rate limit');
-      return handler(req, res);
+    if (Date.now() - ipData.lastReset > windowMs) {
+      ipData.count = 0;
+      ipData.lastReset = Date.now();
     }
 
-    if (!limiter) {
-      console.warn('[rate-limiter] binding %s is not available at runtime', bindingName);
-      return handler(req, res);
-    }
-
-    const ip = getClientIp(req);
-    const { success } = await limiter.limit({ key: `${ip}-${path}` });
-
-    if (!success) {
+    if (ipData.count >= limit) {
       return res.status(429).send('Too Many Requests');
     }
+
+    ipData.count += 1;
 
     return handler(req, res);
   };
