@@ -25,18 +25,18 @@
     "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
   },
   "MoreDealsSection": {
-    "title": "More Internxt deals",
+    "title": "More lifetime cloud storage Black Friday deals",
     "description": "Expand your protection with exclusive discounts across all Internxt products",
     "cards": {
       "card1": {
-        "title": "Internxt deals — save {{discount}}% on all plans",
-        "description": "Discover exclusive discounts across all Internxt apps and services",
-        "cta": "View all deals"
+        "title": "Cloud storage Black Friday deals",
+        "description": "Save big on encrypted cloud storage for your files",
+        "cta": "See storage deals"
       },
       "card2": {
-        "title": "Free cloud storage offers",
-        "description": "Start with free encrypted storage and upgrade for up to {{discount}}% off",
-        "cta": "See storage deals"
+        "title": "Personal cloud storage Black Friday offers",
+        "description": "Exclusive discounts for individuals and personal plans",
+        "cta": "View personal deals"
       }
     }
   },
@@ -84,8 +84,8 @@
     }
   },
   "CtaSection": {
-    "title": "Say goodbye to subscriptions",
-    "description": "Pay once, use forever for {{percentage}}% off",
+    "title": "Internxt lifetime cloud storage Black offer",
+    "description": "87% off all plans",
     "cta": "Claim deal"
   },
   "WhatsIncludedSection": {
@@ -106,81 +106,64 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Why choose Internxt's lifetime plans?",
-    "description": "Our lifetime cloud storage deals give you back control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data, and we don't store or sell your data to third parties. We take every step to ensure your information remains secure.",
+    "title": "Why choose a Black Friday lifetime cloud storage?",
+    "description": "With an Internxt Black Friday cloud storage deal, you get post-quantum, encrypted cloud storage and everything you need to protect your device and privacy online. No more subscriptions; get everything you need with a one-time payment.",
     "cta": "Get to know us better",
     "scrollableSection": {
       "titles": [
         "Pay once and use forever",
-        "Unhackable and unleakable data",
-        "Next-generation security",
-        "Open source and transparent"
+        "The most advanced encryption",
+        "Our biggest Black Friday cloud storage deal"
       ],
       "descriptions": [
         "Say goodbye to subscription models and unpredictable renewal costs with our cloud storage lifetime deals. With one payment, you can access your storage and features forever with no more payments needed.",
-        "We don't store passwords or user data, and all of your data is encrypted in transit and at rest with post-quantum and zero-knowledge encryption. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
-        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Back up and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
+        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive 87% off, now is the perfect time to get the best value on secure and private cloud storage, and more!"
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Full privacy for {{percentage}}% off",
-    "description": "Get the deal of a lifetime with Internxt",
+    "title": "The best Black Friday lifetime cloud storage",
+    "description": "87% off all plans",
     "cta": "Claim deal"
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "Learn more about our Black Friday lifetime cloud storage",
     "faq": [
       {
-        "question": "Who can claim these cloud storage lifetime deals?",
+        "question": "How do I get cloud storage lifetime Black Friday discount?",
         "answer": [
-          "These Internxt deals are for new customers or customers with a free account, or customers who wish to upgrade their current lifetime plan for 85% off to get access to our new features."
+          "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your 87% discount is automatically applied at checkout."
         ]
       },
       {
-        "question": "Can I use an Internxt deal if I already have a lifetime plan?",
+        "question": "When does the lifetime cloud storage Black Friday deal end?",
         "answer": [
-          "If you currently have a lifetime plan and wish to stack storage to your current account and access the features of a Premium or Ultimate plan, you can use this deal to upgrade your account."
+          "The Black Friday sale ends December 3rd, 2026."
         ]
       },
       {
-        "question": "What happens when my deal expires?",
+        "question": "Who is eligible for this discount?",
         "answer": [
-          "If you buy an annual plan with your Internxt deal, this applies to the first year only. Once your first year expires, your plan will automatically renew at the full price listed on our pricing section.",
-          "If you want to avoid subscription charges, you can purchase a lifetime plan for a one-time payment and never pay again, unless you choose to upgrade your storage."
+          "If you're a new user, you can enjoy this discount by creating an account. If you have a lifetime plan, you can upgrade to get more storage and extra features such as Cleaner, Meet, and Mail."
         ]
       },
       {
-        "question": "How can I upgrade or add more storage later?",
+        "question": "Will I keep my lifetime cloud storage Black Friday deal forever?",
         "answer": [
-          "If you have a lifetime plan, you can stack or upgrade your plan anytime to get more storage. It is not possible to upgrade or add more storage for annual plans. Keep an eye out on our website for the latest coupon codes and offers."
+          "Yes, if you choose a lifetime plan, it only requires one payment. Once you pay, you don’t have to pay anything else unless you want to upgrade your plan or add more storage later."
         ]
       },
       {
-        "question": "Can I pay with a credit card, PayPal, or cryptocurrency?",
+        "question": "What payment methods does Internxt accept?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, cryptocurrency, or split the payment of your lifetime plan with Klarna.",
-          "If you have questions about payment methods, simply email us at hello@internxt.com"
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept PayPal, bankcontact, iDEAL, and SOFORT. You can split the cost of a lifetime plan with Klarna, or pay with crypto."
         ]
       },
       {
-        "question": "Can I split my lifetime payment?",
+        "question": "Have more questions?",
         "answer": [
-          "Yes, you can now split your lifetime payments into multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
-        ]
-      },
-      {
-        "question": "What is Internxt's refund policy?",
-        "answer": [
-          "All paid subscriptions include a 30-day money-back guarantee starting from the date of purchase.",
-          "If for any reason you are not fully satisfied within those first 30 days, just reach out to [hello@internxt.com](mailto:hello@internxt.com) and we will process your refund."
-        ]
-      },
-      {
-        "question": "How can I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing hello@internxt.com"
+          "Feel free to reach out to us at hello@internxt.com or say hello on social media. We are always delighted to hear from you!"
         ]
       }
     ]
