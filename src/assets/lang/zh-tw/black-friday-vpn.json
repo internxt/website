@@ -10,9 +10,9 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Internxt **黑色星期五**雲端儲存優惠",
-    "subtitle": "獲取2026年最佳黑色星期五雲端儲存優惠，\n所有方案享受87%折扣！",
-    "description": "立即獲得{{discount}}%折扣！",
+    "title": "Internxt **黑色星期五** VPN優惠",
+    "subtitle": "獲取2026年最佳黑色星期五VPN優惠，加密雲端儲存、VPN等產品享87%折扣",
+    "description": "立即享{{discount}}%折扣",
     "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
     "claimDeal": "領取優惠",
     "moreDeals": {
@@ -31,20 +31,20 @@
     }
   },
   "DontMissSection": {
-    "title": "Internxt有史以來最大的黑色星期五雲端儲存折扣",
+    "title": "Internxt黑色星期五VPN優惠",
     "description": [
-      "使用我們的黑色星期五儲存優惠保護您的隱私，獲得全套隱私套件，包括加密雲端儲存、備份、防毒軟體、VPN、Meet、Mail、Photos等。",
-      "透過Internxt的黑色星期五雲端儲存和隱私套件，以87%的折扣獲得您所需的一切。"
+      "領取您的黑色星期五VPN優惠，包含保護您線上隱私所需的一切，包括Internxt Drive、Meet、Mail、Photos等。",
+      "透過Internxt的87%黑色星期五折扣，為您的隱私和安全獲得最佳優惠。"
     ]
   },
   "MoreDealsSection": {
-    "title": "更多Internxt黑色星期五儲存優惠",
+    "title": "更多VPN黑色星期五優惠",
     "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
     "cards": {
       "card1": {
-        "title": "雲端儲存黑色星期五優惠",
-        "description": "在加密雲端儲存上大省一筆，保護您的檔案",
-        "cta": "查看儲存優惠"
+        "title": "Internxt 2026年黑色星期五全部優惠",
+        "description": "探索我們隱私工具和儲存解決方案的所有優惠",
+        "cta": "查看所有優惠"
       },
       "card2": {
         "title": "個人雲端儲存黑色星期五優惠",
@@ -88,25 +88,25 @@
     }
   },
   "WhyChooseSection": {
-    "title": "為什麼選擇Internxt的黑色星期五雲端儲存？",
-    "description": "透過Internxt的黑色星期五雲端儲存優惠，您可以獲得後量子加密雲端儲存，以及保護您的裝置和線上隱私所需的一切。",
+    "title": "為什麼應該選擇Internxt的黑色星期五VPN優惠",
+    "description": "以我們迄今為止最大的全方案折扣，獲得最佳隱私套裝",
     "cards": {
-      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們最大的黑色星期五雲端儲存優惠"],
+      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們有史以來最大的VPN黑色星期五優惠"],
       "descriptions": [
-        "所有Internxt付費方案都包括後量子加密儲存、備份和防毒軟體。為了獲得完整的線上保護，您還可以獲得VPN、Cleaner、Meet、Mail、Photos以及線上安全所需的一切。",
+        "所有Internxt付費方案都包括後量子加密儲存、備份和防毒軟體。為了獲得完整的線上保護，請選擇Ultimate方案，即可使用Meet、Mail、Photos、NAS、WebDAV以及Rclone支援。",
         "獲得第一個具有後量子加密的雲端儲存，透過我們的端對端加密雲端服務以完全隱私的方式上傳、儲存和共享您的檔案。備份和同步您的檔案以防止數據丟失，並確保與朋友、家人或同事的順暢協作。",
         "利用我們迄今為止最大的黑色星期五優惠，獲得更多功能來保護您的線上數據和檔案。憑藉高達87%的折扣，現在是獲得安全和私密雲端儲存以及更多服務的最佳價值的完美時機！"
       ]
     }
   },
   "CtaSection": {
-    "title": "Internxt的黑色星期五雲端儲存",
-    "description": "所有方案享受87%折扣",
+    "title": "Internxt VPN黑色星期五促銷",
+    "description": "所有月付和終身方案享87%折扣",
     "cta": "領取優惠"
   },
   "HorizontalScrollableSection": {
-    "title": "以隱私為基礎打造的黑色星期五雲端儲存優惠",
-    "description": "我們在設計所有產品時都考慮到隱私。我們不依賴數據或廣告開展業務；我們建立在信任之上。我們的後量子和零知識加密確保只有您可以存取您的檔案。",
+    "title": "最佳黑色星期五VPN優惠，以及更多",
+    "description": "我們的VPN黑色星期五優惠包含以隱私為核心打造的安全產品。我們的業務不建立在數據或廣告之上；而是建立在信任之上。我們的後量子和零知識加密確保只有您，並且只有您，才能存取您的檔案。",
     "features": ["隨時取消", "後量子加密", "可持續能源", "開源代碼", "獨立驗證"],
     "scrollableSection": {
       "titles": ["不可破解和不可洩露的數據", "毫不妥協的安全性", "開源且經過審計", "合規性"],
@@ -119,13 +119,17 @@
     }
   },
   "CtaSectionV2": {
-    "title": "最佳黑色星期五優惠",
+    "title": "Internxt VPN黑色星期五優惠",
     "description": "所有方案享受87%折扣",
     "cta": "領取優惠"
   },
   "FaqSection": {
-    "title": "了解更多關於我們黑色星期五雲端儲存折扣的資訊",
+    "title": "想了解更多關於我們VPN黑色星期五優惠的資訊嗎？",
     "faq": [
+      {
+        "question": "Internxt的VPN黑色星期五優惠包含哪些內容？",
+        "answer": "所有付費方案都包含我們的加密雲端儲存、VPN、防毒軟體和備份。若要使用Internxt的全部功能，Ultimate方案可讓您使用我們完整的產品套件。"
+      },
       {
         "question": "如何獲得Internxt黑色星期五折扣？",
         "answer": [
@@ -139,19 +143,19 @@
       {
         "question": "誰有資格享受此折扣？",
         "answer": [
-          "如果您是新使用者，可以透過建立帳戶來享受此折扣。如果您擁有終身方案，可以升級以獲得更多儲存空間和額外功能，例如Cleaner、Meet和Mail。"
+          "如果您是新使用者，可以透過建立帳戶來享受此折扣。如果您擁有終身方案，可以升級，所選方案的儲存空間和功能將自動新增到您的帳戶。"
         ]
       },
       {
         "question": "方案結束後我還能保留折扣嗎？",
         "answer": [
-          "黑色星期五優惠在訂閱期結束前有效。訂閱期在年底結束後，您的訂閱將自動以正常價格續訂。由於終身方案只需一次付款，您的折扣將永久有效。"
+          "黑色星期五優惠對年付方案在第一個月內有效。第一個月結束後，您的訂閱將自動以正常價格續訂。由於終身方案只需一次付款，您的折扣將永久有效。"
         ]
       },
       {
         "question": "Internxt接受哪些付款方式？",
         "answer": [
-          "目前，我們接受信用卡和簽帳金融卡付款（包括Mastercard、VISA、American Express等），我們還接受Paypal、bankcontact、iDEAL和SOFORT。您可以使用Klarna分期支付終身方案的費用，或使用加密貨幣付款。"
+          "目前，我們接受信用卡和簽帳金融卡付款（包括Mastercard、VISA、American Express等），我們還接受Paypal、bankcontact、iDEAL和SOFORT。我們也接受Paypal、Klarna和加密貨幣。"
         ]
       },
       {
