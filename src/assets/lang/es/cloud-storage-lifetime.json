@@ -25,18 +25,18 @@
     "pcWorld": "\"El **acceso web intuitivo**, la **sincronización de archivos** y los **servicios de backup** de Internxt son **impresionantes**. Este servicio de almacenamiento y backup online encriptado es **fácil**, cubre todas las bases, y los **planes de por vida** actuales son una **ganga**.\""
   },
   "MoreDealsSection": {
-    "title": "Más ofertas de Internxt",
+    "title": "Más ofertas de Black Friday en almacenamiento en la nube de por vida",
     "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
     "cards": {
       "card1": {
-        "title": "Ofertas de Internxt — ahorra un {{discount}}% en todos los planes",
-        "description": "Descubre descuentos exclusivos en todas las aplicaciones y servicios de Internxt",
-        "cta": "Ver todas las ofertas"
+        "title": "Ofertas de Black Friday en almacenamiento en la nube",
+        "description": "Ahorra a lo grande en almacenamiento en la nube cifrado para tus archivos",
+        "cta": "Ver ofertas de almacenamiento"
       },
       "card2": {
-        "title": "Ofertas de almacenamiento en la nube gratuito",
-        "description": "Comienza con almacenamiento cifrado gratuito y mejora con hasta un {{discount}}% de descuento",
-        "cta": "Ver ofertas de almacenamiento"
+        "title": "Ofertas de Black Friday en almacenamiento en la nube personal",
+        "description": "Descuentos exclusivos para particulares y planes personales",
+        "cta": "Ver ofertas personales"
       }
     }
   },
@@ -84,8 +84,8 @@
     }
   },
   "CtaSection": {
-    "title": "Di adiós a las suscripciones",
-    "description": "Paga una vez, úsalo para siempre con {{percentage}}% de descuento",
+    "title": "Oferta de Black Friday de Internxt en almacenamiento en la nube de por vida",
+    "description": "87% de descuento en todos los planes",
     "cta": "Obtener oferta"
   },
   "WhatsIncludedSection": {
@@ -106,81 +106,64 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "¿Por qué elegir los planes de por vida de Internxt?",
-    "description": "Nuestras ofertas de almacenamiento en la nube de por vida te devuelven el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, aseguramos que solo tú tienes las llaves de tus datos encriptados, y no almacenamos ni vendemos tus datos a terceros. Tomamos todos los pasos para asegurar que tu información permanezca segura.",
+    "title": "¿Por qué elegir un almacenamiento en la nube de por vida en Black Friday?",
+    "description": "Con una oferta de Black Friday de almacenamiento en la nube de Internxt, obtienes almacenamiento cifrado y post-cuántico y todo lo que necesitas para proteger tu dispositivo y tu privacidad en línea. Se acabaron las suscripciones; consigue todo lo que necesitas con un único pago.",
     "cta": "Conócenos mejor",
     "scrollableSection": {
       "titles": [
         "Paga una vez y usa para siempre",
-        "Datos imposibles de hackear o filtrar",
-        "Seguridad de nueva generación",
-        "Código abierto y transparente"
+        "El cifrado más avanzado",
+        "Nuestra mayor oferta de Black Friday en almacenamiento en la nube"
       ],
       "descriptions": [
         "Di adiós a los modelos de suscripción y costes de renovación impredecibles con nuestras ofertas de almacenamiento en la nube de por vida. Con un pago, puedes acceder a tu almacenamiento y funciones para siempre sin más pagos necesarios.",
-        "No almacenamos contraseñas ni datos de usuario, y todos tus datos están encriptados en tránsito y en reposo con encriptación post-cuántica y de conocimiento cero. Internxt te pone en control total de tus archivos. Tus datos son tu negocio. Protegerlos es el nuestro.",
-        "Internxt es el único almacenamiento en la nube que encripta automáticamente tus archivos usando criptografía end-to-end y post-cuántica, lo que significa que solo tú puedes acceder a tus datos.",
-        "Estamos orgullosos de lo que hacemos, así que nuestro código está hecho público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar excepto tus datos."
+        "Consigue el primer almacenamiento en la nube con cifrado post-cuántico para subir, guardar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube cifrado de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y colaborar sin problemas con amigos, familiares o compañeros de trabajo.",
+        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos en línea. Con un enorme 87% de descuento, ahora es el momento perfecto para conseguir la mejor relación calidad-precio en almacenamiento en la nube seguro y privado, ¡y mucho más!"
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Privacidad total por {{percentage}}% de descuento",
-    "description": "Obtén la oferta de tu vida con Internxt",
+    "title": "El mejor almacenamiento en la nube de por vida de Black Friday",
+    "description": "87% de descuento en todos los planes",
     "cta": "Obtener oferta"
   },
   "FaqSection": {
-    "title": "¿Preguntas? Tenemos respuestas",
+    "title": "Descubre más sobre nuestro almacenamiento en la nube de por vida de Black Friday",
     "faq": [
       {
-        "question": "¿Quién puede reclamar estas ofertas de almacenamiento en la nube de por vida?",
+        "question": "¿Cómo consigo el descuento de Black Friday en almacenamiento en la nube de por vida?",
         "answer": [
-          "Estas ofertas de Internxt son para nuevos clientes o clientes con una cuenta gratuita, o clientes que deseen actualizar su plan de por vida actual con un 85% de descuento para obtener acceso a nuestras nuevas funciones."
+          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y ve a la página de pago. Tu 87% de descuento se aplica automáticamente al finalizar la compra."
         ]
       },
       {
-        "question": "¿Puedo usar una oferta de Internxt si ya tengo un plan de por vida?",
+        "question": "¿Cuándo termina la oferta de Black Friday de almacenamiento en la nube de por vida?",
         "answer": [
-          "Si actualmente tienes un plan de por vida y deseas acumular almacenamiento en tu cuenta actual y acceder a las funciones de un plan Premium o Ultimate, puedes usar esta oferta para actualizar tu cuenta."
+          "La promoción de Black Friday termina el 3 de diciembre de 2026."
         ]
       },
       {
-        "question": "¿Qué sucede cuando expira mi oferta?",
+        "question": "¿Quién puede beneficiarse de este descuento?",
         "answer": [
-          "Si compras un plan anual con tu oferta de Internxt, esto se aplica solo al primer año. Una vez que expire tu primer año, tu plan se renovará automáticamente al precio completo que aparece en nuestra sección de precios.",
-          "Si quieres evitar cargos de suscripción, puedes comprar un plan de por vida con un pago único y nunca volver a pagar, a menos que elijas actualizar tu almacenamiento."
+          "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes mejorarlo para obtener más almacenamiento y funciones adicionales como Cleaner, Meet y Mail."
         ]
       },
       {
-        "question": "¿Cómo puedo actualizar o añadir más almacenamiento más tarde?",
+        "question": "¿Conservaré para siempre mi oferta de Black Friday de almacenamiento en la nube de por vida?",
         "answer": [
-          "Si tienes un plan de por vida, puedes acumular o actualizar tu plan en cualquier momento para obtener más almacenamiento. No es posible actualizar o añadir más almacenamiento para planes anuales. Estate atento a nuestro sitio web para los últimos códigos de cupón y ofertas."
+          "Sí, si eliges un plan de por vida, solo requiere un pago. Una vez que pagues, no tendrás que pagar nada más, a menos que quieras mejorar tu plan o añadir más almacenamiento más adelante."
         ]
       },
       {
-        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "question": "¿Qué métodos de pago acepta Internxt?",
         "answer": [
-          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, criptomonedas o dividir el pago de tu plan de por vida con Klarna.",
-          "Si tienes preguntas sobre métodos de pago, simplemente envíanos un email a hello@internxt.com"
+          "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluidas Mastercard, VISA, American Express y más), y también aceptamos PayPal, Bancontact, iDEAL y SOFORT. Puedes dividir el coste de un plan de por vida con Klarna o pagar con criptomonedas."
         ]
       },
       {
-        "question": "¿Puedo dividir mi pago de por vida?",
+        "question": "¿Tienes más preguntas?",
         "answer": [
-          "Sí, ahora puedes dividir tus pagos de por vida en múltiples cuotas sin intereses usando Klarna. ¡Disfruta de un plan de por vida con la facilidad de pagarlo en cómodas cuotas!"
-        ]
-      },
-      {
-        "question": "¿Cuál es la política de reembolso de Internxt?",
-        "answer": [
-          "Internxt ofrece una garantía estándar de devolución de dinero de 30 días en todas las suscripciones de pago, que comienza a contar tan pronto como te suscribes.",
-          "Y si alguna vez no estás satisfecho con nuestro servicio, contáctanos en hello@internxt.com y solicita un reembolso."
-        ]
-      },
-      {
-        "question": "¿Cómo puedo contactar con el soporte?",
-        "answer": [
-          "¿No encuentras lo que buscas? Puedes contactar con nuestro equipo de soporte técnico a través del chat en vivo o enviando un email a hello@internxt.com"
+          "No dudes en escribirnos a hello@internxt.com o saludarnos en las redes sociales. ¡Siempre estaremos encantados de escucharte!"
         ]
       }
     ]
