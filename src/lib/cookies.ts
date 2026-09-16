@@ -25,6 +25,17 @@ export const TRACKING_PARAMS = [
   'afsrc',
 ] as const;
 
+function isSecureRequest(ctx: GetServerSidePropsContext): boolean {
+  const forwardedProto = ctx.req.headers['x-forwarded-proto'];
+  const proto = Array.isArray(forwardedProto) ? forwardedProto[0] : forwardedProto;
+
+  if (proto) {
+    return proto.split(',')[0].trim() === 'https';
+  }
+
+  return process.env.NODE_ENV === 'production';
+}
+
 function parseUri(ctx: GetServerSidePropsContext) {
   const { query } = url.parse(ctx.req.url);
   const parsedQuery = queryString.parse(query);
@@ -70,7 +81,7 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
   const referralId = parsedUri.ref;
 
   const expires = moment().add(2, 'days').toDate();
-  const cookies = new Cookies(ctx.req, ctx.res);
+  const cookies = new Cookies(ctx.req, ctx.res, { secure: isSecureRequest(ctx) });
 
   cookies.set('REFERRAL', referralId, {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
@@ -83,7 +94,7 @@ function setReferralCookie(ctx: GetServerSidePropsContext): void {
 }
 
 function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string, expires: Date): void {
-  const cookies = new Cookies(ctx.req, ctx.res);
+  const cookies = new Cookies(ctx.req, ctx.res, { secure: isSecureRequest(ctx) });
 
   cookies.set(name, value, {
     domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
@@ -110,10 +121,7 @@ export const saveTrackingParamsToCookies = () => {
 
   const expiryDate = new Date();
 
-  expiryDate.setTime(
-    expiryDate.getTime() +
-      GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY,
-  );
+  expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
 
   TRACKING_PARAMS.forEach((param) => {
     const value = params.get(param);
@@ -126,7 +134,7 @@ export const saveTrackingParamsToCookies = () => {
       expiration: expiryDate,
     });
   });
-}
+};
 
 export const getTrackingParams = (): Record<string, string> => {
   if (typeof window === 'undefined') return {};

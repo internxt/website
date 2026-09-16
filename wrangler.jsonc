@@ -1,0 +1,42 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "internxt-website",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+
+  "ratelimits": [
+    {
+      "name": "CONTACT_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 1, "period": 10 }
+    },
+    {
+      "name": "SHEET_LIMITER",
+      "namespace_id": "1002",
+      "simple": { "limit": 10, "period": 60 }
+    },
+    {
+      "name": "TEMP_MAIL_CREATE_LIMITER",
+      "namespace_id": "1003",
+      "simple": { "limit": 2, "period": 60 }
+    },
+    {
+      "name": "TEMP_MAIL_INBOX_LIMITER",
+      "namespace_id": "1004",
+      "simple": { "limit": 15, "period": 60 }
+    },
+    {
+      "name": "TEMP_MAIL_MESSAGE_LIMITER",
+      "namespace_id": "1005",
+      "simple": { "limit": 20, "period": 60 }
+    }
+  ]
+}
