@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 
-export const HeroSection = ({ textContent }) => {
+export const HeroSection = ({ textContent, url = '#billingButtons' }) => {
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 pt-28 lg:mt-16 lg:flex-row lg:gap-16 lg:py-10"
@@ -22,7 +22,7 @@ export const HeroSection = ({ textContent }) => {
         </p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <Link
-          href={'#billingButtons'}
+          href={url}
           className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
         >
           {textContent.cta}

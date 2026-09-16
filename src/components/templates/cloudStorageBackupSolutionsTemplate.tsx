@@ -1,0 +1,256 @@
+import Script from 'next/script';
+import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
+import Footer from '@/components/layout/footers/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
+import Layout from '@/components/layout/Layout';
+import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
+import { BannersText } from '@/assets/types/components/banners';
+import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
+import WhatWeDo from '@/components/shared/WhatWeDo';
+import CtaSection from '@/components/shared/CtaSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import RelationalLinks from '@/components/shared/sections/RelationalLinks';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import { Check } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
+
+const BREADCRUMB_ITEMS = [
+  { name: 'Encrypted Cloud Storage', url: '/' },
+  { name: 'Secure cloud storage', url: '/drive' },
+  { name: 'Cloud backup storage', url: '/cloud-storage-backup-solutions' },
+];
+
+export interface CloudStorageBackupSolutionsTemplateProps {
+  metatagsDescriptions: MetatagsDescription[];
+  textContent: CloudStorageBackupSolutionsText;
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
+  lang: string;
+  bannerJson?: BannersText;
+  relationalLinksText: any;
+  couponCode?: PromoCodeName;
+  couponCodeForLifetime?: PromoCodeName;
+  hidePriceTable?: boolean;
+  robots?: string;
+}
+
+export const CloudStorageBackupSolutionsTemplate = ({
+  metatagsDescriptions,
+  textContent,
+  navbarLang,
+  footerLang,
+  lang,
+  relationalLinksText,
+  couponCode = PromoCodeName.seolp,
+  couponCodeForLifetime = PromoCodeName.seolp,
+  hidePriceTable = false,
+  robots,
+}: CloudStorageBackupSolutionsTemplateProps): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
+  const CTA_URL = hidePriceTable ? '/pricing' : '#billingButtons';
+  const cardsData: FeatureCard[] = [
+    {
+      title: textContent.FeatureSection.cards.element1.title,
+      description: textContent.FeatureSection.cards.element1.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_increased_protection.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element3.title,
+      description: textContent.FeatureSection.cards.element3.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_ease_of_use.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_recover_your_files.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element4.title,
+      description: textContent.FeatureSection.cards.element4.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_cross_platforms.webp',
+    },
+  ];
+  const product = [
+    {
+      imageUrl: '/images/cloud-storage-backup-solutions/internxt_drive.webp',
+      animationDirection: 'left',
+      redirect: CTA_URL,
+      textContent: textContent.WhatWeDo.square1,
+    },
+    {
+      imageUrl: '/images/cloud-storage-backup-solutions/internxt_s3.webp',
+      animationDirection: 'left',
+      redirect: '/cloud-object-storage/checkout',
+      textContent: textContent.WhatWeDo.square2,
+    },
+  ];
+
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({ couponCode, couponCodeForLifetime });
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
+
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
+
+  return (
+    <>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
+      </Script>
+
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb_list(BREADCRUMB_ITEMS)}
+      </Script>
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Cloud Storage Backup Solutions"
+        lang={lang}
+        robots={robots}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
+        <AnimatedHeroSection
+          textComponent={
+            <>
+              <div className="flex flex-col px-6 py-10 text-3xl font-medium lg:text-5xl">
+                <h1 className=" text-3xl font-semibold leading-tight text-white lg:text-5xl">
+                  {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
+                  <span className="text-primary"> {textContent.HeroSection.TitleAndOnePlan.title.blueText} </span>
+                  {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
+                </h1>
+
+                <p className="pt-4 text-xl text-white">
+                  <span className=" text-white">{textContent.HeroSection.TitleAndOnePlan.description}</span>
+                </p>
+              </div>
+              <div className="mx-auto flex flex-col lg:mx-0">
+                {textContent.HeroSection.TitleAndOnePlan.features.map((feat) => (
+                  <div key={feat} className="flex flex-row gap-2">
+                    <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
+                    <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href={CTA_URL}
+                className={`z-10 mb-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark lg:text-xl`}
+              >
+                {textContent.HeroSection.TitleAndOnePlan.claimDeal}
+              </Link>
+            </>
+          }
+          height="h-min"
+        />
+
+        <FeatureSection
+          title={textContent.FeatureSection.title}
+          description={textContent.FeatureSection.description}
+          cards={cardsData}
+        />
+        {textContent.NewBlock1 && (
+          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
+            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+              {textContent.NewBlock1.title}
+            </h2>
+            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
+              {textContent.NewBlock1.intro}
+            </p>
+          </div>
+        )}
+
+        {!hidePriceTable && (
+          <PricingSectionWrapper
+            textContent={textContent.tableSection}
+            decimalDiscount={{
+              individuals: decimalDiscount,
+              lifetime: decimalDiscountForLifetime,
+            }}
+            lifetimeCoupons={lifetimeCoupons}
+            lang={lang}
+            products={products}
+            loadingCards={loadingCards}
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+            hideBusinessCards
+            hideBusinessSelector
+            popularPlanBySize="5TB"
+            sectionDetails="bg-white lg:py-20"
+            hideFreeCard
+          />
+        )}
+
+        <CtaSection
+          textContent={textContent.CtaSection1}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
+        />
+
+        <FeaturesSection textContent={textContent.FeaturesSection} />
+
+        {textContent.NewBlock2 && (
+          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
+            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+              {textContent.NewBlock2.title}
+            </h2>
+            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
+              {textContent.NewBlock2.intro}
+            </p>
+          </div>
+        )}
+
+        <CtaSection
+          textContent={textContent.CtaSection2}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
+        />
+
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
+
+        <FAQSection textContent={textContent.FaqSection} />
+
+        <RelationalLinks textContent={relationalLinksText} />
+
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+      </Layout>
+    </>
+  );
+};

@@ -3,8 +3,17 @@ import {
   CloudStorageForDocumentsTemplateProps,
 } from '@/components/templates/cloudStorageForDocumentsTemplate';
 import { GetServerSidePropsContext } from 'next';
+import { PromoCodeName } from '@/lib/types';
 
-const CloudStorageForDocumentsLP = (props: CloudStorageForDocumentsTemplateProps) => <CloudStorageForDocumentsTemplate {...props} />;
+const CloudStorageForDocumentsEmLP = (props: CloudStorageForDocumentsTemplateProps) => (
+  <CloudStorageForDocumentsTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
+);
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
@@ -25,4 +34,4 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default CloudStorageForDocumentsLP;
+export default CloudStorageForDocumentsEmLP;

@@ -7,7 +7,13 @@ import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
-export const WebDAVSupportSection = ({ textContent, lang }) => {
+export const WebDAVSupportSection = ({
+  textContent,
+  lang,
+  hidePriceTable = false,
+  couponCode = PromoCodeName.seolp,
+  couponCodeForLifetime = PromoCodeName.seolp,
+}) => {
   const bannerLang = require('../../assets/lang/en/banners.json');
 
   const {
@@ -17,7 +23,7 @@ export const WebDAVSupportSection = ({ textContent, lang }) => {
         coupon: individualCoupon,
         lifetimeCoupon,
         lifetimeCoupons,
-    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+    } = usePricing({ couponCode, couponCodeForLifetime });
 
     const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
     const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
@@ -81,24 +87,26 @@ export const WebDAVSupportSection = ({ textContent, lang }) => {
             </div>
           </div>
         </div>
-        <PricingSectionWrapper
-                textContent={textContent.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
-                popularPlanBySize="5TB"
-                sectionDetails="bg-white lg:py-20"
-                hideFreeCard
-                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-        />
+        {!hidePriceTable && (
+          <PricingSectionWrapper
+            textContent={textContent.tableSection}
+            decimalDiscount={{
+              individuals: decimalDiscount,
+              lifetime: decimalDiscountForLifetime,
+            }}
+            lifetimeCoupons={lifetimeCoupons}
+            lang={lang}
+            products={products}
+            loadingCards={loadingCards}
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+            hideBusinessCards
+            hideBusinessSelector
+            popularPlanBySize="5TB"
+            sectionDetails="bg-white lg:py-20"
+            hideFreeCard
+            backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          />
+        )}
         <SignUpBanner textContent={bannerLang.SignUpWebDAVBanner} lang="en" />
         <div className="flex w-full flex-col space-y-2 lg:max-w-[850px] lg:pt-10">
           {textContent.questions.map((item) => (

@@ -4,9 +4,16 @@ import {
 } from '@/components/templates/cloudStorageBackupSolutionsTemplate';
 import { GetServerSidePropsContext } from 'next';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 
-const CloudStorageBackupSolutionsLP = (props: CloudStorageBackupSolutionsTemplateProps) => (
-  <CloudStorageBackupSolutionsTemplate {...props} />
+const CloudStorageBackupSolutionsEmLP = (props: CloudStorageBackupSolutionsTemplateProps) => (
+  <CloudStorageBackupSolutionsTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
 );
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
@@ -34,4 +41,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default CloudStorageBackupSolutionsLP;
+export default CloudStorageBackupSolutionsEmLP;
