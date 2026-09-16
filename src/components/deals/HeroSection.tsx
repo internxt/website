@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import {
-  Brain,
+  Aperture,
   CellTower,
   Check,
   CloudArrowUp,
@@ -48,12 +48,12 @@ export default function HeroSection({
       text: textContent.products.meet,
     },
     {
-      icon: Envelope,
-      text: textContent.products.mail,
+      icon: Aperture,
+      text: textContent.products.photos,
     },
     {
-      icon: Brain,
-      text: textContent.products.ai,
+      icon: Envelope,
+      text: textContent.products.mail,
     },
   ];
 
