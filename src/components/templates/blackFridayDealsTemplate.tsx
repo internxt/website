@@ -108,8 +108,9 @@ const BlackFridayDealsTemplate = ({
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
 
-      <div className="bg-[#1C1C1C] px-5 py-10">
+      <div className="relative bg-[#1C1C1C] px-5 py-10">
         <div className={`klaviyo-form-${formId} mx-auto max-w-[600px]`}></div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-gray-71 lg:left-32 lg:right-32"></div>
       </div>
 
       <PricingSectionWrapper
