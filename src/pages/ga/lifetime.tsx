@@ -92,14 +92,12 @@ function LifetimeSpecial({
 
   return (
     <>
-      {/* Varify.io code for Internxt Universal Technologies SL */}
       <Head>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
           }}
         />
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://app.varify.io/varify.js" />
       </Head>
       <Layout
