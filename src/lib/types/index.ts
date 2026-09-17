@@ -383,6 +383,7 @@ export enum PromoCodeName {
   lsc = 'LSC',
   kkworld = 'KKWORLD',
   drive87 = 'DRIVE87',
+  specialdeal = 'SPECIALDEAL',
 }
 
 export interface PromoCodeProps {
