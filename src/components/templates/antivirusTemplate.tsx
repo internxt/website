@@ -52,7 +52,7 @@ export const AntivirusTemplate = ({
   relationalLinksText,
   robots,
 }: AntivirusTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
 
   const cardsForComponentsIncolumn = [
@@ -113,8 +113,8 @@ export const AntivirusTemplate = ({
         {sm_breadcrumb_list(BREADCRUMB_ITEMS)}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Home"
         lang={lang}
         robots={robots}

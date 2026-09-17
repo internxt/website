@@ -6,7 +6,6 @@ import Layout from '@/components/layout/Layout';
 import { sm_faq, sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
-import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
@@ -32,7 +31,6 @@ export interface CloudStorageBackupSolutionsTemplateProps {
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   lang: string;
-  bannerJson?: BannersText;
   relationalLinksText: any;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
@@ -52,7 +50,7 @@ export const CloudStorageBackupSolutionsTemplate = ({
   hidePriceTable = false,
   robots,
 }: CloudStorageBackupSolutionsTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
   const CTA_URL = hidePriceTable ? '/pricing' : '#billingButtons';
   const cardsData: FeatureCard[] = [
     {
@@ -141,8 +139,8 @@ export const CloudStorageBackupSolutionsTemplate = ({
         {sm_breadcrumb_list(BREADCRUMB_ITEMS)}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Cloud Storage Backup Solutions"
         lang={lang}
         robots={robots}

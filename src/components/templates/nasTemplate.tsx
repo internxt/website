@@ -50,7 +50,7 @@ export const NasTemplate = ({
   hidePriceTable = false,
   robots,
 }: NasTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'nas');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
   const ctaUrl = hidePriceTable ? '/pricing' : '#billingButtons';
@@ -104,8 +104,8 @@ export const NasTemplate = ({
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Home"
         lang={lang}
         robots={robots}

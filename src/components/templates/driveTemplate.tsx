@@ -65,14 +65,14 @@ export const DriveTemplate = ({
   hidePriceTable = false,
   robots,
 }: DriveTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'drive');
   const ctaUrl = hidePriceTable ? '/pricing' : '#billingButtons';
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode,
@@ -116,8 +116,8 @@ export const DriveTemplate = ({
         {sm_breadcrumb('Secure cloud storage', 'drive')}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Drive"
         lang={lang}
         robots={robots}

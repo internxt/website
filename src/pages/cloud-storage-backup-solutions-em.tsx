@@ -21,7 +21,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/cloud-storage-backup-solutions.json`);
-  const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
@@ -33,7 +32,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       lang,
       metatagsDescriptions,
       textContent,
-      bannerJson,
       navbarLang,
       footerLang,
       relationalLinksText,

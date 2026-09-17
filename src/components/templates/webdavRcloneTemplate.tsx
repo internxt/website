@@ -41,7 +41,7 @@ export const WebdavRcloneTemplate = ({
   hidePriceTable = false,
   robots,
 }: WebdavRcloneTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'webDAV');
   const ctaUrl = hidePriceTable ? '/pricing' : '#billingButtons';
 
   return (
@@ -50,8 +50,8 @@ export const WebdavRcloneTemplate = ({
         {sm_breadcrumb_list(BREADCRUMB_ITEMS)}
       </Script>
       <Layout
-        title={metatags[0].title}
-        description={metatags[0].description}
+        title={metatags?.title ?? ''}
+        description={metatags?.description ?? ''}
         segmentName="Lifetime"
         lang={'en'}
         robots={robots}
