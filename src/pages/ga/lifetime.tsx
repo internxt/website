@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import usePricing from '@/hooks/usePricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -91,6 +92,16 @@ function LifetimeSpecial({
 
   return (
     <>
+      {/* Varify.io code for Internxt Universal Technologies SL */}
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
+          }}
+        />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="https://app.varify.io/varify.js" />
+      </Head>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
