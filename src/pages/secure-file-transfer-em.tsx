@@ -3,8 +3,17 @@ import {
   SecureFileTransferTemplateProps,
 } from '@/components/templates/secureFileTransferTemplate';
 import { GetServerSidePropsContext } from 'next';
+import { PromoCodeName } from '@/lib/types';
 
-const SecureFileTransferLP = (props: SecureFileTransferTemplateProps) => <SecureFileTransferTemplate {...props} />;
+const SecureFileTransferEmLP = (props: SecureFileTransferTemplateProps) => (
+  <SecureFileTransferTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
+);
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
@@ -25,4 +34,4 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default SecureFileTransferLP;
+export default SecureFileTransferEmLP;

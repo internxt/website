@@ -1,7 +1,16 @@
 import { WebdavRcloneTemplate, WebdavRcloneTemplateProps } from '@/components/templates/webdavRcloneTemplate';
 import { GetServerSidePropsContext } from 'next';
+import { PromoCodeName } from '@/lib/types';
 
-const WebDAVLP = (props: WebdavRcloneTemplateProps) => <WebdavRcloneTemplate {...props} />;
+const WebDAVEmLP = (props: WebdavRcloneTemplateProps) => (
+  <WebdavRcloneTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
+);
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
@@ -22,4 +31,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default WebDAVLP;
+export default WebDAVEmLP;

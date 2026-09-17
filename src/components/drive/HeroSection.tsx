@@ -30,9 +30,10 @@ interface HeroSectionProps {
   textContent: any;
   download: Record<OSType, string>;
   ChecksTag?: keyof JSX.IntrinsicElements;
+  url?: string;
 }
 
-const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProps) => {
+const HeroSection = ({ textContent, download, ChecksTag = 'p', url = '#billingButtons' }: HeroSectionProps) => {
   const [OS, setOS] = useState<OSType>('Windows');
   const [isClient, setIsClient] = useState(false);
 
@@ -80,7 +81,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
 
           <div className="flex w-1/2 flex-row gap-3 lg:w-5/6">
             <Link
-              href={'#billingButtons'}
+              href={url}
               className="flex h-[48px] w-min flex-1 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white transition-colors hover:bg-primary-dark"
             >
               {textContent.cta}

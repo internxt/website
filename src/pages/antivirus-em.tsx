@@ -1,14 +1,16 @@
 import { GetServerSidePropsContext } from 'next';
-import { NasTemplate, NasTemplateProps } from '@/components/templates/nasTemplate';
+import { AntivirusTemplate, AntivirusTemplateProps } from '@/components/templates/antivirusTemplate';
 import cookies from '@/lib/cookies';
+import { downloadDriveLinks } from '@/lib/get-download-url';
 
-const NASPage = (props: NasTemplateProps) => <NasTemplate {...props} />;
+const AntivirusEmPage = (props: AntivirusTemplateProps) => <AntivirusTemplate {...props} robots="noindex,follow" />;
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/nas.json`);
+  const langJson = require(`@/assets/lang/${lang}/antivirus.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
@@ -19,12 +21,13 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     props: {
       lang,
       metatagsDescriptions,
-      textContent,
+      langJson,
       navbarLang,
       footerLang,
+      download,
       relationalLinksText,
     },
   };
 }
 
-export default NASPage;
+export default AntivirusEmPage;

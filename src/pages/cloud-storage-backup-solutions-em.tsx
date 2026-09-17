@@ -1,14 +1,26 @@
+import {
+  CloudStorageBackupSolutionsTemplate,
+  CloudStorageBackupSolutionsTemplateProps,
+} from '@/components/templates/cloudStorageBackupSolutionsTemplate';
 import { GetServerSidePropsContext } from 'next';
-import { NasTemplate, NasTemplateProps } from '@/components/templates/nasTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 
-const NASPage = (props: NasTemplateProps) => <NasTemplate {...props} />;
+const CloudStorageBackupSolutionsEmLP = (props: CloudStorageBackupSolutionsTemplateProps) => (
+  <CloudStorageBackupSolutionsTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
+);
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/nas.json`);
+  const textContent = require(`@/assets/lang/${lang}/cloud-storage-backup-solutions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
@@ -27,4 +39,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default NASPage;
+export default CloudStorageBackupSolutionsEmLP;

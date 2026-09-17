@@ -1,8 +1,17 @@
 import { GetServerSidePropsContext } from 'next';
 import { NasTemplate, NasTemplateProps } from '@/components/templates/nasTemplate';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 
-const NASPage = (props: NasTemplateProps) => <NasTemplate {...props} />;
+const NASEmPage = (props: NasTemplateProps) => (
+  <NasTemplate
+    {...props}
+    couponCode={PromoCodeName.seolp}
+    couponCodeForLifetime={PromoCodeName.seolp}
+    hidePriceTable
+    robots="noindex,follow"
+  />
+);
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
@@ -27,4 +36,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default NASPage;
+export default NASEmPage;

@@ -1,17 +1,14 @@
-import {
-  CloudStorageForDocumentsTemplate,
-  CloudStorageForDocumentsTemplateProps,
-} from '@/components/templates/cloudStorageForDocumentsTemplate';
+import { MailTemplate, MailTemplateProps } from '@/components/templates/mailTemplate';
 import { GetServerSidePropsContext } from 'next';
 
-const CloudStorageForDocumentsLP = (props: CloudStorageForDocumentsTemplateProps) => <CloudStorageForDocumentsTemplate {...props} />;
+const MailEmLP = (props: MailTemplateProps) => <MailTemplate {...props} robots="noindex,follow" />;
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
   const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
-  const textContent = require(`@/assets/lang/${locale}/cloud-storage-for-documents.json`);
+  const textContent = require(`@/assets/lang/${locale}/mail.json`);
   const footerText = require(`@/assets/lang/${locale}/footer.json`);
 
   return {
@@ -25,4 +22,4 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default CloudStorageForDocumentsLP;
+export default MailEmLP;
