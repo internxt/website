@@ -168,7 +168,8 @@ export const ALLOWED_PATHS = [
   'lsc',
   'kkworld',
   'drive85',
-  'drive87'
+  'drive87',
+  'special-deal',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -431,6 +432,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'kkworld',
   'drive85',
   'drive87',
+  'special-deal',
 ]);
 
 export const COUPON_CODES = {
@@ -600,6 +602,7 @@ export const COUPON_CODES = {
   kkworld: PromoCodeName.kkworld,
   drive85: PromoCodeName.DRIVE85,
   drive87: PromoCodeName.drive87,
+  'special-deal': PromoCodeName.specialdeal,
 };
 
 interface OfferConfig {
