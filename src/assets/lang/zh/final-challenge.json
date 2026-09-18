@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "您的**奖励**已准备就绪。",
+    "subtitle": "您浏览了全部内容，完成了每一项挑战，并走到了这里。这个优惠从未公开过。这是您应得的。",
+    "description": "立即获得{{discount}}%折扣！",
+    "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"],
+    "claimDeal": "领取奖励"
+  },
+  "RewardSection": {
+    "title": "Internxt Challenge 云存储优惠",
+    "description": [
+      "您一路点击完成了 Challenge，了解了 Internxt 的各项功能，并抵达终点。这份奖励正是为此而来。",
+      "使用 Internxt 的全套隐私套件保护您的数据——Drive、杀毒软件、VPN、Cleaner、Meet、Mail 等——现在仅向完成 Challenge 的用户提供专属折扣。此优惠不对外公开，且不会持续太久。最难的部分您已经完成，剩下的只需一次点击。"
+    ]
+  },
+  "TableSection": {
+    "title": "您的一体化隐私助手",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "选择您的计划",
+      "individuals": "年度计划",
+      "homePage": "选择适合您的计划",
+      "lifetime": "终身计划",
+      "business": "商业计划",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有独家终身计划"
+      }
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得1 GB加密云存储",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

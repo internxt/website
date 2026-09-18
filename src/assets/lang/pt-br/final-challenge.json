@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "Sua **Recompensa** Está Pronta.",
+    "subtitle": "Você explorou tudo, completou cada desafio e chegou até aqui. Esta oferta nunca foi pública. Você a conquistou.",
+    "description": "Garanta {{discount}}% de desconto agora!",
+    "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
+    "claimDeal": "Garantir minha recompensa"
+  },
+  "RewardSection": {
+    "title": "Ofertas de armazenamento em nuvem do Internxt Challenge",
+    "description": [
+      "Você percorreu o Challenge, descobriu tudo o que a Internxt pode fazer e chegou ao fim. É para isso que serve esta recompensa.",
+      "Proteja seus dados com a suíte de privacidade completa da Internxt — Drive, Antivirus, VPN, Cleaner, Meet, Mail e muito mais — agora com um desconto exclusivo só para quem concluiu o Challenge. Esta oferta não é pública e não vai durar. Você já fez a parte difícil. O resto é um clique."
+    ]
+  },
+  "TableSection": {
+    "title": "Seu aliado completo em privacidade",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Escolha seu plano",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos Business",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "Vitalício"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado grátis",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "openSource": "Código aberto e auditado",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}
