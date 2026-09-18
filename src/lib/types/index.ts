@@ -384,6 +384,7 @@ export enum PromoCodeName {
   kkworld = 'KKWORLD',
   drive87 = 'DRIVE87',
   specialdeal = 'SPECIALDEAL',
+  emch = 'EMCH',
 }
 
 export interface PromoCodeProps {
