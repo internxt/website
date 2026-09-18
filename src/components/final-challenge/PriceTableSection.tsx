@@ -2,7 +2,7 @@ import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
-import { Interval, ProductsDataProps, TransformedProduct } from '@/services/stripe.service';
+import { Interval, ProductsDataProps } from '@/services/stripe.service';
 
 const PREMIUM_STORAGE = '3TB';
 const ULTIMATE_STORAGE = '5TB';
@@ -42,6 +42,9 @@ export const PriceTableSection = ({
   const premiumProduct = lifetimeProducts.find((product) => product.storage === PREMIUM_STORAGE);
   const ultimateProduct = lifetimeProducts.find((product) => product.storage === ULTIMATE_STORAGE);
 
+  const premiumProductAtUltimatePrice =
+    premiumProduct && ultimateProduct ? { ...premiumProduct, price: ultimateProduct.price } : premiumProduct;
+
   const features = [
     {
       icon: Headset,
@@ -56,20 +59,6 @@ export const PriceTableSection = ({
       text: textContent.features.openSource,
     },
   ];
-
-  const renderPriceCard = (product: TransformedProduct, popular: boolean) => (
-    <PriceCard
-      product={product}
-      label={product.storage}
-      popular={popular}
-      productCardPlan="individuals"
-      isCheckoutForLifetime
-      decimalDiscountValue={decimalDiscountForLifetime}
-      onCheckoutButtonClicked={onCheckoutButtonClicked}
-      lang={lang}
-      darkMode
-    />
-  );
 
   return (
     <section id="billingButtons" className="overflow-hidden bg-[#1C1C1C] lg:px-5 lg:py-20">
@@ -97,16 +86,50 @@ export const PriceTableSection = ({
         ) : (
           <>
             <div className="hidden w-full flex-nowrap items-stretch justify-center gap-6 px-2 pb-8 lg:flex">
-              {premiumProduct && (
+              {premiumProductAtUltimatePrice && (
                 <div className="flex [&_button]:pointer-events-none [&_button]:invisible">
-                  {renderPriceCard(premiumProduct, false)}
+                  <PriceCard
+                    product={premiumProductAtUltimatePrice}
+                    label={premiumProductAtUltimatePrice.storage}
+                    popular={false}
+                    productCardPlan="individuals"
+                    isCheckoutForLifetime
+                    decimalDiscountValue={decimalDiscountForLifetime}
+                    onCheckoutButtonClicked={onCheckoutButtonClicked}
+                    lang={lang}
+                    darkMode
+                  />
                 </div>
               )}
-              {ultimateProduct && renderPriceCard(ultimateProduct, true)}
+              {ultimateProduct && (
+                <PriceCard
+                  product={ultimateProduct}
+                  label={ultimateProduct.storage}
+                  popular
+                  productCardPlan="individuals"
+                  isCheckoutForLifetime
+                  decimalDiscountValue={decimalDiscountForLifetime}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  lang={lang}
+                  darkMode
+                />
+              )}
             </div>
 
             <div className="flex w-[345px] flex-col lg:hidden">
-              {ultimateProduct && renderPriceCard(ultimateProduct, true)}
+              {ultimateProduct && (
+                <PriceCard
+                  product={ultimateProduct}
+                  label={ultimateProduct.storage}
+                  popular
+                  productCardPlan="individuals"
+                  isCheckoutForLifetime
+                  decimalDiscountValue={decimalDiscountForLifetime}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  lang={lang}
+                  darkMode
+                />
+              )}
             </div>
           </>
         )}
