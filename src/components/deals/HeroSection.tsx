@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import {
-  Brain,
+  Aperture,
   CellTower,
   Check,
   CloudArrowUp,
@@ -48,27 +48,28 @@ export default function HeroSection({
       text: textContent.products.meet,
     },
     {
-      icon: Envelope,
-      text: textContent.products.mail,
+      icon: Aperture,
+      text: textContent.products.photos,
     },
     {
-      icon: Brain,
-      text: textContent.products.ai,
+      icon: Envelope,
+      text: textContent.products.mail,
     },
   ];
 
   const parsePercentText = (text: string) => {
+    if (typeof text !== 'string' || (!text.includes('{{percentage}}') && !text.includes('{{discount}}'))) {
+      return text;
+    }
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string'
-      ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
-      : text;
+    return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
   };
 
   return (
     <section
-      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-12 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-24 lg:pl-10 xl:pl-32 3xl:pl-80`}
       style={{
         background: darkMode
           ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
@@ -96,7 +97,7 @@ export default function HeroSection({
           ))}
         </div>
 
-        <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
+        <div className="flex w-full flex-col justify-center gap-4 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
               className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${
@@ -140,13 +141,13 @@ export default function HeroSection({
         </div>
         <Link
           href={'#billingButtons'}
-          className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
+          className="z-10 flex items-center justify-center self-start whitespace-nowrap rounded-sm-6 bg-primary px-5 py-3 text-sm font-medium text-white hover:bg-primary-dark lg:px-6 lg:py-4 lg:text-base"
         >
           {textContent.claimDeal}
         </Link>
       </div>
 
-      <div className="hidden w-full justify-end lg:flex">
+      <div className="hidden shrink-0 justify-end lg:flex">
         <Image
           src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
@@ -157,14 +158,14 @@ export default function HeroSection({
         />
       </div>
 
-      <div className="flex w-max items-center justify-center lg:hidden">
+      <div className="flex w-full items-center justify-center lg:hidden">
         <Image
           src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
           height={400}
           width={400}
           quality={100}
-          className="flex-shrink-0 pl-10"
+          className="h-auto w-full max-w-[400px]"
         />
       </div>
     </section>

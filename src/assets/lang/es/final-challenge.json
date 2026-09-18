@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "Tu **Recompensa** Está Lista.",
+    "subtitle": "Lo exploraste todo, completaste cada reto y llegaste hasta aquí. Esta oferta nunca fue pública. Te la has ganado.",
+    "description": "¡Consigue un {{discount}}% de descuento ahora!",
+    "features": ["Suite completa de privacidad", "Encriptación post-cuántica", "Código abierto y auditado"],
+    "claimDeal": "Reclama tu recompensa"
+  },
+  "RewardSection": {
+    "title": "Ofertas de almacenamiento en la nube del Internxt Challenge",
+    "description": [
+      "Hiciste clic por todo el Challenge, descubriste todo lo que Internxt puede hacer y llegaste al final. Para eso es esta recompensa.",
+      "Protege tus datos con la suite de privacidad completamente equipada de Internxt — Drive, Antivirus, VPN, Cleaner, Meet, Mail y más — ahora con un descuento exclusivo solo para quienes completaron el Challenge. Esta oferta no es pública y no durará. Ya has hecho lo difícil. Lo que queda es un clic."
+    ]
+  },
+  "TableSection": {
+    "title": "Tu aliado de privacidad todo en uno",
+    "hotLabel": "{{discount}}% dto.",
+    "planTitles": {
+      "header": "Selecciona tu Plan",
+      "individuals": "Planes Anuales",
+      "homePage": "Elige el plan adecuado para ti",
+      "lifetime": "Planes de por Vida",
+      "business": "Planes de Negocio",
+      "lifetimeCampaign": {
+        "blueText": "50% dto.",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Consigue 1 GB de almacenamiento encriptado en la nube gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Soporte premium al cliente",
+      "guarantee": "Garantía de devolución de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}
