@@ -1,5 +1,4 @@
 import axios from 'axios';
-import crypto from 'crypto';
 
 import { MessageObjProps } from '@/components/temp-email/types/types';
 
@@ -27,7 +26,13 @@ interface MailTmMessage {
   html?: string[];
 }
 
-const randomHash = (bytes: number) => crypto.randomBytes(bytes).toString('hex');
+const randomHash = (bytes: number) => {
+  const buffer = new Uint8Array(bytes);
+
+  globalThis.crypto.getRandomValues(buffer);
+
+  return Array.from(buffer, (byte) => byte.toString(16).padStart(2, '0')).join('');
+};
 
 /**
  * mail.tm devuelve `to` como objeto en unos endpoints y como array en otros,
