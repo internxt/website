@@ -73,6 +73,30 @@ const nameFiles = [
   'proton-alternative',
   'teams-alternative',
   'cloud-partner',
+  'antivirus',
+  'vpn',
+  'mail',
+  'meet',
+  'nas',
+  'reviews',
+  'lifetime',
+  'anual',
+  'deals',
+  'file-compressor',
+  'cloud-storage-backup-solutions',
+  'cloud-storage-for-documents',
+  'cloud-storage-for-photos',
+  'cloud-storage-for-videos',
+  'private-cloud-storage-solutions',
+  'gdpr-cloud-storage',
+  'green-cloud-computing',
+  'secure-file-transfer',
+  'metadata-remover',
+  'refer-a-friend',
+  'cyber-security-quiz',
+  'koofr-alternative',
+  'levanteud',
+  'thankyou',
 ];
 
 const langs = {
@@ -84,6 +108,7 @@ const langs = {
   ru: 'Russian',
   zh: 'Chinese',
   'zh-tw': 'Taiwan',
+  'pt-br': 'Portuguese',
 };
 
 describe('Verify that pages do not produce a 500 error', () => {

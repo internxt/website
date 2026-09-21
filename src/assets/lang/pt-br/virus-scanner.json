@@ -1,0 +1,140 @@
+{
+  "HeroSection": {
+    "title": "Scanner de vírus",
+    "subtitle1": "Arraste e solte arquivos suspeitos para detectar malware e outras ameaças gratuitamente.",
+    "subtitle2": "Analise qualquer documento, imagem, PDF ou outro tipo de arquivo. Mantenha seus arquivos seguros e livres de vírus antes de abri-los com o Scanner de vírus de conhecimento zero da Internxt.",
+    "footer": "A Internxt não se responsabiliza por nenhuma informação pessoal que você fornecer. Ao enviar seus arquivos, você concorda com nossos [Termos e Condições de Serviço e Política de Privacidade.](https://internxt.com/legal)",
+    "dropFile": {
+      "line1": "Solte seu arquivo para procurar vírus"
+    },
+    "fileSelected": "Arquivo selecionado para análise",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "scanNow": "Analisar agora",
+    "selectFile": "Escolher arquivo",
+    "dropHere": "Solte o arquivo aqui",
+    "scanAgain": "Analisar outro arquivo",
+    "loading": "Carregando...",
+    "maxFileSize": {
+      "title": "Limite de tamanho de arquivo excedido",
+      "description": "Tamanho máximo de arquivo: 1 GB"
+    },
+    "table": {
+      "loading": "Carregando...",
+      "virusDetected": "Vírus detectado neste arquivo",
+      "noVirusDetected": "Nenhum vírus detectado neste arquivo",
+      "detected": "Detectado",
+      "undetected": "Não detectado",
+      "unableToProcess": "Não foi possível processar",
+      "noVirusesDetected": {
+        "message": "Nenhum vírus detectado",
+        "title": "Mantenha seus arquivos livres de vírus",
+        "subtitle": "A Internxt recomenda o Bitdefender para ajudar a proteger seu dispositivo com tecnologias antivírus premiadas. Obtenha proteção vitalícia para Windows, com segurança em tempo real que ajuda a deter ameaças antes que cheguem aos seus arquivos.",
+        "cta": "Obtenha o Antivirus grátis"
+      },
+      "analyzing": "Analisando arquivo...",
+      "scanTime": "Tempo de análise",
+      "name": "Nome",
+      "detection": "Detecção"
+    },
+    "error": {
+      "title": "Algo deu errado",
+      "description": "Ocorreu um erro ao enviar o arquivo. Tente novamente mais tarde"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "Por que é essencial usar um scanner de vírus",
+      "description": "Analise primeiro, pergunte depois. Identifique vírus antes que eles se infiltrem nos seus dispositivos."
+    },
+    "virusesHatePrivacy": {
+      "title": "Os vírus odeiam sua privacidade",
+      "description": "Um vírus potente pode roubar informações sensíveis, como suas credenciais ou senhas, criptografar e bloquear o acesso aos seus dados, realizar transações dentro de aplicativos, monitorar seu computador e até atacar outros dispositivos em redes conectadas. Um vírus tem o potencial de acessar quase tudo o que está guardado no seu hardware."
+    },
+    "stopMalware": {
+      "title": "Detenha o malware antes que ele detenha você",
+      "description": "Depois que um vírus se propaga, ele pode infectar todos os seus programas e aplicativos sem distinção. Seu código destrutivo pode se espalhar por toda parte, e provavelmente vai. É por isso que é fundamental usar um scanner de vírus."
+    },
+    "freeOnlineScanner": {
+      "title": "Um scanner de vírus online e gratuito em que você pode confiar",
+      "description": "Proteja sua privacidade com nosso scanner de vírus gratuito, criado para ajudar você a evitar infecções e proteger seu computador."
+    },
+    "scanFiles": {
+      "title": "Analise arquivos em busca de vírus com total confiança",
+      "description": "A Internxt sempre colocou e sempre colocará a privacidade e a segurança dos usuários em primeiro lugar. Temos o compromisso de criar uma internet mais justa, mais livre e mais transparente para todos. Foi por isso que criamos nosso scanner de vírus online gratuito: para iluminar vírus furtivos e expor malwares maliciosos."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt Drive",
+    "description": "Assuma o controle dos seus dados com criptografia de nível militar.",
+    "cta": "Armazenamento seguro na nuvem"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "Como verificar se um arquivo está infectado?",
+        "answer": [
+          "O Scanner de vírus da Internxt é uma ferramenta que ajuda você a localizar qualquer vírus que possa ter comprometido seus arquivos. Nosso Scanner de vírus gratuito foi criado para ajudar você a evitar infecções e identificar malware em seus documentos e fotos."
+        ]
+      },
+      {
+        "question": "Como saber se seus arquivos têm malware?",
+        "answer": [
+          "Envie seus arquivos e fique tranquilo sabendo que eles estão seguros e protegidos. Usar nosso Scanner de vírus é uma prática segura para evitar um pesadelo de privacidade. Analise antes de clicar!"
+        ]
+      },
+      {
+        "question": "Como analisar um arquivo em busca de vírus?",
+        "answer": [
+          "Nosso Scanner de vírus gratuito foi criado para ajudar você a evitar infecções e identificar malware em seus documentos e fotos. Arraste e solte o arquivo escolhido na barra do Scanner de vírus e ele analisará automaticamente o arquivo em busca de vírus ou malware."
+        ]
+      },
+      {
+        "question": "Como analisar um arquivo online?",
+        "answer": [
+          "Com o Scanner de vírus da Internxt, você pode arrastar e soltar arquivos suspeitos na barra de ferramentas para detectar malware e outras ameaças gratuitamente."
+        ]
+      },
+      {
+        "question": "Como analisar um arquivo PDF?",
+        "answer": [
+          "Arraste e solte o PDF na barra de ferramentas como faria com qualquer outro arquivo. Com o Scanner de vírus da Internxt, você pode analisar qualquer documento, imagem, PDF ou outro tipo de arquivo. Garanta que seus arquivos estejam seguros e livres de vírus antes de abri-los com o Scanner de vírus da Internxt."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Experimente as ferramentas de segurança online gratuitas da Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Verificador de força da senha",
+        "description": "Analisar agora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Conversor de unidades de bytes",
+        "description": "Converter agora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "E-mail temporário gratuito",
+        "width": 95,
+        "description": "Enviar e-mail agora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Gerador de senhas gratuito",
+        "width": 124,
+        "description": "Gerar agora"
+      }
+    ]
+  }
+}

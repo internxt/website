@@ -89,6 +89,14 @@ const BlackFridayDealsTemplate = ({
     );
   };
 
+  const formIds: Record<string, string> = {
+    en: 'S8qPMC',
+    es: 'Wzdw53',
+    de: 'VMqGKZ',
+    fr: 'XgYz2w',
+  };
+  const formId = formIds[lang] ?? formIds.en;
+
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
@@ -99,6 +107,10 @@ const BlackFridayDealsTemplate = ({
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
+
+      <div className="bg-[#1C1C1C] px-5 py-10">
+        <div className={`klaviyo-form-${formId} mx-auto max-w-[600px]`}></div>
+      </div>
 
       <PricingSectionWrapper
         textContent={textContent.TableSection}

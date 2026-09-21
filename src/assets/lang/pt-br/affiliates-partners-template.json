@@ -1,0 +1,406 @@
+{
+  "recommendedBy": "Recomendado por:",
+  "HeroSectionV3": {
+    "title": "Economize 85% em 5 TB de armazenamento vitalício na nuvem",
+    "subtitle": "Armazenamento na nuvem seguro, com garantia de proteção dos seus dados e do seu direito à privacidade",
+    "cta": "Selecionar plano"
+  },
+  "HeroSectionV2": {
+    "title": "Armazenamento na nuvem seguro e criptografado",
+    "subtitle": "para uma vida de privacidade",
+    "info": "Pague uma vez e tenha armazenamento vitalício com ",
+    "infoHighlight": "85% DE DESCONTO",
+    "cta": "Escolha seu plano"
+  },
+  "HeroSection": {
+    "exclusiveLabel": {
+      "pcmag": "Oferta exclusiva para leitores da PCMag",
+      "cloudwards": "Oferta exclusiva para leitores da Cloudwards"
+    },
+    "all": {
+      "title": "85% de desconto em todos os planos vitalícios",
+      "description": [
+        "A Internxt oferece armazenamento na nuvem seguro, com garantia de proteção dos seus dados e do seu direito à privacidade.",
+        "Tenha armazenamento vitalício com um único pagamento."
+      ],
+      "choosePlanLabel": "Escolha seu plano: "
+    },
+    "one": {
+      "title": "Economize 85% em 5 TB de armazenamento vitalício na nuvem",
+      "description": [
+        "Aumente seu armazenamento na nuvem em 5 TB.",
+        "Armazene e compartilhe seus arquivos com privacidade completa para sempre, sem ocupar o espaço do seu disco rígido."
+      ]
+    }
+  },
+  "FeaturesSectionForOnePlan": {
+    "title": "Diga adeus às limitações de armazenamento!",
+    "description": [
+      "Com um plano vitalício de 5 TB, você pode armazenar e acessar seus arquivos localmente sem consumir o espaço físico do disco do seu dispositivo.",
+      " Tenha tranquilidade sabendo que suas memórias e seus documentos importantes estão seguros na nuvem, acessíveis em qualquer dispositivo."
+    ],
+    "cta": "Ganhe 85% DE DESCONTO"
+  },
+  "WhyChooseInternxtForOneplan": {
+    "title": "Proteja seus arquivos para sempre com uma segurança incomparável integrada",
+    "description": "Oferecemos a melhor segurança para proteger seus arquivos a todo custo.",
+    "cards": [
+      {
+        "title": "Privacidade incomparável",
+        "description": "Proteger sua privacidade é nossa maior prioridade; nunca armazenamos senhas nem dados pessoais. Seus arquivos são criptografados em trânsito e em repouso, dando a você controle total sobre suas informações. "
+      },
+      {
+        "title": "Segurança inabalável",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de saírem do seu dispositivo. Graças à criptografia de conhecimento zero e pós-quântica, você é o único com acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder, exceto os seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Estamos em total conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar apenas na nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa."
+      }
+    ]
+  },
+  "WhatWeDoForOneplan": {
+    "title": "A Internxt garante que sua privacidade esteja protegida",
+    "description": "Implementamos a melhor segurança para proteger seus arquivos e documentos:",
+    "card": {
+      "features": [
+        "Criptografia de conhecimento zero",
+        "Dados protegidos em repouso e em trânsito",
+        "Criação de conta anônima",
+        "Autenticação de dois fatores",
+        "Backups em vários servidores"
+      ],
+      "cta": "Fazer upgrade do plano"
+    }
+  },
+  "SecondFeaturesSection": {
+    "title": "Proteja seus arquivos para sempre com uma segurança incomparável integrada",
+    "description": "Oferecemos a melhor segurança para proteger seus arquivos a todo custo.",
+    "info": [
+      {
+        "title": "Segurança",
+        "description": "A Internxt usa a criptografia AES-256, padrão do setor, para máxima segurança, tanto durante a transferência quanto no armazenamento dos seus dados. Também somos uma empresa de conhecimento zero, então somente você tem a chave para descriptografar seus arquivos. Nenhum terceiro, nem mesmo a Internxt, pode acessá-los."
+      },
+      {
+        "title": "Compartilhamento seguro de arquivos",
+        "description": "Compartilhe arquivos com segurança usando links criptografados ou convites por email. Seus arquivos permanecem protegidos no seu dispositivo, garantindo máxima segurança ao compartilhar online. Para proteção extra, você pode proteger documentos compartilhados com senha e gerenciar as permissões de acesso quando quiser."
+      },
+      {
+        "title": "Acesse seus arquivos de qualquer lugar",
+        "description": "Use nossos aplicativos de desktop para Windows, Mac e Linux, ou gerencie sua nuvem pelos nossos aplicativos móveis para iOS e Android. O suporte a WebDav permite integrar a Internxt aos seus aplicativos favoritos de gerenciamento de arquivos."
+      },
+      {
+        "title": "Código aberto e auditado",
+        "description": "Temos compromisso com o desenvolvimento de código aberto, disponibilizando nosso código publicamente. Nosso compromisso com a transparência permite que você veja exatamente como a Internxt constrói uma plataforma segura que mantém seus dados privados."
+      },
+      {
+        "title": "Backups seguros integrados",
+        "description": "Seus dados são criptografados e divididos em fragmentos, e várias cópias são armazenadas em data centers geograficamente distribuídos pela Europa. Essa redundância garante que seus arquivos estejam sempre seguros, aconteça o que acontecer."
+      },
+      {
+        "title": "Zero coleta de dados",
+        "description": "Diferente das grandes empresas de tecnologia que lucram com seus dados, a Internxt prioriza sua privacidade. Nunca rastreamos, analisamos nem vendemos suas informações a terceiros. Seus dados pertencem a você, e garantimos protegê-los."
+      }
+    ]
+  },
+  "DevicesSection": {
+    "title": "Garanta sua oferta exclusiva!",
+    "cta": "Ganhe 85% DE DESCONTO"
+  },
+  "CtaSection": {
+    "all": {
+      "title": "Garanta sua oferta exclusiva!",
+      "description": "85% de desconto nos planos vitalícios.",
+      "cta": "Comprar agora"
+    },
+    "one": {
+      "title": "Diga adeus ao Google Drive, ao Microsoft OneDrive e ao Dropbox de uma vez por todas. Tire o Google da sua vida.",
+      "cta": "Garantir oferta"
+    },
+    "two": {
+      "title": "Tenha o armazenamento na nuvem mais seguro do mundo",
+      "description": "A criptografia de conhecimento zero da Internxt dá a você controle total da sua privacidade.",
+      "cta": "Escolha seu plano"
+    }
+  },
+  "PriceTable": {
+    "header": "Libere 85% DE DESCONTO",
+    "features": {
+      "endToEnd": "Criptografado de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    },
+    "title": "Planos de armazenamento vitalício",
+    "subtitle": "Todos os planos da Internxt incluem acesso completo aos nossos recursos focados em privacidade. Garanta seu plano e seus arquivos com segurança vitalícia.",
+    "priceCard": {
+      "mostPopular": "Popular",
+      "commingSoon": "Em breve",
+      "discount": "% DE DESCONTO",
+      "billedAnnually": "Pagamento único",
+      "cta": "Resgatar oferta",
+      "stPatricksFeatures": {
+        "title": "Brindes temáticos da Internxt:",
+        "gift": "Tema de Dia de São Patrício para o app web"
+      },
+      "worldCloudSecurityDay": {
+        "title": "Brindes temáticos da Internxt:",
+        "gift": "Chance de ganhar uma mochila Internxt x Swiss Peak"
+      },
+      "IdentityManagementDay": {
+        "title": "Brindes temáticos da Internxt:",
+        "gift1": "Tema especial para o app web",
+        "gift2": "Chance de ganhar uma mochila da Internxt"
+      },
+      "starWarsDay": {
+        "title": "Brindes temáticos da Internxt:",
+        "gift1": "Chance de ganhar uma mochila da Internxt",
+        "gift2": "Tema gratuito de Star Wars para o app web"
+      },
+      "WorldEnvironmentDay": {
+        "title": "Brindes temáticos da Internxt:",
+        "gift1": "Tema para o app web gratuito",
+        "gift2": "Chance de ganhar uma mochila da Internxt"
+      },
+      "features": {
+        "1TB": [
+          "1 TB de armazenamento criptografado de conhecimento zero",
+          "Criptografia pós-quântica",
+          "VPN ultrarrápida e ilimitada (FR)",
+          "Antivirus",
+          "Backup dos seus arquivos",
+          "Compartilhamento de arquivos protegido por senha",
+          "Conformidade com o GDPR",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte a CLI, WebDav e Rclone"
+        ],
+        "3TB": [
+          "3 TB de armazenamento criptografado de conhecimento zero",
+          "Criptografia pós-quântica",
+          "VPN ultrarrápida e ilimitada (FR, DE, PL)",
+          "Antivirus",
+          "Backup dos seus arquivos",
+          "Compartilhamento de arquivos protegido por senha",
+          "Conformidade com o GDPR",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte a CLI, WebDav e Rclone",
+          "Meet (3 participantes)",
+          "Mail (3 endereços)"
+        ],
+        "5TB": [
+          "5 TB de armazenamento criptografado de conhecimento zero",
+          "Criptografia pós-quântica",
+          "VPN ultrarrápida e ilimitada (FR, DE, PL, CA, UK)",
+          "Antivirus",
+          "Backup dos seus arquivos",
+          "Compartilhamento de arquivos protegido por senha",
+          "Conformidade com o GDPR",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte a CLI, WebDav e Rclone",
+          "Meet (5 participantes)",
+          "Mail (5 endereços)"
+        ],
+        "10TB": []
+      }
+    },
+    "onePlan": {
+      "mostPopular": "Plano mais popular",
+      "title": "Plano vitalício de 5 TB",
+      "description": "Proteja todos os seus arquivos e memórias para sempre com um único pagamento. Tenha Internxt Drive, VPN, Antivirus, Meet e Mail para sempre.",
+      "priceCard": {
+        "planType": "Ultimate",
+        "off": "de desconto",
+        "billingFrequency": "Pagamento único",
+        "cta": "Selecionar plano",
+        "5TB": [
+          "5 TB de armazenamento criptografado de conhecimento zero",
+          "Criptografia pós-quântica",
+          "VPN ultrarrápida e ilimitada (FR, DE, PL, CA, UK)",
+          "Antivirus",
+          "Backup dos seus arquivos",
+          "Compartilhamento de arquivos protegido por senha",
+          "Conformidade com o GDPR",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte a CLI, WebDav e Rclone",
+          "Meet (5 participantes)",
+          "Mail (5 endereços)"
+        ]
+      },
+      "features": {
+        "endToEnd": "Criptografado de ponta a ponta",
+        "openSource": "Código aberto e auditado",
+        "anonymousAccount": "Criação de conta anônima",
+        "premiumSupport": "Suporte premium ao cliente",
+        "guarantee": "Garantia de reembolso de 30 dias"
+      }
+    }
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Anual",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Vitalício",
+      "business": "Empresarial",
+      "lifetimeCampaign": {
+        "blueText": "Ganhe 50% DE DESCONTO",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Compre uma vez e tenha privacidade e segurança para sempre.",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir seus resultados.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografado de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FeatureSection": {
+    "title": "Armazenamento na nuvem seguro com privacidade incomparável",
+    "description": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais totalmente dedicada a proteger você online. Tudo o que fazemos e cada decisão que tomamos tem como foco proteger seus dados contra exploração.",
+    "cards": [
+      {
+        "title": "Privacidade desde a concepção",
+        "description": "Não armazenamos senhas nem dados de usuários, e todos os seus dados são criptografados  em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos.  Seus dados são assunto seu. Protegê-los é assunto nosso."
+      },
+      {
+        "title": "Segurança inabalável",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de saírem do seu dispositivo.  Graças à criptografia AES-256 de conhecimento zero, você é absolutamente o único  com acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode  ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos  nada a esconder, exceto os seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Estamos em total conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar  apenas na nossa palavra. A Internxt foi auditada e verificada de forma independente pela  Securitum, principal empresa de testes de invasão da Europa."
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Retome o controle da sua privacidade",
+    "description": "A Internxt cria serviços de nuvem privados e seguros, projetados para devolver a você, usuário, o comando dos seus dados. Protegendo seus arquivos e seu direito fundamental à privacidade, todos os serviços da Internxt são construídos do zero para oferecer segurança incomparável.",
+    "cta": "Selecionar planos vitalícios"
+  },
+  "MostSecureSection": {
+    "title": "O armazenamento na nuvem mais seguro para seus arquivos, fotos e muito mais",
+    "description": "O Internxt Drive é uma solução de armazenamento na nuvem de código aberto e criptografada de ponta a ponta para armazenar, fazer backup e compartilhar seus arquivos com total privacidade. O Internxt Drive oferece criptografia premiada e controle sobre os seus dados. ",
+    "cta": "Resgatar código"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "A Internxt pode acessar meus arquivos?",
+        "answer": [
+          "Não. Nem a Internxt nem qualquer terceiro pode acessar seus arquivos, fotos ou dados.",
+          "Os serviços da Internxt contam com criptografia de conhecimento zero, o que significa que somente você pode acessar e descriptografar seus dados privados. Além disso, a Internxt usa criptografia pós-quântica, a tecnologia mais avançada disponível, para proteger seus arquivos contra ameaças futuras."
+        ]
+      },
+      {
+        "question": "Terei acesso a todos os serviços da Internxt?",
+        "answer": [
+          "Sim, uma assinatura paga ou uma licença vitalícia da Internxt dão acesso à nossa suíte completa de privacidade, composta por Internxt Mail, Meet, VPN, Drive, Send, Antivirus e muito mais.",
+          "Um plano gratuito da Internxt dá acesso somente ao Internxt Drive."
+        ]
+      },
+      {
+        "question": "A Internxt armazena minha senha?",
+        "answer": [
+          "Não. Sendo assim, a Internxt não armazena (e não pode armazenar) sua senha.",
+          "Sua senha da Internxt é exclusiva e é usada para criptografar e descriptografar seus dados na Internxt. Mas, se quiser alterar sua senha, você pode fazer isso pelo nosso aplicativo."
+        ]
+      },
+      {
+        "question": "Posso ativar a autenticação de dois fatores (2FA)?",
+        "answer": [
+          "Sim. Você pode configurar a autenticação de dois fatores para sua conta pelo aplicativo web da Internxt.",
+          "Você também pode usar o Authy ou qualquer outra ferramenta de 2FA para gerar um código pessoal de 2FA com a Internxt."
+        ]
+      },
+      {
+        "question": "Como faço para criar uma conta na Internxt?",
+        "answer": [
+          "Para criar uma conta gratuita na Internxt, basta clicar no melhor plano acima e seguir as instruções.",
+          "Ou acesse nossa página inicial e clique em “Começar”. Você receberá instantaneamente 1 GB de armazenamento gratuito para sempre com uma conta gratuita da Internxt. Você pode usar sua conta gratuita para acessar todos os nossos serviços. Para se cadastrar, basta informar seu nome e endereço de email. Não é necessária nenhuma verificação de identidade ou de email para começar a usar os serviços da Internxt."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoedas?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar via PayPal, iDEAL, Sofort e criptomoedas."
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "Todas as assinaturas pagas incluem garantia de reembolso de 30 dias a partir da data da compra.",
+          "Se, por qualquer motivo, você não ficar totalmente satisfeito nesses primeiros 30 dias, basta entrar em contato pelo [hello@internxt.com](mailto:hello@internxt.com) e processaremos seu reembolso."
+        ]
+      },
+      {
+        "question": "Como posso cancelar minha assinatura?",
+        "answer": [
+          "Cancelar sua assinatura é simples. Abra o aplicativo da Internxt, vá até as configurações e selecione “Cancelar assinatura”. Essa ação encerra sua assinatura imediatamente, e sua conta volta ao plano gratuito.",
+          "Observe que o tempo restante da sua assinatura paga atual não será reembolsado nem transferido. Por exemplo, se você cancelar um plano anual com quatro meses restantes, perderá o acesso a esses quatro meses.",
+          "Você também pode cancelar um plano pago e sua conta Internxt pelas configurações, o que excluirá sua assinatura, sua conta e todos os seus arquivos."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode entrar em contato com nossa equipe de Sucesso do Cliente pelo chat ao vivo ou enviando um email para [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "A Internxt tem planos vitalícios?",
+        "answer": [
+          "Oferecemos planos vitalícios que você pode adquirir em nosso site. Eles garantem acesso vitalício aos nossos planos, com até 10 TB de armazenamento por um único pagamento."
+        ]
+      },
+      {
+        "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
+        "answer": [
+          "Sim, você pode adicionar quanto armazenamento quiser à sua licença vitalícia da Internxt. Os planos vitalícios da Internxt são acumuláveis. Basta adquiri-los com o mesmo endereço de email e entrar em contato pelo hello@internxt.com para que possamos somá-los na mesma conta."
+        ]
+      },
+      {
+        "question": "A Internxt é uma solução de armazenamento na nuvem sustentável e ecológica?",
+        "answer": [
+          "Sim, a Internxt tem compromisso com a computação em nuvem verde, oferecendo soluções de armazenamento ecológicas para apoiar um futuro mais limpo e sustentável. Nossos data centers são alimentados por 92% de energia renovável e foram projetados para minimizar as emissões de carbono, o consumo de recursos e o lixo eletrônico.",
+          "Nossos esforços contribuem para a meta de neutralidade climática até 2050. [Saiba mais](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}

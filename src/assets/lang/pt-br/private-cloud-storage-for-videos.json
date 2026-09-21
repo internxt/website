@@ -1,0 +1,196 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento privado na nuvem para arquivos de vídeo",
+    "features": [
+      "Armazene seus vídeos com privacidade",
+      "Criptografia pós-quântica e de conhecimento zero",
+      "Código aberto e auditado"
+    ],
+    "subtitle": "Tenha o armazenamento na nuvem mais seguro, criado para criadores de vídeo guardarem seus arquivos com total privacidade.",
+    "cta": "Obtenha o Internxt"
+  },
+  "HowToChooseSection": {
+    "title": "Como escolher o melhor armazenamento na nuvem para arquivos de vídeo",
+    "description": "Escolher armazenamento na nuvem para arquivos de vídeo se resume a três pontos: custo no volume que você realmente usa, segurança contra provedores e pipelines que de outra forma leriam seus vídeos, e capacidade que acompanha o crescimento da sua biblioteca. Os três blocos abaixo tratam de cada um deles. O Internxt Drive começa gratuito com 1 GB, os planos pagos partem de € 3 por mês no anual, e o Internxt S3 cobre armazenamento em escala de petabytes por € 7 por TB ao mês.",
+    "cardDescriptions": {
+      "titles": ["Custo", "Segurança", "Necessidades de armazenamento"],
+      "descriptions": [
+        "O custo do armazenamento na nuvem para arquivos de vídeo depende de três coisas: preço por GB, limites de tamanho de arquivo e o que realmente vem no pacote. Os planos gratuitos do Google Photos, Dropbox, OneDrive e iCloud param entre 5 e 15 GB, o que serve para alguns clipes, mas não para uma biblioteca em 4K ou 8K. O plano gratuito da Internxt é de 1 GB. Os planos pagos começam em € 3 por mês no anual, ou planos vitalícios com pagamento único de € 285 (1 TB) a € 585 (5 TB). Os planos incluem VPN, Antivirus, Cleaner, Mail e Meet. Necessidades em escala de petabytes vão para o Internxt S3, a € 7 por TB ao mês, sem taxas de transferência.",
+        "O armazenamento na nuvem para arquivos de vídeo é seguro quando o provedor não consegue ler o que armazena. O teste que importa: quem detém a chave de criptografia. Provedores comuns (Google Photos, Dropbox, OneDrive) guardam as chaves e se reservam o direito, em seus termos de serviço, de escanear o conteúdo para moderação, segmentação de anúncios ou treinamento de IA. A arquitetura de conhecimento zero da Internxt gera a chave no seu dispositivo, então o servidor só vê texto cifrado que não consegue descriptografar. A auditoria da Securitum de 2024 verificou que não há porta dos fundos nem caminho de recuperação por chave-mestra. Os arquivos usam AES-256, criptografia pós-quântica Kyber-512, TLS 1.3 e certificação ISO 27001:2022.",
+        "O armazenamento na nuvem para arquivos de vídeo acaba rápido em altas resoluções. Um plano de 5 TB comporta 444 horas de 4K, 139 horas de 8K ou cerca de 60.000 fotos RAW de 80 MB cada. Quando isso não basta, os planos vitalícios da Internxt se acumulam no mesmo email: um segundo plano de 5 TB soma ao primeiro e resulta em 10 TB, um terceiro leva a 15 TB, sem necessidade de migração. Para necessidades em escala de petabytes (biblioteca de mídia, pipeline de produção de longa-metragem, arquivo de broadcast), o Internxt S3 custa € 7 por TB ao mês, sem taxas de transferência. Ambas as camadas ficam nos mesmos data centers europeus, via OVHcloud."
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "intro": "A Internxt é o armazenamento na nuvem para vídeos que guarda, compartilha e faz backup dos seus arquivos. A criptografia acontece no seu dispositivo, então ficamos apenas com texto cifrado. Sem varredura por IA, sem segmentação de anúncios, sem exceções.",
+    "title": "Melhor armazenamento na nuvem para vídeos",
+    "h2Intro": "O melhor armazenamento na nuvem para vídeos dá conta de três coisas ao mesmo tempo: os tamanhos de arquivo que as câmeras modernas produzem, velocidades de transferência rápidas o bastante para você não ficar esperando, e um compartilhamento que não vaza o arquivo nem seus metadados. Os números ficam pesados rápido. Uma filmagem 4K de celular gera cerca de 375 MB por minuto, em 8K chega perto de 600, e um RAW de uma mirrorless pode atingir 100 MB por segundo. O Internxt Drive vai até 5 TB, aproximadamente 444 horas de 4K ou 139 horas de 8K, com WebDAV e Rclone para envios automatizados. Os arquivos usam AES-256 mais Kyber-512 pós-quântica, auditados pela Securitum.",
+    "features": {
+      "feature1": {
+        "title": "Suporte a arquivos 4K e 8K",
+        "description": [
+          "A maioria dos serviços de nuvem de consumo esbarra num limite em 4K e 8K: tamanho de arquivo restrito, caminho de upgrade lento. O Internxt Drive não. O plano Ultimate comporta até 5 TB (ou seja, 444 horas de 4K ou 139 horas de 8K), com envios de até 100 GB por arquivo no Ultimate, 50 GB no Premium e 1 GB no Essential. RAW, ProRes e H.265 (HEVC) são enviados como tipos de arquivo opacos. E quando 5 TB não bastam, os planos vitalícios se acumulam no mesmo email, então você pode somá-los até 10 TB ou mais sem migrar de provedor."
+        ]
+      },
+      "feature2": {
+        "title": "Velocidades rápidas de envio e download",
+        "description": [
+          "O armazenamento na nuvem para vídeos falha no teste do fluxo de trabalho no instante em que um master de 30 GB leva a noite inteira para subir. O Internxt Drive usa transferências paralelas em blocos para arquivos de vários gigabytes, e o WebDAV, o Rclone e a CLI da Internxt cuidam do resto: envios automatizados, sincronizações programadas, pausar e retomar em conexões instáveis, ingestão direta de um NAS ou de um arquivo em fita. A entrega multinuvem pelos data centers europeus da OVHcloud mantém a latência consistente para download e streaming. Os planos Premium e Ultimate acrescentam histórico de versões, então, se uma renderização der errado, você recupera o master anterior. Tudo roda sobre TLS 1.3, com a criptografia de ponta a ponta intacta."
+        ]
+      },
+      "feature3": {
+        "title": "Compartilhamento seguro de vídeos",
+        "description": [
+          "Compartilhar arquivos de vídeo com privacidade se resume a quatro controles: quem pode ver, por quanto tempo, com qual senha e com que rapidez você consegue revogar o link. Todo link de compartilhamento da Internxt tem os quatro, configuráveis no seu painel. O destinatário não precisa de conta para abri-lo. E como a arquitetura não consegue ler o que armazena, não há varredura por IA, nem pipeline de moderação de conteúdo, nem rastreamento publicitário associado aos metadados. Para colaboração nos dois sentidos, as pastas compartilhadas permitem que colaboradores enviem arquivos de volta à biblioteca, com controles de permissão por destinatário."
+        ]
+      }
+    }
+  },
+  "SecureAndManage": {
+    "title": "Proteja e gerencie seus arquivos de vídeo com a Internxt",
+    "description": "O Internxt Drive e o armazenamento de objetos S3 foram criados para manter seus arquivos privados, oferecendo acesso rápido e flexível e ferramentas poderosas para gerenciar seus vídeos.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "O Internxt Drive é um provedor de armazenamento na nuvem de conhecimento zero e o primeiro com criptografia pós-quântica. Ele oferece a nuvem mais segura e privada para seus vídeos. O Internxt Drive também inclui VPN, Antivirus, Mail e Meet, uma suíte completa de privacidade para garantir que seus vídeos e dados permaneçam seguros.",
+          "A Internxt também oferece suporte a WebDAV e Rclone, com mais flexibilidade para gerenciar seus vídeos. Comece a usar o melhor armazenamento na nuvem para vídeos e escolha entre nossos planos anuais ou vitalícios acessíveis."
+        ],
+        "cta": "Obtenha o Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "O armazenamento S3 é o melhor armazenamento na nuvem para arquivos de vídeo porque guarda os arquivos de um jeito que os torna rápida e facilmente acessíveis, para recuperação imediata com baixa latência. O Internxt S3 é uma solução de armazenamento 100% hot, ou seja, você pode acessar, transmitir ou editar vídeos instantaneamente, sob demanda.",
+          "O Internxt S3 é um sistema de armazenamento na nuvem em conformidade com o GDPR e com criptografia avançada para manter seus arquivos seguros e privados. Nosso modelo de preço fixo conforme o uso, de € 7/TB/mês, significa que você paga apenas pelo armazenamento de que precisa, com zero taxas de transferência de dados."
+        ],
+        "cta": "Obtenha o Internxt S3"
+      }
+    ]
+  },
+  "HorizontalScrollableSection": {
+    "title": "Recursos do armazenamento na nuvem para vídeos da Internxt",
+    "description": "Compartilhe, faça backup e proteja seus arquivos de vídeo com limites de envio generosos e uma proteção contra ransomware em que você pode confiar.",
+    "scrollableSection": {
+      "titles": [
+        "Limites generosos de envio",
+        "Proteção contra ransomware",
+        "Criptografia pós-quântica",
+        "Código aberto e auditado"
+      ],
+      "descriptions": [
+        "A Internxt oferece generosos 40 GB de envio de arquivos para até 3.000 arquivos, e você também pode compartilhar vídeos grandes de até 10 GB com outras pessoas por meio de um link protegido por senha ou por email, com total privacidade e colaboração segura.",
+        "A Internxt oferece backups criptografados dos seus arquivos, para você manter uma cópia dos seus vídeos segura na nuvem. Como esses vídeos são criptografados e copiados em vários data centers, os arquivos podem ser recuperados facilmente em caso de perda de dados ou ataques de ransomware.",
+        "A Internxt é o primeiro armazenamento na nuvem para arquivos de vídeo com criptografia pós-quântica e de conhecimento zero, a criptografia mais avançada disponível para proteger arquivos contra a ameaça dos computadores quânticos.",
+        "O Internxt Drive e todos os nossos serviços são de código aberto. Nosso código está disponível no GitHub para que qualquer pessoa verifique, confira a segurança e confirme que não existem portas dos fundos capazes de comprometer seus dados."
+      ],
+      "imagesPathname": [
+        "/cloud-storage-for-video-files/Generous",
+        "/cloud-storage-for-video-files/Ransomware",
+        "/cloud-storage-for-video-files/PostQuantumEncryption",
+        "/cloud-storage-for-video-files/OpenSourceAndAudited"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Armazenamento na nuvem seguro para arquivos de vídeo",
+    "subtitle": "Guarde horas de vídeo de qualidade com privacidade",
+    "cta": "Obtenha o Internxt"
+  },
+  "cta2": {
+    "title": "O armazenamento na nuvem mais privado para arquivos de vídeo ",
+    "subtitle": "Protegido por criptografia pós-quântica",
+    "cta": "Obtenha o Internxt"
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "valentinesTitle": "Amor seguro - ",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "lifetimeHeader": "Selecione seu plano vitalício",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança para toda a vida",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "Qual armazenamento na nuvem é melhor para vídeos?",
+        "answer": [
+          "O melhor armazenamento na nuvem para vídeos dá conta de tamanhos de arquivo em 4K e 8K, aceita envios grandes por arquivo e funciona em uma arquitetura de conhecimento zero, para que o provedor não consiga ler nem escanear o que está armazenado.",
+          "O Internxt Drive chega a 5 TB, aceita envios de até 100 GB por arquivo e usa AES-256 mais criptografia pós-quântica Kyber-512, com a chave de criptografia permanecendo no seu dispositivo.",
+          "A Securitum auditou a arquitetura de forma independente em 2024, e a ISO 27001:2022 cobre o sistema de gestão de segurança da informação."
+        ]
+      },
+      {
+        "question": "Posso armazenar arquivos de vídeo RAW ou 4K na nuvem?",
+        "answer": [
+          "Sim. RAW, 4K, 8K, ProRes, H.265 e outros formatos grandes são enviados ao Internxt Drive sem transcodificação.",
+          "Os limites por arquivo chegam a 100 GB no Ultimate, 50 GB no Premium e 1 GB no Essential. Um plano de 5 TB comporta aproximadamente 444 horas de 4K ou 139 horas de 8K.",
+          "O WebDAV e o Rclone cuidam de envios em lote e automatizados, e a CLI da Internxt permite automatizar a ingestão direto de um cartão de câmera, NAS ou arquivo em fita."
+        ]
+      },
+      {
+        "question": "Como compartilho arquivos de vídeo grandes com privacidade?",
+        "answer": [
+          "Compartilhe pelos links protegidos por senha da Internxt, com validade configurável e revogação em um clique pelo seu painel. O destinatário não precisa de uma conta Internxt.",
+          "O tamanho por compartilhamento chega a 10 GB e, como a arquitetura não consegue ler o que armazena, não há varredura por IA, nem pipeline de moderação de conteúdo, nem rastreamento publicitário nos metadados.",
+          "Para revisão com clientes ou edição colaborativa, as pastas compartilhadas permitem que destinatários sem conhecimento técnico enviem arquivos de volta, com controles de permissão por usuário."
+        ]
+      },
+      {
+        "question": "O que é criptografia de conhecimento zero e como ela protege meus vídeos?",
+        "answer": [
+          "Criptografia de conhecimento zero significa que a chave de criptografia é gerada e guardada no seu dispositivo, nunca no servidor.",
+          "Assim, o provedor só tem em mãos texto cifrado que não consegue descriptografar, mesmo sob ordem judicial ou caso o servidor seja invadido.",
+          "Isso é diferente do funcionamento do Google Photos, do Dropbox e do OneDrive, em que o provedor detém as chaves e se reserva o direito, em seus termos de serviço, de escanear o conteúdo para moderação, segmentação de anúncios ou treinamento de IA.",
+          "A Securitum verificou de forma independente a arquitetura de conhecimento zero da Internxt em 2024."
+        ]
+      },
+      {
+        "question": "Quanto tempo de vídeo cabe em 1 TB?",
+        "answer": [
+          "1 TB de armazenamento na nuvem comporta cerca de 89 horas de filmagem em 4K na taxa de bits típica de câmeras de celular, aproximadamente 28 horas de 8K ou 12.500 fotos RAW de cerca de 80 MB cada.",
+          "Um plano de 5 TB amplia isso para 444 horas de 4K ou 139 horas de 8K.",
+          "Para fluxos profissionais de longa duração que ultrapassam 5 TB, os planos vitalícios se acumulam no mesmo email, permitindo somar armazenamento sem migrar bibliotecas, e o Internxt S3 custa € 7 por TB ao mês, sem taxas de transferência, para necessidades em escala de petabytes."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI",
+      "photos": "Photos"
+    },
+    "title": "As melhores **ofertas vitalícias** de armazenamento em nuvem da Internxt",
+    "subtitle": "{{discount}}% de desconto em todos os planos. Pagamento único. Privacidade vitalícia",
+    "features": [
+      "Suíte completa de privacidade",
+      "Criptografia pós-quântica",
+      "Código aberto e auditado"
+    ],
+    "startFrom": {
+      "normal1": "A partir de ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /mês"
+    },
+    "claimDeal": "Garantir oferta"
+  },
+  "ReviewSection": {
+    "pcMag": "\"A Internxt está em **megapromoção**, tem **excelentes avaliações de usuários**, criptografia **de ponta a ponta** e **pós-quântica**, e disponibiliza seu código totalmente em **código aberto** para total transparência com os clientes.\"",
+    "mashable": "\"Leve a sério a **proteção** dos seus dados importantes. A Internxt nasceu com a ambição de dar às pessoas verdadeira **liberdade online**, criando um mundo digital mais **ético**, **seguro**, **privado** e responsável.\"",
+    "pcWorld": "\"O **acesso web intuitivo**, a **sincronização de arquivos** e os **serviços de backup** da Internxt são **impressionantes**. Esse serviço criptografado de armazenamento e backup online é **fácil**, cobre todas as frentes, e os **planos vitalícios** atuais são uma **pechincha**.\""
+  },
+  "MoreDealsSection": {
+    "title": "Mais ofertas Internxt",
+    "description": "Encontre descontos exclusivos em soluções de armazenamento em nuvem seguro para todas as necessidades",
+    "cards": {
+      "card1": {
+        "title": "Ofertas de armazenamento em nuvem gratuito",
+        "description": "Comece com armazenamento criptografado gratuito e faça upgrade com até {{discount}}% de desconto",
+        "cta": "Ver ofertas gratuitas"
+      },
+      "card2": {
+        "title": "Ofertas de armazenamento em nuvem vitalício",
+        "description": "Pague uma vez e tenha seu armazenamento seguro para sempre com {{discount}}% de desconto",
+        "cta": "Aproveitar oferta vitalícia"
+      }
+    }
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Seu aliado completo em privacidade",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos Business",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e aproveite privacidade e segurança por toda a vida.",
+    "planDescription": "As ofertas vitalícias de armazenamento em nuvem da Internxt são completas, com acesso total à nossa premiada suíte de privacidade, formada por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado grátis",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "Diga adeus às assinaturas",
+    "description": "Pague uma vez, use para sempre com {{percentage}}% de desconto",
+    "cta": "Garantir oferta"
+  },
+  "WhatsIncludedSection": {
+    "title": "As melhores ofertas vitalícias de armazenamento em nuvem para privacidade total online",
+    "description": "A Internxt protege sua privacidade em vez de lucrar com ela. Tenha a proteção definitiva para seus dados online com armazenamento em nuvem seguro e muito mais.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "Drive",
+        "antivirus",
+        "vpn",
+        "cleaner",
+        "meet",
+        "mail",
+        "Terminal"
+      ],
+      "titles": [
+        "Internxt Drive",
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Mail",
+        "Ferramentas avançadas"
+      ],
+      "descriptions": [
+        "O Internxt Drive vem com criptografia pós-quântica e de conhecimento zero, para que ninguém além de você possa acessar seus arquivos. Tenha armazenamento em nuvem criptografado e backups para suas fotos, vídeos e arquivos.\n\nAlém disso, backups criptografados e compartilhamento de arquivos protegido por senha oferecem proteção máxima contra ransomware e vazamentos de dados.",
+        "Todos os planos pagos também incluem o Internxt Antivirus para maior proteção contra as ameaças crescentes que enfrentamos online.\n\nExecute verificações completas ou personalizadas pelo aplicativo Internxt para se defender de malware, phishing e ransomware, além de limpar e proteger seu dispositivo contra perdas ou vazamentos de dados.",
+        "Tenha nossa VPN ultrarrápida e ilimitada para até 5 localizações e criptografe e proteja sua conexão com nossa VPN privada.\n\nCriptografe seu tráfego para impedir espionagem externa da sua conexão em espaços públicos, contornar restrições geográficas e evitar vazamentos de dados. A Internxt VPN oferece privacidade total ao navegar na internet.",
+        "O Internxt Cleaner melhora o desempenho e a saúde do seu dispositivo removendo arquivos inúteis ou duplicados do seu computador.\n\nLibere espaço, aumente a velocidade do aparelho e proteja sua privacidade apagando arquivos indesejados com um clique.",
+        "O Internxt Meet oferece videochamadas totalmente privadas com criptografia pós-quântica, garantindo que suas reuniões sejam seguras, confidenciais e livres de rastreadores.\n\nOrganize e participe de videochamadas com amigos, família ou colegas com total privacidade, sem empresas externas monitorando suas conversas.",
+        "Escreva, envie e receba e-mails com o Internxt Mail, um serviço de e-mail totalmente criptografado e privado que garante que ninguém além de você e dos seus contatos veja suas mensagens.\n\nCom o Internxt Mail, garantimos que ninguém além de você possa acessar suas mensagens ou anexos, todos protegidos com criptografia pós-quântica e de conhecimento zero.",
+        "Disponível para Windows, Mac, Linux e celular, a Internxt permite que você assuma o controle total do seu armazenamento na nuvem, acessando-o de qualquer lugar e em qualquer dispositivo.\n\nPara usuários avançados, a Internxt oferece suporte a WebDAV, Rclone e NAS, com tudo o que você precisa para gerenciar seus arquivos com total privacidade."
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Por que escolher a Internxt?",
+    "description": "Oferecemos estas ofertas Internxt para devolver a você o controle da sua privacidade. Ao contrário do armazenamento em nuvem tradicional, garantimos que só você tenha as chaves dos seus dados criptografados, e não armazenamos nem vendemos suas informações a terceiros. Tomamos todas as medidas para que seus dados permaneçam seguros.",
+    "cta": "Conheça-nos melhor",
+    "scrollableSection": {
+      "titles": [
+        "Impossível de hackear ou vazar",
+        "Segurança de próxima geração",
+        "Código aberto e transparente",
+        "Verificado de forma independente"
+      ],
+      "descriptions": [
+        "Não armazenamos senhas nem dados de usuários, e todas as suas informações são criptografadas em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos. Seus dados são assunto seu. Protegê-los é o nosso.",
+        "A Internxt é o único armazenamento em nuvem que criptografa automaticamente seus arquivos usando criptografia de ponta a ponta e pós-quântica, o que significa que só você pode acessar seus dados.",
+        "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser analisado, auditado e verificado por qualquer pessoa. Não temos nada a esconder além dos seus dados.",
+        "Estamos totalmente em conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar só na nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Privacidade total com {{percentage}}% de desconto",
+    "description": "Aproveite a oferta da sua vida com a Internxt",
+    "cta": "Garantir oferta"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "Quem pode aproveitar estas ofertas Internxt?",
+        "answer": [
+          "Estas ofertas Internxt são para novos clientes, clientes com conta gratuita ou clientes que desejam fazer upgrade do seu plano vitalício atual com {{discount}}% de desconto para ter acesso aos nossos novos recursos."
+        ]
+      },
+      {
+        "question": "Posso usar uma oferta Internxt se já tenho um plano?",
+        "answer": [
+          "Se você tem um plano vitalício e quer acumular armazenamento na sua conta atual e acessar os recursos de um plano Premium ou Ultimate, pode usar esta oferta para fazer upgrade da sua conta."
+        ]
+      },
+      {
+        "question": "O que acontece quando minha oferta expirar?",
+        "answer": [
+          "Se você comprar um plano anual com sua oferta Internxt, ela vale apenas para o primeiro ano. Quando esse primeiro ano terminar, seu plano será renovado automaticamente pelo preço integral indicado na nossa seção de preços.",
+          "Se quiser evitar cobranças de assinatura, você pode comprar um plano vitalício com pagamento único e nunca mais pagar, a não ser que decida ampliar seu armazenamento."
+        ]
+      },
+      {
+        "question": "Como posso fazer upgrade ou adicionar mais armazenamento depois?",
+        "answer": [
+          "Sim, se você tem um plano vitalício, pode acumular ou fazer upgrade do seu plano a qualquer momento para conseguir mais armazenamento. Não é possível fazer upgrade nem adicionar mais armazenamento em planos anuais. Fique de olho no nosso site para ver os cupons e ofertas mais recentes."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar com PayPal, criptomoedas ou parcelar o pagamento do seu plano vitalício com a Klarna.",
+          "Se tiver dúvidas sobre formas de pagamento, basta nos escrever para hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Posso parcelar o pagamento do meu plano vitalício?",
+        "answer": [
+          "Sim, agora você pode dividir o pagamento do plano vitalício em várias parcelas sem juros usando a Klarna. Aproveite um plano vitalício com a comodidade de pagar em parcelas fáceis!"
+        ]
+      },
+      {
+        "question": "Qual é a política de reembolso da Internxt?",
+        "answer": [
+          "Todas as assinaturas pagas incluem garantia de reembolso de 30 dias a partir da data da compra.",
+          "Se por qualquer motivo você não ficar totalmente satisfeito nesses primeiros 30 dias, basta escrever para [hello@internxt.com](mailto:hello@internxt.com) e processaremos seu reembolso."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Não encontrou o que procurava? Você pode falar com nossa equipe de suporte técnico pelo chat ao vivo ou pelo e-mail hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}

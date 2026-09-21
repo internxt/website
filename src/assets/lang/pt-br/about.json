@@ -1,0 +1,71 @@
+{
+  "HeroSection": {
+    "title": "Acreditamos em um mundo de privacidade online e **liberdade** digital",
+    "description": "A Internxt foi fundada em 2020 com a visão de construir uma internet em que privacidade e segurança venham em primeiro lugar e só você controle seus dados.",
+    "recognitionsTitle": "Orgulhosamente reconhecida por seu trabalho excepcional"
+  },
+  "WhatWeDoSection": {
+    "title": "A história da Internxt",
+    "section1": {
+      "title": "Fundada em 2020 por Fran Villalba Segarra, a Internxt é um ecossistema europeu de privacidade e código aberto que inclui Drive, Send, VPN, Antivirus, Cleaner, Mail, Meet e muito mais.",
+      "description": [
+        "Criamos a Internxt para proteger seus dados da vigilância e da exploração de corporações sedentas por lucro. Conseguimos isso ao nos tornarmos o primeiro armazenamento em nuvem com criptografia pós-quântica e uma abordagem de conhecimento zero, colocando seus dados totalmente sob seu controle.",
+        "Desde a nossa fundação, um princípio guia todas as decisões da empresa: a privacidade é um direito humano fundamental. Hoje, ajudamos mais de um milhão de usuários ativos a proteger sua privacidade online."
+      ]
+    },
+    "bitSection": {
+      "title": "Revolução da privacidade: a jornada da Internxt com o fundador e CEO Fran Villalba Segarra",
+      "description": "A Internxt está criando um mundo digital que respeita a privacidade do usuário, tornando realidade o melhor conjunto web-3 com foco em privacidade. Internxt Drive, Mail, Send, Meet, Cleaner, Antivirus, VPN e muito mais.",
+      "cta": "Leia mais"
+    }
+  },
+  "ScrollableSection": {
+    "title": "Excelência comprovada em privacidade e segurança",
+    "cardDescriptions": {
+      "titles": [
+        "Privacidade premiada",
+        "Apoiada por líderes do setor",
+        "Fornecedora oficial do Levante UD",
+        "Crescimento imparável"
+      ],
+      "descriptions": [
+        "Reconhecida com o Prêmio da Agência Espanhola de Proteção de Dados, a Internxt foi homenageada por desenvolver técnicas avançadas de proteção de dados e processamento de linguagem natural, um reconhecimento à nossa missão de proteger sua privacidade com tecnologias inovadoras.",
+        "Fundada por Fran Villalba Segarra, a Internxt também cresce impulsionada por investimentos de líderes renomados como Juan Roig, Prosegur, Telefónica, Notion Capital, Andorra Telecom e fundos da União Europeia, o que nos permite criar serviços de nuvem seguros e centrados na privacidade em que você pode confiar.",
+        "A Internxt tem orgulho de oferecer armazenamento em nuvem seguro e centrado na privacidade ao seu clube de futebol local, o Levante UD. Nossa parceria reflete nossa dedicação à proteção de dados e à soberania digital, garantindo que as informações do clube sejam gerenciadas com os mais altos padrões de segurança e confiança.",
+        "Impulsionada por uma equipe talentosa de 30 pessoas, a Internxt alcançou 100% de crescimento ano a ano e estabilidade financeira, o que nos ajudou a nos consolidar como uma empresa confiável e de longo prazo no universo da privacidade online."
+      ]
+    }
+  },
+  "FeatureSection": {
+    "ScrollableSection": {
+      "title": "A alternativa europeia aos serviços \nde Big Tech com pouca privacidade",
+      "description": "Desde o lançamento do Internxt Drive em 2020, a Internxt cresceu e se tornou o **primeiro serviço de armazenamento em nuvem com criptografia pós-quântica, oferecendo uma alternativa às Big Tech focada em privacidade** que prioriza a privacidade do usuário em vez do lucro.\n \n Agora, a Internxt oferece um amplo conjunto de produtos focados em privacidade para que todos possam se juntar à nossa missão de privacidade total online. A Internxt dá a você controle absoluto sobre sua privacidade online ao proteger seus dados de terceiros, vazamentos e hackers.",
+      "cardDescriptions": {
+        "titles": [
+          "Deloitte Technology Fast 50",
+          "Criptografia de nova geração",
+          "Totalmente transparente e auditada",
+          "Feita na Europa",
+          "Tecnologia que respeita o planeta"
+        ],
+        "descriptions": [
+          "A Internxt foi nomeada uma das 50 empresas de tecnologia que mais crescem. Após vários trimestres lucrativos e com apoio governamental, estamos preparados para crescer e liderar a próxima geração de produtos que colocam a privacidade em primeiro lugar.",
+          "Desenvolvemos a criptografia pós-quântica para nos prepararmos para a próxima geração de ameaças computacionais. Na Internxt, nosso objetivo é proteger seus dados com tecnologia avançada que mantém sua privacidade segura agora e no futuro.",
+          "A verdadeira privacidade online depende de abertura e confiança, e é por isso que optamos por ser totalmente de código aberto. Nosso compromisso com o software de código aberto significa transparência total e nenhum acesso oculto aos seus dados. Todo o nosso código foi verificado de forma independente pela Securitum, empresa líder em testes de invasão, que certificou nossa plataforma como segura contra hackers e ciberataques.",
+          "A Internxt está sediada em Valência, na Espanha, e segue o GDPR, os padrões de privacidade mais rigorosos da Europa. Gerenciamos seus dados com segurança e total transparência, garantindo que seus direitos de privacidade sejam respeitados e que você tenha controle completo sobre suas informações pessoais.",
+          "A tecnologia não precisa custar caro ao meio ambiente. Temos o compromisso com práticas sustentáveis, usando fontes de energia limpa e otimizando nossa infraestrutura para reduzir nossa pegada ambiental."
+        ]
+      }
+    },
+    "BetterFutureSection": {
+      "title": "Vamos construir juntos um\n futuro melhor",
+      "description": "A privacidade é tão importante para você quanto é para nós? Junte-se à Internxt hoje e tenha o armazenamento em nuvem mais privado e um conjunto de produtos criado para proteger seus dados.",
+      "cta": "Obtenha a Internxt"
+    }
+  },
+  "CtaSection": {
+    "title": "Experimente a Internxt sem riscos",
+    "description": "Proteja o que realmente importa com o armazenamento em nuvem seguro, privado e criptografado da Internxt.",
+    "cta": "Escolha um plano agora"
+  }
+}

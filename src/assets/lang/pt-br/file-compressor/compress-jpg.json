@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprima um arquivo JPG para reduzir o tamanho e compartilhar fotos sem perder a qualidade das suas imagens com a Internxt.  ",
+    "secureUpload": "Uploads seguros protegidos por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como comprimir um arquivo JPG",
+      "description": "Para comprimir um arquivo JPG, siga estes passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu arquivo JPG: arraste e solte o arquivo na área acima ou envie-o do seu dispositivo para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Comprimir arquivo JPG”"
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ],
+      "outro": "Comprima um arquivo JPG gratuitamente sempre que precisar, sabendo que suas fotos ficam seguras e privadas graças aos uploads criptografados."
+    },
+    "whyConvert": {
+      "title": "Por que você pode precisar comprimir um arquivo JPG",
+      "intro": "Assim como ao comprimir um arquivo PNG, você pode precisar comprimir um arquivo JPG para manter suas fotos na mais alta qualidade e sem marcas d’água nos seus arquivos. Você não precisa se registrar para comprimir um arquivo JPG com a Internxt, então pode focar em otimizar o espaço de armazenamento dos seus álbuns e bibliotecas de fotos. Ao terminar, você pode: ",
+      "bullets": [
+        "Acelerar o tempo de carregamento de sites",
+        "Manter a alta qualidade visual das fotos ",
+        "Economizar espaço de armazenamento no seu dispositivo ou na nuvem"
+      ],
+      "outro": "Todos os seus arquivos são criptografados durante o upload e a compressão para manter suas fotos privadas, assim você pode comprimir, armazenar e compartilhar seus arquivos com confiança na Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Uma plataforma segura para comprimir, armazenar e compartilhar arquivos JPG",
+    "cta": "Obter a Internxt"
+  }
+}

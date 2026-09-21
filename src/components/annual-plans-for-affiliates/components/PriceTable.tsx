@@ -5,7 +5,6 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from './PriceCard';
 import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 
-import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 
@@ -42,7 +41,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
       text: textContent.features.guarantee,
     },
     {
-      icon: OpenSource,
+      icon: Lifebuoy,
       text: textContent.features.openSource,
     },
   ];
@@ -72,6 +71,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
         {/* Render cards */}
         <Transition
+          as="div"
           id="payment"
           show={!loadingCards}
           enterFrom="scale-95 translate-y-20 opacity-0"

@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "您的**獎勵**已準備就緒。",
+    "subtitle": "您瀏覽了全部內容，完成了每一項挑戰，並走到了這裡。這個優惠從未公開過。這是您應得的。",
+    "description": "立即獲得{{discount}}%折扣！",
+    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
+    "claimDeal": "領取獎勵"
+  },
+  "RewardSection": {
+    "title": "Internxt Challenge 雲端儲存優惠",
+    "description": [
+      "您一路點擊完成了 Challenge，了解了 Internxt 的各項功能，並抵達終點。這份獎勵正是為此而來。",
+      "使用 Internxt 的全套隱私套件保護您的資料——Drive、防毒軟體、VPN、Cleaner、Meet、Mail 等——現在僅向完成 Challenge 的使用者提供專屬折扣。此優惠不對外公開，且不會持續太久。最難的部分您已經完成，剩下的只需一次點擊。"
+    ]
+  },
+  "TableSection": {
+    "title": "您的一體化隱私助手",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "選擇您的方案",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得1 GB加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

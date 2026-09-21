@@ -62,5 +62,6 @@
     "withAnnualBilling": "com cobrança anual"
   },
   "invalidCoupon": "Cupom inválido",
-  "oneTimePayment": "*Uma taxa única de 1€ é necessária para verificação da conta"
+  "oneTimePayment": "*Uma taxa única de 1€ é necessária para verificação da conta",
+  "error500": "Insira um número de identificação fiscal válido"
 }

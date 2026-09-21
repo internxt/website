@@ -1,0 +1,222 @@
+{
+  "HeroSection": {
+    "title": "Internxt, uma alternativa **segura**\n ao Koofr",
+    "description": "A Internxt oferece o conjunto de criptografia e privacidade mais moderno e avançado para proteger você na internet",
+    "getPrivacy": " Escolha seu plano e ganhe {{percentage}}% de desconto  ",
+    "cta": "Garantir oferta"
+  },
+  "HeaderSection": {
+    "title": "Visão geral do armazenamento na nuvem: Internxt vs Koofr",
+    "description": "A Internxt é a sua alternativa ao Koofr, com criptografia de conhecimento zero para todos os arquivos e uma suíte completa de privacidade",
+    "tableSection": {
+      "comparisons": [
+        "Transparência do código",
+        "Criptografia",
+        "Criptografia pós-quântica",
+        "Preços e armazenamento",
+        "Recursos",
+        "Auditorias de segurança",
+        "Suporte ao vivo",
+        "Política de privacidade",
+        "Leis de privacidade"
+      ],
+      "internxtFeatures": [
+        "Código aberto",
+        "AES-256 e Kyber-512",
+        "Sim",
+        "Competitivo, inclui o conjunto completo de produtos, até 5TB",
+        "Drive, VPN, Antivirus, Cleaner, Meet, Mail e mais",
+        "Auditorias de segurança regulares",
+        "Sim",
+        "Nunca pode acessar seus arquivos",
+        "Privacidade total: GDPR, HIPAA, ISO 27001 e SOC 2"
+      ],
+      "competitorFeatures": [
+        "Código aberto",
+        "AES-256",
+        "Não",
+        "Até 20TB, apenas armazenamento na nuvem",
+        "Armazenamento na nuvem",
+        "Nenhuma auditoria de segurança publicada",
+        "Não",
+        "Arquivos armazenados fora do Koofr Vault são menos privados",
+        "GDPR, com sede na Eslovênia"
+      ]
+    }
+  },
+  "PrivacyViolationsSection": {
+    "title": "A melhor alternativa ao Koofr é a Internxt",
+    "description": "Tenha armazenamento na nuvem com criptografia pós-quântica, além de Antivirus, VPN, Cleaner, Meet e muito mais com a Internxt.",
+    "scrollableSection": {
+      "titles": [
+        "Criptografia privada separada",
+        "Planos vitalícios limitados",
+        "Criptografia limitada pela tecnologia",
+        "Os planos se limitam ao armazenamento na nuvem"
+      ],
+      "descriptions": [
+        "Nem todos os arquivos que você armazena no Koofr são protegidos com criptografia de conhecimento zero. Somente os arquivos que você move manualmente para o cofre do Koofr são criptografados de ponta a ponta, enquanto todo o resto do seu armazenamento na nuvem comum continua acessível ao provedor por meio da criptografia do lado do servidor.",
+        "Os planos vitalícios do Koofr são limitados a 1TB e não podem ser acumulados, ou há planos anuais de até 20TB por € 1.428,20 /ano. Pelo mesmo custo do plano anual de 5TB do Koofr, você pode ter 5TB de armazenamento vitalício com a Internxt, além de acesso a Meet, Mail, versionamento de arquivos, VPN e muito mais. Para privacidade total online, combine a criptografia completa da Internxt com sua suíte abrangente de produtos.",
+        "O Koofr usa a criptografia AES-256, padrão do setor. Esse modelo de criptografia pode logo ficar desatualizado, já que o surgimento dos computadores pós-quânticos pode quebrar os modelos de criptografia atuais usados pelo Koofr e por outros. A Internxt usa criptografia pós-quântica (Kyber-512).",
+        "O Koofr oferece armazenamento na nuvem de até 20TB, que inclui 10 cofres Koofr, versionamento e proteção por senha. No entanto, se você quer criptografia de conhecimento zero para todos os arquivos na nuvem, além de uma suíte completa de privacidade para proteger seu dispositivo, sua conexão de internet e muito mais, a Internxt é uma alternativa mais abrangente ao Koofr."
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs Koofr:",
+    "description": "A Internxt oferece segurança e privacidade incomparáveis, com recursos que o Koofr não consegue igualar.",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Internxt: privacidade total, transparência e um conjunto completo de privacidade",
+        "features": [
+          {
+            "title": "Código aberto e auditado",
+            "description": "O código da Internxt está aberto no nosso GitHub para que qualquer pessoa possa examiná-lo e confirmar sua segurança. Essa transparência garante que nenhuma vulnerabilidade fique oculta."
+          },
+          {
+            "title": "Criptografia de conhecimento zero",
+            "description": "Seus dados são criptografados no lado do cliente, garantindo que somente você possa acessá-los. Disponível para todos os arquivos, não apenas para um cofre separado."
+          },
+          {
+            "title": "Diversas normas de conformidade",
+            "description": "A Internxt passou por auditorias externas e cumpre o GDPR, a HIPAA, a ISO 27001 e o SOC 2."
+          },
+          {
+            "title": "Planos vitalícios",
+            "description": "Vários planos vitalícios de até 5TB, com acesso a VPN, Meet, Cleaner e muito mais. Acesse esses serviços para sempre com 85% de desconto."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Koofr: e a sua privacidade?",
+        "features": [
+          {
+            "title": "Código aberto, sem auditoria",
+            "description": "Embora o Koofr seja de código aberto, não há registro de uma auditoria de segurança externa e publicada."
+          },
+          {
+            "title": "Apenas cofre criptografado",
+            "description": "A criptografia de conhecimento zero é oferecida apenas para arquivos movidos manualmente para um cofre separado, deixando as contas gratuitas e o armazenamento comum menos seguros e privados."
+          },
+          {
+            "title": "Histórico de conformidade",
+            "description": "Não há registro de uma auditoria de segurança independente que verifique os padrões de conformidade."
+          },
+          {
+            "title": "Planos vitalícios limitados",
+            "description": "Um único plano vitalício de armazenamento na nuvem de apenas 1TB, que não pode ser acumulado."
+          }
+        ]
+      }
+    }
+  },
+  "WhyBestAlternativeSection": {
+    "title": "Por que escolher a Internxt como sua alternativa ao Koofr?",
+    "description": "Com a Internxt, você recebe muito mais do que armazenamento na nuvem: recebe tudo o que precisa para proteger seus dados, arquivos e sua privacidade na internet.",
+    "scrollableSection": {
+      "imagesPathname": [
+        "Drive",
+        "Terminal",
+        "antivirus",
+        "cleaner",
+        "hero",
+        "meet",
+        "vpn"
+      ],
+      "titles": [
+        "Antivirus",
+        "VPN",
+        "Cleaner",
+        "Meet",
+        "Ferramentas avançadas"
+      ],
+      "descriptions": [
+        "O Internxt Antivirus vem integrado diretamente ao aplicativo do Internxt Drive para oferecer controle total e proteção contra malware. Faça verificações completas ou personalizadas para manter seu dispositivo funcionando bem e protegido contra vírus como ransomware e spyware.",
+        "A Internxt VPN protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada. Criptografe sua conexão wi-fi para evitar espionagem, hackers e roubo de identidade. Navegue com segurança sabendo que suas informações pessoais, senhas e contas estão protegidas.",
+        "O Internxt Cleaner ajuda você a identificar, eliminar e gerenciar arquivos inúteis ou duplicados indesejados no seu dispositivo. Com o Cleaner, você pode excluir arquivos desnecessários para manter seu armazenamento organizado, sem bagunça, e garantir que seu dispositivo funcione com eficiência.",
+        "O Internxt Meet também está disponível como sua alternativa segura e privada ao Teams. Com o Meet, você pode fazer videochamadas privadas, livres de rastreadores, anúncios e coleta de dados. Suas videochamadas são protegidas por criptografia pós-quântica, permitindo que você realize reuniões com total privacidade.",
+        "Disponível para Windows, Mac, Linux e celular, a Internxt permite que você assuma o controle total do seu armazenamento na nuvem, acessando-o de qualquer lugar e em qualquer dispositivo.\n\nPara usuários avançados, a Internxt oferece suporte a WebDAV, Rclone e NAS, com tudo o que você precisa para gerenciar seus arquivos com total privacidade."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Escolha a Internxt como a melhor alternativa ao Koofr",
+    "description": "A Internxt oferece criptografia de conhecimento zero completa para todo o seu drive por padrão. Diferentemente de outros serviços, em que a privacidade fica limitada a um cofre separado, garantimos que cada arquivo que você armazena seja privado, de código aberto e seguro.",
+    "cta": "Faça a mudança"
+  },
+  "tableSection": {
+    "title": "Seu aliado completo em privacidade",
+    "hotLabel": "{{discount}}% de desconto  ",
+    "planTitles": {
+      "header": "Seu aliado completo em privacidade"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "Vitalício"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "openSource": "Código aberto e auditado",
+      "premiumSupport": "Suporte ao cliente premium",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "A Internxt é uma alternativa mais segura ao Koofr?",
+        "answer": [
+          "Sim, a Internxt usa criptografia pós-quântica e de conhecimento zero, que garante que ninguém além de você possa ver seus arquivos. Todos os seus arquivos são protegidos com essa criptografia, sem a necessidade de armazená-los em um cofre separado, já que o Internxt Drive funciona como seu cofre completo de armazenamento na nuvem criptografado.",
+          "Recursos adicionais como VPN, Antivirus, Device Cleaner, Meet e Mail também oferecem proteção extra contra hackers e vazamentos de dados como parte do seu plano de armazenamento na nuvem da Internxt."
+        ]
+      },
+      {
+        "question": "O que é criptografia pós-quântica e ela é mais segura?",
+        "answer": [
+          "Diferentemente da criptografia padrão, os algoritmos de criptografia pós-quântica são feitos para resistir a poderosos ataques quânticos, tornando a PQE uma alternativa mais segura ao Koofr.",
+          "A Internxt usa esse método de criptografia para garantir que seu plano vitalício de armazenamento na nuvem proteja você contra futuras ameaças de cibersegurança, e ele está disponível em todos os planos sem custo adicional."
+        ]
+      },
+      {
+        "question": "Onde fica a sede da Internxt?",
+        "answer": [
+          "A Internxt tem sede em Valência, na Espanha, o que a torna uma solução de armazenamento na nuvem em conformidade com o GDPR, seguindo leis rigorosas para garantir a proteção dos seus dados e da sua privacidade."
+        ]
+      },
+      {
+        "question": "O Koofr é mais caro que a Internxt?",
+        "answer": [
+          "O Koofr custa € 199 por 1TB apenas de armazenamento na nuvem vitalício. Com a Internxt, você tem os mesmos 1TB de armazenamento com criptografia pós-quântica, além de VPN e Antivirus por € 195. Com seu desconto exclusivo de {{discount}}%, a Internxt oferece armazenamento na nuvem e uma ampla gama de recursos indisponíveis em qualquer outro provedor de nuvem, incluindo o Koofr."
+        ]
+      },
+      {
+        "question": "Como entro em contato com o suporte?",
+        "answer": [
+          "Se você tiver mais dúvidas, solicitações ou precisar de ajuda, entre em contato pelo e-mail hello@internxt.com e nossa equipe de Sucesso do Cliente terá prazer em ajudar."
+        ]
+      },
+      {
+        "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
+        "answer": [
+          "Sim, você pode fazer upgrade do seu plano nas configurações da sua conta Internxt se precisar de mais armazenamento. Ou compre um novo plano em internxt.com/pricing com sua conta Internxt atual, e seu armazenamento será somado automaticamente."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar com PayPal, iDEAL, Sofort, criptomoedas e Klarna."
+        ]
+      }
+    ]
+  }
+}

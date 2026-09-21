@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "Ihre **Belohnung** Ist Bereit.",
+    "subtitle": "Sie haben alles erkundet, jede Herausforderung gemeistert und es bis hierher geschafft. Dieses Angebot war nie öffentlich. Sie haben es sich verdient.",
+    "description": "Jetzt {{discount}}% Rabatt sichern!",
+    "features": ["Komplette Privacy-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "claimDeal": "Belohnung sichern"
+  },
+  "RewardSection": {
+    "title": "Internxt Challenge Cloud-Speicher-Angebote",
+    "description": [
+      "Sie haben sich durch die Challenge geklickt, entdeckt, was Internxt alles kann, und das Ende erreicht. Genau dafür ist diese Belohnung.",
+      "Schützen Sie Ihre Daten mit der vollständig ausgestatteten Privacy-Suite von Internxt — Drive, Antivirus, VPN, Cleaner, Meet, Mail und mehr — jetzt mit einem exklusiven Rabatt nur für alle, die die Challenge abgeschlossen haben. Dieses Angebot ist nicht öffentlich und gilt nicht lange. Das Schwierigste haben Sie geschafft. Der Rest ist ein Klick."
+    ]
+  },
+  "TableSection": {
+    "title": "Ihr All-in-One Privacy-Partner",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Tarif",
+      "individuals": "Jahrestarife",
+      "homePage": "Wählen Sie den richtigen Tarif für sich",
+      "lifetime": "Lifetime-Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "openSource": "Open Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "Votre **Récompense** Est Prête.",
+    "subtitle": "Vous avez tout exploré, vous avez relevé tous les défis et vous êtes arrivé jusqu'ici. Cette offre n'a jamais été publique. Vous l'avez méritée.",
+    "description": "Obtenez {{discount}} % de réduction maintenant !",
+    "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
+    "claimDeal": "Obtenir ma récompense"
+  },
+  "RewardSection": {
+    "title": "Offres de stockage cloud de l'Internxt Challenge",
+    "description": [
+      "Vous avez parcouru le Challenge, découvert tout ce qu'Internxt peut faire et vous êtes allé jusqu'au bout. C'est à cela que sert cette récompense.",
+      "Protégez vos données avec la suite de confidentialité entièrement équipée d'Internxt — Drive, Antivirus, VPN, Cleaner, Meet, Mail et plus encore — désormais à un tarif exclusif réservé à ceux qui ont terminé le Challenge. Cette offre n'est pas publique et ne durera pas. Vous avez fait le plus dur. Le reste tient en un clic."
+    ]
+  },
+  "TableSection": {
+    "title": "Votre allié tout-en-un pour la confidentialité",
+    "hotLabel": "{{discount}} % de réduction",
+    "planTitles": {
+      "header": "Sélectionnez votre Forfait",
+      "individuals": "Forfaits Annuels",
+      "homePage": "Choisissez le forfait qui vous convient",
+      "lifetime": "Forfaits à Vie",
+      "business": "Forfaits Professionnels",
+      "lifetimeCampaign": {
+        "blueText": "50 % de réduction",
+        "normalText": "sur tous nos forfaits exclusifs à vie"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  }
+}

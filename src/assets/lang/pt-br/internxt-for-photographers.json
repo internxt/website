@@ -1,0 +1,47 @@
+{
+  "HeroSection": {
+    "title": {
+      "how": "Como os ",
+      "blueText": "fotógrafos ",
+      "normalText": "protegem seu trabalho e mantêm os direitos autorais"
+    },
+    "description": "Direitos autorais e segurança de imagens são sempre temas quentes nos estudos de caso sobre fotografia. Os fotógrafos têm novas oportunidades e desafios para equilibrar a divulgação online e a proteção das fotos à medida que o compartilhamento de conteúdo na internet evolui.",
+    "learnMore": "Saiba mais",
+    "image": {
+      "src": "Internxt_for_photographers.webp",
+      "alt": "Internxt para fotógrafos"
+    }
+  },
+  "WhatWeDo": {
+    "challenge": {
+      "title": "Desafio",
+      "description": [
+        "Um fotógrafo registra constantemente imagens de diferentes pessoas, paisagens e muito mais, por isso armazená-las com segurança é fundamental. Como fotógrafo, assim que você envia suas imagens para a internet, elas correm o risco de serem copiadas e apresentadas como trabalho de outra pessoa. Isso pode acontecer como um ataque malicioso e direcionado ou simplesmente por alguém desinformado tentando encontrar fotos para ilustrar um projeto.",
+        "Existem inúmeras soluções e exemplos de estudos de caso que ajudam os fotógrafos a proteger seu trabalho online, mas apenas algumas oferecem garantias; muitas podem perder o controle dos seus dados quando você menos espera.",
+        "No entanto, perder fotos não é o único risco que os fotógrafos enfrentam. Se as imagens vazarem ou forem roubadas, hackers ou criminosos podem usá-las para diversos crimes cibernéticos. Por exemplo, podem usar o rosto de uma pessoa para documentos falsos e roubo de identidade ou descobrir a localização a partir do cenário da foto, expondo potencialmente seu endereço ou local de trabalho.",
+        "Proteger o trabalho de um fotógrafo e os dados que ele contém é essencial neste exemplo de caso de uso para garantir que o trabalho e o sustento das pessoas não fiquem expostos a cibercriminosos."
+      ]
+    },
+    "solution": {
+      "title": "Solução",
+      "description": [
+        "O armazenamento em nuvem seguro oferece a amadores e profissionais da fotografia uma solução confiável para proteger suas fotos ou vídeos. A Internxt é um provedor vantajoso para fotógrafos graças à sua plataforma de código aberto que prioriza segurança, flexibilidade e preço acessível.",
+        "Alguns estudos de caso costumam sugerir plataformas de fotografia criadas com software proprietário, que é de código fechado e pode ser mais caro e vulnerável a vazamentos de dados ou outros riscos de segurança para as fotos de um fotógrafo.",
+        "Por outro lado, as soluções de armazenamento de código aberto para fotógrafos são criadas com seu código-fonte disponível gratuitamente ao público, o que significa que desenvolvedores ou especialistas em segurança podem identificar e corrigir vulnerabilidades no código de forma mais rápida e eficiente do que em softwares proprietários.",
+        "Uma solução de código aberto dá aos usuários da Internxt o poder de ver como seus dados são armazenados, além de benefícios adicionais a longo prazo. Por exemplo, a confiabilidade de uma plataforma de código aberto é alcançada graças às atualizações constantes da comunidade open source. Essas atualizações garantem que a Internxt esteja sempre em dia para oferecer armazenamento rápido, seguro e confiável aos fotógrafos.",
+        "Por fim, as soluções de armazenamento de código aberto costumam ser mais baratas do que os softwares proprietários, tornando-as acessíveis para muitos casos de uso, como iniciantes, amadores ou fotógrafos profissionais."
+      ]
+    },
+    "results": {
+      "title": "Resultados",
+      "description": [
+        "A incerteza sobre quando você pode perder o controle dos seus dados é exatamente o motivo pelo qual todo fotógrafo deveria pensar em segurança de dados. Todos correm risco de vazamentos, independentemente de onde os fotógrafos estejam trabalhando ou compartilhando suas fotos, por isso só protegendo suas imagens com a Internxt é que os fotógrafos conseguem realmente proteger suas memórias."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Armazenamento de fotos criptografado e seguro, num piscar de olhos",
+    "description": "Experimente a Internxt gratuitamente.",
+    "cta": "Proteja sua privacidade"
+  }
+}

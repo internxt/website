@@ -183,6 +183,7 @@ export const PricingSection = ({
       </Transition>
 
       <Transition
+        as="div"
         show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"

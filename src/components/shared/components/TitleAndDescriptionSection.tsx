@@ -19,13 +19,10 @@ export default function TitleAndDescriptionSection({
         } lg:bottom-0 lg:left-32 lg:right-32`}
       ></div>
       <div className="flex h-min w-[345px] flex-col items-center justify-center gap-8 text-center lg:w-full lg:gap-16">
-        <p
-          className={`${darkMode ? 'text-gray-1' : 'text-gray-95'} text-30 font-bold
-      leading-tight lg:text-5xl`}
-        >
+        <p className={`${darkMode ? 'text-gray-1' : 'text-gray-95'} text-30 font-bold leading-tight lg:text-3xl`}>
           {textContent.title}
         </p>
-        <div className="flex flex-col items-center gap-6 text-center lg:w-[786px]">
+        <div className="flex w-[270px] flex-col items-center gap-6 text-center lg:w-[700px]">
           {textContent.description.map((description: string, index: number) => (
             <p
               key={`description-${index}`}

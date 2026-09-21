@@ -30,6 +30,8 @@ export interface PhotosProps {
   relationalLinksText: RelationalLinksText;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
+  hidePriceTable?: boolean;
+  robots?: string;
 }
 
 export const Photos = ({
@@ -41,10 +43,12 @@ export const Photos = ({
   relationalLinksText,
   couponCode = PromoCodeName.OFFSUB,
   couponCodeForLifetime = PromoCodeName.OFFLFT,
+  hidePriceTable = false,
+  robots,
 }: PhotosProps): JSX.Element => {
   const metatags = metatagsDescription.find((metatag) => metatag.id === 'photos');
   const lang = locale as string;
-  const ctaUrl = '#billingButtons';
+  const ctaUrl = hidePriceTable ? '/pricing' : '#billingButtons';
 
   const {
     products,
@@ -95,35 +99,33 @@ export const Photos = ({
   };
 
   return (
-    <Layout
-      title={metatags?.title ?? ''}
-      description={metatags?.description ?? ''}
-      lang={lang}
-    >
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} lang={lang} robots={robots}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
       <HeroSection textContent={textContent.HeroSection} url={ctaUrl} />
 
       <PhotoSection textContent={textContent.PhotoSection} />
 
-      <PricingSectionWrapper
-        textContent={textContent.TableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscountForLifetime,
-        }}
-        backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-        lifetimeCoupons={lifetimeCoupons}
-        lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
-        popularPlanBySize="3TB"
-        sectionDetails="bg-white lg:py-20"
-        hideFreeCard
-      />
+      {!hidePriceTable && (
+        <PricingSectionWrapper
+          textContent={textContent.TableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessCards
+          hideBusinessSelector
+          popularPlanBySize="3TB"
+          sectionDetails="bg-white lg:py-20"
+          hideFreeCard
+        />
+      )}
 
       <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider />
 

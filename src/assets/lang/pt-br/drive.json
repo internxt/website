@@ -1,0 +1,413 @@
+{
+  "HeroSection": {
+    "eyebrow": "Drive",
+    "title": "**Armazenamento na nuvem seguro** para todos os seus arquivos",
+    "subtitle": "Armazenamento na nuvem premiado com criptografia pós-quântica para proteger sua privacidade.",
+    "features": [
+      "Criptografia pós-quântica",
+      "Armazenamento, sincronização e backup de arquivos",
+      "Código aberto e auditado"
+    ],
+    "cta": "Obtenha o Internxt Drive",
+    "DownloadSection": {
+      "downloadTitle": "Baixe o Internxt Drive",
+      "Desktop": "Internxt Desktop",
+      "Web": "Internxt Web",
+      "Mobile": "Internxt Mobile",
+      "or": "ou",
+      "downloadFor": "Baixar para",
+      "orDownloadFor": "Ou baixar para",
+      "downloadOnThe": "Baixar na",
+      "orDownloadOnThe": "Ou baixar na",
+      "getOn": "Baixar na",
+      "orGetOn": "Ou obter na",
+      "openDriveWeb": "Abrir o Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
+  },
+  "tableSection": {
+    "title": "Planos Internxt",
+    "hotLabel": "{{discount}}% de desconto",
+    "planTitles": {
+      "header": "Selecione seu plano",
+      "individuals": "Planos Anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos Vitalícios",
+      "business": "Planos Empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e tenha privacidade e segurança para sempre.",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total à nossa premiada suíte de privacidade, composta por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "Estamos trabalhando em novos planos da Internxt, criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Grátis",
+      "description": "Ganhe 1 GB de armazenamento na nuvem criptografado gratuitamente",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "DriveSection": {
+    "title": "Internxt Drive",
+    "description": [
+      "Provedores de armazenamento tradicionais, como o Google Drive, podem descriptografar, visualizar e compartilhar seus dados com governos e terceiros. ",
+      "O Internxt Drive dá a você controle e privacidade totais do seu armazenamento na nuvem por meio de criptografia de conhecimento zero e pós-quântica. Não conseguimos acessar seus arquivos; você mantém a propriedade, o acesso e o controle totais dos seus dados."
+    ]
+  },
+  "EncryptedCloudStorageSection": {
+    "title": "Armazenamento na nuvem seguro, criado sobre a privacidade",
+    "description": "O Internxt Drive usa criptografia pós-quântica e de conhecimento zero para criptografar seus arquivos e dados em repouso e em trânsito.",
+    "scrollableSection": {
+      "titles": [
+        "Seu cofre criptografado",
+        "Privacidade acima do lucro",
+        "Conformidade",
+        "Código aberto e auditado",
+        "Criado para a liberdade",
+        "Sem portas dos fundos"
+      ],
+      "descriptions": [
+        "A Internxt é o primeiro armazenamento na nuvem a usar criptografia pós-quântica Kyber 512 e AES-256, garantindo proteção de dados com segurança de ponta a ponta, privacidade europeia e tecnologia avançada.",
+        "Diferente das gigantes da tecnologia, a Internxt não pode visualizar nem excluir seus arquivos. Seus arquivos e dados são criptografados diretamente no seu dispositivo.  Ninguém, nem mesmo nós, pode acessar seus arquivos ou dados.",
+        "A Internxt está em conformidade com HIPAA, ISO 27001 e SOC 2. Seja para armazenamento na nuvem na área da saúde, no setor financeiro ou para uso pessoal, a Internxt garante que seus dados e arquivos atendam aos mais altos padrões de proteção de dados.",
+        "Todo o nosso código está publicamente disponível no GitHub e foi verificado por especialistas externos em cibersegurança para garantir que é uma plataforma segura para os seus dados.",
+        "Damos a você propriedade e controle totais sobre sua privacidade. Com nossos produtos focados em privacidade, o poder está com você, não com as gigantes da tecnologia.",
+        "Não temos acesso aos seus dados ou arquivos e não os compartilhamos com ninguém. Nossos aplicativos são totalmente de código aberto e auditados, garantindo que sua privacidade seja respeitada."
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Principais recursos do nosso armazenamento seguro na nuvem",
+    "description": "Segurança completa para seus dados, tudo o que você precisa para manter seus arquivos seguros e privados",
+    "accordionCards": {
+      "titles": [
+        "Um ecossistema totalmente privado",
+        "Colaboração segura",
+        "Sua nuvem, como um disco local"
+      ],
+      "descriptions": [
+        "A Internxt reúne armazenamento criptografado, backups, VPN, Antivirus, Cleaner, Meet, Mail e muito mais — tudo para se libertar das gigantes da tecnologia.",
+        "Envie arquivos com links criptografados, senhas e controles. Trabalhe com sua equipe em tempo real mantendo os dados privados.",
+        "Use a Internxt como um disco virtual para sincronizar, enviar e acessar arquivos sem complicações — como no seu computador, mas totalmente seguro e sempre atualizado."
+      ]
+    },
+    "cards": {
+      "titles": ["Criptografado de ponta a ponta", "Controles de acesso", "Backups criptografados"],
+      "descriptions": [
+        "Todos os arquivos são criptografados com criptografia pós-quântica e de conhecimento zero. Ninguém além de você, ou de quem você escolher compartilhar, pode ver o conteúdo.",
+        "Você controla exatamente quem pode acessar seus arquivos compartilhados com links criptografados e protegidos por senha, que podem ser revogados a qualquer momento.",
+        "Garanta que seus arquivos fiquem protegidos contra ransomware e perdas acidentais com backups programados e criptografados que oferecem proteção extra e tranquilidade."
+      ]
+    }
+  },
+  "AllInOnePrivacySection": {
+    "title": "Sua solução completa de privacidade",
+    "scrollableSection": {
+      "titles": ["Suíte completa de privacidade", "Para empresas", "Para famílias", "Preços incomparáveis"],
+      "descriptions": [
+        "Vá além do armazenamento na nuvem e inclua VPN, Antivirus, Cleaner, Meet e Mail no seu pacote de privacidade.",
+        "Proteja sua empresa contra ransomware e violações de dados com nosso armazenamento na nuvem para empresas.",
+        "Armazene e compartilhe as fotos, os vídeos e as memórias da sua família, e mantenha tudo seguro para sempre.",
+        "Sem taxas ocultas: escolha seu plano e aproveite seus recursos e a criptografia completa por um único preço. "
+      ]
+    }
+  },
+  "MadeInEuropeSection": {
+    "title": "Feito na Europa",
+    "description": "Seus dados são protegidos por rígidas leis e regulamentações europeias de conformidade, combinadas com criptografia premiada.",
+    "cards": {
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
+      "imagesMobile": [
+        "/images/drive/GDPR2.webp",
+        "/images/drive/Redundancy2.webp",
+        "/images/drive/Sustainability2.webp"
+      ],
+      "titles": ["Data centers europeus", "Redundância", "Compromisso com a sustentabilidade "],
+      "descriptions": [
+        "A Internxt fica em Valência, na Espanha, e nossos data centers estão na Europa e em outros locais do mundo, oferecendo a você segurança, velocidade e conformidade.",
+        "Seus arquivos são protegidos por sistemas redundantes, controles ambientais e monitoramento de segurança presencial 24 horas por dia. Não importa o que aconteça, seus arquivos permanecem sempre seguros e acessíveis.",
+        "A Internxt lidera pelo exemplo, trabalhando por uma solução de armazenamento na nuvem mais sustentável por meio de práticas energeticamente eficientes, para uma nuvem mais limpa e sustentável."
+      ],
+      "cta": ["Saiba mais", "", "Saiba mais"]
+    }
+  },
+  "OfficalCloudProvider": {
+    "title": "Provedor oficial de nuvem do Levante UD",
+    "description": [
+      "O Levante UD firmou parceria com a Internxt, que passou a ser a fornecedora oficial de armazenamento na nuvem criptografado do clube para manter seus dados totalmente privados. Essa colaboração une tecnologia e esporte e evidencia a influência crescente da Internxt no cenário tecnológico europeu.",
+      "Enquanto moderniza sua infraestrutura digital, o Levante UD se junta à Internxt para promover um modelo de inovação baseado em privacidade, confiança e independência digital. Esse acordo marca um passo importante no avanço da soberania digital e da proteção de dados."
+    ],
+    "cta": "Saiba mais"
+  },
+  "CtaSection": {
+    "title": "Armazenamento seguro baseado na nuvem",
+    "description": "Mude para o Internxt Drive e tenha o armazenamento na nuvem mais seguro",
+    "cta": "Obtenha o Internxt"
+  },
+  "DownloadSection": {
+    "downloadTitle": "Baixe o Internxt Drive",
+    "Desktop": "Internxt Desktop",
+    "Web": "Internxt Web",
+    "Mobile": "Internxt Mobile",
+    "or": "ou",
+    "downloadFor": "Baixar para",
+    "orDownloadFor": "Ou baixar para",
+    "downloadOnThe": "Baixar na",
+    "orDownloadOnThe": "Ou baixar na",
+    "getOn": "Baixar na",
+    "orGetOn": "Ou obter na",
+    "openDriveWeb": "Abrir o Drive Web",
+    "iPhone": "App Store",
+    "iPad": "App Store",
+    "Android": "Play Store",
+    "Windows": "Windows",
+    "Linux": "Linux",
+    "UNIX": "Linux",
+    "MacOS": "Mac"
+  },
+  "AdvancedToolsSection": {
+    "title": "Ferramentas avançadas para especialistas",
+    "description": "A Internxt funciona no Windows, Mac, Linux e dispositivos móveis — com ferramentas avançadas para desenvolvedores e empresas.",
+    "powerUsers": {
+      "title": "Ferramentas poderosas \n **para usuários avançados**",
+      "description": "O Internxt CLI é uma poderosa ferramenta de linha de comando que permite\n acessar e gerenciar os dados do Internxt Drive por meio de comandos\n e WebDAV.",
+      "install": {
+        "title": "Instale usando o npm",
+        "command": "npm i -g @internxt/cli"
+      },
+      "available": "Disponível em",
+      "learnMore": {
+        "title": "Saiba mais sobre o Internxt CLI:",
+        "GitHub": "ReadMe no GitHub",
+        "learnMore": "Saiba mais"
+      }
+    },
+    "webDAV": {
+      "title": "WebDAV",
+      "description": "Use a Internxt com segurança em qualquer plataforma com seu cliente WebDAV e CLI favoritos — criptografado de ponta a ponta e protegido por conhecimento zero.",
+      "cta": "Obter WebDAV"
+    },
+    "Rclone": {
+      "title": "Rclone",
+      "cta": "Obter Rclone",
+      "description": "Sincronize, faça backup e gerencie seus arquivos em vários serviços de nuvem sem esforço, com suporte nativo ao Rclone."
+    },
+    "NAS": {
+      "title": "NAS",
+      "cta": "Obter NAS",
+      "description": "Conecte seu sistema NAS diretamente ao Internxt Drive para fazer backup, sincronizar e gerenciar seus dados com segurança."
+    }
+  },
+  "ReviewSection": {
+    "forbes": "A Internxt consolida sua posição como alternativa europeia às gigantes da tecnologia",
+    "deloitte": "Recebeu o prêmio Deloitte Fast 50, que reconhece as empresas de crescimento mais rápido",
+    "techradar": "A Internxt é um excelente serviço de armazenamento na nuvem; acessível, intuitivo e confiável",
+    "fortune": "A Internxt está construindo uma internet onde a privacidade e a segurança vêm em primeiro lugar",
+    "trustpilot": "Excelente custo-benefício pela segurança e pelos recursos oferecidos. Serviço e suporte excelentes."
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "O que é o Internxt Drive?",
+        "answer": [
+          "O Internxt Drive é um serviço de armazenamento de arquivos de conhecimento zero, criado para privacidade absoluta e segurança rigorosa. Nosso serviço não acessa seus dados pessoais nem seus arquivos. Ao contrário, foi projetado para devolver a você o controle dos seus arquivos e protegê-lo de coletores de dados."
+        ]
+      },
+      {
+        "question": "Como criar uma conta na Internxt?",
+        "answer": [
+          "Acesse nosso site e clique em “Começar” no canto superior direito. Preencha o formulário de cadastro informando um endereço de email e crie sua senha. Não é necessária nenhuma verificação de identidade ou de email para começar a usar os serviços da Internxt."
+        ]
+      },
+      {
+        "question": "Como enviar arquivos para o Internxt Drive?",
+        "answer": [
+          "Acesse o Drive Web e faça login. Arraste e solte os arquivos ou fotos escolhidos diretamente na janela do navegador. Você também pode clicar em “Novo” no canto direito do navegador, o que abrirá o Explorer ou o Finder, e selecionar os arquivos que deseja enviar."
+        ]
+      },
+      {
+        "question": "Como instalar o aplicativo da Internxt?",
+        "answer": [
+          "Acesse o site da Internxt, role a página inicial para baixo e selecione “Baixar aplicativos”. O aplicativo da Internxt também está disponível na Play Store e na App Store. Assim que o download terminar, você será solicitado a executar nosso aplicativo de armazenamento. Baixar o aplicativo do Drive permite aproveitar melhor o ecossistema da Internxt."
+        ]
+      },
+      {
+        "question": "Posso configurar a autenticação de dois fatores (2FA) na Internxt?",
+        "answer": [
+          "Sim. Você pode configurar a autenticação de dois fatores (2FA) para sua conta Internxt pelo aplicativo Drive Web. Além disso, pode usar o Authy ou qualquer outra ferramenta de 2FA para gerar seu código e fazer login no nosso aplicativo de drive online."
+        ]
+      },
+      {
+        "question": "O que é armazenamento na nuvem seguro?",
+        "answer": [
+          "Armazenamento na nuvem seguro é um serviço online de armazenamento de arquivos projetado especificamente para proteger seus dados contra acessos não autorizados, violações de dados e violações de privacidade — tanto durante a transmissão quanto em repouso em servidores remotos.",
+          "O que diferencia o armazenamento na nuvem seguro das plataformas de nuvem comuns é a combinação de controles técnicos, certificações de conformidade e arquitetura de privacidade. No mínimo, uma solução de armazenamento na nuvem segura usará protocolos robustos para dados em trânsito (como TLS 1.3), proteções sólidas para dados em repouso, controles de acesso e auditorias regulares de terceiros para verificar se essas proteções funcionam conforme o prometido.",
+          "O Internxt Drive é construído sobre uma arquitetura de privacidade de conhecimento zero, o que significa que os arquivos são protegidos no seu dispositivo antes de serem transmitidos, de modo que a própria Internxt não tem acesso ao conteúdo deles. A auditoria independente da Securitum de 2024 confirmou esse modelo — a mesma revisão que fundamenta a certificação ISO 27001:2022 e a conformidade com a HIPAA."
+        ]
+      },
+      {
+        "question": "O que é armazenamento seguro de arquivos na nuvem e por que isso importa?",
+        "answer": [
+          "Armazenamento seguro de arquivos na nuvem é o armazenamento de arquivos individuais — documentos, fotos, vídeos, backups — em servidores remotos de forma a proteger tanto o conteúdo quanto os metadados contra acessos não autorizados, com a privacidade incorporada à arquitetura em vez de acrescentada depois.",
+          "As pessoas guardam na nuvem seus dados mais sensíveis: declarações de imposto, documentos médicos, contratos, fotos pessoais, propriedade intelectual. As plataformas de nuvem de consumo comuns foram projetadas principalmente para acessibilidade e colaboração, não para privacidade. Os serviços de armazenamento seguro de arquivos na nuvem são projetados com a prioridade oposta — privacidade e proteção de dados primeiro, acessibilidade construída sobre essa base.",
+          "Para profissionais, o risco é maior. Um advogado que guarda documentos de clientes, um médico que compartilha prontuários ou uma empresa que arquiva dados financeiros têm obrigações legais sobre como essas informações são tratadas. O armazenamento seguro de arquivos na nuvem com certificações de conformidade verificáveis — e não apenas alegações de marketing — é a infraestrutura adequada para esses casos de uso.",
+          "O Internxt Drive foi criado especificamente como armazenamento seguro de arquivos na nuvem: uma arquitetura de conhecimento zero garante que somente o dono do arquivo possa acessar o conteúdo; a certificação ISO 27001:2022 oferece gestão de segurança da informação verificada de forma independente; e a conformidade com a HIPAA o torna adequado para a área da saúde e setores regulamentados."
+        ]
+      },
+      {
+        "question": "O que torna a segurança do armazenamento na nuvem eficaz?",
+        "answer": [
+          "A segurança eficaz do armazenamento na nuvem não é um recurso único — são várias camadas de proteção atuando em conjunto, cada uma cobrindo uma superfície de ataque diferente.",
+          "Arquitetura de privacidade: a medida de segurança mais significativa no armazenamento na nuvem é saber se o provedor consegue acessar seus arquivos. Serviços que protegem os dados no dispositivo do usuário antes do envio, usando um modelo de conhecimento zero, oferecem um nível de privacidade fundamentalmente superior ao de provedores que mantêm acesso aos seus dados.",
+          "Proteção de dados em trânsito e em repouso: os arquivos devem ser protegidos tanto durante a transmissão para a nuvem quanto enquanto armazenados nos servidores. Procure provedores que usem TLS 1.3 ou equivalente para o trânsito e algoritmos modernos e robustos para dados em repouso.",
+          "Controles de acesso: autenticação multifator, permissões baseadas em função e gerenciamento de sessões são componentes críticos da segurança do armazenamento na nuvem para pessoas e equipes.",
+          "Certificações e auditorias: a ISO 27001:2022 cobre a gestão de segurança da informação; a HIPAA se aplica a dados de saúde. Auditorias de terceiros têm mais peso que autoavaliações, porque uma empresa independente coloca sua reputação em jogo nas conclusões.",
+          "Transparência: o código aberto permite que a comunidade de segurança revise e valide as alegações de privacidade de um provedor. O Internxt Drive cumpre todos os cinco pontos: modelo de privacidade de conhecimento zero, TLS 1.3 em trânsito, certificação ISO 27001:2022, conformidade com a HIPAA, uma auditoria de terceiros de 2024 registrada e o código-fonte aberto no GitHub."
+        ]
+      },
+      {
+        "question": "O que é armazenamento seguro baseado na nuvem e como ele difere das opções comuns?",
+        "answer": [
+          "Armazenamento seguro baseado na nuvem é uma infraestrutura de nuvem projetada tendo a proteção de dados como requisito principal, e não como recurso adicional. A diferença em relação às opções comuns se resume a duas coisas: quem tem acesso aos seus dados e o que acontece quando algo dá errado.",
+          "Armazenamento na nuvem comum (Google Drive, Dropbox, OneDrive): prioriza a integração com o ecossistema, os recursos de colaboração e a acessibilidade. Esses provedores detêm as chaves dos seus dados, podem atender a solicitações de acesso governamentais e podem analisar o conteúdo dos arquivos para diversas finalidades, conforme divulgado em seus termos de serviço.",
+          "Armazenamento seguro baseado na nuvem: construído de modo que o acesso aos seus dados seja tecnicamente restrito — não apenas por política, mas por concepção. Mesmo em caso de violação no servidor ou de ordem judicial de entrega, um provedor verdadeiramente de conhecimento zero não consegue produzir o conteúdo legível dos arquivos, porque realmente não o possui.",
+          "O armazenamento seguro na nuvem que funciona sob esse princípio às vezes é chamado de “privacidade por arquitetura” — a proteção é garantida matematicamente, não apenas prometida. Para pessoas e organizações que precisam da segurança do armazenamento na nuvem como requisito técnico obrigatório, essa diferença de arquitetura é o fator decisivo."
+        ]
+      },
+      {
+        "question": "O armazenamento na nuvem é seguro para arquivos sensíveis?",
+        "answer": [
+          "Se o armazenamento na nuvem é seguro para arquivos sensíveis depende inteiramente do provedor e da arquitetura de privacidade que ele usa — nem todo armazenamento na nuvem é igualmente seguro.",
+          "Nas plataformas de nuvem comuns, seus arquivos ficam acessíveis ao provedor e, potencialmente, a governos, autoridades ou hackers que comprometam os sistemas do provedor. Essas plataformas são seguras no sentido de que protegem contra muitas ameaças comuns, mas não são seguras no sentido de que seus dados sejam totalmente privados.",
+          "Com um provedor de armazenamento na nuvem de conhecimento zero, os arquivos sensíveis são protegidos no seu dispositivo antes da transmissão — o provedor armazena dados que não consegue ler. Em caso de violação, ordem judicial ou ameaça interna, o provedor não tem nada de útil a entregar.",
+          "O armazenamento na nuvem mais seguro para arquivos sensíveis combina arquitetura de conhecimento zero com certificação de segurança independente. O Internxt Drive conta com uma auditoria da Securitum de 2024, certificação ISO 27001:2022 e conformidade com a HIPAA — o que o torna uma escolha defensável para prontuários médicos, documentos jurídicos, dados financeiros e qualquer informação em que o armazenamento seguro na nuvem seja um requisito real."
+        ]
+      },
+      {
+        "question": "Como escolho o armazenamento na nuvem mais seguro para as minhas necessidades?",
+        "answer": [
+          "Escolher o armazenamento na nuvem mais seguro começa pelo seu modelo de ameaças: de quem você está protegendo seus dados e quais são as consequências caso essa pessoa os acesse?",
+          "Para privacidade geral (proteção contra coleta de dados, perfilamento publicitário ou violações oportunistas): qualquer serviço de armazenamento na nuvem que use arquitetura de conhecimento zero e tenha passado por uma auditoria de segurança independente atende ao critério. Internxt Drive, ProtonDrive e Tresorit cumprem esse requisito.",
+          "Para setores regulamentados (saúde, jurídico, financeiro): você precisa de um armazenamento na nuvem com certificações formais de conformidade e um Acordo de Parceria Comercial (BAA) ou equivalente. O Internxt Drive possui conformidade com a HIPAA e certificação ISO 27001:2022 com trilha de auditoria verificável.",
+          "Para equipes e organizações: procure controles de acesso baseados em função, gerenciamento administrativo centralizado e registros de auditoria, além da arquitetura de privacidade subjacente. O armazenamento seguro na nuvem que combina gestão de equipes com um modelo de privacidade de conhecimento zero oferece conformidade e controle.",
+          "Para usuários tecnicamente experientes: o código aberto é um diferencial relevante — permite verificar de forma independente se as alegações de conhecimento zero são precisas. Todo o código-fonte do Internxt Drive está publicamente disponível no GitHub.",
+          "O armazenamento na nuvem mais seguro é aquele que atende aos seus requisitos de privacidade, tem certificações verificáveis (e não apenas alegações autodeclaradas) e foi revisado por auditores independentes."
+        ]
+      },
+      {
+        "question": "Quais certificações de segurança devo procurar em um armazenamento na nuvem?",
+        "answer": [
+          "As certificações e os padrões mais relevantes para a segurança do armazenamento na nuvem são credenciais verificadas de forma independente — não alegações de marketing autodeclaradas.",
+          "ISO 27001:2022: o padrão internacionalmente reconhecido para sistemas de gestão de segurança da informação. A certificação significa que os controles de segurança, as políticas e os processos de gestão de risco de uma organização foram auditados de forma independente segundo um framework rigoroso. A Internxt obteve a certificação ISO 27001:2022 em maio de 2024.",
+          "HIPAA: exigida para qualquer armazenamento na nuvem que trate dados de saúde dos EUA (Informações de Saúde Protegidas). O provedor precisa estar disposto a assinar um Acordo de Parceria Comercial (BAA). O Internxt Drive atende a esse requisito.",
+          "GDPR: relevante para dados que envolvam residentes da UE. A localização europeia do data center é um fator significativo para a segurança do armazenamento baseado na nuvem. A Internxt opera data centers europeus e está em conformidade com o GDPR.",
+          "SOC 2 Type II: um padrão de origem norte-americana que audita controles de segurança, disponibilidade e confidencialidade. Relevante para aquisições corporativas nos EUA.",
+          "Auditorias de segurança independentes: os provedores mais confiáveis contratam empresas terceirizadas de cibersegurança para testar seus sistemas e publicar os resultados. A auditoria independente da Internxt em 2024 foi conduzida pela Securitum, uma das principais empresas de cibersegurança da Europa.",
+          "Alegações autodeclaradas como “nível militar” ou “nível bancário” não são certificações e não têm peso verificável. Ao avaliar a segurança de um armazenamento na nuvem, procure credenciais documentadas e verificadas por terceiros, emitidas por órgãos certificadores reconhecidos."
+        ]
+      }
+    ]
+  },
+  "SecureStorageSeoSection": {
+    "title": "Armazenamento seguro de arquivos na nuvem: como a Internxt protege seus dados",
+    "faq": [
+      {
+        "question": "O que é armazenamento na nuvem seguro?",
+        "answer": [
+          "Armazenamento na nuvem seguro é um serviço online de armazenamento de arquivos projetado especificamente para proteger seus dados contra acessos não autorizados, violações de dados e violações de privacidade — tanto durante a transmissão quanto em repouso em servidores remotos.",
+          "O que diferencia o armazenamento na nuvem seguro das plataformas de nuvem comuns é a combinação de controles técnicos, certificações de conformidade e arquitetura de privacidade. No mínimo, uma solução de armazenamento na nuvem segura usará protocolos robustos para dados em trânsito (como TLS 1.3), proteções sólidas para dados em repouso, controles de acesso e auditorias regulares de terceiros para verificar se essas proteções funcionam conforme o prometido.",
+          "O Internxt Drive é construído sobre uma arquitetura de privacidade de conhecimento zero, o que significa que os arquivos são protegidos no seu dispositivo antes de serem transmitidos, de modo que a própria Internxt não tem acesso ao conteúdo deles. A auditoria independente da Securitum de 2024 confirmou esse modelo — a mesma revisão que fundamenta a certificação ISO 27001:2022 e a conformidade com a HIPAA."
+        ]
+      },
+      {
+        "question": "O que é armazenamento seguro de arquivos na nuvem e por que isso importa?",
+        "answer": [
+          "Armazenamento seguro de arquivos na nuvem é o armazenamento de arquivos individuais — documentos, fotos, vídeos, backups — em servidores remotos de forma a proteger tanto o conteúdo quanto os metadados contra acessos não autorizados, com a privacidade incorporada à arquitetura em vez de acrescentada depois.",
+          "As pessoas guardam na nuvem seus dados mais sensíveis: declarações de imposto, documentos médicos, contratos, fotos pessoais, propriedade intelectual. As plataformas de nuvem de consumo comuns foram projetadas principalmente para acessibilidade e colaboração, não para privacidade. Os serviços de armazenamento seguro de arquivos na nuvem são projetados com a prioridade oposta — privacidade e proteção de dados primeiro, acessibilidade construída sobre essa base.",
+          "Para profissionais, o risco é maior. Um advogado que guarda documentos de clientes, um médico que compartilha prontuários ou uma empresa que arquiva dados financeiros têm obrigações legais sobre como essas informações são tratadas. O armazenamento seguro de arquivos na nuvem com certificações de conformidade verificáveis — e não apenas alegações de marketing — é a infraestrutura adequada para esses casos de uso.",
+          "O Internxt Drive foi criado especificamente como armazenamento seguro de arquivos na nuvem: uma arquitetura de conhecimento zero garante que somente o dono do arquivo possa acessar o conteúdo; a certificação ISO 27001:2022 oferece gestão de segurança da informação verificada de forma independente; e a conformidade com a HIPAA o torna adequado para a área da saúde e setores regulamentados."
+        ]
+      },
+      {
+        "question": "O que torna a segurança do armazenamento na nuvem eficaz?",
+        "answer": [
+          "A segurança eficaz do armazenamento na nuvem não é um recurso único — são várias camadas de proteção atuando em conjunto, cada uma cobrindo uma superfície de ataque diferente.",
+          "Arquitetura de privacidade: a medida de segurança mais significativa no armazenamento na nuvem é saber se o provedor consegue acessar seus arquivos. Serviços que protegem os dados no dispositivo do usuário antes do envio, usando um modelo de conhecimento zero, oferecem um nível de privacidade fundamentalmente superior ao de provedores que mantêm acesso aos seus dados.",
+          "Proteção de dados em trânsito e em repouso: os arquivos devem ser protegidos tanto durante a transmissão para a nuvem quanto enquanto armazenados nos servidores. Procure provedores que usem TLS 1.3 ou equivalente para o trânsito e algoritmos modernos e robustos para dados em repouso.",
+          "Controles de acesso: autenticação multifator, permissões baseadas em função e gerenciamento de sessões são componentes críticos da segurança do armazenamento na nuvem para pessoas e equipes.",
+          "Certificações e auditorias: a ISO 27001:2022 cobre a gestão de segurança da informação; a HIPAA se aplica a dados de saúde. Auditorias de terceiros têm mais peso que autoavaliações, porque uma empresa independente coloca sua reputação em jogo nas conclusões.",
+          "Transparência: o código aberto permite que a comunidade de segurança revise e valide as alegações de privacidade de um provedor. O Internxt Drive cumpre todos os cinco pontos: modelo de privacidade de conhecimento zero, TLS 1.3 em trânsito, certificação ISO 27001:2022, conformidade com a HIPAA, uma auditoria de terceiros de 2024 registrada e o código-fonte aberto no GitHub."
+        ]
+      },
+      {
+        "question": "O que é armazenamento seguro baseado na nuvem e como ele difere das opções comuns?",
+        "answer": [
+          "Armazenamento seguro baseado na nuvem é uma infraestrutura de nuvem projetada tendo a proteção de dados como requisito principal, e não como recurso adicional. A diferença em relação às opções comuns se resume a duas coisas: quem tem acesso aos seus dados e o que acontece quando algo dá errado.",
+          "Armazenamento na nuvem comum (Google Drive, Dropbox, OneDrive): prioriza a integração com o ecossistema, os recursos de colaboração e a acessibilidade. Esses provedores detêm as chaves dos seus dados, podem atender a solicitações de acesso governamentais e podem analisar o conteúdo dos arquivos para diversas finalidades, conforme divulgado em seus termos de serviço.",
+          "Armazenamento seguro baseado na nuvem: construído de modo que o acesso aos seus dados seja tecnicamente restrito — não apenas por política, mas por concepção. Mesmo em caso de violação no servidor ou de ordem judicial de entrega, um provedor verdadeiramente de conhecimento zero não consegue produzir o conteúdo legível dos arquivos, porque realmente não o possui.",
+          "O armazenamento seguro na nuvem que funciona sob esse princípio às vezes é chamado de “privacidade por arquitetura” — a proteção é garantida matematicamente, não apenas prometida. Para pessoas e organizações que precisam da segurança do armazenamento na nuvem como requisito técnico obrigatório, essa diferença de arquitetura é o fator decisivo."
+        ]
+      },
+      {
+        "question": "O armazenamento na nuvem é seguro para arquivos sensíveis?",
+        "answer": [
+          "Se o armazenamento na nuvem é seguro para arquivos sensíveis depende inteiramente do provedor e da arquitetura de privacidade que ele usa — nem todo armazenamento na nuvem é igualmente seguro.",
+          "Nas plataformas de nuvem comuns, seus arquivos ficam acessíveis ao provedor e, potencialmente, a governos, autoridades ou hackers que comprometam os sistemas do provedor. Essas plataformas são seguras no sentido de que protegem contra muitas ameaças comuns, mas não são seguras no sentido de que seus dados sejam totalmente privados.",
+          "Com um provedor de armazenamento na nuvem de conhecimento zero, os arquivos sensíveis são protegidos no seu dispositivo antes da transmissão — o provedor armazena dados que não consegue ler. Em caso de violação, ordem judicial ou ameaça interna, o provedor não tem nada de útil a entregar.",
+          "O armazenamento na nuvem mais seguro para arquivos sensíveis combina arquitetura de conhecimento zero com certificação de segurança independente. O Internxt Drive conta com uma auditoria da Securitum de 2024, certificação ISO 27001:2022 e conformidade com a HIPAA — o que o torna uma escolha defensável para prontuários médicos, documentos jurídicos, dados financeiros e qualquer informação em que o armazenamento seguro na nuvem seja um requisito real."
+        ]
+      },
+      {
+        "question": "Como escolho o armazenamento na nuvem mais seguro para as minhas necessidades?",
+        "answer": [
+          "Escolher o armazenamento na nuvem mais seguro começa pelo seu modelo de ameaças: de quem você está protegendo seus dados e quais são as consequências caso essa pessoa os acesse?",
+          "Para privacidade geral (proteção contra coleta de dados, perfilamento publicitário ou violações oportunistas): qualquer serviço de armazenamento na nuvem que use arquitetura de conhecimento zero e tenha passado por uma auditoria de segurança independente atende ao critério. Internxt Drive, ProtonDrive e Tresorit cumprem esse requisito.",
+          "Para setores regulamentados (saúde, jurídico, financeiro): você precisa de um armazenamento na nuvem com certificações formais de conformidade e um Acordo de Parceria Comercial (BAA) ou equivalente. O Internxt Drive possui conformidade com a HIPAA e certificação ISO 27001:2022 com trilha de auditoria verificável.",
+          "Para equipes e organizações: procure controles de acesso baseados em função, gerenciamento administrativo centralizado e registros de auditoria, além da arquitetura de privacidade subjacente. O armazenamento seguro na nuvem que combina gestão de equipes com um modelo de privacidade de conhecimento zero oferece conformidade e controle.",
+          "Para usuários tecnicamente experientes: o código aberto é um diferencial relevante — permite verificar de forma independente se as alegações de conhecimento zero são precisas. Todo o código-fonte do Internxt Drive está publicamente disponível no GitHub.",
+          "O armazenamento na nuvem mais seguro é aquele que atende aos seus requisitos de privacidade, tem certificações verificáveis (e não apenas alegações autodeclaradas) e foi revisado por auditores independentes."
+        ]
+      },
+      {
+        "question": "Quais certificações de segurança devo procurar em um armazenamento na nuvem?",
+        "answer": [
+          "As certificações e os padrões mais relevantes para a segurança do armazenamento na nuvem são credenciais verificadas de forma independente — não alegações de marketing autodeclaradas.",
+          "ISO 27001:2022: o padrão internacionalmente reconhecido para sistemas de gestão de segurança da informação. A certificação significa que os controles de segurança, as políticas e os processos de gestão de risco de uma organização foram auditados de forma independente segundo um framework rigoroso. A Internxt obteve a certificação ISO 27001:2022 em maio de 2024.",
+          "HIPAA: exigida para qualquer armazenamento na nuvem que trate dados de saúde dos EUA (Informações de Saúde Protegidas). O provedor precisa estar disposto a assinar um Acordo de Parceria Comercial (BAA). O Internxt Drive atende a esse requisito.",
+          "GDPR: relevante para dados que envolvam residentes da UE. A localização europeia do data center é um fator significativo para a segurança do armazenamento baseado na nuvem. A Internxt opera data centers europeus e está em conformidade com o GDPR.",
+          "SOC 2 Type II: um padrão de origem norte-americana que audita controles de segurança, disponibilidade e confidencialidade. Relevante para aquisições corporativas nos EUA.",
+          "Auditorias de segurança independentes: os provedores mais confiáveis contratam empresas terceirizadas de cibersegurança para testar seus sistemas e publicar os resultados. A auditoria independente da Internxt em 2024 foi conduzida pela Securitum, uma das principais empresas de cibersegurança da Europa.",
+          "Alegações autodeclaradas como “nível militar” ou “nível bancário” não são certificações e não têm peso verificável. Ao avaliar a segurança de um armazenamento na nuvem, procure credenciais documentadas e verificadas por terceiros, emitidas por órgãos certificadores reconhecidos."
+        ]
+      }
+    ]
+  }
+}

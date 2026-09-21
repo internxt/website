@@ -1,0 +1,132 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "A privacidade é um ",
+      "blueText": "direito humano fundamental"
+    },
+    "description": " Aqui na Internxt, acreditamos que o que a humanidade pode alcançar é extraordinário e que nossos produtos devem permitir que a sociedade atinja a excelência. Nossos serviços de nuvem não devem apenas empoderar as pessoas, mas também respeitar os direitos individuais humanos básicos. Estamos trabalhando para construir uma internet melhor e mais segura, com o respeito por você, usuário, no centro de tudo.",
+    "cta": "Assista ao vídeo"
+  },
+  "ManifestoSection": {
+    "section1": {
+      "title": {
+        "line1": "Por que a privacidade importa?"
+      },
+      "subtitle": {
+        "line1": "\"Hoje a internet é controlada por gigantes da tecnologia que oferecem serviços e produtos que não passam de um meio para um fim. Serviços que se tornaram essenciais em nossas vidas hoje são usados para coletar enormes quantidades de dados, transformados em armas para traçar perfis de usuários, monitorar hábitos e direcionar anúncios. Comodidade e progresso não deveriam ter um custo tão alto. Acreditamos em uma internet mais justa, ética e equitativa, na qual a privacidade do usuário vem em primeiro lugar.\""
+      },
+      "signature": {
+        "line1": "Fran Villalba Segarra,",
+        "line2": "Fundador e CEO da Internxt"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "A Internxt protege a privacidade do usuário",
+    "description": "Levamos a privacidade e a segurança extremamente a sério, e é por isso que implementamos um conjunto de tecnologias e protocolos para garantir que seus dados permaneçam sempre seguros e privados.",
+    "cards": {
+      "openSource": {
+        "title": "Código aberto",
+        "description": "Cada parte do nosso código é de código aberto e está publicada no GitHub. Todos os nossos sistemas são de conhecimento público e podem ser autenticados de forma independente. Confira você mesmo."
+      },
+      "postQuantum": {
+        "title": "Criptografia pós-quântica",
+        "description": "A Internxt é um dos primeiros produtos de privacidade a usar criptografia pós-quântica, oferecendo a máxima proteção para sua privacidade online. Seus arquivos estão protegidos hoje e continuarão seguros por muito tempo no futuro."
+      },
+      "zeroKnowledge": {
+        "title": "Tecnologia de conhecimento zero",
+        "description": "Em nenhum momento arquivos, fotos, senhas ou qualquer tipo de dado bruto não criptografado ficam visíveis para usuários ou servidores não autorizados. Você sempre tem controle total sobre quem obtém acesso."
+      },
+      "gdpr": {
+        "title": "Sincronização em conformidade com o GDPR",
+        "description": "Hoje cumprimos todas as disposições do GDPR, como o direito à privacidade, o direito à informação e o direito ao esquecimento, entre muitas outras, e nos comprometemos a atender a todas as disposições futuras."
+      },
+      "noUnwantedAccess": {
+        "title": "Nenhum acesso indesejado aos dados",
+        "description": "Tudo o que você armazena ou compartilha é criptografado antes mesmo de sair do seu dispositivo, o que torna impossível descriptografar sem permissão. Nem nós conseguimos acessar seus arquivos, fotos ou senhas."
+      },
+      "freeTools": {
+        "title": "Ferramentas gratuitas de privacidade online",
+        "description": "Queremos que todos estejam mais seguros online, assinando ou não os nossos serviços, e é por isso que criamos várias ferramentas online gratuitas que qualquer pessoa pode usar para se proteger enquanto navega na web."
+      }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "Os produtos mais seguros para ",
+      "line2": "proteger você online"
+    },
+    "subtitle": "Os produtos gratuitos das grandes empresas de tecnologia não são realmente gratuitos: você paga com dados pessoais. Nossos produtos jamais negociarão suas informações nem venderão seus dados. Quando dizemos gratuito, é gratuito mesmo.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Retome o controle dos seus arquivos e dados com o Internxt Drive. Armazenar e fazer backup dos seus arquivos com total privacidade nunca foi tão fácil. Armazenamento em nuvem moderno com criptografia de nível militar.",
+      "cta": "Proteja com o Drive"
+    },
+    "square2": {
+      "title": "Internxt Send",
+      "description": "O Send permite criptografar de ponta a ponta e compartilhar arquivos grandes rapidamente, sem se preocupar com a segurança dos seus documentos, imagens ou vídeos. Transfira para qualquer pessoa com total confidencialidade.",
+      "cta": "Compartilhe com o Send"
+    },
+    "square3": {
+      "title": "Internxt VPN",
+      "description": "A Internxt VPN criptografa e protege sua conexão de internet, defendendo você de vazamentos de dados, hackers e ataques de rede. Mantenha seus dados privados e protegidos de olhares curiosos.",
+      "cta": "Navegue com a VPN"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O armazenamento em nuvem da Internxt é seguro?",
+        "answer": [
+          "O Internxt Drive é um serviço de armazenamento de arquivos com conhecimento zero, criado para privacidade absoluta e segurança rigorosa. Nosso serviço não acessa seus dados pessoais ou arquivos para fins publicitários; ao contrário, foi projetado para devolver a você o controle dos seus arquivos e protegê-lo da coleta de dados e das empresas de publicidade."
+        ]
+      },
+      {
+        "question": "A Internxt é uma solução de armazenamento em nuvem sustentável e ecológica?",
+        "answer": [
+          "Sim, a Internxt tem o compromisso com a computação em nuvem verde, oferecendo soluções de armazenamento ecológicas para apoiar um futuro mais limpo e sustentável. Nossos data centers são alimentados por 92% de energia renovável e foram projetados para minimizar as emissões de carbono, o consumo de recursos e o lixo eletrônico. ",
+          "Nossos esforços contribuem para a meta de neutralidade climática até 2050. Saiba mais"
+        ]
+      },
+      {
+        "question": "Qual é o armazenamento em nuvem mais privado?",
+        "answer": [
+          "Muitos provedores de nuvem dizem que seu serviço é privado, mas a Internxt vai muito além. A Internxt é um serviço de armazenamento de arquivos com conhecimento zero, criado para privacidade absoluta e segurança rigorosa. A Internxt não consegue acessar os dados que você armazena na nuvem."
+        ]
+      },
+      {
+        "question": "A Internxt é privada?",
+        "answer": [
+          "Diferentemente de alguns dos nossos concorrentes, não operamos com base em publicidade ou coleta de dados. Seus dados são exclusivamente seus. Priorizamos sua segurança, sua privacidade e a proteção dos seus arquivos e fotos. Usando a Internxt, você pode ter certeza de que está seguro."
+        ]
+      },
+      {
+        "question": "A Internxt é uma solução de armazenamento em nuvem sustentável e ecológica?",
+        "answer": [
+          "Sim, a Internxt tem o compromisso com a computação em nuvem verde, oferecendo soluções de armazenamento ecológicas para apoiar um futuro mais limpo e sustentável. Nossos data centers são alimentados por 92% de energia renovável e foram projetados para minimizar as emissões de carbono, o consumo de recursos e o lixo eletrônico.",
+          "Nossos esforços contribuem para a meta de neutralidade climática até 2050. [Saiba mais](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  },
+  "SecuritumSection": {
+    "title": "A Internxt é aprovada em auditoria de segurança independente",
+    "subtitle": "Leia os relatórios completos da auditoria de segurança",
+    "links": {
+      "desk": "Auditoria de segurança do Internxt Desktop",
+      "web": "Auditoria de segurança do Internxt Web",
+      "mobile": "Auditoria de segurança do Internxt Mobile"
+    }
+  },
+  "BetterTomorrowSection": {
+    "title": "Defenda um amanhã melhor",
+    "description": "Chegou a hora de colocar sua privacidade em suas próprias mãos. Incentivamos todos a serem proativos na própria proteção. Saiba mais sobre o direito à privacidade. Envolva-se com nossa lista selecionada de organizações respeitadas que defendem os direitos digitais.",
+    "cta": "Diretório de organizações de direitos digitais"
+  },
+  "CtaSection": {
+    "title": "Experimente a Internxt sem riscos",
+    "description": "Proteja o que realmente importa com o armazenamento em nuvem seguro, privado e criptografado da Internxt.",
+    "cta": "Escolha um plano agora"
+  }
+}

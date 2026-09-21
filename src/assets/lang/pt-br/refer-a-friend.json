@@ -1,0 +1,116 @@
+{
+  "HeroSection": {
+    "title": "**Indique** um amigo e **ganhe** até 100€",
+    "subtitle": "Convide seus amigos para experimentar Internxt Drive, VPN, Meet e muito mais. Quando eles comprarem um plano, vocês dois receberão recompensas.",
+    "features": [
+      "Receba até 100€ por cada indicação",
+      "Seu amigo ganha 85% de desconto em todos os planos",
+      "Receba diretamente na sua conta do PayPal"
+    ],
+    "cta": "Convidar um amigo"
+  },
+  "RewardsSection": {
+    "title": "Quais recompensas você recebe?",
+    "subtitle": "Indique um amigo e ganhe até 100€",
+    "features": [
+      "Você receberá uma comissão por cada plano comprado pelo seu link de indicação exclusivo. Quanto mais amigos você indicar, mais dinheiro vai ganhar, com a chance de receber até 100€ por indicação, calculada como uma comissão recorrente de 10% sobre o que seu indicado pagar.",
+      "Quem usar seu link de indicação também ganha 85% de desconto em qualquer plano da Internxt."
+    ]
+  },
+  "HowItWorks": {
+    "title": "Como funciona o programa “Indique e Ganhe” da Internxt?",
+    "subtitle": "Indique um amigo em 3 passos simples e comece a ganhar dinheiro na hora!",
+    "cards": [
+      {
+        "title": "Envie seu link de convite",
+        "description": "Entre na sua conta Internxt e compartilhe seu link de indicação exclusivo pelo aplicativo web da Internxt. "
+      },
+      {
+        "title": "Aguarde a compra",
+        "description": "Compartilhe seu link de indicação com um amigo e ele ganha 85% de desconto em qualquer plano da Internxt."
+      },
+      {
+        "title": "Receba sua recompensa!",
+        "description": "Assim que alguém comprar um plano pelo seu link de indicação, transfira seus ganhos diretamente para sua conta do PayPal. "
+      }
+    ]
+  },
+  "tableSection": {
+    "title": "Quais recompensas seu amigo recebe?",
+    "subtitle": "Seu link de indicação dá 85% de desconto em todos os planos, garantindo acesso a armazenamento em nuvem seguro, VPN, Meet e muito mais.",
+    "planTitles": {
+      "header": "Escolha seu plano",
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano certo para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos empresariais",
+      "lifetimeCampaign": {
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "lifetimeDescription": "Pague uma vez e tenha privacidade e segurança para sempre.",
+    "planDescription": "Todos os planos da Internxt são completos, com acesso total ao nosso conjunto de privacidade premiado, composto por Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet e Mail.",
+    "businessDescription": "No momento estamos desenvolvendo novos planos da Internxt criados exclusivamente para defender sua empresa, proteger seus funcionários e garantir sua lucratividade.",
+    "businessDescription2": "Garanta a segurança dos dados da sua empresa com os planos de armazenamento em nuvem criptografado da Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "lifetime": "Vitalício",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Obtenha nuvem criptografada grátis",
+      "description": "Ganhe 1 GB de armazenamento em nuvem criptografado gratuitamente",
+      "cta": "Escolher plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima",
+      "premiumSupport": "Atendimento premium ao cliente",
+      "guarantee": "Garantia de reembolso em 30 dias"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "Onde encontro meu link de indicação?",
+        "answer": [
+          "Entre na sua conta Internxt em  https://drive.internxt.com/login e clique em Ganhe 100€ na barra de menu."
+        ]
+      },
+      {
+        "question": "Quem pode fazer uma indicação?",
+        "answer": [
+          "O programa está aberto a todos que tenham um plano pago da Internxt, cuja conta tenha pelo menos 30 dias e que tenham um endereço de e-mail verificado."
+        ]
+      },
+      {
+        "question": "Quem pode receber um link de indicação?",
+        "answer": [
+          "Qualquer pessoa com uma conta gratuita da Internxt pode ganhar 85% de desconto em qualquer plano anual ou vitalício."
+        ]
+      },
+      {
+        "question": "Quanto posso ganhar?",
+        "answer": [
+          "Você pode ganhar até 100€ por indicação, dependendo do plano comprado com seu link."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
+        "answer": [
+          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar por PayPal, criptomoedas e Klarna. Mediante solicitação, também aceitamos criptomoedas. Se tiver dúvidas sobre formas de pagamento, basta nos enviar um e-mail para hello@internxt.com."
+        ]
+      }
+    ]
+  }
+}

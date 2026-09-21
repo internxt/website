@@ -144,6 +144,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
       </div>
 
       <Transition
+        as="div"
         show={true}
         enter="transition-opacity easy-in-out duration-800"
         enterFrom="opacity-0"
@@ -182,6 +183,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
         //Render message selected
         (<>
           <Transition
+            as="div"
             show={isMessageOpen}
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"
@@ -208,6 +210,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
           </Transition>
           {/* Render messages list */}
           <Transition
+            as="div"
             show={!isMessageOpen}
             enter="transition-opacity duration-800"
             enterFrom="opacity-0"

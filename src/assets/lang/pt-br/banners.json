@@ -1,131 +1,201 @@
 {
-  "HeroSection": {
-    "title": "Internxt Dark Web Monitor",
-    "subtitle": "Check if your email has been exposed in a data breach.",
-    "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
-    "AllGoodSection": {
-      "title": "All good!",
-      "description": "No breached accounts or pastes.",
-      "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
-    },
-    "EmailToolBar": {
-      "placeHolder": "Your email address",
-      "toolTip": "We do not store or share your email address",
-      "toolTipEmergent": "Your email is only checked against databases for breaches.",
-      "pleaseEnterEmail": "Please enter a valid email address",
-      "noBreachesFound": "Email not found",
-      "errorPwned": "An error occurred while checking your email. Please try again later.",
-      "check": "Check",
-      "checking": "Checking..."
-    },
-    "breaches": {
-      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
-      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
-      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
-    },
-    "PwnedSection": {
-      "title": "Oh no!",
-      "description": "Your email was found in X data breaches and X pastes.",
-      "recomendation": "We recommend taking immediate action to secure your accounts.",
-      "breachesSection": {
-        "title": "Breaches where your email was found",
-        "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
-        "linkToPasswordGenerator": {
-          "linkText": "Internxt’s Password Generator",
-          "otherText": "creates unique, strong passwords to protect your accounts and data."
-        }
-      },
-      "pwnedElement": {
-        "compromisedData": "Compromised data",
-        "name": "Adobe",
-        "title": "Adobe",
-        "domain": "adobe.com",
-        "BreachDate": "2013-10-04",
-        "addedDate": "2013-12-04T00:00:00Z",
-        "modifiedDate": "2022-05-15T23:52:49Z",
-        "pwnCount": 152445165,
-        "description": "In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, encrypted password and a password hint in plain text. The password cryptography was poorly done and many were quickly resolved back to plain text. The unencrypted hints also adding further to the risk that hundreds of millions of Adobe customers already faced.",
-        "logoPath": "https://logos.haveibeenpwned.com/Adobe.png",
-        "dataClasses": ["Email addresses", "Password hints", "Passwords", "Usernames"],
-        "isVerified": true,
-        "isFabricated": false,
-        "isSensitive": false,
-        "isRetired": false,
-        "isSpamList": false,
-        "isMalware": false,
-        "isSubscriptionFree": false
-      }
+  "changeEmailBanner": {
+    "title": "Alterar endereço de e-mail?",
+    "description": [
+      "Esta ação excluirá seu endereço de e-mail atual ${{email}} e todos os e-mails da sua caixa de entrada.",
+      "Você receberá um novo endereço de e-mail temporário imediatamente."
+    ],
+    "actionCta": "Obter um novo e-mail",
+    "cancelCta": "Cancelar"
+  },
+  "LoginBanner": {
+    "head": "Experimente antes de comprar.",
+    "title": "Obtenha a Internxt gratuitamente!",
+    "buttonText": "Cadastre-se agora",
+    "card": {
+      "title1": "Ganhe 1 GB grátis",
+      "title2": "Armazenamento em nuvem seguro e protegido",
+      "title3": "Backup privado de arquivos e fotos",
+      "title4": "Transferências criptografadas de ponta a ponta",
+      "title5": "Sem acesso não autorizado",
+      "title6": "Disponível em todos os dispositivos"
     }
   },
-  "InfoSection": {
-    "pwnedWebsites": "pwned websites",
-    "pwnedWebsitesData": "817",
-    "pwnedAccounts": "pwned accounts",
-    "pwnedAccountsData": "14,169,230,255",
-    "pastes": "pastes",
-    "pastesData": "115,796"
+  "FreeCardPromoBanner": {
+    "title": "Ganhe um desconto exclusivo!",
+    "subtitle": {
+      "blue": "Oferta especial: ",
+      "normal": "guarde seus arquivos com privacidade por menos."
+    },
+    "getDealCta": "Aproveitar a oferta",
+    "freePlanCta": "Continuar com o plano gratuito",
+    "guarantee": "Garantia de reembolso de 30 dias"
   },
-  "CtaSection": {
-    "title": "Don’t become another statistic",
-    "description": "Check your accounts with Internxt Dark Web Monitor.",
-    "cta": "Check now"
+  "AndroidSmartBanner": {
+    "title": "Baixe o Internxt Drive para Android"
   },
-  "CtaSection2": {
-    "title": "Don’t wait for a data breach to happen",
-    "description": "Check and protect your information with Internxt.",
-    "cta": "Check now"
+  "BFBanner": {
+    "head": "Economize muito em privacidade.",
+    "title": "Oferta de Black Friday da Internxt",
+    "buttonText": "Aproveitar a oferta",
+    "card": {
+      "title1": "Ganhe 60% de desconto no nosso plano de 2 TB",
+      "title2": "Armazenamento em nuvem seguro e protegido",
+      "title3": "Backup privado de arquivos e fotos",
+      "title4": "Transferências criptografadas de ponta a ponta",
+      "title5": "Sem acesso não autorizado",
+      "title6": "Disponível até 5 de dezembro"
+    }
   },
-  "FeatureSection": {
-    "title": "What to do if your email has leaked on the dark web",
-    "description": "Internxt is part of our mission to protect you from hackers leaking your data on the dark web.",
-    "description2": "Internxt is committed to keeping you safe in the digital world. Discover effective strategies to secure your accounts and mitigate risks if your email has been compromised on the dark web.",
-    "cards": [
-      {
-        "title": "Create strong passwords",
-        "description": "If your email has been leaked on the dark web, the first thing you must do is change your passwords. Internxt’s Password Generator creates strong passwords or passphrases to prevent hackers from accessing your accounts.",
-        "cta": "Generate",
-        "redirect": "/password-generator"
-      },
-      {
-        "title": "Use a VPN",
-        "description": "Internxt VPN greatly reduces the chances of data breaches by encrypting and hiding your IP address. Our VPN ensures that all data transmitted while you’re surfing online is encrypted and protected from unauthorized access.",
-        "cta": "Download",
-        "redirect": "/vpn"
-      },
-      {
-        "title": "Check your password strength",
-        "description": "Check how secure your password is with Internxt’s Password Checker. View your password strength, times found in leaks, and the time it would take for hackers to crack your password using brute-force attacks or specialized software. ",
-        "cta": "Check",
-        "redirect": "/password-checker"
-      },
-      {
-        "title": "Store files privately",
-        "description": "Internxt Drive encrypted cloud storage uses end-to-end encryption to protect your sensitive information and prevent data breaches and hackers from leaking your information on the dark web. ",
-        "cta": "Susbcribe",
-        "redirect": "/drive"
-      }
-    ]
+  "featuresBanner": {
+    "label": {
+      "blueText": "Ganhe 85% de desconto",
+      "text": "em todos os planos"
+    },
+    "title": "Aproveite seu desconto exclusivo!",
+    "subTitle": {
+      "blueText": "Oferta especial:",
+      "text": "guarde seus arquivos com privacidade por ainda menos"
+    },
+    "ctaGet": "Aceitar convite",
+    "ctaContinue": "Continuar grátis",
+    "guarantee": "Garantia de reembolso de 30 dias",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    }
   },
-  "FeatureSectionV2": {
-    "title": "Have you been pwned in the world’s biggest data breaches?",
-    "description": "Check your email and take action to secure your accounts with Internxt Monitor.",
-    "cards": [
-      {
-        "title": "Internet archive",
-        "description": "In September 2024, the Internet Archive’s “Wayback Machine” experienced a significant data breach when a threat actor stole a user authentication database containing 31 million records. Data from the breach included email addresses, screen names, and bcrypt password hashes. "
-      },
-      {
-        "title": "Facebook",
-        "description": "In April 2021, data from over 500 million Facebook users was made available for download on the dark web. The breach data contained phone numbers, 2.5 million email addresses, and other personal information that can be used in cyberattacks such as phishing.  "
-      },
-      {
-        "title": "Verifications.io",
-        "description": "Verifications.io suffered a data breach due to data being stored in a MongoDB instance left publicly facing without password protection. The breach exposed 763 million unique emails, names, phone numbers, IP addresses, dates of birth, and genders. "
-      },
-      {
-        "title": "Collection #1 ",
-        "description": "In January 2018, the Collection #1 data breach leaked 2.7 billion records, which were made available on the dark web and online forums. The data included over 77 million email addresses and more than 21 million passwords from multiple breaches. "
-      }
-    ]
+  "s3StorageBanner": {
+    "label": "Já disponível!",
+    "title": "Armazenamento de objetos compatível com S3",
+    "feat": [
+      "Até 80% mais barato que a AWS",
+      "Seguro, escalável e compatível com S3",
+      "Suporte nativo ao Rclone"
+    ],
+    "cta": "Ganhe 1 TB gratuitamente",
+    "offerEnds": "*Oferta válida apenas para o primeiro mês"
+  },
+  "tryOutInternxtGeneralBanner": {
+    "title": "Experimente a Internxt",
+    "description": "Armazenamento em nuvem seguro baseado em privacidade total e criptografia.",
+    "cta": "Cadastre-se gratuitamente"
+  },
+  "tryOutInternxtPasswordCheckerBanner": {
+    "title": "Experimente a Internxt",
+    "description": "Armazenamento seguro com tecnologia de proteção por senha para os seus arquivos.",
+    "cta": "Cadastre-se gratuitamente"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Obtenha armazenamento em nuvem criptografado de ponta a ponta sem custo adicional.",
+    "blueText": " Junte-se à Internxt gratuitamente"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "para uma solução de armazenamento em nuvem mais segura, aberta e econômica.",
+    "blueText": "Mude para a Internxt "
+  },
+  "SignUpPwdCheckerBanner": {
+    "line1": "Coloque essa senha forte em uso com uma",
+    "blueText": "conta gratuita da Internxt"
+  },
+  "SignUpFileConverterBanner": {
+    "line1": "Converta, armazene e proteja.",
+    "blueText": "Conversão de arquivos sem esforço com a Internxt"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "Economize espaço de armazenamento com a Internxt",
+    "blueText": "Comprima seus arquivos gratuitamente para otimizar sua nuvem"
+  },
+  "SignUpWebDAVBanner": {
+    "line1": "Tenha gerenciamento avançado de arquivos com a Internxt",
+    "blueText": ""
+  },
+  "SignUpVPNBanner": {
+    "line1": "Proteja-se enquanto navega.",
+    "blueText": "Aproveite uma experiência on-line mais privada com a Internxt"
+  },
+  "SignUpVirusScannerBanner": {
+    "line1": "Mantenha esses arquivos agora limpos em segurança,",
+    "blueText": "junte-se à Internxt gratuitamente"
+  },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Elimine dos seus arquivos os metadados reveladores.",
+    "blueText": "Limpe sua pegada digital com a Internxt"
+  },
+  "SignUpAiDetector": {
+    "line1": "Detecte conteúdo de IA, garanta a autenticidade e",
+    "blueText": "publique com confiança usando a Internxt"
+  },
+  "SignUpByteConverterBanner": {
+    "line1": "Obtenha bytes e mais bytes de armazenamento em nuvem seguro",
+    "blueText": "com a Internxt"
+  },
+  "SignUpTempMailBanner": {
+    "line1": "Mantenha seu e-mail limpo e seus arquivos seguros",
+    "blueText": "com a Internxt"
+  },
+  "SignUpSuccessStoriesBanner": {
+    "line1": "Junte-se à luta pela privacidade e construa uma internet melhor",
+    "blueText": "com a Internxt"
+  },
+  "SignUpCyberAwareness": {
+    "line1": "Agora que você já sabe, proteja-se com",
+    "blueText": "o armazenamento em nuvem seguro da Internxt"
+  },
+  "SignUpPasswordGenerator": {
+    "line1": "Blinde suas contas com senhas únicas,",
+    "blueText": "junte-se à Internxt gratuitamente"
+  },
+  "privacyDirectoryBanner": {
+    "line1": "Junte-se à luta pela privacidade e construa uma internet melhor",
+    "blueText": "com a Internxt"
+  },
+  "GeneralBanner": {
+    "title": "Antes de você ir embora...",
+    "description": "Ganhe 80% de desconto no nosso plano de 2 TB no primeiro ano.",
+    "cta": "Claro, vou experimentar",
+    "ctaCancel": "Não, obrigado"
+  },
+  "GoogleLPBanner": {
+    "line1": "Não deixe o Google lucrar com os seus dados,",
+    "blueText": "mantenha seus arquivos privados com a Internxt"
+  },
+  "BusinessBanner": {
+    "line1": "Você tem interesse em armazenamento em nuvem privado",
+    "blueText": "para a sua empresa?",
+    "subtitle": "Cadastre-se para se manter informado e ser avisado quando nossos planos empresariais estiverem disponíveis.",
+    "placeHolder": "Seu endereço de e-mail",
+    "cta": "Inscrever-se"
+  },
+  "GoogleKnows": {
+    "title": "Aproveite ao máximo suas configurações de privacidade do Google com a nossa página O que o Google sabe"
+  },
+  "TopBarBanner": {
+    "title": {
+      "boldText": "",
+      "normalText": "Ganhe 85% de desconto na Internxt nestas festas de fim de ano e concorra a até € 1000!",
+      "cta": " Aproveitar oferta"
+    }
+  },
+  "lifetimeBanner": {
+    "label": "Proteja seus arquivos para sempre",
+    "title": "Tenha acesso vitalício a um armazenamento em nuvem seguro e privado com a Internxt!",
+    "cta": "Escolher plano",
+    "guarantee": "Garantia de reembolso de 30 dias"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "Espere! Oferta especial de ",
+      "blue": "80% DE DESCONTO ",
+      "normal2": "!"
+    },
+    "subtitle": "Há uma oferta exclusiva esperando por você.",
+    "cta": "80% DE DESCONTO em todos os planos",
+    "guarantee": "Garantia de reembolso de 30 dias"
   }
 }

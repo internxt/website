@@ -153,6 +153,23 @@ export const ALLOWED_PATHS = [
   'enricojo',
   'timo',
   'nauval',
+  'utsav',
+  'josh',
+  'nextuniverz',
+  'techmanis',
+  'sunchannel',
+  'marko',
+  'gamermeld',
+  'apfeltalk',
+  'mobiflip',
+  'mindplace',
+  'gian',
+  'kamarjeri',
+  'lsc',
+  'kkworld',
+  'drive85',
+  'drive87',
+  'special-deal',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -192,6 +209,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   worldcup: 'en',
   thelinuxexp: 'en',
   zackshutt: 'en',
+  marko: 'en',
+  gamermeld: 'en',
 
   // de
   aimentors: 'de',
@@ -215,6 +234,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   windowsarea: 'de',
   niklas: 'de',
   timo: 'de',
+  apfeltalk: 'de',
+  mobiflip: 'de',
 
   // es
   alejavi: 'es',
@@ -254,6 +275,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   nfire: 'it',
   saddy: 'it',
   speciale: 'it',
+  gian: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -286,6 +308,9 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'binosha',
   'david',
   'saddam',
+  'morpheus',
+  'themorpheus',
+  'thelinuxexp',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -391,6 +416,23 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'enricojo',
   'timo',
   'nauval',
+  'utsav',
+  'josh',
+  'nextuniverz',
+  'techmanis',
+  'sunchannel',
+  'marko',
+  'gamermeld',
+  'apfeltalk',
+  'mobiflip',
+  'mindplace',
+  'gian',
+  'kamarjeri',
+  'lsc',
+  'kkworld',
+  'drive85',
+  'drive87',
+  'special-deal',
 ]);
 
 export const COUPON_CODES = {
@@ -544,6 +586,23 @@ export const COUPON_CODES = {
   enricojo: PromoCodeName.enricojo,
   timo: PromoCodeName.timo,
   nauval: PromoCodeName.nauval,
+  utsav: PromoCodeName.utsav,
+  josh: PromoCodeName.josh,
+  nextuniverz: PromoCodeName.nextuniverz,
+  techmanis: PromoCodeName.techmanis,
+  sunchannel: PromoCodeName.sunchannel,
+  marko: PromoCodeName.marko,
+  gamermeld: PromoCodeName.gamermeld,
+  apfeltalk: PromoCodeName.apfeltalk,
+  mobiflip: PromoCodeName.mobiflip,
+  mindplace: PromoCodeName.mindplace,
+  gian: PromoCodeName.gian,
+  kamarjeri: PromoCodeName.kamarjeri,
+  lsc: PromoCodeName.lsc,
+  kkworld: PromoCodeName.kkworld,
+  drive85: PromoCodeName.DRIVE85,
+  drive87: PromoCodeName.drive87,
+  'special-deal': PromoCodeName.specialdeal,
 };
 
 interface OfferConfig {

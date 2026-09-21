@@ -1,0 +1,133 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento em nuvem seguro e criptografado",
+    "subtitle": "que protege seu direito à privacidade",
+    "info": "Aplique seu código personalizado na finalização da compra para garantir seu desconto exclusivo.",
+    "cta": "Escolha seu plano"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Criar uma conta Internxt",
+      "or": "ou",
+      "login": "Entrar",
+      "disclaimer": {
+        "text": "Ao criar uma conta, você aceita os",
+        "link": "termos e condições"
+      },
+      "fields": {
+        "email": {
+          "label": "E-mail",
+          "placeholder": "E-mail"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "strength": {
+            "complexity": "A senha não é complexa o suficiente",
+            "length": "A senha precisa ter pelo menos 8 caracteres",
+            "weak": "Senha fraca",
+            "strong": "Senha forte"
+          }
+        },
+        "submit": "Começar"
+      }
+    }
+  },
+  "PriceTable": {
+    "title": "Planos anuais",
+    "subtitle": "Todos os planos Internxt vêm com acesso completo aos nossos recursos focados em privacidade. Garanta seu plano e seus arquivos com segurança o ano todo",
+    "priceCard": {
+      "mostPopularPlan": "Mais popular",
+      "billedAnnually": "Cobrado anualmente",
+      "cta": "Resgatar código",
+      "features": {
+        "200GB": [
+          "200GB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "2TB": [
+          "2TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "5TB": [
+          "5TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ],
+        "10TB": [
+          "10TB de armazenamento criptografado",
+          "Compartilhamento criptografado de arquivos e pastas",
+          "Compartilhamento de arquivos protegido por senha",
+          "Acesse seus arquivos de qualquer dispositivo",
+          "Tenha acesso a todos os nossos serviços",
+          "Envie arquivos de até 20GB",
+          "Autenticação de dois fatores (2FA)",
+          "Suporte ao cliente premium",
+          "Garantia de reembolso de 30 dias"
+        ]
+      }
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação de conta anônima"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "FeatureSection": {
+    "title": "Retome o controle da sua privacidade",
+    "description": "A Internxt cria serviços de nuvem privados e seguros, projetados para devolver a você, usuário, o comando dos seus dados. Protegendo seus arquivos e seu direito fundamental à privacidade, todos os serviços Internxt são construídos desde a base para oferecer segurança incomparável.",
+    "cta": "Garanta um plano de um ano"
+  },
+  "SecureCloudSection": {
+    "title": "Armazenamento em nuvem seguro com privacidade incomparável",
+    "description": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais totalmente dedicada a proteger você na internet. Tudo o que fazemos e cada decisão que tomamos giram em torno de impedir que seus dados sejam explorados.",
+    "cards": [
+      {
+        "title": "Privado por concepção",
+        "description": "Não armazenamos senhas nem dados de usuários, e todas as suas informações são criptografadas em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos. Seus dados são assunto seu. Protegê-los é o nosso."
+      },
+      {
+        "title": "Segurança sem concessões",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de sair do seu dispositivo. Graças à criptografia AES-256 de conhecimento zero, você é absolutamente a única pessoa com acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser analisado, auditado e verificado por qualquer pessoa. Não temos nada a esconder além dos seus dados."
+      },
+      {
+        "title": "Verificado de forma independente",
+        "description": "Estamos totalmente em conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar só na nossa palavra. A Internxt foi auditada e verificada de forma independente pela Securitum, principal empresa de testes de invasão da Europa."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "O armazenamento em nuvem mais seguro do mundo",
+    "description": "Proteja o que realmente importa com o armazenamento em nuvem seguro, privado e criptografado da Internxt.",
+    "cta": "Escolha seu plano"
+  }
+}

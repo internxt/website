@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Um conversor seguro de HTML para PDF para compartilhar conteúdo de páginas da web com facilidade.",
+    "secureUpload": "Uploads seguros protegidos por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Como converter arquivos HTML para PDF",
+      "description": "Criamos nosso conversor de arquivos para ser o mais fácil de usar possível. Converter seu HTML em um arquivo PDF envolve três passos:",
+      "steps": [
+        {
+          "step": "Passo 1:",
+          "description": "Envie seu HTML: arraste e solte o arquivo na área acima para iniciar a conversão."
+        },
+        {
+          "step": "Passo 2:",
+          "description": "Clique em “Converter para PDF”: isso converte seu arquivo de HTML para PDF."
+        },
+        {
+          "step": "Passo 3:",
+          "description": "Baixe seu arquivo."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Por que converter arquivos HTML para PDF",
+      "paragraphs": [
+        "O conversor de HTML para PDF da Internxt otimiza seu fluxo de trabalho, oferecendo uma solução segura e versátil para gerenciar, compartilhar e apresentar conteúdo da web. Proteja seu arquivo PDF com compartilhamento por senha e assinaturas digitais para máxima segurança.",
+        "Se você precisa de um conversor de HTML para PDF para apresentar seu conteúdo na web, escolha nosso conversor de arquivos gratuito."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Cansado de arquivos incompatíveis?",
+    "description": "Converta para os arquivos de que você precisa com a Internxt",
+    "cta": "Criar conta"
+  }
+}

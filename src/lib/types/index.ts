@@ -368,6 +368,23 @@ export enum PromoCodeName {
   timo = 'TIMO',
   ultimate94 = 'ULTIMATE94',
   nauval = 'NAUVAL',
+  utsav = 'UTSAV',
+  josh = 'JOSH',
+  nextuniverz = 'NEXTUNIVERZ',
+  techmanis = 'TECHMANIS',
+  sunchannel = 'SUNCHANNEL',
+  marko = 'MARKO',
+  gamermeld = 'GAMERMELD',
+  apfeltalk = 'APFELTALK',
+  mobiflip = 'MOBIFLIP',
+  mindplace = 'MINDPLACE',
+  gian = 'GIAN',
+  kamarjeri = 'KAMARJERI',
+  lsc = 'LSC',
+  kkworld = 'KKWORLD',
+  drive87 = 'DRIVE87',
+  specialdeal = 'SPECIALDEAL',
+  emch = 'EMCH',
 }
 
 export interface PromoCodeProps {

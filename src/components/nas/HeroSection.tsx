@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
 
-const HeroSection = ({ textContent }) => (
+const HeroSection = ({ textContent, url = '#billingButtons' }) => (
   <section
     className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
@@ -30,7 +30,7 @@ const HeroSection = ({ textContent }) => (
         ))}
       </div>
       <Link
-        href={'#billingButtons'}
+        href={url}
         className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
       >
         {textContent.cta}

@@ -17,12 +17,22 @@
   {
     "id": "cloud-object-storage",
     "title": "Internxt — Armazenamento de Objetos",
-    "description": "A Internxt fornece armazenamento de objetos privado e acessível para armazenar dados de forma segura usando o protocolo S3 para gerenciar suas necessidades de armazenamento efetivamente."
+    "description": "O Internxt oferece armazenamento de objetos privado e acessível para armazenar dados com segurança, usando o protocolo S3 para gerenciar suas necessidades de armazenamento de forma eficaz."
+  },
+  {
+    "id": "free-cloud-object-storage",
+    "title": "Armazenamento de Objetos na Nuvem Grátis: Internxt Compatível com S3 e Seguro",
+    "description": "Experimente o armazenamento de objetos na nuvem gratuito e serviços profissionais de armazenamento de objetos. A Internxt oferece uma nuvem de armazenamento de objetos segura e compatível com S3 para os seus dados."
   },
   {
     "id": "drive",
     "title": "Internxt Drive – Armazenamento na Nuvem Privado e Seguro",
     "description": "Armazene, compartilhe e faça backup de seus arquivos e fotos na nuvem com o Internxt Drive. Armazenamento de arquivos e backup online criptografado de ponta a ponta e de código aberto."
+  },
+  {
+    "id": "free-cloud-storage",
+    "title": "Armazenamento na Nuvem Grátis, Seguro e Criptografado — Internxt Drive",
+    "description": "Obtenha armazenamento na nuvem gratuito e seguro com o Internxt Drive. Armazene, compartilhe e faça backup dos seus arquivos e fotos com facilidade usando nossa plataforma de código aberto e criptografada de ponta a ponta para garantir sua privacidade."
   },
   {
     "id": "what-google-knows",
@@ -33,11 +43,6 @@
     "id": "media-area",
     "title": "Área de Mídia | Internxt",
     "description": "Área de Mídia da Internxt - Saiba mais sobre os produtos e a missão da Internxt e baixe nosso kit de mídia de capturas de tela e mockups para a mídia e jornalistas."
-  },
-  {
-    "id": "photos",
-    "title": "Internxt Photos – Armazenamento Seguro de Fotos & Backup de Imagens",
-    "description": "Salve, visualize e sincronize suas fotos e imagens em todos os dispositivos com o Internxt Photos. Compartilhamento de fotos na nuvem e backup de imagens criptografados de ponta a ponta."
   },
   {
     "id": "pricing",
@@ -90,6 +95,11 @@
     "description": "Resgate seu código de cupom exclusivo fornecido por um parceiro certificado da Internxt. Obtenha um desconto especial no armazenamento na nuvem seguro da Internxt."
   },
   {
+    "id": "special-offer",
+    "title": "Internxt — Oferta Especial",
+    "description": "Adquira os planos anuais e vitalícios da Internxt com 80% de desconto exclusivo. Aproveite privacidade e segurança com até 10 TB de armazenamento."
+  },
+  {
     "id": "affiliates",
     "title": "Programa de Afiliados | Internxt",
     "description": "Junte-se ao programa de marketing de afiliados da Internxt! Como começar mais detalhes do programa, benefícios e vantagens."
@@ -125,9 +135,104 @@
     "description": "O armazenamento na nuvem da Internxt é uma alternativa segura ao pCloud. Protegemos seus arquivos com criptografia de ponta a ponta, software de código aberto e recursos focados em privacidade."
   },
   {
+    "id": "mega-alternative",
+    "title": "A Melhor Alternativa Segura ao Mega",
+    "description": "Precisa de uma alternativa realmente segura ao Mega? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Mega."
+  },
+  {
+    "id": "google-drive-alternative",
+    "title": "A Melhor Alternativa Segura ao Google Drive",
+    "description": "Precisa de uma alternativa realmente segura ao Drive? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Google Drive."
+  },
+  {
+    "id": "koofr-alternative",
+    "title": "A Melhor Alternativa Segura ao Koofr",
+    "description": "Precisa de uma alternativa realmente segura ao Koofr? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Koofr."
+  },
+  {
+    "id": "teams-alternative",
+    "title": "A Melhor Alternativa Segura ao Teams",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Teams. Videoconferências pós-quânticas e de conhecimento zero para total privacidade nas suas chamadas."
+  },
+  {
+    "id": "icedrive-alternative",
+    "title": "A melhor alternativa ao IceDrive é a Internxt",
+    "description": "Precisa de uma alternativa realmente segura ao Icedrive? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Icedrive."
+  },
+  {
+    "id": "onedrive-alternative",
+    "title": "A Melhor Alternativa Segura ao OneDrive",
+    "description": "Precisa de uma alternativa realmente segura ao OneDrive? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao OneDrive."
+  },
+  {
+    "id": "elephantdrive-alternative",
+    "title": "A Melhor Alternativa Segura ao ElephantDrive",
+    "description": "Precisa de uma alternativa realmente segura ao ElephantDrive? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao ElephantDrive."
+  },
+  {
+    "id": "degoo-alternative",
+    "title": "A Melhor Alternativa Segura ao Degoo",
+    "description": "Precisa de uma alternativa realmente segura ao Degoo? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Degoo."
+  },
+  {
+    "id": "zoom-alternative",
+    "title": "Internxt — Alternativa ao Zoom",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Zoom. Inclui armazenamento na nuvem pós-quântico e muito mais para total privacidade online."
+  },
+  {
+    "id": "proton-drive-alternative",
+    "title": "A Melhor Alternativa Segura ao Proton",
+    "description": "Precisa de uma alternativa realmente segura ao Proton? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Proton."
+  },
+  {
+    "id": "google-meet-alternative",
+    "title": "Internxt — Alternativa ao Google Meet",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Google Meet. Videoconferências pós-quânticas e de conhecimento zero para total privacidade nas suas chamadas."
+  },
+  {
+    "id": "terabox-alternative",
+    "title": "A Melhor Alternativa Segura ao TeraBox",
+    "description": "Precisa de uma alternativa realmente segura ao TeraBox? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao TeraBox."
+  },
+  {
+    "id": "filen-alternative",
+    "title": "A Melhor Alternativa Segura ao Filen",
+    "description": "Precisa de uma alternativa realmente segura ao Filen? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Filen."
+  },
+  {
+    "id": "idrive-alternative",
+    "title": "A Melhor Alternativa Segura ao IDrive",
+    "description": "Precisa de uma alternativa realmente segura ao IDrive? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao IDrive."
+  },
+  {
+    "id": "sync-alternative",
+    "title": "A Melhor Alternativa Segura ao Sync",
+    "description": "Precisa de uma alternativa realmente segura ao Sync? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Sync."
+  },
+  {
+    "id": "drime-alternative",
+    "title": "A Melhor Alternativa Segura ao Drime",
+    "description": "Precisa de uma alternativa realmente segura ao Drime? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Drime."
+  },
+  {
+    "id": "filejump-alternative",
+    "title": "A Melhor Alternativa Segura ao Filejump",
+    "description": "Precisa de uma alternativa realmente segura ao Filejump? Escolha a Internxt. Oferecemos armazenamento criptografado de ponta a ponta que prioriza a sua privacidade acima de todas as outras alternativas ao Filejump."
+  },
+  {
     "id": "black-friday",
     "title": "Oferta de Black Friday da Internxt – Promoção de Armazenamento na Nuvem!",
     "description": "Oferta de Black Friday da Internxt 2023: Aproveite um desconto de 91% em todos os nossos planos anuais. Economize muito no armazenamento na nuvem da Internxt hoje!"
+  },
+  {
+    "id": "black-friday-cloud-storage",
+    "title": "Ofertas de Armazenamento na Nuvem na Black Friday 2026: Economize Muito em Backup de Qualidade",
+    "description": "Black Friday Internxt 2026 — 85% de desconto em armazenamento na nuvem, Antivirus, Cleaner, VPN, Meet e Mail."
+  },
+  {
+    "id": "black-friday-personal-cloud-storage",
+    "title": "Internxt — Ofertas de Armazenamento Pessoal na Nuvem na Black Friday 2025",
+    "description": "Black Friday Internxt 2025 — 85% de desconto em armazenamento na nuvem, Antivirus, Cleaner, VPN, Meet e Mail."
   },
   {
     "id": "cloudwards",
@@ -345,24 +450,34 @@
     "description": "O Conversor de Arquivos da Internxt converte suas imagens para arquivos de texto gratuitamente. Nosso conversor de imagem para texto é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
+    "id": "singles-day",
+    "title": "Oferta de Dia dos Solteiros da Internxt – Promoção de Armazenamento Vitalício na Nuvem!",
+    "description": "Ofertas do Dia dos Solteiros da Internxt 2024: aproveite 80% de desconto em todos os nossos planos vitalícios premium. Economize muito no armazenamento na nuvem da Internxt hoje mesmo!"
+  },
+  {
+    "id": "resurrection-campaign",
+    "title": "Oferta de Armazenamento na Nuvem da Internxt – 85% de desconto em planos de assinatura e vitalícios!",
+    "description": "A Internxt está oferecendo 85% de desconto no nosso novo e aprimorado armazenamento privado na nuvem. Escolha entre os planos de assinatura e vitalícios e economize muito."
+  },
+  {
     "id": "halloween-campaign",
     "title": "Internxt – Armazenamento em Nuvem Privado e Seguro",
     "description": "Campanha de Halloween da Internxt: 80% de desconto em todos os nossos planos anuais. Proteja seus arquivos por toda a vida com um único pagamento."
   },
   {
-    "id": "internxt-monitor",
-    "title": "Internxt Monitor: Fui Comprometido?",
-    "description": "O Internxt é um serviço de verificação de 'fui comprometido' que verifica se o seu e-mail foi vazado em alguma violação de dados online."
-  },
-  {
-    "id": "cloud-object-storage",
-    "title": "Internxt — Armazenamento de Objetos",
-    "description": "O Internxt oferece armazenamento de objetos privado e acessível para armazenar dados com segurança, usando o protocolo S3 para gerenciar suas necessidades de armazenamento de forma eficaz."
+    "id": "elections-campaign",
+    "title": "Make Internxt Great Again",
+    "description": "Campanha Eleitoral da Internxt 2024"
   },
   {
     "id": "green-cloud-computing",
     "title": "Armazenamento em nuvem verde e sustentável",
     "description": "Os data centers ecológicos da Internxt promovem nosso compromisso com a sustentabilidade e a computação em nuvem ecológica, apoiando um ambiente mais verde e sustentável."
+  },
+  {
+    "id": "internxt-brave",
+    "title": "Internxt x Brave – Oferta especial para usuários do navegador Brave Private Browser",
+    "description": "A Internxt fez parceria com o Brave Private Browser para oferecer armazenamento na nuvem seguro, privado e criptografado."
   },
   {
     "id": "internxt-antivirus",
@@ -395,6 +510,11 @@
     "description": "Garanta um desconto em qualquer plano anual da Internxt. Todos os planos incluem armazenamento em nuvem privada, VPN e antivírus."
   },
   {
+    "id": "internxt-cleaner",
+    "title": "Internxt Cleaner — Otimize e Limpe o Seu Computador",
+    "description": "Encontre e elimine arquivos desnecessários para aumentar a velocidade, a capacidade de resposta e o desempenho do seu dispositivo."
+  },
+  {
     "id": "internxt-metadata-remover",
     "title": "Internxt Removedor de Metadados - Como limpar metadados em PDF, fotos e seus documentos online",
     "description": "Remova dados ocultos dos seus arquivos em segundos. O Removedor de Metadados da Internxt limpa seus documentos para máxima privacidade antes de compartilhar."
@@ -405,8 +525,263 @@
     "description": "Internxt Detector de IA. Analise gratuitamente o conteúdo para verificar se foi escrito por ChatGPT, Gemini ou outras plataformas de inteligência artificial."
   },
   {
+    "id": "file-compressor",
+    "title": "Internxt – Compressor de Arquivos",
+    "description": "O compressor de arquivos da Internxt, o melhor compressor para reduzir gratuitamente o tamanho de vídeos, fotos e documentos."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Internxt – Comprimir Arquivo MOV",
+    "description": "A Internxt permite comprimir um arquivo MOV gratuitamente para reduzir o tamanho e enviar vídeos grandes online sem se preocupar com limites de tamanho."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Internxt – Comprimir Arquivo PDF",
+    "description": "A ferramenta gratuita da Internxt é a melhor maneira de comprimir um arquivo PDF para que você possa proteger e enviar seus documentos com facilidade."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Comprimir Arquivo JPG – Internxt",
+    "description": "A ferramenta gratuita da Internxt é a melhor maneira de comprimir um arquivo JPG para que você possa proteger e enviar suas fotos com facilidade."
+  },
+  {
+    "id": "compress-png",
+    "title": "Internxt – Comprimir Arquivo PNG",
+    "description": "A ferramenta gratuita da Internxt é a melhor maneira de comprimir um arquivo PNG para que você possa proteger e enviar suas fotos com facilidade."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Internxt Comprimir – Arquivo PPT",
+    "description": "A Internxt permite comprimir um arquivo PPT gratuitamente para reduzir o tamanho e facilitar o armazenamento e o compartilhamento de arquivos."
+  },
+  {
+    "id": "compress-word",
+    "title": "Internxt – Comprimir Arquivo Word",
+    "description": "Comprima arquivos do Word (DOC) gratuitamente para reduzir o tamanho e facilitar o armazenamento e o compartilhamento dos seus documentos."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Internxt – Comprimir Arquivo Excel",
+    "description": "Comprima arquivos do Excel (XLS) gratuitamente para reduzir o tamanho e facilitar o armazenamento e o compartilhamento das suas planilhas."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Internxt – Compressor de ZIP Online",
+    "description": "Um compressor de ZIP online reduz o tamanho dos seus arquivos ZIP para economizar armazenamento, compartilhar e fazer upload sem se preocupar com limites de tamanho."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Melhor Armazenamento na Nuvem para Vídeos e Arquivos Privados Grandes",
+    "description": "Procura armazenamento privado na nuvem para arquivos de vídeo grandes? Obtenha o melhor armazenamento na nuvem para vídeos com criptografia de conhecimento zero. Faça upload e compartilhe com segurança hoje mesmo."
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet - Videochamada Privada | Videoconferência Segura",
+    "description": "Experimente videoconferências seguras com criptografia de ponta a ponta. Faça uma videochamada privada hoje mesmo e garanta que suas conversas permaneçam confidenciais com nossa tecnologia de videochamada criptografada."
+  },
+  {
+    "id": "nas",
+    "title": "Melhor Solução de Backup NAS na Nuvem (QNAP e Synology) — Internxt",
+    "description": "Faça backup dos seus dispositivos NAS QNAP e Synology na nuvem com segurança usando a criptografia pós-quântica da Internxt. O backup NAS na nuvem mais seguro e privado disponível."
+  },
+  {
+    "id": "coupons",
+    "title": "Internxt — Descontos, Cupons e Promoções",
+    "description": "Defenda a privacidade, mude para a Internxt. Os serviços de armazenamento na nuvem de código aberto da Internxt protegem seu direito à privacidade. Internxt Drive, Photos, Send e mais."
+  },
+  {
+    "id": "free-cloud-storage-deals",
+    "title": "Internxt — Ofertas de Armazenamento na Nuvem Grátis",
+    "description": "Ofertas de armazenamento na nuvem gratuitas diretamente da Internxt para atualizar seu plano com 85% de desconto em armazenamento seguro e criptografado e muito mais."
+  },
+  {
+    "id": "free-cloud-storage-lifetime-deals",
+    "title": "Internxt — Ofertas Oficiais de Armazenamento Vitalício na Nuvem com 85% de Desconto",
+    "description": "Aproveite as melhores ofertas de armazenamento vitalício na nuvem da Internxt. Pague uma vez e obtenha 85% de desconto em armazenamento privado e criptografado, para sempre."
+  },
+  {
+    "id": "deals",
+    "title": "Internxt — Ofertas Oficiais da Internxt com 85% de Desconto em Todos os Planos",
+    "description": "Garanta seu desconto exclusivo de 85%. Estas ofertas da Internxt incluem armazenamento na nuvem privado e criptografado, e muito mais, a um preço imbatível."
+  },
+  {
+    "id": "reviews",
+    "title": "Internxt — Leia as Avaliações dos Clientes da Internxt",
+    "description": "Leia avaliações honestas sobre a Internxt segundo especialistas em tecnologia e usuários. Descubra o que torna a Internxt o serviço mais confiável para a sua privacidade online."
+  },
+  {
+    "id": "cloud-data-centers",
+    "title": "Internxt — Data Centers e Certificações",
+    "description": "Mantenha seus dados seguros com a Internxt. Criptografia de ponta a ponta, data centers na nuvem confiáveis e conformidade com o GDPR e outros padrões."
+  },
+  {
+    "id": "alternative-to-chatgpt",
+    "title": "Internxt — Alternativa ao ChatGPT",
+    "description": "Mude para a Internxt e tenha uma alternativa ao ChatGPT privada e criptografada. A Internxt mantém suas conversas privadas, criptografadas e acessíveis somente a você."
+  },
+  {
+    "id": "alternative-to-copilot",
+    "title": "Internxt — Alternativa ao Copilot",
+    "description": "Mude para a Internxt e tenha uma alternativa ao Copilot privada e criptografada. A Internxt mantém suas conversas privadas, criptografadas e acessíveis somente a você."
+  },
+  {
+    "id": "alternative-to-deepseek",
+    "title": "Internxt — Alternativa ao DeepSeek",
+    "description": "Mude para a Internxt e tenha uma alternativa ao DeepSeek privada e criptografada. A Internxt mantém suas conversas privadas, criptografadas e acessíveis somente a você."
+  },
+  {
+    "id": "alternative-to-gemini",
+    "title": "Internxt — Alternativa ao Gemini",
+    "description": "Mude para a Internxt e tenha uma alternativa ao Gemini privada e criptografada. A Internxt mantém suas conversas privadas, criptografadas e acessíveis somente a você."
+  },
+  {
+    "id": "alternative-to-grok",
+    "title": "Internxt — Alternativa ao Grok",
+    "description": "Mude para a Internxt e tenha uma alternativa ao Grok privada e criptografada. A Internxt mantém suas conversas privadas, criptografadas e acessíveis somente a você."
+  },
+  {
+    "id": "wire-alternative",
+    "title": "Internxt — Alternativa ao Wire",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Wire. Videoconferências pós-quânticas e de conhecimento zero para total privacidade nas suas chamadas."
+  },
+  {
+    "id": "whereby-alternative",
+    "title": "Internxt — Alternativa ao Whereby",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Whereby. Videoconferências pós-quânticas e de conhecimento zero para total privacidade nas suas chamadas."
+  },
+  {
+    "id": "annual",
+    "title": "Oferta de Planos Anuais da Internxt: Armazenamento na Nuvem Seguro e Criptografado",
+    "description": "Adquira os planos anuais da Internxt para armazenamento na nuvem seguro e criptografado. Proteja seus arquivos com tecnologia de conhecimento zero e segurança pós-quântica. Economize mais hoje!"
+  },
+  {
+    "id": "aws-alternative",
+    "title": "Internxt — Alternativa à AWS",
+    "description": "Mude para a Internxt e tenha uma alternativa à AWS privada e criptografada. A Internxt mantém seus dados privados, criptografados e acessíveis somente a você."
+  },
+  {
+    "id": "azure-alternative",
+    "title": "Internxt — Alternativa ao Microsoft Azure",
+    "description": "Mude para o Internxt S3 e tenha uma alternativa de código aberto ao Azure. Armazenamento de objetos na nuvem acessível e seguro para empresas."
+  },
+  {
+    "id": "backblaze-alternative",
+    "title": "Internxt — Alternativa ao Backblaze",
+    "description": "Mude para o Internxt S3 e tenha uma alternativa de código aberto ao Backblaze. Armazenamento de objetos na nuvem acessível e seguro para empresas."
+  },
+  {
+    "id": "idrivee2-alternative",
+    "title": "Internxt — Alternativa ao IDrive e2",
+    "description": "Mude para o Internxt S3 e tenha uma alternativa de código aberto ao IDrive. Armazenamento de objetos na nuvem acessível e seguro para empresas."
+  },
+  {
+    "id": "google-cloud-alternative",
+    "title": "Internxt — Alternativa ao Google Cloud",
+    "description": "Mude para o Internxt S3 e tenha uma alternativa de código aberto ao Google Cloud. Armazenamento de objetos na nuvem acessível e seguro para empresas."
+  },
+  {
+    "id": "alternative-to-avast",
+    "title": "Internxt — Alternativa ao Avast",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Avast. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-avg",
+    "title": "Internxt — Alternativa ao AVG",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao AVG. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-avira",
+    "title": "Internxt — Alternativa ao Avira",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Avira. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-bitdefender",
+    "title": "Internxt — Alternativa ao Bitdefender",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Bitdefender. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-ccleaner",
+    "title": "Internxt — Alternativa ao CCleaner",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao CCleaner. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-clean-my-mac",
+    "title": "Internxt — Alternativa ao CleanMyMac",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao CleanMyMac. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-malwarebytes",
+    "title": "Internxt — Alternativa ao Malwarebytes",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Malwarebytes. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-mcafee",
+    "title": "Internxt — Alternativa ao McAfee",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao McAfee. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-norton",
+    "title": "Internxt — Alternativa ao Norton",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao Norton. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "alternative-to-totalav",
+    "title": "Internxt — Alternativa ao TotalAV",
+    "description": "Mude para a Internxt e tenha uma alternativa de código aberto ao TotalAV. Inclui armazenamento na nuvem criptografado pós-quântico e de conhecimento zero, e muito mais."
+  },
+  {
+    "id": "levante-ud",
+    "title": "Internxt — Parceiro Oficial de Nuvem do Levante UD",
+    "description": "A Internxt é parceira oficial do Levante UD, fornecendo armazenamento na nuvem criptografado e backups para proteger os valiosos dados do clube."
+  },
+  {
+    "id": "nas-synology",
+    "title": "Backup do Synology na Nuvem — Internxt Synology NAS",
+    "description": "Procura um backup NAS na nuvem confiável? Proteja seus dados com o serviço de nuvem NAS da Internxt. A solução definitiva de backup para enviar seu NAS à nuvem com facilidade e manter seus arquivos criptografados e privados."
+  },
+  {
+    "id": "nas-qnap",
+    "title": "Backup do QNAP na Nuvem — Internxt QNAP NAS",
+    "description": "Procura um backup NAS na nuvem confiável? Proteja seus dados com o serviço de nuvem NAS da Internxt. A solução definitiva de backup para enviar seu NAS à nuvem com facilidade e manter seus arquivos criptografados e privados."
+  },
+  {
+    "id": "cloud-partner",
+    "title": "Programa de Parceiros de Nuvem da Internxt",
+    "description": "Torne-se revendedor do armazenamento de objetos Internxt S3 para empresas. Armazenamento na nuvem de acesso imediato e mais barato que AWS, Azure e Google Cloud."
+  },
+  {
     "id": "thankyou",
     "title": "Lista de espera de oferta especial — Internxt",
     "description": "Assine a Internxt para receber seu desconto exclusivo em armazenamento em nuvem privado e criptografado no qual você pode confiar."
+  },
+  {
+    "id": "cloud-storage-for-documents",
+    "title": "Internxt - Armazenamento na Nuvem para Documentos",
+    "description": "A Internxt oferece armazenamento na nuvem seguro para documentos, protegido por criptografia pós-quântica para máxima privacidade."
+  },
+  {
+    "id": "secure-file-transfer",
+    "title": "Internxt - Transferência Segura de Arquivos",
+    "description": "A Internxt oferece um serviço de transferência segura de arquivos para criptografar e proteger seus arquivos, permitindo que você controle quem pode acessar seus dados."
+  },
+  {
+    "id": "mail",
+    "title": "Internxt Mail - O Melhor Email Criptografado para Privacidade.",
+    "description": "O Internxt Mail é uma solução de email criptografado que mantém sua caixa de entrada segura. Graças à criptografia pós-quântica, a Internxt é o serviço de email mais seguro para a sua privacidade."
+  },
+  {
+    "id": "photos",
+    "title": "Internxt Photos – Armazenamento Seguro de Fotos & Backup de Imagens",
+    "description": "Salve, visualize e sincronize suas fotos e imagens em todos os dispositivos com o Internxt Photos. Compartilhamento de fotos na nuvem e backup de imagens criptografados de ponta a ponta."
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: Fui Comprometido?",
+    "description": "O Internxt é um serviço de verificação de 'fui comprometido' que verifica se o seu e-mail foi vazado em alguma violação de dados online."
+  },
+  {
+    "id": "final-challenge-em",
+    "title": "Internxt Challenge Cloud Storage Deals",
+    "description": "You completed the Internxt Challenge. Claim your exclusive reward on Internxt's fully equipped privacy suite: Drive, Antivirus, VPN, Cleaner, Meet, Mail, and more."
   }
 ]

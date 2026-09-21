@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import usePricing from '@/hooks/usePricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -91,6 +92,14 @@ function LifetimeSpecial({
 
   return (
     <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
+          }}
+        />
+        <script src="https://app.varify.io/varify.js" />
+      </Head>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
