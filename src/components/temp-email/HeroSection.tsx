@@ -16,6 +16,7 @@ import {
   SELECTED_MESSAGE,
   saveInfoOfMessageSelectedInLocalStorage,
   saveInboxInLocalStorage,
+  subscribeToInbox,
 } from './services/temp-mail.service';
 
 import EmailToolbar from './components/EmailToolBar';
@@ -82,17 +83,21 @@ export const HeroSection = ({ textContent }) => {
     if (storedEmail !== null) {
       try {
         const decodedEmail = atob(storedEmail);
-        const { address, token } = JSON.parse(decodedEmail);
+        const { address, token, accountId, jwt } = JSON.parse(decodedEmail);
         setUser({
           address,
           token,
+          accountId,
+          jwt,
         });
       } catch {
         try {
-          const { address, token } = JSON.parse(storedEmail);
+          const { address, token, accountId, jwt } = JSON.parse(storedEmail);
           setUser({
             address,
             token,
+            accountId,
+            jwt,
           });
         } catch {
           await getNewEmail();
@@ -110,6 +115,8 @@ export const HeroSection = ({ textContent }) => {
       setUser({
         address: emailData.address,
         token: emailData.token,
+        accountId: emailData.accountId,
+        jwt: emailData.jwt,
       });
       setSelectedMessage(null);
       setMessages(undefined);
@@ -121,22 +128,29 @@ export const HeroSection = ({ textContent }) => {
     }
   };
 
+  const mergeIntoInbox = (incomingMessages: MessageObjProps[]) => {
+    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
+
+    const newMessages = incomingMessages.filter(
+      (message) => !inboxInLocalStorage.some((item) => item.id === message.id),
+    );
+
+    if (newMessages.length === 0) return;
+
+    const updatedInbox = [...inboxInLocalStorage, ...newMessages];
+
+    localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify(updatedInbox));
+    setMessages(updatedInbox);
+  };
+
   const getMailInbox = async (email: string, tempMailToken: string) => {
     if (!tempMailToken && !email) return;
-
-    const inboxInLocalStorage = JSON.parse(localStorage.getItem(INBOX_STORAGE_KEY) ?? '[]');
 
     try {
       const messagesInInbox: MessageObjProps[] | undefined = await fetchAndFormatInbox(email, tempMailToken);
 
       if (messagesInInbox) {
-        const newMessages = messagesInInbox.filter(
-          (message) => !inboxInLocalStorage.some((item) => item.id === message.id),
-        );
-
-        localStorage.setItem(INBOX_STORAGE_KEY, JSON.stringify([...inboxInLocalStorage, ...newMessages]));
-
-        setMessages([...inboxInLocalStorage, ...newMessages]);
+        mergeIntoInbox(messagesInInbox);
       }
     } catch (err) {
       // NO OP
@@ -185,10 +199,23 @@ export const HeroSection = ({ textContent }) => {
 
   const autoFetchEmails = () => {
     if (!user) return;
-    if (isFocused) {
-      const interval = setInterval(() => getMailInbox(user?.address, user.token), 40000);
+    if (!isFocused) return;
+
+    const { address, token, accountId, jwt } = user;
+
+    if (!accountId || !jwt || typeof EventSource === 'undefined') {
+      const interval = setInterval(() => getMailInbox(address, token), 40000);
       return () => clearInterval(interval);
     }
+
+    getMailInbox(address, token);
+
+    return subscribeToInbox(
+      accountId,
+      jwt,
+      (message) => mergeIntoInbox([message]),
+      () => getMailInbox(address, token),
+    );
   };
 
   const onRefresh = async () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const openErrorToast = (message: string) => toast.error(message);
@@ -9,6 +9,7 @@ const ShowSnackbar = () => {
   return (
     <ToastContainer
       theme="colored"
+      transition={Bounce}
       pauseOnFocusLoss={false}
       position="bottom-center"
       hideProgressBar

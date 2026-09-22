@@ -35,7 +35,17 @@ const rateLimitClientMiddleware = async (
   rateLimitData.count += 1;
   setRateLimitData(path, rateLimitData);
 
-  return requestFunction();
+  try {
+    return await requestFunction();
+  } catch (err) {
+    const current = getRateLimitData(path);
+
+    if (current.startTime === rateLimitData.startTime && current.count > 0) {
+      setRateLimitData(path, { ...current, count: current.count - 1 });
+    }
+
+    throw err;
+  }
 };
 
 export default rateLimitClientMiddleware;

@@ -2,7 +2,8 @@ import axios from 'axios';
 
 import { MessageObjProps } from '@/components/temp-email/types/types';
 
-const MAIL_TM_API = 'https://api.mail.gw';
+const MAIL_TM_API = 'https://api.mail.tm';
+const MERCURE_HUB = 'https://mercure.mail.tm/.well-known/mercure';
 
 const mailTm = axios.create({
   baseURL: MAIL_TM_API,
@@ -21,6 +22,7 @@ interface MailTmMessage {
   to: MailTmAddress | MailTmAddress[];
   subject: string;
   intro: string;
+  text?: string;
   seen: boolean;
   createdAt: string;
   html?: string[];
@@ -45,14 +47,26 @@ const toMessageObj = (message: MailTmMessage): MessageObjProps => ({
   date: message.createdAt as unknown as number,
   from: message.from?.address,
   to: toAddress(message.to),
-  html: message.html?.length ? message.html.join('') : message.intro,
+  html: message.html?.length ? message.html.join('') : message.text ?? message.intro,
   subject: message.subject,
   id: message.id,
   seen: message.seen,
 });
 
+/** Intercambia address + password por un JWT de mail.tm. */
+const getJwt = async (address: string, password: string): Promise<string> => {
+  const { data } = await mailTm.post<{ token: string }>('/token', { address, password });
+
+  return data.token;
+};
+
 /** Crea una cuenta desechable. Devuelve la password, que es lo que el cliente guarda como `token`. */
-export const createAccount = async (): Promise<{ address: string; token: string }> => {
+export const createAccount = async (): Promise<{
+  address: string;
+  token: string;
+  accountId: string;
+  jwt: string;
+}> => {
   const { data: domains } = await mailTm.get<{ domain: string; isActive: boolean }[]>('/domains?page=1');
 
   const domain = domains.find((item) => item.isActive)?.domain;
@@ -62,16 +76,11 @@ export const createAccount = async (): Promise<{ address: string; token: string 
   const address = `${randomHash(6)}@${domain}`;
   const password = randomHash(12);
 
-  await mailTm.post('/accounts', { address, password });
+  const { data: account } = await mailTm.post<{ id: string }>('/accounts', { address, password });
 
-  return { address, token: password };
-};
+  const jwt = await getJwt(address, password);
 
-/** Intercambia address + password por un JWT de mail.tm. */
-const getJwt = async (address: string, password: string): Promise<string> => {
-  const { data } = await mailTm.post<{ token: string }>('/token', { address, password });
-
-  return data.token;
+  return { address, token: password, accountId: account.id, jwt };
 };
 
 export const getInbox = async (address: string, password: string): Promise<MessageObjProps[]> => {
@@ -92,4 +101,38 @@ export const getMessage = async (address: string, password: string, messageId: s
   });
 
   return toMessageObj(data);
+};
+
+export const subscribeToInbox = (
+  accountId: string,
+  jwt: string,
+  onMessage: (message: MessageObjProps) => void,
+  onReconnect?: () => void,
+): (() => void) => {
+  const url = new URL(MERCURE_HUB);
+  url.searchParams.set('topic', `/accounts/${accountId}`);
+  url.searchParams.set('authorization', jwt);
+
+  const source = new EventSource(url.toString());
+  let hasConnected = false;
+
+  source.onopen = () => {
+    if (hasConnected) onReconnect?.();
+
+    hasConnected = true;
+  };
+
+  source.onmessage = (event) => {
+    try {
+      const payload = JSON.parse(event.data);
+
+      if (payload['@type'] !== 'Message') return;
+
+      onMessage(toMessageObj(payload));
+    } catch {
+      return;
+    }
+  };
+
+  return () => source.close();
 };
