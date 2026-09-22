@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { AxiosError } from 'axios';
 
 import rateLimitMiddleware from '../../../utils/rate-limiter';
-import { getMessage } from '@/lib/mail-tm';
+import { getMessage } from '@/lib/guerrilla-mail';
 import { csrf } from '@/lib/csrf';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {

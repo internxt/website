@@ -32,8 +32,6 @@ export const ActionTypes = {
 export interface UserProps {
   address: string;
   token: string;
-  accountId?: string;
-  jwt?: string;
 }
 
 export type ActionType =

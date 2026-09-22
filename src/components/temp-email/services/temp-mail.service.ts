@@ -2,7 +2,6 @@ import axios from 'axios';
 
 import { MessageObjProps, UserProps } from '../types/types';
 import rateLimitClientMiddleware from '@/components/utils/rate-limit';
-import { subscribeToInbox } from '@/lib/mail-tm';
 
 export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -89,5 +88,4 @@ export {
   saveInfoOfMessageSelectedInLocalStorage,
   saveInboxInLocalStorage,
   removeLocalStorage,
-  subscribeToInbox,
 };

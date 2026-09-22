@@ -16,7 +16,6 @@ import {
   SELECTED_MESSAGE,
   saveInfoOfMessageSelectedInLocalStorage,
   saveInboxInLocalStorage,
-  subscribeToInbox,
 } from './services/temp-mail.service';
 
 import EmailToolbar from './components/EmailToolBar';
@@ -83,21 +82,17 @@ export const HeroSection = ({ textContent }) => {
     if (storedEmail !== null) {
       try {
         const decodedEmail = atob(storedEmail);
-        const { address, token, accountId, jwt } = JSON.parse(decodedEmail);
+        const { address, token } = JSON.parse(decodedEmail);
         setUser({
           address,
           token,
-          accountId,
-          jwt,
         });
       } catch {
         try {
-          const { address, token, accountId, jwt } = JSON.parse(storedEmail);
+          const { address, token } = JSON.parse(storedEmail);
           setUser({
             address,
             token,
-            accountId,
-            jwt,
           });
         } catch {
           await getNewEmail();
@@ -115,8 +110,6 @@ export const HeroSection = ({ textContent }) => {
       setUser({
         address: emailData.address,
         token: emailData.token,
-        accountId: emailData.accountId,
-        jwt: emailData.jwt,
       });
       setSelectedMessage(null);
       setMessages(undefined);
@@ -201,21 +194,9 @@ export const HeroSection = ({ textContent }) => {
     if (!user) return;
     if (!isFocused) return;
 
-    const { address, token, accountId, jwt } = user;
+    const interval = setInterval(() => getMailInbox(user.address, user.token), 40000);
 
-    if (!accountId || !jwt || typeof EventSource === 'undefined') {
-      const interval = setInterval(() => getMailInbox(address, token), 40000);
-      return () => clearInterval(interval);
-    }
-
-    getMailInbox(address, token);
-
-    return subscribeToInbox(
-      accountId,
-      jwt,
-      (message) => mergeIntoInbox([message]),
-      () => getMailInbox(address, token),
-    );
+    return () => clearInterval(interval);
   };
 
   const onRefresh = async () => {
