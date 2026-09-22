@@ -1,6 +1,6 @@
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'edge', regions: ['fra1'] };
 
-export default async function handler() {
+export default async function handler(req: Request) {
   const started = Date.now();
 
   try {
@@ -11,6 +11,7 @@ export default async function handler() {
     const body = await response.text();
 
     return Response.json({
+      ranIn: req.headers.get('x-vercel-id'),
       status: response.status,
       ratelimit: response.headers.get('ratelimit-policy'),
       server: response.headers.get('server'),
@@ -19,6 +20,11 @@ export default async function handler() {
       ms: Date.now() - started,
     });
   } catch (err) {
-    return Response.json({ failed: true, reason: (err as Error).message, ms: Date.now() - started });
+    return Response.json({
+      ranIn: req.headers.get('x-vercel-id'),
+      failed: true,
+      reason: (err as Error).message,
+      ms: Date.now() - started,
+    });
   }
 }
