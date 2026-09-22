@@ -18,7 +18,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       status: error.response?.status,
       data: error.response?.data,
     });
-    return res.status(500).json({ message: 'Internal Server Error' });
+    return res.status(500).json({
+      message: 'Internal Server Error',
+      debug: {
+        status: error.response?.status ?? null,
+        code: error.code ?? null,
+        reason: error.message,
+        data: error.response?.data ?? null,
+      },
+    });
   }
 }
 
