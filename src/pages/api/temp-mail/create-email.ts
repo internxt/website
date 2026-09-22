@@ -25,6 +25,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         code: error.code ?? null,
         reason: error.message,
         data: error.response?.data ?? null,
+        url: error.config?.url ?? null,
+        method: error.config?.method ?? null,
+        server: error.response?.headers?.['server'] ?? null,
+        ratelimit: error.response?.headers?.['ratelimit-policy'] ?? null,
       },
     });
   }
