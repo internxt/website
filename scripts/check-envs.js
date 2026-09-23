@@ -4,30 +4,25 @@ const { loadEnvConfig } = require('@next/env');
 
 loadEnvConfig(process.cwd());
 
-const fs = require('fs');
 const path = require('path');
 const envExample = require('dotenv').config({ path: path.join(__dirname, '..', '.env.local.example') }).parsed;
+const env =
+  process.env.VERCEL === '1'
+    ? process.env
+    : require('dotenv').config({ path: path.join(__dirname, '..', '.env.local') }).parsed;
 
-const envLocalPath = path.join(__dirname, '..', '.env.local');
+const keysExample = Object.keys(envExample);
+const keysEnv = Object.keys(env);
 
-const env = fs.existsSync(envLocalPath)
-  ? require('dotenv').config({ path: envLocalPath }).parsed
-  : process.env;
-
-const keysExample = Object.keys(envExample || {});
-const keysEnv = Object.keys(env || {});
-
-const missing = keysExample.filter((envName) => keysEnv.indexOf(envName) < 0 || !env[envName]);
-
-if (missing.length === keysExample.length && keysExample.length > 0) {
-  console.warn('No environment variables found; skipping env validation.');
-  process.exit(0);
-}
-
-missing.forEach((envName) => {
-  console.error('Missing env variable: %s', envName);
+let error = false;
+keysExample.forEach((envName) => {
+  const index = keysEnv.indexOf(envName);
+  if (index < 0 || !env[envName]) {
+    error = true;
+    console.error('Missing env variable: %s', envName);
+  }
 });
 
-if (missing.length > 0) {
+if (error) {
   process.exit(1);
 }
