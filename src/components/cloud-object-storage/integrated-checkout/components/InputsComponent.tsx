@@ -1,5 +1,5 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
-import { IFormValues } from '../IntegratedCheckoutView';
+import type { IFormValues } from '../IntegratedCheckoutView';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import TextInput from '@/components/shared/TextInput';
 import PasswordInput from '@/components/shared/PasswordInput';

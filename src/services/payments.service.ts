@@ -1,4 +1,4 @@
-import { PlanData } from '@/pages/cloud-object-storage/checkout';
+import type { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Drive } from '@internxt/sdk';
 import { PaymentMethodVerificationPayload } from '@internxt/sdk/dist/payments/types';
 
@@ -19,7 +19,6 @@ export class ObjStoragePaymentsService {
   public async fetchPlanById(priceId: string, currency?: string): Promise<PlanData> {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
     const objStoragePlan = await client.getObjectStoragePlanById(priceId, currency);
-
     return objStoragePlan;
   }
 

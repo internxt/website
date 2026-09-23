@@ -43,6 +43,24 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 - Runs tests with [cypress](https://www.cypress.io/)
 
+## Cloudflare Workers
+
+The app can also be built for Cloudflare Workers through the [OpenNext](https://opennext.js.org/cloudflare) adapter. This is work in progress and does not replace the current deployment yet.
+
+The worker runs in workerd, which does not read `.env.local`. Copy `.dev.vars.example` to `.dev.vars` and fill it in with the same values before previewing.
+
+### `yarn build:cf`
+
+Builds the app for Workers into the `.open-next` folder.
+
+### `yarn preview:cf`
+
+Builds and serves the worker locally, so API routes and SSR behave as they would on Workers.
+
+### `yarn deploy:cf`
+
+Builds and deploys to Cloudflare. Production variables and secrets are configured in the Cloudflare dashboard.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

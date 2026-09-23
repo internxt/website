@@ -1,0 +1,53 @@
+name: Cloudflare Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+concurrency:
+  group: cf-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: yarn
+
+      - name: Create .env.local
+        run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Check env variables
+        run: node ./scripts/check-envs.js
+
+      - run: yarn build:cf
+
+      - name: Upload preview version
+        id: upload
+        run: |
+          npx wrangler versions upload --tag "pr-${{ github.event.pull_request.number }}" | tee upload.log
+          PREVIEW_URL=$(grep -oE 'https://[a-z0-9-]+\.[a-z0-9-]+\.workers\.dev' upload.log | head -1)
+          echo "preview_url=${PREVIEW_URL}" >> "$GITHUB_OUTPUT"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Comment preview URL
+        if: steps.upload.outputs.preview_url != ''
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: cf-preview
+          message: |
+            ### Cloudflare preview
+
+            ${{ steps.upload.outputs.preview_url }}
+
