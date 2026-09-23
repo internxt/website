@@ -2,6 +2,7 @@ import { ShieldStar } from '@phosphor-icons/react';
 import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { goToSignUpURL } from '@/lib/auth';
+import { getImage } from '@/lib/getImage';
 
 const FeatureSection = ({ textContent }) => {
   return (
@@ -9,7 +10,7 @@ const FeatureSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center px-5 lg:flex-row lg:space-x-20">
         <RevealX direction="right">
           <Image
-            src="/images/drive/secure-file-storage.webp"
+            src={getImage('/images/drive/secure-file-storage.webp')}
             width={496}
             height={520}
             quality={100}

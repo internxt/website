@@ -1,4 +1,5 @@
 import RenderDescription from '@/components/shared/RenderDescription';
+import { getImage } from '@/lib/getImage';
 
 const AchieveSecurityAndPrivacySection = ({ textContent }) => {
   return (
@@ -13,9 +14,9 @@ const AchieveSecurityAndPrivacySection = ({ textContent }) => {
         {/* Image */}
         <div className="flex w-full flex-col items-center justify-center pt-6">
           <picture>
-            <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
+            <source srcSet={getImage('/images/home/internxt_secure_cloud_storage.webp')} type="image/webp" />
             <img
-              src="/images/home/internxt_secure_cloud_storage.webp"
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               alt="Internxt secure cloud storage"
               width={757}
               draggable={false}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import Link from 'next/link';
+import { getImage } from '@/lib/getImage';
 
 const BetterTomorrowSection = ({ textContent, lang }) => {
   return (
@@ -9,7 +10,7 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
       <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">
         <div className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
-            src="/images/privacy/encrypted-file-storage.webp"
+            src={getImage('/images/privacy/encrypted-file-storage.webp')}
             width={496}
             height={520}
             quality={100}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
+import { getImage } from '@/lib/getImage';
 
 const CardText = ({ textContent }) => (
   <div className="flex max-w-[388px] flex-col space-y-6">
@@ -55,7 +56,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
         <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
           <div className="flex flex-col">
             <Image
-              src="/images/cloud-storage-for-education/file_sharing_for_universities.webp"
+              src={getImage('/images/cloud-storage-for-education/file_sharing_for_universities.webp')}
               alt="File Sharing for Universities"
               width={496}
               height={520}
@@ -72,7 +73,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
           <CardText textContent={cards.sendFiles} />
           <div className="flex flex-col">
             <Image
-              src="/images/cloud-storage-for-education/cloud_storage_for_education.webp"
+              src={getImage('/images/cloud-storage-for-education/cloud_storage_for_education.webp')}
               alt="Cloud Storage for Education"
               width={496}
               height={520}
@@ -87,7 +88,7 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
         <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
           <div className="flex flex-col">
             <Image
-              src="/images/cloud-storage-for-education/cloud_storage_for_schools.webp"
+              src={getImage('/images/cloud-storage-for-education/cloud_storage_for_schools.webp')}
               alt="Cloud Storage for Schools"
               width={496}
               height={520}

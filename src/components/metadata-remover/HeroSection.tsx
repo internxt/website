@@ -5,6 +5,7 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from "next/image";
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/metadataRemover';
+import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
@@ -419,7 +420,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                   <>
                     <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
                       <Image
-                        src="/images/virus-scanner/FileArrowUp.png"
+                        src={getImage('/images/virus-scanner/FileArrowUp.webp')}
                         alt="File Arrow Up icon"
                         width={80}
                         height={80}
@@ -436,7 +437,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                       <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">
                           <Image
-                            src="/images/virus-scanner/upload_file.webp"
+                            src={getImage('/images/virus-scanner/upload_file.webp')}
                             width={187}
                             height={187}
                             alt="Upload File"

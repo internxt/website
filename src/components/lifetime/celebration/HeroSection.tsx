@@ -2,6 +2,7 @@ import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 import Animation from '@/components/home/components/Animation';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: any;
@@ -24,7 +25,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
               <div className="flex px-5 lg:hidden">
                 <Image
                   loading="eager"
-                  src="/images/lifetime/celebration/image_mobile.webp"
+                  src={getImage('/images/lifetime/celebration/image_mobile.webp')}
                   draggable="false"
                   quality={100}
                   width={600}

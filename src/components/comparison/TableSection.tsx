@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
+import { getImage } from '@/lib/getImage';
 
 const TableSection = ({ textContent }) => {
   const competitors = [
@@ -495,7 +496,7 @@ const TableSection = ({ textContent }) => {
                       <img
                         loading="lazy"
                         className="h-8 w-8 object-cover object-center"
-                        src="/images/comparison/drag_horizontal.webp"
+                        src={getImage('/images/comparison/drag_horizontal.webp')}
                         draggable="false"
                         alt="Drag horizontal"
                       />

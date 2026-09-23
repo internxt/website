@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent }) => {
   const feeds = [
@@ -60,7 +61,7 @@ const HeroSection = ({ textContent }) => {
         <div className="flex flex-col rounded-3xl bg-white">
           <Image
             alt="woman using file storage"
-            src="/images/pricing/cyber-awareness-offer-per-month.svg"
+            src={getImage('/images/pricing/cyber-awareness-offer-per-month.webp')}
             className=" rounded-3xl"
             width={496}
             height={520}
