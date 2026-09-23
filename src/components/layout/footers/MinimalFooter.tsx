@@ -1,4 +1,5 @@
 import moment from 'moment';
+import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
 interface MinimalFooterProps {
@@ -19,7 +20,7 @@ export const MinimalFooter = ({ lang, footerLang, bgColor, textColor, logoColor 
       <Link href="/" locale={lang} className="flex flex-shrink-0">
         <img
           loading="lazy"
-          src={`../../logos/internxt/${logoColor ? `${logoColor}` : 'cool-gray-90'}.svg`}
+          src={getImage(`/logos/internxt/${logoColor ? `${logoColor}` : 'cool-gray-90'}.svg`)}
           alt="Internxt logo"
         />
       </Link>

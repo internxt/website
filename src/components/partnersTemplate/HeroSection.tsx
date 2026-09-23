@@ -111,7 +111,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -126,7 +126,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -141,7 +141,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -161,7 +161,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -181,7 +181,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -201,7 +201,7 @@ export default function HeroSection({
             <Image
               loading="lazy"
               className="select-none"
-              src={`../../logos/internxt/cool-gray-90.svg`}
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
