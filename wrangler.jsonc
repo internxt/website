@@ -8,8 +8,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  // Kept disabled to match the dashboard: the site must not be reachable on a
-  // public *.workers.dev URL, which would be indexable and duplicate internxt.com.
   "workers_dev": true,
   "preview_urls": true,
   "observability": {
