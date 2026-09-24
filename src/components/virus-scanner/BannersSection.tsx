@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import { CaretRight } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 
@@ -10,10 +10,10 @@ const BannersSection = ({ textContent, lang }) => {
         <div className="flex text-center">
           <p className="text-2xl font-semibold text-gray-100 md:text-4xl">{textContent.title}</p>
         </div>
-        <div className="flex flex-col space-y-9 md:flex-row md:space-y-0 md:space-x-9">
+        <div className="flex flex-col space-y-9 md:flex-row md:space-x-9 md:space-y-0">
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
-              src={getImage('/images/temp-email/password-checker.webp')}
+              src={getImage('/images/temp-email/password-checker.svg')}
               quality={100}
               width={125}
               height={70}
@@ -21,9 +21,10 @@ const BannersSection = ({ textContent, lang }) => {
               loading={'lazy'}
               alt="Password checker image"
               style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
             <p className="max-w-[240px] text-2xl font-medium">{textContent.passwordCheckerBanner.title}</p>
             <button
               onClick={() =>
@@ -37,7 +38,7 @@ const BannersSection = ({ textContent, lang }) => {
           </div>
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
-              src={getImage('/images/temp-email/byte-converter.webp')}
+              src={getImage('/images/temp-email/byte-converter.svg')}
               quality={100}
               width={95}
               height={70}
@@ -45,9 +46,10 @@ const BannersSection = ({ textContent, lang }) => {
               loading={'lazy'}
               alt="Byte converter image"
               style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
             <p className="max-w-[200px] text-2xl font-medium">{textContent.byteConverterBanner.title}</p>
             <button
               onClick={() =>
