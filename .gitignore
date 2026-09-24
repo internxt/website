@@ -42,6 +42,14 @@ cypress.env.json
 # vercel
 .vercel
 
+# cloudflare workers (opennext)
+.open-next
+.wrangler
+.dev.vars
+
+# typescript incremental build info
+tsconfig.tsbuildinfo
+
 # public files
 public/downloads/*
 public/*.pdf

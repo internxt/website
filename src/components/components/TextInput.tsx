@@ -2,7 +2,7 @@
 /*eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import { FieldError, UseFormRegister } from 'react-hook-form';
-import { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
+import type { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 import { CSSProperties } from 'react';
 
 export interface TextInputProps {

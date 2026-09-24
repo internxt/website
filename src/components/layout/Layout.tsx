@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { INTERNXT_URL } from '@/constants';
-import { useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
 

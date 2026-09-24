@@ -43,6 +43,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 - Runs tests with [cypress](https://www.cypress.io/)
 
+### `yarn build:cf`
+
+Builds the app for Workers into the `.open-next` folder.
+
+### `yarn preview:cf`
+
+Builds and serves the worker locally, so API routes and SSR behave as they would on Workers.
+
+### `yarn deploy:cf`
+
+Builds and deploys to Cloudflare. Production variables and secrets are configured in the Cloudflare dashboard.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
