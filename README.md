@@ -43,12 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 - Runs tests with [cypress](https://www.cypress.io/)
 
-## Cloudflare Workers
-
-The app can also be built for Cloudflare Workers through the [OpenNext](https://opennext.js.org/cloudflare) adapter. This is work in progress and does not replace the current deployment yet.
-
-The worker runs in workerd, which does not read `.env.local`. Copy `.dev.vars.example` to `.dev.vars` and fill it in with the same values before previewing.
-
 ### `yarn build:cf`
 
 Builds the app for Workers into the `.open-next` folder.
