@@ -1,5 +1,7 @@
 import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 
+import { getClientIp } from './get-client-ip';
+
 const CLEANUP_INTERVAL_MS = 5 * 60 * 1000;
 let lastCleanup = Date.now();
 
@@ -27,8 +29,7 @@ export default function rateLimitMiddleware(
   return async (req: NextApiRequest, res: NextApiResponse) => {
     cleanUpOldKeys(windowMs);
 
-    const forwarded = req.headers['x-forwarded-for'];
-    const ip = typeof forwarded === 'string' ? forwarded.split(',')[0] : forwarded?.[0] || 'unknown';
+    const ip = getClientIp(req);
     const mapIdentifier = `${ip}-${path}`;
 
     if (!rateLimitMap.has(mapIdentifier)) {

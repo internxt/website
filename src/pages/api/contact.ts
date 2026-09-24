@@ -1,6 +1,8 @@
 import axios, { AxiosError } from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import { getClientIp } from '@/utils/get-client-ip';
+
 const KLAVIYO_PRIVATE_API_KEY = process.env.KLAVIYO_PRIVATE_API_KEY;
 const KLAVIYO_S3_LIST_ID = process.env.KLAVIYO_S3_CONTACT_LIST_ID;
 const KLAVIYO_API_URL = 'https://a.klaviyo.com/api';
@@ -24,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ status: 'Error' });
   }
 
-  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0] || req.socket.remoteAddress || 'unknown';
+  const ip = getClientIp(req);
   const now = Date.now();
   const lastRequest = requestTimestamps.get(ip) || 0;
 
