@@ -142,7 +142,7 @@ export const HeroSection = ({ textContent }) => {
       // NO OP
       const error = err as Error;
 
-      if (error.message.includes('404')) {
+      if (error.message.includes('404') || error.message.includes('401')) {
         await onDeleteEmailButtonClicked();
       }
     }
