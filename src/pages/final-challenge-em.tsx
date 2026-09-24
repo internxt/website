@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
@@ -8,7 +8,6 @@ import HeroSection from '@/components/deals/HeroSection';
 import { PriceTableSection, PriceTableText } from '@/components/final-challenge/PriceTableSection';
 import TitleAndDescriptionSection from '@/components/shared/components/TitleAndDescriptionSection';
 import usePricing from '@/hooks/usePricing';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 
@@ -116,15 +115,13 @@ const FinalChallengeEmPage = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/final-challenge.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

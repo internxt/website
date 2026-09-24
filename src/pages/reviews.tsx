@@ -1,10 +1,9 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import cookies from '@/lib/cookies';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ReviewsTextPage } from '@/assets/types/reviews';
 import SupportSection from '@/components/reviews/support-section';
@@ -20,7 +19,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
 interface CleanerProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: ReviewsTextPage;
@@ -135,15 +134,13 @@ const CleanerPage = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/reviews.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

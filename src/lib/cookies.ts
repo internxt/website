@@ -2,10 +2,9 @@ import { GetServerSidePropsContext } from 'next';
 
 const Cookies = require('cookies');
 const moment = require('moment');
-const url = require('url');
-const queryString = require('querystring');
 
 const GCLID_COOKIE_LIFESPAN_DAYS = 90;
+const REFERRAL_COOKIE_LIFESPAN_DAYS = 2;
 const CELLO_EXPIRATION_DAYS = 30;
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
@@ -24,12 +23,6 @@ export const TRACKING_PARAMS = [
   'irgwc',
   'afsrc',
 ] as const;
-
-function parseUri(ctx: GetServerSidePropsContext) {
-  const { query } = url.parse(ctx.req.url);
-  const parsedQuery = queryString.parse(query);
-  return parsedQuery;
-}
 
 function setCookie({
   cookieName,
@@ -60,28 +53,6 @@ function getCookie(cookieName: string): string {
   return cookie[cookieName];
 }
 
-function setReferralCookie(ctx: GetServerSidePropsContext): void {
-  const parsedUri = parseUri(ctx);
-
-  if (!parsedUri.ref) {
-    return;
-  }
-
-  const referralId = parsedUri.ref;
-
-  const expires = moment().add(2, 'days').toDate();
-  const cookies = new Cookies(ctx.req, ctx.res);
-
-  cookies.set('REFERRAL', referralId, {
-    domain: process.env.NODE_ENV === 'production' ? '.internxt.com' : 'localhost',
-    expires,
-    overwrite: true,
-    httpOnly: false,
-  });
-
-  // httpOnly must be false in order to be accesible by JavaScript
-}
-
 function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: string, expires: Date): void {
   const cookies = new Cookies(ctx.req, ctx.res);
 
@@ -99,6 +70,16 @@ export const saveGclidToCookie = (gclid: string) => {
   setCookie({
     cookieName: 'gclid',
     cookieValue: gclid,
+    expiration: expiryDate,
+  });
+};
+
+export const saveReferralToCookie = (referralId: string) => {
+  const expiryDate = new Date();
+  expiryDate.setTime(expiryDate.getTime() + REFERRAL_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
+  setCookie({
+    cookieName: 'REFERRAL',
+    cookieValue: encodeURIComponent(referralId),
     expiration: expiryDate,
   });
 };
@@ -170,10 +151,8 @@ export const isCelloExpired = (): boolean => {
 };
 
 const cookies = {
-  parseUri,
   setCookie,
   getCookie,
-  setReferralCookie,
   setPublicCookie,
   saveCelloFirstVisit,
   getCelloFirstVisitDate,

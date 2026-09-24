@@ -18,7 +18,7 @@ import { BannersText } from '@/assets/types/components/banners';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
@@ -156,7 +156,7 @@ const VPN = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
