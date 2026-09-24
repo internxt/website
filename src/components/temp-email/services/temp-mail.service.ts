@@ -16,8 +16,8 @@ const fetchNewEmail = async (): Promise<UserProps> => {
   return rateLimitClientMiddleware(
     'create-email-limiter',
     async () => {
-      console.log('Inicio');
       const { data } = await axios.get<UserProps>('/api/temp-mail/create-email');
+      
       return data;
     },
     4,
