@@ -1,6 +1,7 @@
 'use client';
 
 import path from 'path';
+import { buildLocalizedPaths, getLangFolderSlugs } from '@/lib/helpers/staticPaths';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
@@ -54,7 +55,17 @@ const FileConverter = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths({ locales }) {
+  return {
+    paths: buildLocalizedPaths(
+      locales,
+      getLangFolderSlugs('file-compressor', ['converter-card', 'errorState', 'file-compressor']),
+    ),
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const rawFilename = ctx.params.filename;
 

@@ -1,5 +1,5 @@
 import { WebdavRcloneTemplate, WebdavRcloneTemplateProps } from '@/components/templates/webdavRcloneTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 
 const WebDAVEmLP = (props: WebdavRcloneTemplateProps) => (
@@ -12,7 +12,7 @@ const WebDAVEmLP = (props: WebdavRcloneTemplateProps) => (
   />
 );
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

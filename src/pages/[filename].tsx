@@ -12,7 +12,8 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE } from '@/hooks/useSpecialOfferConfig';
+import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE, ALLOWED_PATHS } from '@/hooks/useSpecialOfferConfig';
+import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 
@@ -259,7 +260,16 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+const SLUGS_WITH_OWN_PAGE = ['lifetime'];
+
+export async function getStaticPaths({ locales }) {
+  return {
+    paths: buildLocalizedPaths(locales, ALLOWED_PATHS.filter((slug) => !SLUGS_WITH_OWN_PAGE.includes(slug))),
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const pathname = ctx.params.filename;
   const lang = ctx.locale;
 

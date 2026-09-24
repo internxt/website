@@ -50,7 +50,7 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const download = await downloadDriveLinks();
 

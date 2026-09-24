@@ -1,9 +1,9 @@
 import { WebdavRcloneTemplate, WebdavRcloneTemplateProps } from '@/components/templates/webdavRcloneTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 const WebDAVLP = (props: WebdavRcloneTemplateProps) => <WebdavRcloneTemplate {...props} />;
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -1,9 +1,9 @@
 import { MailTemplate, MailTemplateProps } from '@/components/templates/mailTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 const MailEmLP = (props: MailTemplateProps) => <MailTemplate {...props} robots="noindex,follow" />;
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

@@ -60,7 +60,7 @@ const FileConverter = ({
   </>);
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
 

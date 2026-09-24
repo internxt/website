@@ -12,6 +12,7 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
+import { saveReferralToCookie } from '@/lib/cookies';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -41,6 +42,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    const referralId = new URLSearchParams(globalThis.location.search).get('ref');
+    if (referralId) saveReferralToCookie(referralId);
+  }, [router.asPath]);
 
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
