@@ -1,5 +1,5 @@
 import { Photos, PhotosProps } from '@/components/templates/photosTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 
 const PhotosEmLP = (props: PhotosProps) => (
@@ -12,7 +12,7 @@ const PhotosEmLP = (props: PhotosProps) => (
   />
 );
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
   const navbarText = require(`@/assets/lang/${locale}/navbar.json`);

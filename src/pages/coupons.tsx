@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
@@ -7,7 +7,6 @@ import { stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { CouponPageText } from '@/assets/types/couponsPage';
 import HeroSection from '@/components/coupons/HeroSection';
@@ -21,7 +20,7 @@ import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { getMinimumPrice } from '@/utils/priceHelper';
 
 interface HomeProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: CouponPageText;
@@ -159,15 +158,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/coupons.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

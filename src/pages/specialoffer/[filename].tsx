@@ -5,6 +5,7 @@ import Layout from '@/components/layout/Layout';
 import Script from 'next/script';
 import { PromoCodeName } from '@/lib/types';
 import { saveCelloFirstVisit, isCelloExpired } from '@/lib/cookies';
+import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -302,7 +303,14 @@ function CombinedSpecialOffer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths({ locales }) {
+  return {
+    paths: buildLocalizedPaths(locales, ALLOWED_PATHS),
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const pathname = ctx.params.filename;
 

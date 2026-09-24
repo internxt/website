@@ -11,6 +11,7 @@ import FeatureSection from '@/components/lifetime/FeatureSection';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 
 interface RedeemPageProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -112,7 +113,14 @@ const SpecialOfferPage = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getStaticPaths({ locales }) {
+  return {
+    paths: buildLocalizedPaths(locales, ALLOWED_PATHS),
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps(ctx) {
   const lang = ctx.locale;
   const pathname = ctx.params.filename;
 

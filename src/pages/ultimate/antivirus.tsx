@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
@@ -7,7 +7,6 @@ import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
@@ -28,7 +27,7 @@ const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, 
 const CLAIM_DEAL_EVENT = 'Claim Deal';
 
 interface AntivirusProps {
-  lang: GetServerSidePropsContext['locale'];
+  lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: AntivirusText;
@@ -235,7 +234,7 @@ const AntivirusPage = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
@@ -244,8 +243,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

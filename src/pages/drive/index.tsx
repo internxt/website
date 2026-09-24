@@ -1,11 +1,10 @@
 import { DriveTemplate, DriveTemplateProps } from '@/components/templates/driveTemplate';
-import cookies from '@/lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 
 const DriveLP = (props: DriveTemplateProps) => <DriveTemplate {...props} />;
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getStaticProps(ctx: GetStaticPropsContext) {
   const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
@@ -14,8 +13,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const relationalLinksText = require(`@/assets/lang/${lang}/relational-links.json`);
-
-  cookies.setReferralCookie(ctx);
 
   return {
     props: {

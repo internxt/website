@@ -2,7 +2,7 @@ import {
   SecureFileTransferTemplate,
   SecureFileTransferTemplateProps,
 } from '@/components/templates/secureFileTransferTemplate';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 
 const SecureFileTransferEmLP = (props: SecureFileTransferTemplateProps) => (
@@ -15,7 +15,7 @@ const SecureFileTransferEmLP = (props: SecureFileTransferTemplateProps) => (
   />
 );
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

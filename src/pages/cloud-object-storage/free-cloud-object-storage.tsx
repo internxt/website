@@ -10,7 +10,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPropsContext } from 'next';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 
@@ -19,7 +19,7 @@ interface FreeCloudObjectStorageProps {
   navbarText: NavigationBarText;
   textContent: CloudObjectStorageText;
   footerText: FooterText;
-  locale: GetServerSidePropsContext['locale'];
+  locale: GetStaticPropsContext['locale'];
 }
 
 const FreeCloudObjectStorage = ({
@@ -113,7 +113,7 @@ const FreeCloudObjectStorage = ({
   );
 };
 
-export function getServerSideProps(ctx: GetServerSidePropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;
 
   const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);

@@ -1848,13 +1848,3 @@ export default function Footer({
     </section>
   );
 }
-
-export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
-
-  return {
-    props: {
-      lang,
-    },
-  };
-}
