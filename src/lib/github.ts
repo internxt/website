@@ -9,7 +9,12 @@ export async function getLatestReleaseInfo(user: string, repo: string) {
   }
 
   const fetchUrl = `https://api.github.com/repos/${user}/${repo}/releases/latest`;
-  const res = await fetch(fetchUrl);
+  const res = await fetch(fetchUrl, {
+    headers: {
+      'User-Agent': 'internxt-website',
+      Accept: 'application/vnd.github+json',
+    },
+  });
 
   if (res.status !== 200) {
     throw Error('Latest release information not found');
