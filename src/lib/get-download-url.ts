@@ -3,9 +3,9 @@ import { getLatestReleaseInfo } from './github';
 
 const iosURL = 'https://apps.apple.com/es/app/internxt-drive/id1465869889';
 const androidURL = 'https://play.google.com/store/apps/details?id=com.internxt.cloud';
-const windowsURL = 'https://internxt.com/downloads/drive.exe';
-const macosURL = 'https://internxt.com/downloads/drive.dmg';
-const linuxURL = 'https://internxt.com/downloads/drive.deb';
+const windowsURL = 'https://github.com/internxt/drive-desktop/releases/latest';
+const macosURL = 'https://github.com/internxt/drive-desktop-macos/releases/latest';
+const linuxURL = 'https://github.com/internxt/drive-desktop-linux/releases/latest';
 const lastReleaseURL = 'https://github.com/internxt/drive-desktop/releases';
 
 export function getOS() {
