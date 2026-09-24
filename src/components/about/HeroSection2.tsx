@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import { getImage } from '@/lib/getImage';
 
 const HeroSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20 md:pt-20">
@@ -56,7 +57,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
-                  src="/images/about/logos/forbes.webp"
+                  src={getImage('/images/about/logos/forbes.webp')}
                   width={125}
                   height={32}
                   loading={'lazy'}
@@ -71,7 +72,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
-                  src="/images/about/logos/southsummit.webp"
+                  src={getImage('/images/about/logos/southsummit.webp')}
                   width={70}
                   height={32}
                   loading={'lazy'}
@@ -86,7 +87,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
-                  src="/images/about/logos/tnw.webp"
+                  src={getImage('/images/about/logos/tnw.webp')}
                   alt="TNW Logo"
                   width={112}
                   height={32}
@@ -101,7 +102,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
               <div className="flex flex-shrink-0 flex-col items-center space-y-3">
                 <Image
-                  src="/images/about/logos/startupvalencia.webp"
+                  src={getImage('/images/about/logos/startupvalencia.webp')}
                   alt="Startup Valencia Logo"
                   width={90}
                   height={32}
@@ -121,7 +122,7 @@ const HeroSection2 = ({ textContent, lang }) => (
         <img
           loading="lazy"
           className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 scale-500 select-none blur-xl saturate-150 filter"
-          src="/images/about/assets/stain-big.webp"
+          src={getImage('/images/about/assets/stain-big.webp')}
           draggable="false"
           alt="stain-big logo"
         />

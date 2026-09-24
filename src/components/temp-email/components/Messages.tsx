@@ -2,6 +2,7 @@ import { ArrowClockwise } from '@phosphor-icons/react';
 import moment from 'moment';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { getImage } from '@/lib/getImage';
 
 const Loader = (): JSX.Element => {
   return (
@@ -47,7 +48,7 @@ export const NoMessageSelected = ({
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
-        <Image src="/images/temp-email/empty-inbox.svg" alt="Empty inbox" width={172} height={135} />
+        <Image src={getImage('/images/temp-email/empty-inbox.webp')} alt="Empty inbox" width={172} height={135} />
       </div>
       <div className="flex flex-col items-center space-y-8 px-5">
         <div className="flex flex-col items-center text-center">

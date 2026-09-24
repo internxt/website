@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
         {isStartPage ? (
           <Image
-            src="/images/affiliates/Startpage_discount_collab.webp"
+            src={getImage('/images/affiliates/Startpage_discount_collab.webp')}
             alt="Affiliates Hero Section"
             draggable={false}
             width={500}

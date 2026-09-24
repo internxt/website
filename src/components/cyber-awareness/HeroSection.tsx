@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent, bannerText }) => {
   const router = useRouter();
@@ -36,7 +37,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <>
             <div className="mt-16 flex xl:px-64">
               <img
-                src="/images/cyber-awareness/all-eyes-of-you.png"
+                src={getImage('/images/cyber-awareness/all-eyes-of-you.webp')}
                 alt="all eyes of you image"
                 className="rounded-3xl"
               />

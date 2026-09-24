@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { AppleLogo } from '../shared/icons/AppleIcon';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
+import { getImage } from '@/lib/getImage';
 
 const DownloadOSPlatform = ({ downloadText, installationText, logo }) => (
   <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 p-10">
@@ -28,7 +29,7 @@ export const DownloadCLISection = ({ textContent }) => {
           <DownloadOSPlatform
             downloadText={textContent.downloads[0]}
             installationText={textContent}
-            logo={<Image src="/images/drive/Windows-logo.svg" width={34} height={34} alt="Windows image" />}
+            logo={<Image src={getImage('/images/drive/Windows-logo.webp')} width={34} height={34} alt="Windows image" />}
           />
           <DownloadOSPlatform
             downloadText={textContent.downloads[1]}
@@ -40,7 +41,7 @@ export const DownloadCLISection = ({ textContent }) => {
             installationText={textContent}
             logo={
               <Image
-                src="/images/special-offer/black-friday/Linux.svg"
+                src={getImage('/images/special-offer/black-friday/Linux.webp')}
                 width={29}
                 height={34}
                 alt="Linux image"

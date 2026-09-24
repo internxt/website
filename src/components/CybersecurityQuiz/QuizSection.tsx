@@ -234,7 +234,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             </div>
             <div className="flex flex-col">
               <img
-                src="/images/cyber-awareness/Frame.svg"
+                src={getImage('/images/cyber-awareness/Frame.webp')}
                 alt="quiz-laptop"
                 className="fixed right-0 top-0 hidden h-screen xl:flex 2xl:relative"
               />

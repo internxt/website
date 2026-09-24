@@ -2,6 +2,7 @@ import React from 'react';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
 import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
+import { getImage } from '@/lib/getImage';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const iconSize = 32;
@@ -73,7 +74,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex cursor-pointer">
               {lang === 'es' ? (
                 <Image
-                  src="/images/password-checker/virus-scanner-es.webp"
+                  src={getImage('/images/password-checker/virus-scanner-es.webp')}
                   width={897}
                   height={350}
                   loading="eager"
@@ -85,7 +86,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   }} />
               ) : (
                 <Image
-                  src="/images/password-checker/virus-scanner.webp"
+                  src={getImage('/images/password-checker/virus-scanner.webp')}
                   width={897}
                   height={350}
                   loading="eager"
@@ -117,7 +118,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           <div className="flex cursor-pointer">
             {lang === 'es' ? (
               <Image
-                src="/images/password-checker/byte-converter-es.webp"
+                src={getImage('/images/password-checker/byte-converter-es.webp')}
                 width={897}
                 height={350}
                 loading="eager"
@@ -129,7 +130,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 }} />
             ) : (
               <Image
-                src="/images/password-checker/byte-converter.webp"
+                src={getImage('/images/password-checker/byte-converter.webp')}
                 width={897}
                 height={350}
                 loading="eager"

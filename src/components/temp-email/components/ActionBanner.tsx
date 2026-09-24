@@ -3,6 +3,7 @@ import { formatText } from '@/components/utils/format-text';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 interface DialogDataProps {
   email: string;
@@ -49,7 +50,7 @@ export const ActionBanner = () => {
         <div className="flex flex-col items-center py-12 px-5 md:flex-row md:space-x-4 md:p-14">
           <div className="hidden w-full object-contain md:flex">
             <Image
-              src="/images/temp-email/empty-inbox.svg"
+              src={getImage('/images/temp-email/empty-inbox.webp')}
               alt="Empty inbox"
               width={245}
               height={316}
