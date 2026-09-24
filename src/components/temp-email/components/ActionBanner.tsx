@@ -35,7 +35,7 @@ export const ActionBanner = () => {
   return (
     <div
       className={`${dialogAction.dialogIsOpen(DIALOG_KEY) ? 'flex' : 'hidden'} 
-         fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50`}
+         fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50`}
     >
       <div
         className={`absolute left-1/2 top-1/2 flex h-auto w-full max-w-5xl -translate-x-1/2
@@ -47,10 +47,10 @@ export const ActionBanner = () => {
         >
           <X size={32} className="text-black" />
         </button>
-        <div className="flex flex-col items-center py-12 px-5 md:flex-row md:space-x-4 md:p-14">
+        <div className="flex flex-col items-center px-5 py-12 md:flex-row md:space-x-4 md:p-14">
           <div className="hidden w-full object-contain md:flex">
             <Image
-              src={getImage('/images/temp-email/empty-inbox.webp')}
+              src={getImage('/images/temp-email/empty-inbox.svg')}
               alt="Empty inbox"
               width={245}
               height={316}
@@ -63,13 +63,13 @@ export const ActionBanner = () => {
             <div className="flex w-full flex-col gap-6 md:flex-row">
               <button
                 onClick={onChangeEmailButtonClicked}
-                className="flex flex-col items-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+                className="flex flex-col items-center rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
               >
                 {bannerFormattedText.actionCta}
               </button>
               <button
                 onClick={onCloseDialog}
-                className="flex flex-col items-center rounded-lg border border-gray-10 py-3 px-5 text-xl font-medium text-gray-80 hover:bg-gray-5"
+                className="flex flex-col items-center rounded-lg border border-gray-10 px-5 py-3 text-xl font-medium text-gray-80 hover:bg-gray-5"
               >
                 {bannerFormattedText.cancelCta}
               </button>
