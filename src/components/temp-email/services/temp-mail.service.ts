@@ -17,6 +17,7 @@ const fetchNewEmail = async (): Promise<UserProps> => {
     'create-email-limiter',
     async () => {
       const { data } = await axios.get<UserProps>('/api/temp-mail/create-email');
+      
       return data;
     },
     4,
