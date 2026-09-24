@@ -126,7 +126,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     '/lifetime?utm_source=website&utm_medium=ribbon70&utm_campaign=softsale&utm_term=utm_campaign',
                   );
                 }}
-                src="/images/banners/ribbon.svg"
+                src={getImage('/images/banners/ribbon.webp')}
                 alt="Ribbon label"
                 width={70}
                 height={74}

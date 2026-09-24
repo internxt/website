@@ -1,6 +1,7 @@
 import { CheckSquare } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImage } from '@/lib/getImage';
 
 export const WhenUseVPNSection = ({ textContent }) => {
   return (
@@ -32,7 +33,7 @@ export const WhenUseVPNSection = ({ textContent }) => {
         <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat sm:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
           <div className="inset-0 ml-5 hidden items-center justify-center lg:absolute lg:flex">
             <Image
-              src="/images/vpn-extension/superhero2.svg"
+              src={getImage('/images/vpn-extension/superhero2.webp')}
               alt="Super Hero"
               draggable={false}
               width={444}

@@ -1,6 +1,7 @@
 import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '@/components/shared/RenderDescription';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
@@ -24,7 +25,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           </div>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-privacy-activity-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-privacy-activity-settings.webp')}
           alt="google privacy activity settings"
           draggable={false}
           className="w-full max-w-2xl"
@@ -38,7 +39,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <ul className="list-decimal space-y-3 pt-6 pl-6">{numberedList}</ul>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-activity-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-activity-settings.webp')}
           alt="google activity settings"
           draggable={false}
           className="w-full max-w-2xl"
@@ -51,7 +52,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           width={897}
           height={200}
           className="w-full max-w-[897px] cursor-pointer"
-          src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.png"
+          src={getImage('/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp')}
           alt="google activity settings"
           draggable={false}
         />
@@ -61,7 +62,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <p className="text-lg text-gray-80">{textContent.section3.description}</p>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-activity-controls.png"
+          src={getImage('/images/what-does-google-know-about-me/google-activity-controls.webp')}
           alt="google activity controls"
           draggable={false}
           className="w-full max-w-2xl"
@@ -82,7 +83,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <RenderDescription description={textContent.section6.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-security-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-security-settings.webp')}
           alt="google security settings"
           className="w-full max-w-md pt-16"
           draggable={false}
@@ -94,7 +95,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           width={897}
           height={200}
           className="w-full max-w-[897px] cursor-pointer"
-          src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnowsAboutUs_EN.png"
+          src={getImage('/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnowsAboutUs_EN.webp')}
           alt="Internxt CTA"
           draggable={false}
         />
@@ -104,7 +105,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <RenderDescription description={textContent.section7.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-access-personal-account.png"
+          src={getImage('/images/what-does-google-know-about-me/google-access-personal-account.webp')}
           alt="google access personal account"
           draggable={false}
           className="w-full max-w-2xl"
@@ -115,7 +116,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <p className="text-lg text-gray-80">{textContent.section8.description}</p>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-search-privacy-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-search-privacy-settings.webp')}
           alt="google search privacy settings"
           draggable={false}
           className="w-full max-w-2xl"
@@ -126,7 +127,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
           <RenderDescription description={textContent.section9.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-privacy-settings-options.png"
+          src={getImage('/images/what-does-google-know-about-me/google-privacy-settings-options.webp')}
           alt="google privacy settings options"
           draggable={false}
           className="w-full max-w-2xl"

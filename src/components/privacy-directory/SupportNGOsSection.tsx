@@ -1,6 +1,7 @@
 import React from 'react';
 import { CaretRight } from '@phosphor-icons/react';
 import Image from "next/image";
+import { getImage } from '@/lib/getImage';
 
 const SupportNGOsSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-white px-6">
@@ -8,7 +9,7 @@ const SupportNGOsSection = ({ textContent }) => (
       {/* Card */}
       <div className="flex flex-col">
         <Image
-          src="/images/privacy-directory/support-NGO.png"
+          src={getImage('/images/privacy-directory/support-NGO.webp')}
           width={496}
           height={520}
           alt="Support NGO"

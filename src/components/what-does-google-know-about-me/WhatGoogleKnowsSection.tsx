@@ -1,6 +1,7 @@
 import { MagnifyingGlass } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 const WhatGoogleKnowsSection = ({ textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
@@ -36,7 +37,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           <p className="text-lg text-gray-80">{textContent.section1.footer}</p>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-privacy-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-privacy-settings.webp')}
           alt="google privacy settings"
           className="w-full max-w-4xl pt-16"
           draggable={false}
@@ -59,7 +60,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           }}
           width={897}
           height={200}
-          src="/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp"
+          src={getImage('/images/what-does-google-know-about-me/Internxt_CTA_WhatGoogleKnows_EN.webp')}
           alt="google privacy settings"
           className="w-full max-w-4xl cursor-pointer py-16"
           draggable={false}
@@ -77,7 +78,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           </div>
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-location-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-location-settings.webp')}
           alt="google location privacy settings"
           className="w-full max-w-4xl pt-16"
           draggable={false}
@@ -88,7 +89,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
           <RenderDescription description={textContent.section6.description} />
         </div>
         <img
-          src="/images/what-does-google-know-about-me/google-account-privacy-settings.png"
+          src={getImage('/images/what-does-google-know-about-me/google-account-privacy-settings.webp')}
           alt="google privacy settings"
           className="w-full max-w-4xl pt-16"
           draggable={false}

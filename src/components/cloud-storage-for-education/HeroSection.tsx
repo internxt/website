@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent }) => {
   return (
@@ -37,7 +38,7 @@ const HeroSection = ({ textContent }) => {
           </div>
           <div className="flex">
             <Image
-              src="/images/cloud-storage-for-education/file_sharing_for_education.webp"
+              src={getImage('/images/cloud-storage-for-education/file_sharing_for_education.webp')}
               draggable={false}
               width={496}
               height={520}

@@ -2,6 +2,7 @@ import axios from 'axios';
 import Image from "next/image";
 import { useState } from 'react';
 import { notificationService } from '@/components/Snackbar';
+import { getImage } from '@/lib/getImage';
 
 const BusinessBanner = ({ textContent }) => {
   const [email, setEmail] = useState('');
@@ -64,7 +65,7 @@ const BusinessBanner = ({ textContent }) => {
         <div className="-ml-40 hidden w-full items-center lg:flex">
           <div className="relative left-56 top-2 flex w-full flex-col bg-contain">
             <Image
-              src="/images/home/internxt_secure_cloud_storage.webp"
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               width={534}
               height={300}
               draggable={false}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import Image from "next/image";
+import { getImage } from '@/lib/getImage';
 
 const TryInternxtBanner = ({ textContent, url }) => {
   const [bannerVisible, setBannerVisible] = useState(false);
@@ -49,7 +50,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
           <div className="hidden items-center lg:flex">
             <div className="flex w-[340px]">
               <Image
-                src="/images/virus-scanner/ImageBanner.png"
+                src={getImage('/images/virus-scanner/ImageBanner.webp')}
                 alt="hero"
                 width={208}
                 height={208}

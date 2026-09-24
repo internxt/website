@@ -1,3 +1,5 @@
+import { getImage } from '@/lib/getImage';
+
 const MakePrivacySection = ({ textContent }) => {
   return (
     <section className="overflow-hidden ">
@@ -10,9 +12,9 @@ const MakePrivacySection = ({ textContent }) => {
           </button>
         </div>
         <picture className="max-w-[774px]">
-          <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
+          <source srcSet={getImage('/images/home/internxt_secure_cloud_storage.webp')} type="image/webp" />
           <img
-            src="/images/home/internxt_secure_cloud_storage.webp"
+            src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
             alt="Internxt secure cloud storage"
             draggable={false}
           />

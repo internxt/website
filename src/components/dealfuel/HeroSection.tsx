@@ -1,6 +1,7 @@
 import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ lang, textContent, hideTimer }) => {
   return (
@@ -31,14 +32,14 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
           <div className="hidden w-full flex-col items-end py-20 lg:flex">
             <div className=" flex w-[770px] flex-col 2xl:w-[850px]">
               <img
-                src="/images/lifetime/infinity.svg"
+                src={getImage('/images/lifetime/infinity.webp')}
                 className="relative h-full w-full translate-x-56 object-contain object-left xl:translate-x-72"
                 alt="Infinity"
               />
             </div>
           </div>
           <div className="mb-20 flex flex-col items-center justify-center px-10 pt-12 lg:hidden">
-            <img src="/images/lifetime/infinity.svg" alt="infinity" className="flex" />
+            <img src={getImage('/images/lifetime/infinity.webp')} alt="infinity" className="flex" />
           </div>
         </div>
       </div>
