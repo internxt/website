@@ -48,7 +48,7 @@ export const NoMessageSelected = ({
   return (
     <div className="flex h-full w-full flex-col items-center justify-center space-y-2">
       <div className="relative flex flex-col">
-        <Image src={getImage('/images/temp-email/empty-inbox.webp')} alt="Empty inbox" width={172} height={135} />
+        <Image src={getImage('/images/temp-email/empty-inbox.svg')} alt="Empty inbox" width={172} height={135} />
       </div>
       <div className="flex flex-col items-center space-y-8 px-5">
         <div className="flex flex-col items-center text-center">
@@ -86,11 +86,11 @@ export const MessageSelected = ({
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
       <div className="flex w-full flex-col space-y-2">
-        <p title={item.subject} className="text-xl font-medium text-gray-100 line-clamp-3">
+        <p title={item.subject} className="line-clamp-3 text-xl font-medium text-gray-100">
           {item.subject ? item.subject : textContent.noSubject}
         </p>
         <div className="flex flex-row space-x-2">
-          <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 py-2 px-4">
+          <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 px-4 py-2">
             <p className="truncate text-lg text-primary">{name}</p>
           </div>
           <div className="flex w-full flex-col pr-10">
