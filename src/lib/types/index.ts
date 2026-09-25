@@ -386,6 +386,7 @@ export enum PromoCodeName {
   specialdeal = 'SPECIALDEAL',
   emch = 'EMCH',
   linuxtakeaway = 'LINUXTAKEAWAY',
+  danalove = 'DANALOVE',
 }
 
 export interface PromoCodeProps {
