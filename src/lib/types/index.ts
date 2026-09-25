@@ -385,6 +385,7 @@ export enum PromoCodeName {
   drive87 = 'DRIVE87',
   specialdeal = 'SPECIALDEAL',
   emch = 'EMCH',
+  linuxtakeaway = 'LINUXTAKEAWAY',
 }
 
 export interface PromoCodeProps {

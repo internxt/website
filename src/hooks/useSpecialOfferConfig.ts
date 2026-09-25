@@ -170,6 +170,7 @@ export const ALLOWED_PATHS = [
   'drive85',
   'drive87',
   'special-deal',
+  'linuxtakeaway',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -433,6 +434,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'drive85',
   'drive87',
   'special-deal',
+  'linuxtakeaway',
 ]);
 
 export const COUPON_CODES = {
@@ -603,6 +605,7 @@ export const COUPON_CODES = {
   drive85: PromoCodeName.DRIVE85,
   drive87: PromoCodeName.drive87,
   'special-deal': PromoCodeName.specialdeal,
+  linuxtakeaway: PromoCodeName.linuxtakeaway,
 };
 
 interface OfferConfig {
