@@ -26,18 +26,18 @@
     "pcWorld": "\"L'**accesso web intuitivo**, la **sincronizzazione dei file** e i **servizi di backup** di Internxt sono **impressionanti**. Questo servizio di archiviazione e backup online crittografato è **facile**, copre tutte le basi, e gli attuali **piani a vita** sono un **affare**.\""
   },
   "MoreDealsSection": {
-    "title": "Plus d'offres Internxt",
+    "title": "Altre offerte Black Friday sullo spazio cloud a vita",
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Offerte Internxt — risparmia il {{discount}}% su tutti i piani",
-        "description": "Scopri sconti esclusivi su tutte le app e i servizi Internxt",
-        "cta": "Vedi tutte le offerte"
+        "title": "Offerte Black Friday sullo spazio cloud",
+        "description": "Risparmia alla grande sullo spazio cloud crittografato per i tuoi file",
+        "cta": "Vedi le offerte di spazio"
       },
       "card2": {
-        "title": "Offerte di archiviazione cloud gratuita",
-        "description": "Inizia con archiviazione crittografata gratuita e aggiorna con fino al {{discount}}% di sconto",
-        "cta": "Vedi offerte di archiviazione"
+        "title": "Offerte Black Friday sullo spazio cloud personale",
+        "description": "Sconti esclusivi per privati e piani personali",
+        "cta": "Vedi le offerte personali"
       }
     }
   },
@@ -85,8 +85,8 @@
     }
   },
   "CtaSection": {
-    "title": "Dì addio agli abbonamenti",
-    "description": "Paga una volta, usa per sempre con {{percentage}}% di sconto",
+    "title": "Offerta Black Friday Internxt sullo spazio cloud a vita",
+    "description": "87% di sconto su tutti i piani",
     "cta": "Ottieni l'offerta"
   },
   "WhatsIncludedSection": {
@@ -107,81 +107,64 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Perché scegliere i piani a vita di Internxt?",
-    "description": "Le nostre offerte di archiviazione cloud a vita ti restituiscono il controllo della tua privacy. A differenza dell'archiviazione cloud tradizionale, ci assicuriamo che solo tu abbia le chiavi dei tuoi dati crittografati, e non memorizziamo né vendiamo i tuoi dati a terzi. Prendiamo tutte le misure per garantire che le tue informazioni rimangano sicure.",
+    "title": "Perché scegliere uno spazio cloud a vita durante il Black Friday?",
+    "description": "Con un'offerta Black Friday sullo spazio cloud di Internxt ottieni uno spazio cloud crittografato post-quantistico e tutto ciò che ti serve per proteggere il tuo dispositivo e la tua privacy online. Basta abbonamenti: ottieni tutto ciò che ti serve con un pagamento unico.",
     "cta": "Conoscici meglio",
     "scrollableSection": {
       "titles": [
         "Paga una volta e usa per sempre",
-        "Dati impossibili da hackerare e divulgare",
-        "Sicurezza di nuova generazione",
-        "Open source e trasparente"
+        "La crittografia più avanzata",
+        "La nostra più grande offerta Black Friday sullo spazio cloud"
       ],
       "descriptions": [
         "Dì addio ai modelli di abbonamento e ai costi di rinnovo imprevedibili con le nostre offerte di archiviazione cloud a vita. Con un pagamento, puoi accedere al tuo spazio di archiviazione e alle tue funzionalità per sempre senza ulteriori pagamenti necessari.",
-        "Non memorizziamo password o dati utente, e tutti i tuoi dati sono crittografati in transito e a riposo con crittografia post-quantistica e a conoscenza zero. Internxt ti mette in pieno controllo dei tuoi file. I tuoi dati sono affar tuo. Proteggerli è affar nostro.",
-        "Internxt è l'unico servizio di archiviazione cloud che crittografa automaticamente i tuoi file utilizzando crittografia end-to-end e post-quantistica, il che significa che solo tu puoi accedere ai tuoi dati.",
-        "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente revisionato, verificato e controllato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati."
+        "Scopri il primo spazio cloud con crittografia post-quantistica per caricare, archiviare e condividere i tuoi file in totale privacy con il nostro servizio cloud crittografato end-to-end. Esegui il backup e sincronizza i tuoi file per evitare la perdita di dati e collaborare senza problemi con amici, familiari o colleghi.",
+        "Approfitta della nostra più grande offerta Black Friday di sempre, con ancora più funzionalità per proteggere i tuoi dati e i tuoi file online. Con un enorme sconto dell'87%, questo è il momento perfetto per ottenere il miglior rapporto qualità-prezzo su uno spazio cloud sicuro e privato, e molto altro!"
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Privacy completa per l'{{percentage}}% di sconto",
-    "description": "Ottieni l'offerta della tua vita con Internxt",
+    "title": "Il miglior spazio cloud a vita del Black Friday",
+    "description": "87% di sconto su tutti i piani",
     "cta": "Ottieni l'offerta"
   },
   "FaqSection": {
-    "title": "Domande? Abbiamo risposte",
+    "title": "Scopri di più sul nostro spazio cloud a vita del Black Friday",
     "faq": [
       {
-        "question": "Chi può richiedere queste offerte di archiviazione cloud a vita?",
+        "question": "Come ottengo lo sconto Black Friday sullo spazio cloud a vita?",
         "answer": [
-          "Queste offerte Internxt sono per nuovi clienti o clienti con un account gratuito, o clienti che desiderano aggiornare il loro attuale piano a vita con l'85% di sconto per accedere alle nostre nuove funzionalità."
+          "Per ottenere il tuo sconto, scegli tra i piani Essential, Premium o Ultimate e vai alla pagina di pagamento. Il tuo sconto dell'87% verrà applicato automaticamente al momento del pagamento."
         ]
       },
       {
-        "question": "Posso utilizzare un'offerta Internxt se ho già un piano a vita?",
+        "question": "Quando finisce l'offerta Black Friday sullo spazio cloud a vita?",
         "answer": [
-          "Se attualmente hai un piano a vita e desideri accumulare spazio di archiviazione al tuo account attuale e accedere alle funzionalità di un piano Premium o Ultimate, puoi utilizzare questa offerta per aggiornare il tuo account."
+          "I saldi del Black Friday terminano il 3 dicembre 2026."
         ]
       },
       {
-        "question": "Cosa succede quando la mia offerta scade?",
+        "question": "Chi può usufruire di questo sconto?",
         "answer": [
-          "Se acquisti un piano annuale con la tua offerta Internxt, questo si applica solo al primo anno. Una volta scaduto il primo anno, il tuo piano si rinnoverà automaticamente al prezzo pieno elencato nella nostra sezione prezzi.",
-          "Se vuoi evitare costi di abbonamento, puoi acquistare un piano a vita con un pagamento unico e non pagare mai più, a meno che tu non scelga di aggiornare il tuo spazio di archiviazione."
+          "Se sei un nuovo utente, puoi approfittare di questo sconto creando un account. Se hai già un piano a vita, puoi effettuare l'upgrade per ottenere più spazio e funzionalità extra come Cleaner, Meet e Mail."
         ]
       },
       {
-        "question": "Come posso aggiornare o aggiungere più spazio di archiviazione in seguito?",
+        "question": "Manterrò per sempre la mia offerta Black Friday sullo spazio cloud a vita?",
         "answer": [
-          "Se hai un piano a vita, puoi accumulare o aggiornare il tuo piano in qualsiasi momento per ottenere più spazio di archiviazione. Non è possibile aggiornare o aggiungere più spazio di archiviazione per i piani annuali. Tieni d'occhio il nostro sito web per gli ultimi codici coupon e offerte."
+          "Sì, se scegli un piano a vita, è richiesto un solo pagamento. Una volta pagato, non dovrai pagare altro, a meno che tu non voglia aggiornare il tuo piano o aggiungere più spazio in futuro."
         ]
       },
       {
-        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "question": "Quali metodi di pagamento accetta Internxt?",
         "answer": [
-          "Internxt attualmente accetta carte di debito e di credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, criptovaluta o dividere il pagamento del tuo piano a vita con Klarna.",
-          "Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a hello@internxt.com"
+          "Attualmente accettiamo pagamenti con carte di credito e debito (tra cui Mastercard, VISA, American Express e altre), oltre a PayPal, Bancontact, iDEAL e SOFORT. Puoi dividere il costo di un piano a vita con Klarna o pagare in criptovaluta."
         ]
       },
       {
-        "question": "Posso dividere il mio pagamento a vita?",
+        "question": "Hai altre domande?",
         "answer": [
-          "Sì, ora puoi dividere i tuoi pagamenti a vita in più rate senza interessi utilizzando Klarna. Goditi un piano a vita con la facilità di pagarlo in comode rate!"
-        ]
-      },
-      {
-        "question": "Qual è la politica di rimborso di Internxt?",
-        "answer": [
-          "Internxt offre una garanzia standard di rimborso di 30 giorni su tutti gli abbonamenti a pagamento, che inizia a decorrere non appena ti iscrivi.",
-          "E se mai non sei soddisfatto del nostro servizio, contattaci a hello@internxt.com e richiedi un rimborso."
-        ]
-      },
-      {
-        "question": "Come posso contattare il supporto?",
-        "answer": [
-          "Non riesci a trovare quello che cerchi? Puoi contattare il nostro team di supporto tecnico tramite chat dal vivo o inviando un'email a hello@internxt.com"
+          "Non esitare a scriverci a hello@internxt.com o a salutarci sui social media. Siamo sempre felici di sentirti!"
         ]
       }
     ]
