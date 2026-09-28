@@ -1,6 +1,7 @@
 import { Category, Feature, PricingText } from '@/assets/types/pricing';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
+import { currency as CURRENCY_SYMBOLS } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
 
@@ -44,7 +45,7 @@ export default function ComparisonTableSection({
   const [selectedPlanA, setSelectedPlanA] = useState(textContent.plans[0].id);
   const [selectedPlanB, setSelectedPlanB] = useState(textContent.plans[textContent.plans.length - 1].id);
 
-  const currency = currencyValue === 'eur' ? '€' : '$';
+  const currency = CURRENCY_SYMBOLS[currencyValue] ?? '€';
   const billingText = billingFrequency === Interval.Year ? textContent.billedAnnualy : textContent.billedOnce;
   const isLifetime = billingFrequency === Interval.Lifetime;
 
