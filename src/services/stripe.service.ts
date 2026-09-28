@@ -1,15 +1,10 @@
 import axios from 'axios';
 import bytes from 'bytes';
-import { currencyService } from './currency.service';
+import { currency as CURRENCY_MAP, currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
 import { analyticsService } from './ga.services';
-
-const CURRENCY_MAP = {
-  eur: '€',
-  usd: '$',
-};
 
 export enum Interval {
   Month = 'month',

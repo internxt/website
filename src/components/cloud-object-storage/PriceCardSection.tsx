@@ -19,7 +19,7 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
   const [currencyValue, setCurrencyValue] = useState("eur");
   
   useEffect(() => {
-    currencyService.filterCurrencyByCountry().then(({currency, currencyValue}) => {
+    currencyService.filterObjectStorageCurrencyByCountry().then(({currency, currencyValue}) => {
       setCurrency(currency);
       setCurrencyValue(currencyValue);
     })

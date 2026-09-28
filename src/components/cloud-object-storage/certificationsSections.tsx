@@ -17,7 +17,7 @@ export const CertificationsSection = () => {
 
   useEffect(() => {
     currencyService
-      .filterCurrencyByCountry()
+      .filterObjectStorageCurrencyByCountry()
       .then(({ currencyValue }) => {
         setCurrencyValue(currencyValue);
       })
