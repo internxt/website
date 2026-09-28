@@ -1,5 +1,6 @@
 import axios from 'axios';
 import crypto from 'crypto';
+import { isIP } from 'net';
 
 import { MessageObjProps } from '@/components/temp-email/types/types';
 
@@ -30,6 +31,16 @@ interface MailTmMessage {
 const randomHash = (bytes: number) => crypto.randomBytes(bytes).toString('hex');
 
 /**
+ * mail.tm limita por IP de origen (POST /accounts: rafaga de ~5 y despues ~3-4/min). Como todas
+ * las visitas salen por la IP del servidor, sin esto el cupo se reparte entre todos los visitantes
+ * y en cuanto hay algo de trafico devuelve 429.
+ * mail.tm aplica el limite a la IP de `X-Forwarded-For` cuando la recibe (comprobado: ignora
+ * X-Real-IP, CF-Connecting-IP y Forwarded), asi que reenviamos la IP real del visitante y el cupo
+ * pasa a ser por visitante, como si llamase el mismo.
+ */
+const forwardClientIp = (clientIp?: string) => (clientIp && isIP(clientIp) ? { 'x-forwarded-for': clientIp } : {});
+
+/**
  * mail.tm devuelve `to` como objeto en unos endpoints y como array en otros,
  * asi que normalizamos antes de mapear.
  */
@@ -47,8 +58,10 @@ const toMessageObj = (message: MailTmMessage): MessageObjProps => ({
 });
 
 /** Crea una cuenta desechable. Devuelve la password, que es lo que el cliente guarda como `token`. */
-export const createAccount = async (): Promise<{ address: string; token: string }> => {
-  const { data: domains } = await mailTm.get<{ domain: string; isActive: boolean }[]>('/domains?page=1');
+export const createAccount = async (clientIp?: string): Promise<{ address: string; token: string }> => {
+  const headers = forwardClientIp(clientIp);
+
+  const { data: domains } = await mailTm.get<{ domain: string; isActive: boolean }[]>('/domains?page=1', { headers });
 
   const domain = domains.find((item) => item.isActive)?.domain;
 
@@ -57,33 +70,42 @@ export const createAccount = async (): Promise<{ address: string; token: string 
   const address = `${randomHash(6)}@${domain}`;
   const password = randomHash(12);
 
-  await mailTm.post('/accounts', { address, password });
+  await mailTm.post('/accounts', { address, password }, { headers });
 
   return { address, token: password };
 };
 
 /** Intercambia address + password por un JWT de mail.tm. */
-const getJwt = async (address: string, password: string): Promise<string> => {
-  const { data } = await mailTm.post<{ token: string }>('/token', { address, password });
+const getJwt = async (address: string, password: string, clientIp?: string): Promise<string> => {
+  const { data } = await mailTm.post<{ token: string }>(
+    '/token',
+    { address, password },
+    { headers: forwardClientIp(clientIp) },
+  );
 
   return data.token;
 };
 
-export const getInbox = async (address: string, password: string): Promise<MessageObjProps[]> => {
-  const jwt = await getJwt(address, password);
+export const getInbox = async (address: string, password: string, clientIp?: string): Promise<MessageObjProps[]> => {
+  const jwt = await getJwt(address, password, clientIp);
 
   const { data } = await mailTm.get<MailTmMessage[]>('/messages?page=1', {
-    headers: { authorization: `Bearer ${jwt}` },
+    headers: { ...forwardClientIp(clientIp), authorization: `Bearer ${jwt}` },
   });
 
   return data.map(toMessageObj);
 };
 
-export const getMessage = async (address: string, password: string, messageId: string): Promise<MessageObjProps> => {
-  const jwt = await getJwt(address, password);
+export const getMessage = async (
+  address: string,
+  password: string,
+  messageId: string,
+  clientIp?: string,
+): Promise<MessageObjProps> => {
+  const jwt = await getJwt(address, password, clientIp);
 
   const { data } = await mailTm.get<MailTmMessage>(`/messages/${encodeURIComponent(messageId)}`, {
-    headers: { authorization: `Bearer ${jwt}` },
+    headers: { ...forwardClientIp(clientIp), authorization: `Bearer ${jwt}` },
   });
 
   return toMessageObj(data);
