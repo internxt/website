@@ -1,29 +1,30 @@
 import axios from 'axios';
 
 export const currency = {
-  US: '$',
-  CA: '$',
-  usd: '$',
   eur: '€',
-  IN: '$',
-  SA: '$', // Saudi Arabia
-  AE: '$', // United Arab Emirates (UAE)
-  QA: '$', // Qatar
-  BH: '$', // Bahrain
-  OM: '$', // Oman
-  IR: '$', // Iran
+  usd: '$',
+  inr: '₹',
+  brl: 'R$',
 };
 
 export const priceValue = {
   US: 'usd',
   CA: 'usd',
-  IN: 'usd',
+  IN: 'inr',
+  BR: 'brl',
   SA: 'usd', // Saudi Arabia
   AE: 'usd', // United Arab Emirates (UAE)
   QA: 'usd', // Qatar
   BH: 'usd', // Bahrain
   OM: 'usd', // Oman
   IR: 'usd', // Iran
+};
+
+const objectStorageCurrencyValue = {
+  eur: 'eur',
+  usd: 'usd',
+  inr: 'usd',
+  brl: 'eur',
 };
 
 const getCountry = async () => {
@@ -40,15 +41,28 @@ const filterCurrencyByCountry = async (currencySpecified?: string) => {
     country = data.country;
   }
 
+  const currencyValue = priceValue[country] || 'eur';
+
   const currencyIcon = {
-    currency: currency[country] || '€',
-    currencyValue: priceValue[country] || 'eur',
+    currency: currency[currencyValue],
+    currencyValue,
   };
 
   return currencyIcon;
 };
 
+const filterObjectStorageCurrencyByCountry = async () => {
+  const { currencyValue } = await filterCurrencyByCountry();
+  const objectStorageCurrency = objectStorageCurrencyValue[currencyValue] || 'eur';
+
+  return {
+    currency: currency[objectStorageCurrency],
+    currencyValue: objectStorageCurrency,
+  };
+};
+
 export const currencyService = {
   getCountry,
   filterCurrencyByCountry,
+  filterObjectStorageCurrencyByCountry,
 };
