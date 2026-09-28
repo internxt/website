@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { AxiosError } from 'axios';
 
-import rateLimitMiddleware from '../../../utils/rate-limiter';
 import { createAccount } from '@/lib/mail-tm';
 import { csrf } from '@/lib/csrf';
 
@@ -34,4 +33,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default csrf(rateLimitMiddleware(handler, 'create-email', 4));
+export default csrf(handler);
