@@ -1,5 +1,5 @@
 const MAX_REQUESTS = 20;
-const WINDOW_MS = 60 * 60 * 1000;
+const WINDOW_MS = 60 * 1000;
 
 interface RateLimitData {
   count: number;
