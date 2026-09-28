@@ -114,7 +114,8 @@ export const PriceCard = ({
   darkMode,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const { interval, price, storage, priceId } = product;
+  const { interval, price, storage, priceId, currencyValue } = product;
+  const isINR = currencyValue === 'inr';
   const isBusiness = productCardPlan === 'business';
   const isAnnual = interval === 'year';
   const [currency, setCurrency] = useState<string>('€');
@@ -141,7 +142,15 @@ export const PriceCard = ({
     return truncated;
   };
 
-  const currentPrice = showCents ? roundIfNeeded(priceNumber) : Math.floor(priceNumber).toString();
+  const formatPrice = (value?: string) =>
+    isINR && value
+      ? Number(value).toLocaleString('en-US', {
+          minimumFractionDigits: showCents ? 2 : 0,
+          maximumFractionDigits: showCents ? 2 : 0,
+        })
+      : value;
+
+  const currentPrice = formatPrice(showCents ? roundIfNeeded(priceNumber) : Math.floor(priceNumber).toString());
 
   const getOriginalPrice = () => {
     if (hasDiscount === false) {
@@ -157,7 +166,7 @@ export const PriceCard = ({
     return Math.floor(originalDisplayedPrice).toString();
   };
 
-  const originalPrice = getOriginalPrice();
+  const originalPrice = formatPrice(getOriginalPrice());
 
   const planTypes = {
     '1TB': isBusiness
