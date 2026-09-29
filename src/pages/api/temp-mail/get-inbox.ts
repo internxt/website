@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { AxiosError } from 'axios';
 
 import rateLimitMiddleware from '@/utils/rate-limiter';
+import { getClientIp } from '@/utils/get-client-ip';
 import { getInbox } from '@/lib/mail-tm';
 import { csrf } from '@/lib/csrf';
 
@@ -15,7 +16,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   try {
-    const mails = await getInbox(email, token);
+    const mails = await getInbox(email, token, getClientIp(req));
 
     return res.status(200).json(mails);
   } catch (err) {

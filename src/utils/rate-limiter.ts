@@ -5,14 +5,14 @@ import { getClientIp } from './get-client-ip';
 const CLEANUP_INTERVAL_MS = 5 * 60 * 1000;
 let lastCleanup = Date.now();
 
-const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
+const rateLimitMap = new Map<string, { count: number; lastReset: number; windowMs: number }>();
 
-function cleanUpOldKeys(windowMs: number) {
+function cleanUpOldKeys() {
   const now = Date.now();
   if (now - lastCleanup < CLEANUP_INTERVAL_MS) return;
 
   rateLimitMap.forEach((value, key) => {
-    if (now - value.lastReset > windowMs) {
+    if (now - value.lastReset > value.windowMs) {
       rateLimitMap.delete(key);
     }
   });
@@ -27,7 +27,7 @@ export default function rateLimitMiddleware(
   windowMs: number = 60 * 1000,
 ) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    cleanUpOldKeys(windowMs);
+    cleanUpOldKeys();
 
     const ip = getClientIp(req);
     const mapIdentifier = `${ip}-${path}`;
@@ -36,6 +36,7 @@ export default function rateLimitMiddleware(
       rateLimitMap.set(mapIdentifier, {
         count: 0,
         lastReset: Date.now(),
+        windowMs,
       });
     }
 

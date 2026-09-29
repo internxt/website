@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { AxiosError } from 'axios';
 
 import rateLimitMiddleware from '../../../utils/rate-limiter';
+import { getClientIp } from '@/utils/get-client-ip';
 import { getMessage } from '@/lib/mail-tm';
 import { csrf } from '@/lib/csrf';
 
@@ -15,7 +16,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   try {
-    const messageObj = await getMessage(email, token, messageId);
+    const messageObj = await getMessage(email, token, messageId, getClientIp(req));
 
     return res.status(200).json(messageObj);
   } catch (err) {
