@@ -1,6 +1,6 @@
 import axios from 'axios';
 import crypto from 'crypto';
-import { isIP } from 'net';
+import { isIP } from 'node:net';
 
 import { MessageObjProps } from '@/components/temp-email/types/types';
 
@@ -30,20 +30,8 @@ interface MailTmMessage {
 
 const randomHash = (bytes: number) => crypto.randomBytes(bytes).toString('hex');
 
-/**
- * mail.tm limita por IP de origen (POST /accounts: rafaga de ~5 y despues ~3-4/min). Como todas
- * las visitas salen por la IP del servidor, sin esto el cupo se reparte entre todos los visitantes
- * y en cuanto hay algo de trafico devuelve 429.
- * mail.tm aplica el limite a la IP de `X-Forwarded-For` cuando la recibe (comprobado: ignora
- * X-Real-IP, CF-Connecting-IP y Forwarded), asi que reenviamos la IP real del visitante y el cupo
- * pasa a ser por visitante, como si llamase el mismo.
- */
 const forwardClientIp = (clientIp?: string) => (clientIp && isIP(clientIp) ? { 'x-forwarded-for': clientIp } : {});
 
-/**
- * mail.tm devuelve `to` como objeto en unos endpoints y como array en otros,
- * asi que normalizamos antes de mapear.
- */
 const toAddress = (to: MailTmAddress | MailTmAddress[]) => (Array.isArray(to) ? to[0]?.address : to?.address);
 
 const toMessageObj = (message: MailTmMessage): MessageObjProps => ({
@@ -57,7 +45,6 @@ const toMessageObj = (message: MailTmMessage): MessageObjProps => ({
   seen: message.seen,
 });
 
-/** Crea una cuenta desechable. Devuelve la password, que es lo que el cliente guarda como `token`. */
 export const createAccount = async (clientIp?: string): Promise<{ address: string; token: string }> => {
   const headers = forwardClientIp(clientIp);
 
@@ -75,7 +62,6 @@ export const createAccount = async (clientIp?: string): Promise<{ address: strin
   return { address, token: password };
 };
 
-/** Intercambia address + password por un JWT de mail.tm. */
 const getJwt = async (address: string, password: string, clientIp?: string): Promise<string> => {
   const { data } = await mailTm.post<{ token: string }>(
     '/token',

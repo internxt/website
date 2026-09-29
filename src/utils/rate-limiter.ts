@@ -7,9 +7,6 @@ let lastCleanup = Date.now();
 
 const rateLimitMap = new Map<string, { count: number; lastReset: number; windowMs: number }>();
 
-// Cada contador se limpia segun SU ventana: el mapa es comun a todas las rutas y usar la ventana
-// de la peticion que dispara la limpieza borraria los contadores de ventana larga (create-email, 1h)
-// cada vez que una ruta de ventana corta (60s) pasase por aqui.
 function cleanUpOldKeys() {
   const now = Date.now();
   if (now - lastCleanup < CLEANUP_INTERVAL_MS) return;

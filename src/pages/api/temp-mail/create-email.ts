@@ -21,7 +21,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       data: error.response?.data,
     });
 
-    // Cupo de mail.tm agotado para esta IP: es temporal, no un fallo del servidor.
     if (error.response?.status === 429) {
       return res.status(429).json({ message: 'Too many requests, try again in a moment' });
     }
