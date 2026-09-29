@@ -25,7 +25,7 @@ export const HeroSection = ({ textContent }) => {
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         <div className="flex flex-row gap-4">
           <Link
-            href="/cloud-object-storage/checkout"
+            href="#contactSalesForm"
             className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"
           >
             {textContent.cta}
