@@ -172,6 +172,7 @@ export const ALLOWED_PATHS = [
   'special-deal',
   'linuxtakeaway',
   'danalove',
+  'alextbg',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -239,6 +240,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   timo: 'de',
   apfeltalk: 'de',
   mobiflip: 'de',
+  alextbg: 'de',
 
   // es
   alejavi: 'es',
@@ -438,6 +440,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'special-deal',
   'linuxtakeaway',
   'danalove',
+  'alextbg',
 ]);
 
 export const COUPON_CODES = {
@@ -610,6 +613,7 @@ export const COUPON_CODES = {
   'special-deal': PromoCodeName.specialdeal,
   linuxtakeaway: PromoCodeName.linuxtakeaway,
   danalove: PromoCodeName.danalove,
+  alextbg: PromoCodeName.alextbg,
 };
 
 interface OfferConfig {
