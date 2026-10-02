@@ -164,7 +164,7 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyName}</p>
+                          <p className="text-sm text-gray-100">{textContent.addressBilling.companyName}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyName}
                             label="companyName"
@@ -181,7 +181,7 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyVatId}</p>
+                          <p className="text-sm text-gray-100">{textContent.addressBilling.companyVatId}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyVatId}
                             label="vatId"
