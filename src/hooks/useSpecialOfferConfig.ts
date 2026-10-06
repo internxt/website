@@ -173,6 +173,10 @@ export const ALLOWED_PATHS = [
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -442,6 +446,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
 ]);
 
 export const COUPON_CODES = {
@@ -615,6 +623,10 @@ export const COUPON_CODES = {
   linuxtakeaway: PromoCodeName.linuxtakeaway,
   danalove: PromoCodeName.danalove,
   alextbg: PromoCodeName.alextbg,
+  biswas: PromoCodeName.biswas,
+  dysk: PromoCodeName.dysk,
+  recoon: PromoCodeName.recoon,
+  lazyassassin: PromoCodeName.lazyassassin,
 };
 
 interface OfferConfig {

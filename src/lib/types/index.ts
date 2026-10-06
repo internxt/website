@@ -388,6 +388,10 @@ export enum PromoCodeName {
   linuxtakeaway = 'LINUXTAKEAWAY',
   danalove = 'DANALOVE',
   alextbg = 'ALEXTBG',
+  biswas = 'BISWAS',
+  dysk = 'DYSK',
+  recoon = 'RECOON',
+  lazyassassin = 'LAZYASSASSIN',
 }
 
 export interface PromoCodeProps {
