@@ -26,18 +26,18 @@
     "pcWorld": "\"L'**accès web intuitif**, la **synchronisation de fichiers** et les **services de sauvegarde** d'Internxt sont **impressionnants**. Ce service de stockage et de sauvegarde en ligne crypté est **facile**, couvre toutes les bases, et les **plans à vie** actuels sont une **aubaine**.\""
   },
   "MoreDealsSection": {
-    "title": "Plus d'offres Internxt",
+    "title": "Plus d'offres Black Friday sur le stockage cloud à vie",
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Offres Internxt — économisez {{discount}} % sur tous les forfaits",
-        "description": "Découvrez des réductions exclusives sur toutes les applications et services Internxt",
-        "cta": "Voir toutes les offres"
+        "title": "Offres Black Friday sur le stockage cloud",
+        "description": "Économisez gros sur un stockage cloud chiffré pour vos fichiers",
+        "cta": "Voir les offres de stockage"
       },
       "card2": {
-        "title": "Offres de stockage cloud gratuit",
-        "description": "Commencez avec un stockage chiffré gratuit et passez à la version supérieure avec jusqu'à {{discount}} % de réduction",
-        "cta": "Voir les offres de stockage"
+        "title": "Offres Black Friday sur le stockage cloud personnel",
+        "description": "Des réductions exclusives pour les particuliers et les forfaits personnels",
+        "cta": "Voir les offres personnelles"
       }
     }
   },
@@ -85,8 +85,8 @@
     }
   },
   "CtaSection": {
-    "title": "Dites adieu aux abonnements",
-    "description": "Payez une fois, utilisez pour toujours avec {{percentage}} % de réduction",
+    "title": "Offre Black Friday Internxt sur le stockage cloud à vie",
+    "description": "87 % de réduction sur tous les forfaits",
     "cta": "Obtenir l'offre"
   },
   "WhatsIncludedSection": {
@@ -107,81 +107,64 @@
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Pourquoi choisir les plans à vie d'Internxt ?",
-    "description": "Nos offres de stockage cloud à vie vous redonnent le contrôle de votre confidentialité. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul ayez les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour garantir que vos informations restent sécurisées.",
+    "title": "Pourquoi choisir un stockage cloud à vie pendant le Black Friday ?",
+    "description": "Avec une offre Black Friday de stockage cloud Internxt, vous bénéficiez d'un stockage cloud chiffré post-quantique et de tout ce dont vous avez besoin pour protéger votre appareil et votre vie privée en ligne. Fini les abonnements : obtenez tout ce qu'il vous faut avec un paiement unique.",
     "cta": "Apprenez à mieux nous connaître",
     "scrollableSection": {
       "titles": [
         "Payez une fois et utilisez pour toujours",
-        "Données impossibles à pirater et à divulguer",
-        "Sécurité de nouvelle génération",
-        "Open source et transparent"
+        "Le chiffrement le plus avancé",
+        "Notre plus grande offre Black Friday sur le stockage cloud"
       ],
       "descriptions": [
         "Dites adieu aux modèles d'abonnement et aux coûts de renouvellement imprévisibles avec nos offres de stockage cloud à vie. Avec un seul paiement, vous pouvez accéder à votre stockage et à vos fonctionnalités pour toujours sans aucun paiement supplémentaire nécessaire.",
-        "Nous ne stockons pas les mots de passe ni les données utilisateur, et toutes vos données sont chiffrées en transit et au repos avec un chiffrement post-quantique et à connaissance nulle. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
-        "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
-        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par quiconque. Nous n'avons rien à cacher sauf vos données."
+        "Découvrez le premier stockage cloud doté du chiffrement post-quantique pour téléverser, stocker et partager vos fichiers en toute confidentialité grâce à notre service cloud chiffré de bout en bout. Sauvegardez et synchronisez vos fichiers pour éviter toute perte de données et collaborer facilement avec vos amis, votre famille ou vos collègues.",
+        "Profitez de notre plus grande offre Black Friday à ce jour, avec encore plus de fonctionnalités pour protéger vos données et vos fichiers en ligne. Avec 87 % de réduction, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix sur un stockage cloud sûr et privé, et bien plus encore !"
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Confidentialité totale pour {{percentage}} % de réduction",
-    "description": "Obtenez l'offre de votre vie avec Internxt",
+    "title": "Le meilleur stockage cloud à vie du Black Friday",
+    "description": "87 % de réduction sur tous les forfaits",
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "En savoir plus sur notre stockage cloud à vie du Black Friday",
     "faq": [
       {
-        "question": "Qui peut bénéficier de ces offres de stockage cloud à vie ?",
+        "question": "Comment obtenir la réduction Black Friday sur le stockage cloud à vie ?",
         "answer": [
-          "Ces offres Internxt sont destinées aux nouveaux clients ou aux clients avec un compte gratuit, ou aux clients qui souhaitent mettre à niveau leur plan à vie actuel avec 85 % de réduction pour accéder à nos nouvelles fonctionnalités."
+          "Pour profiter de votre réduction, choisissez l'un de nos forfaits Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 87 % est appliquée automatiquement au moment du paiement."
         ]
       },
       {
-        "question": "Puis-je utiliser une offre Internxt si j'ai déjà un plan à vie ?",
+        "question": "Quand se termine l'offre Black Friday sur le stockage cloud à vie ?",
         "answer": [
-          "Si vous avez actuellement un plan à vie et souhaitez cumuler du stockage sur votre compte actuel et accéder aux fonctionnalités d'un plan Premium ou Ultimate, vous pouvez utiliser cette offre pour mettre à niveau votre compte."
+          "Les soldes du Black Friday se terminent le 3 décembre 2026."
         ]
       },
       {
-        "question": "Que se passe-t-il lorsque mon offre expire ?",
+        "question": "Qui peut bénéficier de cette réduction ?",
         "answer": [
-          "Si vous achetez un plan annuel avec votre offre Internxt, cela s'applique uniquement à la première année. Une fois votre première année expirée, votre plan se renouvellera automatiquement au prix complet indiqué dans notre section tarification.",
-          "Si vous souhaitez éviter les frais d'abonnement, vous pouvez acheter un plan à vie avec un paiement unique et ne plus jamais payer, sauf si vous choisissez de mettre à niveau votre stockage."
+          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez déjà un forfait à vie, vous pouvez le faire évoluer pour obtenir plus de stockage et des fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
         ]
       },
       {
-        "question": "Comment puis-je mettre à niveau ou ajouter plus de stockage plus tard ?",
+        "question": "Vais-je conserver mon offre Black Friday de stockage cloud à vie pour toujours ?",
         "answer": [
-          "Si vous avez un plan à vie, vous pouvez cumuler ou mettre à niveau votre plan à tout moment pour obtenir plus de stockage. Il n'est pas possible de mettre à niveau ou d'ajouter plus de stockage pour les plans annuels. Gardez un œil sur notre site web pour les derniers codes promo et offres."
+          "Oui, si vous choisissez un forfait à vie, un seul paiement suffit. Une fois payé, vous n'avez plus rien à payer, sauf si vous souhaitez faire évoluer votre forfait ou ajouter du stockage plus tard."
         ]
       },
       {
-        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "question": "Quels moyens de paiement Internxt accepte-t-il ?",
         "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, cryptomonnaie ou diviser le paiement de votre plan à vie avec Klarna.",
-          "Si vous avez des questions sur les modes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com"
+          "Nous acceptons actuellement les paiements par carte de crédit et de débit (Mastercard, VISA, American Express, et plus), ainsi que PayPal, Bancontact, iDEAL et SOFORT. Vous pouvez échelonner le coût d'un forfait à vie avec Klarna ou payer en cryptomonnaie."
         ]
       },
       {
-        "question": "Puis-je diviser mon paiement à vie ?",
+        "question": "Vous avez d'autres questions ?",
         "answer": [
-          "Oui, vous pouvez maintenant diviser vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un plan à vie avec la facilité de le payer en versements pratiques !"
-        ]
-      },
-      {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
-        "answer": [
-          "Internxt offre une garantie standard de remboursement de 30 jours sur tous les abonnements payants, qui commence à compter dès que vous vous abonnez.",
-          "Et si jamais vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
-        ]
-      },
-      {
-        "question": "Comment puis-je contacter le support ?",
-        "answer": [
-          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
+          "N'hésitez pas à nous écrire à hello@internxt.com ou à nous dire bonjour sur les réseaux sociaux. Nous sommes toujours ravis de vous lire !"
         ]
       }
     ]

@@ -10,17 +10,31 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Oferta de **Black Friday** da Internxt",
-    "subtitle": "Aproveite a melhor oferta de Black Friday de 2026\n com 87% de desconto em todos os planos Internxt",
-    "description": "Garanta {{discount}}% de desconto agora!",
+    "title": "Ofertas de VPN da **Black Friday** da Internxt",
+    "subtitle": "Aproveite as melhores ofertas de VPN da Black Friday de 2026, 87% de desconto em armazenamento em nuvem criptografado, VPN e muito mais",
+    "description": "Garanta {{discount}}% de desconto",
     "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
-    "claimDeal": "Garantir oferta"
+    "claimDeal": "Garantir oferta",
+    "moreDeals": {
+      "title": "Mais ofertas de Black Friday",
+      "description": "Encontre a oferta de Black Friday ideal para suas necessidades de armazenamento em nuvem e privacidade",
+      "links": [
+        {
+          "text": "Oferta de Black Friday da Internxt",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "Ofertas de Black Friday em armazenamento em nuvem pessoal",
+          "url": "/deals/black-friday-personal-cloud-storage"
+        }
+      ]
+    }
   },
   "DontMissSection": {
-    "title": "Não perca sua oferta de Black Friday!",
+    "title": "Ofertas de VPN da Black Friday da Internxt",
     "description": [
-      "Proteja seus dados online com a Internxt e nossa suíte de privacidade completa, que inclui backups, Antivirus, VPN, Cleaner, Meet, Mail e muito mais.",
-      "Tenha a melhor privacidade e segurança online com os 87% de desconto de Black Friday da Internxt."
+      "Garanta sua oferta de VPN da Black Friday, que inclui tudo o que você precisa para proteger sua privacidade online, como Internxt Drive, Meet, Mail, Photos e muito mais.",
+      "Garanta a melhor oferta para sua privacidade e segurança com os 87% de desconto de Black Friday da Internxt."
     ]
   },
   "TableSection": {
@@ -58,28 +72,29 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Por que escolher a oferta de Black Friday da Internxt?",
+    "title": "Por que escolher as ofertas de VPN da Black Friday da Internxt",
+    "description": "Leve o melhor pacote de privacidade com nosso maior desconto até hoje em todos os planos",
     "cards": {
       "titles": [
         "Um ecossistema totalmente privado",
         "A criptografia mais avançada",
-        "Nossa maior oferta de Black Friday de todos os tempos"
+        "Nossas maiores ofertas de VPN da Black Friday de todos os tempos"
       ],
       "descriptions": [
-        "Todos os planos pagos da Internxt incluem armazenamento com criptografia pós-quântica, backups e Antivirus. Para proteção online completa, você também recebe VPN, Cleaner, Meet, Mail e Photos: tudo o que precisa para ficar seguro na internet.",
+        "Todos os planos pagos da Internxt incluem armazenamento com criptografia pós-quântica, backups e Antivirus. Para proteção online completa, escolha o plano Ultimate e tenha acesso a Meet, Mail, Photos, NAS, WebDAV e suporte a Rclone.",
         "Conte com o primeiro armazenamento em nuvem com criptografia pós-quântica para enviar, guardar e compartilhar seus arquivos com total privacidade em nosso serviço de nuvem criptografado de ponta a ponta. Faça backup e sincronize seus arquivos para evitar a perda de dados e garantir uma colaboração fluida com amigos, família ou colegas.",
         "Aproveite nossa maior oferta de Black Friday até hoje, com ainda mais recursos para proteger seus dados e arquivos online. Com incríveis 87% de desconto, este é o momento perfeito para conseguir o melhor custo-benefício em armazenamento em nuvem seguro e privado, e muito mais!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Aproveite descontos enormes na Black Friday",
-    "description": "87% de desconto em TODOS os nossos planos premium",
+    "title": "Promoção de VPN da Black Friday da Internxt",
+    "description": "87% de desconto em todos os planos mensais e vitalícios",
     "cta": "Garantir oferta"
   },
   "HorizontalScrollableSection": {
-    "title": "O armazenamento em nuvem mais seguro, e muito mais, por menos",
-    "description": "Criamos todos os nossos produtos pensando na privacidade. Nosso negócio não se baseia em dados nem em publicidade; ele se baseia na confiança. Nossa criptografia pós-quântica e de conhecimento zero garante que você, e somente você, possa acessar seus arquivos.",
+    "title": "As melhores ofertas de VPN da Black Friday, e muito mais",
+    "description": "Nossa oferta de VPN da Black Friday inclui produtos seguros pensados para a privacidade. Nosso negócio não se baseia em dados nem em publicidade; ele se baseia na confiança. Nossa criptografia pós-quântica e de conhecimento zero garante que você, e somente você, possa acessar seus arquivos.",
     "features": [
       "Cancele quando quiser",
       "Criptografia pós-quântica",
@@ -103,18 +118,18 @@
     }
   },
   "CtaSectionV2": {
-    "title": "As melhores ofertas de Black Friday",
+    "title": "Oferta de VPN da Black Friday da Internxt",
     "description": "87% de desconto em todos os planos",
     "cta": "Garantir oferta"
   },
   "MoreDealsSection": {
-    "title": "Mais ofertas Internxt",
-    "description": "Encontre a oferta de Black Friday ideal para suas necessidades de armazenamento em nuvem e privacidade",
+    "title": "Mais ofertas de VPN da Black Friday",
+    "description": "Amplie sua proteção com descontos exclusivos em todos os produtos Internxt",
     "cards": {
       "card1": {
-        "title": "Ofertas de Black Friday em armazenamento em nuvem",
-        "description": "Economize muito em armazenamento em nuvem criptografado para seus arquivos",
-        "cta": "Ver ofertas de armazenamento"
+        "title": "Todas as ofertas de Black Friday da Internxt em 2026",
+        "description": "Descubra todas as ofertas de nossas ferramentas de privacidade e soluções de armazenamento",
+        "cta": "Ver todas as ofertas"
       },
       "card2": {
         "title": "Ofertas de Black Friday em armazenamento em nuvem pessoal",
@@ -124,8 +139,12 @@
     }
   },
   "FaqSection": {
-    "title": "Dúvidas? Temos as respostas",
+    "title": "Quer saber mais sobre nossas ofertas de VPN da Black Friday?",
     "faq": [
+      {
+        "question": "O que está incluído nas ofertas de VPN da Black Friday da Internxt?",
+        "answer": "Todos os planos pagos incluem acesso ao nosso armazenamento em nuvem criptografado, VPN, Antivirus e backups. Para acessar todos os recursos da Internxt, nossos planos Ultimate dão acesso a toda a nossa suíte de produtos."
+      },
       {
         "question": "Como consigo o desconto de Black Friday da Internxt?",
         "answer": [
@@ -139,35 +158,25 @@
       {
         "question": "Quem tem direito a este desconto?",
         "answer": [
-          "Se você é um novo usuário, pode aproveitar este desconto criando uma conta. Se você já tem um plano vitalício, pode fazer upgrade para conseguir mais armazenamento e recursos extras como Cleaner, Meet e Mail."
+          "Se você é um novo usuário, pode aproveitar este desconto criando uma conta. Se você já tem um plano vitalício, pode fazer upgrade, e o armazenamento e os recursos do plano escolhido serão adicionados automaticamente à sua conta."
         ]
       },
       {
         "question": "Continuo com o desconto quando meu plano terminar?",
         "answer": [
-          "A oferta de Black Friday é válida até o fim do período de assinatura. Sua assinatura será renovada automaticamente pelo preço normal quando esse período terminar, no fim do primeiro mês. Como os planos vitalícios exigem um único pagamento, seu desconto dura para sempre."
+          "A oferta de Black Friday é válida no primeiro mês para os planos anuais. Sua assinatura será renovada automaticamente pelo preço normal quando esse primeiro mês terminar. Como os planos vitalícios exigem um único pagamento, seu desconto dura para sempre."
         ]
       },
       {
-        "question": "Quais formas de pagamento vocês aceitam?",
+        "question": "Quais formas de pagamento a Internxt aceita?",
         "answer": [
-          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express etc.). Você também pode pagar com Paypal, criptomoedas e parcelar o valor do seu plano vitalício em pagamentos mensais com o Klarna."
+          "Atualmente aceitamos pagamentos com cartões de crédito e débito (incluindo Mastercard, VISA, American Express e outros), além de Paypal, bankcontact, iDEAL e SOFORT. Também aceitamos Paypal, Klarna e criptomoedas."
         ]
       },
       {
-        "question": "Posso parcelar o pagamento do plano vitalício?",
-        "answer": "Sim, agora você pode parcelar o pagamento do seu plano vitalício em várias prestações sem juros usando o Klarna. Aproveite um plano vitalício com a facilidade de pagar em parcelas!"
-      },
-      {
-        "question": "Como entro em contato com o suporte?",
+        "question": "Ainda tem dúvidas?",
         "answer": [
-          "Fique à vontade para falar conosco pelo e-mail [hello@internxt.com](mailto:hello@internxt.com) ou visitar nossa [central de ajuda](https://help.internxt.com/)"
-        ]
-      },
-      {
-        "question": "Qual é a política de reembolso da Internxt?",
-        "answer": [
-          "A Internxt oferece uma garantia padrão de reembolso de 30 dias em todas as assinaturas pagas, contados a partir do momento da assinatura. Se você não ficar satisfeito com nosso serviço, escreva para hello@internxt.com e solicite o reembolso."
+          "Fique à vontade para falar conosco pelo e-mail [hello@internxt.com](mailto:hello@internxt.com) ou nos mandar um oi nas redes sociais. Adoramos ouvir você!"
         ]
       }
     ]
