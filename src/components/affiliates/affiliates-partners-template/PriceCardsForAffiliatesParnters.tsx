@@ -73,7 +73,6 @@ export const PriceCardsForAffiliatesPartners = ({
 
   const planTypes = {
     '1TB': contentText.productFeatures.planTypes.essentials,
-    '2TB': contentText.productFeatures.planTypes.pro,
     '2TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
