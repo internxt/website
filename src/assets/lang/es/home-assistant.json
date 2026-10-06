@@ -14,31 +14,19 @@
     "title": "Creado en Europa",
     "description": "Tus datos están protegidos con estrictas leyes y regulaciones de cumplimiento europeas combinadas con un cifrado galardonado.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Centros de datos europeos",
-        "Redundancia",
-        "Compromiso con la sostenibilidad "
-      ],
+      "titles": ["Centros de datos europeos", "Redundancia", "Compromiso con la sostenibilidad "],
       "descriptions": [
         "Internxt tiene su sede en Valencia, España, y nuestros centros de datos están ubicados en Europa y otras ubicaciones del mundo, ofreciéndote seguridad, velocidad y cumplimiento legal.",
         "Tus archivos están protegidos mediante sistemas redundantes, controles ambientales y supervisión de seguridad in situ las 24 horas, los 7 días de la semana. Pase lo que pase, tus archivos permanecerán siempre seguros y accesibles.",
         "Internxt lidera con el ejemplo al trabajar por una solución de almacenamiento en la nube más sostenible mediante prácticas de eficiencia energética."
       ],
-      "cta": [
-        "Saber más",
-        "",
-        "Saber más"
-      ]
+      "cta": ["Saber más", "", "Saber más"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +35,7 @@
   "ThreeCardsSection": {
     "title": "Valores fundamentales",
     "cards": {
-      "titles": [
-        "Cifrado de conocimiento cero",
-        "Recuperación confiable",
-        "La privacidad es lo primero"
-      ],
+      "titles": ["Cifrado de conocimiento cero", "Recuperación confiable", "La privacidad es lo primero"],
       "descriptions": [
         "Cifrado de extremo a extremo en el lado del cliente. Tus archivos de configuración y claves API permanecen estrictamente privados.",
         "Conserva una copia externa segura de tus capturas de HA en caso de fallos de hardware o problemas de actualización.",
@@ -63,11 +47,7 @@
     "title": "Características principales de nuestro almacenamiento seguro en la nube",
     "description": "Seguridad completa para tus datos, todo lo que necesitas para mantener tus archivos seguros y privados",
     "accordionCards": {
-      "titles": [
-        "Un ecosistema totalmente privado",
-        "Colaboración segura",
-        "Tu nube, como un disco local"
-      ],
+      "titles": ["Un ecosistema totalmente privado", "Colaboración segura", "Tu nube, como un disco local"],
       "descriptions": [
         "Internxt combina almacenamiento cifrado, copias de seguridad, VPN, antivirus, limpiador, Meet, Mail y más: todo para liberarte de las grandes tecnológicas.",
         "Envía archivos con enlaces cifrados, contraseñas y controles de acceso. Trabaja con tu equipo en tiempo real manteniendo los datos privados.",
@@ -75,11 +55,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "Cifrado de extremo a extremo",
-        "Controles de acceso",
-        "Copias de seguridad cifradas"
-      ],
+      "titles": ["Cifrado de extremo a extremo", "Controles de acceso", "Copias de seguridad cifradas"],
       "descriptions": [
         "Todos los archivos están cifrados con cifrado post-cuántico y de conocimiento cero. Nadie más que tú, o quienes elijas, podrá ver su contenido.",
         "Tú controlas exactamente quién puede acceder a tus archivos compartidos mediante enlaces cifrados y protegidos por contraseña que puedes revocar en cualquier momento.",
@@ -128,7 +104,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

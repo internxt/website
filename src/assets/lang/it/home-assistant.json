@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "Archiviazione cloud sicura per i tuoi **backup di Home Assistant**",
     "description": "Backup esterni automatizzati a conoscenza zero. Sviluppato in Europa per la massima privacy e controllo dei dati.",
-    "features": [
-      "Pianifica i tuoi backup",
-      "Backup salvati su più server",
-      "Open source e verificato"
-    ],
+    "features": ["Pianifica i tuoi backup", "Backup salvati su più server", "Open source e verificato"],
     "guarantee": "Garanzia di rimborso di 30 giorni",
     "claimDeal": "Richiedi offerta"
   },
@@ -14,31 +10,19 @@
     "title": "Prodotto in Europa",
     "description": "I tuoi dati sono protetti da rigide normative ed esigenze di conformità europee, combinate con una crittografia pluripremiata.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Data center europei",
-        "Ridondanza",
-        "Impegno per la sostenibilità "
-      ],
+      "titles": ["Data center europei", "Ridondanza", "Impegno per la sostenibilità "],
       "descriptions": [
         "Internxt ha sede a Valencia, in Spagna, e i nostri data center si trovano in Europa e in altre località in tutto il mondo, offrendoti sicurezza, velocità e conformità.",
         "I tuoi file sono protetti da sistemi ridondanti, controlli ambientali e monitoraggio della sicurezza in loco 24/7. Qualsiasi cosa accada, i tuoi file rimangono sempre al sicuro e accessibili.",
         "Internxt dà il buon esempio lavorando per una soluzione di archiviazione cloud più sostenibile attraverso pratiche ad efficienza energetica."
       ],
-      "cta": [
-        "Scopri di più",
-        "",
-        "Scopri di più"
-      ]
+      "cta": ["Scopri di più", "", "Scopri di più"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +31,7 @@
   "ThreeCardsSection": {
     "title": "Valori Fondamentali",
     "cards": {
-      "titles": [
-        "Crittografia Zero-Knowledge",
-        "Ripristino Affidabile",
-        "Privacy al Primo Posto"
-      ],
+      "titles": ["Crittografia Zero-Knowledge", "Ripristino Affidabile", "Privacy al Primo Posto"],
       "descriptions": [
         "Crittografia end-to-end lato client. I tuoi file di configurazione e le chiavi API rimangono strettamente privati.",
         "Conserva una copia esterna sicura dei tuoi snapshot di HA in caso di guasti hardware o problemi di aggiornamento.",
@@ -63,11 +43,7 @@
     "title": "Caratteristiche principali del nostro cloud storage sicuro",
     "description": "Sicurezza completa per i tuoi dati, tutto ciò di cui hai bisogno per mantenere i tuoi file sicuri e privati",
     "accordionCards": {
-      "titles": [
-        "Un ecosistema totalmente privato",
-        "Collaborazione sicura",
-        "Il tuo cloud, come un disco locale"
-      ],
+      "titles": ["Un ecosistema totalmente privato", "Collaborazione sicura", "Il tuo cloud, come un disco locale"],
       "descriptions": [
         "Internxt unisce archiviazione crittografata, backup, VPN, Antivirus, Cleaner, Meet, Mail e altro ancora: tutto per liberarsi dalle Big Tech.",
         "Invia file con link crittografati, password e controlli di accesso. Lavora con il tuo team in tempo reale mantenendo i dati privati.",
@@ -75,11 +51,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "Crittografia End-to-End",
-        "Controlli di accesso",
-        "Backup crittografati"
-      ],
+      "titles": ["Crittografia End-to-End", "Controlli di accesso", "Backup crittografati"],
       "descriptions": [
         "Tutti i file sono crittografati con tecnologia post-quantistica e zero-knowledge. Nessuno tranne te, o chi scegli di autorizzare, può vederne il contenuto.",
         "Controlli esattamente chi può accedere ai tuoi file condivisi tramite link crittografati e protetti da password che puoi revocare in qualsiasi momento.",
@@ -128,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

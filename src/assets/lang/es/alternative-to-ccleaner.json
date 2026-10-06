@@ -66,11 +66,7 @@
     "title": "Funciones",
     "description": "",
     "cards": {
-      "titles": [
-        "Código abierto y auditado",
-        "Suite completa de productos",
-        "Planes asequibles"
-      ],
+      "titles": ["Código abierto y auditado", "Suite completa de productos", "Planes asequibles"],
       "descriptions": [
         "Internxt es totalmente de código abierto y está auditado de forma independiente, por lo que puedes estar seguro de que no hay puertas traseras y de que tu información se gestiona de forma transparente.",
         "Internxt ofrece Cleaner y un ecosistema de privacidad completo para darte todo lo que necesitas para limpiar archivos basura, almacenar archivos con cifrado de conocimiento cero en Drive, VPN, Meet y más.",
@@ -130,22 +126,8 @@
     "title": "Por qué Internxt es la mejor alternativa a CCleaner",
     "description": "Internxt ofrece una suite completa de productos de privacidad para ofrecerte una alternativa segura a las herramientas de limpieza tradicionales.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Herramientas avanzadas"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
       "descriptions": [
         "Internxt Drive ofrece almacenamiento en la nube seguro con cifrado de conocimiento cero y post-cuántico con funciones avanzadas.",
         "Internxt Antivirus está integrado para proteger contra malware y ransomware con escaneos completos.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

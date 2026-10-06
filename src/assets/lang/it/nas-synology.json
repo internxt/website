@@ -38,7 +38,12 @@
     "title": "Esegui il backup del tuo NAS Synology nel cloud",
     "description": "Il backup cloud NAS invia i dati del tuo NAS Synology verso uno storage off-site crittografato dove i file sopravvivono a guasti hardware, furto, ransomware o cancellazione accidentale. Il supporto NAS di Internxt funziona parallelamente al flusso di lavoro Synology Hyper Backup esistente. Ogni caricamento viene crittografato sul tuo dispositivo con Kyber-512 e AES-256 prima di lasciare la rete, e le tue chiavi di crittografia non lasciano mai il tuo hardware.",
     "scrollableSection": {
-      "titles": ["Protezione dalla perdita di dati", "Sincronizzazione in tempo reale", "Sicurezza", "Possiedi i tuoi dati"],
+      "titles": [
+        "Protezione dalla perdita di dati",
+        "Sincronizzazione in tempo reale",
+        "Sicurezza",
+        "Possiedi i tuoi dati"
+      ],
       "descriptions": [
         "Il backup cloud Synology include funzionalità come la protezione RAID, che aiuta a mantenere i file accessibili anche in caso di guasto di un'unità, mentre le funzionalità di snapshot e cronologia delle versioni rendono possibile il ripristino di file eliminati o modificati. Internxt con il supporto NAS Synology aiuta a proteggere dalla perdita di dati mantenendo tutti i tuoi file archiviati in un'unica posizione sicura e centralizzata. Supporta i backup automatici per computer, telefoni, server e unità esterne, riducendo il rischio di perdere dati importanti.",
         "Le funzionalità di sincronizzazione in tempo reale di Synology includono aggiornamenti automatici dei file su dispositivi e posizioni di backup, contribuendo a mantenere i file aggiornati e accessibili su tutti i sistemi. Internxt con il supporto NAS Synology garantisce che tutte le modifiche vengano sincronizzate in tempo reale, riducendo il rischio di versioni obsolete, aggiornamenti persi o sovrascritture accidentali.",
@@ -118,7 +123,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

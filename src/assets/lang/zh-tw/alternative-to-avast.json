@@ -48,12 +48,7 @@
     "title": "Avast 可能刪除重要檔案。Internxt 保護您的裝置、釋放儲存空間並保護您的隱私",
     "description": "Avast 需要深度權限才能運行，增加了意外損壞或濫用的風險。切換到 Internxt，獲得完整的裝置保護與安全雲端儲存的結合。",
     "scrollableSection": {
-      "titles": [
-        "數據收集",
-        "缺乏透明度",
-        "影響裝置效能",
-        "產品線有限"
-      ],
+      "titles": ["數據收集", "缺乏透明度", "影響裝置效能", "產品線有限"],
       "descriptions": [
         "至少從2014年至2020年1月，Avast據稱透過其防毒軟體和瀏覽器擴充功能收集了詳細的瀏覽資訊，並在未充分告知或獲得用戶同意的情況下，將其出售給第三方用於廣告和分析目的。這包括搜尋查詢和造訪的URL。",
         "由於Avast不是開源軟體，您必須相信公司關於隱私、遙測和內部安全控制的聲明，因為外部專家無法自由審查代碼中是否存在隱藏行為、後門或弱加密實現。",
@@ -66,11 +61,7 @@
     "title": "為什麼您需要 Avast 的替代方案",
     "description": "Avast 只是保護裝置免受惡意軟體侵害的選項之一。為了獲得完整的隱私保護和全套產品，請切換到 Internxt，獲得包含 Drive、Cleaner 等功能的完整 Avast 替代方案。",
     "cards": {
-      "titles": [
-        "開源且經過審計",
-        "全套產品線",
-        "實惠的價格"
-      ],
+      "titles": ["開源且經過審計", "全套產品線", "實惠的價格"],
       "descriptions": [
         "Internxt 完全開源並經過獨立審計，您可以放心，沒有後門存取您的數據，您的資訊以透明方式處理。",
         "Internxt 提供 Cleaner 和完整的隱私生態系統，用於清理垃圾檔案、使用 Drive 的零知識加密儲存和共享檔案，以及更多好處，包括 VPN、Meet、Mail 等。",
@@ -130,20 +121,8 @@
     "title": "為什麼 Internxt 是 Avast 的最佳替代方案",
     "description": "Internxt Drive 包含一套全面的產品，旨在讓您重新掌控線上隱私。",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "進階工具"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "進階工具"],
       "descriptions": [
         "透過直接內置到 Internxt Drive 應用中的 Internxt Antivirus 獲得增強保護。執行完整或自訂病毒掃描，保護您的裝置免受勒索軟體或間諜軟體侵害。",
         "Internxt 的 VPN 保護您的瀏覽、屏蔽廣告和追蹤器，並保持您的位置私密。加密您的 wifi 連接以防止監視、駭客和身份盜竊。",
@@ -180,7 +159,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -203,21 +182,15 @@
       },
       {
         "question": "Internxt 總部在哪裡？",
-        "answer": [
-          "Internxt 總部位於西班牙瓦倫西亞，是符合 GDPR 的雲端儲存解決方案。"
-        ]
+        "answer": ["Internxt 總部位於西班牙瓦倫西亞，是符合 GDPR 的雲端儲存解決方案。"]
       },
       {
         "question": "Avast 比 Internxt 貴嗎？",
-        "answer": [
-          "享受 87% 的專屬折扣後，我們所有方案都比 Avast 目前可用的定價選項更便宜，並且提供更多功能。"
-        ]
+        "answer": ["享受 87% 的專屬折扣後，我們所有方案都比 Avast 目前可用的定價選項更便宜，並且提供更多功能。"]
       },
       {
         "question": "如何聯繫支援？",
-        "answer": [
-          "如有更多問題或需要幫助，請聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"
-        ]
+        "answer": ["如有更多問題或需要幫助，請聯繫 hello@internxt.com，我們的客戶成功團隊將很樂意為您提供幫助。"]
       },
       {
         "question": "我可以為終身方案新增更多儲存空間嗎？",

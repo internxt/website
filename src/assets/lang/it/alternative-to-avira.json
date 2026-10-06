@@ -66,11 +66,7 @@
     "title": "Funzionalità",
     "description": "",
     "cards": {
-      "titles": [
-        "Crittografia avanzata",
-        "Open source e auditato",
-        "Piani flessibili"
-      ],
+      "titles": ["Crittografia avanzata", "Open source e auditato", "Piani flessibili"],
       "descriptions": [
         "Internxt utilizza la crittografia zero-knowledge e post-quantum per garantire che solo tu possa accedere ai tuoi file. I tuoi dati vengono crittografati sul tuo dispositivo.",
         "Internxt è completamente open source e auditato in modo indipendente, garantendo totale trasparenza senza backdoor.",
@@ -130,22 +126,8 @@
     "title": "Perché Internxt è la migliore alternativa ad Avira",
     "description": "Internxt va oltre il tradizionale antivirus, offrendo una suite completa per la privacy.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Protezione integrale"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Protezione integrale"],
       "descriptions": [
         "Archiviazione cloud con crittografia zero-knowledge affinché i tuoi documenti siano totalmente al sicuro.",
         "Scansiona il tuo dispositivo senza compromettere la tua privacy né raccogliere dati eccessivi.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -205,21 +187,15 @@
       },
       {
         "question": "Posso usare Internxt con Avira?",
-        "answer": [
-          "Sì, puoi usare Internxt Drive per l'archiviazione sicura mantenendo il tuo attuale antivirus."
-        ]
+        "answer": ["Sì, puoi usare Internxt Drive per l'archiviazione sicura mantenendo il tuo attuale antivirus."]
       },
       {
         "question": "Dove sono salvati i miei dati?",
-        "answer": [
-          "I dati sono crittografati localmente e salvati nell'Unione Europea, rispettando il GDPR."
-        ]
+        "answer": ["I dati sono crittografati localmente e salvati nell'Unione Europea, rispettando il GDPR."]
       },
       {
         "question": "Come migrare i miei file?",
-        "answer": [
-          "Scarica l'app e trascina i file. Saranno al sicuro in pochi minuti."
-        ]
+        "answer": ["Scarica l'app e trascina i file. Saranno al sicuro in pochi minuti."]
       }
     ]
   }

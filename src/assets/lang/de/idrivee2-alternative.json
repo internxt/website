@@ -66,11 +66,7 @@
     "title": "Warum Sie eine IDrive-Alternative brauchen",
     "description": "Internxt bietet europäischen S3-Objektspeicher und entspricht zahlreichen Compliance-Vorschriften, um Unternehmen vollständigen Datenschutz und Sicherheit zu bieten.",
     "cards": {
-      "titles": [
-        "Komplexe Einrichtung",
-        "Versteckte und unvorhersehbare Kosten",
-        "Teure Downloads"
-      ],
+      "titles": ["Komplexe Einrichtung", "Versteckte und unvorhersehbare Kosten", "Teure Downloads"],
       "descriptions": [
         "Das Einrichten von Speicher auf IDrive erfordert die Navigation durch mehrere Dashboards und Sicherheitssysteme. Benutzer müssen Rollen, Zugriffsregeln und Verschlüsselung manuell verwalten. Einfache Aufgaben erfordern oft technisches Wissen, was die Plattform für Anfänger schwierig macht und die Entwicklung verlangsamt.",
         "IDrive berechnet Speicher, Anforderungen, Datenübertragungen, Überwachung, Backups und Sicherheitsfunktionen separat. Diese kleinen Gebühren summieren sich schnell und sind schwer zu verfolgen. Jeder Anstieg des Datenverkehrs oder der Nutzung kann zu erheblichen Rechnungserhöhungen führen, was eine langfristige Budgetierung für Unternehmen unzuverlässig macht.",
@@ -130,12 +126,7 @@
     "title": "Warum Internxt S3 die beste IDrive-Alternative ist",
     "description": "Internxt Cloud-Objektspeicher bietet erschwinglichen S3-Speicher für den schnellen Zugriff auf große Datenmengen.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Sicherer und langlebiger Speicher",
         "Sofortiger Zugriff",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -75,7 +75,10 @@
   "PaymentSection": {
     "limitedOffer": "¡Oferta por tiempo limitado!",
     "title": { "blueText": "", "normalText": "Explora todos nuestros planes exclusivos de por vida" },
-    "title2": { "blueText": "Obtén ${{percent}}% de descuento", "normalText": " en nuestros planes exclusivos de por vida" },
+    "title2": {
+      "blueText": "Obtén ${{percent}}% de descuento",
+      "normalText": " en nuestros planes exclusivos de por vida"
+    },
     "description": "Compra una vez y obtén privacidad y seguridad para siempre.",
     "description2": "Una vida de privacidad y seguridad para tus archivos por un pago único y exclusivo.",
     "normalSection": {
@@ -90,7 +93,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -131,7 +131,7 @@ const Pricing = ({
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="3TB"
+          popularPlanBySize="2TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
           sectionDetails="py-10 lg:py-20 lg:pt-32"
           overrideBillingFrequency={billingFrequency}

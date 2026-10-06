@@ -48,12 +48,7 @@
     "title": "为什么您需要 McAfee 的替代方案",
     "description": "McAfee 只是保护设备的方案之一。为了获得全面的隐私保护，请切换到 Internxt，获得全能替代方案。",
     "scrollableSection": {
-      "titles": [
-        "采集用户数据",
-        "闭源软件",
-        "性能影响",
-        "产品线有限"
-      ],
+      "titles": ["采集用户数据", "闭源软件", "性能影响", "产品线有限"],
       "descriptions": [
         "McAfee 因采集个人及使用数据并与第三方共享而广受批评，这损害了用户的隐私。",
         "作为专有软件，用户无法通过代码验证工具在后台的具体运行方式。",
@@ -66,11 +61,7 @@
     "title": "功能",
     "description": "",
     "cards": {
-      "titles": [
-        "开源且经过审计",
-        "全套产品线",
-        "实惠的价格"
-      ],
+      "titles": ["开源且经过审计", "全套产品线", "实惠的价格"],
       "descriptions": [
         "Internxt 完全开源并经过独立审计，确保无后门且透明。",
         "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理、存储和共享零知识加密文件。",
@@ -130,22 +121,8 @@
     "title": "为什么 Internxt 是 McAfee 的最佳替代方案",
     "description": "Internxt 提供全套方案，为您提供安全的替代选择。",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "高级工具"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [
         "零知识及后量子加密的云存储。",
         "内置恶意软件防护及全面扫描。",
@@ -183,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,21 +176,15 @@
       },
       {
         "question": "Internxt 总部在哪里？",
-        "answer": [
-          "总部位于西班牙瓦伦西亚，严格遵循 GDPR。"
-        ]
+        "answer": ["总部位于西班牙瓦伦西亚，严格遵循 GDPR。"]
       },
       {
         "question": "McAfee 是否比 Internxt 更贵？",
-        "answer": [
-          "凭借您的 85% 折扣，我们的计划更具竞争性，且包含更多服务。"
-        ]
+        "answer": ["凭借您的 85% 折扣，我们的计划更具竞争性，且包含更多服务。"]
       },
       {
         "question": "如何联系支持？",
-        "answer": [
-          "请联系 hello@internxt.com，我们将很乐意提供帮助。"
-        ]
+        "answer": ["请联系 hello@internxt.com，我们将很乐意提供帮助。"]
       }
     ]
   }

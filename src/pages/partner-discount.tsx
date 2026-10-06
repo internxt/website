@@ -48,7 +48,7 @@ const PartnerDiscount = ({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <span className="inline-block bg-gray-200 h-4 w-16 animate-pulse rounded"></span>;
+      return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -105,7 +105,7 @@ const PartnerDiscount = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="2TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />

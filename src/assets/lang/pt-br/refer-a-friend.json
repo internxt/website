@@ -74,7 +74,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -101,9 +101,7 @@
       },
       {
         "question": "Quanto posso ganhar?",
-        "answer": [
-          "Você pode ganhar até 100€ por indicação, dependendo do plano comprado com seu link."
-        ]
+        "answer": ["Você pode ganhar até 100€ por indicação, dependendo do plano comprado com seu link."]
       },
       {
         "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",

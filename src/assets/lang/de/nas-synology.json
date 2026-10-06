@@ -3,7 +3,11 @@
     "label": "Synology NAS",
     "title": "Synology NAS Cloud-Backup auf **Internxt Drive**",
     "subtitle": "Sichern und sichern Sie Ihre Dateien mit Internxt Drive und Synology",
-    "features": ["NAS-Cloud-Backup für Synology", "Sichere Übertragungen", "Verschlüsselte Synchronisierung und Backups"],
+    "features": [
+      "NAS-Cloud-Backup für Synology",
+      "Sichere Übertragungen",
+      "Verschlüsselte Synchronisierung und Backups"
+    ],
     "cta": "Internxt erhalten"
   },
   "WhatIsNASSection": {
@@ -118,7 +122,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

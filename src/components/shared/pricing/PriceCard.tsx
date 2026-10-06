@@ -172,8 +172,7 @@ export const PriceCard = ({
     '1TB': isBusiness
       ? contentText.productFeatures.planTypes.standard
       : contentText.productFeatures.planTypes.essentials,
-    '2TB': contentText.productFeatures.planTypes.pro,
-    '3TB': contentText.productFeatures.planTypes.premium,
+    '2TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
   const planLabel = planTypes[storage] || null;
@@ -188,7 +187,7 @@ export const PriceCard = ({
     if (isBusiness) {
       return ICON_MAPS.business;
     }
-    if (storage === '3TB') {
+    if (storage === '2TB') {
       return ICON_MAPS.premium;
     }
     if (storage === '5TB') {

@@ -65,7 +65,7 @@ export const PricingSection = ({
   hideSwitchSelector,
   businessStorageSelected,
   lang,
-  popularPlanBySize = '3TB',
+  popularPlanBySize = '2TB',
   onPlanTypeChange,
   onBusinessStorageChange,
   onIndividualSwitchToggled,
@@ -82,7 +82,6 @@ export const PricingSection = ({
   premiumAndUltimatePlan = false,
   freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
-
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = '15';
   const showLoadingCards = loadingCards;
@@ -101,10 +100,7 @@ export const PricingSection = ({
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
-  const popularPlan =
-  differentRecommended || billingFrequency === Interval.Lifetime
-    ? popularPlanBySize
-    : '3TB';
+  const popularPlan = differentRecommended || billingFrequency === Interval.Lifetime ? popularPlanBySize : '2TB';
 
   const features = [
     {
@@ -165,11 +161,9 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {new Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <CardSkeleton key={'skeleton' + i} />
-            ))}
+          {new Array(3).fill(0).map((_, i) => (
+            <CardSkeleton key={'skeleton' + i} />
+          ))}
         </div>
       </Transition>
 
@@ -186,7 +180,7 @@ export const PricingSection = ({
             ? products.individuals[billingFrequency]
                 .filter((product) => {
                   if (premiumAndUltimatePlan) {
-                    return product.storage === '5TB' || product.storage === '3TB';
+                    return product.storage === '5TB' || product.storage === '2TB';
                   }
                   if (onlyUltimatePlan) {
                     return product.storage === '5TB';

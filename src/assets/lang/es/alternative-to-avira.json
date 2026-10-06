@@ -66,11 +66,7 @@
     "title": "Funciones",
     "description": "",
     "cards": {
-      "titles": [
-        "Cifrado avanzado",
-        "Código abierto y auditado",
-        "Planes flexibles"
-      ],
+      "titles": ["Cifrado avanzado", "Código abierto y auditado", "Planes flexibles"],
       "descriptions": [
         "Internxt utiliza cifrado de conocimiento cero y post-cuántico para garantizar que nadie más que tú pueda acceder a tus archivos. Tus datos se cifran en tu dispositivo antes de subirse a la nube.",
         "Internxt es totalmente de código abierto y está auditado de forma independiente, lo que garantiza una transparencia total y elimina cualquier posibilidad de puertas traseras o vigilancia oculta.",
@@ -130,22 +126,8 @@
     "title": "Por qué Internxt es la mejor alternativa a Avira",
     "description": "Internxt va más allá del antivirus tradicional, ofreciendo una suite completa de privacidad diseñada para el mundo moderno.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Protección integral"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Protección integral"],
       "descriptions": [
         "Almacenamiento en la nube con cifrado de conocimiento cero para que tus documentos personales estén totalmente a salvo.",
         "Analiza tu dispositivo y archivos en busca de amenazas sin comprometer tu privacidad ni recopilar datos excesivos.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -51,7 +51,7 @@ interface PriceTableProps {
 
 const STORAGE_BY_PLAN: Record<SwitchStorageOptions, string> = {
   Essential: '1TB',
-  Premium: '3TB',
+  Premium: '2TB',
   Ultimate: '5TB',
 };
 
@@ -69,7 +69,7 @@ export const PricingSectionForMobile = ({
   hideBusinessCards,
   hideBusinessSelector,
   lang,
-  popularPlanBySize = '3TB',
+  popularPlanBySize = '2TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,

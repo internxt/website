@@ -107,7 +107,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="2TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />

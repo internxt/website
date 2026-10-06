@@ -74,7 +74,7 @@ export const PriceCardsForAffiliatesPartners = ({
   const planTypes = {
     '1TB': contentText.productFeatures.planTypes.essentials,
     '2TB': contentText.productFeatures.planTypes.pro,
-    '3TB': contentText.productFeatures.planTypes.premium,
+    '2TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
   const cardLabel = planTypes[storage] || null;
@@ -145,7 +145,7 @@ export const PriceCardsForAffiliatesPartners = ({
               })}
               <span className="text-gray-80">{feature}</span>
               {index > 8 ? (
-                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+                <span className="bg-orange/10 text-orange rounded-lg px-1">{contentText.commingSoon}</span>
               ) : null}
             </div>
           ))}
