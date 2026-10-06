@@ -66,11 +66,7 @@
     "title": "Por que você precisa de uma alternativa ao TotalAV",
     "description": "O TotalAV é apenas uma opção para proteger o seu dispositivo contra malware. Para ter privacidade total e um pacote completo de produtos, mude para a Internxt e tenha uma alternativa completa ao TotalAV com Drive, Cleaner e muito mais.",
     "cards": {
-      "titles": [
-        "Código aberto e auditado",
-        "Conjunto completo de produtos",
-        "Planos acessíveis"
-      ],
+      "titles": ["Código aberto e auditado", "Conjunto completo de produtos", "Planos acessíveis"],
       "descriptions": [
         "A Internxt é totalmente de código aberto e auditada de forma independente, então você pode ficar tranquilo: não há portas dos fundos para seus dados e suas informações são tratadas com transparência. Qualquer pessoa pode revisar o código, o que garante o máximo de confiança e responsabilidade.",
         "A Internxt oferece o Cleaner e um ecossistema completo de privacidade com tudo o que você precisa para eliminar arquivos inúteis do seu dispositivo, armazenar e compartilhar arquivos com criptografia de conhecimento zero no Drive, além de outros benefícios como VPN, Meet, Mail e mais.",
@@ -130,20 +126,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao TotalAV",
     "description": "O Internxt Drive inclui um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "Tenha mais proteção com o Internxt Antivirus, integrado diretamente ao aplicativo do Internxt Drive para oferecer controle total e proteção contra malware. Faça verificações completas ou personalizadas para manter seu dispositivo funcionando bem e protegido contra vírus como ransomware e spyware.",
         "A Internxt VPN protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada. Criptografe sua conexão wi-fi para evitar espionagem, hackers e roubo de identidade. Navegue com segurança sabendo que suas informações pessoais, senhas e contas estão protegidas.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

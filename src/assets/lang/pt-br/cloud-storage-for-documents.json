@@ -95,12 +95,7 @@
     "title": "Recursos do armazenamento na nuvem para documentos da Internxt",
     "description": "Mantenha seus documentos seguros, organizados e fáceis de acessar, com compartilhamento seguro, backups e criptografia pós-quântica.",
     "scrollableSection": {
-      "titles": [
-        "Limites generosos de envio",
-        "Backups criptografados",
-        "Disco virtual",
-        "Mais transparência"
-      ],
+      "titles": ["Limites generosos de envio", "Backups criptografados", "Disco virtual", "Mais transparência"],
       "descriptions": [
         "O Internxt Drive tem um limite de envio de 40 GB para até 3.000 arquivos, para que você armazene, gerencie e organize seus documentos com eficiência em uma única plataforma segura na nuvem. Você também pode compartilhar arquivos de até 10 GB com amigos, familiares ou colegas, e definir seus controles de privacidade para mais segurança.",
         "O ransomware é a maior ameaça enfrentada por pessoas e empresas. Proteja seus documentos contra ransomware com os backups criptografados da Internxt. Programe seus backups a cada hora, a cada 6 horas, diariamente ou manualmente, para garantir que você sempre tenha uma cópia dos arquivos, evitar perda de dados e ter mais proteção contra ciberataques.",
@@ -155,7 +150,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

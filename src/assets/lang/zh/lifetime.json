@@ -44,7 +44,7 @@
     "cta": "接受邀请"
   },
   "ctaSection2": {
-    "title": "在 Internxt 的终身套餐中：我应该选择哪个？1TB、3TB 还是 5TB？",
+    "title": "在 Internxt 的终身套餐中：我应该选择哪个？1TB、2TB 还是 5TB？",
     "description": "我们所有的套餐都能为您提供在云端私密存储文件所需的一切。如果您想要完整的隐私、高级云管理以及 Internxt 的所有功能（如 Meet 和 Mail），5TB Ultimate 套餐是实现全面掌控和最高隐私的最佳选择。",
     "descriptionWithoutDisocunt": "通过 Internxt 体验完整的数字隐私",
     "cta": "选择套餐"
@@ -89,7 +89,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

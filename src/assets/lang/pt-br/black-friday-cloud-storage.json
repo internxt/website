@@ -13,11 +13,7 @@
     "title": "Ofertas de armazenamento em nuvem da **Black Friday** da Internxt",
     "subtitle": "Aproveite a melhor oferta de Black Friday de 2025\n com 85% de desconto em todos os planos Internxt",
     "description": "Garanta {{discount}}% de desconto agora!",
-    "features": [
-      "Suíte completa de privacidade",
-      "Criptografia pós-quântica",
-      "Código aberto e auditado"
-    ],
+    "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "claimDeal": "Garantir oferta",
     "moreDeals": {
       "title": "Mais ofertas de Black Friday",
@@ -71,7 +67,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -152,9 +148,7 @@
       },
       {
         "question": "Quando termina a oferta de Black Friday da Internxt?",
-        "answer": [
-          "A promoção de Black Friday termina em 3 de dezembro de 2025."
-        ]
+        "answer": ["A promoção de Black Friday termina em 3 de dezembro de 2025."]
       },
       {
         "question": "Quem tem direito a este desconto?",

@@ -66,11 +66,7 @@
     "title": "Por que você precisa de uma alternativa privada ao Zoom",
     "description": "O que o Zoom demonstra em segurança, ele falha em privacidade. Tenha segurança total combinada com criptografia de conhecimento zero.",
     "cards": {
-      "titles": [
-        "Privacidade sem portas dos fundos",
-        "Controle de ponta a ponta",
-        "Sem coleta de dados"
-      ],
+      "titles": ["Privacidade sem portas dos fundos", "Controle de ponta a ponta", "Sem coleta de dados"],
       "descriptions": [
         "Na Internxt não há rastreadores, nem varredura por IA, nem portas dos fundos ocultas. Não temos acesso às suas chamadas, conversas ou informações pessoais.",
         "O Zoom gerencia as chaves de criptografia em seus servidores, o que lhe dá controle total. A Internxt garante que as chaves fiquem com você, ou seja, somente você pode acessar seu áudio e vídeo.",
@@ -130,20 +126,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao Zoom",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "Integrado diretamente ao app para proteger contra malware, ransomware e spyware, com verificações personalizadas.",
         "Criptografa sua conexão, bloqueia anúncios e rastreadores e mantém sua localização privada, longe de olhares curiosos.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

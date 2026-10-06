@@ -66,11 +66,7 @@
     "title": "Features",
     "description": "",
     "cards": {
-      "titles": [
-        "Open source and audited",
-        "Full product suite",
-        "Affordable plans"
-      ],
+      "titles": ["Open source and audited", "Full product suite", "Affordable plans"],
       "descriptions": [
         "Internxt is fully open source and independently audited, so you can rest assured there are no backdoors to your data and that your information is handled transparently. Anyone can review the code for maximum trust and accountability.",
         "Internxt offers Cleaner and a full privacy ecosystem to give you everything you need to clear junk files from your device, store and share files with zero-knowledge encryption with Drive, and more benefits, including VPN, Meet, Mail, and more.",
@@ -130,22 +126,8 @@
     "title": "Why Internxt is the best alternative to AVG",
     "description": "Internxt offers a comprehensive suite of products alongside its private antivirus and security tools to give you a secure AVG alternative.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Advanced tools"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
         "Internxt Drive offers secure, zero-knowledge and post-quantum encrypted cloud storage with advanced sharing, versioning, NAS, and rclone support.",
         "Internxt Antivirus is built directly into your app to protect against malware, ransomware, and spyware with full or custom scans.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

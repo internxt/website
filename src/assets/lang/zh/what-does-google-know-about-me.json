@@ -1,267 +1,267 @@
 {
-    "HeroSection": {
-      "mainTitle": "Google 了解我多少信息？",
-      "section1": {
-        "description": "隐私组织对 Google 收集个人数据表示警惕，每个人也都听说过 Google 的诸多侵犯隐私行为。",
-        "footer": "Google 收集个人信息并通过 Chrome、Google 搜索、Google Play 应用、Google 地图、YouTube 等跟踪用户，这早已不是秘密。通过调整 Google 控制和设置，阻止 Google 访问您的数据。"
-      },
-      "section2": {
-        "title": "根据 Google 活动记录，Google 了解我哪些信息？",
-        "bulletedList": {
-          "title": "当您在 Google 上搜索时，他们会收集以下所有数据：",
-          "list": [
-            "个人信息：您的姓名、电话号码、性别、出生日期",
-            "您的电子邮件地址",
-            "您的居住地",
-            " your 工作地点",
-            "您的兴趣",
-            "您搜索的内容",
-            "您访问的网站",
-            "您观看的视频",
-            "您点击或点击的广告",
-            "您的位置信息",
-            "您在世界各地去过的地点",
-            "设备信息",
-            "IP 地址和 Cookie 数据",
-            "您的 YouTube 搜索历史记录和最近观看的视频",
-            "您与 Google 助理互动的内容（包括通过智能音箱）"
-          ]
-        }
-      },
-      "section3": {
-        "title": "Google 为什么要收集您的数据？",
-        "description": "简而言之，这是一种剥削形式。Google 的动机是投放精准广告并“个性化”您使用其服务的体验。让 Google 收集所有这些信息，就等于允许成千上万的广告商基于您的敏感个人数据竞标向您展示广告。"
-      },
-      "footer": {
-        "line1": "除了您之外，参与其中的每个人都从您的信息中获益。",
-        "line2": "您才是产品。"
-      }
+  "HeroSection": {
+    "mainTitle": "Google 了解我多少信息？",
+    "section1": {
+      "description": "隐私组织对 Google 收集个人数据表示警惕，每个人也都听说过 Google 的诸多侵犯隐私行为。",
+      "footer": "Google 收集个人信息并通过 Chrome、Google 搜索、Google Play 应用、Google 地图、YouTube 等跟踪用户，这早已不是秘密。通过调整 Google 控制和设置，阻止 Google 访问您的数据。"
     },
-    "CtaSection": {
-      "title": "掌控您的数据",
-      "description": "选择保护您数据而不是将数据变现的服务。",
-      "cta": "切换到 Internxt"
-    },
-    "WhatGoogleKnowsSection": {
-      "title": "探索 Google 了解您的哪些信息",
-      "description": "Google 主要从您的 Google 活动历史记录中收集大量关于您的信息，但出于各种法律原因，他们必须将这些信息提供给您。要了解他们到底收集了多少数据以及具体有哪些数据，您必须打开 Google 设置并深入挖掘一下。",
-      "section1": {
-        "title": "查找存储在您 Google 账号中的所有数据摘要",
-        "numberedList": [
-          "登录您的 Google 账号",
-          "在导航面板上，选择“数据和隐私”或选择“隐私和个性化”标签",
-          "在那里，您将能够查看来自您使用的 Google 应用获取的数据以及从 Google 服务保存的内容"
-        ],
-        "footer": "您还可以在控制面板的“您做过的事情和去过的地点”下找到 Google 每个主要服务的名称，以查看每个具体服务的数据。您还可以选择每个服务旁边的右箭号来管理和更改设置。"
-      },
-      "section2": {
-        "title": "Google 网络与应用活动记录",
-        "description": [
-          "在位于“活动控制”下的 [我的活动](https://myactivity.google.com/myactivity) 中，您将能够看到进行的每一次搜索以及访问过的网站（感谢 Google Analytics）。",
-          "如果您曾经使用过 Google 应用，该数据也会显示。您的所有 Google 活动历史记录均按日期、时间和使用的应用进行显示。"
-        ]
-      },
-      "section3": {
-        "title": "Google 位置记录",
-        "description": [
-          "每次您留下评价或使用位置服务时，您的位置隐私都会受到影响。在 [此处](https://maps.google.com/locationhistory) 查找您的 Google 位置记录和 Google 地图时间轴。",
-          "Google 的位置历史记录页面提供了您去过地点的完整列表（可能保存在 Google 地图中）。还有 Google 地图的“时间轴”，地图将显示 Google 知道您去过的所有区域。"
-        ]
-      },
-      "section4": {
-        "title": "YouTube 历史记录",
-        "description": [
-          "Google 还会保留您的 YouTube 搜索历史记录、观看视频的日期以及用于查看内容的设备。",
-          "登录您的 Google 账号并在 [此处](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1) 查看：选择“YouTube 观看和搜索历史记录”并将其设置为每 3 个月或 6 个月自动删除，或者选择完全不保存任何数据的选项。"
-        ]
-      },
-      "section5": {
-        "title": "您与他人共享的 Google 信息",
-        "description": "如果您想探索他人可见的个人资料和位置共享信息，可以通过点击下面显示的相应标签来实现。在其中您还可以编辑这些信息并调整权限。"
-      },
-      "section6": {
-        "title": "从 Google 服务和第三方应用保存的内容",
-        "description": [
-          "当您安装第三方（非 Google）应用和扩展程序时，许多应用会提供 Google 登录选项以直接使用您的 Google 账号登录简化流程，这是他们访问这些应用数据的方式之一。",
-          "登录您的 Google 账号，并在“您使用的应用和服务的数据”部分下 [发现所有正在访问您 Google 数据的应用和扩展程序](https://security.google.com/settings/security/permissions)。在那里，您会找到服务和第三方应用的摘要，以及浏览和限制数据的设置。"
-        ]
-      },
-      "section7": {
-        "title": "Google Chrome Cookie 和书签",
-        "description": [
-          "[Web Cookie](https://blog.internxt.com/web-cookies-explained/) 是计算机接收的数据集，包含旨在使您访问的网站更加个性化的信息。Cookie 通常用于识别某人何时访问网站并记录此活动。",
-          "在 Google Chrome 中，您可以通过 chrome://settings/cookies 检查设置，以删除现有 Cookie、允许或阻止所有 Cookie 以及设置网站的 Cookie 偏好。您可以允许所有 Cookie、阻止第三方 Cookie、清除已打开窗口中的 Cookie、阻止所有 Cookie（推荐），甚至选择哪些网页绝不允许存储 Cookie。",
-          "此外，Google Chrome 还具有无痕模式，可以在您关闭已打开的窗口后删除浏览历史记录并清除 Cookie。"
-        ]
-      },
-      "section8": {
-        "title": "将您的所有数据导出 Google",
-        "description": "您可以通过找到“下载或删除您的数据”标签并选择所需的具体操作，导出并删除 Google 账号保存的数据。然后，您可以按照以下说明选择要导出或删除的数据。",
-        "numberedList": [
-          {
-            "title": "选择要包含的数据",
-            "description": "您可以选择要导出的所有数据以及来自哪些平台的数据。"
-          },
-          {
-            "title": "选择文件类型、频率和目的地",
-            "description": "选择文件类型、导出文件的频率以及目的地（电子邮件、Internxt、Dropbox、OneDrive、Box 或 Google Drive）。"
-          },
-          {
-            "title": "创建导出",
-            "description": "在这最后一步中，您可以检查所选数据项的数量（如访问日志活动、搜索贡献或您的活动记录）以及可用的截止日期。"
-          }
+    "section2": {
+      "title": "根据 Google 活动记录，Google 了解我哪些信息？",
+      "bulletedList": {
+        "title": "当您在 Google 上搜索时，他们会收集以下所有数据：",
+        "list": [
+          "个人信息：您的姓名、电话号码、性别、出生日期",
+          "您的电子邮件地址",
+          "您的居住地",
+          " your 工作地点",
+          "您的兴趣",
+          "您搜索的内容",
+          "您访问的网站",
+          "您观看的视频",
+          "您点击或点击的广告",
+          "您的位置信息",
+          "您在世界各地去过的地点",
+          "设备信息",
+          "IP 地址和 Cookie 数据",
+          "您的 YouTube 搜索历史记录和最近观看的视频",
+          "您与 Google 助理互动的内容（包括通过智能音箱）"
         ]
       }
     },
-    "CtaSection1": {
-      "title": "受够了被追踪？",
-      "description": "摆脱 Google，使用 Internxt 找回您的自由。",
-      "cta": "获取 Internxt"
+    "section3": {
+      "title": "Google 为什么要收集您的数据？",
+      "description": "简而言之，这是一种剥削形式。Google 的动机是投放精准广告并“个性化”您使用其服务的体验。让 Google 收集所有这些信息，就等于允许成千上万的广告商基于您的敏感个人数据竞标向您展示广告。"
     },
-    "ManageGoogleDataSection": {
-      "title": "删除您的 Google 数据并调整您的 Google 隐私设置",
-      "description": "既然您已经了解了自己的 Google 活动历史记录，是时候从源头上阻止他们收集所有这些个人数据了。以下说明将帮助您编辑隐私设置、选择退出部分数据收集，并限制 Google 存储的个人信息量。",
-      "section1": {
-        "title": "删除 Google 网络与应用活动记录",
-        "description": [
-          "您可能会对 Google 保存的信息量感到惊讶：Google Pay 信息、YouTube 频道订阅、YouTube“不感兴趣”反馈、YouTube 调查问卷答案、YouTube 评论、YouTube 评论的点赞和踩、YouTube 购买活动、Google Word Coach、Google 调查答案、兴趣和通知、Google Play 图书馆、新闻偏好、数据归档历史记录、产品价格跟踪等。",
-          "通过选择“网络与应用活动记录”，您可以点击页面中间的“删除”按钮来删除您的活动，选择：过去一小时、过去一天、所有时间或自定义范围。在“网络与应用活动记录”页面中，您还可以通过选择“保存活动记录”然后点击“关闭”来禁用未来的数据收集。"
-        ]
-      },
-      "section2": {
-        "title": "禁用并删除 Google 位置记录",
-        "description": "位置记录可能是 Google 收集的最令人担忧的数据。您可以点击 Google“位置记录”来禁用跟踪并开启自动删除，以清除之前保存的任何位置数据。",
-        "numberedList": [
-          "前往“位置记录”",
-          "选择“关闭”",
-          "在页面底部的“自动删除”下，选择“删除保留时间超过 3 个月的活动记录”",
-          "选择您偏好的选项，然后点击“下一步”保存您的设置并清除较旧的位置数据"
-        ]
-      },
-      "section3": {
-        "title": "禁用并删除 YouTube 历史记录",
-        "description": "您是 YouTube 的忠实粉丝吗？您可以通过在“控制”中选择“YouTube 历史记录”并点击“关闭”来删除您的 YouTube 历史记录并禁用后续的历史记录收集。您还应该开启页面底部的自动删除。"
-      },
-      "section4": {
-        "title": "删除并禁用 Google Fit 数据",
-        "description": [
-          "您拥有连接到 Google Fit 的设备吗？虽然这有助于跟踪减肥和运动，但 Fit 收集了大量不应该保存在网络上的个人健康信息。",
-          "通过选择“管理 Google Fit 隐私”并取消选中您感到不适的任何选项，调整并禁用 Fit 的数据收集权限，或者彻底关闭 Fit。"
-        ]
-      },
-      "section5": {
-        "title": "管理 Google 电子邮件偏好设置",
-        "description": "厌倦了来自 Google 的定向电子邮件（如价格提醒和旅行提示）？通过点击“来自 Google 服务的电子邮件”标签下的“管理电子邮件偏好设置”来调整您的电子邮件设置并将其关闭。"
-      },
-      "section6": {
-        "title": "Google 广告个性化",
-        "description": [
-          "您可以在 [“我的广告中心”](http://www.google.com/settings/ads/) 的“个性化广告”下查看 Google 了解您的哪些信息，在那里您可以找到有关您的年龄范围、语言、教育程度等信息。您还可以通过点击“我的广告中心”页面右上角的按钮选择关闭所有个性化广告。",
-          "或者，您可以选择自定义个性化广告或进一步管理广告隐私设置，但只要启用了个性化广告，Google 仍会与广告商共享您的部分信息。"
-        ]
-      },
-      "section7": {
-        "title": "移除第三方对您 Google 数据的访问权限",
-        "description": [
-          "当您将 Google 账号连接到第三方账号时，第三方账号有能力从 Google 提取信息。事实上，Google 每天传输我们的个人数据 700 亿次。您应该检查哪些公司可以访问您的数据并管理隐私设置。",
-          "某些第三方账号可能不允许您直接取消第三方账号与 Google 账号的关联，因此要管理这些账号，您必须在这些服务网站上检查设置选项。",
-          "要禁用第三方对单个应用和服务的访问权限，请向下滚动隐私页面并找到写有“具有账号访问权限的第三方应用”的标签。选择它，您将在那里找到哪些第三方可以访问您的账号并管理设置。点击您想要编辑权限的服务，然后选择禁用访问的选项。"
-        ]
-      },
-      "section8": {
-        "title": "从 Google 搜索中移除您的个人数据",
-        "description": "如果您不希望在有人搜索您时，您的个人 Google 账号信息出现在 Google 搜索中，只需找到“搜索中的个人结果”标签，点击它，然后选择开关滑块以关闭搜索是否可以根据您 Google 账号中的信息向您显示个人结果。"
-      },
-      "section9": {
-        "title": "如何删除 Google 账号",
-        "description": [
-          "如果您受够了、决定完全停用 Google 并且只想彻底退出，可以通过滚动到隐私页面的底部，在“更多选项”下选择“删除您的 Google 账号”。",
-          "只需按照提示进行操作即可。请确保您已准备好删除所有信息，因为一旦完成此操作，将无法撤销。"
-        ]
-      }
-    },
-    "ToolsSection": {
-      "title": "Internxt 的其他隐私资源",
-      "description": [
-        "想了解更多关于在网络上保护数据的信息吗？Google 并不是唯一收集您个人信息的公司。请访问我们的 [网络安全意识](https://internxt.com/cyber-awareness) 页面，获取大量最佳实践和策略，使在线浏览更安全、更私密。"
+    "footer": {
+      "line1": "除了您之外，参与其中的每个人都从您的信息中获益。",
+      "line2": "您才是产品。"
+    }
+  },
+  "CtaSection": {
+    "title": "掌控您的数据",
+    "description": "选择保护您数据而不是将数据变现的服务。",
+    "cta": "切换到 Internxt"
+  },
+  "WhatGoogleKnowsSection": {
+    "title": "探索 Google 了解您的哪些信息",
+    "description": "Google 主要从您的 Google 活动历史记录中收集大量关于您的信息，但出于各种法律原因，他们必须将这些信息提供给您。要了解他们到底收集了多少数据以及具体有哪些数据，您必须打开 Google 设置并深入挖掘一下。",
+    "section1": {
+      "title": "查找存储在您 Google 账号中的所有数据摘要",
+      "numberedList": [
+        "登录您的 Google 账号",
+        "在导航面板上，选择“数据和隐私”或选择“隐私和个性化”标签",
+        "在那里，您将能够查看来自您使用的 Google 应用获取的数据以及从 Google 服务保存的内容"
       ],
-      "tools": [
-        {
-          "url": "/images/temp-email/password-checker.svg",
-          "UrlRedirectName": "password-checker",
-          "title": "免费密码强度检查器",
-          "width": 125,
-          "description": "立即检查"
-        },
-        {
-          "url": "/images/temp-email/virus-scanner.svg",
-          "UrlRedirectName": "virus-scanner",
-          "title": "免费病毒扫描程序",
-          "width": 105,
-          "description": "立即扫描"
-        },
-        {
-          "url": "/images/temp-email/byte-converter.svg",
-          "UrlRedirectName": "byte-converter",
-          "title": "免费字节转换器",
-          "width": 95,
-          "description": "立即转换"
-        },
-        {
-          "url": "/images/temp-email/temporary-email.svg",
-          "UrlRedirectName": "temporary-email",
-          "title": "临时电子邮件",
-          "width": 95,
-          "description": "立即发送邮件"
-        }
+      "footer": "您还可以在控制面板的“您做过的事情和去过的地点”下找到 Google 每个主要服务的名称，以查看每个具体服务的数据。您还可以选择每个服务旁边的右箭号来管理和更改设置。"
+    },
+    "section2": {
+      "title": "Google 网络与应用活动记录",
+      "description": [
+        "在位于“活动控制”下的 [我的活动](https://myactivity.google.com/myactivity) 中，您将能够看到进行的每一次搜索以及访问过的网站（感谢 Google Analytics）。",
+        "如果您曾经使用过 Google 应用，该数据也会显示。您的所有 Google 活动历史记录均按日期、时间和使用的应用进行显示。"
       ]
     },
-    "CtaSection2": {
-      "title": "值得您信赖的云存储",
-      "description": "Internxt 的工作是保护您的数据，而不是利用数据牟利。",
-      "cta": "创建免费账号"
+    "section3": {
+      "title": "Google 位置记录",
+      "description": [
+        "每次您留下评价或使用位置服务时，您的位置隐私都会受到影响。在 [此处](https://maps.google.com/locationhistory) 查找您的 Google 位置记录和 Google 地图时间轴。",
+        "Google 的位置历史记录页面提供了您去过地点的完整列表（可能保存在 Google 地图中）。还有 Google 地图的“时间轴”，地图将显示 Google 知道您去过的所有区域。"
+      ]
     },
-    "tableSection": {
-      "title": "Internxt 套餐",
-      "hotLabel": "优惠 {{discount}}%",
-      "planTitles": {
-        "header": "选择您的套餐",
-        "individuals": "年度套餐",
-        "homePage": "选择适合您的套餐",
-        "lifetime": "终身套餐",
-        "business": "企业套餐",
-        "lifetimeCampaign": {
-          "blueText": "50% 优惠",
-          "normalText": "适用于我们所有独家终身套餐"
+    "section4": {
+      "title": "YouTube 历史记录",
+      "description": [
+        "Google 还会保留您的 YouTube 搜索历史记录、观看视频的日期以及用于查看内容的设备。",
+        "登录您的 Google 账号并在 [此处](https://myactivity.google.com/product/youtube?hl=en-GB&utm_medium=web&utm_source=youtube&pli=1) 查看：选择“YouTube 观看和搜索历史记录”并将其设置为每 3 个月或 6 个月自动删除，或者选择完全不保存任何数据的选项。"
+      ]
+    },
+    "section5": {
+      "title": "您与他人共享的 Google 信息",
+      "description": "如果您想探索他人可见的个人资料和位置共享信息，可以通过点击下面显示的相应标签来实现。在其中您还可以编辑这些信息并调整权限。"
+    },
+    "section6": {
+      "title": "从 Google 服务和第三方应用保存的内容",
+      "description": [
+        "当您安装第三方（非 Google）应用和扩展程序时，许多应用会提供 Google 登录选项以直接使用您的 Google 账号登录简化流程，这是他们访问这些应用数据的方式之一。",
+        "登录您的 Google 账号，并在“您使用的应用和服务的数据”部分下 [发现所有正在访问您 Google 数据的应用和扩展程序](https://security.google.com/settings/security/permissions)。在那里，您会找到服务和第三方应用的摘要，以及浏览和限制数据的设置。"
+      ]
+    },
+    "section7": {
+      "title": "Google Chrome Cookie 和书签",
+      "description": [
+        "[Web Cookie](https://blog.internxt.com/web-cookies-explained/) 是计算机接收的数据集，包含旨在使您访问的网站更加个性化的信息。Cookie 通常用于识别某人何时访问网站并记录此活动。",
+        "在 Google Chrome 中，您可以通过 chrome://settings/cookies 检查设置，以删除现有 Cookie、允许或阻止所有 Cookie 以及设置网站的 Cookie 偏好。您可以允许所有 Cookie、阻止第三方 Cookie、清除已打开窗口中的 Cookie、阻止所有 Cookie（推荐），甚至选择哪些网页绝不允许存储 Cookie。",
+        "此外，Google Chrome 还具有无痕模式，可以在您关闭已打开的窗口后删除浏览历史记录并清除 Cookie。"
+      ]
+    },
+    "section8": {
+      "title": "将您的所有数据导出 Google",
+      "description": "您可以通过找到“下载或删除您的数据”标签并选择所需的具体操作，导出并删除 Google 账号保存的数据。然后，您可以按照以下说明选择要导出或删除的数据。",
+      "numberedList": [
+        {
+          "title": "选择要包含的数据",
+          "description": "您可以选择要导出的所有数据以及来自哪些平台的数据。"
+        },
+        {
+          "title": "选择文件类型、频率和目的地",
+          "description": "选择文件类型、导出文件的频率以及目的地（电子邮件、Internxt、Dropbox、OneDrive、Box 或 Google Drive）。"
+        },
+        {
+          "title": "创建导出",
+          "description": "在这最后一步中，您可以检查所选数据项的数量（如访问日志活动、搜索贡献或您的活动记录）以及可用的截止日期。"
         }
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "受够了被追踪？",
+    "description": "摆脱 Google，使用 Internxt 找回您的自由。",
+    "cta": "获取 Internxt"
+  },
+  "ManageGoogleDataSection": {
+    "title": "删除您的 Google 数据并调整您的 Google 隐私设置",
+    "description": "既然您已经了解了自己的 Google 活动历史记录，是时候从源头上阻止他们收集所有这些个人数据了。以下说明将帮助您编辑隐私设置、选择退出部分数据收集，并限制 Google 存储的个人信息量。",
+    "section1": {
+      "title": "删除 Google 网络与应用活动记录",
+      "description": [
+        "您可能会对 Google 保存的信息量感到惊讶：Google Pay 信息、YouTube 频道订阅、YouTube“不感兴趣”反馈、YouTube 调查问卷答案、YouTube 评论、YouTube 评论的点赞和踩、YouTube 购买活动、Google Word Coach、Google 调查答案、兴趣和通知、Google Play 图书馆、新闻偏好、数据归档历史记录、产品价格跟踪等。",
+        "通过选择“网络与应用活动记录”，您可以点击页面中间的“删除”按钮来删除您的活动，选择：过去一小时、过去一天、所有时间或自定义范围。在“网络与应用活动记录”页面中，您还可以通过选择“保存活动记录”然后点击“关闭”来禁用未来的数据收集。"
+      ]
+    },
+    "section2": {
+      "title": "禁用并删除 Google 位置记录",
+      "description": "位置记录可能是 Google 收集的最令人担忧的数据。您可以点击 Google“位置记录”来禁用跟踪并开启自动删除，以清除之前保存的任何位置数据。",
+      "numberedList": [
+        "前往“位置记录”",
+        "选择“关闭”",
+        "在页面底部的“自动删除”下，选择“删除保留时间超过 3 个月的活动记录”",
+        "选择您偏好的选项，然后点击“下一步”保存您的设置并清除较旧的位置数据"
+      ]
+    },
+    "section3": {
+      "title": "禁用并删除 YouTube 历史记录",
+      "description": "您是 YouTube 的忠实粉丝吗？您可以通过在“控制”中选择“YouTube 历史记录”并点击“关闭”来删除您的 YouTube 历史记录并禁用后续的历史记录收集。您还应该开启页面底部的自动删除。"
+    },
+    "section4": {
+      "title": "删除并禁用 Google Fit 数据",
+      "description": [
+        "您拥有连接到 Google Fit 的设备吗？虽然这有助于跟踪减肥和运动，但 Fit 收集了大量不应该保存在网络上的个人健康信息。",
+        "通过选择“管理 Google Fit 隐私”并取消选中您感到不适的任何选项，调整并禁用 Fit 的数据收集权限，或者彻底关闭 Fit。"
+      ]
+    },
+    "section5": {
+      "title": "管理 Google 电子邮件偏好设置",
+      "description": "厌倦了来自 Google 的定向电子邮件（如价格提醒和旅行提示）？通过点击“来自 Google 服务的电子邮件”标签下的“管理电子邮件偏好设置”来调整您的电子邮件设置并将其关闭。"
+    },
+    "section6": {
+      "title": "Google 广告个性化",
+      "description": [
+        "您可以在 [“我的广告中心”](http://www.google.com/settings/ads/) 的“个性化广告”下查看 Google 了解您的哪些信息，在那里您可以找到有关您的年龄范围、语言、教育程度等信息。您还可以通过点击“我的广告中心”页面右上角的按钮选择关闭所有个性化广告。",
+        "或者，您可以选择自定义个性化广告或进一步管理广告隐私设置，但只要启用了个性化广告，Google 仍会与广告商共享您的部分信息。"
+      ]
+    },
+    "section7": {
+      "title": "移除第三方对您 Google 数据的访问权限",
+      "description": [
+        "当您将 Google 账号连接到第三方账号时，第三方账号有能力从 Google 提取信息。事实上，Google 每天传输我们的个人数据 700 亿次。您应该检查哪些公司可以访问您的数据并管理隐私设置。",
+        "某些第三方账号可能不允许您直接取消第三方账号与 Google 账号的关联，因此要管理这些账号，您必须在这些服务网站上检查设置选项。",
+        "要禁用第三方对单个应用和服务的访问权限，请向下滚动隐私页面并找到写有“具有账号访问权限的第三方应用”的标签。选择它，您将在那里找到哪些第三方可以访问您的账号并管理设置。点击您想要编辑权限的服务，然后选择禁用访问的选项。"
+      ]
+    },
+    "section8": {
+      "title": "从 Google 搜索中移除您的个人数据",
+      "description": "如果您不希望在有人搜索您时，您的个人 Google 账号信息出现在 Google 搜索中，只需找到“搜索中的个人结果”标签，点击它，然后选择开关滑块以关闭搜索是否可以根据您 Google 账号中的信息向您显示个人结果。"
+    },
+    "section9": {
+      "title": "如何删除 Google 账号",
+      "description": [
+        "如果您受够了、决定完全停用 Google 并且只想彻底退出，可以通过滚动到隐私页面的底部，在“更多选项”下选择“删除您的 Google 账号”。",
+        "只需按照提示进行操作即可。请确保您已准备好删除所有信息，因为一旦完成此操作，将无法撤销。"
+      ]
+    }
+  },
+  "ToolsSection": {
+    "title": "Internxt 的其他隐私资源",
+    "description": [
+      "想了解更多关于在网络上保护数据的信息吗？Google 并不是唯一收集您个人信息的公司。请访问我们的 [网络安全意识](https://internxt.com/cyber-awareness) 页面，获取大量最佳实践和策略，使在线浏览更安全、更私密。"
+    ],
+    "tools": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "title": "免费密码强度检查器",
+        "width": 125,
+        "description": "立即检查"
       },
-      "lifetimeDescription": "一次付费，永久享有隐私与安全保障。",
-      "planDescription": "所有 Internxt 套餐均包含对我们屡获殊荣的隐私套件的完全访问权限，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
-      "businessDescription": "我们目前正在开发专门旨在捍卫您的业务、保护您的员工并确保您的盈利能力的全新 Internxt 套餐。",
-      "businessDescription2": "使用 Internxt 的加密云存储套餐确保您公司的数据安全。",
-      "billingFrequency": {
-        "monthly": "按月",
-        "annually": "按年",
-        "lifetime": "终身",
-        "individual": "个人",
-        "business": "企业"
+      {
+        "url": "/images/temp-email/virus-scanner.svg",
+        "UrlRedirectName": "virus-scanner",
+        "title": "免费病毒扫描程序",
+        "width": 105,
+        "description": "立即扫描"
       },
-      "freePlanCard": {
-        "eyeBrow": "获取免费加密云存储",
-        "description": "免费获取 1 GB 加密云存储",
-        "cta": "选择套餐"
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "title": "免费字节转换器",
+        "width": 95,
+        "description": "立即转换"
       },
-      "features": {
-        "endToEnd": "端到端加密",
-        "openSource": "开源且经过审计",
-        "anonymousAccount": "匿名创建账号",
-        "premiumSupport": "高级客户支持",
-        "guarantee": "30 天退款保证"
-      },
-      "planStorage": {
-        "essential": "1TB",
-        "premium": "3TB",
-        "ultimate": "5TB"
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "临时电子邮件",
+        "width": 95,
+        "description": "立即发送邮件"
       }
+    ]
+  },
+  "CtaSection2": {
+    "title": "值得您信赖的云存储",
+    "description": "Internxt 的工作是保护您的数据，而不是利用数据牟利。",
+    "cta": "创建免费账号"
+  },
+  "tableSection": {
+    "title": "Internxt 套餐",
+    "hotLabel": "优惠 {{discount}}%",
+    "planTitles": {
+      "header": "选择您的套餐",
+      "individuals": "年度套餐",
+      "homePage": "选择适合您的套餐",
+      "lifetime": "终身套餐",
+      "business": "企业套餐",
+      "lifetimeCampaign": {
+        "blueText": "50% 优惠",
+        "normalText": "适用于我们所有独家终身套餐"
+      }
+    },
+    "lifetimeDescription": "一次付费，永久享有隐私与安全保障。",
+    "planDescription": "所有 Internxt 套餐均包含对我们屡获殊荣的隐私套件的完全访问权限，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
+    "businessDescription": "我们目前正在开发专门旨在捍卫您的业务、保护您的员工并确保您的盈利能力的全新 Internxt 套餐。",
+    "businessDescription2": "使用 Internxt 的加密云存储套餐确保您公司的数据安全。",
+    "billingFrequency": {
+      "monthly": "按月",
+      "annually": "按年",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "获取免费加密云存储",
+      "description": "免费获取 1 GB 加密云存储",
+      "cta": "选择套餐"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名创建账号",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "2TB",
+      "ultimate": "5TB"
     }
   }
+}

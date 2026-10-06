@@ -151,7 +151,7 @@ export default function PriceCard({
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
               <>
                 {React.createElement(
-                  index > 10 && storage === '3TB'
+                  index > 10 && storage === '2TB'
                     ? iconsFeatures[index % iconsFeatures.length]
                     : index >= 6 && storage === '1TB'
                     ? iconsFeatures[(index + 1) % iconsFeatures.length]
@@ -164,7 +164,7 @@ export default function PriceCard({
                 <span className="text-gray-80">
                   {feature}
                   {index > 9 ? (
-                    <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                    <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">
                       {contentText.commingSoon}
                     </span>
                   ) : null}

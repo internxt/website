@@ -2,11 +2,7 @@
   "heroSection": {
     "title": "Lo que la gente está **diciendo** sobre Internxt",
     "subtitle": "Descubre por qué la gente confía en Internxt sus datos",
-    "features": [
-      "Suite completa de privacidad",
-      "Cifrado post-cuántico",
-      "Código abierto y auditado"
-    ],
+    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"],
     "cta": "Obtener Internxt"
   },
   "ReviewSection": {
@@ -61,11 +57,7 @@
         "Internxt es un excelente servicio de almacenamiento en la nube debido a sus planes de precios asequibles, interfaz intuitiva y soporte confiable. Destaca en medidas de seguridad y compromiso con la privacidad, convirtiéndolo en una opción principal.",
         "Internxt es una solución de almacenamiento en la nube centrada en la privacidad que ofrece cifrado del lado del cliente, seguridad post-cuántica, software de código abierto y servidores con sede en la UE, proporcionando almacenamiento seguro y conforme a un excelente precio."
       ],
-      "authors": [
-        "Jon Jacobi - {{company}}",
-        "Craig Hale - {{company}}",
-        "Aleksandar Kochovski - {{company}}"
-      ]
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
     },
     "readMore": "Lee más reseñas en Trustpilot"
   },
@@ -92,7 +84,7 @@
     "description": "Únete a 1.000.000 de usuarios satisfechos que dejaron atrás a las grandes tecnológicas",
     "cta": "Obtener Internxt"
   },
-    "tableSection": {
+  "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
     "valentinesTitle": "Amor seguro - ",
@@ -133,7 +125,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

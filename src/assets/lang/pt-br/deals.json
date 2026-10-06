@@ -12,11 +12,7 @@
     },
     "title": "As melhores **ofertas vitalícias** de armazenamento em nuvem da Internxt",
     "subtitle": "{{discount}}% de desconto em todos os planos. Pagamento único. Privacidade vitalícia",
-    "features": [
-      "Suíte completa de privacidade",
-      "Criptografia pós-quântica",
-      "Código aberto e auditado"
-    ],
+    "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "startFrom": {
       "normal1": "A partir de ",
       "price": " {{minimumPrice}}",
@@ -84,7 +80,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -97,24 +93,8 @@
     "title": "As melhores ofertas vitalícias de armazenamento em nuvem para privacidade total online",
     "description": "A Internxt protege sua privacidade em vez de lucrar com ela. Tenha a proteção definitiva para seus dados online com armazenamento em nuvem seguro e muito mais.",
     "scrollableSection": {
-      "imagesPathname": [
-        "Drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "mail",
-        "Terminal"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Mail",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Drive vem com criptografia pós-quântica e de conhecimento zero, para que ninguém além de você possa acessar seus arquivos. Tenha armazenamento em nuvem criptografado e backups para suas fotos, vídeos e arquivos.\n\nAlém disso, backups criptografados e compartilhamento de arquivos protegido por senha oferecem proteção máxima contra ransomware e vazamentos de dados.",
         "Todos os planos pagos também incluem o Internxt Antivirus para maior proteção contra as ameaças crescentes que enfrentamos online.\n\nExecute verificações completas ou personalizadas pelo aplicativo Internxt para se defender de malware, phishing e ransomware, além de limpar e proteger seu dispositivo contra perdas ou vazamentos de dados.",

@@ -48,12 +48,7 @@
     "title": "為什麼您需要 Norton 的替代方案",
     "description": "Norton 只是保護裝置的方案之一。為了獲得真正的隱私保護和全套工具，請切換到 Internxt。",
     "scrollableSection": {
-      "titles": [
-        "大規模數據採集",
-        "閉源軟體",
-        "效能影響",
-        "產品線有限"
-      ],
+      "titles": ["大規模數據採集", "閉源軟體", "效能影響", "產品線有限"],
       "descriptions": [
         "Norton (Gen Digital) 會收集大量關於用戶行為和裝置的數據，這損害了個人隱私。",
         "作為專有軟體，Norton 的代碼無法被公開審計，以驗證其真實的數據處理方式。",
@@ -66,11 +61,7 @@
     "title": "功能",
     "description": "",
     "cards": {
-      "titles": [
-        "開源且經過審計",
-        "全套產品線",
-        "實惠的价格"
-      ],
+      "titles": ["開源且經過審計", "全套產品線", "實惠的价格"],
       "descriptions": [
         "Internxt 完全開源並經過獨立審計，確保數據無後門，隱私更有保障。",
         "Internxt 提供 Cleaner 和完整的隱私生態系統，用於清理、儲存和共享零知識加密檔案。",
@@ -130,22 +121,8 @@
     "title": "為什麼 Internxt 是 Norton 的最佳替代方案",
     "description": "Internxt 提供全套隱私保護產品，为您提供安全的替代選擇。",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "進階工具"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "進階工具"],
       "descriptions": [
         "零知識及後量子加密的雲端儲存。",
         "內置惡意軟體防護，支援全面或自定義掃描。",
@@ -183,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,15 +176,11 @@
       },
       {
         "question": "Internxt 總部在哪裡？",
-        "answer": [
-          "總部位於西班牙瓦レンシア，嚴格遵循 GDPR。"
-        ]
+        "answer": ["總部位於西班牙瓦レンシア，嚴格遵循 GDPR。"]
       },
       {
         "question": "如何聯繫支持？",
-        "answer": [
-          "請聯繫 hello@internxt.com，我們的團隊將竭誠為您服務。"
-        ]
+        "answer": ["請聯繫 hello@internxt.com，我們的團隊將竭誠為您服務。"]
       }
     ]
   }

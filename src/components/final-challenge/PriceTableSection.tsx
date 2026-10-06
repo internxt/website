@@ -4,7 +4,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 
-const PREMIUM_STORAGE = '3TB';
+const PREMIUM_STORAGE = '2TB';
 const ULTIMATE_STORAGE = '5TB';
 
 export interface PriceTableText {

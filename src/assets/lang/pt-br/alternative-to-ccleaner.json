@@ -66,11 +66,7 @@
     "title": "Recursos",
     "description": "",
     "cards": {
-      "titles": [
-        "Código aberto e auditado",
-        "Conjunto completo de produtos",
-        "Planos acessíveis"
-      ],
+      "titles": ["Código aberto e auditado", "Conjunto completo de produtos", "Planos acessíveis"],
       "descriptions": [
         "A Internxt é totalmente de código aberto e auditada de forma independente, então você pode ficar tranquilo: não há portas dos fundos para seus dados e suas informações são tratadas com transparência. Qualquer pessoa pode revisar o código, o que garante o máximo de confiança e responsabilidade.",
         "A Internxt oferece o Cleaner e um ecossistema completo de privacidade com tudo o que você precisa para eliminar arquivos inúteis do seu dispositivo, armazenar e compartilhar arquivos com criptografia de conhecimento zero no Drive, além de outros benefícios como VPN, Meet, Mail e mais.",
@@ -130,22 +126,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao CCleaner",
     "description": "A Internxt oferece um conjunto completo de produtos, junto com seu cleaner privado, para dar a você uma alternativa segura ao CCleaner.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Drive oferece armazenamento na nuvem seguro, com criptografia de conhecimento zero e pós-quântica, além de compartilhamento avançado, versionamento e suporte a NAS e rclone.",
         "O Internxt Antivirus vem integrado diretamente ao seu aplicativo para proteger você contra malware, ransomware e spyware com verificações completas ou personalizadas.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

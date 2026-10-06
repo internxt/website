@@ -70,7 +70,7 @@ export const PricingSection = ({
   hideSwitchSelector,
   businessStorageSelected,
   lang,
-  popularPlanBySize = '3TB',
+  popularPlanBySize = '2TB',
   isFamilyPage,
   onPlanTypeChange,
   onBusinessStorageChange,
@@ -88,18 +88,16 @@ export const PricingSection = ({
   premiumAndUltimatePlan = false,
   freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
-  const banner = require('@/assets/lang/en/banners.json');
-
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = '15';
   const showLoadingCards = loadingCards;
-  const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
+    console.log('product', products?.individuals ? products.individuals : null);
     if (isBusiness) {
       onBusinessPlansSelected?.(true);
     } else {
@@ -113,7 +111,7 @@ export const PricingSection = ({
     ? popularPlanBySize
     : billingFrequency === Interval.Lifetime
     ? popularPlanBySize
-    : '3TB';
+    : '2TB';
 
   const features = [
     {
@@ -195,7 +193,7 @@ export const PricingSection = ({
             ? products.individuals[billingFrequency]
                 .filter((product) => {
                   if (premiumAndUltimatePlan) {
-                    return product.storage === '5TB' || product.storage === '3TB';
+                    return product.storage === '5TB' || product.storage === '2TB';
                   }
                   if (onlyUltimatePlan) {
                     return product.storage === '5TB';

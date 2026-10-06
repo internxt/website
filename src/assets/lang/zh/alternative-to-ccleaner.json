@@ -48,12 +48,7 @@
     "title": "为什么您需要 CCleaner 的替代方案",
     "description": "CCleaner 只是清理垃圾文件的选择之一。为了获得全面的隐私保护，请切换到 Internxt，获得包含 Drive、Cleaner 在内的全能替代方案。",
     "scrollableSection": {
-      "titles": [
-        "大规模数据采集",
-        "曾发生安全事件",
-        "捆绑软件 (Bloatware)",
-        "产品线有限"
-      ],
+      "titles": ["大规模数据采集", "曾发生安全事件", "捆绑软件 (Bloatware)", "产品线有限"],
       "descriptions": [
         "CCleaner 曾因采集大量用户数据用于分析和广告而受到批评，这损害了用户的隐私。",
         "多年来，CCleaner 曾遭受重大安全漏洞，导致数百万用户面临恶意软件风险。",
@@ -66,11 +61,7 @@
     "title": "功能",
     "description": "",
     "cards": {
-      "titles": [
-        "开源且经过审计",
-        "全套产品线",
-        "实惠的价格"
-      ],
+      "titles": ["开源且经过审计", "全套产品线", "实惠的价格"],
       "descriptions": [
         "Internxt 完全开源并经过独立审计，确保无后门且透明。",
         "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理、存储和共享零知识加密文件。",
@@ -130,22 +121,8 @@
     "title": "为什么 Internxt 是 CCleaner 的最佳替代方案",
     "description": "Internxt 提供全套方案，为传统清理工具提供安全的替代选择。",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "高级工具"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [
         "零知识及后量子加密的云存储。",
         "内置恶意软件防护及全面扫描。",
@@ -183,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,21 +176,15 @@
       },
       {
         "question": "Internxt 总部在哪里？",
-        "answer": [
-          "总部位于西班牙瓦伦西亚，严格遵循 GDPR。"
-        ]
+        "answer": ["总部位于西班牙瓦伦西亚，严格遵循 GDPR。"]
       },
       {
         "question": "如何联系支持？",
-        "answer": [
-          "请联系 hello@internxt.com，我们将很乐意提供帮助。"
-        ]
+        "answer": ["请联系 hello@internxt.com，我们将很乐意提供帮助。"]
       },
       {
         "question": "支持哪些支付方式？",
-        "answer": [
-          "接受信用卡、PayPal、加密货币及 Klarna。"
-        ]
+        "answer": ["接受信用卡、PayPal、加密货币及 Klarna。"]
       }
     ]
   }

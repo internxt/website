@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "为您的 **Home Assistant 备份** 提供安全的云存储",
     "description": "自动化的零知识异地备份。源自欧洲，为您提供极高的隐私保障与数据控制权。",
-    "features": [
-      "定时计划您的备份",
-      "跨多个服务器分布式备份",
-      "开源且经过安全审计"
-    ],
+    "features": ["定时计划您的备份", "跨多个服务器分布式备份", "开源且经过安全审计"],
     "guarantee": "30天退款保证",
     "claimDeal": "获取优惠"
   },
@@ -14,31 +10,19 @@
     "title": "欧洲制造",
     "description": "结合屡获殊荣的加密技术，您的数据受欧洲严格的合规法律法规保护。",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "欧洲数据中心",
-        "冗余备份",
-        "致力于可持续发展 "
-      ],
+      "titles": ["欧洲数据中心", "冗余备份", "致力于可持续发展 "],
       "descriptions": [
         "Internxt 总部位于西班牙瓦伦西亚， our 的数据中心位于欧洲及全球其他地区，为您提供安全、高速和合规的服务。",
         "您的文件通过冗余系统、环境控制和 24/7 全天候现场安全监控获得全面保护。无论发生什么，您的文件都将始终保持安全并可随时访问。",
         "Internxt 率先推行高效能节能做法，致力于打造更清洁、更可持续的云存储解决方案。"
       ],
-      "cta": [
-        "了解更多",
-        "",
-        "了解更多"
-      ]
+      "cta": ["了解更多", "", "了解更多"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +31,7 @@
   "ThreeCardsSection": {
     "title": "核心价值",
     "cards": {
-      "titles": [
-        "零知识加密",
-        "可靠的数据恢复",
-        "隐私至上"
-      ],
+      "titles": ["零知识加密", "可靠的数据恢复", "隐私至上"],
       "descriptions": [
         "端到端客户端加密。您的配置文件和 API 密钥保持严格私密。",
         "妥善保存 HA 快照的安全异地副本，以防硬件故障或升级问题。",
@@ -63,11 +43,7 @@
     "title": "我们安全云存储的核心功能",
     "description": "全面保护您的数据安全，满足您保持文件安全和私密所需的一切",
     "accordionCards": {
-      "titles": [
-        "完全私密的生态系统",
-        "安全协作",
-        "像本地硬盘一样的云盘"
-      ],
+      "titles": ["完全私密的生态系统", "安全协作", "像本地硬盘一样的云盘"],
       "descriptions": [
         "Internxt 集成了加密存储、备份、VPN、杀毒软件、清理工具、Meet、Mail 等——助您彻底摆脱科技巨头的束缚。",
         "通过加密链接、密码和访问控制发送文件。在保持数据私密的同时与团队进行实时协作。",
@@ -75,11 +51,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "端到端加密",
-        "访问控制",
-        "加密备份"
-      ],
+      "titles": ["端到端加密", "访问控制", "加密备份"],
       "descriptions": [
         "所有文件均采用抗量子和零知识加密技术进行加密。除了您或您选择分享的对象外，没有人可以查看其内容。",
         "您可以精准控制谁可以访问分享的文件，支持随时撤销加密且带密码保护的链接。",
@@ -128,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

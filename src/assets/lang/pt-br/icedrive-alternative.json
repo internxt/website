@@ -66,11 +66,7 @@
     "title": "Alternativa ao Icedrive",
     "description": "Os planos da Internxt incluem a criptografia de conhecimento zero mais moderna, segura e avançada, além de um conjunto completo de produtos para máxima privacidade online.",
     "cards": {
-      "titles": [
-        "Transparência de código aberto",
-        "Preparada para a era pós-quântica",
-        "Suíte completa"
-      ],
+      "titles": ["Transparência de código aberto", "Preparada para a era pós-quântica", "Suíte completa"],
       "descriptions": [
         "O código da Internxt está aberto no nosso GitHub para que qualquer pessoa possa examiná-lo e confirmar sua segurança. Essa transparência garante que nenhuma vulnerabilidade fique oculta.",
         "A Internxt usa o Kyber-512, um algoritmo de criptografia pós-quântica feito para resistir a poderosos ataques quânticos, tornando a Internxt uma alternativa segura ao Icedrive para o futuro.",
@@ -130,22 +126,8 @@
     "title": "A melhor alternativa ao IceDrive é a Internxt",
     "description": "Com a Internxt, você recebe muito mais do que armazenamento na nuvem: recebe tudo o que precisa para proteger seus dados, arquivos e sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "Drive",
-        "Terminal",
-        "antivirus",
-        "cleaner",
-        "hero",
-        "meet",
-        "vpn"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Antivirus vem integrado diretamente ao aplicativo do Internxt Drive para oferecer controle total e proteção contra malware. Faça verificações completas ou personalizadas para manter seu dispositivo funcionando bem e protegido contra vírus como ransomware e spyware.",
         "A Internxt VPN protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada. Criptografe sua conexão wi-fi para evitar espionagem, hackers e roubo de identidade. Navegue com segurança sabendo que suas informações pessoais, senhas e contas estão protegidas.",
@@ -182,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

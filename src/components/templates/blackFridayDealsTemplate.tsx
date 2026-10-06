@@ -124,7 +124,7 @@ const BlackFridayDealsTemplate = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards={config.hideBusinessCards ?? true}
         hideBusinessSelector={config.hideBusinessSelector ?? true}
-        popularPlanBySize={config.popularPlanSize || '3TB'}
+        popularPlanBySize={config.popularPlanSize || '2TB'}
         sectionDetails="bg-[#1C1C1C] lg:py-20"
         darkMode
         hideFreeCard

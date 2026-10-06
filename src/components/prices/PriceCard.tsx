@@ -51,8 +51,7 @@ export interface PriceCardProps {
 
 const STORAGE_LEVELS = {
   '1TB': 'Essential ',
-  '3TB': 'Premium ',
-  '2TB': 'Lite ',
+  '2TB': 'Premium ',
   '5TB': 'Ultimate ',
   '10TB': 'Ultra ',
 };
