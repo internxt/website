@@ -102,6 +102,7 @@ const TeamsComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foo
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hideSwitchSelector
+          hideBusinessCards
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
         />
