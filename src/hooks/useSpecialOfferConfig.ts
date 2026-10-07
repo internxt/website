@@ -177,6 +177,7 @@ export const ALLOWED_PATHS = [
   'dysk',
   'recoon',
   'lazyassassin',
+  'loco',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -260,6 +261,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tukaram: 'es',
   xataka: 'es',
   claridadartificial: 'es',
+  loco: 'es',
 
   // fr
   benjamin: 'fr',
@@ -450,6 +452,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'dysk',
   'recoon',
   'lazyassassin',
+  'loco',
 ]);
 
 export const COUPON_CODES = {
@@ -627,6 +630,7 @@ export const COUPON_CODES = {
   dysk: PromoCodeName.dysk,
   recoon: PromoCodeName.recoon,
   lazyassassin: PromoCodeName.lazyassassin,
+  loco: PromoCodeName.loco,
 };
 
 interface OfferConfig {
