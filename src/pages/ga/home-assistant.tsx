@@ -88,8 +88,6 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
                 products={products}
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
                 popularPlanBySize="5TB"
                 onlyUltimatePlan
                 startFromPlan='Individuals'

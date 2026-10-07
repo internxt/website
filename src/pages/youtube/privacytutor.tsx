@@ -123,8 +123,6 @@ function PrivacyTutor({
         products={products}
         loadingCards={false}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         popularPlanBySize="5TB"
         sectionDetails={`lg:py-20`}
         hideFreeCard

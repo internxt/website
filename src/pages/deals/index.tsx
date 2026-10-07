@@ -15,8 +15,6 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
       metatagsId: 'deals',
       couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
       popularPlanSize: '5TB',
-      hideBusinessCards: true,
-      hideBusinessSelector: true,
       moreDealsUrls: {
         card1: 'deals/free-cloud-storage-deals',
         card2: 'deals/cloud-storage-lifetime',

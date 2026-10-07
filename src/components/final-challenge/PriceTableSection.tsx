@@ -92,7 +92,6 @@ export const PriceTableSection = ({
                     product={premiumProductAtUltimatePrice}
                     label={premiumProductAtUltimatePrice.storage}
                     popular={false}
-                    productCardPlan="individuals"
                     isCheckoutForLifetime
                     decimalDiscountValue={decimalDiscountForLifetime}
                     onCheckoutButtonClicked={onCheckoutButtonClicked}
@@ -106,7 +105,6 @@ export const PriceTableSection = ({
                   product={ultimateProduct}
                   label={ultimateProduct.storage}
                   popular
-                  productCardPlan="individuals"
                   isCheckoutForLifetime
                   decimalDiscountValue={decimalDiscountForLifetime}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
@@ -122,7 +120,6 @@ export const PriceTableSection = ({
                   product={ultimateProduct}
                   label={ultimateProduct.storage}
                   popular
-                  productCardPlan="individuals"
                   isCheckoutForLifetime
                   decimalDiscountValue={decimalDiscountForLifetime}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
