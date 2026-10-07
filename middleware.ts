@@ -11,6 +11,7 @@ const excludedPaths: string[] = [
   `/js`,
   '/inxt-library',
   `DPA.pdf`,
+  `Certificado ENS ALTA_signed.pdf`,
 ];
 
 const Middleware = (res) => {
