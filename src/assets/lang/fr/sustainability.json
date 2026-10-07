@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Renouvelables",
         "description": "Cela fait référence au pourcentage de l'énergie renouvelable utilisée dans nos centres de données.",
-        "value": "92 %",
+        "value": "100 %",
         "unit": "REF"
       }
     }
