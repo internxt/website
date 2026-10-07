@@ -101,7 +101,6 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hideSwitchSelector
-          hideBusinessCards
           hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
           hideFreeCard
