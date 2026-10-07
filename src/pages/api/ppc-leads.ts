@@ -13,6 +13,14 @@ const MAX_EMAIL_LENGTH = 254;
 const MAX_LANDING_LENGTH = 100;
 const requestTimestamps = new Map<string, number>();
 
+interface KlaviyoErrorResponse {
+  errors?: {
+    meta?: {
+      duplicate_profile_id?: string;
+    };
+  }[];
+}
+
 const klaviyoAxios = axios.create({
   baseURL: KLAVIYO_API_URL,
   headers: {
@@ -44,7 +52,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { email, locale, landing } = req.body;
 
-  if (!email || !email.includes('@') || email.length > MAX_EMAIL_LENGTH) {
+  if (!email?.includes('@') || email.length > MAX_EMAIL_LENGTH) {
     return res.status(400).json({ status: 'Error', message: 'Invalid email' });
   }
 
@@ -77,7 +85,7 @@ async function getOrCreateProfile(email: string, locale: string, landing: string
     });
     return response.data.data.id;
   } catch (error) {
-    const axiosError = error as AxiosError<any>;
+    const axiosError = error as AxiosError<KlaviyoErrorResponse>;
     if (axiosError.response?.status === 409) {
       const duplicateId = axiosError.response.data?.errors?.[0]?.meta?.duplicate_profile_id;
       if (duplicateId) {
