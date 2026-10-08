@@ -94,8 +94,6 @@ const ReferAFriendPage = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         backgroundGradientColor="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 

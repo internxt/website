@@ -101,8 +101,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         popularPlanBySize="2TB"
         sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}

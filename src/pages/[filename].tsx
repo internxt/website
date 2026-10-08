@@ -211,8 +211,6 @@ function CombinedSpecialOffer({
           products={products}
           loadingCards={false}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
           popularPlanBySize="5TB"
           sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
           hideFreeCard
