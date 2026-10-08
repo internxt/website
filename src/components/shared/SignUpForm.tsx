@@ -92,8 +92,8 @@ export const SignUpForm = ({ textContent, lang, error, loading, onSubmitEmail }:
     if (onSubmitEmail) {
       try {
         await onSubmitEmail(email);
-      } catch {
-        // Capturing the lead must never block the signup flow
+      } catch (err) {
+        console.warn('Lead capture failed');
       }
     }
 
