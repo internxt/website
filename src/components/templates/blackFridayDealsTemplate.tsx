@@ -21,8 +21,6 @@ interface BlackFridayDealConfig {
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;
   popularPlanSize?: string;
-  hideBusinessCards?: boolean;
-  hideBusinessSelector?: boolean;
   moreDealsUrls: {
     card1: string;
     card2: string;
@@ -122,9 +120,7 @@ const BlackFridayDealsTemplate = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards={config.hideBusinessCards ?? true}
-        hideBusinessSelector={config.hideBusinessSelector ?? true}
-        popularPlanBySize={config.popularPlanSize || '3TB'}
+        popularPlanBySize={config.popularPlanSize || '2TB'}
         sectionDetails="bg-[#1C1C1C] lg:py-20"
         darkMode
         hideFreeCard

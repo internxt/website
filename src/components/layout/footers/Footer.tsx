@@ -753,6 +753,18 @@ export default function Footer({
             {/* Logos */}
             <div className="flex w-full flex-row justify-between">
               <div className="flex flex-row gap-10">
+                <a href="/Certificado ENS ALTA_signed.pdf" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={getImage('/images/footer/distintivo_ens_certificacion_ALTA_RD311-2022.jpg')}
+                    alt="Distintivo de certificación ENS categoría ALTA (RD 311/2022)"
+                    width={60}
+                    height={60}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </a>
                 <Image
                   src={getImage('/icons/social/ISO-27001-logo-eturia.png')}
                   alt="Eturia logo"

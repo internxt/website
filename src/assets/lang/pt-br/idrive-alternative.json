@@ -130,20 +130,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao IDrive",
     "description": "Com a Internxt, você recebe muito mais do que armazenamento na nuvem: recebe tudo o que precisa para proteger seus dados, arquivos e sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Antivirus está integrado diretamente ao app do Internxt Drive para oferecer controle total e proteção contra malware, ransomware e spyware.",
         "A VPN da Internxt protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada. Navegue com segurança sabendo que suas informações pessoais estão protegidas.",
@@ -180,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

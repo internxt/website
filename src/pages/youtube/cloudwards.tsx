@@ -23,7 +23,13 @@ interface CloudWardsProps {
   lang: string;
 }
 
-function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: Readonly<CloudWardsProps>): JSX.Element {
+function Cloudwards({
+  langJson,
+  lang,
+  metatagsDescriptions,
+  footerLang,
+  navbarLang,
+}: Readonly<CloudWardsProps>): JSX.Element {
   const metatags = metatagsDescriptions.find((item) => item.id === 'cloudwards');
 
   const {
@@ -77,15 +83,15 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
   };
 
   return (
-    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Affiliates" lang={lang}>
+    <Layout
+      title={metatags?.title ?? ''}
+      description={metatags?.description ?? ''}
+      segmentName="Affiliates"
+      lang={lang}
+    >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        percentOff={percentOff}
-        cloudWards
-        image={'alohomora'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} cloudWards image={'alohomora'} />
       <ReviewsSection textContent={langJson.ReviewSection} />
 
       <TrustedSection
@@ -105,9 +111,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="2TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />
@@ -133,7 +137,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <HorizontalScrollableSection
         textContent={langJson.NextGenSection}
-        bgGradient='linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
+        bgGradient="linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)"
       />
 
       <FloatingCtaSectionv2

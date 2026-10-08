@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "**Free** encrypted cloud storage",
+    "subtitle": "**1 GB free, forever.** No credit card needed.",
+    "SignUp": {
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "show": "Show",
+          "hide": "Hide",
+          "strength": {
+            "complexity": "Password is not complex enough",
+            "length": "Password must be at least 8 characters",
+            "weak": "Password is weak",
+            "strong": "Password is strong"
+          }
+        },
+        "submit": "Create free account"
+      },
+      "info": "Internxt doesn't store passwords. If you forget it, your backup key restores access to your files.",
+      "disclaimer": {
+        "text": "By creating an account you accept our",
+        "link": "terms of service and privacy policy"
+      },
+      "login": {
+        "text": "Already have an account?",
+        "link": "Log in"
+      }
+    }
+  },
+  "ReviewSection": {
+    "forbes": "Internxt consolidates its position as the European alternative to tech giants",
+    "deloitte": "Received Deloitte Fast 50 Award, which recognizes the fastest-growing companies in Europe",
+    "techradar": "Internxt is an excellent cloud storage service; affordable, intuitive, and reliable",
+    "fortune": "Internxt is building a better internet where privacy and security come first",
+    "trustpilot": "Outstanding value given the security and features offered. Excellent service and support"
+  },
+  "TrustedSection": {
+    "description": "With Internxt Free, you get 1 GB of storage that only you can open. No ads, no scanning, no strings and your digital life belongs to you."
+  },
+  "FeaturesSection": {
+    "title": "The Best Next-Gen Encrypted Cloud Storage for Ultimate Protection",
+    "description": "We protect your file's security and privacy with advanced encryption to future-proof against emerging threats.",
+    "cards": {
+      "titles": [
+        "Unhackable and unleakable data",
+        "Next-generation security",
+        "Open source and transparent",
+        "Independently verified"
+      ],
+      "descriptions": [
+        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
+        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+      ]
+    }
+  },
+  "ChoosePlanSection": {
+    "title": "Start free. Upgrade when you need more.",
+    "description": "Your files and encryption stay exactly the same.",
+    "freeCard": {
+      "label": "Free",
+      "storage": "1 GB",
+      "price": "{{currency}}0 forever",
+      "features": [
+        "1 GB encrypted storage",
+        "Web, desktop & mobile apps",
+        "Secure file sharing",
+        "Zero-knowledge encryption"
+      ],
+      "cta": "Create free account"
+    },
+    "premiumCard": {
+      "label": "Premium",
+      "badge": "Exclusive discount",
+      "storage": "1-5 TB",
+      "price": "from {{currency}}{{minimumPrice}}/mo",
+      "features": [
+        "1 TB, 3 TB or 5 TB storage",
+        "Full privacy suite: VPN, Antivirus, Cleaner & more",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "cta": "Get the deal"
+    },
+    "guarantees": {
+      "premiumSupport": "Premium customer support",
+      "moneyBack": "30-day money-back guarantee",
+      "openSource": "Open source and audited"
+    }
+  },
+  "FaqSection": {
+    "title": "Frequently asked questions",
+    "faq": [
+      {
+        "question": "Is the free plan really free forever?",
+        "answer": [
+          "Yes. Internxt Free gives you 1 GB of encrypted cloud storage at no cost, with no credit card, no trial period, and no expiry date. You only pay if you decide to upgrade for more storage."
+        ]
+      },
+      {
+        "question": "Can Internxt see my files?",
+        "answer": [
+          "No. Internxt uses zero-knowledge, end-to-end encryption, so your files are encrypted on your device before they ever reach our servers. We never hold the keys, which means nobody at Internxt, and no third party, can read your data."
+        ]
+      },
+      {
+        "question": "What happens if I forget my password?",
+        "answer": [
+          "Internxt doesn't store your password, so we cannot reset it for you. That's why you get a backup key when you create your account: keep it somewhere safe and you can use it to restore access to your files at any time."
+        ]
+      },
+      {
+        "question": "What if I need more than 1 GB?",
+        "answer": [
+          "You can upgrade to a paid plan whenever you want and keep the same account, the same files, and the same encryption. Internxt Premium plans start at 1 TB and go up to 5 TB, and include the full privacy suite with VPN, Antivirus, Cleaner and more."
+        ]
+      },
+      {
+        "question": "Which devices can I use?",
+        "answer": [
+          "Internxt works in any modern web browser and has native apps for Windows, macOS, Linux, Android and iOS, so your encrypted files stay in sync across every device you own."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Your files. Your keys. Free.",
+    "description": "Create your account in under a minute.",
+    "cta": "Get 1 GB free"
+  }
+}

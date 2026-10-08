@@ -66,11 +66,7 @@
     "title": "Por que você precisa de uma alternativa ao Azure",
     "description": "O que o Azure demonstra em segurança, falha em privacidade. Para ter privacidade total, obtenha segurança completa combinada com a criptografia de conhecimento zero da Internxt.",
     "cards": {
-      "titles": [
-        "Configuração complexa",
-        "Custos ocultos e imprevisíveis",
-        "Downloads caros"
-      ],
+      "titles": ["Configuração complexa", "Custos ocultos e imprevisíveis", "Downloads caros"],
       "descriptions": [
         "Configurar o armazenamento no Azure envolve navegar por vários painéis e sistemas de segurança. Os usuários precisam gerenciar manualmente funções, regras de acesso e regiões. Tarefas simples costumam exigir conhecimento técnico, tornando a plataforma difícil para iniciantes e atrasando o desenvolvimento.",
         "O Microsoft Azure cobra separadamente por armazenamento, requisições, transferência de dados, monitoramento, backups e recursos de segurança. Essas pequenas taxas se acumulam rapidamente e são difíceis de acompanhar. Qualquer aumento no tráfego ou no uso pode causar picos significativos na fatura, tornando o orçamento de longo prazo pouco confiável para as empresas.",
@@ -130,12 +126,7 @@
     "title": "Por que a Internxt é a melhor alternativa ao Azure",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Armazenamento seguro e durável",
         "Acesso instantâneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

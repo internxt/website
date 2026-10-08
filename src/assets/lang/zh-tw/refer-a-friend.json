@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "**推薦**朋友，**賺取**高達100歐元",
     "subtitle": "邀請您的朋友試用 Internxt Drive、VPN、Meet 等。當他們購買方案時，你們都會獲得獎勵。",
-    "features": [
-      "每次推薦可獲得高達100歐元",
-      "您的朋友可享受所有方案85%的折扣",
-      "直接將款項支付到您的 PayPal 帳戶"
-    ],
+    "features": ["每次推薦可獲得高達100歐元", "您的朋友可享受所有方案85%的折扣", "直接將款項支付到您的 PayPal 帳戶"],
     "cta": "邀請朋友"
   },
   "RewardsSection": {
@@ -74,7 +70,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -83,27 +79,19 @@
     "faq": [
       {
         "question": "我在哪裡可以找到我的推薦連結？",
-        "answer": [
-          "登入您的 Internxt 帳戶 https://drive.internxt.com/login，然後在選單列中單擊賺取 100 歐元。"
-        ]
+        "answer": ["登入您的 Internxt 帳戶 https://drive.internxt.com/login，然後在選單列中單擊賺取 100 歐元。"]
       },
       {
         "question": "誰有資格進行推薦？",
-        "answer": [
-          "該計劃向所有擁有 Internxt 付費方案、帳戶已建立至少 30 天且已驗證電子郵件地址的人開放。"
-        ]
+        "answer": ["該計劃向所有擁有 Internxt 付費方案、帳戶已建立至少 30 天且已驗證電子郵件地址的人開放。"]
       },
       {
         "question": "誰有資格獲得推薦連結？",
-        "answer": [
-          "任何擁有免費 Internxt 帳戶的人都有資格獲得任何年度或終身方案 85% 的折扣。"
-        ]
+        "answer": ["任何擁有免費 Internxt 帳戶的人都有資格獲得任何年度或終身方案 85% 的折扣。"]
       },
       {
         "question": "我能賺多少錢？",
-        "answer": [
-          "根據使用您的連結購買的方案，您每次推薦最高可賺取 100 歐元。"
-        ]
+        "answer": ["根據使用您的連結購買的方案，您每次推薦最高可賺取 100 歐元。"]
       },
       {
         "question": "我可以使用信用卡、PayPal 或加密貨幣付款嗎？",

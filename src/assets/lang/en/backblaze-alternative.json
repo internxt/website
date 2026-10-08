@@ -66,11 +66,7 @@
     "title": "Why you need a Backblaze alternative",
     "description": "Internxt offers European S3 object storage and complies with multiple compliance regulations to offer full privacy and security for businesses and enterprises.",
     "cards": {
-      "titles": [
-        "Complex setup",
-        "Hidden and unpredictable costs",
-        "Expensive downloads"
-      ],
+      "titles": ["Complex setup", "Hidden and unpredictable costs", "Expensive downloads"],
       "descriptions": [
         "Setting up storage on Backblaze involves navigating multiple dashboards and security systems. Users must manually manage roles, access rules, and encryption. Simple tasks often require technical knowledge, making the platform difficult for beginners and slowing down development.",
         "Backblaze charges separately for storage, requests, data transfer, monitoring, backups, and security features. These small fees accumulate quickly and are difficult to track. Any increases in traffic or usage can cause major bill spikes, making long-term budgeting unreliable for businesses.",
@@ -130,18 +126,8 @@
     "title": "Why Internxt S3 is the best Backblaze alternative",
     "description": "Internxt cloud object storage offers affordable S3 storage for rapid access to large amounts of data.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
-      "titles": [
-        "Secure and durable storage",
-        "Instant access",
-        "Simple and predictable pricing",
-        "Cost per GB"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
+      "titles": ["Secure and durable storage", "Instant access", "Simple and predictable pricing", "Cost per GB"],
       "descriptions": [
         "Internxt S3 provides built-in end-to-end encryption and immutable object locking to protect data from loss, corruption, or ransomware. With 11×9s durability, all files are kept secure and safe across multiple regions.",
         "Internxt S3 is a 100% hot cloud storage solution, so all files are immediately available for upload or download. This instant availability ensures fast response times for all workloads.",
@@ -177,7 +163,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -66,11 +66,7 @@
     "title": "Perché hai bisogno di un'alternativa ad AWS",
     "description": "Ciò che AWS dimostra in materia di sicurezza fallisce in termini di privacy. Per la massima privacy, ottieni una sicurezza totale combinata con la crittografia zero-knowledge di Internxt.",
     "cards": {
-      "titles": [
-        "Configurazione complessa",
-        "Costi nascosti e imprevedibili",
-        "Download costosi"
-      ],
+      "titles": ["Configurazione complessa", "Costi nascosti e imprevedibili", "Download costosi"],
       "descriptions": [
         "La configurazione dell'archiviazione su AWS comporta la navigazione tra decine di dashboard e sistemi di sicurezza, rendendolo difficile per i principianti.",
         "Amazon AWS addebita separatamente archiviazione, richieste, trasferimento dati, monitoraggio, backup e funzionalità di sicurezza. Aumenti di traffico possono causare picchi enormi.",
@@ -130,18 +126,8 @@
     "title": "Perché Internxt è la migliore alternativa ad AWS",
     "description": "Internxt Drive offre una suite affidabile di prodotti progettata per proteggere la tua privacy online.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
-      "titles": [
-        "Archiviazione sicura",
-        "Accesso immediato",
-        "Prezzi prevedibili",
-        "Costo per GB"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
+      "titles": ["Archiviazione sicura", "Accesso immediato", "Prezzi prevedibili", "Costo per GB"],
       "descriptions": [
         "Internxt S3 fornisce crittografia end-to-end integrata e blocco degli oggetti immutabile per proteggere i dati dai ransomware.",
         "Internxt S3 è una soluzione di cloud storage a caldo, quindi tutti i file sono immediatamente disponibili, a differenza di Amazon S3 Glacier.",
@@ -177,7 +163,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -210,9 +196,7 @@
       },
       {
         "question": "Come contatto il supporto?",
-        "answer": [
-          "Se hai bisogno di assistenza o informazioni, puoi contattare hello@internxt.com."
-        ]
+        "answer": ["Se hai bisogno di assistenza o informazioni, puoi contattare hello@internxt.com."]
       }
     ]
   },

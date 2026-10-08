@@ -87,7 +87,7 @@
   {
     "id": "lifetime",
     "title": "Piani a vita Internxt – Archiviazione cloud sicura per tutta la vita!",
-    "description": "Internxt Lifetime Deal: pagate una volta e ottenete 1TB, 3TB o 5TB di spazio di archiviazione cloud sicuro per sempre. Iscrivetevi o passate a un piano Internxt a vita per avere la privacy per tutta la vita! Solo per un periodo limitato."
+    "description": "Internxt Lifetime Deal: pagate una volta e ottenete 1TB, 2TB o 5TB di spazio di archiviazione cloud sicuro per sempre. Iscrivetevi o passate a un piano Internxt a vita per avere la privacy per tutta la vita! Solo per un periodo limitato."
   },
   {
     "id": "partner-discount",
@@ -625,5 +625,10 @@
     "id": "final-challenge-em",
     "title": "Internxt Challenge Cloud Storage Deals",
     "description": "You completed the Internxt Challenge. Claim your exclusive reward on Internxt's fully equipped privacy suite: Drive, Antivirus, VPN, Cleaner, Meet, Mail, and more."
+  },
+  {
+    "id": "test-ppc-leads",
+    "title": "Internxt — Spazio cloud crittografato gratuito, 1 GB per sempre",
+    "description": "Ottieni 1 GB di spazio cloud crittografato gratuito con Internxt. Nessuna carta di credito, nessuna pubblicità, nessuna scansione. Crittografia zero-knowledge e open source."
   }
 ]

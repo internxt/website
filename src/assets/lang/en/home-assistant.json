@@ -1,16 +1,12 @@
 {
-    "HeroSection": {
+  "HeroSection": {
     "title": "Secure cloud storage for your **Home Assistant Backups**",
     "description": "Automated, zero-knowledge offsite backups. Built in Europe for maximum privacy and data control.",
-    "features": [
-      "Schedule your backups",
-      "Backed up across multiple servers",
-      "Open source and audited"
-    ],
+    "features": ["Schedule your backups", "Backed up across multiple servers", "Open source and audited"],
     "guarantee": "30-day money-back guarantee",
     "claimDeal": "Claim deal"
-    },
-    "MadeInEuropeSection": {
+  },
+  "MadeInEuropeSection": {
     "title": "Made in Europe",
     "description": "Your data is protected with strict European compliance laws and regulations combined with award-winning encryption.",
     "cards": {
@@ -43,7 +39,7 @@
       ]
     }
   },
-    "CoreFeatures": {
+  "CoreFeatures": {
     "title": "Core Features of our cloud secure storage",
     "description": "Complete security for your data, everything you need to keep your files secure and private",
     "accordionCards": {
@@ -104,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

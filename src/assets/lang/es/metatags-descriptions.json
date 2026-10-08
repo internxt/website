@@ -87,7 +87,7 @@
   {
     "id": "lifetime",
     "title": "Planes de por vida de Internxt – Almacenamiento en la nube de por vida asequible y seguro",
-    "description": "Almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 1TB, 3TB o 5TB de almacenamiento seguro en la nube de por vida. ¡Regístrate o actualiza a un plan de por vida de Internxt para privacidad de por vida!"
+    "description": "Almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 1TB, 2TB o 5TB de almacenamiento seguro en la nube de por vida. ¡Regístrate o actualiza a un plan de por vida de Internxt para privacidad de por vida!"
   },
   {
     "id": "comparison",
@@ -685,5 +685,10 @@
     "id": "final-challenge-em",
     "title": "Internxt Challenge Cloud Storage Deals",
     "description": "You completed the Internxt Challenge. Claim your exclusive reward on Internxt's fully equipped privacy suite: Drive, Antivirus, VPN, Cleaner, Meet, Mail, and more."
+  },
+  {
+    "id": "test-ppc-leads",
+    "title": "Internxt — Almacenamiento en la nube cifrado y gratis, 1 GB para siempre",
+    "description": "Consigue 1 GB de almacenamiento en la nube cifrado y gratis con Internxt. Sin tarjeta de crédito, sin anuncios y sin escaneos. Cifrado de conocimiento cero y código abierto."
   }
 ]

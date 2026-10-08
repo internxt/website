@@ -121,7 +121,7 @@
           },
           {
             "title": "Basato su abbonamento",
-            "description": "68% più costoso per un piano annuale da 3TB, e nessun piano a vita è disponibile."
+            "description": "68% più costoso per un piano annuale da 2TB, e nessun piano a vita è disponibile."
           }
         ]
       }
@@ -131,7 +131,7 @@
     "title": "La migliore alternativa a MEGA.io è Internxt",
     "description": "Ottieni la massima privacy per i tuoi file con Internxt",
     "cta": "Seleziona piano"
-},
+  },
   "CtaSection2": {
     "title": "Nessun tracker. Nessun problema.",
     "description": "Ottieni privacy completa per i tuoi file con Internxt",
@@ -159,7 +159,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -173,6 +173,12 @@ export const ALLOWED_PATHS = [
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
+  'loco',
+  'technouplift',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -256,6 +262,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tukaram: 'es',
   xataka: 'es',
   claridadartificial: 'es',
+  loco: 'es',
 
   // fr
   benjamin: 'fr',
@@ -316,6 +323,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'morpheus',
   'themorpheus',
   'thelinuxexp',
+  'simon42',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -441,6 +449,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
+  'loco',
+  'technouplift',
 ]);
 
 export const COUPON_CODES = {
@@ -614,6 +628,12 @@ export const COUPON_CODES = {
   linuxtakeaway: PromoCodeName.linuxtakeaway,
   danalove: PromoCodeName.danalove,
   alextbg: PromoCodeName.alextbg,
+  biswas: PromoCodeName.biswas,
+  dysk: PromoCodeName.dysk,
+  recoon: PromoCodeName.recoon,
+  lazyassassin: PromoCodeName.lazyassassin,
+  loco: PromoCodeName.loco,
+  technouplift: PromoCodeName.technouplift,
 };
 
 interface OfferConfig {

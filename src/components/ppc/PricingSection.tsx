@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
-import { SwitchComponent, SwitchStorageBusinessOptions } from '@/components/shared/pricing/components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/ppc/FreePlanCard';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
@@ -18,14 +16,9 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   popularPlanBySize?: string;
-  businessStorageSelected: SwitchStorageBusinessOptions;
-  hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
-  hideBusinessCards?: boolean;
-  businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  hideSwitchSelector?: boolean;
   isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
@@ -33,15 +26,10 @@ interface PriceTableProps {
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
-    business?: number;
   };
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
-  onIndividualSwitchToggled: (interval: Interval) => void;
-  onBusinessStorageChange: (businessStorageSelected: string) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
-  onBusinessSwitchToggled?: (interval: Interval) => void;
-  onBusinessPlansSelected?: (isBusiness: boolean) => void;
   differentRecommended?: boolean;
   isValentinesMode?: boolean;
   onlyUltimatePlan?: boolean;
@@ -55,23 +43,14 @@ export const PricingSection = ({
   loadingCards,
   activeSwitchPlan,
   billingFrequency,
-  businessBillingFrequency,
   decimalDiscount,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
-  hideBusinessCards,
   hidePlanSelectorComponent,
-  hideBusinessSelector,
-  hideSwitchSelector,
-  businessStorageSelected,
   lang,
-  popularPlanBySize = '3TB',
+  popularPlanBySize = '2TB',
   onPlanTypeChange,
-  onBusinessStorageChange,
-  onIndividualSwitchToggled,
-  onBusinessSwitchToggled,
   onCheckoutButtonClicked,
-  onBusinessPlansSelected,
   darkMode,
   differentRecommended = true,
   hideFeatures,
@@ -82,29 +61,10 @@ export const PricingSection = ({
   premiumAndUltimatePlan = false,
   freePlanNeedsH2 = false,
 }: PriceTableProps): JSX.Element => {
-
-  const isBusiness = activeSwitchPlan === 'Business';
-  const labelDiscount = '15';
   const showLoadingCards = loadingCards;
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const showIndividualCards = isIndividual && !loadingCards;
-  const showSwitchComponent =
-    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
+  const showIndividualCards = !loadingCards;
 
-  useEffect(() => {
-    if (isBusiness) {
-      onBusinessPlansSelected?.(true);
-    } else {
-      onBusinessPlansSelected?.(false);
-    }
-  }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
-
-  const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
-
-  const popularPlan =
-  differentRecommended || billingFrequency === Interval.Lifetime
-    ? popularPlanBySize
-    : '3TB';
+  const popularPlan = differentRecommended || billingFrequency === Interval.Lifetime ? popularPlanBySize : '2TB';
 
   const features = [
     {
@@ -121,14 +81,6 @@ export const PricingSection = ({
     },
   ];
 
-  const switchHandler = (interval: Interval) => {
-    if (isIndividual) {
-      onIndividualSwitchToggled(interval);
-    } else {
-      onBusinessSwitchToggled?.(interval);
-    }
-  };
-
   return (
     <>
       <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9 `}>
@@ -136,25 +88,9 @@ export const PricingSection = ({
           <PlanSelector
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
-            hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
             darkMode={darkMode}
-          />
-        )}
-
-        {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
-          <SwitchComponent
-            textContent={textContent}
-            show={showSwitchComponent}
-            lang={lang}
-            billedFrequency={billingFrequencyForSwitch}
-            handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={labelDiscount}
-            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
-            darkMode={darkMode}
-            activeStoragePlan={businessStorageSelected}
-            onBusinessStorageChange={onBusinessStorageChange}
           />
         )}
       </div>
@@ -165,11 +101,9 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {new Array(3)
-            .fill(0)
-            .map((_, i) => (
-              <CardSkeleton key={'skeleton' + i} />
-            ))}
+          {new Array(3).fill(0).map((_, i) => (
+            <CardSkeleton key={'skeleton' + i} />
+          ))}
         </div>
       </Transition>
 
@@ -186,7 +120,7 @@ export const PricingSection = ({
             ? products.individuals[billingFrequency]
                 .filter((product) => {
                   if (premiumAndUltimatePlan) {
-                    return product.storage === '5TB' || product.storage === '3TB';
+                    return product.storage === '5TB' || product.storage === '2TB';
                   }
                   if (onlyUltimatePlan) {
                     return product.storage === '5TB';
@@ -201,7 +135,6 @@ export const PricingSection = ({
                     label={product.storage}
                     key={product.storage}
                     popular={product.storage === popularPlan}
-                    productCardPlan="individuals"
                     decimalDiscountValue={
                       product.interval === Interval.Lifetime
                         ? decimalDiscount?.lifetime

@@ -66,11 +66,7 @@
     "title": "Why you need a TotalAV alternative",
     "description": "TotalAV is only one option to protect your device from malware. For full privacy and a complete product suite, switch to Internxt for a full TotalAV alternative with Drive, Cleaner, and more.",
     "cards": {
-      "titles": [
-        "Open source and audited",
-        "Full product suite",
-        "Affordable plans"
-      ],
+      "titles": ["Open source and audited", "Full product suite", "Affordable plans"],
       "descriptions": [
         "Internxt is fully open source and independently audited, so you can rest assured there are no backdoors to your data and that your information is handled transparently. Anyone can review the code for maximum trust and accountability.",
         "Internxt offers Cleaner, and a full privacy ecosystem to give you everything you need to clear junk files from your device, store and share files with zero-knowledge encryption with Drive, and more benefits, including VPN, Meet, Mail, and more.",
@@ -130,20 +126,8 @@
     "title": "Why Internxt is the best TotalAV alternative",
     "description": "Internxt Drive includes a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Advanced tools"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
         "Get increased protection with Internxt Antivirus built directly into your Internxt Drive app for full control and protection against malware. Run full or custom virus scans to keep your device running smoothly and protected against viruses such as ransomware or spyware.",
         "Internxt's VPN protects your browsing, blocks ads and trackers, and keeps your location private. Encrypt your wifi connection to prevent spying, hackers, and identity theft. Surf securely, knowing your personal information, passwords, and accounts are protected.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

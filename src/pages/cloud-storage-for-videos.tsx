@@ -138,8 +138,6 @@ const CloudStorageForVideos = ({
                 products={products}
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
-                hideBusinessCards
-                hideBusinessSelector
                 popularPlanBySize="5TB"
                 sectionDetails="lg:py-20"
                 backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'

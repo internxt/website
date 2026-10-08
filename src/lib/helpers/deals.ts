@@ -7,8 +7,6 @@ interface DealConfig {
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
   popularPlanSize?: string;
-  hideBusinessCards?: boolean;
-  hideBusinessSelector?: boolean;
   moreDealsUrls: {
     card1: string;
     card2: string;
