@@ -1,6 +1,6 @@
 import { Interval } from '@/services/stripe.service';
 
-export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
+export type SwitchButtonOptions = 'Individuals' | 'Lifetime';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
 
 interface PlanSwitchProps {
@@ -8,7 +8,6 @@ interface PlanSwitchProps {
   activeSwitchPlan: SwitchButtonOptions;
   activeStoragePlan: SwitchStorageOptions;
   hidePlanSelectorComponent?: boolean;
-  hideBusinessSelector?: boolean;
   isMonthly?: boolean;
   darkMode?: boolean;
   hideBillingController?: boolean;
@@ -21,7 +20,6 @@ export const PlanSelectorForMobile = ({
   textContent,
   activeSwitchPlan,
   activeStoragePlan,
-  hideBusinessSelector,
   onPlanTypeChange,
   onStorageChange,
   darkMode,
@@ -54,22 +52,6 @@ export const PlanSelectorForMobile = ({
           }`}
         >
           {textContent.billingFrequency.lifetime}
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            onPlanTypeChange('Business');
-          }}
-          className={`rounded-2xl py-0.5 ${
-            hideBusinessSelector ? 'hidden' : 'flex'
-          } flex-row gap-3 px-6 font-semibold ${
-            activeSwitchPlan === 'Business'
-              ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-              : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
-          }`}
-        >
-          {textContent.billingFrequency.business}
         </button>
       </div>
     )}

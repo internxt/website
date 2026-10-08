@@ -5,7 +5,6 @@ import { SwitchButtonOptions, SwitchStorageOptions } from '@/components/shared/p
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { PricingSectionForMobile } from '@/components/shared/pricing/PricingSectionForMobile';
-import { SwitchStorageBusinessOptions } from '@/components/shared/pricing/components/Switch';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { CheckCircle } from '@phosphor-icons/react';
 import { ArrowDown } from '@phosphor-icons/react/dist/ssr';
@@ -25,17 +24,12 @@ interface PricingSectionWrapperProps {
   lang: string;
   loadingCards: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  hideBusinessSelector?: boolean;
-  hideBusinessCards?: boolean;
   hidePlanSelectorComponent?: boolean;
-  hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
   startIndividualPlansFromInterval?: Interval;
-  startBusinessPlansFromInterval?: Interval;
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   startFromStorage?: SwitchStorageOptions;
-  startFromBusinessStorage?: SwitchStorageBusinessOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   sectionDetails?: string;
   backgroundGradientColor?: string;
@@ -45,13 +39,11 @@ interface PricingSectionWrapperProps {
   decimalDiscount?: {
     individuals?: number;
     lifetime?: number;
-    business?: number;
   };
   hideDescription?: boolean;
   couponCodeName?: string;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   handlePageNameUpdate?: (pageName: string) => void;
-  onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
   isBrave?: boolean;
   isAnnual?: boolean;
@@ -61,15 +53,10 @@ interface PricingSectionWrapperProps {
   isValentinesMode?: boolean;
   hideBillingController?: boolean;
   overrideBillingFrequency?: Interval;
-  overrideBusinessBillingFrequency?: Interval;
   overrideActiveSwitchPlan?: SwitchButtonOptions;
   overrideActiveStoragePlan?: SwitchStorageOptions;
-  overrideActiveBusinessStoragePlan?: SwitchStorageBusinessOptions;
   overrideOnPlanTypeChange?: (plan: SwitchButtonOptions) => void;
   overrideOnStorageChange?: (storage: SwitchStorageOptions) => void;
-  overrideOnBusinessStorageChange?: (storage: SwitchStorageBusinessOptions) => void;
-  overrideOnIndividualSwitchToggled?: (interval: Interval) => void;
-  overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
   differentRecommended?: boolean;
   SectionTag?: React.ElementType;
   onlyUltimatePlan?: boolean;
@@ -163,19 +150,15 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  hideBusinessSelector,
-  hideBusinessCards,
   hidePlanSelectorComponent,
   sectionDetails = DEFAULTS.sectionDetails,
   backgroundGradientColor,
   lifetimeCoupons,
-  hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
   hideFeatures,
   onCheckoutButtonClicked,
-  onBusinessPlansSelected,
   darkMode,
   isAnnual,
   showPromo,
@@ -184,22 +167,15 @@ export const PricingSectionWrapper = ({
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
   startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Lifetime',
   startFromStorage = 'Premium',
-  startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
   couponCodeName,
   overrideBillingFrequency,
-  overrideBusinessBillingFrequency,
   overrideActiveSwitchPlan,
   overrideActiveStoragePlan,
-  overrideActiveBusinessStoragePlan,
   overrideOnPlanTypeChange,
   overrideOnStorageChange,
-  overrideOnBusinessStorageChange,
-  overrideOnIndividualSwitchToggled,
-  overrideOnBusinessSwitchToggled,
   differentRecommended,
   SectionTag = DEFAULTS.SectionTag,
   onlyUltimatePlan = false,
@@ -211,55 +187,41 @@ export const PricingSectionWrapper = ({
     startFromStorage,
     startIndividualPlansFromInterval,
     handlePageNameUpdate,
-    startFromBusinessStorage,
-    startBusinessPlansFromInterval,
   );
   const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
   const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
-  const activeBusinessStoragePlan = overrideActiveBusinessStoragePlan ?? localPlanSelection.activeBusinessStoragePlan;
   const billingFrequency = overrideBillingFrequency ?? localPlanSelection.billingFrequency;
-  const businessBillingFrequency = overrideBusinessBillingFrequency ?? localPlanSelection.businessBillingFrequency;
   const onPlanTypeChange = overrideOnPlanTypeChange ?? localPlanSelection.onPlanTypeChange;
   const onStorageChange = overrideOnStorageChange ?? localPlanSelection.onStorageChange;
-  const onBusinessStorageChange = overrideOnBusinessStorageChange ?? localPlanSelection.onBusinessStorageChange;
-  const onIndividualSwitchToggled = overrideOnIndividualSwitchToggled ?? localPlanSelection.onIndividualSwitchToggled;
-  const onBusinessSwitchToggled = overrideOnBusinessSwitchToggled ?? localPlanSelection.onBusinessSwitchToggled;
 
   const actualDiscountValue =
     activeSwitchPlan === 'Lifetime'
       ? calculateDiscountPercentage(decimalDiscount?.lifetime)
-      : calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
+      : calculateDiscountPercentage(decimalDiscount?.individuals);
 
   const commonPricingProps = {
     textContent,
     lang,
     billingFrequency,
-    businessBillingFrequency,
     lifetimeCoupons,
     isFamilyPage,
     decimalDiscount: {
       subscriptions: decimalDiscount?.individuals,
       lifetime: decimalDiscount?.lifetime,
-      business: decimalDiscount?.business,
     },
     products,
     popularPlanBySize,
-    hideBusinessSelector,
     hidePlanSelectorComponent,
-    hideBusinessCards,
     hidePlanSelectorAndSwitch,
     loadingCards,
     activeSwitchPlan,
     onCheckoutButtonClicked,
     onPlanTypeChange,
-    onBusinessPlansSelected,
     darkMode,
     isAnnual,
     hideFeatures,
     showPromo,
     isAffiliate,
-    businessStorageSelected: activeBusinessStoragePlan,
-    onBusinessStorageChange,
     hideFreeCard,
     differentRecommended,
     isValentinesMode,
@@ -287,9 +249,6 @@ export const PricingSectionWrapper = ({
 
         <PricingSection
           {...commonPricingProps}
-          hideSwitchSelector={hideSwitchSelector}
-          onIndividualSwitchToggled={onIndividualSwitchToggled}
-          onBusinessSwitchToggled={onBusinessSwitchToggled}
           darkMode={darkMode}
           differentRecommended={differentRecommended}
           showPromo={showPromo}
@@ -327,8 +286,6 @@ export const PricingSectionWrapper = ({
           onStorageChange={onStorageChange}
           storageSelected={activeStoragePlan}
           hideBillingController={hideBillingController}
-          onIndividualSwitchToggled={onIndividualSwitchToggled}
-          onBusinessSwitchToggled={onBusinessSwitchToggled}
           darkMode={darkMode}
           showPromo={showPromo}
           isValentinesMode={isValentinesMode}
