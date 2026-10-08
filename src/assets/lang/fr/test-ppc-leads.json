@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "Stockage cloud chiffré **gratuit**",
+    "subtitle": "**1 Go gratuit, pour toujours.** Sans carte bancaire.",
+    "SignUp": {
+      "fields": {
+        "email": {
+          "label": "Adresse e-mail",
+          "placeholder": "Adresse e-mail"
+        },
+        "password": {
+          "label": "Mot de passe",
+          "placeholder": "Mot de passe",
+          "show": "Afficher",
+          "hide": "Masquer",
+          "strength": {
+            "complexity": "Le mot de passe n'est pas assez complexe",
+            "length": "Le mot de passe doit contenir au moins 8 caractères",
+            "weak": "Le mot de passe est faible",
+            "strong": "Le mot de passe est fort"
+          }
+        },
+        "submit": "Créer un compte gratuit"
+      },
+      "info": "Internxt ne stocke pas les mots de passe. Si vous l'oubliez, votre clé de secours restaure l'accès à vos fichiers.",
+      "disclaimer": {
+        "text": "En créant un compte, vous acceptez les",
+        "link": "conditions de service et la politique de confidentialité"
+      },
+      "login": {
+        "text": "Vous avez déjà un compte ?",
+        "link": "Se connecter"
+      }
+    }
+  },
+  "ReviewSection": {
+    "forbes": "Internxt consolide sa position en tant qu'alternative européenne aux géants technologiques",
+    "deloitte": "A reçu le prix Deloitte Fast 50, qui récompense les entreprises à la croissance la plus rapide",
+    "techradar": "Un fournisseur de stockage cloud très axé sur la confidentialité et la sécurité",
+    "fortune": "Internxt construit un internet où la confidentialité et la sécurité passent en premier",
+    "trustpilot": "Des tonnes d'espace privé et sécurisé. Excellent support. Vraiment rentable."
+  },
+  "TrustedSection": {
+    "description": "Avec Internxt Free, vous disposez de 1 Go de stockage que vous seul pouvez ouvrir. Pas de publicité, pas d'analyse, aucune condition et votre vie numérique vous appartient."
+  },
+  "FeaturesSection": {
+    "title": "Chiffrement nouvelle génération pour une protection ultime",
+    "description": "Nous protégeons la sécurité et la confidentialité de vos fichiers avec un chiffrement avancé pour nous prémunir contre les menaces émergentes.",
+    "cards": {
+      "titles": [
+        "Données impossibles à pirater et à divulguer",
+        "Sécurité nouvelle génération",
+        "Open source et transparent",
+        "Vérifié indépendamment"
+      ],
+      "descriptions": [
+        "Nous ne stockons pas de mots de passe ni de données utilisateur et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données vous appartiennent. Les protéger, c'est notre affaire.",
+        "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
+        "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par quiconque. Nous n'avons rien à cacher sauf vos données.",
+        "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale société européenne de tests de pénétration, Securitum."
+      ]
+    }
+  },
+  "ChoosePlanSection": {
+    "title": "Commencez gratuitement. Changez d'offre quand vous en avez besoin.",
+    "description": "Vos fichiers et votre chiffrement restent exactement les mêmes.",
+    "freeCard": {
+      "label": "Gratuit",
+      "storage": "1 Go",
+      "price": "{{currency}}0 pour toujours",
+      "features": [
+        "1 Go de stockage chiffré",
+        "Applications web, bureau et mobile",
+        "Partage de fichiers sécurisé",
+        "Chiffrement zero-knowledge"
+      ],
+      "cta": "Créer un compte gratuit"
+    },
+    "premiumCard": {
+      "label": "Premium",
+      "badge": "Remise exclusive",
+      "storage": "1-5 To",
+      "price": "à partir de {{currency}}{{minimumPrice}}/mois",
+      "features": [
+        "1 To, 3 To ou 5 To de stockage",
+        "Suite de confidentialité complète : VPN, Antivirus, Cleaner et plus",
+        "Support client premium",
+        "Garantie satisfait ou remboursé 30 jours"
+      ],
+      "cta": "Profiter de l'offre"
+    },
+    "guarantees": {
+      "premiumSupport": "Support client premium",
+      "moneyBack": "Garantie satisfait ou remboursé 30 jours",
+      "openSource": "Open source et audité"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions fréquentes",
+    "faq": [
+      {
+        "question": "Le plan gratuit est-il vraiment gratuit pour toujours ?",
+        "answer": [
+          "Oui. Internxt Free vous offre 1 Go de stockage cloud chiffré sans frais, sans carte bancaire, sans période d'essai et sans date d'expiration. Vous ne payez que si vous décidez de passer à une offre supérieure."
+        ]
+      },
+      {
+        "question": "Internxt peut-il voir mes fichiers ?",
+        "answer": [
+          "Non. Internxt utilise un chiffrement de bout en bout et zero-knowledge : vos fichiers sont chiffrés sur votre appareil avant même d'atteindre nos serveurs. Nous ne détenons jamais les clés, ce qui signifie que personne chez Internxt, ni aucun tiers, ne peut lire vos données."
+        ]
+      },
+      {
+        "question": "Que se passe-t-il si j'oublie mon mot de passe ?",
+        "answer": [
+          "Internxt ne stocke pas votre mot de passe, nous ne pouvons donc pas le réinitialiser. C'est pourquoi vous recevez une clé de secours à la création de votre compte : conservez-la en lieu sûr et vous pourrez restaurer l'accès à vos fichiers à tout moment."
+        ]
+      },
+      {
+        "question": "Et si j'ai besoin de plus de 1 Go ?",
+        "answer": [
+          "Vous pouvez passer à une offre payante quand vous le souhaitez en conservant le même compte, les mêmes fichiers et le même chiffrement. Les offres Premium d'Internxt vont de 1 To à 5 To et incluent la suite de confidentialité complète avec VPN, Antivirus, Cleaner et plus encore."
+        ]
+      },
+      {
+        "question": "Quels appareils puis-je utiliser ?",
+        "answer": [
+          "Internxt fonctionne dans tout navigateur moderne et propose des applications natives pour Windows, macOS, Linux, Android et iOS, afin que vos fichiers chiffrés restent synchronisés sur tous vos appareils."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Vos fichiers. Vos clés. Gratuit.",
+    "description": "Créez votre compte en moins d'une minute.",
+    "cta": "Obtenir 1 Go gratuit"
+  }
+}
