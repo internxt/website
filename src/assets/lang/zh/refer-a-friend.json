@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "**推荐**朋友，**赚取**高达100欧元",
     "subtitle": "邀请您的朋友试用 Internxt Drive、VPN、Meet 等。当他们购买计划时，您们都会获得奖励。",
-    "features": [
-      "每次推荐可获得高达100欧元",
-      "您的朋友可享受所有计划85%的折扣",
-      "直接将款项支付到您的 PayPal 账户"
-    ],
+    "features": ["每次推荐可获得高达100欧元", "您的朋友可享受所有计划85%的折扣", "直接将款项支付到您的 PayPal 账户"],
     "cta": "邀请朋友"
   },
   "RewardsSection": {
@@ -74,7 +70,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -83,27 +79,19 @@
     "faq": [
       {
         "question": "我在哪里可以找到我的推荐链接？",
-        "answer": [
-          "登录您的 Internxt 帐户 https://drive.internxt.com/login，然后在菜单栏中单击赚取 100 欧元。"
-        ]
+        "answer": ["登录您的 Internxt 帐户 https://drive.internxt.com/login，然后在菜单栏中单击赚取 100 欧元。"]
       },
       {
         "question": "谁有资格进行推荐？",
-        "answer": [
-          "该计划向所有拥有 Internxt 付费计划、账户已创建至少 30 天且已验证电子邮件地址的人开放。"
-        ]
+        "answer": ["该计划向所有拥有 Internxt 付费计划、账户已创建至少 30 天且已验证电子邮件地址的人开放。"]
       },
       {
         "question": "谁有资格获得推荐链接？",
-        "answer": [
-          "任何拥有免费 Internxt 帐户的人都有资格获得任何年度或终身计划 85% 的折扣。"
-        ]
+        "answer": ["任何拥有免费 Internxt 帐户的人都有资格获得任何年度或终身计划 85% 的折扣。"]
       },
       {
         "question": "我能赚多少钱？",
-        "answer": [
-          "根据使用您的链接购买的计划，您每次推荐最高可赚取 100 欧元。"
-        ]
+        "answer": ["根据使用您的链接购买的计划，您每次推荐最高可赚取 100 欧元。"]
       },
       {
         "question": "我可以使用信用卡、PayPal 或加密货币付款吗？",

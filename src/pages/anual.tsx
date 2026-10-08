@@ -114,10 +114,8 @@ function AnualSpecial({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         hidePlanSelectorComponent={true}
-        popularPlanBySize="3TB"
+        popularPlanBySize="2TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
         SectionTag={'h2'}

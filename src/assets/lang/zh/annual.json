@@ -27,12 +27,7 @@
     "description": "Internxt让您重新掌控隐私。与传统云存储不同，我们确保只有您拥有加密数据的密钥，我们不会存储或向第三方出售您的数据。我们采取一切措施确保您的信息保持安全。",
     "cta": "更好地了解我们",
     "cardDescriptions": {
-      "titles": [
-        "不可破解和不可泄露的数据",
-        "下一代安全性",
-        "开源且透明",
-        "独立验证"
-      ],
+      "titles": ["不可破解和不可泄露的数据", "下一代安全性", "开源且透明", "独立验证"],
       "descriptions": [
         "我们不存储密码或用户数据，您的所有数据在传输和静止状态下都经过加密。Internxt让您完全控制文件。您的数据是您的事务。保护它们是我们的责任。",
         "Internxt是唯一自动使用端到端和后量子加密技术加密文件的云存储，这意味着只有您可以访问您的数据。",
@@ -48,7 +43,7 @@
     "cta": "接受邀请"
   },
   "ctaSection2": {
-    "title": "在 Internxt 的年度计划中：我应该选择哪一个？1TB、3TB，还是 5TB？",
+    "title": "在 Internxt 的年度计划中：我应该选择哪一个？1TB、2TB，还是 5TB？",
     "description": "获取您的独家{{discount}}%折扣，享用Internxt隐私套件一整年",
     "descriptionWithoutDisocunt": "使用Internxt体验完整的数字隐私",
     "cta": "选择套餐"
@@ -93,7 +88,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

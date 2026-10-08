@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "Stockage cloud sécurisé pour vos **sauvegardes Home Assistant**",
     "description": "Sauvegardes hors site automatisées à connaissance nulle (zero-knowledge). Conçu en Europe pour une confidentialité et un contrôle des données maximaux.",
-    "features": [
-      "Planifiez vos sauvegardes",
-      "Sauvegardé sur plusieurs serveurs",
-      "Open source et audité"
-    ],
+    "features": ["Planifiez vos sauvegardes", "Sauvegardé sur plusieurs serveurs", "Open source et audité"],
     "guarantee": "Garantie satisfait ou remboursé de 30 jours",
     "claimDeal": "Profiter de l'offre"
   },
@@ -14,31 +10,19 @@
     "title": "Fabriqué en Europe",
     "description": "Vos données sont protégées par les lois et réglementations européennes strictes en matière de conformité, associées à un chiffrement récompensé.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Centres de données européens",
-        "Redondance",
-        "Engagement en faveur du développement durable "
-      ],
+      "titles": ["Centres de données européens", "Redondance", "Engagement en faveur du développement durable "],
       "descriptions": [
         "Internxt est basé à Valence, en Espagne, et nos centres de données sont situés en Europe et dans d'autres endroits du monde, vous offrant sécurité, rapidité et conformité.",
         "Vos fichiers sont protégés par des systèmes redondants, des contrôles environnementaux et une surveillance de sécurité sur site 24h/24 et 7j/7. Quoi qu'il arrive, vos fichiers restent toujours en sécurité et accessibles.",
         "Internxt montre l'exemple en œuvrant pour une solution de stockage cloud plus durable grâce à des pratiques écoénergétiques pour un stockage cloud plus propre."
       ],
-      "cta": [
-        "En savoir plus",
-        "",
-        "En savoir plus"
-      ]
+      "cta": ["En savoir plus", "", "En savoir plus"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +31,7 @@
   "ThreeCardsSection": {
     "title": "Valeurs fondamentales",
     "cards": {
-      "titles": [
-        "Chiffrement Zero-Knowledge",
-        "Restauration fiable",
-        "Priorité à la confidentialité"
-      ],
+      "titles": ["Chiffrement Zero-Knowledge", "Restauration fiable", "Priorité à la confidentialité"],
       "descriptions": [
         "Chiffrement de bout en bout côté client. Vos fichiers de configuration et clés API restent strictement privés.",
         "Conservez une copie hors site sécurisée de vos instantanés HA en cas de panne matérielle ou de problème de mise à jour.",
@@ -63,11 +43,7 @@
     "title": "Fonctionnalités clés de notre stockage cloud sécurisé",
     "description": "Une sécurité complète pour vos données, tout ce dont vous avez besoin pour garder vos fichiers en sécurité et confidentiels",
     "accordionCards": {
-      "titles": [
-        "Un écosystème entièrement privé",
-        "Collaboration sécurisée",
-        "Votre cloud, comme un disque local"
-      ],
+      "titles": ["Un écosystème entièrement privé", "Collaboration sécurisée", "Votre cloud, comme un disque local"],
       "descriptions": [
         "Internxt regroupe le stockage chiffré, les sauvegardes, un VPN, un antivirus, un nettoyeur, Meet, Mail et plus encore — tout pour vous affranchir des Big Tech.",
         "Envoyez des fichiers avec des liens chiffrés, des mots de passe et des contrôles d'accès. Travaillez avec votre équipe en temps réel tout en préservant la confidentialité des données.",
@@ -75,11 +51,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "Chiffré de bout en bout",
-        "Contrôles d'accès",
-        "Sauvegardes chiffrées"
-      ],
+      "titles": ["Chiffré de bout en bout", "Contrôles d'accès", "Sauvegardes chiffrées"],
       "descriptions": [
         "Tous les fichiers sont chiffrés avec un chiffrement post-quantique et à connaissance nulle. Personne d'autre que vous, ou les personnes avec lesquelles vous partagez vos fichiers, ne peut en voir le contenu.",
         "Vous contrôlez exactement qui peut accéder à vos fichiers partagés grâce à des liens chiffrés et protégés par mot de passe que vous pouvez révoquer à tout moment.",
@@ -128,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

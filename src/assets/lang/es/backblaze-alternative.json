@@ -66,11 +66,7 @@
     "title": "Por qué necesitas una alternativa a Backblaze",
     "description": "Internxt ofrece almacenamiento de objetos S3 europeo y cumple con múltiples regulaciones de cumplimiento para ofrecer privacidad y seguridad total para empresas y organizaciones.",
     "cards": {
-      "titles": [
-        "Configuración compleja",
-        "Costos ocultos e impredecibles",
-        "Descargas costosas"
-      ],
+      "titles": ["Configuración compleja", "Costos ocultos e impredecibles", "Descargas costosas"],
       "descriptions": [
         "Configurar el almacenamiento en Backblaze implica navegar por múltiples paneles y sistemas de seguridad. Los usuarios deben gestionar manualmente roles, reglas de acceso y cifrado. Las tareas simples a menudo requieren conocimientos técnicos, lo que dificulta la plataforma para los principiantes y ralentiza el desarrollo.",
         "Backblaze cobra por separado el almacenamiento, las solicitudes, la transferencia de datos, la monitorización, las copias de seguridad y las funciones de seguridad. Estas pequeñas tarifas se acumulan rápidamente y son difíciles de rastrear. Cualquier aumento en el tráfico o uso puede causar grandes picos en las facturas, haciendo que el presupuesto a largo plazo no sea confiable para las empresas.",
@@ -130,12 +126,7 @@
     "title": "Por qué Internxt S3 es la mejor alternativa a Backblaze",
     "description": "El almacenamiento de objetos en la nube de Internxt ofrece almacenamiento S3 asequible para un acceso rápido a grandes cantidades de datos.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Almacenamiento seguro y duradero",
         "Acceso instantáneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

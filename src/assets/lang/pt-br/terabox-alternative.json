@@ -48,7 +48,12 @@
     "title": "O Terabox rastreia, compartilha e monitora seus dados. A Internxt os protege.",
     "description": "O Terabox pode ser seguro, mas é um pesadelo para a sua privacidade. Mude para a Internxt e tenha segurança total para seus documentos, vídeos e fotos.",
     "scrollableSection": {
-      "titles": ["Coleta extensa de dados", "Anúncios integrados", "Contas de usuários excluídas", "Velocidades limitadas"],
+      "titles": [
+        "Coleta extensa de dados",
+        "Anúncios integrados",
+        "Contas de usuários excluídas",
+        "Velocidades limitadas"
+      ],
       "descriptions": [
         "O TeraBox coleta dados sensíveis, incluindo informações da conta, metadados e dados do dispositivo. Como gerencia as chaves de criptografia, tecnicamente pode acessar seus dados para prestação do serviço e conformidade.",
         "O Terabox exibe anúncios para usuários gratuitos, o que exige coleta de dados. Isso significa que sua atividade e seus padrões de uso podem ser rastreados e compartilhados com anunciantes para gerar lucro.",
@@ -159,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

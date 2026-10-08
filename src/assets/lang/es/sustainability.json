@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Renovables",
         "description": "Esto se refiere al porcentaje de tarifas de Factor de Energía Renovable (REF) utilizadas en nuestros centros de datos.",
-        "value": "92%",
+        "value": "100%",
         "unit": "REF"
       }
     }

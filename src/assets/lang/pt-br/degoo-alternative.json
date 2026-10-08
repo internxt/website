@@ -48,12 +48,7 @@
     "title": "O Degoo não tem transparência. A Internxt protege a sua privacidade.",
     "description": "O Degoo mantém seu código-fonte oculto e não publica auditorias de segurança. Mude para a Internxt e tenha segurança e transparência totais para seus arquivos, vídeos e fotos. Com a Internxt, ninguém além de você pode acessar seus arquivos, nem mesmo nós.",
     "scrollableSection": {
-      "titles": [
-        "Código fechado",
-        "Nenhuma auditoria publicada",
-        "Exclusões de contas",
-        "Privacidade paga"
-      ],
+      "titles": ["Código fechado", "Nenhuma auditoria publicada", "Exclusões de contas", "Privacidade paga"],
       "descriptions": [
         "O Degoo mantém seu código-fonte oculto do público. Sem transparência, não há como saber com certeza como o Degoo trata ou protege seus dados.",
         "Diferentemente da Internxt, o Degoo não publicou nenhuma auditoria de segurança independente, deixando os usuários sem certeza sobre a segurança da plataforma.",
@@ -66,11 +61,7 @@
     "title": "Por que você precisa de uma alternativa privada ao Degoo",
     "description": "O que o Degoo demonstra em segurança básica ele falha em privacidade e transparência. Para privacidade total, tenha segurança completa combinada com a criptografia de conhecimento zero da Internxt.",
     "cards": {
-      "titles": [
-        "Privacidade",
-        "Conhecimento zero apenas para planos pagos",
-        "Confiabilidade da conta"
-      ],
+      "titles": ["Privacidade", "Conhecimento zero apenas para planos pagos", "Confiabilidade da conta"],
       "descriptions": [
         "Os planos gratuitos do Degoo não têm criptografia de conhecimento zero, o que significa que seus arquivos são menos privados. Na Internxt, todos os planos incluem criptografia de conhecimento zero, sem rastreadores, sem varredura por IA e sem portas dos fundos ocultas. A Internxt não consegue ler seus arquivos, então suas fotos, documentos e vídeos permanecem privados.",
         "Com o Degoo, a criptografia de conhecimento zero só está disponível nos planos pagos, deixando os usuários gratuitos expostos. A Internxt oferece criptografia pós-quântica e de conhecimento zero para todos os usuários, inclusive contas gratuitas, garantindo que seus dados estejam sempre protegidos.",
@@ -130,23 +121,8 @@
     "title": "A melhor alternativa ao Degoo é a Internxt",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "Drive",
-        "Terminal",
-        "antivirus",
-        "cleaner",
-        "hero",
-        "meet",
-        "vpn"
-      ],
-      "titles": [
-        "Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Drive vem com criptografia pós-quântica e de conhecimento zero, para que ninguém além de você possa acessar seus arquivos. Tenha armazenamento na nuvem e backups criptografados para suas fotos, vídeos e arquivos. \n\n Além disso, os backups criptografados e o compartilhamento de arquivos protegido por senha oferecem proteção máxima contra ransomware e vazamentos de dados.",
         "O Internxt Antivirus vem integrado diretamente ao aplicativo do Internxt Drive para oferecer controle total e proteção contra malware. Faça verificações completas ou personalizadas para manter seu dispositivo funcionando bem e protegido contra vírus como ransomware e spyware.",
@@ -184,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

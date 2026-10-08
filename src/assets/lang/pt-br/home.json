@@ -46,11 +46,7 @@
     },
     "description": "Ganhe {{discount}}% de desconto",
     "descriptionNormal": "em todos os planos",
-    "features": [
-      "Suíte completa de privacidade",
-      "Criptografia pós-quântica",
-      "Código aberto e auditado"
-    ],
+    "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "giftDescription": {
       "line1": "Participe do nosso sorteio de Natal e ganhe até € 1000!",
       "line2": "Junte-se à Internxt nesta temporada e participe do nosso sorteio de vale-presente de Natal"
@@ -102,7 +98,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -48,12 +48,7 @@
     "title": "O ElephantDrive carece de transparência. A Internxt protege sua privacidade.",
     "description": "O ElephantDrive mantém seu código-fonte oculto e não tem auditorias de segurança publicadas. Nem todos os arquivos são protegidos por criptografia de ponta a ponta por padrão. Mude para a Internxt e tenha segurança e transparência totais para seus arquivos, vídeos e fotos. Com a Internxt, ninguém além de você pode acessar seus arquivos, nem mesmo nós.",
     "scrollableSection": {
-      "titles": [
-        "Código fechado",
-        "Sem auditoria publicada",
-        "Não é totalmente criptografado",
-        "Servidores nos EUA"
-      ],
+      "titles": ["Código fechado", "Sem auditoria publicada", "Não é totalmente criptografado", "Servidores nos EUA"],
       "descriptions": [
         "O ElephantDrive mantém seu código-fonte oculto do público. Sem transparência nem auditoria de segurança independente, não há como saber com certeza como o ElephantDrive trata ou protege seus dados.",
         "Diferente da Internxt, o ElephantDrive não publicou nenhuma auditoria de segurança independente, deixando os usuários sem certeza sobre a segurança da plataforma.",
@@ -165,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

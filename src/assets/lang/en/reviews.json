@@ -2,11 +2,7 @@
   "heroSection": {
     "title": "What people are **saying** about Internxt",
     "subtitle": "Find out why people trust Internxt with their data",
-    "features": [
-      "Complete privacy suite",
-      "Post-quantum encryption",
-      "Open source and audited"
-    ],
+    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "cta": "Get Internxt"
   },
   "ReviewSection": {
@@ -61,11 +57,7 @@
         "Internxt is an excellent cloud storage service due to its affordable pricing plans, intuitive interface, and reliable support. It excels in security measures and commitment to privacy, making it a top choice.",
         "Internxt is a privacy-focused cloud storage solution offering client-side encryption, post-quantum security, open-source software, and EU-based servers, delivering secure and compliant storage at an excellent value."
       ],
-      "authors": [
-        "Jon Jacobi - {{company}}",
-        "Craig Hale - {{company}}",
-        "Aleksandar Kochovski - {{company}}"
-      ]
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
     },
     "readMore": "Read more reviews on Trustpilot"
   },
@@ -92,7 +84,7 @@
     "description": "Join 1,000,000 happy users who moved away from Big Tech",
     "cta": "Get Internxt"
   },
-    "tableSection": {
+  "tableSection": {
     "title": "Internxt Plans",
     "valentinesTitle": "Secure love - ",
     "hotLabel": "{{discount}}% off",
@@ -133,7 +125,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

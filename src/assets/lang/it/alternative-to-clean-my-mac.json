@@ -66,11 +66,7 @@
     "title": "Funzionalità",
     "description": "",
     "cards": {
-      "titles": [
-        "Open source e auditato",
-        "Suite completa di prodotti",
-        "Piani convenienti"
-      ],
+      "titles": ["Open source e auditato", "Suite completa di prodotti", "Piani convenienti"],
       "descriptions": [
         "Internxt è completamente open source e auditato in modo indipendente, garantendo l'assenza di backdoor.",
         "Internxt offre Cleaner e un ecosistema completo per pulire, archiviare e condividere i tuoi file con crittografia zero-knowledge.",
@@ -130,22 +126,8 @@
     "title": "Perché Internxt è la migliore alternativa a CleanMyMac",
     "description": "Internxt offre una suite completa per offrirti un'alternativa sicura ai tradizionali strumenti di pulizia.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Strumenti avanzati"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
       "descriptions": [
         "Archiviazione cloud sicura con crittografia zero-knowledge e post-quantum.",
         "Protezione integrata contro malware e ransomware con scansioni complete.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,21 +181,15 @@
       },
       {
         "question": "Dove ha sede Internxt?",
-        "answer": [
-          "Internxt ha sede a Valencia, in Spagna, rispettando rigorosamente il GDPR."
-        ]
+        "answer": ["Internxt ha sede a Valencia, in Spagna, rispettando rigorosamente il GDPR."]
       },
       {
         "question": "Come contattare il supporto?",
-        "answer": [
-          "Contatta hello@internxt.com e il nostro team ti aiuterà volentieri."
-        ]
+        "answer": ["Contatta hello@internxt.com e il nostro team ti aiuterà volentieri."]
       },
       {
         "question": "Posso pagare con carta di credito?",
-        "answer": [
-          "Sì, accettiamo carte, PayPal, criptovalute e Klarna."
-        ]
+        "answer": ["Sì, accettiamo carte, PayPal, criptovalute e Klarna."]
       }
     ]
   }
