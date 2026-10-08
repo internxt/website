@@ -6,17 +6,20 @@ import { SwitchStorageBusinessOptions } from '@/components/shared/pricing/compon
 export const usePlanSelection = (
   initialPlan: SwitchButtonOptions,
   initialStorage: SwitchStorageOptions,
-  initialBusinessStorage: SwitchStorageBusinessOptions,
   initialInterval: Interval,
-  initialIntervalForBusiness: Interval,
   setPageName?: (pageName: string) => void,
+  initialBusinessStorage?: SwitchStorageBusinessOptions,
+  initialIntervalForBusiness?: Interval,
 ) => {
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>(initialPlan);
   const [billingFrequency, setBillingFrequency] = useState<Interval>(initialInterval);
-  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(initialIntervalForBusiness);
+  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(
+    initialIntervalForBusiness as Interval,
+  );
   const [activeStoragePlan, setAactiveStoragePlan] = useState<SwitchStorageOptions>(initialStorage);
-  const [activeBusinessStoragePlan, setBusinessAactiveStoragePlan] =
-    useState<SwitchStorageBusinessOptions>(initialBusinessStorage);
+  const [activeBusinessStoragePlan, setBusinessAactiveStoragePlan] = useState<SwitchStorageBusinessOptions>(
+    initialBusinessStorage as SwitchStorageBusinessOptions,
+  );
 
   const onPlanTypeChange = (plan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(plan);

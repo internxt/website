@@ -209,10 +209,10 @@ export const PricingSectionWrapper = ({
   const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
-    startFromBusinessStorage,
     startIndividualPlansFromInterval,
-    startBusinessPlansFromInterval,
     handlePageNameUpdate,
+    startFromBusinessStorage,
+    startBusinessPlansFromInterval,
   );
   const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
   const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
