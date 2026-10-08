@@ -392,6 +392,8 @@ export enum PromoCodeName {
   dysk = 'DYSK',
   recoon = 'RECOON',
   lazyassassin = 'LAZYASSASSIN',
+  loco = 'LOCO',
+  technouplift = 'TECHNOUPLIFT',
 }
 
 export interface PromoCodeProps {
