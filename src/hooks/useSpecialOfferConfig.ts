@@ -178,6 +178,7 @@ export const ALLOWED_PATHS = [
   'recoon',
   'lazyassassin',
   'loco',
+  'technouplift',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -453,6 +454,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'recoon',
   'lazyassassin',
   'loco',
+  'technouplift',
 ]);
 
 export const COUPON_CODES = {
@@ -631,6 +633,7 @@ export const COUPON_CODES = {
   recoon: PromoCodeName.recoon,
   lazyassassin: PromoCodeName.lazyassassin,
   loco: PromoCodeName.loco,
+  technouplift: PromoCodeName.technouplift,
 };
 
 interface OfferConfig {
