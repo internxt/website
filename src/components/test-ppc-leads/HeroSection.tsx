@@ -29,7 +29,7 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
       className="flex w-full flex-col items-center justify-center gap-8 overflow-hidden px-5 pb-10 pt-28 lg:mt-10 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-20 xl:px-32 3xl:px-80"
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
-      <div className="flex w-full flex-col gap-8 lg:min-w-0 lg:max-w-[680px] lg:flex-1">
+      <div className="flex w-full flex-col gap-8 lg:min-w-0 lg:max-w-[760px] lg:flex-1">
         <div className="flex flex-col gap-3">
           <h1 className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
             <HighlightText text={textContent.title} />
@@ -45,7 +45,7 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
         </div>
       </div>
 
-      <div className="flex w-full min-w-0 flex-1 items-center justify-center">
+      <div className="flex w-full min-w-0 flex-1 items-center justify-center lg:justify-end">
         <Image
           src={getImage('/images/home/NewDesign/mockup.png')}
           alt="Internxt Drive web app"
