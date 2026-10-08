@@ -74,7 +74,7 @@ export const ChoosePlanSection = ({
       )}
       <div className="flex w-full max-w-[1000px] flex-col items-center gap-10 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center">
-          <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</h2>
           <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{textContent.description}</p>
         </div>
 
