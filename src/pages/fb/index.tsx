@@ -99,8 +99,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         popularPlanBySize="2TB"
         sectionDetails="bg-white lg:py-20 xl:py-32"
         freePlanNeedsH2

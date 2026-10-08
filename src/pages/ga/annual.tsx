@@ -84,8 +84,6 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         popularPlanBySize="2TB"

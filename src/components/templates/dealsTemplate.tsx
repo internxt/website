@@ -19,8 +19,6 @@ interface DealsConfig {
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;
   popularPlanSize?: string;
-  hideBusinessCards?: boolean;
-  hideBusinessSelector?: boolean;
   moreDealsUrls: {
     card1: string;
     card2: string;
@@ -123,8 +121,6 @@ const DealsTemplate = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards={config.hideBusinessCards ?? true}
-        hideBusinessSelector={config.hideBusinessSelector ?? true}
         popularPlanBySize={config.popularPlanSize || '2TB'}
         sectionDetails="lg:py-20"
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"

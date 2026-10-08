@@ -208,8 +208,6 @@ export const CloudStorageBackupSolutionsTemplate = ({
             products={products}
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
-            hideBusinessCards
-            hideBusinessSelector
             popularPlanBySize="5TB"
             sectionDetails="bg-white lg:py-20"
             hideFreeCard
