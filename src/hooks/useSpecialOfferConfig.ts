@@ -182,6 +182,9 @@ export const ALLOWED_PATHS = [
   'technobaazi',
   'salvaje',
   'manguman',
+  'techbot',
+  'juan',
+  'pietro',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -267,6 +270,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   claridadartificial: 'es',
   loco: 'es',
   salvaje: 'es',
+  juan: 'es',
 
   // fr
   benjamin: 'fr',
@@ -292,6 +296,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   saddy: 'it',
   speciale: 'it',
   gian: 'it',
+  pietro: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -463,6 +468,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'technobaazi',
   'salvaje',
   'manguman',
+  'techbot',
+  'juan',
+  'pietro',
 ]);
 
 export const COUPON_CODES = {
@@ -645,6 +653,9 @@ export const COUPON_CODES = {
   technobaazi: PromoCodeName.technobaazi,
   salvaje: PromoCodeName.salvaje,
   manguman: PromoCodeName.manguman,
+  techbot: PromoCodeName.techbot,
+  juan: PromoCodeName.juan,
+  pietro: PromoCodeName.pietro,
 };
 
 interface OfferConfig {
