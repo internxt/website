@@ -752,7 +752,7 @@ export default function Footer({
 
             {/* Logos */}
             <div className="flex w-full flex-row justify-between">
-              <div className="flex flex-row gap-10">
+              <div className="flex flex-row items-center gap-10">
                 <a href="/Certificado ENS ALTA_signed.pdf" target="_blank" rel="noopener noreferrer">
                   <Image
                     src={getImage('/images/footer/distintivo_ens_certificacion_ALTA_RD311-2022.jpg')}

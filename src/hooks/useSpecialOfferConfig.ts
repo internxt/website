@@ -179,6 +179,9 @@ export const ALLOWED_PATHS = [
   'lazyassassin',
   'loco',
   'technouplift',
+  'technobaazi',
+  'salvaje',
+  'manguman',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -263,6 +266,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   xataka: 'es',
   claridadartificial: 'es',
   loco: 'es',
+  salvaje: 'es',
 
   // fr
   benjamin: 'fr',
@@ -324,6 +328,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'themorpheus',
   'thelinuxexp',
   'simon42',
+  'ition',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -455,6 +460,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'lazyassassin',
   'loco',
   'technouplift',
+  'technobaazi',
+  'salvaje',
+  'manguman',
 ]);
 
 export const COUPON_CODES = {
@@ -634,6 +642,9 @@ export const COUPON_CODES = {
   lazyassassin: PromoCodeName.lazyassassin,
   loco: PromoCodeName.loco,
   technouplift: PromoCodeName.technouplift,
+  technobaazi: PromoCodeName.technobaazi,
+  salvaje: PromoCodeName.salvaje,
+  manguman: PromoCodeName.manguman,
 };
 
 interface OfferConfig {
