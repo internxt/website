@@ -394,6 +394,9 @@ export enum PromoCodeName {
   lazyassassin = 'LAZYASSASSIN',
   loco = 'LOCO',
   technouplift = 'TECHNOUPLIFT',
+  technobaazi = 'TECHNOBAAZI',
+  salvaje = 'SALVAJE',
+  manguman = 'MANGUMAN',
 }
 
 export interface PromoCodeProps {
