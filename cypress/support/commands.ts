@@ -10,7 +10,7 @@ export {};
 
 import { getLatestReleaseInfo } from '../../src/lib/github';
 
-const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
+const DRIVE_WEB_URL = Cypress.config('env').DRIVE_WEB_URL;
 
 type Interval = 'Individual' | 'Lifetime';
 
