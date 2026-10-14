@@ -401,6 +401,7 @@ export enum PromoCodeName {
   juan = 'JUAN',
   pietro = 'PIETRO',
   adslzone87 = 'ADSLZONE87',
+  sonu = 'SONU',
 }
 
 export interface PromoCodeProps {

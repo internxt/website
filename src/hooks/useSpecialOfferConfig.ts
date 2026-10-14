@@ -186,6 +186,7 @@ export const ALLOWED_PATHS = [
   'juan',
   'pietro',
   'adslzone87',
+  'sonu',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -474,6 +475,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'juan',
   'pietro',
   'adslzone87',
+  'sonu',
 ]);
 
 export const COUPON_CODES = {
@@ -660,6 +662,7 @@ export const COUPON_CODES = {
   juan: PromoCodeName.juan,
   pietro: PromoCodeName.pietro,
   adslzone87: PromoCodeName.adslzone87,
+  sonu: PromoCodeName.sonu,
 };
 
 interface OfferConfig {
