@@ -191,6 +191,7 @@ export const ALLOWED_PATHS = [
   'tdes85',
   'tdit85',
   'tdpt85',
+  '5tblastcall',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -489,6 +490,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tdes85',
   'tdit85',
   'tdpt85',
+  '5tblastcall',
 ]);
 
 export const COUPON_CODES = {
@@ -680,6 +682,7 @@ export const COUPON_CODES = {
   tdes85: PromoCodeName.tdes85,
   tdit85: PromoCodeName.tdit85,
   tdpt85: PromoCodeName.tdpt85,
+  '5tblastcall': PromoCodeName.ftblastcall,
 };
 
 interface OfferConfig {
