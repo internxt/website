@@ -188,6 +188,9 @@ export const ALLOWED_PATHS = [
   'adslzone87',
   'sonu',
   'tse87',
+  'tdes85',
+  'tdit85',
+  'tdpt85',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -275,6 +278,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   salvaje: 'es',
   juan: 'es',
   adslzone87: 'es',
+  tdes85: 'es',
 
   // fr
   benjamin: 'fr',
@@ -301,12 +305,16 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   speciale: 'it',
   gian: 'it',
   pietro: 'it',
+  tdit85: 'it',
 
   // zh
   madmoneylabs: 'zh',
 
   // zh-tw
   ahui: 'zh-tw',
+
+  //pt-br
+  tdpt85: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -477,7 +485,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'pietro',
   'adslzone87',
   'sonu',
-  'tse87'
+  'tse87',
+  'tdes85',
+  'tdit85',
+  'tdpt85',
 ]);
 
 export const COUPON_CODES = {
@@ -666,6 +677,9 @@ export const COUPON_CODES = {
   adslzone87: PromoCodeName.adslzone87,
   sonu: PromoCodeName.sonu,
   tse87: PromoCodeName.tse87,
+  tdes85: PromoCodeName.tdes85,
+  tdit85: PromoCodeName.tdit85,
+  tdpt85: PromoCodeName.tdpt85,
 };
 
 interface OfferConfig {
