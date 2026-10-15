@@ -8,9 +8,9 @@ export enum Campaign {
 }
 
 const CAMPAIGN_SUFFIXES = {
-  [Campaign.Campaign2]: 'CMPGN',
-  [Campaign.BlackFriday]: 'BLKFRD',
-  [Campaign.CyberWeek]: 'CYBRWK',
+  [Campaign.Campaign2]: 'CM87',
+  [Campaign.BlackFriday]: 'BF90',
+  [Campaign.CyberWeek]: 'CW90',
   [Campaign.Test]: 'TEST',
 } as const;
 
