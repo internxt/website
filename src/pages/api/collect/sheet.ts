@@ -11,7 +11,10 @@ interface SheetPayload {
   currency?: string;
   timestamp: string;
   captcha: string;
+  marketingConsent?: string;
 }
+
+const MARKETING_CONSENT_VALUES = ['granted', 'denied'];
 
 const GOOGLE_RECAPTCHA_V3_ENDPOINT = process.env.RECAPTCHA_V3_ENDPOINT as string;
 
@@ -57,7 +60,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
 
-  const { gclid, name, value, currency = 'EUR', timestamp, captcha }: SheetPayload = JSON.parse(req.body);
+  const {
+    gclid,
+    name,
+    value,
+    currency = 'EUR',
+    timestamp,
+    captcha,
+    marketingConsent,
+  }: SheetPayload = JSON.parse(req.body);
 
   if (!gclid || !name || !value || !timestamp) {
     return res.status(400).send({ message: 'Missing required fields' });
@@ -87,6 +98,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       value,
       currency,
       timestamp,
+      ...(marketingConsent && MARKETING_CONSENT_VALUES.includes(marketingConsent) && { marketingConsent }),
     });
 
     return res.status(200).send({ message: 'Data sent successfully' });
