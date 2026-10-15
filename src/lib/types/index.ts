@@ -400,6 +400,9 @@ export enum PromoCodeName {
   techbot = 'TECHBOT',
   juan = 'JUAN',
   pietro = 'PIETRO',
+  adslzone87 = 'ADSLZONE87',
+  sonu = 'SONU',
+  tse87 = 'TSE87',
 }
 
 export interface PromoCodeProps {

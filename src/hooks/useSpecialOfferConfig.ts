@@ -185,6 +185,9 @@ export const ALLOWED_PATHS = [
   'techbot',
   'juan',
   'pietro',
+  'adslzone87',
+  'sonu',
+  'tse87',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -271,6 +274,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   loco: 'es',
   salvaje: 'es',
   juan: 'es',
+  adslzone87: 'es',
 
   // fr
   benjamin: 'fr',
@@ -471,6 +475,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'techbot',
   'juan',
   'pietro',
+  'adslzone87',
+  'sonu',
+  'tse87'
 ]);
 
 export const COUPON_CODES = {
@@ -656,6 +663,9 @@ export const COUPON_CODES = {
   techbot: PromoCodeName.techbot,
   juan: PromoCodeName.juan,
   pietro: PromoCodeName.pietro,
+  adslzone87: PromoCodeName.adslzone87,
+  sonu: PromoCodeName.sonu,
+  tse87: PromoCodeName.tse87,
 };
 
 interface OfferConfig {
