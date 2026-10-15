@@ -282,6 +282,26 @@ function appendScriptInHead(e) {
     c.type === e && $('head').append(c.value);
   });
 }
+
+var MARKETING_CONSENT_COOKIE = 'marketingConsent';
+
+function getMarketingConsentCookieAttributes() {
+  var isInternxtDomain = /(^|\.)internxt\.com$/.test(window.location.hostname);
+  return '; path=/' + (isInternxtDomain ? '; domain=.internxt.com; Secure' : '');
+}
+
+function setMarketingConsentCookie(value) {
+  var expires = new Date();
+  expires.setTime(expires.getTime() + config.expires * 24 * 60 * 60 * 1e3);
+  var cookie = MARKETING_CONSENT_COOKIE + '=' + value + '; expires=' + expires.toUTCString();
+  document.cookie = cookie + getMarketingConsentCookieAttributes();
+}
+
+function clearMarketingConsentCookie() {
+  document.cookie =
+    MARKETING_CONSENT_COOKIE + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT' + getMarketingConsentCookieAttributes();
+}
+
 var injectScripts = function () {
   appendScriptInHead('analytics');
   appendScriptInHead('marketing');
@@ -309,6 +329,8 @@ var injectScripts = function () {
     ad_user_data: isMarketing ? 'granted' : 'denied',
     ad_personalization: isMarketing ? 'granted' : 'denied',
   });
+
+  setMarketingConsentCookie(isMarketing ? 'granted' : 'denied');
 };
 
 !(function (e) {
@@ -319,6 +341,7 @@ var injectScripts = function () {
     var c = i('cookieConsent');
     if (c) injectScripts();
     else {
+      clearMarketingConsentCookie();
       e('#cookieBanner').remove();
       var n =
         '<li><input type="checkbox" name="gdprPrefItem" value="necessary" checked="checked" disabled="disabled" data-compulsory="on"> <label title="' +
@@ -410,7 +433,9 @@ var injectScripts = function () {
           e('#cookieBanner').remove();
         }),
         e('body').on('click', '#cookieReject', function () {
-          r(!1, config.expires), t('cookieConsentPrefs', '', { expires: o(-365), path: '/' });
+          r(!1, config.expires),
+            t('cookieConsentPrefs', '', { expires: o(-365), path: '/' }),
+            setMarketingConsentCookie('denied');
         });
     }
   };
