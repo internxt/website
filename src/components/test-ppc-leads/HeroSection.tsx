@@ -5,6 +5,7 @@ import { getImage } from '@/lib/getImage';
 import { HighlightText } from '@/components/components/HighlightText';
 import { HeroSection as HeroSectionText } from '@/assets/types/test-ppc-leads';
 import SignUpForm from '@/components/shared/SignUpForm';
+import metaService from '@/services/meta.service';
 
 interface HeroSectionProps {
   textContent: HeroSectionText;
@@ -21,6 +22,8 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
       { email, locale: lang, landing: LANDING_NAME },
       { timeout: LEAD_REQUEST_TIMEOUT },
     );
+
+    metaService.trackPpcLead({ landing: LANDING_NAME, locale: lang });
   };
 
   return (
