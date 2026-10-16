@@ -143,7 +143,7 @@ let activeCampaign: Promise<Campaign | undefined> | undefined;
 
 function fetchActiveCampaign(): Promise<Campaign | undefined> {
   activeCampaign ??= axios
-    .get(`${window.origin}/api/stripe/get_active_campaign`, {
+    .get(`${window.origin}/api/get_active_campaign`, {
       params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone },
     })
     .then(({ data }) => (isCampaign(data?.campaign) ? data.campaign : undefined))
