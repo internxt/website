@@ -4,7 +4,6 @@ declare global {
   interface Window {
     analytics: any;
     gtag: any;
-    fbq: any;
     _mtm: any;
     snigelPubConf: any;
     grecaptcha: {

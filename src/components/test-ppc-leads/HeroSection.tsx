@@ -5,7 +5,7 @@ import { getImage } from '@/lib/getImage';
 import { HighlightText } from '@/components/components/HighlightText';
 import { HeroSection as HeroSectionText } from '@/assets/types/test-ppc-leads';
 import SignUpForm from '@/components/shared/SignUpForm';
-import metaService from '@/services/meta.service';
+import { analyticsService } from '@/services/ga.services';
 
 interface HeroSectionProps {
   textContent: HeroSectionText;
@@ -14,6 +14,7 @@ interface HeroSectionProps {
 
 const LANDING_NAME = 'test-ppc-leads';
 const LEAD_REQUEST_TIMEOUT = 3000;
+const LEAD_EVENT = 'ppc_lead';
 
 export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const registerLead = async (email: string) => {
@@ -23,7 +24,7 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
       { timeout: LEAD_REQUEST_TIMEOUT },
     );
 
-    metaService.trackPpcLead({ landing: LANDING_NAME, locale: lang });
+    analyticsService.trackCustomEvent(LEAD_EVENT, { landing: LANDING_NAME, locale: lang });
   };
 
   return (
