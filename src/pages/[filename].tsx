@@ -80,6 +80,7 @@ function CombinedSpecialOffer({
     isBpdrive,
     isPrivacyTutor,
     requireAnnualDiscount,
+    redirectToUrgentCheckout,
   } = useOfferConfig(pathname);
 
   const {
@@ -141,6 +142,7 @@ function CombinedSpecialOffer({
       interval,
       storage,
       couponCodeForCheckout?.name,
+      redirectToUrgentCheckout,
     );
   };
 
