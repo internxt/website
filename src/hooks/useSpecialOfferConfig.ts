@@ -351,6 +351,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -694,6 +695,7 @@ interface OfferConfig {
   onlyUltimatePlan: boolean;
   ultimateAndPremiumPlans: boolean;
   annualPlans: boolean;
+  annualFirstPlans: boolean;
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
@@ -716,6 +718,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         onlyUltimatePlan: false,
         ultimateAndPremiumPlans: false,
         annualPlans: false,
+        annualFirstPlans: false,
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
@@ -731,6 +734,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);
     const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
+    const annualFirstPlans = ANNUAL_FIRST_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
@@ -751,6 +755,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       onlyUltimatePlan,
       ultimateAndPremiumPlans,
       annualPlans,
+      annualFirstPlans,
       lifetimePlans,
       isClubic,
       isWpcdrive,
