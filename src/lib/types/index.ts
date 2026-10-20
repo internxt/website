@@ -405,7 +405,11 @@ export enum PromoCodeName {
   adslzone87 = 'ADSLZONE87',
   sonu = 'SONU',
   tse87 = 'TSE87',
-  yu = 'YU',
+  tdes85 = 'TDES85',
+  tdit85 = 'TDIT85',
+  tdpt85 = 'TDPT85',
+  ftblastcall = '5TBLASTCALL',
+  naseros = 'NASEROS',
 }
 
 export interface PromoCodeProps {
