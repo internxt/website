@@ -192,6 +192,7 @@ export const ALLOWED_PATHS = [
   'tdit85',
   'tdpt85',
   '5tblastcall',
+  'naseros',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -280,6 +281,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   juan: 'es',
   adslzone87: 'es',
   tdes85: 'es',
+  naseros: 'es',
 
   // fr
   benjamin: 'fr',
@@ -351,6 +353,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -491,6 +494,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tdit85',
   'tdpt85',
   '5tblastcall',
+  'naseros',
 ]);
 
 export const COUPON_CODES = {
@@ -683,6 +687,7 @@ export const COUPON_CODES = {
   tdit85: PromoCodeName.tdit85,
   tdpt85: PromoCodeName.tdpt85,
   '5tblastcall': PromoCodeName.ftblastcall,
+  naseros: PromoCodeName.naseros,
 };
 
 interface OfferConfig {
@@ -694,6 +699,7 @@ interface OfferConfig {
   onlyUltimatePlan: boolean;
   ultimateAndPremiumPlans: boolean;
   annualPlans: boolean;
+  annualFirstPlans: boolean;
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
@@ -716,6 +722,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         onlyUltimatePlan: false,
         ultimateAndPremiumPlans: false,
         annualPlans: false,
+        annualFirstPlans: false,
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
@@ -731,6 +738,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);
     const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
+    const annualFirstPlans = ANNUAL_FIRST_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
@@ -751,6 +759,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       onlyUltimatePlan,
       ultimateAndPremiumPlans,
       annualPlans,
+      annualFirstPlans,
       lifetimePlans,
       isClubic,
       isWpcdrive,
