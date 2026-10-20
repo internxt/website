@@ -192,6 +192,7 @@ export const ALLOWED_PATHS = [
   'tdit85',
   'tdpt85',
   '5tblastcall',
+  'naseros',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -280,6 +281,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   juan: 'es',
   adslzone87: 'es',
   tdes85: 'es',
+  naseros: 'es',
 
   // fr
   benjamin: 'fr',
@@ -491,6 +493,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tdit85',
   'tdpt85',
   '5tblastcall',
+  'naseros',
 ]);
 
 export const COUPON_CODES = {
@@ -683,6 +686,7 @@ export const COUPON_CODES = {
   tdit85: PromoCodeName.tdit85,
   tdpt85: PromoCodeName.tdpt85,
   '5tblastcall': PromoCodeName.ftblastcall,
+  naseros: PromoCodeName.naseros,
 };
 
 interface OfferConfig {
