@@ -3,7 +3,7 @@ import bytes from 'bytes';
 import { currency as CURRENCY_MAP, currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
-import { Campaign, ResolvedPromoCode, applyCampaign, isCampaign } from '@/lib/helpers/campaigns';
+import { ActiveCampaigns, ResolvedPromoCode, applyCampaign, hasEarlyRelease, isCampaign } from '@/lib/helpers/campaigns';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
 import { analyticsService } from './ga.services';
 
@@ -139,17 +139,20 @@ async function getSelectedPrice(
   return selectedPrice;
 }
 
-let activeCampaign: Promise<Campaign | undefined> | undefined;
+let activeCampaigns: Promise<ActiveCampaigns> | undefined;
 
-function fetchActiveCampaign(): Promise<Campaign | undefined> {
-  activeCampaign ??= axios
+function fetchActiveCampaigns(): Promise<ActiveCampaigns> {
+  activeCampaigns ??= axios
     .get(`${window.origin}/api/get_active_campaign`, {
       params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone },
     })
-    .then(({ data }) => (isCampaign(data?.campaign) ? data.campaign : undefined))
-    .catch(() => undefined);
+    .then(({ data }) => ({
+      campaign: isCampaign(data?.campaign) ? data.campaign : undefined,
+      earlyReleaseCampaign: isCampaign(data?.earlyReleaseCampaign) ? data.earlyReleaseCampaign : undefined,
+    }))
+    .catch(() => ({}));
 
-  return activeCampaign;
+  return activeCampaigns;
 }
 
 async function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodeProps> {
@@ -173,7 +176,8 @@ async function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodePr
 }
 
 async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
-  const resolvedName = applyCampaign(couponName, await fetchActiveCampaign());
+  const { campaign, earlyReleaseCampaign } = await fetchActiveCampaigns();
+  const resolvedName = applyCampaign(couponName, hasEarlyRelease(couponName) ? earlyReleaseCampaign : campaign);
 
   if (resolvedName === couponName) {
     return requestCoupon(resolvedName);

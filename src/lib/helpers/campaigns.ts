@@ -18,10 +18,23 @@ type CampaignSuffix = typeof CAMPAIGN_SUFFIXES[Campaign];
 
 export type ResolvedPromoCode = `${PromoCodeName}` | `${PromoCodeName}${CampaignSuffix}`;
 
+export interface ActiveCampaigns {
+  campaign?: Campaign;
+  earlyReleaseCampaign?: Campaign;
+}
+
 const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([]);
+
+export const HIGH_DISCOUNT_CAMPAIGNS: ReadonlySet<Campaign> = new Set([Campaign.BlackFriday, Campaign.CyberWeek]);
+
+export const EARLY_RELEASE_DAYS = 1;
+
+const EARLY_RELEASE_CODES: ReadonlySet<PromoCodeName> = new Set([PromoCodeName.simon42]);
 
 export const isCampaign = (value: unknown): value is Campaign =>
   typeof value === 'string' && (Object.values(Campaign) as string[]).includes(value);
+
+export const hasEarlyRelease = (name: PromoCodeName): boolean => EARLY_RELEASE_CODES.has(name);
 
 export const applyCampaign = (name: PromoCodeName, campaign?: Campaign): ResolvedPromoCode => {
   if (!campaign || CAMPAIGN_EXCEPTIONS.has(name)) return name;

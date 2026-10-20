@@ -1,12 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Campaign } from '@/lib/helpers/campaigns';
+import { Campaign, EARLY_RELEASE_DAYS, HIGH_DISCOUNT_CAMPAIGNS } from '@/lib/helpers/campaigns';
 
-interface ActiveCampaign {
+interface ActiveCampaignResponse {
   campaign: Campaign | null;
+  earlyReleaseCampaign: Campaign | null;
 }
 
 const CAMPAIGN_PERIODS: { campaign: Campaign; from: string; to: string }[] = [
-  { campaign: Campaign.Test, from: '2026-10-19', to: '2026-10-20' },
+  { campaign: Campaign.Test, from: '2026-10-22', to: '2026-10-23' },
   { campaign: Campaign.Campaign2, from: '2026-11-01', to: '2026-11-23' },
   { campaign: Campaign.BlackFriday, from: '2026-11-23', to: '2026-11-30' },
   { campaign: Campaign.CyberWeek, from: '2026-11-30', to: '2026-12-05' },
@@ -29,20 +30,41 @@ const toTimeZone = (value: NextApiRequest['query'][string]): string => {
 const getLocalDate = (now: Date, timeZone: string): string =>
   new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
 
-const getActiveCampaign = (timeZone: string, now: Date = new Date()): Campaign | undefined => {
-  const today = getLocalDate(now, timeZone);
+const subtractDays = (date: string, days: number): string => {
+  const shifted = new Date(`${date}T00:00:00Z`);
+  shifted.setUTCDate(shifted.getUTCDate() - days);
 
-  return CAMPAIGN_PERIODS.find(({ from, to }) => today >= from && today < to)?.campaign;
+  return shifted.toISOString().slice(0, 10);
 };
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<ActiveCampaign | void>): void {
+const getActiveCampaign = (today: string): Campaign | undefined =>
+  CAMPAIGN_PERIODS.find(({ from, to }) => today >= from && today < to)?.campaign;
+
+const getEarlyReleaseCampaign = (today: string): Campaign | undefined => {
+  const active = getActiveCampaign(today);
+
+  if (active && HIGH_DISCOUNT_CAMPAIGNS.has(active)) return active;
+
+  const upcoming = CAMPAIGN_PERIODS.find(
+    ({ campaign, from }) =>
+      HIGH_DISCOUNT_CAMPAIGNS.has(campaign) && today >= subtractDays(from, EARLY_RELEASE_DAYS) && today < from,
+  )?.campaign;
+
+  return upcoming ?? active;
+};
+
+export default function handler(req: NextApiRequest, res: NextApiResponse<ActiveCampaignResponse | void>): void {
   if (req.method !== 'GET') {
     res.status(405).end();
     return;
   }
 
   const timeZone = toTimeZone(req.query.timeZone);
+  const today = getLocalDate(new Date(), timeZone);
 
   res.setHeader('Cache-Control', 'no-store');
-  res.status(200).json({ campaign: getActiveCampaign(timeZone) ?? null });
+  res.status(200).json({
+    campaign: getActiveCampaign(today) ?? null,
+    earlyReleaseCampaign: getEarlyReleaseCampaign(today) ?? null,
+  });
 }
