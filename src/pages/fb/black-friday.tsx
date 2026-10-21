@@ -6,7 +6,7 @@ const BlackFridayPpcPage = (props) => {
   return <BlackFridayPpcTemplate {...props} />;
 };
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -24,8 +24,8 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
       config: {
         heroImage: '/images/black-friday/bf-cloud-storage.webp',
         metatagsId: 'black-friday',
-        couponCode: PromoCodeName.GADS85,
-        couponCodeForLifetime: PromoCodeName.GADS85,
+        couponCode: PromoCodeName.META85,
+        couponCodeForLifetime: PromoCodeName.META85,
         popularPlanSize: '5TB',
       },
     },

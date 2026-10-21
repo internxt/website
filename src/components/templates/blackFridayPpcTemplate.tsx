@@ -11,33 +11,14 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import usePricing from '@/hooks/usePricing';
-import { ReactNode } from 'react';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 
 const CTA_ANCHOR = '#billingButtons';
-const PERCENT_PLACEHOLDER = /\{\{(?:percentage|discount)\}\}/;
-const PERCENT_PLACEHOLDER_GLOBAL = /\{\{(?:percentage|discount)\}\}/g;
+const PERCENT_PLACEHOLDER = /\{\{(?:percentage|discount)\}\}/g;
 
-const renderWithDiscount = (text: string, discount: string | null): ReactNode => {
-  if (typeof text !== 'string' || !PERCENT_PLACEHOLDER.test(text)) {
-    return text;
-  }
-
-  if (discount !== null) {
-    return text.replace(PERCENT_PLACEHOLDER_GLOBAL, discount);
-  }
-
-  const [beforePercent, afterPercent] = text.split(PERCENT_PLACEHOLDER_GLOBAL);
-
-  return (
-    <>
-      {beforePercent}
-      <span className="mx-1 inline-block h-4 w-10 animate-pulse rounded bg-white/20 align-middle" />
-      {afterPercent}
-    </>
-  );
-};
+const renderWithDiscount = (text: string, discount: string | null): string =>
+  typeof text === 'string' ? text.replace(PERCENT_PLACEHOLDER, discount ?? '') : text;
 
 interface BlackFridayPpcConfig {
   heroImage: string;
@@ -64,7 +45,7 @@ const BlackFridayPpcTemplate = ({
   footerLang,
   config,
 }: BlackFridayPpcTemplateProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === config.metatagsId);
+  const metatags = metatagsDescriptions.find((desc) => desc.id === config.metatagsId);
 
   const {
     products,
@@ -99,7 +80,7 @@ const BlackFridayPpcTemplate = ({
       couponCodeForCheckout,
     );
 
-    stripeService.redirectToCheckout(
+    await stripeService.redirectToCheckout(
       priceId,
       finalPrice,
       currencyValue,
@@ -113,8 +94,8 @@ const BlackFridayPpcTemplate = ({
 
   return (
     <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
+      title={metatags?.title ?? ''}
+      description={metatags?.description ?? ''}
       segmentName="PPC Black Friday"
       lang={lang}
       robots="noindex, follow"
