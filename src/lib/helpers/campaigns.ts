@@ -25,7 +25,11 @@ export interface ActiveCampaigns {
 
 const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([]);
 
-export const HIGH_DISCOUNT_CAMPAIGNS: ReadonlySet<Campaign> = new Set([Campaign.BlackFriday, Campaign.CyberWeek]);
+export const EARLY_RELEASE_CAMPAIGNS: ReadonlySet<Campaign> = new Set([
+  Campaign.BlackFriday,
+  Campaign.CyberWeek,
+  Campaign.Test,
+]);
 
 export const EARLY_RELEASE_DAYS = 1;
 

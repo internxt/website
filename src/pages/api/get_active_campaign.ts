@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Campaign, EARLY_RELEASE_DAYS, HIGH_DISCOUNT_CAMPAIGNS } from '@/lib/helpers/campaigns';
+import { Campaign, EARLY_RELEASE_CAMPAIGNS, EARLY_RELEASE_DAYS } from '@/lib/helpers/campaigns';
 
 interface ActiveCampaignResponse {
   campaign: Campaign | null;
@@ -43,11 +43,11 @@ const getActiveCampaign = (today: string): Campaign | undefined =>
 const getEarlyReleaseCampaign = (today: string): Campaign | undefined => {
   const active = getActiveCampaign(today);
 
-  if (active && HIGH_DISCOUNT_CAMPAIGNS.has(active)) return active;
+  if (active && EARLY_RELEASE_CAMPAIGNS.has(active)) return active;
 
   const upcoming = CAMPAIGN_PERIODS.find(
     ({ campaign, from }) =>
-      HIGH_DISCOUNT_CAMPAIGNS.has(campaign) && today >= subtractDays(from, EARLY_RELEASE_DAYS) && today < from,
+      EARLY_RELEASE_CAMPAIGNS.has(campaign) && today >= subtractDays(from, EARLY_RELEASE_DAYS) && today < from,
   )?.campaign;
 
   return upcoming ?? active;
