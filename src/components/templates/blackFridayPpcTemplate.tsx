@@ -119,11 +119,9 @@ const BlackFridayPpcTemplate = ({
       lang={lang}
       robots="noindex, follow"
     >
-      <div className="bg-[#082D66]">
-        <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} darkMode fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
-      </div>
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
       <PricingSectionWrapper
         textContent={textContent.TableSection}
