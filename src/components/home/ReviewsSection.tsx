@@ -71,7 +71,10 @@ export default function ReviewSection({
     return `${buttonBase} cursor-pointer ${hover}`;
   };
 
-  const quoteClass = `text-sm font-medium italic leading-[1.2] text-gray-55 text-center whitespace-pre-line`;
+  const quoteClass = `text-sm font-medium italic leading-[1.2] ${
+    darkMode ? 'text-green-120' : 'text-gray-55'
+  } text-center whitespace-pre-line`;
+  const logoClass = darkMode ? 'brightness-0 invert opacity-60' : '';
 
   return (
     <section
@@ -94,6 +97,7 @@ export default function ReviewSection({
                   width={brand.width}
                   height={brand.height}
                   quality={100}
+                  className={logoClass}
                 />
               </div>
               <p className={quoteClass}>{textContent[brand.key]}</p>
@@ -134,6 +138,7 @@ export default function ReviewSection({
                 width={brand.width}
                 height={brand.height}
                 quality={100}
+                className={logoClass}
               />
             </div>
             <p
