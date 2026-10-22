@@ -410,6 +410,9 @@ export enum PromoCodeName {
   naseros = 'NASEROS',
   harryshares = 'HARRYSHARES',
   visionia = 'VISIONIA',
+  roxana = 'ROXANA',
+  peter = 'PETER',
+  douglas = 'DOUGLAS',
 }
 
 export interface PromoCodeProps {
