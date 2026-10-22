@@ -793,7 +793,7 @@ export default function Footer({
                     rel="noopener noreferrer"
                   >
                     <Image
-                      src={getImage('/icons/social/cdti.png')}
+                      src={getImage('/images/footer/logo_cdti_2024_sin_banderas_soportes_fisicos_1.jpg')}
                       alt="CDTI - Gobierno de España, Ministerio de Ciencia, Innovación y Universidades"
                       width={200}
                       height={60}
