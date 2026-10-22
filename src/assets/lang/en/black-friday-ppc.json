@@ -1,0 +1,153 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "photos": "Photos",
+      "mail": "Mail"
+    },
+    "title": "**Black Friday**: 85% off private cloud storage",
+    "subtitle": "Encrypted on your device. Nobody reads your files. Not even us.",
+    "description": "Get 85% off now!",
+    "features": [
+      "Complete privacy suite",
+      "Post-quantum encryption",
+      "Open source and audited"
+    ],
+    "claimDeal": "Get the deal"
+  },
+  "TableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off",
+    "planTitles": {
+      "header": "Select your Plan",
+      "individuals": "Annual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "50% off",
+        "normalText": "on all our exclusive lifetime plans"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1 GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "2TB",
+      "ultimate": "5TB"
+    }
+  },
+  "ReviewSection": {
+    "forbes": "Internxt consolidates its position as an European alternative to the tech giants",
+    "deloitte": "Received Deloitte Fast 50 Award, which recognizes fastest-growing companies",
+    "techradar": "Internxt is an excellent cloud storage service; affordable, intuitive, and reliable",
+    "fortune": "Internxt is building an internet where privacy and security come first",
+    "trustpilot": "Outstanding value given the security and features offered. Excellent service and support."
+  },
+  "WhyChooseSection": {
+    "title": "Why choose our Black Friday cloud storage deals?",
+    "cards": {
+      "titles": [
+        "A fully private ecosystem",
+        "The most advanced encryption",
+        "Our biggest Black Friday deal ever"
+      ],
+      "descriptions": [
+        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, and Mail, everything you need to stay secure online.",
+        "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
+        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive discount on our plans, now is the perfect time to get the best value on secure and private cloud storage, and more! "
+      ]
+    }
+  },
+  "CoreFeatures": {
+    "title": "Core Features of our cloud secure storage",
+    "description": "Complete security for your data, everything you need to keep your files secure and private",
+    "accordionCards": {
+      "titles": [
+        "A fully private ecosystem",
+        "Secure collaboration",
+        "Your cloud, like a local drive"
+      ],
+      "descriptions": [
+        "Internxt bundles encrypted storage, backups, VPN, Antivirus, Cleaner, Meet, Mail & more—everything to break free from Big Tech.",
+        "Send files with encrypted links, passwords, and controls. Work with your team in real time while keeping data private.",
+        "Use Internxt as a virtual drive to sync, upload, and access files seamlessly—just like on your computer, but fully secure and always up to date."
+      ]
+    },
+    "cards": {
+      "titles": [
+        "End-to-end encrypted",
+        "Access controls",
+        "Encrypted backups"
+      ],
+      "descriptions": [
+        "All files are encrypted with post-quantum and zero-knowledge encryption. Nobody but you, or those you choose to share files with, can see its contents.",
+        "You control exactly who can access your shared files with encrypted, password-protected links you can revoke anytime.",
+        "Ensure your files stay safe from ransomware and accidental loss with scheduled, encrypted backups that provide extra protection and peace of mind."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Black Friday: {{discount}}% off private cloud storage",
+    "description": "",
+    "cta": "Get the deal",
+    "guarantee": "30-day money-back guarantee"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How do I get the Internxt Black Friday Discount?",
+        "answer": [
+          "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your {{discount}}% discount is automatically applied at checkout."
+        ]
+      },
+      {
+        "question": "When does the Black Friday Internxt Deal end?",
+        "answer": [
+          "The Black Friday sale ends December 3rd, 2026."
+        ]
+      },
+      {
+        "question": "Who is eligible for this discount?",
+        "answer": [
+          "If you're a new user, you can enjoy this discount by creating an account. If you have a lifetime plan, you can upgrade to get more storage and the extra features such as Cleaner, Meet, and Mail."
+        ]
+      },
+      {
+        "question": "Will I keep my discount when my plan ends?",
+        "answer": [
+          "The Black Friday deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the year. As lifetime plans only require one payment, your discount will last forever."
+        ]
+      },
+      {
+        "question": "What payment methods does Internxt accept?",
+        "answer": [
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
+        ]
+      },
+      {
+        "question": "Have more questions?",
+        "answer": [
+          "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+        ]
+      }
+    ]
+  }
+}
