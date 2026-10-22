@@ -202,6 +202,7 @@ const redirectToCheckout = async (
   interval: string,
   storage: string,
   promoCodeId?: PromoCodeProps['name'],
+  redirectToUrgentCheckout?: boolean,
 ) => {
   const gclid = getGclidFromURL();
 
@@ -226,6 +227,7 @@ const redirectToCheckout = async (
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
     ...(gclid ? { gclid } : {}),
+    ...(redirectToUrgentCheckout ? { redirectToUrgentCheckout } : {}),
   });
 };
 
