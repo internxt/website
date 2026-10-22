@@ -193,6 +193,8 @@ export const ALLOWED_PATHS = [
   'tdpt85',
   '5tblastcall',
   'naseros',
+  'harryshares',
+  'visionia',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -294,6 +296,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   madroz: 'fr',
   overfl0w: 'fr',
   qinhui: 'fr',
+  visionia: 'fr',
 
   // it
   alessandro: 'it',
@@ -518,6 +521,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tdpt85',
   '5tblastcall',
   'naseros',
+  'harryshares',
+  'visionia',
 ]);
 
 export const COUPON_CODES = {
@@ -711,6 +716,8 @@ export const COUPON_CODES = {
   tdpt85: PromoCodeName.tdpt85,
   '5tblastcall': PromoCodeName.ftblastcall,
   naseros: PromoCodeName.naseros,
+  harryshares: PromoCodeName.harryshares,
+  visionia: PromoCodeName.visionia,
 };
 
 interface OfferConfig {
