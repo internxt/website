@@ -787,16 +787,22 @@ export default function Footer({
                     }}
                   />
                 ) : (
-                  <Image
-                    src={getImage('/icons/social/cdti.png')}
-                    alt="GDPR Internxt"
-                    width={200}
-                    height={60}
-                    style={{
-                      maxWidth: '100%',
-                      height: 'auto',
-                    }}
-                  />
+                  <a
+                    href="https://blog.internxt.com/es/internxt-mail-e-internxt-meet-servicio-de-comunicacion-segura-mediante-encriptacion-postcuantica/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={getImage('/icons/social/cdti.png')}
+                      alt="CDTI - Gobierno de España, Ministerio de Ciencia, Innovación y Universidades"
+                      width={200}
+                      height={60}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                      }}
+                    />
+                  </a>
                 )}
               </div>
 
