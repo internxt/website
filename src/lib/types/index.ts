@@ -410,6 +410,11 @@ export enum PromoCodeName {
   tdpt85 = 'TDPT85',
   ftblastcall = '5TBLASTCALL',
   naseros = 'NASEROS',
+  harryshares = 'HARRYSHARES',
+  visionia = 'VISIONIA',
+  roxana = 'ROXANA',
+  peter = 'PETER',
+  douglas = 'DOUGLAS',
 }
 
 export interface PromoCodeProps {
