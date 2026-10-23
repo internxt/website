@@ -12,5 +12,6 @@
   "preview_urls": true,
   "observability": {
     "enabled": true
-  }
+  },
+  "upload_source_maps": false
 }

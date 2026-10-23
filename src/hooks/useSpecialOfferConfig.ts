@@ -193,6 +193,11 @@ export const ALLOWED_PATHS = [
   'tdpt85',
   '5tblastcall',
   'naseros',
+  'harryshares',
+  'visionia',
+  'roxana',
+  'peter',
+  'douglas',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -282,6 +287,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   adslzone87: 'es',
   tdes85: 'es',
   naseros: 'es',
+  roxana: 'es',
 
   // fr
   benjamin: 'fr',
@@ -294,6 +300,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   madroz: 'fr',
   overfl0w: 'fr',
   qinhui: 'fr',
+  visionia: 'fr',
 
   // it
   alessandro: 'it',
@@ -318,6 +325,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
 
   //pt-br
   tdpt85: 'pt-br',
+  peter: 'pt-br',
+  douglas: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -355,6 +364,30 @@ export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
 export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
+export const URGENT_CHECKOUT_PATHS = new Set<string>([
+  'bjoern',
+  'heisect',
+  'aimentors',
+  'alextbg',
+  'morpheus',
+  'saasmaster',
+  'cyberlab',
+  'macrumors',
+  'nazlouis',
+  'themorpheus',
+  'ctechmedia',
+  'lukas',
+  'apfeltalk',
+  'lefiltre',
+  'niklas',
+  'kevin',
+  'simon42',
+  'windowsarea',
+  'ition',
+  'overfl0w',
+  'devopstoolbox',
+  'morrolinux',
+]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
   'drop-offer',
@@ -495,6 +528,11 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'tdpt85',
   '5tblastcall',
   'naseros',
+  'harryshares',
+  'visionia',
+  'roxana',
+  'peter',
+  'douglas',
 ]);
 
 export const COUPON_CODES = {
@@ -688,6 +726,11 @@ export const COUPON_CODES = {
   tdpt85: PromoCodeName.tdpt85,
   '5tblastcall': PromoCodeName.ftblastcall,
   naseros: PromoCodeName.naseros,
+  harryshares: PromoCodeName.harryshares,
+  visionia: PromoCodeName.visionia,
+  roxana: PromoCodeName.roxana,
+  peter: PromoCodeName.peter,
+  douglas: PromoCodeName.douglas,
 };
 
 interface OfferConfig {
@@ -706,6 +749,7 @@ interface OfferConfig {
   isBpdrive: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
+  redirectToUrgentCheckout: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -729,6 +773,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         isBpdrive: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
+        redirectToUrgentCheckout: false,
       };
     }
 
@@ -745,6 +790,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const isBpdrive = selectedPathname === 'bpdrive';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
+    const redirectToUrgentCheckout = URGENT_CHECKOUT_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -766,6 +812,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       isBpdrive,
       isPrivacyTutor,
       requireAnnualDiscount,
+      redirectToUrgentCheckout,
     };
   }, [pathname]);
 };
