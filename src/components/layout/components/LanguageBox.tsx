@@ -64,7 +64,11 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
       />
 
       {/* Menu items */}
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+      <div
+        className={`pointer-events-none absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border ${
+          darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-black border-opacity-5 bg-white'
+        } p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100`}
+      >
         <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
@@ -73,7 +77,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="en"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('en')}
               >
                 {currentLang.en}
@@ -81,7 +87,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="zh"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('zh')}
               >
                 {currentLang.zh}
@@ -89,7 +97,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="zh-tw"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('zh-tw')}
               >
                 {currentLang['zh-tw']}
@@ -97,7 +107,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="pt-br"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('pt-br')}
               >
                 {currentLang['pt-br']}
@@ -108,7 +120,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="en"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('en')}
               >
                 {currentLang.en}
@@ -116,7 +130,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="es"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('es')}
               >
                 {currentLang.es}
@@ -124,7 +140,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="fr"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('fr')}
               >
                 {currentLang.fr}
@@ -132,7 +150,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="de"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('de')}
               >
                 {currentLang.de}
@@ -140,7 +160,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="it"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('it')}
               >
                 {currentLang.it}
@@ -148,7 +170,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="zh"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('zh')}
               >
                 {currentLang.zh}
@@ -156,7 +180,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="ru"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('ru')}
               >
                 {currentLang.ru}
@@ -164,7 +190,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="zh-tw"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('zh-tw')}
               >
                 {currentLang['zh-tw']}
@@ -172,7 +200,9 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
               <Link
                 href={correctPath}
                 locale="pt-br"
-                className="flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 hover:bg-gray-1"
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-cool-gray-80 hover:bg-gray-1'
+                }`}
                 onClick={() => changeLang('pt-br')}
               >
                 {currentLang['pt-br']}

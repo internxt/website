@@ -22,11 +22,13 @@ import { Interval } from '@/services/stripe.service';
 import { analyticsService } from '@/services/ga.services';
 import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, #billingButtons button';
 const CLAIM_DEAL_EVENT = 'Claim Deal';
 
 interface AntivirusProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -42,6 +44,7 @@ interface AntivirusProps {
 }
 
 const AntivirusPage = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   langJson,
   lang,
@@ -156,7 +159,13 @@ const AntivirusPage = ({
               {infoSectionData.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80">{item.description}</p>
+                  <p
+                    className={`min-h-[80px] max-w-[229px] text-xl font-medium ${
+                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                    }`}
+                  >
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -187,7 +196,9 @@ const AntivirusPage = ({
               {InfoSectionV2.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
+                  <p className={`pt-5 text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                    {item.title}
+                  </p>
                 </div>
               ))}
             </div>
@@ -206,19 +217,24 @@ const AntivirusPage = ({
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+                <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className="font-regular text-xl text-gray-80">{langJson.ComponentsInColumn.description}</p>
+                <p className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  {langJson.ComponentsInColumn.description}
+                </p>
               </div>
             </div>
           }
           SecondComponent={
             <div className="flex flex-col items-center">
-              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white" />
+              <CardGroup
+                cards={cardsForComponentsIncolumn}
+                backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+              />
             </div>
           }
-          backgroundColor="bg-white"
+          backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
         />
         <CtaSection
           textContent={langJson.cta2}

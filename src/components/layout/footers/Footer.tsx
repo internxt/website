@@ -12,12 +12,13 @@ import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export default function Footer({
   textContent,
   lang,
   hideNewsletter,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   breadcrumbItems,
 }: Readonly<{
   textContent: FooterText;
@@ -39,8 +40,7 @@ export default function Footer({
   const year = moment().format('YYYY');
 
   // La puntuación final se saca fuera del enlace (regla tipográfica FR y buena práctica general)
-  const privacyLinkTrailingPunctuation =
-    textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
+  const privacyLinkTrailingPunctuation = textContent.NewsletterSection.privacyLink.match(/[.。]+$/)?.[0] ?? '';
   const privacyLinkText = privacyLinkTrailingPunctuation
     ? textContent.NewsletterSection.privacyLink.slice(0, -privacyLinkTrailingPunctuation.length)
     : textContent.NewsletterSection.privacyLink;
@@ -287,7 +287,11 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div
+                className={`flex max-w-[14%] flex-1 flex-col items-center ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:flex-none`}
+              >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.company.title}
@@ -339,7 +343,11 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div
+                className={`flex max-w-[14%] flex-1 flex-col items-center ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:flex-none`}
+              >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.join.title}
@@ -386,7 +394,11 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[34%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div
+                className={`flex max-w-[34%] flex-1 flex-col items-center ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:flex-none`}
+              >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}>
                     {textContent.FooterSection.sections.resources.title}
@@ -640,13 +652,22 @@ export default function Footer({
                     <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.deals}
                     </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/deals/black-friday-internxt/bf-cloud-storage-deals"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div
+                className={`flex max-w-[18%] flex-1 flex-col items-center ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:flex-none`}
+              >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.tools.title}
@@ -683,7 +704,11 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
+              <div
+                className={`flex max-w-[14%] flex-1 flex-col items-center ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:flex-none`}
+              >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.features.title}
@@ -755,7 +780,11 @@ export default function Footer({
               <div className="flex flex-row items-center gap-10">
                 <a href="/Certificado ENS ALTA_signed.pdf" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src={getImage('/images/footer/distintivo_ens_certificacion_ALTA_RD311-2022.jpg')}
+                    src={
+                      darkMode
+                        ? '/images/footer/dark/distintivo_ens_certificacion_ALTA_RD311-2022.webp'
+                        : getImage('/images/footer/distintivo_ens_certificacion_ALTA_RD311-2022.jpg')
+                    }
                     alt="Distintivo de certificación ENS categoría ALTA (RD 311/2022)"
                     width={60}
                     height={60}
@@ -766,7 +795,11 @@ export default function Footer({
                   />
                 </a>
                 <Image
-                  src={getImage('/icons/social/ISO-27001-logo-eturia.png')}
+                  src={
+                    darkMode
+                      ? '/icons/social/dark/ISO-27001-logo-eturia.webp'
+                      : getImage('/icons/social/ISO-27001-logo-eturia.png')
+                  }
                   alt="Eturia logo"
                   width={60}
                   height={60}
@@ -919,8 +952,14 @@ export default function Footer({
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -929,9 +968,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col px-6 font-semibold text-gray-100 ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col px-6 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} ${
+                        !open ? 'hidden' : 'flex'
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'} space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
@@ -1001,8 +1040,14 @@ export default function Footer({
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1011,9 +1056,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                        !open ? 'hidden' : 'flex'
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
                         {textContent.FooterSection.sections.company.about}
@@ -1061,8 +1106,14 @@ export default function Footer({
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1071,9 +1122,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                        !open ? 'hidden' : 'flex'
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
@@ -1120,8 +1171,14 @@ export default function Footer({
                 <>
                   <Disclosure.Button className={mobileResourcesHeaderClass}>
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${open ? 'flex' : 'hidden'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${open ? 'flex' : 'hidden'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1130,7 +1187,7 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
                         open ? 'flex' : 'hidden'
                       } ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
@@ -1635,11 +1692,16 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.certifications}
                       </Link>
                       <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.deals}
-                    </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
-                    </Link>
+                        {textContent.FooterSection.sections.resources.deals}
+                      </Link>
+                      <Link
+                        href="/deals/black-friday-internxt/bf-cloud-storage-deals"
+                        locale={lang}
+                        passHref
+                        className="items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -1654,8 +1716,14 @@ export default function Footer({
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1664,9 +1732,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                        !open ? 'hidden' : 'flex'
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.byteConverter}
@@ -1710,8 +1778,14 @@ export default function Footer({
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretDown
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
+                    <CaretUp
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      weight="bold"
+                    />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1720,9 +1794,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
-                      } space-y-8 p-4`}
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                        !open ? 'hidden' : 'flex'
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
                     >
                       <Link href="/private-cloud-storage-solutions" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.privateCloud}
@@ -1759,7 +1833,9 @@ export default function Footer({
             {/* Language selection for mobile view */}
             <LanguageMobileBox darkMode={darkMode} />
 
-            <div className="flex flex-col items-center space-y-4 py-10 text-gray-100">
+            <div
+              className={`flex flex-col items-center space-y-4 py-10 ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+            >
               <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1841,7 +1917,11 @@ export default function Footer({
                 {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
               </p>
 
-              <Link href="/" locale={lang} className="flex flex-shrink-0 text-gray-100">
+              <Link
+                href="/"
+                locale={lang}
+                className={`flex flex-shrink-0 ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+              >
                 <Image
                   width={96}
                   height={10.5}
@@ -1858,7 +1938,11 @@ export default function Footer({
           </div>
         </footer>
         {lang === 'es' && (
-          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
+          <p
+            className={`text- max-w-[896px] pb-5 pt-10 text-center text-xs ${
+              darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+            }`}
+          >
             {textContent.FooterSection.financialProject}
           </p>
         )}

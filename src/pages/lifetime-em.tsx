@@ -14,8 +14,10 @@ import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LifetimeSpecialProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -25,6 +27,7 @@ interface LifetimeSpecialProps {
 }
 
 function LifetimeSpecial({
+  darkMode = DARK_MODE_ENABLED,
   langJson,
   lang,
   metatagsDescriptions,
@@ -124,7 +127,7 @@ function LifetimeSpecial({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hidePlanSelectorComponent={true}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
           SectionTag={'h2'}
         />
@@ -136,8 +139,18 @@ function LifetimeSpecial({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
+                {ctaText}
+              </h2>
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[698px] lg:text-center lg:text-xl`}
+              >
                 {langJson.ctaSection.description}
               </p>
             </div>
@@ -145,7 +158,11 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20 pb-20"
-          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
 
         <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
@@ -155,10 +172,18 @@ function LifetimeSpecial({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:px-40 lg:text-4xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:px-40 lg:text-4xl`}
+              >
                 {langJson.ctaSection2.title}
               </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[698px] lg:text-center lg:text-xl`}
+              >
                 {ctaText2}
               </p>
             </div>
@@ -166,7 +191,11 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-10"
-          bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
 
         <Footer

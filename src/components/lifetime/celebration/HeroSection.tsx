@@ -3,13 +3,15 @@ import Countdown from '@/components/components/Countdown';
 import Animation from '@/components/home/components/Animation';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: any;
   hideTimer?: boolean;
 }
 
-const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, hideTimer }: HeroSectionProps) => {
   return (
     <section className="overflow-hidden bg-[url('/images/lifetime/celebration/swiggles_italy.png')] bg-cover bg-no-repeat py-20">
       <div className="flex flex-col justify-center pt-10 lg:pt-20">
@@ -34,7 +36,9 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 />
               </div>
               <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+                <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+                  {textContent.title}
+                </h1>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button

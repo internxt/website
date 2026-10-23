@@ -18,10 +18,18 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const URL_REDIRECT = '#billingButtons';
 
-const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
+const CloudStorageComparison = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  lang,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
 
   const cardsData = [
@@ -122,7 +130,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails="bg-white lg:py-20"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
         />
 

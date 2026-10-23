@@ -2,6 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { FiveStars } from '../shared/StarsRate';
 import { ReactNode } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TestimonialProps {
   testimonial: {
@@ -14,6 +15,7 @@ interface TestimonialProps {
 }
 
 interface TestimonialsSectionProps {
+  darkMode?: boolean;
   textContent: any;
   bgColor?: string;
   textColor?: string;
@@ -36,6 +38,7 @@ const AvatarAndText = ({ testimonial, textColor }: TestimonialProps): JSX.Elemen
 );
 
 const TestimonialsSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bgColor,
   textComponent,
@@ -57,7 +60,11 @@ const TestimonialsSection = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${bgColor ?? 'bg-white'} lg:py:20 px-5 py-10 lg:px-16`}>
+    <section
+      className={`overflow-hidden ${
+        bgColor ?? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
+      } lg:py:20 px-5 py-10 lg:px-16`}
+    >
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
@@ -71,7 +78,13 @@ const TestimonialsSection = ({
         >
           <div className="flex max-w-[355px] flex-col gap-3 lg:h-[300px]">
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
-            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
+            <p
+              className={`text-start text-xl ${
+                textColor ? textColor : `${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`
+              }`}
+            >
+              {testimonials[0].review}
+            </p>
           </div>
           <div className="flex max-w-[355px] flex-col items-center justify-center gap-3  lg:h-[300px] lg:pb-20">
             <Image
@@ -83,7 +96,13 @@ const TestimonialsSection = ({
           </div>
           <div className="flex max-w-[355px] flex-col gap-3  lg:h-[300px]">
             <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
-            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[1].review}</p>
+            <p
+              className={`text-start text-xl ${
+                textColor ? textColor : `${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`
+              }`}
+            >
+              {testimonials[1].review}
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { ANNOUNCEMENT_BAR_ENABLED, BLACK_FRIDAY_URL } from '@/announcement.config';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface NavigationLinkProps {
   href: string;
@@ -41,11 +43,22 @@ interface ItemsNavigationProps {
 }
 
 const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
-  const baseClasses = 'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
+  const baseClasses =
+    'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
   const darkModeClasses = isDarkMode ? 'text-white hover:text-gray-20' : 'text-gray-60 hover:text-primary';
 
   return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
 };
+
+const HighlightedNavigationLink = ({ href, text, lang }: Omit<NavigationLinkProps, 'isActive' | 'isDarkMode'>) => (
+  <Link
+    href={href}
+    locale={lang}
+    className="whitespace-nowrap px-4 py-1.5 text-base font-bold text-primary transition duration-150 ease-in-out hover:text-primary-dark min-[1024px]:text-sm min-[1100px]:text-base"
+  >
+    {text}
+  </Link>
+);
 
 const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
   <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
@@ -60,18 +73,22 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
     ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
     : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary';
 
-  const dropdownBgClasses = darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5';
+  const dropdownBgClasses = darkMode ? 'hover:bg-white/10' : 'hover:bg-gray-5';
 
   return (
     <div
-      className={`group relative flex cursor-default items-center space-x-1 min-[1024px]:text-sm min-[1100px]:text-base rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
+      className={`group relative flex cursor-default items-center space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out min-[1024px]:text-sm min-[1100px]:text-base ${menuClasses}`}
     >
       <span>{label}</span>
       <CaretDown
         size={20}
         className="translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30"
       />
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-max -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+      <div
+        className={`pointer-events-none absolute left-1/2 top-full z-50 w-max -translate-x-1/2 translate-y-0 rounded-xl border ${
+          darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-black border-opacity-5 bg-white'
+        } p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100`}
+      >
         <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
           {items.map(({ href, text, title }) =>
@@ -82,7 +99,9 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
                 title={title || undefined}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
+                } ${dropdownBgClasses}`}
               >
                 {text}
               </a>
@@ -92,7 +111,9 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
                 href={href}
                 title={title || undefined}
                 locale={lang}
-                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${dropdownBgClasses}`}
+                className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium ${
+                  darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
+                } ${dropdownBgClasses}`}
               >
                 {text}
               </Link>
@@ -106,7 +127,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
 
 export const ItemsNavigation = ({
   lang,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   shouldHideItems,
   getTitles,
   textContent,
@@ -126,6 +147,9 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        {ANNOUNCEMENT_BAR_ENABLED && (
+          <HighlightedNavigationLink href={BLACK_FRIDAY_URL} text={textContent.links.blackFriday} lang={lang} />
+        )}
         <DropdownMenu
           label={textContent.links.products}
           items={[
@@ -135,7 +159,7 @@ export const ItemsNavigation = ({
             { href: '/cleaner', text: textContent.products.cleaner },
             { href: '/meet', text: textContent.products.meet.name, title: textContent.products.meet.title },
             { href: '/mail', text: textContent.products.mail.name, title: textContent.products.mail.title },
-            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title }
+            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title },
           ]}
           darkMode={darkMode}
           lang={lang}

@@ -8,6 +8,7 @@ import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
 import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import { PromoCodeProps } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -56,7 +57,7 @@ export const PricingSection = ({
   isFamilyPage,
   onPlanTypeChange,
   onCheckoutButtonClicked,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   differentRecommended = true,
   hideFeatures,
   showPromo,

@@ -5,6 +5,7 @@ import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
 import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;
@@ -156,7 +157,9 @@ const View = (viewSelected: ViewProps | undefined) => {
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
               className={`${
-                currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
+                currentCheckbox === ''
+                  ? `cursor-not-allowed ${DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-20'}`
+                  : 'cursor-pointer bg-primary'
               } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}
@@ -186,9 +189,7 @@ const View = (viewSelected: ViewProps | undefined) => {
               <p className="text-center text-lg xl:text-left">{textContent.QuizSection.quizCompleted.description}</p>
               <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href="/cyber-awareness">
-                    {textContent.QuizSection.quizCompleted.cyberAwareness}
-                  </Link>
+                  <Link href="/cyber-awareness">{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
                   <button
@@ -206,19 +207,13 @@ const View = (viewSelected: ViewProps | undefined) => {
                   </Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-generator'}>
-                    {textContent.QuizSection.quizCompleted.passwordGenerator}
-                  </Link>
+                  <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/virus-scanner'}>
-                    {textContent.QuizSection.quizCompleted.freeVirusScanner}
-                  </Link>
+                  <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-checker'}>
-                    {textContent.QuizSection.quizCompleted.passwordChecker}
-                  </Link>
+                  <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
                 </li>
               </ul>
 

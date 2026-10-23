@@ -7,6 +7,7 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const FreeCardPromoBanner = () => {
   const router = useRouter();
@@ -56,21 +57,36 @@ export const FreeCardPromoBanner = () => {
         {/* absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 */}
         <div
           className={`relative flex h-[457px] w-full flex-col overflow-hidden rounded-2xl
-        text-neutral-900 lg:w-3/4`}
+        ${DARK_MODE_ENABLED ? 'text-white-95' : 'text-neutral-900'} lg:w-3/4`}
           style={{
-            background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
+            background: DARK_MODE_ENABLED
+              ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
           }}
         >
-          <button className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
+          <button
+            className={`absolute right-0 top-0 z-50 m-5 flex w-auto ${
+              DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+            }`}
+            onClick={onCloseBanner}
+          >
             <X size={32} />
           </button>
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
             <div className="flex w-full max-w-[500px] flex-col items-center gap-12 text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-4 text-center lg:text-left">
-                <p className="text-3xl font-bold leading-tight text-gray-100 md:text-5xl">
+                <p
+                  className={`text-3xl font-bold leading-tight ${
+                    DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                  } md:text-5xl`}
+                >
                   {bannerText.FreeCardPromoBanner.title}
                 </p>
-                <p className="text-xl font-semibold leading-tight text-gray-100 md:text-2xl">
+                <p
+                  className={`text-xl font-semibold leading-tight ${
+                    DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                  } md:text-2xl`}
+                >
                   <span className="text-primary">{bannerText.FreeCardPromoBanner.subtitle.blue}</span>
                   {bannerText.FreeCardPromoBanner.subtitle.normal}
                 </p>
@@ -86,7 +102,9 @@ export const FreeCardPromoBanner = () => {
               </div>
               <div className="flex flex-row space-x-3 pt-2">
                 <CheckCircle size={24} className="text-primary" weight="bold" />
-                <p className="font-medium text-gray-100 lg:text-lg">{bannerText.FreeCardPromoBanner.guarantee}</p>
+                <p className={`font-medium ${DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'} lg:text-lg`}>
+                  {bannerText.FreeCardPromoBanner.guarantee}
+                </p>
               </div>
             </div>
             <div className="hidden lg:flex">

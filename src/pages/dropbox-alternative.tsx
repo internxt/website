@@ -14,8 +14,16 @@ import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const DropboxComparison = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
   const {
     products,
@@ -74,7 +82,12 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor="Dropbox"
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -96,19 +109,27 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)'
+          }
           needsH2
           needsH3
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
+          }
           needsH2
         />
 
@@ -117,10 +138,18 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           url={'/pricing'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {langJson.CtaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                }  lg:text-center lg:text-xl`}
+              >
                 {langJson.CtaSection.description}
               </p>
             </div>

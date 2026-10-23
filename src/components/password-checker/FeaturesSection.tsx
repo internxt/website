@@ -1,10 +1,11 @@
 import React from 'react';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
-import Image from "next/image";
+import Image from 'next/image';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ textContent, bannerText, lang }) => {
+const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -18,26 +19,36 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="relative">
       {/* Password tips and rules */}
-      <div className="flex w-full flex-col items-center justify-center space-y-20 bg-gray-5 bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16">
+      <div
+        className={`flex w-full flex-col items-center justify-center space-y-20 ${
+          darkMode ? 'bg-gray-105' : 'bg-gray-5'
+        } bg-opacity-50 px-4 py-10 sm:pt-20 lg:p-16`}
+      >
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center ">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section1.title}</h3>
 
-              <p className="text-lg text-gray-80">{textContent.section1.subtitle}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.section1.subtitle}
+              </p>
             </div>
 
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-3xl font-medium lg:text-2xl">{textContent.section2.title}</h3>
 
-              <p className="text-lg text-gray-80">{textContent.section2.subtitle}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.section2.subtitle}
+              </p>
             </div>
 
             <div className="grid auto-rows-auto grid-cols-1 gap-5 px-1 sm:grid-cols-2 lg:max-w-max lg:grid-cols-3">
               {textContent.section2.tips.map((tip, index) => (
                 <div
                   key={tip}
-                  className="flex flex-col items-start space-y-3 rounded-2xl bg-white p-8 lg:h-full lg:max-w-[256px]"
+                  className={`flex flex-col items-start space-y-3 rounded-2xl ${
+                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                  } p-8 lg:h-full lg:max-w-[256px]`}
                 >
                   <p className="flex flex-col text-primary">{tipIcons[index]}</p>
                   <p className="text-2xl font-medium">{tip}</p>
@@ -49,12 +60,14 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
       </div>
       {/* Password tool info */}
       <div className="flex w-full flex-col items-center justify-center">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 py-10 px-4 sm:pt-20 lg:p-16">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-4 py-10 sm:pt-20 lg:p-16">
           <div className="flex w-full flex-col items-center space-y-16">
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className="text-2xl font-medium">{textContent.section3.title}</h3>
 
-              <p className="text-lg text-gray-80">{textContent.section3.subtitle}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.section3.subtitle}
+              </p>
 
               <ul className="list-disc space-y-1.5 pl-6 lg:max-w-2xl">
                 {textContent.section3.features.map((feature) => (
@@ -81,9 +94,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   alt="Virus Scanner image"
                   onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               ) : (
                 <Image
                   src={getImage('/images/password-checker/virus-scanner.webp')}
@@ -93,9 +107,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   alt="Virus Scanner image"
                   onClick={() => window.open(`${window.location.origin}/${lang}/virus-scanner`, '_blank')}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               )}
             </div>
 
@@ -125,9 +140,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 alt="Byte converter image"
                 onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
                 style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             ) : (
               <Image
                 src={getImage('/images/password-checker/byte-converter.webp')}
@@ -137,9 +153,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 alt="Byte converter image"
                 onClick={() => window.open(`${window.location.origin}/${lang}/byte-converter`, '_blank')}
                 style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             )}
           </div>
         </div>

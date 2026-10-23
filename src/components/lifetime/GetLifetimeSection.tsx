@@ -4,13 +4,19 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface GetLifetimeSectionProps {
+  darkMode?: boolean;
   textContent: any;
   isCelebrationPage?: boolean;
 }
 
-const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSectionProps) => {
+const GetLifetimeSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  isCelebrationPage,
+}: GetLifetimeSectionProps) => {
   const router = useRouter();
   const lang = router.locale;
   const { title } = textContent;
@@ -43,7 +49,9 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
             <p className="pb-4 pt-4 text-xl font-normal">{textContent.description}</p>
             <Link
               href={'#priceTable'}
-              className={`z-10 flex w-max justify-center rounded-lg bg-white px-4 py-3 text-xl font-medium text-gray-100 hover:bg-white/95`}
+              className={`z-10 flex w-max justify-center rounded-lg ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } px-4 py-3 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} hover:bg-white/95`}
             >
               {textContent.cta}
             </Link>

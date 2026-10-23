@@ -14,8 +14,16 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const MegaComparison = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
   const {
     products,
@@ -69,7 +77,12 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor="MEGA"
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -90,19 +103,27 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)'
+          }
           needsH2
           needsH3
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
+          }
           needsH2
         />
 
@@ -111,11 +132,15 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           url="#billingButtons"
           customText={
             <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
+              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                {langJson.CtaSection.title}
+              </p>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {langJson.CtaSection.description}
+              </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         />
 

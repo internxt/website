@@ -2,8 +2,9 @@ import { useState } from 'react';
 import CheckboxItem from '@/components/shared/CheckboxItem';
 import axios from 'axios';
 import { notificationService } from '../Snackbar';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const [email, setEmail] = useState('');
   const [checkbox, setCheckbox] = useState(false);
 
@@ -29,10 +30,12 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden px-5 pt-14">
       <div className="flex flex-col items-center justify-center space-y-12 py-20">
         <div className="flex w-full flex-col items-center space-y-5 text-center">
-          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
             {textContent.title.text} <span className="text-primary">{textContent.title.blueText}</span>
           </h1>
-          <p className="max-w-[700px] text-xl text-gray-80">{textContent.description}</p>
+          <p className={`max-w-[700px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.description}
+          </p>
         </div>
         <form
           data-code="Frjj25"
@@ -48,7 +51,9 @@ const HeroSection = ({ textContent }) => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder={`${textContent.form.emailLabel}`}
-            className={`flex h-auto w-full appearance-none flex-row rounded-lg border border-cool-gray-20 bg-white px-4 py-3 text-left text-lg outline-none
+            className={`flex h-auto w-full appearance-none flex-row rounded-lg border ${
+              darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-cool-gray-20 bg-white'
+            } px-4 py-3 text-left text-lg outline-none
             transition-all duration-150 focus:border-blue-50 focus:ring focus:ring-primary focus:ring-opacity-20 sm:py-2 sm:text-base`}
             required
           />
@@ -60,7 +65,9 @@ const HeroSection = ({ textContent }) => {
               disabled={!checkbox}
               value={`${textContent.form.cta}`}
               className={`${
-                !checkbox ? 'cursor-default bg-gray-20 text-gray-40' : 'bg-primary hover:bg-primary-dark'
+                !checkbox
+                  ? `cursor-default ${darkMode ? 'bg-gray-71' : 'bg-gray-20'} text-gray-40`
+                  : 'bg-primary hover:bg-primary-dark'
               } flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none sm:mb-2 sm:py-2 sm:text-base`}
             />
           </div>

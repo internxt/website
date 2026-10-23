@@ -2,6 +2,7 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const SHOW_LIFETIME_BANNER = 'showLifetimeBanner';
 
@@ -30,17 +31,19 @@ const LifetimeBanner = (): JSX.Element => {
   return (
     <div
       className={`${showBanner ? 'flex' : 'hidden'} 
-         fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
+         fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
         className={`absolute left-1/2 top-1/2 flex h-auto max-w-4xl -translate-x-1/2 -translate-y-1/2
-        flex-col overflow-hidden rounded-2xl bg-primary-dark text-neutral-900`}
+        flex-col overflow-hidden rounded-2xl bg-primary-dark ${
+          DARK_MODE_ENABLED ? 'text-white-95' : 'text-neutral-900'
+        }`}
       >
         <button className="absolute right-0 z-50 m-5 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
-        <div className="flex w-screen max-w-[800px] flex-col py-10 px-5 lg:pl-10">
-          <div className="absolute top-20 right-0 lg:top-0">
+        <div className="flex w-screen max-w-[800px] flex-col px-5 py-10 lg:pl-10">
+          <div className="absolute right-0 top-20 lg:top-0">
             <Image
               src={'/images/banners/lifetime_big.webp'}
               priority
@@ -56,7 +59,13 @@ const LifetimeBanner = (): JSX.Element => {
             </div>
             <div className="flex flex-col items-center space-y-6 lg:items-start">
               <button
-                className="relative flex w-max flex-row items-center space-x-4 rounded-lg bg-white px-7 py-3 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-1 sm:text-lg"
+                className={`relative flex w-max flex-row items-center space-x-4 rounded-lg ${
+                  DARK_MODE_ENABLED ? 'bg-[#1C1C1C]' : 'bg-white'
+                } px-7 py-3 text-base font-medium text-primary transition duration-100 focus:outline-none ${
+                  DARK_MODE_ENABLED
+                    ? 'focus-visible:bg-gray-105 active:bg-gray-105'
+                    : 'focus-visible:bg-gray-1 active:bg-gray-1'
+                } sm:text-lg`}
                 onClick={() => {
                   onClose();
                   router.push('/lifetime');

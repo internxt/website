@@ -11,8 +11,10 @@ import fileCompressorService from '@/services/file-compressor.service';
 import { ErrorState } from './states/ErrorState';
 import { CaretLeft, ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ConverterSectionProps {
+  darkMode?: boolean;
   textContent: any;
   converterText: any;
   errorContent: any;
@@ -21,7 +23,13 @@ interface ConverterSectionProps {
 
 type ConverterStates = 'initialState' | 'selectedFileState' | 'compressingState' | 'downloadFileState' | 'errorState';
 
-export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
+export const ConverterSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  converterText,
+  errorContent,
+  pathname,
+}: ConverterSectionProps) => {
   const router = useRouter();
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
@@ -203,7 +211,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   return (
-    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} pb-20 pt-32`}>
       <input
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
@@ -227,10 +235,14 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold">{formattedConverterText.title}</p>
           </div>
 
-          <h2 className="max-w-[865px] pt-2 text-xl text-gray-80">{textContent.description}</h2>
+          <h2 className={`max-w-[865px] pt-2 text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.description}
+          </h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
-            <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
+            <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.secureUpload}
+            </p>
           </div>
         </div>
         <div

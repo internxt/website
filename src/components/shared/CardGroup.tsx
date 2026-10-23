@@ -1,11 +1,14 @@
 import RevealY from '../components/RevealY';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const CardGroup = ({
+  darkMode = DARK_MODE_ENABLED,
   cards,
   backgroundColorCard,
   textColor,
   iconColor,
 }: {
+  darkMode?: boolean;
   cards: any[];
   backgroundColorCard?: string;
   textColor?: string;
@@ -16,7 +19,7 @@ export const CardGroup = ({
       <div
         key={card.title}
         className={`flex flex-col items-start justify-start rounded-2xl ${
-          backgroundColorCard ?? 'bg-gray-1'
+          backgroundColorCard ?? `${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`
         } p-8 sm:p-10 md:max-w-[488px]`}
       >
         <card.icon className={`mb-6 text-4xl ${iconColor ? iconColor : 'text-primary'}`} size={32} />

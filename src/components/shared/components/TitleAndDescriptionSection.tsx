@@ -1,3 +1,4 @@
+import { DARK_MODE_ENABLED } from '@/theme.config';
 interface TitleAndDescriptionSectionProps {
   textContent: any;
   darkMode?: boolean;
@@ -5,7 +6,7 @@ interface TitleAndDescriptionSectionProps {
 
 export default function TitleAndDescriptionSection({
   textContent,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
 }: Readonly<TitleAndDescriptionSectionProps>): JSX.Element {
   return (
     <section

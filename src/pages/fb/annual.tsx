@@ -13,8 +13,10 @@ import TrustedSection from '@/components/home/TrustedSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService, Interval } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AnnualProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -22,7 +24,14 @@ interface AnnualProps {
   footerLang: FooterText;
 }
 
-const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLang }: AnnualProps): JSX.Element => {
+const AnnualPage = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  footerLang,
+  navbarLang,
+}: AnnualProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const locale = lang as string;
 
@@ -87,7 +96,7 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20"
+        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
       />
 

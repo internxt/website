@@ -1,12 +1,15 @@
 import { Check } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CheckboxSettings = ({
+  darkMode = DARK_MODE_ENABLED,
   id,
   checked,
   onClick,
   required,
   className,
 }: {
+  darkMode?: boolean;
   id: string;
   checked: boolean;
   onClick?: React.DOMAttributes<HTMLLabelElement>['onClick'];
@@ -18,7 +21,9 @@ const CheckboxSettings = ({
       <button
         onClick={(e) => e.preventDefault()}
         className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded border text-white ${
-          checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'
+          checked
+            ? 'border-primary bg-primary'
+            : `${darkMode ? 'border-gray-71' : 'border-gray-30'} hover:border-gray-40`
         }`}
       >
         {checked && <Check size={16} weight="bold" />}

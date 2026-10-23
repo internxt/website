@@ -210,7 +210,13 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
         showPromo
-        backgroundGradientColor={isValentinesMode ? 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)' : undefined}
+        backgroundGradientColor={
+          isValentinesMode
+            ? isDarkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #2A1420 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)'
+            : undefined
+        }
       />
 
       <FloatingCtaSectionv2

@@ -4,6 +4,7 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThreeCardsWithImagesProps {
   textContent: {
@@ -26,7 +27,7 @@ interface ThreeCardsWithImagesProps {
 
 export default function ThreeCardsWithImagesSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
   bgColor,
   cardColor,
   bottomSeparationBar = false,
@@ -122,7 +123,11 @@ export default function ThreeCardsWithImagesSection({
           {textContent.title}
         </p>
         {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+          >
+            {textContent.description}
+          </p>
         )}
       </div>
 
@@ -194,7 +199,9 @@ export default function ThreeCardsWithImagesSection({
               disabled={currentIndex === 0}
               aria-label="Previous card"
               className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft size={24} className="text-primary" />
@@ -204,7 +211,9 @@ export default function ThreeCardsWithImagesSection({
               disabled={currentIndex === maxIndex}
               aria-label="Next card"
               className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight size={24} className="text-primary" />

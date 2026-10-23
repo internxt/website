@@ -14,8 +14,16 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const PCloudComparison = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
   const {
     products,
@@ -74,7 +82,12 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor="pCloud"
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -87,7 +100,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
         />
 
         <TablesSection
@@ -100,12 +113,20 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
+          }
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)'
+          }
           needsH2
           needsH3
         />
@@ -116,12 +137,16 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           customText={
             <>
               <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-                <h2 className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</h2>
-                <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
+                <h2 className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                  {langJson.CtaSection2.title}
+                </h2>
+                <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                  {langJson.CtaSection2.description}
+                </p>
               </div>
             </>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         />
 

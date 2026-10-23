@@ -21,9 +21,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudStorageForVideosProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageForVideoText;
   navbarLang: NavigationBarText;
@@ -33,6 +34,7 @@ interface CloudStorageForVideosProps {
 }
 
 const CloudStorageForVideos = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -42,148 +44,171 @@ const CloudStorageForVideos = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-for-videos');
 
   const {
-        products,
-        loadingCards,
-        currencyValue,
-        coupon: individualCoupon,
-        lifetimeCoupon,
-        lifetimeCoupons,
-    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
 
-    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-    const onCheckoutButtonClicked = async (
-        priceId: string,
-        isCheckoutForLifetime: boolean,
-        interval: string,
-        storage: string,
-    ) => {
-        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
-        const finalPrice = await stripeService.calculateFinalPrice(
-            priceId,
-            interval,
-            currencyValue,
-            'individuals',
-            couponCodeForCheckout,
-        );
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
-        stripeService.redirectToCheckout(
-            priceId,
-            finalPrice,
-            currencyValue,
-            'individual',
-            isCheckoutForLifetime,
-            interval,
-            storage,
-            couponCodeForCheckout?.name,
-        );
-    };
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
 
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' },
+        ])}
       </Script>
       <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Private Cloud Storage Solutions"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <AnimatedHeroSection
-        textComponent={
-          <>
-            <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
-              <h1 className="w-[323px] text-30 font-semibold text-white lg:w-full lg:text-5xl">
-                {textContent.HeroSection.title}
-              </h1>
-              <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
-                {textContent.HeroSection.features?.map((feat) => (
-                  <div key={feat} className="flex flex-row gap-2">
-                    <Check className="hidden pt-2 text-green-1 lg:flex lg:pt-0" weight="bold" size={24} />
-                    <Check className="flex text-green-1 lg:hidden lg:pt-0" weight="bold" size={20} />
-                    <p className="text-left text-sm font-medium text-white lg:text-lg lg:font-semibold ">{feat}</p>
-                  </div>
-                ))}
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Private Cloud Storage Solutions"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <AnimatedHeroSection
+          textComponent={
+            <>
+              <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
+                <h1 className="w-[323px] text-30 font-semibold text-white lg:w-full lg:text-5xl">
+                  {textContent.HeroSection.title}
+                </h1>
+                <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
+                  {textContent.HeroSection.features?.map((feat) => (
+                    <div key={feat} className="flex flex-row gap-2">
+                      <Check className="hidden pt-2 text-green-1 lg:flex lg:pt-0" weight="bold" size={24} />
+                      <Check className="flex text-green-1 lg:hidden lg:pt-0" weight="bold" size={20} />
+                      <p className="text-left text-sm font-medium text-white lg:text-lg lg:font-semibold ">{feat}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
+                  {textContent.HeroSection.subtitle}{' '}
+                </p>
+                <Link
+                  href={'#billingButtons'}
+                  className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                >
+                  {textContent.HeroSection.cta}
+                </Link>
               </div>
-              <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
-                {textContent.HeroSection.subtitle}{' '}
+            </>
+          }
+          width="w-[580px] "
+          bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+        />
+
+        <FeatureSection textContent={textContent.FeaturesSection} />
+
+        <PricingSectionWrapper
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          popularPlanBySize="5TB"
+          sectionDetails="lg:py-20"
+          backgroundGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 100%, #1C1C1C 100%, )'
+              : 'linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
+          }
+          hideFreeCard
+        />
+
+        <FloatingCtaSectionv2
+          textContent={textContent.cta}
+          customText={
+            <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
+              <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {textContent.cta.subtitle}
               </p>
-              <Link
-                href={'#billingButtons'}
-                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
-              >
-                {textContent.HeroSection.cta}
-              </Link>
             </div>
-          </>
-        }
-        width="w-[580px] "
-        bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
-      />
+          }
+          url="#billingButtons"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:py-20 py-10"
+        />
 
-      <FeatureSection textContent={textContent.FeaturesSection} />
+        <HowToChooseSection textContent={textContent.HowToChooseSection} />
 
-      <PricingSectionWrapper
-                textContent={textContent.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                popularPlanBySize="5TB"
-                sectionDetails="lg:py-20"
-                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
-                hideFreeCard
-                
-            />
+        <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.cta}
-        customText={
-          <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
-          </div>
-        }
-        url="#billingButtons"
-        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20 py-10"
-      />
+        <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
 
-      <HowToChooseSection textContent={textContent.HowToChooseSection} />
+        <FloatingCtaSectionv2
+          textContent={textContent.cta}
+          customText={
+            <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
+              <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {textContent.cta2.subtitle}
+              </p>
+            </div>
+          }
+          url="#billingButtons"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:py-20"
+        />
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
-
-      <FloatingCtaSectionv2
-        textContent={textContent.cta}
-        customText={
-          <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
-          </div>
-        }
-        url="#billingButtons"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20"
-      />
-
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
-
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }]} />
-    </Layout>
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };

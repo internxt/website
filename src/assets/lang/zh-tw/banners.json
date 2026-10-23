@@ -159,6 +159,13 @@
       "cta": "选择你的套餐 "
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "僅限限時搶購！",
+      "normalText": "黑色星期五超值優惠",
+      "cta": "立即領取"
+    }
+  },
   "lifetimeBanner": {
     "label": "永久保护您的文件",
     "title": "通过Internxt获得终身访问安全的私人云存储！",

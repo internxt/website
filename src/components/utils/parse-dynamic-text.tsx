@@ -1,12 +1,21 @@
 import { Fragment, ReactNode } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type Replacements = Record<string, string | number | undefined>;
 
 const isPending = (value: string | number | undefined) =>
   value === undefined || value === null || value === '' || String(value) === '0';
 
-export const ValueSkeleton = ({ className = 'h-4 w-12' }: { className?: string }) => (
-  <span className={`inline-block animate-pulse rounded bg-gray-10 align-middle ${className}`} />
+export const ValueSkeleton = ({
+  darkMode = DARK_MODE_ENABLED,
+  className = 'h-4 w-12',
+}: {
+  darkMode?: boolean;
+  className?: string;
+}) => (
+  <span
+    className={`inline-block animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'} align-middle ${className}`}
+  />
 );
 
 /**
@@ -15,11 +24,7 @@ export const ValueSkeleton = ({ className = 'h-4 w-12' }: { className?: string }
  * server. Instead of leaking the raw placeholder or a 0% discount, a skeleton is rendered
  * in place of the number until the real value arrives.
  */
-export const parseDynamicText = (
-  text: unknown,
-  replacements: Replacements,
-  skeletonClassName?: string,
-): ReactNode => {
+export const parseDynamicText = (text: unknown, replacements: Replacements, skeletonClassName?: string): ReactNode => {
   if (typeof text !== 'string') return text as ReactNode;
 
   const parts = text.split(/(\{\{\w+\}\})/g);

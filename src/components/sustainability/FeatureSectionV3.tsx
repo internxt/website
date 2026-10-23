@@ -3,11 +3,13 @@ import RevealX from '../components/RevealX';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { SustainabilityText } from '@/assets/types/sustainability';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface FeatureSectionV3Props {
+  darkMode?: boolean;
   textContent: SustainabilityText['FeatureSectionV3'];
 }
-const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
+const FeatureSectionV3 = ({ darkMode = DARK_MODE_ENABLED, textContent }: FeatureSectionV3Props) => {
   const cards = [
     {
       icon: Lightning,
@@ -45,10 +47,16 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
 
   return (
     <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 py-20">
+      <div
+        className={`flex flex-col items-center justify-center space-y-16 ${
+          darkMode ? 'bg-gray-105' : 'bg-gray-1'
+        } py-20`}
+      >
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
         <div>
           {cards.map((card, index) => {
@@ -86,7 +94,9 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
                   <p className="text-3xl font-semibold sm:text-4xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <span className="flex items-start space-x-2 text-4xl font-semibold text-green-1 md:text-5xl">
                     <p>{card.value}</p>
-                    <p className="text-xl font-semibold text-gray-100 md:text-2xl">{card.unit}</p>
+                    <p className={`text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} md:text-2xl`}>
+                      {card.unit}
+                    </p>
                   </span>
 
                   <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>

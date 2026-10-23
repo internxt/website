@@ -2,8 +2,9 @@ import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ lang, textContent, hideTimer }) => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, lang, textContent, hideTimer }) => {
   return (
     <section className="flex overflow-hidden bg-primary-dark pt-16">
       <div className="lg:mx-10 xl:mx-32">
@@ -15,7 +16,7 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
                 <Countdown textColor={'white'} />
               </div>
             )}
-            <div className="flex max-w-[600px] flex-col pt-10 pb-10 text-center text-white md:text-start lg:pt-0">
+            <div className="flex max-w-[600px] flex-col pb-10 pt-10 text-center text-white md:text-start lg:pt-0">
               <p className="text-7xl font-bold">{textContent.title}</p>
               <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
             </div>
@@ -23,7 +24,9 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
               onClick={() => {
                 window.location.href = `#payment`;
               }}
-              className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
+              className={`flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } text-center ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
             >
               <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
             </button>{' '}

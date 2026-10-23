@@ -1,7 +1,8 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const GetStartedSection = ({ textContent }) => (
+const GetStartedSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
   <section className="text-white">
     <div className="content">
       <div className="flex w-full flex-shrink-0 flex-col justify-center px-10 py-12 text-center sm:items-center md:px-0">
@@ -17,7 +18,9 @@ const GetStartedSection = ({ textContent }) => (
           <button
             onClick={() => goToSignUpURL()}
             id="get-started-link"
-            className="inline-flex w-auto items-center justify-center rounded-full border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base"
+            className={`inline-flex w-auto items-center justify-center rounded-full border border-transparent ${
+              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+            } px-6 py-2 text-lg font-medium text-primary focus:outline-none sm:text-base`}
           >
             {textContent.cta1}
           </button>

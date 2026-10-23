@@ -1,8 +1,10 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   url,
   maxWidth,
@@ -11,6 +13,7 @@ const CtaSection = ({
   image,
   customDescription,
 }: {
+  darkMode?: boolean;
   textContent: any;
   url?: string;
   maxWidth?: string;
@@ -24,12 +27,18 @@ const CtaSection = ({
       style={{
         background: bgImage
           ? `url(${getImage(bgImage)})`
+          : darkMode
+          ? 'radial-gradient(ellipse at center, #082D66 25%, #0D0D0D 100%)'
           : 'radial-gradient(ellipse at center, #E5EFFF 25%, #F9F9FC 100%)',
       }}
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black`}>
+        <div
+          className={`flex ${maxWidth} flex-col items-center space-y-4 text-center ${
+            darkMode ? 'text-white-95' : 'text-black'
+          }`}
+        >
           {image ? (
             <Image src={getImage(image)} alt="Internxt Logo" draggable={false} loading="lazy" width={262} height={32} />
           ) : (

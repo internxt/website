@@ -3,6 +3,7 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
@@ -12,9 +13,8 @@ interface HeroSectionForPartnerProps {
 
 export default function HeroSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
-
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
@@ -24,7 +24,7 @@ export default function HeroSection({
           : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
-      <div className="flex h-min w-[345px] flex-col justify-start gap-3 lg:gap-6 lg:w-[606px] lg:justify-between">
+      <div className="flex h-min w-[345px] flex-col justify-start gap-3 lg:w-[606px] lg:justify-between lg:gap-6">
         <h1
           className={`text-balance text-4xl font-semibold leading-tight ${
             darkMode ? 'text-white-95' : 'text-gray-100'
@@ -33,19 +33,15 @@ export default function HeroSection({
           <HighlightText text={textContent.title} />
         </h1>
 
-        <p
-          className={`font-regular ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } text-lg leading-tight lg:text-xl`}
-          >
-            {textContent.description}
+        <p className={`font-regular ${darkMode ? 'text-white-95' : 'text-gray-100'} text-lg leading-tight lg:text-xl`}>
+          {textContent.description}
         </p>
 
         <div className="flex w-full flex-col items-start">
           {textContent.features.map((feat) => (
             <div key={feat} className="flex flex-row gap-2">
               <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
-              <p className="text-left text-lg font-semibold text-black ">{feat}</p>
+              <p className={`text-left text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-black'} `}>{feat}</p>
             </div>
           ))}
         </div>
@@ -59,18 +55,16 @@ export default function HeroSection({
               {textContent.claimDeal}
             </Link>
           </div>
-          <div className="flex flex-row items-center space-x-3 justify-start">
+          <div className="flex flex-row items-center justify-start space-x-3">
             <ShieldCheck size={24} color="#0069FF" weight="fill" />
-            <p className="whitespace-nowrap  text-base lg:text-lg text-black">
+            <p className={`whitespace-nowrap  text-base lg:text-lg ${darkMode ? 'text-white-95' : 'text-black'}`}>
               {textContent.guarantee}
             </p>
           </div>
         </div>
       </div>
 
-      <div
-        className={'h-[500px] w-[562px] hidden justify-center lg:flex'}
-      >
+      <div className={'hidden h-[500px] w-[562px] justify-center lg:flex'}>
         <Image
           src={getImage(`/images/influencers/internxt-private-cloud.webp`)}
           alt="Internxt Partners HeroSection Image"

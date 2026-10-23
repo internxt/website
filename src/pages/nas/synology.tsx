@@ -18,8 +18,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface NASPageProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -29,6 +31,7 @@ interface NASPageProps {
 }
 
 const SynologyNASPage = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   lang,
@@ -41,44 +44,44 @@ const SynologyNASPage = ({
   const navbarCta = 'chooseStorage';
 
   const {
-        products,
-        loadingCards,
-        currencyValue,
-        coupon: individualCoupon,
-        lifetimeCoupon,
-        lifetimeCoupons,
-    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
 
-    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-    const onCheckoutButtonClicked = async (
-        priceId: string,
-        isCheckoutForLifetime: boolean,
-        interval: string,
-        storage: string,
-    ) => {
-        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
-        const finalPrice = await stripeService.calculateFinalPrice(
-            priceId,
-            interval,
-            currencyValue,
-            'individuals',
-            couponCodeForCheckout,
-        );
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
-        stripeService.redirectToCheckout(
-            priceId,
-            finalPrice,
-            currencyValue,
-            'individual',
-            isCheckoutForLifetime,
-            interval,
-            storage,
-            couponCodeForCheckout?.name,
-        );
-    };
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
 
   return (
     <>
@@ -99,37 +102,45 @@ const SynologyNASPage = ({
         <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
 
         <PricingSectionWrapper
-                textContent={textContent.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={locale}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
-                hideFreeCard
-          />
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          popularPlanBySize="5TB"
+          sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
+          hideFreeCard
+        />
 
         <FloatingCtaSectionv2
           textContent={textContent.ctaSection}
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {textContent.ctaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                }  lg:text-center lg:text-xl`}
+              >
                 {textContent.ctaSection.description}
               </p>
             </div>
           }
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-          bgPadding="bg-neutral-17 px-10"
+          bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
         />
 
         <HorizontalScrollableSection
@@ -147,16 +158,28 @@ const SynologyNASPage = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {textContent.ctaSectionV2.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {textContent.ctaSectionV2.description}
               </p>
             </div>
           }
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
           containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
           bgPadding="lg:pb-20"
         />

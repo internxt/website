@@ -3,6 +3,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { HandCoins, Headset, Keyhole, CheckCircle, ArrowDown } from '@phosphor-icons/react';
 import React from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -24,7 +25,7 @@ const couponNameLabel = (label: string, couponName: string) => {
 const HotLabel = ({
   textContent,
   discountValue,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   isValentinesMode,
 }: {
   textContent: any;
@@ -38,11 +39,9 @@ const HotLabel = ({
 
   const labelColorClass = isValentinesMode
     ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-    : 'bg-neutral-37 text-primary';
+    : `${darkMode ? 'bg-purple-100' : 'bg-neutral-37'} text-primary`;
 
-  const darkModeLabelClass = darkMode
-    ? 'bg-purple-100 text-purple-8'
-    : labelColorClass;
+  const darkModeLabelClass = darkMode ? 'bg-purple-100 text-purple-8' : labelColorClass;
 
   return (
     <span
@@ -62,7 +61,7 @@ const PricingHeader = ({
   discountValue,
   className = '',
   couponCodeName,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   SectionTag,
   isValentinesMode,
   alternativeHeader,
@@ -82,7 +81,9 @@ const PricingHeader = ({
     } ${className}`}
     id="priceTable"
   >
-    <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+    <SectionTag
+      className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}
+    >
       {alternativeHeader ? textContent?.planTitles?.lifetimeHeader : textContent?.planTitles?.header}
     </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
@@ -96,12 +97,20 @@ const PricingHeader = ({
   </div>
 );
 
-const CouponCodeHeader = ({ textContent, couponCode }: { textContent: any; couponCode: string }) => (
+const CouponCodeHeader = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  couponCode,
+}: {
+  darkMode?: boolean;
+  textContent: any;
+  couponCode: string;
+}) => (
   <div
     className={`flex w-auto max-w-full flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 px-4 py-2.5 text-center shadow-lg sm:p-3`}
   >
     <CheckCircle className="h-4 w-4 shrink-0 text-green-1 sm:h-5 sm:w-5" weight="fill" />
-    <p className="text-xs font-medium text-gray-95 sm:text-sm lg:text-base">
+    <p className={`text-xs font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} sm:text-sm lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
     </p>
   </div>
@@ -121,12 +130,7 @@ interface ComparativePricingSectionProps {
   couponCodeName?: string;
   isValentinesMode?: boolean;
   alternativeHeader?: boolean;
-  onCheckoutButtonClicked: (
-    planId: string,
-    isCheckoutForLifetime: boolean,
-    interval: string,
-    storage: string,
-  ) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
   hideFeatures?: boolean;
   sectionDetails?: string;
   backgroundGradientColor?: string;
@@ -139,27 +143,21 @@ export const ComparativePricingSection = ({
   loadingCards,
   lang,
   targetStorage = '5TB',
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
   decimalDiscount,
   couponCodeName,
   isValentinesMode = false,
   alternativeHeader = false,
   onCheckoutButtonClicked,
   hideFeatures = false,
-  sectionDetails = 'bg-white py-8 sm:py-10 lg:py-20',
+  sectionDetails = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-8 sm:py-10 lg:py-20`,
   backgroundGradientColor,
   SectionTag = 'h2',
 }: ComparativePricingSectionProps): JSX.Element => {
-  const annualPlan = products?.individuals?.[Interval.Year]?.find(
-    (product) => product.storage === targetStorage,
-  );
-  const lifetimePlan = products?.individuals?.[Interval.Lifetime]?.find(
-    (product) => product.storage === targetStorage,
-  );
+  const annualPlan = products?.individuals?.[Interval.Year]?.find((product) => product.storage === targetStorage);
+  const lifetimePlan = products?.individuals?.[Interval.Lifetime]?.find((product) => product.storage === targetStorage);
 
-  const actualDiscountValue = calculateDiscountPercentage(
-    decimalDiscount?.lifetime || decimalDiscount?.individuals,
-  );
+  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.lifetime || decimalDiscount?.individuals);
 
   const features = [
     {
@@ -242,7 +240,9 @@ export const ComparativePricingSection = ({
         {textContent?.ctaCompare && (
           <a
             href="#comparisonTable"
-            className="flex flex-row items-center gap-2 rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary transition-colors hover:border-primary-dark hover:bg-neutral-20 hover:text-primary-dark sm:px-5 sm:py-4 sm:text-base"
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary transition-colors hover:border-primary-dark ${
+              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20'
+            } hover:text-primary-dark sm:px-5 sm:py-4 sm:text-base`}
           >
             {textContent.ctaCompare}
             <ArrowDown className="h-4 w-4 text-primary sm:h-5 sm:w-5" />
@@ -250,19 +250,26 @@ export const ComparativePricingSection = ({
         )}
       </div>
       {!hideFeatures && (
-          <div className="w-full pl-6 pr-4 pt-10 lg:pt-20 sm:pl-10 sm:pr-6 md:px-0 lg:px-10 xl:px-32 3xl:px-80">
-            <div className="flex flex-col items-start justify-center gap-3 text-left sm:gap-4 md:flex-row md:items-start md:justify-between md:space-x-16 md:space-y-0 md:gap-0 md:text-center">
-              {features.map((feature) => (
-                <div key={feature.text} className="flex flex-row items-start justify-start gap-2.5 text-left md:max-w-[33%] md:flex-row md:items-start md:gap-3">
-                  <feature.icon size={36} className="!h-7 !w-7 shrink-0 text-primary md:!h-[36px] md:!w-[36px] md:pb-0" />
-                  <p className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${darkMode ? 'text-white' : 'text-gray-80'}`}>
-                    {feature.text}
-                  </p>
-                </div>
-              ))}
-            </div>
+        <div className="w-full pl-6 pr-4 pt-10 sm:pl-10 sm:pr-6 md:px-0 lg:px-10 lg:pt-20 xl:px-32 3xl:px-80">
+          <div className="flex flex-col items-start justify-center gap-3 text-left sm:gap-4 md:flex-row md:items-start md:justify-between md:gap-0 md:space-x-16 md:space-y-0 md:text-center">
+            {features.map((feature) => (
+              <div
+                key={feature.text}
+                className="flex flex-row items-start justify-start gap-2.5 text-left md:max-w-[33%] md:flex-row md:items-start md:gap-3"
+              >
+                <feature.icon size={36} className="!h-7 !w-7 shrink-0 text-primary md:!h-[36px] md:!w-[36px] md:pb-0" />
+                <p
+                  className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${
+                    darkMode ? 'text-white' : 'text-gray-80'
+                  }`}
+                >
+                  {feature.text}
+                </p>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
+      )}
     </section>
   );
 };

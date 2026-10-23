@@ -2,13 +2,19 @@ import { PhotoText } from '@/assets/types/photos';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
+  darkMode?: boolean;
   textContent: PhotoText['CoreFeatures'];
   needsDivider?: boolean;
 }
 
-const CoreFeaturesSection = ({ textContent, needsDivider }: CoreFeaturesSectionProps): JSX.Element => {
+const CoreFeaturesSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  needsDivider,
+}: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,19 +44,35 @@ const CoreFeaturesSection = ({ textContent, needsDivider }: CoreFeaturesSectionP
   };
 
   return (
-    <section className="relative w-full bg-neutral-17 py-10 lg:py-20">
+    <section className={`relative w-full ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} py-10 lg:py-20`}>
       {needsDivider && (
-        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+        <div
+          className={`absolute left-8 right-8 top-0 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:left-32 lg:right-32`}
+        ></div>
       )}
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-5 lg:gap-10 lg:px-20">
-        <h2 className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 lg:text-5xl lg:pr-10">{textContent.title}</h2>
-        <p className="max-w-[900px] leading-tight text-base font-normal text-gray-55 lg:text-lg">{textContent.description}</p>
+        <h2
+          className={`max-w-[1000px] text-[30px] font-bold leading-tight ${
+            darkMode ? 'text-white-95' : 'text-gray-100'
+          } lg:pr-10 lg:text-5xl`}
+        >
+          {textContent.title}
+        </h2>
+        <p
+          className={`max-w-[900px] text-base font-normal leading-tight ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          } lg:text-lg`}
+        >
+          {textContent.description}
+        </p>
         <div className="flex w-full flex-col justify-center gap-6 lg:max-w-[1500px] lg:flex-row lg:gap-16">
           <div className="flex w-full flex-col gap-6 lg:max-w-[420px]">
             <div className="flex flex-row items-center justify-center lg:hidden">
               <Image
                 src={getImage(`/images/photos/mobile.webp`)}
-                alt='mobile-features'
+                alt="mobile-features"
                 height={161}
                 width={333}
                 className="object-cover"
@@ -61,28 +83,30 @@ const CoreFeaturesSection = ({ textContent, needsDivider }: CoreFeaturesSectionP
                 key={title}
                 type="button"
                 onClick={() => handleAccordionClick(index)}
-                className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
-                  activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
-                }`}
+                className={`flex flex-col rounded-16 ${
+                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
                 aria-expanded={activeIndex === index}
               >
                 <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                   {index + 1}
-                  <h3 className="text-lg lg:text-xl font-medium text-gray-100">{title}</h3>
+                  <h3 className={`text-lg font-medium lg:text-xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {title}
+                  </h3>
                 </span>
                 <div
                   className={`grid transition-all duration-300 ${
                     activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
-                  <div className="flex flex-col text-sm lg:text-base overflow-hidden">
+                  <div className="flex flex-col overflow-hidden text-sm lg:text-base">
                     {textContent.accordionCards.descriptions[index]}
                   </div>
                 </div>
               </button>
             ))}
           </div>
-          <div className="hidden lg:flex w-full justify-center">
+          <div className="hidden w-full justify-center lg:flex">
             <div className="w-full max-w-[820px]">
               <Image
                 src={getImage(`/images/photos/mockup${activeIndex + 1}.webp`)}
@@ -104,8 +128,7 @@ const CoreFeaturesSection = ({ textContent, needsDivider }: CoreFeaturesSectionP
               msOverflowStyle: 'none',
               paddingRight: isMobile ? `calc(20px + ${getPaddingRight()}px)` : undefined,
             }}
-          >
-          </div>
+          ></div>
         </div>
       </div>
     </section>

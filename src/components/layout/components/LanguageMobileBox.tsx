@@ -36,11 +36,17 @@ export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) 
               } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
             >
               <div className="flex flex-row items-center space-x-2">
-                <Globe className={darkMode ? 'text-white' : 'text-black'} size={20} weight="regular" />
+                <Globe className={darkMode ? 'text-white-95' : 'text-black'} size={20} weight="regular" />
                 <span className="flex flex-row">{selectedLanguage}</span>
               </div>
-              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+              <CaretDown
+                className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                weight="bold"
+              />
+              <CaretUp
+                className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                weight="bold"
+              />
             </Disclosure.Button>
 
             <Transition
@@ -50,8 +56,8 @@ export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) 
               leave="transition duration-200 ease-out"
             >
               <Disclosure.Panel
-                className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                  darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
+                className={`flex flex-col px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                  darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'
                 } max-h-48 space-y-2 overflow-y-auto p-4`}
               >
                 {filteredLanguages.map((language) => {

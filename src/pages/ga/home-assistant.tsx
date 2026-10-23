@@ -14,133 +14,148 @@ import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import HeroSection from '@/components/home-assistant/HeroSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeAssistantProps {
-    lang: GetStaticPropsContext['locale'];
-    metatagsDescriptions: MetatagsDescription[];
-    navbarLang: NavigationBarText;
-    textContent: HomeAssistantText;
-    footerLang: FooterText;
+  darkMode?: boolean;
+  lang: GetStaticPropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: HomeAssistantText;
+  footerLang: FooterText;
 }
 
-const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
+const HomeAssistantPage = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  footerLang,
+  navbarLang,
+}: HomeAssistantProps): JSX.Element => {
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
+  const locale = lang as string;
 
-    const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
-    const locale = lang as string;
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    lifetimeCoupons,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+  } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
 
-    const {
-        products,
-        loadingCards,
-        currencyValue,
-        lifetimeCoupons,
-        coupon: individualCoupon,
-        lifetimeCoupon,
-    } = usePricing({ couponCode: PromoCodeName.GADS85, couponCodeForLifetime: PromoCodeName.GADS85 });
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
-    const onCheckoutButtonClicked = async (
-        priceId: string,
-        isCheckoutForLifetime: boolean,
-        interval: string,
-        storage: string,
-    ) => {
-        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
-
-        const finalPrice = await stripeService.calculateFinalPrice(
-            priceId,
-            interval,
-            currencyValue,
-            'individuals',
-            couponCodeForCheckout,
-        );
-
-        stripeService.redirectToCheckout(
-            priceId,
-            finalPrice,
-            currencyValue,
-            'individual',
-            isCheckoutForLifetime,
-            interval,
-            storage,
-            couponCodeForCheckout?.name,
-        );
-    };
-
-    return (
-        <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
-            <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
-
-            <HeroSection textContent={textContent.HeroSection} />
-
-            <ReviewsSection textContent={textContent.ReviewSection} />
-
-            <PricingSectionWrapper 
-                textContent={textContent.TableSection}
-                decimalDiscount={{
-                individuals: decimalDiscount,
-                lifetime: decimalDiscountForLifetime,
-                }}
-                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-                lifetimeCoupons={lifetimeCoupons}
-                lang={locale}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                popularPlanBySize="5TB"
-                onlyUltimatePlan
-                startFromPlan='Individuals'
-                startIndividualPlansFromInterval={Interval.Year}
-                sectionDetails="bg-white lg:py-20"
-                hideFreeCard
-            />
-
-            <ThreeCardsIconsSection
-                textContent={textContent.ThreeCardsSection}
-                cardColor='bg-white'
-            />
-
-            <CoreFeaturesSection textContent={textContent.CoreFeatures} />
-
-            <TrustedSection
-                textContent={textContent.TrustedBySection}
-                bottomBar={true}
-                bgColor='bg-neutral-17'
-            />
-
-            <ThreeCardsSection
-                textContent={textContent.MadeInEuropeSection}
-                bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-            />
-
-            <MinimalFooter
-                footerLang={footerLang.FooterSection}
-                lang={locale}
-                bgColor='bg-white'
-            />
-
-        </Layout>
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
     );
-}
+
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
+
+  return (
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
+      <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
+
+      <HeroSection textContent={textContent.HeroSection} />
+
+      <ReviewsSection textContent={textContent.ReviewSection} />
+
+      <PricingSectionWrapper
+        textContent={textContent.TableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
+        }}
+        backgroundGradientColor={
+          darkMode
+            ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
+        lifetimeCoupons={lifetimeCoupons}
+        lang={locale}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        popularPlanBySize="5TB"
+        onlyUltimatePlan
+        startFromPlan="Individuals"
+        startIndividualPlansFromInterval={Interval.Year}
+        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        hideFreeCard
+      />
+
+      <ThreeCardsIconsSection
+        textContent={textContent.ThreeCardsSection}
+        cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+      />
+
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+
+      <TrustedSection
+        textContent={textContent.TrustedBySection}
+        bottomBar={true}
+        bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+      />
+
+      <ThreeCardsSection
+        textContent={textContent.MadeInEuropeSection}
+        bgColor={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
+      />
+
+      <MinimalFooter
+        footerLang={footerLang.FooterSection}
+        lang={locale}
+        bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+      />
+    </Layout>
+  );
+};
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
-    const lang = ctx.locale;
+  const lang = ctx.locale;
 
-    const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-    const langJson = require(`@/assets/lang/${lang}/home-assistant.json`);
-    const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-    const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/home-assistant.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
-    return {
-        props: {
-            lang,
-            metatagsDescriptions,
-            textContent: langJson,
-            navbarLang,
-            footerLang,
-        },
-    };
+  return {
+    props: {
+      lang,
+      metatagsDescriptions,
+      textContent: langJson,
+      navbarLang,
+      footerLang,
+    },
+  };
 }
 
 export default HomeAssistantPage;

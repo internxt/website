@@ -23,8 +23,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveProps {
+  darkMode?: boolean;
   textContent: DriveText;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -43,6 +45,7 @@ interface DriveProps {
 }
 
 const Drive = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   download,
   textContent,
@@ -53,126 +56,163 @@ const Drive = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-cloud-storage');
 
   const {
-        products,
-        loadingCards,
-        currencyValue,
-        coupon: individualCoupon,
-        lifetimeCoupon,
-        lifetimeCoupons,
-    } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({ couponCode: PromoCodeName.seolp, couponCodeForLifetime: PromoCodeName.seolp });
 
-    const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-    const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-    const onCheckoutButtonClicked = async (
-        priceId: string,
-        isCheckoutForLifetime: boolean,
-        interval: string,
-        storage: string,
-    ) => {
-        const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+  const onCheckoutButtonClicked = async (
+    priceId: string,
+    isCheckoutForLifetime: boolean,
+    interval: string,
+    storage: string,
+  ) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
 
-        const finalPrice = await stripeService.calculateFinalPrice(
-            priceId,
-            interval,
-            currencyValue,
-            'individuals',
-            couponCodeForCheckout,
-        );
+    const finalPrice = await stripeService.calculateFinalPrice(
+      priceId,
+      interval,
+      currencyValue,
+      'individuals',
+      couponCodeForCheckout,
+    );
 
-        stripeService.redirectToCheckout(
-            priceId,
-            finalPrice,
-            currencyValue,
-            'individual',
-            isCheckoutForLifetime,
-            interval,
-            storage,
-            couponCodeForCheckout?.name,
-        );
-    };
+    stripeService.redirectToCheckout(
+      priceId,
+      finalPrice,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      interval,
+      storage,
+      couponCodeForCheckout?.name,
+    );
+  };
 
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' },
+        ])}
       </Script>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
-      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="FreeCloudStorage"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
 
-      <DriveSection textContent={textContent.DriveSection} />
+        <DriveSection textContent={textContent.DriveSection} />
 
-      <HorizontalScrollableSection
-        textContent={textContent.EncryptedCloudStorageSection}
-        bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-      />
-
-      <FileParallaxSection />
-
-      <PricingSectionWrapper
-                textContent={textContent.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
-                hideFreeCard
+        <HorizontalScrollableSection
+          textContent={textContent.EncryptedCloudStorageSection}
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
+          needsH2
+          needsH3
         />
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+        <FileParallaxSection />
 
-      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
+        <PricingSectionWrapper
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          popularPlanBySize="5TB"
+          sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
+          hideFreeCard
+        />
 
-      <ThreeCardsSection
-        textContent={textContent.MadeInEuropeSection}
-        bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-      />
+        <CoreFeaturesSection textContent={textContent.CoreFeatures} />
 
-      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
+        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection}
-        url={'#billingButtons'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSection.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20"
-      />
+        <ThreeCardsSection
+          textContent={textContent.MadeInEuropeSection}
+          bgColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
+        />
 
-      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
-      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection}
+          url={'#billingButtons'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
+                {textContent.CtaSection.title}
+              </h2>
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
+                {textContent.CtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:py-20"
+        />
 
-      <ReviewsSection
-        textContent={textContent.ReviewSection}
-        bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-      />
+        <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }]} />
-    </Layout>
+        <ReviewsSection
+          textContent={textContent.ReviewSection}
+          bgColor={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
+        />
+
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' },
+          ]}
+        />
+      </Layout>
     </>
   );
 };

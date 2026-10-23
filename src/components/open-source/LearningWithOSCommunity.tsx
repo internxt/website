@@ -1,10 +1,11 @@
-const LearningWithOSCommunity = ({ textContent }) => {
+import { DARK_MODE_ENABLED } from '@/theme.config';
+const LearningWithOSCommunity = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-6 py-20 px-5 text-center">
+      <div className="flex flex-col items-center justify-center space-y-6 px-5 py-20 text-center">
         <p className="max-w-[744px] text-5xl font-semibold">{textContent.title}</p>
         {textContent.description.map((paragraph, index) => (
-          <p key={index} className="max-w-[774px] text-xl text-gray-80">
+          <p key={index} className={`max-w-[774px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {paragraph}
           </p>
         ))}

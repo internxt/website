@@ -4,6 +4,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DialogDataProps {
   email: string;
@@ -39,13 +40,15 @@ export const ActionBanner = () => {
     >
       <div
         className={`absolute left-1/2 top-1/2 flex h-auto w-full max-w-5xl -translate-x-1/2
-        -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-white`}
+        -translate-y-1/2 flex-col overflow-hidden rounded-2xl ${DARK_MODE_ENABLED ? 'bg-[#1C1C1C]' : 'bg-white'}`}
       >
         <button
-          className="absolute right-0 z-50 m-5 flex w-auto rounded-md hover:bg-gray-5"
+          className={`absolute right-0 z-50 m-5 flex w-auto rounded-md ${
+            DARK_MODE_ENABLED ? 'hover:bg-gray-105' : 'hover:bg-gray-5'
+          }`}
           onClick={() => dialogAction.closeDialog(DIALOG_KEY)}
         >
-          <X size={32} className="text-black" />
+          <X size={32} className={`${DARK_MODE_ENABLED ? 'text-white-95' : 'text-black'}`} />
         </button>
         <div className="flex flex-col items-center px-5 py-12 md:flex-row md:space-x-4 md:p-14">
           <div className="hidden w-full object-contain md:flex">
@@ -58,7 +61,9 @@ export const ActionBanner = () => {
             />
           </div>
           <div className="flex max-w-[551px] flex-col items-center gap-6 text-center md:items-start md:justify-center md:text-left">
-            <p className="text-4xl font-semibold text-gray-100">{bannerFormattedText.title}</p>
+            <p className={`text-4xl font-semibold ${DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'}`}>
+              {bannerFormattedText.title}
+            </p>
             <RenderDescription description={bannerFormattedText.description} />
             <div className="flex w-full flex-col gap-6 md:flex-row">
               <button
@@ -69,7 +74,11 @@ export const ActionBanner = () => {
               </button>
               <button
                 onClick={onCloseDialog}
-                className="flex flex-col items-center rounded-lg border border-gray-10 px-5 py-3 text-xl font-medium text-gray-80 hover:bg-gray-5"
+                className={`flex flex-col items-center rounded-lg border ${
+                  DARK_MODE_ENABLED ? 'border-gray-71' : 'border-gray-10'
+                } px-5 py-3 text-xl font-medium ${
+                  DARK_MODE_ENABLED ? 'text-cool-gray-30 hover:bg-gray-105' : 'text-gray-80 hover:bg-gray-5'
+                }`}
               >
                 {bannerFormattedText.cancelCta}
               </button>

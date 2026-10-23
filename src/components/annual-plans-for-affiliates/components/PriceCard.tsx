@@ -20,8 +20,10 @@ import {
   VideoConference,
 } from '@phosphor-icons/react';
 import React from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface PriceCardProps {
+  darkMode?: boolean;
   contentText: any;
   planType: string;
   storage: string;
@@ -39,6 +41,7 @@ export interface PriceCardProps {
 }
 
 export default function PriceCard({
+  darkMode = DARK_MODE_ENABLED,
   planType,
   storage,
   price,
@@ -73,11 +76,13 @@ export default function PriceCard({
   return (
     <div
       className={`${
-        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
+        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${darkMode ? 'ring-gray-71' : 'ring-gray-10'}`
       } m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -99,10 +104,14 @@ export default function PriceCard({
         >
           <div
             className={`priceBreakdown flex flex-row
-              items-end space-x-px text-neutral-700
+              items-end space-x-px ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}
             `}
           >
-            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
+            <p
+              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
               <span>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
@@ -138,14 +147,20 @@ export default function PriceCard({
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+              : `border-primary text-primary ${
+                  darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5'
+                }`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{contentText.cta}</p>
         </button>
       </div>
 
-      <div className="featureList flex h-[700px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
+      <div
+        className={`featureList flex h-[700px] flex-col border-t ${
+          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
+        } p-6 ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+      >
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
@@ -161,7 +176,7 @@ export default function PriceCard({
                     className: 'text-primary',
                   },
                 )}
-                <span className="text-gray-80">
+                <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
                   {feature}
                   {index > 9 ? (
                     <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">

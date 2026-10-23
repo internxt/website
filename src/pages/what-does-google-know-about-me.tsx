@@ -17,10 +17,12 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const URL_REDIRECT = '/pricing';
 
 const WhatDoesGoogleKnowAboutMe = ({
+  darkMode = DARK_MODE_ENABLED,
   lang,
   langJson,
   toolsContent,
@@ -100,7 +102,7 @@ const WhatDoesGoogleKnowAboutMe = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20 xl:py-32"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           freePlanNeedsH2
         />
 

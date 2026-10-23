@@ -16,9 +16,10 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: CloudStorageForPhotosText;
   navbarLang: NavigationBarText;
@@ -29,6 +30,7 @@ interface PrivacyProps {
 }
 
 const CloudStorageBackupSolutions = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -87,7 +89,11 @@ const CloudStorageBackupSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' },
+        ])}
       </Script>
       <Layout
         title={metatags[0].title}
@@ -122,14 +128,22 @@ const CloudStorageBackupSolutions = ({
         <FeaturesSlider
           textContent={textContent.FeaturesSection}
           cardInfo={cardInfo}
-          backgroundClass="bg-white lg:bg-gray-1"
+          backgroundClass={`${darkMode ? 'bg-[#1C1C1C] lg:bg-gray-105' : 'bg-white lg:bg-gray-1'}`}
         />
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' },
+          ]}
+        />
       </Layout>
     </>
   );

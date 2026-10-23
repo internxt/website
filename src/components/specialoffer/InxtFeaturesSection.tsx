@@ -1,7 +1,8 @@
 import { LockSimple, NumberCircleZero, ShieldCheck, Eye, Scales, ListChecks } from '@phosphor-icons/react';
 import { CardGroup } from '../shared/CardGroup';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const InxtFeaturesSection = ({ textContent }) => {
+export const InxtFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const cards = [
     {
       icon: LockSimple,
@@ -36,11 +37,13 @@ export const InxtFeaturesSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-[850px] flex-col gap-6 text-center">
-          <h2 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <h2 className={`text-5xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </h2>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
         <CardGroup cards={cards} />
       </div>

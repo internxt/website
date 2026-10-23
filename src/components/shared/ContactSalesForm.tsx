@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useState, useEffect, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import { currencyService } from '@/services/currency.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ContactSalesFormProps {
+  darkMode?: boolean;
   textContent: any;
   isReseller?: boolean;
   locale?: string;
@@ -122,6 +124,7 @@ const isFormDataLegitimate = (data: {
 };
 
 export const ContactSalesForm = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   isReseller,
   locale,
@@ -144,17 +147,17 @@ export const ContactSalesForm = ({
 
   useEffect(() => {
     currencyService
-    .getCountry()
-    .then(({ country }) => {
-      const prefix = PHONE_PREFIXES.find((prefix) => prefix.label.includes(country));
-      if(prefix) {
-        setPhonePrefix(prefix.code);
-      }
-    })
-    .catch(() => {
-      // No OP
-    })
-  },[])
+      .getCountry()
+      .then(({ country }) => {
+        const prefix = PHONE_PREFIXES.find((prefix) => prefix.label.includes(country));
+        if (prefix) {
+          setPhonePrefix(prefix.code);
+        }
+      })
+      .catch(() => {
+        // No OP
+      });
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -225,21 +228,42 @@ export const ContactSalesForm = ({
   return (
     <section className="overflow-hidden px-8 py-10 lg:px-0 lg:py-20" id="contactSalesForm">
       {needsTopDivider && (
-        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+        <div
+          className={`absolute left-8 right-8 top-0 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:left-32 lg:right-32`}
+        ></div>
       )}
       {needsBottomDivider && (
-        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+        <div
+          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:left-32 lg:right-32`}
+        ></div>
       )}
       <div className="flex flex-col items-center gap-6 text-center ">
-        <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
-        <p className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">
+        <p
+          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}
+        >
+          {textContent.title}
+        </p>
+        <p
+          className={`max-w-[774px] px-10 text-lg leading-tight ${
+            darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+          } lg:px-0`}
+          id="contactSales"
+        >
           {textContent.description}
         </p>
       </div>
 
       <div className="flex items-center justify-center py-8 ">
         <div className="flex w-[636px]">
-          <div className="flex-1 rounded-32 bg-neutral-17 p-10 text-gray-100">
+          <div
+            className={`flex-1 rounded-32 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} p-10 ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            }`}
+          >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
@@ -250,7 +274,9 @@ export const ContactSalesForm = ({
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="w-full rounded-lg border border-highlight px-3 py-2 outline-none"
+                    className={`w-full rounded-lg border ${
+                      darkMode ? 'border-gray-71' : 'border-highlight'
+                    } px-3 py-2 outline-none`}
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -263,7 +289,9 @@ export const ContactSalesForm = ({
                     id="company"
                     type="text"
                     placeholder={textContent.form.company}
-                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none  "
+                    className={`w-full rounded-lg border ${
+                      darkMode ? 'border-gray-71' : 'border-highlight'
+                    } px-3 py-2 focus:outline-none  `}
                     value={formData.company}
                     onChange={handleChange}
                   />
@@ -279,7 +307,9 @@ export const ContactSalesForm = ({
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none "
+                    className={`w-full rounded-lg border ${
+                      darkMode ? 'border-gray-71' : 'border-highlight'
+                    } px-3 py-2 focus:outline-none `}
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -288,12 +318,18 @@ export const ContactSalesForm = ({
                   <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
-                  <div className="flex overflow-hidden rounded-lg border border-highlight">
+                  <div
+                    className={`flex overflow-hidden rounded-lg border ${
+                      darkMode ? 'border-gray-71' : 'border-highlight'
+                    }`}
+                  >
                     <select
                       id="phonePrefix"
                       value={phonePrefix}
                       onChange={(e) => setPhonePrefix(e.target.value)}
-                      className="cursor-pointer appearance-none border-r border-highlight bg-white px-2 py-2 text-sm text-gray-100 focus:outline-none"
+                      className={`cursor-pointer appearance-none border-r ${
+                        darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-highlight bg-white'
+                      } px-2 py-2 text-sm ${darkMode ? 'text-white-95' : 'text-gray-100'} focus:outline-none`}
                     >
                       {PHONE_PREFIXES.map(({ code, flag, label }) => (
                         <option key={code} value={code}>
@@ -305,7 +341,7 @@ export const ContactSalesForm = ({
                       id="phone"
                       type="tel"
                       placeholder={textContent.form.phone}
-                      className="flex-1 bg-white px-3 py-2 focus:outline-none"
+                      className={`flex-1 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-3 py-2 focus:outline-none`}
                       value={formData.phone}
                       onChange={handleChange}
                     />
@@ -319,8 +355,10 @@ export const ContactSalesForm = ({
                 </label>
                 <select
                   id="storage"
-                  className={`w-full appearance-none rounded-lg border border-highlight bg-white px-3 py-2 ${
-                    formData.storage === '' ? 'text-gray-40' : 'text-gray-100'
+                  className={`w-full appearance-none rounded-lg border ${
+                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-highlight bg-white'
+                  } px-3 py-2 ${
+                    formData.storage === '' ? 'text-gray-40' : `${darkMode ? 'text-white-95' : 'text-gray-100'}`
                   }`}
                   value={formData.storage}
                   onChange={handleChange}
@@ -329,14 +367,18 @@ export const ContactSalesForm = ({
                     <option
                       key={index}
                       value={index === 0 ? '' : option}
-                      className={index === 0 ? 'text-gray-40' : 'text-gray-100'}
+                      className={index === 0 ? 'text-gray-40' : `${darkMode ? 'text-white-95' : 'text-gray-100'}`}
                     >
                       {option}
                     </option>
                   ))}
                 </select>
 
-                <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100" />
+                <CaretDown
+                  className={`pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform ${
+                    darkMode ? 'text-white-95' : 'text-gray-100'
+                  }`}
+                />
               </div>
 
               <div>
@@ -349,7 +391,9 @@ export const ContactSalesForm = ({
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
-                  className="h-32 w-full resize-none rounded-lg border border-highlight px-3 py-2 focus:outline-none "
+                  className={`h-32 w-full resize-none rounded-lg border ${
+                    darkMode ? 'border-gray-71' : 'border-highlight'
+                  } px-3 py-2 focus:outline-none `}
                 />
               </div>
 
@@ -366,16 +410,28 @@ export const ContactSalesForm = ({
               </div>
 
               {formStatus === 'success' && (
-                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                <div
+                  className={`flex items-center justify-center rounded-md border ${
+                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-highlight bg-white'
+                  } px-5 py-2`}
+                >
                   <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
-                  <p className="ml-2 text-sm text-gray-80">{textContent.form.successMessage}</p>
+                  <p className={`ml-2 text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                    {textContent.form.successMessage}
+                  </p>
                 </div>
               )}
 
               {formStatus === 'error' && (
-                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                <div
+                  className={`flex items-center justify-center rounded-md border ${
+                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-highlight bg-white'
+                  } px-5 py-2`}
+                >
                   <WarningCircle height={24} width={24} weight="fill" className="text-red" />
-                  <p className="ml-2 text-sm text-gray-80">{textContent.form.errorMessage}</p>
+                  <p className={`ml-2 text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                    {textContent.form.errorMessage}
+                  </p>
                 </div>
               )}
             </form>

@@ -45,7 +45,11 @@ const FreePlanCard = ({ textContent, darkMode, freePlanNeedsH2 = false }: FreePl
           border  px-1 text-center lg:hidden`}
       >
         <div className="flex h-[78px] flex-col items-center justify-center px-1 text-center">
-          <p className={`${darkMode ? 'text-white-95' : 'text-gray-95'}  text-30 font-semibold text-gray-95`}>
+          <p
+            className={`${darkMode ? 'text-white-95' : 'text-gray-95'}  text-30 font-semibold ${
+              darkMode ? 'text-white-95' : 'text-gray-95'
+            }`}
+          >
             {textContent.eyeBrow}
           </p>
           <p className={`${darkMode ? 'text-green-120' : 'text-gray-55'} w-[313px] text-sm font-normal`}>

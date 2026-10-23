@@ -5,6 +5,10 @@ import Script from 'next/script';
 import { INTERNXT_URL } from '@/constants';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
+import { DARK_MODE_ENABLED } from '@/theme.config';
+import TopBanner from '@/components/banners/TopBanner';
+import { ANNOUNCEMENT_BAR_OFFSET_PADDING } from '@/announcement.config';
+import { useAnnouncementBar } from '@/hooks/useAnnouncementBar';
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -40,6 +44,8 @@ export default function Layout({
 }: LayoutProps) {
   const router = useRouter();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
+
+  const { isVisible: showAnnouncementBar } = useAnnouncementBar();
   const lang = router.locale;
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.has(langToUpperCase) ? langToUpperCase : 'EN';
@@ -105,8 +111,14 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
         <meta name="apple-itunes-app" content={`app-id=1465869889`} />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+        {DARK_MODE_ENABLED ? (
+          <meta name="theme-color" content="#1C1C1C" />
+        ) : (
+          <>
+            <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+          </>
+        )}
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
@@ -121,6 +133,14 @@ export default function Layout({
         <link rel="alternate" hrefLang="pt-BR" href={`https://internxt.com/pt-br${pathname}`} />
         <link rel="alternate" hrefLang="x-default" href={`https://internxt.com${pathname}`} />
         <link rel="stylesheet" href="/cookiebanner.style.css" />
+        {DARK_MODE_ENABLED && (
+          <style>{`html, body { background-color: #1C1C1C; color: #FAFAFA; }
+            .always-scroll::-webkit-scrollbar-track { background: #0D0D0D; }
+            .always-scroll::-webkit-scrollbar-thumb { background-color: #474747; }
+            .always-scroll { scrollbar-color: #474747 #0D0D0D; }
+            #cookieBanner { border: 1px solid #474747; box-shadow: 0 8px 28px rgba(0,0,0,0.55); }
+            #cookieBanner.light button#cookieReject { border: 1px solid #474747; }`}</style>
+        )}
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -145,6 +165,10 @@ export default function Layout({
         }`}
       </Script>
 
+      <Script id="internxt-dark-mode-flag" strategy="beforeInteractive">
+        {`window.__INTERNXT_DARK_MODE__ = ${DARK_MODE_ENABLED};`}
+      </Script>
+
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
       <Script src="/js/cookiebanner.script.js" strategy="afterInteractive" />
       <Script id="cookie-banner-init" strategy="afterInteractive">
@@ -160,7 +184,15 @@ export default function Layout({
         `}
       </Script>
 
-      <div className="flex flex-col">{children}</div>
+      {showAnnouncementBar && <TopBanner />}
+
+      <div
+        className={`flex flex-col ${DARK_MODE_ENABLED ? 'bg-[#1C1C1C]' : ''} ${
+          showAnnouncementBar ? ANNOUNCEMENT_BAR_OFFSET_PADDING : ''
+        }`}
+      >
+        {children}
+      </div>
 
       {/* <BFBanner /> */}
     </>

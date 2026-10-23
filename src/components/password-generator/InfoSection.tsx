@@ -4,15 +4,18 @@ import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, Text
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bannerText,
   hideLast2Sections,
   lang,
 }: {
+  darkMode?: boolean;
   textContent: any;
   bannerText: any;
   hideLast2Sections?: boolean;
@@ -48,28 +51,36 @@ const InfoSection = ({
   const getSectionText = (text) => {
     return (
       <div className="flex w-full max-w-2xl flex-col space-y-3 ">
-        <p className="text-2xl font-medium text-gray-100">{text.title}</p>
+        <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{text.title}</p>
         <RenderDescription description={text.description} />
       </div>
     );
   };
 
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
-        <div className="gap flex flex-row flex-wrap items-center justify-center bg-gray-1">
+        <div
+          className={`gap flex flex-row flex-wrap items-center justify-center ${
+            darkMode ? 'bg-gray-105' : 'bg-gray-1'
+          }`}
+        >
           <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl px-10 pt-10">
             {cards1.map((item) => (
               <div className="1 100% flex flex-1" key={item.title}>
-                <div className="flex h-full flex-col rounded-2xl bg-white p-10">
+                <div className={`flex h-full flex-col rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-10`}>
                   <div className="flex max-w-[200px] flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
                     <item.icon className="h-8 w-8 text-primary" />
-                    <p className="text-2xl font-medium text-gray-100">{item.title}</p>
+                    <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                      {item.title}
+                    </p>
                     <div className="flex flex-row items-center justify-center text-primary">
-                      <p className="text-2xl text-gray-80">{item.description}</p>
+                      <p className={`text-2xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -90,9 +101,17 @@ const InfoSection = ({
               </p>
             }
           />
-          <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
+          <div
+            className={`flex flex-col items-center justify-center space-y-16 ${
+              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+            } px-5 py-20`}
+          >
             {getSectionText(textContent.thirdSection)}
-            <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
+            <div
+              className={`flex max-w-2xl flex-col items-start space-y-3 ${
+                darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+              } md:px-0`}
+            >
               {getSectionText(textContent.fourthSection)}
               <p className="text-lg">{textContent.bulletedList.title}</p>
               <ul className="list-disc pl-5 text-lg">
@@ -123,7 +142,9 @@ const InfoSection = ({
               {textContent.infoCards2.map((tip, index) => (
                 <div
                   key={tip}
-                  className="flex flex-col items-start space-y-3 rounded-2xl bg-gray-1 p-8 lg:h-full lg:max-w-[256px]"
+                  className={`flex flex-col items-start space-y-3 rounded-2xl ${
+                    darkMode ? 'bg-gray-105' : 'bg-gray-1'
+                  } p-8 lg:h-full lg:max-w-[256px]`}
                 >
                   <p className="flex flex-col text-primary">{tipIcons[index]}</p>
                   <p className="text-2xl">{tip}</p>

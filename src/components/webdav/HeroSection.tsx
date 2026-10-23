@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ textContent, url = '#billingButtons' }) => {
+export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, url = '#billingButtons' }) => {
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 pt-28 lg:mt-16 lg:flex-row lg:gap-16 lg:py-10"
-      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
+          : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
+      }}
     >
       <div
         className={`z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[520px] lg:gap-8 lg:rounded-16 lg:p-8`}
@@ -17,10 +22,14 @@ export const HeroSection = ({ textContent, url = '#billingButtons' }) => {
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>
-        <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+        <p
+          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
+        >
           <HighlightText text={textContent.title} />
         </p>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+          {textContent.description}
+        </p>
         <Link
           href={url}
           className="z-10 flex h-min w-min items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-normal text-white hover:bg-primary-dark"

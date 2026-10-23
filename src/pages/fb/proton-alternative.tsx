@@ -15,8 +15,16 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const ProtonComparison = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'proton-drive-alternative');
 
   const {
@@ -62,8 +70,12 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
-  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
+  const privacyBgGradient = darkMode
+    ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
+    : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
+  const alternativeBgColor = darkMode
+    ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
+    : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
 
   return (
     <>
@@ -77,7 +89,12 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <MinimalNavbar textContent={navbarLang} lang={locale} />
         <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'proton-drive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'proton-drive'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable
+          textContent={langJson.HeaderSection}
+          competitor={'proton-drive'}
+          percentage={percentageDiscount}
+          needH2
+        />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -100,7 +117,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
           hideFreeCard
         />
 
@@ -114,7 +131,7 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         <ThreeCardsSection
           textContent={langJson.WhyNeedAlternativeSection}
           bgColor={privacyBgGradient}
-          cardColor="bg-white"
+          cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           needsH2={false}
           bottomSeparationBar
         />
@@ -131,15 +148,21 @@ const ProtonComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-32">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                {parseDynamicText(langJson.CtaSection.title, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {parseDynamicText(langJson.CtaSection.description, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
         />

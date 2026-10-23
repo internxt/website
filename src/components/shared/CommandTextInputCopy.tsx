@@ -1,19 +1,23 @@
 import { Copy } from '@phosphor-icons/react';
 import copyToClipboard from '../utils/copy-to-clipboard';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CopyTextInputProps {
+  darkMode?: boolean;
   text: string;
   isCommandCard?: boolean;
 }
 
-export const CommandTextInputCopy = ({ text, isCommandCard }: CopyTextInputProps) => {
+export const CommandTextInputCopy = ({ darkMode = DARK_MODE_ENABLED, text, isCommandCard }: CopyTextInputProps) => {
   const onCopy = () => {
     copyToClipboard(text);
   };
 
   return (
     <button
-      className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl border border-gray-10 bg-white px-4 py-3 text-gray-80 shadow-sm`}
+      className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl border ${
+        darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
+      } px-4 py-3 ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} shadow-sm`}
       onClick={onCopy}
     >
       <p

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Feature {
   icon: React.ComponentType<any>;
@@ -7,6 +8,7 @@ interface Feature {
 }
 
 interface BestStorageSectionProps {
+  darkMode?: boolean;
   textContent: {
     card1: { title: string };
     card2: { title: string };
@@ -16,7 +18,7 @@ interface BestStorageSectionProps {
   };
 }
 
-const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestStorageSectionProps): JSX.Element => {
   const features: Feature[] = [
     {
       icon: Database,
@@ -40,7 +42,6 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
     },
   ];
 
- 
   const formatText = (text: string) => {
     const firstSpaceIndex = text.indexOf(' ');
     if (firstSpaceIndex === -1) return text;
@@ -58,11 +59,13 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
   };
 
   const FeatureItem = ({
+    darkMode = DARK_MODE_ENABLED,
     feature,
     iconSize,
     containerWidth,
     textSize,
   }: {
+    darkMode?: boolean;
     feature: Feature;
     iconSize: number;
     containerWidth: string;
@@ -73,12 +76,14 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
         size={iconSize}
         className="mb-2 text-primary transition-colors duration-200 hover:text-primary/80"
       />
-      <p className={`${textSize} font-medium text-gray-100`}>{formatText(feature.title)}</p>
+      <p className={`${textSize} font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+        {formatText(feature.title)}
+      </p>
     </div>
   );
 
   return (
-    <section className="overflow-hidden bg-neutral-17">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}>
       <div className="hidden items-center justify-center py-16 lg:flex">
         <div className="flex w-full max-w-4xl flex-row justify-between gap-4 px-4">
           {features.map((feature, index) => (

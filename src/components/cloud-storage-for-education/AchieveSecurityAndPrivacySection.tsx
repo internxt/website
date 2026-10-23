@@ -1,15 +1,24 @@
 import RenderDescription from '@/components/shared/RenderDescription';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const AchieveSecurityAndPrivacySection = ({ textContent }) => {
+const AchieveSecurityAndPrivacySection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center space-y-20 py-20 px-5">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+      <div className="flex flex-col items-center space-y-20 px-5 py-20">
         {/* First section */}
         <div className="flex max-w-[774px] flex-col items-center space-y-6 text-center">
-          <h2 className="max-w-[700px] text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
-          <p className="text-2xl font-semibold text-gray-80">{textContent.subtitle}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <h2
+            className={`max-w-[700px] text-5xl font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            }`}
+          >
+            {textContent.title}
+          </h2>
+          <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.subtitle}
+          </p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
         {/* Image */}
         <div className="flex w-full flex-col items-center justify-center pt-6">
@@ -30,7 +39,9 @@ const AchieveSecurityAndPrivacySection = ({ textContent }) => {
             <span className="text-primary">{textContent.claimOffer.title.blueText}</span>
             {textContent.claimOffer.title.normalText2}
           </h2>
-          <p className="text-2xl font-semibold text-gray-80">{textContent.claimOffer.description}</p>
+          <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.claimOffer.description}
+          </p>
           <RenderDescription fontSize="text-xl" description={textContent.claimOffer.paragraph} />
           {/* CTA */}
           <div className="flex flex-col pt-6">

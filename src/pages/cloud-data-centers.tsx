@@ -13,8 +13,10 @@ import CompilanceAndCertificationsSection from '@/components/data-centers/Compil
 import { ContentBlockSection } from '@/components/shared/ContentBlock';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudDataCentersPageProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -23,6 +25,7 @@ interface CloudDataCentersPageProps {
 }
 
 const CloudDataCentersPage = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   lang,
@@ -41,7 +44,11 @@ const CloudDataCentersPage = ({
       lang={lang}
     >
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Data Centers and Certifications', url: '/cloud-data-centers' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
@@ -56,17 +63,25 @@ const CloudDataCentersPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {textContent.CtaSection.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {textContent.CtaSection.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="py-10 bg-neutral-17"
+        bgPadding={`py-10 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
       />
 
       <CompilanceAndCertificationsSection textContent={textContent.CompilanceAndCertificationsSection} />
@@ -78,23 +93,43 @@ const CloudDataCentersPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {textContent.CtaSection2.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {textContent.CtaSection2.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="py-10"
       />
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }]} />
+      <Footer
+        textContent={footerLang}
+        lang={locale}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Data Centers and Certifications', url: '/cloud-data-centers' },
+        ]}
+      />
     </Layout>
   );
 };

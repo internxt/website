@@ -4,8 +4,11 @@ import Image from 'next/image';
 import router from 'next/router';
 import { currencyService } from '@/services/currency.service';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { ANNOUNCEMENT_BAR_OFFSET_TOP } from '@/announcement.config';
+import { useAnnouncementBar } from '@/hooks/useAnnouncementBar';
 
 export interface MinimalNavbarProps {
+  darkMode?: boolean;
   lang: string;
   isOffer?: boolean;
   textContent?: NavigationBarText;
@@ -13,7 +16,14 @@ export interface MinimalNavbarProps {
   isAnnual?: boolean;
 }
 
-export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }: MinimalNavbarProps) => {
+export const MinimalNavbar = ({
+  darkMode = false,
+  isOffer,
+  textContent,
+  price,
+  isAnnual = false,
+}: MinimalNavbarProps) => {
+  const { isVisible: isAnnouncementBarVisible } = useAnnouncementBar();
   const [scrolled, setScrolled] = useState<boolean>(true);
   const [currencySymbol, setCurrencySymbol] = useState<string>('€');
 
@@ -39,9 +49,13 @@ export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }:
   return (
     <div
       id="navbar"
-      className={`fixed flex h-20 w-full items-center justify-center bg-white backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${
+      className={`${
+        isAnnouncementBarVisible ? ANNOUNCEMENT_BAR_OFFSET_TOP : ''
+      } fixed flex h-20 w-full items-center justify-center ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+      } backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${
         scrolled ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'
-      } z-50 border-b border-black`}
+      } z-50 border-b ${darkMode ? 'border-white' : 'border-black'}`}
     >
       <div className="relative flex w-full items-center justify-center">
         <Image
@@ -49,12 +63,12 @@ export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }:
           height={10.5}
           loading="lazy"
           className="h-[10.5px] w-24 select-none lg:h-3 lg:w-[110px]"
-          src={getImage(`/logos/internxt/cool-gray-90.svg`)}
+          src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
           alt="Internxt logo"
         />
         {isOffer && (
           <div className="absolute right-0 hidden flex-row items-center gap-4 px-5 lg:flex lg:gap-8 lg:px-10 xl:px-32 3xl:px-80">
-            <p className="text-gray-800 text-sm font-medium">{priceLabel}</p>
+            <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{priceLabel}</p>
             <button
               onClick={() => router.push('#priceCard')}
               id="choose-storage-button"

@@ -3,14 +3,21 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface FeatureSectionProps {
+  darkMode?: boolean;
   textContent: AntivirusText['FeatureSection'];
   isGetAntivirus?: boolean;
   showPlan?: boolean;
 }
 
-const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
+const FeatureSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  isGetAntivirus,
+  showPlan = false,
+}: FeatureSectionProps) => {
   const cards = [
     {
       icon: '/images/antivirus/internxt_antivirus_1.webp',
@@ -39,15 +46,25 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
 
   return (
     <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
+      <div
+        className={`flex flex-col items-center justify-center space-y-16 ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } py-20`}
+      >
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <span className="space-y-4 text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+          <span
+            className={`space-y-4 text-30 font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-5xl`}
+          >
             {textContent.title}
             <br />
             <p className="text-primary"> {textContent.titleLine2}</p>
           </span>
 
-          <p className="font-regular text-sm text-gray-80 lg:text-xl">{formattedDescription}</p>
+          <p className={`font-regular text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+            {formattedDescription}
+          </p>
         </div>
 
         <Link

@@ -88,7 +88,7 @@ export default function HeroSection({
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p
                 className={`whitespace-nowrap text-sm font-medium leading-tight ${
-                  darkMode ? 'text-neutral-37' : 'text-gray-80'
+                  darkMode ? 'text-white' : 'text-gray-80'
                 }`}
               >
                 {feature.text}

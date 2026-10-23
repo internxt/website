@@ -1,15 +1,22 @@
 import ProductCard from '@/components/shared/ProductCard';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const SecondWhatWeDoSection = ({ textContent, lang }) => {
+const SecondWhatWeDoSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div className={`z-10 flex flex-col items-center bg-white py-20 text-gray-100`}>
+      <div
+        className={`z-10 flex flex-col items-center ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-20 ${
+          darkMode ? 'text-white-95' : 'text-gray-100'
+        }`}
+      >
         <div className="flex flex-col gap-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
 
-            <h3 className="max-w-3xl text-xl font-normal text-gray-80">{textContent.description}</h3>
+            <h3 className={`max-w-3xl text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.description}
+            </h3>
           </div>
 
           <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">

@@ -21,6 +21,7 @@ import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import React, { useEffect, useState } from 'react';
 import { currencyService } from '@/services/currency.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const ICON_MAPS = {
   individuals: [Database, Medal, Key, LockSimple, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
@@ -87,7 +88,7 @@ export const PriceCard = ({
   lang,
   isValentinesMode,
   onCheckoutButtonClicked,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { interval, price, storage, priceId, currencyValue } = product;

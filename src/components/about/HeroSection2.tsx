@@ -1,13 +1,18 @@
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection2 = ({ textContent, lang }) => (
+const HeroSection2 = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20 md:pt-20">
     <div className="relative flex flex-col items-center py-20 lg:py-40">
       {/* Main title */}
       <div className="relative space-y-20 px-6 text-center md:space-y-28">
-        <h1 className="relative z-10 text-left text-5xl text-cool-gray-90 sm:text-center md:text-6xl lg:text-7xl">
+        <h1
+          className={`relative z-10 text-left text-5xl ${
+            darkMode ? 'text-white-95' : 'text-cool-gray-90'
+          } sm:text-center md:text-6xl lg:text-7xl`}
+        >
           {textContent.title.line1} <br className="hidden lg:flex" />
           <span className={`${lang === 'fr' ? '' : 'text-primary'}`}>
             {lang === 'fr' ? textContent.title.line2.substring2 : textContent.title.line2.substring1}
@@ -25,7 +30,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-col items-start justify-center sm:items-center">
               <span className="relative -ml-2 text-6xl font-extralight tracking-tighter text-primary sm:-ml-4 sm:text-7xl md:text-8xl">
                 {textContent.figures.activeUsers.figure}
-                <span className="absolute -top-2.5 -right-6 translate-x-0.5 text-5xl text-blue-30 md:-right-8 md:text-6xl">
+                <span className="absolute -right-6 -top-2.5 translate-x-0.5 text-5xl text-blue-30 md:-right-8 md:text-6xl">
                   +
                 </span>
               </span>
@@ -35,7 +40,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             <div className="flex flex-col items-start justify-center sm:items-center">
               <span className="relative text-6xl font-extralight tracking-tighter text-primary sm:text-7xl md:text-8xl">
                 {textContent.figures.awards.figure}
-                <span className="absolute -top-2.5 -right-6 translate-x-0.5 text-5xl text-blue-30 md:-right-8 md:text-6xl">
+                <span className="absolute -right-6 -top-2.5 translate-x-0.5 text-5xl text-blue-30 md:-right-8 md:text-6xl">
                   +
                 </span>
               </span>
@@ -43,7 +48,7 @@ const HeroSection2 = ({ textContent, lang }) => (
             </div>
           </div>
 
-          <h3 className="mb-10 text-xl font-normal text-cool-gray-80 lg:mb-20">
+          <h3 className={`mb-10 text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} lg:mb-20`}>
             {textContent.description.line1} <br className="hidden md:flex" />
             {textContent.description.line2}
           </h3>
@@ -63,9 +68,10 @@ const HeroSection2 = ({ textContent, lang }) => (
                   loading={'lazy'}
                   alt="Forbes Logo"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.forbes.caption1}</p>
               </div>
             </div>
@@ -78,9 +84,10 @@ const HeroSection2 = ({ textContent, lang }) => (
                   loading={'lazy'}
                   alt="South Summit Logo"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.southsummit.caption1}</p>
               </div>
             </div>
@@ -93,9 +100,10 @@ const HeroSection2 = ({ textContent, lang }) => (
                   height={32}
                   loading={'lazy'}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 <p className="whitespace-nowrap text-base">{textContent.recognitions.brands.tnw.caption1}</p>
               </div>
             </div>
@@ -108,9 +116,10 @@ const HeroSection2 = ({ textContent, lang }) => (
                   height={32}
                   loading={'lazy'}
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
                 <p className="whitespace-nowrap text-base">
                   {textContent.recognitions.brands.startupvalencia.caption1}
                 </p>

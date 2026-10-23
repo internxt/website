@@ -1,14 +1,21 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { parseDynamicText, Replacements } from '@/components/utils/parse-dynamic-text';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InxtTableProps {
+  darkMode?: boolean;
   textContent: any;
   TableTitleTag?: React.ElementType;
   replacements?: Replacements;
 }
 
-export const InxtTable = ({ textContent, TableTitleTag = 'p', replacements = {} }: InxtTableProps) => {
+export const InxtTable = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  TableTitleTag = 'p',
+  replacements = {},
+}: InxtTableProps) => {
   const parseText = (text: string) => parseDynamicText(text, replacements);
 
   return (
@@ -28,7 +35,7 @@ export const InxtTable = ({ textContent, TableTitleTag = 'p', replacements = {} 
           alt="Internxt icon"
           className="flex lg:hidden"
         />
-        <TableTitleTag className="hidden text-lg font-normal text-gray-95 lg:flex">
+        <TableTitleTag className={`hidden text-lg font-normal ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:flex`}>
           {parseText(textContent.title)}
         </TableTitleTag>
       </div>
@@ -45,10 +52,18 @@ export const InxtTable = ({ textContent, TableTitleTag = 'p', replacements = {} 
                 isLast ? 'rounded-bl-16' : ''
               } flex flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
             >
-              <p className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-base">
+              <p
+                className={`w-[156.5px] text-start text-xs font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:w-[538px] lg:text-center lg:text-base`}
+              >
                 {parseText(item.title)}
               </p>
-              <p className="w-[156.5px] text-start text-10 font-normal leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-sm">
+              <p
+                className={`w-[156.5px] text-start text-10 font-normal leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:w-[538px] lg:text-center lg:text-sm`}
+              >
                 {parseText(item.description)}
               </p>
             </div>

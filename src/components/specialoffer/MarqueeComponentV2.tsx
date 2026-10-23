@@ -1,13 +1,19 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MarqueeComponentProps {
+  darkMode?: boolean;
   label?: string;
   bgColor?: string;
 }
 
-export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeComponentProps) => {
+export const MarqueeComponentV2 = ({
+  darkMode = DARK_MODE_ENABLED,
+  label,
+  bgColor = 'bg-color-1',
+}: MarqueeComponentProps) => {
   return (
     <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
       <div className={'flex xl:hidden'}>
@@ -96,7 +102,9 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
       <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
         <div className={`featured flex w-full flex-row justify-center overflow-x-auto ${bgColor}  px-4 pb-10`}>
           <div className="flex flex-row items-center space-x-12">
-            {label ? <p className="text-xl font-medium text-gray-60">{label}</p> : undefined}
+            {label ? (
+              <p className={`text-xl font-medium ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>{label}</p>
+            ) : undefined}
             <Image
               loading="lazy"
               src={getImage('/logos/featured/Valenciacf.png')}

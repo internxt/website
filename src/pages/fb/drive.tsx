@@ -20,8 +20,10 @@ import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveProps {
+  darkMode?: boolean;
   textContent: DriveText;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -41,6 +43,7 @@ interface DriveProps {
 }
 
 const Drive = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   download,
   textContent,
@@ -118,12 +121,16 @@ const Drive = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20 xl:py-32"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           hideFreeCard
         />
         <HorizontalScrollableSection
           textContent={textContent.EncryptedCloudStorageSection}
-          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
           needsH2
           needsH3
         />
@@ -132,7 +139,11 @@ const Drive = ({
         <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
         <ThreeCardsSection
           textContent={textContent.MadeInEuropeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
         <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
         <FloatingCtaSectionv2
@@ -140,10 +151,18 @@ const Drive = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {textContent.CtaSection.title}
               </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {textContent.CtaSection.description}
               </p>
             </div>
@@ -157,7 +176,11 @@ const Drive = ({
         <FAQSection
           textContent={textContent.FaqSection}
           needsH3
-          bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
         />
         <RelationalLinks textContent={relationalLinksText} />
         <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />

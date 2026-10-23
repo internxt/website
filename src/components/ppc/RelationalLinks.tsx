@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { LinkTo } from './LinkTo';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Card {
   cta: string;
@@ -9,6 +10,7 @@ interface Card {
 }
 
 interface RelationalLinksProps {
+  darkMode?: boolean;
   textContent: {
     title: string;
     links: Card[];
@@ -24,7 +26,7 @@ const shuffleData = (data: Card[]): Card[] => {
   return shuffled;
 };
 
-const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
+const RelationalLinks = ({ darkMode = DARK_MODE_ENABLED, textContent }: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
   const router = useRouter();
 
@@ -55,9 +57,9 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   const updateScrollButtons = () => {
     if (scrollContainerRef.current === null) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-    
+
     const maxScrollLeft = scrollWidth - clientWidth;
-    
+
     setScrollState({
       canGoLeft: scrollLeft > 2,
       canGoRight: scrollLeft < maxScrollLeft - 2,
@@ -107,7 +109,11 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
-        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 lg:mb-14 lg:text-5xl">
+        <p
+          className={`mb-8 text-center text-4xl font-semibold ${
+            darkMode ? 'text-white-95' : 'text-gray-100'
+          } lg:mb-14 lg:text-5xl`}
+        >
           {textContent.title}
         </p>
       </div>
@@ -131,7 +137,11 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
                 width: isMobile ? '300px' : '350px',
               }}
             >
-              <div className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 p-10 transition-colors hover:bg-neutral-20">
+              <div
+                className={`flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl ${
+                  darkMode ? 'bg-gray-105' : 'bg-gray-1'
+                } p-10 transition-colors ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20'}`}
+              >
                 <LinkTo linkToRedirect={card.link} text={card.cta} />
               </div>
             </div>

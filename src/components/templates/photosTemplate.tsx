@@ -20,8 +20,10 @@ import { stripeService } from '@/services/stripe.service';
 import { getTrackingParams } from '@/lib/cookies';
 import { analyticsService } from '@/services/ga.services';
 import { checkout } from '@/lib/auth';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface PhotosProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: PhotoText;
@@ -35,6 +37,7 @@ export interface PhotosProps {
 }
 
 export const Photos = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescription,
   navbarText,
   footerText,
@@ -113,14 +116,18 @@ export const Photos = ({
             individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
-          backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          backgroundGradientColor={
+            darkMode
+              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
           lifetimeCoupons={lifetimeCoupons}
           lang={lang}
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
         />
       )}
@@ -129,7 +136,11 @@ export const Photos = ({
 
       <HorizontalScrollableSection
         textContent={textContent.PhotoFeatureSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
       />
 
       <HorizontalScrollableWithPhotoSection textContent={textContent.DesignedSection} />
@@ -141,7 +152,9 @@ export const Photos = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight lg:text-4xl">{textContent.CtaSectionV2.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
+            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              {textContent.CtaSectionV2.description}
+            </p>
           </div>
         }
         url={ctaUrl}

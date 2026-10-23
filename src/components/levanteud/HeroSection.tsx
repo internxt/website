@@ -3,9 +3,11 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
-    textContent: any;
+  darkMode?: boolean;
+  textContent: any;
 }
 
 const IMAGES = [
@@ -16,6 +18,7 @@ const IMAGES = [
 ];
 
 export default function HeroSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<HeroSectionProps>): JSX.Element {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,7 +34,10 @@ export default function HeroSection({
     return () => clearInterval(interval);
   }, []);
 
-  const HighlightText = ({ text, className = 'lg:text-5xl text-30 text-start lg:text-center font-semibold leading-tight lg:whitespace-pre-line' }) => {
+  const HighlightText = ({
+    text,
+    className = 'lg:text-5xl text-30 text-start lg:text-center font-semibold leading-tight lg:whitespace-pre-line',
+  }) => {
     const parts = text.split(/(\*\*.*?\*\*)/);
 
     return (
@@ -52,10 +58,14 @@ export default function HeroSection({
 
   return (
     <section
-      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-20 mt-8 lg:mt-16 px-6 lg:px-20 lg:gap-16 gap-10`}
-      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
+      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-10 overflow-hidden px-6 py-20 lg:mt-16 lg:gap-16 lg:px-20`}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+          : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)',
+      }}
     >
-      <div className='flex flex-col lg:gap-6 gap-10'>
+      <div className="flex flex-col gap-10 lg:gap-6">
         <Image
           src={getImage('/images/Levante/InternxtLevanteOPCP.webp')}
           alt="Internxt x Levante Logo"
@@ -66,31 +76,66 @@ export default function HeroSection({
         <HighlightText text={textContent.title} />
       </div>
 
-      <div className='hidden lg:flex flex-col gap-6'>
-        <div className='flex flex-row justify-between gap-2.5'>
-          <Image src={getImage('/images/Levante/Levante1.webp')} alt="Internxt x Levante" width={452} height={320} className='rounded-16' quality={100} />
-          <Image src={getImage('/images/Levante/Levante2.webp')} alt="Internxt x Levante" width={365} height={320} className='rounded-16' quality={100} />
-          <Image src={getImage('/images/Levante/Levante3.webp')} alt="Internxt x Levante" width={275} height={320} className='rounded-16' quality={100} />
+      <div className="hidden flex-col gap-6 lg:flex">
+        <div className="flex flex-row justify-between gap-2.5">
+          <Image
+            src={getImage('/images/Levante/Levante1.webp')}
+            alt="Internxt x Levante"
+            width={452}
+            height={320}
+            className="rounded-16"
+            quality={100}
+          />
+          <Image
+            src={getImage('/images/Levante/Levante2.webp')}
+            alt="Internxt x Levante"
+            width={365}
+            height={320}
+            className="rounded-16"
+            quality={100}
+          />
+          <Image
+            src={getImage('/images/Levante/Levante3.webp')}
+            alt="Internxt x Levante"
+            width={275}
+            height={320}
+            className="rounded-16"
+            quality={100}
+          />
         </div>
-        <div className='flex flex-row justify-between gap-2.5'>
-          <Image src={getImage('/images/Levante/Levante4.webp')} alt="Internxt x Levante" width={558} height={372} className='rounded-16' quality={100} />
-          <Image src={getImage('/images/Levante/Levante5.webp')} alt="Internxt x Levante" width={558} height={372} className='rounded-16' quality={100} />
+        <div className="flex flex-row justify-between gap-2.5">
+          <Image
+            src={getImage('/images/Levante/Levante4.webp')}
+            alt="Internxt x Levante"
+            width={558}
+            height={372}
+            className="rounded-16"
+            quality={100}
+          />
+          <Image
+            src={getImage('/images/Levante/Levante5.webp')}
+            alt="Internxt x Levante"
+            width={558}
+            height={372}
+            className="rounded-16"
+            quality={100}
+          />
         </div>
       </div>
 
       <div
         ref={scrollRef}
-        className='flex lg:hidden w-full overflow-x-auto snap-x snap-mandatory scroll-smooth gap-3'
+        className="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth lg:hidden"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {IMAGES.map((img, i) => (
-          <div key={i} className='flex-none w-full snap-center'>
+          <div key={i} className="w-full flex-none snap-center">
             <Image
               src={getImage(img.src)}
               alt={`Internxt x Levante ${i + 1}`}
               width={img.width}
               height={img.height}
-              className='rounded-xl w-full object-cover'
+              className="w-full rounded-xl object-cover"
               style={{ maxHeight: '195px' }}
               quality={100}
             />

@@ -1,13 +1,14 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { Gift } from '@phosphor-icons/react';
 import React from 'react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ThirdFeaturesSection = ({ textContent }) => {
+const ThirdFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+      <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">
         <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
             src={getImage('/images/home/Online-privacy-services.webp')}
@@ -18,9 +19,10 @@ const ThirdFeaturesSection = ({ textContent }) => {
             className="rounded-3xl"
             alt="Only privacy services image"
             style={{
-              maxWidth: "100%",
-              height: "auto"
-            }} />
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
         </RevealX>
         <RevealX
           direction="left"

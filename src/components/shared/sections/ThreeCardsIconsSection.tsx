@@ -1,7 +1,9 @@
 import { CaretLeft, CaretRight, Gear, RocketLaunch, Bank } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThreeCardsIconsProps {
+  darkMode?: boolean;
   textContent: any;
   bgColor?: string;
   cardColor?: string;
@@ -13,6 +15,7 @@ interface ThreeCardsIconsProps {
 }
 
 export default function ThreeCardsIconsSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bgColor,
   cardColor,
@@ -83,23 +86,37 @@ export default function ThreeCardsIconsSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : 'bg-neutral-17'
+        bgColor ? '' : `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgColor ? bgColor : '' }}
     >
       {topSeparationBar && (
-        <div className={`absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`}></div>
+        <div
+          className={`absolute left-8 right-8 top-0 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        ></div>
       )}
       {bottomSeparationBar && (
-        <div className={`absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`} />
+        <div
+          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        />
       )}
 
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <SectionTitleTag className={`text-30 font-bold leading-tight text-gray-95 lg:text-3xl`}>
+        <SectionTitleTag
+          className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+        >
           {textContent.title}
         </SectionTitleTag>
         {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+          >
+            {textContent.description}
+          </p>
         )}
       </div>
 
@@ -121,15 +138,23 @@ export default function ThreeCardsIconsSection({
                 <div
                   key={title}
                   className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                    cardColor || 'bg-neutral-17'
+                    cardColor || `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
                   } p-6 lg:rounded-16 lg:p-8`}
                 >
                   <div className="flex flex-col">
                     {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
-                    <TitleTag className={`flex items-center justify-start gap-4 text-lg font-medium text-gray-100`}>
+                    <TitleTag
+                      className={`flex items-center justify-start gap-4 text-lg font-medium ${
+                        darkMode ? 'text-white-95' : 'text-gray-100'
+                      }`}
+                    >
                       {title}
                     </TitleTag>
-                    <p className={`pt-[16px] text-sm font-normal leading-tight text-gray-55 lg:pt-6 lg:text-base`}>
+                    <p
+                      className={`pt-[16px] text-sm font-normal leading-tight ${
+                        darkMode ? 'text-green-120' : 'text-gray-55'
+                      } lg:pt-6 lg:text-base`}
+                    >
                       {textContent.cards.descriptions[index]}
                     </p>
                   </div>
@@ -145,7 +170,9 @@ export default function ThreeCardsIconsSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -154,7 +181,9 @@ export default function ThreeCardsIconsSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
@@ -169,12 +198,22 @@ export default function ThreeCardsIconsSection({
           return (
             <div
               key={title}
-              className={`flex w-full flex-col justify-between gap-6 rounded-16 ${cardColor || 'bg-neutral-17'} p-8`}
+              className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
+                cardColor || `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
+              } p-8`}
             >
               <div className="flex flex-col">
                 {Icon && <Icon size={40} className="mb-4 shrink-0 text-primary" />}
-                <p className={`flex items-center justify-start gap-4 text-xl font-medium text-gray-100`}>{title}</p>
-                <p className={`pt-6 text-base font-normal leading-tight text-gray-55`}>
+                <p
+                  className={`flex items-center justify-start gap-4 text-xl font-medium ${
+                    darkMode ? 'text-white-95' : 'text-gray-100'
+                  }`}
+                >
+                  {title}
+                </p>
+                <p
+                  className={`pt-6 text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
+                >
                   {textContent.cards.descriptions[index]}
                 </p>
               </div>

@@ -2,12 +2,14 @@ import { MailText } from '@/assets/types/mail';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
+  darkMode?: boolean;
   textContent: MailText['CoreFeatures'];
 }
 
-const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Element => {
+const CoreFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -37,18 +39,30 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section className="flex w-full flex-col gap-6 bg-neutral-17 px-5 py-10 lg:py-10 lg:pl-10 xl:pl-32 3xl:pl-80">
-      <h2 className="flex flex-col text-[30px] lg:translate-x-40 lg:pl-20 lg:text-5xl lg:pr-10 lg:max-w-[1000px] font-bold leading-tight text-gray-100">{textContent.title}</h2>
+    <section
+      className={`flex w-full flex-col gap-6 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } px-5 py-10 lg:py-10 lg:pl-10 xl:pl-32 3xl:pl-80`}
+    >
+      <h2
+        className={`flex flex-col text-[30px] font-bold leading-tight lg:max-w-[1000px] lg:translate-x-40 lg:pl-20 lg:pr-10 lg:text-5xl ${
+          darkMode ? 'text-white-95' : 'text-gray-100'
+        }`}
+      >
+        {textContent.title}
+      </h2>
       {textContent.descriptions.map((description: string) => (
         <p
-          key={description.slice(0,5)} 
-          className="w-full max-w-[950px] lg:translate-x-60 text-[16px] pr-3 leading-tight lg:pr-0 lg:text-lg font-normal text-gray-55"
+          key={description.slice(0, 5)}
+          className={`w-full max-w-[950px] pr-3 text-[16px] font-normal leading-tight lg:translate-x-60 lg:pr-0 lg:text-lg ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          }`}
         >
           {description}
         </p>
       ))}
 
-      <div className="flex w-full flex-row gap-2 lg:pt-10 lg:max-w-[1500px] lg:pl-20">
+      <div className="flex w-full flex-row gap-2 lg:max-w-[1500px] lg:pl-20 lg:pt-10">
         <div className="flex w-full flex-col gap-6 lg:max-w-[550px] lg:pl-40">
           <div className="flex flex-row items-center justify-center lg:hidden">
             <Image
@@ -64,35 +78,35 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
               key={title}
               type="button"
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
-                activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
-              }`}
+              className={`flex flex-col rounded-16 ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
-                <h3 className="text-xl font-medium text-gray-100">{title}</h3>
+                <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{title}</h3>
               </span>
               <div
                 className={`grid transition-all duration-300 ${
                   activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="flex flex-col lg:text-base overflow-hidden">
+                <div className="flex flex-col overflow-hidden lg:text-base">
                   {textContent.accordionCards.descriptions[index]}
                 </div>
               </div>
             </button>
           ))}
         </div>
-        <div className="hidden lg:flex w-full justify-center">
+        <div className="hidden w-full justify-center lg:flex">
           <div className="w-full max-w-[820px]">
             <Image
               src={getImage(`/images/mail/mockup${activeIndex + 1}.webp`)}
               alt={textContent.accordionCards.titles[activeIndex]}
               height={426}
               width={682}
-              className="rounded-16 object-cover w-full h-auto"
+              className="h-auto w-full rounded-16 object-cover"
             />
           </div>
         </div>
@@ -107,8 +121,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             msOverflowStyle: 'none',
             paddingRight: isMobile ? `calc(20px + ${getPaddingRight()}px)` : undefined,
           }}
-        >
-        </div>
+        ></div>
       </div>
     </section>
   );

@@ -3,10 +3,12 @@ import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 import { formatText } from '../utils/format-text';
 import { parseDynamicText } from '../utils/parse-dynamic-text';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PLACEHOLDER_REGEX = /\{\{\w+\}\}/;
 
 export default function FaqAccordion({
+  darkMode = DARK_MODE_ENABLED,
   question,
   answer,
   isQuestionBigger = false,
@@ -17,6 +19,7 @@ export default function FaqAccordion({
   index,
   totalItems,
 }: {
+  darkMode?: boolean;
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
@@ -42,11 +45,8 @@ export default function FaqAccordion({
     });
   }, []);
 
-  const isSpecialParagraph = 
-    needsSpecialH3 &&
-    typeof index === 'number' &&
-    typeof totalItems === 'number' &&
-    index < totalItems - 2;
+  const isSpecialParagraph =
+    needsSpecialH3 && typeof index === 'number' && typeof totalItems === 'number' && index < totalItems - 2;
 
   const defaultTag = needsH3 ? 'h3' : 'p';
 
@@ -62,9 +62,9 @@ export default function FaqAccordion({
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
         <QuestionTag
-          className={`w-full text-lg font-medium ${textColor ? textColor : 'text-gray-100'} ${
-            isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'
-          }`}
+          className={`w-full text-lg font-medium ${
+            textColor ? textColor : `${darkMode ? 'text-white-95' : 'text-gray-100'}`
+          } ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
         >
           {question}
         </QuestionTag>
@@ -75,7 +75,7 @@ export default function FaqAccordion({
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
         } duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${
-          textColor ? textColor : 'text-gray-60'
+          textColor ? textColor : `${darkMode ? 'text-green-120' : 'text-gray-60'}`
         } transition-all ease-in-out`}
       >
         {(Array.isArray(answer) ? answer : [answer]).map((text) => {

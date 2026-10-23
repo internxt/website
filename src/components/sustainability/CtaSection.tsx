@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   url,
   maxWidth,
@@ -9,6 +11,7 @@ const CtaSection = ({
   bgColor,
   customDescription,
 }: {
+  darkMode?: boolean;
   textContent: any;
   url: string;
   maxWidth?: string;
@@ -27,7 +30,9 @@ const CtaSection = ({
         <Link
           href={url}
           target={target}
-          className={`text-green flex rounded-lg bg-white bg-white px-5 py-3 text-lg text-xl font-medium hover:bg-blue-10`}
+          className={`text-green flex rounded-lg ${
+            darkMode ? 'bg-[#1C1C1C] bg-[#1C1C1C]' : 'bg-white bg-white'
+          } px-5 py-3 text-lg text-xl font-medium ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
         >
           {textContent.cta}
         </Link>

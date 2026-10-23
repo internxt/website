@@ -17,8 +17,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface SecureFileTransferTemplateProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: SecureFileTransferText;
@@ -31,6 +33,7 @@ export interface SecureFileTransferTemplateProps {
 }
 
 export const SecureFileTransferTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescription,
   navbarText,
   textContent,
@@ -129,7 +132,7 @@ export const SecureFileTransferTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails="bg-white lg:py-20"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
         />
       )}
@@ -139,11 +142,17 @@ export const SecureFileTransferTemplate = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSection.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection.description}</p>
+            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              {textContent.CtaSection.description}
+            </p>
           </div>
         }
         url={ctaUrl}
-        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
@@ -160,7 +169,9 @@ export const SecureFileTransferTemplate = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSectionV2.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
+            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              {textContent.CtaSectionV2.description}
+            </p>
           </div>
         }
         url={ctaUrl}

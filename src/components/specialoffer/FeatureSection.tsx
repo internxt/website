@@ -2,13 +2,16 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RenderDescription from '../shared/RenderDescription';
 import Button from '../shared/Button';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FeatureSectionForSpecialOffer = ({ textContent }) => {
+export const FeatureSectionForSpecialOffer = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 py-20 px-5">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
       <div className="flex flex-col items-center gap-9">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
+          <h2 className={`text-5xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </h2>
           <RenderDescription description={textContent.description} fontSize="text-xl" />
           <Button
             text={textContent.cta}

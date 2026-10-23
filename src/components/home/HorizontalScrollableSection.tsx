@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
   textContent: any;
@@ -9,7 +10,7 @@ interface HorizontalScrollableProps {
 
 export default function HorizontalScrollableSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
   isValentinesMode = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

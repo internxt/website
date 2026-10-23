@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
@@ -142,7 +143,7 @@ const BottomBanner = () => {
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
         styles.linearGradient
-      } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
+      } lg:${shouldShowBanner ? 'flex' : 'hidden'} bg-orange overflow-hidden rounded-lg px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">
@@ -173,7 +174,15 @@ const BottomBanner = () => {
               </p>
             </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
+              className={`flex w-max flex-row items-center justify-center space-x-4 rounded-lg ${
+                DARK_MODE_ENABLED ? 'bg-[#1C1C1C]' : 'bg-white'
+              } px-5 py-2.5 text-lg font-medium ${
+                DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+              } transition duration-100 focus:outline-none ${
+                DARK_MODE_ENABLED
+                  ? 'focus-visible:bg-gray-105 active:bg-gray-71'
+                  : 'focus-visible:bg-gray-1 active:bg-gray-10'
+              } sm:text-lg`}
               onClick={() => {
                 router.push('/pricing');
                 handleClose();

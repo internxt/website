@@ -20,6 +20,7 @@ import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 import Footer from '../layout/footers/Footer';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type CompetitorType =
   | 'pCloud'
@@ -66,6 +67,7 @@ type CompetitorType =
   | 'totalav';
 
 interface ComparisonPageProps {
+  darkMode?: boolean;
   competitor: CompetitorType;
   metaTagId: string;
   segmentName: string;
@@ -87,6 +89,7 @@ interface ComparisonPageProps {
 }
 
 export const ComparisonPage = ({
+  darkMode = DARK_MODE_ENABLED,
   competitor,
   metaTagId,
   segmentName,
@@ -149,8 +152,12 @@ export const ComparisonPage = ({
 
   const {
     showThreeCards = false,
-    privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)',
-    alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)',
+    privacyBgGradient = darkMode
+      ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
+      : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)',
+    alternativeBgColor = darkMode
+      ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
+      : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)',
   } = customSections;
 
   return (
@@ -181,7 +188,7 @@ export const ComparisonPage = ({
             products={products}
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
-            sectionDetails="bg-white lg:py-20 py-10"
+            sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
           />
         )}
 
@@ -190,13 +197,22 @@ export const ComparisonPage = ({
         {showThreeCards && langJson.WhyNeedAlternativeSection && (
           <ThreeCardsSection
             textContent={langJson.WhyNeedAlternativeSection}
-            bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"
-            cardColor="bg-white"
+            bgColor={
+              darkMode
+                ? 'linear-gradient(180deg, #0D0D0D 0%, #3A1412 50%, #1C1C1C 100%)'
+                : 'linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)'
+            }
+            cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             bottomSeparationBar={true}
           />
         )}
 
-        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} />
+        <TablesSection
+          textContent={langJson.VersusSection}
+          competitor={'Drive'}
+          percentage={percentageDiscount}
+          logo={logo}
+        />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
@@ -208,15 +224,21 @@ export const ComparisonPage = ({
           url={'/pricing'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-0">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                {parseDynamicText(langJson.CtaSection.title, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {parseDynamicText(langJson.CtaSection.description, {
+                  percentage: percentageDiscount,
+                  discount: percentageDiscount,
+                })}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
         />

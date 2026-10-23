@@ -12,6 +12,8 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import LanguageMobileBox from '../components/LanguageMobileBox';
+import { ANNOUNCEMENT_BAR_ENABLED, ANNOUNCEMENT_BAR_OFFSET_TOP, BLACK_FRIDAY_URL } from '@/announcement.config';
+import { useAnnouncementBar } from '@/hooks/useAnnouncementBar';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -45,6 +47,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
+  const darkMode = props.darkMode ?? false;
+
+  const isTransparentOnTop = props.darkMode === true && !!props.fixed && !scrolled && !menuState;
+
+  const { isVisible: isAnnouncementBarVisible } = useAnnouncementBar();
+  const hasAnnouncementBar = isAnnouncementBarVisible && !props.hide;
+
   // SCROLL EFFECTS
   useEffect(() => {
     const handleScroll = () => setScrolled(window.pageYOffset > 0);
@@ -67,14 +76,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     <div
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} ${
-        props.isLinksHidden ? 'top-0' : 'top-18'
-      } top-18 fixed left-0 flex h-20 w-full items-center ${
-        props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
+        hasAnnouncementBar ? ANNOUNCEMENT_BAR_OFFSET_TOP : props.isLinksHidden ? 'top-0' : 'top-18'
+      } fixed left-0 flex h-20 w-full items-center ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} ${
+        darkMode ? (isTransparentOnTop ? 'bg-opacity-0' : 'bg-opacity-100') : props.fixed ? 'bg-opacity-100' : ''
       } transition-all duration-100 lg:h-16 ${
-        props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
-      } ${scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'} ${
-        menuState ? 'bg-opacity-100' : ''
-      } z-40 border-b border-black`}
+        scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'
+      } z-40 border-b ${darkMode ? 'border-white' : 'border-black'}`}
     >
       <div className="w-full px-5 lg:px-10 lg:pt-1 xl:px-32 3xl:px-80">
         <div className="flex items-center justify-between">
@@ -86,7 +93,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                   height={10.5}
                   loading="lazy"
                   className="h-[10.5px] w-24 select-none lg:h-3 lg:w-[110px]"
-                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
+                  src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               ) : (
@@ -96,14 +103,14 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     height={10.5}
                     loading="lazy"
                     className="h-[10.5px] w-24 select-none lg:h-3 lg:w-[110px]"
-                    src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
+                    src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                   />
                 </Link>
               )}
             </div>
             <ItemsNavigation
-              darkMode={props.darkMode ?? false}
+              darkMode={darkMode}
               getTitles={getTitles}
               shouldHideItems={props.isLinksHidden ?? false}
               lang={lang as string}
@@ -139,8 +146,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 id="loginButton"
                 onClick={() => goToLoginURL({ redirectURL: 'https://drive.internxt.com/login', lang: lang })}
                 className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
-                  props.darkMode && !menuState
-                    ? 'bg-white text-gray-80 focus:opacity-80'
+                  darkMode
+                    ? 'border-gray-71 bg-transparent text-white-95 hover:bg-white/10 focus:opacity-80'
                     : 'border-gray-10 text-gray-80 hover:bg-gray-1 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium shadow-sm`}
               >
@@ -205,8 +212,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       });
                     }}
                     className={`flex justify-center rounded-lg border border-transparent px-4 py-1.5 text-sm font-medium focus:outline-none sm:inline-flex ${
-                      props.darkMode && !menuState
-                        ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
+                      darkMode
+                        ? 'bg-white text-gray-100 hover:bg-white-95 focus:bg-white-95 active:bg-white-95'
                         : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
                     } transition-all duration-75`}
                   >
@@ -218,7 +225,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               </>
             )}
             <div className="hidden items-end justify-center bg-transparent lg:flex">
-              {!props.hideNavbar && !props.hideLanguage ? <LanguageBox darkMode={props.darkMode} /> : undefined}
+              {!props.hideNavbar && !props.hideLanguage ? <LanguageBox darkMode={darkMode} /> : undefined}
             </div>
 
             {!props.isLinksHidden && (
@@ -226,7 +233,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 <Hamburger
                   label="Show menu"
                   size={20}
-                  color={props.darkMode && !menuState ? '#fff' : '#3A3A3B'}
+                  color={darkMode ? '#fff' : '#3A3A3B'}
                   toggled={menuState}
                   toggle={setMenuState}
                 />
@@ -234,11 +241,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`absolute right-0 top-10 overflow-hidden bg-white px-5 font-semibold transition-all duration-500 ${
-                      menuState ? 'h-screen w-screen pb-14' : 'h-0 '
-                    }`}
+                    className={`absolute right-0 top-10 overflow-hidden ${
+                      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                    } px-5 font-semibold transition-all duration-500 ${menuState ? 'h-screen w-screen pb-14' : 'h-0 '}`}
                   >
-                    <div className="mt-4 flex flex-col text-gray-100">
+                    <div className={`mt-4 flex flex-col ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
                       <Link
                         href="/pricing"
                         locale={props.lang}
@@ -254,6 +261,23 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {props.textContent.links.pricing}
                       </Link>
 
+                      {ANNOUNCEMENT_BAR_ENABLED && (
+                        <Link
+                          href={BLACK_FRIDAY_URL}
+                          locale={props.lang}
+                          role="link"
+                          tabIndex={0}
+                          onClick={() => {
+                            setMenuState(false);
+                          }}
+                          className={`flex w-full translate-y-0 px-8 py-4 font-bold text-primary outline-none transition delay-100 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          {props.textContent.links.blackFriday}
+                        </Link>
+                      )}
+
                       <Disclosure
                         as="div"
                         className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${
@@ -264,8 +288,18 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
                               <span className="flex flex-row">{props.textContent.links.products}</span>
-                              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                              <CaretDown
+                                className={`${open ? 'hidden' : 'flex'} ${
+                                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                                }`}
+                                weight="bold"
+                              />
+                              <CaretUp
+                                className={`${!open ? 'hidden' : 'flex'} ${
+                                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                                }`}
+                                weight="bold"
+                              />
                             </Disclosure.Button>
                             <Transition
                               enter="transition duration-200 ease-out"
@@ -274,11 +308,16 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                               leave="transition duration-200 ease-out"
                             >
                               <Disclosure.Panel
-                                className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
-                                } space-y-8 p-4`}
+                                className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-8 font-medium ${
+                                  !open ? 'hidden' : 'flex'
+                                } ${darkMode ? 'text-gray-30' : 'text-gray-60'} space-y-8 p-4`}
                               >
-                                <Link href="/drive" locale={props.lang} title={props.textContent.products.drive.title || undefined } className="flex flex-row space-x-2">
+                                <Link
+                                  href="/drive"
+                                  locale={props.lang}
+                                  title={props.textContent.products.drive.title || undefined}
+                                  className="flex flex-row space-x-2"
+                                >
                                   <p>{props.textContent.products.drive.name}</p>
                                 </Link>
 
@@ -286,20 +325,40 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   <p>{props.textContent.products.antivirus}</p>
                                 </Link>
 
-                                <Link href="/vpn" locale={props.lang} title={props.textContent.products.vpn.title || undefined } className="flex flex-row space-x-2">
+                                <Link
+                                  href="/vpn"
+                                  locale={props.lang}
+                                  title={props.textContent.products.vpn.title || undefined}
+                                  className="flex flex-row space-x-2"
+                                >
                                   <p>{props.textContent.products.vpn.name}</p>
                                 </Link>
 
                                 <Link href="/cleaner" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.products.cleaner}</p>
                                 </Link>
-                                <Link href="/meet" locale={props.lang} title={props.textContent.products.meet.title || undefined } className="flex flex-row space-x-2">
+                                <Link
+                                  href="/meet"
+                                  locale={props.lang}
+                                  title={props.textContent.products.meet.title || undefined}
+                                  className="flex flex-row space-x-2"
+                                >
                                   <p>{props.textContent.products.meet.name}</p>
                                 </Link>
-                                 <Link href="/mail" locale={props.lang} title={props.textContent.products.mail.title || undefined } className="flex flex-row space-x-2">
+                                <Link
+                                  href="/mail"
+                                  locale={props.lang}
+                                  title={props.textContent.products.mail.title || undefined}
+                                  className="flex flex-row space-x-2"
+                                >
                                   <p>{props.textContent.products.mail.name}</p>
                                 </Link>
-                                <Link href="/photos" locale={props.lang} title={props.textContent.products.drive.title || undefined } className="flex flex-row space-x-2">
+                                <Link
+                                  href="/photos"
+                                  locale={props.lang}
+                                  title={props.textContent.products.drive.title || undefined}
+                                  className="flex flex-row space-x-2"
+                                >
                                   <p>{props.textContent.products.photos.name}</p>
                                 </Link>
                               </Disclosure.Panel>
@@ -332,8 +391,18 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           <>
                             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
                               <span className="flex flex-row">{props.textContent.links.ourValues}</span>
-                              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                              <CaretDown
+                                className={`${open ? 'hidden' : 'flex'} ${
+                                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                                }`}
+                                weight="bold"
+                              />
+                              <CaretUp
+                                className={`${!open ? 'hidden' : 'flex'} ${
+                                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                                }`}
+                                weight="bold"
+                              />
                             </Disclosure.Button>
                             <Transition
                               enter="transition duration-200 ease-out"
@@ -342,9 +411,9 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                               leave="transition duration-200 ease-out"
                             >
                               <Disclosure.Panel
-                                className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
-                                } space-y-8 p-4`}
+                                className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-8 font-medium ${
+                                  !open ? 'hidden' : 'flex'
+                                } ${darkMode ? 'text-gray-30' : 'text-gray-60'} space-y-8 p-4`}
                               >
                                 <Link href="/privacy" locale={props.lang} className="flex flex-row space-x-2">
                                   <p>{props.textContent.ourValues.privacy}</p>
@@ -376,7 +445,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         )}
                       </Disclosure>
 
-
                       {props.lang === 'en' && router.pathname === '/temporary-email' ? (
                         <button
                           onClick={() => {
@@ -394,7 +462,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-                      {!props.hideLanguage && <LanguageMobileBox darkMode={props.darkMode} />}
+                      {!props.hideLanguage && <LanguageMobileBox darkMode={darkMode} />}
                       <a
                         onClick={() => {
                           setMenuState(false);

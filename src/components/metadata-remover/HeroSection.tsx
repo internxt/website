@@ -2,17 +2,19 @@
 import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle } from '@phosphor-icons/react';
-import Image from "next/image";
+import Image from 'next/image';
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/metadataRemover';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: MetadataRemoverText['HeroSection'];
   lang: string;
 }
 
-const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -203,12 +205,18 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
             <CheckCircle weight="fill" size={48} className="text-green-1" />
             <div className="flex flex-col space-y-2">
               <p className="text-2xl font-semibold">{textContent.table.metadataRemoved}</p>
-              <p className="text-lg text-cool-gray-60">{textContent.table.automaticDownload}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                {textContent.table.automaticDownload}
+              </p>
             </div>
             <div className="flex flex-row items-center space-x-4">
               <button
                 type="button"
-                className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                className={`flex h-12 flex-row items-center rounded-lg border ${
+                  darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-30 bg-white'
+                } px-6 text-lg font-medium ${
+                  darkMode ? 'text-white-95' : 'text-black'
+                } transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base`}
                 onClick={handleCancel}
               >
                 {textContent.cancel}
@@ -278,9 +286,17 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
         >
           <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between">
             <div className="flex w-full flex-col items-center space-y-5 text-center">
-              <h1 className="text-3xl font-semibold text-cool-gray-100 md:text-6xl">{textContent.title}</h1>
-              <p className="text-xl font-normal text-cool-gray-80 md:text-xl">{textContent.subtitle2}</p>
-              <p className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80">
+              <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-cool-gray-100'} md:text-6xl`}>
+                {textContent.title}
+              </h1>
+              <p className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} md:text-xl`}>
+                {textContent.subtitle2}
+              </p>
+              <p
+                className={`md:text-regular flex items-center justify-center gap-2 text-sm font-normal ${
+                  darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
+                }`}
+              >
                 <CheckCircle size={24} weight="fill" className="text-green-1" />
                 {textContent.secure}
               </p>
@@ -300,8 +316,16 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           <div></div>
                         )}
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file?.name}</p>
-                          <p className="text-sm text-cool-gray-60">{file?.type}</p>
+                          <p
+                            className={`max-w-xs truncate text-base font-medium ${
+                              darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
+                            }`}
+                          >
+                            {file?.name}
+                          </p>
+                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                            {file?.type}
+                          </p>
                         </div>
                       </div>
 
@@ -323,7 +347,9 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center space-y-2">
                                 <p className="text-2xl font-medium">{textContent.error.title}</p>
-                                <p className="text-xl text-cool-gray-60">File type not supported</p>
+                                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                                  File type not supported
+                                </p>
                               </div>
                               <button
                                 type="button"
@@ -351,7 +377,9 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center">
                                 <p className="text-2xl font-medium">{textContent.maxFileSize.title}</p>
-                                <p className="text-xl text-cool-gray-60">{textContent.maxFileSize.description}</p>
+                                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                                  {textContent.maxFileSize.description}
+                                </p>
                               </div>
                               <button
                                 type="button"
@@ -379,14 +407,22 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             <div className="flex w-full flex-col items-center space-y-6">
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
                                 <p className="px-4 text-center text-2xl font-medium">{textContent.fileSelected}</p>
-                                <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 lg:w-auto lg:max-w-md xl:max-w-xl">
+                                <p
+                                  className={`w-full truncate px-10 text-center text-lg font-semibold ${
+                                    darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                                  } lg:w-auto lg:max-w-md xl:max-w-xl`}
+                                >
                                   {file?.name}
                                 </p>
                               </div>
                               <div className="flex flex-row items-center justify-center space-x-4">
                                 <button
                                   type="button"
-                                  className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                                  className={`flex h-12 flex-row items-center rounded-lg border ${
+                                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-30 bg-white'
+                                  } px-6 text-lg font-medium ${
+                                    darkMode ? 'text-white-95' : 'text-black'
+                                  } transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base`}
                                   onClick={() => {
                                     handleCancelProcess();
                                   }}
@@ -425,9 +461,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                         width={80}
                         height={80}
                         style={{
-                          maxWidth: "100%",
-                          height: "auto"
-                        }} />
+                          maxWidth: '100%',
+                          height: 'auto',
+                        }}
+                      />
                       <p className="pt-4 text-2xl font-semibold">{textContent.dropHere}</p>
                     </div>
                   </>
@@ -442,13 +479,16 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             height={187}
                             alt="Upload File"
                             style={{
-                              maxWidth: "100%",
-                              height: "auto"
-                            }} />
+                              maxWidth: '100%',
+                              height: 'auto',
+                            }}
+                          />
                         </div>
                         <div className="flex max-w-[255px] flex-col items-center space-y-4 text-center">
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
-                            <p className="text-sm font-medium text-gray-80">{textContent.maxFileSize.description}</p>
+                            <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                              {textContent.maxFileSize.description}
+                            </p>
                           </div>
                           <p className="text-30 font-semibold">{textContent.dropFile.line1}</p>
                           <button
@@ -482,12 +522,18 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white p-5 shadow-subtle-hard">
+                  <div
+                    className={`relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl ${
+                      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                    } p-5 shadow-subtle-hard`}
+                  >
                     <p className="text-xl font-medium">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button
                       type="button"
-                      className="-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 px-5 text-primary transition duration-150 ease-out active:scale-98"
+                      className={`-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg ${
+                        darkMode ? 'bg-purple-100' : 'bg-blue-10'
+                      } px-5 text-primary transition duration-150 ease-out active:scale-98`}
                       onClick={() => {
                         handleRestartProcess();
                       }}

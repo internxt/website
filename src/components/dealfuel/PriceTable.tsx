@@ -1,8 +1,9 @@
 import React from 'react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const PriceTable = ({ lang, country, textContent }) => {
+const PriceTable = ({ darkMode = DARK_MODE_ENABLED, lang, country, textContent }) => {
   let prices;
   const billingFrequency = -1;
   const billingPrice = (price) => price[billingFrequency];
@@ -110,18 +111,24 @@ const PriceTable = ({ lang, country, textContent }) => {
           country={country}
         />
       </div>
-      <div className="flex flex-col items-center justify-center space-y-8 pt-10 text-center md:flex-row md:space-y-0 md:space-x-32">
+      <div className="flex flex-col items-center justify-center space-y-8 pt-10 text-center md:flex-row md:space-x-32 md:space-y-0">
         <div className="flex max-w-[183px] flex-col items-center space-y-3">
           <Coin size={40} className="text-primary" />
-          <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
+          <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.firstFeed}
+          </p>
         </div>
         <div className="flex max-w-[183px] flex-col items-center space-y-3">
           <CreditCard size={40} className="text-primary" />
-          <p className="text-xl font-medium text-gray-80">{textContent.secondFeed}</p>
+          <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.secondFeed}
+          </p>
         </div>
         <div className="flex max-w-[183px] flex-col items-center space-y-3">
           <Detective size={40} className="text-primary" />
-          <p className="text-xl font-medium text-gray-80">{textContent.thirdFeed}</p>
+          <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.thirdFeed}
+          </p>
         </div>
       </div>
     </section>

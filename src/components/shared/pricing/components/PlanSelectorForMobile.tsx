@@ -1,4 +1,5 @@
 import { Interval } from '@/services/stripe.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
@@ -22,21 +23,27 @@ export const PlanSelectorForMobile = ({
   activeStoragePlan,
   onPlanTypeChange,
   onStorageChange,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
 
   hideBillingController,
   hideStorageSelector,
 }: PlanSwitchProps): JSX.Element => (
   <>
     {!hideBillingController && (
-      <div className={`flex w-full flex-row items-center justify-center border-b-[1px] border-gray-10 py-2 text-base`}>
+      <div
+        className={`flex w-full flex-row items-center justify-center border-b-[1px] ${
+          darkMode ? 'border-gray-71' : 'border-gray-10'
+        } py-2 text-base`}
+      >
         <button
           type="button"
           onClick={() => {
             onPlanTypeChange('Individuals', Interval.Year);
           }}
           className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            activeSwitchPlan === 'Individuals' ? `bg-primary/10 text-primary shadow-sm` : `text-cool-gray-50`
+            activeSwitchPlan === 'Individuals'
+              ? `bg-primary/10 text-primary shadow-sm`
+              : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
           }`}
         >
           {textContent.billingFrequency.annually}
@@ -48,7 +55,9 @@ export const PlanSelectorForMobile = ({
             onPlanTypeChange('Lifetime', Interval.Lifetime);
           }}
           className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            activeSwitchPlan === 'Lifetime' ? `bg-primary/10 text-primary shadow-sm` : `text-cool-gray-50`
+            activeSwitchPlan === 'Lifetime'
+              ? `bg-primary/10 text-primary shadow-sm`
+              : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
           }`}
         >
           {textContent.billingFrequency.lifetime}
@@ -70,8 +79,8 @@ export const PlanSelectorForMobile = ({
           }}
           className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
             activeStoragePlan === 'Essential'
-              ? `bg-white font-semibold text-primary shadow-sm`
-              : `font-regular text-cool-gray-50 `
+              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
+              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'} `
           }`}
         >
           {textContent.planStorage.essential}
@@ -83,8 +92,8 @@ export const PlanSelectorForMobile = ({
           }}
           className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
             activeStoragePlan === 'Premium'
-              ? `bg-white font-semibold text-primary shadow-sm`
-              : `font-regular text-cool-gray-50`
+              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
+              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
           }`}
         >
           {textContent.planStorage.premium}
@@ -96,8 +105,8 @@ export const PlanSelectorForMobile = ({
           }}
           className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
             activeStoragePlan === 'Ultimate'
-              ? `bg-white font-semibold text-primary shadow-sm`
-              : `font-regular text-cool-gray-50`
+              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
+              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
           }`}
         >
           {textContent.planStorage.ultimate}

@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from '../../components/privacy/HeroSection.module.scss';
 import SignUpBanner from '@/components/banners/SignUpBanner';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ textContent, lang, bannerText }) => (
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, bannerText }) => (
   <>
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
-        <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+        <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          {textContent.title}
+        </h1>
       </div>
     </section>
     <section className="flex flex-col  py-16">

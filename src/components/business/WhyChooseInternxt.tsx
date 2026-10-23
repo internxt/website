@@ -3,8 +3,10 @@ import { CardGroup } from '../shared/CardGroup';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface WhyChooseInternxtForBusinessProps {
+  darkMode?: boolean;
   textContent: any;
   withoutBanner?: boolean;
 }
@@ -17,6 +19,7 @@ const scrollToTop = () => {
 };
 
 export const WhyChooseInternxtForBusiness = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   withoutBanner,
 }: WhyChooseInternxtForBusinessProps): JSX.Element => {
@@ -48,7 +51,7 @@ export const WhyChooseInternxtForBusiness = ({
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
       <div className="flex flex-col items-center justify-center gap-20">
         {/* Banner */}
         {withoutBanner ? undefined : (
@@ -90,12 +93,16 @@ export const WhyChooseInternxtForBusiness = ({
         )}
         {/* Title and description */}
         <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
+          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.WhyChooseInternxt.title}
+          </h2>
+          <h3 className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.WhyChooseInternxt.description}
+          </h3>
         </div>
 
         {/* Cards */}
-        <CardGroup cards={cards} backgroundColorCard="bg-white" />
+        <CardGroup cards={cards} backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`} />
       </div>
     </section>
   );

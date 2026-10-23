@@ -21,6 +21,7 @@ import {
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
 import { getTrackingParams } from '@/lib/cookies';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const iconList: Record<string, Icon[]> = {
   '1TB': [Database, CurrencyCircleDollar, LockSimple, Key, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
@@ -61,6 +62,7 @@ const iconList: Record<string, Icon[]> = {
 };
 
 export interface HorizontalPriceCardProps {
+  darkMode?: boolean;
   decimalDiscountValue?: number;
   storage: string;
   popular: boolean;
@@ -74,6 +76,7 @@ export interface HorizontalPriceCardProps {
 }
 
 export const HorizontalPriceCard = ({
+  darkMode = DARK_MODE_ENABLED,
   decimalDiscountValue,
   storage,
   currency,
@@ -120,18 +123,30 @@ export const HorizontalPriceCard = ({
   return (
     <div
       id="billingButtons"
-      className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]"
+      className={`flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ${
+        darkMode ? 'ring-gray-71' : 'ring-gray-10'
+      } lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]`}
     >
-      <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white p-6 pb-10 pt-10 lg:w-1/4 lg:border-r lg:border-neutral-20">
+      <div
+        className={`flex w-full flex-col items-center justify-center space-y-4 ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } p-6 pb-10 pt-10 lg:w-1/4 lg:border-r ${darkMode ? 'lg:border-gray-71' : 'lg:border-neutral-20'}`}
+      >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex rounded-full px-3 py-0.5">
-            <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{cardLabel}</p>
+            <p className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+              {cardLabel}
+            </p>
           </div>
         </div>
 
         <div className={`flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
-          <div className="flex flex-row items-end space-x-2 text-neutral-700">
-            <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100">
+          <div className={`flex flex-row items-end space-x-2 ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}`}>
+            <p
+              className={`flex flex-row items-end whitespace-nowrap font-medium ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
               <span className="text-4xl font-bold">{currentPrice}</span>
               <span>{currency}</span>
               <span className="text-sm">{billingPeriodLabel}</span>
@@ -153,7 +168,11 @@ export const HorizontalPriceCard = ({
           {contentText.cta}
         </button>
       </div>
-      <div className="flex w-full flex-col justify-center border-t border-neutral-20 bg-neutral-10 pb-6 pt-6 text-sm lg:border-t-0 lg:py-10">
+      <div
+        className={`flex w-full flex-col justify-center border-t ${
+          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
+        } pb-6 pt-6 text-sm lg:border-t-0 lg:py-10`}
+      >
         <div
           className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}
         >
@@ -167,7 +186,7 @@ export const HorizontalPriceCard = ({
                 <FeatureIcon size={24} className="shrink-0 text-primary" />
                 <div className="flex flex-row items-center gap-2">
                   <p
-                    className="font-regular text-lg+ text-gray-80"
+                    className={`font-regular text-lg+ ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
                     dangerouslySetInnerHTML={{ __html: formattedName }}
                   />
                   {isComingSoon && (

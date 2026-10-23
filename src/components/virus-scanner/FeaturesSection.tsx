@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ textContent, bannerText, lang }) => {
+const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
   const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
 
   const maliciousMalware = textContent.scanFiles.description.substr(
@@ -11,7 +12,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
   );
 
   return (
-    <section className="relative bg-gray-1 py-20 lg:pb-0 lg:pt-10">
+    <section className={`relative ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-20 lg:pb-0 lg:pt-10`}>
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center ">
           <SignUpBanner textContent={bannerText} lang={lang} />
@@ -31,9 +32,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               }
               style={{
                 cursor: 'pointer',
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </div>
         <div id="incontent_2" className="flex w-full max-w-[1000px] justify-center"></div>
@@ -42,7 +44,9 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           <div className="flex flex-col items-center space-y-6">
             <h3 className="text-4xl font-semibold sm:text-5xl">{textContent.whyToScan.title}</h3>
             <div className="flex flex-col">
-              <p className="text-xl text-gray-80">{textContent.whyToScan.description}</p>
+              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.whyToScan.description}
+              </p>
             </div>
           </div>
 
@@ -51,7 +55,9 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
                 <p className=" text-3xl font-semibold md:text-start">{textContent.virusesHatePrivacy.title}</p>
-                <p className="text-xl text-gray-80">{textContent.virusesHatePrivacy.description}</p>
+                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  {textContent.virusesHatePrivacy.description}
+                </p>
               </div>
               <div className="flex">
                 <Image
@@ -61,9 +67,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   alt="Viruses Hate Privacy"
                   loading="lazy"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
             </div>
             {/* Prevent malware */}
@@ -76,13 +83,16 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   alt="Stop malware image"
                   loading="lazy"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
                 <p className=" text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
-                <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
+                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  {textContent.stopMalware.description}
+                </p>
               </div>
             </div>
             <div className="flex w-full flex-col items-center justify-center">
@@ -101,15 +111,18 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 }
                 style={{
                   cursor: 'pointer',
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             </div>
 
             {/* Free online scanner */}
             <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
               <p className=" text-4xl font-semibold">{textContent.freeOnlineScanner.title}</p>
-              <p className="text-xl text-gray-80">{textContent.freeOnlineScanner.description}</p>
+              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.freeOnlineScanner.description}
+              </p>
             </div>
             {/* Scan files card and info */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
@@ -136,9 +149,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   alt="Scan files image"
                   loading="lazy"
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
             </div>
             <div className="flex w-full flex-col items-center justify-center">
@@ -157,9 +171,10 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 }
                 style={{
                   cursor: 'pointer',
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             </div>
           </div>
         </div>

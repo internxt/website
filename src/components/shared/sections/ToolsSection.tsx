@@ -13,8 +13,19 @@ import {
   ShieldCheck,
 } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any; lang: string; bgColor?: string }) => {
+export const ToolsSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  lang,
+  bgColor,
+}: {
+  darkMode?: boolean;
+  textContent: any;
+  lang: string;
+  bgColor?: string;
+}) => {
   const router = useRouter();
   const pathname = router.pathname;
 
@@ -70,11 +81,13 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
           {filteredCards.map((tool) => (
             <div
               key={tool.title}
-              className="flex w-full flex-col items-center justify-between gap-4 rounded-[10px] border border-gray-10 bg-white px-10 py-6 lg:flex-row lg:gap-0"
+              className={`flex w-full flex-col items-center justify-between gap-4 rounded-[10px] border ${
+                darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
+              } px-10 py-6 lg:flex-row lg:gap-0`}
             >
               <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:text-left">
                 <tool.icon size={32} className="text-primary" />
-                <p className="flex items-start text-2xl font-medium text-black">
+                <p className={`flex items-start text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-black'}`}>
                   {tool.title}
                   <span className="ml-2 self-start rounded-2 bg-green-100 px-1 py-0.5 text-xs font-semibold text-green-0">
                     {textContent.free}

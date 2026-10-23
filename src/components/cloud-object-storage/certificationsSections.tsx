@@ -1,18 +1,19 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { currencyService } from '@/services/currency.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const certifications = [
-    { src: '/images/datacenters-and-certifications/ISO.webp', width: 48, alt: 'ISO Certification' },
-    { src: '/images/datacenters-and-certifications/HipaaCompilance.webp', width: 102, alt: 'HIPAA Compliance' },
-    { src: '/images/datacenters-and-certifications/AICPA.webp', width: 120, alt: 'AICPA Certification' },
-    { src: '/images/datacenters-and-certifications/GDPR.webp', width: 146, alt: 'GDPR Compliance' },
-    { src: '/images/datacenters-and-certifications/ENS.webp', width: 110, alt: 'ENS Certification' },
-    { src: '/images/datacenters-and-certifications/CSA.webp', width: 48, alt: 'CSA Certification' },
-  ];
+  { src: '/images/datacenters-and-certifications/ISO.webp', width: 48, alt: 'ISO Certification' },
+  { src: '/images/datacenters-and-certifications/HipaaCompilance.webp', width: 102, alt: 'HIPAA Compliance' },
+  { src: '/images/datacenters-and-certifications/AICPA.webp', width: 120, alt: 'AICPA Certification' },
+  { src: '/images/datacenters-and-certifications/GDPR.webp', width: 146, alt: 'GDPR Compliance' },
+  { src: '/images/datacenters-and-certifications/ENS.webp', width: 110, alt: 'ENS Certification' },
+  { src: '/images/datacenters-and-certifications/CSA.webp', width: 48, alt: 'CSA Certification' },
+];
 
-export const CertificationsSection = () => {
+export const CertificationsSection = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
   const [currencyValue, setCurrencyValue] = useState('eur');
 
   useEffect(() => {
@@ -26,11 +27,15 @@ export const CertificationsSection = () => {
       });
   }, []);
 
-  const visibleCertifications = certifications.filter((cert) => !(currencyValue === 'usd' && cert.src.includes('ENS.webp')));
+  const visibleCertifications = certifications.filter(
+    (cert) => !(currencyValue === 'usd' && cert.src.includes('ENS.webp')),
+  );
+
+  const certSrc = (src: string) =>
+    darkMode ? src.replace('/datacenters-and-certifications/', '/datacenters-and-certifications/dark/') : getImage(src);
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 lg:pt-0 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 xl:px-32 3xl:px-80">
-
+    <section className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 lg:pt-0 xl:px-32 3xl:px-80">
       <div className="relative w-full overflow-hidden lg:hidden">
         <style>{`
           @keyframes marquee {
@@ -49,7 +54,7 @@ export const CertificationsSection = () => {
           {[...visibleCertifications, ...visibleCertifications].map((cert, index) => (
             <Image
               key={`${cert.src}-${index}`}
-              src={getImage(cert.src)}
+              src={certSrc(cert.src)}
               alt={cert.alt}
               width={cert.width}
               height={40}
@@ -60,19 +65,11 @@ export const CertificationsSection = () => {
       </div>
 
       {/* Desktop: static row */}
-      <div className="hidden lg:flex flex-row items-center gap-16 w-full justify-between">
+      <div className="hidden w-full flex-row items-center justify-between gap-16 lg:flex">
         {visibleCertifications.map((cert) => (
-          <Image
-            key={cert.src}
-            src={getImage(cert.src)}
-            alt={cert.alt}
-            width={cert.width}
-            height={40}
-            quality={100}
-          />
+          <Image key={cert.src} src={certSrc(cert.src)} alt={cert.alt} width={cert.width} height={40} quality={100} />
         ))}
       </div>
-
     </section>
   );
 };

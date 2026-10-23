@@ -13,6 +13,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import { CaretUp } from '@phosphor-icons/react';
 import { PASSWORD_REGEX } from './components/InputsComponent';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
@@ -35,6 +36,7 @@ export interface IFormValues {
 }
 
 interface IntegratedCheckoutViewProps {
+  darkMode?: boolean;
   textContent: IntegratedCheckoutText;
   objStoragePlan: PlanData;
   isPaying: boolean;
@@ -59,6 +61,7 @@ interface IntegratedCheckoutViewProps {
 }
 
 export const IntegratedCheckoutView = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   objStoragePlan,
   isPaying,
@@ -97,13 +100,19 @@ export const IntegratedCheckoutView = ({
 
   return (
     <form
-      className="flex h-full bg-gray-1 lg:w-screen xl:px-16"
+      className={`flex h-full ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} lg:w-screen xl:px-16`}
       onSubmit={handleSubmit((formData, event) => onCheckoutButtonClicked(event, stripeSDK, elements, formData))}
     >
       <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
         <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
           <HeaderComponent textContent={textContent} lang="en" />
-          <p className="text-xl font-bold text-gray-100 md:text-center lg:text-left lg:text-3xl">{textContent.title}</p>
+          <p
+            className={`text-xl font-bold ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } md:text-center lg:text-left lg:text-3xl`}
+          >
+            {textContent.title}
+          </p>
           <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:justify-between">
             <div className="flex w-full max-w-xl flex-col space-y-14">
               <UserAuthComponent
@@ -113,8 +122,14 @@ export const IntegratedCheckoutView = ({
                 register={register}
               />
               <div className="flex flex-col space-y-8 pb-20">
-                <p className="text-2xl font-semibold text-gray-100">2. {textContent.addressBillingTitle}</p>
-                <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
+                <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  2. {textContent.addressBillingTitle}
+                </p>
+                <div
+                  className={`flex flex-col rounded-2xl border ${
+                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
+                  } p-5`}
+                >
                   <AddressElement
                     onChange={(e) => {
                       onUserNameChange(e.value.name);
@@ -129,7 +144,11 @@ export const IntegratedCheckoutView = ({
                     }}
                   />
                 </div>
-                <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white p-5">
+                <div
+                  className={`flex w-full flex-col items-start gap-3 rounded-2xl border ${
+                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
+                  } p-5`}
+                >
                   <Menu>
                     <Menu.Button
                       onKeyDown={(e) => e.preventDefault()}
@@ -142,9 +161,9 @@ export const IntegratedCheckoutView = ({
                     >
                       {textContent.addressBilling.optionalData}
                       {optionalAddressBillingDetailsDialogClicked ? (
-                        <CaretUp size={24} className="text-gray-60" />
+                        <CaretUp size={24} className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`} />
                       ) : (
-                        <CaretDown size={24} className="text-gray-60" />
+                        <CaretDown size={24} className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`} />
                       )}
                     </Menu.Button>
                     <Transition
@@ -164,7 +183,9 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyName}</p>
+                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                            {textContent.addressBilling.companyName}
+                          </p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyName}
                             label="companyName"
@@ -181,7 +202,9 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyVatId}</p>
+                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                            {textContent.addressBilling.companyVatId}
+                          </p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyVatId}
                             label="vatId"
@@ -197,7 +220,9 @@ export const IntegratedCheckoutView = ({
                   </Menu>
                 </div>
 
-                <p className="text-2xl font-semibold text-gray-100">3. {textContent.paymentTitle}</p>
+                <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  3. {textContent.paymentTitle}
+                </p>
                 <PaymentElement options={PAYMENT_ELEMENT_OPTIONS} />
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
                 <Button

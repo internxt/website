@@ -1,20 +1,23 @@
 import { X } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) => {
+const IntercomTicketCreatedBanner = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerVisible, onClose }) => {
   return (
     <section
       className={`${
         bannerVisible ? 'flex' : 'hidden'
-      }  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50`}
+      }  fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50`}
     >
       <div
-        className={`${bannerVisible ? 'flex' : 'hidden'} absolute top-1/2 left-1/2
-        flex w-full max-w-[800px] -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-primary text-neutral-900`}
+        className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
+        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl bg-primary ${
+          darkMode ? 'text-white-95' : 'text-neutral-900'
+        }`}
       >
         <button className="absolute right-0 m-7 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
-        <div className="flex  flex-col items-center justify-center px-24 pt-20 pb-16">
+        <div className="flex  flex-col items-center justify-center px-24 pb-16 pt-20">
           <div className="flex flex-col items-center justify-center space-y-10 text-center">
             <div className="flex w-full max-w-[610px] flex-col items-center space-y-4">
               <p className="text-3xl font-semibold text-white">{textContent.thanks}</p>
@@ -23,7 +26,13 @@ const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) =>
             <div className="flex flex-col items-center justify-center space-y-6">
               <p className="text-xl font-medium text-white">{textContent.description}</p>
               <button
-                className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white py-3 px-5 text-base font-medium text-black transition duration-100 focus:outline-none active:bg-white active:text-black sm:text-lg lg:w-max"
+                className={`relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg ${
+                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                } px-5 py-3 text-base font-medium ${
+                  darkMode ? 'text-white-95' : 'text-black'
+                } transition duration-100 focus:outline-none ${
+                  darkMode ? 'active:bg-[#1C1C1C] active:text-white-95' : 'active:bg-white active:text-black'
+                } sm:text-lg lg:w-max`}
                 onClick={onClose}
               >
                 {textContent.cta}

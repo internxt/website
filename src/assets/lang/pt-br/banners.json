@@ -182,6 +182,13 @@
       "cta": " Aproveitar oferta"
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "só por tempo limitado!",
+      "normalText": "Descontos enormes de Black Friday",
+      "cta": "Aproveitar oferta"
+    }
+  },
   "lifetimeBanner": {
     "label": "Proteja seus arquivos para sempre",
     "title": "Tenha acesso vitalício a um armazenamento em nuvem seguro e privado com a Internxt!",

@@ -1,7 +1,9 @@
 import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface EmailToolBarProps {
+  darkMode?: boolean;
   email: string | undefined;
   borderColor: boolean;
   isChangeEmailIconAnimated: boolean;
@@ -16,6 +18,7 @@ interface EmailToolBarProps {
 }
 
 function EmailToolbar({
+  darkMode = DARK_MODE_ENABLED,
   email,
   borderColor,
   isChangeEmailIconAnimated,
@@ -28,13 +31,15 @@ function EmailToolbar({
       <div className="flex w-full flex-col items-center justify-center gap-3 md:flex-row">
         <div
           className={`flex h-full w-full items-center justify-center rounded-xl md:w-screen md:max-w-[500px] ${
-            borderColor ? 'ring ring-primary ring-opacity-15' : 'border border-gray-20'
+            borderColor
+              ? 'ring ring-primary ring-opacity-15'
+              : `border ${darkMode ? 'border-gray-71' : 'border-gray-20'}`
           }`}
         >
           <button
-            className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl bg-white text-gray-80 shadow-sm ${
-              borderColor ? 'border border-primary' : ''
-            } px-4 py-3`}
+            className={`flex h-full w-full cursor-pointer flex-row items-center justify-between rounded-xl ${
+              darkMode ? 'bg-[#1C1C1C] text-cool-gray-30' : 'bg-white text-gray-80'
+            } shadow-sm ${borderColor ? 'border border-primary' : ''} px-4 py-3`}
             onClick={onCopy}
           >
             <p>{email ?? textContent.generatingEmail}</p>
@@ -42,9 +47,11 @@ function EmailToolbar({
               variant="light"
               id="copy-to-clipboard"
               delayShow={700}
-              className="z-40 rounded-lg bg-white drop-shadow-md"
+              className={`z-40 rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} drop-shadow-md`}
             >
-              <p className="break-word text-center text-gray-80">{textContent.copyEmail}</p>
+              <p className={`break-word text-center ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.copyEmail}
+              </p>
             </Tooltip>
             <Copy
               data-tooltip-id="copy-to-clipboard"
@@ -54,7 +61,11 @@ function EmailToolbar({
           </button>
         </div>
         <button
-          className="flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border border-gray-20 bg-gray-5 px-5 py-2.5 text-gray-80 shadow-sm hover:bg-gray-5 active:bg-gray-10"
+          className={`flex w-full flex-row items-center justify-center space-x-2 whitespace-nowrap rounded-lg border ${
+            darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-20 bg-gray-5'
+          } px-5 py-2.5 ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} shadow-sm ${
+            darkMode ? 'hover:bg-gray-105 active:bg-gray-71' : 'hover:bg-gray-5 active:bg-gray-10'
+          }`}
           onClick={onDelete}
         >
           <ArrowClockwise size={24} className={`${isChangeEmailIconAnimated ? 'animate-spin-refresh' : ''}`} />
