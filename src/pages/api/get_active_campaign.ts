@@ -7,8 +7,7 @@ interface ActiveCampaignResponse {
 }
 
 const CAMPAIGN_PERIODS: { campaign: Campaign; from: string; to: string }[] = [
-  { campaign: Campaign.Test, from: '2026-10-22', to: '2026-10-23' },
-  { campaign: Campaign.Campaign2, from: '2026-11-01', to: '2026-11-23' },
+  { campaign: Campaign.Campaign2, from: '2026-11-02', to: '2026-11-23' },
   { campaign: Campaign.BlackFriday, from: '2026-11-23', to: '2026-11-30' },
   { campaign: Campaign.CyberWeek, from: '2026-11-30', to: '2026-12-05' },
 ];

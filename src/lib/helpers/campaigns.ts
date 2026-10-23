@@ -4,14 +4,12 @@ export enum Campaign {
   Campaign2 = 'campaign2',
   BlackFriday = 'blackFriday',
   CyberWeek = 'cyberWeek',
-  Test = 'test',
 }
 
 const CAMPAIGN_SUFFIXES = {
   [Campaign.Campaign2]: 'CM87',
   [Campaign.BlackFriday]: 'BF90',
   [Campaign.CyberWeek]: 'CW90',
-  [Campaign.Test]: 'TEST',
 } as const;
 
 type CampaignSuffix = typeof CAMPAIGN_SUFFIXES[Campaign];
@@ -27,8 +25,6 @@ const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([]);
 
 export const EARLY_RELEASE_CAMPAIGNS: ReadonlySet<Campaign> = new Set([
   Campaign.BlackFriday,
-  Campaign.CyberWeek,
-  Campaign.Test,
 ]);
 
 export const EARLY_RELEASE_DAYS = 1;
