@@ -3,6 +3,7 @@ import bytes from 'bytes';
 import { currency as CURRENCY_MAP, currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+import { ActiveCampaigns, ResolvedPromoCode, applyCampaign, hasEarlyRelease, isCampaign } from '@/lib/helpers/campaigns';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
 import { analyticsService } from './ga.services';
 
@@ -138,7 +139,23 @@ async function getSelectedPrice(
   return selectedPrice;
 }
 
-async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
+let activeCampaigns: Promise<ActiveCampaigns> | undefined;
+
+function fetchActiveCampaigns(): Promise<ActiveCampaigns> {
+  activeCampaigns ??= axios
+    .get(`${window.origin}/api/get_active_campaign`, {
+      params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone },
+    })
+    .then(({ data }) => ({
+      campaign: isCampaign(data?.campaign) ? data.campaign : undefined,
+      earlyReleaseCampaign: isCampaign(data?.earlyReleaseCampaign) ? data.earlyReleaseCampaign : undefined,
+    }))
+    .catch(() => ({}));
+
+  return activeCampaigns;
+}
+
+async function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodeProps> {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {
@@ -158,6 +175,23 @@ async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
   }
 }
 
+async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
+  const { campaign, earlyReleaseCampaign } = await fetchActiveCampaigns();
+  const resolvedName = applyCampaign(couponName, hasEarlyRelease(couponName) ? earlyReleaseCampaign : campaign);
+
+  if (resolvedName === couponName) {
+    return requestCoupon(resolvedName);
+  }
+
+  try {
+    return await requestCoupon(resolvedName);
+  } catch {
+    console.warn(`Campaign coupon ${resolvedName} unavailable, falling back to ${couponName}`);
+
+    return requestCoupon(couponName);
+  }
+}
+
 async function getLifetimeCoupons() {
   const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
   const { data } = res;
@@ -169,7 +203,7 @@ const calculateFinalPrice = async (
   interval: string,
   currencyValue: string,
   planType: 'individuals' | 'business' = 'individuals',
-  coupon?: { name: PromoCodeName },
+  coupon?: { name: ResolvedPromoCode },
 ): Promise<number> => {
   const prices = await getPrices(currencyValue);
   const selectedPrice = prices?.[planType]?.[interval]?.find((plan) => plan.priceId === priceId);
@@ -178,7 +212,7 @@ const calculateFinalPrice = async (
 
   if (coupon && finalPrice > 0) {
     try {
-      const couponData = await getCoupon(coupon.name);
+      const couponData = await requestCoupon(coupon.name);
 
       if (couponData.percentOff) {
         finalPrice = finalPrice * (1 - couponData.percentOff / 100);

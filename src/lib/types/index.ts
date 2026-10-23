@@ -1,3 +1,5 @@
+import type { ResolvedPromoCode } from '@/lib/helpers/campaigns';
+
 export interface UserData {
   id: number;
   userId: string;
@@ -416,7 +418,7 @@ export enum PromoCodeName {
 }
 
 export interface PromoCodeProps {
-  name: PromoCodeName;
+  name: ResolvedPromoCode;
   codeId: string;
   amountOff?: number;
   percentOff?: number;
