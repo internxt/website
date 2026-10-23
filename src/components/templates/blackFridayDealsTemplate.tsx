@@ -18,8 +18,8 @@ import MoreDealsSection from '../black-friday/MoreDealsSection';
 interface BlackFridayDealConfig {
   heroImage: string;
   metatagsId: string;
-  couponCode: PromoCodeName;
-  couponCodeForLifetime: PromoCodeName;
+  couponCode?: PromoCodeName;
+  couponCodeForLifetime?: PromoCodeName;
   popularPlanSize?: string;
   moreDealsUrls: {
     card1: string;
@@ -54,6 +54,7 @@ const BlackFridayDealsTemplate = ({
     lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: config.couponCode,
     couponCodeForLifetime: config.couponCodeForLifetime,
   });
 
@@ -96,6 +97,7 @@ const BlackFridayDealsTemplate = ({
   const formId = formIds[lang] ?? formIds.en;
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
   return (
@@ -113,6 +115,7 @@ const BlackFridayDealsTemplate = ({
       <PricingSectionWrapper
         textContent={textContent.TableSection}
         decimalDiscount={{
+          individuals: decimalDiscount,
           lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
