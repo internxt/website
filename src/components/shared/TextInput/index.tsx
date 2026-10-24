@@ -1,5 +1,4 @@
 import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-form';
-import './TextInput.module.scss';
 import type { IFormValues } from '../../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 
 interface InputProps {
@@ -57,7 +56,11 @@ export default function TextInput({
           maxLength,
           pattern,
         })}
-        className={error ? 'inxt-input input-error' : 'inxt-input input-primary'}
+        className={`w-full rounded-md border bg-white p-3 text-base text-gray-100 placeholder-gray-50 outline-none disabled:border-gray-10 disabled:text-gray-40 ${
+          error
+            ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
+            : 'border-gray-40 focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]'
+        }`}
       />
     </div>
   );
