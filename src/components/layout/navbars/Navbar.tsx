@@ -12,6 +12,8 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import LanguageMobileBox from '../components/LanguageMobileBox';
+import { ANNOUNCEMENT_BAR_ENABLED, ANNOUNCEMENT_BAR_OFFSET_TOP, BLACK_FRIDAY_URL } from '@/announcement.config';
+import { useAnnouncementBar } from '@/hooks/useAnnouncementBar';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -45,6 +47,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
+  const { isVisible: isAnnouncementBarVisible } = useAnnouncementBar();
+  const hasAnnouncementBar = isAnnouncementBarVisible && !props.hide;
+  const defaultTopOffset = props.isLinksHidden ? 'top-0' : 'top-18';
+  const topOffset = hasAnnouncementBar ? ANNOUNCEMENT_BAR_OFFSET_TOP : defaultTopOffset;
+
   // SCROLL EFFECTS
   useEffect(() => {
     const handleScroll = () => setScrolled(window.pageYOffset > 0);
@@ -66,9 +73,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   return (
     <div
       id="navbar"
-      className={`${props.hide ? 'hidden' : ''} ${
-        props.isLinksHidden ? 'top-0' : 'top-18'
-      } top-18 fixed left-0 flex h-20 w-full items-center ${
+      className={`${props.hide ? 'hidden' : ''} ${topOffset} fixed left-0 flex h-20 w-full items-center ${
         props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
       } transition-all duration-100 lg:h-16 ${
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
@@ -253,6 +258,23 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       >
                         {props.textContent.links.pricing}
                       </Link>
+
+                      {ANNOUNCEMENT_BAR_ENABLED && (
+                        <Link
+                          href={BLACK_FRIDAY_URL}
+                          locale={props.lang}
+                          role="link"
+                          tabIndex={0}
+                          onClick={() => {
+                            setMenuState(false);
+                          }}
+                          className={`flex w-full translate-y-0 px-8 py-4 font-bold text-primary outline-none transition delay-100 duration-300 ${
+                            menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                          }`}
+                        >
+                          {props.textContent.links.blackFriday}
+                        </Link>
+                      )}
 
                       <Disclosure
                         as="div"

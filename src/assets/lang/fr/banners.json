@@ -128,6 +128,13 @@
       "cta": "Choisissez votre forfait "
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "pour une durée limitée !",
+      "normalText": "Des réductions massives pour le Black Friday",
+      "cta": "Profiter de l'offre"
+    }
+  },
   "lifetimeBanner": {
     "label": "Sécurisez vos fichiers pour toujours",
     "title": "Obtenez un accès à vie sur Internxt",
