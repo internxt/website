@@ -159,6 +159,13 @@
       "cta": "Scegli il tuo piano "
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "solo per un periodo limitato!",
+      "normalText": "Super sconti del Black Friday",
+      "cta": "Approfitta dell'offerta"
+    }
+  },
   "lifetimeBanner": {
     "label": "Proteggi i tuoi file per sempre",
     "title": "Ottieni l'accesso a vita allo storage cloud sicuro e privato con Internxt!",

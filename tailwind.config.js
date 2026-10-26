@@ -313,6 +313,9 @@ module.exports = {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         marquee: 'marquee 8s linear infinite',
         fadeIn: 'fadeIn 300ms ease-out',
+        'announcement-pop': 'announcement-pop 600ms cubic-bezier(0.22, 1.2, 0.36, 1) both',
+        'announcement-marquee': 'announcement-marquee 18s linear infinite',
+        'announcement-shine': 'announcement-shine 4.5s ease-in-out infinite',
       },
       translate: {
         25: '6.25rem',
@@ -392,6 +395,19 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: '0', transform: 'scale(1.02)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        'announcement-pop': {
+          '0%': { transform: 'translateY(-100%) scale(0.98)', opacity: '0' },
+          '60%': { transform: 'translateY(4%) scale(1.004)', opacity: '1' },
+          '100%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+        },
+        'announcement-marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'announcement-shine': {
+          '0%, 65%, 100%': { transform: 'translateX(-130%) skewX(-18deg)' },
+          '35%': { transform: 'translateX(230%) skewX(-18deg)' },
         },
       },
 
