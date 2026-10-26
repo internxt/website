@@ -3,10 +3,12 @@ import type { IFormValues } from '../IntegratedCheckoutView';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import TextInput from '@/components/shared/TextInput';
 import PasswordInput from '@/components/shared/PasswordInput';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const MAX_PASSWORD_LENGTH = 50;
 
 interface InputsComponentProps {
+  darkMode?: boolean;
   textContent: IntegratedCheckoutText['authComponent'];
   errors: FieldErrors<IFormValues>;
   authError?: string;
@@ -15,11 +17,19 @@ interface InputsComponentProps {
 
 export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
-export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps): JSX.Element => {
+export const InputsComponent = ({
+  darkMode = DARK_MODE_ENABLED,
+  register,
+  textContent,
+  errors,
+  authError,
+}: InputsComponentProps): JSX.Element => {
   return (
     <>
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-80">{textContent.signup.emailAddress}</p>
+        <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          {textContent.signup.emailAddress}
+        </p>
         <TextInput
           placeholder={'Email'}
           label="email"
@@ -32,7 +42,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
       </div>
 
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-80">{textContent.signup.password}</p>
+        <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.signup.password}</p>
         <label className="space-y-0.5">
           <PasswordInput
             placeholder={'Password'}

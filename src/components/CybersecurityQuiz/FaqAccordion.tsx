@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle, PlusCircle, XCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export default function FaqAccordion({
+  darkMode = DARK_MODE_ENABLED,
   question,
   answer,
   isQuestionBigger = false,
   isCorrectAnswer,
 }: Readonly<{
+  darkMode?: boolean;
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
@@ -45,7 +48,9 @@ export default function FaqAccordion({
       <span
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg text-gray-60 transition-all ease-in-out`}
+        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg ${
+          darkMode ? 'text-green-120' : 'text-gray-60'
+        } transition-all ease-in-out`}
       >
         {answer.map((text) => {
           return <ReactMarkdown key={text}>{text}</ReactMarkdown>;

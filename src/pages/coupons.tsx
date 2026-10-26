@@ -18,8 +18,10 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { getMinimumPrice } from '@/utils/priceHelper';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -27,7 +29,14 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'coupons');
 
   const {
@@ -104,14 +113,22 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         popularPlanBySize="2TB"
         sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
-        backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        backgroundGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
       />
 
       <RedeemCouponsSection textContent={textContent.howToRedeemSection} />
 
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
       />
 
       <FloatingCtaSectionv2
@@ -119,10 +136,18 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {textContent.ctaSection.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {textContent.ctaSection.description}
             </p>
           </div>
@@ -130,7 +155,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
-        bgGradientColor="linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(0deg, #082D66 0%, #1C1C1C 100%)'
+            : 'linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)'
+        }
       />
 
       <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
@@ -140,15 +169,27 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {textContent.ctaSectionV2.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {textContent.ctaSectionV2.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="background: linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientContainerColor={
+          darkMode
+            ? 'background: linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'background: linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
       />

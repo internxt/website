@@ -1,8 +1,10 @@
 import DropArea from '@/components/shared/DropArea';
 import EmptyFile from '@/components/shared/icons/EmptyFile';
 import { formatText } from '@/components/utils/format-text';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InitialStateProps {
+  darkMode?: boolean;
   textContent: any;
   isDragging: boolean;
   pathFrom: string;
@@ -12,6 +14,7 @@ interface InitialStateProps {
 }
 
 const InitialState = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   isDragging,
   pathFrom,
@@ -32,7 +35,7 @@ const InitialState = ({
             <div className="flex flex-col rounded-lg bg-orange-100 px-4 py-2">
               <p className="font-semibold text-orange-1">{textContent.maxFileSize}</p>
             </div>
-            <p className="text-3xl font-semibold text-gray-100">
+            <p className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {formatText(textContent.dragYourFile, {
                 pathFrom,
               })}

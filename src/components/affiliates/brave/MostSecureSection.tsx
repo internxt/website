@@ -2,8 +2,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '@/components/shared/Button';
 import HeroSectionSafeArea from '@/components/shared/HeroSectionSafeArea';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MostSecureSectionProps {
+  darkMode?: boolean;
   textContent: any;
   onRedirectButtonClicked?: () => void;
   showButton?: boolean;
@@ -11,10 +13,11 @@ interface MostSecureSectionProps {
 }
 
 const MostSecureSection: React.FC<MostSecureSectionProps> = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   onRedirectButtonClicked,
   showButton = 'true',
-  bgColor = 'bg-gray-1',
+  bgColor = `${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`,
 }) => {
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
@@ -36,8 +39,20 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({
 
       <div className="flex w-[323px] flex-col items-center justify-center space-y-8 text-center lg:w-[550px] lg:items-start lg:text-left">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h1>
-          <h2 className="font-regular text-lg leading-tight text-gray-80 lg:text-xl">{textContent.description}</h2>
+          <h1
+            className={`text-30 font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-3xl`}
+          >
+            {textContent.title}
+          </h1>
+          <h2
+            className={`font-regular text-lg leading-tight ${
+              darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+            } lg:text-xl`}
+          >
+            {textContent.description}
+          </h2>
         </div>
         {showButton ? (
           <button

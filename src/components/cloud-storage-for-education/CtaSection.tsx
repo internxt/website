@@ -1,4 +1,13 @@
-const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: string }) => {
+import { DARK_MODE_ENABLED } from '@/theme.config';
+const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  maxWidth,
+}: {
+  darkMode?: boolean;
+  textContent: any;
+  maxWidth?: string;
+}) => {
   return (
     <section
       style={{
@@ -12,7 +21,9 @@ const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: st
           <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className={`flex rounded-lg ${
+            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+          } px-5 py-3 text-lg font-medium text-primary ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
           onClick={() => {
             window.scrollTo({
               top: document.getElementById('discountCard')?.offsetTop,

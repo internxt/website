@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const ALLOWED_PATHS = [
   'baity',
@@ -787,7 +788,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     if (!selectedPathname) {
       return {
         selectedPathname: null,
-        isDarkMode: false,
+        isDarkMode: DARK_MODE_ENABLED,
         alternateRecommendedPlan: false,
         couponCode: undefined,
         alternativeImages: null,
@@ -805,7 +806,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       };
     }
 
-    const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
+    const isDarkMode = DARK_MODE_ENABLED || DARK_MODE_PATHS.has(selectedPathname);
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname as keyof typeof COUPON_CODES];
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);

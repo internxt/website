@@ -2,9 +2,10 @@ import React from 'react';
 import { CaretRight } from '@phosphor-icons/react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const SupportNGOsSection = ({ textContent }) => (
-  <section className="relative flex flex-col items-center bg-white px-6">
+const SupportNGOsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+  <section className={`relative flex flex-col items-center ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-6`}>
     <div className="flex w-full max-w-screen-lg flex-col items-center justify-center space-y-10 py-16 sm:py-24 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-20 lg:px-0">
       {/* Card */}
       <div className="flex flex-col">

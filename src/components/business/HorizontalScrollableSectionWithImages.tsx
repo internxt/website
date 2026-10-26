@@ -3,8 +3,10 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionProps {
+  darkMode?: boolean;
   textContent: Record<string, any>;
   bgColor?: string;
   redirection?: boolean;
@@ -15,8 +17,9 @@ interface HorizontalScrollableSectionProps {
 }
 
 export default function HorizontalScrollableSectionWithImages({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
-  bgColor = 'bg-white',
+  bgColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
   redirection = false,
   containerDecoration,
   cardDecoration = false,
@@ -128,16 +131,30 @@ export default function HorizontalScrollableSectionWithImages({
       className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} py-10 lg:py-20`}
       style={{ background: bgGardient }}
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
-      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      ></div>
+      <div
+        className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      ></div>
 
       <div
         className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-center lg:gap-20`}
       >
         <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-          <p className="text-30 font-bold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
+          <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+            {textContent.title}
+          </p>
 
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{textContent.description}</p>
+          <p
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-lg`}
+          >
+            {textContent.description}
+          </p>
 
           {redirection && (
             <Link
@@ -192,10 +209,16 @@ export default function HorizontalScrollableSectionWithImages({
                     )}
 
                     <div className="flex flex-row gap-4">
-                      <p className="text-left text-xl font-medium text-gray-100">{title}</p>
+                      <p className={`text-left text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                        {title}
+                      </p>
                     </div>
 
-                    <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
+                    <p
+                      className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
+                    >
+                      {cardDescriptions[index]}
+                    </p>
                   </div>
                 </div>
               </div>

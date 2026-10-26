@@ -11,8 +11,10 @@ import CtaSection from '@/components/sustainability/CtaSection';
 import FeatureSection from '@/components/sustainability/FeatureSection';
 import HeroSection from '@/components/sustainability/HeroSection';
 import FeatureSectionV3 from '@/components/sustainability/FeatureSectionV3';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SustainabilityProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   lang: GetStaticPropsContext['locale'];
   navbarLang: NavigationBarText;
@@ -21,6 +23,7 @@ interface SustainabilityProps {
 }
 
 const Sustainability = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   lang,
   navbarLang,
@@ -65,17 +68,25 @@ const Sustainability = ({
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-              <h2 className="text-3xl font-semibold text-gray-100 sm:text-5xl">{langJson.FeatureSection.title}</h2>
-              <p className="font-regular text-gray-80 sm:text-xl">{langJson.FeatureSection.description}</p>
+              <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} sm:text-5xl`}>
+                {langJson.FeatureSection.title}
+              </h2>
+              <p className={`font-regular ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-xl`}>
+                {langJson.FeatureSection.description}
+              </p>
             </div>
           </div>
         }
         SecondComponent={
           <div className="flex flex-col items-center">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-gray-1" iconColor="text-green" />
+            <CardGroup
+              cards={cardsForFeatureSection}
+              backgroundColorCard={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
+              iconColor="text-green"
+            />
           </div>
         }
-        backgroundColor="bg-white"
+        backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
       />
 
       <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />

@@ -1,7 +1,9 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   url,
   maxWidth,
@@ -9,6 +11,7 @@ const CtaSection = ({
   bgImage,
   customDescription,
 }: {
+  darkMode?: boolean;
   textContent: any;
   url?: string;
   maxWidth?: string;
@@ -37,7 +40,9 @@ const CtaSection = ({
             className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
               bgImage && bgImage !== defaultBgImage
                 ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-                : 'bg-white text-primary hover:bg-blue-10'
+                : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} text-primary ${
+                    darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
+                  }`
             }`}
           >
             {textContent.cta}

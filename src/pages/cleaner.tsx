@@ -14,8 +14,10 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FeatureSection from '@/components/cleaner/FeatureSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CleanerProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -25,6 +27,7 @@ interface CleanerProps {
 }
 
 const CleanerPage = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   lang,
@@ -56,14 +59,24 @@ const CleanerPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col gap-4 px-6 text-center">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
-            <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
+              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                {textContent.CtaSection.title}
+              </p>
+              <p
+                className={`px-10 text-base font-normal ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:px-0 lg:text-xl`}
+              >
               {textContent.CtaSection.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)'
+          }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
       />
@@ -77,12 +90,20 @@ const CleanerPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
+              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+                {textContent.CtaSection2.title}
+              </p>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {textContent.CtaSection2.description}
+              </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #082D66 0%, #1C1C1C 100%)'
+              : 'linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)'
+          }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
       />
@@ -91,7 +112,15 @@ const CleanerPage = ({
 
       <RelationalLinks textContent={relationalLinksText} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Cleaner', url: '/cleaner' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={locale}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Internxt Cleaner', url: '/cleaner' },
+          ]}
+        />
     </Layout>
     </>
   );

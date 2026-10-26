@@ -7,8 +7,10 @@ import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableProps {
+  darkMode?: boolean;
   textContent: any;
   handlePriceCardButton: (planId: string, coupon: string) => void;
   billingFrequency: string;
@@ -20,6 +22,7 @@ interface PriceTableProps {
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   handlePriceCardButton,
   discount,
@@ -47,14 +50,18 @@ const PriceTable: React.FC<PriceTableProps> = ({
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-12">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-12`}>
       <div className="flex flex-col items-center ">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
           {isStartPage ? <p className="text-3xl font-semibold text-primary xl:text-4xl">{textContent.header}</p> : null}
-          <p className={`${titleFontSize ?? 'text-4xl xl:text-5xl'} px-2 font-semibold text-gray-100`}>
+          <p
+            className={`${titleFontSize ?? 'text-4xl xl:text-5xl'} px-2 font-semibold ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            }`}
+          >
             {textContent.title}
           </p>
-          <p className="px-1 text-xl text-gray-80">{textContent.subtitle}</p>
+          <p className={`px-1 text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.subtitle}</p>
         </div>
         <Transition
           show={loadingCards}
@@ -108,7 +115,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
-              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+              <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature.text}</p>
             </div>
           ))}
         </div>

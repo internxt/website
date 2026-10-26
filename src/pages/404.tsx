@@ -61,7 +61,7 @@ export default function Custom404() {
           </div>
         </div>
       </section>
-      <Footer textContent={footerLang as FooterText} lang={'en'} />
+      <Footer textContent={footerLang as FooterText} lang={'en'} darkMode={false} />
     </>
   );
 }

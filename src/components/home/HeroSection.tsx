@@ -15,16 +15,19 @@ import {
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
+  darkMode?: boolean;
   textContent: HomeText['HeroSection'];
   percentOff: string;
   minimumPrice: string;
 }
 
 export default function HeroSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   percentOff,
   minimumPrice,
@@ -109,32 +112,58 @@ export default function HeroSection({
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[705px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[325px] flex-col justify-center gap-5 lg:h-[534px] lg:w-[536px] lg:justify-between">
         <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[536px] lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1"
+              className={`flex h-5 w-min flex-row items-center justify-center gap-1 rounded ${
+                darkMode ? 'bg-white/10' : 'bg-white/50'
+              } px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1`}
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-5 lg:w-5" />
-              <p className="whitespace-nowrap text-[12px] font-medium leading-tight text-gray-80">{feature.text}</p>
+              <p
+                className={`whitespace-nowrap text-[12px] font-medium leading-tight ${
+                  darkMode ? 'text-white' : 'text-gray-80'
+                }`}
+              >
+                {feature.text}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <h1
+              className={`w-full text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-3xl`}
+            >
               <HighlightText text={textContent.title} />
             </h1>
-            <p className="font-regular text-lg leading-tight text-gray-100 lg:whitespace-pre-line  lg:text-2xl">
+            <p
+              className={`font-regular text-lg leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:whitespace-pre-line  lg:text-2xl`}
+            >
               {textContent.subtitle.part1} {textContent.subtitle.part2}
             </p>
           </div>
-          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
-            <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
+          <span
+            className={`flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-xl`}
+          >
+            <p className={`${darkMode ? 'bg-purple-100' : 'bg-neutral-37'} px-1 py-0.5 text-primary`}>
+              {parsePercentText(textContent.description)}
+            </p>
 
             <p className="bg-transparent">{textContent.descriptionNormal}</p>
           </span>
@@ -143,13 +172,23 @@ export default function HeroSection({
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
+                <p
+                  className={`text-left text-sm font-semibold ${
+                    darkMode ? 'text-white-95' : 'text-gray-100'
+                  } lg:text-lg `}
+                >
+                  {feat}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex h-[29px] flex-row items-center gap-1 text-xs font-normal text-gray-100 lg:h-[43px] lg:items-end lg:text-base">
+        <div
+          className={`flex h-[29px] flex-row items-center gap-1 text-xs font-normal ${
+            darkMode ? 'text-white-95' : 'text-gray-100'
+          } lg:h-[43px] lg:items-end lg:text-base`}
+        >
           {textContent.startFrom.normal1}
           <span className="flex w-max flex-row gap-1 pb-[8px] text-2xl font-bold lg:pb-0 lg:text-4xl">
             <abbr className="text-xs lg:text-base">{currency}</abbr>
@@ -167,7 +206,11 @@ export default function HeroSection({
               {textContent.claimDeal}
             </Link>
           </div>
-          <span className="flex flex-row items-center gap-2 text-xs font-normal leading-tight text-gray-100 lg:text-lg">
+          <span
+            className={`flex flex-row items-center gap-2 text-xs font-normal leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-lg`}
+          >
             <Image
               src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
               alt="Internxt Blue Shield check"

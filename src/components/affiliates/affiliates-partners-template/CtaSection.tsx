@@ -1,6 +1,7 @@
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const CtaSection = ({ textContent }) => {
+export const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,
@@ -17,7 +18,9 @@ export const CtaSection = ({ textContent }) => {
         </div>
         <button
           onClick={handleOnButtonClick}
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className={`flex rounded-lg ${
+            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+          } px-5 py-3 text-lg font-medium text-primary ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
         >
           {textContent.cta}
         </button>

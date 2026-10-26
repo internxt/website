@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThreeCardsProps {
   textContent: any;
@@ -14,7 +15,7 @@ interface ThreeCardsProps {
 
 export default function ThreeCardsSection({
   textContent,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   bgColor,
   cardColor,
   bottomSeparationBar = false,
@@ -113,7 +114,11 @@ export default function ThreeCardsSection({
           {textContent.title}
         </SectionTitleTag>
         {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+          >
+            {textContent.description}
+          </p>
         )}
       </div>
 
@@ -175,7 +180,9 @@ export default function ThreeCardsSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -184,7 +191,9 @@ export default function ThreeCardsSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

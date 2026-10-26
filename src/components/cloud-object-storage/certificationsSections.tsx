@@ -2,6 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useState, useEffect } from 'react'
 import { currencyService } from '@/services/currency.service';
+import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 const certifications = [
     { src: '/images/datacenters-and-certifications/ISO.webp', width: 48, alt: 'ISO Certification' },
@@ -12,7 +13,7 @@ const certifications = [
     { src: '/images/datacenters-and-certifications/CSA.webp', width: 48, alt: 'CSA Certification' },
   ];
 
-export const CertificationsSection = () => {
+export const CertificationsSection = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
   const [currencyValue, setCurrencyValue] = useState('eur');
 
   useEffect(() => {
@@ -27,6 +28,8 @@ export const CertificationsSection = () => {
   }, []);
 
   const visibleCertifications = certifications.filter((cert) => !(currencyValue === 'usd' && cert.src.includes('ENS.webp')));
+
+  const logoClass = darkMode ? DARK_MODE_LOGO_FILTER : '';
 
   return (
     <section className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 lg:pt-0 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 xl:px-32 3xl:px-80">
@@ -54,6 +57,7 @@ export const CertificationsSection = () => {
               width={cert.width}
               height={40}
               quality={100}
+              className={logoClass}
             />
           ))}
         </div>
@@ -69,6 +73,7 @@ export const CertificationsSection = () => {
             width={cert.width}
             height={40}
             quality={100}
+            className={logoClass}
           />
         ))}
       </div>

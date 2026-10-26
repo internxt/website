@@ -3,12 +3,15 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { PhotoText } from '@/assets/types/photos';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionWithPhotosProps {
+  darkMode?: boolean;
   textContent: PhotoText['DesignedSection'];
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
@@ -87,11 +90,15 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-2 py-5 pt-14 lg:h-min lg:gap-14 lg:pt-20"
-      style={{ background: '#FFFFFF 100%' }}
+      style={{ background: darkMode ? '#1C1C1C' : '#FFFFFF 100%' }}
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
         <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6 lg:ml-20 lg:pl-14">
-          <h2 className="text-[30px] font-bold leading-tight text-gray-95 lg:text-5xl">{textContent.title}</h2>
+          <h2
+            className={`text-[30px] font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-5xl`}
+          >
+            {textContent.title}
+          </h2>
         </div>
       </div>
 
@@ -120,8 +127,20 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             {cardTitles.map((title: string, index: number) => (
               <div key={title} className="flex-shrink-0 items-center">
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
-                  <h3 className="pb-6 text-[18px] font-medium text-gray-95 lg:text-[20px]">{title}</h3>
-                  <p className="flex-1 text-xs lg:text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
+                  <h3
+                    className={`pb-6 text-[18px] font-medium ${
+                      darkMode ? 'text-white-95' : 'text-gray-95'
+                    } lg:text-[20px]`}
+                  >
+                    {title}
+                  </h3>
+                  <p
+                    className={`flex-1 text-xs font-normal leading-tight lg:text-base ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
+                    {cardDescriptions[index]}
+                  </p>
                 </div>
                 <Image
                   src={getImage(`/images/photos/${textContent.scrollableSection.images[index]}.webp`)}
@@ -129,7 +148,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   height={150}
                   width={350}
                   quality={100}
-                  className="hidden rounded-16 lg:block lg:-ml-4"
+                  className="hidden rounded-16 lg:-ml-4 lg:block"
                   />
                 <Image
                   src={getImage(`/images/photos/${textContent.scrollableSection.images[index]}.webp`)}
@@ -138,7 +157,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   width={300}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
-                  className="block w-full rounded-16 lg:hidden -ml-4"
+                  className="-ml-4 block w-full rounded-16 lg:hidden"
                   />
               </div>
             ))}
@@ -150,8 +169,12 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -160,8 +183,12 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

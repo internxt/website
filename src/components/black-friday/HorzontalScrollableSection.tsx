@@ -1,11 +1,16 @@
 import { CaretLeft, CaretRight, CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
+  darkMode?: boolean;
   textContent: any;
 }
 
-export default function HorizontalScrollableSection({ textContent }: Readonly<HorizontalScrollableProps>): JSX.Element {
+export default function HorizontalScrollableSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -197,7 +202,9 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -206,7 +213,9 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

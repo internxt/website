@@ -1,17 +1,28 @@
 import ProductCard from '@/components/shared/ProductCard';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatWeDo = ({ textContent, lang, products }) => {
+const WhatWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, products }) => {
   return (
     <section className="overflow-hidden ">
-      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 py-10 text-gray-100 md:py-20">
+      <div
+        className={`z-10 flex flex-col items-center space-y-16 ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-10 ${
+          darkMode ? 'text-white-95' : 'text-gray-100'
+        } md:py-20`}
+      >
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-10">
           <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-            <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <h2
+              className={`text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-3xl`}
+            >
               {textContent.title.line1} {textContent.title.line2} {textContent.title.line3}
             </h2>
             <div className="flex flex-col space-y-6">
-              <p className="text-lg leading-tight text-gray-80">{textContent.subtitle}</p>
+              <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {textContent.subtitle}
+              </p>
             </div>
           </div>
         </section>

@@ -1,13 +1,16 @@
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatIsOSS = ({ textContent }) => {
+const WhatIsOSS = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center px-5 py-20 text-center">
         <div className="flex w-full max-w-[850px] flex-col items-center space-y-16">
           <div className="flex flex-col space-y-6">
-            <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-            <p className="text-xl text-gray-80">{textContent.description}</p>
+            <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.title}
+            </h2>
+            <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
           </div>
 
           <img
@@ -17,7 +20,7 @@ const WhatIsOSS = ({ textContent }) => {
           />
           <div className="flex flex-col space-y-6">
             {textContent.section.map((description, index) => (
-              <p className="text-xl text-gray-80" key={index}>
+              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`} key={index}>
                 {description}
               </p>
             ))}

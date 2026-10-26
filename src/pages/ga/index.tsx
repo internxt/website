@@ -16,8 +16,10 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import { getMinimumPrice } from '@/utils/priceHelper';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -25,7 +27,14 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const {
@@ -100,7 +109,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20 xl:py-32"
+        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
         freePlanNeedsH2
         hideFreeCard
       />
@@ -113,7 +122,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor="bg-neutral-17"
+        bgColor={`${darkMode ? 'bg-gray-100' : 'bg-neutral-17'}`}
       />
 
       <HorizontalScrollableSection textContent={textContent.NextGenSection} />
@@ -122,7 +131,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.EncryptedStorageSeoSection}
         needsH2
         needsH3
-        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(360deg, #1C1C1C 0%, #18181B 100%)'
+            : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
       />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />

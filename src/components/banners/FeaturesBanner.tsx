@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { X, CloudArrowUp, ShieldPlus, Sparkle, CellTower, VideoConference, Envelope, ShieldCheck, Brain } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FeaturesBanner = (): JSX.Element => {
   const router = useRouter();
@@ -47,7 +48,9 @@ const FeaturesBanner = (): JSX.Element => {
     { id: 'ai', icon: Brain, text: banner.products.ai },
   ];
 
-  const bgColor = 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)';
+  const bgColor = DARK_MODE_ENABLED
+    ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%)'
+    : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)';
 
   return (
     <div
@@ -63,7 +66,9 @@ const FeaturesBanner = (): JSX.Element => {
         <button
           id="close-banner"
           aria-label="close-banner"
-          className="absolute right-0 top-0 m-3 flex border-[0.1px] border-white text-gray-100 dark:text-gray-10 hover:bg-gray-1/10"
+          className={`absolute right-0 top-0 m-3 flex border-[0.1px] border-white ${
+            DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+          } dark:text-gray-10 hover:bg-gray-1/10`}
           onClick={handleClose}
         >
           <X size={32} />
@@ -71,21 +76,39 @@ const FeaturesBanner = (): JSX.Element => {
 
         <div className="w-[509px] h-[358px] pl-14 justify-center gap-8 items-start flex flex-col">
           <div className="flex flex-col gap-5">
-            <div className="flex px-1 gap-3">
-              <p className="text-lg font-semibold text-primary bg-gray-10 dark:bg-gray-90 rounded-sm px-1 py-0.5">
+            <div className="flex gap-3 px-1">
+              <p
+                className={`text-lg font-semibold text-primary ${
+                  DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-10'
+                } dark:bg-gray-90 rounded-sm px-1 py-0.5`}
+              >
                 {banner.label.blueText}
               </p>
-              <p className="text-lg font-semibold text-gray-100 dark:text-gray-1 px-1 py-0.5">
+              <p
+                className={`text-lg font-semibold ${
+                  DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                } dark:text-gray-1 px-1 py-0.5`}
+              >
                 {banner.label.text}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="text-4xl font-semibold text-gray-100 dark:text-gray-1 whitespace-nowrap">
+              <p
+                className={`text-4xl font-semibold ${
+                  DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                } dark:text-gray-1 whitespace-nowrap`}
+              >
                 {banner.title}
               </p>
-              <div className="flex px-1 gap-1">
+              <div className="flex gap-1 px-1">
                 <p className="text-lg font-semibold text-primary">{banner.subTitle.blueText}</p>
-                <p className="text-lg font-semibold text-gray-100 dark:text-gray-1">{banner.subTitle.text}</p>
+                <p
+                  className={`text-lg font-semibold ${
+                    DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                  } dark:text-gray-1`}
+                >
+                  {banner.subTitle.text}
+                </p>
               </div>
             </div>
           </div>
@@ -107,7 +130,11 @@ const FeaturesBanner = (): JSX.Element => {
             </div>
             <div className="flex flex-row items-center gap-2">
               <ShieldCheck size={24} weight="fill" className="text-primary" />
-              <p className="whitespace-nowrap font-medium text-gray-100 dark:text-gray-1 lg:text-base">
+              <p
+                className={`whitespace-nowrap font-medium ${
+                  DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                } dark:text-gray-1 lg:text-base`}
+              >
                 {banner.guarantee}
               </p>
             </div>
@@ -117,10 +144,16 @@ const FeaturesBanner = (): JSX.Element => {
             {products.map((feature) => (
               <div
                 key={feature.id}
-                className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+                className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
+                  DARK_MODE_ENABLED ? 'bg-white/10' : 'bg-white/50'
+                } px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
               >
                 <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-                <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-gray-20">
+                <p
+                  className={`whitespace-nowrap text-sm font-medium leading-tight ${
+                    DARK_MODE_ENABLED ? 'text-white' : 'text-gray-80'
+                  } dark:text-gray-20`}
+                >
                   {feature.text}
                 </p>
               </div>

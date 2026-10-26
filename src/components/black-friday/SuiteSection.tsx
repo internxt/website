@@ -2,7 +2,8 @@ import React from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
-const SuiteSection = ({ textContent, lang }) => {
+import { DARK_MODE_ENABLED } from '@/theme.config';
+const SuiteSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
   const images = {
     drive: '/images/privacy/Internxt-Drive.webp',
     business: '/images/black-friday/internxt_for_families.webp',
@@ -18,7 +19,7 @@ const SuiteSection = ({ textContent, lang }) => {
     }
   };
   return (
-    <section className="relative flex w-full flex-col bg-highlight">
+    <section className={`relative flex w-full flex-col ${darkMode ? 'bg-white/10' : 'bg-highlight'}`}>
       <div className="z-10 flex flex-col items-center py-16">
         <div className="px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center px-5 pb-16 text-center">

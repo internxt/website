@@ -3,14 +3,21 @@ import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { HighlightText } from '@/components/components/HighlightText';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: any;
   percentage?: number;
   competitor: string;
 }
 
-export const HeroSection = ({ textContent, percentage, competitor }: HeroSectionProps) => {
+export const HeroSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  percentage,
+  competitor,
+}: HeroSectionProps) => {
   // HighlightText needs a plain string, and {{competitor}} is always known at render time.
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text);
   const parseDiscountText = (text?: string) =>
@@ -19,20 +26,40 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
   return (
     <div
       className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 py-8 pt-28 lg:h-min lg:flex-row lg:justify-center lg:p-20 lg:px-10 lg:pt-40 xl:px-32 3xl:px-80"
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      ></div>
       <div className="hidden h-auto w-full justify-between lg:flex lg:h-min">
         <div className="flex h-full flex-col items-start justify-center gap-5 text-start lg:h-min lg:w-1/2 lg:text-start">
-          <h1 className="flex 2xl:whitespace-pre-line text-30 font-semibold text-gray-95 lg:text-5xl">
+          <h1
+            className={`flex text-30 font-semibold 2xl:whitespace-pre-line ${
+              darkMode ? 'text-white-95' : 'text-gray-95'
+            } lg:text-5xl`}
+          >
             <HighlightText text={parseText(textContent.title)} />
           </h1>
 
-          <p className="text-start text-base font-normal leading-tight text-gray-55 lg:text-xl 2xl:whitespace-pre-line">
+          <p
+            className={`text-start text-base font-normal leading-tight ${
+              darkMode ? 'text-green-120' : 'text-gray-55'
+            } lg:text-xl 2xl:whitespace-pre-line`}
+          >
             {textContent.description}
           </p>
 
-          <p className="items-center justify-center text-lg font-semibold text-gray-95 lg:text-2xl">
+          <p
+            className={`items-center justify-center text-lg font-semibold ${
+              darkMode ? 'text-white-95' : 'text-gray-95'
+            } lg:text-2xl`}
+          >
             {parseDiscountText(textContent.getPrivacy)}
           </p>
 
@@ -57,11 +84,19 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
 
       <div className="flex lg:hidden">
         <div className="flex h-full flex-col items-start justify-center gap-5 text-start lg:h-min lg:w-1/2 lg:text-start">
-          <p className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95 lg:text-5xl">
+          <p
+            className={`whitespace-pre-line text-30 font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-95'
+            } lg:text-5xl`}
+          >
             <HighlightText text={parseText(textContent.title)} />
           </p>
 
-          <p className=" text-start text-base font-normal leading-tight text-gray-55 lg:text-xl">
+          <p
+            className={` text-start text-base font-normal leading-tight ${
+              darkMode ? 'text-green-120' : 'text-gray-55'
+            } lg:text-xl`}
+          >
             {textContent.description}
           </p>
           <Image
@@ -73,7 +108,11 @@ export const HeroSection = ({ textContent, percentage, competitor }: HeroSection
             height={166}
             quality={100}
           />
-          <p className="items-center justify-center whitespace-pre-line text-lg font-semibold text-gray-95 lg:text-2xl">
+          <p
+            className={`items-center justify-center whitespace-pre-line text-lg font-semibold ${
+              darkMode ? 'text-white-95' : 'text-gray-95'
+            } lg:text-2xl`}
+          >
             {parseDiscountText(textContent.getPrivacy)}
           </p>
 

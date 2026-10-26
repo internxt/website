@@ -1,11 +1,17 @@
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface BestStorageSectionProps {
+  darkMode?: boolean;
   textContent: Record<string, any>;
   hideTitleAndDescription?: boolean;
 }
 
-const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  hideTitleAndDescription,
+}: BestStorageSectionProps): JSX.Element => {
   const features = [
     {
       icon: Database,
@@ -42,7 +48,7 @@ const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorag
           {features.map((feature, index) => (
             <div className="flex w-full max-w-[120px] flex-col items-center space-y-3 pt-16 text-center" key={index}>
               <feature.icon size={40} className="text-primary" />
-              <p className="text-xl font-medium text-gray-100">{feature.title}</p>
+              <p className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{feature.title}</p>
             </div>
           ))}
         </div>

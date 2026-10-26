@@ -15,8 +15,10 @@ import { getMinimumPrice } from '@/utils/priceHelper';
 import { PromoCodeName } from '@/lib/types';
 import { TestPpcLeadsText } from '@/assets/types/test-ppc-leads';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TestPpcLeadsProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: TestPpcLeadsText;
@@ -25,6 +27,7 @@ interface TestPpcLeadsProps {
 }
 
 const TestPpcLeads = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -62,21 +65,28 @@ const TestPpcLeads = ({
 
       <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} />
 
-      <CardsGridSection textContent={textContent.FeaturesSection} bgColor="bg-neutral-17" />
+      <CardsGridSection
+        textContent={textContent.FeaturesSection}
+        bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+      />
 
       <ChoosePlanSection
         textContent={textContent.ChoosePlanSection}
         currency={currency}
         minimumPrice={minimumPrice}
         loadingCards={loadingCards}
-        sectionDetails="bg-neutral-17 py-10 lg:py-20"
+        sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} py-10 lg:py-20`}
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
         needsH2
         needsH3
-        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
       />
 
       <FloatingCtaSectionv2
@@ -97,7 +107,11 @@ const TestPpcLeads = ({
         bgPadding="py-10 lg:py-20"
       />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} bgColor="bg-white" />
+      <MinimalFooter
+        footerLang={footerLang.FooterSection}
+        lang={locale}
+        bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+      />
     </Layout>
   );
 };

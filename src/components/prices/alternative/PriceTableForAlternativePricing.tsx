@@ -3,8 +3,10 @@ import PriceCard from '../PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { TransformedProduct } from '@/services/stripe.service';
 import FreePlanCard from '../FreePlanCard';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableForAlternativePricingProps {
+  darkMode?: boolean;
   textContent: Record<string, any>;
   selectedPlanStorage: string;
   discount: number;
@@ -25,6 +27,7 @@ const CARD_LABEL = {
 };
 
 export const PriceTableForAlternativePricing = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   selectedPlanStorage,
   lang,
@@ -45,20 +48,31 @@ export const PriceTableForAlternativePricing = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center justify-center gap-10 pb-6">
           <div className="flex flex-col items-center gap-4 text-center">
-            <p className="max-w-[900px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
+            <p
+              className={`max-w-[900px] text-center text-4xl font-semibold ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-6xl`}
+            >
               {textContent.title.normal1} <span className="text-primary">{textContent.title.blue2}</span>
               {textContent.title.normal2}
             </p>
-            <p className="max-w-[550px] text-xl text-gray-80">{textContent.description}</p>
+            <p className={`max-w-[550px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.description}
+            </p>
           </div>
         </div>
 
-        <div className="flex w-screen border border-gray-10" />
+        <div className={`flex w-screen border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
 
         <div className="flex flex-col items-center gap-12 pt-10">
           <div className="flex flex-col items-center gap-6">
-            <p className="text-center text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
-            <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 p-0.5">
+            <p className={`text-center text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.howMuchStorage}
+            </p>
+            <div
+              id="billingButtons"
+              className={`flex w-max flex-row rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-cool-gray-10'} p-0.5`}
+            >
               {availableStorage?.map((plan) => (
                 <button
                   key={plan.priceId}
@@ -67,7 +81,9 @@ export const PriceTableForAlternativePricing = ({
                     handleOnPlanButtonClicked(plan.storage);
                   }}
                   className={`rounded-lg px-6 py-0.5 font-semibold ${
-                    plan.storage === selectedPlanStorage ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                    plan.storage === selectedPlanStorage
+                      ? `${darkMode ? 'bg-[#1C1C1C] text-cool-gray-30' : 'bg-white text-cool-gray-80'} shadow-sm`
+                      : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
                   }`}
                 >
                   {plan.storage}
@@ -113,7 +129,9 @@ export const PriceTableForAlternativePricing = ({
           {iconsFeatures.map((Icon, index) => (
             <div key={textContent.features[index]} className="flex flex-row gap-6 md:items-center">
               <Icon size={40} className="text-primary" />
-              <p className="pt-1 text-xl font-medium text-gray-100 md:pt-0">{textContent.features[index]}</p>
+              <p className={`pt-1 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} md:pt-0`}>
+                {textContent.features[index]}
+              </p>
             </div>
           ))}
         </div>

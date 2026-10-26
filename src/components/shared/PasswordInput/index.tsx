@@ -4,8 +4,10 @@ import './PasswordInput.module.scss';
 import { Eye, EyeSlash } from '@phosphor-icons/react';
 import { useState } from 'react';
 import type { IFormValues } from '@/components/cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InputProps {
+  darkMode?: boolean;
   label: Path<IFormValues>;
   disabled?: boolean;
   register: UseFormRegister<IFormValues>;
@@ -26,6 +28,7 @@ interface InputProps {
 }
 
 const PasswordInput = ({
+  darkMode = DARK_MODE_ENABLED,
   label,
   disabled,
   register,
@@ -75,7 +78,9 @@ const PasswordInput = ({
         onClick={() => setShowPassword(!showPassword)}
         onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}
         tabIndex={0}
-        className="absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center text-gray-100"
+        className={`absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center ${
+          darkMode ? 'text-white-95' : 'text-gray-100'
+        }`}
       >
         {showPassword ? <Eye className="h-6 w-6" /> : <EyeSlash className="h-6 w-6" />}
       </button>

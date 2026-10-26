@@ -1,6 +1,8 @@
 import Spinner from './Spinner';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ButtonProps {
+  darkMode?: boolean;
   text: string;
   showSpinner?: boolean;
   className?: string;
@@ -13,6 +15,7 @@ interface ButtonProps {
 }
 
 const Button = ({
+  darkMode = DARK_MODE_ENABLED,
   text,
   className,
   type,
@@ -31,7 +34,7 @@ const Button = ({
       type={type}
       className={[
         'flex w-max justify-center rounded-md px-5 py-3 text-base font-medium',
-        disabled ? 'bg-gray-10' : `bg-primary ${hoverColor}`,
+        disabled ? `${darkMode ? 'bg-gray-71' : 'bg-gray-10'}` : `bg-primary ${hoverColor}`,
         textColor || 'text-white',
         className || '',
       ].join(' ')}

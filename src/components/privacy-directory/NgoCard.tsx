@@ -2,8 +2,9 @@ import React from 'react';
 import { Parallax } from 'react-parallax';
 import { Transition } from '@headlessui/react';
 import * as anim from '../../../public/js/anim';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const NgoCard = ({ id, name, short, description }) => {
+const NgoCard = ({ darkMode = DARK_MODE_ENABLED, id, name, short, description }) => {
   // Constant to avoid unnecessary re-renders
   const showTrigger = [] as any;
   const setShowTrigger = () => {
@@ -20,17 +21,19 @@ const NgoCard = ({ id, name, short, description }) => {
           enterFrom="opacity-0 translate-y-10 scale-99"
           enterTo="opacity-100 translate-y-0 scale-100"
         >
-          <div className="flex w-full flex-col space-y-5 rounded-xl bg-white p-8">
+          <div className={`flex w-full flex-col space-y-5 rounded-xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8`}>
             <>
               {/* Make animation only happen first time is scrolled */}
               {showTrigger.length <= 1 && percentage > 0 && setShowTrigger()}
 
               {/* Logo */}
-              <div className="relative h-10 w-10 rounded-xl bg-gray-10 sm:h-12 sm:w-12">
+              <div
+                className={`relative h-10 w-10 rounded-xl ${darkMode ? 'bg-gray-71' : 'bg-gray-10'} sm:h-12 sm:w-12`}
+              >
                 <img
                   src={`/logos/ngos/${id}.webp`}
                   draggable="false"
-                  className="absolute h-full w-full overflow-hidden bg-white"
+                  className={`absolute h-full w-full overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
                   alt={`${name} logo`}
                 />
               </div>
@@ -42,10 +45,10 @@ const NgoCard = ({ id, name, short, description }) => {
               </div>
 
               {/* Separator */}
-              <div className="h-px w-full bg-gray-10" />
+              <div className={`h-px w-full ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`} />
 
               {/* Description */}
-              <p className="text-gray-80">{description}</p>
+              <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{description}</p>
             </>
           </div>
         </Transition>

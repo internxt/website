@@ -18,6 +18,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -51,6 +52,8 @@ const ALLOWED_PATHS = [
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
+const VALENTINES_GRADIENT_DARK = 'linear-gradient(180deg, #1C1C1C 0%, #2A1420 100%)';
+const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)';
 const ANNUAL_DISCOUNT_PLANS_PATHS = ['grabon', 'pcmag'];
 
 const COUPON_CODES = {
@@ -83,7 +86,8 @@ function CombinedSpecialOffer({
   const router = useRouter();
   const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(true);
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
+  const isDarkMode = DARK_MODE_ENABLED || (selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false);
+  const valentinesGradient = isDarkMode ? VALENTINES_GRADIENT_DARK : VALENTINES_GRADIENT_LIGHT;
   const isValentinesMode = selectedPathname === 'love';
   const isPcMag = selectedPathname === 'pcmag';
   const annualPlans = selectedPathname ? ANNUAL_DISCOUNT_PLANS_PATHS.includes(selectedPathname) : false;
@@ -210,7 +214,7 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
         showPromo
-        backgroundGradientColor={isValentinesMode ? 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)' : undefined}
+        backgroundGradientColor={isValentinesMode ? valentinesGradient : undefined}
       />
 
       <FloatingCtaSectionv2

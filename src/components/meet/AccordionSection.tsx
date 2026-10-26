@@ -2,12 +2,17 @@ import { useState } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { MeetPageText } from '@/assets/meet';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AccordionSectionProps {
+  darkMode?: boolean;
   textContent: any;
 }
 
-export default function AccordionSectionSection({ textContent }: AccordionSectionProps): JSX.Element {
+export default function AccordionSectionSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: AccordionSectionProps): JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const cardTitles = textContent?.accordionSection.titles ?? [];
@@ -23,10 +28,24 @@ export default function AccordionSectionSection({ textContent }: AccordionSectio
   const currentImageAlt = openIndex !== null ? `${cardTitles[openIndex]} - Imagen ilustrativa` : 'Imagen por defecto';
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 bg-neutral-17 py-10 lg:h-min lg:gap-16 lg:py-20">
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } py-10 lg:h-min lg:gap-16 lg:py-20`}
+    >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className="text-30 font-bold leading-tight text-gray-95 lg:w-[736px] lg:text-3xl">{textContent.title}</h2>
-        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 lg:text-xl">
+        <h2
+          className={`text-30 font-bold leading-tight ${
+            darkMode ? 'text-white-95' : 'text-gray-95'
+          } lg:w-[736px] lg:text-3xl`}
+        >
+          {textContent.title}
+        </h2>
+        <p
+          className={`whitespace-pre-line text-base font-normal leading-tight ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          } lg:text-xl`}
+        >
           {textContent.description}
         </p>
       </div>
@@ -34,7 +53,10 @@ export default function AccordionSectionSection({ textContent }: AccordionSectio
       <div className="flex w-[345px] flex-row lg:w-full lg:pl-52 1.5xl:pl-64 2xl:pl-80 ">
         <div className="space-y-4">
           {cardTitles.map((title, index) => (
-            <div key={index} className="w-[352px] overflow-hidden rounded-2xl bg-white">
+            <div
+              key={index}
+              className={`w-[352px] overflow-hidden rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+            >
               <button
                 onClick={() => toggleAccordion(index)}
                 className={`flex w-full items-center px-8 text-left transition-all duration-700 ${
@@ -43,7 +65,9 @@ export default function AccordionSectionSection({ textContent }: AccordionSectio
               >
                 <span className="flex items-center justify-center gap-4 py-4 text-2xl text-primary">
                   {index + 1}
-                  <p className="text-lg font-medium text-gray-95 lg:text-xl">{title}</p>
+                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                    {title}
+                  </p>
                 </span>
               </button>
 
@@ -53,7 +77,9 @@ export default function AccordionSectionSection({ textContent }: AccordionSectio
                 } overflow-hidden`}
               >
                 <div className="px-8 pb-8">
-                  <p className="text-base leading-tight text-gray-55 lg:text-base">{cardDescriptions[index]}</p>
+                  <p className={`text-base leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}>
+                    {cardDescriptions[index]}
+                  </p>
                 </div>
               </div>
             </div>

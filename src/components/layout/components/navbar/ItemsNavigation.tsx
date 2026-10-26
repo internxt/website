@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { IS_BLACK_FRIDAY, BLACK_FRIDAY_URL } from '@/announcement.config';
 
 interface NavigationLinkProps {
   href: string;
@@ -49,6 +50,16 @@ const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
 
 const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
   <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
+    {text}
+  </Link>
+);
+
+const HighlightedNavigationLink = ({ href, text, lang }: Omit<NavigationLinkProps, 'isActive' | 'isDarkMode'>) => (
+  <Link
+    href={href}
+    locale={lang}
+    className="whitespace-nowrap px-4 py-1.5 text-base font-bold text-primary transition duration-150 ease-in-out hover:text-primary-dark min-[1024px]:text-sm min-[1100px]:text-base"
+  >
     {text}
   </Link>
 );
@@ -126,6 +137,9 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        {IS_BLACK_FRIDAY && (
+          <HighlightedNavigationLink href={BLACK_FRIDAY_URL} text={textContent.links.blackFriday} lang={lang} />
+        )}
         <DropdownMenu
           label={textContent.links.products}
           items={[

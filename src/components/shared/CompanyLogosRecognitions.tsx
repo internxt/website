@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Logo {
   src: string;
@@ -344,8 +345,16 @@ export const CompanyLogosRecognitions = () => {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent"></div>
+      <div
+        className={`pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r ${
+          DARK_MODE_ENABLED ? 'from-[#1C1C1C]' : 'from-white'
+        } to-transparent`}
+      ></div>
+      <div
+        className={`pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l ${
+          DARK_MODE_ENABLED ? 'from-[#1C1C1C]' : 'from-white'
+        } to-transparent`}
+      ></div>
     </div>
   );
 };

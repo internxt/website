@@ -1,6 +1,7 @@
 import { Binary, Detective, ShieldStar } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HowItWorksSection = ({ textContent }) => {
+export const HowItWorksSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const cards = [
     {
       icon: Binary,
@@ -20,18 +21,29 @@ export const HowItWorksSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
       <div className="flex flex-col items-center justify-center space-y-12">
-        <h2 className="text-center text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+        <h2
+          className={`text-center text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
+        >
+          {textContent.title}
+        </h2>
         <div className="flex max-w-[800px] flex-col space-y-6 text-center">
-          <p className="text-xl font-medium text-gray-80">{textContent.subtitle}</p>
+          <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {textContent.subtitle}
+          </p>
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-8">
           {cards.map((card) => (
-            <div className="flex w-full flex-col space-y-6 rounded-2xl bg-white p-10 sm:max-w-[350px]" key={card.title}>
+            <div
+              className={`flex w-full flex-col space-y-6 rounded-2xl ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } p-10 sm:max-w-[350px]`}
+              key={card.title}
+            >
               <card.icon size={32} className="text-primary" />
-              <h3 className="text-2xl font-medium text-gray-100">{card.title}</h3>
-              <p className="text-lg text-gray-80">{card.description}</p>
+              <h3 className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{card.title}</h3>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{card.description}</p>
             </div>
           ))}
         </div>

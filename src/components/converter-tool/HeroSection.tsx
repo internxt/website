@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const allOptions = [
   { value: 'bit', label: 'Bits (bit)' },
@@ -24,6 +25,7 @@ const allOptions = [
 ];
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: {
     title: string;
     description: string;
@@ -31,7 +33,7 @@ interface HeroSectionProps {
   };
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const [value1, setValue1] = useState<number>(1);
   const [value2, setValue2] = useState<number>(1000);
   const [convertFrom, setConvertFrom] = useState('tb');
@@ -154,15 +156,25 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       <div className="mx-3 flex md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           <div className="flex w-full max-w-[700px] flex-col items-center justify-center text-center">
-            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
-            <p className="pt-5 text-lg font-semibold text-gray-80 lg:text-xl">{textContent.description}</p>
-            <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
+            <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+              {textContent.title}
+            </h1>
+            <p className={`pt-5 text-lg font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+              {textContent.description}
+            </p>
+            <p className={`pt-5 text-lg font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+              {textContent.description1}
+            </p>
           </div>
 
           <div className="relative w-full rounded-2xl border-4 border-primary/7 bg-primary/2 p-9 lg:flex lg:w-auto">
             <div className="flex flex-col items-center justify-center gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0">
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
+                <div
+                  className={`flex flex-row justify-between rounded-xl border ${
+                    darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-1'
+                  } focus-within:border-primary ${darkMode ? 'focus-within:bg-[#1C1C1C]' : 'focus-within:bg-white'}`}
+                >
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     alt="convert from"
@@ -173,7 +185,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                     onChange={handleInput1Change}
                   />
                   <Select
-                    className="inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg ${
+                      darkMode ? 'border-gray-71' : 'border-gray-10'
+                    } p-2`}
                     value={allOptions.find((option) => option.value === convertFrom)}
                     id="from-unit-dropdown"
                     menuPosition="absolute"
@@ -186,7 +200,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
               </div>
 
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div className="flex flex-row rounded-xl border border-gray-10 bg-gray-1 focus-within:border-primary focus-within:bg-white">
+                <div
+                  className={`flex flex-row rounded-xl border ${
+                    darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-1'
+                  } focus-within:border-primary ${darkMode ? 'focus-within:bg-[#1C1C1C]' : 'focus-within:bg-white'}`}
+                >
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     alt="convert to"
@@ -197,7 +215,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                     onChange={handleInput2Change}
                   />
                   <Select
-                    className="inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg border-gray-10 p-2"
+                    className={`inline-block w-screen max-w-[180px] flex-shrink-0 rounded-lg ${
+                      darkMode ? 'border-gray-71' : 'border-gray-10'
+                    } p-2`}
                     value={allOptions.find((option) => option.value === convertTo)}
                     id="to-unit-dropdown"
                     menuPosition="absolute"
@@ -211,11 +231,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
             </div>
 
             <button
-              className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 transition-transform hover:scale-105 lg:rotate-0"
+              className={`absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border ${
+                darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-20 bg-white'
+              } p-2 transition-transform hover:scale-105 lg:rotate-0`}
               onClick={handleSwap}
               aria-label="Intercambiar unidades"
             >
-              <ArrowsLeftRight size={28} weight="light" className="text-gray-60" />
+              <ArrowsLeftRight size={28} weight="light" className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`} />
             </button>
           </div>
         </div>

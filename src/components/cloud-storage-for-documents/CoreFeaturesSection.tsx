@@ -2,12 +2,14 @@ import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-d
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
+  darkMode?: boolean;
   textContent: CloudStorageForDocumentsText['CoreFeatures'];
 }
 
-const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Element => {
+const CoreFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -37,9 +39,23 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
-      <h2 className="flex text-2xl lg:text-4xl font-bold leading-tight text-gray-100">{textContent.title}</h2>
-      <p className="w-full max-w-[950px] pr-5 lg:pr-0 lg:text-lg font-normal text-gray-55">{textContent.description}</p>
+    <section
+      className={`flex w-full flex-col items-start justify-center gap-6 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
+    >
+      <h2
+        className={`flex text-2xl font-bold leading-tight lg:text-4xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+      >
+        {textContent.title}
+      </h2>
+      <p
+        className={`w-full max-w-[950px] pr-5 font-normal lg:pr-0 lg:text-lg ${
+          darkMode ? 'text-green-120' : 'text-gray-55'
+        }`}
+      >
+        {textContent.description}
+      </p>
 
       <div className="flex w-full flex-row gap-8">
         <div className="flex w-full flex-col gap-6 lg:w-[45%]">
@@ -70,14 +86,14 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             <button
               key={title}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
-                activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
-              }`}
+              className={`flex flex-col rounded-16 ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
-                <h3 className="text-xl font-medium text-gray-100">{title}</h3>
+                <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{title}</h3>
               </span>
               <div
                 className={`grid transition-all duration-300 ${
@@ -86,7 +102,14 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
               >
                 <div className="flex flex-col overflow-hidden">
                   {textContent.accordionCards.descriptions[index].contents.map((paragraph) => (
-                    <p key={paragraph.slice(0,30)} className="text:sm lg:text-base font-normal leading-tight text-gray-55">{paragraph}</p>
+                    <p
+                      key={paragraph.slice(0, 30)}
+                      className={`text:sm font-normal leading-tight lg:text-base ${
+                        darkMode ? 'text-green-120' : 'text-gray-55'
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               </div>

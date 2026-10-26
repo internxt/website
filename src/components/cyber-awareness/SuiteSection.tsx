@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CaretRight, GlobeSimple, HardDrives, Lock, PaperPlaneTilt } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Globe = () => {
   return (
@@ -50,7 +51,7 @@ const Globe = () => {
   );
 };
 
-const SuiteSection = ({ textContent }) => {
+const SuiteSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const suiteCards = [
     {
       img: HardDrives,
@@ -88,7 +89,10 @@ const SuiteSection = ({ textContent }) => {
         <p className="text-center text-5xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
         <RevealY className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2">
           {suiteCards.map((card, index) => (
-            <div key={index} className="flex flex-col space-y-4 rounded-2xl bg-gray-1 p-10 ">
+            <div
+              key={index}
+              className={`flex flex-col space-y-4 rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10 `}
+            >
               <card.img size={30} className="text-primary" />
               <p className="text-2xl font-medium">{card.title}</p>
               <p className="max-w-[408px] text-lg font-normal">{card.body}</p>

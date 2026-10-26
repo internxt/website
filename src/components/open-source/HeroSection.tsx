@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const router = useRouter();
   const lang = router.locale;
   const blueTextInChinese = textContent.title.normalText.substring('开源', 2);
@@ -25,10 +26,12 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center space-y-6 pt-16 text-center">
         <div className="flex w-full flex-col items-center px-5">
-          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{title}</h1>
+          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            {title}
+          </h1>
         </div>
         <div className="flex max-w-[850px] flex-col">
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
       </div>
     </section>

@@ -18,6 +18,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -26,6 +27,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface CloudStorageBackupSolutionsTemplateProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: CloudStorageBackupSolutionsText;
   navbarLang: NavigationBarText;
@@ -39,6 +41,7 @@ export interface CloudStorageBackupSolutionsTemplateProps {
 }
 
 export const CloudStorageBackupSolutionsTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -187,10 +190,16 @@ export const CloudStorageBackupSolutionsTemplate = ({
         />
         {textContent.NewBlock1 && (
           <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+            <h2
+              className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+            >
               {textContent.NewBlock1.title}
             </h2>
-            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
+            <p
+              className={`w-full text-center text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[832px] lg:text-lg`}
+            >
               {textContent.NewBlock1.intro}
             </p>
           </div>
@@ -209,7 +218,7 @@ export const CloudStorageBackupSolutionsTemplate = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="5TB"
-            sectionDetails="bg-white lg:py-20"
+            sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
             hideFreeCard
           />
         )}
@@ -224,10 +233,16 @@ export const CloudStorageBackupSolutionsTemplate = ({
 
         {textContent.NewBlock2 && (
           <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
+            <h2
+              className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+            >
               {textContent.NewBlock2.title}
             </h2>
-            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
+            <p
+              className={`w-full text-center text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[832px] lg:text-lg`}
+            >
               {textContent.NewBlock2.intro}
             </p>
           </div>

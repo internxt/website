@@ -5,6 +5,7 @@ import { signup } from '@/lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SignUpInlineProps {
   textContent: any;
@@ -15,6 +16,7 @@ interface SignUpInlineProps {
 }
 
 export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
+  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
   const [passwordState, setPasswordState] = useState<
     | {
         tag: 'error' | 'warning' | 'success';
@@ -108,9 +110,14 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             disabled={props.loading}
           />
         </div>
-        <span className={`w-full text-sm ${props.darkMode ? 'text-white' : 'text-gray-50'} sm:text-left`}>
+        <span className={`w-full text-sm ${darkMode ? 'text-white' : 'text-gray-50'} sm:text-left`}>
           <span>{props.textContent.disclaimer.text}</span>{' '}
-          <a href="/legal" className="underline hover:text-gray-60 active:text-gray-80">
+          <a
+            href="/legal"
+            className={`underline ${
+              darkMode ? 'hover:text-green-120 active:text-cool-gray-30' : 'hover:text-gray-60 active:text-gray-80'
+            }`}
+          >
             {props.textContent.disclaimer.link}
           </a>
           <span>{'.'}</span>

@@ -3,12 +3,15 @@ import { RangeSlider } from '../shared/RangeSlider';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import Image from 'next/image';
 import { currencyService } from '@/services/currency.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HowMuchYouNeedSectionProps {
+  darkMode?: boolean;
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
 }
 
 const GraphComponent = ({
+  darkMode = DARK_MODE_ENABLED,
   price,
   priceLabel,
   background,
@@ -19,6 +22,7 @@ const GraphComponent = ({
   altImg,
   currency,
 }: {
+  darkMode?: boolean;
   price: number;
   priceLabel: number;
   background: string;
@@ -35,7 +39,9 @@ const GraphComponent = ({
     >
       <div
         className={`${
-          isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
+          isBlueLabel
+            ? 'bg-primary text-white'
+            : `${darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100'}`
         } z-20 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
         <p className="lg:whitespace-nowrap">{currency}{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
@@ -52,7 +58,10 @@ const GraphComponent = ({
   );
 };
 
-export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProps): JSX.Element => {
+export const HowMuchYouNeedSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: HowMuchYouNeedSectionProps): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
   const [currency, setCurrency] = useState('€');
@@ -135,18 +144,30 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   }
 
   return (
-    <section className="hidden overflow-hidden bg-neutral-17 px-5 py-20 lg:flex">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+    <section className={`hidden overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-5 py-20 lg:flex`}>
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      ></div>
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p
+            className={`text-30 font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-3xl`}
+          >
+            {textContent.title}
+          </p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
 
         <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 md:flex-row">
           <div className="flex w-full flex-col gap-2">
-            <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
-              <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
+            <div className={`flex w-full flex-col gap-4 rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-9`}>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent['pay-as-you-go']}
+              </p>
 
               <div className="flex flex-row items-end gap-2">
                 <p className="text-4xl font-semibold text-primary lg:text-5xl">
@@ -163,27 +184,43 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               </div>
             </div>
 
-            <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
-              <p className="font-medium text-gray-100">{textContent.storageAmount}</p>
+            <div className={`flex w-full flex-col gap-4 rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-9`}>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent.storageAmount}
+              </p>
 
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} />
-                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
-                  <p className="font-medium text-gray-100">{storageAmountValue}TB</p>
+                <div
+                  className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
+                    darkMode ? 'border-gray-71' : 'border-gray-10'
+                  } px-4 py-2.5`}
+                >
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {storageAmountValue}TB
+                  </p>
                 </div>
               </div>
 
-              <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent.percentDownloadPerMonth}
+              </p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
-                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
-                  <p className="font-medium text-gray-100">{percentDownloadValue}%</p>
+                <div
+                  className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
+                    darkMode ? 'border-gray-71' : 'border-gray-10'
+                  } px-4 py-2.5`}
+                >
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {percentDownloadValue}%
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
+          <div className={`flex w-full flex-col rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-9 py-10`}>
             <div className="flex h-full flex-row flex-wrap justify-center gap-12">
               <div className="flex flex-col items-center gap-2">
                 <GraphComponent

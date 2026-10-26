@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CtaSection = ({ textContent }) => {
+const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
     <section className="overflow-hidden bg-primary py-14">
       <div className="flex flex-col items-center justify-center space-y-8 px-5 text-center">
@@ -12,7 +13,11 @@ const CtaSection = ({ textContent }) => {
           </p>
         </div>
         <Link href="/pricing" legacyBehavior>
-          <div className="flex cursor-pointer rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary">
+          <div
+            className={`flex cursor-pointer rounded-lg ${
+              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+            } px-5 py-3 text-lg font-medium text-primary`}
+          >
             {textContent.cta}
           </div>
         </Link>

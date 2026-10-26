@@ -1,31 +1,48 @@
 import { ReviewsTextPage } from '@/assets/types/reviews';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SupportSectionProps {
+  darkMode?: boolean;
   textContent: ReviewsTextPage['supportSection'];
 }
 
 interface CardProps {
+  darkMode?: boolean;
   title: string;
   description: string;
 }
 
-const SupportCard = ({ title, description }: CardProps): JSX.Element => {
+const SupportCard = ({ darkMode = DARK_MODE_ENABLED, title, description }: CardProps): JSX.Element => {
   return (
-    <div className="flex flex-col gap-4 rounded-xl bg-white p-6 lg:gap-6 lg:rounded-16 lg:p-8">
-      <p className="text-lg font-medium text-gray-95 lg:text-xl">{title}</p>
-      <p className="text-sm font-normal leading-tight text-gray-55 lg:text-base">{description}</p>
+    <div
+      className={`flex flex-col gap-4 rounded-xl ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+      } p-6 lg:gap-6 lg:rounded-16 lg:p-8`}
+    >
+      <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>{title}</p>
+      <p className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}>
+        {description}
+      </p>
     </div>
   );
 };
 
-const SupportSection = ({ textContent }: Readonly<SupportSectionProps>): JSX.Element => {
+const SupportSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Readonly<SupportSectionProps>): JSX.Element => {
   const cards = Object.values(textContent.cards);
 
   return (
-    <section className="flex h-min w-full flex-col-reverse items-center justify-center gap-8 bg-neutral-17 px-6 py-10 lg:flex-row lg:gap-8 lg:p-20">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
+    <section
+      className={`flex h-min w-full flex-col-reverse items-center justify-center gap-8 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } px-6 py-10 lg:flex-row lg:gap-8 lg:p-20`}
+    >
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      />
 
       <div className="flex justify-center lg:w-1/2">
         <Image
@@ -40,8 +57,16 @@ const SupportSection = ({ textContent }: Readonly<SupportSectionProps>): JSX.Ele
 
       <div className="flex flex-col gap-8 lg:w-1/2 lg:gap-12">
         <div className="flex flex-col gap-8 lg:gap-6">
-          <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
-          <p className="font-regular text-base leading-tight text-gray-55 lg:text-lg">{textContent.description}</p>
+          <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+            {textContent.title}
+          </p>
+          <p
+            className={`font-regular text-base leading-tight ${
+              darkMode ? 'text-green-120' : 'text-gray-55'
+            } lg:text-lg`}
+          >
+            {textContent.description}
+          </p>
         </div>
 
         <div className="flex flex-col gap-8 lg:gap-6">

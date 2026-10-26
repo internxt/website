@@ -2,8 +2,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import { HomeText } from '@/assets/types/home';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface OfficialCloudProviderProps {
+  darkMode?: boolean;
   textContent: HomeText['OfficalCloudProvider'];
   lang?: string;
   partner?: 'valencia' | 'levante';
@@ -32,6 +34,7 @@ const PARTNER_CONFIG = {
 };
 
 export default function OfficialCloudProviderSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   lang = 'en',
   partner = 'valencia',
@@ -45,11 +48,15 @@ export default function OfficialCloudProviderSection({
   return (
     <section
       className={`${
-        bgColor ? bgColor : 'bg-white'
+        bgColor ? bgColor : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
       } flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
       style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32`}
+      ></div>
 
       <Image
         src={getImage(config.image)}
@@ -61,18 +68,27 @@ export default function OfficialCloudProviderSection({
       />
 
       <div className="flex flex-1 flex-col justify-between gap-6 lg:h-auto lg:w-[842px] lg:flex-initial">
-        <p className="text-30 font-bold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
+        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+          {textContent.title}
+        </p>
 
         {isDescriptionArray ? (
           <div className="flex flex-col gap-4">
             {(textContent.description as string[]).map((paragraph, index) => (
-              <p key={index} className="text-sm font-normal leading-tight text-gray-55 lg:text-xl">
+              <p
+                key={index}
+                className={`text-sm font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:text-xl`}
+              >
                 {paragraph}
               </p>
             ))}
           </div>
         ) : (
-          <p className="text-sm font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+            {textContent.description}
+          </p>
         )}
 
         <span

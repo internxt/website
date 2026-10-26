@@ -1,12 +1,17 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HowItWorksSectionProps {
+  darkMode?: boolean;
   textContent: ReferAFriendText['HowItWorks'];
 }
 
-export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSectionProps>): JSX.Element {
+export default function HowItWorksSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: Readonly<HowItWorksSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -65,11 +70,15 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-6 overflow-hidden py-10 lg:gap-14 lg:px-20 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{ background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+          : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex flex-col items-center gap-2 px-4">
-        <p className="text-4xl font-bold text-gray-100">{textContent.title}</p>
-        <p className="text-2xl font-medium text-gray-55">{textContent.subtitle}</p>
+        <p className={`text-4xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</p>
+        <p className={`text-2xl font-medium ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>{textContent.subtitle}</p>
       </div>
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
@@ -83,16 +92,24 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
           {textContent.cards.map((card: any, index: number) => (
             <div
               key={index}
-              className="flex flex-1 shrink-0 flex-col gap-6 rounded-16 bg-white p-8"
+              className={`flex flex-1 shrink-0 flex-col gap-6 rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8`}
               style={{
                 width: isMobile ? '293px' : 'auto',
               }}
             >
               <span className="flex flex-row items-center gap-2">
                 <p className="text-2xl font-medium text-primary">{index + 1}</p>
-                <p className="text-center text-xl font-medium text-gray-100">{card.title}</p>
+                <p className={`text-center text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  {card.title}
+                </p>
               </span>
-              <p className="text-start text-base font-normal leading-tight text-gray-55">{card.description}</p>
+              <p
+                className={`text-start text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                }`}
+              >
+                {card.description}
+              </p>
             </div>
           ))}
         </div>

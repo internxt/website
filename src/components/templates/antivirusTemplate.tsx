@@ -18,6 +18,7 @@ import { InfoSection } from '@/components/antivirus/InfoSecction';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -26,6 +27,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface AntivirusTemplateProps {
+  darkMode?: boolean;
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -42,6 +44,7 @@ export interface AntivirusTemplateProps {
 }
 
 export const AntivirusTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   langJson,
   lang,
@@ -132,7 +135,13 @@ export const AntivirusTemplate = ({
               {infoSectionData.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80">{item.description}</p>
+                  <p
+                    className={`min-h-[80px] max-w-[300px] text-lg font-medium ${
+                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                    }`}
+                  >
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -147,7 +156,9 @@ export const AntivirusTemplate = ({
               {InfoSectionV2.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
+                  <p className={`pt-5 text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                    {item.title}
+                  </p>
                 </div>
               ))}
             </div>
@@ -166,19 +177,24 @@ export const AntivirusTemplate = ({
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+                <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className="font-regular text-xl text-gray-80">{langJson.ComponentsInColumn.description}</p>
+                <p className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  {langJson.ComponentsInColumn.description}
+                </p>
               </div>
             </div>
           }
           SecondComponent={
             <div className="flex flex-col items-center">
-              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white" />
+              <CardGroup
+                cards={cardsForComponentsIncolumn}
+                backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+              />
             </div>
           }
-          backgroundColor="bg-gray-1"
+          backgroundColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
         />
         <CtaSection
           textContent={langJson.cta2}

@@ -3,12 +3,15 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CertificationsSection } from '../cloud-object-storage/certificationsSections';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LeadingOrganizationsSectionProps {
+  darkMode?: boolean;
     textContent: any;
 }
 
 export default function LeadingOrganizationsSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<LeadingOrganizationsSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -73,12 +76,30 @@ export default function LeadingOrganizationsSection({
   return (
     <section
       className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 gap-16`}
-      style={{ background: 'linear-gradient(180deg, #F4F8FF 59.26%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #0D0D0D 59.26%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #F4F8FF 59.26%, #FFFFFF 100%)',
+      }}
     >
-      <div className='flex flex-col gap-6 text-start lg:text-center px-6 lg:px-0 lg:px-10 xl:px-32 3xl:px-80'>
-       <p className='text-30 lg:text-5xl text-start lg:text-center font-semibold leading-tight lg:whitespace-pre-line'>{textContent.title}</p>
-       <p className='text-base text-start lg:text-center font-regular text-gray-55 leading-tight lg:whitespace-pre-line'>{textContent.subtitle[0]}</p>
-       <p className='text-base text-start lg:text-center font-regular text-gray-55 leading-tight lg:whitespace-pre-line'>{textContent.subtitle[1]}</p>
+      <div className="flex flex-col gap-6 px-6 text-start lg:px-0 lg:px-10 lg:text-center xl:px-32 3xl:px-80">
+        <p className="text-start text-30 font-semibold leading-tight lg:whitespace-pre-line lg:text-center lg:text-5xl">
+          {textContent.title}
+        </p>
+        <p
+          className={`font-regular text-start text-base lg:text-center ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          } leading-tight lg:whitespace-pre-line`}
+        >
+          {textContent.subtitle[0]}
+        </p>
+        <p
+          className={`font-regular text-start text-base lg:text-center ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          } leading-tight lg:whitespace-pre-line`}
+        >
+          {textContent.subtitle[1]}
+        </p>
       </div>
       <div className='flex flex-col lg:flex-row gap-8 w-full items-center lg:items-stretch lg:px-10 xl:px-32 3xl:px-80'>
         <div className='w-full lg:w-max flex justify-center px-6 lg:px-0'>
@@ -107,12 +128,27 @@ export default function LeadingOrganizationsSection({
             {textContent.cards.map((card, index) => (
               <div
                 key={index}
-                className='flex flex-col gap-6 bg-white rounded-xl lg:rounded-16 p-6 lg:p-8 w-full lg:min-w-0 flex-shrink-0 lg:flex-shrink'
+                className={`flex flex-col gap-6 ${
+                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                } w-full flex-shrink-0 rounded-xl p-6 lg:min-w-0 lg:flex-shrink lg:rounded-16 lg:p-8`}
               >
-                <p className='text-xl font-medium leading-tight lg:whitespace-pre-line text-black'>{card.title}</p>
+                <p
+                  className={`text-xl font-medium leading-tight lg:whitespace-pre-line ${
+                    darkMode ? 'text-white-95' : 'text-black'
+                  }`}
+                >
+                  {card.title}
+                </p>
                 <div className="flex flex-col gap-2">
                   {card.description.map((description, idx) => (
-                    <p key={idx} className='text-base text-start leading-tight lg:whitespace-pre-line text-gray-55'>{description}</p>
+                    <p
+                      key={idx}
+                      className={`text-start text-base leading-tight lg:whitespace-pre-line ${
+                        darkMode ? 'text-green-120' : 'text-gray-55'
+                      }`}
+                    >
+                      {description}
+                    </p>
                   ))}
                 </div>
               </div>

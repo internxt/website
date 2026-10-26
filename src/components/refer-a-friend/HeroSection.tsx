@@ -6,12 +6,17 @@ import dynamic from 'next/dynamic';
 
 const Animation = dynamic(() => import('../home/components/Animation'));
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForHomeProps {
+  darkMode?: boolean;
   textContent: ReferAFriendText['HeroSection'];
 }
 
-export default function HeroSection({ textContent }: Readonly<HeroSectionForHomeProps>): JSX.Element {
+export default function HeroSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const HighlightText = ({ text, className = '' }) => {
     const parts = text.split(/(\*\*.*?\*\*)/);
 
@@ -34,15 +39,29 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-start justify-center overflow-hidden py-10 lg:mt-10 lg:h-[758px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-8 lg:mt-28 lg:h-min lg:w-[540px] lg:justify-between">
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+            <p
+              className={`w-full text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-5xl`}
+            >
               <HighlightText text={textContent.title} />
             </p>
-            <p className="font-regular text-lg leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
+            <p
+              className={`font-regular text-lg leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:text-xl`}
+            >
+              {textContent.subtitle}
+            </p>
           </div>
 
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
@@ -50,7 +69,13 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
+                <p
+                  className={`text-left text-sm font-semibold ${
+                    darkMode ? 'text-white-95' : 'text-gray-100'
+                  } lg:text-lg `}
+                >
+                  {feat}
+                </p>
               </div>
             ))}
           </div>

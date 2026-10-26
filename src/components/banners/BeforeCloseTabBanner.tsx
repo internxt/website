@@ -6,6 +6,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
 import { CheckCircle, X } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CLOSE_TAB_BANNER_NAME = 'close_tab_banner_date';
 const ONE_MONTH_IN_MS = 30 * 24 * 60 * 60 * 1000;
@@ -78,17 +79,25 @@ export const BeforeCloseTabBanner = () => {
           className="absolute right-0 m-7 flex rounded-md text-white hover:bg-gray-1/10"
           onClick={handleCloseBanner}
         >
-          <X size={32} className="text-gray-100" />
+          <X size={32} className={`${DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'}`} />
         </button>
         <div className="flex w-full flex-col space-x-10 md:flex-row">
           <div className="flex w-full flex-col  items-center justify-center space-y-3 py-14 text-center md:items-start md:justify-between md:text-start">
-            <p className="w-full max-w-[310px] text-4xl font-bold leading-tight text-gray-100">
+            <p
+              className={`w-full max-w-[310px] text-4xl font-bold leading-tight ${
+                DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
               {textContent.BeforeCloseBanner.title.normal1}{' '}
               <span className="text-primary">{textContent.BeforeCloseBanner.title.blue}</span>
               {textContent.BeforeCloseBanner.title.normal2}
             </p>
 
-            <p className="w-full max-w-[310px] text-2xl font-semibold leading-tight text-gray-100">
+            <p
+              className={`w-full max-w-[310px] text-2xl font-semibold leading-tight ${
+                DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
               {textContent.BeforeCloseBanner.subtitle}
             </p>
 
@@ -99,7 +108,11 @@ export const BeforeCloseTabBanner = () => {
               >
                 {textContent.BeforeCloseBanner.cta}
               </button>
-              <div className="flex flex-row items-center space-x-3 pt-2 text-gray-100">
+              <div
+                className={`flex flex-row items-center space-x-3 pt-2 ${
+                  DARK_MODE_ENABLED ? 'text-white-95' : 'text-gray-100'
+                }`}
+              >
                 <CheckCircle size={24} className="text-primary" />
                 <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.BeforeCloseBanner.guarantee}</p>
               </div>

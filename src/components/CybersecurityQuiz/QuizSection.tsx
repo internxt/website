@@ -5,6 +5,7 @@ import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
 import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;
@@ -156,7 +157,9 @@ const View = (viewSelected: ViewProps | undefined) => {
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
               className={`${
-                currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
+                currentCheckbox === ''
+                  ? `cursor-not-allowed ${DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-20'}`
+                  : 'cursor-pointer bg-primary'
               } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}

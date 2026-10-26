@@ -1,16 +1,29 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function CardSkeleton({ maxWidth = 'max-w-xs', cardWidthForDesk = 'xs:w-72' }) {
+export default function CardSkeleton({
+  darkMode = DARK_MODE_ENABLED,
+  maxWidth = 'max-w-xs',
+  cardWidthForDesk = 'xs:w-72',
+}) {
   return (
     <div
       className={`priceCard card m-2 flex w-full ${maxWidth} flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl ${cardWidthForDesk}`}
     >
-      <div className="info flex flex-col items-center justify-center rounded-t-2xl bg-white p-6 pt-6">
+      <div
+        className={`info flex flex-col items-center justify-center rounded-t-2xl ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } p-6 pt-6`}
+      >
         <Skeleton height={30} width={70} className="rounded-full" />
 
         <div className="planPrice flex flex-col items-center justify-center space-y-4 py-8">
-          <div className="priceBreakdown flex flex-row items-end space-x-px text-neutral-700">
+          <div
+            className={`priceBreakdown flex flex-row items-end space-x-px ${
+              darkMode ? 'text-cool-gray-30' : 'text-neutral-700'
+            }`}
+          >
             <Skeleton height={40} width={80} />
           </div>
 
@@ -22,7 +35,11 @@ export default function CardSkeleton({ maxWidth = 'max-w-xs', cardWidthForDesk =
         </div>
       </div>
 
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
+      <div
+        className={`featureList flex flex-col border-t ${
+          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
+        } p-6 ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+      >
         <Skeleton count={9} />
       </div>
     </div>
