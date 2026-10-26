@@ -198,6 +198,12 @@ export const ALLOWED_PATHS = [
   'roxana',
   'peter',
   'douglas',
+  'techsagar90',
+  'cm90',
+  'ibg90',
+  'qweenty',
+  'nu90',
+  'decodificandoti',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -327,6 +333,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tdpt85: 'pt-br',
   peter: 'pt-br',
   douglas: 'pt-br',
+  decodificandoti: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -387,6 +394,15 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'overfl0w',
   'devopstoolbox',
   'morrolinux',
+  'thelinuxexp',
+  'ahui',
+  'techsagar',
+  'xavier',
+  'salvaje',
+  'juan',
+  'scott',
+  'linuxtakeaway',
+  'david',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -533,6 +549,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'roxana',
   'peter',
   'douglas',
+  'techsagar90',
+  'cm90',
+  'ibg90',
+  'qweenty',
+  'nu90',
+  'decodificandoti',
 ]);
 
 export const COUPON_CODES = {
@@ -731,6 +753,12 @@ export const COUPON_CODES = {
   roxana: PromoCodeName.roxana,
   peter: PromoCodeName.peter,
   douglas: PromoCodeName.douglas,
+  techsagar90: PromoCodeName.techsagar90,
+  cm90: PromoCodeName.cm90,
+  ibg90: PromoCodeName.ibg90,
+  qweenty: PromoCodeName.qweenty,
+  nu90: PromoCodeName.nu90,
+  decodificandoti: PromoCodeName.decodificandoti,
 };
 
 interface OfferConfig {
