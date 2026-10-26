@@ -81,7 +81,7 @@ const FreeCloudObjectStorage = ({
       />
 
         <HorizontalScrollableSection
-          textContent={textContent.HowInternxtComparesSection}
+          textContent={textContent.WhyChooseInternxtSection}
           bgGradient={
             darkMode
               ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
