@@ -24,6 +24,7 @@ const MenuItems = {
 };
 
 const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, openBanner }) => {
+  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -62,7 +63,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
   };
 
   return (
-    <section id="discountCard" className={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section id="discountCard" className={darkMode ? 'bg-gray-105' : 'bg-gray-1'}>
       <div className="flex flex-col items-center space-y-20 py-20 px-5">
         <div className="flex max-w-[774px] flex-col space-y-6 text-center">
           <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -111,7 +112,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
                   />
                 </div>
                 <CheckboxItem
-                  textColor={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+                  textColor={darkMode ? 'text-white-95' : 'text-gray-100'}
                   checked={legalCheckbox}
                   setCheckbox={setLegalCheckbox}
                   label={textContent.privacyCheckbox}
@@ -124,7 +125,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
                   disabled={isButtonDisabled}
                   className={`flex w-full justify-center ${
                     isButtonDisabled
-                      ? `${darkMode ? 'bg-gray-71' : 'bg-gray-10'} text-gray-40`
+                      ? `${bgClass} text-gray-40`
                       : 'bg-primary text-white hover:bg-primary-dark'
                   } rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
                 >

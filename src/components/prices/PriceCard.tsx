@@ -83,6 +83,8 @@ export default function PriceCard({
   isPcComponentes5tb = false,
   trialToken,
 }: Readonly<PriceCardProps>): JSX.Element {
+  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
+  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -395,9 +397,7 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary ring-[3px]' : `ring-1 ${darkMode ? 'ring-gray-71' : 'ring-gray-10'}`
-      } flex ${
+      className={`${popular ? 'border-primary ring-[3px]' : `ring-1 ${ringClass}`} flex ${
         isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[400px] lg:h-[850px] '
       } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
@@ -479,9 +479,7 @@ export default function PriceCard({
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : `border-primary text-primary ${
-                  darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5'
-                }`
+              : `border-primary text-primary ${hoverClass}`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
@@ -529,7 +527,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature}</span>
+                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
               </div>
             ))
           ) : isPcComponentes ? (
@@ -542,7 +540,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature}</span>
+                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
               </div>
             ))
           ) : (
@@ -558,7 +556,7 @@ export default function PriceCard({
                       className: 'text-primary',
                     },
                   )}
-                  <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>
                     {feature}
                     {index > 9 ? (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">

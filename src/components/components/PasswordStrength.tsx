@@ -5,6 +5,7 @@ export interface PasswordStrengthProps {
 }
 
 export default function PasswordStrength(props: PasswordStrengthProps): JSX.Element {
+  const bgClass = DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-10';
   let activeBackground: string;
   let labelColor: string;
 
@@ -27,16 +28,8 @@ export default function PasswordStrength(props: PasswordStrengthProps): JSX.Elem
     <div className="flex flex-col space-y-1 pt-1">
       <div className="flex space-x-1.5">
         <div className={`h-1 w-12 rounded-full ${activeBackground}`} />
-        <div
-          className={`h-1 w-12 rounded-full ${
-            props.strength !== 'error' ? activeBackground : `${DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-10'}`
-          }`}
-        />
-        <div
-          className={`h-1 w-12 rounded-full ${
-            props.strength === 'success' ? activeBackground : `${DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-10'}`
-          }`}
-        />
+        <div className={`h-1 w-12 rounded-full ${props.strength !== 'error' ? activeBackground : bgClass}`} />
+        <div className={`h-1 w-12 rounded-full ${props.strength === 'success' ? activeBackground : bgClass}`} />
       </div>
 
       <p className={`text-sm ${labelColor}`}>{props.label}</p>

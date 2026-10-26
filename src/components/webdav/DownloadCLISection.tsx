@@ -24,9 +24,9 @@ export const DownloadCLISection = ({ darkMode = DARK_MODE_ENABLED, textContent }
   return (
     <section id="downloadCli" className="overflow-hidden px-5 py-20">
       <div
-        className={`absolute bottom-0 left-8 right-8 h-[1px] ${`${
+        className={`absolute bottom-0 left-8 right-8 h-[1px] ${
           darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        }`} lg:bottom-0 lg:left-32 lg:right-32`}
+        } lg:bottom-0 lg:left-32 lg:right-32`}
       ></div>
       <div className="flex flex-col items-center gap-12">
         <p

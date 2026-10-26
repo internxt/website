@@ -24,13 +24,14 @@ const GraphComponent = ({
   srcImg?: string;
   altImg?: string;
 }): JSX.Element => {
+  const bgClass = darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100';
   return (
     <div
       className={`relative flex h-48 w-16 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
     >
       <div
         className={`${
-          isBlueLabel ? 'bg-orange text-white' : `${darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100'}`
+          isBlueLabel ? 'bg-orange text-white' : bgClass
         } z-40 flex w-24 items-center justify-center rounded-full px-2 py-1 text-xs font-semibold sm:max-w-[113px] sm:text-sm`}
       >
         <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>

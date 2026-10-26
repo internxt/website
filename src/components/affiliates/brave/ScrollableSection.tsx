@@ -5,6 +5,7 @@ import RevealX from '@/components/components/RevealX';
 import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const ScrollableSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [cardIndex, setCardIndex] = useState(0);
 
   const cardElements = [
@@ -64,7 +65,7 @@ const ScrollableSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
             <Fragment key={info.title}>
               <button
                 className={`flex ${
-                  cardIndex === index ? 'border-primary' : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                  cardIndex === index ? 'border-primary' : borderClass
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);

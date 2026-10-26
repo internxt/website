@@ -33,13 +33,14 @@ const HotLabel = ({
   darkMode?: boolean;
   isValentinesMode?: boolean;
 }) => {
+  const bgClass = darkMode ? 'bg-purple-100' : 'bg-neutral-37';
   if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
   }
 
   const labelColorClass = isValentinesMode
     ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-    : `${darkMode ? 'bg-purple-100' : 'bg-neutral-37'} text-primary`;
+    : `${bgClass} text-primary`;
 
   const darkModeLabelClass = darkMode
     ? 'bg-purple-100 text-purple-8'

@@ -14,6 +14,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -174,7 +175,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               } transition-opacity ${
                 currentIndex === 0
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -188,7 +189,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               } transition-opacity ${
                 currentIndex === maxIndex
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

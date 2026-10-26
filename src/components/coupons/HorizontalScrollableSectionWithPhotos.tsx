@@ -22,6 +22,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   TitleTag = 'p',
   TitleCardTag = 'p',
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
@@ -167,9 +168,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
               } transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -180,9 +179,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
               } transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

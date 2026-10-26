@@ -68,9 +68,9 @@ export const WebDAVSupportSection = ({
       }}
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${`${
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
           darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        }`} lg:left-32 lg:right-32 lg:top-0`}
+        } lg:left-32 lg:right-32 lg:top-0`}
       ></div>
       <div className="flex flex-col items-center gap-12">
         <h2

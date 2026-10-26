@@ -32,6 +32,7 @@ export default function ThreeCardsWithImagesSection({
   cardColor,
   bottomSeparationBar = false,
 }: Readonly<ThreeCardsWithImagesProps>): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -98,10 +99,11 @@ export default function ThreeCardsWithImagesSection({
   const maxIndex = getMaxIndex();
   const hasCta = Boolean(textContent.cards.cta && textContent.cards.links);
 
+  const sectionBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17';
   return (
     <section
       className={`flex min-h-0 w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+        bgColor ? '' : sectionBgClass
       } relative py-10 lg:gap-16 lg:py-20`}
       style={{ background: bgColor || undefined }}
     >
@@ -199,9 +201,7 @@ export default function ThreeCardsWithImagesSection({
               disabled={currentIndex === 0}
               aria-label="Previous card"
               className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft size={24} className="text-primary" />
@@ -211,9 +211,7 @@ export default function ThreeCardsWithImagesSection({
               disabled={currentIndex === maxIndex}
               aria-label="Next card"
               className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight size={24} className="text-primary" />

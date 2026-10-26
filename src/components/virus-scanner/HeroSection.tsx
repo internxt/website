@@ -116,6 +116,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }: HeroSe
     }
   };
   const scanAgainButton = (onlyOneVirus) => {
+    const bgClass = darkMode ? 'bg-[#1C1C1C] text-white-95' : 'bg-white text-black';
     return (
       <Transition
         as={Fragment}
@@ -130,9 +131,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }: HeroSe
             className={`group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border ${
               darkMode ? 'border-gray-71' : 'border-gray-10'
             } px-6 text-lg transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base ${
-              onlyOneVirus
-                ? 'bg-primary text-white'
-                : `${darkMode ? 'bg-[#1C1C1C] text-white-95' : 'bg-white text-black'}`
+              onlyOneVirus ? 'bg-primary text-white' : bgClass
             }`}
             onClick={() => {
               handleRestartScan();

@@ -5,6 +5,7 @@ import { CaretDown } from '@phosphor-icons/react';
 import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const SelectSection = ({ darkMode = DARK_MODE_ENABLED, textContent, itemSelected, setItemSelected }) => {
+  const textClass = darkMode ? 'text-green-120' : 'text-gray-60';
   function linkTitles() {
     const titles: string[] = [];
     for (const key in textContent) {
@@ -27,9 +28,7 @@ const SelectSection = ({ darkMode = DARK_MODE_ENABLED, textContent, itemSelected
             <p
               key={title}
               className={`cursor-pointer text-base font-medium ${
-                itemSelected === title
-                  ? 'text-primary hover:text-primary-dark'
-                  : `${darkMode ? 'text-green-120' : 'text-gray-60'} hover:text-primary`
+                itemSelected === title ? 'text-primary hover:text-primary-dark' : `${textClass} hover:text-primary`
               } `}
               onClick={() => {
                 setItemSelected(title);

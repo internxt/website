@@ -13,6 +13,7 @@ interface WhatCanWeDoProps {
 }
 
 export const WhatCanWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent }: WhatCanWeDoProps): JSX.Element => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
   const onRightArrowClick = () => {
@@ -52,7 +53,7 @@ export const WhatCanWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent }: WhatC
               <Fragment key={info.title}>
                 <button
                   className={`flex ${
-                    selectedTab === index ? 'border-primary' : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                    selectedTab === index ? 'border-primary' : borderClass
                   } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                   onClick={() => onTabSelectorButtonClicked(index)}
                 >

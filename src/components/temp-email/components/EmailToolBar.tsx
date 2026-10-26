@@ -26,14 +26,13 @@ function EmailToolbar({
   onDelete,
   textContent,
 }: Readonly<EmailToolBarProps>) {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-20';
   return (
     <div className="flex w-full max-w-3xl flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 p-9 lg:max-w-2xl">
       <div className="flex w-full flex-col items-center justify-center gap-3 md:flex-row">
         <div
           className={`flex h-full w-full items-center justify-center rounded-xl md:w-screen md:max-w-[500px] ${
-            borderColor
-              ? 'ring ring-primary ring-opacity-15'
-              : `border ${darkMode ? 'border-gray-71' : 'border-gray-20'}`
+            borderColor ? 'ring ring-primary ring-opacity-15' : `border ${borderClass}`
           }`}
         >
           <button

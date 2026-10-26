@@ -19,6 +19,8 @@ const FloatingCtaSection = ({
   bgImage?: string;
   customDescription?: React.ReactNode;
 }) => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const hoverClass = darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10';
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
   return (
@@ -43,9 +45,7 @@ const FloatingCtaSection = ({
             className={`flex rounded-lg px-5 py-3 text-lg font-medium xl:mr-10 ${
               bgImage && bgImage !== defaultBgImage
                 ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-                : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} text-primary ${
-                    darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
-                  }`
+                : `${bgClass} text-primary ${hoverClass}`
             }`}
           >
             {textContent.cta}

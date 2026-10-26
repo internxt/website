@@ -41,6 +41,7 @@ export default function OfficialCloudProviderSection({
   bgColor,
   bgGradientColor,
 }: OfficialCloudProviderProps): JSX.Element {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
   const config = PARTNER_CONFIG[partner];
   const blogUrl = config.blogUrl[lang as 'en' | 'es'] || config.blogUrl.en;
   const isDescriptionArray = Array.isArray(textContent.description);
@@ -48,7 +49,7 @@ export default function OfficialCloudProviderSection({
   return (
     <section
       className={`${
-        bgColor ? bgColor : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
+        bgColor ? bgColor : bgClass
       } flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
       style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >

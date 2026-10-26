@@ -12,6 +12,7 @@ export default function RedeemCouponsSection({
   darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<RedeemCouponsSectionProps>): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -162,9 +163,7 @@ export default function RedeemCouponsSection({
                 onClick={scrollLeft}
                 disabled={currentIndex === 0}
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === 0
-                    ? 'cursor-not-allowed opacity-50'
-                    : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -173,9 +172,7 @@ export default function RedeemCouponsSection({
                 onClick={scrollRight}
                 disabled={currentIndex === maxIndex}
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === maxIndex
-                    ? 'cursor-not-allowed opacity-50'
-                    : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

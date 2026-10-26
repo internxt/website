@@ -22,34 +22,39 @@ export const PlanSelector = ({
   darkMode = DARK_MODE_ENABLED,
   isIndividualsOffer,
   isLifetimeOffer,
-}: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg bg-neutral-90/10`}>
-    <button
-      type="button"
-      onClick={() => {
-        onPlanTypeChange('Individuals', Interval.Year);
-      }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-        activeSwitchPlan === 'Individuals'
-          ? `m-1 rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
-          : `text-lg font-normal ${darkMode ? 'text-white-95' : 'text-gray-105'}`
-      }`}
-    >
-      {textContent.billingFrequency.annually}
-    </button>
+}: PlanSwitchProps): JSX.Element => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const inactiveTextClass = darkMode ? 'text-white-95' : 'text-gray-105';
 
-    <button
-      type="button"
-      onClick={() => {
-        onPlanTypeChange('Lifetime', Interval.Lifetime);
-      }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-        activeSwitchPlan === 'Lifetime'
-          ? `m-1 rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
-          : `text-lg font-normal  ${darkMode ? 'text-white-95' : 'text-gray-105'}`
-      }`}
-    >
-      {textContent.billingFrequency.lifetime}
-    </button>
-  </div>
-);
+  return (
+    <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg bg-neutral-90/10`}>
+      <button
+        type="button"
+        onClick={() => {
+          onPlanTypeChange('Individuals', Interval.Year);
+        }}
+        className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+          activeSwitchPlan === 'Individuals'
+            ? `m-1 rounded-lg ${bgClass} font-semibold text-primary shadow-sm`
+            : `text-lg font-normal ${inactiveTextClass}`
+        }`}
+      >
+        {textContent.billingFrequency.annually}
+      </button>
+
+      <button
+        type="button"
+        onClick={() => {
+          onPlanTypeChange('Lifetime', Interval.Lifetime);
+        }}
+        className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+          activeSwitchPlan === 'Lifetime'
+            ? `m-1 rounded-lg ${bgClass} font-semibold text-primary shadow-sm`
+            : `text-lg font-normal  ${inactiveTextClass}`
+        }`}
+      >
+        {textContent.billingFrequency.lifetime}
+      </button>
+    </div>
+  );
+};

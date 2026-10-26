@@ -28,6 +28,7 @@ interface AnswerQuestionsSectionProps {
 }
 
 const View = (viewSelected: ViewProps | undefined) => {
+  const bgClass = DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-20';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
 
@@ -158,7 +159,7 @@ const View = (viewSelected: ViewProps | undefined) => {
               onClick={handleNextQuestion}
               className={`${
                 currentCheckbox === ''
-                  ? `cursor-not-allowed ${DARK_MODE_ENABLED ? 'bg-gray-71' : 'bg-gray-20'}`
+                  ? `cursor-not-allowed ${bgClass}`
                   : 'cursor-pointer bg-primary'
               } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >

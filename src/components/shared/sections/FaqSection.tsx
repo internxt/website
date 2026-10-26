@@ -29,7 +29,7 @@ const FAQSection = ({
   const TitleTag = needsH2 ? 'h2' : 'p';
   return (
     <section
-      className={`overflow-hidden ${bgColor ?? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}`}
+      className={`overflow-hidden ${bgColor ?? (darkMode ? 'bg-[#1C1C1C]' : 'bg-white')}`}
       style={bgGradient ? { background: bgGradient } : undefined}
     >
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-10 pb-16 lg:pb-10 lg:pt-20">

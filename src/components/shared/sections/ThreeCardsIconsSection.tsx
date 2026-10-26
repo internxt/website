@@ -25,6 +25,8 @@ export default function ThreeCardsIconsSection({
   needsH2 = false,
   icons,
 }: Readonly<ThreeCardsIconsProps>): JSX.Element {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -86,7 +88,7 @@ export default function ThreeCardsIconsSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
+        bgColor ? '' : bgClass
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgColor ? bgColor : '' }}
     >
@@ -138,7 +140,7 @@ export default function ThreeCardsIconsSection({
                 <div
                   key={title}
                   className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                    cardColor || `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
+                    cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
                   } p-6 lg:rounded-16 lg:p-8`}
                 >
                   <div className="flex flex-col">
@@ -170,9 +172,7 @@ export default function ThreeCardsIconsSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -181,9 +181,7 @@ export default function ThreeCardsIconsSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
@@ -199,7 +197,7 @@ export default function ThreeCardsIconsSection({
             <div
               key={title}
               className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
-                cardColor || `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
+                cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
               } p-8`}
             >
               <div className="flex flex-col">

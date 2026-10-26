@@ -10,6 +10,7 @@ interface Props {
   textContent: FeaturesSectionType;
 }
 const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): JSX.Element => {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -163,7 +164,7 @@ const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): J
               } transition-opacity ${
                 currentIndex === 0
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -177,7 +178,7 @@ const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): J
               } transition-opacity ${
                 currentIndex === maxIndex
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

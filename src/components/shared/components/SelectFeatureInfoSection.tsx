@@ -20,9 +20,10 @@ const SelectFeatureInfoSection = ({
   lang,
   cards,
   showCta,
-  bgColor = `${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`,
-  mobileBg = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
+  bgColor = darkMode ? 'bg-gray-105' : 'bg-gray-1',
+  mobileBg = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
 }: SelectFeatureInfoSectionProps): JSX.Element => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [cardIndex, setCardIndex] = React.useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -71,7 +72,7 @@ const SelectFeatureInfoSection = ({
               <button
                 key={info.title}
                 className={`flex ${
-                  cardIndex === index ? 'border-primary' : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                  cardIndex === index ? 'border-primary' : borderClass
                 } cursor-pointer flex-row items-center gap-3 border-r-4 py-3 pr-8 text-start`}
                 onClick={() => {
                   handleButtonClick(index);

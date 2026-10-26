@@ -52,7 +52,7 @@ export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
                         darkMode ? 'text-white-95' : 'text-gray-100'
                       } lg:hidden`}
                     >
-                      {card.title.replace(/\n/g, ' ')}
+                      {card.title.replaceAll('\n', ' ')}
                     </p>
                   </>
                 </div>
@@ -66,7 +66,7 @@ export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
                     ))}
                   </p>
                   <p className={`text-regular hidden ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:hidden`}>
-                    {card.description.replace(/\n/g, ' ')}
+                    {card.description.replaceAll('\n', ' ')}
                   </p>
                 </>
               </button>

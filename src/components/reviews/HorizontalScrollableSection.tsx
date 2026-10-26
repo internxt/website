@@ -140,6 +140,7 @@ const HorizontalScrollableSection = ({
   darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<HorizontalScrollableSectionProps>): JSX.Element => {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-10';
   const rating = 4;
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Users');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -332,9 +333,7 @@ const HorizontalScrollableSection = ({
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                   darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
                 } transition-opacity ${
-                  currentIndex === 0
-                    ? 'cursor-not-allowed opacity-50'
-                    : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-10'}`
+                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -345,9 +344,7 @@ const HorizontalScrollableSection = ({
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                   darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
                 } transition-opacity ${
-                  currentIndex >= maxIndex
-                    ? 'cursor-not-allowed opacity-50'
-                    : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-10'}`
+                  currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

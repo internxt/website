@@ -21,6 +21,8 @@ export default function HorizontalScrollableSection({
   needsH2 = false,
   needsH3 = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent.scrollableSection?.titles ?? [];
   const cardDescriptions = textContent.scrollableSection?.descriptions ?? [];
 
@@ -101,7 +103,7 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
+        bgGradient ? '' : bgClass
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgGradient }}
     >
@@ -184,9 +186,7 @@ export default function HorizontalScrollableSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -195,9 +195,7 @@ export default function HorizontalScrollableSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

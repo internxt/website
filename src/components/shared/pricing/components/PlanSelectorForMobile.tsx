@@ -27,91 +27,91 @@ export const PlanSelectorForMobile = ({
 
   hideBillingController,
   hideStorageSelector,
-}: PlanSwitchProps): JSX.Element => (
-  <>
-    {!hideBillingController && (
-      <div
-        className={`flex w-full flex-row items-center justify-center border-b-[1px] ${
-          darkMode ? 'border-gray-71' : 'border-gray-10'
-        } py-2 text-base`}
-      >
-        <button
-          type="button"
-          onClick={() => {
-            onPlanTypeChange('Individuals', Interval.Year);
-          }}
-          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            activeSwitchPlan === 'Individuals'
-              ? `bg-primary/10 text-primary shadow-sm`
-              : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
-          }`}
+}: PlanSwitchProps): JSX.Element => {
+  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50';
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  return (
+    <>
+      {!hideBillingController && (
+        <div
+          className={`flex w-full flex-row items-center justify-center border-b-[1px] ${
+            darkMode ? 'border-gray-71' : 'border-gray-10'
+          } py-2 text-base`}
         >
-          {textContent.billingFrequency.annually}
-        </button>
+          <button
+            type="button"
+            onClick={() => {
+              onPlanTypeChange('Individuals', Interval.Year);
+            }}
+            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
+              activeSwitchPlan === 'Individuals' ? `bg-primary/10 text-primary shadow-sm` : textClass
+            }`}
+          >
+            {textContent.billingFrequency.annually}
+          </button>
 
-        <button
-          type="button"
-          onClick={() => {
-            onPlanTypeChange('Lifetime', Interval.Lifetime);
-          }}
-          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            activeSwitchPlan === 'Lifetime'
-              ? `bg-primary/10 text-primary shadow-sm`
-              : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
-          }`}
-        >
-          {textContent.billingFrequency.lifetime}
-        </button>
-      </div>
-    )}
+          <button
+            type="button"
+            onClick={() => {
+              onPlanTypeChange('Lifetime', Interval.Lifetime);
+            }}
+            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
+              activeSwitchPlan === 'Lifetime' ? `bg-primary/10 text-primary shadow-sm` : textClass
+            }`}
+          >
+            {textContent.billingFrequency.lifetime}
+          </button>
+        </div>
+      )}
 
-    {!hideStorageSelector && (
-      <div
-        id="billingButtons"
-        className={`flex w-[345px] flex-row justify-between rounded-lg ${
-          darkMode ? 'bg-neutral-90/10' : 'bg-cool-gray-10'
-        } p-0.5`}
-      >
-        <button
-          type="button"
-          onClick={() => {
-            onStorageChange('Essential');
-          }}
-          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-            activeStoragePlan === 'Essential'
-              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
-              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'} `
-          }`}
+      {!hideStorageSelector && (
+        <div
+          id="billingButtons"
+          className={`flex w-[345px] flex-row justify-between rounded-lg ${
+            darkMode ? 'bg-neutral-90/10' : 'bg-cool-gray-10'
+          } p-0.5`}
         >
-          {textContent.planStorage.essential}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            onStorageChange('Premium');
-          }}
-          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-            activeStoragePlan === 'Premium'
-              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
-              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
-          }`}
-        >
-          {textContent.planStorage.premium}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            onStorageChange('Ultimate');
-          }}
-          className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-            activeStoragePlan === 'Ultimate'
-              ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} font-semibold text-primary shadow-sm`
-              : `font-regular ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
-          }`}
-        >
-          {textContent.planStorage.ultimate}
-        </button>
-      </div>
-    )}
-  </>
-);
+          <button
+            type="button"
+            onClick={() => {
+              onStorageChange('Essential');
+            }}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+              activeStoragePlan === 'Essential'
+                ? `${bgClass} font-semibold text-primary shadow-sm`
+                : `font-regular ${textClass} `
+            }`}
+          >
+            {textContent.planStorage.essential}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              onStorageChange('Premium');
+            }}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+              activeStoragePlan === 'Premium'
+                ? `${bgClass} font-semibold text-primary shadow-sm`
+                : `font-regular ${textClass}`
+            }`}
+          >
+            {textContent.planStorage.premium}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              onStorageChange('Ultimate');
+            }}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
+              activeStoragePlan === 'Ultimate'
+                ? `${bgClass} font-semibold text-primary shadow-sm`
+                : `font-regular ${textClass}`
+            }`}
+          >
+            {textContent.planStorage.ultimate}
+          </button>
+        </div>
+      )}
+    </>
+  );
+};

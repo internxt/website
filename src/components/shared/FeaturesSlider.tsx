@@ -6,8 +6,10 @@ const FeaturesSlider = ({
   darkMode = DARK_MODE_ENABLED,
   textContent,
   cardInfo,
-  backgroundClass = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
+  backgroundClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
 }) => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
+  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [cardIndex, setCardIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const isScrollingRef = useRef(false);
@@ -66,16 +68,14 @@ const FeaturesSlider = ({
             <Fragment key={info.title}>
               <button
                 className={`flex ${
-                  cardIndex === index ? 'border-primary' : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                  cardIndex === index ? 'border-primary' : borderClass
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8 transition-all duration-500 ease-in-out`}
                 onClick={() => setCardIndex(index)}
               >
                 <info.icon className="mr-2 text-primary" size={32} />
                 <h3
                   className={`text-left text-2xl font-medium transition-colors duration-500 ${
-                    cardIndex === index
-                      ? 'text-primary'
-                      : `${darkMode ? 'text-white-95' : 'text-gray-100'} hover:text-primary`
+                    cardIndex === index ? 'text-primary' : `${textClass} hover:text-primary`
                   }`}
                 >
                   {info.title}
@@ -88,7 +88,7 @@ const FeaturesSlider = ({
               >
                 <div
                   className={`border-r-4 pr-8 transition-all duration-500 ${
-                    index === cardIndex ? 'border-primary' : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                    index === cardIndex ? 'border-primary' : borderClass
                   }`}
                 />
               </div>

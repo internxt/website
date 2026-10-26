@@ -73,6 +73,11 @@ export const ComparisonTable = ({
   percentage,
   needH2 = false,
 }: ComparisonTableProps) => {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-10';
+  const bgClass2 = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const bgClass3 = darkMode ? 'bg-purple-100' : 'bg-neutral-37';
+  const bgClass4 = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const bgClass5 = darkMode ? 'bg-gray-105' : 'bg-white-95';
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -286,11 +291,9 @@ export const ComparisonTable = ({
                     key={`fixed-${row.id}`}
                     className={`flex h-[50px] flex-col items-start justify-center border ${
                       darkMode ? 'border-gray-71' : 'border-green-120'
-                    } px-2 sm:px-3 lg:h-[64px] lg:px-6 ${
-                      index % 2 === 0
-                        ? `${darkMode ? 'bg-gray-105' : 'bg-neutral-10'}`
-                        : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
-                    } ${index === 0 ? 'rounded-tl-2xl' : ''} ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}
+                    } px-2 sm:px-3 lg:h-[64px] lg:px-6 ${index % 2 === 0 ? bgClass : bgClass2} ${
+                      index === 0 ? 'rounded-tl-2xl' : ''
+                    } ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}
                   >
                     <p
                       className={`text-xs font-normal leading-tight ${
@@ -351,11 +354,7 @@ export const ComparisonTable = ({
                       <div
                         className={`flex h-[50px] flex-col items-center justify-center border ${
                           darkMode ? 'border-gray-71' : 'border-green-120'
-                        } px-2 lg:h-[64px] lg:px-4 ${
-                          index % 2 === 0
-                            ? `${darkMode ? 'bg-purple-100' : 'bg-neutral-37'}`
-                            : `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
-                        }`}
+                        } px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass3 : bgClass4}`}
                       >
                         <span
                           className={`text-center text-xs font-semibold ${
@@ -371,11 +370,9 @@ export const ComparisonTable = ({
                       <div
                         className={`flex h-[50px] flex-col items-center justify-center border ${
                           darkMode ? 'border-gray-71' : 'border-green-120'
-                        } px-2 lg:h-[64px] lg:px-4 ${
-                          index % 2 === 0
-                            ? `${darkMode ? 'bg-gray-105' : 'bg-white-95'}`
-                            : `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
-                        } ${index === tableRows.length - 1 ? 'rounded-br-2xl' : ''}`}
+                        } px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass5 : bgClass2} ${
+                          index === tableRows.length - 1 ? 'rounded-br-2xl' : ''
+                        }`}
                       >
                         <span
                           className={`text-center text-xs font-normal ${

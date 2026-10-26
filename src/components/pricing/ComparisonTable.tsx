@@ -28,6 +28,7 @@ export default function ComparisonTableSection({
   decimalDiscount,
   currencyValue,
 }: Readonly<ComparisonTableProps>): JSX.Element {
+  const borderClass3 = darkMode ? 'border-gray-71' : 'border-neutral-25';
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -104,28 +105,33 @@ export default function ComparisonTableSection({
     featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
+    const ringClass = darkMode ? 'ring-gray-71 bg-gray-105' : 'ring-neutral-25 bg-neutral-17';
+    const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-16';
+    const ringClass2 = darkMode ? 'ring-gray-71' : 'ring-neutral-25';
     return `items-start p-6 text-start  ${
       isRecommendedPlan(planIndex)
-        ? `flex rounded-t-2xl ring-[1px] ${darkMode ? 'ring-gray-71 bg-gray-105' : 'ring-neutral-25 bg-neutral-17'}`
-        : `${darkMode ? 'bg-gray-105' : 'bg-neutral-16'} ring-[1px] ${darkMode ? 'ring-gray-71' : 'ring-neutral-25'}`
+        ? `flex rounded-t-2xl ring-[1px] ${ringClass}`
+        : `${bgClass} ring-[1px] ${ringClass2}`
     }`;
   };
 
   const getButtonStyles = (planIndex: number) => {
+    const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-1';
     return `${
       isRecommendedPlan(planIndex)
         ? 'bg-primary text-white hover:bg-primary-dark'
-        : `border-primary bg-transparent text-primary ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-1'}`
+        : `border-primary bg-transparent text-primary ${hoverClass}`
     } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`;
   };
 
   const getCategoryRowStyles = (planIndex: number) => {
+    const borderClass = darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-25 bg-neutral-17';
+    const borderClass2 = darkMode ? 'border-gray-71' : 'border-neutral-25';
+    const textClass = darkMode ? 'text-white-95' : 'text-gray-95';
     return `h-[72px] ${
       isRecommendedPlan(planIndex)
-        ? `border-[1px] ${darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-25 bg-neutral-17'} shadow-lg`
-        : `border-y-[1px] ${darkMode ? 'border-gray-71' : 'border-neutral-25'} p-6 text-xl font-medium ${
-            darkMode ? 'text-white-95' : 'text-gray-95'
-          }`
+        ? `border-[1px] ${borderClass} shadow-lg`
+        : `border-y-[1px] ${borderClass2} p-6 text-xl font-medium ${textClass}`
     }`;
   };
 
@@ -169,17 +175,17 @@ export default function ComparisonTableSection({
   };
 
   const getMobilePlanStyles = (planId: string) => {
+    const bgClass2 = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+    const bgClass3 = darkMode ? 'bg-gray-105' : 'bg-neutral-16';
     const plan = textContent.plans.find((p) => p.id === planId);
     const planOrder = plan?.order ?? 0;
 
     if (planOrder === 0 || planOrder === 1) {
-      return `${darkMode ? 'bg-gray-105' : 'bg-neutral-16'}`;
+      return darkMode ? 'bg-gray-105' : 'bg-neutral-16';
     }
 
     const isUltimate = planId === textContent.plans[textContent.plans.length - 1].id;
-    return isUltimate
-      ? `${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`
-      : `${darkMode ? 'bg-gray-105' : 'bg-neutral-16'}`;
+    return isUltimate ? bgClass2 : bgClass3;
   };
 
   const getMobileBorderStyles = (planId: string) => {
@@ -194,10 +200,11 @@ export default function ComparisonTableSection({
   };
 
   const renderFeatureContent = (feature: Feature, categoryName: string, isAvailable: boolean, category?: Category) => {
+    const textClass2 = darkMode ? 'text-white-95' : 'text-gray-95';
     const showIcon = categoryName !== 'Storage' && !category?.hideIcons && !feature.hideIcons;
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
-    const textColor = isAvailable ? `${darkMode ? 'text-white-95' : 'text-gray-95'}` : 'text-gray-95/50';
+    const textColor = isAvailable ? textClass2 : 'text-gray-95/50';
     const fillColor = isAvailable ? 'fill' : 'regular';
 
     return (
@@ -471,9 +478,7 @@ export default function ComparisonTableSection({
                       <div
                         key={`${feature.id}-${featureIndex}-planA`}
                         className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1
-                            ? `border-b ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`
-                            : ''
+                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
                         }`}
                       >
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanA], category)}
@@ -496,9 +501,7 @@ export default function ComparisonTableSection({
                       <div
                         key={`${feature.id}-${featureIndex}-planB`}
                         className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1
-                            ? `border-b ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`
-                            : ''
+                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
                         }`}
                       >
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanB], category)}

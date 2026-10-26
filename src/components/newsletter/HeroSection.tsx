@@ -5,6 +5,7 @@ import { notificationService } from '../Snackbar';
 import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
   const [email, setEmail] = useState('');
   const [checkbox, setCheckbox] = useState(false);
 
@@ -65,9 +66,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
               disabled={!checkbox}
               value={`${textContent.form.cta}`}
               className={`${
-                !checkbox
-                  ? `cursor-default ${darkMode ? 'bg-gray-71' : 'bg-gray-20'} text-gray-40`
-                  : 'bg-primary hover:bg-primary-dark'
+                !checkbox ? `cursor-default ${bgClass} text-gray-40` : 'bg-primary hover:bg-primary-dark'
               } flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none sm:mb-2 sm:py-2 sm:text-base`}
             />
           </div>

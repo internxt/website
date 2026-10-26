@@ -5,36 +5,39 @@ import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CheckboxButton = ({ darkMode = DARK_MODE_ENABLED, checked, id }) => (
-  <>
-    <div
-      className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
+const CheckboxButton = ({ darkMode = DARK_MODE_ENABLED, checked, id }) => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-30';
+  return (
+    <>
+      <div
+        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
                   border p-1 text-white ${
-                    checked
-                      ? 'border-primary bg-primary'
-                      : `${darkMode ? 'border-gray-71' : 'border-gray-30'} hover:border-gray-40`
+                    checked ? 'border-primary bg-primary' : `${borderClass} hover:border-gray-40`
                   }`}
-    >
-      {checked && (
-        <div
-          className={`flex cursor-pointer flex-col items-center justify-center rounded-full
+      >
+        {checked && (
+          <div
+            className={`flex cursor-pointer flex-col items-center justify-center rounded-full
                       text-white`}
-        >
-          <div className={`rounded-full ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-1`} />
-        </div>
-      )}
-    </div>
-    <input
-      id={id}
-      checked={checked}
-      type="checkbox"
-      readOnly
-      className="base-checkbox h-0 w-0 appearance-none opacity-0"
-    />
-  </>
-);
+          >
+            <div className={`rounded-full ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-1`} />
+          </div>
+        )}
+      </div>
+      <input
+        id={id}
+        checked={checked}
+        type="checkbox"
+        readOnly
+        className="base-checkbox h-0 w-0 appearance-none opacity-0"
+      />
+    </>
+  );
+};
 
 const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+  const borderClass2 = darkMode ? 'border-gray-71' : 'border-gray-10';
+  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
@@ -123,35 +126,23 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
               <button
                 onClick={() => setPasswordType('password')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
-                  passwordType === 'password'
-                    ? 'border-primary ring-4 ring-primary ring-opacity-10'
-                    : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                  passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
                 <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
-                <p
-                  className={`text-xl font-medium ${
-                    passwordType === 'password' ? `${darkMode ? 'text-white-95' : 'text-gray-100'}` : 'text-gray-50'
-                  }`}
-                >
+                <p className={`text-xl font-medium ${passwordType === 'password' ? textClass : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
               </button>
               <button
                 onClick={() => setPasswordType('passphrase')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
-                  passwordType === 'passphrase'
-                    ? 'border-primary ring-4 ring-primary ring-opacity-10'
-                    : `${darkMode ? 'border-gray-71' : 'border-gray-10'}`
+                  passwordType === 'passphrase' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
                 <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
 
-                <p
-                  className={`text-xl font-medium ${
-                    passwordType === 'passphrase' ? `${darkMode ? 'text-white-95' : 'text-gray-100'}` : 'text-gray-50'
-                  }`}
-                >
+                <p className={`text-xl font-medium ${passwordType === 'passphrase' ? textClass : 'text-gray-50'}`}>
                   {textContent.passphrase.title}
                 </p>
               </button>

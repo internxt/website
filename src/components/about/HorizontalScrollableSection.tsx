@@ -16,6 +16,8 @@ export default function HorizontalScrollableSection({
   textContent,
   header = true,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -96,18 +98,17 @@ export default function HorizontalScrollableSection({
     }
   };
 
+  const headerBackground = darkMode
+    ? 'linear-gradient(180deg, #0D0D0D 63.1%, #1C1C1C 100%)'
+    : 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)';
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${
-        header ? 'gap-8 lg:gap-16' : ` gap-6 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:gap-12`
+        header ? 'gap-8 lg:gap-16' : ` gap-6 ${bgClass} lg:gap-12`
       } lg:py-20 `}
       style={
         header
-          ? {
-              background: darkMode
-                ? 'linear-gradient(180deg, #0D0D0D 63.1%, #1C1C1C 100%)'
-                : 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)',
-            }
+          ? { background: headerBackground }
           : undefined
       }
     >
@@ -231,7 +232,7 @@ export default function HorizontalScrollableSection({
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex === 0
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -242,7 +243,7 @@ export default function HorizontalScrollableSection({
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex >= maxIndex
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

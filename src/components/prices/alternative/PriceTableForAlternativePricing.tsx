@@ -40,6 +40,8 @@ export const PriceTableForAlternativePricing = ({
   currencyValue,
   handleOnPlanButtonClicked,
 }: PriceTableForAlternativePricingProps): JSX.Element => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C] text-cool-gray-30' : 'bg-white text-cool-gray-80';
+  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50';
   const iconsFeatures = [ShieldCheck, HandCoins, ClockCounterClockwise];
   const priceText = require(`@/assets/lang/${lang}/pricing.json`);
 
@@ -81,9 +83,7 @@ export const PriceTableForAlternativePricing = ({
                     handleOnPlanButtonClicked(plan.storage);
                   }}
                   className={`rounded-lg px-6 py-0.5 font-semibold ${
-                    plan.storage === selectedPlanStorage
-                      ? `${darkMode ? 'bg-[#1C1C1C] text-cool-gray-30' : 'bg-white text-cool-gray-80'} shadow-sm`
-                      : `${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50'}`
+                    plan.storage === selectedPlanStorage ? `${bgClass} shadow-sm` : textClass
                   }`}
                 >
                   {plan.storage}

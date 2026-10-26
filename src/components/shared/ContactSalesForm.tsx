@@ -131,6 +131,7 @@ export const ContactSalesForm = ({
   needsTopDivider = true,
   needsBottomDivider = true,
 }: ContactSalesFormProps) => {
+  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -358,7 +359,7 @@ export const ContactSalesForm = ({
                   className={`w-full appearance-none rounded-lg border ${
                     darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-highlight bg-white'
                   } px-3 py-2 ${
-                    formData.storage === '' ? 'text-gray-40' : `${darkMode ? 'text-white-95' : 'text-gray-100'}`
+                    formData.storage === '' ? 'text-gray-40' : textClass
                   }`}
                   value={formData.storage}
                   onChange={handleChange}
@@ -367,7 +368,7 @@ export const ContactSalesForm = ({
                     <option
                       key={index}
                       value={index === 0 ? '' : option}
-                      className={index === 0 ? 'text-gray-40' : `${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+                      className={index === 0 ? 'text-gray-40' : textClass}
                     >
                       {option}
                     </option>

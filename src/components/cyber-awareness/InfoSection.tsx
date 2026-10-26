@@ -27,9 +27,9 @@ export const InfoCard = ({ darkMode = DARK_MODE_ENABLED, id, title, title1, img,
         if ((e.target as any).id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(null)}
-      className={`${`flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl ${
+      className={`flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl ${
         darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      } p-8`} 
+      } p-8 
         `}
     >
       <img key={id} src={img} alt={`${title}`} width={32} height={32} />

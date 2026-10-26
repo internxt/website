@@ -45,6 +45,8 @@ export const PriceCardsForAffiliatesPartners = ({
   currencyValue,
   coupon,
 }: PriceCardsForAffiliatesPartnersProps) => {
+  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
+  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
   const contentText = require(`@/assets/lang/en/priceCard.json`);
 
   function onCheckoutButtonClicked() {
@@ -84,7 +86,7 @@ export const PriceCardsForAffiliatesPartners = ({
   return (
     <div
       className={`${
-        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${darkMode ? 'ring-gray-71' : 'ring-gray-10'}`
+        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${ringClass}`
       } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
       <div
@@ -138,9 +140,7 @@ export const PriceCardsForAffiliatesPartners = ({
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : `border-primary text-primary ${
-                  darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5'
-                }`
+              : `border-primary text-primary ${hoverClass}`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{contentText.cta.selectPlan}</p>
@@ -159,7 +159,7 @@ export const PriceCardsForAffiliatesPartners = ({
                 size: 24,
                 className: 'text-primary',
               })}
-              <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature}</span>
+              <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
               {index > 8 ? (
                 <span className="bg-orange/10 text-orange rounded-lg px-1">{contentText.commingSoon}</span>
               ) : null}

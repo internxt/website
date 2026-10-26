@@ -55,6 +55,8 @@ export default function PriceCard({
   isCloudwards,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
+  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
+  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
   const priceBeforeDiscount = priceBefore ? Number(priceBefore).toFixed(2).replace('.00', '') : undefined;
   const iconsFeatures = [
     Database,
@@ -76,7 +78,7 @@ export default function PriceCard({
   return (
     <div
       className={`${
-        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${darkMode ? 'ring-gray-71' : 'ring-gray-10'}`
+        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${ringClass}`
       } m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
@@ -147,9 +149,7 @@ export default function PriceCard({
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : `border-primary text-primary ${
-                  darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5'
-                }`
+              : `border-primary text-primary ${hoverClass}`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{contentText.cta}</p>
@@ -176,7 +176,7 @@ export default function PriceCard({
                     className: 'text-primary',
                   },
                 )}
-                <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>
                   {feature}
                   {index > 9 ? (
                     <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">

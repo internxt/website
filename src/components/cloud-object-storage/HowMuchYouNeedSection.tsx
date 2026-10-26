@@ -33,6 +33,7 @@ const GraphComponent = ({
   altImg?: string;
   currency: string;
 }): JSX.Element => {
+  const bgClass = darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100';
   return (
     <div
       className={`relative flex h-64 w-20 flex-col items-center justify-end gap-5 rounded-lg lg:h-full ${background}`}
@@ -41,7 +42,7 @@ const GraphComponent = ({
         className={`${
           isBlueLabel
             ? 'bg-primary text-white'
-            : `${darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100'}`
+            : bgClass
         } z-20 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
         <p className="lg:whitespace-nowrap">{currency}{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>

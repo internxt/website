@@ -29,6 +29,8 @@ const FeatureSection = ({
   withoutCta?: boolean;
   backgroundColor?: string;
 }) => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const bgClass2 = darkMode ? 'bg-gray-105' : 'bg-gray-1';
   const router = useRouter();
   const Cards = [
     {
@@ -86,9 +88,7 @@ const FeatureSection = ({
             <div
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl ${
-                backgroundColor
-                  ? `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`
-                  : `${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`
+                backgroundColor ? bgClass : bgClass2
               } space-y-6 p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className=" text-4xl text-primary" size={32} />

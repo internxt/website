@@ -12,6 +12,7 @@ interface Props {
 }
 
 const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): JSX.Element => {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const videoSources = [
     '/videos/cloud-storage-for-video-files/Nature_Water.mp4',
     '/videos/cloud-storage-for-video-files/Sunset_Yoga.mp4',
@@ -181,9 +182,7 @@ const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): J
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
               } transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -194,9 +193,7 @@ const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): J
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
               } transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
