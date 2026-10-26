@@ -1,4 +1,4 @@
-export const ANNOUNCEMENT_BAR_ENABLED = true;
+export const IS_BLACK_FRIDAY = true;
 
 export const BLACK_FRIDAY_URL = '/deals/black-friday-internxt';
 

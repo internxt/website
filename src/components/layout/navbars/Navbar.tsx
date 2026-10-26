@@ -12,7 +12,7 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import LanguageMobileBox from '../components/LanguageMobileBox';
-import { ANNOUNCEMENT_BAR_ENABLED, ANNOUNCEMENT_BAR_OFFSET_TOP, BLACK_FRIDAY_URL } from '@/announcement.config';
+import { IS_BLACK_FRIDAY, ANNOUNCEMENT_BAR_OFFSET_TOP, BLACK_FRIDAY_URL } from '@/announcement.config';
 import { useAnnouncementBar } from '@/hooks/useAnnouncementBar';
 
 export interface NavbarProps {
@@ -259,7 +259,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {props.textContent.links.pricing}
                       </Link>
 
-                      {ANNOUNCEMENT_BAR_ENABLED && (
+                      {IS_BLACK_FRIDAY && (
                         <Link
                           href={BLACK_FRIDAY_URL}
                           locale={props.lang}

@@ -32,7 +32,7 @@ const TopBanner = () => {
     const copy = copyRef.current;
     if (!viewport || !copy) return;
     const { paddingLeft, paddingRight } = window.getComputedStyle(viewport);
-    const available = viewport.clientWidth - parseFloat(paddingLeft) - parseFloat(paddingRight);
+    const available = viewport.clientWidth - Number.parseFloat(paddingLeft) - Number.parseFloat(paddingRight);
     setOverflows(copy.scrollWidth > available + 1);
   }, []);
 
