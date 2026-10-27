@@ -415,6 +415,12 @@ export enum PromoCodeName {
   roxana = 'ROXANA',
   peter = 'PETER',
   douglas = 'DOUGLAS',
+  techsagar90 = 'TECHSAGAR90',
+  cm90 = 'CM90',
+  ibg90 = 'IBG90',
+  qweenty = 'QWEENTY',
+  nu90 = 'NU90',
+  decodificandoti = 'DECODIFICANDOTI',
 }
 
 export interface PromoCodeProps {
