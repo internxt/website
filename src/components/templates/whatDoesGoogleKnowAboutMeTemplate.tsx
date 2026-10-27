@@ -78,7 +78,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
       couponCodeForCheckout,
     );
 
-    stripeService.redirectToCheckout(
+    await stripeService.redirectToCheckout(
       priceId,
       finalPrice,
       currencyValue,
