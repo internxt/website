@@ -32,7 +32,6 @@ export interface WhatDoesGoogleKnowAboutMeTemplateProps {
   locale: GetServerSidePropsContext['locale'];
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
-  hidePriceTable?: boolean;
   robots?: string;
 }
 
