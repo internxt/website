@@ -5,7 +5,7 @@ import {
 import { GetStaticPropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 
-const WhatDoesGoogleKnowAboutMeLP = (props: WhatDoesGoogleKnowAboutMeTemplateProps) => (
+const WhatDoesGoogleKnowAboutMe = (props: WhatDoesGoogleKnowAboutMeTemplateProps) => (
   <WhatDoesGoogleKnowAboutMeTemplate 
     {...props}
     couponCode={PromoCodeName.seolp}
@@ -36,4 +36,4 @@ export function getStaticProps(ctx: GetStaticPropsContext) {
   };
 }
 
-export default WhatDoesGoogleKnowAboutMeLP;
+export default WhatDoesGoogleKnowAboutMe;
