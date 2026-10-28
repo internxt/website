@@ -421,6 +421,39 @@ export enum PromoCodeName {
   qweenty = 'QWEENTY',
   nu90 = 'NU90',
   decodificandoti = 'DECODIFICANDOTI',
+
+  // Affiliates Early Black Friday / Black Month (Nov 2 - Nov 22)
+  blackmonth87 = 'BLACKMONTH87',
+  blackmonthcn87 = 'BLACKMONTHCN87',
+  cloudwardsbm87 = 'CLOUDWARDSBM87',
+  privacybm87 = 'PRIVACYBM87',
+  heisebm87 = 'HEISEBM87',
+  xatakabm87 = 'XATAKABM87',
+  clubicbm87 = 'CLUBICBM87',
+  tdesbm87 = 'TDESBM87',
+  tdptbm87 = 'TDPTBM87',
+  tditbm87 = 'TDITBM87',
+
+  // Affiliates Black Week / Black Friday (Nov 23 - Nov 29)
+  blackfriday90 = 'BLACKFRIDAY90',
+  blackfridaycn90 = 'BLACKFRIDAYCN90',
+  cloudwardsbf90 = 'CLOUDWARDSBF90',
+  privacybf90 = 'PRIVACYBF90',
+  heisebf90 = 'HEISEBF90',
+  xatakabf90 = 'XATAKABF90',
+  clubicbf90 = 'CLUBICBF90',
+  tdesbf90 = 'TDESBF90',
+  tdptbf90 = 'TDPTBF90',
+  tditbf90 = 'TDITBF90',
+
+  // Affiliates Cyber Week (Nov 30 - Dec 4)
+  cyberweek90 = 'CYBERWEEK90',
+  cyberweekcn90 = 'CYBERWEEKCN90',
+  cloudwardscm90 = 'CLOUDWARDSCM90',
+  privacycm90 = 'PRIVACYCM90',
+  heisecm90 = 'HEISECM90',
+  xatakacm90 = 'XATAKACM90',
+  clubiccm90 = 'CLUBICCM90',
 }
 
 export interface PromoCodeProps {

@@ -35,6 +35,7 @@ interface BlackFridayPpcTemplateProps {
   textContent: BlackFridayPpcText;
   footerLang: FooterText;
   config: BlackFridayPpcConfig;
+  hideLanguage?: boolean;
 }
 
 const BlackFridayPpcTemplate = ({
@@ -44,6 +45,7 @@ const BlackFridayPpcTemplate = ({
   textContent,
   footerLang,
   config,
+  hideLanguage,
 }: BlackFridayPpcTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === config.metatagsId);
 
@@ -100,7 +102,7 @@ const BlackFridayPpcTemplate = ({
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed hideLanguage={hideLanguage} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 

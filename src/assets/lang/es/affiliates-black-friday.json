@@ -1,0 +1,304 @@
+{
+  "shared": {
+    "HeroSection": {
+      "products": {
+        "drive": "Drive",
+        "antivirus": "Antivirus",
+        "cleaner": "Cleaner",
+        "vpn": "VPN",
+        "meet": "Meet",
+        "photos": "Photos",
+        "mail": "Mail"
+      },
+      "subtitle": "Cifrado en tu dispositivo. Nadie lee tus archivos. Ni siquiera nosotros.",
+      "features": [
+        "Suite digital privada",
+        "Cifrado post-cuántico",
+        "Código abierto y auditado"
+      ],
+      "claimDeal": "Consigue la oferta"
+    },
+    "TableSection": {
+      "title": "Tu todo en uno para la privacidad",
+      "hotLabel": "{{discount}}% de descuento",
+      "billingFrequency": {
+        "annually": "Anual",
+        "lifetime": "De por vida"
+      },
+      "planTitles": {
+        "header": "Elige tu plan",
+        "individuals": "Planes Anuales",
+        "lifetime": "Planes de por Vida",
+        "business": "Planes de Empresa"
+      },
+      "freePlanCard": {
+        "eyeBrow": "Gratis",
+        "description": "Consigue 1 GB de almacenamiento en la nube encriptado gratis",
+        "cta": "Seleccionar plan"
+      },
+      "features": {
+        "openSource": "Código abierto y auditado",
+        "premiumSupport": "Atención al cliente premium",
+        "guarantee": "Garantía de devolución de 30 días"
+      },
+      "planStorage": {
+        "essential": "1TB",
+        "premium": "2TB",
+        "ultimate": "5TB"
+      }
+    },
+    "ReviewSection": {
+      "forbes": "Internxt consolida su posición como alternativa europea a los gigantes tecnológicos",
+      "deloitte": "Recibió el premio Deloitte Fast 50, que reconoce a las empresas de más rápido crecimiento",
+      "techradar": "Un proveedor de almacenamiento en la nube muy comprometido con la privacidad y la seguridad",
+      "fortune": "Internxt está construyendo un internet donde la privacidad y la seguridad son lo primero",
+      "trustpilot": "Montones de espacio privado y seguro. Soporte excelente. Sin duda, una buena relación calidad-precio."
+    },
+    "CoreFeatures": {
+      "title": "Características Principales",
+      "description": "Seguridad completa para tus datos, todo lo que necesitas para mantener tus archivos seguros y privados",
+      "accordionCards": {
+        "titles": [
+          "Un ecosistema totalmente privado",
+          "Colaboración segura",
+          "Tu nube, como un disco local"
+        ],
+        "descriptions": [
+          "Internxt agrupa almacenamiento cifrado, copias de seguridad, VPN, Antivirus, Cleaner, Meet, Mail y más—todo para liberarte de las Grandes Tecnológicas.",
+          "Envía archivos con enlaces cifrados, contraseñas y controles. Trabaja con tu equipo en tiempo real mientras mantienes los datos privados.",
+          "Usa Internxt como un disco virtual para sincronizar, subir y acceder a archivos sin problemas—igual que en tu ordenador, pero totalmente seguro y siempre actualizado."
+        ]
+      },
+      "cards": {
+        "titles": [
+          "Cifrado de extremo a extremo",
+          "Controles de acceso",
+          "Copias de seguridad cifradas"
+        ],
+        "descriptions": [
+          "Todos los archivos están cifrados con cifrado post-cuántico y de conocimiento cero. Nadie más que tú, o aquellos con quienes elijas compartir archivos, puede ver su contenido.",
+          "Tú controlas exactamente quién puede acceder a tus archivos compartidos con enlaces cifrados y protegidos por contraseña que puedes revocar en cualquier momento.",
+          "Asegura que tus archivos se mantengan a salvo del ransomware y la pérdida accidental con copias de seguridad cifradas y programadas que proporcionan protección adicional y tranquilidad."
+        ]
+      }
+    }
+  },
+  "campaigns": {
+    "black-month": {
+      "metatags": {
+        "title": "Early Black Friday 2026: 87% de descuento en almacenamiento en la nube | Internxt",
+        "description": "Early Black Friday en Internxt: consigue un 87% de descuento en almacenamiento en la nube seguro con VPN, Antivirus, Cleaner, Meet y Mail."
+      },
+      "HeroSection": {
+        "title": "**Early Black Friday**: 87% de descuento en almacenamiento en la nube privado",
+        "description": "{{discount}}% DE DESCUENTO - EARLY BLACK FRIDAY"
+      },
+      "WhyChooseSection": {
+        "title": "¿Por qué elegir nuestras ofertas de Early Black Friday en almacenamiento en la nube?",
+        "cards": {
+          "titles": [
+            "Un ecosistema completamente privado",
+            "La encriptación más avanzada",
+            "Nuestra mayor oferta de Early Black Friday hasta la fecha"
+          ],
+          "descriptions": [
+            "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
+            "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
+            "Aprovecha nuestra mayor oferta de Early Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo en nuestros planes, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+          ]
+        }
+      },
+      "CtaSection": {
+        "title": "Early Black Friday: {{discount}}% de descuento en almacenamiento en la nube privado",
+        "description": "",
+        "cta": "Consigue la oferta",
+        "guarantee": "Garantía de devolución de 30 días"
+      },
+      "FaqSection": {
+        "title": "¿Preguntas? Tenemos respuestas",
+        "faq": [
+          {
+            "question": "¿Cómo obtengo el descuento de Early Black Friday de Internxt?",
+            "answer": [
+              "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del {{discount}}% se aplica automáticamente al finalizar la compra."
+            ]
+          },
+          {
+            "question": "¿Cuándo termina la oferta de Early Black Friday de Internxt?",
+            "answer": [
+              "La venta de Early Black Friday termina el 22 de noviembre de 2026."
+            ]
+          },
+          {
+            "question": "¿Quién es elegible para este descuento?",
+            "answer": [
+              "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes actualizar para obtener más almacenamiento y funciones adicionales como Cleaner, Meet y Mail."
+            ]
+          },
+          {
+            "question": "¿Mantendré mi descuento cuando termine mi plan?",
+            "answer": [
+              "La oferta de Early Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+            ]
+          },
+          {
+            "question": "¿Qué métodos de pago acepta Internxt?",
+            "answer": [
+              "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluyendo Mastercard, VISA, American Express y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
+            ]
+          },
+          {
+            "question": "¿Tienes más preguntas?",
+            "answer": [
+              "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en redes sociales. ¡Siempre estamos encantados de saber de ti!"
+            ]
+          }
+        ]
+      }
+    },
+    "black-week": {
+      "metatags": {
+        "title": "Black Friday 2026: 90% de descuento en almacenamiento en la nube | Internxt",
+        "description": "Black Friday en Internxt: 90% de descuento en almacenamiento en la nube seguro, el mejor precio del año. Incluye VPN, Antivirus, Cleaner, Meet y Mail."
+      },
+      "HeroSection": {
+        "title": "**Black Friday**: 90% de descuento en almacenamiento en la nube privado",
+        "description": "{{discount}}% DE DESCUENTO - EL MEJOR PRECIO DEL AÑO"
+      },
+      "WhyChooseSection": {
+        "title": "¿Por qué elegir nuestras ofertas de Black Friday en almacenamiento en la nube?",
+        "cards": {
+          "titles": [
+            "Un ecosistema completamente privado",
+            "La encriptación más avanzada",
+            "Nuestra mayor oferta de Black Friday hasta la fecha"
+          ],
+          "descriptions": [
+            "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
+            "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
+            "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo en nuestros planes, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+          ]
+        }
+      },
+      "CtaSection": {
+        "title": "Black Friday: {{discount}}% de descuento en almacenamiento en la nube privado",
+        "description": "",
+        "cta": "Consigue la oferta",
+        "guarantee": "Garantía de devolución de 30 días"
+      },
+      "FaqSection": {
+        "title": "¿Preguntas? Tenemos respuestas",
+        "faq": [
+          {
+            "question": "¿Cómo obtengo el descuento de Black Friday de Internxt?",
+            "answer": [
+              "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del {{discount}}% se aplica automáticamente al finalizar la compra."
+            ]
+          },
+          {
+            "question": "¿Cuándo termina la oferta de Black Friday de Internxt?",
+            "answer": [
+              "La venta de Black Friday termina el 29 de noviembre de 2026."
+            ]
+          },
+          {
+            "question": "¿Quién es elegible para este descuento?",
+            "answer": [
+              "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes actualizar para obtener más almacenamiento y funciones adicionales como Cleaner, Meet y Mail."
+            ]
+          },
+          {
+            "question": "¿Mantendré mi descuento cuando termine mi plan?",
+            "answer": [
+              "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+            ]
+          },
+          {
+            "question": "¿Qué métodos de pago acepta Internxt?",
+            "answer": [
+              "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluyendo Mastercard, VISA, American Express y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
+            ]
+          },
+          {
+            "question": "¿Tienes más preguntas?",
+            "answer": [
+              "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en redes sociales. ¡Siempre estamos encantados de saber de ti!"
+            ]
+          }
+        ]
+      }
+    },
+    "cyber-week": {
+      "metatags": {
+        "title": "Cyber Week 2026: 90% de descuento en almacenamiento en la nube | Internxt",
+        "description": "Cyber Week en Internxt: última oportunidad de conseguir un 90% de descuento en almacenamiento en la nube seguro al mejor precio del año. Incluye VPN, Antivirus, Cleaner, Meet y Mail."
+      },
+      "HeroSection": {
+        "title": "**Cyber Week**: 90% de descuento en almacenamiento en la nube privado",
+        "description": "{{discount}}% DE DESCUENTO - ÚLTIMA OPORTUNIDAD DE CONSEGUIR EL MEJOR PRECIO DEL AÑO"
+      },
+      "WhyChooseSection": {
+        "title": "¿Por qué elegir nuestras ofertas de Cyber Week en almacenamiento en la nube?",
+        "cards": {
+          "titles": [
+            "Un ecosistema completamente privado",
+            "La encriptación más avanzada",
+            "Nuestra mayor oferta de Cyber Week hasta la fecha"
+          ],
+          "descriptions": [
+            "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
+            "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
+            "Aprovecha nuestra mayor oferta de Cyber Week hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo en nuestros planes, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+          ]
+        }
+      },
+      "CtaSection": {
+        "title": "Cyber Week: {{discount}}% de descuento en almacenamiento en la nube privado",
+        "description": "",
+        "cta": "Consigue la oferta",
+        "guarantee": "Garantía de devolución de 30 días"
+      },
+      "FaqSection": {
+        "title": "¿Preguntas? Tenemos respuestas",
+        "faq": [
+          {
+            "question": "¿Cómo obtengo el descuento de Cyber Week de Internxt?",
+            "answer": [
+              "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del {{discount}}% se aplica automáticamente al finalizar la compra."
+            ]
+          },
+          {
+            "question": "¿Cuándo termina la oferta de Cyber Week de Internxt?",
+            "answer": [
+              "La venta de Cyber Week termina el 4 de diciembre de 2026."
+            ]
+          },
+          {
+            "question": "¿Quién es elegible para este descuento?",
+            "answer": [
+              "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes actualizar para obtener más almacenamiento y funciones adicionales como Cleaner, Meet y Mail."
+            ]
+          },
+          {
+            "question": "¿Mantendré mi descuento cuando termine mi plan?",
+            "answer": [
+              "La oferta de Cyber Week es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+            ]
+          },
+          {
+            "question": "¿Qué métodos de pago acepta Internxt?",
+            "answer": [
+              "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluyendo Mastercard, VISA, American Express y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
+            ]
+          },
+          {
+            "question": "¿Tienes más preguntas?",
+            "answer": [
+              "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en redes sociales. ¡Siempre estamos encantados de saber de ti!"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
