@@ -100,16 +100,33 @@ const BlackFridayDealsTemplate = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
+  const parsePercentText = (text: string) => {
+    if (typeof text !== 'string' || (!text.includes('{{percentage}}') && !text.includes('{{discount}}'))) {
+      return text;
+    }
+    if (!percentOff || percentOff === '0') {
+      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+    }
+    return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
-      <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
+      <TitleAndDescriptionSection
+        textContent={{
+          ...textContent.DontMissSection,
+          description: textContent.DontMissSection.description.map(parsePercentText),
+        }}
+        darkMode
+      />
 
-      <div className="bg-[#1C1C1C] px-5 py-10">
+      <div className="relative bg-[#1C1C1C] px-5 py-10">
         <div className={`klaviyo-form-${formId} mx-auto max-w-[600px]`}></div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-gray-71 lg:left-32 lg:right-32"></div>
       </div>
 
       <PricingSectionWrapper
@@ -129,7 +146,16 @@ const BlackFridayDealsTemplate = ({
         hideFreeCard
       />
 
-      <ThreeCardsSection textContent={textContent.WhyChooseSection} darkMode />
+      <ThreeCardsSection
+        textContent={{
+          ...textContent.WhyChooseSection,
+          cards: {
+            ...textContent.WhyChooseSection.cards,
+            descriptions: textContent.WhyChooseSection.cards.descriptions.map(parsePercentText),
+          },
+        }}
+        darkMode
+      />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -137,10 +163,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {textContent.CtaSection.title}
+              {parsePercentText(textContent.CtaSection.title)}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
+              {parsePercentText(textContent.CtaSection.description)}
             </p>
           </div>
         }
@@ -163,10 +189,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {textContent.CtaSectionV2.title}
+              {parsePercentText(textContent.CtaSectionV2.title)}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
+              {parsePercentText(textContent.CtaSectionV2.description)}
             </p>
           </div>
         }
@@ -177,6 +203,7 @@ const BlackFridayDealsTemplate = ({
 
       <FAQSection
         textContent={textContent.FaqSection}
+        percentageDiscount={percentOff}
         bgColor="bg-[#1C1C1C] text-white"
         cardColor="bg-[#1C1C1C]"
         textColor="text-white"

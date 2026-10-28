@@ -90,6 +90,9 @@ const DealsTemplate = ({
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
   const parsePercentText = (text: string) => {
+    if (typeof text !== 'string' || (!text.includes('{{percentage}}') && !text.includes('{{discount}}'))) {
+      return text;
+    }
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
@@ -97,6 +100,7 @@ const DealsTemplate = ({
       ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
       : text;
   };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
@@ -153,7 +157,13 @@ const DealsTemplate = ({
       />
 
       <HorizontalScrollableSection
-        textContent={textContent.WhyChooseInternxtSection}
+        textContent={{
+          ...textContent.WhyChooseInternxtSection,
+          scrollableSection: {
+            ...textContent.WhyChooseInternxtSection.scrollableSection,
+            descriptions: textContent.WhyChooseInternxtSection.scrollableSection?.descriptions.map(parsePercentText),
+          },
+        }}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         needsDivider={false}
       />
@@ -177,7 +187,7 @@ const DealsTemplate = ({
         bgPadding="pb-8 lg:py-14"
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} percentageDiscount={percentOff} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
