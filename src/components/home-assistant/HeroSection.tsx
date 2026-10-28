@@ -3,6 +3,7 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
@@ -12,7 +13,7 @@ interface HeroSectionForPartnerProps {
 
 export default function HeroSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
 
   return (
@@ -45,7 +46,7 @@ export default function HeroSection({
           {textContent.features.map((feat) => (
             <div key={feat} className="flex flex-row gap-2">
               <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
-              <p className="text-left text-lg font-semibold text-black ">{feat}</p>
+              <p className={`text-left text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-black'} `}>{feat}</p>
             </div>
           ))}
         </div>
@@ -61,7 +62,7 @@ export default function HeroSection({
           </div>
           <div className="flex flex-row items-center space-x-3 justify-start">
             <ShieldCheck size={24} color="#0069FF" weight="fill" />
-            <p className="whitespace-nowrap  text-base lg:text-lg text-black">
+            <p className={`whitespace-nowrap  text-base lg:text-lg ${darkMode ? 'text-white-95' : 'text-black'}`}>
               {textContent.guarantee}
             </p>
           </div>

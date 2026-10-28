@@ -7,14 +7,17 @@ import PasswordStrength from '@/components/components/PasswordStrength';
 import axios from 'axios';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
 import { signup } from '@/lib/auth';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SignUpProps {
+  darkMode?: boolean;
   textContent: any;
   loading?: boolean;
   provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR' | 'MIGHTYDEALS' | 'OYSTERVPN' | 'COINGATE' ;
 }
 
 export default function SignUp(props: Readonly<SignUpProps>) {
+  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
   const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
@@ -146,7 +149,12 @@ export default function SignUp(props: Readonly<SignUpProps>) {
 
         <span className="text-center text-sm text-gray-50">
           <span>{props.textContent.SignUp.disclaimer.text}</span>{' '}
-          <a href="/legal" className="hover:text-gray-60 hover:underline active:text-gray-80">
+          <a
+            href="/legal"
+            className={`${darkMode ? 'hover:text-green-120' : 'hover:text-gray-60'} hover:underline ${
+              darkMode ? 'active:text-cool-gray-30' : 'active:text-gray-80'
+            }`}
+          >
             {props.textContent.SignUp.disclaimer.link}
           </a>
           {'.'}

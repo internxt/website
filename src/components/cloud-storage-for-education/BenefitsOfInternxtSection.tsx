@@ -2,16 +2,19 @@ import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CardText = ({ textContent }) => (
+const CardText = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
   <div className="flex max-w-[388px] flex-col space-y-6">
     <textContent.icon size={64} className="text-primary" />
-    <h3 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h3>
-    <p className="text-xl text-gray-80">{textContent.description}</p>
+    <h3 className={`text-5xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+      {textContent.title}
+    </h3>
+    <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
   </div>
 );
 
-const BenefitsOfInternxtSection = ({ textContent }) => {
+const BenefitsOfInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const cards = {
     workFromAnywhere: {
       icon: GlobeHemisphereWest,
@@ -35,8 +38,16 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
         {/* First Section */}
         <div className="flex flex-col items-center space-y-12">
           <div className="flex max-w-[774px] flex-col space-y-6 text-center">
-            <h2 className="max-w-[730px] text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
-            <p className="text-2xl font-semibold text-gray-80">{textContent.subtitle}</p>
+            <h2
+              className={`max-w-[730px] text-5xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
+              {textContent.title}
+            </h2>
+            <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.subtitle}
+            </p>
             <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
           </div>
           <button

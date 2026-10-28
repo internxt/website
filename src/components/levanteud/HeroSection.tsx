@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
     textContent: any;
 }
 
@@ -16,6 +18,7 @@ const IMAGES = [
 ];
 
 export default function HeroSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
 }: Readonly<HeroSectionProps>): JSX.Element {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -53,7 +56,11 @@ export default function HeroSection({
   return (
     <section
       className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-20 mt-8 lg:mt-16 px-6 lg:px-20 lg:gap-16 gap-10`}
-      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+          : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)',
+      }}
     >
       <div className='flex flex-col lg:gap-6 gap-10'>
         <Image

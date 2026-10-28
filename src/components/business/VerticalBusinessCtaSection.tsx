@@ -1,10 +1,13 @@
+import { DARK_MODE_ENABLED } from '@/theme.config';
 const VerticalBusinessSection = ({
+  darkMode = DARK_MODE_ENABLED,
   customText,
   bgGradientContainerColor,
   bgGradientColor,
-  containerDetails,
-  bgColor,
+  containerDetails = '',
+  bgColor = darkMode ? 'bg-[#1C1C1C]' : '',
 }: {
+  darkMode?: boolean;
   textContent: any;
   url?: string;
   target?: string;

@@ -1,5 +1,6 @@
 import { Interval } from '@/services/stripe.service';
 import { SealPercent } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
@@ -18,37 +19,43 @@ export const PlanSelector = ({
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   isIndividualsOffer,
   isLifetimeOffer,
-}: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg bg-neutral-90/10`}>
-    <button
-      type="button"
-      onClick={() => {
-        onPlanTypeChange('Individuals', Interval.Year);
-      }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-        activeSwitchPlan === 'Individuals'
-          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
-          : `text-lg font-normal ${darkMode ? 'text-white-95' : 'text-gray-105'}`
-      }`}
-    >
-      {textContent.billingFrequency.annually}
-    </button>
+}: PlanSwitchProps): JSX.Element => {
+  const hoverClass = darkMode ? 'hover:bg-[#1C1C1C]/60' : 'hover:bg-white/60';
+  const trackClass = darkMode ? 'bg-gray-80' : 'bg-neutral-90/10';
+  const inactiveTextClass = darkMode ? 'text-white-95' : 'text-gray-105';
 
-    <button
-      type="button"
-      onClick={() => {
-        onPlanTypeChange('Lifetime', Interval.Lifetime);
-      }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-        activeSwitchPlan === 'Lifetime'
-          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
-          : `text-lg font-normal  ${darkMode ? 'text-white-95' : 'text-gray-105'}`
-      }`}
-    >
-      {textContent.billingFrequency.lifetime}
-    </button>
-  </div>
-);
+  return (
+    <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg ${trackClass}`}>
+      <button
+        type="button"
+        onClick={() => {
+          onPlanTypeChange('Individuals', Interval.Year);
+        }}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+          activeSwitchPlan === 'Individuals'
+            ? `bg-white font-semibold text-primary shadow-sm`
+            : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`
+        }`}
+      >
+        {textContent.billingFrequency.annually}
+      </button>
+
+      <button
+        type="button"
+        onClick={() => {
+          onPlanTypeChange('Lifetime', Interval.Lifetime);
+        }}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+          activeSwitchPlan === 'Lifetime'
+            ? `bg-white font-semibold text-primary shadow-sm`
+            : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`
+        }`}
+      >
+        {textContent.billingFrequency.lifetime}
+      </button>
+    </div>
+  );
+};

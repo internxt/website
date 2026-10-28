@@ -1,7 +1,9 @@
 import { Slider } from '@mui/material';
 import { ReactNode } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PricingRangeSliderProps {
+  darkMode?: boolean;
   max: number;
   min?: number;
   color?: string;
@@ -10,6 +12,7 @@ interface PricingRangeSliderProps {
 }
 
 export const RangeSlider = ({
+  darkMode = DARK_MODE_ENABLED,
   max,
   min = 0,
   rangeItems,
@@ -20,7 +23,7 @@ export const RangeSlider = ({
     <div className="flex w-full max-w-[840px] flex-col gap-2">
       <div className="inset-0 flex w-full items-center justify-between">
         {rangeItems.map((item) => (
-          <span key={item} className="font-medium text-gray-100">
+          <span key={item} className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {item}
           </span>
         ))}

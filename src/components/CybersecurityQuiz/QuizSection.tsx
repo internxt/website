@@ -5,8 +5,10 @@ import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
 import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ViewProps {
+  darkMode?: boolean;
   view: CyberSecurityQuizViews | undefined;
   textContent: any;
   height: MutableRefObject<number>;
@@ -27,6 +29,8 @@ interface AnswerQuestionsSectionProps {
 }
 
 const View = (viewSelected: ViewProps | undefined) => {
+  const darkMode = viewSelected?.darkMode ?? DARK_MODE_ENABLED;
+  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
 
@@ -156,7 +160,9 @@ const View = (viewSelected: ViewProps | undefined) => {
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
               className={`${
-                currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
+                currentCheckbox === ''
+                  ? `cursor-not-allowed ${bgClass}`
+                  : 'cursor-pointer bg-primary'
               } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}

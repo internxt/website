@@ -17,8 +17,10 @@ import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CombinedSpecialOfferProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -58,6 +60,7 @@ const renderCtaContent = (
 );
 
 function CombinedSpecialOffer({
+  darkMode = DARK_MODE_ENABLED,
   langJson,
   lang,
   metatagsDescriptions,
@@ -115,7 +118,7 @@ function CombinedSpecialOffer({
   const openerSwitchPlan: SwitchButtonOptions = annualFirstPlans ? 'Individuals' : 'Lifetime';
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
@@ -189,7 +192,7 @@ function CombinedSpecialOffer({
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
       {onlyUltimatePlan ? (
-        <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
+        <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
           {ultimatePlan && (
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}

@@ -2,16 +2,20 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionWithPhotosProps {
+  darkMode?: boolean;
   textContent: any;
   bgColor?: string;
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bgColor,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
@@ -104,12 +108,19 @@ export default function HorizontalScrollableSectionWithPhotosSection({
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
       style={{
-        background: bgColor || 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+        background:
+          bgColor || darkMode
+            ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
       }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</h2>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+          {textContent.title}
+        </h2>
+        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+          {textContent.description}
+        </p>
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
@@ -134,8 +145,12 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             >
               <div className="flex h-full flex-col items-center justify-between">
                 <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
-                  <h3 className="pb-6 text-xl font-medium text-gray-95">{title}</h3>
-                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
+                  <h3 className={`pb-6 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>{title}</h3>
+                  <p
+                    className={`flex flex-1 whitespace-pre-line text-base font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
                     {cardDescriptions[index]}
                   </p>
                 </div>
@@ -158,9 +173,9 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-all ${!canScrollLeft ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
               aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -168,9 +183,9 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollRight ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-all ${!canScrollRight ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
               aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

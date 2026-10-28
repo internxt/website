@@ -3,10 +3,11 @@ import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const BetterTomorrowSection = ({ textContent, lang }) => {
+const BetterTomorrowSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">
         <div className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
@@ -27,8 +28,14 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
           className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
         >
           <ShieldStar size={60} className="text-primary" />
-          <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="text-xl">{textContent.description}</p>
+          <p
+            className={`mb-6 text-4xl font-semibold ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } sm:text-5xl sm:leading-tight`}
+          >
+            {textContent.title}
+          </p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
 
           <Link
             href={'/'}

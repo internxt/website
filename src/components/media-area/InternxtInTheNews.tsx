@@ -3,8 +3,9 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Image from "next/image";
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const InternxtInTheNews = ({ textContent }) => {
+const InternxtInTheNews = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,7 +30,7 @@ const InternxtInTheNews = ({ textContent }) => {
   };
 
   return (
-    <section className="overflow-hidden bg-white pb-20 pt-16">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} pb-20 pt-16`}>
       <RevealY className="flex items-center justify-center p-6 pb-[70px]">
         <p className="mb-6 text-center text-5xl font-medium">{textContent.title}</p>
       </RevealY>
@@ -39,7 +40,9 @@ const InternxtInTheNews = ({ textContent }) => {
           {beforeIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className={`relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } p-10 opacity-40 drop-shadow-md`}
             >
               <div className="flex flex-col items-start">
                 <Image
@@ -69,7 +72,9 @@ const InternxtInTheNews = ({ textContent }) => {
           {current.map((card, index) => (
             <div
               key={index}
-              className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
+              className={`card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } p-10 shadow-subtle-hard`}
             >
               <div className="flex flex-col items-start justify-center">
                 <Image
@@ -99,7 +104,9 @@ const InternxtInTheNews = ({ textContent }) => {
           {afterIndex.map((card, index) => (
             <div
               key={index}
-              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
+              className={`relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } p-10 opacity-40 drop-shadow-md`}
             >
               <div className="flex flex-col items-start justify-center">
                 <Image
@@ -123,7 +130,11 @@ const InternxtInTheNews = ({ textContent }) => {
           {data.map((card, index) => {
             return (
               <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">
-                <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white p-8">
+                <div
+                  className={`flex snap-center flex-col overflow-hidden rounded-3xl ${
+                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                  } p-8`}
+                >
                   <div className="flex w-auto max-w-[300px] flex-col">
                     <div className="flex w-[331px] flex-row">
                       <div className="flex flex-col pl-4">

@@ -6,7 +6,7 @@ interface RevealProps {
   direction?: 'left' | 'right';
 }
 
-const RevealX = ({ children, className, direction }: RevealProps) => {
+const RevealX = ({ children, className = '', direction }: RevealProps) => {
   useEffect(() => {
     function reveal() {
       const reveals = document.querySelectorAll(direction === 'left' ? '.revealXLeft' : '.revealXRight');

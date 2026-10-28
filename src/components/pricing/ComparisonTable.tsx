@@ -4,11 +4,13 @@ import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { currency as CURRENCY_SYMBOLS } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type FeatureGroup = { group: string; features: Feature[] };
 type GroupedItem = Feature | FeatureGroup;
 
 interface ComparisonTableProps {
+  darkMode?: boolean;
   textContent: PricingText['ComparisonTable'];
   products: ProductsDataProps | undefined;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
@@ -18,6 +20,7 @@ interface ComparisonTableProps {
 }
 
 export default function ComparisonTableSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   onCheckoutButtonClicked,
   products,
@@ -25,6 +28,7 @@ export default function ComparisonTableSection({
   decimalDiscount,
   currencyValue,
 }: Readonly<ComparisonTableProps>): JSX.Element {
+  const borderClass3 = darkMode ? 'border-gray-71' : 'border-neutral-25';
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -101,26 +105,33 @@ export default function ComparisonTableSection({
     featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
+    const ringClass = darkMode ? 'ring-gray-71 bg-gray-105' : 'ring-neutral-25 bg-neutral-17';
+    const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-16';
+    const ringClass2 = darkMode ? 'ring-gray-71' : 'ring-neutral-25';
     return `items-start p-6 text-start  ${
       isRecommendedPlan(planIndex)
-        ? 'flex rounded-t-2xl ring-[1px] ring-neutral-25 bg-neutral-17'
-        : 'bg-neutral-16 ring-[1px] ring-neutral-25'
+        ? `flex rounded-t-2xl ring-[1px] ${ringClass}`
+        : `${bgClass} ring-[1px] ${ringClass2}`
     }`;
   };
 
   const getButtonStyles = (planIndex: number) => {
+    const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-1';
     return `${
       isRecommendedPlan(planIndex)
         ? 'bg-primary text-white hover:bg-primary-dark'
-        : 'border-primary bg-transparent text-primary hover:bg-gray-1'
+        : `border-primary bg-transparent text-primary ${hoverClass}`
     } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`;
   };
 
   const getCategoryRowStyles = (planIndex: number) => {
+    const borderClass = darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-25 bg-neutral-17';
+    const borderClass2 = darkMode ? 'border-gray-71' : 'border-neutral-25';
+    const textClass = darkMode ? 'text-white-95' : 'text-gray-95';
     return `h-[72px] ${
       isRecommendedPlan(planIndex)
-        ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border-y-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        ? `border-[1px] ${borderClass} shadow-lg`
+        : `border-y-[1px] ${borderClass2} p-6 text-xl font-medium ${textClass}`
     }`;
   };
 
@@ -128,12 +139,14 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
-      baseStyles += ' bg-neutral-17 outline outline-1 outline-neutral-25';
+      baseStyles += ` ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} outline outline-1 ${
+        darkMode ? 'outline-gray-71' : 'outline-neutral-25'
+      }`;
       if (isLastCategory(categoryIndex)) {
-        baseStyles += 'outline outline-1 outline-neutral-25 rounded-br-16';
+        baseStyles += `outline outline-1 ${darkMode ? 'outline-gray-71' : 'outline-neutral-25'} rounded-br-16`;
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += ' border-t-[1px] border-neutral-25';
+      baseStyles += ` border-t-[1px] ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`;
     }
 
     return baseStyles;
@@ -148,27 +161,31 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
-      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 shadow-lg  outline outline-1 outline-neutral-25';
+      baseStyles += `ring-[1px] ${
+        darkMode ? 'ring-gray-71 bg-gray-105' : 'ring-neutral-25 bg-neutral-17'
+      } shadow-lg  outline outline-1 ${darkMode ? 'outline-gray-71' : 'outline-neutral-25'}`;
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
+        baseStyles += ` rounded-b-16 outline outline-1 ${darkMode ? 'outline-gray-71' : 'outline-neutral-25'}`;
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += 'border-t-[1px] border-neutral-25';
+      baseStyles += `border-t-[1px] ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`;
     }
 
     return baseStyles;
   };
 
   const getMobilePlanStyles = (planId: string) => {
+    const bgClass2 = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+    const bgClass3 = darkMode ? 'bg-gray-105' : 'bg-neutral-16';
     const plan = textContent.plans.find((p) => p.id === planId);
     const planOrder = plan?.order ?? 0;
 
     if (planOrder === 0 || planOrder === 1) {
-      return 'bg-neutral-16';
+      return darkMode ? 'bg-gray-105' : 'bg-neutral-16';
     }
 
     const isUltimate = planId === textContent.plans[textContent.plans.length - 1].id;
-    return isUltimate ? 'bg-neutral-17' : 'bg-neutral-16';
+    return isUltimate ? bgClass2 : bgClass3;
   };
 
   const getMobileBorderStyles = (planId: string) => {
@@ -176,17 +193,18 @@ export default function ComparisonTableSection({
     const planOrder = plan?.order ?? 0;
 
     if (planOrder === 0 || planOrder === 1) {
-      return 'border-t-[1px] border-neutral-25';
+      return `border-t-[1px] ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`;
     }
 
-    return 'border border-neutral-25';
+    return `border ${darkMode ? 'border-gray-71' : 'border-neutral-25'}`;
   };
 
   const renderFeatureContent = (feature: Feature, categoryName: string, isAvailable: boolean, category?: Category) => {
+    const textClass2 = darkMode ? 'text-white-95' : 'text-gray-95';
     const showIcon = categoryName !== 'Storage' && !category?.hideIcons && !feature.hideIcons;
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
-    const textColor = isAvailable ? 'text-gray-95' : 'text-gray-95/50';
+    const textColor = isAvailable ? textClass2 : 'text-gray-95/50';
     const fillColor = isAvailable ? 'fill' : 'regular';
 
     return (
@@ -256,10 +274,16 @@ export default function ComparisonTableSection({
   return (
     <section
       className="flex h-min w-full flex-col items-center py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)',
+      }}
       id="comparisonTable"
     >
-      <h2 className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</h2>
+      <h2 className={`text-30 font-bold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+        {textContent.title}
+      </h2>
 
       <div className="hidden h-min w-full justify-center lg:flex lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
         <table>
@@ -268,13 +292,17 @@ export default function ComparisonTableSection({
               {textContent.plans.map((plan, planIndex) => (
                 <th key={plan.id} className={getHeaderStyles(planIndex)}>
                   <div className="flex flex-col gap-6">
-                    <h3 className="text-4xl font-semibold text-gray-95">{plan.name}</h3>
+                    <h3 className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+                      {plan.name}
+                    </h3>
                     <span className="flex flex-row gap-2">
-                      <p className="flex text-xl font-bold text-gray-95">
+                      <p className={`flex text-xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
                         {currency}
                         {getPlanPrice(plan.order)}
                       </p>
-                      <p className="text-lg font-normal text-gray-55">{billingText}</p>
+                      <p className={`text-lg font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
+                        {billingText}
+                      </p>
                     </span>
                     <button
                       onClick={() =>
@@ -339,7 +367,9 @@ export default function ComparisonTableSection({
                     return groupedFeatures.map((item: GroupedItem, itemIndex: number) => (
                       <tr
                         key={`${category.name}-${'features' in item ? item.group : item.id}-${itemIndex}`}
-                        className={`border-t-[1px] border-neutral-25 ${itemIndex === 0 ? 'border-t-[1px]' : ''}`}
+                        className={`border-t-[1px] ${darkMode ? 'border-gray-71' : 'border-neutral-25'} ${
+                          itemIndex === 0 ? 'border-t-[1px]' : ''
+                        }`}
                       >
                         {textContent.plans.map((plan, planIndex) => (
                           <td
@@ -366,7 +396,7 @@ export default function ComparisonTableSection({
         </table>
       </div>
 
-      <div className="w-full bg-neutral-16 px-4 lg:hidden">
+      <div className={`w-full ${darkMode ? 'bg-gray-105' : 'bg-neutral-16'} px-4 lg:hidden`}>
         <div className={`sticky top-10 z-10 grid grid-cols-2 gap-0 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
           <CustomPlanSelector
             plans={textContent.plans}
@@ -422,14 +452,14 @@ export default function ComparisonTableSection({
                     categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
-                  <p className="font-medium text-gray-95">{category.name}</p>
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>{category.name}</p>
                 </div>
                 <div
                   className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${
                     categoryIndex === 0 ? '' : ''
                   }`}
                 >
-                  <p className="font-medium text-gray-95">{category.name}</p>
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>{category.name}</p>
                 </div>
               </div>
 
@@ -448,7 +478,7 @@ export default function ComparisonTableSection({
                       <div
                         key={`${feature.id}-${featureIndex}-planA`}
                         className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1 ? 'border-b border-neutral-25' : ''
+                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
                         }`}
                       >
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanA], category)}
@@ -471,7 +501,7 @@ export default function ComparisonTableSection({
                       <div
                         key={`${feature.id}-${featureIndex}-planB`}
                         className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1 ? 'border-b border-neutral-25' : ''
+                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
                         }`}
                       >
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanB], category)}

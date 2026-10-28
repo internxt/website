@@ -1,9 +1,14 @@
 import { getImage } from '@/lib/getImage';
 import Image from "next/image";
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function FileParallaxSection() {
+export default function FileParallaxSection({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) {
   return (
-    <section className="pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden bg-gray-5 md:h-[440px]">
+    <section
+      className={`pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden ${
+        darkMode ? 'bg-gradient-to-b from-[#001D6C] to-[#121923]' : 'bg-gray-5'
+      } md:h-[440px]`}
+    >
       <div
         className="flex shrink-0 transform-gpu items-center justify-center space-x-12 will-change-transform md:space-x-20"
         style={{

@@ -6,14 +6,21 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
 import { CloudStorageForPhotosText, ImageConfig } from '@/assets/types/cloud-storage-for-photos';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 const Animation = dynamic(() => import('../shared/Animation'));
 interface HeroSectionForHomeProps {
+  darkMode?: boolean;
   textContent: CloudStorageForPhotosText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  lang,
+  isHomePageV2,
+}: HeroSectionForHomeProps): JSX.Element {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
@@ -82,7 +89,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
         <div
           style={{ backgroundImage: BgImage }}

@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const KitCard = ({ textContent, image, downloadImagesLink }) => {
+export const KitCard = ({ darkMode = DARK_MODE_ENABLED, textContent, image, downloadImagesLink }) => {
   return (
-    <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1">
+    <div className={`flex flex-col items-center justify-between rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col">
         <Image
           height={520}

@@ -6,12 +6,15 @@ import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import styles from '@/components/privacy/HeroSection.module.scss';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const PriceBannerForCampaigns = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   redirectTo,
   percentOff,
 }: {
+  darkMode?: boolean;
   textContent: any;
   redirectTo?: string;
   percentOff: string;
@@ -33,7 +36,7 @@ export const PriceBannerForCampaigns = ({
   }, []);
 
   return (
-    <section className="pt-20 lg:mr-4 lg:pt-24">
+    <section className={`pt-20 lg:mr-4 lg:pt-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div
         className={`${
           shouldShowBanner && delayedRender ? 'flex' : 'hidden'

@@ -9,11 +9,12 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -47,7 +48,7 @@ const PasswordGenerator = ({
 
         <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} bgColor="bg-gray-1" />
+        <ToolsSection textContent={toolsContent} lang={lang} bgColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`} />
 
         <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 

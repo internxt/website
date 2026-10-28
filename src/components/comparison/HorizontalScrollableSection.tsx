@@ -1,7 +1,9 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
+  darkMode?: boolean;
   textContent: any;
   bgGradient?: string;
   competitor?: string;
@@ -11,6 +13,7 @@ interface HorizontalScrollableProps {
 }
 
 export default function HorizontalScrollableSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bgGradient,
   competitor,
@@ -18,6 +21,8 @@ export default function HorizontalScrollableSection({
   needsH2 = false,
   needsH3 = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent.scrollableSection?.titles ?? [];
   const cardDescriptions = textContent.scrollableSection?.descriptions ?? [];
 
@@ -98,19 +103,33 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : 'bg-neutral-17'
+        bgGradient ? '' : bgClass
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgGradient }}
     >
       {!hideDivider && (
         <>
-          <div className="absolute left-8 right-8 top-0 flex h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:hidden"></div>
-          <div className="absolute left-8 right-8 hidden h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:top-0 lg:flex"></div>
+          <div
+            className={`absolute left-8 right-8 top-0 flex h-[1px] ${
+              darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            } lg:left-32 lg:right-32 lg:hidden`}
+          ></div>
+          <div
+            className={`absolute left-8 right-8 hidden h-[1px] ${
+              darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            } lg:left-32 lg:right-32 lg:top-0 lg:flex`}
+          ></div>
         </>
       )}
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <TagTitle className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</TagTitle>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <TagTitle
+          className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+        >
+          {textContent.title}
+        </TagTitle>
+        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+          {textContent.description}
+        </p>
         {textContent.cta && !competitor && (
           <span
             onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
@@ -141,9 +160,21 @@ export default function HorizontalScrollableSection({
           >
             {cardTitles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
-                  <TagMiniTitle className="pb-6 text-xl font-medium text-gray-95">{title}</TagMiniTitle>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
+                <div
+                  className={`flex h-full w-[345px] flex-col rounded-16 ${
+                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                  } p-8 lg:w-[400px]`}
+                >
+                  <TagMiniTitle className={`pb-6 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+                    {title}
+                  </TagMiniTitle>
+                  <p
+                    className={`flex-1 text-base font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
+                    {cardDescriptions[index]}
+                  </p>
                 </div>
               </div>
             ))}
@@ -155,7 +186,7 @@ export default function HorizontalScrollableSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -164,7 +195,7 @@ export default function HorizontalScrollableSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

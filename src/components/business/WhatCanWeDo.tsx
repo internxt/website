@@ -5,12 +5,15 @@ import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
 import { CaretLeft, CaretRight, DotsThree } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface WhatCanWeDoProps {
+  darkMode?: boolean;
   textContent: any;
 }
 
-export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
+export const WhatCanWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent }: WhatCanWeDoProps): JSX.Element => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [selectedTab, setSelectedTab] = useState<number>(0);
 
   const onRightArrowClick = () => {
@@ -50,13 +53,13 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
               <Fragment key={info.title}>
                 <button
                   className={`flex ${
-                    selectedTab === index ? 'border-primary' : 'border-gray-10'
+                    selectedTab === index ? 'border-primary' : borderClass
                   } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                   onClick={() => onTabSelectorButtonClicked(index)}
                 >
                   <p className="text-start text-2xl font-medium text-white hover:text-primary">{info.selectorTab}</p>
                 </button>
-                <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
+                <div className={`h-8 border-r-4 ${darkMode ? 'border-gray-71' : 'border-gray-10'} pr-8 last:hidden`} />
               </Fragment>
             ))}
           </div>
@@ -107,7 +110,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                   <button
                     onClick={onRightArrowClick}
                     disabled={isLastTab}
-                    className={`${isLastTab ? 'text-gray-400 cursor-not-allowed' : 'hover:text-gray-300 text-white'}`}
+                    className={`${isLastTab ? 'cursor-not-allowed text-gray-50' : 'text-white hover:text-gray-30'}`}
                   >
                     <CaretRight size={24} />
                   </button>

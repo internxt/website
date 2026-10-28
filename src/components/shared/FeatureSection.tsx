@@ -2,6 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 import { IconProps } from '@phosphor-icons/react'; // Import IconProps type
 
 export interface FeatureCard {
@@ -13,6 +14,7 @@ export interface FeatureCard {
 }
 
 export interface FeatureSectionProps {
+  darkMode?: boolean;
   title: string;
   subtitle?: string;
   description?: string;
@@ -21,18 +23,46 @@ export interface FeatureSectionProps {
   cards: FeatureCard[];
 }
 
-const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards }: FeatureSectionProps) => {
+const FeatureSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  title,
+  subtitle,
+  description,
+  ctaText,
+  ctaLink,
+  cards,
+}: FeatureSectionProps) => {
   return (
-    <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
+    <section className={`overflow-hidden px-5 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+      <div
+        className={`flex flex-col items-center justify-center space-y-16 ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } py-10 md:py-20`}
+      >
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
-            <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{title}</h2>
+            <h2
+              className={`text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-3xl`}
+            >
+              {title}
+            </h2>
             <div className="flex flex-col space-y-6 lg:max-w-[950px]">
-              {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
+              {subtitle && (
+                <p
+                  className={`text-lg font-medium leading-tight ${
+                    darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                  } lg:text-2xl`}
+                >
+                  {subtitle}
+                </p>
+              )}
               {description && (
                 <p
-                  className="font-regular text-base leading-tight text-gray-80 lg:text-xl"
+                  className={`font-regular text-base leading-tight ${
+                    darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                  } lg:text-xl`}
                   dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}
                 />
               )}
@@ -91,10 +121,20 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     </div>)
                   )}
 
-                  <h3 className="text-30 font-semibold  sm:leading-tight md:text-3xl">{card.title}</h3>
-                  <p className="font-regular text-base sm:text-lg md:text-xl">
-                    {Array.isArray(card.description)
-                      ? card.description.map((line, index) => (
+                  <h3
+                    className={`text-30 font-semibold ${
+                      darkMode ? 'text-white-95' : 'text-gray-100'
+                    } sm:leading-tight md:text-3xl`}
+                  >
+                    {card.title}
+                  </h3>
+                  <p
+                    className={`font-regular text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                    } sm:text-lg md:text-xl`}
+                  >
+                    {Array.isArray(card.description) ? (
+                      card.description.map((line, index) => (
                           <span key={index}>
                             <span dangerouslySetInnerHTML={{ __html: line }} />
                             {index < card.description.length - 1 && (
@@ -105,7 +145,9 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                             )}
                           </span>
                         ))
-                      : <span dangerouslySetInnerHTML={{ __html: card.description }} />}
+                    ) : (
+                      <span dangerouslySetInnerHTML={{ __html: card.description }} />
+                    )}
                   </p>
                 </div>
               </div>

@@ -1,8 +1,9 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Browsers, CopySimple, FolderSimpleDashed, Keyhole, Planet, UserCircleMinus } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FeaturesSection = ({ textContent, bannerText, lang }) => {
+export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
   const cards = [
     {
       icon: FolderSimpleDashed,
@@ -37,29 +38,37 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
         <SignUpBanner textContent={bannerText} lang={'en'} />
         {/* Text sections */}
         <div className="flex max-w-[672px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.inxtFileConverter.title}</p>
+            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.inxtFileConverter.title}
+            </p>
             <RenderDescription description={textContent.inxtFileConverter.description} />
           </div>
           <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.howUseFileConverter.title}</p>
+            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.howUseFileConverter.title}
+            </p>
             <ul className="list-[square] space-y-1.5 pl-6 lg:max-w-2xl">
               {textContent.howUseFileConverter.steps.map((feature) => (
                 <li key={feature.step} className="text-lg text-primary">
                   {feature.step}
-                  <span className="text-gray-80"> {feature.description}</span>
+                  <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}> {feature.description}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex flex-col">
-            <p className="text-2xl font-medium text-gray-100">{textContent.whyUseFileConverter.title}</p>
-            <p className="text-lg text-gray-80">{textContent.whyUseFileConverter.description}</p>
+            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.whyUseFileConverter.title}
+            </p>
+            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.whyUseFileConverter.description}
+            </p>
           </div>
         </div>
 
@@ -68,12 +77,18 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
+              className={`flex flex-col items-start justify-start rounded-2xl ${
+                darkMode ? 'bg-gray-105' : 'bg-gray-1'
+              } p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[408px] flex-col">
-                <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
-                <p className="text-base text-gray-80 sm:text-lg">{card.description}</p>
+                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  {card.title}
+                </p>
+                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-lg`}>
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}

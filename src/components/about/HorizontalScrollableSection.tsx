@@ -3,16 +3,21 @@ import { useRef, useState, useEffect } from 'react';
 import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface HorizontalScrollableProps {
+  darkMode?: boolean;
   textContent: any;
   header?: boolean;
 }
 
 export default function HorizontalScrollableSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   header = true,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -93,18 +98,31 @@ export default function HorizontalScrollableSection({
     }
   };
 
+  const headerBackground = darkMode
+    ? 'linear-gradient(180deg, #0D0D0D 63.1%, #1C1C1C 100%)'
+    : 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)';
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${
-        header ? 'gap-8 lg:gap-16' : ' gap-6 bg-neutral-17 lg:gap-12'
+        header ? 'gap-8 lg:gap-16' : ` gap-6 ${bgClass} lg:gap-12`
       } lg:py-20 `}
-      style={header ? { background: 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)' } : undefined}
+      style={
+        header
+          ? { background: headerBackground }
+          : undefined
+      }
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32`}
+      ></div>
       <p
         className={`whitespace-pre-line ${
           header ? 'text-start lg:text-center' : 'text-start lg:pl-20'
-        } w-[345px] text-30 font-bold leading-tight text-gray-95 lg:w-[853px] lg:text-5xl`}
+        } w-[345px] text-30 font-bold leading-tight ${
+          darkMode ? 'text-white-95' : 'text-gray-95'
+        } lg:w-[853px] lg:text-5xl`}
       >
         {textContent.title}
       </p>
@@ -112,7 +130,9 @@ export default function HorizontalScrollableSection({
         {header && (
           <>
             <p
-              className="w-full text-sm font-normal leading-tight text-gray-55 lg:w-1/2 lg:text-base"
+              className={`w-full text-sm font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-1/2 lg:text-base`}
               dangerouslySetInnerHTML={{
                 __html: textContent.description
                   .replace(/\n/g, '<br/>')
@@ -125,7 +145,7 @@ export default function HorizontalScrollableSection({
                 width={358}
                 height={346}
                 quality={100}
-                className="rounded-2xl"
+                className={`rounded-2xl ${darkMode ? DARK_MODE_LOGO_FILTER : ''}`}
                 draggable={false}
                 alt="Internxt gift"
                 loading="eager"
@@ -140,7 +160,7 @@ export default function HorizontalScrollableSection({
                 width={345}
                 height={150}
                 quality={100}
-                className="rounded-2xl"
+                className={`rounded-2xl ${darkMode ? DARK_MODE_LOGO_FILTER : ''}`}
                 draggable={false}
                 alt="Internxt gift"
                 loading="eager"
@@ -183,9 +203,19 @@ export default function HorizontalScrollableSection({
           >
             {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-6 lg:w-[450px] lg:p-8">
-                  <p className=" pb-4 text-xl font-medium text-gray-95 lg:pb-6">{title}</p>
-                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55">
+                <div
+                  className={`flex h-full w-[345px] flex-col rounded-16 ${
+                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                  } p-6 lg:w-[450px] lg:p-8`}
+                >
+                  <p className={` pb-4 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:pb-6`}>
+                    {title}
+                  </p>
+                  <p
+                    className={`flex-1 text-sm font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>
@@ -200,7 +230,9 @@ export default function HorizontalScrollableSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -209,7 +241,9 @@ export default function HorizontalScrollableSection({
               onClick={scrollRight}
               disabled={currentIndex >= maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                currentIndex >= maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

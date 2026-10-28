@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TrustedSectionProps {
   textContent: {
@@ -16,11 +17,13 @@ const WORDS_PER_GROUP = 2;
 const LIT_COLOR_DARK = '#FFFFFF';
 const LIT_COLOR_LIGHT = '#0A0A0A';
 const UNLIT_COLOR = '#A0A0A0';
+const VALENTINES_GRADIENT_DARK = 'linear-gradient(360deg, #1C1C1C 0%, #2A1420 100%)';
+const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)';
 
 export default function TrustedSection({
   textContent,
   bottomBar = true,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   image,
   isValentinesMode,
   bgGradientColor,
@@ -59,6 +62,7 @@ export default function TrustedSection({
     window.addEventListener('scroll', updateProgress, { passive: true });
     return () => window.removeEventListener('scroll', updateProgress);
   }, [darkMode]);
+  const valentinesGradient = darkMode ? VALENTINES_GRADIENT_DARK : VALENTINES_GRADIENT_LIGHT;
 
   return (
     <section
@@ -70,7 +74,7 @@ export default function TrustedSection({
       }`}
       style={
         isValentinesMode
-          ? { background: 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)' }
+          ? { background: valentinesGradient }
           : bgGradientColor
           ? { background: bgGradientColor }
           : !darkMode && !image && !bgColor
@@ -79,7 +83,11 @@ export default function TrustedSection({
       }
     >
       {bottomBar && (
-        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+        <div
+          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          } lg:bottom-0 lg:left-32 lg:right-32`}
+        ></div>
       )}
       <p className="w-full py-1 text-justify text-2xl font-semibold leading-[100%] lg:text-[60px]">
         {groups.map((group, i) => (

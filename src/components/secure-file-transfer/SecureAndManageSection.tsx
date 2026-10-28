@@ -1,20 +1,34 @@
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const SecureAndManageSection = ({ textContent }): JSX.Element => {
-
+const SecureAndManageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
   return (
     <section
-      className="relative flex flex-col items-center justify-center gap-8 bg-neutral-17 px-5 py-10 lg:gap-12 lg:px-0 lg:py-20"
+      className={`relative flex flex-col items-center justify-center gap-8 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } px-5 py-10 lg:gap-12 lg:px-0 lg:py-20`}
     >
-      <div className="absolute left-5 right-5 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
+      <div
+        className={`absolute left-5 right-5 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32`}
+      />
 
-      <h2 className="w-full max-w-[832px] px-4 text-center text-[30px] font-bold leading-tight text-gray-100 lg:px-0 lg:text-[48px]">
+      <h2
+        className={`w-full max-w-[832px] px-4 text-center text-[30px] font-bold leading-tight ${
+          darkMode ? 'text-white-95' : 'text-gray-100'
+        } lg:px-0 lg:text-[48px]`}
+      >
         {textContent.title}
       </h2>
 
-      <p className="w-full max-w-[832px] px-5 text-center text-[14px] font-normal leading-tight text-gray-55 lg:px-0 lg:text-lg">
+      <p
+        className={`w-full max-w-[832px] px-5 text-center text-[14px] font-normal leading-tight ${
+          darkMode ? 'text-green-120' : 'text-gray-55'
+        } lg:px-0 lg:text-lg`}
+      >
         {textContent.description}
       </p>
 
@@ -22,10 +36,12 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white p-10"
+            className={`flex w-[544px] flex-col items-center gap-16 rounded-16 ${
+              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+            } p-10`}
           >
             <div className="flex flex-col gap-6">
-              <p className="text-[20px] lg:text-[30px] font-semibold text-gray-100">
+              <p className={`text-[20px] font-semibold lg:text-[30px] ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
                 {card.title}
               </p>
 
@@ -33,7 +49,9 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph.slice(0,30)}
-                    className="text-[14px] lg:text-base font-normal leading-tight text-gray-55"
+                    className={`text-[14px] font-normal leading-tight lg:text-base ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
                   >
                     {paragraph}
                   </p>
@@ -70,18 +88,18 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className="flex w-full max-w-[340px] flex-col items-center gap-16 rounded-16 bg-white p-10"
+            className={`flex w-full max-w-[340px] flex-col items-center gap-16 rounded-16 ${
+              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+            } p-10`}
           >
             <div className="flex flex-col gap-6">
-              <p className="text-xl font-semibold text-gray-100">
-                {card.title}
-              </p>
+              <p className={`text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{card.title}</p>
 
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph.slice(0,30)}
-                    className="text-sm font-normal leading-tight text-gray-55"
+                    className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
                   >
                     {paragraph}
                   </p>

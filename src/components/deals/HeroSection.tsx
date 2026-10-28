@@ -62,7 +62,7 @@ export default function HeroSection({
       return text;
     }
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
   };
@@ -88,7 +88,7 @@ export default function HeroSection({
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p
                 className={`whitespace-nowrap text-sm font-medium leading-tight ${
-                  darkMode ? 'text-neutral-37' : 'text-gray-80'
+                  darkMode ? 'text-white' : 'text-gray-80'
                 }`}
               >
                 {feature.text}

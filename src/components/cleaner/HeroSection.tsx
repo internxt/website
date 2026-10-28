@@ -4,12 +4,17 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 import HeroSafeArea from '../HeroSafeArea';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ textContent }) => (
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
   <section
     className="h-[600 px]
     flex w-full flex-row justify-center lg:h-[695px]"
-    style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
+    style={{
+      background: darkMode
+        ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
+        : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
+    }}
   >
     <HeroSafeArea>
       <div
@@ -21,19 +26,33 @@ const HeroSection = ({ textContent }) => (
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
-              <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</p>
+              <p
+                className={`text-30 font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                } lg:text-5xl`}
+              >
+                {textContent.title}
+              </p>
             </div>
             <div className="flex h-[88px] w-full flex-col justify-between ">
               {textContent.features.map((feat) => (
                 <div key={feat} className="flex h-[24px] flex-row gap-2 ">
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
-                  <p className="mb-2 text-left text-sm font-normal text-gray-95 xs-md:text-lg ">{feat}</p>
+                  <p
+                    className={`mb-2 text-left text-sm font-normal ${
+                      darkMode ? 'text-white-95' : 'text-gray-95'
+                    } xs-md:text-lg `}
+                  >
+                    {feat}
+                  </p>
                 </div>
               ))}
             </div>
             <div className="h-[44px] w-full lg:h-min">
-              <p className="text-base font-normal text-gray-95 lg:text-xl">{textContent.subTitle}</p>
+              <p className={`text-base font-normal ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                {textContent.subTitle}
+              </p>
             </div>
           </div>
           <div className="h-[48px] w-full">

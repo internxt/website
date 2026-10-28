@@ -8,12 +8,12 @@ import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { CheckCircle } from '@phosphor-icons/react';
 import { ArrowDown } from '@phosphor-icons/react/dist/ssr';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
 
 const DEFAULTS = {
-  sectionDetails: 'bg-white',
   hideBillingController: false,
   SectionTag: 'p' as React.ElementType,
 };
@@ -106,7 +106,7 @@ const PricingHeader = ({
   discountValue,
   className = '',
   couponCodeName,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   SectionTag,
   isValentinesMode,
   alternativeHeader,
@@ -131,12 +131,12 @@ const PricingHeader = ({
   </div>
 );
 
-const CouponCodeHeader = ({ textContent, couponCode }) => (
+const CouponCodeHeader = ({ darkMode = DARK_MODE_ENABLED, textContent, couponCode }) => (
   <div
     className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}
   >
     <CheckCircle className="text-green-1" weight="fill" />
-    <p className="text-sm font-medium text-gray-95 lg:text-base">
+    <p className={`text-sm font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
     </p>
   </div>
@@ -149,7 +149,8 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   hidePlanSelectorComponent,
-  sectionDetails = DEFAULTS.sectionDetails,
+  darkMode = DARK_MODE_ENABLED,
+  sectionDetails = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
   backgroundGradientColor,
   lifetimeCoupons,
   popularPlanBySize,
@@ -157,7 +158,6 @@ export const PricingSectionWrapper = ({
   isFamilyPage,
   hideFeatures,
   onCheckoutButtonClicked,
-  darkMode,
   isAnnual,
   showPromo,
   isAffiliate,
@@ -258,7 +258,9 @@ export const PricingSectionWrapper = ({
         {textContent.ctaCompare && (
           <a
             href="#comparisonTable"
-            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark hover:bg-neutral-20 hover:text-primary-dark`}
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark ${
+              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20'
+            } hover:text-primary-dark`}
           >
             {textContent.ctaCompare}
             <ArrowDown className="h-6 w-6 text-primary" />

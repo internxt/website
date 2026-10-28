@@ -1,15 +1,18 @@
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BusinessCtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   url,
   target,
   customText,
   bgGradientContainerColor,
   bgGradientColor,
-  containerDetails,
-  bgColor,
+  containerDetails = '',
+  bgColor = darkMode ? 'bg-[#1C1C1C]' : '',
 }: {
+  darkMode?: boolean;
   textContent: any;
   url?: string;
   target?: string;

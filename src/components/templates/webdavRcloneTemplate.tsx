@@ -11,6 +11,7 @@ import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -19,6 +20,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface WebdavRcloneTemplateProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   langJson: any;
   navbarLang: NavigationBarText;
@@ -31,6 +33,7 @@ export interface WebdavRcloneTemplateProps {
 }
 
 export const WebdavRcloneTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -74,10 +77,18 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {langJson.CtaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {langJson.CtaSection.description}
               </p>
             </div>
@@ -85,7 +96,11 @@ export const WebdavRcloneTemplate = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding=" px-20 py-10"
-          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
         />
 
         <DownloadCLISection textContent={langJson.DownloadCLISection} />
@@ -97,10 +112,18 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {langJson.CtaSection2.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {langJson.CtaSection2.description}
               </p>
             </div>

@@ -21,9 +21,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: gdprCloudStorageText;
   navbarLang: NavigationBarText;
@@ -34,6 +35,7 @@ interface PrivacyProps {
 }
 
 const PrivateCloudStorageSolutions = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -186,7 +188,7 @@ const PrivateCloudStorageSolutions = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-white lg:py-20"
+                sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
                 hideFreeCard
             />
 

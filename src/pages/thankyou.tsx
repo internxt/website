@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetStaticPropsContext } from 'next';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThankyouText {
   HeroSection: {
@@ -15,6 +16,7 @@ interface ThankyouText {
 }
 
 interface ThankyouProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -22,7 +24,14 @@ interface ThankyouProps {
   footerLang: FooterText;
 }
 
-const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }: ThankyouProps): JSX.Element => {
+const Thankyou = ({
+  darkMode = DARK_MODE_ENABLED,
+  lang,
+  metatagsDescriptions,
+  navbarLang,
+  langJson,
+  footerLang,
+}: ThankyouProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'thankyou');
   const locale = lang as string;
 
@@ -30,12 +39,22 @@ const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang} robots="noindex">
       <Navbar lang={locale} textContent={navbarLang} cta={['default']} isLinksHidden hideCTA />
 
-      <section className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-24 text-center">
+      <section
+        className={`flex min-h-screen flex-col items-center justify-center ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } px-6 py-24 text-center`}
+      >
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-5xl font-semibold text-gray-100">{langJson.HeroSection.title}</h1>
-          <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.subtitle}</p>
-          <p className="text-lg text-gray-60">{langJson.HeroSection.description}</p>
-          <p className="text-lg text-gray-60">{langJson.HeroSection.emailNote}</p>
+          <h1 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {langJson.HeroSection.title}
+          </h1>
+          <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            {langJson.HeroSection.subtitle}
+          </p>
+          <p className={`text-lg ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>
+            {langJson.HeroSection.description}
+          </p>
+          <p className={`text-lg ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>{langJson.HeroSection.emailNote}</p>
           <p className="text-base font-medium text-primary">{langJson.HeroSection.cta}</p>
         </div>
       </section>

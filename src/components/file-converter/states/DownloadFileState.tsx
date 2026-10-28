@@ -1,13 +1,16 @@
 import { CheckCircle, House } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DownloadFileStateProps {
+  darkMode?: boolean;
   textContent: any;
   onConvertMoreFilesButtonPressed: () => void;
   onDownloadFile: () => void;
 }
 
 const DownloadFileState = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   onConvertMoreFilesButtonPressed,
   onDownloadFile,
@@ -17,21 +20,29 @@ const DownloadFileState = ({
     <div className="flex flex-col items-center space-y-8 text-center">
       <div className="flex flex-row space-x-2 rounded-lg bg-green/8 p-4 text-center md:text-start">
         <CheckCircle className="hidden text-green md:flex" size={19.5} />
-        <p className="text-gray-100">{textContent.label}</p>
+        <p className={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.label}</p>
       </div>
       <h3 className="text-3xl font-semibold">{textContent.title}</h3>
-      <p className="text-lg font-semibold text-gray-60">{textContent.description}</p>
+      <p className={`text-lg font-semibold ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>
+        {textContent.description}
+      </p>
       <div className="flex flex-col gap-2 md:flex-row">
         <button
           onClick={() => route.push('/file-converter')}
-          className="flex flex-row items-center justify-center space-x-2 rounded-lg border-gray-10 bg-white px-5 py-2 font-medium shadow-sm hover:bg-gray-5"
+          className={`flex flex-row items-center justify-center space-x-2 rounded-lg ${
+            darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
+          } px-5 py-2 font-medium shadow-sm ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-5'}`}
         >
           <House size={24} />
           <p>{textContent.goHome}</p>
         </button>
         <button
           onClick={onConvertMoreFilesButtonPressed}
-          className="rounded-lg border border-gray-5 bg-white px-5 py-2.5 font-medium text-gray-80 shadow-sm hover:bg-gray-5"
+          className={`rounded-lg border ${
+            darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-5 bg-white'
+          } px-5 py-2.5 font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} shadow-sm ${
+            darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-5'
+          }`}
         >
           {textContent.convertAnother}
         </button>

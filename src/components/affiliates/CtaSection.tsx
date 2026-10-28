@@ -1,7 +1,9 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   url,
   maxWidth,
@@ -10,6 +12,7 @@ const CtaSection = ({
   onClick,
   customDescription,
 }: {
+  darkMode?: boolean;
   textContent: any;
   url: string;
   maxWidth?: string;
@@ -18,6 +21,8 @@ const CtaSection = ({
   onClick?: () => void;
   customDescription?: React.ReactNode;
 }) => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const hoverClass = darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10';
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
   return (
@@ -38,7 +43,7 @@ const CtaSection = ({
           className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
             bgImage && bgImage !== defaultBgImage
               ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-              : 'bg-white text-primary hover:bg-blue-10'
+              : `${bgClass} text-primary ${hoverClass}`
           }`}
         >
           {textContent.cta}

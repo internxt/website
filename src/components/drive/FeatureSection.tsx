@@ -3,8 +3,9 @@ import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { goToSignUpURL } from '@/lib/auth';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ textContent }) => {
+const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center px-5 lg:flex-row lg:space-x-20">
@@ -26,8 +27,16 @@ const FeatureSection = ({ textContent }) => {
           className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
         >
           <ShieldStar size={64} className="text-primary" weight="light" />
-          <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
-          <p className="text-base text-gray-80 lg:text-xl">{textContent.description}</p>
+          <p
+            className={`text-30 font-semibold leading-tight ${
+              darkMode ? 'text-white-95' : 'text-gray-100'
+            } lg:text-3xl`}
+          >
+            {textContent.title}
+          </p>
+          <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+            {textContent.description}
+          </p>
           <button
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
             onClick={() => {

@@ -2,8 +2,9 @@ import Image from 'next/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const InfoSection = ({ textContent, bannerText, lang }) => {
+export const InfoSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
   const infoCards = () => {
     return [
       {
@@ -40,7 +41,11 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
+    <section
+      className={`flex flex-col items-center justify-center overflow-hidden ${
+        darkMode ? 'bg-gray-105' : 'bg-gray-1'
+      } px-5 py-16`}
+    >
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
           <div className="flex  w-full flex-col items-center justify-center">
@@ -62,41 +67,53 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
           </div>
           <SignUpBanner textContent={bannerText} lang={lang} />
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
-            <p className="text-2xl font-medium">{textContent.title}</p>
-            <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.subtitle}</p>
+            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</p>
+            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} md:max-w-2xl`}>
+              {textContent.subtitle}
+            </p>
           </div>
           <div className="flex flex-col items-center space-y-9 px-1">
             <div className="flex w-full max-w-2xl flex-col space-y-3 text-start">
-              <p className="text-3xl font-medium lg:text-2xl">{textContent.steps.title}</p>
+              <p className={`text-3xl font-medium lg:text-2xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.steps.title}</p>
               <ul className="list-disc space-y-3 pl-6">
                 {textContent.steps.steps.map((item) => (
                   <li key={item.title}>
                     <span className="text-lg font-medium text-primary">{item.title}: </span>
-                    <span className="text-lg text-gray-80">{item.description}</span>
+                    <span className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                      {item.description}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="flex max-w-2xl flex-col space-y-3 text-start">
-              <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whatIsTempMail.description}</p>
+              <p className={`text-3xl font-medium lg:text-2xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.whatIsTempMail.title}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} md:max-w-2xl`}>
+                {textContent.whatIsTempMail.description}
+              </p>
             </div>
             <div className="flex max-w-2xl flex-col space-y-3 text-start">
-              <p className="text-3xl font-medium lg:text-2xl">{textContent.whyUseDisposableMail.title}</p>
-              <p className="text-lg text-gray-80 md:max-w-2xl">{textContent.whyUseDisposableMail.description}</p>
+              <p className={`text-3xl font-medium lg:text-2xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.whyUseDisposableMail.title}</p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} md:max-w-2xl`}>
+                {textContent.whyUseDisposableMail.description}
+              </p>
             </div>
             <div className="flex flex-col space-y-8">
               <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
                 {infoCards().map((card) => (
                   <div
                     key={card.title}
-                    className="flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]"
+                    className={`flex flex-col items-start justify-start rounded-2xl ${
+                      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                    } p-8 sm:p-10 md:max-w-[488px]`}
                   >
                     <card.icon className="mb-6 text-4xl text-primary" />
                     <div className="flex w-full max-w-[400px] flex-col">
-                      <p className="mb-6 text-2xl font-medium">{card.title}</p>
-                      <p className="text-base text-cool-gray-80 sm:text-lg">{card.description}</p>
+                      <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{card.title}</p>
+                      <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                        {card.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -119,9 +136,15 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             </div>
 
             <div className="flex max-w-2xl flex-col space-y-3">
-              <p className="text-3xl font-medium text-gray-100 lg:text-2xl">{textContent.whenUseTempMail.title}</p>
-              <p className="text-lg">{textContent.whenUseTempMail.description}</p>
-              <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 lg:max-w-2xl">
+              <p className={`text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-2xl`}>
+                {textContent.whenUseTempMail.title}
+              </p>
+              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.whenUseTempMail.description}</p>
+              <ul
+                className={`list-disc space-y-1 pl-5 text-lg ${
+                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                } lg:max-w-2xl`}
+              >
                 {textContent.whenUseTempMail.bulletedList.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

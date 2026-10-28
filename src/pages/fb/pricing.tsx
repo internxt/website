@@ -18,8 +18,10 @@ import { Interval } from '@/services/stripe.service';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { GetStaticPropsContext } from 'next';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PricingProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   footerLang: FooterText;
@@ -29,6 +31,7 @@ interface PricingProps {
 }
 
 const Pricing = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   navbarLang,
   footerLang,
@@ -117,8 +120,12 @@ const Pricing = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           popularPlanBySize="2TB"
-          backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="py-10 lg:py-20 lg:pt-32"
+          backgroundGradientColor={
+            darkMode
+              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
+          sectionDetails={`py-10 lg:py-20 lg:pt-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
           overrideBillingFrequency={billingFrequency}
           overrideActiveSwitchPlan={activeSwitchPlan}
           overrideActiveStoragePlan={activeStoragePlan}
@@ -152,10 +159,18 @@ const Pricing = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {textContent.lastCtaSection.title}
               </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {textContent.lastCtaSection.description}
               </p>
             </div>

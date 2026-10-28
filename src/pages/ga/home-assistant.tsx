@@ -14,8 +14,10 @@ import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import HeroSection from '@/components/home-assistant/HeroSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeAssistantProps {
+    darkMode?: boolean;
     lang: GetStaticPropsContext['locale'];
     metatagsDescriptions: MetatagsDescription[];
     navbarLang: NavigationBarText;
@@ -23,7 +25,7 @@ interface HomeAssistantProps {
     footerLang: FooterText;
 }
 
-const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
+const HomeAssistantPage = ({ darkMode = DARK_MODE_ENABLED, metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
 
     const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
     const locale = lang as string;
@@ -82,7 +84,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
                 individuals: decimalDiscount,
                 lifetime: decimalDiscountForLifetime,
                 }}
-                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+                backgroundGradientColor={darkMode ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)' : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'}
                 lifetimeCoupons={lifetimeCoupons}
                 lang={locale}
                 products={products}
@@ -92,13 +94,13 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
                 onlyUltimatePlan
                 startFromPlan='Individuals'
                 startIndividualPlansFromInterval={Interval.Year}
-                sectionDetails="bg-white lg:py-20"
+                sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
                 hideFreeCard
             />
 
             <ThreeCardsIconsSection
                 textContent={textContent.ThreeCardsSection}
-                cardColor='bg-white'
+                cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             />
 
             <CoreFeaturesSection textContent={textContent.CoreFeatures} />
@@ -106,18 +108,18 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
             <TrustedSection
                 textContent={textContent.TrustedBySection}
                 bottomBar={true}
-                bgColor='bg-neutral-17'
+                bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
             />
 
             <ThreeCardsSection
                 textContent={textContent.MadeInEuropeSection}
-                bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+                bgColor={darkMode ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)' : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'}
             />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
                 lang={locale}
-                bgColor='bg-white'
+                bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             />
 
         </Layout>

@@ -1,29 +1,55 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 interface ContentBlockSectionProps {
+  darkMode?: boolean;
   textContent: any;
 }
 
-export const ContentBlockSection = ({ textContent }: ContentBlockSectionProps) => {
+export const ContentBlockSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: ContentBlockSectionProps) => {
   return (
-    <section className="flex items-center justify-between gap-6 bg-neutral-17 px-5 py-10 lg:px-10 lg:py-20 xl:p-32 3xl:px-80">
+    <section
+      className={`flex items-center justify-between gap-6 ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } px-5 py-10 lg:px-10 lg:py-20 xl:p-32 3xl:px-80`}
+    >
       <div
         className="flex flex-col items-center justify-between gap-10 rounded-16 p-4 lg:p-0 lg:py-10 lg:pl-10"
-        style={{ background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%' }}
+        style={{
+          background: darkMode
+            ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%'
+            : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%',
+        }}
       >
-        <p className="flex items-center text-center text-30 font-bold leading-tight text-gray-100 lg:pr-10 lg:text-4xl">
+        <p
+          className={`flex items-center text-center text-30 font-bold leading-tight ${
+            darkMode ? 'text-white-95' : 'text-gray-100'
+          } lg:pr-10 lg:text-4xl`}
+        >
           {textContent.title}
         </p>
         <div className="flex flex-row items-center justify-between gap-10">
           <div className="flex flex-col gap-6 lg:w-1/2 lg:gap-6">
-            <p className="flex text-base font-normal leading-tight text-gray-55 lg:whitespace-pre-line lg:text-xl">
+            <p
+              className={`flex text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:whitespace-pre-line lg:text-xl`}
+            >
               {textContent.description}
             </p>
-            <div className="flex flex-col gap-6 rounded-16 bg-white p-8">
-              <p className="text-xl font-medium leading-tight text-gray-100">{textContent.card.title}</p>
+            <div className={`flex flex-col gap-6 rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8`}>
+              <p className={`text-xl font-medium leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent.card.title}
+              </p>
               {textContent.card.description.map((feat) => (
-                <p className="flex text-sm font-normal leading-tight text-gray-55 lg:text-lg">{feat}</p>
+                <p
+                  className={`flex text-sm font-normal leading-tight ${
+                    darkMode ? 'text-green-120' : 'text-gray-55'
+                  } lg:text-lg`}
+                >
+                  {feat}
+                </p>
               ))}
               <Link
                 href={'/drive'}

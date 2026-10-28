@@ -7,7 +7,7 @@ const FloatingCtaSectionv2 = ({
   customText,
   bgGradientContainerColor,
   bgGradientColor,
-  containerDetails,
+  containerDetails = '',
 }: {
   textContent: any;
   url?: string;

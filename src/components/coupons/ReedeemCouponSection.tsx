@@ -1,12 +1,18 @@
 import { CouponPageText } from '@/assets/types/couponsPage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface RedeemCouponsSectionProps {
+  darkMode?: boolean;
   textContent: CouponPageText['howToRedeemSection'];
 }
 
-export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCouponsSectionProps>): JSX.Element {
+export default function RedeemCouponsSection({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}: Readonly<RedeemCouponsSectionProps>): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -57,23 +63,50 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
   };
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 lg:h-min lg:gap-16 lg:p-20 ">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } pb-10 lg:h-min lg:gap-16 lg:p-20 `}
+    >
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:left-32 lg:right-32 `}
+      />
 
       <div className="flex h-min w-full flex-col justify-center gap-8 p-6 lg:gap-12 lg:p-10">
         <div className="flex h-min w-full flex-col items-center justify-center gap-8 lg:gap-6">
-          <p className="text-30 font-bold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</p>
-          <p className="font-regular text-base leading-tight text-gray-55 lg:text-lg">{textContent.description}</p>
+          <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            {textContent.title}
+          </p>
+          <p
+            className={`font-regular text-base leading-tight ${
+              darkMode ? 'text-green-120' : 'text-gray-55'
+            } lg:text-lg`}
+          >
+            {textContent.description}
+          </p>
         </div>
 
         <div className="hidden items-stretch lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:px-20 3xl:px-52">
           {textContent.cards.titles.map((card, index) => (
-            <div key={index} className="flex h-[220px] w-full flex-col gap-6 rounded-16 bg-white p-8">
-              <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95">
+            <div
+              key={index}
+              className={`flex h-[220px] w-full flex-col gap-6 rounded-16 ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } p-8`}
+            >
+              <span
+                className={`flex flex-row items-center gap-4 text-xl font-medium ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                }`}
+              >
                 <p className="text-2xl text-primary ">{index + 1}</p>
                 {card}
               </span>
-              <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+              <p
+                className={`flex-1 text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
+              >
                 {textContent.cards.descriptions[index]}
               </p>
             </div>
@@ -100,13 +133,23 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
               {textContent.cards.titles.map((card, index) => (
                 <div
                   key={index}
-                  className="flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white p-8"
+                  className={`flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 ${
+                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                  } p-8`}
                 >
-                  <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95">
+                  <span
+                    className={`flex flex-row items-center gap-4 text-xl font-medium ${
+                      darkMode ? 'text-white-95' : 'text-gray-95'
+                    }`}
+                  >
                     <p className="text-2xl text-primary ">{index + 1}</p>
                     {card}
                   </span>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                  <p
+                    className={`flex-1 text-base font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
                     {textContent.cards.descriptions[index]}
                   </p>
                 </div>
@@ -120,7 +163,7 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
                 onClick={scrollLeft}
                 disabled={currentIndex === 0}
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -129,7 +172,7 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
                 onClick={scrollRight}
                 disabled={currentIndex === maxIndex}
                 className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+                  currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

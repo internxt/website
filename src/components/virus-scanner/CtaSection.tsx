@@ -1,6 +1,7 @@
-const CtaSection = ({ textContent }) => {
+import { DARK_MODE_ENABLED } from '@/theme.config';
+const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   return (
-    <section className="overflow-hidden py-12">
+    <section className={`overflow-hidden py-12 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center pt-12 lg:px-20">
         <div className="flex flex-col text-center text-white">
           <p className="text-4xl font-semibold">{textContent.title}</p>
@@ -10,7 +11,9 @@ const CtaSection = ({ textContent }) => {
           onClick={() => {
             window.open('https://internxt.com/drive', '_blank', 'noopener noreferrer');
           }}
-          className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
+          className={`flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg ${
+            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+          } text-center ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
         >
           <p className="px-9 py-3 text-base font-semibold text-primary">{textContent.cta}</p>
         </button>

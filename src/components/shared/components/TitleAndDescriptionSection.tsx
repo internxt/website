@@ -1,3 +1,4 @@
+import { DARK_MODE_ENABLED } from '@/theme.config';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 interface TitleAndDescriptionSectionProps {
@@ -8,7 +9,7 @@ interface TitleAndDescriptionSectionProps {
 
 export default function TitleAndDescriptionSection({
   textContent,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   percentOff,
 }: Readonly<TitleAndDescriptionSectionProps>): JSX.Element {
   return (

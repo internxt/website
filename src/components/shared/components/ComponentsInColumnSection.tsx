@@ -1,13 +1,16 @@
 import { ReactNode } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ComponentsInColumnSectionSectionProps {
+  darkMode?: boolean;
   backgroundColor?: string;
   FirstComponent?: ReactNode;
   SecondComponent?: ReactNode;
 }
 
 export const ComponentsInColumnSection = ({
-  backgroundColor,
+  darkMode = DARK_MODE_ENABLED,
+  backgroundColor = darkMode ? 'bg-[#1C1C1C]' : '',
   FirstComponent,
   SecondComponent,
 }: ComponentsInColumnSectionSectionProps): JSX.Element => {

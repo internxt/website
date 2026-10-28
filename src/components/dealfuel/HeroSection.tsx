@@ -2,8 +2,9 @@ import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ lang, textContent, hideTimer }) => {
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, lang, textContent, hideTimer }) => {
   return (
     <section className="flex overflow-hidden bg-primary-dark pt-16">
       <div className="lg:mx-10 xl:mx-32">
@@ -23,7 +24,9 @@ const HeroSection = ({ lang, textContent, hideTimer }) => {
               onClick={() => {
                 window.location.href = `#payment`;
               }}
-              className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
+              className={`flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } text-center ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
             >
               <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
             </button>{' '}

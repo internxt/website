@@ -4,11 +4,16 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ textContent, url = '#billingButtons' }) => (
+const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, url = '#billingButtons' }) => (
   <section
     className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40"
-    style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
+    style={{
+      background: darkMode
+        ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
+        : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
+    }}
   >
     <div
       className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}
@@ -16,16 +21,22 @@ const HeroSection = ({ textContent, url = '#billingButtons' }) => (
       <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
         <p className="text-sm font-semibold text-primary lg:text-nowrap lg:text-lg">{textContent.label}</p>
       </div>
-      <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+      <p className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
         <HighlightText text={textContent.title} />
       </p>
-      <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.subtitle}</p>
+      <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+        {textContent.subtitle}
+      </p>
       <div className="flex flex-col items-start justify-center gap-1 lg:gap-2">
         {textContent.features.map((feat) => (
           <div key={feat} className="flex h-[24px] flex-row items-center justify-center gap-2">
             <Check className="hidden text-green-dark xs-md:block" size={24} />
             <Check className="block text-green-dark xs-md:hidden" size={20} />
-            <p className="text-left text-sm font-medium text-gray-55 xs-md:text-lg">{feat}</p>
+            <p
+              className={`text-left text-sm font-medium ${darkMode ? 'text-green-120' : 'text-gray-55'} xs-md:text-lg`}
+            >
+              {feat}
+            </p>
           </div>
         ))}
       </div>

@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { ImageAndCards } from '../shared/ImageAndCards';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ComplianceAndCertificationsProps {
   textContent: any;
@@ -11,7 +12,7 @@ interface ComplianceAndCertificationsProps {
 
 export default function ComplianceAndCertificationsSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
 }: Readonly<ComplianceAndCertificationsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,13 +66,21 @@ export default function ComplianceAndCertificationsSection({
 
   const textColorClass = darkMode ? 'text-white-95' : 'text-gray-95';
   const descriptionColorClass = darkMode ? 'text-green-120' : 'text-gray-55';
-  const bgColorClass = darkMode ? 'bg-gray-105' : 'bg-white';
+  const bgColorClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
   const buttonBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
   const buttonHoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 lg:h-min lg:gap-16 lg:py-20">
-      <div className={`absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`} />
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+      } pb-10 lg:h-min lg:gap-16 lg:py-20`}
+    >
+      <div
+        className={`absolute bottom-0 left-8 right-8 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32`}
+      />
 
       <ImageAndCards textContent={textContent} image="/images/datacenters-and-certifications/image.webp" />
 

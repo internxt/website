@@ -2,6 +2,7 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
   textContent: any;
@@ -10,7 +11,7 @@ interface HorizontalScrollableProps {
 
 export default function HorizontalScrollableSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,7 +67,11 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{ background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+          : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-start gap-8 lg:w-[850px] lg:flex-row">
         <div className="flex h-min flex-col justify-center gap-6 ">
@@ -78,9 +83,9 @@ export default function HorizontalScrollableSection({
             {textContent.title}
           </p>
           <p
-            className={`${
+            className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight ${
               darkMode ? 'text-green-120' : 'text-gray-55'
-            } text-base font-normal leading-tight text-gray-55 lg:whitespace-pre-line lg:text-xl`}
+            } lg:whitespace-pre-line lg:text-xl`}
           >
             {textContent.description}
           </p>

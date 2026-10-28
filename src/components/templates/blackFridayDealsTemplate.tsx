@@ -155,6 +155,7 @@ const BlackFridayDealsTemplate = ({
 
       <MoreDealsSection
         textContent={textContent.MoreDealsSection}
+        darkMode
         urls={config.moreDealsUrls}
         percentOff={percentOff}
       />

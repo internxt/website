@@ -1,16 +1,19 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
   textContent: any;
   darkMode?: boolean;
   isValentinesMode?: boolean;
+  bgGradient?: string;
 }
 
 export default function HorizontalScrollableSection({
   textContent,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
   isValentinesMode = false,
+  bgGradient,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollState, setScrollState] = useState({
@@ -118,8 +121,9 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        isValentinesMode ? 'bg-pink-0' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+        bgGradient ? '' : isValentinesMode ? 'bg-pink-0' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
       } pb-10 lg:h-min lg:gap-16 lg:py-20`}
+      style={bgGradient ? { background: bgGradient } : undefined}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>

@@ -21,9 +21,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudStorageForVideosProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageForVideoText;
   navbarLang: NavigationBarText;
@@ -33,6 +34,7 @@ interface CloudStorageForVideosProps {
 }
 
 const CloudStorageForVideos = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -108,53 +110,62 @@ const CloudStorageForVideos = ({
                     <p className="text-left text-sm font-medium text-white lg:text-lg lg:font-semibold ">{feat}</p>
                   </div>
                 ))}
+                </div>
+                <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
+                  {textContent.HeroSection.subtitle}{' '}
+                </p>
+                <Link
+                  href={'#billingButtons'}
+                  className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                >
+                  {textContent.HeroSection.cta}
+                </Link>
               </div>
-              <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
-                {textContent.HeroSection.subtitle}{' '}
+            </>
+          }
+          width="w-[580px] "
+          bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+        />
+
+        <FeatureSection textContent={textContent.FeaturesSection} />
+
+        <PricingSectionWrapper
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          popularPlanBySize="5TB"
+          sectionDetails={`lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
+          backgroundGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 100%, #1C1C1C 100%, )'
+              : 'linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
+          }
+          hideFreeCard
+        />
+
+        <FloatingCtaSectionv2
+          textContent={textContent.cta}
+          customText={
+            <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
+              <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {textContent.cta.subtitle}
               </p>
-              <Link
-                href={'#billingButtons'}
-                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
-              >
-                {textContent.HeroSection.cta}
-              </Link>
             </div>
-          </>
         }
-        width="w-[580px] "
-        bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
-      />
-
-      <FeatureSection textContent={textContent.FeaturesSection} />
-
-      <PricingSectionWrapper
-                textContent={textContent.tableSection}
-                decimalDiscount={{
-                    individuals: decimalDiscount,
-                    lifetime: decimalDiscountForLifetime,
-                }}
-                lifetimeCoupons={lifetimeCoupons}
-                lang={lang}
-                products={products}
-                loadingCards={loadingCards}
-                onCheckoutButtonClicked={onCheckoutButtonClicked}
-                popularPlanBySize="5TB"
-                sectionDetails="lg:py-20"
-                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
-                hideFreeCard
-                
-            />
-
-      <FloatingCtaSectionv2
-        textContent={textContent.cta}
-        customText={
-          <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
-          </div>
+          url="#billingButtons"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
-        url="#billingButtons"
-        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20 py-10"
@@ -171,10 +182,13 @@ const CloudStorageForVideos = ({
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
+              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+                {textContent.cta2.subtitle}
+              </p>
           </div>
         }
         url="#billingButtons"
+        bgGradientColor={darkMode ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)' : undefined}
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
@@ -182,7 +196,15 @@ const CloudStorageForVideos = ({
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' },
+          ]}
+      />
     </Layout>
     </>
   );

@@ -5,9 +5,10 @@ import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
-const BottomBanner = () => {
+const BottomBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
   const router = useRouter();
   const [shouldShowBanner, setShouldShowBanner] = useState(false);
 
@@ -173,7 +174,15 @@ const BottomBanner = () => {
               </p>
             </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
+              className={`flex w-max flex-row items-center justify-center space-x-4 rounded-lg ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } px-5 py-2.5 text-lg font-medium ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } transition duration-100 focus:outline-none ${
+                darkMode
+                  ? 'focus-visible:bg-gray-105 active:bg-gray-71'
+                  : 'focus-visible:bg-gray-1 active:bg-gray-10'
+              } sm:text-lg`}
               onClick={() => {
                 router.push('/pricing');
                 handleClose();

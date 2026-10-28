@@ -1,17 +1,25 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveSectionProps {
+  darkMode?: boolean;
   textContent: {
     title: string;
     description: string[];
   };
 }
 
-const DriveSection = ({ textContent }: DriveSectionProps): JSX.Element => {
+const DriveSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: DriveSectionProps): JSX.Element => {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-8 px-5 pb-10 lg:gap-16 lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80">
-      <h2 className="text-30 font-bold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+    <section
+      className={`flex w-full flex-col items-center justify-center gap-8 px-5 pb-10 lg:gap-16 lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 ${
+        darkMode ? 'bg-[#1C1C1C]' : ''
+      }`}
+    >
+      <h2 className={`text-30 font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        {textContent.title}
+      </h2>
 
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start">
         <div className="hidden w-full lg:flex lg:w-1/2">
@@ -27,7 +35,12 @@ const DriveSection = ({ textContent }: DriveSectionProps): JSX.Element => {
 
         <div className="flex w-full flex-col gap-4 lg:w-1/3">
           {textContent.description.map((desc, index) => (
-            <p key={index} className="text-base font-normal leading-tight text-gray-55 lg:text-lg">
+            <p
+              key={index}
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:text-lg`}
+            >
               {desc}
             </p>
           ))}

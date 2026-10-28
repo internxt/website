@@ -4,8 +4,10 @@ import RevealY from '@/components/components/RevealY';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const InfoSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   lang,
   withoutCta,
@@ -16,6 +18,7 @@ const InfoSection = ({
   hideCtaArrow,
   buttonComponent,
 }: {
+  darkMode?: boolean;
   textContent: any;
   lang: string;
   cards: Record<string, any>[];
@@ -26,12 +29,18 @@ const InfoSection = ({
   hideCtaArrow?: boolean;
   buttonComponent?: ReactNode;
 }) => {
+  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const bgClass2 = darkMode ? 'bg-gray-105' : 'bg-gray-1';
   return (
-    <section className={`overflow-hidden ${backgroundColor ?? ''} `}>
+    <section className={`overflow-hidden ${backgroundColor ?? (darkMode ? 'bg-[#1C1C1C]' : '')} `}>
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
-        <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
+        <div
+          className={`flex max-w-3xl flex-col items-center justify-center space-y-6 text-center ${
+            darkMode ? 'text-white-95' : 'text-black'
+          }`}
+        >
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
           {!withoutCta && (
             <Link
               href={redirect}
@@ -52,13 +61,17 @@ const InfoSection = ({
             <div
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl ${
-                backgroundColor ? 'bg-white' : 'bg-gray-1'
+                backgroundColor ? bgClass : bgClass2
               } p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
-                <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
-                <p className="text-base text-cool-gray-80 sm:text-lg">{card.description}</p>
+                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  {card.title}
+                </p>
+                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}

@@ -13,6 +13,7 @@ import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
 import HeroSection from '../deals/HeroSection';
 import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
 import MoreDealsSection from '../black-friday/MoreDealsSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DealsConfig {
   heroImage: string;
@@ -27,6 +28,7 @@ interface DealsConfig {
 }
 
 interface DealsTemplateProps {
+  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -36,6 +38,7 @@ interface DealsTemplateProps {
 }
 
 const DealsTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   lang,
@@ -90,16 +93,19 @@ const DealsTemplate = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
+  const parsePercentText = (text: string) => {
+    if (!percentOff || percentOff === '0') {
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
+    }
+    return typeof text === 'string'
+      ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
+      : text;
+  };
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection
-        percentOff={percentOff}
-        textContent={textContent.HeroSection}
-        darkMode={false}
-        image={config.heroImage}
-      />
+      <HeroSection percentOff={percentOff} textContent={textContent.HeroSection} image={config.heroImage} />
 
       {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
@@ -115,14 +121,18 @@ const DealsTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize || '2TB'}
-        sectionDetails="lg:py-20"
-        backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        sectionDetails={`lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
+        backgroundGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
       />
 
       <MoreDealsSection
         textContent={textContent.MoreDealsSection}
         urls={config.moreDealsUrls}
-        darkMode={false}
+        bgColor={darkMode ? 'bg-gray-105' : undefined}
         percentOff={percentOff}
       />
 
@@ -131,16 +141,28 @@ const DealsTemplate = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {parseDynamicText(textContent.CtaSection.title, { percentage: percentOff, discount: percentOff })}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {parseDynamicText(textContent.CtaSection.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="pb-8 lg:py-14"
       />
@@ -148,7 +170,11 @@ const DealsTemplate = ({
       <HorizontalScrollableSection
         textContent={textContent.WhyChooseInternxtSection}
         percentOff={percentOff}
-        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
         needsDivider={false}
       />
 
@@ -157,17 +183,29 @@ const DealsTemplate = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {parseDynamicText(textContent.CtaSectionV2.title, { percentage: percentOff, discount: percentOff })}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[633px] lg:text-center lg:text-xl`}
+            >
               {parseDynamicText(textContent.CtaSectionV2.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
         bgPadding="pb-8 lg:py-14"
       />
 

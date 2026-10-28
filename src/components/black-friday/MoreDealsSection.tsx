@@ -1,4 +1,5 @@
 import { CaretRight } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MoreDealsSectionProps {
   textContent: {
@@ -22,15 +23,22 @@ interface MoreDealsSectionProps {
     card2: string;
   };
   darkMode?: boolean;
+  bgColor?: string;
   percentOff: any;
 }
 
-const MoreDealsSection = ({ textContent, urls, darkMode = true, percentOff }: MoreDealsSectionProps) => {
+const MoreDealsSection = ({
+  textContent,
+  urls,
+  darkMode = DARK_MODE_ENABLED,
+  percentOff,
+  bgColor,
+}: MoreDealsSectionProps) => {
   const cards = [textContent.cards.card1, textContent.cards.card2];
   const urlsArray = [urls.card1, urls.card2];
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -38,7 +46,7 @@ const MoreDealsSection = ({ textContent, urls, darkMode = true, percentOff }: Mo
   return (
     <section
       className={`flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:gap-16 lg:py-20 xl:px-32 3xl:px-80 ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-[#F4F8FF]'
+        bgColor ?? (darkMode ? 'bg-[#1C1C1C]' : 'bg-[#F4F8FF]')
       }`}
     >
       <div

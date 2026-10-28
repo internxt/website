@@ -20,8 +20,10 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AffiliatesProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: AffiliatesText;
@@ -43,7 +45,7 @@ const InfinityIcon = () => (
   </svg>
 );
 
-const ImageAndTextRow = ({ textContent, imageUrl, alt, direction = 'right' }) => {
+const ImageAndTextRow = ({ darkMode = DARK_MODE_ENABLED, textContent, imageUrl, alt, direction = 'right' }) => {
   const containerObjDirection = direction === 'left' ? 'flex-row' : 'flex-row-reverse';
   return (
     <div className={`flex flex-col-reverse items-center justify-center gap-20 lg:${containerObjDirection}`}>
@@ -59,7 +61,9 @@ const ImageAndTextRow = ({ textContent, imageUrl, alt, direction = 'right' }) =>
         />
       </div>
       <div className="flex max-w-[388px] flex-col items-center gap-4 text-center lg:items-start lg:text-left">
-        <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
+        <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+          {textContent.title}
+        </h2>
         <RenderDescription description={textContent.description} />
       </div>
     </div>
@@ -68,7 +72,14 @@ const ImageAndTextRow = ({ textContent, imageUrl, alt, direction = 'right' }) =>
 
 const HERO_SECTION_CTA_BUTTON = 'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1';
 
-const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLang }: AffiliatesProps): JSX.Element => {
+const Affiliates = ({
+  darkMode = DARK_MODE_ENABLED,
+  langJson,
+  lang,
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+}: AffiliatesProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
 
   const groupCards = [
@@ -143,15 +154,19 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <HeroSection
         TextComponent={
           <div className="flex w-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
-            <div className="flex w-max items-center rounded-lg bg-gray-5 px-4 py-2">
-              <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.label}</p>
+            <div className={`flex w-max items-center rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-gray-5'} px-4 py-2`}>
+              <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {langJson.HeroSection.label}
+              </p>
             </div>
             <div className="flex w-full max-w-[533px] flex-col space-y-8">
-              <h1 className="text-6xl font-semibold leading-tight">
+              <h1 className={`text-6xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
                 <span className="text-primary">{langJson.HeroSection.title.blueText}</span>
                 {langJson.HeroSection.title.normalText}
               </h1>
-              <p className="text-xl leading-tight text-gray-80">{langJson.HeroSection.description}</p>
+              <p className={`text-xl leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                {langJson.HeroSection.description}
+              </p>
 
               <div className="flex flex-row items-center justify-center gap-4 pb-8 lg:items-start lg:justify-start">
                 <button
@@ -167,7 +182,9 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
                   href={IMPACT_LOGIN_USER}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10"
+                  className={`flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 ${
+                    darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
+                  }`}
                 >
                   <p className="text-lg font-medium text-primary">{langJson.HeroSection.logIn}</p>
                 </Link>
@@ -188,13 +205,21 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <TextAndImageColumnSection
         TextComponent={
           <div className="flex max-w-[750px] flex-col space-y-6 text-center">
-            <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <p
+              className={`text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-3xl`}
+            >
               {langJson.WhatIsInternxtSection.title}
             </p>
-            <p className="text-xl font-medium leading-tight text-gray-100 lg:text-2xl">
+            <p
+              className={`text-xl font-medium leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-2xl`}
+            >
               {langJson.WhatIsInternxtSection.subtitle}
             </p>
-            <p className="text-lg leading-tight text-gray-80 lg:text-xl">
+            <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
               {langJson.WhatIsInternxtSection.description}
             </p>
           </div>
@@ -212,10 +237,18 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <p
+              className={`text-30 font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-3xl`}
+            >
               {langJson.WhatWeDoSection.title}
             </p>
-            <p className="max-w-[796px] text-lg leading-tight text-gray-80 lg:text-xl">
+            <p
+              className={`max-w-[796px] text-lg leading-tight ${
+                darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+              } lg:text-xl`}
+            >
               {langJson.WhatWeDoSection.description}
             </p>
           </div>
@@ -224,9 +257,11 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       />
 
       <ComponentsInColumnSection
-        backgroundColor="bg-gray-1"
+        backgroundColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
         FirstComponent={
-          <p className="text-center text-30 font-semibold text-gray-100 lg:text-3xl">
+          <p
+            className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}
+          >
             {langJson.CommissionStructureSection.title}
           </p>
         }
@@ -282,15 +317,21 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
                 <p className="whitespace-nowrap text-30 font-semibold leading-tight text-primary lg:text-3xl">
                   {feature.title}
                 </p>
-                <p className="text-base font-medium text-gray-80 lg:text-xl">{feature.description}</p>
+                <p className={`text-base font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
         }
       />
 
-      <div className="flex flex-col items-center justify-center gap-12 bg-gray-1 px-5 py-20 text-center">
-        <h2 className="text-30 font-semibold lg:text-3xl">
+      <div
+        className={`flex flex-col items-center justify-center gap-12 ${
+          darkMode ? 'bg-gray-105' : 'bg-gray-1'
+        } px-5 py-20 text-center`}
+      >
+        <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
           {langJson.Number1Section.title.line1}{' '}
           <span className="text-primary">{langJson.Number1Section.title.blue} </span>
           {langJson.Number1Section.title.line2}

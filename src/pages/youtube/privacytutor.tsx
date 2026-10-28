@@ -14,8 +14,10 @@ import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyTutorProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -25,6 +27,7 @@ interface PrivacyTutorProps {
 }
 
 function PrivacyTutor({
+  darkMode = DARK_MODE_ENABLED,
   langJson,
   lang,
   metatagsDescriptions,
@@ -79,7 +82,7 @@ function PrivacyTutor({
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -124,9 +127,13 @@ function PrivacyTutor({
         loadingCards={false}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="5TB"
-        sectionDetails={`lg:py-20`}
+        sectionDetails={`lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
         hideFreeCard
-        backgroundGradientColor='linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        backgroundGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
       />
 
       <FeaturesSection
@@ -140,24 +147,40 @@ function PrivacyTutor({
           textContent={langJson.ctaSection}
           customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              }  lg:text-center lg:text-xl`}
+            >
               {parsePercentText(langJson.ctaSection.description)}
             </p>
           </div>
         }
           url="#billingButtons"
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor='linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
         />
 
       <HorizontalScrollableSection 
         textContent={langJson.NextGenSection}
-        bgGradient='linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
+        bgGradient={
+          darkMode
+            ? 'linear-gradient(180deg, #0D0D0D 80%, #1C1C1C 100%)'
+            : 'linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
+        }
       />
 
       <Footer textContent={footerLang} lang={lang} />

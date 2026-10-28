@@ -14,8 +14,10 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudWardsProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -23,7 +25,14 @@ interface CloudWardsProps {
   lang: string;
 }
 
-function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
+function Cloudwards({
+  darkMode = DARK_MODE_ENABLED,
+  langJson,
+  lang,
+  metatagsDescriptions,
+  footerLang,
+  navbarLang,
+}: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
 
   const {
@@ -41,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -106,7 +115,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20"
+        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
       />
 
@@ -115,10 +124,18 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[698px] lg:text-center lg:text-xl`}
+            >
               {parsePercentText(langJson.ctaSection.description)}
             </p>
           </div>
@@ -126,7 +143,11 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pY-20 pb-20"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor={
+          darkMode
+            ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
+            : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+        }
       />
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} />
@@ -136,17 +157,25 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+            <p
+              className={`text-2xl font-semibold leading-tight ${
+                darkMode ? 'text-white-95' : 'text-gray-95'
+              } lg:text-4xl`}
+            >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+            <p
+              className={`text-base font-normal leading-tight ${
+                darkMode ? 'text-green-120' : 'text-gray-55'
+              } lg:w-[698px] lg:text-center lg:text-xl`}
+            >
               {parsePercentText(langJson.ctaSection2.description)}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20 pb-10 bg-neutral-17"
+        bgPadding={`lg:py-20 pb-10 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
       />
 
       <Footer textContent={footerLang} lang={lang} />

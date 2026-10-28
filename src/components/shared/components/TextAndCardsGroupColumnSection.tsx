@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
 import { CardGroup } from '../CardGroup';
 import { Icon } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TextAndCardGroupColumnSectionProps {
+  darkMode?: boolean;
   TextComponent: ReactNode;
   cards: { icon: Icon; title: string; description: string }[];
   backgroundColorForCard?: string;
@@ -11,10 +13,11 @@ interface TextAndCardGroupColumnSectionProps {
 }
 
 export const TextAndCardsGroupColumnSection = ({
+  darkMode = DARK_MODE_ENABLED,
   TextComponent,
   cards,
   backgroundColorForCard,
-  background,
+  background = darkMode ? 'bg-[#1C1C1C]' : '',
   textCardColor
 }: TextAndCardGroupColumnSectionProps) => {
   return (

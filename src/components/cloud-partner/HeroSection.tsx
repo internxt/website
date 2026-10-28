@@ -2,21 +2,29 @@ import { CloudPartnerText } from '@/assets/types/cloud-partner';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: CloudPartnerText['HeroSection'];
 }
 
-export default function HeroSection({ textContent }: HeroSectionProps): JSX.Element {
+export default function HeroSection({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionProps): JSX.Element {
   return (
     <div
       className="mt-20 flex flex-row items-center justify-between pb-8 pt-20 lg:mt-16 lg:px-10 xl:px-32 3xl:px-80"
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex flex-col gap-8">
         <span className="flex flex-col gap-4">
           <p className="text-2xl font-semibold text-primary lg:text-4xl">{textContent.title}</p>
-          <p className="text-xl font-semibold text-gray-95 lg:text-2xl">{textContent.description}</p>
+          <p className={`text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-2xl`}>
+            {textContent.description}
+          </p>
         </span>
         <Link
           href={'#contactSalesForm'}

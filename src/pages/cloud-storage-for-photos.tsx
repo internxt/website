@@ -16,9 +16,10 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
-
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: CloudStorageForPhotosText;
   navbarLang: NavigationBarText;
@@ -29,6 +30,7 @@ interface PrivacyProps {
 }
 
 const CloudStorageBackupSolutions = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -122,7 +124,7 @@ const CloudStorageBackupSolutions = ({
         <FeaturesSlider
           textContent={textContent.FeaturesSection}
           cardInfo={cardInfo}
-          backgroundClass="bg-white lg:bg-gray-1"
+          backgroundClass={`${darkMode ? 'bg-[#1C1C1C] lg:bg-gray-105' : 'bg-white lg:bg-gray-1'}`}
         />
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} />

@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 interface ComparisonHeaderProps {
+  darkMode?: boolean;
   textContent: any;
   redirectUrl: string;
   maxWithForTitle?: string;
@@ -15,7 +17,7 @@ const CodeComponent = ({ textContent }) => (
   </div>
 );
 
-export const ComparisonHeader = ({ textContent, redirectUrl }: ComparisonHeaderProps) => (
+export const ComparisonHeader = ({ darkMode = DARK_MODE_ENABLED, textContent, redirectUrl }: ComparisonHeaderProps) => (
   <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 pt-[130px] text-white">
     <div className="relative z-10 mb-16 flex flex-col items-center justify-center space-y-4 md:mb-8">
       <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>
@@ -30,7 +32,11 @@ export const ComparisonHeader = ({ textContent, redirectUrl }: ComparisonHeaderP
         href={redirectUrl}
         rel="noopener noreferrer"
         id="get-started-link"
-        className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto"
+        className={`flex w-full items-center justify-center rounded-lg border border-transparent ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } px-6 py-2 text-lg font-medium text-primary ${
+          darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
+        } focus:outline-none sm:inline-flex sm:w-auto`}
       >
         {textContent.cta}
       </Link>

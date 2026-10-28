@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const GraphComponent = ({
+  darkMode = DARK_MODE_ENABLED,
   price,
   priceLabel,
   background,
@@ -12,6 +14,7 @@ const GraphComponent = ({
   srcImg,
   altImg,
 }: {
+  darkMode?: boolean;
   price: number;
   priceLabel: number;
   background: string;
@@ -21,13 +24,14 @@ const GraphComponent = ({
   srcImg?: string;
   altImg?: string;
 }): JSX.Element => {
+  const bgClass = darkMode ? 'bg-gray-105 text-white-95' : 'bg-gray-5 text-gray-100';
   return (
     <div
       className={`relative flex h-48 w-16 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
     >
       <div
         className={`${
-          isBlueLabel ? 'bg-orange text-white' : 'bg-gray-5 text-gray-100'
+          isBlueLabel ? 'bg-orange text-white' : bgClass
         } z-40 flex w-24 items-center justify-center rounded-full px-2 py-1 text-xs font-semibold sm:max-w-[113px] sm:text-sm`}
       >
         <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
@@ -45,7 +49,7 @@ const GraphComponent = ({
   );
 };
 
-export const SlidersComparsion = ({ textContent }): JSX.Element => {
+export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
 
@@ -111,19 +115,23 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
   }
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-10 py-10">
+    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-10 py-10`}>
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
+          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </h2>
+          <h3 className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</h3>
         </div>
 
         {/* Cards */}
         <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-6 px-10 sm:min-w-[1115px] md:flex-row">
           <div className="flex w-full flex-col gap-2">
             {/* Pricing */}
-            <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
-              <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
+            <div className={`flex w-full flex-col gap-4 rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-9`}>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent['pay-as-you-go']}
+              </p>
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
                 <p className="text-5xl font-semibold text-orange">
@@ -141,8 +149,10 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
             </div>
 
             {/* Sliders */}
-            <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
-              <p className="font-medium text-gray-100">{textContent.storageAmount}</p>
+            <div className={`flex w-full flex-col gap-4 rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-9`}>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent.storageAmount}
+              </p>
               {/* Storage amount slider */}
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider
@@ -152,12 +162,20 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                   valueLabelFormat={storageAmountValueLabelFormat}
                   color="orange"
                 />
-                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
-                  <p className="font-medium text-gray-100">{storageAmountValue}TB</p>
+                <div
+                  className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
+                    darkMode ? 'border-gray-71' : 'border-gray-10'
+                  } px-4 py-2.5`}
+                >
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {storageAmountValue}TB
+                  </p>
                 </div>
               </div>
               {/* Percent download slider */}
-              <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
+              <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                {textContent.percentDownloadPerMonth}
+              </p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider
                   min={1}
@@ -166,15 +184,21 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                   valueLabelFormat={percentDownloadValueLabelFormat}
                   color="orange"
                 />
-                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
-                  <p className="font-medium text-gray-100">{percentDownloadValue}%</p>
+                <div
+                  className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
+                    darkMode ? 'border-gray-71' : 'border-gray-10'
+                  } px-4 py-2.5`}
+                >
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {percentDownloadValue}%
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Graphs (Comparison) */}
-          <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
+          <div className={`flex w-full flex-col rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-9 py-10`}>
             <div className="flex h-full flex-row flex-wrap justify-center gap-12">
               <div className="flex flex-col items-center gap-2">
                 <GraphComponent

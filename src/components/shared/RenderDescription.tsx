@@ -1,7 +1,16 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const RenderDescription = ({ description, fontSize }: { description: string[]; fontSize?: string }): JSX.Element => {
+const RenderDescription = ({
+  darkMode = DARK_MODE_ENABLED,
+  description,
+  fontSize,
+}: {
+  darkMode?: boolean;
+  description: string[];
+  fontSize?: string;
+}): JSX.Element => {
   useEffect(() => {
     const renderDescriptionComponent = document.querySelector('#render-description-section');
     const links = document.querySelectorAll('a');
@@ -20,7 +29,9 @@ const RenderDescription = ({ description, fontSize }: { description: string[]; f
       {description.map((item) => (
         <ReactMarkdown
           key={item}
-          className={`${fontSize ? fontSize : 'text-base font-normal leading-tight lg:text-lg'} text-gray-55`}
+          className={`${fontSize ? fontSize : 'text-base font-normal leading-tight lg:text-lg'} ${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          }`}
         >
           {item}
         </ReactMarkdown>

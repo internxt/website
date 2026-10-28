@@ -4,12 +4,16 @@ import PriceCard from '@/components/prices/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { Interval, TransformedProduct } from '@/services/stripe.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
+export default function PriceTable({
+  darkMode = DARK_MODE_ENABLED,
+  lang,
+}: Readonly<{ darkMode?: boolean; lang: string }>) {
   const { products, currency, loadingCards } = usePricing();
 
   return (
-    <section id="priceTable" className="">
+    <section id="priceTable" className={` ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center">
         <Transition
           show={loadingCards}

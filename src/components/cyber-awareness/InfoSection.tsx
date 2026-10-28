@@ -12,8 +12,9 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const InfoCard = ({ id, title, title1, img, link }) => {
+export const InfoCard = ({ darkMode = DARK_MODE_ENABLED, id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);
   return (
     <Link
@@ -26,7 +27,9 @@ export const InfoCard = ({ id, title, title1, img, link }) => {
         if ((e.target as any).id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(null)}
-      className={`${'flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white p-8'} 
+      className={`flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+      } p-8 
         `}
     >
       <img key={id} src={img} alt={`${title}`} width={32} height={32} />

@@ -1,6 +1,7 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Detective, File, FileZip, LockSimple, Tray, UploadSimple } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FirstBold = ({ text, className = '' }) => {
   if (!text) return null;
@@ -12,7 +13,7 @@ const FirstBold = ({ text, className = '' }) => {
   );
 };
 
-export const FeaturesSection = ({ textContent, bannerText, lang }) => {
+export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
   const cards = [
     {
       icon: File,
@@ -47,34 +48,47 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
         <SignUpBanner textContent={bannerText} lang="en" />
 
         <div className="flex max-w-[966px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
-            <p className="pb-8 text-2xl font-medium text-gray-100">{textContent.inxtFileCompressor.title}</p>
+            <p className={`pb-8 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.inxtFileCompressor.title}
+            </p>
             <RenderDescription description={textContent.inxtFileCompressor.description} />
           </div>
 
           <div className="flex flex-col space-y-3">
-            <p className="text-center text-2xl font-medium text-gray-100">{textContent.howUseFileCompressor.title}</p>
+            <p className={`text-center text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.howUseFileCompressor.title}
+            </p>
             <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-3">
               {textContent.howUseFileCompressor.steps.map((feature, idx) => (
                 <div
                   key={feature.step}
-                  className="flex w-[256px] flex-col items-start gap-6 rounded-xl bg-gray-1 p-6 shadow-md"
+                  className={`flex w-[256px] flex-col items-start gap-6 rounded-xl ${
+                    darkMode ? 'bg-gray-105' : 'bg-gray-1'
+                  } p-6 shadow-md`}
                 >
                   <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
-                  <FirstBold text={feature.description} className="text-base text-gray-80" />
+                  <FirstBold
+                    text={feature.description}
+                    className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                  />
                 </div>
               ))}
             </div>
           </div>
 
           <div className="flex flex-col">
-            <p className="pb-8 text-2xl font-medium text-gray-100">{textContent.whyUseFileCompressor.title}</p>
-            <p className="text-lg text-gray-80">{textContent.whyUseFileCompressor.description}</p>
+            <p className={`pb-8 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.whyUseFileCompressor.title}
+            </p>
+            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.whyUseFileCompressor.description}
+            </p>
           </div>
         </div>
 
@@ -82,14 +96,20 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 shadow-lg transition-shadow duration-300 hover:shadow-xl sm:p-10 md:max-w-[488px]"
+              className={`flex flex-col items-start justify-start rounded-2xl ${
+                darkMode ? 'bg-gray-105' : 'bg-gray-1'
+              } p-8 shadow-lg transition-shadow duration-300 hover:shadow-xl sm:p-10 md:max-w-[488px]`}
             >
               <div className="flex w-full max-w-[388px] flex-col">
                 <div className="flex w-full flex-row items-center justify-between">
-                  <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
+                  <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    {card.title}
+                  </p>
                   <card.icon className="mb-6 text-4xl text-primary" size={32} />
                 </div>
-                <p className="text-base text-gray-80 sm:text-lg">{card.description}</p>
+                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-lg`}>
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}

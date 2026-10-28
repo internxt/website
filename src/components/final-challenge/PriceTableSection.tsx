@@ -3,6 +3,7 @@ import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PREMIUM_STORAGE = '2TB';
 const ULTIMATE_STORAGE = '5TB';
@@ -22,6 +23,7 @@ export interface PriceTableText {
 }
 
 interface PriceTableSectionProps {
+  darkMode?: boolean;
   textContent: PriceTableText;
   products: ProductsDataProps | undefined;
   loadingCards: boolean;
@@ -31,6 +33,7 @@ interface PriceTableSectionProps {
 }
 
 export const PriceTableSection = ({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   products,
   loadingCards,
@@ -67,8 +70,10 @@ export const PriceTableSection = ({
           {textContent.planTitles.header}
         </p>
 
-        <div className="flex h-[38px] w-[212px] flex-row rounded-lg bg-neutral-90/10">
-          <div className="m-1 flex w-full flex-row items-center justify-center rounded-lg bg-white text-lg font-semibold text-primary shadow-sm">
+        <div className={`flex h-[38px] w-[212px] flex-row rounded-lg ${darkMode ? 'bg-gray-80' : 'bg-neutral-90/10'}`}>
+          <div
+            className={`m-1 flex w-full flex-row items-center justify-center rounded-lg bg-white text-lg font-semibold text-primary shadow-sm`}
+          >
             {textContent.billingFrequency.lifetime}
           </div>
         </div>

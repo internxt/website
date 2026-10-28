@@ -3,6 +3,7 @@ import moment from 'moment';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Loader = (): JSX.Element => {
   return (
@@ -24,10 +25,12 @@ const Loader = (): JSX.Element => {
 };
 
 export const NoMessageSelected = ({
+  darkMode = DARK_MODE_ENABLED,
   messagesLength,
   textContent,
   onRefreshButtonClicked,
 }: {
+  darkMode?: boolean;
   messagesLength: number;
   textContent: any;
   onRefreshButtonClicked: () => void;
@@ -52,14 +55,18 @@ export const NoMessageSelected = ({
       </div>
       <div className="flex flex-col items-center space-y-8 px-5">
         <div className="flex flex-col items-center text-center">
-          <p className="text-base font-medium text-gray-100">
+          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {messages ? withoutMessagesSentence : withMessagesSentence}
           </p>
 
-          <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-50'}`}>
+            {messages ? textContent.waitingEmail : textContent.selectMessage}
+          </p>
         </div>
         <button
-          className="flex w-max flex-row space-x-2 rounded-lg border border-gray-10 px-5 py-2.5 shadow-sm"
+          className={`flex w-max flex-row space-x-2 rounded-lg border ${
+            darkMode ? 'border-gray-71 text-white-95' : 'border-gray-10'
+          } px-5 py-2.5 shadow-sm`}
           onClick={() => {
             onRefreshButtonClicked();
             setIsRefreshIconAnimated(true);
@@ -74,9 +81,11 @@ export const NoMessageSelected = ({
 };
 
 export const MessageSelected = ({
+  darkMode = DARK_MODE_ENABLED,
   item,
   textContent,
 }: {
+  darkMode?: boolean;
   item: Record<string, any>;
   textContent: any;
 }): JSX.Element => {
@@ -86,7 +95,10 @@ export const MessageSelected = ({
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
       <div className="flex w-full flex-col space-y-2">
-        <p title={item.subject} className="line-clamp-3 text-xl font-medium text-gray-100">
+        <p
+          title={item.subject}
+          className={`line-clamp-3 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+        >
           {item.subject ? item.subject : textContent.noSubject}
         </p>
         <div className="flex flex-row space-x-2">
@@ -94,7 +106,10 @@ export const MessageSelected = ({
             <p className="truncate text-lg text-primary">{name}</p>
           </div>
           <div className="flex w-full flex-col pr-10">
-            <p title={item.from} className="truncate text-sm font-medium text-gray-80">
+            <p
+              title={item.from}
+              className={`truncate text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+            >
               {item.from}
             </p>
             <p title={date} className="text-xs">
@@ -103,9 +118,9 @@ export const MessageSelected = ({
           </div>
         </div>
       </div>
-      <div className="flex w-full border border-gray-5" />
+      <div className={`flex w-full border ${darkMode ? 'border-gray-71' : 'border-gray-5'}`} />
       <div dangerouslySetInnerHTML={{ __html: item.html }} className="flex w-full flex-col" />
-      <div className="flex w-full border border-gray-5" />
+      <div className={`flex w-full border ${darkMode ? 'border-gray-71' : 'border-gray-5'}`} />
     </div>
   );
 };

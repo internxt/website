@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TextAndImageColumnSectionProps {
+  darkMode?: boolean;
   TextComponent: ReactNode;
   imageProperties: {
     src: string;
@@ -14,9 +16,10 @@ interface TextAndImageColumnSectionProps {
 }
 
 export const TextAndImageColumnSection = ({
+  darkMode = DARK_MODE_ENABLED,
   TextComponent,
   imageProperties,
-  background,
+  background = darkMode ? 'bg-[#1C1C1C]' : '',
 }: TextAndImageColumnSectionProps): JSX.Element => {
   const { src, alt, width, height, className } = imageProperties;
 

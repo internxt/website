@@ -20,8 +20,10 @@ import { Interval } from '@/services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface PriceCardProps {
+  darkMode?: boolean;
   planType: string;
   storage: string;
   price: number;
@@ -57,6 +59,7 @@ const STORAGE_LEVELS = {
 };
 
 export default function PriceCard({
+  darkMode = DARK_MODE_ENABLED,
   planType,
   storage,
   price,
@@ -80,6 +83,8 @@ export default function PriceCard({
   isPcComponentes5tb = false,
   trialToken,
 }: Readonly<PriceCardProps>): JSX.Element {
+  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
+  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -392,12 +397,14 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
+      className={`${popular ? 'border-primary ring-[3px]' : `ring-1 ${ringClass}`} flex ${
         isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[400px] lg:h-[850px] '
       } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl ${
+          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        } p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -423,10 +430,14 @@ export default function PriceCard({
         >
           <div
             className={`priceBreakdown flex flex-row
-              items-end space-x-px text-neutral-700
+              items-end space-x-px ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}
             `}
           >
-            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
+            <p
+              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              }`}
+            >
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
                 {isFreePlan ? `${contentText.freePlan}` : isPcComponentes ? discountPCComponentes : formattedPrice}
@@ -468,14 +479,18 @@ export default function PriceCard({
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+              : `border-primary text-primary ${hoverClass}`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
       </div>
 
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
+      <div
+        className={`featureList flex flex-col border-t ${
+          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
+        } pb-6 text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+      >
         {isOffer ? (
           <>
             <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
@@ -512,7 +527,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className="text-gray-80">{feature}</span>
+                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
               </div>
             ))
           ) : isPcComponentes ? (
@@ -525,7 +540,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className="text-gray-80">{feature}</span>
+                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
               </div>
             ))
           ) : (
@@ -541,7 +556,7 @@ export default function PriceCard({
                       className: 'text-primary',
                     },
                   )}
-                  <span className={'text-gray-80'}>
+                  <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>
                     {feature}
                     {index > 9 ? (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">

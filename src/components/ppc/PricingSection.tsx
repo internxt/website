@@ -7,6 +7,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/ppc/FreePlanCard';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -51,7 +52,7 @@ export const PricingSection = ({
   popularPlanBySize = '2TB',
   onPlanTypeChange,
   onCheckoutButtonClicked,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   differentRecommended = true,
   hideFeatures,
   showPromo,

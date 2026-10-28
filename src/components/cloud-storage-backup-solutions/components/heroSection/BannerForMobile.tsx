@@ -4,8 +4,9 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from "next/image";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const BannerForMobile = () => {
+export const BannerForMobile = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../../../assets/lang/${lang}/cloud-storage-backup-solutions.json`);
@@ -15,11 +16,13 @@ export const BannerForMobile = () => {
   return (
     <div className="flex flex-col items-center justify-center lg:hidden">
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className="text-center text-5xl font-bold text-gray-100">
+        <p className={`text-center text-5xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
-        <p className="text-center pt-4 text-xl">
-              <span className="text-gray-100">{textContent.HeroSection.TitleAndOnePlanV2.description}</span>
+        <p className="pt-4 text-center text-xl">
+          <span className={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.HeroSection.TitleAndOnePlanV2.description}
+          </span>
             </p>
         <button
           onClick={handleOnClick}

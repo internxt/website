@@ -2,10 +2,11 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ImportanceSection = ({ textContent, ctaLink }) => {
+const ImportanceSection = ({ darkMode = DARK_MODE_ENABLED, textContent, ctaLink }) => {
   return (
-    <section className="overflow-hidden px-5">
+    <section className={`overflow-hidden px-5 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16">
         <div>
           <div

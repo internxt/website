@@ -10,8 +10,10 @@ import HeroSection from '@/components/cloud-partner/HeroSection';
 import FeatureSection from '@/components/cloud-partner/FeatureSection';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import AccordionSection from '@/components/cloud-partner/AccordionSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudPartnerProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudPartnerText;
@@ -21,6 +23,7 @@ interface CloudPartnerProps {
 }
 
 const CloudPartner = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescription,
   navbarText,
   textContent,
@@ -44,7 +47,7 @@ const CloudPartner = ({
 
       <ThreeCardsIconsSection
         textContent={textContent.ThreeCardsSection}
-        cardColor="bg-white"
+        cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
         bottomSeparationBar
         topSeparationBar
       />

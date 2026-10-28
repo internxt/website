@@ -1,7 +1,15 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import RevealX from '@/components/components/RevealX';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' }) => {
+const FeaturesSlider = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  cardInfo,
+  backgroundClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
+}) => {
+  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
+  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [cardIndex, setCardIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const isScrollingRef = useRef(false);
@@ -39,10 +47,14 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
     <section className={`overflow-hidden ${backgroundClass}`}>
       <section className="flex flex-col items-center justify-center space-y-12 px-5 py-20 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
+          <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+            {textContent.title}
+          </h2>
 
           <div className="flex flex-col">
-            <p className="text-lg leading-tight text-gray-80">{textContent.description}</p>
+            <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.description}
+            </p>
           </div>
         </div>
       </section>
@@ -56,23 +68,27 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
             <Fragment key={info.title}>
               <button
                 className={`flex ${
-                  cardIndex === index ? 'border-primary' : 'border-gray-10'
+                  cardIndex === index ? 'border-primary' : borderClass
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8 transition-all duration-500 ease-in-out`}
                 onClick={() => setCardIndex(index)}
               >
                 <info.icon className="mr-2 text-primary" size={32} />
                 <h3
                   className={`text-left text-2xl font-medium transition-colors duration-500 ${
-                    cardIndex === index ? 'text-primary' : 'text-gray-100 hover:text-primary'
+                    cardIndex === index ? 'text-primary' : `${textClass} hover:text-primary`
                   }`}
                 >
                   {info.title}
                 </h3>
               </button>
-              <div className="h-8 border-r-4 border-gray-10 pr-8 transition-all duration-500">
+              <div
+                className={`h-8 border-r-4 ${
+                  darkMode ? 'border-gray-71' : 'border-gray-10'
+                } pr-8 transition-all duration-500`}
+              >
                 <div
                   className={`border-r-4 pr-8 transition-all duration-500 ${
-                    index === cardIndex ? 'border-primary' : 'border-gray-10'
+                    index === cardIndex ? 'border-primary' : borderClass
                   }`}
                 />
               </div>
@@ -85,8 +101,14 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6 opacity-100 transition-opacity duration-700">
                 <DescriptionIcon className="text-primary transition-all duration-500" size={64} />
-                <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <p className="font-regular text-base leading-relaxed text-gray-80 sm:text-lg md:text-xl">
+                <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  {cardInfo[cardIndex].title}
+                </p>
+                <p
+                  className={`font-regular text-base leading-relaxed ${
+                    darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                  } sm:text-lg md:text-xl`}
+                >
                   {Array.isArray(cardInfo[cardIndex].description)
                     ? cardInfo[cardIndex].description.map((line, index) => (
                         <span key={index}>
@@ -107,19 +129,26 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
         {cardInfo.map((info) => (
           <div
             key={info.title}
-            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 transition-all duration-500 sm:p-10 md:max-w-[488px]"
+            className={`flex flex-col items-start justify-start rounded-2xl ${
+              darkMode ? 'bg-gray-105' : 'bg-gray-1'
+            } p-8 transition-all duration-500 sm:p-10 md:max-w-[488px]`}
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col space-y-4">
-              <p className="text-2xl font-medium text-gray-100">{info.title}</p>
+              <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{info.title}</p>
               {Array.isArray(info.description) ? (
                 info.description.map((line, index) => (
-                  <p key={index} className="text-base text-cool-gray-80 sm:text-lg">
+                  <p
+                    key={index}
+                    className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
+                  >
                     {line}
                   </p>
                 ))
               ) : (
-                <p className="text-base text-cool-gray-80 sm:text-lg">{info.description}</p>
+                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                  {info.description}
+                </p>
               )}
             </div>
           </div>

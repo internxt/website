@@ -13,8 +13,10 @@ import FeaturesSection from '@/components/drive/FeaturesSection';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import TrustedSection from '@/components/home/TrustedSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface UltimateAnnualTemplateProps {
+  darkMode?: boolean;
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -23,7 +25,8 @@ export interface UltimateAnnualTemplateProps {
   couponCodeForLifetime?: PromoCodeName;
 }
 
-export const UltimateAnnualTemplate = ({ 
+export const UltimateAnnualTemplate = ({
+    darkMode = DARK_MODE_ENABLED,
     metatagsDescriptions,
     langJson,
     lang, 
@@ -49,7 +52,7 @@ export const UltimateAnnualTemplate = ({
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
 
         {ultimatePlan && (
-          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24" id="priceCard">
+          <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`} id="priceCard">
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
               storage={ultimatePlan.storage}

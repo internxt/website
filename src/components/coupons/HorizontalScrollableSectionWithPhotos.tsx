@@ -2,8 +2,13 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { DARK_MODE_ENABLED } from '@/theme.config';
+
+const SECTION_GRADIENT_DARK = 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)';
+const SECTION_GRADIENT_LIGHT = 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)';
 
 interface HorizontalScrollableSectionWithPhotosProps {
+  darkMode?: boolean;
   textContent: any;
   bgColor?: any;
   TitleTag?: React.ElementType;
@@ -11,11 +16,13 @@ interface HorizontalScrollableSectionWithPhotosProps {
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
+  darkMode = DARK_MODE_ENABLED,
   textContent,
   bgColor,
   TitleTag = 'p',
   TitleCardTag = 'p',
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
@@ -90,17 +97,22 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   };
 
   const maxIndex = getMaxIndex();
+  const sectionGradient = darkMode ? SECTION_GRADIENT_DARK : SECTION_GRADIENT_LIGHT;
 
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{
-        background: bgColor ? '' : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      style={{ background: bgColor ? bgColor : sectionGradient }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <TitleTag className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</TitleTag>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <TitleTag
+          className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+        >
+          {textContent.title}
+        </TitleTag>
+        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+          {textContent.description}
+        </p>
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
@@ -124,8 +136,14 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             {cardTitles.map((title: string, index: number) => (
               <div key={title} className="flex-1 flex-shrink-0 flex-col items-center justify-between">
                 <div className="flex h-min w-[345px] flex-col px-6 pb-2 pt-6 lg:w-[350px] lg:px-0 lg:pb-8">
-                  <TitleCardTag className="pb-6 text-xl font-medium text-gray-95">{title}</TitleCardTag>
-                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
+                  <TitleCardTag className={`pb-6 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+                    {title}
+                  </TitleCardTag>
+                  <p
+                    className={`flex flex-1 whitespace-pre-line text-base font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    }`}
+                  >
                     {cardDescriptions[index]}
                   </p>
                 </div>
@@ -147,8 +165,10 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -156,8 +176,10 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

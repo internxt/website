@@ -3,16 +3,25 @@ import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FirstFeaturesSection = ({ textContent, lang }) => {
+const FirstFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
   return (
-    <section className="overflow-hidden bg-white py-20">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-20`}>
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center gap-8">
-          <div className="flex w-full max-w-3xl flex-col items-center gap-6 px-6 text-center font-semibold text-black">
+          <div
+            className={`flex w-full max-w-3xl flex-col items-center gap-6 px-6 text-center font-semibold ${
+              darkMode ? 'text-white-95' : 'text-black'
+            }`}
+          >
             <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
-            <h3 className="max-w-3xl text-xl font-semibold text-gray-100">{textContent.subtitle}</h3>
-            <p className="text-xl font-normal text-gray-80">{textContent.description}</p>
+            <h3 className={`max-w-3xl text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              {textContent.subtitle}
+            </h3>
+            <p className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              {textContent.description}
+            </p>
           </div>
 
           <Link

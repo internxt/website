@@ -12,8 +12,10 @@ import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LifetimeSpecialProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -23,6 +25,7 @@ interface LifetimeSpecialProps {
 }
 
 function LifetimeSpecial({
+  darkMode = DARK_MODE_ENABLED,
   langJson,
   lang,
   metatagsDescriptions,
@@ -47,7 +50,7 @@ function LifetimeSpecial({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
     }
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
@@ -114,7 +117,7 @@ function LifetimeSpecial({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           hidePlanSelectorComponent={true}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
           SectionTag={'h2'}
         />
@@ -126,8 +129,18 @@ function LifetimeSpecial({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
+                {ctaText}
+              </h2>
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[698px] lg:text-center lg:text-xl`}
+              >
                 {langJson.ctaSection.description}
               </p>
             </div>
@@ -135,7 +148,11 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20 pb-20"
-          bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
 
         <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
@@ -145,10 +162,18 @@ function LifetimeSpecial({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:px-40 lg:text-4xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:px-40 lg:text-4xl`}
+              >
                 {langJson.ctaSection2.title}
               </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[698px] lg:text-center lg:text-xl`}
+              >
                 {ctaText2}
               </p>
             </div>
@@ -156,7 +181,11 @@ function LifetimeSpecial({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-10"
-          bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />

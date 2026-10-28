@@ -12,8 +12,10 @@ import { PromoCodeName } from '@/lib/types';
 import HeroSection from '@/components/refer-a-friend/HeroSection';
 import RewardSection from '@/components/refer-a-friend/RewardSection';
 import HowItWorksSection from '@/components/refer-a-friend/HowItWorksSection';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ReferAFriendProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -22,6 +24,7 @@ interface ReferAFriendProps {
 }
 
 const ReferAFriendPage = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   textContent,
   lang,
@@ -94,7 +97,11 @@ const ReferAFriendPage = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        backgroundGradientColor="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+        backgroundGradientColor={
+          darkMode
+            ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+            : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
+        }
       />
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} />

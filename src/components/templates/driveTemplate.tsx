@@ -23,6 +23,7 @@ import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -30,6 +31,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface DriveTemplateProps {
+  darkMode?: boolean;
   textContent: DriveText;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -53,6 +55,7 @@ export interface DriveTemplateProps {
 }
 
 export const DriveTemplate = ({
+  darkMode = DARK_MODE_ENABLED,
   metatagsDescriptions,
   download,
   textContent,
@@ -140,13 +143,17 @@ export const DriveTemplate = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="2TB"
-            sectionDetails="bg-white lg:py-20 xl:py-32"
+            sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           />
         )}
 
         <HorizontalScrollableSection
           textContent={textContent.EncryptedCloudStorageSection}
-          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
           needsH2
           needsH3
         />
@@ -159,7 +166,11 @@ export const DriveTemplate = ({
 
         <ThreeCardsSection
           textContent={textContent.MadeInEuropeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgColor={
+            darkMode
+              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
+              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+          }
         />
 
         <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
@@ -169,10 +180,18 @@ export const DriveTemplate = ({
           url={'/pricing'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <h2
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
                 {textContent.CtaSection.title}
               </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
                 {textContent.CtaSection.description}
               </p>
             </div>
@@ -188,13 +207,21 @@ export const DriveTemplate = ({
 
         <ReviewsSection
           textContent={textContent.ReviewSection}
-          bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgColor={
+            darkMode
+              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
         />
 
         <FAQSection
           textContent={textContent.FaqSection}
           needsH3
-          bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradient={
+            darkMode
+              ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
         />
 
         <RelationalLinks textContent={relationalLinksText} />

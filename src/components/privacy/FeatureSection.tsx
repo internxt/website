@@ -1,7 +1,8 @@
 import { Eye, Fingerprint, Globe, LockKey, ShieldCheck, UserCircle } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ textContent }) => {
+const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
   const cards = [
     {
       icon: Eye,
@@ -36,22 +37,30 @@ const FeatureSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden px-5">
+    <section className={`overflow-hidden px-5 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </p>
+          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap gap-8 sm:grid-cols-2">
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
+              className={`flex flex-col items-start justify-start rounded-2xl ${
+                darkMode ? 'bg-gray-105' : 'bg-gray-1'
+              } p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[408px] flex-col">
-                <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
-                <p className="text-base text-gray-80 sm:text-lg">{card.description}</p>
+                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  {card.title}
+                </p>
+                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-lg`}>
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}

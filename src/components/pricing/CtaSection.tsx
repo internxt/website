@@ -1,7 +1,16 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
+const CtaSection = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  freePlan,
+}: {
+  darkMode?: boolean;
+  textContent: any;
+  freePlan?: boolean;
+}) => {
   return (
     <section className="overflow-hidden bg-primary py-14">
       <div className="flex flex-col items-center justify-center space-y-8 px-5 text-center">
@@ -10,7 +19,9 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
           <p className="w-full max-w-[570px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className={`flex rounded-lg ${
+            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+          } px-5 py-3 text-lg font-medium text-primary ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
           onClick={() => {
             freePlan
               ? goToSignUpURL()

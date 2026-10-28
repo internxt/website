@@ -18,8 +18,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface NASPageProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -28,7 +30,15 @@ interface NASPageProps {
   relationalLinksText: any;
 }
 
-const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang, relationalLinksText }: NASPageProps): JSX.Element => {
+const QNAPNASPage = ({
+  darkMode = DARK_MODE_ENABLED,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+  relationalLinksText,
+}: NASPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'nas-qnap');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -80,7 +90,7 @@ const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, foot
             { name: textContent.Breadcrumbs.home, url: '/' }, 
             { name: textContent.Breadcrumbs.drive, url: '/drive' }, 
             { name: textContent.Breadcrumbs.nas, url: '/nas' },
-            { name: textContent.Breadcrumbs.qnap, url: '/nas/qnap' }
+            { name: textContent.Breadcrumbs.qnap, url: '/nas/qnap' },
         ])}
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
@@ -103,7 +113,7 @@ const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, foot
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
+                sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
                 hideFreeCard
         />
 
@@ -112,17 +122,25 @@ const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, foot
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
               {textContent.ctaSection.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
               {textContent.ctaSection.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="bg-neutral-17 px-10"
+        bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
       />
 
       <HorizontalScrollableSection
@@ -140,16 +158,28 @@ const QNAPNASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, foot
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p
+                className={`text-2xl font-semibold leading-tight ${
+                  darkMode ? 'text-white-95' : 'text-gray-95'
+                } lg:text-4xl`}
+              >
               {textContent.ctaSectionV2.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p
+                className={`text-base font-normal leading-tight ${
+                  darkMode ? 'text-green-120' : 'text-gray-55'
+                } lg:w-[633px] lg:text-center lg:text-xl`}
+              >
               {textContent.ctaSectionV2.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradientColor={
+            darkMode
+              ? 'linear-gradient(0deg, #1C1C1C 0%, #0D0D0D 100%)'
+              : 'linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)'
+          }
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:pb-20"
       />

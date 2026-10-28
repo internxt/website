@@ -1,16 +1,19 @@
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ExploreOurOSS = ({ textContent, download }) => {
+const ExploreOurOSS = ({ darkMode = DARK_MODE_ENABLED, textContent, download }) => {
   const description = textContent.description.split('GitHub');
   const GitHub = textContent.description.substr(textContent.description.indexOf('GitHub') - 0, 6);
 
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
         <div className="flex max-w-[914px] flex-col space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-          <div className="text-xl text-gray-80">
+          <p className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            {textContent.title}
+          </p>
+          <div className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {description[0]}
             <button
               className="cursor-pointer underline hover:no-underline"

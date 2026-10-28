@@ -14,6 +14,7 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const URL_REDIRECT = '/pricing';
 
@@ -33,6 +34,7 @@ export interface WhatDoesGoogleKnowAboutMeTemplateProps {
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
   robots?: string;
+  darkMode?: boolean;
 }
 
 export const WhatDoesGoogleKnowAboutMeTemplate = ({
@@ -46,6 +48,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
   couponCode = PromoCodeName.seolp,
   couponCodeForLifetime = PromoCodeName.seolp,
   robots,
+  darkMode = DARK_MODE_ENABLED,
 }: WhatDoesGoogleKnowAboutMeTemplateProps): JSX.Element => {
   const metatags = metatagsDescription.find((desc) => desc.id === 'what-google-knows');
   const lang = locale as string;
@@ -118,7 +121,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20 xl:py-32"
+          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           freePlanNeedsH2
         />
 

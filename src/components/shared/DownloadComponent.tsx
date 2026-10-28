@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DownloadLinks {
   Android: string;
@@ -33,6 +34,7 @@ interface TextContent {
 }
 
 interface DownloadComponentProps {
+  darkMode?: boolean;
   textContent: TextContent;
   lang: string;
   download: DownloadLinks;
@@ -86,21 +88,28 @@ const DownloadLink: React.FC<{
   </a>
 );
 
-const SecondaryLink: React.FC<{
-  href: string;
-  children: React.ReactNode;
-}> = ({ href, children }) => (
-  <a className="font-medium text-gray-80 underline hover:no-underline" href={href} target="_blank" rel="noreferrer">
+const SecondaryLink: React.FC<{ darkMode?: boolean; href: string; children: React.ReactNode }> = ({
+  darkMode = DARK_MODE_ENABLED,
+  href,
+  children,
+}) => (
+  <a
+    className={`font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} underline hover:no-underline`}
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+  >
     {children}
   </a>
 );
 
 const SecondaryDownloads: React.FC<{
+  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ OS, textContent, download, isChinese }) => {
+}> = ({ darkMode = DARK_MODE_ENABLED, OS, textContent, download, isChinese }) => {
   const getSecondaryPlatforms = () => {
     switch (OS) {
       case 'MacOS':
@@ -121,7 +130,7 @@ const SecondaryDownloads: React.FC<{
   const { first, second } = platforms;
 
   return (
-    <div className="text-lg font-semibold text-gray-80">
+    <div className={`text-lg font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
       {isChinese ? (
         <>
           {textContent.orDownloadFor.split('<>')[0]}
@@ -141,14 +150,17 @@ const SecondaryDownloads: React.FC<{
 };
 
 const DesktopSection: React.FC<{
+  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ OS, textContent, download, isChinese }) => (
+}> = ({ darkMode = DARK_MODE_ENABLED, OS, textContent, download, isChinese }) => (
   <div className="flex flex-1 flex-grow flex-row justify-end">
     <div className="flex flex-col items-center gap-6">
-      <p className="text-3xl font-medium text-black lg:text-30">{textContent.Desktop}</p>
+      <p className={`text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+        {textContent.Desktop}
+      </p>
       <DownloadLink href={download[OS]}>
         {formatTextWithPlaceholder(textContent.downloadFor, textContent[OS], isChinese)}
       </DownloadLink>
@@ -158,9 +170,14 @@ const DesktopSection: React.FC<{
   </div>
 );
 
-const WebSection: React.FC<{ textContent: TextContent }> = ({ textContent }) => (
+const WebSection: React.FC<{ darkMode?: boolean; textContent: TextContent }> = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+}) => (
   <div className="flex flex-col items-center justify-between">
-    <p className="pb-6 text-3xl font-medium text-black lg:text-30">{textContent.Web}</p>
+    <p className={`pb-6 text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+      {textContent.Web}
+    </p>
     <a
       className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex"
       href="https://drive.internxt.com/app"
@@ -205,16 +222,19 @@ const MobileBadges: React.FC<{
 };
 
 const MobileSection: React.FC<{
+  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ OS, textContent, download, isChinese }) => {
+}> = ({ darkMode = DARK_MODE_ENABLED, OS, textContent, download, isChinese }) => {
   const showAppleFirst = OS === 'MacOS';
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <p className="text-3xl font-medium text-black lg:text-30">{textContent.Mobile}</p>
+      <p className={`text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+        {textContent.Mobile}
+      </p>
 
       {showAppleFirst ? (
         <>
@@ -222,7 +242,7 @@ const MobileSection: React.FC<{
             {formatTextWithPlaceholder(textContent.downloadOnThe, textContent.iPhone, isChinese)}
           </DownloadLink>
 
-          <div className="text-lg font-semibold text-gray-80">
+          <div className={`text-lg font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {isChinese ? (
               <>
                 {textContent.orGetOn.split('<>')[0]}{' '}
@@ -248,7 +268,7 @@ const MobileSection: React.FC<{
             <CaretRight size={16} weight="bold" />
           </a>
 
-          <div className="text-base font-semibold text-gray-80">
+          <div className={`text-base font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {isChinese ? (
               <>
                 {textContent.orDownloadOnThe.split('<>')[0]}{' '}
@@ -267,7 +287,12 @@ const MobileSection: React.FC<{
   );
 };
 
-const DownloadComponent: React.FC<DownloadComponentProps> = ({ textContent, lang, download }) => {
+const DownloadComponent: React.FC<DownloadComponentProps> = ({
+  darkMode = DARK_MODE_ENABLED,
+  textContent,
+  lang,
+  download,
+}) => {
   const router = useRouter();
   const [OS, setOS] = useState<OSType>('');
   const isChinese = router.locale === 'zh';
@@ -277,9 +302,19 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ textContent, lang
   }, []);
 
   return (
-    <section className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex">
-      <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
-      <p className="text-center text-2xl font-semibold text-gray-100 lg:text-4xl">{textContent.downloadTitle}</p>
+    <section
+      className={`hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex ${
+        darkMode ? 'bg-[#1C1C1C]' : ''
+      }`}
+    >
+      <div
+        className={`absolute ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]`}
+      />
+      <p className={`text-center text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-4xl`}>
+        {textContent.downloadTitle}
+      </p>
 
       <div className="flex w-full flex-row items-center justify-between px-5 lg:items-start lg:px-10 xl:px-32 3xl:px-80 ">
         {!isMobile && (

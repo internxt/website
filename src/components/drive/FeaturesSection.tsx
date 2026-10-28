@@ -7,6 +7,7 @@ import DownloadComponent from '@/components/shared/DownloadComponent';
 import * as anim from '../../../public/js/anim';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface FeatureSectionProps {
   textContent: any;
@@ -21,7 +22,7 @@ const FeaturesSection = ({
   lang,
   download,
   showLastSection = true,
-  darkMode = false,
+  darkMode = DARK_MODE_ENABLED,
 }: FeatureSectionProps): JSX.Element => {
   return (
     <section className={`${darkMode ? 'bg-[#1C1C1C] py-10 lg:py-20' : 'bg-white'} flex w-full flex-col`}>
@@ -234,8 +235,16 @@ const FeaturesSection = ({
         </div>
 
         {showLastSection && (
-          <div className="flex w-full flex-col items-center bg-gray-1 px-10 py-10 lg:px-0 lg:py-20">
-            <h3 className="mb-12 text-center text-4xl font-semibold text-gray-100 lg:text-5xl">
+          <div
+            className={`flex w-full flex-col items-center ${
+              darkMode ? 'bg-gray-105' : 'bg-gray-1'
+            } px-10 py-10 lg:px-0 lg:py-20`}
+          >
+            <h3
+              className={`mb-12 text-center text-4xl font-semibold ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } lg:text-5xl`}
+            >
               {textContent.section6.title.line1} <br className="hidden sm:flex" />
               {textContent.section6.title.line2}
             </h3>
