@@ -66,11 +66,7 @@
     "title": "Por qué necesitas una alternativa a IDrive",
     "description": "Internxt ofrece almacenamiento de objetos S3 europeo y cumple con múltiples normativas para ofrecer total privacidad y seguridad a empresas.",
     "cards": {
-      "titles": [
-        "Configuración compleja",
-        "Costes ocultos e impredecibles",
-        "Descargas caras"
-      ],
+      "titles": ["Configuración compleja", "Costes ocultos e impredecibles", "Descargas caras"],
       "descriptions": [
         "Configurar el almacenamiento en IDrive implica navegar por múltiples paneles y sistemas de seguridad. Los usuarios deben gestionar manualmente roles, reglas de acceso y cifrado. Tareas simples a menudo requieren conocimientos técnicos, lo que hace que la plataforma sea difícil para principiantes y ralentiza el desarrollo.",
         "IDrive cobra por separado por almacenamiento, solicitudes, transferencia de datos, supervisión, copias de seguridad y funciones de seguridad. Estas pequeñas tarifas se acumulan rápidamente y son difíciles de rastrear. Cualquier aumento en el tráfico o en el uso puede provocar grandes picos de facturación, haciendo que el presupuesto a largo plazo sea poco fiable para las empresas.",
@@ -130,12 +126,7 @@
     "title": "Por qué Internxt S3 es la mejor alternativa a IDrive",
     "description": "El almacenamiento de objetos en la nube de Internxt ofrece almacenamiento S3 asequible para acceso rápido a grandes cantidades de datos.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Almacenamiento seguro y duradero",
         "Acceso instantáneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

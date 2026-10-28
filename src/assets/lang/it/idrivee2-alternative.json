@@ -66,11 +66,7 @@
     "title": "Perché hai bisogno di un'alternativa a IDrive",
     "description": "Internxt offre archiviazione a oggetti S3 europea ed è conforme a molteplici normative di conformità per offrire privacy e sicurezza totali alle aziende.",
     "cards": {
-      "titles": [
-        "Configurazione complessa",
-        "Costi nascosti e imprevedibili",
-        "Download costosi"
-      ],
+      "titles": ["Configurazione complessa", "Costi nascosti e imprevedibili", "Download costosi"],
       "descriptions": [
         "L'installazione dell'archiviazione su IDrive implica la navigazione attraverso molteplici pannelli di controllo e sistemi di sicurezza. Gli utenti devono gestire manualmente ruoli, regole di accesso e crittografia. Semplici compiti spesso richiedono conoscenze tecniche, rendendo la piattaforma difficile per i principianti e rallentando lo sviluppo.",
         "IDrive addebita separatamente archiviazione, richieste, traffico dati, monitoraggio, backup e funzioni di sicurezza. Queste piccole commissioni si accumulano rapidamente e sono difficili da tenere traccia. Qualsiasi aumento del traffico o dell'uso può causare picchi importanti di fatturazione, rendendo inaffidabile il budget a lungo termine per le aziende.",
@@ -130,12 +126,7 @@
     "title": "Perché Internxt S3 è la migliore alternativa a IDrive",
     "description": "L'archiviazione a oggetti cloud di Internxt offre un'archiviazione S3 conveniente per l'accesso rapido a grandi quantitativi di dati.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Archiviazione sicura e duratura",
         "Accesso istantaneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -230,11 +221,7 @@
       "cta": "Scegli il piano",
       "whatsIncluded": {
         "title": "Cosa c'è",
-        "features": [
-          "Tariffazione o pagamenti al mese",
-          "Server crittografato",
-          "IAM e AWS S3 simili o compatibili"
-        ]
+        "features": ["Tariffazione o pagamenti al mese", "Server crittografato", "IAM e AWS S3 simili o compatibili"]
       }
     },
     "oneTimePayment": "*€1 per confermare un conto sicuro"

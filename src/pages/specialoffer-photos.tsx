@@ -120,8 +120,6 @@ function SpecialOffer({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
         popularPlanBySize="5TB"
         startFromStorage='Ultimate'
         sectionDetails="bg-white lg:py-20"

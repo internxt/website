@@ -3,11 +3,7 @@
     "label": "QNAP NAS",
     "title": "Backup em nuvem do QNAP NAS para o **Internxt Drive**",
     "subtitle": "Proteja e faça backup dos seus arquivos com o Internxt Drive e o QNAP",
-    "features": [
-      "Backup em nuvem NAS para QNAP",
-      "Transferências seguras",
-      "Sincronização e backups criptografados"
-    ],
+    "features": ["Backup em nuvem NAS para QNAP", "Transferências seguras", "Sincronização e backups criptografados"],
     "cta": "Obtenha o Internxt"
   },
   "WhatIsNASSection": {
@@ -60,11 +56,7 @@
     "title": "O que o Internxt oferece com suporte ao QNAP NAS",
     "description": "O Internxt oferece suporte NAS para QNAP para fazer upload, sincronizar, compartilhar e fazer backup dos seus arquivos na nuvem para protegê-los contra perda de dados e ransomware.",
     "cards": {
-      "titles": [
-        "QNAP",
-        "Acesso de qualquer dispositivo",
-        "Proteção contra ransomware"
-      ],
+      "titles": ["QNAP", "Acesso de qualquer dispositivo", "Proteção contra ransomware"],
       "descriptions": [
         "O suporte NAS do Internxt para QNAP é executado por meio da imagem Docker da CLI do Internxt. O Internxt se integra ao QNAP NAS via aplicativo Docker, permitindo a conexão com ferramentas de backup padrão como Hyper Backup ou métodos de sincronização em nível de arquivo, possibilitando que os usuários enviem dados do NAS diretamente para o armazenamento em nuvem criptografado do Internxt para backup externo e recuperação de desastres. Essa integração simplifica os backups, mantendo o controle total do seu fluxo de trabalho existente e adicionando armazenamento em nuvem seguro com criptografia de conhecimento zero Kyber-512 e AES-256 do Internxt.",
         "O acesso remoto criptografado permite que você acesse com segurança os mesmos arquivos na nuvem de qualquer dispositivo com o Internxt instalado. Os aplicativos para web, Windows, macOS, Linux, iOS e Android descriptografam seus arquivos localmente usando sua própria chave, para que somente você possa ver seus dados. Isso mantém tudo em um lugar seguro para o seu NAS, computador ou telefone.",
@@ -76,21 +68,13 @@
     "title": "Configure os backups em nuvem do seu QNAP NAS",
     "description": "Você pode configurar os backups em nuvem do seu QNAP NAS em três etapas usando nossos tutoriais detalhados do nosso GitHub de código aberto para guiá-lo em cada etapa.",
     "cards": {
-      "titles": [
-        "ReadMe",
-        "Guia do usuário",
-        "Código aberto"
-      ],
+      "titles": ["ReadMe", "Guia do usuário", "Código aberto"],
       "descriptions": [
         "O ReadMe explica como conectar seu dispositivo NAS ao aplicativo Docker para começar a usar o Internxt Drive e o NAS QNAP com o comando Docker run, portas necessárias, montagens de volumes e outros controles de segurança adicionais.",
         "No QNAP, instale o Docker (ou o Container Manager no DSM 7.2+), obtenha a imagem do Internxt, configure as variáveis de ambiente para sua conta e adicione o ponto de montagem como destino do Hyper Backup. Você pode encontrar instruções mais detalhadas em nosso centro de ajuda.",
         "O repositório da CLI do Internxt em github.com/internxt/cli contém todos os arquivos do cliente que o contêiner Docker executa e as notas de lançamento de cada versão. O armazenamento em nuvem de código aberto do Internxt e todos os seus produtos são de código aberto e transparentes, e a segurança de criptografia ou manipulação de chaves pode ser verificada a partir da nossa base de código publicamente disponível."
       ],
-      "cta": [
-        "Ler guia",
-        "Saiba mais",
-        "Ver detalhes"
-      ]
+      "cta": ["Ler guia", "Saiba mais", "Ver detalhes"]
     }
   },
   "ctaSectionV2": {
@@ -139,7 +123,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

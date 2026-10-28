@@ -150,8 +150,6 @@ export const CloudStorageForDocumentsTemplate = ({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
           popularPlanBySize="5TB"
           sectionDetails="bg-neutral-17 lg:py-20"
           hideFreeCard

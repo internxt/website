@@ -79,7 +79,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Coupons', url: '/coupons' }])}
+        {sm_breadcrumb_list([
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Coupons', url: '/coupons' },
+        ])}
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
@@ -97,9 +101,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards
-        hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="2TB"
         sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
@@ -153,7 +155,15 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Coupons', url: '/coupons' }]} />
+      <Footer
+        textContent={footerLang}
+        lang={locale}
+        breadcrumbItems={[
+          { name: 'Encrypted Cloud Storage', url: '/' },
+          { name: 'Secure cloud storage', url: '/drive' },
+          { name: 'Internxt Coupons', url: '/coupons' },
+        ]}
+      />
     </Layout>
   );
 };

@@ -105,7 +105,7 @@ function LifetimeSpecial({
         segmentName="Lifetime"
         lang={lang}
         specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-        robots='noindex,follow'
+        robots="noindex,follow"
       >
         <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
@@ -122,10 +122,8 @@ function LifetimeSpecial({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
           hidePlanSelectorComponent={true}
-          popularPlanBySize="3TB"
+          popularPlanBySize="2TB"
           sectionDetails="bg-white lg:py-20"
           hideFreeCard
           SectionTag={'h2'}

@@ -49,7 +49,7 @@
     "cta": "Aceitar convite"
   },
   "ctaSection2": {
-    "title": "Entre os planos vitalícios da Internxt: qual devo escolher? 1TB, 3TB ou 5TB?",
+    "title": "Entre os planos vitalícios da Internxt: qual devo escolher? 1TB, 2TB ou 5TB?",
     "description": "Todos os nossos planos oferecem tudo o que você precisa para armazenar seus arquivos de forma privada na nuvem. Se você quer privacidade completa, gerenciamento avançado da nuvem e todos os recursos da Internxt, como Meet e Mail, o plano Ultimate de 5TB é a melhor escolha para controle total e máxima privacidade.",
     "descriptionWithoutDisocunt": "Experimente a privacidade digital completa com a Internxt",
     "cta": "Escolher plano"
@@ -94,7 +94,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

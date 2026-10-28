@@ -45,7 +45,7 @@ const PriceTable = ({
   showOffer,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
-  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '5TB' : '3TB';
+  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '5TB' : '2TB';
   const [specialCoupons, setSpecialCoupons] = useState();
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({

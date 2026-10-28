@@ -53,27 +53,16 @@ const Pricing = ({
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
-  const {
-    activeSwitchPlan,
-    activeStoragePlan,
-    activeBusinessStoragePlan,
-    billingFrequency,
-    businessBillingFrequency,
-    onPlanTypeChange,
-    onStorageChange,
-    onBusinessStorageChange,
-    onIndividualSwitchToggled,
-    onBusinessSwitchToggled,
-  } = usePlanSelection('Lifetime', 'Premium', 'Pro', Interval.Lifetime, Interval.Year, setPageName);
+  const { activeSwitchPlan, activeStoragePlan, billingFrequency, onPlanTypeChange, onStorageChange } = usePlanSelection(
+    'Lifetime',
+    'Premium',
+    Interval.Lifetime,
+    setPageName,
+  );
 
-  const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
-  const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
-
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
+  const infoText = textContent.InfoSection;
+  const faqSection = textContent.FaqSection;
 
   const onCheckoutButtonClicked = async (
     priceId: string,
@@ -129,25 +118,16 @@ const Pricing = ({
           products={products}
           loadingCards={loadingCards}
           handlePageNameUpdate={setPageName}
-          onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
-          hideBusinessCards
-          hideBusinessSelector
-          hideSwitchSelector
-          popularPlanBySize="3TB"
+          popularPlanBySize="2TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
           sectionDetails="py-10 lg:py-20 lg:pt-32"
           overrideBillingFrequency={billingFrequency}
-          overrideBusinessBillingFrequency={businessBillingFrequency}
           overrideActiveSwitchPlan={activeSwitchPlan}
           overrideActiveStoragePlan={activeStoragePlan}
-          overrideActiveBusinessStoragePlan={activeBusinessStoragePlan}
           overrideOnPlanTypeChange={onPlanTypeChange}
           overrideOnStorageChange={onStorageChange}
-          overrideOnBusinessStorageChange={onBusinessStorageChange}
-          overrideOnIndividualSwitchToggled={onIndividualSwitchToggled}
-          overrideOnBusinessSwitchToggled={onBusinessSwitchToggled}
           SectionTag={'h1'}
         />
 

@@ -66,11 +66,7 @@
     "title": "Por qué necesitas una alternativa a AWS",
     "description": "Lo que AWS demuestra en seguridad, falla en términos de privacidad. Para una privacidad completa, obtén seguridad total combinada con encriptación de conocimiento cero de Internxt.",
     "cards": {
-      "titles": [
-        "Configuración compleja",
-        "Costes ocultos e impredecibles",
-        "Descargas caras"
-      ],
+      "titles": ["Configuración compleja", "Costes ocultos e impredecibles", "Descargas caras"],
       "descriptions": [
         "Configurar el almacenamiento en AWS implica navegar por múltiples paneles y sistemas de seguridad. Los usuarios deben gestionar manualmente los roles, reglas de acceso y regiones. A menudo requiere conocimientos técnicos, dificultando la plataforma para principiantes y ralentizando el desarrollo.",
         "Amazon AWS cobra por separado el almacenamiento, las peticiones, la transferencia de datos, la monitorización, las copias de seguridad y la seguridad. Estas pequeñas tarifas se acumulan rápidamente y son difíciles de rastrear. Cualquier aumento en el tráfico puede causar grandes picos en la factura, haciendo que el presupuesto a largo plazo no sea fiable.",
@@ -130,12 +126,7 @@
     "title": "Por qué Internxt es la mejor alternativa a AWS",
     "description": "Internxt Drive ofrece un paquete de productos diseñados para devolverte el control de tu privacidad online.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Almacenamiento seguro y duradero",
         "Acceso instantáneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

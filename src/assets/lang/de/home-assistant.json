@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "Sicherer Cloud-Speicher für Ihre **Home Assistant-Backups**",
     "description": "Automatisierte Offsite-Backups mit Zero-Knowledge-Verschlüsselung. In Europa entwickelt für maximale Privatsphäre und Datenkontrolle.",
-    "features": [
-      "Planen Sie Ihre Backups",
-      "Gesichert auf mehreren Servern",
-      "Open-Source und geprüft"
-    ],
+    "features": ["Planen Sie Ihre Backups", "Gesichert auf mehreren Servern", "Open-Source und geprüft"],
     "guarantee": "30-Tage-Geld-zurück-Garantie",
     "claimDeal": "Angebot sichern"
   },
@@ -14,31 +10,19 @@
     "title": "Made in Europe",
     "description": "Ihre Daten sind durch strenge europäische Datenschutzgesetze und -bestimmungen in Kombination mit preisgekrönter Verschlüsselung geschützt.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Europäische Rechenzentren",
-        "Redundanz",
-        "Engagement für Nachhaltigkeit "
-      ],
+      "titles": ["Europäische Rechenzentren", "Redundanz", "Engagement für Nachhaltigkeit "],
       "descriptions": [
         "Internxt hat seinen Sitz in Valencia, Spanien, und unsere Rechenzentren befinden sich in Europa und anderen Standorten weltweit. Sie bieten Ihnen Sicherheit, Geschwindigkeit und Konformität.",
         "Ihre Dateien sind durch redundante Systeme, Umweltkontrollen und eine 24/7-Sicherheitsüberwachung vor Ort geschützt. Egal was passiert, Ihre Dateien bleiben immer sicher und zugänglich.",
         "Internxt geht mit gutem Beispiel voran und setzt sich durch energieeffiziente Praktiken für eine sauberere und nachhaltigere Cloud-Speicherlösung ein."
       ],
-      "cta": [
-        "Mehr erfahren",
-        "",
-        "Mehr erfahren"
-      ]
+      "cta": ["Mehr erfahren", "", "Mehr erfahren"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +31,7 @@
   "ThreeCardsSection": {
     "title": "Kernwerte",
     "cards": {
-      "titles": [
-        "Zero-Knowledge-Verschlüsselung",
-        "Zuverlässige Wiederherstellung",
-        "Privatsphäre an erster Stelle"
-      ],
+      "titles": ["Zero-Knowledge-Verschlüsselung", "Zuverlässige Wiederherstellung", "Privatsphäre an erster Stelle"],
       "descriptions": [
         "Ende-zu-Ende-Verschlüsselung auf Client-Seite. Ihre Konfigurationsdateien und API-Schlüssel bleiben streng vertraulich.",
         "Bewahren Sie eine sichere Offsite-Kopie Ihrer HA-Snapshots für den Fall von Hardwarefehlern oder Update-Problemen auf.",
@@ -63,11 +43,7 @@
     "title": "Hauptmerkmale unseres sicheren Cloud-Speichers",
     "description": "Vollständige Sicherheit für Ihre Daten – alles, was Sie brauchen, um Ihre Dateien sicher und vertraulich zu halten",
     "accordionCards": {
-      "titles": [
-        "Ein vollständig privates Ökosystem",
-        "Sichere Zusammenarbeit",
-        "Ihre Cloud wie ein lokales Laufwerk"
-      ],
+      "titles": ["Ein vollständig privates Ökosystem", "Sichere Zusammenarbeit", "Ihre Cloud wie ein lokales Laufwerk"],
       "descriptions": [
         "Internxt bündelt verschlüsselten Speicher, Backups, VPN, Antivirus, Cleaner, Meet, Mail & mehr – alles, um sich von Big Tech zu befreien.",
         "Senden Sie Dateien mit verschlüsselten Links, Passwörtern und Zugriffskontrollen. Arbeiten Sie in Echtzeit mit Ihrem Team zusammen und halten Sie Daten vertraulich.",
@@ -75,11 +51,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "Ende-zu-Ende verschlüsselt",
-        "Zugriffskontrollen",
-        "Verschlüsselte Backups"
-      ],
+      "titles": ["Ende-zu-Ende verschlüsselt", "Zugriffskontrollen", "Verschlüsselte Backups"],
       "descriptions": [
         "Alle Dateien werden mit Post-Quanten- und Zero-Knowledge-Verschlüsselung verschlüsselt. Niemand außer Ihnen oder den Personen, mit denen Sie Dateien teilen, kann den Inhalt sehen.",
         "Sie steuern genau, wer auf Ihre geteilten Dateien zugreifen kann – mit verschlüsselten, passwortgeschützten Links, die Sie jederzeit widerrufen können.",
@@ -128,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

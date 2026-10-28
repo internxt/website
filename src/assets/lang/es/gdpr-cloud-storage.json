@@ -104,7 +104,7 @@
     "description": "Protege y almacena tu información de forma segura y confidencial",
     "cta": "Elige tu plan"
   },
-    "tableSection": {
+  "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
     "valentinesTitle": "Amor seguro - ",
@@ -145,7 +145,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

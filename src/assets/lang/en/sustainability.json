@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Renewables",
         "description": "This refers to the percentage of Renewable Energy Factor (REF) rates used in our data centers.",
-        "value": "92%",
+        "value": "100%",
         "unit": "REF"
       }
     }

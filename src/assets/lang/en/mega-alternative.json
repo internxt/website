@@ -118,7 +118,7 @@
           },
           {
             "title": "Subscription based",
-            "description": "68% more expensive for a 3TB annual plan, and no lifetime plans are available."
+            "description": "68% more expensive for a 2TB annual plan, and no lifetime plans are available."
           }
         ]
       }
@@ -161,7 +161,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

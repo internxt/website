@@ -48,12 +48,7 @@
     "title": "為什麼您需要 Avira 的替代方案",
     "description": "Avira 是保護裝置的選擇之一，但如果您追求極限隱私，Internxt 就是您需要的 Avira 替代方案。憑藉更高的安全性，Internxt 能更穩妥地保護您的檔案。",
     "scrollableSection": {
-      "titles": [
-        "收集遙測數據",
-        "缺乏透明度",
-        "被 NortonLifeLock 收購",
-        "效能影響"
-      ],
+      "titles": ["收集遙測數據", "缺乏透明度", "被 NortonLifeLock 收購", "效能影響"],
       "descriptions": [
         "Avira 預設收集遙測數據以分析軟體使用情況。儘管聲稱數據是匿名的，但收集系統資訊仍可能威脅到追求絕對匿名的資深用戶的隱私。",
         "由於不是開源軟體，Avira 不允許公眾審計其代碼，無法核實其處理檔案的具體細節，用戶只能盲目信任其公司政策。",
@@ -66,11 +61,7 @@
     "title": "核心功能",
     "description": "",
     "cards": {
-      "titles": [
-        "領先的加密技術",
-        "開源且經過審計",
-        "靈活的方案"
-      ],
+      "titles": ["領先的加密技術", "開源且經過審計", "靈活的方案"],
       "descriptions": [
         "Internxt 採用零知識加密和後量子加密，確保除您之外無人能存取檔案。數據在上傳前已在本地完成加密。",
         "Internxt 完全開源並接受第三方獨立審計，確保無任何後門或隱形監控，透明度極高。",
@@ -130,22 +121,8 @@
     "title": "為什麼 Internxt 是 Avira 的最佳替代",
     "description": "Internxt 突破了傳統安全軟體的局限，為您提供面向現代世界的全方位隱私套件。",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "全方位保護"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "全方位保護"],
       "descriptions": [
         "具備零知識加密的雲端儲存，讓您的個人文檔獲得絕對的安全保障。",
         "在不犧牲隱私、不收集多餘數據的前提下，掃描裝置中的潛在威脅。",
@@ -183,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,27 +176,19 @@
       },
       {
         "question": "Internxt 終身方案包含哪些內容？",
-        "answer": [
-          "一次性付款即可永久使用選定的儲存容量，包含 Drive, VPN, Antivirus 和 Cleaner 等功能。"
-        ]
+        "answer": ["一次性付款即可永久使用選定的儲存容量，包含 Drive, VPN, Antivirus 和 Cleaner 等功能。"]
       },
       {
         "question": "我可以同時使用 Internxt 和 Avira 嗎？",
-        "answer": [
-          "可以，您可以使用 Internxt Drive 安全儲存檔案的同時，保留您現有的防毒軟體。"
-        ]
+        "answer": ["可以，您可以使用 Internxt Drive 安全儲存檔案的同時，保留您現有的防毒軟體。"]
       },
       {
         "question": "我的數據保存在哪裡？",
-        "answer": [
-          "您的數據會在本地加密並切片儲存在歐盟境內的伺服器上，嚴苛遵循 GDPR 規範。"
-        ]
+        "answer": ["您的數據會在本地加密並切片儲存在歐盟境內的伺服器上，嚴苛遵循 GDPR 規範。"]
       },
       {
         "question": "如何遷移我的檔案？",
-        "answer": [
-          "非常簡單：下載 Internxt 應用，然後直接拖拽檔案即可。幾分鐘內即可完成加密和安全上傳。"
-        ]
+        "answer": ["非常簡單：下載 Internxt 應用，然後直接拖拽檔案即可。幾分鐘內即可完成加密和安全上傳。"]
       }
     ]
   }

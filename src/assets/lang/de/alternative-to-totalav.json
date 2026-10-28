@@ -66,11 +66,7 @@
     "title": "Warum Sie eine TotalAV-Alternative brauchen",
     "description": "TotalAV ist nur eine Option zum Schutz Ihres Geräts vor Malware. Für echte Privatsphäre und eine komplette Produktpalette wechseln Sie zu Internxt für eine vollständige TotalAV-Alternative mit Drive, Cleaner und mehr.",
     "cards": {
-      "titles": [
-        "Open-Source und geprüft",
-        "Komplette Produktpalette",
-        "Erschwingliche Pläne"
-      ],
+      "titles": ["Open-Source und geprüft", "Komplette Produktpalette", "Erschwingliche Pläne"],
       "descriptions": [
         "Internxt ist vollständig Open-Source und wird unabhängig geprüft, sodass Sie sicher sein können, dass es keine Hintertüren zu Ihren Daten gibt und Ihre Informationen transparent verwaltet werden.",
         "Internxt bietet Cleaner und ein komplettes Datenschutz-Ökosystem, um Junk-Dateien zu entfernen, Dateien mit Zero-Knowledge-Verschlüsselung zu speichern und zu teilen sowie weitere Vorteile wie VPN, Meet, Mail und mehr.",
@@ -130,20 +126,8 @@
     "title": "Warum Internxt die beste TotalAV-Alternative ist",
     "description": "Internxt Drive bietet eine umfassende Produktpalette, die Ihnen die Kontrolle über Ihre Online-Privatsphäre zurückgibt.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Fortgeschrittene Tools"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Fortgeschrittene Tools"],
       "descriptions": [
         "Internxt Antivirus ist direkt in Ihre Internxt Drive App integriert und schützt vor Malware. Führen Sie vollständige oder benutzerdefinierte Virenscans durch, um Ihr Gerät vor Ransomware oder Spyware zu schützen.",
         "Internxts VPN schützt Ihr Surfen, blockiert Werbung und Tracker und hält Ihren Standort privat. Verschlüsseln Sie Ihre WLAN-Verbindung, um Spionage, Hacker und Identitätsdiebstahl zu verhindern.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -203,9 +187,7 @@
       },
       {
         "question": "Wo hat Internxt seinen Sitz?",
-        "answer": [
-          "Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."
-        ]
+        "answer": ["Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."]
       },
       {
         "question": "Ist TotalAV teurer als Internxt?",
@@ -215,9 +197,7 @@
       },
       {
         "question": "Wie kontaktiere ich den Support?",
-        "answer": [
-          "Schreiben Sie an hello@internxt.com und unser Team hilft Ihnen gerne weiter."
-        ]
+        "answer": ["Schreiben Sie an hello@internxt.com und unser Team hilft Ihnen gerne weiter."]
       },
       {
         "question": "Kann ich meinem Lifetime-Plan mehr Speicher hinzufügen?",

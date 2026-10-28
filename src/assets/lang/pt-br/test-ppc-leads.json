@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "Armazenamento em nuvem criptografado **grátis**",
+    "subtitle": "**1 GB grátis, para sempre.** Sem cartão de crédito.",
+    "SignUp": {
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "show": "Mostrar",
+          "hide": "Ocultar",
+          "strength": {
+            "complexity": "A senha não é complexa o suficiente",
+            "length": "A senha deve ter pelo menos 8 caracteres",
+            "weak": "A senha é fraca",
+            "strong": "A senha é forte"
+          }
+        },
+        "submit": "Criar conta grátis"
+      },
+      "info": "A Internxt não armazena senhas. Se você esquecer a sua, a chave de backup restaura o acesso aos seus arquivos.",
+      "disclaimer": {
+        "text": "Ao criar uma conta você aceita os",
+        "link": "termos de serviço e política de privacidade"
+      },
+      "login": {
+        "text": "Já tem uma conta?",
+        "link": "Entrar"
+      }
+    }
+  },
+  "ReviewSection": {
+    "forbes": "A Internxt consolida sua posição como a alternativa europeia às gigantes da tecnologia",
+    "deloitte": "Recebeu o prêmio Deloitte Fast 50, que reconhece as empresas de crescimento mais rápido da Europa",
+    "techradar": "A Internxt é um excelente serviço de armazenamento em nuvem; acessível, intuitivo e confiável",
+    "fortune": "A Internxt está construindo uma internet melhor, onde a privacidade e a segurança vêm em primeiro lugar",
+    "trustpilot": "Excelente custo-benefício considerando a segurança e os recursos oferecidos. Serviço e suporte excelentes"
+  },
+  "TrustedSection": {
+    "description": "Com o Internxt Free, você tem 1 GB de armazenamento que só você pode abrir. Sem anúncios, sem escaneamento, sem pegadinhas e sua vida digital pertence a você."
+  },
+  "FeaturesSection": {
+    "title": "O melhor armazenamento em nuvem criptografado de nova geração para a proteção definitiva",
+    "description": "Protegemos a segurança e a privacidade dos seus arquivos com criptografia avançada, preparada para enfrentar as ameaças emergentes do futuro.",
+    "cards": {
+      "titles": [
+        "Dados impossíveis de hackear ou vazar",
+        "Segurança de nova geração",
+        "Código aberto e transparente",
+        "Verificada de forma independente"
+      ],
+      "descriptions": [
+        "Não armazenamos senhas nem dados de usuário, e todos os seus dados são criptografados em trânsito e em repouso. A Internxt coloca você no controle total dos seus arquivos. Seus dados são assunto seu. Protegê-los é assunto nosso.",
+        "A Internxt é o único armazenamento em nuvem que criptografa automaticamente seus arquivos usando criptografia de ponta a ponta e pós-quântica, o que significa que só você pode acessar seus dados.",
+        "Temos orgulho do que fazemos, por isso nosso código é público no GitHub e pode ser revisado, auditado e verificado pessoalmente por qualquer pessoa. Não temos nada a esconder além dos seus dados.",
+        "Estamos em total conformidade com o GDPR e somos 100% seguros, mas não precisa acreditar só na nossa palavra. A Internxt foi auditada e verificada de forma independente pela principal empresa de testes de intrusão da Europa, a Securitum."
+      ]
+    }
+  },
+  "ChoosePlanSection": {
+    "title": "Comece grátis. Faça upgrade quando precisar de mais.",
+    "description": "Seus arquivos e sua criptografia continuam exatamente os mesmos.",
+    "freeCard": {
+      "label": "Grátis",
+      "storage": "1 GB",
+      "price": "{{currency}}0 para sempre",
+      "features": [
+        "1 GB de armazenamento criptografado",
+        "Apps web, desktop e mobile",
+        "Compartilhamento seguro de arquivos",
+        "Criptografia de conhecimento zero"
+      ],
+      "cta": "Criar conta grátis"
+    },
+    "premiumCard": {
+      "label": "Premium",
+      "badge": "Desconto exclusivo",
+      "storage": "1-5 TB",
+      "price": "a partir de {{currency}}{{minimumPrice}}/mês",
+      "features": [
+        "1 TB, 3 TB ou 5 TB de armazenamento",
+        "Suíte completa de privacidade: VPN, Antivírus, Cleaner e mais",
+        "Suporte ao cliente premium",
+        "Garantia de reembolso de 30 dias"
+      ],
+      "cta": "Aproveitar a oferta"
+    },
+    "guarantees": {
+      "premiumSupport": "Suporte ao cliente premium",
+      "moneyBack": "Garantia de reembolso de 30 dias",
+      "openSource": "Código aberto e auditado"
+    }
+  },
+  "FaqSection": {
+    "title": "Perguntas frequentes",
+    "faq": [
+      {
+        "question": "O plano gratuito é realmente grátis para sempre?",
+        "answer": [
+          "Sim. O Internxt Free oferece 1 GB de armazenamento em nuvem criptografado sem custo, sem cartão de crédito, sem período de teste e sem data de validade. Você só paga se decidir fazer upgrade para ter mais espaço."
+        ]
+      },
+      {
+        "question": "A Internxt consegue ver meus arquivos?",
+        "answer": [
+          "Não. A Internxt usa criptografia de ponta a ponta e de conhecimento zero, então seus arquivos são criptografados no seu dispositivo antes de chegarem aos nossos servidores. Nunca temos as chaves, ou seja, ninguém na Internxt nem terceiros conseguem ler seus dados."
+        ]
+      },
+      {
+        "question": "O que acontece se eu esquecer minha senha?",
+        "answer": [
+          "A Internxt não armazena sua senha, por isso não podemos redefini-la para você. É por isso que você recebe uma chave de backup ao criar sua conta: guarde-a em um lugar seguro e poderá restaurar o acesso aos seus arquivos a qualquer momento."
+        ]
+      },
+      {
+        "question": "E se eu precisar de mais de 1 GB?",
+        "answer": [
+          "Você pode fazer upgrade para um plano pago quando quiser e manter a mesma conta, os mesmos arquivos e a mesma criptografia. Os planos Premium da Internxt começam em 1 TB e vão até 5 TB, e incluem a suíte completa de privacidade com VPN, Antivírus, Cleaner e mais."
+        ]
+      },
+      {
+        "question": "Em quais dispositivos posso usar?",
+        "answer": [
+          "A Internxt funciona em qualquer navegador moderno e tem apps nativos para Windows, macOS, Linux, Android e iOS, para que seus arquivos criptografados fiquem sincronizados em todos os seus dispositivos."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Seus arquivos. Suas chaves. Grátis.",
+    "description": "Crie sua conta em menos de um minuto.",
+    "cta": "Ganhe 1 GB grátis"
+  }
+}

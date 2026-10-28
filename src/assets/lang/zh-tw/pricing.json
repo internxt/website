@@ -35,7 +35,7 @@
     "individuals": "年度",
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     },
     "ctaCompare": "比較所有方案"
@@ -78,7 +78,7 @@
           },
           {
             "id": "storage_Premium",
-            "name": "3TB",
+            "name": "2TB",
             "avalability": {
               "Essential": false,
               "Premium": true,

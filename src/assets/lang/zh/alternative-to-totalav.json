@@ -48,12 +48,7 @@
     "title": "TotalAV 可能删除重要文件。Internxt 保护您的设备、释放存储空间并保护您的隐私",
     "description": "TotalAV 需要深度权限才能运行，增加了意外损坏或滥用的风险。切换到 Internxt，获得完整的设备保护与安全云存储的结合。",
     "scrollableSection": {
-      "titles": [
-        "隐私政策不明确",
-        "缺乏透明度",
-        "影响设备性能",
-        "产品线有限"
-      ],
+      "titles": ["隐私政策不明确", "缺乏透明度", "影响设备性能", "产品线有限"],
       "descriptions": [
         "VPN 声称无日志政策，但其隐私政策允许收集一些元数据，且缺乏公开的独立审计，引发了关于实际存储内容的混淆和信任顾虑。",
         "由于TotalAV不是开源软件，您必须相信公司关于隐私、遥测和内部安全控制的声明，因为外部专家无法自由审查代码中是否存在隐藏行为、后门或弱加密实现。",
@@ -66,11 +61,7 @@
     "title": "为什么您需要 TotalAV 的替代方案",
     "description": "TotalAV 只是保护设备免受恶意软件侵害的选项之一。为了获得完整的隐私保护和全套产品，请切换到 Internxt，获得包含 Drive、Cleaner 等功能的完整 TotalAV 替代方案。",
     "cards": {
-      "titles": [
-        "开源且经过审计",
-        "全套产品线",
-        "实惠的价格"
-      ],
+      "titles": ["开源且经过审计", "全套产品线", "实惠的价格"],
       "descriptions": [
         "Internxt 完全开源并经过独立审计，您可以放心，没有后门访问您的数据，您的信息以透明方式处理。",
         "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理垃圾文件、使用 Drive 的零知识加密存储和共享文件，以及更多好处，包括 VPN、Meet、Mail 等。",
@@ -130,20 +121,8 @@
     "title": "为什么 Internxt 是 TotalAV 的最佳替代方案",
     "description": "Internxt Drive 包含一套全面的产品，旨在让您重新掌控在线隐私。",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "高级工具"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [
         "通过直接内置到 Internxt Drive 应用中的 Internxt Antivirus 获得增强保护。运行完整或自定义病毒扫描，保护您的设备免受勒索软件或间谍软件侵害。",
         "Internxt 的 VPN 保护您的浏览、屏蔽广告和追踪器，并保持您的位置私密。加密您的 wifi 连接以防止监视、黑客和身份盗窃。",
@@ -180,7 +159,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -203,21 +182,15 @@
       },
       {
         "question": "Internxt 总部在哪里？",
-        "answer": [
-          "Internxt 总部位于西班牙瓦伦西亚，是符合 GDPR 的云存储解决方案。"
-        ]
+        "answer": ["Internxt 总部位于西班牙瓦伦西亚，是符合 GDPR 的云存储解决方案。"]
       },
       {
         "question": "TotalAV 比 Internxt 贵吗？",
-        "answer": [
-          "享受 87% 的专属折扣后，我们所有计划都比 TotalAV 目前可用的定价选项更便宜，并且提供更多功能。"
-        ]
+        "answer": ["享受 87% 的专属折扣后，我们所有计划都比 TotalAV 目前可用的定价选项更便宜，并且提供更多功能。"]
       },
       {
         "question": "如何联系支持？",
-        "answer": [
-          "如有更多问题或需要帮助，请联系 hello@internxt.com，我们的客户成功团队将很乐意为您提供帮助。"
-        ]
+        "answer": ["如有更多问题或需要帮助，请联系 hello@internxt.com，我们的客户成功团队将很乐意为您提供帮助。"]
       },
       {
         "question": "我可以为终身计划添加更多存储空间吗？",

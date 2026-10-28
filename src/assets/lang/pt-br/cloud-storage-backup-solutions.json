@@ -7,11 +7,7 @@
         "textAfterBlueText": "seus dados"
       },
       "description": "O Internxt Drive permite que você faça backup de seus arquivos e os proteja contra perdas e ransomware",
-      "features": [
-        "Agende seus backups",
-        "Backup em vários servidores",
-        "Código aberto e auditado"
-      ],
+      "features": ["Agende seus backups", "Backup em vários servidores", "Código aberto e auditado"],
       "claimDeal": "Ver planos"
     },
     "TitleAndOnePlanV2": {
@@ -133,7 +129,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

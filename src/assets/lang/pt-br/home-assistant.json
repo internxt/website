@@ -2,11 +2,7 @@
   "HeroSection": {
     "title": "Armazenamento em nuvem seguro para seus **backups do Home Assistant**",
     "description": "Backups externos automatizados e de conhecimento zero. Criados na Europa para máxima privacidade e controle dos dados.",
-    "features": [
-      "Agende seus backups",
-      "Backup replicado em vários servidores",
-      "Código aberto e auditado"
-    ],
+    "features": ["Agende seus backups", "Backup replicado em vários servidores", "Código aberto e auditado"],
     "guarantee": "Garantia de reembolso em 30 dias",
     "claimDeal": "Resgatar oferta"
   },
@@ -14,31 +10,19 @@
     "title": "Feito na Europa",
     "description": "Seus dados são protegidos por rigorosas leis e regulamentações europeias de conformidade, combinadas a uma criptografia premiada.",
     "cards": {
-      "images": [
-        "/images/drive/GDPR.webp",
-        "/images/drive/redundancy.webp",
-        "/images/drive/sustainability.webp"
-      ],
+      "images": ["/images/drive/GDPR.webp", "/images/drive/redundancy.webp", "/images/drive/sustainability.webp"],
       "imagesMobile": [
         "/images/drive/GDPR2.webp",
         "/images/drive/Redundancy2.webp",
         "/images/drive/Sustainability2.webp"
       ],
-      "titles": [
-        "Data centers europeus",
-        "Redundância",
-        "Compromisso com a sustentabilidade "
-      ],
+      "titles": ["Data centers europeus", "Redundância", "Compromisso com a sustentabilidade "],
       "descriptions": [
         "A Internxt fica em Valência, na Espanha, e nossos data centers estão na Europa e em outros locais pelo mundo, oferecendo a você segurança, velocidade e conformidade.",
         "Seus arquivos são protegidos por sistemas redundantes, controles ambientais e monitoramento de segurança no local 24 horas por dia, 7 dias por semana. Aconteça o que acontecer, seus arquivos permanecem sempre seguros e acessíveis.",
         "A Internxt lidera pelo exemplo ao trabalhar por uma solução de armazenamento em nuvem mais sustentável, adotando práticas de eficiência energética para uma nuvem mais limpa e sustentável."
       ],
-      "cta": [
-        "Saiba mais",
-        "",
-        "Saiba mais"
-      ]
+      "cta": ["Saiba mais", "", "Saiba mais"]
     }
   },
   "TrustedBySection": {
@@ -47,11 +31,7 @@
   "ThreeCardsSection": {
     "title": "Valores fundamentais",
     "cards": {
-      "titles": [
-        "Criptografia de conhecimento zero",
-        "Recuperação confiável",
-        "Privacidade em primeiro lugar"
-      ],
+      "titles": ["Criptografia de conhecimento zero", "Recuperação confiável", "Privacidade em primeiro lugar"],
       "descriptions": [
         "Criptografia de ponta a ponta no lado do cliente. Seus arquivos de configuração e suas chaves de API permanecem estritamente privados.",
         "Mantenha uma cópia externa segura dos seus snapshots do HA em caso de falha de hardware ou problemas em atualizações.",
@@ -63,11 +43,7 @@
     "title": "Recursos principais do nosso armazenamento seguro na nuvem",
     "description": "Segurança completa para seus dados: tudo o que você precisa para manter seus arquivos seguros e privados",
     "accordionCards": {
-      "titles": [
-        "Um ecossistema totalmente privado",
-        "Colaboração segura",
-        "Sua nuvem, como um disco local"
-      ],
+      "titles": ["Um ecossistema totalmente privado", "Colaboração segura", "Sua nuvem, como um disco local"],
       "descriptions": [
         "A Internxt reúne armazenamento criptografado, backups, VPN, Antivirus, Cleaner, Meet, Mail e muito mais: tudo para você se libertar das Big Tech.",
         "Envie arquivos com links criptografados, senhas e controles. Trabalhe com sua equipe em tempo real mantendo os dados privados.",
@@ -75,11 +51,7 @@
       ]
     },
     "cards": {
-      "titles": [
-        "Criptografia de ponta a ponta",
-        "Controles de acesso",
-        "Backups criptografados"
-      ],
+      "titles": ["Criptografia de ponta a ponta", "Controles de acesso", "Backups criptografados"],
       "descriptions": [
         "Todos os arquivos são criptografados com criptografia pós-quântica e de conhecimento zero. Ninguém além de você, ou de quem você escolher compartilhar, pode ver o conteúdo.",
         "Você controla exatamente quem pode acessar seus arquivos compartilhados, com links criptografados e protegidos por senha que podem ser revogados a qualquer momento.",
@@ -128,7 +100,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

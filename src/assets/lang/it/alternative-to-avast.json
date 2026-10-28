@@ -48,12 +48,7 @@
     "title": "Avast può rimuovere file importanti. Internxt protegge il tuo dispositivo, libera spazio di archiviazione e protegge la tua privacy",
     "description": "Avast richiede autorizzazioni profonde per funzionare, aumentando l'esposizione a danni accidentali o usi impropri. Passa a Internxt per una protezione completa del dispositivo combinata con archiviazione cloud sicura.",
     "scrollableSection": {
-      "titles": [
-        "Raccolta dati",
-        "Mancanza di trasparenza",
-        "Impatto sulle prestazioni",
-        "Suite di prodotti limitata"
-      ],
+      "titles": ["Raccolta dati", "Mancanza di trasparenza", "Impatto sulle prestazioni", "Suite di prodotti limitata"],
       "descriptions": [
         "Tra almeno il 2014 e gennaio 2020, Avast avrebbe raccolto informazioni dettagliate sulla navigazione tramite estensioni antivirus e browser, vendendole a terzi per scopi pubblicitari e analitici senza adeguata informazione o consenso. Ciò includeva query di ricerca e URL visitate.",
         "Poiché Avast non è open source, devi fidarti delle dichiarazioni dell'azienda su privacy, telemetria e controlli di sicurezza interni, in quanto esperti esterni non possono esaminare liberamente il codice per individuare comportamenti nascosti, backdoor o implementazioni crittografiche deboli.",
@@ -66,11 +61,7 @@
     "title": "Perché hai bisogno di un'alternativa a Avast",
     "description": "Avast è solo una delle opzioni per proteggere il tuo dispositivo dal malware. Per una privacy totale e una suite completa, passa a Internxt per un'alternativa completa ad Avast con Drive, Cleaner e altro.",
     "cards": {
-      "titles": [
-        "Open source e auditato",
-        "Suite completa di prodotti",
-        "Piani convenienti"
-      ],
+      "titles": ["Open source e auditato", "Suite completa di prodotti", "Piani convenienti"],
       "descriptions": [
         "Internxt è completamente open source e auditato in modo indipendente, così puoi essere certo che non ci siano backdoor ai tuoi dati e che le tue informazioni siano gestite in modo trasparente.",
         "Internxt offre Cleaner e un ecosistema completo per la privacy per eliminare file indesiderati, archiviare e condividere file con crittografia zero-knowledge con Drive, e altri vantaggi tra cui VPN, Meet, Mail e altro.",
@@ -130,20 +121,8 @@
     "title": "Perché Internxt è la migliore alternativa a Avast",
     "description": "Internxt Drive include una suite completa di prodotti progettata per ridarti il controllo della tua privacy online.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Strumenti avanzati"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
       "descriptions": [
         "Ottieni una maggiore protezione con Internxt Antivirus integrato direttamente nella tua app Internxt Drive. Esegui scansioni complete o personalizzate per proteggere il tuo dispositivo da ransomware o spyware.",
         "La VPN di Internxt protegge la tua navigazione, blocca annunci e tracker e mantiene la tua posizione privata. Crittografa la tua connessione wifi per prevenire spionaggio, hacker e furto d'identità.",
@@ -180,7 +159,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

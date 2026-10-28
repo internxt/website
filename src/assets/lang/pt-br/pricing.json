@@ -34,7 +34,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     },
     "ctaCompare": "Comparar planos"
@@ -61,7 +61,7 @@
           },
           {
             "id": "storage_Premium",
-            "name": "3TB",
+            "name": "2TB",
             "avalability": { "Essential": false, "Premium": true, "Ultimate": false }
           },
           {

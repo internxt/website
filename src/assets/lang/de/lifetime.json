@@ -49,7 +49,7 @@
     "cta": "Einladung annehmen"
   },
   "ctaSection2": {
-    "title": "Unter den Lifetime-Tarifen von Internxt: Welchen soll ich wählen? 1TB, 3TB oder 5TB?",
+    "title": "Unter den Lifetime-Tarifen von Internxt: Welchen soll ich wählen? 1TB, 2TB oder 5TB?",
     "description": "Alle unsere Tarife bieten Ihnen alles, was Sie brauchen, um Ihre Dateien privat in der Cloud zu speichern. Wenn Sie vollständige Privatsphäre, fortschrittliche Cloud-Verwaltung und alle Funktionen von Internxt wie Meet und Mail wünschen, ist der 5TB-Ultimate-Tarif die beste Wahl für totale Kontrolle und maximale Privatsphäre.",
     "descriptionWithoutDisocunt": "Erleben Sie mit Internxt vollständige digitale Privatsphäre",
     "cta": "Tarif wählen"
@@ -94,7 +94,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

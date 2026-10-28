@@ -117,7 +117,7 @@
           },
           {
             "title": "基于订阅",
-            "description": "3TB年度方案贵68%，且没有终身方案可用。"
+            "description": "2TB年度方案贵68%，且没有终身方案可用。"
           }
         ]
       }
@@ -127,7 +127,7 @@
     "title": "MEGA.io 的最佳替代方案是 Internxt",
     "description": "使用 Internxt 为您的文件获得完全的隐私保护",
     "cta": "选择方案"
-},
+  },
   "CtaSection2": {
     "title": "无追踪器。无问题。",
     "description": "使用Internxt为您的文件获得完全隐私",
@@ -155,7 +155,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -12,11 +12,7 @@
     "title": "**Descontos** e **promoções** da Internxt",
     "subtitle": "Você desbloqueou {{discount}}% de desconto! Resgate aqui seu cupom da Internxt",
     "descriptionNormal": "todos os planos",
-    "features": [
-      "Conjunto completo de privacidade",
-      "Criptografia pós-quântica",
-      "Código aberto e auditado"
-    ],
+    "features": ["Conjunto completo de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "startFrom": {
       "normal1": "A partir de ",
       "price": " {{minimumPrice}}",
@@ -58,7 +54,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -66,11 +62,7 @@
     "title": "Como resgatar os cupons da Internxt",
     "description": "Resgate seu cupom da Internxt seguindo estes três passos simples:",
     "cards": {
-      "titles": [
-        "Escolha seu plano",
-        "Vá para o checkout",
-        "Confirme e aproveite!"
-      ],
+      "titles": ["Escolha seu plano", "Vá para o checkout", "Confirme e aproveite!"],
       "descriptions": [
         "Escolha um dos nossos 3 planos anuais ou vitalícios na tabela acima e clique em ‘Escolher plano’ para resgatar seu cupom da Internxt.",
         "Assim que você for para o checkout, seu cupom da Internxt é aplicado automaticamente! A partir daí, basta informar seus dados para seguir com o pagamento.",
@@ -102,23 +94,8 @@
     "description": "Seu cupom da Internxt é válido para todos os nossos planos anuais e vitalícios Essential, Premium e Ultimate.",
     "cta": "Conheça-nos melhor",
     "scrollableSection": {
-      "imagesPathname": [
-        "Drive",
-        "Terminal",
-        "antivirus",
-        "cleaner",
-        "hero",
-        "meet",
-        "vpn"
-      ],
-      "titles": [
-        "Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "O Internxt Drive conta com criptografia pós-quântica e de conhecimento zero, de modo que ninguém além de você pode acessar seus arquivos. Tenha armazenamento em nuvem criptografado e backups para suas fotos, seus vídeos e seus arquivos. \n\n Além disso, backups criptografados e compartilhamento de arquivos protegido por senha oferecem proteção máxima contra ransomware e vazamentos de dados.",
         "Todos os planos pagos também incluem o Internxt Antivirus para maior proteção contra as ameaças crescentes que enfrentamos online. \n\n  Faça varreduras completas ou personalizadas pelo aplicativo da Internxt para se defender de malware, phishing e ransomware, além de limpar e proteger seu dispositivo contra perda ou vazamento de dados.",

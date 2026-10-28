@@ -221,8 +221,8 @@
   },
   {
     "id": "black-friday",
-    "title": "Oferta de Black Friday da Internxt – Promoção de Armazenamento na Nuvem!",
-    "description": "Oferta de Black Friday da Internxt 2023: Aproveite um desconto de 91% em todos os nossos planos anuais. Economize muito no armazenamento na nuvem da Internxt hoje!"
+    "title": "Ofertas de Black Friday 2026 - Armazenamento na Nuvem e Ofertas de Nuvem Pessoal",
+    "description": "Internxt Black Friday 2026: 85% de desconto em armazenamento em nuvem seguro e no seu pacote completo de privacidade! Obtenha VPN, Antivirus, Cleaner, Meet e Mail."
   },
   {
     "id": "black-friday-cloud-storage",
@@ -783,5 +783,10 @@
     "id": "final-challenge-em",
     "title": "Internxt Challenge Cloud Storage Deals",
     "description": "You completed the Internxt Challenge. Claim your exclusive reward on Internxt's fully equipped privacy suite: Drive, Antivirus, VPN, Cleaner, Meet, Mail, and more."
+  },
+  {
+    "id": "test-ppc-leads",
+    "title": "Internxt — Armazenamento em nuvem criptografado grátis, 1 GB para sempre",
+    "description": "Ganhe 1 GB de armazenamento em nuvem criptografado grátis com a Internxt. Sem cartão de crédito, sem anúncios, sem escaneamento. Criptografia de conhecimento zero e código aberto."
   }
 ]

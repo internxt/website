@@ -23,18 +23,8 @@ import { PromoCodeProps } from '@/lib/types';
 import { getTrackingParams } from '@/lib/cookies';
 
 const iconList: Record<string, Icon[]> = {
-  '1TB': [
-    Database,
-    CurrencyCircleDollar,
-    LockSimple,
-    Key,
-    Fingerprint,
-    ArrowsClockwise,
-    Password,
-    CellTower,
-    Shield,
-  ],
-  '3TB': [
+  '1TB': [Database, CurrencyCircleDollar, LockSimple, Key, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
+  '2TB': [
     Database,
     CurrencyCircleDollar,
     LockSimple,
@@ -114,9 +104,8 @@ export const HorizontalPriceCard = ({
     }[storage] || null;
 
   const planFeatures: { name: string; status: string }[] = contentText.productFeatures.individualPlans[storage] ?? [];
-  const minorGap = planFeatures.length <= 13 ? 'lg:gap-y-5' : 'lg:gap-y-4'
-  const featuresRowGap =
-    planFeatures.length <= 9 ? 'lg:gap-y-6' : minorGap;
+  const minorGap = planFeatures.length <= 13 ? 'lg:gap-y-5' : 'lg:gap-y-4';
+  const featuresRowGap = planFeatures.length <= 9 ? 'lg:gap-y-6' : minorGap;
 
   function onCheckoutButtonClicked() {
     checkout({

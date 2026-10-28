@@ -18,11 +18,9 @@ import MoreDealsSection from '../black-friday/MoreDealsSection';
 interface BlackFridayDealConfig {
   heroImage: string;
   metatagsId: string;
-  couponCode: PromoCodeName;
-  couponCodeForLifetime: PromoCodeName;
+  couponCode?: PromoCodeName;
+  couponCodeForLifetime?: PromoCodeName;
   popularPlanSize?: string;
-  hideBusinessCards?: boolean;
-  hideBusinessSelector?: boolean;
   moreDealsUrls: {
     card1: string;
     card2: string;
@@ -56,6 +54,7 @@ const BlackFridayDealsTemplate = ({
     lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: config.couponCode,
     couponCodeForLifetime: config.couponCodeForLifetime,
   });
 
@@ -98,6 +97,7 @@ const BlackFridayDealsTemplate = ({
   const formId = formIds[lang] ?? formIds.en;
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
   return (
@@ -115,6 +115,7 @@ const BlackFridayDealsTemplate = ({
       <PricingSectionWrapper
         textContent={textContent.TableSection}
         decimalDiscount={{
+          individuals: decimalDiscount,
           lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
@@ -122,9 +123,7 @@ const BlackFridayDealsTemplate = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessCards={config.hideBusinessCards ?? true}
-        hideBusinessSelector={config.hideBusinessSelector ?? true}
-        popularPlanBySize={config.popularPlanSize || '3TB'}
+        popularPlanBySize={config.popularPlanSize || '2TB'}
         sectionDetails="bg-[#1C1C1C] lg:py-20"
         darkMode
         hideFreeCard

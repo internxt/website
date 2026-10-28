@@ -66,11 +66,7 @@
     "title": "Why you need an alternative to Azure",
     "description": "What Azure demonstrates in security fails in terms of privacy. For full privacy, get total security combined with zero-knowledge encryption from Internxt.",
     "cards": {
-      "titles": [
-        "Complex setup",
-        "Hidden and unpredictable costs",
-        "Expensive downloads"
-      ],
+      "titles": ["Complex setup", "Hidden and unpredictable costs", "Expensive downloads"],
       "descriptions": [
         "Setting up storage on Azure involves navigating multiple dashboards and security systems. Users must manually manage roles, access rules, and regions. Simple tasks often require technical knowledge, making the platform difficult for beginners and slowing down development.",
         "Microsoft Azure charges separately for storage, requests, data transfer, monitoring, backups, and security features. These small fees accumulate quickly and are difficult to track. Any increases in traffic or usage can cause major bill spikes, making long-term budgeting unreliable for businesses.",
@@ -130,18 +126,8 @@
     "title": "Why Internxt is the best alternative to Azure",
     "description": "Internxt Drive offers a comprehensive suite of products designed to give you back control of your online privacy.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
-      "titles": [
-        "Secure and durable storage",
-        "Instant access",
-        "Simple and predictable pricing",
-        "Cost per GB"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
+      "titles": ["Secure and durable storage", "Instant access", "Simple and predictable pricing", "Cost per GB"],
       "descriptions": [
         "Internxt S3 provides built-in end-to-end encryption and immutable object locking to protect data from loss, corruption, or ransomware. With 11×9s durability, all files are kept secure and safe across multiple regions.",
         "Internxt S3 is a 100% hot cloud storage solution, so all files are immediately available for upload or download. There is no cold storage or delayed retrieval, unlike Microsoft S3 Glacier, where accessing data can take hours. This instant availability ensures fast response times for all workloads.",
@@ -177,7 +163,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

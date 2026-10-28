@@ -66,11 +66,7 @@
     "title": "Funktionen",
     "description": "",
     "cards": {
-      "titles": [
-        "Fortschrittliche Verschlüsselung",
-        "Open-Source und geprüft",
-        "Flexible Pläne"
-      ],
+      "titles": ["Fortschrittliche Verschlüsselung", "Open-Source und geprüft", "Flexible Pläne"],
       "descriptions": [
         "Internxt verwendet Zero-Knowledge- und Post-Quanten-Verschlüsselung, um sicherzustellen, dass nur Sie auf Ihre Dateien zugreifen können. Ihre Daten werden auf Ihrem Gerät verschlüsselt.",
         "Internxt ist vollständig Open-Source und wird unabhängig geprüft, was volle Transparenz garantiert und Hintertüren oder versteckte Überwachung ausschließt.",
@@ -130,22 +126,8 @@
     "title": "Warum Internxt die beste Alternative zu Avira ist",
     "description": "Internxt geht über herkömmliche Antivirensoftware hinaus und bietet eine komplette Datenschutz-Suite für die moderne Welt.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Umfassender Schutz"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Umfassender Schutz"],
       "descriptions": [
         "Cloud-Speicher mit Zero-Knowledge-Verschlüsselung, damit Ihre persönlichen Dokumente vollkommen sicher sind.",
         "Scannen Sie Ihr Gerät und Ihre Dateien auf Bedrohungen, ohne Ihre Privatsphäre zu gefährden oder übermäßige Daten zu sammeln.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

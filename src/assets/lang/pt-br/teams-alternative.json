@@ -114,20 +114,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao Microsoft Teams",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "Tenha mais proteção com o Internxt Antivirus, integrado diretamente ao aplicativo do Internxt Drive para oferecer controle total e proteção contra malware. Faça verificações completas ou personalizadas para manter seu dispositivo funcionando bem e protegido contra vírus como ransomware e spyware.",
         "A Internxt VPN protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada. Criptografe sua conexão wi-fi para evitar espionagem, hackers e roubo de identidade. Navegue com segurança sabendo que suas informações pessoais, senhas e contas estão protegidas.",
@@ -164,7 +152,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

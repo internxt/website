@@ -70,7 +70,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -107,11 +107,7 @@
     "title": "Principais recursos do nosso armazenamento seguro na nuvem",
     "description": "Segurança completa para seus dados, tudo o que você precisa para manter seus arquivos seguros e privados",
     "accordionCards": {
-      "titles": [
-        "Um ecossistema totalmente privado",
-        "Colaboração segura",
-        "Sua nuvem, como um disco local"
-      ],
+      "titles": ["Um ecossistema totalmente privado", "Colaboração segura", "Sua nuvem, como um disco local"],
       "descriptions": [
         "A Internxt reúne armazenamento criptografado, backups, VPN, Antivirus, Cleaner, Meet, Mail e muito mais — tudo para se libertar das gigantes da tecnologia.",
         "Envie arquivos com links criptografados, senhas e controles. Trabalhe com sua equipe em tempo real mantendo os dados privados.",

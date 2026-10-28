@@ -1,16 +1,13 @@
 import {
   ArrowsClockwise,
-  Broom,
   CellTower,
   CirclesThreePlus,
   Code,
   CodeBlock,
-  CreditCard,
   Database,
   Envelope,
   Files,
   Fingerprint,
-  Gauge,
   Image,
   Key,
   LockSimple,
@@ -61,24 +58,6 @@ const ICON_MAPS = {
     VideoCamera,
     Envelope,
   ],
-  business: [
-    Database,
-    Key,
-    LockSimple,
-    Fingerprint,
-    ArrowsClockwise,
-    Password,
-    CirclesThreePlus,
-    Gauge,
-    CodeBlock,
-    CreditCard,
-    CellTower,
-    Shield,
-    Broom,
-    VideoCamera,
-    Files,
-    Envelope,
-  ],
 };
 
 export interface PriceCardProps {
@@ -87,12 +66,10 @@ export interface PriceCardProps {
   lang: string;
   label: string;
   isCheckoutForLifetime: boolean;
-  productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
   labelBackground?: string;
   decimalDiscountValue?: number;
   redeemCodeCta?: LifetimeMode;
-  monthlyProductPrice?: number;
   darkMode?: boolean;
   isValentinesMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean, interval: string, storage: string) => void;
@@ -106,7 +83,6 @@ export const PriceCard = ({
   product,
   decimalDiscountValue,
   isCheckoutForLifetime,
-  productCardPlan = 'individuals',
   popular,
   lang,
   isValentinesMode,
@@ -116,7 +92,6 @@ export const PriceCard = ({
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { interval, price, storage, priceId, currencyValue } = product;
   const isINR = currencyValue === 'inr';
-  const isBusiness = productCardPlan === 'business';
   const isAnnual = interval === 'year';
   const [currency, setCurrency] = useState<string>('€');
 
@@ -169,26 +144,18 @@ export const PriceCard = ({
   const originalPrice = formatPrice(getOriginalPrice());
 
   const planTypes = {
-    '1TB': isBusiness
-      ? contentText.productFeatures.planTypes.standard
-      : contentText.productFeatures.planTypes.essentials,
-    '2TB': contentText.productFeatures.planTypes.pro,
-    '3TB': contentText.productFeatures.planTypes.premium,
+    '1TB': contentText.productFeatures.planTypes.essentials,
+    '2TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
   const planLabel = planTypes[storage] || null;
 
   const ctaText = contentText.cta;
 
-  const features = isBusiness
-    ? contentText.productFeatures.business[storage]
-    : contentText.productFeatures.individualPlans[storage];
+  const features = contentText.productFeatures.individualPlans[storage];
 
   const getIconMap = () => {
-    if (isBusiness) {
-      return ICON_MAPS.business;
-    }
-    if (storage === '3TB') {
+    if (storage === '2TB') {
       return ICON_MAPS.premium;
     }
     if (storage === '5TB') {
@@ -243,15 +210,6 @@ export const PriceCard = ({
                       <p className={`text-2xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
                         {currentPrice}
                       </p>
-                      {isBusiness && (
-                        <span
-                          className={`flex h-full items-end pl-1 text-base font-semibold ${
-                            darkMode ? 'text-white' : 'text-gray-100'
-                          }`}
-                        >
-                          {contentText.perUserSlash}
-                        </span>
-                      )}
                       {isAnnual && (
                         <span
                           className={`flex h-full items-end text-base font-semibold ${
@@ -278,11 +236,6 @@ export const PriceCard = ({
                       >
                         {originalPrice}
                       </p>
-                      {isBusiness && (
-                        <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50'}`}>
-                          {contentText.perUserSlash}
-                        </span>
-                      )}
                       {isAnnual && (
                         <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50'}`}>
                           {contentText.perMonth}
@@ -303,16 +256,7 @@ export const PriceCard = ({
                       <p className={`text-3xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
                         {currentPrice}
                       </p>
-                      {isBusiness && (
-                        <span
-                          className={`flex h-full items-center pt-4 text-base font-semibold ${
-                            darkMode ? 'text-white' : 'text-gray-100'
-                          }`}
-                        >
-                          {contentText.perUserSlash}
-                        </span>
-                      )}
-                      {isAnnual && !isBusiness && (
+                      {isAnnual && (
                         <span
                           className={`flex h-full items-center pt-4 text-base font-semibold ${
                             darkMode ? 'text-white' : 'text-gray-100'

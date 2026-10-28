@@ -253,6 +253,7 @@ type PaymentCheckoutConfig = {
   currency?: string;
   gclid?: string;
   trackingParams?: Record<string, string>;
+  redirectToUrgentCheckout?: boolean;
 };
 
 function appendTrackingParams(params: URLSearchParams, trackingParams?: Record<string, string>): void {
@@ -271,10 +272,11 @@ export function checkout({
   currency,
   gclid,
   trackingParams,
+  redirectToUrgentCheckout,
 }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
-    const pathname = '/checkout';
+    const pathname = redirectToUrgentCheckout ? '/checkout-uc' : '/checkout';
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);

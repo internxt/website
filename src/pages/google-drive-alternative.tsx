@@ -102,8 +102,6 @@ const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLan
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideSwitchSelector
-          hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
         />
 

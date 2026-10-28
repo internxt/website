@@ -49,7 +49,7 @@
     "cta": "Accetta l'invito"
   },
   "ctaSection2": {
-    "title": "Tra i piani annuali di Internxt: Quale dovrei scegliere? 1TB, 3TB o 5TB?",
+    "title": "Tra i piani annuali di Internxt: Quale dovrei scegliere? 1TB, 2TB o 5TB?",
     "description": "Rivendica il tuo sconto esclusivo del {{discount}}% per accedere alla suite per la privacy di Internxt per un anno",
     "descriptionWithoutDisocunt": "Sperimenta la privacy digitale completa con Internxt",
     "cta": "Scegli il piano"
@@ -94,7 +94,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "**免費**加密雲端儲存空間",
+    "subtitle": "**1 GB 永久免費。** 無需信用卡。",
+    "SignUp": {
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "密碼",
+          "placeholder": "密碼",
+          "show": "顯示",
+          "hide": "隱藏",
+          "strength": {
+            "complexity": "密碼複雜度不足",
+            "length": "密碼至少需要 8 個字元",
+            "weak": "密碼強度較弱",
+            "strong": "密碼強度良好"
+          }
+        },
+        "submit": "建立免費帳戶"
+      },
+      "info": "Internxt 不會儲存密碼。如果您忘記密碼，備份金鑰可以協助您復原檔案的存取權限。",
+      "disclaimer": {
+        "text": "建立帳戶即表示您同意我們的",
+        "link": "服務條款和隱私政策"
+      },
+      "login": {
+        "text": "已經有帳戶了嗎？",
+        "link": "登入"
+      }
+    }
+  },
+  "ReviewSection": {
+    "forbes": "Internxt鞏固了其作為歐洲科技巨頭替代方案的地位",
+    "deloitte": "榮獲德勤Fast 50大獎，表彰成長最快的企業",
+    "techradar": "注重隱私和安全的雲端儲存服務商",
+    "fortune": "Internxt正在構建一個以隱私和安全為先的網際網路",
+    "trustpilot": "大量私密、安全的儲存空間。出色的支援。絕對物有所值。"
+  },
+  "TrustedSection": {
+    "description": "使用 Internxt Free，您將獲得 1 GB 只有您才能開啟的儲存空間。沒有廣告、沒有掃描、沒有附加條件，您的數位生活屬於您自己。"
+  },
+  "FeaturesSection": {
+    "title": "新世代加密技術，提供終極保護",
+    "description": "我們使用先進的加密技術保護您檔案的安全和隱私，為未來的新興威脅做好準備。",
+    "cards": {
+      "titles": [
+        "無法破解和洩露的資料",
+        "新世代安全技術",
+        "開源且透明",
+        "獨立驗證"
+      ],
+      "descriptions": [
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和儲存時都經過加密。Internxt 讓您完全控制自己的檔案。您的資料是您的事。保護它們是我們的事。",
+        "Internxt 是唯一一個使用端對端和後量子密碼學自動加密檔案的雲端儲存服務，這意味著只有您可以存取您的資料。",
+        "我們為自己的工作感到自豪，所以我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有什麼可隱藏的。",
+        "我們完全符合 GDPR 規定，100% 安全，但不要只聽我們的話。Internxt 已經通過歐洲領先的滲透測試公司 Securitum 的獨立稽核和驗證。"
+      ]
+    }
+  },
+  "ChoosePlanSection": {
+    "title": "免費開始。需要更多時再升級。",
+    "description": "您的檔案和加密方式完全不變。",
+    "freeCard": {
+      "label": "免費",
+      "storage": "1 GB",
+      "price": "{{currency}}0 永久",
+      "features": [
+        "1 GB 加密儲存空間",
+        "網頁版、桌面版與行動應用程式",
+        "安全的檔案分享",
+        "零知識加密"
+      ],
+      "cta": "建立免費帳戶"
+    },
+    "premiumCard": {
+      "label": "Premium",
+      "badge": "專屬折扣",
+      "storage": "1-5 TB",
+      "price": "低至 {{currency}}{{minimumPrice}}/月",
+      "features": [
+        "1 TB、3 TB 或 5 TB 儲存空間",
+        "完整隱私套件：VPN、防毒、Cleaner 等",
+        "高級客戶支援",
+        "30 天退款保證"
+      ],
+      "cta": "取得優惠"
+    },
+    "guarantees": {
+      "premiumSupport": "高級客戶支援",
+      "moneyBack": "30 天退款保證",
+      "openSource": "開源且經過稽核"
+    }
+  },
+  "FaqSection": {
+    "title": "常見問題",
+    "faq": [
+      {
+        "question": "免費方案真的永久免費嗎？",
+        "answer": [
+          "是的。Internxt Free 為您提供 1 GB 加密雲端儲存空間，完全免費，無需信用卡，沒有試用期，也沒有到期日。只有在您決定升級取得更多空間時才需要付費。"
+        ]
+      },
+      {
+        "question": "Internxt 看得到我的檔案嗎？",
+        "answer": [
+          "不行。Internxt 採用零知識的端對端加密，您的檔案在抵達我們的伺服器之前就已在您的裝置上完成加密。我們從不持有金鑰，這表示 Internxt 的任何人以及任何第三方都無法讀取您的資料。"
+        ]
+      },
+      {
+        "question": "如果我忘記密碼會怎樣？",
+        "answer": [
+          "Internxt 不會儲存您的密碼，因此我們無法為您重設。這正是您在建立帳戶時會取得備份金鑰的原因：請妥善保管，您可以隨時用它復原檔案的存取權限。"
+        ]
+      },
+      {
+        "question": "如果我需要超過 1 GB 該怎麼辦？",
+        "answer": [
+          "您可以隨時升級至付費方案，帳戶、檔案和加密方式都維持不變。Internxt Premium 方案從 1 TB 起，最高可達 5 TB，並包含 VPN、防毒、Cleaner 等完整隱私套件。"
+        ]
+      },
+      {
+        "question": "我可以在哪些裝置上使用？",
+        "answer": [
+          "Internxt 可在任何現代瀏覽器中使用，並提供 Windows、macOS、Linux、Android 和 iOS 的原生應用程式，讓您的加密檔案在所有裝置之間保持同步。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "您的檔案。您的金鑰。免費。",
+    "description": "一分鐘內建立您的帳戶。",
+    "cta": "取得 1 GB 免費空間"
+  }
+}

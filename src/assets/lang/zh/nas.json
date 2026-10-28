@@ -116,7 +116,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -158,9 +158,7 @@
       },
       {
         "question": "如何联系支持？",
-        "answer": [
-          "找不到您要找的内容？您可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的技术支持团队。"
-        ]
+        "answer": ["找不到您要找的内容？您可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的技术支持团队。"]
       }
     ]
   },

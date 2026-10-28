@@ -1,7 +1,11 @@
 {
   "HeroSection": {
     "title": "Private cloud storage for documents",
-    "features": ["Store your documents in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
+    "features": [
+      "Store your documents in privacy",
+      "Post-quantum & zero-knowledge encryption",
+      "Open source and audited"
+    ],
     "subtitle": "Get the first cloud storage with post-quantum encription to store, share, and organize your files.",
     "cta": "Get Internxt"
   },
@@ -43,27 +47,24 @@
       "titles": ["Cost", "Privacy", "Extra features"],
       "descriptions": [
         {
-          "contents":
-          [
+          "contents": [
             "Free cloud storage for documents is often enough for your needs, as documents don’t usually take up a lot of storage space. Free services come with restrictions, with some providers charging extra for zero-knowledge encryption. So, it’s important to compare pricing and features to determine whether they meet your needs. ",
             "If you want cloud storage for important documents, plus a VPN, Antivirus, Mail, Meet, and more, Internxt offers them in its affordable pricing plans. Get started for free or from €3 per month for annual or lifetime plans, or store petabytes of documents with Internxt S3 object storage for €7/TB/month."
           ]
-       },
+        },
         {
-          "contents":
-          [
+          "contents": [
             "Google Drive, Dropbox, and others don’t offer the same zero-knowledge encryption as Internxt. Instead, Big Tech companies manage the encryption keys on their servers, meaning they could decrypt and access your confidential documents.",
             "Choosing zero-knowledge encrypted cloud storage means the keys are managed on your device, offering you maximum privacy as nobody but you can see the content of your documents."
           ]
-      },
+        },
         {
-          "contents":
-          [
+          "contents": [
             "Free cloud storage for documents may often cost you your privacy from companies that use your personal data to maximise their profits. In exchange, you receive free storage, but with targeted ads from third parties, increasing the risk of your data leaking online.",
             "Internxt’s free cloud storage plan offers 1GB of free cloud storage that is designed as a fully private solution for your files. Internxt never shares your data with anyone, and you get post-quantum encryption, plus a VPN for one location included in your free account."
           ]
-      }
-    ]
+        }
+      ]
     }
   },
 
@@ -89,17 +90,12 @@
       }
     ]
   },
-  
+
   "FeaturesInternxtSection": {
     "title": "Features of Internxt’s cloud storage for documents",
     "description": "Keep your documents safe, organized, and easy to access with secure sharing, backups, and post-quantum cryptography.",
     "scrollableSection": {
-      "titles": [
-        "Generous upload limits",
-        "Encrypted backups",
-        "Virtual drive",
-        "Increased transparency"
-      ],
+      "titles": ["Generous upload limits", "Encrypted backups", "Virtual drive", "Increased transparency"],
       "descriptions": [
         "Internxt Drive has an upload limit of 40GB for up to 3,000 files, so you can efficiently store, manage, and organize your documents in one secure cloud platform. You can also share files of up to 10GB with friends, family, or coworkers, and set your privacy controls for increased security.",
         "Ransomware is the biggest threat individuals and businesses face. Protect your documents against ransomware with Internxt’s encrypted backups. Schedule your backups every hour, 6 hours, daily, or manually to ensure you always have a copy of your files to avoid data loss and get increased protection against cyberattacks.",
@@ -154,7 +150,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

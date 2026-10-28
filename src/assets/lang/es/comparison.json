@@ -139,7 +139,7 @@
       }
     ]
   },
-    "tableSection": {
+  "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
     "valentinesTitle": "Amor seguro - ",
@@ -180,7 +180,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

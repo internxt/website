@@ -138,7 +138,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     },
     "title": "Planos de armazenamento vitalício",
@@ -184,7 +184,7 @@
           "Autenticação de dois fatores (2FA)",
           "Suporte a CLI, WebDav e Rclone"
         ],
-        "3TB": [
+        "2TB": [
           "3 TB de armazenamento criptografado de conhecimento zero",
           "Criptografia pós-quântica",
           "VPN ultrarrápida e ilimitada (FR, DE, PL)",
@@ -281,7 +281,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

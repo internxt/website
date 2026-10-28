@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "**免费**加密云存储",
+    "subtitle": "**1 GB 永久免费。** 无需信用卡。",
+    "SignUp": {
+      "fields": {
+        "email": {
+          "label": "电子邮箱",
+          "placeholder": "电子邮箱"
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "密码",
+          "show": "显示",
+          "hide": "隐藏",
+          "strength": {
+            "complexity": "密码复杂度不足",
+            "length": "密码长度至少为 8 个字符",
+            "weak": "密码强度较弱",
+            "strong": "密码强度高"
+          }
+        },
+        "submit": "创建免费账户"
+      },
+      "info": "Internxt 不会存储密码。如果你忘记了密码，备份密钥可以帮你恢复文件访问权限。",
+      "disclaimer": {
+        "text": "创建账户即表示您同意我们的",
+        "link": "服务条款和隐私政策"
+      },
+      "login": {
+        "text": "已有账户？",
+        "link": "登录"
+      }
+    }
+  },
+  "ReviewSection": {
+    "forbes": "Internxt 正巩固其作为欧洲科技巨头替代方案的地位",
+    "deloitte": "荣获德勤 Fast 50 奖，该奖项表彰欧洲增长最快的公司",
+    "techradar": "Internxt 是一项出色的云存储服务：价格实惠、操作直观且稳定可靠",
+    "fortune": "Internxt 正在构建一个隐私与安全优先的更好的互联网",
+    "trustpilot": "考虑到所提供的安全性与功能，性价比极高。服务与支持都非常出色"
+  },
+  "TrustedSection": {
+    "description": "使用 Internxt Free，你将获得 1 GB 只有你才能打开的存储空间。没有广告，没有扫描，没有附加条件，你的数字生活属于你自己。"
+  },
+  "FeaturesSection": {
+    "title": "终极防护的新一代最佳加密云存储",
+    "description": "我们以先进的加密技术保护文件的安全与隐私，从容应对未来的新型威胁。",
+    "cards": {
+      "titles": [
+        "无法被攻破和泄露的数据",
+        "新一代安全技术",
+        "开源且透明",
+        "通过独立验证"
+      ],
+      "descriptions": [
+        "我们不存储密码或用户数据，你的所有数据在传输中和存储时都经过加密。Internxt 让你完全掌控自己的文件。你的数据是你的事，保护它是我们的事。",
+        "Internxt 是唯一自动使用端到端加密和后量子密码学保护文件的云存储服务，这意味着只有你才能访问自己的数据。",
+        "我们为自己的工作感到自豪，因此代码在 GitHub 上公开，任何人都可以亲自审阅、审计和验证。除了你的数据，我们没有什么可隐藏的。",
+        "我们完全符合 GDPR 且 100% 安全，但不必只听我们说。Internxt 已通过欧洲领先的渗透测试公司 Securitum 的独立审计与验证。"
+      ]
+    }
+  },
+  "ChoosePlanSection": {
+    "title": "免费开始。需要更多时再升级。",
+    "description": "你的文件和加密方式完全不变。",
+    "freeCard": {
+      "label": "免费",
+      "storage": "1 GB",
+      "price": "{{currency}}0 永久",
+      "features": [
+        "1 GB 加密存储空间",
+        "网页版、桌面版和移动应用",
+        "安全的文件分享",
+        "零知识加密"
+      ],
+      "cta": "创建免费账户"
+    },
+    "premiumCard": {
+      "label": "Premium",
+      "badge": "专属折扣",
+      "storage": "1-5 TB",
+      "price": "低至 {{currency}}{{minimumPrice}}/月",
+      "features": [
+        "1 TB、3 TB 或 5 TB 存储空间",
+        "完整隐私套件：VPN、杀毒、Cleaner 等",
+        "高级客户支持",
+        "30 天退款保证"
+      ],
+      "cta": "获取优惠"
+    },
+    "guarantees": {
+      "premiumSupport": "高级客户支持",
+      "moneyBack": "30 天退款保证",
+      "openSource": "开源且经过审计"
+    }
+  },
+  "FaqSection": {
+    "title": "常见问题",
+    "faq": [
+      {
+        "question": "免费套餐真的永久免费吗？",
+        "answer": [
+          "是的。Internxt Free 为你提供 1 GB 加密云存储，完全免费，无需信用卡，没有试用期，也没有到期日。只有当你决定升级获取更多空间时才需要付费。"
+        ]
+      },
+      {
+        "question": "Internxt 能看到我的文件吗？",
+        "answer": [
+          "不能。Internxt 采用零知识的端到端加密，你的文件在到达我们的服务器之前就已在你的设备上完成加密。我们从不持有密钥，这意味着 Internxt 的任何人以及任何第三方都无法读取你的数据。"
+        ]
+      },
+      {
+        "question": "如果我忘记密码会怎样？",
+        "answer": [
+          "Internxt 不会存储你的密码，因此我们无法为你重置。这正是你在创建账户时会获得备份密钥的原因：请妥善保管，你可以随时用它恢复对文件的访问。"
+        ]
+      },
+      {
+        "question": "如果我需要超过 1 GB 怎么办？",
+        "answer": [
+          "你可以随时升级到付费套餐，账户、文件和加密方式都保持不变。Internxt Premium 套餐从 1 TB 起，最高可达 5 TB，并包含 VPN、杀毒、Cleaner 等完整隐私套件。"
+        ]
+      },
+      {
+        "question": "我可以在哪些设备上使用？",
+        "answer": [
+          "Internxt 可在任何现代浏览器中使用，并提供 Windows、macOS、Linux、Android 和 iOS 的原生应用，让你的加密文件在所有设备间保持同步。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "你的文件。你的密钥。免费。",
+    "description": "一分钟内创建你的账户。",
+    "cta": "获取 1 GB 免费空间"
+  }
+}

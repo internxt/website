@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Rinnovabili",
         "description": "Questo valore si riferisce alla percentuale di tariffe di energia rinnovabile utilizzata nei nostri data center.",
-        "value": "92%",
+        "value": "100%",
         "unit": "REF"
       }
     }

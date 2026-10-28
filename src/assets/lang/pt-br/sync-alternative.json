@@ -66,11 +66,7 @@
     "title": "Por que escolher a Internxt como sua alternativa ao Sync",
     "description": "Tenha segurança total combinada com criptografia de conhecimento zero e uma suíte completa de produtos para proteger você online.",
     "cards": {
-      "titles": [
-        "Criptografia pós-quântica",
-        "Proteção completa online",
-        "Pague uma vez, use para sempre"
-      ],
+      "titles": ["Criptografia pós-quântica", "Proteção completa online", "Pague uma vez, use para sempre"],
       "descriptions": [
         "A Internxt é o primeiro armazenamento na nuvem com criptografia pós-quântica, protegendo você contra ameaças capazes de quebrar a criptografia padrão do setor.",
         "Além do armazenamento na nuvem, a Internxt oferece uma suíte completa (VPN, Antivirus, Meet) para manter seus dispositivos e sua presença online privados e seguros.",
@@ -130,20 +126,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao Sync",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "Integrado diretamente ao app para oferecer controle total e proteção contra malware, ransomware e spyware.",
         "Protege sua navegação, bloqueia anúncios e rastreadores e mantém sua localização privada e segura.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -228,9 +212,7 @@
       },
       {
         "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
-        "answer": [
-          "A Internxt aceita cartões de débito/crédito, PayPal, iDEAL, Sofort, criptomoedas e Klarna."
-        ]
+        "answer": ["A Internxt aceita cartões de débito/crédito, PayPal, iDEAL, Sofort, criptomoedas e Klarna."]
       }
     ]
   }

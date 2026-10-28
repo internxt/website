@@ -44,7 +44,7 @@
     "cta": "接受邀請"
   },
   "ctaSection2": {
-    "title": "在 Internxt 的終身方案中：我應該選擇哪個？1TB、3TB 還是 5TB？",
+    "title": "在 Internxt 的終身方案中：我應該選擇哪個？1TB、2TB 還是 5TB？",
     "description": "我們所有的方案都能為您提供在雲端私密儲存檔案所需的一切。如果您想要完整的隱私、進階雲端管理以及 Internxt 的所有功能（如 Meet 和 Mail），5TB Ultimate 方案是實現全面掌控和最高隱私的最佳選擇。",
     "descriptionWithoutDisocunt": "透過 Internxt 體驗完整的數位隱私",
     "cta": "選擇方案"
@@ -89,7 +89,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -66,11 +66,7 @@
     "title": "Funciones",
     "description": "",
     "cards": {
-      "titles": [
-        "Código abierto y auditado",
-        "Suite completa de productos",
-        "Planes asequibles"
-      ],
+      "titles": ["Código abierto y auditado", "Suite completa de productos", "Planes asequibles"],
       "descriptions": [
         "Internxt es totalmente de código abierto y está auditado de forma independiente, garantizando que tu privacidad es lo primero.",
         "Internxt ofrece Cleaner y un ecosistema de privacidad completo para limpiar, guardar y compartir archivos con cifrado de conocimiento cero.",
@@ -130,22 +126,8 @@
     "title": "Por qué Internxt es la mejor alternativa a AVG",
     "description": "Internxt ofrece una suite completa de productos de privacidad para ofrecerte una alternativa segura.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Herramientas avanzadas"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
       "descriptions": [
         "Almacenamiento en la nube seguro con cifrado de conocimiento cero y post-cuántico.",
         "Protección integrada contra malware y ransomware con escaneos completos.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,15 +181,11 @@
       },
       {
         "question": "¿Dónde se encuentra la sede de Internxt?",
-        "answer": [
-          "Internxt tiene su sede en Valencia, España, y cumple estrictamente con el RGPD."
-        ]
+        "answer": ["Internxt tiene su sede en Valencia, España, y cumple estrictamente con el RGPD."]
       },
       {
         "question": "¿Cómo puedo contactar con soporte?",
-        "answer": [
-          "Si tienes dudas, puedes escribir a hello@internxt.com y nuestro equipo te ayudará."
-        ]
+        "answer": ["Si tienes dudas, puedes escribir a hello@internxt.com y nuestro equipo te ayudará."]
       }
     ]
   }

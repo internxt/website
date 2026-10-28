@@ -66,11 +66,7 @@
     "title": "Perché hai bisogno di un'alternativa a TotalAV",
     "description": "TotalAV è solo una delle opzioni per proteggere il tuo dispositivo dal malware. Per una privacy totale e una suite completa, passa a Internxt per un'alternativa completa a TotalAV con Drive, Cleaner e altro.",
     "cards": {
-      "titles": [
-        "Open source e auditato",
-        "Suite completa di prodotti",
-        "Piani convenienti"
-      ],
+      "titles": ["Open source e auditato", "Suite completa di prodotti", "Piani convenienti"],
       "descriptions": [
         "Internxt è completamente open source e auditato in modo indipendente, così puoi essere certo che non ci siano backdoor ai tuoi dati e che le tue informazioni siano gestite in modo trasparente.",
         "Internxt offre Cleaner e un ecosistema completo per la privacy per eliminare file indesiderati, archiviare e condividere file con crittografia zero-knowledge con Drive, e altri vantaggi tra cui VPN, Meet, Mail e altro.",
@@ -130,20 +126,8 @@
     "title": "Perché Internxt è la migliore alternativa a TotalAV",
     "description": "Internxt Drive include una suite completa di prodotti progettata per ridarti il controllo della tua privacy online.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Strumenti avanzati"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
       "descriptions": [
         "Ottieni una maggiore protezione con Internxt Antivirus integrato direttamente nella tua app Internxt Drive. Esegui scansioni complete o personalizzate per proteggere il tuo dispositivo da ransomware o spyware.",
         "La VPN di Internxt protegge la tua navigazione, blocca annunci e tracker e mantiene la tua posizione privata. Crittografa la tua connessione wifi per prevenire spionaggio e furto d'identità.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -215,9 +199,7 @@
       },
       {
         "question": "Come contattare il supporto?",
-        "answer": [
-          "Contatta hello@internxt.com e il nostro team sarà felice di aiutarti."
-        ]
+        "answer": ["Contatta hello@internxt.com e il nostro team sarà felice di aiutarti."]
       },
       {
         "question": "Posso aggiungere più spazio al mio piano a vita?",

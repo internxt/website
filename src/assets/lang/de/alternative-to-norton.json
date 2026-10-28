@@ -66,11 +66,7 @@
     "title": "Funktionen",
     "description": "",
     "cards": {
-      "titles": [
-        "Open-Source und geprüft",
-        "Komplette Produktpalette",
-        "Erschwingliche Pläne"
-      ],
+      "titles": ["Open-Source und geprüft", "Komplette Produktpalette", "Erschwingliche Pläne"],
       "descriptions": [
         "Internxt ist vollständig Open-Source und wird unabhängig geprüft, um sicherzustellen, dass es keine Hintertüren zu Ihren Daten gibt.",
         "Internxt bietet Cleaner und ein komplettes Datenschutz-Ökosystem zum Reinigen, Speichern und Teilen mit Zero-Knowledge-Verschlüsselung.",
@@ -130,22 +126,8 @@
     "title": "Warum Internxt die beste Alternative zu Norton ist",
     "description": "Internxt bietet eine umfassende Produktpalette für eine sichere Alternative.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Fortgeschrittene Tools"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Fortgeschrittene Tools"],
       "descriptions": [
         "Sicherer Cloud-Speicher mit Zero-Knowledge- und Post-Quanten-Verschlüsselung.",
         "Internxt Antivirus schützt mit vollständigen Scans vor Malware und Ransomware.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,15 +181,11 @@
       },
       {
         "question": "Wo hat Internxt seinen Sitz?",
-        "answer": [
-          "Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."
-        ]
+        "answer": ["Internxt hat seinen Sitz in Valencia, Spanien, und erfüllt strikt die DSGVO."]
       },
       {
         "question": "Wie kontaktiere ich den Support?",
-        "answer": [
-          "Schreiben Sie an hello@internxt.com, unser Team hilft Ihnen gerne weiter."
-        ]
+        "answer": ["Schreiben Sie an hello@internxt.com, unser Team hilft Ihnen gerne weiter."]
       }
     ]
   }

@@ -68,7 +68,7 @@
       "renewables": {
         "title": "可再生能源",
         "description": "這是指我們數據中心中使用的可再生能源因子（REF）的比例。",
-        "value": "92%",
+        "value": "100%",
         "unit": "REF"
       }
     }

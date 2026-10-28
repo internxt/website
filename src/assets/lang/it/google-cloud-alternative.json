@@ -66,11 +66,7 @@
     "title": "Perché hai bisogno di un'alternativa a Google Cloud",
     "description": "Quello che Google Cloud dimostra riguardo alla sicurezza fallisce in termini di privacy. Per una privacy totale, ottieni una sicurezza totale combinata con la crittografia a conoscenza zero da Internxt.",
     "cards": {
-      "titles": [
-        "Configurazione complessa",
-        "Costi nascosti e imprevedibili",
-        "Download costosi"
-      ],
+      "titles": ["Configurazione complessa", "Costi nascosti e imprevedibili", "Download costosi"],
       "descriptions": [
         "La configurazione dell'archiviazione su Google Cloud implica la navigazione tra più dashboard e sistemi di sicurezza. Gli utenti devono gestire manualmente ruoli, regole di accesso e regioni. Le attività semplici richiedono spesso conoscenze tecniche, rendendo la piattaforma difficile per i principianti e rallentando lo sviluppo.",
         "Google Cloud addebita separatamente storage, richieste, trasferimento di dati, monitoraggio, backup e funzionalità di sicurezza. Queste piccole tariffe si accumulano rapidamente e sono difficili da monitorare. Eventuali aumenti di traffico o utilizzo possono causare picchi importanti nelle fatture, rendendo i budget a lungo termine inaffidabili per le aziende.",
@@ -130,12 +126,7 @@
     "title": "Perché Internxt è la migliore alternativa a Google Cloud",
     "description": "Internxt Drive offre una suite completa di prodotti progettati per restituirti il controllo della tua privacy online.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
       "titles": [
         "Archiviazione sicura e duratura",
         "Accesso istantaneo",
@@ -177,7 +168,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

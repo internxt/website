@@ -192,7 +192,7 @@ const TableSection = ({ textContent }) => {
         unlimited_bandwidth: false,
         free_account_storage: '2GB',
         monthly_base_pricing: '$18',
-        max_storage_amount: '3TB',
+        max_storage_amount: '2TB',
         lifetime_plans: false,
         support_center: true,
         live_chat_support: true,

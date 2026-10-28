@@ -16,6 +16,7 @@ import { useOfferConfig, usePathRedirect, ENFORCED_LOCALE, ALLOWED_PATHS } from 
 import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -74,12 +75,14 @@ function CombinedSpecialOffer({
     onlyUltimatePlan,
     ultimateAndPremiumPlans,
     annualPlans,
+    annualFirstPlans,
     lifetimePlans,
     isClubic,
     isWpcdrive,
     isBpdrive,
     isPrivacyTutor,
     requireAnnualDiscount,
+    redirectToUrgentCheckout,
   } = useOfferConfig(pathname);
 
   const {
@@ -108,7 +111,8 @@ function CombinedSpecialOffer({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const themeClasses = getThemeClasses(isDarkMode);
-  const openerInterval = annualPlans ? Interval.Year : Interval.Lifetime;
+  const openerInterval = annualPlans || annualFirstPlans ? Interval.Year : Interval.Lifetime;
+  const openerSwitchPlan: SwitchButtonOptions = annualFirstPlans ? 'Individuals' : 'Lifetime';
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
@@ -141,6 +145,7 @@ function CombinedSpecialOffer({
       interval,
       storage,
       couponCodeForCheckout?.name,
+      redirectToUrgentCheckout,
     );
   };
 
@@ -211,8 +216,6 @@ function CombinedSpecialOffer({
           products={products}
           loadingCards={false}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
           popularPlanBySize="5TB"
           sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
           hideFreeCard
@@ -221,6 +224,7 @@ function CombinedSpecialOffer({
           onlyUltimatePlan={onlyUltimatePlan}
           premiumAndUltimatePlan={ultimateAndPremiumPlans}
           startIndividualPlansFromInterval={openerInterval}
+          startFromPlan={openerSwitchPlan}
           hidePlanSelectorComponent={annualPlans || lifetimePlans}
           alternativeHeader={lifetimePlans}
         />

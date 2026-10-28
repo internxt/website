@@ -48,12 +48,7 @@
     "title": "为什么您需要 CleanMyMac 的替代方案",
     "description": "CleanMyMac 只是清理文件的选择之一。为了获得全面的隐私保护，请切换到 Internxt，获得包含 Drive、Cleaner 在内的全能替代方案。",
     "scrollableSection": {
-      "titles": [
-        "闭源软件",
-        "深度系统访问权限",
-        "缺乏加密",
-        "产品线有限"
-      ],
+      "titles": ["闭源软件", "深度系统访问权限", "缺乏加密", "产品线有限"],
       "descriptions": [
         "作为专有软件，用户无法独立验证后台采集了哪些数据。",
         "CleanMyMac 需要广泛的权限。如果不当使用，可能会删除重要的系统文件，导致系统不稳定。",
@@ -66,11 +61,7 @@
     "title": "功能",
     "description": "",
     "cards": {
-      "titles": [
-        "开源且经过审计",
-        "全套产品线",
-        "实惠的价格"
-      ],
+      "titles": ["开源且经过审计", "全套产品线", "实惠的价格"],
       "descriptions": [
         "Internxt 完全开源并经过独立审计，确保无后门且透明。",
         "Internxt 提供 Cleaner 和完整的隐私生态系统，用于清理、存储和共享零知识加密文件。",
@@ -130,22 +121,8 @@
     "title": "为什么 Internxt 是 CleanMyMac 的最佳替代方案",
     "description": "Internxt 提供全套方案，为传统清理工具提供安全的替代选择。",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "高级工具"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [
         "零知识及后量子加密的云存储。",
         "内置恶意软件防护及全面扫描。",
@@ -183,7 +160,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -199,15 +176,11 @@
       },
       {
         "question": "Internxt 总部在哪里？",
-        "answer": [
-          "总部位于西班牙瓦伦西亚，严格遵循 GDPR。"
-        ]
+        "answer": ["总部位于西班牙瓦伦西亚，严格遵循 GDPR。"]
       },
       {
         "question": "如何联系支持？",
-        "answer": [
-          "请联系 hello@internxt.com，我们将很乐意提供帮助。"
-        ]
+        "answer": ["请联系 hello@internxt.com，我们将很乐意提供帮助。"]
       }
     ]
   }

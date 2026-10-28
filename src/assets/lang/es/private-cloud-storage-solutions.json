@@ -81,7 +81,7 @@
     "description": "Tus archivos seguros con cifrado postcuántico de última generación.",
     "cta": "Obtén Internxt"
   },
-    "tableSection": {
+  "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
     "valentinesTitle": "Amor seguro - ",
@@ -122,7 +122,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

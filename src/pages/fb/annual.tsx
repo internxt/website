@@ -68,39 +68,37 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
   };
 
   return (
-      <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
-        <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
+    <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
+      <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
-        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
 
-        <PricingSectionWrapper
-            textContent={langJson.tableSection}
-            decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscountForLifetime,
-            }}
-            lifetimeCoupons={lifetimeCoupons}
-            lang={locale}
-            products={products}
-            loadingCards={loadingCards}
-            onCheckoutButtonClicked={onCheckoutButtonClicked}
-            hideBusinessCards
-            hideBusinessSelector
-            startFromPlan='Individuals'
-            startIndividualPlansFromInterval={Interval.Year}
-            popularPlanBySize="3TB"
-            sectionDetails="bg-white lg:py-20"
-            hideFreeCard
-        />
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={locale}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        startFromPlan="Individuals"
+        startIndividualPlansFromInterval={Interval.Year}
+        popularPlanBySize="2TB"
+        sectionDetails="bg-white lg:py-20"
+        hideFreeCard
+      />
 
-        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
+      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
 
-        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
 
-        <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
-      </Layout>
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+    </Layout>
   );
 };
 

@@ -173,6 +173,37 @@ export const ALLOWED_PATHS = [
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
+  'loco',
+  'technouplift',
+  'technobaazi',
+  'salvaje',
+  'manguman',
+  'techbot',
+  'juan',
+  'pietro',
+  'adslzone87',
+  'sonu',
+  'tse87',
+  'tdes85',
+  'tdit85',
+  'tdpt85',
+  '5tblastcall',
+  'naseros',
+  'harryshares',
+  'visionia',
+  'roxana',
+  'peter',
+  'douglas',
+  'techsagar90',
+  'cm90',
+  'ibg90',
+  'qweenty',
+  'nu90',
+  'decodificandoti',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -256,6 +287,13 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tukaram: 'es',
   xataka: 'es',
   claridadartificial: 'es',
+  loco: 'es',
+  salvaje: 'es',
+  juan: 'es',
+  adslzone87: 'es',
+  tdes85: 'es',
+  naseros: 'es',
+  roxana: 'es',
 
   // fr
   benjamin: 'fr',
@@ -268,6 +306,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   madroz: 'fr',
   overfl0w: 'fr',
   qinhui: 'fr',
+  visionia: 'fr',
 
   // it
   alessandro: 'it',
@@ -281,12 +320,20 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   saddy: 'it',
   speciale: 'it',
   gian: 'it',
+  pietro: 'it',
+  tdit85: 'it',
 
   // zh
   madmoneylabs: 'zh',
 
   // zh-tw
   ahui: 'zh-tw',
+
+  //pt-br
+  tdpt85: 'pt-br',
+  peter: 'pt-br',
+  douglas: 'pt-br',
+  decodificandoti: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -316,11 +363,47 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'morpheus',
   'themorpheus',
   'thelinuxexp',
+  'simon42',
+  'ition',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
+export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
+export const URGENT_CHECKOUT_PATHS = new Set<string>([
+  'bjoern',
+  'heisect',
+  'aimentors',
+  'alextbg',
+  'morpheus',
+  'saasmaster',
+  'cyberlab',
+  'macrumors',
+  'nazlouis',
+  'themorpheus',
+  'ctechmedia',
+  'lukas',
+  'apfeltalk',
+  'lefiltre',
+  'niklas',
+  'kevin',
+  'simon42',
+  'windowsarea',
+  'ition',
+  'overfl0w',
+  'devopstoolbox',
+  'morrolinux',
+  'thelinuxexp',
+  'ahui',
+  'techsagar',
+  'xavier',
+  'salvaje',
+  'juan',
+  'scott',
+  'linuxtakeaway',
+  'david',
+]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
   'drop-offer',
@@ -441,6 +524,37 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'linuxtakeaway',
   'danalove',
   'alextbg',
+  'biswas',
+  'dysk',
+  'recoon',
+  'lazyassassin',
+  'loco',
+  'technouplift',
+  'technobaazi',
+  'salvaje',
+  'manguman',
+  'techbot',
+  'juan',
+  'pietro',
+  'adslzone87',
+  'sonu',
+  'tse87',
+  'tdes85',
+  'tdit85',
+  'tdpt85',
+  '5tblastcall',
+  'naseros',
+  'harryshares',
+  'visionia',
+  'roxana',
+  'peter',
+  'douglas',
+  'techsagar90',
+  'cm90',
+  'ibg90',
+  'qweenty',
+  'nu90',
+  'decodificandoti',
 ]);
 
 export const COUPON_CODES = {
@@ -614,6 +728,37 @@ export const COUPON_CODES = {
   linuxtakeaway: PromoCodeName.linuxtakeaway,
   danalove: PromoCodeName.danalove,
   alextbg: PromoCodeName.alextbg,
+  biswas: PromoCodeName.biswas,
+  dysk: PromoCodeName.dysk,
+  recoon: PromoCodeName.recoon,
+  lazyassassin: PromoCodeName.lazyassassin,
+  loco: PromoCodeName.loco,
+  technouplift: PromoCodeName.technouplift,
+  technobaazi: PromoCodeName.technobaazi,
+  salvaje: PromoCodeName.salvaje,
+  manguman: PromoCodeName.manguman,
+  techbot: PromoCodeName.techbot,
+  juan: PromoCodeName.juan,
+  pietro: PromoCodeName.pietro,
+  adslzone87: PromoCodeName.adslzone87,
+  sonu: PromoCodeName.sonu,
+  tse87: PromoCodeName.tse87,
+  tdes85: PromoCodeName.tdes85,
+  tdit85: PromoCodeName.tdit85,
+  tdpt85: PromoCodeName.tdpt85,
+  '5tblastcall': PromoCodeName.ftblastcall,
+  naseros: PromoCodeName.naseros,
+  harryshares: PromoCodeName.harryshares,
+  visionia: PromoCodeName.visionia,
+  roxana: PromoCodeName.roxana,
+  peter: PromoCodeName.peter,
+  douglas: PromoCodeName.douglas,
+  techsagar90: PromoCodeName.techsagar90,
+  cm90: PromoCodeName.cm90,
+  ibg90: PromoCodeName.ibg90,
+  qweenty: PromoCodeName.qweenty,
+  nu90: PromoCodeName.nu90,
+  decodificandoti: PromoCodeName.decodificandoti,
 };
 
 interface OfferConfig {
@@ -625,12 +770,14 @@ interface OfferConfig {
   onlyUltimatePlan: boolean;
   ultimateAndPremiumPlans: boolean;
   annualPlans: boolean;
+  annualFirstPlans: boolean;
   lifetimePlans: boolean;
   isClubic: boolean;
   isWpcdrive: boolean;
   isBpdrive: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
+  redirectToUrgentCheckout: boolean;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -647,12 +794,14 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         onlyUltimatePlan: false,
         ultimateAndPremiumPlans: false,
         annualPlans: false,
+        annualFirstPlans: false,
         lifetimePlans: false,
         isClubic: false,
         isWpcdrive: false,
         isBpdrive: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
+        redirectToUrgentCheckout: false,
       };
     }
 
@@ -662,12 +811,14 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);
     const ultimateAndPremiumPlans = ULTIMATE_PREMIUM_PLANS_PATHS.has(selectedPathname);
     const annualPlans = ANNUAL_PLANS_PATHS.has(selectedPathname);
+    const annualFirstPlans = ANNUAL_FIRST_PLANS_PATHS.has(selectedPathname);
     const lifetimePlans = LIFETIME_PLANS_PATHS.has(selectedPathname);
     const isClubic = selectedPathname === 'clubic';
     const isWpcdrive = selectedPathname === 'wpcdrive';
     const isBpdrive = selectedPathname === 'bpdrive';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
+    const redirectToUrgentCheckout = URGENT_CHECKOUT_PATHS.has(selectedPathname);
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -682,12 +833,14 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       onlyUltimatePlan,
       ultimateAndPremiumPlans,
       annualPlans,
+      annualFirstPlans,
       lifetimePlans,
       isClubic,
       isWpcdrive,
       isBpdrive,
       isPrivacyTutor,
       requireAnnualDiscount,
+      redirectToUrgentCheckout,
     };
   }, [pathname]);
 };

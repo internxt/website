@@ -2,11 +2,7 @@
   "heroSection": {
     "title": "O que as pessoas estão **dizendo** sobre a Internxt",
     "subtitle": "Descubra por que as pessoas confiam seus dados à Internxt",
-    "features": [
-      "Conjunto completo de privacidade",
-      "Criptografia pós-quântica",
-      "Código aberto e auditado"
-    ],
+    "features": ["Conjunto completo de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "cta": "Obtenha a Internxt"
   },
   "ReviewSection": {
@@ -61,11 +57,7 @@
         "A Internxt é um excelente serviço de armazenamento em nuvem graças aos seus planos de preços acessíveis, à interface intuitiva e ao suporte confiável. Ela se destaca nas medidas de segurança e no compromisso com a privacidade, o que a torna uma das melhores escolhas.",
         "A Internxt é uma solução de armazenamento em nuvem focada em privacidade que oferece criptografia no lado do cliente, segurança pós-quântica, software de código aberto e servidores na UE, entregando armazenamento seguro e em conformidade com um excelente custo-benefício."
       ],
-      "authors": [
-        "Jon Jacobi - {{company}}",
-        "Craig Hale - {{company}}",
-        "Aleksandar Kochovski - {{company}}"
-      ]
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
     },
     "readMore": "Leia mais avaliações no Trustpilot"
   },
@@ -133,7 +125,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

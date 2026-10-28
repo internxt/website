@@ -119,9 +119,7 @@ export const Photos = ({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideBusinessCards
-          hideBusinessSelector
-          popularPlanBySize="3TB"
+          popularPlanBySize="2TB"
           sectionDetails="bg-white lg:py-20"
           hideFreeCard
         />

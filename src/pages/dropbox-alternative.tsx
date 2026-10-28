@@ -96,8 +96,6 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          hideSwitchSelector
-          hideBusinessSelector
           sectionDetails="bg-white lg:py-20 py-10"
         />
 

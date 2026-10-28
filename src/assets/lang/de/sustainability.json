@@ -68,7 +68,7 @@
       "renewables": {
         "title": "Erneuerbare",
         "description": "Dies bezieht sich auf den Anteil des verwendeten erneuerbaren Energiesatzes (REF) in unseren Rechenzentren.",
-        "value": "92%",
+        "value": "100%",
         "unit": "REF"
       }
     }

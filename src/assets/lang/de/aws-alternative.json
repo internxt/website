@@ -66,11 +66,7 @@
     "title": "Warum Sie eine Alternative zu AWS brauchen",
     "description": "Was AWS an Sicherheit zeigt, fehlt bei der Privatsphäre. Für volle Privatsphäre holen Sie sich die Zero-Knowledge-Verschlüsselung von Internxt.",
     "cards": {
-      "titles": [
-        "Komplexes Setup",
-        "Versteckte Kosten",
-        "Teure Downloads"
-      ],
+      "titles": ["Komplexes Setup", "Versteckte Kosten", "Teure Downloads"],
       "descriptions": [
         "Das Einrichten von Speicher auf AWS erfordert das Navigieren durch viele Dashboards. Benutzer müssen Rollen und Zugriffsregeln manuell verwalten.",
         "Amazon AWS berechnet Speicher, Anfragen und Datenübertragung separat. Diese Gebühren summieren sich schnell und sind schwer nachzuverfolgen.",
@@ -130,18 +126,8 @@
     "title": "Warum Internxt die beste Alternative zu AWS ist",
     "description": "Internxt bietet Ihnen Kontrolle über Ihre digitale Privatsphäre.",
     "scrollableSection": {
-      "imagesPathname": [
-        "storage",
-        "access",
-        "pricing",
-        "cost"
-      ],
-      "titles": [
-        "Sicherer Speicher",
-        "Sofortiger Zugriff",
-        "Einfache und vorhersehbare Preise",
-        "Kosten pro GB"
-      ],
+      "imagesPathname": ["storage", "access", "pricing", "cost"],
+      "titles": ["Sicherer Speicher", "Sofortiger Zugriff", "Einfache und vorhersehbare Preise", "Kosten pro GB"],
       "descriptions": [
         "Internxt S3 bietet eine Ende-zu-Ende-Verschlüsselung, um Daten vor Verlust, Korruption oder Ransomware zu schützen. Mit einer Dauerhaftigkeit von 11×9s.",
         "Internxt S3 ist eine sofortige Cloud-Lösung, sodass alle Dateien sofort verfügbar sind. Im Gegensatz zu Amazon S3 Glacier gibt es keine Verzögerung.",
@@ -177,7 +163,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -192,27 +178,19 @@
       },
       {
         "question": "Was ist die beste Alternative zu AWS?",
-        "answer": [
-          "Internxt ist die beste AWS-Alternative für Objektspeicher mit vorhersehbaren Preisen."
-        ]
+        "answer": ["Internxt ist die beste AWS-Alternative für Objektspeicher mit vorhersehbaren Preisen."]
       },
       {
         "question": "Wo sitzt Internxt?",
-        "answer": [
-          "Internxt hat seinen Sitz in Valencia, Spanien, und ist eine DSGVO-konforme Lösung."
-        ]
+        "answer": ["Internxt hat seinen Sitz in Valencia, Spanien, und ist eine DSGVO-konforme Lösung."]
       },
       {
         "question": "Ist Amazon AWS teurer als Internxt?",
-        "answer": [
-          "Da Internxt S3 keine Übertragungsgebühren hat, ist es bis zu 80% günstiger als AWS."
-        ]
+        "answer": ["Da Internxt S3 keine Übertragungsgebühren hat, ist es bis zu 80% günstiger als AWS."]
       },
       {
         "question": "Wie kontaktiere ich den Support?",
-        "answer": [
-          "Sie können sich jederzeit an hello@internxt.com wenden."
-        ]
+        "answer": ["Sie können sich jederzeit an hello@internxt.com wenden."]
       }
     ]
   },

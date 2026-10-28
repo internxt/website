@@ -66,11 +66,7 @@
     "title": "Vá além do armazenamento na nuvem e tenha privacidade total",
     "description": "Para privacidade total, tenha segurança completa combinada com a criptografia de conhecimento zero e pós-quântica da Internxt.",
     "cards": {
-      "titles": [
-        "Preparada para a era pós-quântica",
-        "Proteção total online",
-        "Pague uma vez, use para sempre"
-      ],
+      "titles": ["Preparada para a era pós-quântica", "Proteção total online", "Pague uma vez, use para sempre"],
       "descriptions": [
         "A Internxt é a primeira nuvem a implementar a criptografia pós-quântica (Kyber-512), preparando seus dados para o futuro contra ataques de computadores quânticos que vão quebrar o padrão AES-256.",
         "A Internxt vai além do armazenamento, oferecendo um ecossistema completo (VPN, Antivirus, Meet) para proteger seu dispositivo e sua identidade online em uma única assinatura segura.",
@@ -130,20 +126,8 @@
     "title": "Por que a Internxt é a melhor alternativa ao Filen",
     "description": "O Internxt Drive oferece um conjunto completo de produtos criado para devolver a você o controle da sua privacidade na internet.",
     "scrollableSection": {
-      "imagesPathname": [
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Ferramentas avançadas"
-      ],
+      "imagesPathname": ["antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Antivirus", "VPN", "Cleaner", "Meet", "Ferramentas avançadas"],
       "descriptions": [
         "Proteção integrada contra malware, ransomware e spyware diretamente no seu aplicativo de drive seguro.",
         "Criptografe sua conexão de internet, bloqueie rastreadores e navegue com privacidade de qualquer lugar do mundo.",
@@ -180,7 +164,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

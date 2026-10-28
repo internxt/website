@@ -75,7 +75,10 @@
   "PaymentSection": {
     "limitedOffer": "Zeitlich begrenztes Angebot!",
     "title": { "blueText": "", "normalText": "Entdecken Sie unsere exklusiven Lifetime-Pläne" },
-    "title2": { "blueText": "Erhalten Sie ${{percent}}% Rabatt", "normalText": " auf unsere exklusiven Lifetime-Pläne" },
+    "title2": {
+      "blueText": "Erhalten Sie ${{percent}}% Rabatt",
+      "normalText": " auf unsere exklusiven Lifetime-Pläne"
+    },
     "description": "Einmal kaufen und für immer Privatsphäre und Sicherheit erhalten.",
     "description2": "Lebenslange Privatsphäre und Sicherheit für Ihre Dateien zu einem einmaligen, exklusiven Preis.",
     "normalSection": {
@@ -90,7 +93,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

@@ -66,11 +66,7 @@
     "title": "Funzionalità",
     "description": "",
     "cards": {
-      "titles": [
-        "Open source e auditato",
-        "Suite completa di prodotti",
-        "Piani convenienti"
-      ],
+      "titles": ["Open source e auditato", "Suite completa di prodotti", "Piani convenienti"],
       "descriptions": [
         "Internxt è completamente open source e auditato in modo indipendente, quindi puoi essere certo che non ci siano backdoor e che le tue informazioni siano gestite in modo trasparente. Chiunque può esaminare il codice.",
         "Internxt offre Cleaner e un ecosistema completo per la privacy per darti tutto ciò di cui hai bisogno per pulire i file spazzatura, archiviare e condividere file con crittografia zero-knowledge, oltre a VPN, Meet e Mail.",
@@ -130,22 +126,8 @@
     "title": "Perché Internxt è la migliore alternativa a Bitdefender",
     "description": "Internxt offre una suite completa di prodotti insieme alla sua IA privata per offrirti un'alternativa sicura.",
     "scrollableSection": {
-      "imagesPathname": [
-        "drive",
-        "antivirus",
-        "vpn",
-        "cleaner",
-        "meet",
-        "hero"
-      ],
-      "titles": [
-        "Internxt Drive",
-        "Antivirus",
-        "VPN",
-        "Cleaner",
-        "Meet",
-        "Strumenti avanzati"
-      ],
+      "imagesPathname": ["drive", "antivirus", "vpn", "cleaner", "meet", "hero"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
       "descriptions": [
         "Internxt Drive offre archiviazione cloud sicura, zero-knowledge e con crittografia post-quantum, inclusa condivisione avanzata e supporto NAS.",
         "Internxt Antivirus è integrato per proteggerti dai malware tramite scansioni complete o personalizzate.",
@@ -183,7 +165,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },
@@ -217,9 +199,7 @@
       },
       {
         "question": "Come contattare il supporto?",
-        "answer": [
-          "Per qualsiasi domanda, contatta hello@internxt.com e il nostro team sarà lieto di aiutarti."
-        ]
+        "answer": ["Per qualsiasi domanda, contatta hello@internxt.com e il nostro team sarà lieto di aiutarti."]
       },
       {
         "question": "Posso aggiungere archiviazione al mio piano a vita?",
@@ -229,9 +209,7 @@
       },
       {
         "question": "Posso pagare con carta, PayPal o crypto?",
-        "answer": [
-          "Internxt accetta carte, PayPal, iDEAL, Sofort, criptovalute e Klarna."
-        ]
+        "answer": ["Internxt accetta carte, PayPal, iDEAL, Sofort, criptovalute e Klarna."]
       }
     ]
   }

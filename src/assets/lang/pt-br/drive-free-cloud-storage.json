@@ -64,11 +64,7 @@
     "title": "Principais recursos do nosso armazenamento online gratuito na nuvem",
     "description": "Armazenamento na nuvem seguro e gratuito com a mesma estrutura Kyber-512 e AES-256 que você tem em todos os planos pagos, com aplicativos funcionais para desktop, celular, web e CLI desde o primeiro dia. Sem cartão para se cadastrar, e a criptografia não é rebaixada porque o armazenamento é gratuito. Se você valoriza a arquitetura de conhecimento zero acima de extras agregados, esta é a melhor opção de armazenamento na nuvem gratuito disponível.",
     "accordionCards": {
-      "titles": [
-        "Um ecossistema totalmente privado",
-        "Colaboração segura",
-        "Sua nuvem, como um disco local"
-      ],
+      "titles": ["Um ecossistema totalmente privado", "Colaboração segura", "Sua nuvem, como um disco local"],
       "descriptions": [
         "Uma única conta Internxt dá acesso a toda a linha de produtos: Drive, VPN, Antivirus, Cleaner, Meet e Send. O próprio Drive usa criptografia de conhecimento zero AES-256 e Kyber-512 em todos os planos, gratuitos ou pagos. Os planos pagos aumentam o armazenamento, adicionam mais localizações de VPN e liberam ferramentas de colaboração como versionamento de arquivos, mas o piso de privacidade do Drive não muda.",
         "Envie arquivos para qualquer pessoa, inclusive para quem não tem conta na Internxt. O conteúdo compartilhado viaja como texto cifrado do seu dispositivo até o dela, e o dispositivo do destinatário faz a descriptografia do lado dele. O link em si não contém uma cópia legível do arquivo.",
@@ -87,12 +83,7 @@
   "AllInOnePrivacySection": {
     "title": "Armazenamento na nuvem gratuito em uma suíte completa de privacidade",
     "scrollableSection": {
-      "titles": [
-        "Suíte completa de privacidade",
-        "Para empresas",
-        "Para famílias",
-        "Preços vitalícios e anuais"
-      ],
+      "titles": ["Suíte completa de privacidade", "Para empresas", "Para famílias", "Preços vitalícios e anuais"],
       "descriptions": [
         "A Internxt não coloca um paywall sobre a arquitetura de privacidade. O Drive no plano gratuito usa a mesma criptografia de conhecimento zero AES-256 e Kyber-512 de todos os planos pagos, e a mesma conta Internxt funciona no VPN, Antivirus, Cleaner, Meet e Send. O que os planos pagos acrescentam é mais armazenamento, mais localizações de VPN e ferramentas como versionamento de arquivos e pastas colaborativas.",
         "O Internxt Business usa a mesma estrutura de conhecimento zero, com pastas de equipe, controles administrativos, SSO e cobrança compartilhada por cima. Os arquivos ficam em data centers na UE, e a certificação ISO 27001:2022 somada ao GDPR cobre a maioria das cargas de trabalho regulamentadas.",
@@ -235,7 +226,7 @@
     },
     "planStorage": {
       "essential": "1TB",
-      "premium": "3TB",
+      "premium": "2TB",
       "ultimate": "5TB"
     }
   },

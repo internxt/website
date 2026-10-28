@@ -1,3 +1,5 @@
+import type { ResolvedPromoCode } from '@/lib/helpers/campaigns';
+
 export interface UserData {
   id: number;
   userId: string;
@@ -388,10 +390,41 @@ export enum PromoCodeName {
   linuxtakeaway = 'LINUXTAKEAWAY',
   danalove = 'DANALOVE',
   alextbg = 'ALEXTBG',
+  biswas = 'BISWAS',
+  dysk = 'DYSK',
+  recoon = 'RECOON',
+  lazyassassin = 'LAZYASSASSIN',
+  loco = 'LOCO',
+  technouplift = 'TECHNOUPLIFT',
+  technobaazi = 'TECHNOBAAZI',
+  salvaje = 'SALVAJE',
+  manguman = 'MANGUMAN',
+  techbot = 'TECHBOT',
+  juan = 'JUAN',
+  pietro = 'PIETRO',
+  adslzone87 = 'ADSLZONE87',
+  sonu = 'SONU',
+  tse87 = 'TSE87',
+  tdes85 = 'TDES85',
+  tdit85 = 'TDIT85',
+  tdpt85 = 'TDPT85',
+  ftblastcall = '5TBLASTCALL',
+  naseros = 'NASEROS',
+  harryshares = 'HARRYSHARES',
+  visionia = 'VISIONIA',
+  roxana = 'ROXANA',
+  peter = 'PETER',
+  douglas = 'DOUGLAS',
+  techsagar90 = 'TECHSAGAR90',
+  cm90 = 'CM90',
+  ibg90 = 'IBG90',
+  qweenty = 'QWEENTY',
+  nu90 = 'NU90',
+  decodificandoti = 'DECODIFICANDOTI',
 }
 
 export interface PromoCodeProps {
-  name: PromoCodeName;
+  name: ResolvedPromoCode;
   codeId: string;
   amountOff?: number;
   percentOff?: number;

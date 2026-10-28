@@ -13,10 +13,9 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
     {
       heroImage: '/images/black-friday/bf-general.webp',
       metatagsId: 'black-friday',
-      couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
+      couponCode: PromoCodeName.seolp,
+      couponCodeForLifetime: PromoCodeName.seolp,
       popularPlanSize: '5TB',
-      hideBusinessCards: true,
-      hideBusinessSelector: true,
       moreDealsUrls: {
         card1: 'black-friday-internxt/bf-cloud-storage-deals',
         card2: 'black-friday-internxt/bf-personal-cloud-storage-deals',
