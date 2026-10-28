@@ -182,6 +182,13 @@
       "cta": " Claim deal"
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "only for a limited time!",
+      "normalText": "Massive Black Friday savings",
+      "cta": "Claim deal"
+    }
+  },
   "lifetimeBanner": {
     "label": "Secure your files forever",
     "title": "Get lifetime access to secure, private cloud storage with Internxt!",

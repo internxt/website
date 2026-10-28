@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { BLACK_FRIDAY_URL } from '@/components/banners/BlackFridayTopBanner';
 
 interface NavigationLinkProps {
   href: string;
@@ -53,6 +54,16 @@ const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLi
   </Link>
 );
 
+const HighlightedNavigationLink = ({ href, text, lang }: Omit<NavigationLinkProps, 'isActive' | 'isDarkMode'>) => (
+  <Link
+    href={href}
+    locale={lang}
+    className="whitespace-nowrap px-4 py-1.5 text-base font-bold text-primary transition duration-150 ease-in-out hover:text-primary-dark min-[1024px]:text-sm min-[1100px]:text-base"
+  >
+    {text}
+  </Link>
+);
+
 const isExternalLink = (href: string) => /^https?:\/\//.test(href);
 
 const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
@@ -64,7 +75,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
 
   return (
     <div
-      className={`group relative flex cursor-default items-center space-x-1 min-[1024px]:text-sm min-[1100px]:text-base rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
+      className={`group relative flex cursor-default items-center space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out min-[1024px]:text-sm min-[1100px]:text-base ${menuClasses}`}
     >
       <span>{label}</span>
       <CaretDown
@@ -126,6 +137,7 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        <HighlightedNavigationLink href={BLACK_FRIDAY_URL} text={textContent.links.blackFriday} lang={lang} />
         <DropdownMenu
           label={textContent.links.products}
           items={[
@@ -135,7 +147,7 @@ export const ItemsNavigation = ({
             { href: '/cleaner', text: textContent.products.cleaner },
             { href: '/meet', text: textContent.products.meet.name, title: textContent.products.meet.title },
             { href: '/mail', text: textContent.products.mail.name, title: textContent.products.mail.title },
-            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title }
+            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title },
           ]}
           darkMode={darkMode}
           lang={lang}

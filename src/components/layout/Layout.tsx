@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { INTERNXT_URL } from '@/constants';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
+import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -143,6 +144,10 @@ export default function Layout({
             "https://github.com/internxt"
           ]
         }`}
+      </Script>
+
+      <Script id="internxt-dark-mode-flag" strategy="beforeInteractive">
+        {`window.__INTERNXT_DARK_MODE__ = ${DARK_MODE_ENABLED};`}
       </Script>
 
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />

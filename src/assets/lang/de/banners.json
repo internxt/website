@@ -153,6 +153,13 @@
       "cta": "Wähle deinen Tarif "
     }
   },
+  "BlackFridayTopBarBanner": {
+    "title": {
+      "boldText": "nur für kurze Zeit!",
+      "normalText": "Riesige Black-Friday-Rabatte",
+      "cta": "Angebot sichern"
+    }
+  },
   "lifetimeBanner": {
     "label": "Sichern Sie Ihre Dateien für immer",
     "title": "Erhalte lebenslangen Zugang bei Internxt",
