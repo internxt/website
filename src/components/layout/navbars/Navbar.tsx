@@ -45,6 +45,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     !props.hide && !props.isLinksHidden && !router.pathname.startsWith(BLACK_FRIDAY_URL);
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
+  const defaultTopClass = props.isLinksHidden ? 'top-0' : 'top-18';
+
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
@@ -73,7 +75,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     <div
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} ${
-        showBlackFridayBanner ? 'top-12 lg:top-[54px]' : props.isLinksHidden ? 'top-0' : 'top-18'
+        showBlackFridayBanner ? 'top-12 lg:top-[54px]' : defaultTopClass
       } fixed left-0 flex h-20 w-full items-center ${
         props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
       } transition-all duration-100 lg:h-16 ${
