@@ -107,7 +107,7 @@ const BlackFridayDealsTemplate = ({
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
+    return text.replaceAll(/{{percentage}}/g, percentOff).replaceAll(/{{discount}}/g, percentOff);
   };
 
   return (
@@ -125,7 +125,7 @@ const BlackFridayDealsTemplate = ({
       />
 
       <div className="relative bg-[#1C1C1C] px-5 py-10">
-        <div className={`klaviyo-form-${formId} mx-auto max-w-[600px]`}></div>
+        <div className={`klaviyo-form-${formId} klaviyo-form-title-size mx-auto max-w-[600px]`}></div>
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-gray-71 lg:left-32 lg:right-32"></div>
       </div>
 
