@@ -132,8 +132,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "",
-      "normalText": "Grandes descuentos de Black Friday — ¡solo por tiempo limitado!",
+      "boldText": "¡solo por tiempo limitado!",
+      "normalText": "Grandes descuentos de Black Friday",
       "cta": "Consigue la oferta"
     }
   },

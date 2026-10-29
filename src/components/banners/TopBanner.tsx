@@ -20,7 +20,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         <div className="mx-auto flex flex-row items-center justify-center">
           <div className="flex cursor-default">
             <p className="gap-2 text-base font-semibold">
-              {textContent.title.normalText} <span className="pl-3"> {textContent.title.boldText}</span>
+              {textContent.title.normalText} — <span className="pr-3">{textContent.title.boldText}</span>
             </p>
           </div>
           <Link
@@ -41,7 +41,9 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         <div className=" w-full  overflow-hidden px-3 text-center">
           <div className="flex animate-marquee flex-row whitespace-nowrap">
             <p className="mx-1 flex items-center justify-center gap-1 text-base font-semibold">
-              <span>{textContent.title.normalText}</span>
+              <span>
+                {textContent.title.normalText} — {textContent.title.boldText}
+              </span>
             </p>
             <Link
               href={'/deals/black-friday-internxt'}

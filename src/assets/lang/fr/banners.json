@@ -123,8 +123,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "",
-      "normalText": "Des réductions massives pour le Black Friday — pour une durée limitée !",
+      "boldText": "pour une durée limitée !",
+      "normalText": "Des réductions massives pour le Black Friday",
       "cta": "Profiter de l'offre"
     }
   },
