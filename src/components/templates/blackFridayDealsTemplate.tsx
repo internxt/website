@@ -7,7 +7,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { parsePercentText } from '@/utils/parsePercentText';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { BlackFridayText } from '@/assets/types/blackFriday';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
@@ -139,10 +139,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {parsePercentText(textContent.CtaSection.title, percentOff)}
+              {parseDynamicText(textContent.CtaSection.title, { percentage: percentOff, discount: percentOff })}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSection.description, percentOff)}
+              {parseDynamicText(textContent.CtaSection.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
@@ -165,10 +165,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {parsePercentText(textContent.CtaSectionV2.title, percentOff)}
+              {parseDynamicText(textContent.CtaSectionV2.title, { percentage: percentOff, discount: percentOff })}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSectionV2.description, percentOff)}
+              {parseDynamicText(textContent.CtaSectionV2.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
