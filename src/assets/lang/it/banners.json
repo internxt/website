@@ -154,8 +154,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "solo per un periodo limitato!",
-      "normalText": "Super sconti del Black Friday",
+      "boldText": "",
+      "normalText": "Super sconti del Black Friday — solo per un periodo limitato!",
       "cta": "Approfitta dell'offerta"
     }
   },

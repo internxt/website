@@ -177,8 +177,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "only for a limited time!",
-      "normalText": "Massive Black Friday savings",
+      "boldText": "",
+      "normalText": "Massive Black Friday savings — only for a limited time!",
       "cta": "Claim deal"
     }
   },

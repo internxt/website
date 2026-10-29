@@ -154,8 +154,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "僅限限時搶購！",
-      "normalText": "黑色星期五超值優惠",
+      "boldText": "",
+      "normalText": "黑色星期五超值優惠——僅限限時搶購！",
       "cta": "立即領取"
     }
   },

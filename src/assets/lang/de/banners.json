@@ -148,8 +148,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "nur für kurze Zeit!",
-      "normalText": "Riesige Black-Friday-Rabatte",
+      "boldText": "",
+      "normalText": "Riesige Black-Friday-Rabatte — nur für kurze Zeit!",
       "cta": "Angebot sichern"
     }
   },
