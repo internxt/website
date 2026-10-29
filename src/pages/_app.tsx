@@ -10,6 +10,7 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
+import { isDarkModePage } from '@/theme.config';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
 import { saveReferralToCookie } from '@/lib/cookies';
@@ -26,6 +27,7 @@ const EXCLUDE_INTERCOM_PATHS = [
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
+  const darkMode = isDarkModePage(pathname);
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
 
@@ -136,17 +138,17 @@ function MyApp({ Component, pageProps }: AppProps) {
           ></iframe>
         </noscript>
 
-        <Component {...pageProps} />
+        <Component {...pageProps} darkMode={darkMode} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
           {shouldShowBanner ? (
             <>
-              <BottomBanner />
+              <BottomBanner darkMode={darkMode} />
             </>
           ) : undefined}
         </div>
-        <FreeCardPromoBanner />
-        <FreeCardPromoBannerPPC />
+        <FreeCardPromoBanner darkMode={darkMode} />
+        <FreeCardPromoBannerPPC darkMode={darkMode} />
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
