@@ -421,6 +421,12 @@ export enum PromoCodeName {
   qweenty = 'QWEENTY',
   nu90 = 'NU90',
   decodificandoti = 'DECODIFICANDOTI',
+  kocpc = 'KOCPC',
+  pijun = 'PIJUN',
+  beitech = 'BEITECH',
+  negocios = 'NEGOCIOS',
+  lucas = 'LUCAS',
+  youensina = 'YOUENSINA',
 }
 
 export interface PromoCodeProps {
