@@ -107,7 +107,7 @@ const BlackFridayDealsTemplate = ({
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return text.replaceAll(/{{percentage}}/g, percentOff).replaceAll(/{{discount}}/g, percentOff);
+    return text.replaceAll('{{percentage}}', percentOff).replaceAll('{{discount}}', percentOff);
   };
 
   return (
