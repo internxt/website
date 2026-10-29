@@ -19,7 +19,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
   return (
     <>
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-80">{textContent.signup.emailAddress}</p>
+        <p className="text-sm text-gray-100">{textContent.signup.emailAddress}</p>
         <TextInput
           placeholder={'Email'}
           label="email"
@@ -32,7 +32,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
       </div>
 
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-80">{textContent.signup.password}</p>
+        <p className="text-sm text-gray-100">{textContent.signup.password}</p>
         <label className="space-y-0.5">
           <PasswordInput
             placeholder={'Password'}

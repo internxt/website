@@ -204,6 +204,12 @@ export const ALLOWED_PATHS = [
   'qweenty',
   'nu90',
   'decodificandoti',
+  'kocpc',
+  'pijun',
+  'beitech',
+  'negocios',
+  'lucas',
+  'youensina',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -328,12 +334,17 @@ export const ENFORCED_LOCALE: Record<string, string> = {
 
   // zh-tw
   ahui: 'zh-tw',
+  kocpc: 'zh-tw',
+  pijun: 'zh-tw',
 
   //pt-br
   tdpt85: 'pt-br',
   peter: 'pt-br',
   douglas: 'pt-br',
   decodificandoti: 'pt-br',
+  negocios: 'pt-br',
+  lucas: 'pt-br',
+  youensina: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -403,6 +414,9 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'scott',
   'linuxtakeaway',
   'david',
+  'nu90',
+  'techsagar90',
+  'cm90',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -555,6 +569,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'qweenty',
   'nu90',
   'decodificandoti',
+  'kocpc',
+  'pijun',
+  'beitech',
+  'negocios',
+  'lucas',
+  'youensina',
 ]);
 
 export const COUPON_CODES = {
@@ -759,6 +779,12 @@ export const COUPON_CODES = {
   qweenty: PromoCodeName.qweenty,
   nu90: PromoCodeName.nu90,
   decodificandoti: PromoCodeName.decodificandoti,
+  kocpc: PromoCodeName.kocpc,
+  pijun: PromoCodeName.pijun,
+  beitech: PromoCodeName.beitech,
+  negocios: PromoCodeName.negocios,
+  lucas: PromoCodeName.lucas,
+  youensina: PromoCodeName.youensina,
 };
 
 interface OfferConfig {
