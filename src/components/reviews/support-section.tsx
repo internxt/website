@@ -69,13 +69,8 @@ const SupportSection = ({ darkMode = false, textContent }: Readonly<SupportSecti
         </div>
 
         <div className="flex flex-col gap-8 lg:gap-6">
-          {cards.map((card, index) => (
-            <SupportCard
-              key={`support-card-${index}`}
-              title={card.title}
-              description={card.description}
-              darkMode={darkMode}
-            />
+          {cards.map((card) => (
+            <SupportCard key={card.title} title={card.title} description={card.description} darkMode={darkMode} />
           ))}
         </div>
       </div>

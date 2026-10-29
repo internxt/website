@@ -5,7 +5,7 @@ import footerLang from '@/assets/lang/en/footer.json';
 import { House, Lifebuoy, Question } from '@phosphor-icons/react';
 import { FooterText } from '@/assets/types/layout/types';
 
-export default function Custom404({ darkMode = false }: { darkMode?: boolean }) {
+export default function Custom404({ darkMode = false }: Readonly<{ darkMode?: boolean }>) {
   const cards = [
     {
       icon: House,

@@ -31,7 +31,7 @@ function Cloudwards({
   metatagsDescriptions,
   footerLang,
   navbarLang,
-}: CloudWardsProps): JSX.Element {
+}: Readonly<CloudWardsProps>): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
 
   const {

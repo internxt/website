@@ -136,9 +136,9 @@ const FeaturesSlider = ({
             <div className="flex w-full max-w-[400px] flex-col space-y-4">
               <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{info.title}</p>
               {Array.isArray(info.description) ? (
-                info.description.map((line, index) => (
+                info.description.map((line) => (
                   <p
-                    key={index}
+                    key={line}
                     className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
                   >
                     {line}

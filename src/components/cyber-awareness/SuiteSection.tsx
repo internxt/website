@@ -87,9 +87,9 @@ const SuiteSection = ({ darkMode = false, textContent }) => {
       <div className="flex flex-col items-center space-y-20 p-10 px-5 sm:p-20">
         <p className="text-center text-5xl font-semibold md:w-full md:max-w-xl">{textContent.title}</p>
         <RevealY className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2">
-          {suiteCards.map((card, index) => (
+          {suiteCards.map((card) => (
             <div
-              key={index}
+              key={card.title}
               className={`flex flex-col space-y-4 rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10 `}
             >
               <card.img size={30} className="text-primary" />

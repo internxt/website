@@ -46,9 +46,10 @@ const PasswordInput = ({
 }: InputProps): JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
 
+  const defaultBorderClass = darkMode ? 'border-gray-71' : 'border-gray-40';
   const borderStyles = error
     ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
-    : `${darkMode ? 'border-gray-71' : 'border-gray-40'} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
+    : `${defaultBorderClass} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
 
   return (
     <div className={`relative z-20 flex-1 ${className}`}>

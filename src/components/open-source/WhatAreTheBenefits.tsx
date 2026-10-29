@@ -44,10 +44,10 @@ const WhatAreTheBenefits = ({ darkMode = false, textContent }) => {
           <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {cards.map((card, index) => (
+          {cards.map((card) => (
             <div
               className={`flex flex-col space-y-6 rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10`}
-              key={index}
+              key={card.title}
             >
               <card.icon className="h-8 w-8 text-primary" />
               <h3 className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{card.title}</h3>

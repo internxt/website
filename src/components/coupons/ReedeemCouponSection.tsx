@@ -90,7 +90,7 @@ export default function RedeemCouponsSection({
         <div className="hidden items-stretch lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:px-20 3xl:px-52">
           {textContent.cards.titles.map((card, index) => (
             <div
-              key={index}
+              key={card}
               className={`flex h-[220px] w-full flex-col gap-6 rounded-16 ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
               } p-8`}

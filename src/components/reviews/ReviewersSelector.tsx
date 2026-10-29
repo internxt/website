@@ -13,7 +13,6 @@ export const ReviewersSelector = ({
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => {
   const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
-  const hoverClass = darkMode ? 'hover:bg-[#1C1C1C]/60' : 'hover:bg-white/60';
   const textClass = darkMode ? 'text-cool-gray-30' : 'text-gray-105';
   return (
     <div id="reviewersButtons" className={`flex h-[38px] w-full flex-row rounded-lg bg-neutral-90/10 lg:w-[423.67px]`}>

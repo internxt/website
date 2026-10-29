@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Custom500({ darkMode = false }: { darkMode?: boolean }) {
+export default function Custom500({ darkMode = false }: Readonly<{ darkMode?: boolean }>) {
   return (
     <section className={`${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="content flex flex-col w-screen h-screen items-center justify-center">

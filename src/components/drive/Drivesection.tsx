@@ -33,9 +33,9 @@ const DriveSection = ({ darkMode = false, textContent }: DriveSectionProps): JSX
         </div>
 
         <div className="flex w-full flex-col gap-4 lg:w-1/3">
-          {textContent.description.map((desc, index) => (
+          {textContent.description.map((desc) => (
             <p
-              key={index}
+              key={desc}
               className={`text-base font-normal leading-tight ${
                 darkMode ? 'text-green-120' : 'text-gray-55'
               } lg:text-lg`}

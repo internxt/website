@@ -117,11 +117,13 @@ export default function HorizontalScrollableSection({
     };
   }, [isMobile]);
 
+  const darkBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17';
+  const themeBgClass = isValentinesMode ? 'bg-pink-0' : darkBgClass;
+  const sectionBgClass = bgGradient ? '' : themeBgClass;
+
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : isValentinesMode ? 'bg-pink-0' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
-      } pb-10 lg:h-min lg:gap-16 lg:py-20`}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${sectionBgClass} pb-10 lg:h-min lg:gap-16 lg:py-20`}
       style={bgGradient ? { background: bgGradient } : undefined}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">

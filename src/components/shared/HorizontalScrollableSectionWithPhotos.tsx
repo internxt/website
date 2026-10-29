@@ -15,6 +15,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   bgColor,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const enabledArrowClass = `cursor-pointer ${hoverClass}`;
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
@@ -174,7 +175,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               disabled={!canScrollLeft}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-all ${!canScrollLeft ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
+              } transition-all ${!canScrollLeft ? 'cursor-not-allowed opacity-50' : enabledArrowClass}`}
               aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -184,7 +185,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               disabled={!canScrollRight}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
                 darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-all ${!canScrollRight ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
+              } transition-all ${!canScrollRight ? 'cursor-not-allowed opacity-50' : enabledArrowClass}`}
               aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from "next/image";
 
-export default function FileParallaxSection({ darkMode = false }: { darkMode?: boolean }) {
+export default function FileParallaxSection({ darkMode = false }: Readonly<{ darkMode?: boolean }>) {
   return (
     <section
       className={`pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden ${

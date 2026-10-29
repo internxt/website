@@ -43,6 +43,7 @@ export const ContentBlockSection = ({ darkMode = false, textContent }: ContentBl
               </p>
               {textContent.card.description.map((feat) => (
                 <p
+                  key={feat}
                   className={`flex text-sm font-normal leading-tight ${
                     darkMode ? 'text-green-120' : 'text-gray-55'
                   } lg:text-lg`}

@@ -18,8 +18,8 @@ const WhatIsOSS = ({ darkMode = false, textContent }) => {
             alt="Internxt Open Source Software"
           />
           <div className="flex flex-col space-y-6">
-            {textContent.section.map((description, index) => (
-              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`} key={index}>
+            {textContent.section.map((description) => (
+              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`} key={description}>
                 {description}
               </p>
             ))}

@@ -5,7 +5,7 @@ interface FeatureSectionProps {
   textContent: CloudPartnerText['FeatureSection'];
 }
 
-export default function FeatureSection({ darkMode = false, textContent }: FeatureSectionProps): JSX.Element {
+export default function FeatureSection({ darkMode = false, textContent }: Readonly<FeatureSectionProps>): JSX.Element {
   return (
     <div
       className="flex flex-col items-center gap-6 pb-20 lg:px-10 xl:px-32 3xl:px-80 "

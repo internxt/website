@@ -5,8 +5,8 @@ const LearningWithOSCommunity = ({ darkMode = false, textContent }) => {
         <p className={`max-w-[744px] text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
           {textContent.title}
         </p>
-        {textContent.description.map((paragraph, index) => (
-          <p key={index} className={`max-w-[774px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+        {textContent.description.map((paragraph) => (
+          <p key={paragraph} className={`max-w-[774px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {paragraph}
           </p>
         ))}

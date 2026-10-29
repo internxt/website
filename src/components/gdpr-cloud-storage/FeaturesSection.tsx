@@ -113,9 +113,9 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
               </p>
               {/* Render the description as an array of paragraphs */}
               {Array.isArray(info.description) ? (
-                info.description.map((line, index) => (
+                info.description.map((line) => (
                   <p
-                    key={index}
+                    key={line}
                     className={`mb-4 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
                   >
                     {line}

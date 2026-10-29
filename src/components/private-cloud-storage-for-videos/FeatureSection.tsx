@@ -162,9 +162,9 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
                 {title}
               </h3>
               <div className="space-y-4">
-                {description.map((paragraph, i) => (
+                {description.map((paragraph) => (
                   <p
-                    key={i}
+                    key={paragraph}
                     className={`text-base font-normal leading-tight ${
                       darkMode ? 'text-green-120' : 'text-gray-55'
                     } lg:text-base`}

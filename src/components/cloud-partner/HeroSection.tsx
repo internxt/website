@@ -8,7 +8,7 @@ interface HeroSectionProps {
   textContent: CloudPartnerText['HeroSection'];
 }
 
-export default function HeroSection({ darkMode = false, textContent }: HeroSectionProps): JSX.Element {
+export default function HeroSection({ darkMode = false, textContent }: Readonly<HeroSectionProps>): JSX.Element {
   return (
     <div
       className="mt-20 flex flex-row items-center justify-between pb-8 pt-20 lg:mt-16 lg:px-10 xl:px-32 3xl:px-80"

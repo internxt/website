@@ -39,9 +39,9 @@ const FeaturesSliderImg = ({ darkMode = false, textContent, cardInfo }) => {
                 {info.title}
               </p>
               {Array.isArray(info.description) ? (
-                info.description.map((line, index) => (
+                info.description.map((line) => (
                   <p
-                    key={index}
+                    key={line}
                     className={`mb-4 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
                   >
                     {line}

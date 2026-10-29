@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import { Menu, Transition } from '@headlessui/react';
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react';
 
 const SelectSection = ({ darkMode = false, textContent, itemSelected, setItemSelected }) => {
@@ -14,6 +14,8 @@ const SelectSection = ({ darkMode = false, textContent, itemSelected, setItemSel
     }
     return titles;
   }
+
+  const itemTextClass = darkMode ? 'text-white-95' : 'text-gray-100';
 
   return (
     <>
@@ -46,33 +48,29 @@ const SelectSection = ({ darkMode = false, textContent, itemSelected, setItemSel
         <div className="flex flex-col">
           <Menu>
             <div className="mt-1 flex flex-col">
-              <Menu.Button className="flex w-full cursor-default flex-row items-center justify-between rounded-lg px-5 py-2 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
+              <MenuButton className="flex w-full cursor-default flex-row items-center justify-between rounded-lg px-5 py-2 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
                 <p>{itemSelected || linkTitles()[0]}</p>
                 <span>
                   <CaretDown size={24} className="pointer-events-none flex items-center" />
                 </span>
-              </Menu.Button>
+              </MenuButton>
               <Transition
                 as={Fragment}
                 leave="transition ease-in duration-100"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Menu.Items
+                <MenuItems
                   className={`mt-1 flex w-full flex-col rounded-md ${
                     darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
                   } py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm`}
                 >
                   {linkTitles().map((title, personIdx) => (
-                    <Menu.Item
+                    <MenuItem
                       as={'div'}
                       key={personIdx}
                       className={`flex cursor-default select-none py-2 pl-4 pr-4 ${
-                        itemSelected
-                          ? 'bg-primary bg-opacity-10 text-primary'
-                          : darkMode
-                          ? 'text-white-95'
-                          : 'text-gray-100'
+                        itemSelected ? 'bg-primary bg-opacity-10 text-primary' : itemTextClass
                       }`}
                     >
                       <p
@@ -89,9 +87,9 @@ const SelectSection = ({ darkMode = false, textContent, itemSelected, setItemSel
                       >
                         {title}
                       </p>
-                    </Menu.Item>
+                    </MenuItem>
                   ))}
-                </Menu.Items>
+                </MenuItems>
               </Transition>
             </div>
           </Menu>

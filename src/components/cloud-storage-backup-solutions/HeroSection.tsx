@@ -14,7 +14,7 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ darkMode = false, textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({ darkMode = false, textContent, lang, isHomePageV2 }: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);

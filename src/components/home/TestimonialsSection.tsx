@@ -81,7 +81,7 @@ const TestimonialsSection = ({
         >
           <div className="flex max-w-[355px] flex-col gap-3 lg:h-[300px]">
             <AvatarAndText testimonial={testimonials[0]} textColor={nameColor} />
-            <p className={`text-start text-xl ${textColor ? textColor : textClass}`}>{testimonials[0].review}</p>
+            <p className={`text-start text-xl ${textColor || textClass}`}>{testimonials[0].review}</p>
           </div>
           <div className="flex max-w-[355px] flex-col items-center justify-center gap-3  lg:h-[300px] lg:pb-20">
             <Image
@@ -93,7 +93,7 @@ const TestimonialsSection = ({
           </div>
           <div className="flex max-w-[355px] flex-col gap-3  lg:h-[300px]">
             <AvatarAndText testimonial={testimonials[1]} textColor={nameColor} />
-            <p className={`text-start text-xl ${textColor ? textColor : textClass}`}>{testimonials[1].review}</p>
+            <p className={`text-start text-xl ${textColor || textClass}`}>{testimonials[1].review}</p>
           </div>
         </div>
       </div>

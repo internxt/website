@@ -7,7 +7,7 @@ interface AccordionCardsProps {
   cardWidth?: string;
 }
 
-export default function AccordionCards({ darkMode = false, textContent, cardWidth }: AccordionCardsProps) {
+export default function AccordionCards({ darkMode = false, textContent, cardWidth }: Readonly<AccordionCardsProps>) {
   const cardTitles = textContent?.titles ?? [];
   const cardDescriptions = textContent?.descriptions ?? [];
   const [expandedCard, setExpandedCard] = useState(0);
@@ -60,7 +60,7 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
         {cardTitles.map((title, index) => (
           <div
             key={`${title}-${index}`}
-            className={`${cardWidth ? cardWidth : 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 ${
+            className={`${cardWidth || 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 ${
               darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
             } transition-all duration-300`}
           >

@@ -8,7 +8,10 @@ interface AccordionSectionProps {
   textContent: any;
 }
 
-export default function AccordionSectionSection({ darkMode = false, textContent }: AccordionSectionProps): JSX.Element {
+export default function AccordionSectionSection({
+  darkMode = false,
+  textContent,
+}: Readonly<AccordionSectionProps>): JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const cardTitles = textContent?.accordionSection.titles ?? [];
@@ -50,7 +53,7 @@ export default function AccordionSectionSection({ darkMode = false, textContent 
         <div className="space-y-4">
           {cardTitles.map((title, index) => (
             <div
-              key={index}
+              key={title}
               className={`w-[352px] overflow-hidden rounded-2xl ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             >
               <button

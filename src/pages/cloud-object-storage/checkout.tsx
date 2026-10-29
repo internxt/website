@@ -96,7 +96,9 @@ const IntegratedCheckout = ({ darkMode = false, textContent }: IntegratedCheckou
       .fetchPlanById(PRICE_ID, 'eur')
       .then((plan) => {
         setPlan(plan);
-        loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, placeholderColor, plan);
+        loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, placeholderColor, plan).catch(
+          (err) => console.error('Stripe elements failed to load:', err),
+        );
       })
       .catch((err) => {
         console.error('Plan fetch failed, redirecting to storage page:', err);

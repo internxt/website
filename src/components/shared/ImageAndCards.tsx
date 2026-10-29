@@ -47,7 +47,7 @@ export const ImageAndCards = ({ darkMode = false, textContent, image }: ImageAnd
         <div className="flex flex-1 flex-col justify-between gap-8">
           {textContent.features.titles.map((title: string, index: number) => (
             <div
-              key={index}
+              key={title}
               className={`flex w-full flex-col gap-6 rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8`}
             >
               <h3 className={`text-xl font-medium leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

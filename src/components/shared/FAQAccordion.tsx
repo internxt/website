@@ -67,7 +67,7 @@ export default function FaqAccordion({
       >
         <QuestionTag
           className={`w-full text-lg font-medium ${
-            textColor ? textColor : textClass
+            textColor || textClass
           } ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
         >
           {question}
@@ -84,7 +84,7 @@ export default function FaqAccordion({
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
         } duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${
-          textColor ? textColor : textClass2
+          textColor || textClass2
         } transition-all ease-in-out`}
       >
         {(Array.isArray(answer) ? answer : [answer]).map((text) => {

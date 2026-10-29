@@ -101,7 +101,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{ background: bgColor ? bgColor : sectionGradient }}
+      style={{ background: bgColor || sectionGradient }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <TitleTag

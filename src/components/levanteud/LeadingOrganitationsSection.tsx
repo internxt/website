@@ -139,9 +139,9 @@ export default function LeadingOrganizationsSection({
                   {card.title}
                 </p>
                 <div className="flex flex-col gap-2">
-                  {card.description.map((description, idx) => (
+                  {card.description.map((description) => (
                     <p
-                      key={idx}
+                      key={description}
                       className={`text-start text-base leading-tight lg:whitespace-pre-line ${
                         darkMode ? 'text-green-120' : 'text-gray-55'
                       }`}

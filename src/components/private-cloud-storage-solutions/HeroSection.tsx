@@ -20,7 +20,7 @@ export default function HeroSection({
   textContent,
   lang,
   isHomePageV2,
-}: HeroSectionForHomeProps): JSX.Element {
+}: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);

@@ -6,35 +6,35 @@ interface DigitalIndependenceSectionProps {
     textContent: any;
 }
 
+const HighlightText = ({
+  darkMode = false,
+  text,
+  className = `text-base text-start leading-tight lg:whitespace-pre-line ${
+    darkMode ? 'text-green-120' : 'text-gray-55'
+  }`,
+}) => {
+  const parts = text.split(/(\*\*.*?\*\*)/);
+
+  return (
+    <span className={className}>
+      {parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+          return (
+            <span key={index} className="font-semibold">
+              {part.slice(2, -2)}
+            </span>
+          );
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </span>
+  );
+};
+
 export default function DigitalIndependenceSection({
   darkMode = false,
   textContent,
 }: Readonly<DigitalIndependenceSectionProps>): JSX.Element {
-  const HighlightText = ({
-    darkMode = false,
-    text,
-    className = `text-base text-start leading-tight lg:whitespace-pre-line ${
-      darkMode ? 'text-green-120' : 'text-gray-55'
-    }`,
-  }) => {
-    const parts = text.split(/(\*\*.*?\*\*)/);
-
-    return (
-      <span className={className}>
-        {parts.map((part, index) => {
-          if (part.startsWith('**') && part.endsWith('**')) {
-            return (
-              <span key={index} className="font-semibold">
-                {part.slice(2, -2)}
-              </span>
-            );
-          }
-          return <span key={index}>{part}</span>;
-        })}
-      </span>
-    );
-  };
-
   return (
     <section
       className={`flex h-min flex flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 lg:mt-16 lg:px-20 px-6 lg:gap-16 gap-8 lg:px-10 xl:px-32 3xl:px-80`}
@@ -49,8 +49,8 @@ export default function DigitalIndependenceSection({
       </p>
       <div className="flex flex-col-reverse gap-6 lg:flex-row">
         <div className='flex flex-col gap-6'>
-          {textContent.features.map((feature, index) => (
-            <HighlightText text={feature} darkMode={darkMode}/>
+          {textContent.features.map((feature) => (
+            <HighlightText key={feature} text={feature} darkMode={darkMode} />
           ))}
         </div>
         <Image

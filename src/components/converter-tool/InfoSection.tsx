@@ -14,8 +14,11 @@ const InfoSection = ({ darkMode = false, textContent }) => {
           </p>
         </div>
         <div className="flex w-full max-w-[850px] flex-col space-y-2">
-          {textContent.faq.faq.map((item, index) => (
-            <div className={`rounded-lg border ${darkMode ? 'border-gray-71' : 'border-gray-20'} px-5`} key={index}>
+          {textContent.faq.faq.map((item) => (
+            <div
+              className={`rounded-lg border ${darkMode ? 'border-gray-71' : 'border-gray-20'} px-5`}
+              key={item.question}
+            >
               <FaqAccordion
                 key={item.question}
                 question={item.question}

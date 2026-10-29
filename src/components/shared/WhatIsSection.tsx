@@ -22,6 +22,7 @@ export const WhatIsSection = ({ darkMode = false, textContent }: WhatIsSectionPr
       </p>
       {textContent.description.map((feat) => (
         <p
+          key={feat}
           className={`flex text-center text-base font-normal leading-tight ${
             darkMode ? 'text-green-120' : 'text-gray-55'
           } lg:w-2/3 lg:text-lg`}

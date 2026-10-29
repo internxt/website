@@ -48,7 +48,7 @@ export default function OfficialCloudProviderSection({
   return (
     <section
       className={`${
-        bgColor ? bgColor : bgClass
+        bgColor || bgClass
       } flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
       style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >
@@ -74,9 +74,9 @@ export default function OfficialCloudProviderSection({
 
         {isDescriptionArray ? (
           <div className="flex flex-col gap-4">
-            {(textContent.description as string[]).map((paragraph, index) => (
+            {(textContent.description as string[]).map((paragraph) => (
               <p
-                key={index}
+                key={paragraph}
                 className={`text-sm font-normal leading-tight ${
                   darkMode ? 'text-green-120' : 'text-gray-55'
                 } lg:text-xl`}

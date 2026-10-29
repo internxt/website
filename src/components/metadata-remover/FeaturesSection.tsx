@@ -11,8 +11,8 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
             <h1 className={`mb-4 text-3xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.hero.title}
             </h1>
-            {textContent.hero.description.map((paragraph, index) => (
-              <p key={index} className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-70'}`}>
+            {textContent.hero.description.map((paragraph) => (
+              <p key={paragraph} className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-70'}`}>
                 {paragraph}
               </p>
             ))}

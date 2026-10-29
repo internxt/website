@@ -4,6 +4,8 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { TransformedProduct } from '@/services/stripe.service';
 import FreePlanCard from '../FreePlanCard';
 
+const SKELETON_KEYS = ['skeleton-1', 'skeleton-2', 'skeleton-3'];
+
 interface PriceTableForAlternativePricingProps {
   darkMode?: boolean;
   textContent: Record<string, any>;
@@ -114,9 +116,7 @@ export const PriceTableForAlternativePricing = ({
                       darkMode={darkMode}
                     />
                   ))
-                : Array(3)
-                    .fill(0)
-                    .map(() => <CardSkeleton darkMode={darkMode} />)}
+                : SKELETON_KEYS.map((key) => <CardSkeleton key={key} darkMode={darkMode} />)}
             </div>
             {showFreeCard ? (
               <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">

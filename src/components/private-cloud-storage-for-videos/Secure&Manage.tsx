@@ -30,7 +30,7 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
       <div className="hidden flex-row gap-8 lg:flex">
         {textContent.cards.map((card, index) => (
           <div
-            key={index}
+            key={card.title}
             className={`flex w-[544px] flex-col items-center gap-16 rounded-16  ${
               darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
             } p-10`}
@@ -38,9 +38,9 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
             <div className="flex flex-col gap-6">
               <p className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} `}>{card.title}</p>
               <div className="flex flex-col gap-6">
-                {card.description.map((paragraph, pIndex) => (
+                {card.description.map((paragraph) => (
                   <p
-                    key={pIndex}
+                    key={paragraph}
                     className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
                   >
                     {paragraph}
@@ -86,7 +86,7 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
       <div className="flex flex-col gap-4 lg:hidden">
         {textContent.cards.map((card, index) => (
           <div
-            key={index}
+            key={card.title}
             className={`flex w-[340px] flex-col items-center gap-16 rounded-16 ${
               darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
             } p-10`}
@@ -94,9 +94,9 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
             <div className="flex flex-col gap-6">
               <p className={`text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} `}>{card.title}</p>
               <div className="flex flex-col gap-6">
-                {card.description.map((paragraph, pIndex) => (
+                {card.description.map((paragraph) => (
                   <p
-                    key={pIndex}
+                    key={paragraph}
                     className={`text-xs font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
                   >
                     {paragraph}
