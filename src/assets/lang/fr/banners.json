@@ -124,14 +124,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Rejoignez Internxt cette saison avec 85 % de réduction et participez à notre tirage au sort de cartes-cadeaux de Noël.",
-      "cta": "Choisissez votre forfait "
-    }
-  },
-  "BlackFridayTopBarBanner": {
-    "title": {
-      "boldText": "pour une durée limitée !",
-      "normalText": "Des réductions massives pour le Black Friday",
+      "normalText": "Des réductions massives pour le Black Friday — pour une durée limitée !",
       "cta": "Profiter de l'offre"
     }
   },

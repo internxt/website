@@ -29,7 +29,6 @@ export interface BannersText {
   BusinessBanner: BusinessBanner;
   GoogleKnows: AndroidSmartBanner;
   TopBarBanner: TopBarBanner;
-  BlackFridayTopBarBanner: TopBarBanner;
   lifetimeBanner: LifetimeBanner;
   BeforeCloseBanner: BeforeCloseBanner;
 }

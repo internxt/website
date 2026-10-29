@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
-import { BLACK_FRIDAY_URL } from '@/components/banners/BlackFridayTopBanner';
 
 interface NavigationLinkProps {
   href: string;
   text: string;
   isActive: boolean;
   isDarkMode: boolean;
+  isHighlighted?: boolean;
   lang: string;
 }
 
@@ -41,25 +41,19 @@ interface ItemsNavigationProps {
   };
 }
 
-const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
-  const baseClasses = 'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
+const getLinkClasses = (isDarkMode: boolean, isActive: boolean, isHighlighted = false) => {
+  const baseClasses =
+    'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base transition duration-150 ease-in-out';
   const darkModeClasses = isDarkMode ? 'text-white hover:text-gray-20' : 'text-gray-60 hover:text-primary';
+  const colorClasses = isActive ? 'text-primary' : darkModeClasses;
 
-  return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
+  return isHighlighted
+    ? `${baseClasses} whitespace-nowrap font-bold text-primary hover:text-primary-dark`
+    : `${baseClasses} font-medium ${colorClasses}`;
 };
 
-const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
-  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
-    {text}
-  </Link>
-);
-
-const HighlightedNavigationLink = ({ href, text, lang }: Omit<NavigationLinkProps, 'isActive' | 'isDarkMode'>) => (
-  <Link
-    href={href}
-    locale={lang}
-    className="whitespace-nowrap px-4 py-1.5 text-base font-bold text-primary transition duration-150 ease-in-out hover:text-primary-dark min-[1024px]:text-sm min-[1100px]:text-base"
-  >
+const NavigationLink = ({ href, text, isActive, isDarkMode, isHighlighted, lang }: NavigationLinkProps) => (
+  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive, isHighlighted)}>
     {text}
   </Link>
 );
@@ -137,7 +131,14 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
-        <HighlightedNavigationLink href={BLACK_FRIDAY_URL} text={textContent.links.blackFriday} lang={lang} />
+        <NavigationLink
+          href="/deals/black-friday-internxt"
+          text={textContent.links.blackFriday}
+          isActive={router.pathname.startsWith('/deals/black-friday-internxt')}
+          isDarkMode={darkMode}
+          isHighlighted
+          lang={lang}
+        />
         <DropdownMenu
           label={textContent.links.products}
           items={[

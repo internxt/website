@@ -155,14 +155,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Unisciti a Internxt durante le feste con l'85% di sconto e partecipa alla nostra estrazione di carte regalo natalizie. ",
-      "cta": "Scegli il tuo piano "
-    }
-  },
-  "BlackFridayTopBarBanner": {
-    "title": {
-      "boldText": "solo per un periodo limitato!",
-      "normalText": "Super sconti del Black Friday",
+      "normalText": "Super sconti del Black Friday — solo per un periodo limitato!",
       "cta": "Approfitta dell'offerta"
     }
   },

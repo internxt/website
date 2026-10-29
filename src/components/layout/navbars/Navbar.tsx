@@ -12,7 +12,6 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import LanguageMobileBox from '../components/LanguageMobileBox';
-import BlackFridayTopBanner, { BLACK_FRIDAY_URL } from '@/components/banners/BlackFridayTopBanner';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -41,11 +40,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
   const router = useRouter();
   const lang = router.locale;
-  const showBlackFridayBanner =
-    !props.hide && !props.isLinksHidden && !router.pathname.startsWith(BLACK_FRIDAY_URL);
   const getTitles = require(`@/assets/lang/en/navbar.json`);
-
-  const defaultTopClass = props.isLinksHidden ? 'top-0' : 'top-18';
 
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
@@ -69,14 +64,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   }, []);
 
   return (
-    <>
-      {showBlackFridayBanner && <BlackFridayTopBanner />}
-
     <div
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} ${
-        showBlackFridayBanner ? 'top-12 lg:top-[54px]' : defaultTopClass
-      } fixed left-0 flex h-20 w-full items-center ${
+        props.isLinksHidden ? 'top-0' : 'top-18'
+      } top-18 fixed left-0 flex h-20 w-full items-center ${
         props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
       } transition-all duration-100 lg:h-16 ${
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
@@ -263,7 +255,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       </Link>
 
                       <Link
-                        href={BLACK_FRIDAY_URL}
+                        href="/deals/black-friday-internxt"
                         locale={props.lang}
                         role="link"
                         tabIndex={0}
@@ -444,6 +436,5 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
       {/* Auth dialog */}
     </div>
-    </>
   );
 }
