@@ -3,8 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import TopBanner from '@/components/banners/TopBanner';
-import { INTERNXT_URL, EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { INTERNXT_URL } from '@/constants';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
 import { isDarkModePage } from '@/theme.config';
@@ -42,10 +41,8 @@ export default function Layout({
   robots,
 }: LayoutProps) {
   const router = useRouter();
-  const { dialogIsOpen } = useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.has(langToUpperCase) ? langToUpperCase : 'EN';
 
@@ -169,9 +166,9 @@ export default function Layout({
         `}
       </Script>
 
-      {shouldShowBanner && <TopBanner />}
+      <TopBanner />
 
-      <div className={`flex flex-col ${shouldShowBanner ? 'pt-[64px] lg:pt-[54px]' : ''}`}>{children}</div>
+      <div className="flex flex-col pt-[64px] lg:pt-[54px]">{children}</div>
 
       {/* <BFBanner /> */}
     </>
