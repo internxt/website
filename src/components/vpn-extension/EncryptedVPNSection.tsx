@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const EncryptedVPNSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText }) => {
+export const EncryptedVPNSection = ({ darkMode = false, textContent, bannerText }) => {
   return (
     <section
       className={`flex flex-col items-center justify-center space-y-12 overflow-hidden ${

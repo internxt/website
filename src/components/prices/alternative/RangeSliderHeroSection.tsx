@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Button from '@/components/shared/Button';
 import { RangeSlider } from '../../shared/RangeSlider';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface RangeSliderHeroSectionProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ const PRICING_RANGE_SLIDER_VALUES = ['50GB', '1TB', '10TB'];
 const STORAGE_RANGE = ['50GB', '100GB', '200GB', '500GB', '1TB', '2TB', '4TB', '8TB', '10TB'];
 
 export const RangeSliderHeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   onButtonClick,
 }: RangeSliderHeroSectionProps) => {
@@ -52,10 +51,11 @@ export const RangeSliderHeroSection = ({
                 max={STORAGE_RANGE.length - 1}
                 valueLabelFormat={valueLabelFormat}
                 rangeItems={PRICING_RANGE_SLIDER_VALUES}
+                darkMode={darkMode}
               />
             </div>
             <div className="flex flex-col items-center">
-              <Button text={textContent.cta} onClick={handleOnButtonClick} />
+              <Button text={textContent.cta} onClick={handleOnButtonClick} darkMode={darkMode} />
             </div>
           </div>
         </div>

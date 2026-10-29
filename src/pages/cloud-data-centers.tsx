@@ -13,7 +13,6 @@ import CompilanceAndCertificationsSection from '@/components/data-centers/Compil
 import { ContentBlockSection } from '@/components/shared/ContentBlock';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudDataCentersPageProps {
   darkMode?: boolean;
@@ -25,7 +24,7 @@ interface CloudDataCentersPageProps {
 }
 
 const CloudDataCentersPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -48,11 +47,11 @@ const CloudDataCentersPage = ({
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <WhatIsSection textContent={textContent.WhatIsDataCenterSection} />
+      <WhatIsSection textContent={textContent.WhatIsDataCenterSection} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.HorizontalScrllableSection} />
+      <HorizontalScrollableSection textContent={textContent.HorizontalScrllableSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -78,11 +77,12 @@ const CloudDataCentersPage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding={`py-10 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+        darkMode={darkMode}
       />
 
-      <CompilanceAndCertificationsSection textContent={textContent.CompilanceAndCertificationsSection} />
+      <CompilanceAndCertificationsSection textContent={textContent.CompilanceAndCertificationsSection} darkMode={darkMode} />
 
-      <ContentBlockSection textContent={textContent.SecureCloudStorgaeSection} />
+      <ContentBlockSection textContent={textContent.SecureCloudStorgaeSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection2}
@@ -113,11 +113,12 @@ const CloudDataCentersPage = ({
         }
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="py-10"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }]} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Data Centers and Certifications', url: '/cloud-data-centers' }]} darkMode={darkMode} />
     </Layout>
   );
 };

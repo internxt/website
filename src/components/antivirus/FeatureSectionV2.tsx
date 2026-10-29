@@ -1,13 +1,12 @@
 import { AntivirusText } from '@/assets/types/antivirus';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 export interface FeatureSectionV2Props {
   darkMode?: boolean;
   textContent: AntivirusText['FeatureSectionV2'];
 }
 
-const FeatureSectionV2 = ({ darkMode = DARK_MODE_ENABLED, textContent }: FeatureSectionV2Props) => {
+const FeatureSectionV2 = ({ darkMode = false, textContent }: FeatureSectionV2Props) => {
   const cards = [
     {
       image: '/images/antivirus/detect_malware.svg',

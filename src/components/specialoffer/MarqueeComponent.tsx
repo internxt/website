@@ -1,7 +1,6 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MarqueeComponentProps {
   darkMode?: boolean;
@@ -9,11 +8,7 @@ interface MarqueeComponentProps {
   bgColor?: string;
 }
 
-export const MarqueeComponent = ({
-  darkMode = DARK_MODE_ENABLED,
-  label,
-  bgColor = 'bg-color-1',
-}: MarqueeComponentProps) => {
+export const MarqueeComponent = ({ darkMode = false, label, bgColor = 'bg-color-1' }: MarqueeComponentProps) => {
   return (
     <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
       <div className={'flex xl:hidden'}>

@@ -10,7 +10,6 @@ import HeroSection from '@/components/cloud-partner/HeroSection';
 import FeatureSection from '@/components/cloud-partner/FeatureSection';
 import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIconsSection';
 import AccordionSection from '@/components/cloud-partner/AccordionSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudPartnerProps {
   darkMode?: boolean;
@@ -23,7 +22,7 @@ interface CloudPartnerProps {
 }
 
 const CloudPartner = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -39,29 +38,31 @@ const CloudPartner = ({
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
 
-      <AccordionSection textContent={textContent.AccordionSection} />
+      <AccordionSection textContent={textContent.AccordionSection} darkMode={darkMode} />
 
       <ThreeCardsIconsSection
         textContent={textContent.ThreeCardsSection}
         cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
         bottomSeparationBar
         topSeparationBar
+        darkMode={darkMode}
       />
 
-      <TrustedObjectStorageSection textContent={textContent.TrustedSection} />
+      <TrustedObjectStorageSection textContent={textContent.TrustedSection} darkMode={darkMode} />
 
       <ContactSalesForm
         textContent={textContent.ContactSales}
         locale={locale}
         needsBottomDivider={false}
         isReseller={true}
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
 import { CloudStorageForPhotosText, ImageConfig } from '@/assets/types/cloud-storage-for-photos';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 const Animation = dynamic(() => import('../shared/Animation'));
 interface HeroSectionForHomeProps {
   darkMode?: boolean;
@@ -16,7 +15,7 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   isHomePageV2,
@@ -116,7 +115,7 @@ export default function HeroSection({
                 />
               </div>
             ) : (
-              <BannerForMobile />
+              <BannerForMobile darkMode={darkMode} />
             )}
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>

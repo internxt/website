@@ -1,4 +1,3 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 export interface PasswordStrengthProps {
   darkMode?: boolean;
   label?: string;
@@ -6,7 +5,7 @@ export interface PasswordStrengthProps {
 }
 
 export default function PasswordStrength(props: PasswordStrengthProps): JSX.Element {
-  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = props.darkMode ?? false;
   const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
   let activeBackground: string;
   let labelColor: string;

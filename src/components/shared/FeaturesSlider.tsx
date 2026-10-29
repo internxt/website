@@ -1,9 +1,8 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import RevealX from '@/components/components/RevealX';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FeaturesSlider = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   cardInfo,
   backgroundClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',

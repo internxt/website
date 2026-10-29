@@ -1,7 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HowItWorksSectionProps {
   darkMode?: boolean;
@@ -9,7 +8,7 @@ interface HowItWorksSectionProps {
 }
 
 export default function HowItWorksSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<HowItWorksSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

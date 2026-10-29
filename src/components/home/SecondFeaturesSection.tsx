@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react';
 import { CaretRight, ClockCounterClockwise, ListChecks, MagicWand, ShieldStar } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { Transition } from '@headlessui/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SecondFeaturesSectionProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ interface SecondFeaturesSectionProps {
 }
 
 const SecondFeaturesSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   cards,

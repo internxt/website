@@ -3,9 +3,8 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Animation from '@/components/shared/Animation';
 import { ImageConfig } from '@/assets/types/mail'
 import { useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HeroSection = ({ darkMode = false, textContent }) => {
     const [scale, setScale] = useState<number>(1);
 
     useEffect(() => {

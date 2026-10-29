@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const TryInternxtBanner = ({ darkMode = DARK_MODE_ENABLED, textContent, url }) => {
+const TryInternxtBanner = ({ darkMode = false, textContent, url }) => {
   const [bannerVisible, setBannerVisible] = useState(false);
   const onClose = () => {
     setBannerVisible(false);

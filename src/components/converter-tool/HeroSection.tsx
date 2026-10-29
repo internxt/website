@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const allOptions = [
   { value: 'bit', label: 'Bits (bit)' },
@@ -33,7 +32,7 @@ interface HeroSectionProps {
   };
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ darkMode = false, textContent }) => {
   const [value1, setValue1] = useState<number>(1);
   const [value2, setValue2] = useState<number>(1000);
   const [convertFrom, setConvertFrom] = useState('tb');

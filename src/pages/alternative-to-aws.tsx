@@ -10,6 +10,7 @@ const AwsComparison = (props: any) => (
     segmentName="AWS Comparison"
     logo="/images/comparison/aws-Letters.webp"
     isS3Alternative
+    darkMode={props.darkMode}
   />
 );
 

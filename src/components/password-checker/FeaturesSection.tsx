@@ -3,9 +3,8 @@ import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@ph
 import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -81,7 +80,7 @@ const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.section4.title}</h3>
 
-              <RenderDescription description={textContent.section4.description} />
+              <RenderDescription description={textContent.section4.description} darkMode={darkMode} />
             </div>
 
             <div className="flex cursor-pointer">
@@ -115,7 +114,7 @@ const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText
             <div className="flex flex-col space-y-3 px-2 md:max-w-2xl">
               <h3 className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.section5.title}</h3>
 
-              <RenderDescription description={textContent.section5.description} />
+              <RenderDescription description={textContent.section5.description} darkMode={darkMode} />
             </div>
           </div>
         </div>
@@ -125,7 +124,7 @@ const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText
           <div className="justify-center-center flex max-w-2xl flex-col space-y-3">
             <h3 className={`text-left text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.section6.title}</h3>
 
-            <RenderDescription description={textContent.section6.description} />
+            <RenderDescription description={textContent.section6.description} darkMode={darkMode} />
           </div>
 
           <div className="flex cursor-pointer">

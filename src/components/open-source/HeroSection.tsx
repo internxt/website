@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   const router = useRouter();
   const lang = router.locale;
   const blueTextInChinese = textContent.title.normalText.substring('开源', 2);

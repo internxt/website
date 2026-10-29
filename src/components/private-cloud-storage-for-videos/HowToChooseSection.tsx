@@ -1,9 +1,8 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HowToChooseSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const HowToChooseSection = ({ darkMode = false, textContent }) => (
   <section
     className={`flex h-auto w-full flex-row items-center justify-center ${
       darkMode ? 'bg-gray-105' : 'bg-neutral-17'
@@ -49,11 +48,11 @@ const HowToChooseSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
       </div>
 
       <div className="flex h-min flex-row justify-between pt-8 lg:hidden">
-        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[333px]" />
+        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[333px]" darkMode={darkMode} />
       </div>
 
       <div className="h-max-[692px] hidden w-[832px] flex-row justify-between lg:flex">
-        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[440px]" />
+        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[440px]" darkMode={darkMode} />
         <div className="h-[500px]">
           <Image
             src={getImage('/images/cloud-storage-for-video-files/MobileImage_Search.png')}

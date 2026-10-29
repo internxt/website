@@ -2,9 +2,8 @@ import React from 'react';
 import { Parallax } from 'react-parallax';
 import { Transition } from '@headlessui/react';
 import * as anim from '../../../public/js/anim';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const NgoCard = ({ darkMode = DARK_MODE_ENABLED, id, name, short, description }) => {
+const NgoCard = ({ darkMode = false, id, name, short, description }) => {
   // Constant to avoid unnecessary re-renders
   const showTrigger = [] as any;
   const setShowTrigger = () => {

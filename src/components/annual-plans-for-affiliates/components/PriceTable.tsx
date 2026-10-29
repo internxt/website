@@ -7,7 +7,6 @@ import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableProps {
   darkMode?: boolean;
@@ -22,7 +21,7 @@ interface PriceTableProps {
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   handlePriceCardButton,
   discount,
@@ -70,9 +69,9 @@ const PriceTable: React.FC<PriceTableProps> = ({
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
+            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton darkMode={darkMode} />
           </div>
         </Transition>
 
@@ -104,6 +103,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       priceBefore={discount ? product.price : undefined}
                       percentOff={discount ? 100 - discount : 0}
                       isCloudwards={true}
+                      darkMode={darkMode}
                     />
                   );
                 })

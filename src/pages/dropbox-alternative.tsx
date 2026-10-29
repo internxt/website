@@ -14,10 +14,9 @@ import Footer from '@/components/layout/footers/Footer';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const DropboxComparison = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -80,9 +79,9 @@ const DropboxComparison = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -91,6 +90,7 @@ const DropboxComparison = ({
           logo="/images/comparison/competitors/Dropbox_Letters.webp"
           sectionNeedsH2
           TableNameTag={'h3'}
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -105,6 +105,7 @@ const DropboxComparison = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -116,6 +117,7 @@ const DropboxComparison = ({
           }
           needsH2
           needsH3
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -126,6 +128,7 @@ const DropboxComparison = ({
               : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
           }
           needsH2
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -152,9 +155,10 @@ const DropboxComparison = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-20"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -164,6 +168,7 @@ const DropboxComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Alternative to dropbox', url: '/dropbox-alternative' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

@@ -3,7 +3,6 @@ import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { HighlightText } from '@/components/components/HighlightText';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   percentage,
   competitor,
@@ -21,7 +20,7 @@ export const HeroSection = ({
   // HighlightText needs a plain string, and {{competitor}} is always known at render time.
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text);
   const parseDiscountText = (text?: string) =>
-    parseDynamicText(text, { competitor, percentage, discount: percentage });
+    parseDynamicText(text, { competitor, percentage, discount: percentage }, darkMode);
 
   return (
     <div

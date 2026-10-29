@@ -1,7 +1,6 @@
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CookiesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const CookiesSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <>
       <div className="mb-6 flex flex-col" id={textContent.title32}>

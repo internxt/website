@@ -12,6 +12,7 @@ const totalavComparison = (props: any) => (
     segmentName="TotalAV Comparison"
     logo="/images/comparison/totalav-Letters.webp"
     couponCodeName={PromoCodeName.TOTALAV85}
+    darkMode={props.darkMode}
   />
 );
 

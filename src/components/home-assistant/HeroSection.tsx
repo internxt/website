@@ -3,7 +3,6 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
@@ -13,7 +12,7 @@ interface HeroSectionForPartnerProps {
 
 export default function HeroSection({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
 
   return (

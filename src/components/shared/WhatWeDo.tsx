@@ -1,8 +1,7 @@
 import ProductCard from '@/components/shared/ProductCard';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, products }) => {
+const WhatWeDo = ({ darkMode = false, textContent, lang, products }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div

@@ -1,7 +1,6 @@
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const MakePrivacySection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const MakePrivacySection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden ">
       <div

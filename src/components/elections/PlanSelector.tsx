@@ -1,4 +1,3 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 export type SwitchButtonOptions = 'Kamala' | 'Trump';
 
 interface PlanSwitchProps {
@@ -9,7 +8,7 @@ interface PlanSwitchProps {
 }
 
 export const PlanSelector = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,

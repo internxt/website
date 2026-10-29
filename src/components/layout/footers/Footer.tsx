@@ -12,13 +12,13 @@ import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 export default function Footer({
   textContent,
   lang,
   hideNewsletter,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   breadcrumbItems,
 }: Readonly<{
   textContent: FooterText;

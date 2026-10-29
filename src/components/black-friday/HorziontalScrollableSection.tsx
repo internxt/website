@@ -1,6 +1,5 @@
 import { CaretLeft, CaretRight, CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableProps {
   darkMode?: boolean;
@@ -8,7 +7,7 @@ interface HorizontalScrollableProps {
 }
 
 export default function HorizontalScrollableSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';

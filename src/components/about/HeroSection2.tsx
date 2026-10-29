@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection2 = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => (
+const HeroSection2 = ({ darkMode = false, textContent, lang }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20 md:pt-20">
     <div className="relative flex flex-col items-center py-20 lg:py-40">
       {/* Main title */}

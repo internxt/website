@@ -1,6 +1,5 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ImageAndCardsProps {
   darkMode?: boolean;
@@ -8,7 +7,7 @@ interface ImageAndCardsProps {
   image: string;
 }
 
-export const ImageAndCards = ({ darkMode = DARK_MODE_ENABLED, textContent, image }: ImageAndCardsProps) => {
+export const ImageAndCards = ({ darkMode = false, textContent, image }: ImageAndCardsProps) => {
   return (
     <section className={`flex flex-col gap-8 px-6 pb-16 lg:gap-16 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div

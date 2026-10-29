@@ -18,18 +18,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const URL_REDIRECT = '#billingButtons';
 
-const CloudStorageComparison = ({
-  darkMode = DARK_MODE_ENABLED,
-  metatagsDescriptions,
-  langJson,
-  navbarLang,
-  footerLang,
-  lang,
-}) => {
+const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
 
   const cardsData = [
@@ -112,11 +104,11 @@ const CloudStorageComparison = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
-        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
+        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} darkMode={darkMode} />
 
         {/* <TableSection textContent={langJson.HeroSection} /> */}
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+        <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -132,17 +124,24 @@ const CloudStorageComparison = ({
           popularPlanBySize="5TB"
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
+          darkMode={darkMode}
         />
 
-        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="/privacy" cards={cardsData} />
+        <InfoSection
+          textContent={langJson.InfoSection}
+          lang={lang}
+          redirect="/privacy"
+          cards={cardsData}
+          darkMode={darkMode}
+        />
 
-        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} darkMode={darkMode} />
 
-        <TestimonialsSection textContent={langJson.TestimonialsSection} />
+        <TestimonialsSection textContent={langJson.TestimonialsSection} darkMode={darkMode} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -151,6 +150,7 @@ const CloudStorageComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

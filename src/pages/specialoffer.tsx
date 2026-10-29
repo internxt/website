@@ -17,7 +17,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SpecialOfferProps {
   darkMode?: boolean;
@@ -29,7 +28,7 @@ interface SpecialOfferProps {
 }
 
 function SpecialOffer({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -108,9 +107,10 @@ function SpecialOffer({
         percentOff={percentOff}
         image={'internxt-private-cloud'}
         specialOffer
+        darkMode={darkMode}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -126,6 +126,7 @@ function SpecialOffer({
         popularPlanBySize="2TB"
         sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -157,14 +158,16 @@ function SpecialOffer({
             ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
       <TrustedSection
         textContent={langJson.TrustedBySection}
         bottomBar={false}
         bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -196,9 +199,10 @@ function SpecialOffer({
             ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 }

@@ -8,7 +8,6 @@ import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { CheckCircle } from '@phosphor-icons/react';
 import { ArrowDown } from '@phosphor-icons/react/dist/ssr';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -106,7 +105,7 @@ const PricingHeader = ({
   discountValue,
   className = '',
   couponCodeName,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   SectionTag,
   isValentinesMode,
   alternativeHeader,
@@ -131,7 +130,7 @@ const PricingHeader = ({
   </div>
 );
 
-const CouponCodeHeader = ({ darkMode = DARK_MODE_ENABLED, textContent, couponCode }) => (
+const CouponCodeHeader = ({ darkMode = false, textContent, couponCode }) => (
   <div
     className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}
   >
@@ -149,7 +148,7 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   hidePlanSelectorComponent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   sectionDetails = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
   backgroundGradientColor,
   lifetimeCoupons,
@@ -242,7 +241,9 @@ export const PricingSectionWrapper = ({
             isValentinesMode={isValentinesMode}
             alternativeHeader={alternativeHeader}
           />
-          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
+          {couponCodeName && (
+            <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} darkMode={darkMode} />
+          )}
         </div>
 
         <PricingSection
@@ -279,7 +280,9 @@ export const PricingSectionWrapper = ({
             isValentinesMode={isValentinesMode}
             alternativeHeader={alternativeHeader}
           />
-          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
+          {couponCodeName && (
+            <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} darkMode={darkMode} />
+          )}
         </div>
 
         <PricingSectionForMobile

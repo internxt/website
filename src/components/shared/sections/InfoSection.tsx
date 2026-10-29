@@ -4,10 +4,9 @@ import RevealY from '@/components/components/RevealY';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const InfoSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   withoutCta,

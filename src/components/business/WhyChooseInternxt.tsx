@@ -3,7 +3,6 @@ import { CardGroup } from '../shared/CardGroup';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface WhyChooseInternxtForBusinessProps {
   darkMode?: boolean;
@@ -19,7 +18,7 @@ const scrollToTop = () => {
 };
 
 export const WhyChooseInternxtForBusiness = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   withoutBanner,
 }: WhyChooseInternxtForBusinessProps): JSX.Element => {
@@ -76,9 +75,9 @@ export const WhyChooseInternxtForBusiness = ({
                 <p className="text-xl">{textContent.WhyChooseInternxt.banner.description}</p>
               </div>
               <div className="flex flex-col items-center gap-4 lg:flex-row ">
-                <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} />
+                <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} darkMode={darkMode} />
                 <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
-                <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+                <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} darkMode={darkMode} />
               </div>
             </div>
             <div className="hidden items-center lg:flex">
@@ -102,7 +101,11 @@ export const WhyChooseInternxtForBusiness = ({
         </div>
 
         {/* Cards */}
-        <CardGroup cards={cards} backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`} />
+        <CardGroup
+          cards={cards}
+          backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+          darkMode={darkMode}
+        />
       </div>
     </section>
   );

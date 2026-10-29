@@ -2,7 +2,6 @@ import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { IFormValues } from '../IntegratedCheckoutView';
 import { InputsComponent } from './InputsComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface UserAuthComponentProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface UserAuthComponentProps {
 }
 
 export const UserAuthComponent = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   errors,
   authError,
@@ -29,7 +28,13 @@ export const UserAuthComponent = ({
           darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
         } p-5`}
       >
-        <InputsComponent errors={errors} authError={authError} textContent={textContent} register={register} />
+        <InputsComponent
+          errors={errors}
+          authError={authError}
+          textContent={textContent}
+          register={register}
+          darkMode={darkMode}
+        />
       </div>
     </div>
   );

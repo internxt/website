@@ -6,7 +6,6 @@ import { HighlightText } from '@/components/components/HighlightText';
 import { HeroSection as HeroSectionText } from '@/assets/types/test-ppc-leads';
 import SignUpForm from '@/components/shared/SignUpForm';
 import { analyticsService } from '@/services/ga.services';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -18,7 +17,7 @@ const LANDING_NAME = 'test-ppc-leads';
 const LEAD_REQUEST_TIMEOUT = 3000;
 const LEAD_EVENT = 'ppc_lead';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }: HeroSectionProps): JSX.Element => {
+export const HeroSection = ({ darkMode = false, textContent, lang }: HeroSectionProps): JSX.Element => {
   const registerLead = async (email: string) => {
     await axios.post(
       '/api/ppc-leads',
@@ -59,7 +58,7 @@ export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }:
             darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
           } p-6 shadow-soft lg:max-w-[480px] lg:p-8`}
         >
-          <SignUpForm textContent={textContent.SignUp} lang={lang} onSubmitEmail={registerLead} />
+          <SignUpForm textContent={textContent.SignUp} lang={lang} onSubmitEmail={registerLead} darkMode={darkMode} />
         </div>
       </div>
 

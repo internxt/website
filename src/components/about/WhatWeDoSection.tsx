@@ -2,9 +2,8 @@ import Image from 'next/image';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatWeDoSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhatWeDoSection = ({ darkMode = false, textContent }) => {
   return (
     <section
       className="w-full overflow-hidden"

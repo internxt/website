@@ -7,7 +7,6 @@ import PasswordStrength from '@/components/components/PasswordStrength';
 import axios from 'axios';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
 import { signup } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SignUpProps {
   darkMode?: boolean;
@@ -17,7 +16,7 @@ interface SignUpProps {
 }
 
 export default function SignUp(props: Readonly<SignUpProps>) {
-  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = props.darkMode ?? false;
   const [error, setError] = useState<string | null>(null);
   const [passwordState, setPasswordState] = useState<{
     tag: 'error' | 'warning' | 'success';
@@ -101,6 +100,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           required
           id="email"
           disabled={props.loading}
+          darkMode={darkMode}
         />
 
         <div className="space-y-0.5">
@@ -117,8 +117,9 @@ export default function SignUp(props: Readonly<SignUpProps>) {
             required
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
+            darkMode={darkMode}
           />
-          {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
+          {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} darkMode={darkMode} />}
         </div>
 
         <TextInput
@@ -129,6 +130,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           id="redeemCode"
           required
           disabled={props.loading}
+          darkMode={darkMode}
         />
 
         {error && (

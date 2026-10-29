@@ -1,5 +1,4 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
-const SuiteSection2 = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const SuiteSection2 = ({ darkMode = false, textContent }) => {
   const suiteCards = [
     {
       img: '/images/cyber-awareness/SuiteSection/card-1.svg',

@@ -8,7 +8,6 @@ import { HighlightText } from '../components/HighlightText';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { ArrowUpRight, CaretRight, CaretLeft } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AdvancedToolsProps {
   darkMode?: boolean;
@@ -16,11 +15,7 @@ interface AdvancedToolsProps {
   lang?: string;
 }
 
-const AdvancedToolsSection = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  lang = 'en',
-}: AdvancedToolsProps): JSX.Element => {
+const AdvancedToolsSection = ({ darkMode = false, textContent, lang = 'en' }: AdvancedToolsProps): JSX.Element => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -107,7 +102,7 @@ const AdvancedToolsSection = ({
               <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
                 {textContent.powerUsers.install.title}
               </p>
-              <CommandTextInputCopy text={textContent.powerUsers.install.command} />
+              <CommandTextInputCopy text={textContent.powerUsers.install.command} darkMode={darkMode} />
             </div>
           </div>
 

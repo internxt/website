@@ -1,7 +1,6 @@
 import RenderDescription from '../shared/RenderDescription';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+export const FeaturesSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <section className={`overflow-hidden px-5 py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex w-full flex-col items-center space-y-16">
@@ -26,7 +25,7 @@ export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lan
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.whyConvert.title}
           </p>
-          <RenderDescription description={textContent.whyConvert.paragraphs} />
+          <RenderDescription description={textContent.whyConvert.paragraphs} darkMode={darkMode} />
         </div>
       </div>
     </section>

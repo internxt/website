@@ -3,9 +3,8 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Image from "next/image";
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const InternxtInTheNews = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const InternxtInTheNews = ({ darkMode = false, textContent }) => {
   const data = textContent.cards;
   const [currentIndex, setCurrentIndex] = useState(0);
 

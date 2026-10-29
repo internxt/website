@@ -12,6 +12,7 @@ const mcafeeComparison = (props: any) => (
     segmentName="Mcafee Comparison"
     logo="/images/comparison/mcafee-Letters.webp"
     couponCodeName={PromoCodeName.MCAFEE85}
+    darkMode={props.darkMode}
   />
 );
 

@@ -1,8 +1,7 @@
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ExploreOurOSS = ({ darkMode = DARK_MODE_ENABLED, textContent, download }) => {
+const ExploreOurOSS = ({ darkMode = false, textContent, download }) => {
   const description = textContent.description.split('GitHub');
   const GitHub = textContent.description.substr(textContent.description.indexOf('GitHub') - 0, 6);
 
@@ -35,7 +34,7 @@ const ExploreOurOSS = ({ darkMode = DARK_MODE_ENABLED, textContent, download }) 
             draggable={false}
           />
         </div>
-        <DownloadComponent textContent={textContent.DownloadLinks} lang={'en'} download={download} />
+        <DownloadComponent textContent={textContent.DownloadLinks} lang={'en'} download={download} darkMode={darkMode} />
       </div>
     </section>
   );

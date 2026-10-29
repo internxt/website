@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ExplanationSection = ({ darkMode = DARK_MODE_ENABLED, textContent, ctaText, ctaLink }) => {
+const ExplanationSection = ({ darkMode = false, textContent, ctaText, ctaLink }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}>
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">

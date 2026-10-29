@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface GetLifetimeSectionProps {
   darkMode?: boolean;
@@ -12,11 +11,7 @@ interface GetLifetimeSectionProps {
   isCelebrationPage?: boolean;
 }
 
-const GetLifetimeSection = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  isCelebrationPage,
-}: GetLifetimeSectionProps) => {
+const GetLifetimeSection = ({ darkMode = false, textContent, isCelebrationPage }: GetLifetimeSectionProps) => {
   const router = useRouter();
   const lang = router.locale;
   const { title } = textContent;

@@ -14,6 +14,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 
 
 const Scan = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   toolsContent,
@@ -36,26 +37,28 @@ const Scan = ({
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} darkMode={darkMode} />
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt'}
+          darkMode={darkMode}
         />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpVirusScannerBanner}
           lang={lang}
+          darkMode={darkMode}
         />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection textContent={langJson.CtaSection} darkMode={darkMode} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

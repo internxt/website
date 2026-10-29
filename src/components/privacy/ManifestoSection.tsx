@@ -1,9 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ManifestoSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const ManifestoSection = ({ darkMode = false, textContent }) => (
   <section className={`relative flex w-full flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">

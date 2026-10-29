@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from '../../components/privacy/HeroSection.module.scss';
 import SignUpBanner from '@/components/banners/SignUpBanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, bannerText }) => (
+const HeroSection = ({ darkMode = false, textContent, lang, bannerText }) => (
   <>
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
@@ -23,7 +22,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, bannerTe
             <p className="pt-7 text-lg font-normal">{textContent.brief.body.paragraph4}</p>
           </div>
         </div>
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
       </div>
     </section>
   </>

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Check, CaretDown } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Plan {
   id: string;
@@ -23,7 +22,7 @@ interface CustomPlanSelectorProps {
 }
 
 export default function CustomPlanSelector({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   plans,
   selectedPlan,
   onPlanChange,

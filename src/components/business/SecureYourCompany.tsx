@@ -1,13 +1,9 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface SecureYourCompanyProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export const SecureYourCompany = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-}: SecureYourCompanyProps): JSX.Element => (
+export const SecureYourCompany = ({ darkMode = false, textContent }: SecureYourCompanyProps): JSX.Element => (
   <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-5 py-10 lg:py-20`}>
     <div
       className={`absolute bottom-0 left-8 right-8 h-[1px] ${

@@ -1,8 +1,7 @@
 import { CaretRight } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection2 = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, bannerText }) => {
+const HeroSection2 = ({ darkMode = false, textContent, lang, bannerText }) => {
   return (
     <section className="flex flex-col py-[88px] lg:py-16">
       <div className="flex flex-col items-center bg-gradient-to-b from-primary to-primary-dark px-5 py-20">
@@ -25,7 +24,7 @@ const HeroSection2 = ({ darkMode = DARK_MODE_ENABLED, textContent, lang, bannerT
             <CaretRight size={14} weight="bold" className="text-primary" />
           </a>
         </div>
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
       </div>
     </section>
   );

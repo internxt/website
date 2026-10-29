@@ -23,7 +23,6 @@ import { Interval } from '@/services/stripe.service';
 import { analyticsService } from '@/services/ga.services';
 import { handleImpactEvent } from '@/services/impact.service';
 import { checkout } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PRICE_BY_CURRENCY: Record<string, string> = {
   eur: '149',
@@ -44,7 +43,7 @@ interface AntivirusProps {
 }
 
 const AntivirusPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -161,6 +160,7 @@ const AntivirusPage = ({
           currentPrice={ultimatePlan?.price.toString()}
           currency={currency}
           isAnnual
+          darkMode={darkMode}
         />
 
         <InfoSection
@@ -180,6 +180,7 @@ const AntivirusPage = ({
               ))}
             </div>
           }
+          darkMode={darkMode}
         />
 
         {ultimatePlan && (
@@ -195,11 +196,12 @@ const AntivirusPage = ({
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
               isAnnual
+              darkMode={darkMode}
             />
           </div>
         )}
 
-        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} showPlan />
+        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} showPlan darkMode={darkMode} />
 
         <InfoSection
           FirstComponent={
@@ -214,15 +216,17 @@ const AntivirusPage = ({
               ))}
             </div>
           }
+          darkMode={darkMode}
         />
 
         <CtaSection
           textContent={langJson.cta1}
           url={'#priceCard'}
           customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
+          darkMode={darkMode}
         />
 
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
+        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} darkMode={darkMode} />
 
         <ComponentsInColumnSection
           FirstComponent={
@@ -242,20 +246,23 @@ const AntivirusPage = ({
               <CardGroup
                 cards={cardsForComponentsIncolumn}
                 backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+                darkMode={darkMode}
               />
             </div>
           }
           backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+          darkMode={darkMode}
         />
         <CtaSection
           textContent={langJson.cta2}
           url={'#priceCard'}
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
       </Layout>
     </div>
   );

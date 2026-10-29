@@ -1,9 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeatureSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center space-y-10 px-6 py-20 lg:flex-row lg:space-x-48 lg:space-y-0 ">

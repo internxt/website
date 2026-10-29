@@ -4,9 +4,8 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, url = '#billingButtons' }) => (
+const HeroSection = ({ darkMode = false, textContent, url = '#billingButtons' }) => (
   <section
     className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40"
     style={{

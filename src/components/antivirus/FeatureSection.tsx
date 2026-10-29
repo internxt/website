@@ -3,7 +3,6 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface FeatureSectionProps {
   darkMode?: boolean;
@@ -12,12 +11,7 @@ export interface FeatureSectionProps {
   showPlan?: boolean;
 }
 
-const FeatureSection = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  isGetAntivirus,
-  showPlan = false,
-}: FeatureSectionProps) => {
+const FeatureSection = ({ darkMode = false, textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
   const cards = [
     {
       icon: '/images/antivirus/internxt_antivirus_1.webp',

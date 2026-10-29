@@ -1,8 +1,7 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const GetStartedSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const GetStartedSection = ({ darkMode = false, textContent }) => (
   <section className="text-white">
     <div className="content">
       <div className="flex w-full flex-shrink-0 flex-col justify-center px-10 py-12 text-center sm:items-center md:px-0">

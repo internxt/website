@@ -4,9 +4,8 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 import HeroSafeArea from '../HeroSafeArea';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const HeroSection = ({ darkMode = false, textContent }) => (
   <section
     className="h-[600 px]
     flex w-full flex-row justify-center lg:h-[695px]"

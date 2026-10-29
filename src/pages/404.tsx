@@ -4,9 +4,8 @@ import navbarLang from '@/assets/lang/en/navbar.json';
 import footerLang from '@/assets/lang/en/footer.json';
 import { House, Lifebuoy, Question } from '@phosphor-icons/react';
 import { FooterText } from '@/assets/types/layout/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function Custom404({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) {
+export default function Custom404({ darkMode = false }: { darkMode?: boolean }) {
   const cards = [
     {
       icon: House,
@@ -70,7 +69,7 @@ export default function Custom404({ darkMode = DARK_MODE_ENABLED }: { darkMode?:
           </div>
         </div>
       </section>
-      <Footer textContent={footerLang as FooterText} lang={'en'} />
+      <Footer textContent={footerLang as FooterText} lang={'en'} darkMode={darkMode} />
     </>
   );
 }

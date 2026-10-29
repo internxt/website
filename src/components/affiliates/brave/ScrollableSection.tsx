@@ -2,9 +2,8 @@ import { Devices, Eye, FolderLock, ShieldCheck } from '@phosphor-icons/react';
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ScrollableSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const ScrollableSection = ({ darkMode = false, textContent }) => {
   const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [cardIndex, setCardIndex] = useState(0);
 

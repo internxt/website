@@ -1,8 +1,7 @@
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhyChooseInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhyChooseInternxtSection = ({ darkMode = false, textContent }) => {
   const Cards = [
     {
       icon: ShieldCheck,

@@ -2,9 +2,8 @@ import Image from 'next/image';
 import { AppleLogo } from '../shared/icons/AppleIcon';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const DownloadOSPlatform = ({ darkMode = DARK_MODE_ENABLED, downloadText, installationText, logo }) => (
+const DownloadOSPlatform = ({ darkMode = false, downloadText, installationText, logo }) => (
   <div className={`flex w-full max-w-[350px] flex-col rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10`}>
     <div className="flex flex-col  gap-6">
       {logo}
@@ -14,13 +13,13 @@ const DownloadOSPlatform = ({ darkMode = DARK_MODE_ENABLED, downloadText, instal
         <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
           {installationText.installation}
         </p>
-        <CommandTextInputCopy text={installationText.command} isCommandCard />
+        <CommandTextInputCopy text={installationText.command} isCommandCard darkMode={darkMode} />
       </div>
     </div>
   </div>
 );
 
-export const DownloadCLISection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const DownloadCLISection = ({ darkMode = false, textContent }) => {
   return (
     <section id="downloadCli" className={`overflow-hidden px-5 py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div
@@ -41,11 +40,13 @@ export const DownloadCLISection = ({ darkMode = DARK_MODE_ENABLED, textContent }
             downloadText={textContent.downloads[0]}
             installationText={textContent}
             logo={<Image src={getImage('/images/drive/Windows-logo.webp')} width={34} height={34} alt="Windows image" />}
+            darkMode={darkMode}
           />
           <DownloadOSPlatform
             downloadText={textContent.downloads[1]}
             installationText={textContent}
             logo={<AppleLogo width={28} height={34} />}
+            darkMode={darkMode}
           />
           <DownloadOSPlatform
             downloadText={textContent.downloads[2]}
@@ -59,6 +60,7 @@ export const DownloadCLISection = ({ darkMode = DARK_MODE_ENABLED, textContent }
                 className="mt-0.5"
               />
             }
+            darkMode={darkMode}
           />
         </div>
       </div>

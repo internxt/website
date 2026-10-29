@@ -1,7 +1,6 @@
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhenWhyHowSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const WhenWhyHowSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <>
       {lang !== 'es' ? (

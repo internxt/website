@@ -20,7 +20,6 @@ import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveProps {
   darkMode?: boolean;
@@ -43,7 +42,7 @@ interface DriveProps {
 }
 
 const Drive = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   download,
   textContent,
@@ -107,8 +106,8 @@ const Drive = ({
         robots="noindex, follow"
       >
         <MinimalNavbar textContent={navbarLang} lang={lang} />
-        <HeroSection textContent={textContent.HeroSection} download={download} />
-        <DriveSection textContent={textContent.DriveSection} />
+        <HeroSection textContent={textContent.HeroSection} download={download} darkMode={darkMode} />
+        <DriveSection textContent={textContent.DriveSection} darkMode={darkMode} />
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
@@ -123,6 +122,7 @@ const Drive = ({
           popularPlanBySize="2TB"
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           hideFreeCard
+          darkMode={darkMode}
         />
         <HorizontalScrollableSection
           textContent={textContent.EncryptedCloudStorageSection}
@@ -133,10 +133,11 @@ const Drive = ({
           }
           needsH2
           needsH3
+          darkMode={darkMode}
         />
-        <FileParallaxSection />
-        <CoreFeaturesSection textContent={textContent.CoreFeatures} />
-        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
+        <FileParallaxSection darkMode={darkMode} />
+        <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
+        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 darkMode={darkMode} />
         <ThreeCardsSection
           textContent={textContent.MadeInEuropeSection}
           bgColor={
@@ -144,8 +145,14 @@ const Drive = ({
               ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
               : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
           }
+          darkMode={darkMode}
         />
-        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
+        <OfficialCloudProviderSection
+          textContent={textContent.OfficalCloudProvider}
+          lang={lang}
+          partner="levante"
+          darkMode={darkMode}
+        />
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
           url={'#billingButtons'}
@@ -170,8 +177,14 @@ const Drive = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
+          darkMode={darkMode}
         />
-        <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+        <DownloadComponent
+          textContent={textContent.DownloadSection}
+          lang={lang}
+          download={download}
+          darkMode={darkMode}
+        />
 
         <FAQSection
           textContent={textContent.FaqSection}
@@ -181,9 +194,10 @@ const Drive = ({
               ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
               : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
           }
+          darkMode={darkMode}
         />
-        <RelationalLinks textContent={relationalLinksText} />
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} darkMode={darkMode} />
       </Layout>
     </>
   );

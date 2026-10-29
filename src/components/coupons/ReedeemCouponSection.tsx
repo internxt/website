@@ -1,7 +1,6 @@
 import { CouponPageText } from '@/assets/types/couponsPage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface RedeemCouponsSectionProps {
   darkMode?: boolean;
@@ -9,7 +8,7 @@ interface RedeemCouponsSectionProps {
 }
 
 export default function RedeemCouponsSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<RedeemCouponsSectionProps>): JSX.Element {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';

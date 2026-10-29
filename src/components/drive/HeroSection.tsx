@@ -9,7 +9,6 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type OSType = 'Android' | 'iPhone' | 'Windows' | 'MacOS' | 'Linux';
 
@@ -36,7 +35,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   download,
   ChecksTag = 'p',

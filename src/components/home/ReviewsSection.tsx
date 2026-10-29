@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ReviewSectionProps {
   textContent: {
@@ -27,7 +26,7 @@ const brands = [
 
 export default function ReviewSection({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   bgColor,
   reverseDivider = false,
 }: Readonly<ReviewSectionProps>): JSX.Element {

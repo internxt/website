@@ -1,12 +1,7 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function CardSkeleton({
-  darkMode = DARK_MODE_ENABLED,
-  maxWidth = 'max-w-xs',
-  cardWidthForDesk = 'xs:w-72',
-}) {
+export default function CardSkeleton({ darkMode = false, maxWidth = 'max-w-xs', cardWidthForDesk = 'xs:w-72' }) {
   return (
     <div
       className={`priceCard card m-2 flex w-full ${maxWidth} flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl ${cardWidthForDesk}`}

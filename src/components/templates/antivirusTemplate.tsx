@@ -18,7 +18,6 @@ import { InfoSection } from '@/components/antivirus/InfoSecction';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -44,7 +43,7 @@ export interface AntivirusTemplateProps {
 }
 
 export const AntivirusTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -127,7 +126,7 @@ export const AntivirusTemplate = ({
         ) : (
           <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
         )}
-        <HeroSection textContent={langJson.HeroSection} download={download} />
+        <HeroSection textContent={langJson.HeroSection} download={download} darkMode={darkMode} />
 
         <InfoSection
           FirstComponent={
@@ -146,9 +145,10 @@ export const AntivirusTemplate = ({
               ))}
             </div>
           }
+          darkMode={darkMode}
         />
 
-        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} />
+        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} darkMode={darkMode} />
 
         <InfoSection
           FirstComponent={
@@ -163,15 +163,17 @@ export const AntivirusTemplate = ({
               ))}
             </div>
           }
+          darkMode={darkMode}
         />
 
         <CtaSection
           textContent={langJson.cta1}
           url={'/pricing'}
           customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
+          darkMode={darkMode}
         />
 
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
+        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} darkMode={darkMode} />
 
         <ComponentsInColumnSection
           FirstComponent={
@@ -191,22 +193,25 @@ export const AntivirusTemplate = ({
               <CardGroup
                 cards={cardsForComponentsIncolumn}
                 backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+                darkMode={darkMode}
               />
             </div>
           }
           backgroundColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
+          darkMode={darkMode}
         />
         <CtaSection
           textContent={langJson.cta2}
           url={'/pricing'}
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={locale} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={locale} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

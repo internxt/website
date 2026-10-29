@@ -18,7 +18,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface NASPageProps {
   darkMode?: boolean;
@@ -31,7 +30,7 @@ interface NASPageProps {
 }
 
 const SynologyNASPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -95,11 +94,11 @@ const SynologyNASPage = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-        <WhatIsNASSection textContent={textContent.WhatIsNASSection} />
+        <WhatIsNASSection textContent={textContent.WhatIsNASSection} darkMode={darkMode} />
 
-        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
+        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} darkMode={darkMode} />
 
         <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -115,6 +114,7 @@ const SynologyNASPage = ({
                 popularPlanBySize="5TB"
                 sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
                 hideFreeCard
+                darkMode={darkMode}
           />
 
         <FloatingCtaSectionv2
@@ -141,17 +141,19 @@ const SynologyNASPage = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
           textContent={textContent.horizontalScrollableSection}
           needsDivider={false}
           cardsHeight="330px"
+          darkMode={darkMode}
         />
 
-        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
+        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} darkMode={darkMode} />
 
-        <ThreeCardsSection textContent={textContent.howSetupSection} />
+        <ThreeCardsSection textContent={textContent.howSetupSection} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.ctaSectionV2}
@@ -182,11 +184,12 @@ const SynologyNASPage = ({
           }
           containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
           bgPadding="lg:pb-20"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -197,6 +200,7 @@ const SynologyNASPage = ({
             { name: textContent.Breadcrumbs.nas, url: '/nas' },
             { name: textContent.Breadcrumbs.synology, url: '/nas/synology' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

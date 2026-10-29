@@ -21,7 +21,6 @@ import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { ObjStoragePaymentsService } from '@/services/payments.service';
 import { stripeService } from '@/services/stripe.service';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface IntegratedCheckoutProps {
   darkMode?: boolean;
@@ -74,7 +73,7 @@ const PRICE_ID = IS_PRODUCTION
   ? (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string)
   : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
-const IntegratedCheckout = ({ darkMode = DARK_MODE_ENABLED, textContent }: IntegratedCheckoutProps): JSX.Element => {
+const IntegratedCheckout = ({ darkMode = false, textContent }: IntegratedCheckoutProps): JSX.Element => {
   const paymentService = new ObjStoragePaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
 
@@ -309,6 +308,7 @@ const IntegratedCheckout = ({ darkMode = DARK_MODE_ENABLED, textContent }: Integ
               onRemoveAppliedCouponCode={() => setCoupon(undefined)}
               showCouponCode={coupon !== undefined}
               couponCodeName={coupon?.name}
+              darkMode={darkMode}
             />
           </Elements>
         ) : (

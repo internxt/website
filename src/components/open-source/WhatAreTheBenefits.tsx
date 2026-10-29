@@ -1,7 +1,6 @@
 import { ArrowsInSimple, CalendarCheck, CodeBlock, Eye, ShieldCheck, SketchLogo } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatAreTheBenefits = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhatAreTheBenefits = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: Eye,

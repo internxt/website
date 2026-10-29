@@ -1,7 +1,6 @@
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const CtaSection = ({ darkMode = false, textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,

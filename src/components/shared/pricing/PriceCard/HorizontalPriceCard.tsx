@@ -21,7 +21,6 @@ import {
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
 import { getTrackingParams } from '@/lib/cookies';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const iconList: Record<string, Icon[]> = {
   '1TB': [Database, CurrencyCircleDollar, LockSimple, Key, Fingerprint, ArrowsClockwise, Password, CellTower, Shield],
@@ -76,7 +75,7 @@ export interface HorizontalPriceCardProps {
 }
 
 export const HorizontalPriceCard = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   decimalDiscountValue,
   storage,
   currency,

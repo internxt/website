@@ -1,7 +1,6 @@
 import { Percent, RocketLaunch, ShieldStar } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatGetSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhatGetSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: RocketLaunch,

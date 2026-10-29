@@ -1,8 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const FeatureSection = ({ darkMode = false, textContent }) => (
   <section
     className={`flex h-[440px] flex-col items-center justify-start  lg:h-[563px] lg:justify-center  lg:gap-16 ${
       darkMode ? 'bg-[#1C1C1C]' : ''

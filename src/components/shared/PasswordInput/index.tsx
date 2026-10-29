@@ -3,7 +3,6 @@ import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-fo
 import { Eye, EyeSlash } from '@phosphor-icons/react';
 import { useState } from 'react';
 import type { IFormValues } from '@/components/cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InputProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface InputProps {
 }
 
 const PasswordInput = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   label,
   disabled,
   register,

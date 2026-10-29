@@ -2,8 +2,7 @@ import React from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
-const SuiteSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const SuiteSection = ({ darkMode = false, textContent, lang }) => {
   const images = {
     drive: '/images/privacy/Internxt-Drive.webp',
     business: '/images/black-friday/internxt_for_families.webp',

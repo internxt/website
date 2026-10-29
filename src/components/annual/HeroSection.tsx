@@ -2,9 +2,8 @@ import React from 'react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 import { Percent } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   const wordsToBold = ['85%'];
   const formattedHero = textContent.header
     .split(/(85%)/g)

@@ -2,9 +2,8 @@ import React from 'react';
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, lang, textContent, hideTimer }) => {
+const HeroSection = ({ darkMode = false, lang, textContent, hideTimer }) => {
   return (
     <section className="flex overflow-hidden bg-primary-dark pt-16">
       <div className="lg:mx-10 xl:mx-32">

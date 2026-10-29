@@ -1,7 +1,6 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AlternativeHeroSectionProps {
   darkMode?: boolean;
@@ -12,7 +11,7 @@ interface AlternativeHeroSectionProps {
 }
 
 const AlternativeHeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   currentPrice,
   currency,

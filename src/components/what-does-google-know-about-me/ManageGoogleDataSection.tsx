@@ -2,9 +2,8 @@ import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '@/components/shared/RenderDescription';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const ManageGoogleDataSection = ({ darkMode = false, textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
     <li key={item} className={`text-lg leading-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
       {item}
@@ -26,7 +25,7 @@ const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) 
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.section1.title}
             </p>
-            <RenderDescription description={textContent.section1.description} />
+            <RenderDescription description={textContent.section1.description} darkMode={darkMode} />
           </div>
         </div>
         <img
@@ -85,7 +84,7 @@ const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) 
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.section4.title}
           </p>
-          <RenderDescription description={textContent.section4.description} />
+          <RenderDescription description={textContent.section4.description} darkMode={darkMode} />
         </div>
         {/* Fifth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
@@ -101,7 +100,7 @@ const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) 
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.section6.title}
           </p>
-          <RenderDescription description={textContent.section6.description} />
+          <RenderDescription description={textContent.section6.description} darkMode={darkMode} />
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-security-settings.webp')}
@@ -125,7 +124,7 @@ const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) 
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.section7.title}
           </p>
-          <RenderDescription description={textContent.section7.description} />
+          <RenderDescription description={textContent.section7.description} darkMode={darkMode} />
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-access-personal-account.webp')}
@@ -153,7 +152,7 @@ const ManageGoogleDataSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) 
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.section9.title}
           </p>
-          <RenderDescription description={textContent.section9.description} />
+          <RenderDescription description={textContent.section9.description} darkMode={darkMode} />
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-privacy-settings-options.webp')}

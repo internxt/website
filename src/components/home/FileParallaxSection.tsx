@@ -1,8 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from "next/image";
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export default function FileParallaxSection({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) {
+export default function FileParallaxSection({ darkMode = false }: { darkMode?: boolean }) {
   return (
     <section
       className={`pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden ${

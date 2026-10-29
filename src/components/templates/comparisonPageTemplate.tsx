@@ -20,7 +20,6 @@ import { AlternativePageText } from '@/assets/types/alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 import Footer from '../layout/footers/Footer';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type CompetitorType =
   | 'pCloud'
@@ -89,7 +88,7 @@ interface ComparisonPageProps {
 }
 
 export const ComparisonPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   competitor,
   metaTagId,
   segmentName,
@@ -170,12 +169,12 @@ export const ComparisonPage = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName={segmentName} lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={competitor} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} darkMode={darkMode} />
 
         {isS3Alternative && langJson.PriceCardSection ? (
-          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
+          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} darkMode={darkMode} />
         ) : (
           <PricingSectionWrapper
             textContent={langJson.tableSection}
@@ -189,10 +188,11 @@ export const ComparisonPage = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+            darkMode={darkMode}
           />
         )}
 
-        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} darkMode={darkMode} />
 
         {showThreeCards && langJson.WhyNeedAlternativeSection && (
           <ThreeCardsSection
@@ -204,14 +204,16 @@ export const ComparisonPage = ({
             }
             cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             bottomSeparationBar={true}
+            darkMode={darkMode}
           />
         )}
 
-        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} />
+        <TablesSection textContent={langJson.VersusSection} competitor={'Drive'} percentage={percentageDiscount} logo={logo} darkMode={darkMode} />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
           bgColor={alternativeBgColor}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -220,19 +222,20 @@ export const ComparisonPage = ({
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-0">
               <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
               <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
             </div>
           }
           containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} />
+        <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -245,6 +248,7 @@ export const ComparisonPage = ({
                 ]
               : undefined
           }
+          darkMode={darkMode}
         />
       </Layout>
     </>

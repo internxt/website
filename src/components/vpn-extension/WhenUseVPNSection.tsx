@@ -2,9 +2,8 @@ import { CheckSquare } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const WhenUseVPNSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const WhenUseVPNSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden px-5 py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center space-y-12 text-center">

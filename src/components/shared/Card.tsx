@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export default function Card({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   className = '',
   children,
 }: {

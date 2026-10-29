@@ -9,12 +9,11 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -44,17 +43,17 @@ const PasswordGenerator = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} darkMode={darkMode} />
 
-        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
+        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} bgColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`} />
+        <ToolsSection textContent={toolsContent} lang={lang} bgColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
+        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} darkMode={darkMode} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

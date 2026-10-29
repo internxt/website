@@ -6,14 +6,14 @@ import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import { useState } from 'react';
 import { PartnerSelector, SwitchButtonOptions } from './PartnerSelector';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface PartnersSectionProps {
   darkMode?: boolean;
   textContent: CloudObjectStorageText['PartnersSection'];
 }
 
-export const PartnersSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: PartnersSectionProps): JSX.Element => {
+export const PartnersSection = ({ darkMode = false, textContent }: PartnersSectionProps): JSX.Element => {
   const [activePartner, setActivePartner] = useState<SwitchButtonOptions>('Prosegur');
 
   const activeIndex = textContent.companies.indexOf(activePartner);
@@ -37,7 +37,7 @@ export const PartnersSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: P
         </p>
       </div>
 
-      <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner}/>
+      <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} darkMode={darkMode} />
 
       <div
         className={`flex w-full flex-col gap-6 rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8 lg:flex-row`}

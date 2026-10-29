@@ -1,7 +1,6 @@
 import { ReviewsTextPage } from '@/assets/types/reviews';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SupportSectionProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ interface CardProps {
   description: string;
 }
 
-const SupportCard = ({ darkMode = DARK_MODE_ENABLED, title, description }: CardProps): JSX.Element => {
+const SupportCard = ({ darkMode = false, title, description }: CardProps): JSX.Element => {
   return (
     <div
       className={`flex flex-col gap-4 rounded-xl ${
@@ -29,7 +28,7 @@ const SupportCard = ({ darkMode = DARK_MODE_ENABLED, title, description }: CardP
   );
 };
 
-const SupportSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Readonly<SupportSectionProps>): JSX.Element => {
+const SupportSection = ({ darkMode = false, textContent }: Readonly<SupportSectionProps>): JSX.Element => {
   const cards = Object.values(textContent.cards);
 
   return (
@@ -71,7 +70,12 @@ const SupportSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Readonly<
 
         <div className="flex flex-col gap-8 lg:gap-6">
           {cards.map((card, index) => (
-            <SupportCard key={`support-card-${index}`} title={card.title} description={card.description} />
+            <SupportCard
+              key={`support-card-${index}`}
+              title={card.title}
+              description={card.description}
+              darkMode={darkMode}
+            />
           ))}
         </div>
       </div>

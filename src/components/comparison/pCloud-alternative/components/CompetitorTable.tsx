@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { parseDynamicText, Replacements } from '@/components/utils/parse-dynamic-text';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 const ROW_BG_LIGHT = { even: 'bg-red-old-25', odd: 'bg-red-old-15' };
 const ROW_BG_DARK = { even: 'bg-red/15', odd: 'bg-red/10' };
@@ -15,7 +15,7 @@ interface CompetitorTableProps {
 }
 
 export const CompetitorTable = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   logo,
   TableTitleTag = 'p',
@@ -23,7 +23,7 @@ export const CompetitorTable = ({
 }: CompetitorTableProps) => {
   const rowBg = darkMode ? ROW_BG_DARK : ROW_BG_LIGHT;
   const logoClass = darkMode ? DARK_MODE_LOGO_FILTER : '';
-  const parseText = (text: string) => parseDynamicText(text, replacements);
+  const parseText = (text: string) => parseDynamicText(text, replacements, darkMode);
 
   return (
     <div className="flex h-min w-[180.5px] flex-col rounded-r-16  lg:w-[570px]">

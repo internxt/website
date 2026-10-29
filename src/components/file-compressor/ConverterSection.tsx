@@ -11,7 +11,6 @@ import fileCompressorService from '@/services/file-compressor.service';
 import { ErrorState } from './states/ErrorState';
 import { CaretLeft, ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ConverterSectionProps {
   darkMode?: boolean;
@@ -24,7 +23,7 @@ interface ConverterSectionProps {
 type ConverterStates = 'initialState' | 'selectedFileState' | 'compressingState' | 'downloadFileState' | 'errorState';
 
 export const ConverterSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   converterText,
   errorContent,
@@ -163,6 +162,7 @@ export const ConverterSection = ({
             isDragging={isDragging}
             setIsDragging={setIsDragging}
             handleOpenFileExplorer={handleOpenFileExplorer}
+            darkMode={darkMode}
           />
         );
       case 'selectedFileState':
@@ -173,6 +173,7 @@ export const ConverterSection = ({
               files={files}
               onFileConvert={handleCompression}
               onCancel={resetViewToInitialState}
+              darkMode={darkMode}
             />
           )
         );
@@ -196,6 +197,7 @@ export const ConverterSection = ({
             textContent={formattedConverterText.fileConverted}
             onConvertMoreFilesButtonPressed={resetViewToInitialState}
             onDownloadFile={handleCompression}
+            darkMode={darkMode}
           />
         );
       case 'errorState':
@@ -205,6 +207,7 @@ export const ConverterSection = ({
             resetViewToInitialState={resetViewToInitialState}
             errorContent={formattedErrorText}
             textContent={formattedConverterText.dragNDropArea}
+            darkMode={darkMode}
           />
         );
       default:

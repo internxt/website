@@ -1,5 +1,4 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
-const MainSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const MainSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <>
       {lang !== 'es' ? (

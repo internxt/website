@@ -8,7 +8,6 @@ import Image from 'next/image';
 import styles from '@/components/privacy/HeroSection.module.scss';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type OSType = 'Android' | 'iPhone' | 'Windows' | 'MacOS' | 'Linux';
 
@@ -33,7 +32,7 @@ interface HeroSectionProps {
   ChecksTag?: keyof JSX.IntrinsicElements;
 }
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, download, ChecksTag = 'p' }: HeroSectionProps) => {
+const HeroSection = ({ darkMode = false, textContent, download, ChecksTag = 'p' }: HeroSectionProps) => {
   const [OS, setOS] = useState<OSType>('Windows');
   const [isClient, setIsClient] = useState(false);
 

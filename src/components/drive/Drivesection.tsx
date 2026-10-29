@@ -1,6 +1,5 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveSectionProps {
   darkMode?: boolean;
@@ -10,7 +9,7 @@ interface DriveSectionProps {
   };
 }
 
-const DriveSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: DriveSectionProps): JSX.Element => {
+const DriveSection = ({ darkMode = false, textContent }: DriveSectionProps): JSX.Element => {
   return (
     <section
       className={`flex w-full flex-col items-center justify-center gap-8 px-5 pb-10 lg:gap-16 lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 ${

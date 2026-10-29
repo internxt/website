@@ -2,14 +2,13 @@ import { SecureFileTransferText } from '@/assets/types/secure-file-transfer';
 import { useState } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HowToChooseSectionProps {
   darkMode?: boolean;
   textContent: SecureFileTransferText['HowToChooseSection'];
 }
 
-const HowToChooseSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: HowToChooseSectionProps): JSX.Element => {
+const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const handleAccordionClick = (index: number) => {

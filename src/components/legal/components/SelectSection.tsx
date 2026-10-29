@@ -2,9 +2,8 @@ import { Fragment } from 'react';
 
 import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const SelectSection = ({ darkMode = DARK_MODE_ENABLED, textContent, itemSelected, setItemSelected }) => {
+const SelectSection = ({ darkMode = false, textContent, itemSelected, setItemSelected }) => {
   const textClass = darkMode ? 'text-green-120' : 'text-gray-60';
   function linkTitles() {
     const titles: string[] = [];

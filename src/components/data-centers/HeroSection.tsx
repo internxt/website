@@ -2,7 +2,6 @@ import { HighlightText } from '@/components/components/HighlightText';
 import { getImage } from '@/lib/getImage';
 import { Check } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface HeroSectionProps {
   };
 }
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionProps) => {
+export const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps) => {
   return (
     <section
       className="relative flex w-full flex-col items-center justify-center px-5 py-8 pt-28 lg:flex-row lg:gap-12 lg:p-20 lg:px-10  xl:px-32 3xl:px-80"

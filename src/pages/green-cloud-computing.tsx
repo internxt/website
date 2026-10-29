@@ -11,7 +11,6 @@ import CtaSection from '@/components/sustainability/CtaSection';
 import FeatureSection from '@/components/sustainability/FeatureSection';
 import HeroSection from '@/components/sustainability/HeroSection';
 import FeatureSectionV3 from '@/components/sustainability/FeatureSectionV3';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SustainabilityProps {
   darkMode?: boolean;
@@ -23,7 +22,7 @@ interface SustainabilityProps {
 }
 
 const Sustainability = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   lang,
   navbarLang,
@@ -58,11 +57,11 @@ const Sustainability = ({
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} darkMode={darkMode} />
 
       <ComponentsInColumnSection
         FirstComponent={
@@ -83,17 +82,19 @@ const Sustainability = ({
               cards={cardsForFeatureSection}
               backgroundColorCard={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
               iconColor="text-green"
+              darkMode={darkMode}
             />
           </div>
         }
         backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+        darkMode={darkMode}
       />
 
-      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
+      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} darkMode={darkMode} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
+      <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

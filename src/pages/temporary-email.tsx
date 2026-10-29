@@ -17,7 +17,7 @@ import { setup } from '@/lib/csrf';
 import { GetServerSidePropsContext } from 'next';
 
 
-const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
+const TempEmail = ({ darkMode = false, lang, metatags, textContent, footerLang, navbarLang, toolsContent, bannerLang }: any) => {
   const dialogAction = useGlobalDialog();
 
   return (
@@ -34,20 +34,20 @@ const TempEmail = ({ lang, metatags, textContent, footerLang, navbarLang, toolsC
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-        <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
+        <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
-        <FeaturesBanner />
+        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner darkMode={darkMode} />}
+        <FeaturesBanner darkMode={darkMode} />
 
-        <SignupSection textContent={textContent.SignupSection} />
+        <SignupSection textContent={textContent.SignupSection} darkMode={darkMode} />
 
-        <QASection textContent={textContent.QASection} />
+        <QASection textContent={textContent.QASection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Temp email', url: '/temporary-email' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Temp email', url: '/temporary-email' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

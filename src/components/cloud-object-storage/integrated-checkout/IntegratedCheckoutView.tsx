@@ -13,7 +13,6 @@ import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import { CaretUp } from '@phosphor-icons/react';
 import { PASSWORD_REGEX } from './components/InputsComponent';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
@@ -61,7 +60,7 @@ interface IntegratedCheckoutViewProps {
 }
 
 export const IntegratedCheckoutView = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   objStoragePlan,
   isPaying,
@@ -105,7 +104,7 @@ export const IntegratedCheckoutView = ({
     >
       <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
         <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
-          <HeaderComponent textContent={textContent} lang="en" />
+          <HeaderComponent textContent={textContent} lang="en" darkMode={darkMode} />
           <p
             className={`text-xl font-bold ${
               darkMode ? 'text-white-95' : 'text-gray-100'
@@ -120,6 +119,7 @@ export const IntegratedCheckoutView = ({
                 errors={errors}
                 authError={error?.auth as string}
                 register={register}
+                darkMode={darkMode}
               />
               <div className="flex flex-col space-y-8 pb-20">
                 <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -194,6 +194,7 @@ export const IntegratedCheckoutView = ({
                             register={register}
                             required={true}
                             error={errors.companyName}
+                            darkMode={darkMode}
                           />
                         </div>
                         <div
@@ -213,6 +214,7 @@ export const IntegratedCheckoutView = ({
                             register={register}
                             required={true}
                             error={errors.vatId}
+                            darkMode={darkMode}
                           />
                         </div>
                       </Menu.Items>
@@ -232,6 +234,7 @@ export const IntegratedCheckoutView = ({
                   showSpinner={disabledButton}
                   text={disabledButton ? textContent.paying : textContent.pay}
                   disabled={!isValidPassword || disabledButton}
+                  darkMode={darkMode}
                 />
               </div>
             </div>
@@ -244,6 +247,7 @@ export const IntegratedCheckoutView = ({
                 onRemoveAppliedCouponCode={onRemoveAppliedCouponCode}
                 showCouponCode={showCouponCode}
                 couponCodeName={couponCodeName}
+                darkMode={darkMode}
               />
               <Button
                 id="submit"
@@ -252,6 +256,7 @@ export const IntegratedCheckoutView = ({
                 text={disabledButton ? textContent.paying : textContent.pay}
                 showSpinner={disabledButton}
                 disabled={!isValidPassword || disabledButton}
+                darkMode={darkMode}
               />
             </div>
           </div>

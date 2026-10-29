@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface UseCouponSectionProps {
   darkMode?: boolean;
@@ -19,7 +18,7 @@ const CodeComponent = ({ textContent }) => (
   </div>
 );
 
-export const CouponSection = ({ darkMode = DARK_MODE_ENABLED, textContent, redirectUrl }: UseCouponSectionProps) => {
+export const CouponSection = ({ darkMode = false, textContent, redirectUrl }: UseCouponSectionProps) => {
   return (
     <section className="flex flex-col bg-primary-dark px-5 py-20">
       <div className="flex flex-col items-center gap-12 text-center">

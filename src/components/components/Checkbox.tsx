@@ -1,6 +1,5 @@
 import { Check } from '@phosphor-icons/react';
 import { MouseEventHandler } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CheckboxProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ interface CheckboxProps {
 }
 
 function Checkbox({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   id,
   checked,
   showCheckIcon,

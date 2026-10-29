@@ -6,10 +6,9 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const WebDAVSupportSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   hidePriceTable = false,
@@ -81,7 +80,7 @@ export const WebDAVSupportSection = ({
           {textContent.title}
         </h2>
         <div className="flex w-full max-w-[672px] flex-col gap-12 lg:py-10">
-          <RenderDescription description={textContent.description} />
+          <RenderDescription description={textContent.description} darkMode={darkMode} />
 
           <div className="flex flex-col gap-6 md:gap-3">
             <p
@@ -129,9 +128,10 @@ export const WebDAVSupportSection = ({
             sectionDetails={`${darkMode ? 'bg-transparent' : 'bg-white'} lg:py-20`}
             hideFreeCard
             backgroundGradientColor={darkMode ? undefined : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'}
+            darkMode={darkMode}
           />
         )}
-        <SignUpBanner textContent={bannerLang.SignUpWebDAVBanner} lang="en" />
+        <SignUpBanner textContent={bannerLang.SignUpWebDAVBanner} lang="en" darkMode={darkMode} />
         <div className="flex w-full flex-col space-y-2 lg:max-w-[850px] lg:pt-10">
           {textContent.questions.map((item) => (
             <div
@@ -145,6 +145,7 @@ export const WebDAVSupportSection = ({
                 isQuestionBigger
                 textColor={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}
                 needsH3={false}
+                darkMode={darkMode}
               />
             </div>
           ))}

@@ -2,7 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useState, useEffect } from 'react'
 import { currencyService } from '@/services/currency.service';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 const certifications = [
     { src: '/images/datacenters-and-certifications/ISO.webp', width: 48, alt: 'ISO Certification' },
@@ -14,7 +14,7 @@ const certifications = [
   ];
 
 export const CertificationsSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   bgColor,
 }: {
   darkMode?: boolean;

@@ -1,20 +1,19 @@
 import Image from "next/image";
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const language = {
   en: 'EN',
   es: 'ES',
 };
 
-const ExplanationSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+const ExplanationSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const langUpperCase = language[lang] || 'EN';
 
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 pt-14 lg:px-10">
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
         <div className="flex max-w-2xl flex-col space-y-3">
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.convertTo.title}</p>
           <p className={`text-lg font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>

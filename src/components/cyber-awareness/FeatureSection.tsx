@@ -1,9 +1,8 @@
 import { FileArrowDown } from '@phosphor-icons/react';
 import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeatureSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5`}>
       <div className="flex flex-col-reverse items-center justify-center space-y-10 space-y-reverse py-20 lg:flex-row lg:space-y-0 lg:space-x-20">

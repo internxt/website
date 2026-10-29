@@ -1,8 +1,7 @@
 import { Cookie, Crosshair, HandCoins, SketchLogo, TrendUp, UsersThree } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-function PaintedText({ darkMode = DARK_MODE_ENABLED, text }): JSX.Element {
+function PaintedText({ darkMode = false, text }): JSX.Element {
   if (!text) return <></>;
 
   if (!text.includes('$299'))
@@ -21,7 +20,7 @@ function PaintedText({ darkMode = DARK_MODE_ENABLED, text }): JSX.Element {
   );
 }
 
-const WhyJoinSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhyJoinSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: HandCoins,
@@ -69,7 +68,7 @@ const WhyJoinSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
                 } p-8 text-center lg:items-start lg:text-left`}
               >
                 <item.icon className="text-primary" size={32} />
-                <PaintedText text={item.title} />
+                <PaintedText text={item.title} darkMode={darkMode} />
               </div>
             ))}
           </RevealY>

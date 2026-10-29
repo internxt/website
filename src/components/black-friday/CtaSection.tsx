@@ -4,9 +4,8 @@ import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
 import { CheckCircle } from '@phosphor-icons/react/dist/ssr';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const CtaSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-white/10' : 'bg-highlight'} p-5 sm:p-10`}>
       {/* Mobile Version */}

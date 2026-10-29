@@ -2,7 +2,6 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 import { IconProps } from '@phosphor-icons/react'; // Import IconProps type
 
 export interface FeatureCard {
@@ -24,7 +23,7 @@ export interface FeatureSectionProps {
 }
 
 const FeatureSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   title,
   subtitle,
   description,

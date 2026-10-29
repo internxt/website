@@ -1,6 +1,5 @@
 import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 import { useState } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AccordionCardsProps {
   darkMode?: boolean;
@@ -8,7 +7,7 @@ interface AccordionCardsProps {
   cardWidth?: string;
 }
 
-export default function AccordionCards({ darkMode = DARK_MODE_ENABLED, textContent, cardWidth }: AccordionCardsProps) {
+export default function AccordionCards({ darkMode = false, textContent, cardWidth }: AccordionCardsProps) {
   const cardTitles = textContent?.titles ?? [];
   const cardDescriptions = textContent?.descriptions ?? [];
   const [expandedCard, setExpandedCard] = useState(0);

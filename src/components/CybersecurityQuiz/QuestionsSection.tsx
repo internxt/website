@@ -1,8 +1,7 @@
 import React from 'react';
 import FaqAccordion from './FaqAccordion';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const QuestionsSection = ({ darkMode = DARK_MODE_ENABLED, textContent, isCorrectAnswer }) => {
+const QuestionsSection = ({ darkMode = false, textContent, isCorrectAnswer }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}>
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-20">
@@ -19,6 +18,7 @@ const QuestionsSection = ({ darkMode = DARK_MODE_ENABLED, textContent, isCorrect
                 answer={item.answer}
                 isQuestionBigger
                 isCorrectAnswer={isCorrectAnswer[index]}
+                darkMode={darkMode}
               />
             </div>
           ))}

@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 import { formatText } from '@/components/utils/format-text';
 import { ChoosePlanSection as ChoosePlanSectionText, PlanCard } from '@/assets/types/test-ppc-leads';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ChoosePlanSectionProps {
   darkMode?: boolean;
@@ -17,13 +16,13 @@ interface ChoosePlanSectionProps {
   topSeparationBar?: boolean;
 }
 
-const PriceSkeleton = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => (
+const PriceSkeleton = ({ darkMode = false }: { darkMode?: boolean }) => (
   <span
     className={`inline-block h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'} lg:h-5 lg:w-20`}
   />
 );
 
-const PlanFeatures = ({ darkMode = DARK_MODE_ENABLED, features }: { darkMode?: boolean; features: string[] }) => (
+const PlanFeatures = ({ darkMode = false, features }: { darkMode?: boolean; features: string[] }) => (
   <div className="flex flex-col gap-4">
     {features.map((feature) => (
       <div key={feature} className="flex flex-row items-start gap-3">
@@ -37,7 +36,7 @@ const PlanFeatures = ({ darkMode = DARK_MODE_ENABLED, features }: { darkMode?: b
 );
 
 const PlanHeader = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   card,
   price,
   isLoading,
@@ -66,14 +65,14 @@ const PlanHeader = ({
       </p>
       <p className={`pb-0.5 text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
         {'· '}
-        {isLoading ? <PriceSkeleton /> : price}
+        {isLoading ? <PriceSkeleton darkMode={darkMode} /> : price}
       </p>
     </div>
   </div>
 );
 
 export const ChoosePlanSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   currency,
   minimumPrice,
@@ -128,8 +127,8 @@ export const ChoosePlanSection = ({
             } p-6 md:max-w-[420px] lg:p-8`}
           >
             <div className="flex flex-col gap-6">
-              <PlanHeader card={textContent.freeCard} price={freePrice} />
-              <PlanFeatures features={textContent.freeCard.features} />
+              <PlanHeader card={textContent.freeCard} price={freePrice} darkMode={darkMode} />
+              <PlanFeatures features={textContent.freeCard.features} darkMode={darkMode} />
             </div>
             <Link
               href={signUpURL}
@@ -147,8 +146,13 @@ export const ChoosePlanSection = ({
             } p-6 md:max-w-[420px] lg:p-8`}
           >
             <div className="flex flex-col gap-6">
-              <PlanHeader card={textContent.premiumCard} price={premiumPrice} isLoading={loadingCards} />
-              <PlanFeatures features={textContent.premiumCard.features} />
+              <PlanHeader
+                card={textContent.premiumCard}
+                price={premiumPrice}
+                isLoading={loadingCards}
+                darkMode={darkMode}
+              />
+              <PlanFeatures features={textContent.premiumCard.features} darkMode={darkMode} />
             </div>
             <Link
               href={getDealURL}

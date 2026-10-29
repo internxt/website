@@ -29,6 +29,7 @@ interface BlackFridayDealConfig {
 }
 
 interface BlackFridayDealsTemplateProps {
+  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -38,6 +39,7 @@ interface BlackFridayDealsTemplateProps {
 }
 
 const BlackFridayDealsTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -149,9 +151,10 @@ const BlackFridayDealsTemplate = ({
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
+      <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} darkMode={darkMode} />
 
       <MoreDealsSection
         textContent={textContent.MoreDealsSection}
@@ -176,6 +179,7 @@ const BlackFridayDealsTemplate = ({
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -184,6 +188,7 @@ const BlackFridayDealsTemplate = ({
         bgColor="bg-[#1C1C1C] text-white"
         cardColor="bg-[#1C1C1C]"
         textColor="text-white"
+        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode />

@@ -1,8 +1,7 @@
 import { CircleWavyCheck } from '@phosphor-icons/react';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeaturesSection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden">
       <div

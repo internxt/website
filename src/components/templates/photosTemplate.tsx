@@ -20,7 +20,6 @@ import { stripeService } from '@/services/stripe.service';
 import { getTrackingParams } from '@/lib/cookies';
 import { analyticsService } from '@/services/ga.services';
 import { checkout } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface PhotosProps {
   darkMode?: boolean;
@@ -37,7 +36,7 @@ export interface PhotosProps {
 }
 
 export const Photos = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   footerText,
@@ -105,9 +104,9 @@ export const Photos = ({
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} lang={lang} robots={robots}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} url={ctaUrl} />
+      <HeroSection textContent={textContent.HeroSection} url={ctaUrl} darkMode={darkMode} />
 
-      <PhotoSection textContent={textContent.PhotoSection} />
+      <PhotoSection textContent={textContent.PhotoSection} darkMode={darkMode} />
 
       {!hidePriceTable && (
         <PricingSectionWrapper
@@ -129,10 +128,11 @@ export const Photos = ({
           popularPlanBySize="2TB"
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
+          darkMode={darkMode}
         />
       )}
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.PhotoFeatureSection}
@@ -141,11 +141,16 @@ export const Photos = ({
             ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableWithPhotoSection textContent={textContent.DesignedSection} />
+      <HorizontalScrollableWithPhotoSection textContent={textContent.DesignedSection} darkMode={darkMode} />
 
-      <ThreeCardsSection textContent={textContent.MadeInEuropeSection} bgColor={darkMode ? '#1C1C1C' : '#FFFFFF'} />
+      <ThreeCardsSection
+        textContent={textContent.MadeInEuropeSection}
+        bgColor={darkMode ? '#1C1C1C' : '#FFFFFF'}
+        darkMode={darkMode}
+      />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
@@ -162,6 +167,7 @@ export const Photos = ({
         bgGradientContainerColor="background: linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:py-20 lg:pb-20 pb-10"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -171,11 +177,12 @@ export const Photos = ({
         }}
         needsH3
         needsH2
+        darkMode={darkMode}
       />
 
-      <RelationalLinks textContent={relationalLinksText} />
+      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

@@ -1,5 +1,4 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface FreePlanCardProps {
   textContent: any;
@@ -7,11 +6,7 @@ interface FreePlanCardProps {
   freePlanNeedsH2?: boolean;
 }
 
-const FreePlanCard = ({
-  textContent,
-  darkMode = DARK_MODE_ENABLED,
-  freePlanNeedsH2 = false,
-}: FreePlanCardProps): JSX.Element => {
+const FreePlanCard = ({ textContent, darkMode = false, freePlanNeedsH2 = false }: FreePlanCardProps): JSX.Element => {
   const { openDialog } = useGlobalDialog();
 
   const TitleTag = freePlanNeedsH2 ? 'h2' : 'p';

@@ -14,7 +14,6 @@ import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import { PromoCodeName } from '@/lib/types';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LifetimeSpecialProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface LifetimeSpecialProps {
 }
 
 function LifetimeSpecial({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -112,9 +111,9 @@ function LifetimeSpecial({
         robots="noindex, nofollow"
       >
         <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode={darkMode} />
 
-        <ReviewsSection textContent={testimonialsJson.ReviewSection} />
+        <ReviewsSection textContent={testimonialsJson.ReviewSection} darkMode={darkMode} />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -131,9 +130,10 @@ function LifetimeSpecial({
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
           SectionTag={'h2'}
+          darkMode={darkMode}
         />
 
-        <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+        <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={langJson.ctaSection}
@@ -164,9 +164,10 @@ function LifetimeSpecial({
               ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
               : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
           }
+          darkMode={darkMode}
         />
 
-        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={langJson.ctaSection2}
@@ -197,6 +198,7 @@ function LifetimeSpecial({
               ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
               : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
           }
+          darkMode={darkMode}
         />
 
         <Footer
@@ -207,6 +209,7 @@ function LifetimeSpecial({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Lifetime cloud storage', url: '/lifetime' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

@@ -6,10 +6,9 @@ import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import styles from '@/components/privacy/HeroSection.module.scss';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const PriceBannerForCampaigns = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   redirectTo,
   percentOff,

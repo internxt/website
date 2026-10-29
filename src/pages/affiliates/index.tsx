@@ -20,7 +20,6 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AffiliatesProps {
   darkMode?: boolean;
@@ -45,7 +44,7 @@ const InfinityIcon = () => (
   </svg>
 );
 
-const ImageAndTextRow = ({ darkMode = DARK_MODE_ENABLED, textContent, imageUrl, alt, direction = 'right' }) => {
+const ImageAndTextRow = ({ darkMode = false, textContent, imageUrl, alt, direction = 'right' }) => {
   const containerObjDirection = direction === 'left' ? 'flex-row' : 'flex-row-reverse';
   return (
     <div className={`flex flex-col-reverse items-center justify-center gap-20 lg:${containerObjDirection}`}>
@@ -64,7 +63,7 @@ const ImageAndTextRow = ({ darkMode = DARK_MODE_ENABLED, textContent, imageUrl, 
         <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
           {textContent.title}
         </h2>
-        <RenderDescription description={textContent.description} />
+        <RenderDescription description={textContent.description} darkMode={darkMode} />
       </div>
     </div>
   );
@@ -73,7 +72,7 @@ const ImageAndTextRow = ({ darkMode = DARK_MODE_ENABLED, textContent, imageUrl, 
 const HERO_SECTION_CTA_BUTTON = 'https://app.impact.com/campaign-promo-signup/Internxt.brand?execution=e3s1';
 
 const Affiliates = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -198,9 +197,10 @@ const Affiliates = ({
           width: 496,
           height: 520,
         }}
+        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
 
       <TextAndImageColumnSection
         TextComponent={
@@ -230,9 +230,10 @@ const Affiliates = ({
           width: 1240,
           height: 685,
         }}
+        darkMode={darkMode}
       />
 
-      <WhyJoinSection textContent={langJson.WhyJoinSection} />
+      <WhyJoinSection textContent={langJson.WhyJoinSection} darkMode={darkMode} />
 
       <TextAndCardsGroupColumnSection
         TextComponent={
@@ -254,6 +255,7 @@ const Affiliates = ({
           </div>
         }
         cards={groupCards}
+        darkMode={darkMode}
       />
 
       <ComponentsInColumnSection
@@ -286,12 +288,14 @@ const Affiliates = ({
                   <Button
                     text={langJson.CommissionStructureSection.cta}
                     onClick={() => (window.location.href = SIGNUP_DRIVE_WEB)}
+                    darkMode={darkMode}
                   />
                 </div>
               );
             })}
           </div>
         }
+        darkMode={darkMode}
       />
 
       <ComponentsInColumnSection
@@ -302,11 +306,13 @@ const Affiliates = ({
               textContent={langJson.DescribingPlansSection.drive}
               imageUrl={getImage('/images/affiliates/internxt-b2b-b2c-affiliates.webp')}
               alt={'Internxt B2C & B2B'}
+              darkMode={darkMode}
             />
             <ImageAndTextRow
               textContent={langJson.DescribingPlansSection.s3}
               imageUrl={getImage('/images/affiliates/internxt-s3-storage-affiliates.webp')}
               alt={'Internxt B2C & B2B'}
+              darkMode={darkMode}
             />
           </>
         }
@@ -324,6 +330,7 @@ const Affiliates = ({
             ))}
           </div>
         }
+        darkMode={darkMode}
       />
 
       <div
@@ -350,18 +357,19 @@ const Affiliates = ({
         </div>
       </div>
 
-      <FileParallaxSection />
+      <FileParallaxSection darkMode={darkMode} />
 
-      <FaqSection textContent={langJson.FaqSection} />
+      <FaqSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
       <CtaSection
         textContent={langJson.CtaSection}
         url={
           'https://app.impact.com/campaign-mediapartner-signup/Internxt.brand?type=dm&io=e2AXxeEh7q3EO8TzTRQ1yfzRimhVUUQ4VIYp7wvigF46G5y9GkCkRC94J2GfuR%2Fa'
         }
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

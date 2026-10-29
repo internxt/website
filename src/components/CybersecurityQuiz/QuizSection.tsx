@@ -5,7 +5,6 @@ import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
 import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ViewProps {
   darkMode?: boolean;
@@ -22,6 +21,7 @@ interface ViewProps {
 }
 
 interface AnswerQuestionsSectionProps {
+  darkMode?: boolean;
   textContent: any;
   view: CyberSecurityQuizViews | undefined;
   setIsQuizSection: (isQuizSection: boolean) => void;
@@ -29,7 +29,7 @@ interface AnswerQuestionsSectionProps {
 }
 
 const View = (viewSelected: ViewProps | undefined) => {
-  const darkMode = viewSelected?.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = viewSelected?.darkMode ?? false;
   const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
@@ -110,6 +110,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                   showCheckIcon
                   checked={currentCheckbox === 'A'}
                   id="A"
+                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].A}</p>
               </button>
@@ -123,6 +124,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                   showCheckIcon
                   rounded="rounded-md"
                   id="B"
+                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].B}</p>
               </button>
@@ -136,6 +138,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                   checked={currentCheckbox === 'C'}
                   showCheckIcon
                   id="C"
+                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].C}</p>
               </button>
@@ -150,6 +153,7 @@ const View = (viewSelected: ViewProps | undefined) => {
                     checked={currentCheckbox === 'D'}
                     showCheckIcon
                     id="C"
+                    darkMode={darkMode}
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].D}</p>
                 </button>
@@ -255,8 +259,9 @@ const View = (viewSelected: ViewProps | undefined) => {
           textContent={textContent.CheckQuestions}
           answers={savedAnswers}
           correctAnswers={textContent.QuizSection.correctAnswers}
+          darkMode={darkMode}
         />
-        <Footer textContent={footerLang} lang="en" />
+        <Footer textContent={footerLang} lang="en" darkMode={darkMode} />
       </>
     ),
   };
@@ -266,7 +271,13 @@ const View = (viewSelected: ViewProps | undefined) => {
   return view[viewSelected.view];
 };
 
-const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewChange }: AnswerQuestionsSectionProps) => {
+const AnswerQuestionsSection = ({
+  darkMode = false,
+  textContent,
+  view,
+  setIsQuizSection,
+  onViewChange,
+}: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
@@ -307,6 +318,7 @@ const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewCha
       savedAnswers={savedAnswers}
       setIsQuizSection={setIsQuizSection}
       textContent={textContent}
+      darkMode={darkMode}
     />
   );
 };

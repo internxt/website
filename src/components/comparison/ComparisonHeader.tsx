@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface ComparisonHeaderProps {
   darkMode?: boolean;
   textContent: any;
@@ -17,7 +16,7 @@ const CodeComponent = ({ textContent }) => (
   </div>
 );
 
-export const ComparisonHeader = ({ darkMode = DARK_MODE_ENABLED, textContent, redirectUrl }: ComparisonHeaderProps) => (
+export const ComparisonHeader = ({ darkMode = false, textContent, redirectUrl }: ComparisonHeaderProps) => (
   <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 pt-[130px] text-white">
     <div className="relative z-10 mb-16 flex flex-col items-center justify-center space-y-4 md:mb-8">
       <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>

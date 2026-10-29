@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 const VALENTINES_GRADIENT_DARK = 'linear-gradient(180deg, #2A1420 0%, #1C1C1C 100.01%)';
 const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(180deg, #FFF2F8 0%, #FFFFFF 100.01%)';
@@ -43,7 +43,7 @@ export default function HeroSection({
   textContent,
   percentOff,
   cloudWards = false,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   isValentinesMode = false,
   image = 'internxt-private-cloud',
   isClubic = false,

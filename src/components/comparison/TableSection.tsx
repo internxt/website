@@ -3,9 +3,8 @@ import { UilCheck, UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const TableSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const TableSection = ({ darkMode = false, textContent }) => {
   const competitors = [
     {
       name: 'Internxt',

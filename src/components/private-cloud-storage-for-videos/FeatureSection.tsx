@@ -4,14 +4,13 @@ import Image from 'next/image';
 import { useState, useRef, useCallback, useEffect } from 'react';
 import VideoScroller from './VideoScroller';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Props {
   darkMode?: boolean;
   textContent: FeaturesSectionType;
 }
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Props): JSX.Element => {
+const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element => {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
   const videoSources = [
     '/videos/cloud-storage-for-video-files/Nature_Water.mp4',

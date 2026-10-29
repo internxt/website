@@ -12,9 +12,8 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const InfoCard = ({ darkMode = DARK_MODE_ENABLED, id, title, title1, img, link }) => {
+export const InfoCard = ({ darkMode = false, id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);
   return (
     <Link
@@ -56,7 +55,7 @@ export const InfoCard = ({ darkMode = DARK_MODE_ENABLED, id, title, title1, img,
   );
 };
 
-const InfoSection = ({ textContent }) => {
+const InfoSection = ({ darkMode = false, textContent }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -130,7 +129,7 @@ const InfoSection = ({ textContent }) => {
           )}
           <RevealY className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
             {infoCards.map(({ title1, title, id, img, link }) => (
-              <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} />
+              <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} darkMode={darkMode} />
             ))}
           </RevealY>
         </div>

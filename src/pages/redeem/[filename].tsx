@@ -12,7 +12,6 @@ import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface RedeemPageProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface RedeemPageProps {
 const ALLOWED_PATHS = ['stackcommerce', 'coingate'];
 
 const SpecialOfferPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -82,7 +81,7 @@ const SpecialOfferPage = ({
         } p-7 ${darkMode ? 'text-white-95' : 'text-neutral-900'}`}
           >
             <X className={`absolute right-5 top-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
-            <SignUp textContent={langJson.Auth} provider={provider} />
+            <SignUp textContent={langJson.Auth} provider={provider} darkMode={darkMode} />
           </div>
         </div>
       ) : null}
@@ -104,16 +103,21 @@ const SpecialOfferPage = ({
               ></p>
             </div>
 
-            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" />
+            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" darkMode={darkMode} />
           </>
         }
+        darkMode={darkMode}
       />
 
-      <MostSecureSection textContent={langJson.MostSecureSection} onRedirectButtonClicked={onButtonClicked} />
+      <MostSecureSection
+        textContent={langJson.MostSecureSection}
+        onRedirectButtonClicked={onButtonClicked}
+        darkMode={darkMode}
+      />
 
-      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
+      <FeatureSection textContent={langJson.FeatureSection} withoutCta darkMode={darkMode} />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
+      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} darkMode={darkMode} />
     </Layout>
   );
 };

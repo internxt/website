@@ -1,5 +1,4 @@
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface BestStorageSectionProps {
   darkMode?: boolean;
@@ -8,7 +7,7 @@ interface BestStorageSectionProps {
 }
 
 const BestStorageSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   hideTitleAndDescription,
 }: BestStorageSectionProps): JSX.Element => {

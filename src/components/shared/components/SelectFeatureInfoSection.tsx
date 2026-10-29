@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { Transition } from '@headlessui/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SelectFeatureInfoSectionProps {
   darkMode?: boolean;
@@ -15,7 +14,7 @@ interface SelectFeatureInfoSectionProps {
 }
 
 const SelectFeatureInfoSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   cards,

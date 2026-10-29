@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionProps {
   darkMode?: boolean;
@@ -17,7 +16,7 @@ interface HorizontalScrollableSectionProps {
 }
 
 export default function HorizontalScrollableSectionWithImages({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
   redirection = false,

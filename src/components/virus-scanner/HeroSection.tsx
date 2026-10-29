@@ -4,7 +4,6 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { VirusScannerText } from '@/assets/types/virusScanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -12,7 +11,7 @@ interface HeroSectionProps {
   lang: string;
 }
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ darkMode = false, textContent, lang }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);

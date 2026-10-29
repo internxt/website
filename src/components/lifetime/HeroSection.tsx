@@ -6,6 +6,7 @@ import { getImage } from '@/lib/getImage';
 import { formatText } from '../utils/format-text';
 
 interface HeroSectionProps {
+  darkMode?: boolean;
   textContent: any;
   hideTimer?: boolean;
   dt?: string;
@@ -19,6 +20,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
+  darkMode = false,
   textContent,
   hideTimer,
   isCelebrationPage,

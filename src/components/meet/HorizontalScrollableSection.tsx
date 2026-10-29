@@ -3,7 +3,6 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MeetPageText } from '@/assets/meet';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionWithPhotosProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface HorizontalScrollableSectionWithPhotosProps {
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';

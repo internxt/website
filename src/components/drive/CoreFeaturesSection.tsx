@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
   textContent: DriveText['CoreFeatures'];
@@ -13,7 +12,7 @@ interface CoreFeaturesSectionProps {
 
 const CoreFeaturesSection = ({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   needsDivider = false,
 }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);

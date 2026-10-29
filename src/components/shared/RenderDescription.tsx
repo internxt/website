@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const RenderDescription = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   description,
   fontSize,
 }: {

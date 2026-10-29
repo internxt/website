@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden px-5 pt-14">
       <div className="lg:mx-10 xl:mx-32">

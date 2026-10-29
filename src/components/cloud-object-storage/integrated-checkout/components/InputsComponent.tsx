@@ -3,7 +3,6 @@ import type { IFormValues } from '../IntegratedCheckoutView';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import TextInput from '@/components/shared/TextInput';
 import PasswordInput from '@/components/shared/PasswordInput';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const MAX_PASSWORD_LENGTH = 50;
 
@@ -18,7 +17,7 @@ interface InputsComponentProps {
 export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
 export const InputsComponent = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   register,
   textContent,
   errors,
@@ -38,6 +37,7 @@ export const InputsComponent = ({
           required={true}
           minLength={{ value: 1, message: textContent.emailMustNotBeEmpty }}
           error={errors.email}
+          darkMode={darkMode}
         />
       </div>
 
@@ -56,6 +56,7 @@ export const InputsComponent = ({
               message:
                 'Password must contain 6 letters or more, at least one digit, mix between uppercase and lowercase letters, one special character.',
             }}
+            darkMode={darkMode}
           />
         </label>
       </div>

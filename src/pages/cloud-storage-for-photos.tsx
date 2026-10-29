@@ -16,7 +16,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
 import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyProps {
   darkMode?: boolean;
@@ -30,7 +29,7 @@ interface PrivacyProps {
 }
 
 const CloudStorageBackupSolutions = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -99,7 +98,7 @@ const CloudStorageBackupSolutions = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} lang={locale} />
+        <HeroSection textContent={textContent.HeroSection} lang={locale} darkMode={darkMode} />
 
         <FeatureSection
           title={textContent.FeatureSection.title}
@@ -108,30 +107,34 @@ const CloudStorageBackupSolutions = ({
           ctaText={textContent.FeatureSection.cta}
           ctaLink="/pricing"
           cards={cardsData}
+          darkMode={darkMode}
         />
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
+          darkMode={darkMode}
         />
 
         <ExplanationSection
           textContent={textContent.ExplanationSection}
           ctaText={textContent.ExplanationSection.cta}
           ctaLink={CTA_URL}
+          darkMode={darkMode}
         ></ExplanationSection>
 
         <FeaturesSlider
           textContent={textContent.FeaturesSection}
           cardInfo={cardInfo}
           backgroundClass={`${darkMode ? 'bg-[#1C1C1C] lg:bg-gray-105' : 'bg-white lg:bg-gray-1'}`}
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Cloud storage for photos', url: '/cloud-storage-for-photos' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

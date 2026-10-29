@@ -1,8 +1,7 @@
 import { Check } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CheckboxSettings = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   id,
   checked,
   onClick,

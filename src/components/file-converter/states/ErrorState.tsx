@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { WarningCircle } from '@phosphor-icons/react';
 import { Errors } from '../types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ErrorStateProps {
   darkMode?: boolean;
@@ -17,7 +16,7 @@ interface ErrorViewProps {
 }
 
 export const ErrorState = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   errorContent,
   error,

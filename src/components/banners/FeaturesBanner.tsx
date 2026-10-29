@@ -3,9 +3,8 @@ import { useRouter } from 'next/router';
 import { X, CloudArrowUp, ShieldPlus, Sparkle, CellTower, VideoConference, Envelope, ShieldCheck, Brain } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }): JSX.Element => {
+const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Element => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`@/assets/lang/${lang}/banners.json`);

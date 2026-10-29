@@ -14,7 +14,6 @@ import CoreFeaturesSection from '@/components/drive/CoreFeaturesSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import HeroSection from '@/components/home-assistant/HeroSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeAssistantProps {
     darkMode?: boolean;
@@ -25,7 +24,7 @@ interface HomeAssistantProps {
     footerLang: FooterText;
 }
 
-const HomeAssistantPage = ({ darkMode = DARK_MODE_ENABLED, metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
+const HomeAssistantPage = ({ darkMode = false, metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
 
     const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
     const locale = lang as string;
@@ -74,9 +73,9 @@ const HomeAssistantPage = ({ darkMode = DARK_MODE_ENABLED, metatagsDescriptions,
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
             <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
 
-            <HeroSection textContent={textContent.HeroSection} />
+            <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-            <ReviewsSection textContent={textContent.ReviewSection} />
+            <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
             <PricingSectionWrapper 
                 textContent={textContent.TableSection}
@@ -96,30 +95,35 @@ const HomeAssistantPage = ({ darkMode = DARK_MODE_ENABLED, metatagsDescriptions,
                 startIndividualPlansFromInterval={Interval.Year}
                 sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
                 hideFreeCard
+                darkMode={darkMode}
             />
 
             <ThreeCardsIconsSection
                 textContent={textContent.ThreeCardsSection}
                 cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+                darkMode={darkMode}
             />
 
-            <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+            <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
             <TrustedSection
                 textContent={textContent.TrustedBySection}
                 bottomBar={true}
                 bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+                darkMode={darkMode}
             />
 
             <ThreeCardsSection
                 textContent={textContent.MadeInEuropeSection}
                 bgColor={darkMode ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)' : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'}
+                darkMode={darkMode}
             />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
                 lang={locale}
                 bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+                darkMode={darkMode}
             />
 
         </Layout>

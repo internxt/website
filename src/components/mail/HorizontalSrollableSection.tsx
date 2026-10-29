@@ -3,7 +3,6 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MailText } from '@/assets/types/mail';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HorizontalScrollableSectionWithPhotosProps {
   darkMode?: boolean;
@@ -12,7 +11,7 @@ interface HorizontalScrollableSectionWithPhotosProps {
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   needsDivider = true,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {

@@ -7,7 +7,6 @@ import PrimaryButton from '@/components/components/PrimaryButton';
 import PasswordStrength from '@/components/components/PasswordStrength';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
 import { goToLoginURL, signup } from '@/lib/auth';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const DRIVE_WEB_LOGIN_URL = 'https://drive.internxt.com/login';
 
@@ -57,7 +56,7 @@ type PasswordState = {
 };
 
 export const SignUpForm = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   error,
@@ -128,6 +127,7 @@ export const SignUpForm = ({
           placeholder={textContent.fields.email.placeholder}
           required
           disabled={loading}
+          darkMode={darkMode}
         />
       </div>
 
@@ -150,6 +150,7 @@ export const SignUpForm = ({
             required
             disabled={loading}
             onChange={checkPassword}
+            darkMode={darkMode}
           />
           <button
             type="button"
@@ -161,7 +162,9 @@ export const SignUpForm = ({
             {showPassword ? textContent.fields.password.hide : textContent.fields.password.show}
           </button>
         </div>
-        {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
+        {passwordState && (
+          <PasswordStrength strength={passwordState.tag} label={passwordState.label} darkMode={darkMode} />
+        )}
       </div>
 
       {textContent.info && (

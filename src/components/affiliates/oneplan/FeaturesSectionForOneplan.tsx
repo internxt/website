@@ -1,8 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FeaturesSectionForOnePlan = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const FeaturesSectionForOnePlan = ({ darkMode = false, textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,

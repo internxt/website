@@ -4,7 +4,6 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThreeCardsWithImagesProps {
   textContent: {
@@ -27,7 +26,7 @@ interface ThreeCardsWithImagesProps {
 
 export default function ThreeCardsWithImagesSection({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   bgColor,
   cardColor,
   bottomSeparationBar = false,

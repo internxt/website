@@ -6,9 +6,9 @@ import { Tooltip } from 'react-tooltip';
 import { MessageSelected, NoMessageSelected } from './Messages';
 import { Transition } from '@headlessui/react';
 import { MessageObjProps } from '../types/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InboxProps {
+  darkMode?: boolean;
   textContent: any;
   onRefresh: any;
   openedMessages: number;
@@ -18,6 +18,7 @@ interface InboxProps {
 }
 
 export const Inbox = ({
+  darkMode = false,
   textContent,
   onRefresh,
   openedMessages,
@@ -37,6 +38,7 @@ export const Inbox = ({
             openedMessages,
             textContent,
           }}
+          darkMode={darkMode}
         />
       </div>
       <div className="flex w-screen justify-center px-5 md:hidden">
@@ -49,6 +51,7 @@ export const Inbox = ({
             openedMessages,
             textContent,
           }}
+          darkMode={darkMode}
         />
       </div>
     </div>
@@ -56,7 +59,7 @@ export const Inbox = ({
 };
 
 //Web Inbox View
-const InboxWeb = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
+const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
   const { messages, selectedMessage, onRefresh, onMessageSelected, openedMessages, textContent } = getProps;
   const [animation, setAnimation] = useState(false);
 
@@ -179,7 +182,7 @@ const InboxWeb = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: boole
       >
         {selectedMessage ? (
           <div className="flex h-full w-screen">
-            <MessageSelected item={selectedMessage} textContent={textContent} />
+            <MessageSelected item={selectedMessage} textContent={textContent} darkMode={darkMode} />
           </div>
         ) : (
           <div className="flex w-screen items-center">
@@ -187,6 +190,7 @@ const InboxWeb = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: boole
               messagesLength={openedMessages}
               textContent={textContent}
               onRefreshButtonClicked={onRefresh}
+              darkMode={darkMode}
             />
           </div>
         )}
@@ -196,7 +200,7 @@ const InboxWeb = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: boole
 };
 
 //Mobile Inbox View
-const InboxMobile = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
+const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
   const { messages, selectedMessage, onMessageSelected, onRefresh, textContent } = getProps;
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
@@ -235,7 +239,7 @@ const InboxMobile = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: bo
                 </div>
               </div>
               <div className="flex h-full w-full">
-                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} />}
+                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} darkMode={darkMode} />}
               </div>
             </div>
           </Transition>
@@ -313,7 +317,7 @@ const InboxMobile = ({ darkMode = DARK_MODE_ENABLED, getProps }: { darkMode?: bo
         </>)
       ) : (
         !selectedMessage && (
-          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
+          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} darkMode={darkMode} />
         )
       )}
     </div>

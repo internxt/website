@@ -3,7 +3,6 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetStaticPropsContext } from 'next';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThankyouText {
   HeroSection: {
@@ -25,7 +24,7 @@ interface ThankyouProps {
 }
 
 const Thankyou = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   lang,
   metatagsDescriptions,
   navbarLang,
@@ -59,7 +58,7 @@ const Thankyou = ({
         </div>
       </section>
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

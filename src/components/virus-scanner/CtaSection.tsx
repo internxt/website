@@ -1,5 +1,4 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
-const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const CtaSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden py-12 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center pt-12 lg:px-20">

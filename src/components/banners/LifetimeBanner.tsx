@@ -2,11 +2,10 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const SHOW_LIFETIME_BANNER = 'showLifetimeBanner';
 
-const LifetimeBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }): JSX.Element => {
+const LifetimeBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Element => {
   const router = useRouter();
   const language = router.locale;
   const [showBanner, setShowBanner] = useState(false);

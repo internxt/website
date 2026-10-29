@@ -6,7 +6,6 @@ import Image from "next/image";
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/metadataRemover';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ interface HeroSectionProps {
   lang: string;
 }
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);

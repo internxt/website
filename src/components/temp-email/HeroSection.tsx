@@ -26,9 +26,8 @@ import useWindowFocus from '@/hooks/useWindowFocus';
 import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HeroSection = ({ darkMode = false, textContent }) => {
   const isFocused = useWindowFocus();
 
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
@@ -274,6 +273,7 @@ export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
           onCopy={onCopyEmailButtonClicked}
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}
+          darkMode={darkMode}
         />
 
         <Inbox
@@ -283,6 +283,7 @@ export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
           messages={messages}
           selectedMessage={selectedMessage}
           onMessageSelected={onMessageSelected}
+          darkMode={darkMode}
         />
         <div
           className={`flex flex-row items-center space-x-1 pt-2 text-center text-sm ${

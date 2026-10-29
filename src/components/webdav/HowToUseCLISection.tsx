@@ -7,9 +7,8 @@ import {
   RCLONE_CLI_UPDATES_LINK,
 } from '@/constants';
 import { LinkTo } from '../drive/components/LinkTo';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HowToUseCLISection = ({ darkMode = DARK_MODE_ENABLED, textContent, isRclone = false }) => {
+export const HowToUseCLISection = ({ darkMode = false, textContent, isRclone = false }) => {
   const cards = [
     {
       title: textContent.info[0].title,

@@ -1,10 +1,9 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface WhatIsSectionProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export const WhatIsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: WhatIsSectionProps) => {
+export const WhatIsSection = ({ darkMode = false, textContent }: WhatIsSectionProps) => {
   return (
     <section
       className={`flex flex-col items-center justify-center gap-6 px-6 py-10 lg:p-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}

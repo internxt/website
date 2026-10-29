@@ -11,6 +11,7 @@ import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -39,15 +40,16 @@ const FileConverter = ({
         converterText={converterText}
         errorContent={errorContent}
         pathname={pathname}
+        darkMode={darkMode}
       />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} />
+      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} darkMode={darkMode} />
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
+      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" darkMode={darkMode} />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} darkMode={darkMode} />
     </Layout>
   );
 };

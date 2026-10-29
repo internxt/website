@@ -3,7 +3,7 @@ import BlackFridayPpcTemplate from '@/components/templates/blackFridayPpcTemplat
 import { PromoCodeName } from '@/lib/types';
 
 const BlackFridayPpcPage = (props) => {
-  return <BlackFridayPpcTemplate {...props} />;
+  return <BlackFridayPpcTemplate {...props} darkMode={props.darkMode} />;
 };
 
 export function getStaticProps(ctx: GetStaticPropsContext) {

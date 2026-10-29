@@ -7,9 +7,8 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FreeCardPromoBannerPPC = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+export const FreeCardPromoBannerPPC = ({ darkMode = false }: { darkMode?: boolean }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -93,7 +92,7 @@ export const FreeCardPromoBannerPPC = ({ darkMode = DARK_MODE_ENABLED }: { darkM
                 </p>
               </div>
               <div className="flex flex-col items-center gap-6 lg:flex-row">
-                <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
+                <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} darkMode={darkMode} />
                 <button
                   type="button"
                   className="text-xl font-medium text-primary underline hover:no-underline"

@@ -1,9 +1,8 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FloatingCtaSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   url,
   maxWidth = '',

@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableProps {
   darkMode?: boolean;
@@ -16,7 +15,7 @@ interface PriceTableProps {
 }
 
 export const HorizontalPricingSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   couponName,
   bgColor,
@@ -85,9 +84,10 @@ export const HorizontalPricingSection = ({
             planId={activeProduct?.priceId}
             currencyValue={currencyValue}
             coupon={coupon}
+            darkMode={darkMode}
           />
         ) : (
-          <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" />
+          <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" darkMode={darkMode} />
         )}
         <div className="flex flex-col items-center justify-center space-y-8 pb-24 pt-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (

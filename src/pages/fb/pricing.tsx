@@ -18,7 +18,6 @@ import { Interval } from '@/services/stripe.service';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { GetStaticPropsContext } from 'next';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PricingProps {
   darkMode?: boolean;
@@ -31,7 +30,7 @@ interface PricingProps {
 }
 
 const Pricing = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   footerLang,
@@ -133,13 +132,14 @@ const Pricing = ({
           overrideOnStorageChange={onStorageChange}
           SectionTag={'h1'}
           hideFreeCard
+          darkMode={darkMode}
         />
 
-        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 />
+        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 darkMode={darkMode} />
 
-        <BestStorageSection textContent={textContent.BestStorageSection} />
+        <BestStorageSection textContent={textContent.BestStorageSection} darkMode={darkMode} />
 
-        <FileParallaxSection />
+        <FileParallaxSection darkMode={darkMode} />
 
         <ComparisonTableSection
           textContent={textContent.ComparisonTable}
@@ -148,11 +148,12 @@ const Pricing = ({
           billingFrequency={billingFrequency}
           decimalDiscount={decimalDiscount}
           currencyValue={currencyValue}
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={faqSection} needsH3={false} />
+        <FAQSection textContent={faqSection} needsH3={false} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
@@ -178,9 +179,10 @@ const Pricing = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-20"
+          darkMode={darkMode}
         />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} darkMode={darkMode} />
       </Layout>
     </>
   );

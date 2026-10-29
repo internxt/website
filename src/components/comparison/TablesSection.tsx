@@ -4,7 +4,6 @@ import { InxtTable } from './pCloud-alternative/components/InxtTable';
 import { CompetitorTable } from './pCloud-alternative/components/CompetitorTable';
 import { CaretDown, CaretUp } from '@phosphor-icons/react';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type TablesSectionProps = {
   textContent: {
@@ -53,7 +52,7 @@ export const TablesSection = ({
   sectionNeedsH2 = false,
   TableTitleTag = 'p',
   TableNameTag = 'p',
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   bottomSeparationBar = false,
 }: TablesSectionProps) => {
   const availableSections = [
@@ -95,7 +94,7 @@ export const TablesSection = ({
   };
 
   const replacements = { competitor, percentage, discount: percentage };
-  const parseText = (text?: string) => parseDynamicText(text, replacements);
+  const parseText = (text?: string) => parseDynamicText(text, replacements, darkMode);
   const SectionTitleTag = sectionNeedsH2 ? 'h2' : 'p';
 
   return (
@@ -152,12 +151,14 @@ export const TablesSection = ({
                   textContent={textContent.mainTable.inxtTable}
                   TableTitleTag={TableTitleTag}
                   replacements={replacements}
+                  darkMode={darkMode}
                 />
                 <CompetitorTable
                   textContent={textContent.mainTable.competitorTable}
                   logo={logo}
                   TableTitleTag={TableTitleTag}
                   replacements={replacements}
+                  darkMode={darkMode}
                 />
               </div>
             </div>
@@ -219,12 +220,14 @@ export const TablesSection = ({
                       textContent={section.data.inxtTable}
                       TableTitleTag={TableTitleTag}
                       replacements={replacements}
+                      darkMode={darkMode}
                     />
                     <CompetitorTable
                       textContent={section.data.competitorTable}
                       logo={logo}
                       TableTitleTag={TableTitleTag}
                       replacements={replacements}
+                      darkMode={darkMode}
                     />
                   </div>
                 </div>

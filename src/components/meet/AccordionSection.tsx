@@ -2,17 +2,13 @@ import { useState } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { MeetPageText } from '@/assets/meet';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AccordionSectionProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export default function AccordionSectionSection({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-}: AccordionSectionProps): JSX.Element {
+export default function AccordionSectionSection({ darkMode = false, textContent }: AccordionSectionProps): JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const cardTitles = textContent?.accordionSection.titles ?? [];

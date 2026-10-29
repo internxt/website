@@ -1,8 +1,7 @@
 import RenderDescription from '@/components/shared/RenderDescription';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const AchieveSecurityAndPrivacySection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const AchieveSecurityAndPrivacySection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center space-y-20 py-20 px-5">
@@ -42,7 +41,7 @@ const AchieveSecurityAndPrivacySection = ({ darkMode = DARK_MODE_ENABLED, textCo
           <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {textContent.claimOffer.description}
           </p>
-          <RenderDescription fontSize="text-xl" description={textContent.claimOffer.paragraph} />
+          <RenderDescription fontSize="text-xl" description={textContent.claimOffer.paragraph} darkMode={darkMode} />
           {/* CTA */}
           <div className="flex flex-col pt-6">
             <button

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Feature {
   icon: React.ComponentType<any>;
@@ -18,7 +17,7 @@ interface BestStorageSectionProps {
   };
 }
 
-const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectionProps): JSX.Element => {
   const features: Feature[] = [
     {
       icon: Database,
@@ -60,7 +59,7 @@ const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestS
   };
 
   const FeatureItem = ({
-    darkMode = DARK_MODE_ENABLED,
+    darkMode = false,
     feature,
     iconSize,
     containerWidth,
@@ -94,6 +93,7 @@ const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestS
               iconSize={32}
               containerWidth="w-[370px]"
               textSize="text-lg"
+              darkMode={darkMode}
             />
           ))}
         </div>
@@ -108,6 +108,7 @@ const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestS
               iconSize={24}
               containerWidth="flex-1 max-w-[74px]"
               textSize="text-xs"
+              darkMode={darkMode}
             />
           ))}
         </div>
@@ -120,6 +121,7 @@ const BestStorageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: BestS
               iconSize={24}
               containerWidth="flex-1 max-w-[74px]"
               textSize="text-xs"
+              darkMode={darkMode}
             />
           ))}
         </div>

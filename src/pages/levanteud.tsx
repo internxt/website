@@ -9,7 +9,6 @@ import DigitalIndependenceSection from "@/components/levanteud/DigitalIndependen
 import LeadingOrganizationsSection from "@/components/levanteud/LeadingOrganitationsSection";
 import FloatingCtaSectionv2 from "@/components/shared/FloatingCtaSectionV2";
 import { getImage } from "@/lib/getImage";
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LevanteProps {
   darkMode?: boolean;
@@ -21,7 +20,7 @@ interface LevanteProps {
 }
 
 const LevantePage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -38,11 +37,11 @@ const LevantePage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <DigitalIndependenceSection textContent={textContent.DigitalIndependenceSection} />
+      <DigitalIndependenceSection textContent={textContent.DigitalIndependenceSection} darkMode={darkMode} />
 
-      <LeadingOrganizationsSection textContent={textContent.LeadingOrganizationsSection} />
+      <LeadingOrganizationsSection textContent={textContent.LeadingOrganizationsSection} darkMode={darkMode} />
 
        <FloatingCtaSectionv2
           textContent={textContent.ctaBanner}
@@ -77,9 +76,10 @@ const LevantePage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20"
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

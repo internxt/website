@@ -2,9 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { CaretRight } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const BannersSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const BannersSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">

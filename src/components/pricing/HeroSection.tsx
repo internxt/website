@@ -2,9 +2,8 @@ import Image from "next/image";
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   const feeds = [
     {
       icon: Coin,

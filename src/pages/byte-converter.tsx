@@ -17,7 +17,7 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
-const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, toolsContent, footerLang, bannerLang }) => {
+const ConverterTool = ({ darkMode = false, lang, metatagsDescriptions, navbarLang, langJson, toolsContent, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
@@ -32,34 +32,36 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
+          darkMode={darkMode}
         />
 
         <ExplanationSection
           textContent={langJson.ExplanationSection}
           bannerText={bannerLang.SignUpByteConverterBanner}
           lang={lang}
+          darkMode={darkMode}
         />
 
-        <CtaSection textContent={langJson.ctaSection1} />
+        <CtaSection textContent={langJson.ctaSection1} darkMode={darkMode} />
 
-        <InfoSection textContent={langJson.infoSection} />
+        <InfoSection textContent={langJson.infoSection} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.ctaSection2} />
+        <CtaSection textContent={langJson.ctaSection2} darkMode={darkMode} />
 
-        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
+        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.ctaSection3} />
+        <CtaSection textContent={langJson.ctaSection3} darkMode={darkMode} />
 
-        <FaqSection textContent={langJson.FaqSection} />
+        <FaqSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

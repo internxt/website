@@ -1,8 +1,7 @@
 import React from 'react';
 import NgoCard from './NgoCard';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WikiSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const WikiSection = ({ darkMode = false, textContent }) => (
   <section className={`relative flex flex-col items-center ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6`}>
     <div className="flex w-full max-w-screen-lg flex-col items-center space-y-16 py-16 sm:space-y-24 sm:py-24">
       {/* Title */}
@@ -21,7 +20,15 @@ const WikiSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
         <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
-              {i % 2 === 0 && <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />}
+              {i % 2 === 0 && (
+                <NgoCard
+                  id={ngo.id}
+                  name={ngo.name}
+                  short={ngo.short}
+                  description={ngo.description}
+                  darkMode={darkMode}
+                />
+              )}
             </React.Fragment>
           ))}
         </div>
@@ -30,7 +37,15 @@ const WikiSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
         <div className="flex w-full flex-col items-stretch space-y-8">
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
-              {i % 2 === 1 && <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />}
+              {i % 2 === 1 && (
+                <NgoCard
+                  id={ngo.id}
+                  name={ngo.name}
+                  short={ngo.short}
+                  description={ngo.description}
+                  darkMode={darkMode}
+                />
+              )}
             </React.Fragment>
           ))}
         </div>
@@ -45,6 +60,7 @@ const WikiSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
             name={ngo.name}
             short={ngo.short}
             description={ngo.description}
+            darkMode={darkMode}
           />
         ))}
       </div>

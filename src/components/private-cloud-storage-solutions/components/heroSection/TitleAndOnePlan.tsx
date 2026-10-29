@@ -1,7 +1,6 @@
 import { ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TitleAndOnePlanProps {
   darkMode?: boolean;
@@ -11,12 +10,7 @@ interface TitleAndOnePlanProps {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const TitleAndOnePlan = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  header,
-  footer,
-}: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ darkMode = false, textContent, header, footer }: TitleAndOnePlanProps): JSX.Element => {
   return (
     <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24 ">
       {header ?? (

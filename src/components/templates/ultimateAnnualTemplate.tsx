@@ -13,7 +13,6 @@ import FeaturesSection from '@/components/drive/FeaturesSection';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import TrustedSection from '@/components/home/TrustedSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface UltimateAnnualTemplateProps {
   darkMode?: boolean;
@@ -26,7 +25,7 @@ export interface UltimateAnnualTemplateProps {
 }
 
 export const UltimateAnnualTemplate = ({
-    darkMode = DARK_MODE_ENABLED,
+    darkMode = false,
     metatagsDescriptions,
     langJson,
     lang, 
@@ -49,7 +48,7 @@ export const UltimateAnnualTemplate = ({
       <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
         <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
-        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
+        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} darkMode={darkMode} />
 
         {ultimatePlan && (
           <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`} id="priceCard">
@@ -63,17 +62,18 @@ export const UltimateAnnualTemplate = ({
               planId={ultimatePlan.priceId}
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
+              darkMode={darkMode}
             />
           </div>
         )}
 
-        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
+        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} darkMode={darkMode} />
 
-        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
 
-        <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+        <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
       </Layout>
   );
 };

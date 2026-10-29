@@ -15,7 +15,6 @@ import {
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -27,7 +26,7 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   percentOff,
   minimumPrice,

@@ -1,6 +1,5 @@
 import { Asterisk } from '@phosphor-icons/react';
 import SignUpBanner from '../banners/SignUpBanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FirstBold = ({ text, className = '' }) => {
   if (!text) return null;
@@ -12,11 +11,11 @@ const FirstBold = ({ text, className = '' }) => {
   );
 };
 
-export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   return (
     <section className={`overflow-hidden px-5 py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex w-full flex-col items-center space-y-8">
-        <SignUpBanner textContent={bannerText} lang={'en'} />
+        <SignUpBanner textContent={bannerText} lang={'en'} darkMode={darkMode} />
         <div className="flex max-w-[832px] flex-col pt-16">
           <div className="flex flex-col">
             <p className={`pb-4 text-center text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

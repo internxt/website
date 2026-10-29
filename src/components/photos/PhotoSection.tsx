@@ -1,6 +1,5 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PhotoSectionProps {
   darkMode?: boolean;
@@ -10,7 +9,7 @@ interface PhotoSectionProps {
   };
 }
 
-const PhotoSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: PhotoSectionProps): JSX.Element => {
+const PhotoSection = ({ darkMode = false, textContent }: PhotoSectionProps): JSX.Element => {
   return (
     <section className={`flex w-full flex-col items-center justify-center gap-4 px-5 lg:pb-10 lg:gap-14 lg:px-10 lg:py-20 lg:pt-15 xl:px-32 3xl:px-80 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <h2 className={`text-3xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>

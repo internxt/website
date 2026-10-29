@@ -3,7 +3,6 @@ import { CheckCircle } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { HeroSection as HeroSectionText } from '@/assets/types/photos';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -12,7 +11,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   url = '/pricing',
 }: Readonly<HeroSectionProps>) => {

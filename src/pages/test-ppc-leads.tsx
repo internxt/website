@@ -15,7 +15,6 @@ import { getMinimumPrice } from '@/utils/priceHelper';
 import { PromoCodeName } from '@/lib/types';
 import { TestPpcLeadsText } from '@/assets/types/test-ppc-leads';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TestPpcLeadsProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface TestPpcLeadsProps {
 }
 
 const TestPpcLeads = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -59,15 +58,16 @@ const TestPpcLeads = ({
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale} darkMode={darkMode} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
-      <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} />
+      <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} darkMode={darkMode} />
 
       <CardsGridSection
         textContent={textContent.FeaturesSection}
         bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+        darkMode={darkMode}
       />
 
       <ChoosePlanSection
@@ -76,6 +76,7 @@ const TestPpcLeads = ({
         minimumPrice={minimumPrice}
         loadingCards={loadingCards}
         sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} py-10 lg:py-20`}
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -87,6 +88,7 @@ const TestPpcLeads = ({
             ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
             : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -105,12 +107,14 @@ const TestPpcLeads = ({
         bgGradientContainerColor="linear-gradient(279.29deg, #0c4499 3.25%, #041733 78.35%)"
         containerDetails="px-6 lg:flex-row lg:justify-between lg:px-10 lg:text-left"
         bgPadding="py-10 lg:py-20"
+        darkMode={darkMode}
       />
 
       <MinimalFooter
         footerLang={footerLang.FooterSection}
         lang={locale}
         bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+        darkMode={darkMode}
       />
     </Layout>
   );

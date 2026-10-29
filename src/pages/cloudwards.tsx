@@ -14,7 +14,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudWardsProps {
   darkMode?: boolean;
@@ -26,7 +25,7 @@ interface CloudWardsProps {
 }
 
 function Cloudwards({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -94,13 +93,15 @@ function Cloudwards({
         percentOff={percentOff}
         cloudWards
         image={'internxt-private-cloud'}
+        darkMode={darkMode}
       />
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
       <TrustedSection
         textContent={langJson.TrustedBySection}
         bottomBar={true}
         image="/images/home/NewDesign/mauricio-hoody-techbg.webp"
+        darkMode={darkMode}
       />
 
       <PricingSectionWrapper
@@ -117,6 +118,7 @@ function Cloudwards({
         popularPlanBySize="2TB"
         sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -148,9 +150,10 @@ function Cloudwards({
             ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
@@ -176,9 +179,10 @@ function Cloudwards({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding={`lg:py-20 pb-10 ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 }

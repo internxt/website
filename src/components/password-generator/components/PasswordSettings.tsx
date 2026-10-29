@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { checkPassword, getRandomInteger } from '../utils';
 import Checkbox from '@/components/components/Checkbox';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PasswordProperties {
   length: string;
@@ -11,7 +10,7 @@ interface PasswordProperties {
   symbols: boolean;
 }
 
-const PasswordSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPassword, setCrackScore, regenerate }) => {
+const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrackScore, regenerate }) => {
   const [passwordProperties, setPasswordProperties] = useState<PasswordProperties>({
     length: '13',
     uppercase: true,
@@ -117,6 +116,7 @@ const PasswordSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPasswo
                   });
                 }}
                 checked={passwordProperties.uppercase}
+                darkMode={darkMode}
               />
             </div>
             <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -136,6 +136,7 @@ const PasswordSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPasswo
                   });
                 }}
                 checked={passwordProperties.lowercase}
+                darkMode={darkMode}
               />
             </div>
             <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -155,6 +156,7 @@ const PasswordSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPasswo
                   });
                 }}
                 checked={passwordProperties.numbers}
+                darkMode={darkMode}
               />
             </div>
             <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -174,6 +176,7 @@ const PasswordSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPasswo
                   });
                 }}
                 checked={passwordProperties.symbols}
+                darkMode={darkMode}
               />
             </div>
             <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

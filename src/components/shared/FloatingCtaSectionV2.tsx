@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const DARK_CONTAINER_GRADIENT =
   'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)';
@@ -13,7 +12,7 @@ const FloatingCtaSectionv2 = ({
   bgGradientColor,
   containerDetails = '',
   bgPadding = '',
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 }: {
   textContent: any;
   url?: string;

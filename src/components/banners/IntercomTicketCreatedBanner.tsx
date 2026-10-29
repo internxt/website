@@ -1,7 +1,6 @@
 import { X } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const IntercomTicketCreatedBanner = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerVisible, onClose }) => {
+const IntercomTicketCreatedBanner = ({ darkMode = false, textContent, bannerVisible, onClose }) => {
   return (
     <section
       className={`${

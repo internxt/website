@@ -17,7 +17,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CleanerProps {
   darkMode?: boolean;
@@ -29,7 +28,7 @@ interface CleanerProps {
 }
 
 const CleanerPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -87,11 +86,11 @@ const CleanerPage = ({
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.heroSection} />
+      <HeroSection textContent={textContent.heroSection} darkMode={darkMode} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} />
+      <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} darkMode={darkMode} />
 
       <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -107,11 +106,12 @@ const CleanerPage = ({
                 popularPlanBySize="5TB"
                 sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
                 hideFreeCard
+                darkMode={darkMode}
         />
 
-      <VideotSection textContent={textContent.videoSection} />
+      <VideotSection textContent={textContent.videoSection} darkMode={darkMode} />
 
-      <SupportSection textContent={textContent.supportSection} />
+      <SupportSection textContent={textContent.supportSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSection}
@@ -134,11 +134,12 @@ const CleanerPage = ({
         }
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="pb-20 lg:pb-0 p-8 lg:py-10"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }]} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }]} darkMode={darkMode} />
     </Layout>
   );
 };

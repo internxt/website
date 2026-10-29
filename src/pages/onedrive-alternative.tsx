@@ -17,10 +17,9 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const OneDriveComparison = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -90,9 +89,9 @@ const OneDriveComparison = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'OneDrive'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'OneDrive'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'OneDrive'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'OneDrive'} percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -102,6 +101,7 @@ const OneDriveComparison = ({
           TableTitleTag={'h3'}
           sectionNeedsH2
           bottomSeparationBar
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -116,14 +116,16 @@ const OneDriveComparison = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+          darkMode={darkMode}
         />
 
-        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} darkMode={darkMode} />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
           bgColor={alternativeBgColor}
           TitleCardTag={'h3'}
+          darkMode={darkMode}
         />
 
         <ThreeCardsSection
@@ -131,6 +133,7 @@ const OneDriveComparison = ({
           bgColor={privacyBgGradient}
           cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           topSeparationBar={false}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -139,22 +142,24 @@ const OneDriveComparison = ({
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-32">
               <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
               <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
             </div>
           }
           containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
+          darkMode={darkMode}
         />
 
         <FAQSection
           textContent={langJson.FaqSection}
           percentageDiscount={percentageDiscount?.toString()}
           needsH3={false}
+          darkMode={darkMode}
         />
 
         <Footer
@@ -165,6 +170,7 @@ const OneDriveComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Onedrive alternative', url: '/onedrive-alternative' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

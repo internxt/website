@@ -1,13 +1,12 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CTA_BG_DARK = 'radial-gradient(ellipse at center, #082D66 25%, #0D0D0D 100%)';
 const CTA_BG_LIGHT = 'radial-gradient(ellipse at center, #E5EFFF 25%, #F9F9FC 100%)';
 
 const CtaSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   url,
   maxWidth = '',

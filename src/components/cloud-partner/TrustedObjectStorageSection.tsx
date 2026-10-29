@@ -1,15 +1,11 @@
 import { CertificationsSection } from '../cloud-object-storage/certificationsSections';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TrustedObjectStorageSectionProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export const TrustedObjectStorageSection = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-}: TrustedObjectStorageSectionProps) => {
+export const TrustedObjectStorageSection = ({ darkMode = false, textContent }: TrustedObjectStorageSectionProps) => {
   return (
     <div
       className="flex flex-col items-center justify-center gap-12 p-20"
@@ -34,7 +30,7 @@ export const TrustedObjectStorageSection = ({
         </p>
       </div>
 
-      <CertificationsSection bgColor="" />
+      <CertificationsSection bgColor="" darkMode={darkMode} />
     </div>
   );
 };

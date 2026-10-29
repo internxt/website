@@ -3,7 +3,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface ComparisonTableProps {
   darkMode?: boolean;
@@ -66,7 +66,7 @@ interface ComparisonTableProps {
 }
 
 export const ComparisonTable = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   logo,
   competitor,
@@ -82,7 +82,7 @@ export const ComparisonTable = ({
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const replacements = { competitor, percentage, discount: percentage };
-  const parseText = (text?: string) => parseDynamicText(text, replacements);
+  const parseText = (text?: string) => parseDynamicText(text, replacements, darkMode);
 
   useEffect(() => {
     const scrollElement = scrollRef.current;

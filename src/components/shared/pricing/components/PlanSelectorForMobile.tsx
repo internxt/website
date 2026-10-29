@@ -1,5 +1,4 @@
 import { Interval } from '@/services/stripe.service';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
@@ -23,7 +22,7 @@ export const PlanSelectorForMobile = ({
   activeStoragePlan,
   onPlanTypeChange,
   onStorageChange,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 
   hideBillingController,
   hideStorageSelector,

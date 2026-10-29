@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');

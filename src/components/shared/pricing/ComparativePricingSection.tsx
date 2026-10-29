@@ -3,7 +3,6 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { HandCoins, Headset, Keyhole, CheckCircle, ArrowDown } from '@phosphor-icons/react';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -25,7 +24,7 @@ const couponNameLabel = (label: string, couponName: string) => {
 const HotLabel = ({
   textContent,
   discountValue,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   isValentinesMode,
 }: {
   textContent: any;
@@ -64,7 +63,7 @@ const PricingHeader = ({
   discountValue,
   className = '',
   couponCodeName,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   SectionTag,
   isValentinesMode,
   alternativeHeader,
@@ -99,7 +98,7 @@ const PricingHeader = ({
 );
 
 const CouponCodeHeader = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   couponCode,
 }: {
@@ -149,7 +148,7 @@ export const ComparativePricingSection = ({
   loadingCards,
   lang,
   targetStorage = '5TB',
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   decimalDiscount,
   couponCodeName,
   isValentinesMode = false,
@@ -203,13 +202,13 @@ export const ComparativePricingSection = ({
             isValentinesMode={isValentinesMode}
             alternativeHeader={alternativeHeader}
           />
-          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
+          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} darkMode={darkMode} />}
         </div>
 
         {loadingCards && (
           <div className="flex w-full flex-col items-center justify-center gap-6 py-8 sm:flex-row sm:flex-wrap sm:py-14">
-            <CardSkeleton />
-            <CardSkeleton />
+            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton darkMode={darkMode} />
           </div>
         )}
 

@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const language = {
   en: 'EN',
   es: 'ES',
 };
 
-const ConversionTableSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const ConversionTableSection = ({ darkMode = false, textContent, lang }) => {
   const langUpperCase = language[lang] || 'EN';
 
   const table = [

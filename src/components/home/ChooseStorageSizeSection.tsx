@@ -2,9 +2,8 @@ import Image from 'next/image';
 
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const ChooseStorageSizeSection = ({ darkMode = DARK_MODE_ENABLED, textContent, onButtonClicked }) => {
+export const ChooseStorageSizeSection = ({ darkMode = false, textContent, onButtonClicked }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
       <div className="flex flex-col-reverse items-center justify-center gap-20 lg:flex-row">
@@ -32,7 +31,7 @@ export const ChooseStorageSizeSection = ({ darkMode = DARK_MODE_ENABLED, textCon
               {textContent.peaceOfMind}
             </p>
           </div>
-          <Button text={textContent.cta} onClick={onButtonClicked} />
+          <Button text={textContent.cta} onClick={onButtonClicked} darkMode={darkMode} />
         </div>
       </div>
     </section>

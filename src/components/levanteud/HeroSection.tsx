@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -18,7 +17,7 @@ const IMAGES = [
 ];
 
 export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<HeroSectionProps>): JSX.Element {
   const scrollRef = useRef<HTMLDivElement>(null);

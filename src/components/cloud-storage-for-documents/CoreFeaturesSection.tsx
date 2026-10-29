@@ -2,14 +2,13 @@ import { CloudStorageForDocumentsText } from '@/assets/types/cloud-storage-for-d
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
   darkMode?: boolean;
   textContent: CloudStorageForDocumentsText['CoreFeatures'];
 }
 
-const CoreFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: CoreFeaturesSectionProps): JSX.Element => {
+const CoreFeaturesSection = ({ darkMode = false, textContent }: CoreFeaturesSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);

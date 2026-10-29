@@ -1,5 +1,4 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type SwitchButtonOptions = 'Prosegur' | 'Europa Press' | 'SPAR';
 interface PlanSwitchProps {
@@ -10,7 +9,7 @@ interface PlanSwitchProps {
 }
 
 export const PartnerSelector = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   activePartner,
   onPlanTypeChange,

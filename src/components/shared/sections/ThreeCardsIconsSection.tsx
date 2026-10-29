@@ -1,6 +1,5 @@
 import { CaretLeft, CaretRight, Gear, RocketLaunch, Bank } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ThreeCardsIconsProps {
   darkMode?: boolean;
@@ -15,7 +14,7 @@ interface ThreeCardsIconsProps {
 }
 
 export default function ThreeCardsIconsSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor,
   cardColor,

@@ -1,6 +1,5 @@
 import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-form';
 import type { IFormValues } from '../../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InputProps {
   darkMode?: boolean;
@@ -24,7 +23,7 @@ interface InputProps {
 }
 
 export default function TextInput({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   label,
   type,
   disabled,

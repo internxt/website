@@ -11,7 +11,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import CoreFeaturesSection from '@/components/mail/CoreFeaturesSection';
 import { MailText } from '@/assets/types/mail';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface MailTemplateProps {
   darkMode?: boolean;
@@ -24,7 +23,7 @@ export interface MailTemplateProps {
 }
 
 export const MailTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   footerText,
@@ -39,9 +38,9 @@ export const MailTemplate = ({
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} robots={robots}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <MailSection textContent={textContent.DriveSection} />
+      <MailSection textContent={textContent.DriveSection} darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.MailFeatureSection}
@@ -52,6 +51,7 @@ export const MailTemplate = ({
         }
         needsH2
         needsH3
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -73,9 +73,10 @@ export const MailTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
@@ -96,9 +97,10 @@ export const MailTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.DesignedSection} />
+      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.DesignedSection} darkMode={darkMode} />
 
       <FAQSection
         textContent={{
@@ -108,9 +110,10 @@ export const MailTemplate = ({
         needsH3={false}
         needsSpecialH3
         needsH2
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

@@ -1,5 +1,4 @@
 import { CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MoreDealsSectionProps {
   textContent: {
@@ -27,13 +26,7 @@ interface MoreDealsSectionProps {
   percentOff: any;
 }
 
-const MoreDealsSection = ({
-  textContent,
-  urls,
-  darkMode = DARK_MODE_ENABLED,
-  percentOff,
-  bgColor,
-}: MoreDealsSectionProps) => {
+const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgColor }: MoreDealsSectionProps) => {
   const cards = [textContent.cards.card1, textContent.cards.card2];
   const urlsArray = [urls.card1, urls.card2];
   const parsePercentText = (text: string) => {

@@ -3,7 +3,6 @@ import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PREMIUM_STORAGE = '2TB';
 const ULTIMATE_STORAGE = '5TB';
@@ -33,7 +32,7 @@ interface PriceTableSectionProps {
 }
 
 export const PriceTableSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   products,
   loadingCards,
@@ -81,11 +80,11 @@ export const PriceTableSection = ({
         {loadingCards ? (
           <>
             <div className="hidden flex-row items-end justify-center p-6 py-14 lg:flex">
-              <CardSkeleton />
-              <CardSkeleton />
+              <CardSkeleton darkMode={darkMode} />
+              <CardSkeleton darkMode={darkMode} />
             </div>
             <div className="flex flex-row items-end justify-center lg:hidden">
-              <CardSkeleton />
+              <CardSkeleton darkMode={darkMode} />
             </div>
           </>
         ) : (

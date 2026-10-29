@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Logo {
   src: string;
@@ -261,7 +260,7 @@ const logosMobile: Logo[] = [
   },
 ];
 
-export const CompanyLogosRecognitions = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+export const CompanyLogosRecognitions = ({ darkMode = false }: { darkMode?: boolean }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos];

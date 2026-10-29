@@ -2,7 +2,6 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import DownloadComponent from './DownloadComponent';
 import { isMobile } from 'react-device-detect';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -11,12 +10,7 @@ interface HeroSectionProps {
   needsDownloadSection?: boolean;
 }
 
-const HeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  download,
-  needsDownloadSection,
-}: HeroSectionProps) => (
+const HeroSection = ({ darkMode = false, textContent, download, needsDownloadSection }: HeroSectionProps) => (
   <section className={`flex w-full flex-col px-2 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
     <div className="flex flex-col items-center pt-32 lg:pt-40">
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
@@ -87,7 +81,9 @@ const HeroSection = ({
         </div>
       </div>
 
-      {!isMobile && <DownloadComponent textContent={textContent.DownloadLinks} download={download} />}
+      {!isMobile && (
+        <DownloadComponent textContent={textContent.DownloadLinks} download={download} darkMode={darkMode} />
+      )}
     </div>
   </section>
 );

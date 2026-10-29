@@ -4,9 +4,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const PriceCard = ({ darkMode = DARK_MODE_ENABLED, planType, storage, price, cta, country, popular }) => {
+const PriceCard = ({ darkMode = false, planType, storage, price, cta, country, popular }) => {
   const currency = () => {
     switch (country) {
       case 'US':

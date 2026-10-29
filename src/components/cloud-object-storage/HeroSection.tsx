@@ -2,9 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HeroSection = ({ darkMode = false, textContent }) => {
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 pt-28 lg:flex-row lg:gap-16 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"

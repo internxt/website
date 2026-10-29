@@ -1,9 +1,8 @@
 import Image from "next/image";
 import SignUpBanner from '../banners/SignUpBanner';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
 
   const maliciousMalware = textContent.scanFiles.description.substr(
@@ -15,7 +14,7 @@ const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText
     <section className={`relative ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-20 lg:pb-0 lg:pt-10`}>
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center ">
-          <SignUpBanner textContent={bannerText} lang={lang} />
+          <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
           <div className="flex w-full flex-col items-center justify-center pt-10">
             <Image
               src={getImage(`/banners/Ban_Internxt_728x90.webp`)}

@@ -4,7 +4,6 @@
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import type { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 import { CSSProperties } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface TextInputProps {
   darkMode?: boolean;
@@ -97,7 +96,7 @@ const validatePassword = (password) => {
 };
 
 const TextInput = (props: TextInputProps) => {
-  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = props.darkMode ?? false;
   const { register } = props;
   return (
     <input

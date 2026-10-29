@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { LinkTo } from './LinkTo';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface Card {
   cta: string;
@@ -26,7 +25,7 @@ const shuffleData = (data: Card[]): Card[] => {
   return shuffled;
 };
 
-const RelationalLinks = ({ darkMode = DARK_MODE_ENABLED, textContent }: RelationalLinksProps) => {
+const RelationalLinks = ({ darkMode = false, textContent }: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
   const router = useRouter();
 

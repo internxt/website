@@ -2,9 +2,8 @@ import Image from 'next/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const InfoSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+export const InfoSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const infoCards = () => {
     return [
       {
@@ -65,7 +64,7 @@ export const InfoSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerT
               }
             />
           </div>
-          <SignUpBanner textContent={bannerText} lang={lang} />
+          <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</p>
             <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} md:max-w-2xl`}>

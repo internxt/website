@@ -7,7 +7,6 @@ import DownloadComponent from '@/components/shared/DownloadComponent';
 import * as anim from '../../../public/js/anim';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface FeatureSectionProps {
   textContent: any;
@@ -22,7 +21,7 @@ const FeaturesSection = ({
   lang,
   download,
   showLastSection = true,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 }: FeatureSectionProps): JSX.Element => {
   return (
     <section className={`${darkMode ? 'bg-[#1C1C1C] py-10 lg:py-20' : 'bg-white'} flex w-full flex-col`}>
@@ -249,7 +248,7 @@ const FeaturesSection = ({
               {textContent.section6.title.line2}
             </h3>
 
-            <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
+            <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} darkMode={darkMode} />
           </div>
         )}
       </div>

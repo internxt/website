@@ -14,7 +14,6 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const URL_REDIRECT = '/pricing';
 
@@ -48,7 +47,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
   couponCode = PromoCodeName.seolp,
   couponCodeForLifetime = PromoCodeName.seolp,
   robots,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 }: WhatDoesGoogleKnowAboutMeTemplateProps): JSX.Element => {
   const metatags = metatagsDescription.find((desc) => desc.id === 'what-google-knows');
   const lang = locale as string;
@@ -107,7 +106,12 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
       >
         <Navbar textContent={navbarText} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.GoogleLPBanner} lang={lang} />
+        <HeroSection
+          textContent={textContent.HeroSection}
+          bannerText={bannerText.GoogleLPBanner}
+          lang={lang}
+          darkMode={darkMode}
+        />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -123,19 +127,20 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
           popularPlanBySize="2TB"
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
           freePlanNeedsH2
+          darkMode={darkMode}
         />
 
-        <WhatGoogleKnowsSection textContent={textContent.WhatGoogleKnowsSection} />
+        <WhatGoogleKnowsSection textContent={textContent.WhatGoogleKnowsSection} darkMode={darkMode} />
 
-        <CtaSection textContent={textContent.CtaSection1} url={URL_REDIRECT} />
+        <CtaSection textContent={textContent.CtaSection1} url={URL_REDIRECT} darkMode={darkMode} />
 
-        <ManageGoogleDataSection textContent={textContent.ManageGoogleDataSection} />
+        <ManageGoogleDataSection textContent={textContent.ManageGoogleDataSection} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-        <CtaSection textContent={textContent.CtaSection2} url={URL_REDIRECT} />
+        <CtaSection textContent={textContent.CtaSection2} url={URL_REDIRECT} darkMode={darkMode} />
 
-        <Footer textContent={footerText} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerText} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

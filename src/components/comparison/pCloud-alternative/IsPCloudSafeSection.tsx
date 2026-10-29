@@ -1,7 +1,6 @@
 import { Barcode, ChartPolar, Envelope, Keyhole } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const IsPCloudSafeSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const IsPCloudSafeSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: Envelope,

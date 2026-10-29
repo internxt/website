@@ -1,8 +1,7 @@
 import { ArrowsClockwise, EyeSlash, Gauge, ListChecks, LockKey, User } from '@phosphor-icons/react';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const FeatureSection = ({ darkMode = false, textContent }) => (
   <section>
     <div className="my-10 mb-32 flex flex-col items-center md:my-20">
       <div className="mb-16 flex flex-col items-center px-6 text-center font-semibold">

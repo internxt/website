@@ -1,9 +1,8 @@
 import ReactMarkdown from 'react-markdown';
 import CheckboxSettings from '@/components/password-generator/components/CheckboxSettings';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CheckboxItem = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   checked,
   setCheckbox,
   label,
@@ -23,6 +22,7 @@ const CheckboxItem = ({
         onClick={() => {
           setCheckbox(!checked);
         }}
+        darkMode={darkMode}
       />
       <ReactMarkdown
         className={`markdown text-sm font-medium ${textColor || (darkMode ? 'text-green-120' : 'text-gray-60')}`}

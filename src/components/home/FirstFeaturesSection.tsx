@@ -3,9 +3,8 @@ import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FirstFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const FirstFeaturesSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-20`}>
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">

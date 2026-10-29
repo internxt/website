@@ -13,6 +13,7 @@ import Script from 'next/script';
 
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -31,25 +32,27 @@ const FileConverter = ({
       </Script>
 <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
       <FeaturesSection
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileCompressorBanner}
         lang={lang}
+        darkMode={darkMode}
       />
 
       <CtaSection
         textContent={textContent.CtaSection}
         url={'https://internxt.com/drive'}
         customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
+        darkMode={darkMode}
       />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-      <QASection textContent={textContent.QASection} />
+      <QASection textContent={textContent.QASection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} darkMode={darkMode} />
     </Layout>
   </>);
 };

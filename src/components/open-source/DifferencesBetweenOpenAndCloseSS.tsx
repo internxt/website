@@ -1,9 +1,8 @@
 import { getImage } from '@/lib/getImage';
 import { Check, Lifebuoy, X } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const DifferencesBetweenOpenAndCloseSS = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-20">

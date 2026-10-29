@@ -2,9 +2,8 @@ import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { getImage } from '@/lib/getImage';
 import { EyeSlash, Fingerprint, HardDrives, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const WhyChooseInxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const WhyChooseInxtSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: EyeSlash,

@@ -1,8 +1,7 @@
 import { NumberOne, NumberThree, NumberTwo } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
+const FeatureSection = ({ darkMode = false, textContent }): JSX.Element => {
   const cards = [
     {
       icon: NumberOne,

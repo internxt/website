@@ -18,7 +18,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -41,7 +40,7 @@ export interface CloudStorageBackupSolutionsTemplateProps {
 }
 
 export const CloudStorageBackupSolutionsTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -181,12 +180,14 @@ export const CloudStorageBackupSolutionsTemplate = ({
             </>
           }
           height="h-min"
+          darkMode={darkMode}
         />
 
         <FeatureSection
           title={textContent.FeatureSection.title}
           description={textContent.FeatureSection.description}
           cards={cardsData}
+          darkMode={darkMode}
         />
         {textContent.NewBlock1 && (
           <div
@@ -224,6 +225,7 @@ export const CloudStorageBackupSolutionsTemplate = ({
             popularPlanBySize="5TB"
             sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
             hideFreeCard
+            darkMode={darkMode}
           />
         )}
 
@@ -231,9 +233,10 @@ export const CloudStorageBackupSolutionsTemplate = ({
           textContent={textContent.CtaSection1}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
+          darkMode={darkMode}
         />
 
-        <FeaturesSection textContent={textContent.FeaturesSection} />
+        <FeaturesSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
 
         {textContent.NewBlock2 && (
           <div
@@ -260,15 +263,16 @@ export const CloudStorageBackupSolutionsTemplate = ({
           textContent={textContent.CtaSection2}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
+          darkMode={darkMode}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} darkMode={darkMode} />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

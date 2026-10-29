@@ -1,4 +1,3 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface SelectedFileProps {
   darkMode?: boolean;
   textContent: any;
@@ -7,13 +6,7 @@ interface SelectedFileProps {
   onFileConvert: (files) => void;
 }
 
-const SelectedFile = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  files,
-  onCancel,
-  onFileConvert,
-}: SelectedFileProps) => {
+const SelectedFile = ({ darkMode = false, textContent, files, onCancel, onFileConvert }: SelectedFileProps) => {
   const isMultipleFiles = files.length > 1;
   const fileName = files && isMultipleFiles ? 'Files' : files[0].name;
 

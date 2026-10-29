@@ -17,7 +17,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface SecureFileTransferTemplateProps {
   darkMode?: boolean;
@@ -33,7 +32,7 @@ export interface SecureFileTransferTemplateProps {
 }
 
 export const SecureFileTransferTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -115,9 +114,10 @@ export const SecureFileTransferTemplate = ({
             </Link>
           </div>
         }
+        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={textContent.FeaturesSection} />
+      <FeatureSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
 
       {!hidePriceTable && (
         <PricingSectionWrapper
@@ -134,6 +134,7 @@ export const SecureFileTransferTemplate = ({
           popularPlanBySize="5TB"
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
           hideFreeCard
+          darkMode={darkMode}
         />
       )}
 
@@ -156,13 +157,14 @@ export const SecureFileTransferTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
-      <HowToChooseSection textContent={textContent.HowToChooseSection} />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} darkMode={darkMode} />
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.SecureFeaturesSection} />
+      <HorizontalScrollableSection textContent={textContent.SecureFeaturesSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
@@ -178,6 +180,7 @@ export const SecureFileTransferTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -188,9 +191,10 @@ export const SecureFileTransferTemplate = ({
         needsH3={false}
         needsSpecialH3
         needsH2
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

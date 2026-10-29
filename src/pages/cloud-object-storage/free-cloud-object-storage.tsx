@@ -13,7 +13,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetStaticPropsContext } from 'next';
 import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface FreeCloudObjectStorageProps {
   darkMode?: boolean;
@@ -25,7 +24,7 @@ interface FreeCloudObjectStorageProps {
 }
 
 const FreeCloudObjectStorage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -46,13 +45,13 @@ const FreeCloudObjectStorage = ({
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
+      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} darkMode={darkMode} />
 
-      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+      <PredictablePricingSection textContent={textContent.PredictablePricingSection} darkMode={darkMode} />
 
-      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -78,6 +77,7 @@ const FreeCloudObjectStorage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
         bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
+        darkMode={darkMode}
       />
 
         <HorizontalScrollableSection
@@ -90,6 +90,7 @@ const FreeCloudObjectStorage = ({
           needsH2
           needsH3
           needsDivider={false}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -116,6 +117,7 @@ const FreeCloudObjectStorage = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding="px-10"
+          darkMode={darkMode}
         />
 
         {textContent.HowInternxtComparesSection && (
@@ -129,10 +131,11 @@ const FreeCloudObjectStorage = ({
             needsH2
             needsH3
             needsDivider={false}
+            darkMode={darkMode}
           />
         )}
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerText}
@@ -142,6 +145,7 @@ const FreeCloudObjectStorage = ({
             { name: 'Cloud object storage', url: '/cloud-object-storage' },
             { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' },
           ]}
+          darkMode={darkMode}
         />
     </Layout>
     </>

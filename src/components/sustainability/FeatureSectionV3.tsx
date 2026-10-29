@@ -3,13 +3,12 @@ import RevealX from '../components/RevealX';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { SustainabilityText } from '@/assets/types/sustainability';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface FeatureSectionV3Props {
   darkMode?: boolean;
   textContent: SustainabilityText['FeatureSectionV3'];
 }
-const FeatureSectionV3 = ({ darkMode = DARK_MODE_ENABLED, textContent }: FeatureSectionV3Props) => {
+const FeatureSectionV3 = ({ darkMode = false, textContent }: FeatureSectionV3Props) => {
   const cards = [
     {
       icon: Lightning,

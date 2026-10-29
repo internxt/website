@@ -1,8 +1,7 @@
 import { Eye, Fingerprint, Globe, LockKey, ShieldCheck, UserCircle } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeatureSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: Eye,

@@ -1,6 +1,5 @@
 import { ArrowClockwise, Copy } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface EmailToolBarProps {
   darkMode?: boolean;
@@ -18,7 +17,7 @@ interface EmailToolBarProps {
 }
 
 function EmailToolbar({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   email,
   borderColor,
   isChangeEmailIconAnimated,

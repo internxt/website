@@ -1,10 +1,9 @@
 import SignUpInline from '@/components/auth/SignUpInline';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const SignUpBanner = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   changeTextOrder,
@@ -43,7 +42,7 @@ const SignUpBanner = ({
             </p>
           </div>
           <div className="flex w-full min-w-0 justify-center md:justify-start">
-            <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBanner />
+            <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBanner darkMode={darkMode} />
           </div>
         </div>
 

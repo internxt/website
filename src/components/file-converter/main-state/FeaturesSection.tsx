@@ -1,9 +1,8 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Browsers, CopySimple, FolderSimpleDashed, Keyhole, Planet, UserCircleMinus } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const cards = [
     {
       icon: FolderSimpleDashed,
@@ -40,14 +39,14 @@ export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, ban
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
-        <SignUpBanner textContent={bannerText} lang={'en'} />
+        <SignUpBanner textContent={bannerText} lang={'en'} darkMode={darkMode} />
         {/* Text sections */}
         <div className="flex max-w-[672px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.inxtFileConverter.title}
             </p>
-            <RenderDescription description={textContent.inxtFileConverter.description} />
+            <RenderDescription description={textContent.inxtFileConverter.description} darkMode={darkMode} />
           </div>
           <div className="flex flex-col space-y-3">
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

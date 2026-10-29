@@ -3,17 +3,13 @@ import { getImage } from '@/lib/getImage';
 import { Check } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionDealsProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-}: Readonly<HeroSectionDealsProps>): JSX.Element {
+export default function HeroSection({ darkMode = false, textContent }: Readonly<HeroSectionDealsProps>): JSX.Element {
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pt-28 lg:flex-row lg:justify-between lg:gap-16 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80"

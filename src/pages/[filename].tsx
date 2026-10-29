@@ -17,7 +17,6 @@ import { buildLocalizedPaths } from '@/lib/helpers/staticPaths';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/HorizontalPriceCard';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CombinedSpecialOfferProps {
   darkMode?: boolean;
@@ -60,7 +59,7 @@ const renderCtaContent = (
 );
 
 function CombinedSpecialOffer({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -86,7 +85,7 @@ function CombinedSpecialOffer({
     isPrivacyTutor,
     requireAnnualDiscount,
     redirectToUrgentCheckout,
-  } = useOfferConfig(pathname);
+  } = useOfferConfig(pathname, darkMode);
 
   const {
     products,
@@ -204,6 +203,7 @@ function CombinedSpecialOffer({
               planId={ultimatePlan.priceId}
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
+              darkMode={isDarkMode}
             />
           )}
         </div>
@@ -255,6 +255,7 @@ function CombinedSpecialOffer({
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgGradientContainerColor={themeClasses.bgGradientContainer}
           bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
+          darkMode={isDarkMode}
         />
       )}
 

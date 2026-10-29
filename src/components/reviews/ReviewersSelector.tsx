@@ -1,4 +1,3 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 export type SwitchButtonOptions = 'Users' | 'Tech';
 interface PlanSwitchProps {
   darkMode?: boolean;
@@ -8,7 +7,7 @@ interface PlanSwitchProps {
 }
 
 export const ReviewersSelector = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,

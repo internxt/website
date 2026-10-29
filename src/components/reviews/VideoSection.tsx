@@ -1,14 +1,13 @@
 import { ReviewsTextPage } from '@/assets/types/reviews';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface VideoSectionProps {
   darkMode?: boolean;
   textContent: ReviewsTextPage['videoSection'];
 }
 
-const VideotSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: Readonly<VideoSectionProps>): JSX.Element => {
+const VideotSection = ({ darkMode = false, textContent }: Readonly<VideoSectionProps>): JSX.Element => {
   return (
     <section
       className={`flex h-min w-full flex-col-reverse items-center justify-center gap-8 ${

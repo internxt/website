@@ -14,10 +14,9 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PCloudComparison = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -80,9 +79,9 @@ const PCloudComparison = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -96,6 +95,7 @@ const PCloudComparison = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+          darkMode={darkMode}
         />
 
         <TablesSection
@@ -104,6 +104,7 @@ const PCloudComparison = ({
           percentage={percentageDiscount}
           logo="/images/comparison/competitors/pCloud.webp"
           sectionNeedsH2
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -113,6 +114,7 @@ const PCloudComparison = ({
               ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
               : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
           }
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -124,6 +126,7 @@ const PCloudComparison = ({
           }
           needsH2
           needsH3
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -143,9 +146,10 @@ const PCloudComparison = ({
           }
           containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -155,6 +159,7 @@ const PCloudComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'pCloud alternative', url: '/pcloud-alternative' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

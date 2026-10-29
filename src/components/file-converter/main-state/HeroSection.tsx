@@ -1,8 +1,7 @@
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HeroSection = ({ darkMode = false, textContent }) => {
   const router = useRouter();
 
   return (

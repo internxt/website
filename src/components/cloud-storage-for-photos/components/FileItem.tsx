@@ -1,10 +1,9 @@
 import { DotsThree } from '@phosphor-icons/react';
 import moment from 'moment';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FileItem = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   encrypted,
   className = '',
   title,

@@ -13,7 +13,6 @@ import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
 import HeroSection from '../deals/HeroSection';
 import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
 import MoreDealsSection from '../black-friday/MoreDealsSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DealsConfig {
   heroImage: string;
@@ -38,7 +37,7 @@ interface DealsTemplateProps {
 }
 
 const DealsTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -105,7 +104,12 @@ const DealsTemplate = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection percentOff={percentOff} textContent={textContent.HeroSection} image={config.heroImage} />
+      <HeroSection
+        percentOff={percentOff}
+        textContent={textContent.HeroSection}
+        image={config.heroImage}
+        darkMode={darkMode}
+      />
 
       {/*<ReviewsSection textContent={textContent.ReviewSection} />+/+*/}
 
@@ -127,6 +131,7 @@ const DealsTemplate = ({
             ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
             : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <MoreDealsSection
@@ -134,6 +139,7 @@ const DealsTemplate = ({
         urls={config.moreDealsUrls}
         bgColor={darkMode ? 'bg-gray-105' : undefined}
         percentOff={percentOff}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -165,6 +171,7 @@ const DealsTemplate = ({
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="pb-8 lg:py-14"
+        darkMode={darkMode}
       />
 
       <HorizontalScrollableSection
@@ -176,6 +183,7 @@ const DealsTemplate = ({
             : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
         needsDivider={false}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -207,11 +215,12 @@ const DealsTemplate = ({
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
         bgPadding="pb-8 lg:py-14"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} percentageDiscount={percentOff} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} percentageDiscount={percentOff} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

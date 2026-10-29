@@ -1,7 +1,6 @@
 import Button from '@/components/shared/Button';
 import { FiveStars } from '@/components/shared/StarsRate';
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TitleAndSurveyProps {
   darkMode?: boolean;
@@ -9,11 +8,7 @@ interface TitleAndSurveyProps {
   redirectUrl: string;
 }
 
-const TitleAndSurvey = ({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-  redirectUrl,
-}: TitleAndSurveyProps): JSX.Element => {
+const TitleAndSurvey = ({ darkMode = false, textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
   const router = useRouter();
 
   const handleOnPlanButtonClicked = () => {
@@ -59,7 +54,12 @@ const TitleAndSurvey = ({
           <div className="flex flex-wrap gap-4 lg:flex-row">
             {textContent.buttonLabel.map((label) => (
               <div key={label} className="flex w-full lg:w-max">
-                <Button className="!w-full lg:w-max" text={label} onClick={handleOnPlanButtonClicked} />
+                <Button
+                  className="!w-full lg:w-max"
+                  text={label}
+                  onClick={handleOnPlanButtonClicked}
+                  darkMode={darkMode}
+                />
               </div>
             ))}
           </div>

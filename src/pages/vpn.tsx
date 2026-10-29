@@ -23,7 +23,6 @@ import CtaSection from '@/components/shared/CtaSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { useEffect, useState } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 
 interface VPNProps {
@@ -40,7 +39,7 @@ interface VPNProps {
 }
 
 const VPN = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   toolsContent,
@@ -128,36 +127,39 @@ const VPN = ({
             </div>
           </div>
         }
+        darkMode={darkMode}
       />
 
-      <EncryptedVPNSection textContent={textContent.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} />
+      <EncryptedVPNSection textContent={textContent.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} darkMode={darkMode} />
 
-      <SecureVPNSection textContent={textContent.SecureVPNSection} />
+      <SecureVPNSection textContent={textContent.SecureVPNSection} darkMode={darkMode} />
 
-      <HowItWorksSection textContent={textContent.HowItWorksSection} />
+      <HowItWorksSection textContent={textContent.HowItWorksSection} darkMode={darkMode} />
 
-      <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
+      <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} darkMode={darkMode} />
 
       <CtaSection
         textContent={textContent.CtaSection}
         url={'/pricing'}
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection.description}</p>}
+        darkMode={darkMode}
       />
 
-      <ToolsSection textContent={toolsContent} lang="en" />
+      <ToolsSection textContent={toolsContent} lang="en" darkMode={darkMode} />
 
       <CtaSection
         textContent={textContent.CtaSection2}
         url={vpnWebStoreUrl}
         target="_blank"
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt VPN', url: '/vpn' }]} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt VPN', url: '/vpn' }]} darkMode={darkMode} />
     </Layout>
     </>
   );

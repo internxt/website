@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const GraphComponent = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   price,
   priceLabel,
   background,
@@ -49,7 +48,7 @@ const GraphComponent = ({
   );
 };
 
-export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
+export const SlidersComparsion = ({ darkMode = false, textContent }): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
 
@@ -161,6 +160,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   rangeItems={[]}
                   valueLabelFormat={storageAmountValueLabelFormat}
                   color="orange"
+                  darkMode={darkMode}
                 />
                 <div
                   className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
@@ -183,6 +183,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   rangeItems={[]}
                   valueLabelFormat={percentDownloadValueLabelFormat}
                   color="orange"
+                  darkMode={darkMode}
                 />
                 <div
                   className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
@@ -208,6 +209,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   background="bg-orange/6"
                   isBlueLabel
                   maxPrice={maxPrice}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-bold">{textContent.companies[0]}</p>
               </div>
@@ -218,6 +220,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   activeBackground="bg-primary"
                   background="bg-primary/7"
                   maxPrice={maxPrice}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[1]}</p>
               </div>
@@ -228,6 +231,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   activeBackground="bg-yellow"
                   background="bg-yellow/6"
                   maxPrice={maxPrice}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>
               </div>
@@ -238,6 +242,7 @@ export const SlidersComparsion = ({ darkMode = DARK_MODE_ENABLED, textContent })
                   activeBackground="bg-red-dark"
                   background="bg-red/6"
                   maxPrice={maxPrice}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[3]}</p>
               </div>

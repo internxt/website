@@ -17,7 +17,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface CloudStorageForDocumentsTemplateProps {
   darkMode?: boolean;
@@ -33,7 +32,7 @@ export interface CloudStorageForDocumentsTemplateProps {
 }
 
 export const CloudStorageForDocumentsTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -120,9 +119,10 @@ export const CloudStorageForDocumentsTemplate = ({
         }
         width="w-[580px] "
         bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={textContent.FeaturesSection} />
+      <FeatureSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -143,9 +143,10 @@ export const CloudStorageForDocumentsTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
       {!hidePriceTable && (
         <PricingSectionWrapper
@@ -162,10 +163,11 @@ export const CloudStorageForDocumentsTemplate = ({
           popularPlanBySize="5TB"
           sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
           hideFreeCard
+          darkMode={darkMode}
         />
       )}
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.FeaturesInternxtSection}
@@ -177,6 +179,7 @@ export const CloudStorageForDocumentsTemplate = ({
         needsH2
         needsH3
         needsDivider={false}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -193,6 +196,7 @@ export const CloudStorageForDocumentsTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -203,9 +207,10 @@ export const CloudStorageForDocumentsTemplate = ({
         needsH3={false}
         needsSpecialH3
         needsH2
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

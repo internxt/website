@@ -5,7 +5,6 @@ import { signup } from '@/lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useState } from 'react';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface SignUpInlineProps {
   textContent: any;
@@ -16,7 +15,7 @@ interface SignUpInlineProps {
 }
 
 export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
-  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = props.darkMode ?? false;
   const [passwordState, setPasswordState] = useState<
     | {
         tag: 'error' | 'warning' | 'success';
@@ -61,6 +60,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             autoComplete="email"
             required
             disabled={props.loading}
+            darkMode={darkMode}
           />
         </div>
 
@@ -79,6 +79,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             required
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
+            darkMode={darkMode}
           />
         </div>
       </div>

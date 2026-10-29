@@ -9,12 +9,18 @@ import { BannerForMobile } from './components/heroSection/BannerForMobile';
 const Animation = dynamic(() => import('../shared/Animation'));
 
 interface HeroSectionForHomeProps {
+  darkMode?: boolean;
   textContent: any;
   lang: string;
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  darkMode = false,
+  textContent,
+  lang,
+  isHomePageV2,
+}: HeroSectionForHomeProps): JSX.Element {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
@@ -117,9 +123,9 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : (
-              <BannerForMobile />
+              <BannerForMobile darkMode={darkMode} />
             )}
-            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
+            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} darkMode={darkMode} />
           </div>
 
           <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">

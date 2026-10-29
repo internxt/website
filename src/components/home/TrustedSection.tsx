@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TrustedSectionProps {
   textContent: {
@@ -23,7 +22,7 @@ const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 1
 export default function TrustedSection({
   textContent,
   bottomBar = true,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   image,
   isValentinesMode,
   bgGradientColor,

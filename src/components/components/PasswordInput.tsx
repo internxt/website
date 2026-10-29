@@ -1,15 +1,14 @@
 import { Eye, EyeSlash } from '@phosphor-icons/react';
 import { useState } from 'react';
 import TextInput, { TextInputProps } from '@/components/components/TextInput';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export default function PasswordInput(props: Readonly<TextInputProps>) {
-  const darkMode = props.darkMode ?? DARK_MODE_ENABLED;
+  const darkMode = props.darkMode ?? false;
   const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [showPassword, setShowPassword] = useState<boolean>(false);
   return (
     <div className="relative flex w-full">
-      <TextInput {...props} type={showPassword ? 'text' : 'password'} isPasswordInput />
+      <TextInput {...props} type={showPassword ? 'text' : 'password'} isPasswordInput darkMode={darkMode} />
       <button
         onClick={(e) => {
           e.preventDefault();

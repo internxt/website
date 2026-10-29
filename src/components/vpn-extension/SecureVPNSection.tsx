@@ -1,8 +1,7 @@
 import { Crosshair, Fingerprint, MonitorPlay, Password } from '@phosphor-icons/react';
 import RevealY from '../components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const SecureVPNSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const SecureVPNSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: Password,

@@ -18,7 +18,6 @@ import fileConverterService from '@/services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ConverterSectionProps {
   darkMode?: boolean;
@@ -41,7 +40,7 @@ const converters = [
 ];
 
 export const ConverterSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   converterText,
   errorContent,
@@ -171,6 +170,7 @@ export const ConverterSection = ({
           isDragging={isDragging}
           setIsDragging={setIsDragging}
           handleOpenFileExplorer={handleOpenFileExplorer}
+          darkMode={darkMode}
         />
       ),
       selectedFileState: files && (
@@ -179,6 +179,7 @@ export const ConverterSection = ({
           files={files}
           onFileConvert={handleConversion}
           onCancel={resetViewToInitialState}
+          darkMode={darkMode}
         />
       ),
       convertingState: (
@@ -197,6 +198,7 @@ export const ConverterSection = ({
           textContent={formattedConverterText.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
           onDownloadFile={handleConversion}
+          darkMode={darkMode}
         />
       ),
       errorState: (
@@ -205,6 +207,7 @@ export const ConverterSection = ({
           resetViewToInitialState={resetViewToInitialState}
           errorContent={formattedErrorText}
           textContent={formattedConverterText.dragNDropArea}
+          darkMode={darkMode}
         />
       ),
     };

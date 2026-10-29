@@ -3,7 +3,6 @@ import PriceCard from '../PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { TransformedProduct } from '@/services/stripe.service';
 import FreePlanCard from '../FreePlanCard';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceTableForAlternativePricingProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ const CARD_LABEL = {
 };
 
 export const PriceTableForAlternativePricing = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   selectedPlanStorage,
   lang,
@@ -112,15 +111,16 @@ export const PriceTableForAlternativePricing = ({
                       isOffer
                       coupon={coupons.subscription}
                       currencyValue={currencyValue}
+                      darkMode={darkMode}
                     />
                   ))
                 : Array(3)
                     .fill(0)
-                    .map(() => <CardSkeleton />)}
+                    .map(() => <CardSkeleton darkMode={darkMode} />)}
             </div>
             {showFreeCard ? (
               <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">
-                <FreePlanCard textContent={priceText.tableSection.freePlanCard} />
+                <FreePlanCard textContent={priceText.tableSection.freePlanCard} darkMode={darkMode} />
               </div>
             ) : undefined}
           </div>

@@ -2,7 +2,6 @@ import { PhotoText } from '@/assets/types/photos';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CoreFeaturesSectionProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface CoreFeaturesSectionProps {
 }
 
 const CoreFeaturesSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   needsDivider,
 }: CoreFeaturesSectionProps): JSX.Element => {

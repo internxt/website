@@ -23,7 +23,6 @@ import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -55,7 +54,7 @@ export interface DriveTemplateProps {
 }
 
 export const DriveTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   download,
   textContent,
@@ -126,9 +125,9 @@ export const DriveTemplate = ({
         robots={robots}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} download={download} url={ctaUrl} />
+        <HeroSection textContent={textContent.HeroSection} download={download} url={ctaUrl} darkMode={darkMode} />
 
-        <DriveSection textContent={textContent.DriveSection} />
+        <DriveSection textContent={textContent.DriveSection} darkMode={darkMode} />
 
         {!hidePriceTable && (
           <PricingSectionWrapper
@@ -144,6 +143,7 @@ export const DriveTemplate = ({
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="2TB"
             sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
+            darkMode={darkMode}
           />
         )}
 
@@ -156,13 +156,14 @@ export const DriveTemplate = ({
           }
           needsH2
           needsH3
+          darkMode={darkMode}
         />
 
-        <FileParallaxSection />
+        <FileParallaxSection darkMode={darkMode} />
 
-        <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+        <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
-        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
+        <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 darkMode={darkMode} />
 
         <ThreeCardsSection
           textContent={textContent.MadeInEuropeSection}
@@ -171,9 +172,15 @@ export const DriveTemplate = ({
               ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
               : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
           }
+          darkMode={darkMode}
         />
 
-        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
+        <OfficialCloudProviderSection
+          textContent={textContent.OfficalCloudProvider}
+          lang={lang}
+          partner="levante"
+          darkMode={darkMode}
+        />
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
@@ -199,11 +206,17 @@ export const DriveTemplate = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
+          darkMode={darkMode}
         />
 
-        <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+        <DownloadComponent
+          textContent={textContent.DownloadSection}
+          lang={lang}
+          download={download}
+          darkMode={darkMode}
+        />
 
-        <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} />
+        <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} darkMode={darkMode} />
 
         <ReviewsSection
           textContent={textContent.ReviewSection}
@@ -212,6 +225,7 @@ export const DriveTemplate = ({
               ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
               : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
           }
+          darkMode={darkMode}
         />
 
         <FAQSection
@@ -222,11 +236,12 @@ export const DriveTemplate = ({
               ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
               : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
           }
+          darkMode={darkMode}
         />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CertificationsSection } from '../cloud-object-storage/certificationsSections';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface LeadingOrganizationsSectionProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface LeadingOrganizationsSectionProps {
 }
 
 export default function LeadingOrganizationsSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<LeadingOrganizationsSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -180,7 +179,7 @@ export default function LeadingOrganizationsSection({
           )}
         </div>
       </div>
-      <CertificationsSection />
+      <CertificationsSection darkMode={darkMode} />
     </section>
   );
 }

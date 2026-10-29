@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, url = '#billingButtons' }) => {
+export const HeroSection = ({ darkMode = false, textContent, url = '#billingButtons' }) => {
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 pt-28 lg:mt-16 lg:flex-row lg:gap-16 lg:py-10"

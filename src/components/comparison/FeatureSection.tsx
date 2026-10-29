@@ -1,9 +1,8 @@
 import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeatureSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="content flex flex-col items-center justify-center space-y-20 px-6 py-20">

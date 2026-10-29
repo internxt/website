@@ -16,7 +16,7 @@ interface HorizontalScrollableProps {
 }
 
 export default function HorizontalScrollableSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgGradient,
   cardsWidth = '400px',

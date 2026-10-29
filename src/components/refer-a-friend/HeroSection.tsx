@@ -6,17 +6,13 @@ import dynamic from 'next/dynamic';
 
 const Animation = dynamic(() => import('../home/components/Animation'));
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForHomeProps {
   darkMode?: boolean;
   textContent: ReferAFriendText['HeroSection'];
 }
 
-export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
-  textContent,
-}: Readonly<HeroSectionForHomeProps>): JSX.Element {
+export default function HeroSection({ darkMode = false, textContent }: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const HighlightText = ({ text, className = '' }) => {
     const parts = text.split(/(\*\*.*?\*\*)/);
 

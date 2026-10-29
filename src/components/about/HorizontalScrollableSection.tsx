@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import Image from "next/image";
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface HorizontalScrollableProps {
   darkMode?: boolean;
@@ -12,7 +12,7 @@ interface HorizontalScrollableProps {
 }
 
 export default function HorizontalScrollableSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   header = true,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {

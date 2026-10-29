@@ -20,7 +20,6 @@ import {
   VideoConference,
 } from '@phosphor-icons/react';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceCardsForAffiliatesPartnersProps {
   darkMode?: boolean;
@@ -35,7 +34,7 @@ interface PriceCardsForAffiliatesPartnersProps {
 }
 
 export const PriceCardsForAffiliatesPartners = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   storage,
   popular,
   currency,

@@ -1,13 +1,12 @@
 import { SustainabilityText } from '@/assets/types/sustainability';
 import { Database, GlobeHemisphereWest, Heart, Leaf, Sun } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface HeroSectionsProps {
   darkMode?: boolean;
   textContent: SustainabilityText['HeroSection'];
 }
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionsProps) => {
+const FeatureSection = ({ darkMode = false, textContent }: HeroSectionsProps) => {
   const goals = [
     {
       title: textContent.goals.element1,

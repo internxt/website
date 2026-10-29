@@ -1,7 +1,6 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Detective, File, FileZip, LockSimple, Tray, UploadSimple } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const FirstBold = ({ text, className = '' }) => {
   if (!text) return null;
@@ -13,7 +12,7 @@ const FirstBold = ({ text, className = '' }) => {
   );
 };
 
-export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const cards = [
     {
       icon: File,
@@ -50,14 +49,14 @@ export const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, ban
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
-        <SignUpBanner textContent={bannerText} lang="en" />
+        <SignUpBanner textContent={bannerText} lang="en" darkMode={darkMode} />
 
         <div className="flex max-w-[966px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
             <p className={`pb-8 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.inxtFileCompressor.title}
             </p>
-            <RenderDescription description={textContent.inxtFileCompressor.description} />
+            <RenderDescription description={textContent.inxtFileCompressor.description} darkMode={darkMode} />
           </div>
 
           <div className="flex flex-col space-y-3">

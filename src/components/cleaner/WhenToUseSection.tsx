@@ -1,5 +1,4 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
-const WhenToUseSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhenToUseSection = ({ darkMode = false, textContent }) => {
   const features = textContent?.features ?? [];
   const midIndex = Math.ceil(features.length / 2);
   const firstColumn = features.slice(0, midIndex);

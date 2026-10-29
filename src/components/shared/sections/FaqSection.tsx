@@ -1,5 +1,4 @@
 import FaqAccordion from '@/components/shared/FAQAccordion';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface FAQSectionProps {
   darkMode?: boolean;
@@ -15,7 +14,7 @@ interface FAQSectionProps {
 }
 
 const FAQSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor,
   cardColor,
@@ -57,6 +56,7 @@ const FAQSection = ({
                 needsSpecialH3={needsSpecialH3}
                 index={index}
                 totalItems={textContent.faq.length}
+                darkMode={darkMode}
               />
             </div>
           ))}

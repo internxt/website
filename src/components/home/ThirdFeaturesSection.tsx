@@ -3,9 +3,8 @@ import { Gift } from '@phosphor-icons/react';
 import React from 'react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const ThirdFeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const ThirdFeaturesSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">

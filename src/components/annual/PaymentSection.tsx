@@ -2,9 +2,8 @@ import React from 'react';
 
 import { Coin, CreditCard, CurrencyCircleDollar, Detective, Lifebuoy } from '@phosphor-icons/react';
 import PriceTable from '@/components/annual/PriceTable';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const PaymentSection = ({ darkMode = DARK_MODE_ENABLED, lang, textContent }) => {
+const PaymentSection = ({ darkMode = false, lang, textContent }) => {
   const wordsToBold = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
   const formattedDescription = textContent.description
     .split(/(Drive|Send|VPN|Antivirus|Meet|Mail)/g)
@@ -26,7 +25,7 @@ const PaymentSection = ({ darkMode = DARK_MODE_ENABLED, lang, textContent }) => 
           </div>
         </div>
 
-        <PriceTable lang={lang} />
+        <PriceTable lang={lang} darkMode={darkMode} />
 
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           <div className="p flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">

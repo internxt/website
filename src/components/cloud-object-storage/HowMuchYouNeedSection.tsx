@@ -3,7 +3,6 @@ import { RangeSlider } from '../shared/RangeSlider';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import Image from 'next/image';
 import { currencyService } from '@/services/currency.service';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HowMuchYouNeedSectionProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface HowMuchYouNeedSectionProps {
 }
 
 const GraphComponent = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   price,
   priceLabel,
   background,
@@ -60,7 +59,7 @@ const GraphComponent = ({
 };
 
 export const HowMuchYouNeedSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: HowMuchYouNeedSectionProps): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
@@ -191,7 +190,7 @@ export const HowMuchYouNeedSection = ({
               </p>
 
               <div className="flex flex-row items-end gap-4">
-                <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} />
+                <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} darkMode={darkMode} />
                 <div
                   className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
                     darkMode ? 'border-gray-71' : 'border-gray-10'
@@ -207,7 +206,7 @@ export const HowMuchYouNeedSection = ({
                 {textContent.percentDownloadPerMonth}
               </p>
               <div className="flex flex-row items-end gap-4">
-                <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
+                <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} darkMode={darkMode} />
                 <div
                   className={`flex w-full max-w-[90px] items-center justify-center rounded-lg border ${
                     darkMode ? 'border-gray-71' : 'border-gray-10'
@@ -232,6 +231,7 @@ export const HowMuchYouNeedSection = ({
                   isBlueLabel
                   maxPrice={maxPrice}
                   currency={currency}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-bold">{textContent.companies[0]}</p>
               </div>
@@ -243,6 +243,7 @@ export const HowMuchYouNeedSection = ({
                   background="bg-yellow/6"
                   maxPrice={maxPrice}
                   currency={currency}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[1]}</p>
               </div>
@@ -254,6 +255,7 @@ export const HowMuchYouNeedSection = ({
                   background="bg-orange-100"
                   maxPrice={maxPrice}
                   currency={currency}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>
               </div>
@@ -265,6 +267,7 @@ export const HowMuchYouNeedSection = ({
                   background="bg-red/6"
                   maxPrice={maxPrice}
                   currency={currency}
+                  darkMode={darkMode}
                 />
                 <p className="text-lg font-medium">{textContent.companies[3]}</p>
               </div>

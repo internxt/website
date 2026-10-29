@@ -16,7 +16,6 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import { getMinimumPrice } from '@/utils/priceHelper';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeProps {
   darkMode?: boolean;
@@ -28,7 +27,7 @@ interface HomeProps {
 }
 
 const HomePage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -93,9 +92,14 @@ const HomePage = ({
     >
       <MinimalNavbar textContent={navbarLang} lang={locale} />
 
-      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
+      <HeroSection
+        textContent={textContent.HeroSection}
+        percentOff={percentOff}
+        minimumPrice={minimumPrice}
+        darkMode={darkMode}
+      />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -112,17 +116,19 @@ const HomePage = ({
         sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
         freePlanNeedsH2
         hideFreeCard
+        darkMode={darkMode}
       />
 
-      <TrustedSection textContent={textContent.TrustedBySection} />
+      <TrustedSection textContent={textContent.TrustedBySection} darkMode={darkMode} />
 
-      <AwardWinningSection textContent={textContent.AwardWinningSection} />
+      <AwardWinningSection textContent={textContent.AwardWinningSection} darkMode={darkMode} />
 
       <OfficialCloudProviderSection
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
         bgColor={`${darkMode ? 'bg-gray-100' : 'bg-neutral-17'}`}
+        darkMode={darkMode}
       />
 
       <HorizontalScrollableSection
@@ -132,6 +138,7 @@ const HomePage = ({
             ? 'linear-gradient(180deg, #1C1C1C 0%, #18181B 100%)'
             : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -143,9 +150,10 @@ const HomePage = ({
             ? 'linear-gradient(360deg, #1C1C1C 0%, #18181B 100%)'
             : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

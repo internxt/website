@@ -1,12 +1,11 @@
 import { SustainabilityText } from '@/assets/types/sustainability';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface FeatureSectionProps {
   darkMode?: boolean;
   textContent: SustainabilityText['FeatureSection'];
 }
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: FeatureSectionProps) => {
+const FeatureSection = ({ darkMode = false, textContent }: FeatureSectionProps) => {
   const cards = [
     {
       number: textContent.cards.reduceCarbonEnergy.number,

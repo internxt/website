@@ -1,7 +1,6 @@
 import DropArea from '@/components/shared/DropArea';
 import EmptyFile from '@/components/shared/icons/EmptyFile';
 import { formatText } from '@/components/utils/format-text';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface InitialStateProps {
   darkMode?: boolean;
@@ -14,7 +13,7 @@ interface InitialStateProps {
 }
 
 const InitialState = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   isDragging,
   pathFrom,

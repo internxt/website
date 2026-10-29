@@ -4,7 +4,7 @@ import { ReviewersSelector, SwitchButtonOptions } from './ReviewersSelector';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface HorizontalScrollableSectionProps {
   darkMode?: boolean;
@@ -32,7 +32,7 @@ interface TechReviewCardProps {
 }
 
 const TechReviewCard = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   title,
   description,
   author,
@@ -97,7 +97,7 @@ const StarRating = ({ rating, maxStars = 5, size = 40 }: StarRatingProps): JSX.E
   );
 };
 
-const ReviewCard = ({ darkMode = DARK_MODE_ENABLED, review, author }: ReviewCardProps): JSX.Element => {
+const ReviewCard = ({ darkMode = false, review, author }: ReviewCardProps): JSX.Element => {
   return (
     <div
       className={`flex h-[270px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl ${
@@ -137,7 +137,7 @@ const ReviewCard = ({ darkMode = DARK_MODE_ENABLED, review, author }: ReviewCard
 };
 
 const HorizontalScrollableSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<HorizontalScrollableSectionProps>): JSX.Element => {
   const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-10';
@@ -278,6 +278,7 @@ const HorizontalScrollableSection = ({
             textContent={textContent.reviewers.reviewers}
             activeSwitchPlan={activeSwitchPlan}
             onPlanTypeChange={handlePlanTypeChange}
+            darkMode={darkMode}
           />
         </div>
       </div>
@@ -308,7 +309,7 @@ const HorizontalScrollableSection = ({
             {activeSwitchPlan === 'Users'
               ? userReviews.reviews.map((review, index) => (
                   <div key={`user-review-${index}`} className="review-card">
-                    <ReviewCard review={review} author={userReviews.authors[index]} />
+                    <ReviewCard review={review} author={userReviews.authors[index]} darkMode={darkMode} />
                   </div>
                 ))
               : techReviews?.titles.map((title, index) => (
@@ -318,6 +319,7 @@ const HorizontalScrollableSection = ({
                       description={techReviews.description[index]}
                       author={processAuthor(techReviews.authors[index], index)}
                       companyLogo={companyLogos[index]}
+                      darkMode={darkMode}
                     />
                   </div>
                 ))}

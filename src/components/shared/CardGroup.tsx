@@ -1,8 +1,7 @@
 import RevealY from '../components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const CardGroup = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   cards,
   backgroundColorCard,
   textColor = darkMode ? 'text-white-95' : 'text-gray-100',

@@ -17,6 +17,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PrivacyText } from '@/assets/types/privacy';
 import { GetStaticPropsContext } from 'next';
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
   navbarLang: NavigationBarText;
@@ -24,7 +25,7 @@ interface PrivacyProps {
   lang: string;
 }
 
-const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, lang }: PrivacyProps): JSX.Element => {
+const Privacy = ({ darkMode = false, metatagsDescriptions, textContent, navbarLang, footerLang, lang }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
   const langForLink = lang === 'en' ? '' : lang;
   const CTA_URL = `https://internxt.com/${langForLink}/pricing`;
@@ -41,23 +42,23 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-        <FileParallaxSection />
+        <FileParallaxSection darkMode={darkMode} />
 
-        <ManifestoSection textContent={textContent.ManifestoSection} />
+        <ManifestoSection textContent={textContent.ManifestoSection} darkMode={darkMode} />
 
-        <FeatureSection textContent={textContent.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
 
-        <InxtAppsSection textContent={textContent.InxtAppsSection} lang={lang} />
+        <InxtAppsSection textContent={textContent.InxtAppsSection} lang={lang} darkMode={darkMode} />
 
-        <SecuritumSection textContent={textContent.SecuritumSection} />
+        <SecuritumSection textContent={textContent.SecuritumSection} darkMode={darkMode} />
 
-        <BetterTomorrowSection textContent={textContent.BetterTomorrowSection} lang={lang} />
+        <BetterTomorrowSection textContent={textContent.BetterTomorrowSection} lang={lang} darkMode={darkMode} />
 
-        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
+        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

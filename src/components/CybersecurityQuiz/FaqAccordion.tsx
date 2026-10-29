@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle, PlusCircle, XCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export default function FaqAccordion({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   question,
   answer,
   isQuestionBigger = false,

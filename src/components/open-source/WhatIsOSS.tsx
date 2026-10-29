@@ -1,7 +1,6 @@
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatIsOSS = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhatIsOSS = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center px-5 py-20 text-center">

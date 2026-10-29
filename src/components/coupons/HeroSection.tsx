@@ -16,7 +16,6 @@ import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import { CouponPageText } from '@/assets/types/couponsPage';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionForHomeProps {
   darkMode?: boolean;
@@ -26,7 +25,7 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   percentOff,
   minimumPrice,

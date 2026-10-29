@@ -16,7 +16,6 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import ReviewsSection from '@/components/home/ReviewsSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PartnerDiscountProps {
   darkMode?: boolean;
@@ -28,7 +27,7 @@ interface PartnerDiscountProps {
 }
 
 const PartnerDiscount = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -91,9 +90,9 @@ const PartnerDiscount = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode={darkMode} />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -109,6 +108,7 @@ const PartnerDiscount = ({
         popularPlanBySize="2TB"
         sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -140,9 +140,10 @@ const PartnerDiscount = ({
             ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
       <TrustedSection
         textContent={langJson.TrustedBySection}
@@ -152,6 +153,7 @@ const PartnerDiscount = ({
             ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -178,9 +180,10 @@ const PartnerDiscount = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-10"
+        darkMode={darkMode}
       />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

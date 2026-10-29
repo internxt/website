@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { Code, CodeBlock, Gauge, HandCoins, Headset, LockSimple, Resize, Star } from '@phosphor-icons/react';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PriceCardSectionProps {
   darkMode?: boolean;
@@ -15,7 +14,7 @@ interface PriceCardSectionProps {
 }
 
 export const CloudObjectStoragePriceCardSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: PriceCardSectionProps): JSX.Element => {
   const router = useRouter();
@@ -98,6 +97,7 @@ export const CloudObjectStoragePriceCardSection = ({
                 className="!w-full"
                 text={textContent.cardText.cta}
                 onClick={() => router.push('/cloud-object-storage/checkout')}
+                darkMode={darkMode}
               />
             </div>
 

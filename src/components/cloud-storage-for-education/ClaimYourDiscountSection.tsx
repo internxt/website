@@ -6,7 +6,6 @@ import TextInput from '@/components/components/TextInput';
 import RenderDescription from '@/components/shared/RenderDescription';
 import CheckboxItem from '@/components/shared/CheckboxItem';
 import { notificationService } from '@/components/Snackbar';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const MenuItems = {
   annual: [
@@ -23,7 +22,7 @@ const MenuItems = {
   ],
 };
 
-const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, openBanner }) => {
+const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner }) => {
   const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
@@ -72,7 +71,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
           <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
             {textContent.subtitle}
           </p>
-          <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
+          <RenderDescription fontSize="text-xl" description={textContent.paragraph} darkMode={darkMode} />
         </div>
         <div className={`flex flex-row space-x-20 rounded-[32px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}>
           {/* Text Card */}
@@ -98,6 +97,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
                       setName(e.target.value);
                     }}
                     placeholder={textContent.card.nameLabel}
+                    darkMode={darkMode}
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
@@ -109,6 +109,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
                       setEmail(e.target.value);
                     }}
                     placeholder={textContent.card.emailLabel}
+                    darkMode={darkMode}
                   />
                 </div>
                 <CheckboxItem
@@ -116,6 +117,7 @@ const ClaimYourDiscountSection = ({ darkMode = DARK_MODE_ENABLED, textContent, o
                   checked={legalCheckbox}
                   setCheckbox={setLegalCheckbox}
                   label={textContent.privacyCheckbox}
+                  darkMode={darkMode}
                 />
                 <button
                   onClick={(e) => {

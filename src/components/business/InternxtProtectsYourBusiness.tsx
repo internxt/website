@@ -1,11 +1,10 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface InternxtProtectsYourBusinessProps {
   darkMode?: boolean;
   textContent: any;
 }
 
 export const InternxtProtectsYourBusiness = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: InternxtProtectsYourBusinessProps): JSX.Element => {
   return (

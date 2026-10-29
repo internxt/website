@@ -1,8 +1,7 @@
 import React from 'react';
 import FaqAccordion from '@/components/shared/FAQAccordion';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const InfoSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const InfoSection = ({ darkMode = false, textContent }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-10 py-20">
@@ -17,7 +16,13 @@ const InfoSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
         <div className="flex w-full max-w-[850px] flex-col space-y-2">
           {textContent.faq.faq.map((item, index) => (
             <div className={`rounded-lg border ${darkMode ? 'border-gray-71' : 'border-gray-20'} px-5`} key={index}>
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} isQuestionBigger />
+              <FaqAccordion
+                key={item.question}
+                question={item.question}
+                answer={item.answer}
+                isQuestionBigger
+                darkMode={darkMode}
+              />
             </div>
           ))}
         </div>

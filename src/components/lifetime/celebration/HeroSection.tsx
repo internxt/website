@@ -3,7 +3,6 @@ import Countdown from '@/components/components/Countdown';
 import Animation from '@/components/home/components/Animation';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface HeroSectionProps {
   hideTimer?: boolean;
 }
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, hideTimer }: HeroSectionProps) => {
+const HeroSection = ({ darkMode = false, textContent, hideTimer }: HeroSectionProps) => {
   return (
     <section className="overflow-hidden bg-[url('/images/lifetime/celebration/swiggles_italy.png')] bg-cover bg-no-repeat py-20">
       <div className="flex flex-col justify-center pt-10 lg:pt-20">

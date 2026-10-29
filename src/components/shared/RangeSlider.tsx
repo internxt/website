@@ -1,6 +1,5 @@
 import { Slider } from '@mui/material';
 import { ReactNode } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PricingRangeSliderProps {
   darkMode?: boolean;
@@ -12,7 +11,7 @@ interface PricingRangeSliderProps {
 }
 
 export const RangeSlider = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   max,
   min = 0,
   rangeItems,

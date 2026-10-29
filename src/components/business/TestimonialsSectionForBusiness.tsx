@@ -3,7 +3,6 @@ import { FiveStars } from '../shared/StarsRate';
 import { getImage } from '@/lib/getImage';
 import { useState } from 'react';
 import { CaretLeft, CaretRight, Quotes } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TestimonialsSectionForBusinessProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface TestimonialsSectionForBusinessProps {
 }
 
 export const TestimonialsSectionForBusiness = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: TestimonialsSectionForBusinessProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);

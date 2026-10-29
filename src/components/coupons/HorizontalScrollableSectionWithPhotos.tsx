@@ -2,7 +2,6 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const SECTION_GRADIENT_DARK = 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)';
 const SECTION_GRADIENT_LIGHT = 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)';
@@ -16,7 +15,7 @@ interface HorizontalScrollableSectionWithPhotosProps {
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor,
   TitleTag = 'p',

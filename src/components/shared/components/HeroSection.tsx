@@ -1,7 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 import HeroSectionSafeArea from '../HeroSectionSafeArea';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -19,7 +18,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   TextComponent,
   style,
   ImageComponent,

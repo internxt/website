@@ -5,7 +5,6 @@ import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
 import { PlanSelector, SwitchButtonOptions } from '../elections/PlanSelector';
 import { highlightKeywords } from '@/utils/highlightKeywords';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
@@ -28,7 +27,7 @@ interface PaymentSectionProps {
 }
 
 const PaymentSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   lang,
   textContent,
   couponCode,
@@ -103,6 +102,7 @@ const PaymentSection = ({
               textContent={textContent}
               activeSwitchPlan={activeSwitchPlan}
               onPlanTypeChange={onPlanTypeChange}
+              darkMode={darkMode}
             />
           </div>
         )}
@@ -117,6 +117,7 @@ const PaymentSection = ({
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
           showOffer={showOffer}
+          darkMode={darkMode}
         />
 
         <div className="flex flex-col items-start justify-start space-y-8 pb-12 pl-10 text-center md:flex-row md:space-x-32 md:space-y-0 lg:justify-center">

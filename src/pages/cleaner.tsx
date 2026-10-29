@@ -14,7 +14,6 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import FeatureSection from '@/components/cleaner/FeatureSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CleanerProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface CleanerProps {
 }
 
 const CleanerPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -46,12 +45,12 @@ const CleanerPage = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
 
       <div className="lg:py-18">
-        <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
+        <HorizontalScrollableSection textContent={textContent.WhyUseSection} darkMode={darkMode} />
       </div>
 
       <FloatingCtaSectionv2
@@ -79,11 +78,12 @@ const CleanerPage = ({
           }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
+        darkMode={darkMode}
       />
 
-      <HowItWorksSection textContent={textContent.HowItWorksSection} />
+      <HowItWorksSection textContent={textContent.HowItWorksSection} darkMode={darkMode} />
 
-      <WhenToUseSection textContent={textContent.WhenToUseSection} />
+      <WhenToUseSection textContent={textContent.WhenToUseSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection2}
@@ -106,11 +106,12 @@ const CleanerPage = ({
           }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -120,6 +121,7 @@ const CleanerPage = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Internxt Cleaner', url: '/cleaner' },
           ]}
+          darkMode={darkMode}
         />
     </Layout>
     </>

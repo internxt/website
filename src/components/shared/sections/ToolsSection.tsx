@@ -13,10 +13,9 @@ import {
   ShieldCheck,
 } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export const ToolsSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang,
   bgColor = darkMode ? 'bg-[#1C1C1C]' : '',

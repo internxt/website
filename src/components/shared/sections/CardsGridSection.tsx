@@ -1,4 +1,3 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface CardsGridSectionProps {
   darkMode?: boolean;
   textContent: {
@@ -17,7 +16,7 @@ interface CardsGridSectionProps {
 }
 
 export const CardsGridSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
   cardColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,

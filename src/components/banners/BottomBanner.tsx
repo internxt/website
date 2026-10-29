@@ -5,10 +5,9 @@ import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
-const BottomBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+const BottomBanner = ({ darkMode = false }: { darkMode?: boolean }) => {
   const router = useRouter();
   const [shouldShowBanner, setShouldShowBanner] = useState(false);
 

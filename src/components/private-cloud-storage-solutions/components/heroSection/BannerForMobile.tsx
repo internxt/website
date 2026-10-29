@@ -4,9 +4,8 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from "next/image";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const BannerForMobile = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+export const BannerForMobile = ({ darkMode = false }: { darkMode?: boolean }) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../../../assets/lang/${lang}/private-cloud-storage-solutions.json`);

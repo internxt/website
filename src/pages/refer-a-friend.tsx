@@ -12,7 +12,6 @@ import { PromoCodeName } from '@/lib/types';
 import HeroSection from '@/components/refer-a-friend/HeroSection';
 import RewardSection from '@/components/refer-a-friend/RewardSection';
 import HowItWorksSection from '@/components/refer-a-friend/HowItWorksSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ReferAFriendProps {
   darkMode?: boolean;
@@ -24,7 +23,7 @@ interface ReferAFriendProps {
 }
 
 const ReferAFriendPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -81,11 +80,11 @@ const ReferAFriendPage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <RewardSection textContent={textContent.RewardsSection} />
+      <RewardSection textContent={textContent.RewardsSection} darkMode={darkMode} />
 
-      <HowItWorksSection textContent={textContent.HowItWorks} />
+      <HowItWorksSection textContent={textContent.HowItWorks} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -102,11 +101,12 @@ const ReferAFriendPage = ({
             ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
             : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };

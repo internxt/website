@@ -4,12 +4,11 @@ import { CirclesThree, Fingerprint, Hash, NumberCircleThree, Ruler, TextAa, Text
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bannerText,
   hideLast2Sections,
@@ -52,7 +51,7 @@ const InfoSection = ({
     return (
       <div className="flex w-full max-w-2xl flex-col space-y-3 ">
         <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{text.title}</p>
-        <RenderDescription description={text.description} />
+        <RenderDescription description={text.description} darkMode={darkMode} />
       </div>
     );
   };
@@ -60,7 +59,7 @@ const InfoSection = ({
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
-        <SignUpBanner textContent={bannerText} lang={lang as string} />
+        <SignUpBanner textContent={bannerText} lang={lang as string} darkMode={darkMode} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
         <div
@@ -100,6 +99,7 @@ const InfoSection = ({
                 {textContent.ctaSection.description}
               </p>
             }
+            darkMode={darkMode}
           />
           <div
             className={`flex flex-col items-center justify-center space-y-16 ${

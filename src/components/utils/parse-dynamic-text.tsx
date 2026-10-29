@@ -1,5 +1,4 @@
 import { Fragment, ReactNode } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type Replacements = Record<string, string | number | undefined>;
 
@@ -7,7 +6,7 @@ const isPending = (value: string | number | undefined) =>
   value === undefined || value === null || value === '' || String(value) === '0';
 
 export const ValueSkeleton = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   className = 'h-4 w-12',
 }: {
   darkMode?: boolean;
@@ -27,6 +26,7 @@ export const ValueSkeleton = ({
 export const parseDynamicText = (
   text: unknown,
   replacements: Replacements,
+  darkMode = false,
   skeletonClassName?: string,
 ): ReactNode => {
   if (typeof text !== 'string') return text as ReactNode;
@@ -42,7 +42,7 @@ export const parseDynamicText = (
 
         const value = replacements[match[1]];
         return isPending(value) ? (
-          <ValueSkeleton key={index} className={skeletonClassName} />
+          <ValueSkeleton key={index} className={skeletonClassName} darkMode={darkMode} />
         ) : (
           <Fragment key={index}>{String(value)}</Fragment>
         );

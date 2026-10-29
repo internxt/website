@@ -14,7 +14,6 @@ import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import { PromoCodeName } from '@/lib/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PrivacyTutorProps {
   darkMode?: boolean;
@@ -27,7 +26,7 @@ interface PrivacyTutorProps {
 }
 
 function PrivacyTutor({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -109,11 +108,12 @@ function PrivacyTutor({
         percentOff={percentOff}
         isPrivacyTutor
         image={'alohomora'}
+        darkMode={darkMode}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -134,6 +134,7 @@ function PrivacyTutor({
             ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <FeaturesSection
@@ -141,6 +142,7 @@ function PrivacyTutor({
         lang={lang}
         download={false}
         showLastSection={false}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -172,6 +174,7 @@ function PrivacyTutor({
         }
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
+          darkMode={darkMode}
         />
 
       <HorizontalScrollableSection 
@@ -181,9 +184,10 @@ function PrivacyTutor({
             ? 'linear-gradient(180deg, #0D0D0D 80%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 }

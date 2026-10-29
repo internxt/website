@@ -1,10 +1,9 @@
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BLOG_POST_URL = 'https://blog.internxt.com/internxt-security-audit/';
 
-const SecuritumSection = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
+const SecuritumSection = ({ darkMode = false, textContent }): JSX.Element => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className={`bg- flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-20`}>

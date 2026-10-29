@@ -5,14 +5,13 @@ import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
 import { CaretLeft, CaretRight, DotsThree } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface WhatCanWeDoProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export const WhatCanWeDo = ({ darkMode = DARK_MODE_ENABLED, textContent }: WhatCanWeDoProps): JSX.Element => {
+export const WhatCanWeDo = ({ darkMode = false, textContent }: WhatCanWeDoProps): JSX.Element => {
   const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
   const [selectedTab, setSelectedTab] = useState<number>(0);
 

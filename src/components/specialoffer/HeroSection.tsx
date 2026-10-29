@@ -3,9 +3,8 @@ import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 import { MarqueeComponent } from './MarqueeComponent';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HeroSectionForSpecialOffer = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HeroSectionForSpecialOffer = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden pt-5 lg:pt-10">
       <HeroSectionSafeArea>
@@ -22,6 +21,7 @@ export const HeroSectionForSpecialOffer = ({ darkMode = DARK_MODE_ENABLED, textC
             onClick={() => {
               window.location.hash = '#priceTable';
             }}
+            darkMode={darkMode}
           />
         </div>
         <div>
@@ -34,7 +34,7 @@ export const HeroSectionForSpecialOffer = ({ darkMode = DARK_MODE_ENABLED, textC
           />
         </div>
       </HeroSectionSafeArea>
-      <MarqueeComponent label={textContent.recommendedBy} />
+      <MarqueeComponent label={textContent.recommendedBy} darkMode={darkMode} />
     </section>
   );
 };

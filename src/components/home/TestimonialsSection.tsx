@@ -2,7 +2,6 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { FiveStars } from '../shared/StarsRate';
 import { ReactNode } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface TestimonialProps {
   testimonial: {
@@ -38,7 +37,7 @@ const AvatarAndText = ({ testimonial, textColor }: TestimonialProps): JSX.Elemen
 );
 
 const TestimonialsSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   bgColor,
   textComponent,

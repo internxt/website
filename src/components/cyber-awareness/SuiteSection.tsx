@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { CaretRight, GlobeSimple, HardDrives, Lock, PaperPlaneTilt } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Globe = () => {
   return (
@@ -51,7 +50,7 @@ const Globe = () => {
   );
 };
 
-const SuiteSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const SuiteSection = ({ darkMode = false, textContent }) => {
   const suiteCards = [
     {
       img: HardDrives,

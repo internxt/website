@@ -11,7 +11,6 @@ import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BREADCRUMB_ITEMS = [
   { name: 'Encrypted Cloud Storage', url: '/' },
@@ -33,7 +32,7 @@ export interface WebdavRcloneTemplateProps {
 }
 
 export const WebdavRcloneTemplate = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -60,9 +59,9 @@ export const WebdavRcloneTemplate = ({
         robots={robots}
       >
         <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} url={ctaUrl} />
+        <HeroSection textContent={langJson.HeroSection} url={ctaUrl} darkMode={darkMode} />
 
-        <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone />
+        <HowToUseCLISection textContent={langJson.RcloneSupportSection} isRclone darkMode={darkMode} />
 
         <WebDAVSupportSection
           textContent={langJson.WebDAVSupportSection}
@@ -70,6 +69,7 @@ export const WebdavRcloneTemplate = ({
           hidePriceTable={hidePriceTable}
           couponCode={couponCode}
           couponCodeForLifetime={couponCodeForLifetime}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -101,11 +101,12 @@ export const WebdavRcloneTemplate = ({
               ? 'linear-gradient(0deg, #1C1C1C 0%, #0D0D0D 100%)'
               : 'linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)'
           }
+          darkMode={darkMode}
         />
 
-        <DownloadCLISection textContent={langJson.DownloadCLISection} />
+        <DownloadCLISection textContent={langJson.DownloadCLISection} darkMode={darkMode} />
 
-        <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
+        <HowToUseCLISection textContent={langJson.HowToUseCLISection} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={langJson.CtaSection2}
@@ -131,11 +132,12 @@ export const WebdavRcloneTemplate = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding=" px-20 py-10"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={'en'} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={'en'} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

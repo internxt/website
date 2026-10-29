@@ -1,8 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => (
+const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
   <section
     className="relative flex w-full flex-col overflow-hidden pt-10 lg:pt-20"
     style={{

@@ -3,9 +3,8 @@ import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CheckboxButton = ({ darkMode = DARK_MODE_ENABLED, checked, id }) => {
+const CheckboxButton = ({ darkMode = false, checked, id }) => {
   const borderClass = darkMode ? 'border-gray-71' : 'border-gray-30';
   return (
     <>
@@ -35,7 +34,7 @@ const CheckboxButton = ({ darkMode = DARK_MODE_ENABLED, checked, id }) => {
   );
 };
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const HeroSection = ({ darkMode = false, textContent, lang }) => {
   const borderClass2 = darkMode ? 'border-gray-71' : 'border-gray-10';
   const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
@@ -131,7 +130,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
-                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
+                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} darkMode={darkMode} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? textClass : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
@@ -142,7 +141,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
                   passwordType === 'passphrase' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
-                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
+                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} darkMode={darkMode} />
 
                 <p className={`text-xl font-medium ${passwordType === 'passphrase' ? textClass : 'text-gray-50'}`}>
                   {textContent.passphrase.title}
@@ -155,6 +154,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
                 setPassword={setPassword}
                 setCrackScore={setCrackScore}
                 regenerate={regenerate}
+                darkMode={darkMode}
               />
             ) : (
               <PassphraseSettings
@@ -162,6 +162,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
                 setPassword={setPassword}
                 setCrackScore={setCrackScore}
                 regenerate={regenerate}
+                darkMode={darkMode}
               />
             )}
           </div>

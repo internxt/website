@@ -1,11 +1,10 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface IconsSectionProps {
   darkMode?: boolean;
   iconsAndTitlesData: Record<string, any>[];
   bgColor?: string;
 }
 
-export const IconsSection = ({ darkMode = DARK_MODE_ENABLED, iconsAndTitlesData, bgColor }: IconsSectionProps) => (
+export const IconsSection = ({ darkMode = false, iconsAndTitlesData, bgColor }: IconsSectionProps) => (
   <section className={`overflow-hidden px-5 py-20 ${bgColor}`}>
     <div className="flex flex-row flex-wrap justify-center gap-10 md:gap-20 lg:gap-32">
       {iconsAndTitlesData.map((iconAndTitle) => (

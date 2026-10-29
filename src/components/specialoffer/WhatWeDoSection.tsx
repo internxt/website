@@ -2,7 +2,6 @@ import Button from '../shared/Button';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface WhatWeDoSectionForSpecialOfferProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface WhatWeDoSectionForSpecialOfferProps {
 }
 
 export const WhatWeDoSectionForSpecialOffer = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   handleOnButtonClick,
   bgColor = `${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`,
@@ -47,7 +46,7 @@ export const WhatWeDoSectionForSpecialOffer = ({
               ))}
             </div>
             <div className="flex justify-start">
-              <Button text={textContent.card.cta} onClick={handleOnButtonClick} />
+              <Button text={textContent.card.cta} onClick={handleOnButtonClick} darkMode={darkMode} />
             </div>
           </div>
           <div className="flex">

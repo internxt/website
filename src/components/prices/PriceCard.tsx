@@ -20,7 +20,6 @@ import { Interval } from '@/services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export interface PriceCardProps {
   darkMode?: boolean;
@@ -59,7 +58,7 @@ const STORAGE_LEVELS = {
 };
 
 export default function PriceCard({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   planType,
   storage,
   price,

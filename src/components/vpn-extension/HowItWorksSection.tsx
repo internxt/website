@@ -1,7 +1,6 @@
 import { Binary, Detective, ShieldStar } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const HowItWorksSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const HowItWorksSection = ({ darkMode = false, textContent }) => {
   const cards = [
     {
       icon: Binary,

@@ -3,12 +3,11 @@ import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 import { formatText } from '../utils/format-text';
 import { parseDynamicText } from '../utils/parse-dynamic-text';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const PLACEHOLDER_REGEX = /\{\{\w+\}\}/;
 
 export default function FaqAccordion({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   question,
   answer,
   isQuestionBigger = false,
@@ -96,7 +95,7 @@ export default function FaqAccordion({
           // window the answer is rendered as plain text with a skeleton where the number
           // goes, instead of leaking "{{percentage}}" or a 0% discount into the HTML.
           if (hasPlaceholder && isDiscountPending) {
-            return <p key={text}>{parseDynamicText(text, { percentage: undefined, discount: undefined })}</p>;
+            return <p key={text}>{parseDynamicText(text, { percentage: undefined, discount: undefined }, darkMode)}</p>;
           }
 
           return (

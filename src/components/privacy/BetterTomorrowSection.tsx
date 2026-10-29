@@ -3,9 +3,8 @@ import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const BetterTomorrowSection = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const BetterTomorrowSection = ({ darkMode = false, textContent, lang }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
       <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">

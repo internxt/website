@@ -1,6 +1,5 @@
 import { CheckCircle, House } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DownloadFileStateProps {
   darkMode?: boolean;
@@ -10,7 +9,7 @@ interface DownloadFileStateProps {
 }
 
 const DownloadFileState = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   onConvertMoreFilesButtonPressed,
   onDownloadFile,

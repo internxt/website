@@ -3,7 +3,6 @@ import moment from 'moment';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const Loader = (): JSX.Element => {
   return (
@@ -25,7 +24,7 @@ const Loader = (): JSX.Element => {
 };
 
 export const NoMessageSelected = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   messagesLength,
   textContent,
   onRefreshButtonClicked,
@@ -81,7 +80,7 @@ export const NoMessageSelected = ({
 };
 
 export const MessageSelected = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   item,
   textContent,
 }: {

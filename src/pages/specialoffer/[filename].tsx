@@ -18,7 +18,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CombinedSpecialOfferProps {
   darkMode?: boolean;
@@ -77,7 +76,7 @@ const COUPON_CODES = {
 };
 
 function CombinedSpecialOffer({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -256,6 +255,7 @@ function CombinedSpecialOffer({
         bgGradientColor={
           isValentinesMode ? undefined : isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={isDarkMode}
       />
 
       <HorizontalScrollableSection
@@ -300,6 +300,7 @@ function CombinedSpecialOffer({
         }
         bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
         bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        darkMode={isDarkMode}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />

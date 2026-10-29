@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CtaSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const CtaSection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden bg-primary-dark">
       <div className="flex flex-col items-center justify-center py-12 pb-12 lg:px-20">

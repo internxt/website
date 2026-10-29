@@ -3,7 +3,6 @@ import { useRef, useState, useEffect } from 'react';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { ImageAndCards } from '../shared/ImageAndCards';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ComplianceAndCertificationsProps {
   textContent: any;
@@ -12,7 +11,7 @@ interface ComplianceAndCertificationsProps {
 
 export default function ComplianceAndCertificationsSection({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
 }: Readonly<ComplianceAndCertificationsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,7 +81,11 @@ export default function ComplianceAndCertificationsSection({
         } lg:bottom-0 lg:left-32 lg:right-32`}
       />
 
-      <ImageAndCards textContent={textContent} image="/images/datacenters-and-certifications/image.webp" />
+      <ImageAndCards
+        textContent={textContent}
+        image="/images/datacenters-and-certifications/image.webp"
+        darkMode={darkMode}
+      />
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-16">
         <div

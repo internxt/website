@@ -3,7 +3,6 @@ import { generate } from 'random-words';
 import { useEffect, useState } from 'react';
 import { checkPassword, getRandomInteger } from '../utils';
 import CheckboxSettings from './CheckboxSettings';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PassphraseProperties {
   words: string;
@@ -18,7 +17,7 @@ const space = {
   ru: 'Пробел',
 };
 
-const PassphraseSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPassword, setCrackScore, regenerate }) => {
+const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCrackScore, regenerate }) => {
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
     words: '5',
     separator: '-',
@@ -111,6 +110,7 @@ const PassphraseSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPass
                 });
               }}
               checked={passphraseProperties.capitalize}
+              darkMode={darkMode}
             />
           </div>
           <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -128,6 +128,7 @@ const PassphraseSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPass
                 });
               }}
               checked={passphraseProperties.number}
+              darkMode={darkMode}
             />
           </div>
           <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -152,6 +153,7 @@ const PassphraseSettings = ({ darkMode = DARK_MODE_ENABLED, textContent, setPass
                     });
                   }}
                   checked={passphraseProperties.separator === item}
+                  darkMode={darkMode}
                 />
               </div>
               <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

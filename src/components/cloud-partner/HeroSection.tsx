@@ -2,14 +2,13 @@ import { CloudPartnerText } from '@/assets/types/cloud-partner';
 import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
   textContent: CloudPartnerText['HeroSection'];
 }
 
-export default function HeroSection({ darkMode = DARK_MODE_ENABLED, textContent }: HeroSectionProps): JSX.Element {
+export default function HeroSection({ darkMode = false, textContent }: HeroSectionProps): JSX.Element {
   return (
     <div
       className="mt-20 flex flex-row items-center justify-between pb-8 pt-20 lg:mt-16 lg:px-10 xl:px-32 3xl:px-80"

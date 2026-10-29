@@ -1,9 +1,8 @@
 import React from 'react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const PriceTable = ({ darkMode = DARK_MODE_ENABLED, lang, country, textContent }) => {
+const PriceTable = ({ darkMode = false, lang, country, textContent }) => {
   let prices;
   const billingFrequency = -1;
   const billingPrice = (price) => price[billingFrequency];
@@ -93,6 +92,7 @@ const PriceTable = ({ darkMode = DARK_MODE_ENABLED, lang, country, textContent }
           cta={['checkout', 'lifetime2TB']}
           popular={prices.TB2.popular}
           country={country}
+          darkMode={darkMode}
         />
         <PriceCard
           planType="individual"
@@ -101,6 +101,7 @@ const PriceTable = ({ darkMode = DARK_MODE_ENABLED, lang, country, textContent }
           cta={['checkout', 'lifetime5TB']}
           popular={prices.TB5.popular}
           country={country}
+          darkMode={darkMode}
         />
         <PriceCard
           planType="individual"
@@ -109,6 +110,7 @@ const PriceTable = ({ darkMode = DARK_MODE_ENABLED, lang, country, textContent }
           cta={['checkout', 'lifetime10TB']}
           popular={prices.TB10.popular}
           country={country}
+          darkMode={darkMode}
         />
       </div>
       <div className="flex flex-col items-center justify-center space-y-8 pt-10 text-center md:flex-row md:space-y-0 md:space-x-32">

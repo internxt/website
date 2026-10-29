@@ -1,5 +1,4 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PredictablePricingSectionProps {
   darkMode?: boolean;
@@ -7,7 +6,7 @@ interface PredictablePricingSectionProps {
 }
 
 export const PredictablePricingSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: PredictablePricingSectionProps): JSX.Element => {
   return (

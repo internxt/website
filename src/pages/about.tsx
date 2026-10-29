@@ -8,7 +8,7 @@ import HorizontalScrollableSection from '@/components/about/HorizontalScrollable
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
-const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
+const AboutUs = ({ darkMode = false, lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
@@ -18,15 +18,15 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-      <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
+      <WhatWeDoSection textContent={textContent.WhatWeDoSection} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.ScrollableSection} header={false} />
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} header={false} darkMode={darkMode} />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} darkMode={darkMode} />
     </Layout>
   );
 };

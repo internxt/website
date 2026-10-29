@@ -2,9 +2,8 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const WhatGoogleKnowsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
     <li key={index} className={`text-lg leading-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
       {item}
@@ -54,14 +53,14 @@ const WhatGoogleKnowsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) =
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.section2.title}
             </p>
-            <RenderDescription description={textContent.section2.description} />
+            <RenderDescription description={textContent.section2.description} darkMode={darkMode} />
           </div>
           {/* Third section */}
           <div className="flex flex-col space-y-3">
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.section3.title}
             </p>
-            <RenderDescription description={textContent.section3.description} />
+            <RenderDescription description={textContent.section3.description} darkMode={darkMode} />
           </div>
         </div>
         <Image
@@ -81,7 +80,7 @@ const WhatGoogleKnowsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) =
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.section4.title}
             </p>
-            <RenderDescription description={textContent.section4.description} />
+            <RenderDescription description={textContent.section4.description} darkMode={darkMode} />
           </div>
           {/* Firth section */}
           <div className="flex flex-col space-y-3">
@@ -104,7 +103,7 @@ const WhatGoogleKnowsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) =
           <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             {textContent.section6.title}
           </p>
-          <RenderDescription description={textContent.section6.description} />
+          <RenderDescription description={textContent.section6.description} darkMode={darkMode} />
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-account-privacy-settings.webp')}
@@ -118,7 +117,7 @@ const WhatGoogleKnowsSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) =
             <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.section7.title}
             </p>
-            <RenderDescription description={textContent.section7.description} />
+            <RenderDescription description={textContent.section7.description} darkMode={darkMode} />
           </div>
           {/* Eighth section */}
           <div className="flex flex-col space-y-3">

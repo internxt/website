@@ -2,9 +2,8 @@ import { CaretRight } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import HorizontalScrollableSection from './HorizontalScrollableSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const FeatureSection = ({ darkMode = false, textContent }) => {
   return (
     <section
       className="overflow-hidden"
@@ -14,7 +13,7 @@ const FeatureSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
           : 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)',
       }}
     >
-      <HorizontalScrollableSection textContent={textContent.ScrollableSection} />
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} darkMode={darkMode} />
       <section
         className={`flex flex-col-reverse items-center justify-center gap-8 ${
           darkMode ? 'bg-[#1C1C1C]' : 'bg-white'

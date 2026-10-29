@@ -1,6 +1,5 @@
 import { Clock, ClockCounterClockwise, FolderSimple, Trash, Users } from '@phosphor-icons/react';
 import React from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const driveItems = [
   {
@@ -25,7 +24,7 @@ const driveItems = [
   },
 ];
 
-export const DriveSidenav = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => (
+export const DriveSidenav = ({ darkMode = false }: { darkMode?: boolean }) => (
   <div className="flex  overflow-hidden rounded-xl shadow-2xl">
     <div className="flex  cursor-default flex-col py-2 px-2">
       {driveItems.map((item) => (

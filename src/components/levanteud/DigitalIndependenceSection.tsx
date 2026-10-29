@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DigitalIndependenceSectionProps {
   darkMode?: boolean;
@@ -8,11 +7,11 @@ interface DigitalIndependenceSectionProps {
 }
 
 export default function DigitalIndependenceSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<DigitalIndependenceSectionProps>): JSX.Element {
   const HighlightText = ({
-    darkMode = DARK_MODE_ENABLED,
+    darkMode = false,
     text,
     className = `text-base text-start leading-tight lg:whitespace-pre-line ${
       darkMode ? 'text-green-120' : 'text-gray-55'
@@ -51,7 +50,7 @@ export default function DigitalIndependenceSection({
       <div className="flex flex-col-reverse gap-6 lg:flex-row">
         <div className='flex flex-col gap-6'>
           {textContent.features.map((feature, index) => (
-            <HighlightText text={feature}/>
+            <HighlightText text={feature} darkMode={darkMode}/>
           ))}
         </div>
         <Image

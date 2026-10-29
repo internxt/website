@@ -5,9 +5,8 @@ import WhenWhyHowSection from './WhenWhyHowSection';
 import MainSection from './MainSection';
 import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const TermsAndConditionsOverview = ({ darkMode = DARK_MODE_ENABLED, textContent, lang }) => {
+const TermsAndConditionsOverview = ({ darkMode = false, textContent, lang }) => {
   const [itemSelected, setItemSelected] = useState();
 
   // Set the scroll at center of the screen with anchor tag
@@ -25,7 +24,12 @@ const TermsAndConditionsOverview = ({ darkMode = DARK_MODE_ENABLED, textContent,
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
         </div>
         <div className="flex flex-row items-start space-x-16 px-24 py-20">
-          <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
+          <SelectSection
+            textContent={textContent}
+            itemSelected={itemSelected}
+            setItemSelected={setItemSelected}
+            darkMode={darkMode}
+          />
           <div className="flex w-full flex-col space-y-8">
             <div
               className={`flex flex-row items-center space-x-2 text-base ${
@@ -38,9 +42,9 @@ const TermsAndConditionsOverview = ({ darkMode = DARK_MODE_ENABLED, textContent,
             <div className={`border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
             <div className="flex scroll-smooth">
               <div className={`flex flex-col ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
-                <WhenWhyHowSection textContent={textContent} lang={lang} />
-                <MainSection textContent={textContent} lang={lang} />
-                <CookiesSection textContent={textContent} lang={lang} />
+                <WhenWhyHowSection textContent={textContent} lang={lang} darkMode={darkMode} />
+                <MainSection textContent={textContent} lang={lang} darkMode={darkMode} />
+                <CookiesSection textContent={textContent} lang={lang} darkMode={darkMode} />
               </div>
             </div>
           </div>
@@ -63,9 +67,9 @@ const TermsAndConditionsOverview = ({ darkMode = DARK_MODE_ENABLED, textContent,
           </div>
           <div className={`border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
           <div className="flex flex-col">
-            <WhenWhyHowSection textContent={textContent} lang={lang} />
-            <MainSection textContent={textContent} lang={lang} />
-            <CookiesSection textContent={textContent} lang={lang} />
+            <WhenWhyHowSection textContent={textContent} lang={lang} darkMode={darkMode} />
+            <MainSection textContent={textContent} lang={lang} darkMode={darkMode} />
+            <CookiesSection textContent={textContent} lang={lang} darkMode={darkMode} />
           </div>
         </div>
       </div>

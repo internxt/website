@@ -1,6 +1,5 @@
-import { DARK_MODE_ENABLED } from '@/theme.config';
 const VerticalBusinessSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   customText,
   bgGradientContainerColor,
   bgGradientColor,

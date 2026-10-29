@@ -23,7 +23,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DriveProps {
   darkMode?: boolean;
@@ -45,7 +44,7 @@ interface DriveProps {
 }
 
 const Drive = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   download,
   textContent,
@@ -105,9 +104,9 @@ const Drive = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
+      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" darkMode={darkMode} />
 
-      <DriveSection textContent={textContent.DriveSection} />
+      <DriveSection textContent={textContent.DriveSection} darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.EncryptedCloudStorageSection}
@@ -118,9 +117,10 @@ const Drive = ({
           }
         needsH2
         needsH3
+        darkMode={darkMode}
       />
 
-      <FileParallaxSection />
+      <FileParallaxSection darkMode={darkMode} />
 
       <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -136,11 +136,12 @@ const Drive = ({
                 popularPlanBySize="5TB"
           sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
                 hideFreeCard
+                darkMode={darkMode}
         />
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
+      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 darkMode={darkMode} />
 
       <ThreeCardsSection
         textContent={textContent.MadeInEuropeSection}
@@ -149,9 +150,10 @@ const Drive = ({
               ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
               : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
@@ -177,11 +179,12 @@ const Drive = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
+          darkMode={darkMode}
         />
 
-      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} darkMode={darkMode} />
 
-      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
+      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} darkMode={darkMode} />
 
       <ReviewsSection
         textContent={textContent.ReviewSection}
@@ -190,9 +193,10 @@ const Drive = ({
               ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
               : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
           }
+          darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -202,6 +206,7 @@ const Drive = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' },
           ]}
+          darkMode={darkMode}
         />
     </Layout>
     </>

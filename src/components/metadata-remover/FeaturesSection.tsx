@@ -1,12 +1,11 @@
 import SignUpBanner from '../banners/SignUpBanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   return (
     <section className={`relative ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} `}>
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center">
-          <SignUpBanner textContent={bannerText} lang={lang} />
+          <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
 
           <div className="mb-12 w-full max-w-3xl space-y-8 pt-10">
             <h1 className={`mb-4 text-3xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>

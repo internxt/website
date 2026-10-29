@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const BusinessCtaSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   url,
   target,

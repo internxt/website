@@ -4,7 +4,6 @@ import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { currency as CURRENCY_SYMBOLS } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 type FeatureGroup = { group: string; features: Feature[] };
 type GroupedItem = Feature | FeatureGroup;
@@ -20,7 +19,7 @@ interface ComparisonTableProps {
 }
 
 export default function ComparisonTableSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   onCheckoutButtonClicked,
   products,
@@ -418,6 +417,7 @@ export default function ComparisonTableSection({
             }}
             isLeftColumn={true}
             customBackgroundClass={getMobilePlanStyles(selectedPlanA)}
+            darkMode={darkMode}
           />
 
           <CustomPlanSelector
@@ -440,6 +440,7 @@ export default function ComparisonTableSection({
             }}
             isLeftColumn={false}
             customBackgroundClass={getMobilePlanStyles(selectedPlanB)}
+            darkMode={darkMode}
           />
         </div>
 

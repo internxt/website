@@ -2,9 +2,8 @@ import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const SecureAndManageSection = ({ darkMode = DARK_MODE_ENABLED, textContent }): JSX.Element => {
+const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element => {
   const router = useRouter();
 
   return (

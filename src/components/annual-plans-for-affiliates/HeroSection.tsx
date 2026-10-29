@@ -3,7 +3,6 @@ import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Button from '../shared/Button';
 import { Percent, X } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HeroSectionProps {
   darkMode?: boolean;
@@ -50,7 +49,7 @@ const CloudWardsLabel = () => {
 };
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   InfoTextComponent,
   isStartPage,
@@ -80,7 +79,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <p className={`text-md ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.info}</p>
             )}
           </div>
-          <Button onClick={redirectToPricingTable} text={textContent.cta} />
+          <Button onClick={redirectToPricingTable} text={textContent.cta} darkMode={darkMode} />
         </div>
         {isStartPage ? (
           <Image

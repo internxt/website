@@ -15,10 +15,9 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const TeraboxComparison = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -86,9 +85,9 @@ const TeraboxComparison = ({
         lang={lang}
       >
         <MinimalNavbar textContent={navbarLang} lang={locale} />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Terabox'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Terabox'} percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -98,6 +97,7 @@ const TeraboxComparison = ({
           sectionNeedsH2
           bottomSeparationBar
           TableTitleTag={'h3'}
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -113,12 +113,14 @@ const TeraboxComparison = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
           hideFreeCard
+          darkMode={darkMode}
         />
         <HorizontalScrollableSection
           textContent={langJson.PrivacyViolationsSection}
           bgGradient={privacyBgGradient}
           needsH2
           needsH3
+          darkMode={darkMode}
         />
 
         {langJson.WhyNeedAlternativeSection && (
@@ -128,6 +130,7 @@ const TeraboxComparison = ({
             cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
             bottomSeparationBar={true}
             needsH2={false}
+            darkMode={darkMode}
           />
         )}
 
@@ -135,6 +138,7 @@ const TeraboxComparison = ({
           textContent={langJson.WhyBestAlternativeSection}
           bgColor={alternativeBgColor}
           TitleTag={'h2'}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -143,25 +147,27 @@ const TeraboxComparison = ({
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
               <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
               <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
             </div>
           }
           containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
+          darkMode={darkMode}
         />
 
         <FAQSection
           textContent={langJson.FaqSection}
           percentageDiscount={percentageDiscount?.toString()}
           needsH3={false}
+          darkMode={darkMode}
         />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
       </Layout>
     </>
   );

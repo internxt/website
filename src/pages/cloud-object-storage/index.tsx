@@ -17,7 +17,6 @@ import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generato
 import Script from 'next/script';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 import { PartnersSection } from '@/components/cloud-object-storage/PartnersSection';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudObjectStorageProps {
   darkMode?: boolean;
@@ -30,7 +29,7 @@ interface CloudObjectStorageProps {
 }
 
 const CloudObjectStorage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -52,17 +51,17 @@ const CloudObjectStorage = ({
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
         <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-        <CertificationsSection />
+        <CertificationsSection darkMode={darkMode} />
 
-        <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
+        <PredictablePricingSection textContent={textContent.PredictablePricingSection} darkMode={darkMode} />
 
-        <PartnersSection textContent={textContent.PartnersSection} />
+        <PartnersSection textContent={textContent.PartnersSection} darkMode={darkMode} />
 
-        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
+        <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} darkMode={darkMode} />
 
-        <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+        <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
@@ -88,6 +87,7 @@ const CloudObjectStorage = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -100,6 +100,7 @@ const CloudObjectStorage = ({
           needsH2
           needsH3
           needsDivider={false}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -126,6 +127,7 @@ const CloudObjectStorage = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding="px-10"
+          darkMode={darkMode}
         />
 
         <FAQSection
@@ -136,11 +138,12 @@ const CloudObjectStorage = ({
           needsH3={false}
           needsSpecialH3
           needsH2
+          darkMode={darkMode}
         />
 
-        <ContactSalesForm textContent={textContent.ContactSales} locale={locale} />
+        <ContactSalesForm textContent={textContent.ContactSales} locale={locale} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <Footer
           textContent={footerText}
@@ -149,6 +152,7 @@ const CloudObjectStorage = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Cloud object storage', url: '/cloud-object-storage' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

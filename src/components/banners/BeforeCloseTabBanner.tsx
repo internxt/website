@@ -6,12 +6,11 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
 import { CheckCircle, X } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const CLOSE_TAB_BANNER_NAME = 'close_tab_banner_date';
 const ONE_MONTH_IN_MS = 30 * 24 * 60 * 60 * 1000;
 
-export const BeforeCloseTabBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+export const BeforeCloseTabBanner = ({ darkMode = false }: { darkMode?: boolean }) => {
   const router = useRouter();
   const lang = router.locale;
   const todayDate = new Date();

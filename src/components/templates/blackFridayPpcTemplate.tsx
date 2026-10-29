@@ -29,6 +29,7 @@ interface BlackFridayPpcConfig {
 }
 
 interface BlackFridayPpcTemplateProps {
+  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -38,6 +39,7 @@ interface BlackFridayPpcTemplateProps {
 }
 
 const BlackFridayPpcTemplate = ({
+  darkMode = false,
   lang,
   metatagsDescriptions,
   navbarLang,
@@ -143,6 +145,7 @@ const BlackFridayPpcTemplate = ({
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgPadding="py-10 lg:py-20 bg-[#1C1C1C]"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -152,6 +155,7 @@ const BlackFridayPpcTemplate = ({
         textColor="text-white"
         percentageDiscount={percentOff}
         needsH2
+        darkMode={darkMode}
       />
 
       <MinimalFooter
@@ -160,6 +164,7 @@ const BlackFridayPpcTemplate = ({
         bgColor="bg-[#1C1C1C]"
         logoColor="white"
         textColor="text-gray-50"
+        darkMode={darkMode}
       />
     </Layout>
   );

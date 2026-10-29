@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import { HomeText } from '@/assets/types/home';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface OfficialCloudProviderProps {
   darkMode?: boolean;
@@ -34,7 +33,7 @@ const PARTNER_CONFIG = {
 };
 
 export default function OfficialCloudProviderSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   lang = 'en',
   partner = 'valencia',

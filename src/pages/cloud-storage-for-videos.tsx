@@ -21,7 +21,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CloudStorageForVideosProps {
   darkMode?: boolean;
@@ -34,7 +33,7 @@ interface CloudStorageForVideosProps {
 }
 
 const CloudStorageForVideos = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -125,9 +124,10 @@ const CloudStorageForVideos = ({
           }
           width="w-[580px] "
           bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
+          darkMode={darkMode}
         />
 
-        <FeatureSection textContent={textContent.FeaturesSection} />
+        <FeatureSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -148,6 +148,7 @@ const CloudStorageForVideos = ({
               : 'linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
           }
           hideFreeCard
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -169,13 +170,14 @@ const CloudStorageForVideos = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20 py-10"
+        darkMode={darkMode}
       />
 
-      <HowToChooseSection textContent={textContent.HowToChooseSection} />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} darkMode={darkMode} />
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} darkMode={darkMode} />
 
-      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
+      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.cta}
@@ -192,9 +194,10 @@ const CloudStorageForVideos = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -204,6 +207,7 @@ const CloudStorageForVideos = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Cloud storage for large video files', url: '/cloud-storage-for-videos' },
           ]}
+          darkMode={darkMode}
       />
     </Layout>
     </>

@@ -18,7 +18,6 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { getMinimumPrice } from '@/utils/priceHelper';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface HomeProps {
   darkMode?: boolean;
@@ -30,7 +29,7 @@ interface HomeProps {
 }
 
 const HomePage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -96,9 +95,14 @@ const HomePage = ({
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
+      <HeroSection
+        textContent={textContent.HeroSection}
+        percentOff={percentOff}
+        minimumPrice={minimumPrice}
+        darkMode={darkMode}
+      />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -118,9 +122,10 @@ const HomePage = ({
             ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
             : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <RedeemCouponsSection textContent={textContent.howToRedeemSection} />
+      <RedeemCouponsSection textContent={textContent.howToRedeemSection} darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
@@ -129,6 +134,7 @@ const HomePage = ({
             ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
             : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -160,9 +166,13 @@ const HomePage = ({
             ? 'linear-gradient(0deg, #082D66 0%, #1C1C1C 100%)'
             : 'linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)'
         }
+        darkMode={darkMode}
       />
 
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
+      <HorizontalScrollableSectionWithPhotosSection
+        textContent={textContent.WhatsIncludedSection}
+        darkMode={darkMode}
+      />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSectionV2}
@@ -192,9 +202,10 @@ const HomePage = ({
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
       <Footer
         textContent={footerLang}
@@ -204,6 +215,7 @@ const HomePage = ({
           { name: 'Secure cloud storage', url: '/drive' },
           { name: 'Internxt Coupons', url: '/coupons' },
         ]}
+        darkMode={darkMode}
       />
     </Layout>
   );

@@ -4,7 +4,6 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface DialogDataProps {
   email: string;
@@ -13,7 +12,7 @@ interface DialogDataProps {
 
 const DIALOG_KEY = GlobalDialog.TempMailAction;
 
-export const ActionBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => {
+export const ActionBanner = ({ darkMode = false }: { darkMode?: boolean }) => {
   const dialogAction = useGlobalDialog();
 
   const textContent = require('@/assets/lang/en/banners.json');
@@ -64,7 +63,7 @@ export const ActionBanner = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: bool
             <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {bannerFormattedText.title}
             </p>
-            <RenderDescription description={bannerFormattedText.description} />
+            <RenderDescription description={bannerFormattedText.description} darkMode={darkMode} />
             <div className="flex w-full flex-col gap-6 md:flex-row">
               <button
                 onClick={onChangeEmailButtonClicked}

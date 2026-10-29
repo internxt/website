@@ -2,9 +2,8 @@ import { getImage } from '@/lib/getImage';
 import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CheckQuestions = ({ darkMode = DARK_MODE_ENABLED, textContent, answers, correctAnswers }) => {
+const CheckQuestions = ({ darkMode = false, textContent, answers, correctAnswers }) => {
   const isCorrectAnswer = correctAnswers.map((answer, index) => {
     return answers[index] === answer;
   });
@@ -95,7 +94,11 @@ const CheckQuestions = ({ darkMode = DARK_MODE_ENABLED, textContent, answers, co
         </div>
         <div className="flex flex-col items-center justify-center xl:py-16">
           <div className="flex flex-col items-center space-y-16">
-            <QuestionsSection textContent={textContent.QuestionsSection} isCorrectAnswer={isCorrectAnswer} />
+            <QuestionsSection
+              textContent={textContent.QuestionsSection}
+              isCorrectAnswer={isCorrectAnswer}
+              darkMode={darkMode}
+            />
           </div>
         </div>
       </div>

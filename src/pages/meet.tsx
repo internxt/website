@@ -13,7 +13,6 @@ import HorizontalScrollableSectionWithPhotosSection from '@/components/meet/Hori
 import AccordionSection from '@/components/meet/AccordionSection';
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface CleanerProps {
   darkMode?: boolean;
@@ -26,7 +25,7 @@ interface CleanerProps {
 }
 
 const CleanerPage = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -45,7 +44,7 @@ const CleanerPage = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="meet" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
       <HorizontalScrollableSection
         textContent={textContent.enjoyPrivacySection}
@@ -58,6 +57,7 @@ const CleanerPage = ({
         cardsWidth="352px"
         needsH2={true}
         needsH3={true}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -84,11 +84,12 @@ const CleanerPage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-8`}
+        darkMode={darkMode}
       />
 
-      <AccordionSection textContent={textContent.accordionSection} />
+      <AccordionSection textContent={textContent.accordionSection} darkMode={darkMode} />
 
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} />
+      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSectionV2}
@@ -114,11 +115,12 @@ const CleanerPage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding={`lg:pb-20 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-8`}
+        darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-      <RelationalLinks textContent={relationalLinksText} />
+      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -128,6 +130,7 @@ const CleanerPage = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Internxt Meet', url: '/meet' },
           ]}
+          darkMode={darkMode}
         />
     </Layout>
     </>

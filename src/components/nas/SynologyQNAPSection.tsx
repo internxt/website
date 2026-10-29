@@ -20,10 +20,9 @@ interface NASBoxProps {
 }
 
 import { LinkTo } from '../drive/components/LinkTo';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 function NASBox({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   title,
   description,
   image,
@@ -62,7 +61,7 @@ function NASBox({
 }
 
 export default function SynologyQNAPSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<SynologyQNAPSectionProps>): JSX.Element {
   return (
@@ -99,6 +98,7 @@ export default function SynologyQNAPSection({
           imageHeight={228}
           link="/nas/synology"
           cta="synology nas cloud backup"
+          darkMode={darkMode}
         />
         <NASBox
           title={textContent.QNAPBox.title}
@@ -109,6 +109,7 @@ export default function SynologyQNAPSection({
           imageHeight={204}
           link="/nas/qnap"
           cta="qnap backup"
+          darkMode={darkMode}
         />
       </div>
     </section>

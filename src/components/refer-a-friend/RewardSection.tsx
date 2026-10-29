@@ -1,5 +1,4 @@
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface RewardSectionProps {
   darkMode?: boolean;
@@ -7,7 +6,7 @@ interface RewardSectionProps {
 }
 
 export default function RewardSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<RewardSectionProps>): JSX.Element {
 

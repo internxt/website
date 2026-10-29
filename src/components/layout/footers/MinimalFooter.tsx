@@ -1,7 +1,6 @@
 import moment from 'moment';
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MinimalFooterProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface MinimalFooterProps {
 }
 
 export const MinimalFooter = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   lang,
   footerLang,
   bgColor = darkMode ? 'bg-[#1C1C1C]' : '',

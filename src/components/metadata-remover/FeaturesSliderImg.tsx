@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const FeaturesSliderImg = ({ darkMode = DARK_MODE_ENABLED, textContent, cardInfo }) => {
+const FeaturesSliderImg = ({ darkMode = false, textContent, cardInfo }) => {
   return (
     <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">

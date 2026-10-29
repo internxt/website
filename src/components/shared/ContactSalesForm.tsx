@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useState, useEffect, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import { currencyService } from '@/services/currency.service';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ContactSalesFormProps {
   darkMode?: boolean;
@@ -124,7 +123,7 @@ const isFormDataLegitimate = (data: {
 };
 
 export const ContactSalesForm = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   isReseller,
   locale,

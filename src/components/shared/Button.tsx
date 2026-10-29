@@ -1,5 +1,4 @@
 import Spinner from './Spinner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface ButtonProps {
   darkMode?: boolean;
@@ -15,7 +14,7 @@ interface ButtonProps {
 }
 
 const Button = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   text,
   className,
   type,

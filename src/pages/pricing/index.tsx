@@ -20,7 +20,6 @@ import RelationalLinks from '@/components/shared/sections/RelationalLinks';
 import ComparisonTableSection from '@/components/pricing/ComparisonTable';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { Interval } from '@/services/stripe.service';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface PricingProps {
   darkMode?: boolean;
@@ -33,7 +32,7 @@ interface PricingProps {
 }
 
 const Pricing = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   footerLang,
@@ -136,13 +135,14 @@ const Pricing = ({
           overrideOnPlanTypeChange={onPlanTypeChange}
           overrideOnStorageChange={onStorageChange}
           SectionTag={'h1'}
+          darkMode={darkMode}
         />
 
-        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 />
+        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 darkMode={darkMode} />
 
-        <BestStorageSection textContent={textContent.BestStorageSection} />
+        <BestStorageSection textContent={textContent.BestStorageSection} darkMode={darkMode} />
 
-        <FileParallaxSection />
+        <FileParallaxSection darkMode={darkMode} />
 
         <ComparisonTableSection
           textContent={textContent.ComparisonTable}
@@ -151,11 +151,12 @@ const Pricing = ({
           billingFrequency={billingFrequency}
           decimalDiscount={decimalDiscount}
           currencyValue={currencyValue}
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={faqSection} needsH3={false} />
+        <FAQSection textContent={faqSection} needsH3={false} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} />
+        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
@@ -181,6 +182,7 @@ const Pricing = ({
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-20"
+          darkMode={darkMode}
         />
 
         <Footer
@@ -191,6 +193,7 @@ const Pricing = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Cloud Storage Pricing', url: '/pricing' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

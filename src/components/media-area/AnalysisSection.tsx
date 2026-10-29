@@ -1,7 +1,6 @@
 import { EyeSlash, FileCloud, FileLock, Key, ShieldCheck, TrendUp } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const AnalysisSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const AnalysisSection = ({ darkMode = false, textContent }) => {
   const iconSize = 32;
   const tipIcons = [
     <FileCloud size={iconSize} key={'File Cloud'} />,

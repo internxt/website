@@ -15,6 +15,7 @@ import InfoSection from '@/components/password-generator/InfoSection';
 
 
 const PasswordChecker = ({
+  darkMode = false,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -49,15 +50,17 @@ const PasswordChecker = ({
             lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
           }
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
+          darkMode={darkMode}
         />
 
-        <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
 
         <InfoSection
           textContent={langJson.InfoSection}
           bannerText={bannerLang.SignUpPasswordGenerator}
           hideLast2Sections
           lang={lang}
+          darkMode={darkMode}
         />
 
         <CtaSection
@@ -69,21 +72,23 @@ const PasswordChecker = ({
               {langJson.CtaSection.description}
             </p>
           }
+          darkMode={darkMode}
         />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpPwdCheckerBanner}
           lang={lang}
+          darkMode={darkMode}
         />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
+        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" darkMode={darkMode} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import TextInput from '@/components/components/TextInput';
 import Button from '@/components/shared/Button';
-import { DARK_MODE_ENABLED, DARK_MODE_LOGO_FILTER } from '@/theme.config';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface ProductFeaturesComponentProps {
   darkMode?: boolean;
@@ -22,12 +22,12 @@ interface ProductFeaturesComponentProps {
   couponCodeName?: string;
 }
 
-const Separator = ({ darkMode = DARK_MODE_ENABLED }: { darkMode?: boolean }) => (
+const Separator = ({ darkMode = false }: { darkMode?: boolean }) => (
   <div className={`border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
 );
 
 export const ProductFeaturesComponent = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   selectedPlan,
   onCouponInputChange,
@@ -67,7 +67,7 @@ export const ProductFeaturesComponent = ({
           <p className={`text-2xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
             Object storage - {textContent.billed.month}
           </p>
-          <Separator />
+          <Separator darkMode={darkMode} />
           <div className="flex flex-col space-y-5">
             <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
               {textContent.planDetails.title}
@@ -81,7 +81,7 @@ export const ProductFeaturesComponent = ({
               ))}
             </div>
           </div>
-          <Separator />
+          <Separator darkMode={darkMode} />
           <div
             className={`flex flex-row items-center justify-between text-2xl font-semibold ${
               darkMode ? 'text-white-95' : 'text-gray-100'
@@ -158,6 +158,7 @@ export const ProductFeaturesComponent = ({
                           }}
                           data-cy="coupon-code-input"
                           className="inxt-input input-primary dark:bg-transparent"
+                          darkMode={darkMode}
                         />
                         <Button
                           disabled={!couponName?.length}
@@ -167,6 +168,7 @@ export const ProductFeaturesComponent = ({
                           text={textContent.addCoupon.applyCodeButtonTitle}
                           className="h-11 w-32 items-center justify-center"
                           type="button"
+                          darkMode={darkMode}
                         />
                       </div>
                       {couponError && <p className="text-red-dark">{couponError}</p>}

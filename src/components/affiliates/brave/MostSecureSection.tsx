@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '@/components/shared/Button';
 import HeroSectionSafeArea from '@/components/shared/HeroSectionSafeArea';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface MostSecureSectionProps {
   darkMode?: boolean;
@@ -13,7 +12,7 @@ interface MostSecureSectionProps {
 }
 
 const MostSecureSection: React.FC<MostSecureSectionProps> = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   onRedirectButtonClicked,
   showButton = 'true',

@@ -17,7 +17,7 @@ interface ThreeCardsProps {
 
 export default function ThreeCardsSection({
   textContent,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   bgColor,
   cardColor,
   bottomSeparationBar = false,

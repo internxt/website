@@ -12,10 +12,9 @@ import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import { HeroSection } from '@/components/comparison/HeroSection';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const MegaComparison = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -78,9 +77,9 @@ const MegaComparison = ({
       >
         <MinimalNavbar textContent={navbarLang} lang={lang} />
 
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Mega'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -88,6 +87,7 @@ const MegaComparison = ({
           percentage={percentageDiscount}
           logo="/images/comparison/competitors/Mega_Letters.webp"
           sectionNeedsH2
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -103,6 +103,7 @@ const MegaComparison = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
           hideFreeCard
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -114,6 +115,7 @@ const MegaComparison = ({
           }
           needsH2
           needsH3
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
@@ -124,6 +126,7 @@ const MegaComparison = ({
               : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
           }
           needsH2
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -141,11 +144,12 @@ const MegaComparison = ({
           }
           containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          darkMode={darkMode}
         />
 
-        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} darkMode={darkMode} />
       </Layout>
     </>
   );

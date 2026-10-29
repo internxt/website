@@ -4,9 +4,8 @@ import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { AppleLogo } from '../shared/icons/AppleIcon';
 import { GH_README_LINK, USER_GUIDE_LINK } from '@/constants';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-export const CliCard = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+export const CliCard = ({ darkMode = false, textContent }) => {
   return (
     <section
       className={`flex flex-col rounded-3xl border ${
@@ -36,7 +35,7 @@ export const CliCard = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
               <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
                 {textContent.installCli}
               </p>
-              <CommandTextInputCopy text={textContent.command} />
+              <CommandTextInputCopy text={textContent.command} darkMode={darkMode} />
             </div>
           </div>
           <div className="flex w-full flex-col space-y-3 pl-5 md:w-max md:pl-0">

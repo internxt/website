@@ -1,8 +1,7 @@
 import { Eye } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, lang }) => {
+const HeroSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const bulletedList = textContent.section2.bulletedList.list.map((item, index) => (
     <li key={index} className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
       {item}
@@ -25,7 +24,7 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent, bannerText, la
             </p>
           </div>
           <div className="mt-16 flex w-full items-center justify-center xl:px-64">
-            <SignUpBanner textContent={bannerText} lang={lang} />
+            <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
           </div>
           <div className="flex max-w-2xl flex-col items-center justify-center">
             <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">

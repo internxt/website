@@ -1,13 +1,12 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 interface ContentBlockSectionProps {
   darkMode?: boolean;
   textContent: any;
 }
 
-export const ContentBlockSection = ({ darkMode = DARK_MODE_ENABLED, textContent }: ContentBlockSectionProps) => {
+export const ContentBlockSection = ({ darkMode = false, textContent }: ContentBlockSectionProps) => {
   return (
     <section
       className={`flex items-center justify-between gap-6 ${

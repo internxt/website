@@ -2,9 +2,8 @@ import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import { ClockCounterClockwise, GlobeHemisphereWest, PaperPlaneTilt } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const CardText = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const CardText = ({ darkMode = false, textContent }) => (
   <div className="flex max-w-[388px] flex-col space-y-6">
     <textContent.icon size={64} className="text-primary" />
     <h3 className={`text-5xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
@@ -14,7 +13,7 @@ const CardText = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
   </div>
 );
 
-const BenefitsOfInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const BenefitsOfInternxtSection = ({ darkMode = false, textContent }) => {
   const cards = {
     workFromAnywhere: {
       icon: GlobeHemisphereWest,
@@ -48,7 +47,7 @@ const BenefitsOfInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }
             <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
               {textContent.subtitle}
             </p>
-            <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
+            <RenderDescription fontSize="text-xl" description={textContent.paragraph} darkMode={darkMode} />
           </div>
           <button
             onClick={() => {
@@ -77,11 +76,11 @@ const BenefitsOfInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }
                 height: "auto"
               }} />
           </div>
-          <CardText textContent={cards.workFromAnywhere} />
+          <CardText textContent={cards.workFromAnywhere} darkMode={darkMode} />
         </div>
         {/* Send files */}
         <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
-          <CardText textContent={cards.sendFiles} />
+          <CardText textContent={cards.sendFiles} darkMode={darkMode} />
           <div className="flex flex-col">
             <Image
               src={getImage('/images/cloud-storage-for-education/cloud_storage_for_education.webp')}
@@ -109,7 +108,7 @@ const BenefitsOfInternxtSection = ({ darkMode = DARK_MODE_ENABLED, textContent }
                 height: "auto"
               }} />
           </div>
-          <CardText textContent={cards.secureBackup} />
+          <CardText textContent={cards.secureBackup} darkMode={darkMode} />
         </div>
       </div>
     </section>

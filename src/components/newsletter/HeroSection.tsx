@@ -2,9 +2,8 @@ import { useState } from 'react';
 import CheckboxItem from '@/components/shared/CheckboxItem';
 import axios from 'axios';
 import { notificationService } from '../Snackbar';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
+const HeroSection = ({ darkMode = false, textContent }) => {
   const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
   const [email, setEmail] = useState('');
   const [checkbox, setCheckbox] = useState(false);
@@ -59,7 +58,12 @@ const HeroSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => {
             required
           />
           <div className="flex flex-col space-y-6 pt-9">
-            <CheckboxItem checked={checkbox} setCheckbox={setCheckbox} label={textContent.form.checkboxText} />
+            <CheckboxItem
+              checked={checkbox}
+              setCheckbox={setCheckbox}
+              label={textContent.form.checkboxText}
+              darkMode={darkMode}
+            />
             <input
               name="signup"
               type="submit"

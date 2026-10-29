@@ -2,7 +2,6 @@ import RevealY from '@/components/components/RevealY';
 import { CaretRight, Eye, ShieldCheck, UserCircleGear } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 const InfinityIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 256 256">
@@ -19,7 +18,7 @@ const InfinityIcon = () => (
 );
 
 const FeatureSection = ({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
   withoutCta,
   backgroundColor,

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 import { HomeText } from '@/assets/types/home';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 interface AwardWinningSectionProps {
   darkMode?: boolean;
@@ -11,7 +10,7 @@ interface AwardWinningSectionProps {
 const onButtonClick = () => (window.location.href = '#priceTable');
 
 export default function AwardWinningSection({
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   textContent,
 }: Readonly<AwardWinningSectionProps>): JSX.Element {
   return (
@@ -71,7 +70,7 @@ export default function AwardWinningSection({
               {textContent.subtitle}
             </p>
           </div>
-          <Button text={textContent.cta} onClick={onButtonClick} className="hidden lg:flex" />
+          <Button text={textContent.cta} onClick={onButtonClick} className="hidden lg:flex" darkMode={darkMode} />
         </div>
       </div>
     </section>

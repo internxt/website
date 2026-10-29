@@ -1,9 +1,8 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
-const HowItWorksSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
+const HowItWorksSection = ({ darkMode = false, textContent }) => (
   <section
     className={`flex h-[600px] w-full flex-row items-center justify-center ${
       darkMode ? 'bg-gray-105' : 'bg-neutral-15'
@@ -25,10 +24,10 @@ const HowItWorksSection = ({ darkMode = DARK_MODE_ENABLED, textContent }) => (
         </p>
       </div>
       <div className="mt-14 flex h-min flex-row justify-between  lg:hidden ">
-        <AccordionCards textContent={textContent.cardDescriptions} />
+        <AccordionCards textContent={textContent.cardDescriptions} darkMode={darkMode} />
       </div>
       <div className="mt-2 hidden h-[480px] flex-row justify-between lg:flex">
-        <AccordionCards textContent={textContent.cardDescriptions} />
+        <AccordionCards textContent={textContent.cardDescriptions} darkMode={darkMode} />
         <div className="relative h-[314px] w-[530px]">
           <Image
             src={getImage('/images/cleaner/mockup2.png')}

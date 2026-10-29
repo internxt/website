@@ -1,6 +1,5 @@
 import { Interval } from '@/services/stripe.service';
 import { SealPercent } from '@phosphor-icons/react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
@@ -19,7 +18,7 @@ export const PlanSelector = ({
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,
-  darkMode = DARK_MODE_ENABLED,
+  darkMode = false,
   isIndividualsOffer,
   isLifetimeOffer,
 }: PlanSwitchProps): JSX.Element => {
