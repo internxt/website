@@ -143,12 +143,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="flex justify-center">
           {shouldShowBanner ? (
             <>
-              <BottomBanner darkMode={darkMode} />
+              <BottomBanner />
             </>
           ) : undefined}
         </div>
-        <FreeCardPromoBanner darkMode={darkMode} />
-        <FreeCardPromoBannerPPC darkMode={darkMode} />
+        <FreeCardPromoBanner />
+        <FreeCardPromoBannerPPC />
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
