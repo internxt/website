@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { parsePercentText } from '@/utils/parsePercentText';
 
 interface HorizontalScrollableProps {
   textContent: any;
@@ -9,6 +10,7 @@ interface HorizontalScrollableProps {
   needsDivider?: boolean;
   needsH2?: boolean;
   needsH3?: boolean;
+  percentOff?: string;
 }
 
 export default function HorizontalScrollableSection({
@@ -19,6 +21,7 @@ export default function HorizontalScrollableSection({
   needsDivider = true,
   needsH2 = false,
   needsH3 = false,
+  percentOff,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -117,9 +120,9 @@ export default function HorizontalScrollableSection({
           <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
         )}
         <TitleTag className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-3xl">
-          {textContent.title}
+          {parsePercentText(textContent.title, percentOff)}
         </TitleTag>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{parsePercentText(textContent.description, percentOff)}</p>
         {textContent.cta && (
           <span
             onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
@@ -154,9 +157,9 @@ export default function HorizontalScrollableSection({
               }}
             >
               <div className="flex h-full flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8">
-                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</CardTag>
+                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{parsePercentText(title, percentOff)}</CardTag>
                 <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
-                  {textContent.scrollableSection.descriptions[index]}
+                  {parsePercentText(textContent.scrollableSection.descriptions[index], percentOff)}
                 </p>
               </div>
             </div>

@@ -1,11 +1,15 @@
+import { parsePercentText } from '@/utils/parsePercentText';
+
 interface TitleAndDescriptionSectionProps {
   textContent: any;
   darkMode?: boolean;
+  percentOff?: string;
 }
 
 export default function TitleAndDescriptionSection({
   textContent,
   darkMode,
+  percentOff,
 }: Readonly<TitleAndDescriptionSectionProps>): JSX.Element {
   return (
     <section
@@ -20,7 +24,7 @@ export default function TitleAndDescriptionSection({
       ></div>
       <div className="flex h-min w-[345px] flex-col items-center justify-center gap-8 text-center lg:w-full lg:max-w-[1000px] lg:gap-16">
         <p className={`${darkMode ? 'text-gray-1' : 'text-gray-95'} text-30 font-bold leading-tight lg:text-3xl`}>
-          {textContent.title}
+          {parsePercentText(textContent.title, percentOff)}
         </p>
         <div className="flex w-[270px] flex-col items-center gap-6 text-center lg:w-[700px]">
           {textContent.description.map((description: string, index: number) => (
@@ -30,7 +34,7 @@ export default function TitleAndDescriptionSection({
                 darkMode ? 'text-green-110' : 'text-gray-55'
               } lg:text-xl`}
             >
-              {description}
+              {parsePercentText(description, percentOff)}
             </p>
           ))}
         </div>

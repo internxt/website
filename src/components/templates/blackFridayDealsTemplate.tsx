@@ -7,6 +7,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
+import { parsePercentText } from '@/utils/parsePercentText';
 import { BlackFridayText } from '@/assets/types/blackFriday';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
@@ -100,29 +101,13 @@ const BlackFridayDealsTemplate = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
-  const parsePercentText = (text: string) => {
-    if (typeof text !== 'string' || (!text.includes('{{percentage}}') && !text.includes('{{discount}}'))) {
-      return text;
-    }
-    if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
-    }
-    return text.replaceAll('{{percentage}}', percentOff).replaceAll('{{discount}}', percentOff);
-  };
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
-      <TitleAndDescriptionSection
-        textContent={{
-          ...textContent.DontMissSection,
-          description: textContent.DontMissSection.description.map(parsePercentText),
-        }}
-        darkMode
-      />
+      <TitleAndDescriptionSection textContent={textContent.DontMissSection} percentOff={percentOff} darkMode />
 
       <div className="relative bg-[#1C1C1C] px-5 py-10">
         <div className={`klaviyo-form-${formId} klaviyo-form-title-size mx-auto max-w-[600px]`}></div>
@@ -146,16 +131,7 @@ const BlackFridayDealsTemplate = ({
         hideFreeCard
       />
 
-      <ThreeCardsSection
-        textContent={{
-          ...textContent.WhyChooseSection,
-          cards: {
-            ...textContent.WhyChooseSection.cards,
-            descriptions: textContent.WhyChooseSection.cards.descriptions.map(parsePercentText),
-          },
-        }}
-        darkMode
-      />
+      <ThreeCardsSection textContent={textContent.WhyChooseSection} percentOff={percentOff} darkMode />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -163,10 +139,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {parsePercentText(textContent.CtaSection.title)}
+              {parsePercentText(textContent.CtaSection.title, percentOff)}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSection.description)}
+              {parsePercentText(textContent.CtaSection.description, percentOff)}
             </p>
           </div>
         }
@@ -189,10 +165,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {parsePercentText(textContent.CtaSectionV2.title)}
+              {parsePercentText(textContent.CtaSectionV2.title, percentOff)}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSectionV2.description)}
+              {parsePercentText(textContent.CtaSectionV2.description, percentOff)}
             </p>
           </div>
         }

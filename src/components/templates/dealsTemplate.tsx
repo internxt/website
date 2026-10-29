@@ -7,6 +7,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
+import { parsePercentText } from '@/utils/parsePercentText';
 import { DealsPageText } from '@/assets/types/freeCloudStorage';
 import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
 import HeroSection from '../deals/HeroSection';
@@ -89,18 +90,6 @@ const DealsTemplate = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
 
-  const parsePercentText = (text: string) => {
-    if (typeof text !== 'string' || (!text.includes('{{percentage}}') && !text.includes('{{discount}}'))) {
-      return text;
-    }
-    if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
-    }
-    return typeof text === 'string'
-      ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
-      : text;
-  };
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
@@ -143,10 +132,10 @@ const DealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(textContent.CtaSection.title)}
+              {parsePercentText(textContent.CtaSection.title, percentOff)}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSection.description)}
+              {parsePercentText(textContent.CtaSection.description, percentOff)}
             </p>
           </div>
         }
@@ -157,13 +146,8 @@ const DealsTemplate = ({
       />
 
       <HorizontalScrollableSection
-        textContent={{
-          ...textContent.WhyChooseInternxtSection,
-          scrollableSection: {
-            ...textContent.WhyChooseInternxtSection.scrollableSection,
-            descriptions: textContent.WhyChooseInternxtSection.scrollableSection?.descriptions.map(parsePercentText),
-          },
-        }}
+        textContent={textContent.WhyChooseInternxtSection}
+        percentOff={percentOff}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         needsDivider={false}
       />
@@ -174,10 +158,10 @@ const DealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(textContent.CtaSectionV2.title)}
+              {parsePercentText(textContent.CtaSectionV2.title, percentOff)}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {parsePercentText(textContent.CtaSectionV2.description)}
+              {parsePercentText(textContent.CtaSectionV2.description, percentOff)}
             </p>
           </div>
         }
