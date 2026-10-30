@@ -7,6 +7,7 @@ interface NavigationLinkProps {
   text: string;
   isActive: boolean;
   isDarkMode: boolean;
+  isHighlighted?: boolean;
   lang: string;
 }
 
@@ -40,15 +41,19 @@ interface ItemsNavigationProps {
   };
 }
 
-const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
-  const baseClasses = 'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base font-medium transition duration-150 ease-in-out';
+const getLinkClasses = (isDarkMode: boolean, isActive: boolean, isHighlighted = false) => {
+  const baseClasses =
+    'px-4 py-1.5 text-base min-[1024px]:text-sm min-[1100px]:text-base transition duration-150 ease-in-out';
   const darkModeClasses = isDarkMode ? 'text-white hover:text-gray-20' : 'text-gray-60 hover:text-primary';
+  const colorClasses = isActive ? 'text-primary' : darkModeClasses;
 
-  return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
+  return isHighlighted
+    ? `${baseClasses} whitespace-nowrap font-bold text-primary hover:text-primary-dark`
+    : `${baseClasses} font-medium ${colorClasses}`;
 };
 
-const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
-  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
+const NavigationLink = ({ href, text, isActive, isDarkMode, isHighlighted, lang }: NavigationLinkProps) => (
+  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive, isHighlighted)}>
     {text}
   </Link>
 );
@@ -64,7 +69,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
 
   return (
     <div
-      className={`group relative flex cursor-default items-center space-x-1 min-[1024px]:text-sm min-[1100px]:text-base rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
+      className={`group relative flex cursor-default items-center space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out min-[1024px]:text-sm min-[1100px]:text-base ${menuClasses}`}
     >
       <span>{label}</span>
       <CaretDown
@@ -126,6 +131,14 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        <NavigationLink
+          href="/deals/black-friday-internxt"
+          text={textContent.links.blackFriday}
+          isActive={router.pathname.startsWith('/deals/black-friday-internxt')}
+          isDarkMode={darkMode}
+          isHighlighted
+          lang={lang}
+        />
         <DropdownMenu
           label={textContent.links.products}
           items={[
@@ -135,7 +148,7 @@ export const ItemsNavigation = ({
             { href: '/cleaner', text: textContent.products.cleaner },
             { href: '/meet', text: textContent.products.meet.name, title: textContent.products.meet.title },
             { href: '/mail', text: textContent.products.mail.name, title: textContent.products.mail.title },
-            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title }
+            { href: '/photos', text: textContent.products.photos.name, title: textContent.products.photos.title },
           ]}
           darkMode={darkMode}
           lang={lang}

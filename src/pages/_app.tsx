@@ -10,6 +10,7 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
+import { isDarkModePage } from '@/theme.config';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
 import { saveReferralToCookie } from '@/lib/cookies';
@@ -26,6 +27,7 @@ const EXCLUDE_INTERCOM_PATHS = [
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
+  const darkMode = isDarkModePage(pathname);
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
 
@@ -47,6 +49,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     const referralId = new URLSearchParams(globalThis.location.search).get('ref');
     if (referralId) saveReferralToCookie(referralId);
   }, [router.asPath]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+  }, [darkMode]);
 
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
@@ -71,7 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,

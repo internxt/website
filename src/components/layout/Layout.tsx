@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import TopBanner from '@/components/banners/TopBanner';
 import { INTERNXT_URL } from '@/constants';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
+import { isDarkModePage } from '@/theme.config';
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -145,6 +147,10 @@ export default function Layout({
         }`}
       </Script>
 
+      <Script id="internxt-dark-mode-flag" strategy="beforeInteractive">
+        {`window.__INTERNXT_DARK_MODE__ = ${isDarkModePage(router.pathname)};`}
+      </Script>
+
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
       <Script src="/js/cookiebanner.script.js" strategy="afterInteractive" />
       <Script id="cookie-banner-init" strategy="afterInteractive">
@@ -160,7 +166,9 @@ export default function Layout({
         `}
       </Script>
 
-      <div className="flex flex-col">{children}</div>
+      <TopBanner />
+
+      <div className="flex flex-col pt-[64px] lg:pt-[54px]">{children}</div>
 
       {/* <BFBanner /> */}
     </>
