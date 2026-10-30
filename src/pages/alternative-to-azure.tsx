@@ -9,6 +9,7 @@ const AzureComparison = (props: any) => (
     segmentName="Azure Comparison"
     logo="/images/comparison/azure-Letters.webp"
     isS3Alternative
+    darkMode={props.darkMode}
   />
 );
 

@@ -481,15 +481,15 @@ const TableSection = ({ textContent }) => {
   ];
 
   return (
-    <section id="buy" className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white">
+    <section id="buy" className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white dark:from-gray-95 dark:via-gray-105 dark:to-gray-95">
       <div className="flex flex-col">
         {/* Table */}
-        <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white py-10 xl:overflow-x-visible">
+        <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white dark:bg-gray-95 py-10 xl:overflow-x-visible">
           <div className="mx-auto flex flex-col items-center justify-center px-6">
-            <table className="group relative mb-20 table-auto border-collapse bg-none text-center text-base text-cool-gray-80">
+            <table className="group relative mb-20 table-auto border-collapse bg-none text-center text-base text-cool-gray-80 dark:text-cool-gray-30">
               {/* Competitors */}
-              <thead className="top-16 z-20 h-44 text-cool-gray-90 xl:sticky">
-                <tr className="relative z-10 bg-white bg-opacity-80 backdrop-blur-md backdrop-filter">
+              <thead className="top-16 z-20 h-44 text-cool-gray-90 dark:text-white-95 xl:sticky">
+                <tr className="relative z-10 bg-white dark:bg-gray-95 bg-opacity-80 backdrop-blur-md backdrop-filter">
                   {/* Drag hint */}
                   <th className="pointer-events-none h-44 align-bottom">
                     <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-6 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden">
@@ -508,7 +508,7 @@ const TableSection = ({ textContent }) => {
                   </th>
                   <th className="relative p-16 text-lg font-medium">
                     {' '}
-                    <div className="absolute bottom-0 left-0 flex h-32 w-32 flex-col items-center justify-center space-y-1.5 rounded-t-2xl bg-blue-10">
+                    <div className="absolute bottom-0 left-0 flex h-32 w-32 flex-col items-center justify-center space-y-1.5 rounded-t-2xl bg-blue-10 dark:bg-purple-100">
                       <img
                         loading="lazy"
                         className="h-12 w-12 object-cover object-center"
@@ -522,9 +522,7 @@ const TableSection = ({ textContent }) => {
                   {competitors.slice(1).map((col, index) => (
                     <th className="relative p-14 font-normal" key={col.name}>
                       {' '}
-                      <div
-                        className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg `}
-                      >
+                      <div className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg `}>
                         <img
                           loading="lazy"
                           className="h-8 w-8 object-contain object-center"
@@ -542,8 +540,8 @@ const TableSection = ({ textContent }) => {
               {table.map((section) => (
                 <Fragment key={section.name}>
                   {/* Section */}
-                  <thead className="top-60 z-10 h-14 text-left text-cool-gray-90 md:h-12 xl:sticky">
-                    <tr className="h-14 bg-cool-gray-10 font-medium md:h-12">
+                  <thead className="top-60 z-10 h-14 text-left text-cool-gray-90 dark:text-white-95 md:h-12 xl:sticky">
+                    <tr className="h-14 bg-cool-gray-10 dark:bg-gray-105 font-medium md:h-12">
                       <td className="whitespace-nowrap rounded-l-lg px-6 text-lg">{section.name}</td>
                       {competitors.map((item) => (
                         <td key={item.name} />
@@ -552,13 +550,14 @@ const TableSection = ({ textContent }) => {
                   </thead>
 
                   {/* Rows */}
-                  <tbody className="divide-y divide-cool-gray-10">
+                  <tbody className="divide-y divide-cool-gray-10 dark:divide-gray-71">
                     {section.rows.map((row, rowIndex) => (
                       <tr className="h-14 md:h-12" key={row.title}>
                         <td className="whitespace-nowrap px-6 text-left text-base">{row.title}</td>
                         <td
                           className={`${
-                            rowIndex !== 0 && 'border-t border-blue-20 border-opacity-50'
+                            rowIndex !== 0 &&
+                            `border-t border-blue-20 dark:border-purple-100 border-opacity-50`
                           } bg-primary bg-opacity-6`}
                         >
                           <div className="flex h-full flex-col items-center justify-center">
@@ -582,7 +581,9 @@ const TableSection = ({ textContent }) => {
                                 ) : (
                                   <UilMinus className="h-8 w-8 text-cool-gray-20" />
                                 ))}
-                              {typeof feature === 'string' && <span className="text-gray-60">{feature}</span>}
+                              {typeof feature === 'string' && (
+                                <span className="text-gray-60 dark:text-green-120">{feature}</span>
+                              )}
                             </div>
                           </td>
                         ))}

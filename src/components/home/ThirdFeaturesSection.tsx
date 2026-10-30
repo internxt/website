@@ -6,7 +6,7 @@ import { getImage } from '@/lib/getImage';
 
 const ThirdFeaturesSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
         <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
@@ -22,13 +22,10 @@ const ThirdFeaturesSection = ({ textContent }) => {
               height: "auto"
             }} />
         </RevealX>
-        <RevealX
-          direction="left"
-          className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
-        >
+        <RevealX direction="left" className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">
           <Gift size={60} className="text-primary" />
-          <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="text-xl">{textContent.description}</p>
+          <p className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight">{textContent.title}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           <div>
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"

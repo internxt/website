@@ -4,7 +4,7 @@ import Link from 'next/link';
 const CtaSection = ({
   textContent,
   url,
-  maxWidth,
+  maxWidth = '',
   target,
   bgImage,
   customDescription,
@@ -16,6 +16,8 @@ const CtaSection = ({
   bgImage?: string;
   customDescription?: React.ReactNode;
 }) => {
+  const bgClass = 'bg-white dark:bg-gray-95';
+  const hoverClass = 'hover:bg-blue-10 dark:hover:bg-purple-100';
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
   return (
@@ -34,11 +36,7 @@ const CtaSection = ({
           <Link
             href={url}
             target={target}
-            className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
-              bgImage && bgImage !== defaultBgImage
-                ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-                : 'bg-white text-primary hover:bg-blue-10'
-            }`}
+            className={`flex rounded-lg px-5 py-3 text-lg font-medium ${bgImage && bgImage !== defaultBgImage ? 'bg-primary text-xl text-white hover:bg-primary-dark' : `${bgClass} text-primary ${hoverClass}`}`}
           >
             {textContent.cta}
           </Link>

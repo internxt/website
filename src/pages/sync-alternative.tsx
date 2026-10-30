@@ -18,7 +18,14 @@ import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const SyncComparison = ({
+  darkMode = false,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'sync-alternative');
   const {
     products,
@@ -63,14 +70,13 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
-  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
+  const privacyBgGradient = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]';
+  const alternativeBgColor = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]';
+  const alternativeBgColorLight = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)]';
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Alternative to sync', 'sync-alternative')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('Alternative to sync', 'sync-alternative')}</Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
@@ -78,9 +84,9 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'sync'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'sync'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'sync'} percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'sync'} percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -90,6 +96,7 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           sectionNeedsH2
           bottomSeparationBar
           TableTitleTag={'h3'}
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -103,7 +110,8 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
+          darkMode={darkMode}
         />
         <HorizontalScrollableSection
           textContent={langJson.PrivacyViolationsSection}
@@ -116,15 +124,16 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           <ThreeCardsSection
             textContent={langJson.WhyNeedAlternativeSection}
             bgColor={alternativeBgColor}
-            cardColor="bg-white"
+            cardColor="bg-white dark:bg-gray-95"
             bottomSeparationBar={true}
             needsH2={false}
+            darkMode={darkMode}
           />
         )}
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColor}
+          bgColor={alternativeBgColorLight}
           TitleTag={'h2'}
         />
 
@@ -133,16 +142,16 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           url={'/drive'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           bgPadding="px-20 py-10"
         />
 
@@ -150,6 +159,7 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
           textContent={langJson.FaqSection}
           percentageDiscount={percentageDiscount?.toString()}
           needsH3={false}
+          darkMode={darkMode}
         />
 
         <Footer
@@ -160,6 +170,7 @@ const SyncComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Alternative to sync', url: '/sync-alternative' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>
