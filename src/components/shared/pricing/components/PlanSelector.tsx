@@ -33,11 +33,7 @@ export const PlanSelector = ({
         onClick={() => {
           onPlanTypeChange('Individuals', Interval.Year);
         }}
-        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-          activeSwitchPlan === 'Individuals'
-            ? `bg-white font-semibold text-primary shadow-sm`
-            : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`
-        }`}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${activeSwitchPlan === 'Individuals' ? `bg-white font-semibold text-primary shadow-sm` : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`}`}
       >
         {textContent.billingFrequency.annually}
       </button>
@@ -47,11 +43,7 @@ export const PlanSelector = ({
         onClick={() => {
           onPlanTypeChange('Lifetime', Interval.Lifetime);
         }}
-        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
-          activeSwitchPlan === 'Lifetime'
-            ? `bg-white font-semibold text-primary shadow-sm`
-            : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`
-        }`}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${activeSwitchPlan === 'Lifetime' ? `bg-white font-semibold text-primary shadow-sm` : `text-lg font-normal ${inactiveTextClass} ${hoverClass}`}`}
       >
         {textContent.billingFrequency.lifetime}
       </button>

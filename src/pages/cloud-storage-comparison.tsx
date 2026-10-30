@@ -127,12 +127,7 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
           darkMode={darkMode}
         />
 
-        <InfoSection
-          textContent={langJson.InfoSection}
-          lang={lang}
-          redirect="/privacy"
-          cards={cardsData}
-        />
+        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="/privacy" cards={cardsData} />
 
         <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 

@@ -118,11 +118,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                     handleCreatingTicket({ name, email });
                   }}
                   disabled={isButtonDisabled}
-                  className={`flex w-full justify-center ${
-                    isButtonDisabled
-                      ? `${bgClass} text-gray-40`
-                      : 'bg-primary text-white hover:bg-primary-dark'
-                  } rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
+                  className={`flex w-full justify-center ${isButtonDisabled ? `${bgClass} text-gray-40` : 'bg-primary text-white hover:bg-primary-dark'} rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
                 >
                   {textContent.cta}
                 </button>

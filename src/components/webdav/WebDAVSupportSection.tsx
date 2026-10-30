@@ -109,10 +109,7 @@ export const WebDAVSupportSection = ({
         <SignUpBanner textContent={bannerLang.SignUpWebDAVBanner} lang="en" darkMode={darkMode} />
         <div className="flex w-full flex-col space-y-2 lg:max-w-[850px] lg:pt-10">
           {textContent.questions.map((item) => (
-            <div
-              className="rounded-lg border border-gray-20 dark:border-gray-71 px-5"
-              key={item.question}
-            >
+            <div className="rounded-lg border border-gray-20 dark:border-gray-71 px-5" key={item.question}>
               <FaqAccordion
                 key={item.question}
                 question={item.question}

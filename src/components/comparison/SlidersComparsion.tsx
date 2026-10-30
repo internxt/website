@@ -25,14 +25,8 @@ const GraphComponent = ({
 }): JSX.Element => {
   const bgClass = 'bg-gray-5 text-gray-100 dark:bg-gray-105 dark:text-white-95';
   return (
-    <div
-      className={`relative flex h-48 w-16 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
-    >
-      <div
-        className={`${
-          isBlueLabel ? 'bg-orange text-white' : bgClass
-        } z-40 flex w-24 items-center justify-center rounded-full px-2 py-1 text-xs font-semibold sm:max-w-[113px] sm:text-sm`}
-      >
+    <div className={`relative flex h-48 w-16 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}>
+      <div className={`${isBlueLabel ? 'bg-orange text-white' : bgClass} z-40 flex w-24 items-center justify-center rounded-full px-2 py-1 text-xs font-semibold sm:max-w-[113px] sm:text-sm`}>
         <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
       </div>
 

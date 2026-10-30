@@ -40,15 +40,10 @@ export default function AccordionSection({
       <div className="flex w-full flex-row lg:w-full lg:pl-10 xl:pl-32 3xl:pl-80">
         <div className="space-y-4">
           {cardTitles.map((title, index) => (
-            <div
-              key={title}
-              className="w-[544px] overflow-hidden rounded-2xl bg-white dark:bg-gray-95"
-            >
+            <div key={title} className="w-[544px] overflow-hidden rounded-2xl bg-white dark:bg-gray-95">
               <button
                 onClick={() => toggleAccordion(index)}
-                className={`flex w-full items-center px-8 text-left transition-all duration-700 ${
-                  openIndex === index ? 'pt-4' : 'h-[93px] py-4'
-                }`}
+                className={`flex w-full items-center px-8 text-left transition-all duration-700 ${openIndex === index ? 'pt-4' : 'h-[93px] py-4'}`}
               >
                 <span className="flex items-center justify-center gap-4 py-4 text-2xl text-primary">
                   {index + 1}
@@ -58,11 +53,7 @@ export default function AccordionSection({
                 </span>
               </button>
 
-              <div
-                className={`transition-all duration-700 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                } overflow-hidden`}
-              >
+              <div className={`transition-all duration-700 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
                 <div className="px-8 pb-8">
                   <p className="text-base leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                     {cardDescriptions[index]}

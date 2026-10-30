@@ -142,11 +142,7 @@ const HeroSection = ({ textContent }) => {
 
             <span className="text-sm text-gray-50">{textContent.result.pwned.subtitle}</span>
 
-            <div
-              className={`absolute right-8 top-8 text-red-dark transition-opacity duration-100 ease-out ${
-                hasNumber(pwned) && pwned.toString() !== '0' ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
+            <div className={`absolute right-8 top-8 text-red-dark transition-opacity duration-100 ease-out ${hasNumber(pwned) && pwned.toString() !== '0' ? 'opacity-100' : 'opacity-0'}`}>
               <WarningCircle weight="fill" size={24} />
             </div>
           </div>

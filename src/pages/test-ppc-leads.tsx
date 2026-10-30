@@ -64,10 +64,7 @@ const TestPpcLeads = ({
 
       <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} darkMode={darkMode} />
 
-      <CardsGridSection
-        textContent={textContent.FeaturesSection}
-        bgColor="bg-neutral-17 dark:bg-gray-105"
-      />
+      <CardsGridSection textContent={textContent.FeaturesSection} bgColor="bg-neutral-17 dark:bg-gray-105" />
 
       <ChoosePlanSection
         textContent={textContent.ChoosePlanSection}
@@ -104,11 +101,7 @@ const TestPpcLeads = ({
         bgPadding="py-10 lg:py-20"
       />
 
-      <MinimalFooter
-        footerLang={footerLang.FooterSection}
-        lang={locale}
-        bgColor="bg-white dark:bg-gray-95"
-      />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} bgColor="bg-white dark:bg-gray-95" />
     </Layout>
   );
 };

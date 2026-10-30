@@ -39,10 +39,7 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
                 {textContent.whatIs.title}
               </h2>
               {textContent.whatIs.description.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className={`text-lg text-gray-70 dark:text-cool-gray-30 ${index < textContent.whatIs.description.length - 1 ? 'mb-4' : ''}`}
-                >
+                <p key={index} className={`text-lg text-gray-70 dark:text-cool-gray-30 ${index < textContent.whatIs.description.length - 1 ? 'mb-4' : ''}`}>
                   {paragraph}
                 </p>
               ))}

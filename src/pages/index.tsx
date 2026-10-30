@@ -87,11 +87,7 @@ const HomePage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-        percentOff={percentOff}
-        minimumPrice={minimumPrice}
-      />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
       <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 

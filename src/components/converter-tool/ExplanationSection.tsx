@@ -30,10 +30,7 @@ const ExplanationSection = ({ darkMode = false, textContent, bannerText, lang })
         <div className="flex w-full max-w-2xl flex-col">
           <p className="pb-3 text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.whyUseConverter.title}</p>{' '}
           {textContent.whyUseConverter.description.map((feature) => (
-            <p
-              className="ml-5 list-item pb-1 text-lg font-normal text-gray-80 dark:text-cool-gray-30"
-              key={feature.adv}
-            >
+            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80 dark:text-cool-gray-30" key={feature.adv}>
               {feature.adv}
             </p>
           ))}

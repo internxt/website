@@ -38,15 +38,9 @@ const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgC
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:gap-16 lg:py-20 xl:px-32 3xl:px-80 ${
-        bgColor ?? (darkMode ? 'bg-gray-95' : 'bg-[#F4F8FF] dark:bg-gray-95')
-      }`}
+      className={`flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:gap-16 lg:py-20 xl:px-32 3xl:px-80 ${bgColor ?? (darkMode ? 'bg-gray-95' : 'bg-[#F4F8FF] dark:bg-gray-95')}`}
     >
-      <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
-      ></div>
+      <div className={`absolute left-8 right-8 top-0 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:bottom-0 lg:left-32 lg:right-32`}></div>
       <div className="flex flex-col items-center gap-6 px-6 text-center">
         <h2 className={`text-30 font-bold lg:text-3xl ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'}`}>
           {textContent.title}
@@ -59,9 +53,7 @@ const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgC
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`${
-              darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'
-            } flex w-full flex-1 flex-col gap-4 rounded-xl p-6 lg:max-w-[50%] lg:gap-6 lg:rounded-16 lg:p-8`}
+            className={`${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} flex w-full flex-1 flex-col gap-4 rounded-xl p-6 lg:max-w-[50%] lg:gap-6 lg:rounded-16 lg:p-8`}
           >
             <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'}`}>
               {parsePercentText(card.title)}

@@ -3,9 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function CardSkeleton({ maxWidth = 'max-w-xs', cardWidthForDesk = 'xs:w-72' }) {
   return (
-    <div
-      className={`priceCard card m-2 flex w-full ${maxWidth} flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl ${cardWidthForDesk}`}
-    >
+    <div className={`priceCard card m-2 flex w-full ${maxWidth} flex-shrink-0 flex-grow-0 animate-pulse flex-col overflow-hidden rounded-2xl ${cardWidthForDesk}`}>
       <div className="info flex flex-col items-center justify-center rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6">
         <Skeleton height={30} width={70} className="rounded-full" />
 

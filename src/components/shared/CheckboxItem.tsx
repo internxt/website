@@ -21,9 +21,7 @@ const CheckboxItem = ({
           setCheckbox(!checked);
         }}
       />
-      <ReactMarkdown
-        className={`markdown text-sm font-medium ${textColor || ('text-gray-60 dark:text-green-120')}`}
-      >
+      <ReactMarkdown className={`markdown text-sm font-medium ${textColor || ('text-gray-60 dark:text-green-120')}`}>
         {label}
       </ReactMarkdown>
     </div>

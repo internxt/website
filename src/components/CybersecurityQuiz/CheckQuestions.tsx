@@ -94,10 +94,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
         </div>
         <div className="flex flex-col items-center justify-center xl:py-16">
           <div className="flex flex-col items-center space-y-16">
-            <QuestionsSection
-              textContent={textContent.QuestionsSection}
-              isCorrectAnswer={isCorrectAnswer}
-            />
+            <QuestionsSection textContent={textContent.QuestionsSection} isCorrectAnswer={isCorrectAnswer} />
           </div>
         </div>
       </div>

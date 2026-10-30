@@ -29,10 +29,7 @@ const DriveSection = ({ textContent }: DriveSectionProps): JSX.Element => {
 
         <div className="flex w-full flex-col gap-4 lg:w-1/3">
           {textContent.description.map((desc) => (
-            <p
-              key={desc}
-              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-            >
+            <p key={desc} className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
               {desc}
             </p>
           ))}

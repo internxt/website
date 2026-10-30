@@ -89,9 +89,7 @@ export default function HorizontalScrollableSection({
   };
 
   const getButtonClasses = (isDisabled: boolean) => {
-    const baseClasses = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-      darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
-    } transition-all`;
+    const baseClasses = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} transition-all`;
 
     if (isDisabled) {
       return `${baseClasses} cursor-not-allowed opacity-30`;
@@ -170,11 +168,7 @@ export default function HorizontalScrollableSection({
                   <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>
                     {title}
                   </h3>
-                  <p
-                    className={`${
-                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-                    } flex-1 text-sm font-normal leading-tight lg:text-base`}
-                  >
+                  <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} flex-1 text-sm font-normal leading-tight lg:text-base`}>
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

@@ -49,11 +49,7 @@ const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.
           <div className="flex flex-wrap gap-4 lg:flex-row">
             {textContent.buttonLabel.map((label) => (
               <div key={label} className="flex w-full lg:w-max">
-                <Button
-                  className="!w-full lg:w-max"
-                  text={label}
-                  onClick={handleOnPlanButtonClicked}
-                />
+                <Button className="!w-full lg:w-max" text={label} onClick={handleOnPlanButtonClicked} />
               </div>
             ))}
           </div>

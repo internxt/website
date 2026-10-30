@@ -90,16 +90,10 @@ const CoreFeaturesSection = ({
 
   return (
     <section
-      className={`relative flex w-full flex-col items-start justify-center gap-6 ${
-        darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95'
-      } px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`relative flex w-full flex-col items-start justify-center gap-6 ${darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95'} px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
     >
       {needsDivider && (
-        <div
-          className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
-          } lg:left-32 lg:right-32`}
-        />
+        <div className={`absolute left-8 right-8 top-0 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:left-32 lg:right-32`} />
       )}
       <h2 className={`flex text-4xl font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
         {textContent.title}
@@ -135,20 +129,14 @@ const CoreFeaturesSection = ({
             <button
               key={index}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 ${
-                darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'
-              } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
+              className={`flex flex-col rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
                 <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>{title}</h3>
               </span>
-              <div
-                className={`grid transition-all duration-300 ${
-                  activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
+              <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="overflow-hidden">
                   <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'}`}>
                     {textContent.accordionCards.descriptions[index]}
@@ -211,9 +199,7 @@ const CoreFeaturesSection = ({
               <button
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -221,9 +207,7 @@ const CoreFeaturesSection = ({
               <button
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

@@ -70,9 +70,7 @@ export const PriceTableSection = ({
         </p>
 
         <div className={`flex h-[38px] w-[212px] flex-row rounded-lg ${darkMode ? 'bg-gray-80' : 'bg-neutral-90/10 dark:bg-gray-80'}`}>
-          <div
-            className={`m-1 flex w-full flex-row items-center justify-center rounded-lg bg-white text-lg font-semibold text-primary shadow-sm`}
-          >
+          <div className={`m-1 flex w-full flex-row items-center justify-center rounded-lg bg-white text-lg font-semibold text-primary shadow-sm`}>
             {textContent.billingFrequency.lifetime}
           </div>
         </div>

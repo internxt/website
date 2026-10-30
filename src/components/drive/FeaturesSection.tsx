@@ -30,9 +30,7 @@ const FeaturesSection = ({
           className="flex w-full flex-col items-center justify-center text-center"
           renderLayer={(percentage) => (
             <h2
-              className={`flex flex-col items-center text-center text-30 font-semibold ${
-                darkMode ? 'text-white-95' : 'text-cool-gray-90 dark:text-white-95'
-              } lg:my-10 lg:text-3xl`}
+              className={`flex flex-col items-center text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-cool-gray-90 dark:text-white-95'} lg:my-10 lg:text-3xl`}
             >
               <Transition
                 as="div"
@@ -68,10 +66,7 @@ const FeaturesSection = ({
 
         {/* Feature #1 - All your files available in all your devices 
         <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-10 lg:grid-cols-2 lg:pb-20 lg:pt-20">
-          <RevealX
-            className="hidden w-full max-w-[713px] flex-col object-contain object-right lg:right-0 lg:flex"
-            direction="right"
-          >
+          <RevealX className="hidden w-full max-w-[713px] flex-col object-contain object-right lg:right-0 lg:flex" direction="right">
             <Image
               className="w-full"
               src={getImage('/images/drive/secure_file_storage.webp')}
@@ -102,9 +97,7 @@ const FeaturesSection = ({
                 {textContent.section2.title.line3}
               </h3>
 
-              <p
-                className={`${darkMode ? 'text-green-120' : 'text-gray-80 dark:text-green-120'} w-full max-w-[262px] text-lg leading-tight`}
-              >
+              <p className={`${darkMode ? 'text-green-120' : 'text-gray-80 dark:text-green-120'} w-full max-w-[262px] text-lg leading-tight`}>
                 {textContent.section2.subtitle.line1}
                 {textContent.section2.subtitle.line2}
                 {textContent.section2.subtitle.line3}
@@ -122,11 +115,7 @@ const FeaturesSection = ({
             {/* Keep items aligned to the left */}
             <div className="flex w-full flex-col items-center pt-10 lg:w-auto lg:items-start lg:pt-0">
               <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-28 lg:px-0">
-                <h3
-                  className={`${
-                    darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-                  } mb-6 text-30 font-semibold leading-tight lg:text-3xl`}
-                >
+                <h3 className={`${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} mb-6 text-30 font-semibold leading-tight lg:text-3xl`}>
                   {textContent.section3.title.line1} <br className="hidden sm:flex" />
                   {textContent.section3.title.line2} <br className="hidden sm:flex" />
                   {textContent.section3.title.line3} <br className="hidden sm:flex" />
@@ -157,10 +146,7 @@ const FeaturesSection = ({
           </div>
 
           <div className="relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex 4xl:absolute 4xl:right-0">
-            <RevealX
-              className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
-              direction="left"
-            >
+            <RevealX className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex" direction="left">
               <Image
                 className="h-full w-full bg-no-repeat "
                 src={getImage('/images/drive/document-folders.webp')}
@@ -208,11 +194,7 @@ const FeaturesSection = ({
             </div>
 
             <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
-              <h3
-                className={`${
-                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-                } mb-6 text-30 font-semibold leading-tight lg:text-3xl`}
-              >
+              <h3 className={`${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} mb-6 text-30 font-semibold leading-tight lg:text-3xl`}>
                 {textContent.section4.title.line1} <br className="hidden sm:flex" />
                 {textContent.section4.title.line2} <br className="hidden sm:flex" />
                 {textContent.section4.title.line3} <br className="hidden sm:flex" />
@@ -234,16 +216,8 @@ const FeaturesSection = ({
         </div>
 
         {showLastSection && (
-          <div
-            className={`flex w-full flex-col items-center ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'
-            } px-10 py-10 lg:px-0 lg:py-20`}
-          >
-            <h3
-              className={`mb-12 text-center text-4xl font-semibold ${
-                darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-              } lg:text-5xl`}
-            >
+          <div className={`flex w-full flex-col items-center ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-10 py-10 lg:px-0 lg:py-20`}>
+            <h3 className={`mb-12 text-center text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-5xl`}>
               {textContent.section6.title.line1} <br className="hidden sm:flex" />
               {textContent.section6.title.line2}
             </h3>

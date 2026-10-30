@@ -13,18 +13,12 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
       </p>
       <div className="hidden flex-row gap-8 lg:flex">
         {textContent.cards.map((card, index) => (
-          <div
-            key={card.title}
-            className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
-          >
+          <div key={card.title} className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10">
             <div className="flex flex-col gap-6">
               <p className="text-30 font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p key={paragraph} className="text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {paragraph}
                   </p>
                 ))}
@@ -67,18 +61,12 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
       </div>
       <div className="flex flex-col gap-4 lg:hidden">
         {textContent.cards.map((card, index) => (
-          <div
-            key={card.title}
-            className="flex w-[340px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
-          >
+          <div key={card.title} className="flex w-[340px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10">
             <div className="flex flex-col gap-6">
               <p className="text-xl font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-xs font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p key={paragraph} className="text-xs font-normal leading-tight text-gray-55 dark:text-green-120">
                     {paragraph}
                   </p>
                 ))}

@@ -481,10 +481,7 @@ const TableSection = ({ textContent }) => {
   ];
 
   return (
-    <section
-      id="buy"
-      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white dark:from-gray-95 dark:via-gray-105 dark:to-gray-95"
-    >
+    <section id="buy" className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white dark:from-gray-95 dark:via-gray-105 dark:to-gray-95">
       <div className="flex flex-col">
         {/* Table */}
         <div className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white dark:bg-gray-95 py-10 xl:overflow-x-visible">
@@ -525,9 +522,7 @@ const TableSection = ({ textContent }) => {
                   {competitors.slice(1).map((col, index) => (
                     <th className="relative p-14 font-normal" key={col.name}>
                       {' '}
-                      <div
-                        className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg `}
-                      >
+                      <div className={`absolute bottom-0 left-0 flex h-28 w-28 flex-col items-center justify-center space-y-1 rounded-t-lg `}>
                         <img
                           loading="lazy"
                           className="h-8 w-8 object-contain object-center"

@@ -24,11 +24,7 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
         </div>
         <div className="flex flex-row items-start space-x-16 px-24 py-20">
-          <SelectSection
-            textContent={textContent}
-            itemSelected={itemSelected}
-            setItemSelected={setItemSelected}
-          />
+          <SelectSection textContent={textContent} itemSelected={itemSelected} setItemSelected={setItemSelected} />
           <div className="flex w-full flex-col space-y-8">
             <div className="flex flex-row items-center space-x-2 text-base text-gray-80 dark:text-cool-gray-30">
               <CalendarBlank size={17} />

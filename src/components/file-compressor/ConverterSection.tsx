@@ -246,9 +246,7 @@ export const ConverterSection = ({
             </p>
           </div>
         </div>
-        <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle} py-12`}
-        >
+        <div className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle} py-12`}>
           {renderState()}
         </div>
       </div>

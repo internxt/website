@@ -166,11 +166,7 @@ export const DriveTemplate = ({
           darkMode={darkMode}
         />
 
-        <OfficialCloudProviderSection
-          textContent={textContent.OfficalCloudProvider}
-          lang={lang}
-          partner="levante"
-        />
+        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}

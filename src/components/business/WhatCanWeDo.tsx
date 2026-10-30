@@ -50,9 +50,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
             {textContent.cards.map((info: any, index: number) => (
               <Fragment key={info.title}>
                 <button
-                  className={`flex ${
-                    selectedTab === index ? 'border-primary' : borderClass
-                  } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
+                  className={`flex ${selectedTab === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                   onClick={() => onTabSelectorButtonClicked(index)}
                 >
                   <p className="text-start text-2xl font-medium text-white hover:text-primary">{info.selectorTab}</p>

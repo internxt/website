@@ -68,9 +68,7 @@ const FeatureSection = ({
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:pb-20 ${
-                  isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:pb-20 ${isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'} md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -86,11 +84,7 @@ const FeatureSection = ({
                     alt={card.altText || `${card.title} image`}
                   />
                 </RevealX>
-                <div
-                  className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
-                    isEven ? 'md:pl-10' : 'md:pr-10'
-                  }`}
-                >
+                <div className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${isEven ? 'md:pl-10' : 'md:pr-10'}`}>
                   {/* Icon Section (Optional) */}
                   {IconComponent && (
                     // <IconComponent className="text-primary" size={48} weight="duotone" />

@@ -24,9 +24,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
           {linkTitles().map((title) => (
             <p
               key={title}
-              className={`cursor-pointer text-base font-medium ${
-                itemSelected === title ? 'text-primary hover:text-primary-dark' : `${textClass} hover:text-primary`
-              } `}
+              className={`cursor-pointer text-base font-medium ${itemSelected === title ? 'text-primary hover:text-primary-dark' : `${textClass} hover:text-primary`} `}
               onClick={() => {
                 setItemSelected(title);
               }}
@@ -57,9 +55,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
                     <MenuItem
                       as={'div'}
                       key={personIdx}
-                      className={`flex cursor-default select-none py-2 pl-4 pr-4 ${
-                        itemSelected === title ? 'bg-primary bg-opacity-10 text-primary' : itemTextClass
-                      }`}
+                      className={`flex cursor-default select-none py-2 pl-4 pr-4 ${itemSelected === title ? 'bg-primary bg-opacity-10 text-primary' : itemTextClass}`}
                     >
                       <p
                         onClick={() => {

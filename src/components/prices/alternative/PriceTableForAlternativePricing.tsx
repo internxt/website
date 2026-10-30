@@ -68,10 +68,7 @@ export const PriceTableForAlternativePricing = ({
             <p className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95">
               {textContent.howMuchStorage}
             </p>
-            <div
-              id="billingButtons"
-              className="flex w-max flex-row rounded-lg bg-cool-gray-10 dark:bg-gray-80 p-0.5"
-            >
+            <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 dark:bg-gray-80 p-0.5">
               {availableStorage?.map((plan) => (
                 <button
                   key={plan.priceId}
@@ -79,9 +76,7 @@ export const PriceTableForAlternativePricing = ({
                   onClick={() => {
                     handleOnPlanButtonClicked(plan.storage);
                   }}
-                  className={`rounded-lg px-6 py-0.5 font-semibold ${
-                    plan.storage === selectedPlanStorage ? `${bgClass} shadow-sm` : textClass
-                  }`}
+                  className={`rounded-lg px-6 py-0.5 font-semibold ${plan.storage === selectedPlanStorage ? `${bgClass} shadow-sm` : textClass}`}
                 >
                   {plan.storage}
                 </button>

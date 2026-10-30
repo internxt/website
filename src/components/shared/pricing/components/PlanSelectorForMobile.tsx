@@ -31,19 +31,13 @@ export const PlanSelectorForMobile = ({
   return (
     <>
       {!hideBillingController && (
-        <div
-          className={`flex w-full flex-row items-center justify-center border-b-[1px] ${
-            darkMode ? 'border-gray-71' : 'border-gray-10 dark:border-gray-71'
-          } py-2 text-base`}
-        >
+        <div className={`flex w-full flex-row items-center justify-center border-b-[1px] ${darkMode ? 'border-gray-71' : 'border-gray-10 dark:border-gray-71'} py-2 text-base`}>
           <button
             type="button"
             onClick={() => {
               onPlanTypeChange('Individuals', Interval.Year);
             }}
-            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-              activeSwitchPlan === 'Individuals' ? `bg-primary/10 text-primary shadow-sm` : textClass
-            }`}
+            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${activeSwitchPlan === 'Individuals' ? `bg-primary/10 text-primary shadow-sm` : textClass}`}
           >
             {textContent.billingFrequency.annually}
           </button>
@@ -53,9 +47,7 @@ export const PlanSelectorForMobile = ({
             onClick={() => {
               onPlanTypeChange('Lifetime', Interval.Lifetime);
             }}
-            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-              activeSwitchPlan === 'Lifetime' ? `bg-primary/10 text-primary shadow-sm` : textClass
-            }`}
+            className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${activeSwitchPlan === 'Lifetime' ? `bg-primary/10 text-primary shadow-sm` : textClass}`}
           >
             {textContent.billingFrequency.lifetime}
           </button>
@@ -65,20 +57,14 @@ export const PlanSelectorForMobile = ({
       {!hideStorageSelector && (
         <div
           id="billingButtons"
-          className={`flex w-[345px] flex-row justify-between rounded-lg ${
-            darkMode ? 'bg-gray-80' : 'bg-cool-gray-10 dark:bg-gray-80'
-          } p-0.5`}
+          className={`flex w-[345px] flex-row justify-between rounded-lg ${darkMode ? 'bg-gray-80' : 'bg-cool-gray-10 dark:bg-gray-80'} p-0.5`}
         >
           <button
             type="button"
             onClick={() => {
               onStorageChange('Essential');
             }}
-            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-              activeStoragePlan === 'Essential'
-                ? `bg-white font-semibold text-primary shadow-sm`
-                : `font-regular ${textClass} `
-            }`}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${activeStoragePlan === 'Essential' ? `bg-white font-semibold text-primary shadow-sm` : `font-regular ${textClass} `}`}
           >
             {textContent.planStorage.essential}
           </button>
@@ -87,11 +73,7 @@ export const PlanSelectorForMobile = ({
             onClick={() => {
               onStorageChange('Premium');
             }}
-            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-              activeStoragePlan === 'Premium'
-                ? `bg-white font-semibold text-primary shadow-sm`
-                : `font-regular ${textClass}`
-            }`}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${activeStoragePlan === 'Premium' ? `bg-white font-semibold text-primary shadow-sm` : `font-regular ${textClass}`}`}
           >
             {textContent.planStorage.premium}
           </button>
@@ -100,11 +82,7 @@ export const PlanSelectorForMobile = ({
             onClick={() => {
               onStorageChange('Ultimate');
             }}
-            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
-              activeStoragePlan === 'Ultimate'
-                ? `bg-white font-semibold text-primary shadow-sm`
-                : `font-regular ${textClass}`
-            }`}
+            className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${activeStoragePlan === 'Ultimate' ? `bg-white font-semibold text-primary shadow-sm` : `font-regular ${textClass}`}`}
           >
             {textContent.planStorage.ultimate}
           </button>

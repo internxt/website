@@ -10,9 +10,7 @@ const CheckboxButton = ({ checked, id }) => {
     <>
       <div
         className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
-                  border p-1 text-white ${
-                    checked ? 'border-primary bg-primary' : `${borderClass} hover:border-gray-40`
-                  }`}
+                  border p-1 text-white ${checked ? 'border-primary bg-primary' : `${borderClass} hover:border-gray-40`}`}
       >
         {checked && (
           <div
@@ -118,9 +116,7 @@ const HeroSection = ({ textContent, lang }) => {
             <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-x-2 lg:space-y-0">
               <button
                 onClick={() => setPasswordType('password')}
-                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
-                  passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
-                } p-5`}
+                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2} p-5`}
               >
                 <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? textClass : 'text-gray-50'}`}>
@@ -129,9 +125,7 @@ const HeroSection = ({ textContent, lang }) => {
               </button>
               <button
                 onClick={() => setPasswordType('passphrase')}
-                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
-                  passwordType === 'passphrase' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
-                } p-5`}
+                className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${passwordType === 'passphrase' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2} p-5`}
               >
                 <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
 

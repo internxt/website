@@ -77,11 +77,7 @@ const CoreFeaturesSection = ({
                     {title}
                   </h3>
                 </span>
-                <div
-                  className={`grid transition-all duration-300 ${
-                    activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                  }`}
-                >
+                <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                   <div className="flex flex-col overflow-hidden text-sm text-gray-55 dark:text-green-120 lg:text-base">
                     {textContent.accordionCards.descriptions[index]}
                   </div>

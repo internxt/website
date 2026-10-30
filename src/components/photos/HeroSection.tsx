@@ -15,9 +15,7 @@ export const HeroSection = ({
 }: Readonly<HeroSectionProps>) => {
   return (
     <section className="mt-20 flex w-full min-h-[60vh] flex-col items-center justify-center gap-8 px-8 py-8 lg:mt-10 lg:min-h-auto lg:flex-row lg:justify-between lg:gap-10 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
-      <div
-        className={`z-20 h-min flex w-full shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 py-5 shadow-soft backdrop-blur-55 lg:w-1/2 lg:max-w-[600px] lg:gap-8 lg:rounded-16 lg:p-8 bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)] dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]`}
-      >
+      <div className={`z-20 h-min flex w-full shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 py-5 shadow-soft backdrop-blur-55 lg:w-1/2 lg:max-w-[600px] lg:gap-8 lg:rounded-16 lg:p-8 bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)] dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]`}>
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>

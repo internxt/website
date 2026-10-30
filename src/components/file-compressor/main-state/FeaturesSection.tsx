@@ -70,10 +70,7 @@ export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lan
                   className="flex w-[256px] flex-col items-start gap-6 rounded-xl bg-gray-1 dark:bg-gray-105 p-6 shadow-md"
                 >
                   <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
-                  <FirstBold
-                    text={feature.description}
-                    className="text-base text-gray-80 dark:text-cool-gray-30"
-                  />
+                  <FirstBold text={feature.description} className="text-base text-gray-80 dark:text-cool-gray-30" />
                 </div>
               ))}
             </div>

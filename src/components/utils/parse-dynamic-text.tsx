@@ -12,9 +12,7 @@ export const ValueSkeleton = ({
   darkMode?: boolean;
   className?: string;
 }) => (
-  <span
-    className={`inline-block animate-pulse rounded bg-gray-10 dark:bg-gray-71 align-middle ${className}`}
-  />
+  <span className={`inline-block animate-pulse rounded bg-gray-10 dark:bg-gray-71 align-middle ${className}`} />
 );
 
 /**

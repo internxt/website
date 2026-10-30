@@ -13,9 +13,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
 
   return (
     <section
-      className={`${
-        bannerVisible ? 'flex' : 'hidden'
-      }  fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
+      className={`${bannerVisible ? 'flex' : 'hidden'}  fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2

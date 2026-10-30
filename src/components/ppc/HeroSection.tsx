@@ -45,9 +45,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
 
   return (
     <section className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
-      <div
-        className={`${styles.cleanerTitleAndOnePlan} z-20 flex w-full shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:w-1/2`}
-      >
+      <div className={`${styles.cleanerTitleAndOnePlan} z-20 flex w-full shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:w-1/2`}>
         <div className="z-10 flex flex-col justify-between gap-10 p-6 lg:p-8">
           <div className="flex w-full flex-col justify-between gap-10">
             <div className="flex w-full flex-col justify-center gap-8 ">

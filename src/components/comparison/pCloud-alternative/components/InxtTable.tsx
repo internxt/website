@@ -49,9 +49,7 @@ export const InxtTable = ({
           return (
             <div
               key={index}
-              className={`h-[156px] lg:h-[110px] ${isEven ? rowBg.even : rowBg.odd} ${
-                isLast ? 'rounded-bl-16' : ''
-              } flex flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
+              className={`h-[156px] lg:h-[110px] ${isEven ? rowBg.even : rowBg.odd} ${isLast ? 'rounded-bl-16' : ''} flex flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
             >
               <p className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 dark:text-white-95 lg:w-[538px] lg:text-center lg:text-base">
                 {parseText(item.title)}

@@ -75,10 +75,7 @@ export default function RedeemCouponsSection({
 
         <div className="hidden items-stretch lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:px-20 3xl:px-52">
           {textContent.cards.titles.map((card, index) => (
-            <div
-              key={card}
-              className="flex h-[220px] w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
-            >
+            <div key={card} className="flex h-[220px] w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8">
               <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95">
                 <p className="text-2xl text-primary ">{index + 1}</p>
                 {card}
@@ -108,10 +105,7 @@ export default function RedeemCouponsSection({
               }}
             >
               {textContent.cards.titles.map((card, index) => (
-                <div
-                  key={index}
-                  className="flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
-                >
+                <div key={index} className="flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8">
                   <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95">
                     <p className="text-2xl text-primary ">{index + 1}</p>
                     {card}
@@ -129,18 +123,14 @@ export default function RedeemCouponsSection({
               <button
                 onClick={scrollLeft}
                 disabled={currentIndex === 0}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-                }`}
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
               </button>
               <button
                 onClick={scrollRight}
                 disabled={currentIndex === maxIndex}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                  currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-                }`}
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />
               </button>

@@ -159,11 +159,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             <button
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
-              className={`${
-                currentCheckbox === ''
-                  ? `cursor-not-allowed ${bgClass}`
-                  : 'cursor-pointer bg-primary'
-              } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
+              className={`${currentCheckbox === '' ? `cursor-not-allowed ${bgClass}` : 'cursor-pointer bg-primary'} flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}
             </button>

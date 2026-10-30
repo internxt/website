@@ -92,12 +92,7 @@ const SecondaryLink: React.FC<{ darkMode?: boolean; href: string; children: Reac
   href,
   children,
 }) => (
-  <a
-    className="font-medium text-gray-80 dark:text-cool-gray-30 underline hover:no-underline"
-    href={href}
-    target="_blank"
-    rel="noreferrer"
-  >
+  <a className="font-medium text-gray-80 dark:text-cool-gray-30 underline hover:no-underline" href={href} target="_blank" rel="noreferrer">
     {children}
   </a>
 );
@@ -190,12 +185,7 @@ const WebSection: React.FC<{ darkMode?: boolean; textContent: TextContent }> = (
     <p className="pb-6 text-3xl font-medium text-black dark:text-white-95 lg:text-30">
       {textContent.Web}
     </p>
-    <a
-      className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex"
-      href="https://drive.internxt.com/app"
-      target="_blank"
-      rel="noreferrer"
-    >
+    <a className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex" href="https://drive.internxt.com/app" target="_blank" rel="noreferrer">
       <span>{textContent.openDriveWeb}</span>
       <CaretRight size={16} weight="bold" />
     </a>
@@ -275,12 +265,7 @@ const MobileSection: React.FC<{
         </>
       ) : (
         <>
-          <a
-            className="flex flex-row items-center space-x-1 text-lg font-semibold text-primary"
-            href={download.Android}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="flex flex-row items-center space-x-1 text-lg font-semibold text-primary" href={download.Android} target="_blank" rel="noreferrer">
             {formatTextWithPlaceholder(textContent.getOn, textContent.Android, isChinese)}
             <CaretRight size={16} weight="bold" />
           </a>

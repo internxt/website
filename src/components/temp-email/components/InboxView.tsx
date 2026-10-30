@@ -104,9 +104,7 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
               <ArrowsClockwise
                 size={24}
                 data-tooltip-id="arrows-clockwise"
-                className={`text-gray-50 outline-none hover:text-gray-80 dark:hover:text-cool-gray-30 ${
-                  animation ? 'animate-spin-refresh' : ''
-                }`}
+                className={`text-gray-50 outline-none hover:text-gray-80 dark:hover:text-cool-gray-30 ${animation ? 'animate-spin-refresh' : ''}`}
               />
             </button>
           </div>
@@ -121,11 +119,7 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
                     onClick={() => {
                       onMessageSelected(item);
                     }}
-                    className={`flex h-full ${
-                      !item.seen ? 'border-l-2 border-l-primary' : ''
-                    } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${
-                      item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
-                    } `}
+                    className={`flex h-full ${!item.seen ? 'border-l-2 border-l-primary' : ''} w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15 ${item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null} `}
                   >
                     <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 dark:border-gray-71 py-4">
                       <p title={item.from} className="truncate text-xs font-medium text-gray-50">
@@ -170,11 +164,7 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
           </div>
         ) : (
           <div className="flex w-screen items-center">
-            <NoMessageSelected
-              messagesLength={openedMessages}
-              textContent={textContent}
-              onRefreshButtonClicked={onRefresh}
-            />
+            <NoMessageSelected messagesLength={openedMessages} textContent={textContent} onRefreshButtonClicked={onRefresh} />
           </div>
         )}
       </Transition>
@@ -252,9 +242,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
                         onMessageSelected(item);
                         setIsMessageOpen(true);
                       }}
-                      className={`flex h-full ${
-                        !item.seen ? 'border-l-2 border-l-primary' : ''
-                      } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
+                      className={`flex h-full ${!item.seen ? 'border-l-2 border-l-primary' : ''} w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
                       <div className="flex w-full flex-col border-b border-gray-10 dark:border-gray-71 py-4">
                         <p title={item.from} className="text-xs font-medium text-gray-50">

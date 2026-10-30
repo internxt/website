@@ -20,25 +20,13 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   return (
-    <div
-      className={`priceCard card ${
-        popular ? 'border-2 border-primary  bg-blue-60 shadow-lg ring-2 ring-blue-60' : ''
-      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl sm:m-4`}
-    >
-      <div
-        className={`mostPopular ${
-          popular ? '' : 'hidden'
-        } flex flex-col items-center justify-center py-2 text-xs font-semibold text-white`}
-      >
+    <div className={`priceCard card ${popular ? 'border-2 border-primary  bg-blue-60 shadow-lg ring-2 ring-blue-60' : ''} m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl sm:m-4`}>
+      <div className={`mostPopular ${popular ? '' : 'hidden'} flex flex-col items-center justify-center py-2 text-xs font-semibold text-white`}>
         {contentText.mostPopularPlan}
       </div>
 
       <div className="info flex flex-col items-center justify-center bg-white dark:bg-gray-95 p-6">
-        <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
-            popular ? 'text-primary' : 'text-gray-50'
-          } bg-neutral-20 dark:bg-gray-105 px-4 py-1 pb-0.5 font-semibold`}
-        >
+        <div className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${popular ? 'text-primary' : 'text-gray-50'} bg-neutral-20 dark:bg-gray-105 px-4 py-1 pb-0.5 font-semibold`}>
           <p>{storage}</p>
         </div>
 

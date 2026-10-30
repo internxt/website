@@ -88,10 +88,7 @@ export const MessageSelected = ({
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
       <div className="flex w-full flex-col space-y-2">
-        <p
-          title={item.subject}
-          className="line-clamp-3 text-xl font-medium text-gray-100 dark:text-white-95"
-        >
+        <p title={item.subject} className="line-clamp-3 text-xl font-medium text-gray-100 dark:text-white-95">
           {item.subject ? item.subject : textContent.noSubject}
         </p>
         <div className="flex flex-row space-x-2">
@@ -99,10 +96,7 @@ export const MessageSelected = ({
             <p className="truncate text-lg text-primary">{name}</p>
           </div>
           <div className="flex w-full flex-col pr-10">
-            <p
-              title={item.from}
-              className="truncate text-sm font-medium text-gray-80 dark:text-cool-gray-30"
-            >
+            <p title={item.from} className="truncate text-sm font-medium text-gray-80 dark:text-cool-gray-30">
               {item.from}
             </p>
             <p title={date} className="text-xs">

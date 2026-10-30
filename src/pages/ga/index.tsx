@@ -92,11 +92,7 @@ const HomePage = ({
     >
       <MinimalNavbar textContent={navbarLang} lang={locale} />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-        percentOff={percentOff}
-        minimumPrice={minimumPrice}
-      />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
       <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 

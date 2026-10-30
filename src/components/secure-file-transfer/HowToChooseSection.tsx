@@ -49,9 +49,7 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
             <button
               key={title}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 bg-white dark:bg-gray-95 text-left transition-all duration-300 lg:w-[80%] ${
-                activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
-              }`}
+              className={`flex flex-col rounded-16 bg-white dark:bg-gray-95 text-left transition-all duration-300 lg:w-[80%] ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-[24px] font-medium text-primary">
@@ -60,11 +58,7 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
                   {title}
                 </h3>
               </span>
-              <div
-                className={`grid transition-all duration-300 ${
-                  activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
+              <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="overflow-hidden">
                   <p className="text-[14px] font-normal leading-tight lg:text-[16px] text-gray-55 dark:text-green-120">
                     {textContent.accordionCards.descriptions[index]}

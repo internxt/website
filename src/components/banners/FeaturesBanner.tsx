@@ -54,9 +54,7 @@ const FeaturesBanner = (): JSX.Element => {
       className={`${showBanner ? 'flex' : 'hidden'}
       fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
-      <div
-        className={`left-1/2 top-1/2 flex h-[450px] w-[1100px] rounded-3xl -translate-x-[50%] -translate-y-[50%] flex-row overflow-hidden justify-between absolute inset-0 bg-center bg-no-repeat bg-cover items-center ${bgColor}`}
-      >
+      <div className={`left-1/2 top-1/2 flex h-[450px] w-[1100px] rounded-3xl -translate-x-[50%] -translate-y-[50%] flex-row overflow-hidden justify-between absolute inset-0 bg-center bg-no-repeat bg-cover items-center ${bgColor}`}>
         <button
           id="close-banner"
           aria-label="close-banner"

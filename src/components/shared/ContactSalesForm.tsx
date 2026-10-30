@@ -235,10 +235,7 @@ export const ContactSalesForm = ({
         <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
-        <p
-          className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:px-0"
-          id="contactSales"
-        >
+        <p className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:px-0" id="contactSales">
           {textContent.description}
         </p>
       </div>
@@ -325,9 +322,7 @@ export const ContactSalesForm = ({
                 </label>
                 <select
                   id="storage"
-                  className={`w-full appearance-none rounded-lg border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-3 py-2 ${
-                    formData.storage === '' ? 'text-gray-40' : textClass
-                  }`}
+                  className={`w-full appearance-none rounded-lg border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-3 py-2 ${formData.storage === '' ? 'text-gray-40' : textClass}`}
                   value={formData.storage}
                   onChange={handleChange}
                 >
@@ -362,9 +357,7 @@ export const ContactSalesForm = ({
               <div className="flex">
                 <button
                   type="submit"
-                  className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${
-                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-primary/40'
-                  }`}
+                  className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-primary/40'}`}
                   disabled={!isFormValid || isSubmitting}
                 >
                   {isSubmitting ? textContent.form.ctaSending : textContent.form.cta}

@@ -156,9 +156,7 @@ export const HorizontalPriceCard = ({
         </button>
       </div>
       <div className="flex w-full flex-col justify-center border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 pt-6 text-sm lg:border-t-0 lg:py-10">
-        <div
-          className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}
-        >
+        <div className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}>
           {planFeatures.map((feature, index) => {
             const FeatureIcon = iconList[storage][index];
             const isComingSoon = feature.status === 'Coming soon';

@@ -7,9 +7,7 @@ import { HighlightText } from '../components/HighlightText';
 
 const HeroSection = ({ textContent, url = '#billingButtons' }) => (
   <section className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
-    <div
-      className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}
-    >
+    <div className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}>
       <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
         <p className="text-sm font-semibold text-primary lg:text-nowrap lg:text-lg">{textContent.label}</p>
       </div>

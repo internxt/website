@@ -223,9 +223,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
               <button
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -233,9 +231,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
               <button
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

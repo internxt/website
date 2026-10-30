@@ -105,31 +105,19 @@ export default function ComparisonTableSection({
     const ringClass = 'ring-neutral-25 bg-neutral-17 dark:ring-gray-71 dark:bg-gray-105';
     const bgClass = 'bg-neutral-16 dark:bg-gray-105';
     const ringClass2 = 'ring-neutral-25 dark:ring-gray-71';
-    return `items-start p-6 text-start  ${
-      isRecommendedPlan(planIndex)
-        ? `flex rounded-t-2xl ring-[1px] ${ringClass}`
-        : `${bgClass} ring-[1px] ${ringClass2}`
-    }`;
+    return `items-start p-6 text-start  ${isRecommendedPlan(planIndex) ? `flex rounded-t-2xl ring-[1px] ${ringClass}` : `${bgClass} ring-[1px] ${ringClass2}`}`;
   };
 
   const getButtonStyles = (planIndex: number) => {
     const hoverClass = 'hover:bg-gray-1 dark:hover:bg-gray-105';
-    return `${
-      isRecommendedPlan(planIndex)
-        ? 'bg-primary text-white hover:bg-primary-dark'
-        : `border-primary bg-transparent text-primary ${hoverClass}`
-    } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`;
+    return `${isRecommendedPlan(planIndex) ? 'bg-primary text-white hover:bg-primary-dark' : `border-primary bg-transparent text-primary ${hoverClass}`} flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`;
   };
 
   const getCategoryRowStyles = (planIndex: number) => {
     const borderClass = 'border-neutral-25 bg-neutral-17 dark:border-gray-71 dark:bg-gray-105';
     const borderClass2 = 'border-neutral-25 dark:border-gray-71';
     const textClass = 'text-gray-95 dark:text-white-95';
-    return `h-[72px] ${
-      isRecommendedPlan(planIndex)
-        ? `border-[1px] ${borderClass} shadow-lg`
-        : `border-y-[1px] ${borderClass2} p-6 text-xl font-medium ${textClass}`
-    }`;
+    return `h-[72px] ${isRecommendedPlan(planIndex) ? `border-[1px] ${borderClass} shadow-lg` : `border-y-[1px] ${borderClass2} p-6 text-xl font-medium ${textClass}`}`;
   };
 
   const getSpecialFeatureStyles = (planIndex: number, categoryIndex: number) => {
@@ -208,11 +196,7 @@ export default function ComparisonTableSection({
             <Icon height={20} width={20} className={`${iconColor} flex shrink-0 lg:hidden`} weight={fillColor} />
           </>
         )}
-        <p
-          className={`${
-            categoryName === 'Storage' ? 'whitespace-nowrap' : ''
-          } text-sm font-normal lg:text-base ${textColor}`}
-        >
+        <p className={`${categoryName === 'Storage' ? 'whitespace-nowrap' : ''} text-sm font-normal lg:text-base ${textColor}`}>
           {feature.name}
         </p>
       </div>
@@ -355,15 +339,10 @@ export default function ComparisonTableSection({
                     return groupedFeatures.map((item: GroupedItem, itemIndex: number) => (
                       <tr
                         key={`${category.name}-${'features' in item ? item.group : item.id}-${itemIndex}`}
-                        className={`border-t-[1px] border-neutral-25 dark:border-gray-71 ${
-                          itemIndex === 0 ? 'border-t-[1px]' : ''
-                        }`}
+                        className={`border-t-[1px] border-neutral-25 dark:border-gray-71 ${itemIndex === 0 ? 'border-t-[1px]' : ''}`}
                       >
                         {textContent.plans.map((plan, planIndex) => (
-                          <td
-                            key={`${'features' in item ? item.group : item.id}-${plan.id}`}
-                            className={getRegularFeatureStyles(planIndex, categoryIndex, category, itemIndex)}
-                          >
+                          <td key={`${'features' in item ? item.group : item.id}-${plan.id}`} className={getRegularFeatureStyles(planIndex, categoryIndex, category, itemIndex)}>
                             {'features' in item
                               ? (() => {
                                   const featureInPlan = item.features.find((f: Feature) => f.avalability[plan.id]);
@@ -435,63 +414,37 @@ export default function ComparisonTableSection({
           {textContent.categories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <div className="grid grid-cols-2">
-                <div
-                  className={`${getMobileBorderStyles(selectedPlanA)} p-3 ${getMobilePlanStyles(selectedPlanA)} ${
-                    categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
-                  }`}
-                >
+                <div className={`${getMobileBorderStyles(selectedPlanA)} p-3 ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}>
                   <p className="font-medium text-gray-95 dark:text-white-95">{category.name}</p>
                 </div>
-                <div
-                  className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${
-                    categoryIndex === 0 ? '' : ''
-                  }`}
-                >
+                <div className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === 0 ? '' : ''}`}>
                   <p className="font-medium text-gray-95 dark:text-white-95">{category.name}</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2">
-                <div
-                  className={`${getMobileBorderStyles(selectedPlanA)} ${getMobilePlanStyles(selectedPlanA)} ${
-                    categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
-                  }`}
-                >
+                <div className={`${getMobileBorderStyles(selectedPlanA)} ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}>
                   {isExclusiveCategory(category) ? (
                     <div className="min-h-[40px] items-center p-3">
                       {renderMobileFeatureContent(selectedPlanA, category)}
                     </div>
                   ) : (
                     category.features.map((feature, featureIndex) => (
-                      <div
-                        key={`${feature.id}-${featureIndex}-planA`}
-                        className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
-                        }`}
-                      >
+                      <div key={`${feature.id}-${featureIndex}-planA`} className={`min-h-[40px] items-center p-3 ${featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''}`}>
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanA], category)}
                       </div>
                     ))
                   )}
                 </div>
 
-                <div
-                  className={`${getMobileBorderStyles(selectedPlanB)} ${getMobilePlanStyles(selectedPlanB)} ${
-                    categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''
-                  }`}
-                >
+                <div className={`${getMobileBorderStyles(selectedPlanB)} ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''}`}>
                   {isExclusiveCategory(category) ? (
                     <div className="min-h-[40px] items-center p-3">
                       {renderMobileFeatureContent(selectedPlanB, category)}
                     </div>
                   ) : (
                     category.features.map((feature, featureIndex) => (
-                      <div
-                        key={`${feature.id}-${featureIndex}-planB`}
-                        className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''
-                        }`}
-                      >
+                      <div key={`${feature.id}-${featureIndex}-planB`} className={`min-h-[40px] items-center p-3 ${featureIndex < category.features.length - 1 ? `border-b ${borderClass3}` : ''}`}>
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanB], category)}
                       </div>
                     ))

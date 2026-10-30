@@ -22,10 +22,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
               height: "auto"
             }} />
         </RevealX>
-        <RevealX
-          direction="left"
-          className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
-        >
+        <RevealX direction="left" className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">
           <Gift size={60} className="text-primary" />
           <p className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight">
             {textContent.title}

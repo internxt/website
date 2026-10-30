@@ -140,9 +140,7 @@ const BottomBanner = () => {
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
-        styles.linearGradient
-      } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${styles.linearGradient} lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">

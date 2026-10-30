@@ -47,9 +47,7 @@ const HotLabel = ({
 
   return (
     <span
-      className={`flex items-center justify-center rounded-sm ${
-        isValentinesMode ? labelColorClass : darkModeLabelClass
-      } px-2 py-0.5 text-lg font-semibold lg:text-xl`}
+      className={`flex items-center justify-center rounded-sm ${isValentinesMode ? labelColorClass : darkModeLabelClass} px-2 py-0.5 text-lg font-semibold lg:text-xl`}
     >
       {isValentinesMode ? textContent.valentinesTitle : ''}
       {formatDiscountLabel(textContent.hotLabel, discountValue)}
@@ -78,9 +76,7 @@ const PricingHeader = ({
   alternativeHeader?: boolean;
 }) => (
   <div
-    className={`flex flex-col items-center justify-center gap-3 text-center sm:gap-4 ${
-      isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'
-    } ${className}`}
+    className={`flex flex-col items-center justify-center gap-3 text-center sm:gap-4 ${isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'} ${className}`}
     id="priceTable"
   >
     <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
@@ -106,9 +102,7 @@ const CouponCodeHeader = ({
   textContent: any;
   couponCode: string;
 }) => (
-  <div
-    className={`flex w-auto max-w-full flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 px-4 py-2.5 text-center shadow-lg sm:p-3`}
-  >
+  <div className={`flex w-auto max-w-full flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 px-4 py-2.5 text-center shadow-lg sm:p-3`}>
     <CheckCircle className="h-4 w-4 shrink-0 text-green-1 sm:h-5 sm:w-5" weight="fill" />
     <p className={`text-xs font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} sm:text-sm lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
@@ -251,9 +245,7 @@ export const ComparativePricingSection = ({
         {textContent?.ctaCompare && (
           <a
             href="#comparisonTable"
-            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary transition-colors hover:border-primary-dark ${
-              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'
-            } hover:text-primary-dark sm:px-5 sm:py-4 sm:text-base`}
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary transition-colors hover:border-primary-dark ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'} hover:text-primary-dark sm:px-5 sm:py-4 sm:text-base`}
           >
             {textContent.ctaCompare}
             <ArrowDown className="h-4 w-4 text-primary sm:h-5 sm:w-5" />
@@ -264,16 +256,9 @@ export const ComparativePricingSection = ({
           <div className="w-full pl-6 pr-4 pt-10 lg:pt-20 sm:pl-10 sm:pr-6 md:px-0 lg:px-10 xl:px-32 3xl:px-80">
             <div className="flex flex-col items-start justify-center gap-3 text-left sm:gap-4 md:flex-row md:items-start md:justify-between md:space-x-16 md:space-y-0 md:gap-0 md:text-center">
               {features.map((feature) => (
-              <div
-                key={feature.text}
-                className="flex flex-row items-start justify-start gap-2.5 text-left md:max-w-[33%] md:flex-row md:items-start md:gap-3"
-              >
+              <div key={feature.text} className="flex flex-row items-start justify-start gap-2.5 text-left md:max-w-[33%] md:flex-row md:items-start md:gap-3">
                   <feature.icon size={36} className="!h-7 !w-7 shrink-0 text-primary md:!h-[36px] md:!w-[36px] md:pb-0" />
-                <p
-                  className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${
-                    darkMode ? 'text-white' : 'text-gray-80 dark:text-white'
-                  }`}
-                >
+                <p className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
                     {feature.text}
                   </p>
                 </div>

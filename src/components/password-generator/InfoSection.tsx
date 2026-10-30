@@ -117,9 +117,7 @@ const InfoSection = ({
               }}
             >
               <img
-                src={`/images/converter-tool/PasswordChecker${
-                  lang && allowedLangForImage.includes(lang) ? lang.toUpperCase() : 'EN'
-                }.webp`}
+                src={`/images/converter-tool/PasswordChecker${lang && allowedLangForImage.includes(lang) ? lang.toUpperCase() : 'EN'}.webp`}
                 alt="Password Checker"
               />
             </div>

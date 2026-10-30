@@ -37,11 +37,7 @@ const CtaSection = ({
         <Link
           href={url}
           target={target}
-          className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
-            bgImage && bgImage !== defaultBgImage
-              ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-              : `${bgClass} text-primary ${hoverClass}`
-          }`}
+          className={`flex rounded-lg px-5 py-3 text-lg font-medium ${bgImage && bgImage !== defaultBgImage ? 'bg-primary text-xl text-white hover:bg-primary-dark' : `${bgClass} text-primary ${hoverClass}`}`}
         >
           {textContent.cta}
         </Link>

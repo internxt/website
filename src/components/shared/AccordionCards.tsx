@@ -35,11 +35,7 @@ export default function AccordionCards({ textContent, cardWidth }: Readonly<Acco
               </div>
             </button>
 
-            <div
-              className={`transition-all duration-200 ease-linear ${
-                expandedCard === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-              } overflow-hidden`}
-            >
+            <div className={`transition-all duration-200 ease-linear ${expandedCard === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
               <div className="bg-white dark:bg-gray-95 px-6 pb-4">
                 <p className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
                   {cardDescriptions[index]}
@@ -67,11 +63,7 @@ export default function AccordionCards({ textContent, cardWidth }: Readonly<Acco
               </div>
             </button>
 
-            <div
-              className={`transition-all duration-200 ease-linear ${
-                expandedCard === index ? 'h-[260px] opacity-100' : 'max-h-0 opacity-0'
-              } overflow-hidden`}
-            >
+            <div className={`transition-all duration-200 ease-linear ${expandedCard === index ? 'h-[260px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
               <div className="bg-white dark:bg-gray-95 px-6 pb-4">
                 <p className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
                   {cardDescriptions[index]}

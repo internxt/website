@@ -55,19 +55,13 @@ const HeroSection = ({ textContent }) => {
             required
           />
           <div className="flex flex-col space-y-6 pt-9">
-            <CheckboxItem
-              checked={checkbox}
-              setCheckbox={setCheckbox}
-              label={textContent.form.checkboxText}
-            />
+            <CheckboxItem checked={checkbox} setCheckbox={setCheckbox} label={textContent.form.checkboxText} />
             <input
               name="signup"
               type="submit"
               disabled={!checkbox}
               value={`${textContent.form.cta}`}
-              className={`${
-                !checkbox ? `cursor-default ${bgClass} text-gray-40` : 'bg-primary hover:bg-primary-dark'
-              } flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none sm:mb-2 sm:py-2 sm:text-base`}
+              className={`${!checkbox ? `cursor-default ${bgClass} text-gray-40` : 'bg-primary hover:bg-primary-dark'} flex w-full cursor-pointer items-center justify-center rounded-lg border border-transparent px-4 py-3 text-lg font-medium text-white transition-all duration-75 focus:outline-none sm:mb-2 sm:py-2 sm:text-base`}
             />
           </div>
         </form>

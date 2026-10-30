@@ -138,11 +138,7 @@ const Drive = ({
           bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
           darkMode={darkMode}
         />
-        <OfficialCloudProviderSection
-          textContent={textContent.OfficalCloudProvider}
-          lang={lang}
-          partner="levante"
-        />
+        <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
           url={'#billingButtons'}

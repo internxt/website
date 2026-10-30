@@ -183,10 +183,7 @@ export const AntivirusTemplate = ({
           }
           SecondComponent={
             <div className="flex flex-col items-center">
-              <CardGroup
-                cards={cardsForComponentsIncolumn}
-                backgroundColorCard="bg-white dark:bg-gray-95"
-              />
+              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white dark:bg-gray-95" />
             </div>
           }
           backgroundColor="bg-gray-1 dark:bg-gray-105"

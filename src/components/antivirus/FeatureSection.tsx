@@ -66,9 +66,7 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
-                  !isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${!isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'} md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -85,11 +83,7 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
                   />
                 </RevealX>
 
-                <div
-                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:w-1/2 md:items-start md:space-y-6 ${
-                    isEven ? 'md:pl-10' : 'md:pr-10'
-                  }`}
-                >
+                <div className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:w-1/2 md:items-start md:space-y-6 ${isEven ? 'md:pl-10' : 'md:pr-10'}`}>
                   <Image
                     src={getImage(card.icon)}
                     width={61}

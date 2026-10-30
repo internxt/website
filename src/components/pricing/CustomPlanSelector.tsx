@@ -62,11 +62,7 @@ export default function CustomPlanSelector({
 
   return (
     <div className="z-10 flex flex-col pt-10">
-      <div
-        className={`border border-neutral-25 dark:border-gray-71 p-4 ${customBackgroundClass} ${
-          isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'
-        }`}
-      >
+      <div className={`border border-neutral-25 dark:border-gray-71 p-4 ${customBackgroundClass} ${isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'}`}>
         <div className="relative mb-4 border-b border-neutral-25 dark:border-gray-71 pb-1">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -91,9 +87,7 @@ export default function CustomPlanSelector({
                     <li key={plan.id} role="option">
                       <button
                         onClick={() => handlePlanSelect(plan.id)}
-                        className={`${
-                          plan.id === selectedPlan ? 'bg-highlight/10' : ''
-                        } flex w-full items-center justify-between  px-4 py-2 text-left transition-colors duration-150 hover:bg-highlight/5 focus:bg-highlight/10 focus:outline-none`}
+                        className={`${plan.id === selectedPlan ? 'bg-highlight/10' : ''} flex w-full items-center justify-between  px-4 py-2 text-left transition-colors duration-150 hover:bg-highlight/5 focus:bg-highlight/10 focus:outline-none`}
                       >
                         <span
                           className={`'text-gray-100' text-base font-medium
@@ -102,11 +96,7 @@ export default function CustomPlanSelector({
                           {plan.name}
                         </span>
                         {plan.id === selectedPlan && (
-                          <Check
-                            size={16}
-                            className="text-gray-100 dark:text-white-95"
-                            weight="bold"
-                          />
+                          <Check size={16} className="text-gray-100 dark:text-white-95" weight="bold" />
                         )}
                       </button>
                     </li>

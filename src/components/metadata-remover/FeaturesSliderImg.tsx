@@ -16,10 +16,7 @@ const FeaturesSliderImg = ({ textContent, cardInfo }) => {
 
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-5 pb-20 md:grid-cols-2">
         {cardInfo.map((info) => (
-          <div
-            key={info.title}
-            className="flex h-full flex-col items-start justify-start rounded-2xl bg-white dark:bg-gray-95"
-          >
+          <div key={info.title} className="flex h-full flex-col items-start justify-start rounded-2xl bg-white dark:bg-gray-95">
             {info.image && (
               <div className="w-full overflow-hidden rounded-t-lg pb-10">
                 <Image
@@ -38,10 +35,7 @@ const FeaturesSliderImg = ({ textContent, cardInfo }) => {
               </p>
               {Array.isArray(info.description) ? (
                 info.description.map((line) => (
-                  <p
-                    key={line}
-                    className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
-                  >
+                  <p key={line} className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                     {line}
                   </p>
                 ))

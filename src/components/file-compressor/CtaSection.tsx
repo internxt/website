@@ -28,9 +28,7 @@ const CtaSection = ({
       className={`overflow-hidden bg-primary bg-cover px-5 py-14 ${bgImage ? '' : CTA_BG}`}
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div
-          className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black dark:text-white-95`}
-        >
+        <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black dark:text-white-95`}>
           {image ? (
             <Image src={getImage(image)} alt="Internxt Logo" draggable={false} loading="lazy" width={262} height={32} />
           ) : (

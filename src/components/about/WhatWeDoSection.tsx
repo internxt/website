@@ -60,10 +60,7 @@ const WhatWeDoSection = ({ textContent }) => {
             <div className="flex flex-col space-y-5">
               {textContent.section1.description.map((text: string) => {
                 return (
-                  <p
-                    key={text}
-                    className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
-                  >
+                  <p key={text} className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                     {text}
                   </p>
                 );

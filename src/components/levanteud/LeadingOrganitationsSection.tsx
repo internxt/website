@@ -119,10 +119,7 @@ export default function LeadingOrganizationsSection({
                 </p>
                 <div className="flex flex-col gap-2">
                   {card.description.map((description) => (
-                    <p
-                      key={description}
-                      className="text-start text-base leading-tight lg:whitespace-pre-line text-gray-55 dark:text-green-120"
-                    >
+                    <p key={description} className="text-start text-base leading-tight lg:whitespace-pre-line text-gray-55 dark:text-green-120">
                       {description}
                     </p>
                   ))}
@@ -135,9 +132,7 @@ export default function LeadingOrganizationsSection({
               <button
                 onClick={scrollLeftHandler}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all ${
-                  !canScrollLeft ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary/10'
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary/10'}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -145,9 +140,7 @@ export default function LeadingOrganizationsSection({
               <button
                 onClick={scrollRightHandler}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all ${
-                  !canScrollRight ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary/10'
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : 'hover:bg-primary/10'}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

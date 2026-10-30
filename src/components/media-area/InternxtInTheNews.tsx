@@ -37,10 +37,7 @@ const InternxtInTheNews = ({ textContent }) => {
       <RevealY className="hidden w-full flex-row items-center justify-center space-x-12 xl:flex">
         <div className="relative flex h-full flex-1 flex-row items-center justify-end space-x-10 overflow-hidden">
           {beforeIndex.map((card, index) => (
-            <div
-              key={index}
-              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 opacity-40 drop-shadow-md"
-            >
+            <div key={index} className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 opacity-40 drop-shadow-md">
               <div className="flex flex-col items-start">
                 <Image
                   src={getImage(`/images/media-area/${card.img}`)}
@@ -67,10 +64,7 @@ const InternxtInTheNews = ({ textContent }) => {
         </div>
         <div className="flex flex-row items-center justify-center space-x-10">
           {current.map((card, index) => (
-            <div
-              key={index}
-              className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 shadow-subtle-hard"
-            >
+            <div key={index} className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 shadow-subtle-hard">
               <div className="flex flex-col items-start justify-center">
                 <Image
                   src={getImage(`/images/media-area/${card.img}`)}
@@ -97,10 +91,7 @@ const InternxtInTheNews = ({ textContent }) => {
             </button>
           </div>
           {afterIndex.map((card, index) => (
-            <div
-              key={index}
-              className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 opacity-40 drop-shadow-md"
-            >
+            <div key={index} className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white dark:bg-gray-95 p-10 opacity-40 drop-shadow-md">
               <div className="flex flex-col items-start justify-center">
                 <Image
                   src={getImage(`/images/media-area/${card.img}`)}

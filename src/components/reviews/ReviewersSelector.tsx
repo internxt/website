@@ -19,11 +19,7 @@ export const ReviewersSelector = ({
         onClick={() => {
           onPlanTypeChange('Users');
         }}
-        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-sm transition-colors duration-200 ease-out lg:text-lg ${
-          activeSwitchPlan === 'Users'
-            ? `${bgClass} font-semibold text-primary shadow-sm`
-            : `font-normal ${textClass} `
-        }`}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-sm transition-colors duration-200 ease-out lg:text-lg ${activeSwitchPlan === 'Users' ? `${bgClass} font-semibold text-primary shadow-sm` : `font-normal ${textClass} `}`}
       >
         {textContent.Trustpilot}
       </button>
@@ -33,11 +29,7 @@ export const ReviewersSelector = ({
         onClick={() => {
           onPlanTypeChange('Tech');
         }}
-        className={`m-1 flex w-1/2 flex-row items-center justify-center whitespace-nowrap rounded-lg px-6 text-center text-sm transition-colors  duration-200 ease-out lg:text-lg ${
-          activeSwitchPlan === 'Tech'
-            ? `${bgClass} font-semibold text-primary shadow-sm`
-            : `font-normal ${textClass}`
-        }`}
+        className={`m-1 flex w-1/2 flex-row items-center justify-center whitespace-nowrap rounded-lg px-6 text-center text-sm transition-colors  duration-200 ease-out lg:text-lg ${activeSwitchPlan === 'Tech' ? `${bgClass} font-semibold text-primary shadow-sm` : `font-normal ${textClass}`}`}
       >
         {textContent.Techexperts}
       </button>

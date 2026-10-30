@@ -111,10 +111,7 @@ export const SignUpForm = ({
   return (
     <form className="flex w-full flex-col gap-4" onSubmit={onSubmit}>
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="signUpFormEmail"
-          className="text-sm font-medium text-gray-80 dark:text-cool-gray-30"
-        >
+        <label htmlFor="signUpFormEmail" className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
           {textContent.fields.email.label}
         </label>
         <TextInput
@@ -129,10 +126,7 @@ export const SignUpForm = ({
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="signUpFormPassword"
-          className="text-sm font-medium text-gray-80 dark:text-cool-gray-30"
-        >
+        <label htmlFor="signUpFormPassword" className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
           {textContent.fields.password.label}
         </label>
         <div className="relative flex w-full">

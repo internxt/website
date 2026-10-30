@@ -104,15 +104,11 @@ export default function ThreeCardsWithImagesSection({
       className={`flex min-h-0 w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgColor ?? sectionBgClass} relative py-10 lg:gap-16 lg:py-20`}
     >
       <hr
-        className={`absolute left-8 right-8 top-0 border-t ${
-          darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'
-        } lg:left-32 lg:right-32`}
+        className={`absolute left-8 right-8 top-0 border-t ${darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'} lg:left-32 lg:right-32`}
       />
       {bottomSeparationBar && (
         <hr
-          className={`absolute bottom-0 left-8 right-8 border-t ${
-            darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'
-          } lg:left-32 lg:right-32`}
+          className={`absolute bottom-0 left-8 right-8 border-t ${darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'} lg:left-32 lg:right-32`}
         />
       )}
 
@@ -121,9 +117,7 @@ export default function ThreeCardsWithImagesSection({
           {textContent.title}
         </p>
         {textContent.description && (
-          <p
-            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:text-xl`}
-          >
+          <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:text-xl`}>
             {textContent.description}
           </p>
         )}
@@ -144,33 +138,18 @@ export default function ThreeCardsWithImagesSection({
             {textContent.cards.titles.map((title: string, index: number) => (
               <article
                 key={`${title}-${index}`}
-                className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                  cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')
-                }  lg:rounded-16 lg:p-8`}
+                className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')}  lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col gap-4">
                   <div className="relative h-[170px] w-full overflow-hidden rounded-lg">
-                    <Image
-                      src={getImage(textContent.cards.imagesMobile[index])}
-                      alt={title}
-                      fill
-                      className="object-cover"
-                    />
+                    <Image src={getImage(textContent.cards.imagesMobile[index])} alt={title} fill className="object-cover" />
                   </div>
 
-                  <p
-                    className={`flex items-center justify-start gap-4 text-lg font-medium ${
-                      darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-                    }`}
-                  >
+                  <p className={`flex items-center justify-start gap-4 text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
                     {hasCta && <span className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</span>}
                     {title}
                   </p>
-                  <p
-                    className={`text-sm font-normal leading-tight ${
-                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-                    } lg:text-base`}
-                  >
+                  <p className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:text-base`}>
                     {textContent.cards.descriptions[index]}
                   </p>
                 </div>
@@ -196,9 +175,7 @@ export default function ThreeCardsWithImagesSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               aria-label="Previous card"
-              className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft size={24} className="text-primary" />
             </button>
@@ -206,9 +183,7 @@ export default function ThreeCardsWithImagesSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               aria-label="Next card"
-              className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-12 w-12 items-center justify-center rounded-full border border-primary bg-transparent transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight size={24} className="text-primary" />
             </button>
@@ -220,20 +195,14 @@ export default function ThreeCardsWithImagesSection({
         {textContent.cards.titles.map((title: string, index: number) => (
           <article
             key={`${title}-${index}`}
-            className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
-              cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')
-            } p-8`}
+            className={`flex w-full flex-col justify-between gap-6 rounded-16 ${cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')} p-8`}
           >
             <div className="flex flex-col gap-6">
               <div className="relative h-[352px] w-full overflow-hidden rounded-2xl">
                 <Image src={getImage(textContent.cards.images[index])} alt={title} fill className="object-cover" />
               </div>
 
-              <p
-                className={`flex items-center justify-start gap-4 text-xl font-medium ${
-                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-                }`}
-              >
+              <p className={`flex items-center justify-start gap-4 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
                 {hasCta && <span className="text-2xl font-medium text-primary">{index + 1}</span>}
                 {title}
               </p>

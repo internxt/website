@@ -103,10 +103,7 @@ const SpecialOfferPage = ({
         }
       />
 
-      <MostSecureSection
-        textContent={langJson.MostSecureSection}
-        onRedirectButtonClicked={onButtonClicked}
-      />
+      <MostSecureSection textContent={langJson.MostSecureSection} onRedirectButtonClicked={onButtonClicked} />
 
       <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 

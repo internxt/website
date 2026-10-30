@@ -65,26 +65,18 @@ const FeaturesSlider = ({
           {cardInfo.map((info, index) => (
             <Fragment key={info.title}>
               <button
-                className={`flex ${
-                  cardIndex === index ? 'border-primary' : borderClass
-                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8 transition-all duration-500 ease-in-out`}
+                className={`flex ${cardIndex === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center border-r-4 p-2 pr-8 transition-all duration-500 ease-in-out`}
                 onClick={() => setCardIndex(index)}
               >
                 <info.icon className="mr-2 text-primary" size={32} />
                 <h3
-                  className={`text-left text-2xl font-medium transition-colors duration-500 ${
-                    cardIndex === index ? 'text-primary' : `${textClass} hover:text-primary`
-                  }`}
+                  className={`text-left text-2xl font-medium transition-colors duration-500 ${cardIndex === index ? 'text-primary' : `${textClass} hover:text-primary`}`}
                 >
                   {info.title}
                 </h3>
               </button>
               <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 transition-all duration-500">
-                <div
-                  className={`border-r-4 pr-8 transition-all duration-500 ${
-                    index === cardIndex ? 'border-primary' : borderClass
-                  }`}
-                />
+                <div className={`border-r-4 pr-8 transition-all duration-500 ${index === cardIndex ? 'border-primary' : borderClass}`} />
               </div>
             </Fragment>
           ))}
@@ -126,10 +118,7 @@ const FeaturesSlider = ({
               <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{info.title}</p>
               {Array.isArray(info.description) ? (
                 info.description.map((line) => (
-                  <p
-                    key={line}
-                    className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
-                  >
+                  <p key={line} className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                     {line}
                   </p>
                 ))

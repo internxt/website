@@ -113,10 +113,7 @@ export default function HeroSection({
       <div className="flex h-min w-[325px] flex-col justify-center gap-5 lg:h-[534px] lg:w-[536px] lg:justify-between">
         <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[536px] lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1"
-            >
+            <div key={index} className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1">
               <feature.icon className="h-5 w-5 text-primary lg:h-5 lg:w-5" />
               <p className="whitespace-nowrap text-[12px] font-medium leading-tight text-gray-80 dark:text-white">
                 {feature.text}

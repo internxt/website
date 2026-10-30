@@ -12,10 +12,7 @@ export const InternxtProtectsYourBusiness = ({
       </h2>
       <div className="flex w-[350px] flex-col items-center gap-8 lg:w-[1100px]">
         {textContent.description.map((text) => (
-          <p
-            className="text-base leading-tight text-gray-55 dark:text-green-120 first:font-semibold lg:w-[832px] lg:text-xl"
-            key={text}
-          >
+          <p className="text-base leading-tight text-gray-55 dark:text-green-120 first:font-semibold lg:w-[832px] lg:text-xl" key={text}>
             {text}
           </p>
         ))}

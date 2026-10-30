@@ -74,18 +74,9 @@ export default function HeroSection({
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[596px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1 ${
-                darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'
-              }`}
-            >
+            <div key={index} className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1 ${darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'}`}>
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p
-                className={`whitespace-nowrap text-sm font-medium leading-tight ${
-                  darkMode ? 'text-white' : 'text-gray-80 dark:text-white'
-                }`}
-              >
+              <p className={`whitespace-nowrap text-sm font-medium leading-tight ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
                 {feature.text}
               </p>
             </div>
@@ -95,25 +86,19 @@ export default function HeroSection({
         <div className="flex w-full flex-col justify-center gap-3 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
-              className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${
-                darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'
-              }`}
+              className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'}`}
             >
               <HighlightText text={textContent.title} className={darkMode ? 'text-white-95' : 'dark:text-white-95'} />
             </h1>
             <h2
-              className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${
-                darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
-              }`}
+              className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}
             >
               {parsePercentText(textContent.subtitle)}
             </h2>
           </div>
           {textContent.description && (
             <span
-              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
-                darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'
-              }`}
+              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'}`}
             >
               <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'}`}>
                 {parsePercentText(textContent.description)}
@@ -125,9 +110,7 @@ export default function HeroSection({
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p
-                  className={`text-left text-sm font-semibold lg:text-lg ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}
-                >
+                <p className={`text-left text-sm font-semibold lg:text-lg ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>
                   {feat}
                 </p>
               </div>

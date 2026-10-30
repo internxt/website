@@ -50,9 +50,7 @@ const renderCtaContent = (
     <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${themeClasses.title}`}>
       {parsePercentText(title)}
     </p>
-    <p
-      className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${themeClasses.description} ${descriptionWidth}`}
-    >
+    <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${themeClasses.description} ${descriptionWidth}`}>
       {parsePercentText(description)}
     </p>
   </div>

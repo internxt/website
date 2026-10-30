@@ -51,9 +51,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
       <div className="flex flex-col items-center ">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
           {isStartPage ? <p className="text-3xl font-semibold text-primary xl:text-4xl">{textContent.header}</p> : null}
-          <p
-            className={`${titleFontSize ?? 'text-4xl xl:text-5xl'} px-2 font-semibold text-gray-100 dark:text-white-95`}
-          >
+          <p className={`${titleFontSize ?? 'text-4xl xl:text-5xl'} px-2 font-semibold text-gray-100 dark:text-white-95`}>
             {textContent.title}
           </p>
           <p className="px-1 text-xl text-gray-80 dark:text-cool-gray-30">{textContent.subtitle}</p>

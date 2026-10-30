@@ -17,12 +17,7 @@ const WikiSection = ({ textContent }) => (
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
               {i % 2 === 0 && (
-                <NgoCard
-                  id={ngo.id}
-                  name={ngo.name}
-                  short={ngo.short}
-                  description={ngo.description}
-                />
+                <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />
               )}
             </React.Fragment>
           ))}
@@ -33,12 +28,7 @@ const WikiSection = ({ textContent }) => (
           {textContent.ngos.map((ngo, i) => (
             <React.Fragment key={ngo.id}>
               {i % 2 === 1 && (
-                <NgoCard
-                  id={ngo.id}
-                  name={ngo.name}
-                  short={ngo.short}
-                  description={ngo.description}
-                />
+                <NgoCard id={ngo.id} name={ngo.name} short={ngo.short} description={ngo.description} />
               )}
             </React.Fragment>
           ))}

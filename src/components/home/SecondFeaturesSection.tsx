@@ -83,9 +83,7 @@ const SecondFeaturesSection = ({
             <Fragment key={info.title}>
               <button
                 key={info.title}
-                className={`flex ${
-                  cardIndex === index ? 'border-primary' : borderClass
-                } cursor-pointer flex-row items-center gap-3 border-r-4 p-2 pr-8 text-start`}
+                className={`flex ${cardIndex === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center gap-3 border-r-4 p-2 pr-8 text-start`}
                 onClick={() => {
                   handleButtonClick(index);
                 }}

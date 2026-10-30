@@ -225,16 +225,12 @@ function CombinedSpecialOffer({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'
-              }`}
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'}`}
             >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
             <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px] dark:text-white dark:lg:w-[690px]'
-              }`}
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px] dark:text-white dark:lg:w-[690px]'}`}
             >
               {parsePercentText(langJson.ctaSection.description)}
             </p>
@@ -273,16 +269,12 @@ function CombinedSpecialOffer({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-40">
             <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'
-              }`}
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'}`}
             >
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
             <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full dark:text-white dark:lg:w-full'
-              }`}
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full dark:text-white dark:lg:w-full'}`}
             >
               {parsePercentText(langJson.ctaSection2.description)}
             </p>

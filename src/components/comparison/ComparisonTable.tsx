@@ -275,12 +275,7 @@ export const ComparisonTable = ({
                 <div className="h-[48px] lg:h-[128px]"></div>
 
                 {tableRows.map((row, index) => (
-                  <div
-                    key={`fixed-${row.id}`}
-                    className={`flex h-[50px] flex-col items-start justify-center border border-green-120 dark:border-gray-71 px-2 sm:px-3 lg:h-[64px] lg:px-6 ${index % 2 === 0 ? bgClass : bgClass2} ${
-                      index === 0 ? 'rounded-tl-2xl' : ''
-                    } ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}
-                  >
+                  <div key={`fixed-${row.id}`} className={`flex h-[50px] flex-col items-start justify-center border border-green-120 dark:border-gray-71 px-2 sm:px-3 lg:h-[64px] lg:px-6 ${index % 2 === 0 ? bgClass : bgClass2} ${index === 0 ? 'rounded-tl-2xl' : ''} ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}>
                     <p className="text-xs font-normal leading-tight text-gray-95 dark:text-white-95 lg:text-base">
                       {parseText(row.title)}
                     </p>
@@ -325,9 +320,7 @@ export const ComparisonTable = ({
                 {tableRows.map((row, index) => (
                   <div key={`scroll-${row.id}`} className="flex">
                     <div className="w-1/2">
-                      <div
-                        className={`flex h-[50px] flex-col items-center justify-center border border-green-120 dark:border-gray-71 px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass3 : bgClass4}`}
-                      >
+                      <div className={`flex h-[50px] flex-col items-center justify-center border border-green-120 dark:border-gray-71 px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass3 : bgClass4}`}>
                         <span className="text-center text-xs font-semibold text-gray-100 dark:text-white-95 lg:text-base">
                           {parseText(row.internxtFeature)}
                         </span>
@@ -335,11 +328,7 @@ export const ComparisonTable = ({
                     </div>
 
                     <div className="w-1/2">
-                      <div
-                        className={`flex h-[50px] flex-col items-center justify-center border border-green-120 dark:border-gray-71 px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass5 : bgClass2} ${
-                          index === tableRows.length - 1 ? 'rounded-br-2xl' : ''
-                        }`}
-                      >
+                      <div className={`flex h-[50px] flex-col items-center justify-center border border-green-120 dark:border-gray-71 px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass5 : bgClass2} ${index === tableRows.length - 1 ? 'rounded-br-2xl' : ''}`}>
                         <span className="text-center text-xs font-normal text-gray-100 dark:text-white-95 lg:text-base">
                           {parseText(row.competitorFeature)}
                         </span>

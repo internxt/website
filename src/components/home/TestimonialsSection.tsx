@@ -59,9 +59,7 @@ const TestimonialsSection = ({
   ];
 
   return (
-    <section
-      className={`overflow-hidden ${bgColor ?? ('bg-white dark:bg-gray-95')} lg:py:20 px-5 py-10 lg:px-16`}
-    >
+    <section className={`overflow-hidden ${bgColor ?? ('bg-white dark:bg-gray-95')} lg:py:20 px-5 py-10 lg:px-16`}>
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
@@ -78,12 +76,7 @@ const TestimonialsSection = ({
             <p className={`text-start text-xl ${textColor || textClass}`}>{testimonials[0].review}</p>
           </div>
           <div className="flex max-w-[355px] flex-col items-center justify-center gap-3  lg:h-[300px] lg:pb-20">
-            <Image
-              src={getImage('/logos/featured/ValenciaCF.webp')}
-              width={350}
-              height={260}
-              alt="Internxt x ValenciaCF"
-            />
+            <Image src={getImage('/logos/featured/ValenciaCF.webp')} width={350} height={260} alt="Internxt x ValenciaCF" />
           </div>
           <div className="flex max-w-[355px] flex-col gap-3  lg:h-[300px]">
             <AvatarAndText testimonial={testimonials[1]} textColor={nameColor} />

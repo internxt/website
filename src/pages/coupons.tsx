@@ -95,11 +95,7 @@ const HomePage = ({
       </Script>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-        percentOff={percentOff}
-        minimumPrice={minimumPrice}
-      />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
       <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
@@ -146,9 +142,7 @@ const HomePage = ({
         bgGradientColor="bg-[linear-gradient(0deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#082D66_0%,#1C1C1C_100%)]"
       />
 
-      <HorizontalScrollableSectionWithPhotosSection
-        textContent={textContent.WhatsIncludedSection}
-      />
+      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSectionV2}

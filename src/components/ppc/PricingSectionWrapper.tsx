@@ -113,9 +113,7 @@ const PricingHeader = ({
   alternativeHeader,
 }) => (
   <div
-    className={`flex flex-col items-center gap-4 text-center ${
-      isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'
-    } ${className}`}
+    className={`flex flex-col items-center gap-4 text-center ${isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'} ${className}`}
     id="priceTable"
   >
     <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
@@ -133,9 +131,7 @@ const PricingHeader = ({
 );
 
 const CouponCodeHeader = ({ darkMode = false, textContent, couponCode }) => (
-  <div
-    className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}
-  >
+  <div className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}>
     <CheckCircle className="text-green-1" weight="fill" />
     <p className={`text-sm font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
@@ -257,9 +253,7 @@ export const PricingSectionWrapper = ({
         {textContent.ctaCompare && (
           <a
             href="#comparisonTable"
-            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark ${
-              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'
-            } hover:text-primary-dark`}
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'} hover:text-primary-dark`}
           >
             {textContent.ctaCompare}
             <ArrowDown className="h-6 w-6 text-primary" />

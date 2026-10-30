@@ -44,9 +44,7 @@ export const MinimalNavbar = ({
   return (
     <div
       id="navbar"
-      className={`fixed flex h-20 w-full items-center justify-center bg-white backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${
-        scrolled ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'
-      } z-50 border-b border-black`}
+      className={`fixed flex h-20 w-full items-center justify-center bg-white backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${scrolled ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'} z-50 border-b border-black`}
     >
       <div className="relative flex w-full items-center justify-center">
         <Image

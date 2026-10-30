@@ -66,26 +66,15 @@ export default function FaqAccordion({
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
         <QuestionTag
-          className={`w-full text-lg font-medium ${
-            textColor || textClass
-          } ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
+          className={`w-full text-lg font-medium ${textColor || textClass} ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
         >
           {question}
         </QuestionTag>
-        <PlusCircle
-          size={32}
-          className={`${active && 'rotate-45'} ${
-            textColor ?? textClass
-          } duration-250 shrink-0 transition-transform ease-in-out`}
-        />
+        <PlusCircle size={32} className={`${active && 'rotate-45'} ${textColor ?? textClass} duration-250 shrink-0 transition-transform ease-in-out`} />
       </button>
 
       <span
-        className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
-          active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${
-          textColor || textClass2
-        } transition-all ease-in-out`}
+        className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'} duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${textColor || textClass2} transition-all ease-in-out`}
       >
         {(Array.isArray(answer) ? answer : [answer]).map((text) => {
           const hasPlaceholder = typeof text === 'string' && PLACEHOLDER_REGEX.test(text);

@@ -86,9 +86,7 @@ export const ChoosePlanSection = ({
   ];
 
   return (
-    <section
-      className={`relative flex w-full flex-col items-center overflow-hidden px-5 ${sectionDetails} dark:bg-gray-95`}
-    >
+    <section className={`relative flex w-full flex-col items-center overflow-hidden px-5 ${sectionDetails} dark:bg-gray-95`}>
       {topSeparationBar && (
         <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
       )}

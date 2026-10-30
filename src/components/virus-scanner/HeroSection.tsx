@@ -126,9 +126,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         <div className="flex w-full flex-row justify-center pt-6">
           <button
             type="button"
-            className={`group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 dark:border-gray-71 px-6 text-lg transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base ${
-              onlyOneVirus ? 'bg-primary text-white' : bgClass
-            }`}
+            className={`group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 dark:border-gray-71 px-6 text-lg transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base ${onlyOneVirus ? 'bg-primary text-white' : bgClass}`}
             onClick={() => {
               handleRestartScan();
             }}
@@ -164,9 +162,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       />
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
-          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${
-            !isScannig && isDragging ? 'pointer-events-none' : ''
-          }`}
+          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${!isScannig && isDragging ? 'pointer-events-none' : ''}`}
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >

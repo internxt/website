@@ -21,18 +21,12 @@ export default function HeroSection({
     >
       <div className="flex h-min w-[345px] flex-col justify-start gap-3 lg:gap-6 lg:w-[606px] lg:justify-between">
         <h1
-          className={`text-balance text-4xl font-semibold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-          } lg:max-w-[600px] lg:text-5xl`}
+          className={`text-balance text-4xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:max-w-[600px] lg:text-5xl`}
         >
           <HighlightText text={textContent.title} />
         </h1>
 
-        <p
-          className={`font-regular ${
-            darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-          } text-lg leading-tight lg:text-xl`}
-          >
+        <p className={`font-regular ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} text-lg leading-tight lg:text-xl`}>
             {textContent.description}
         </p>
 
@@ -63,9 +57,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div
-        className={'h-[500px] w-[562px] hidden justify-center lg:flex'}
-      >
+      <div className={'h-[500px] w-[562px] hidden justify-center lg:flex'}>
         <Image
           src={getImage(`/images/influencers/internxt-private-cloud.webp`)}
           alt="Internxt Partners HeroSection Image"

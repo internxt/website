@@ -155,12 +155,7 @@ export default function HeroSection({
 
         {isPrivacyTutor && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image
-              src={getImage('/images/partnerships/PrivacyTutor.webp')}
-              width={140}
-              height={16}
-              alt="Privacy Tutor logo"
-            />
+            <Image src={getImage('/images/partnerships/PrivacyTutor.webp')} width={140} height={16} alt="Privacy Tutor logo" />
             <X size={16} />
             <Image
               loading="lazy"
@@ -175,12 +170,7 @@ export default function HeroSection({
 
         {isWpcdrive && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image
-              src={getImage('/images/partnerships/wpcoupons-logo.webp')}
-              width={140}
-              height={16}
-              alt="WPC drive coupon logo"
-            />
+            <Image src={getImage('/images/partnerships/wpcoupons-logo.webp')} width={140} height={16} alt="WPC drive coupon logo" />
             <X size={16} />
             <Image
               loading="lazy"
@@ -195,12 +185,7 @@ export default function HeroSection({
 
         {isBpdrive && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image
-              src={getImage('/images/influencers/bloggerspassoin.webp')}
-              width={140}
-              height={16}
-              alt="BP drive coupon logo"
-            />
+            <Image src={getImage('/images/influencers/bloggerspassoin.webp')} width={140} height={16} alt="BP drive coupon logo" />
             <X size={16} />
             <Image
               loading="lazy"
@@ -217,15 +202,11 @@ export default function HeroSection({
           {products.map((feature, index) => (
             <div
               key={index}
-              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
-                darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'
-              }  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
+              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'}  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p
-                className={`whitespace-nowrap text-sm font-medium leading-tight lg:pt-[2px] ${
-                  darkMode ? 'text-white' : 'text-gray-80 dark:text-white'
-                }`}
+                className={`whitespace-nowrap text-sm font-medium leading-tight lg:pt-[2px] ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}
               >
                 {feature.text}
               </p>
@@ -245,17 +226,13 @@ export default function HeroSection({
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && !isUltimatePlan && (
               <span
-                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${
-                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'
-                }`}
+                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'}`}
               >
                 <span>{parsePercentText(textContent.subtitle)}</span>
               </span>
             )}
             <p
-              className={`font-regular ${
-                darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
-              } text-lg leading-tight lg:text-xl`}
+              className={`font-regular ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} text-lg leading-tight lg:text-xl`}
             >
               {parsePercentText(textContent.description)}
             </p>
@@ -274,9 +251,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div
-        className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}
-      >
+      <div className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}>
         <Image
           src={getImage(`/images/influencers/${heroImage}.webp`)}
           alt="Internxt Partners HeroSection Image"

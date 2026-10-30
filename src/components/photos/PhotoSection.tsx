@@ -18,10 +18,7 @@ const PhotoSection = ({ textContent }: PhotoSectionProps): JSX.Element => {
       <div className="flex flex-col items-center gap-8">
         <div className="flex w-full flex-col gap-4 lg:w-[63%]">
           {textContent.description.map((desc) => (
-            <p
-              key={desc.slice(0, 20)}
-              className="text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-lg"
-            >
+            <p key={desc.slice(0, 20)} className="text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-lg">
               {desc}
             </p>
           ))}

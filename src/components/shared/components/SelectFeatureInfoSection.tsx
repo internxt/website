@@ -55,18 +55,12 @@ const SelectFeatureInfoSection = ({
         )}
       </div>
       <div className="hidden h-full flex-row justify-center gap-20 lg:flex">
-        <div
-          className={`flex h-full w-full border-r-4 border-gray-10 dark:border-gray-71 ${
-            !cards && 'max-w-[288px]'
-          } flex-col gap-10`}
-        >
+        <div className={`flex h-full w-full border-r-4 border-gray-10 dark:border-gray-71 ${!cards && 'max-w-[288px]'} flex-col gap-10`}>
           {cards.map((info, index) => (
             <div key={info.title} className="flex w-full translate-x-1 flex-col">
               <button
                 key={info.title}
-                className={`flex ${
-                  cardIndex === index ? 'border-primary' : borderClass
-                } cursor-pointer flex-row items-center gap-3 border-r-4 py-3 pr-8 text-start`}
+                className={`flex ${cardIndex === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center gap-3 border-r-4 py-3 pr-8 text-start`}
                 onClick={() => {
                   handleButtonClick(index);
                 }}
@@ -106,10 +100,7 @@ const SelectFeatureInfoSection = ({
       {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
         {cards.map((info) => (
-          <div
-            key={info.title}
-            className={`flex flex-col items-start justify-start rounded-2xl ${mobileBg} p-8 sm:p-10 md:max-w-[488px]`}
-          >
+          <div key={info.title} className={`flex flex-col items-start justify-start rounded-2xl ${mobileBg} p-8 sm:p-10 md:max-w-[488px]`}>
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
               <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">

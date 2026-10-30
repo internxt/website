@@ -13,9 +13,7 @@ export default function PasswordInput(props: Readonly<TextInputProps>) {
           e.preventDefault();
           setShowPassword(!showPassword);
         }}
-        className={`absolute right-0 top-0 flex h-11 w-11 flex-col items-center justify-center ${
-          props.disabled ? 'text-gray-30' : textClass
-        } cursor-pointer`}
+        className={`absolute right-0 top-0 flex h-11 w-11 flex-col items-center justify-center ${props.disabled ? 'text-gray-30' : textClass} cursor-pointer`}
         onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}
       >
         {showPassword ? <Eye className="h-6 w-6" /> : <EyeSlash className="h-6 w-6" />}

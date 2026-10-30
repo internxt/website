@@ -143,18 +143,10 @@ const DealsTemplate = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
-              } lg:text-4xl`}
-            >
+            <p className={`text-2xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-4xl`}>
               {parseDynamicText(textContent.CtaSection.title, { percentage: percentOff, discount: percentOff })}
             </p>
-            <p
-              className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-              } lg:w-[633px] lg:text-center lg:text-xl`}
-            >
+            <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:w-[633px] lg:text-center lg:text-xl`}>
               {parseDynamicText(textContent.CtaSection.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
@@ -177,18 +169,10 @@ const DealsTemplate = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
-              } lg:text-4xl`}
-            >
+            <p className={`text-2xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-4xl`}>
               {parseDynamicText(textContent.CtaSectionV2.title, { percentage: percentOff, discount: percentOff })}
             </p>
-            <p
-              className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-              } lg:w-[633px] lg:text-center lg:text-xl`}
-            >
+            <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:w-[633px] lg:text-center lg:text-xl`}>
               {parseDynamicText(textContent.CtaSectionV2.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>

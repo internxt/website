@@ -78,11 +78,7 @@ const Sustainability = ({
         }
         SecondComponent={
           <div className="flex flex-col items-center">
-            <CardGroup
-              cards={cardsForFeatureSection}
-              backgroundColorCard="bg-gray-1 dark:bg-gray-105"
-              iconColor="text-green"
-            />
+            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-gray-1 dark:bg-gray-105" iconColor="text-green" />
           </div>
         }
         backgroundColor="bg-white dark:bg-gray-95"

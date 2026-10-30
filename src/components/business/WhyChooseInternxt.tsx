@@ -99,10 +99,7 @@ export const WhyChooseInternxtForBusiness = ({
         </div>
 
         {/* Cards */}
-        <CardGroup
-          cards={cards}
-          backgroundColorCard="bg-white dark:bg-gray-95"
-        />
+        <CardGroup cards={cards} backgroundColorCard="bg-white dark:bg-gray-95" />
       </div>
     </section>
   );

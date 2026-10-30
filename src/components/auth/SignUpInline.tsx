@@ -95,9 +95,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
         <div className="w-full">
           <PrimaryButton
             id="signupInlineSubmit"
-            className={`h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark ${
-              props.isBanner ? 'sm:text-sm' : 'sm:text-base'
-            }`}
+            className={`h-auto w-full px-0 py-2.5 text-lg shadow-2xl shadow-primary/25 hover:bg-primary-dark ${props.isBanner ? 'sm:text-sm' : 'sm:text-base'}`}
             type="submit"
             label={
               <div className="flex flex-row items-center space-x-1.5">
@@ -111,12 +109,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
         </div>
         <span className={`w-full text-sm ${darkMode ? 'text-white' : 'text-gray-50 dark:text-white'} sm:text-left`}>
           <span>{props.textContent.disclaimer.text}</span>{' '}
-          <a
-            href="/legal"
-            className={`underline ${
-              darkMode ? 'hover:text-green-120 active:text-cool-gray-30' : 'hover:text-gray-60 active:text-gray-80 dark:hover:text-green-120 dark:active:text-cool-gray-30'
-            }`}
-          >
+          <a href="/legal" className={`underline ${darkMode ? 'hover:text-green-120 active:text-cool-gray-30' : 'hover:text-gray-60 active:text-gray-80 dark:hover:text-green-120 dark:active:text-cool-gray-30'}`}>
             {props.textContent.disclaimer.link}
           </a>
           <span>{'.'}</span>

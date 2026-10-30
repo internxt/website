@@ -17,12 +17,7 @@ export const FeaturesSectionForOnePlan = ({ textContent }) => {
             {textContent.title}
           </h2>
           {textContent.description.map((text, index) => (
-            <p
-              key={text}
-              className={`max-w-[775px] text-xl text-gray-80 dark:text-cool-gray-30 ${
-                index === 0 ? 'font-bold' : ''
-              }`}
-            >
+            <p key={text} className={`max-w-[775px] text-xl text-gray-80 dark:text-cool-gray-30 ${index === 0 ? 'font-bold' : ''}`}>
               {text}
             </p>
           ))}

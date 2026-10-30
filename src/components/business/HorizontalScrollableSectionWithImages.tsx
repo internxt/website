@@ -131,9 +131,7 @@ export default function HorizontalScrollableSectionWithImages({
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
 
-      <div
-        className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-center lg:gap-20`}
-      >
+      <div className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-center lg:gap-20`}>
         <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
           <p className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}

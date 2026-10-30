@@ -69,18 +69,10 @@ export default function HorizontalScrollableSection({
     >
       <div className="flex h-min w-[345px] flex-col justify-start gap-8 lg:w-[850px] lg:flex-row">
         <div className="flex h-min flex-col justify-center gap-6 ">
-          <p
-            className={`text-30 font-bold leading-tight lg:whitespace-pre-line ${
-              darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
-            } lg:text-3xl`}
-          >
+          <p className={`text-30 font-bold leading-tight lg:whitespace-pre-line ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-3xl`}>
             {textContent.title}
           </p>
-          <p
-            className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-            } lg:whitespace-pre-line lg:text-xl`}
-          >
+          <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:whitespace-pre-line lg:text-xl`}>
             {textContent.description}
           </p>
         </div>
@@ -115,19 +107,11 @@ export default function HorizontalScrollableSection({
           >
             {textContent.cards.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div
-                  className={`flex h-full w-[345px] flex-col gap-4 rounded-16 ${
-                    darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'
-                  } p-6 lg:w-[352px]`}
-                >
+                <div className={`flex h-full w-[345px] flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} p-6 lg:w-[352px]`}>
                   <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>
                     {title}
                   </p>
-                  <p
-                    className={`${
-                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-                    } flex-1 text-sm font-normal leading-tight  lg:text-base`}
-                  >
+                  <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} flex-1 text-sm font-normal leading-tight  lg:text-base`}>
                     {textContent.cards.description[index]}
                   </p>
                 </div>
@@ -140,26 +124,14 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
-              } transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
-              } transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

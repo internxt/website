@@ -61,9 +61,7 @@ export default function ReviewSection({
   const sectionBg = bgColor ?? (darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95');
   const dividerColor = darkMode ? 'bg-gray-55' : 'bg-neutral-35 dark:bg-gray-55';
   const dividerPosition = reverseDivider ? 'lg:top-0' : 'lg:bottom-0';
-  const buttonBase = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-all ${
-    darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
-  }`;
+  const buttonBase = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-all ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'}`;
 
   const getButtonClass = (disabled: boolean) => {
     if (disabled) return `${buttonBase} cursor-not-allowed opacity-30`;
@@ -71,9 +69,7 @@ export default function ReviewSection({
     return `${buttonBase} cursor-pointer ${hover}`;
   };
 
-  const quoteClass = `text-sm font-medium italic leading-[1.2] ${
-    darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
-  } text-center whitespace-pre-line`;
+  const quoteClass = `text-sm font-medium italic leading-[1.2] ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-center whitespace-pre-line`;
   const logoClass = darkMode ? 'brightness-0 invert opacity-60' : 'dark:brightness-0 dark:invert dark:opacity-60';
 
   return (
@@ -126,10 +122,7 @@ export default function ReviewSection({
 
       <div className="hidden w-full flex-row items-center justify-between gap-4 px-10 lg:flex xl:px-32 3xl:px-80">
         {brands.map((brand) => (
-          <div
-            key={brand.key}
-            className="group relative flex h-20 w-full flex-1 cursor-default items-center justify-center"
-          >
+          <div key={brand.key} className="group relative flex h-20 w-full flex-1 cursor-default items-center justify-center">
             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
               <Image
                 src={getImage(brand.logo)}
@@ -140,9 +133,7 @@ export default function ReviewSection({
                 className={logoClass}
               />
             </div>
-            <p
-              className={`${quoteClass} absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-            >
+            <p className={`${quoteClass} absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100`}>
               {textContent[brand.key]}
             </p>
           </div>

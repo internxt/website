@@ -45,10 +45,7 @@ export const CardsGridSection = ({
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
           {textContent.cards.titles.map((title, index) => (
-            <div
-              key={title}
-              className={`flex flex-col gap-4 rounded-16 border border-gray-10 dark:border-gray-71 ${cardColor} p-6 lg:p-8`}
-            >
+            <div key={title} className={`flex flex-col gap-4 rounded-16 border border-gray-10 dark:border-gray-71 ${cardColor} p-6 lg:p-8`}>
               <CardTitleTag className="text-lg font-medium text-gray-95 dark:text-white-95 lg:text-xl">
                 {title}
               </CardTitleTag>

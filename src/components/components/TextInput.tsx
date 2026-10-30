@@ -120,9 +120,7 @@ const TextInput = (props: TextInputProps) => {
       disabled={props.disabled}
       readOnly={props.readonly || props.autoCompleteOnFocus}
       autoComplete={props.autoComplete ?? 'off'}
-      className={`h-11 w-full appearance-none rounded-lg  border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-3 ${props.isPasswordInput ? 'pr-12' : ''} text-lg text-gray-100 dark:text-white-95 shadow-sm transition duration-100 focus:outline-none ${
-        props.passwordError ? 'border-2 focus:border-red' : 'border focus:border-primary'
-      } focus:shadow-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 dark:disabled:border-gray-71 ${props.disabledText ?? 'disabled:text-gray-30'} md:text-base ${props.className ?? ''}`}
+      className={`h-11 w-full appearance-none rounded-lg  border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-3 ${props.isPasswordInput ? 'pr-12' : ''} text-lg text-gray-100 dark:text-white-95 shadow-sm transition duration-100 focus:outline-none ${props.passwordError ? 'border-2 focus:border-red' : 'border focus:border-primary'} focus:shadow-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 dark:disabled:border-gray-71 ${props.disabledText ?? 'disabled:text-gray-30'} md:text-base ${props.className ?? ''}`}
       onChange={props.onChange}
       onKeyPress={() => props.onChangeText}
       onFocus={(e) => {

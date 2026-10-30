@@ -141,9 +141,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
             <button
               onClick={scrollLeft}
               disabled={!scrollState.canGoLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !scrollState.canGoLeft ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!scrollState.canGoLeft ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'}`}
               aria-label="Anterior"
             >
               <CaretLeft className="text-primary" size={24} />
@@ -151,9 +149,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
             <button
               onClick={scrollRight}
               disabled={!scrollState.canGoRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !scrollState.canGoRight ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!scrollState.canGoRight ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'}`}
               aria-label="Siguiente"
             >
               <CaretRight className="text-primary" size={24} />

@@ -73,18 +73,10 @@ export default function PriceCard({
   ];
 
   return (
-    <div
-      className={`${
-        popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${ringClass}`
-      } m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
-    >
+    <div className={`${popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${ringClass}`} m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}>
       <div className="info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6">
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div
-            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${
-              !popular ? 'invisible' : ''
-            }`}
-          >
+          <div className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${!popular ? 'invisible' : ''}`}>
             <Fire size={28} className="text-white" />
             <p className="font-semibold text-white">{contentText.mostPopular}</p>
           </div>
@@ -92,29 +84,17 @@ export default function PriceCard({
             <p className="text-lg font-medium text-primary">{storage}</p>
           </div>
         </div>
-        <div
-          className={`planPrice flex flex-col items-center justify-center ${
-            priceBeforeDiscount ? 'space-y-1' : 'space-y-4'
-          }`}
-        >
+        <div className={`planPrice flex flex-col items-center justify-center ${priceBeforeDiscount ? 'space-y-1' : 'space-y-4'}`}>
           <div className="priceBreakdown flex flex-row items-end space-x-px text-neutral-700 dark:text-cool-gray-30">
             <p className="flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95">
               <span>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
           </div>
-          <span
-            className={`perUser ${
-              planType.toLowerCase() === 'individual' ? 'hidden' : ''
-            } text-sm font-medium text-gray-50`}
-          >
+          <span className={`perUser ${planType.toLowerCase() === 'individual' ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
             {contentText.perUser}
           </span>
-          <p
-            className={`${
-              priceBeforeDiscount ? 'flex' : 'hidden'
-            } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
-          >
+          <p className={`${priceBeforeDiscount ? 'flex' : 'hidden'} flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}>
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">{priceBeforeDiscount}</span>
           </p>
@@ -131,11 +111,7 @@ export default function PriceCard({
         <button
           id={`planButton${storage}`}
           onClick={() => onButtonClicked(cta[1], coupon)}
-          className={`flex w-full flex-col items-center rounded-lg border ${
-            popular
-              ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : `border-primary text-primary ${hoverClass}`
-          } whitespace-nowrap px-20 py-2.5 font-medium`}
+          className={`flex w-full flex-col items-center rounded-lg border ${popular ? 'border-primary bg-primary text-white hover:bg-primary-dark' : `border-primary text-primary ${hoverClass}`} whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p className="">{contentText.cta}</p>
         </button>

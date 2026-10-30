@@ -60,9 +60,7 @@ const FeaturesSection = ({ textContent }) => {
           {textContent.features.map((info, index) => (
             <Fragment key={info.title}>
               <button
-                className={`flex ${
-                  cardIndex === index ? 'border-primary' : borderClass
-                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
+                className={`flex ${cardIndex === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);
                 }}

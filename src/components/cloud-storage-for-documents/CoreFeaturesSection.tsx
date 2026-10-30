@@ -81,17 +81,10 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                 {index + 1}
                 <h3 className="text-xl font-medium text-gray-100 dark:text-white-95">{title}</h3>
               </span>
-              <div
-                className={`grid transition-all duration-300 ${
-                  activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
+              <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="flex flex-col overflow-hidden">
                   {textContent.accordionCards.descriptions[index].contents.map((paragraph) => (
-                    <p
-                      key={paragraph.slice(0, 30)}
-                      className="text:sm font-normal leading-tight lg:text-base text-gray-55 dark:text-green-120"
-                    >
+                    <p key={paragraph.slice(0, 30)} className="text:sm font-normal leading-tight lg:text-base text-gray-55 dark:text-green-120">
                       {paragraph}
                     </p>
                   ))}

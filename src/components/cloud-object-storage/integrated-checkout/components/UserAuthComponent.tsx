@@ -22,12 +22,7 @@ export const UserAuthComponent = ({
         1. {textContent.title.signUp}
       </p>
       <div className="flex flex-col space-y-4 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
-        <InputsComponent
-          errors={errors}
-          authError={authError}
-          textContent={textContent}
-          register={register}
-        />
+        <InputsComponent errors={errors} authError={authError} textContent={textContent} register={register} />
       </div>
     </div>
   );

@@ -272,9 +272,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
       />
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
-          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${
-            !isProcessing && isDragging ? 'pointer-events-none' : ''
-          }`}
+          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${!isProcessing && isDragging ? 'pointer-events-none' : ''}`}
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >

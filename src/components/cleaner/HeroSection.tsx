@@ -11,9 +11,7 @@ const HeroSection = ({ textContent }) => (
     flex w-full flex-row justify-center lg:h-[695px] bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
   >
     <HeroSafeArea>
-      <div
-        className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-[460px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
-      >
+      <div className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-[460px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}>
         <div className="z-10 flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
           <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
             <div className="flex h-[160px] w-full flex-col justify-between  lg:h-[190px]">

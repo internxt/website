@@ -150,10 +150,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
               </h3>
               <div className="space-y-4">
                 {description.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
-                  >
+                  <p key={paragraph} className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                     {paragraph}
                   </p>
                 ))}
@@ -167,18 +164,14 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

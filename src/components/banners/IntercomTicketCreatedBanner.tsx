@@ -3,9 +3,7 @@ import { X } from '@phosphor-icons/react';
 const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) => {
   return (
     <section
-      className={`${
-        bannerVisible ? 'flex' : 'hidden'
-      }  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50`}
+      className={`${bannerVisible ? 'flex' : 'hidden'}  fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50`}
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
@@ -22,10 +20,7 @@ const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) =>
             </div>
             <div className="flex flex-col items-center justify-center space-y-6">
               <p className="text-xl font-medium text-white">{textContent.description}</p>
-              <button
-                className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-base font-medium text-black dark:text-white-95 transition duration-100 focus:outline-none active:bg-white active:text-black dark:active:bg-gray-95 dark:active:text-white-95 sm:text-lg lg:w-max"
-                onClick={onClose}
-              >
+              <button className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-base font-medium text-black dark:text-white-95 transition duration-100 focus:outline-none active:bg-white active:text-black dark:active:bg-gray-95 dark:active:text-white-95 sm:text-lg lg:w-max" onClick={onClose}>
                 {textContent.cta}
               </button>
             </div>

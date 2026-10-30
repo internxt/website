@@ -99,16 +99,10 @@ export default function HorizontalScrollableSection({
   const headerBackground = 'bg-[linear-gradient(180deg,#F4F8FF_63.1%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_63.1%,#1C1C1C_100%)]';
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${
-        header ? `gap-8 lg:gap-16 ${headerBackground}` : ` gap-6 ${bgClass} lg:gap-12`
-      } lg:py-20 `}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${header ? `gap-8 lg:gap-16 ${headerBackground}` : ` gap-6 ${bgClass} lg:gap-12`} lg:py-20 `}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
-      <p
-        className={`whitespace-pre-line ${
-          header ? 'text-start lg:text-center' : 'text-start lg:pl-20'
-        } w-[345px] text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[853px] lg:text-5xl`}
-      >
+      <p className={`whitespace-pre-line ${header ? 'text-start lg:text-center' : 'text-start lg:pl-20'} w-[345px] text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[853px] lg:text-5xl`}>
         {textContent.title}
       </p>
       <div className="flex w-[345px] flex-col items-center justify-between gap-8 lg:w-[749px] lg:flex-row">
@@ -176,9 +170,7 @@ export default function HorizontalScrollableSection({
           }}
         >
           <div
-            className={`flex gap-4 lg:gap-6 ${
-              header ? 'lg:pl-48 lg:pr-48 2xl:pl-[500px]' : 'lg:pl-48 lg:pr-48  2xl:pl-[520px]'
-            } 1.5xl:pl-64 1.5xl:pr-64  2xl:pr-[520px]`}
+            className={`flex gap-4 lg:gap-6 ${header ? 'lg:pl-48 lg:pr-48 2xl:pl-[500px]' : 'lg:pl-48 lg:pr-48  2xl:pl-[520px]'} 1.5xl:pl-64 1.5xl:pr-64  2xl:pr-[520px]`}
             style={{
               width: 'max-content',
               alignItems: 'stretch',
@@ -204,22 +196,14 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
               disabled={currentIndex >= maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex >= maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${hoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

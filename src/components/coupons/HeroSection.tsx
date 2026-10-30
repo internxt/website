@@ -92,10 +92,7 @@ export default function HeroSection({
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[460px] lg:w-[736px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between w-m">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
-            >
+            <div key={index} className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1">
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white">
                 {feature.text}
@@ -145,10 +142,7 @@ export default function HeroSection({
             </Link>
 
             <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 py-5 text-primary shadow-soft lg:w-[177px]">
-              <Countdown
-                textFont="font-medium"
-                textHeight="text-base text-gray-100 dark:text-white-95"
-              />
+              <Countdown textFont="font-medium" textHeight="text-base text-gray-100 dark:text-white-95" />
             </div>
           </div>
         </div>

@@ -33,10 +33,7 @@ export const ImageAndCards = ({ textContent, image }: ImageAndCardsProps) => {
         </div>
         <div className="flex flex-1 flex-col justify-between gap-8">
           {textContent.features.titles.map((title: string, index: number) => (
-            <div
-              key={title}
-              className="flex w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
-            >
+            <div key={title} className="flex w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8">
               <h3 className="text-xl font-medium leading-tight text-gray-100 dark:text-white-95">
                 {title}
               </h3>

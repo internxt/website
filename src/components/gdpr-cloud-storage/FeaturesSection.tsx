@@ -51,9 +51,7 @@ const FeaturesSection = ({ textContent }) => {
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <button
-                className={`flex ${
-                  cardIndex === index ? 'border-primary' : borderClass
-                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
+                className={`flex ${cardIndex === index ? 'border-primary' : borderClass} cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);
                 }}
@@ -104,10 +102,7 @@ const FeaturesSection = ({ textContent }) => {
               {/* Render the description as an array of paragraphs */}
               {Array.isArray(info.description) ? (
                 info.description.map((line) => (
-                  <p
-                    key={line}
-                    className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
-                  >
+                  <p key={line} className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                     {line}
                   </p>
                 ))

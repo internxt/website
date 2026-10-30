@@ -32,10 +32,7 @@ export const HowItWorksSection = ({ textContent }) => {
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-8">
           {cards.map((card) => (
-            <div
-              className="flex w-full flex-col space-y-6 rounded-2xl bg-white dark:bg-gray-95 p-10 sm:max-w-[350px]"
-              key={card.title}
-            >
+            <div className="flex w-full flex-col space-y-6 rounded-2xl bg-white dark:bg-gray-95 p-10 sm:max-w-[350px]" key={card.title}>
               <card.icon size={32} className="text-primary" />
               <h3 className="text-2xl font-medium text-gray-100 dark:text-white-95">{card.title}</h3>
               <p className="text-lg text-gray-80 dark:text-cool-gray-30">{card.description}</p>
