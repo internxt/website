@@ -43,7 +43,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
             <p className="pb-4 pt-4 text-xl font-normal">{textContent.description}</p>
             <Link
               href={'#priceTable'}
-              className={`z-10 flex w-max justify-center rounded-lg bg-white px-4 py-3 text-xl font-medium text-gray-100 hover:bg-white/95`}
+              className="z-10 flex w-max justify-center rounded-lg bg-white dark:bg-gray-95 px-4 py-3 text-xl font-medium text-gray-100 dark:text-white-95 hover:bg-white/95"
             >
               {textContent.cta}
             </Link>

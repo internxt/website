@@ -191,7 +191,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
               </defs>
             </svg>
           </div>
-          <p className="text-2xl font-semibold">In progress</p>
+          <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">In progress</p>
         </div>
       );
     }
@@ -202,13 +202,15 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
           <div className="flex flex-col items-center space-y-4">
             <CheckCircle weight="fill" size={48} className="text-green-1" />
             <div className="flex flex-col space-y-2">
-              <p className="text-2xl font-semibold">{textContent.table.metadataRemoved}</p>
-              <p className="text-lg text-cool-gray-60">{textContent.table.automaticDownload}</p>
+              <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">{textContent.table.metadataRemoved}</p>
+              <p className="text-lg text-cool-gray-60 dark:text-cool-gray-30">
+                {textContent.table.automaticDownload}
+              </p>
             </div>
             <div className="flex flex-row items-center space-x-4">
               <button
                 type="button"
-                className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-6 text-lg font-medium text-black dark:text-white-95 transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                 onClick={handleCancel}
               >
                 {textContent.cancel}
@@ -230,7 +232,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
       return (
         <div className="flex h-full w-full flex-col items-center justify-center space-y-6 bg-opacity-3 px-5 py-5">
           <div className="flex flex-col items-center space-y-4">
-            <p className="text-2xl font-semibold">File uploaded successfully</p>
+            <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">File uploaded successfully</p>
             <button
               type="button"
               className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
@@ -248,7 +250,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
 
   return (
     <section
-      className="relative flex flex-row items-center justify-center pb-20 pt-32"
+      className="relative flex flex-row items-center justify-center pb-20 pt-32 dark:bg-gray-95"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -270,17 +272,19 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
       />
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
-          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${
-            !isProcessing && isDragging ? 'pointer-events-none' : ''
-          }`}
+          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${!isProcessing && isDragging ? 'pointer-events-none' : ''}`}
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >
           <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between">
             <div className="flex w-full flex-col items-center space-y-5 text-center">
-              <h1 className="text-3xl font-semibold text-cool-gray-100 md:text-6xl">{textContent.title}</h1>
-              <p className="text-xl font-normal text-cool-gray-80 md:text-xl">{textContent.subtitle2}</p>
-              <p className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80">
+              <h1 className="text-3xl font-semibold text-cool-gray-100 dark:text-white-95 md:text-6xl">
+                {textContent.title}
+              </h1>
+              <p className="text-xl font-normal text-cool-gray-80 dark:text-cool-gray-30 md:text-xl">
+                {textContent.subtitle2}
+              </p>
+              <p className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80 dark:text-cool-gray-30">
                 <CheckCircle size={24} weight="fill" className="text-green-1" />
                 {textContent.secure}
               </p>
@@ -300,8 +304,12 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           <div></div>
                         )}
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file?.name}</p>
-                          <p className="text-sm text-cool-gray-60">{file?.type}</p>
+                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30">
+                            {file?.name}
+                          </p>
+                          <p className="text-sm text-cool-gray-60 dark:text-cool-gray-30">
+                            {file?.type}
+                          </p>
                         </div>
                       </div>
 
@@ -322,8 +330,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           >
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center space-y-2">
-                                <p className="text-2xl font-medium">{textContent.error.title}</p>
-                                <p className="text-xl text-cool-gray-60">File type not supported</p>
+                                <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
+                                <p className="text-xl text-cool-gray-60 dark:text-cool-gray-30">
+                                  File type not supported
+                                </p>
                               </div>
                               <button
                                 type="button"
@@ -350,8 +360,10 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           >
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center">
-                                <p className="text-2xl font-medium">{textContent.maxFileSize.title}</p>
-                                <p className="text-xl text-cool-gray-60">{textContent.maxFileSize.description}</p>
+                                <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.maxFileSize.title}</p>
+                                <p className="text-xl text-cool-gray-60 dark:text-cool-gray-30">
+                                  {textContent.maxFileSize.description}
+                                </p>
                               </div>
                               <button
                                 type="button"
@@ -378,15 +390,15 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           >
                             <div className="flex w-full flex-col items-center space-y-6">
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
-                                <p className="px-4 text-center text-2xl font-medium">{textContent.fileSelected}</p>
-                                <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 lg:w-auto lg:max-w-md xl:max-w-xl">
+                                <p className="px-4 text-center text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.fileSelected}</p>
+                                <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl">
                                   {file?.name}
                                 </p>
                               </div>
                               <div className="flex flex-row items-center justify-center space-x-4">
                                 <button
                                   type="button"
-                                  className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                                  className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-6 text-lg font-medium text-black dark:text-white-95 transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                                   onClick={() => {
                                     handleCancelProcess();
                                   }}
@@ -428,7 +440,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           maxWidth: "100%",
                           height: "auto"
                         }} />
-                      <p className="pt-4 text-2xl font-semibold">{textContent.dropHere}</p>
+                      <p className="pt-4 text-2xl font-semibold text-gray-100 dark:text-white-95">{textContent.dropHere}</p>
                     </div>
                   </>
                 ) : (
@@ -448,9 +460,11 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                         </div>
                         <div className="flex max-w-[255px] flex-col items-center space-y-4 text-center">
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
-                            <p className="text-sm font-medium text-gray-80">{textContent.maxFileSize.description}</p>
+                            <p className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
+                              {textContent.maxFileSize.description}
+                            </p>
                           </div>
-                          <p className="text-30 font-semibold">{textContent.dropFile.line1}</p>
+                          <p className="text-30 font-semibold text-gray-100 dark:text-white-95">{textContent.dropFile.line1}</p>
                           <button
                             type="button"
                             className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 group-hover:bg-primary group-hover:text-white sm:h-10 sm:px-5 sm:text-base"
@@ -482,12 +496,12 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white p-5 shadow-subtle-hard">
-                    <p className="text-xl font-medium">{textContent.error.title}</p>
+                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard">
+                    <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button
                       type="button"
-                      className="-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 px-5 text-primary transition duration-150 ease-out active:scale-98"
+                      className="-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 dark:bg-purple-100 px-5 text-primary transition duration-150 ease-out active:scale-98"
                       onClick={() => {
                         handleRestartProcess();
                       }}

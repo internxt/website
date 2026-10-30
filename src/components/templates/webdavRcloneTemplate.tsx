@@ -19,6 +19,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface WebdavRcloneTemplateProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   langJson: any;
   navbarLang: NavigationBarText;
@@ -31,6 +32,7 @@ export interface WebdavRcloneTemplateProps {
 }
 
 export const WebdavRcloneTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -67,6 +69,7 @@ export const WebdavRcloneTemplate = ({
           hidePriceTable={hidePriceTable}
           couponCode={couponCode}
           couponCodeForLifetime={couponCodeForLifetime}
+          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -74,18 +77,18 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {langJson.CtaSection.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding=" px-20 py-10"
-          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradientColor="bg-[linear-gradient(0deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(0deg,#1C1C1C_0%,#0D0D0D_100%)]"
         />
 
         <DownloadCLISection textContent={langJson.DownloadCLISection} />
@@ -97,22 +100,22 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection2.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {langJson.CtaSection2.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding=" px-20 py-10"
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={'en'} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={'en'} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

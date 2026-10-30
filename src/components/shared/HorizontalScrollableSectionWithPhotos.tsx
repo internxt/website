@@ -12,6 +12,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
   bgColor,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
+  const enabledArrowClass = `cursor-pointer ${hoverClass}`;
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
@@ -102,14 +104,15 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{
-        background: bgColor || 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20 ${bgColor ?? 'bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)]'} dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</h2>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <h2 className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
+          {textContent.title}
+        </h2>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
+          {textContent.description}
+        </p>
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
@@ -134,8 +137,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             >
               <div className="flex h-full flex-col items-center justify-between">
                 <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
-                  <h3 className="pb-6 text-xl font-medium text-gray-95">{title}</h3>
-                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
+                  <h3 className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">{title}</h3>
+                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>
@@ -158,9 +161,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-all ${!canScrollLeft ? 'cursor-not-allowed opacity-50' : enabledArrowClass}`}
               aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -168,9 +169,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-all ${
-                !canScrollRight ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-all ${!canScrollRight ? 'cursor-not-allowed opacity-50' : enabledArrowClass}`}
               aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

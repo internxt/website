@@ -24,7 +24,7 @@ const HeroSection = ({ textContent }) => {
       <div className="xl:pl-58 flex w-full flex-col items-center justify-center space-y-10 px-6 py-24 lg:flex-row lg:space-x-28 lg:space-y-0">
         <div className="flex flex-col items-center justify-center space-y-10 lg:items-start lg:justify-start">
           <div className="flex max-w-[470px] flex-col items-center justify-center space-y-10 lg:items-start">
-            <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
+            <div className="flex flex-row rounded-lg bg-gray-5 dark:bg-gray-105 px-5 py-2">
               <Alarm size={32} className="mr-4 text-primary" />
               <Countdown textColor={'black'} dt={'2023-10-31T23:59:59'} />
             </div>
@@ -39,7 +39,9 @@ const HeroSection = ({ textContent }) => {
                   {feeds.map((feed) => (
                     <div className="flex flex-row items-center space-x-4" key={feed.title}>
                       <feed.icon size={32} className="text-primary" />
-                      <p className="text-xl font-medium text-gray-80">{feed.title}</p>
+                      <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">
+                        {feed.title}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -58,7 +60,7 @@ const HeroSection = ({ textContent }) => {
             <p className="flex max-w-[274px] text-sm text-gray-40">{textContent.cta.description}</p>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl bg-white">
+        <div className="flex flex-col rounded-3xl bg-white dark:bg-gray-95">
           <Image
             alt="woman using file storage"
             src={getImage('/images/pricing/cyber-awareness-offer-per-month.webp')}

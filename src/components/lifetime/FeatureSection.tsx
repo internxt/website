@@ -26,6 +26,8 @@ const FeatureSection = ({
   withoutCta?: boolean;
   backgroundColor?: string;
 }) => {
+  const bgClass = 'bg-white dark:bg-gray-95';
+  const bgClass2 = 'bg-gray-1 dark:bg-gray-105';
   const router = useRouter();
   const Cards = [
     {
@@ -53,9 +55,11 @@ const FeatureSection = ({
   return (
     <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center text-black">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center text-black dark:text-white-95">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="max-w-5xl text-xl text-gray-80">{textContent.description}</p>
+          <p className="max-w-5xl text-xl text-gray-80 dark:text-cool-gray-30">
+            {textContent.description}
+          </p>
 
           {!withoutCta && (
             <Link
@@ -76,14 +80,16 @@ const FeatureSection = ({
           {Cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl ${
-                backgroundColor ? 'bg-white' : 'bg-gray-1'
-              } space-y-6 p-8 sm:p-10 md:max-w-[488px]`}
+              className={`flex flex-col items-start justify-start rounded-2xl ${backgroundColor ? bgClass : bgClass2} space-y-6 p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className=" text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
-                <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
-                <p className="text-base text-cool-gray-80 sm:text-lg">{card.description}</p>
+                <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
+                  {card.title}
+                </p>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}

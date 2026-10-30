@@ -10,7 +10,7 @@ export const HeroSection = ({ textContent }) => {
     useEffect(() => {
       const checkIsMobile = () => {
         setScale(window.innerWidth < 1024 ? 0.49 : 1);
-      }
+      };
 
       checkIsMobile();
 
@@ -44,26 +44,20 @@ export const HeroSection = ({ textContent }) => {
         position: { top: `${280*scale}px`, left: `${480*scale}px` },
         filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) opacity(1)',
       },
-    ]
+    ];
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-between gap-8 px-8 pt-28 lg:flex-row lg:gap-20 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80"
-      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
-    >
-      <div
-        className={`z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:gap-8 lg:rounded-16 lg:p-8`}
-        style={{
-          background: 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
-        }}
-      >
+    <section className="flex h-min w-full flex-col items-center justify-between gap-8 px-8 pt-28 lg:flex-row lg:gap-20 lg:px-10 lg:pt-10 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
+      <div className={`z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:gap-8 lg:rounded-16 lg:p-8 bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)] dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]`}>
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>
         </div>
-        <h1 className="flex flex-col text-[30px] font-semibold leading-tight text-gray-100 lg:gap-2 lg:text-6xl">
+        <h1 className="flex flex-col text-[30px] font-semibold leading-tight text-gray-100 dark:text-white-95 lg:gap-2 lg:text-6xl">
           {textContent.title}
         </h1>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
+          {textContent.description}
+        </p>
         <div className="flex flex-col">
           <Link
             href="/pricing"
@@ -73,7 +67,7 @@ export const HeroSection = ({ textContent }) => {
           </Link>
           <div className="flex flex-row items-center justify-center gap-2 pt-3 lg:justify-start">
             <CheckCircle size={24} color="#32C356" weight="fill" />
-              <p className="whitespace-nowrap text-base lg:text-lg text-gray-55">
+              <p className="whitespace-nowrap text-base lg:text-lg text-gray-55 dark:text-green-120">
                 {textContent.garantee}
               </p>
           </div>

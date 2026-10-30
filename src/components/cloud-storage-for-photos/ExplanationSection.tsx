@@ -2,13 +2,17 @@ import Link from 'next/link';
 
 const ExplanationSection = ({ textContent, ctaText, ctaLink }) => {
   return (
-    <section className="overflow-hidden bg-white">
+    <section className="overflow-hidden bg-white dark:bg-gray-95">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
         <div className="flex w-full flex-col items-center justify-center space-y-6 pt-20 text-center lg:max-w-[75%]">
-          <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
+          <h2 className="text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
+            {textContent.title}
+          </h2>
           <div className="flex flex-col items-center space-y-6">
             {textContent.description && (
-              <p className="font-regular text-xl text-gray-80 lg:max-w-[800px] ">{textContent.description}</p>
+              <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30 lg:max-w-[800px]">
+                {textContent.description}
+              </p>
             )}
           </div>
         </div>
@@ -17,16 +21,22 @@ const ExplanationSection = ({ textContent, ctaText, ctaLink }) => {
         <div id="incontent_1" className="flex w-full justify-center"></div>
         <div className="flex w-[323px] flex-col space-y-3">
           <h3 className="text-30 font-medium">{textContent.costExp.title}</h3>
-          <p className="font-regular text-lg text-gray-80 lg:text-xl">{textContent.costExp.description}</p>
+          <p className="font-regular text-lg text-gray-80 dark:text-cool-gray-30 lg:text-xl">
+            {textContent.costExp.description}
+          </p>
         </div>
         <div className="flex w-[323px] flex-col space-y-3">
           <h3 className="text-30 font-medium">{textContent.securityExp.title}</h3>
-          <p className="font-regular text-lg text-gray-80 lg:text-xl">{textContent.securityExp.description}</p>
+          <p className="font-regular text-lg text-gray-80 dark:text-cool-gray-30 lg:text-xl">
+            {textContent.securityExp.description}
+          </p>
         </div>
 
         <div className="flex w-[323px] flex-col space-y-3">
           <h3 className="text-30 font-medium">{textContent.extraFeaturesExp.title}</h3>
-          <p className="font-regular text-lg text-gray-80 lg:text-xl">{textContent.extraFeaturesExp.description}</p>
+          <p className="font-regular text-lg text-gray-80 dark:text-cool-gray-30 lg:text-xl">
+            {textContent.extraFeaturesExp.description}
+          </p>
         </div>
         {ctaText && ctaLink && (
           <Link

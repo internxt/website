@@ -12,6 +12,7 @@ const CloudStorageForDocumentsEmLP = (props: CloudStorageForDocumentsTemplatePro
     couponCodeForLifetime={PromoCodeName.seolp}
     hidePriceTable
     robots="noindex,follow"
+    darkMode={props.darkMode}
   />
 );
 

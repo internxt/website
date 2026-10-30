@@ -189,206 +189,206 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part74}</p>
 
             <div className="relative -mx-6 flex flex-col overflow-hidden overflow-x-scroll px-6">
-              <table className="relative table-auto bg-white">
+              <table className="relative table-auto bg-white dark:bg-gray-95">
                 <tr>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column1}
                   </th>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column2}
                   </th>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column3}
                   </th>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>
                     {textContent.privacy_policy_table2_row2_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row2_column2_1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row2_column3_1}
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row2_column2_2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row2_column3_2}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={4}>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={4}>
                     {textContent.privacy_policy_table2_row3_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column2_1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column3_1}
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column2_2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column3_2}
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column2_3}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column3_3}
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column2_4}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row3_column3_4}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row4_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row4_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row4_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>
                     {textContent.privacy_policy_table2_row5_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row5_column2_1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row5_column3_1}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row5_column2_2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row5_column3_2}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>
                     {textContent.privacy_policy_table2_row6_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row6_column2_1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row6_column3_1}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row6_column2_2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row6_column3_2}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row7_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row7_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row7_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row8_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row8_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row8_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row9_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row9_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row9_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row10_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row10_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row10_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row11_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row11_column2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row11_column3}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>
                     {textContent.privacy_policy_table2_row12_column1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row12_column2_1}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row12_column3_1}
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row12_column2_2}
                   </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                     {textContent.privacy_policy_table2_row12_column3_2}
                   </td>
                 </tr>

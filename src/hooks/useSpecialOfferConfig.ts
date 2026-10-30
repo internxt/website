@@ -210,6 +210,7 @@ export const ALLOWED_PATHS = [
   'negocios',
   'lucas',
   'youensina',
+  'bfcmrec87',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -380,7 +381,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
-export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
+export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp']);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
 export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'bjoern',
@@ -575,6 +576,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'negocios',
   'lucas',
   'youensina',
+  'bfcmrec87',
 ]);
 
 export const COUPON_CODES = {
@@ -785,6 +787,7 @@ export const COUPON_CODES = {
   negocios: PromoCodeName.negocios,
   lucas: PromoCodeName.lucas,
   youensina: PromoCodeName.youensina,
+  bfcmrec87: PromoCodeName.bfcmrec87,
 };
 
 interface OfferConfig {
@@ -806,14 +809,14 @@ interface OfferConfig {
   redirectToUrgentCheckout: boolean;
 }
 
-export const useOfferConfig = (pathname: string): OfferConfig => {
+export const useOfferConfig = (pathname: string, darkMode = false): OfferConfig => {
   return useMemo(() => {
     const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
 
     if (!selectedPathname) {
       return {
         selectedPathname: null,
-        isDarkMode: false,
+        isDarkMode: darkMode,
         alternateRecommendedPlan: false,
         couponCode: undefined,
         alternativeImages: null,
@@ -831,7 +834,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       };
     }
 
-    const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
+    const isDarkMode = darkMode || DARK_MODE_PATHS.has(selectedPathname);
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname as keyof typeof COUPON_CODES];
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);

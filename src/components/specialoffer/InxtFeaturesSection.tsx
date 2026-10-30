@@ -39,8 +39,10 @@ export const InxtFeaturesSection = ({ textContent }) => {
     <section className="overflow-hidden py-20 px-5">
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-[850px] flex-col gap-6 text-center">
-          <h2 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <h2 className="text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">
+            {textContent.title}
+          </h2>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         <CardGroup cards={cards} />
       </div>

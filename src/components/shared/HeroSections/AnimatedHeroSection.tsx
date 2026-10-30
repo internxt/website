@@ -80,24 +80,14 @@ export default function AnimatedHero({
 
   return (
     <section
-      className={`overflow-hidden ${
-        bgGradient ? bgGradient : 'bg-gradient-to-t from-[#001D6C] to-[#121923] lg:bg-gradient-to-b'
-      }`}
+      className={`overflow-hidden ${bgGradient ? bgGradient : 'bg-gradient-to-t from-[#001D6C] to-[#121923] lg:bg-gradient-to-b'}`}
     >
       <div className="relative mx-4 xl:mx-32">
-        <div
-          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
-        />
+        <div className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`} />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center lg:flex-row lg:items-center lg:pb-24">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div
-            className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
-          >
-            <div
-              className={`mt-20 flex ${height ? height : 'lg:h-[530px  h-[450px]'} ${
-                width ? width : 'w-[400px] lg:w-[550px]'
-              } lg:mt-40] flex-col items-center justify-evenly px-6 text-start  lg:items-start lg:px-0`}
-            >
+          <div className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}>
+            <div className={`mt-20 flex ${height ? height : 'lg:h-[530px  h-[450px]'} ${width ? width : 'w-[400px] lg:w-[550px]'} lg:mt-40] flex-col items-center justify-evenly px-6 text-start  lg:items-start lg:px-0`}>
               {textComponent}
             </div>
           </div>

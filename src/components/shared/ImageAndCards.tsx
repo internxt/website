@@ -8,13 +8,13 @@ interface ImageAndCardsProps {
 
 export const ImageAndCards = ({ textContent, image }: ImageAndCardsProps) => {
   return (
-    <section className="flex flex-col gap-8 px-6 pb-16 lg:gap-16">
-      <div className={`absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`} />
+    <section className="flex flex-col gap-8 px-6 pb-16 lg:gap-16 dark:bg-gray-95">
+      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
       <div className="flex h-min flex-col justify-center gap-6 lg:text-center">
-        <h2 className={`whitespace-pre-line text-30 font-bold leading-tight text-gray-100 lg:text-5xl`}>
+        <h2 className="whitespace-pre-line text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h2>
-        <p className={`whitespace-pre-line text-base font-normal leading-tight text-gray-55 lg:text-lg`}>
+        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
           {textContent.description}
         </p>
       </div>
@@ -33,9 +33,11 @@ export const ImageAndCards = ({ textContent, image }: ImageAndCardsProps) => {
         </div>
         <div className="flex flex-1 flex-col justify-between gap-8">
           {textContent.features.titles.map((title: string, index: number) => (
-            <div key={index} className="flex w-full flex-col gap-6 rounded-16 bg-white p-8">
-              <h3 className="text-xl font-medium leading-tight text-gray-100">{title}</h3>
-              <p className="text-base font-normal leading-tight text-gray-55">
+            <div key={title} className="flex w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8">
+              <h3 className="text-xl font-medium leading-tight text-gray-100 dark:text-white-95">
+                {title}
+              </h3>
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                 {textContent.features.description[index]}
               </p>
             </div>

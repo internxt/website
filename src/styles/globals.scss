@@ -118,7 +118,7 @@ body {
 @layer {
   html,
   body {
-    @apply text-gray-100;
+    @apply text-gray-100 dark:bg-gray-95 dark:text-white-95;
   }
 }
 

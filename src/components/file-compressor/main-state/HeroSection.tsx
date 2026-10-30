@@ -6,11 +6,13 @@ export const HeroSection = ({ textContent }) => {
   const router = useRouter();
 
   return (
-    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 pb-20 pt-32">
       <div className="flex w-full flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <p className="text-5xl font-semibold">{textContent.title}</p>
-          <div className="flex flex-col  text-center text-xl text-gray-80">
+          <p className="text-5xl font-semibold text-gray-100 dark:text-white-95">
+            {textContent.title}
+          </p>
+          <div className="flex flex-col text-center text-xl text-gray-80 dark:text-cool-gray-30">
             <p>{textContent.description.normal}</p>
           </div>
         </div>
@@ -19,7 +21,7 @@ export const HeroSection = ({ textContent }) => {
             {textContent.cards.map((card) => (
               <button
                 key={card.title}
-                className="flex w-[18.75rem] cursor-pointer flex-col items-start space-y-2 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:w-[14.5rem] lg:p-9 lg-xl:w-[15rem] 2xl:w-[18rem]  "
+                className="flex w-[18.75rem] cursor-pointer flex-col items-start space-y-2 rounded-2xl bg-white dark:bg-gray-95 px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:w-[14.5rem] lg:p-9 lg-xl:w-[15rem] 2xl:w-[18rem]"
                 onClick={() => {
                   router.push(`/file-compressor/${card.pathname}`);
                 }}
@@ -32,7 +34,7 @@ export const HeroSection = ({ textContent }) => {
                     src={getImage(`/icons/file-compressor/${card.pathname}.svg`)}
                   />
                   <>
-                    <p className="block text-2xl font-semibold text-gray-100 lg:block">
+                    <p className="block text-2xl font-semibold text-gray-100 dark:text-white-95 lg:block">
                       {card.title.split('\n').map((line, i) => (
                         <span key={i}>
                           {line}
@@ -40,13 +42,13 @@ export const HeroSection = ({ textContent }) => {
                         </span>
                       ))}
                     </p>
-                    <p className="hidden text-2xl font-semibold text-gray-100 lg:hidden">
-                      {card.title.replace('\n', ' ')}
+                    <p className="hidden text-2xl font-semibold text-gray-100 dark:text-white-95 lg:hidden">
+                      {card.title.replaceAll('\n', ' ')}
                     </p>
                   </>
                 </div>
                 <>
-                  <p className="text-regular block text-gray-100 lg:block">
+                  <p className="text-regular block text-gray-100 dark:text-white-95 lg:block">
                     {card.description.split('\n').map((line, i) => (
                       <span key={i}>
                         {line}
@@ -54,7 +56,9 @@ export const HeroSection = ({ textContent }) => {
                       </span>
                     ))}
                   </p>
-                  <p className="text-regular hidden text-gray-100 lg:hidden">{card.description.replace('\n', ' ')}</p>
+                  <p className="text-regular hidden text-gray-100 dark:text-white-95 lg:hidden">
+                    {card.description.replaceAll('\n', ' ')}
+                  </p>
                 </>
               </button>
             ))}

@@ -12,7 +12,7 @@ const CtaSection = ({ textContent }) => {
         </div>
         <a
           href="/pricing"
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10 dark:hover:bg-purple-100"
         >
           {textContent.cta}
         </a>

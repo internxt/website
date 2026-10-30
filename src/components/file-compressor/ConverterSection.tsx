@@ -21,7 +21,12 @@ interface ConverterSectionProps {
 
 type ConverterStates = 'initialState' | 'selectedFileState' | 'compressingState' | 'downloadFileState' | 'errorState';
 
-export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
+export const ConverterSection = ({
+  textContent,
+  converterText,
+  errorContent,
+  pathname,
+}: ConverterSectionProps) => {
   const router = useRouter();
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
@@ -177,7 +182,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
               </div>
               <EmptyFile />
             </div>
-            <p className="text-2xl font-semibold">{formattedConverterText.compressing}</p>
+            <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">
+              {formattedConverterText.compressing}
+            </p>
           </div>
         );
       case 'downloadFileState':
@@ -203,7 +210,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   return (
-    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 pb-20 pt-32">
       <input
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
@@ -224,18 +231,22 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
               <CaretLeft className="text-primary" size={24} />
               <p className="pl-1 text-base font-medium text-primary">Back</p>
             </div>
-            <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold">{formattedConverterText.title}</p>
+            <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold text-gray-100 dark:text-white-95">
+              {formattedConverterText.title}
+            </p>
           </div>
 
-          <h2 className="max-w-[865px] pt-2 text-xl text-gray-80">{textContent.description}</h2>
+          <h2 className="max-w-[865px] pt-2 text-xl text-gray-80 dark:text-cool-gray-30">
+            {textContent.description}
+          </h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
-            <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
+            <p className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
+              {textContent.secureUpload}
+            </p>
           </div>
         </div>
-        <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle} py-12`}
-        >
+        <div className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle} py-12`}>
           {renderState()}
         </div>
       </div>

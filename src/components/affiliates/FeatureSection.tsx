@@ -22,18 +22,22 @@ const FeatureSection = ({ textContent }): JSX.Element => {
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-20">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 py-20">
       <div className="flex flex-col items-center justify-center space-y-10 lg:space-y-20">
-        <p className="text-center text-30 font-semibold lg:text-3xl">{textContent.title}</p>
+        <p className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
+          {textContent.title}
+        </p>
         <RevealY className="flex w-full flex-row flex-wrap items-center justify-center gap-4 lg:gap-8">
           {cards.map((item) => (
             <div
               key={item.title}
-              className="flex max-w-[350px] flex-col items-center space-y-6 rounded-2xl bg-white p-10 text-center lg:items-start lg:text-left"
+              className="flex max-w-[350px] flex-col items-center space-y-6 rounded-2xl bg-white dark:bg-gray-95 p-10 text-center lg:items-start lg:text-left"
             >
               <item.icon className="text-primary" size={32} />
-              <p className="text-2xl font-medium text-gray-100">{item.title}</p>
-              <p className="text-lg leading-tight text-gray-80">{item.description}</p>
+              <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{item.title}</p>
+              <p className="text-lg leading-tight text-gray-80 dark:text-cool-gray-30">
+                {item.description}
+              </p>
               {item.cta && (
                 <button
                   onClick={() => {

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const KitCard = ({ textContent, image, downloadImagesLink }) => {
   return (
-    <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1">
+    <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col">
         <Image
           height={520}

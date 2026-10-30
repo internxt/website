@@ -33,6 +33,7 @@ const CLAIM_DEAL_CTA_SELECTOR = 'a[href$="#priceCard"], #choose-storage-button, 
 const CLAIM_DEAL_EVENT = 'Claim Deal';
 
 interface AntivirusProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -42,6 +43,7 @@ interface AntivirusProps {
 }
 
 const AntivirusPage = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -166,7 +168,9 @@ const AntivirusPage = ({
               {infoSectionData.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80">{item.description}</p>
+                  <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80 dark:text-cool-gray-30">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -174,7 +178,7 @@ const AntivirusPage = ({
         />
 
         {ultimatePlan && (
-          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24" id="priceCard">
+          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 dark:bg-gray-95" id="priceCard">
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
               storage={ultimatePlan.storage}
@@ -198,7 +202,9 @@ const AntivirusPage = ({
               {InfoSectionV2.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
+                  <p className="pt-5 text-xl font-medium text-gray-80 dark:text-cool-gray-30">
+                    {item.title}
+                  </p>
                 </div>
               ))}
             </div>
@@ -217,19 +223,21 @@ const AntivirusPage = ({
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+                <h2 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className="font-regular text-xl text-gray-80">{langJson.ComponentsInColumn.description}</p>
+                <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
+                  {langJson.ComponentsInColumn.description}
+                </p>
               </div>
             </div>
           }
           SecondComponent={
             <div className="flex flex-col items-center">
-              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white" />
+              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white dark:bg-gray-95" />
             </div>
           }
-          backgroundColor="bg-white"
+          backgroundColor="bg-white dark:bg-gray-95"
         />
         <CtaSection
           textContent={langJson.cta2}
@@ -237,7 +245,7 @@ const AntivirusPage = ({
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>

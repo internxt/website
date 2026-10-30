@@ -15,6 +15,7 @@ import InfoSection from '@/components/password-generator/InfoSection';
 
 
 const PasswordChecker = ({
+  darkMode = false,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -58,6 +59,7 @@ const PasswordChecker = ({
           bannerText={bannerLang.SignUpPasswordGenerator}
           hideLast2Sections
           lang={lang}
+          darkMode={darkMode}
         />
 
         <CtaSection
@@ -81,9 +83,9 @@ const PasswordChecker = ({
 
         <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

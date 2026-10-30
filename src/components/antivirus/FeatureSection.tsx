@@ -38,16 +38,18 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
     .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
 
   return (
-    <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
+    <section className="overflow-hidden px-5 dark:bg-gray-95">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <span className="space-y-4 text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+          <span className="space-y-4 text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
             <br />
             <p className="text-primary"> {textContent.titleLine2}</p>
           </span>
 
-          <p className="font-regular text-sm text-gray-80 lg:text-xl">{formattedDescription}</p>
+          <p className="font-regular text-sm text-gray-80 dark:text-cool-gray-30 lg:text-xl">
+            {formattedDescription}
+          </p>
         </div>
 
         <Link
@@ -64,9 +66,7 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
-                  !isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${!isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'} md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -83,11 +83,7 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
                   />
                 </RevealX>
 
-                <div
-                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:w-1/2 md:items-start md:space-y-6 ${
-                    isEven ? 'md:pl-10' : 'md:pr-10'
-                  }`}
-                >
+                <div className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:w-1/2 md:items-start md:space-y-6 ${isEven ? 'md:pl-10' : 'md:pr-10'}`}>
                   <Image
                     src={getImage(card.icon)}
                     width={61}
@@ -97,8 +93,12 @@ const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: Featu
                     layout="intrinsic"
                     alt={`${card.title} image`}
                   />
-                  <p className=" text-30 font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
-                  <p className="font-regular text-sm sm:text-lg md:text-xl">{card.description}</p>
+                  <p className="text-30 font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight md:text-5xl">
+                    {card.title}
+                  </p>
+                  <p className="font-regular text-sm text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">
+                    {card.description}
+                  </p>
                 </div>
               </div>
             );

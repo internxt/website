@@ -5,7 +5,7 @@ import TermsAndConditionsOverview from '@/components/legal/TermsAndConditionsOve
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
-const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang }) => {
+const Legal = ({ darkMode = false, lang, metatagsDescriptions, textContent, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'legal');
 
   return (
@@ -17,7 +17,7 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
 
       <TermsAndConditionsOverview textContent={textContent} lang={lang} />
 
-      <Footer lang={lang} textContent={footerLang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Legal Terms and Conditions', url: '/legal' }]} />
+      <Footer lang={lang} textContent={footerLang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Legal Terms and Conditions', url: '/legal' }]} darkMode={darkMode} />
     </Layout>
   );
 };

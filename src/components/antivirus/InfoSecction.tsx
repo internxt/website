@@ -6,7 +6,7 @@ export interface InfoSectionProps {
 
 export const InfoSection: React.FC<InfoSectionProps> = ({ FirstComponent }) => {
   return (
-    <section className={`overflow-hidden  px-5 lg:py-20`}>
+    <section className="overflow-hidden px-5 lg:py-20 dark:bg-gray-95">
       <div className="flex flex-col items-center gap-16">{FirstComponent}</div>
     </section>
   );

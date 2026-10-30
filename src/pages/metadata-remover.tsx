@@ -29,7 +29,7 @@ const HeroSection = dynamic(() => import('@/components/metadata-remover/HeroSect
 
 const CTA_URL = `/pricing`;
 
-const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbarLang, lang, bannerLang }) => {
+const Scan = ({ darkMode = false, metatagsDescriptions, langJson, toolsContent, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-metadata-remover');
   const cardInfo = [
     {
@@ -119,6 +119,7 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
         textContent={langJson.FeaturesSection}
         bannerText={bannerLang.SignUpMetadataRemoverBanner}
         lang={lang}
+        darkMode={darkMode}
       />
 
       <CtaSection
@@ -138,9 +139,9 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
         customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection2.description}</p>}
       />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }]} darkMode={darkMode} />
     </Layout>
   );
 };

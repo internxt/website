@@ -33,11 +33,16 @@ export default function TextInput({
   error,
   min,
   required,
-  className,
+  className = '',
   autoFocus,
   autoComplete,
   inputDataCy,
 }: Readonly<InputProps>): JSX.Element {
+  const defaultBorderClass = 'border-gray-40 dark:border-gray-71';
+  const borderStyles = error
+    ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
+    : `${defaultBorderClass} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
+
   return (
     <div className={`${className}`}>
       <input
@@ -56,11 +61,7 @@ export default function TextInput({
           maxLength,
           pattern,
         })}
-        className={`w-full rounded-md border bg-white p-3 text-base text-gray-100 placeholder-gray-50 outline-none disabled:border-gray-10 disabled:text-gray-40 ${
-          error
-            ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
-            : 'border-gray-40 focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]'
-        }`}
+        className={`w-full rounded-md border p-3 text-base placeholder-gray-50 outline-none bg-white text-gray-100 dark:bg-gray-95 dark:text-white-95 ${borderStyles} disabled:border-gray-10 disabled:text-gray-40 dark:disabled:border-gray-71 dark:disabled:text-gray-50`}
       />
     </div>
   );

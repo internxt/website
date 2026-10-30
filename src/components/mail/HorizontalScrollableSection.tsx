@@ -20,6 +20,7 @@ export default function HorizontalScrollableSection({
   needsH2 = false,
   needsH3 = false,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const bgClass = 'bg-neutral-17 dark:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -107,19 +108,18 @@ export default function HorizontalScrollableSection({
   const CardTag = needsH3 ? 'h3' : 'p';
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : 'bg-neutral-17'
-      } py-10 lg:h-min lg:gap-16 lg:py-10 lg:pt-20`}
-      style={{ background: bgGradient }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgGradient ?? bgClass} py-10 lg:h-min lg:gap-16 lg:py-10 lg:pt-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         {needsDivider && (
-          <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+          <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
         )}
-        <TitleTag className="text-30 font-bold leading-tight text-gray-95 lg:w-[780px] lg:text-6xl">
+        <TitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-6xl">
           {textContent.title}
         </TitleTag>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
+          {textContent.description}
+        </p>
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
@@ -144,9 +144,11 @@ export default function HorizontalScrollableSection({
                 height: cardsHeight,
               }}
             >
-              <div className="flex h-full flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8">
-                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</CardTag>
-                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
+              <div className="flex h-full flex-col rounded-xl bg-white dark:bg-gray-95 p-6 lg:rounded-16 lg:p-8">
+                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 dark:text-white-95 lg:pb-6 lg:text-xl">
+                  {title}
+                </CardTag>
+                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                   {textContent.scrollableSection.descriptions[index]}
                 </p>
               </div>
@@ -160,9 +162,7 @@ export default function HorizontalScrollableSection({
               type="button"
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-              }`}
+              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
               aria-label="Anterior"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -171,9 +171,7 @@ export default function HorizontalScrollableSection({
               type="button"
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-              }`}
+              className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
               aria-label="Siguiente"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

@@ -21,18 +21,31 @@ export interface FeatureSectionProps {
   cards: FeatureCard[];
 }
 
-const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards }: FeatureSectionProps) => {
+const FeatureSection = ({
+  title,
+  subtitle,
+  description,
+  ctaText,
+  ctaLink,
+  cards,
+}: FeatureSectionProps) => {
   return (
-    <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
+    <section className="overflow-hidden px-5 dark:bg-gray-95">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-10 md:py-20">
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
-            <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{title}</h2>
+            <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
+              {title}
+            </h2>
             <div className="flex flex-col space-y-6 lg:max-w-[950px]">
-              {subtitle && <p className="text-lg font-medium leading-tight text-gray-80 lg:text-2xl">{subtitle}</p>}
+              {subtitle && (
+                <p className="text-lg font-medium leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-2xl">
+                  {subtitle}
+                </p>
+              )}
               {description && (
                 <p
-                  className="font-regular text-base leading-tight text-gray-80 lg:text-xl"
+                  className="font-regular text-base leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl"
                   dangerouslySetInnerHTML={{ __html: description.replace(/\n/g, '<br />') }}
                 />
               )}
@@ -55,9 +68,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:pb-20 ${
-                  isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:pb-20 ${isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'} md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -73,11 +84,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     alt={card.altText || `${card.title} image`}
                   />
                 </RevealX>
-                <div
-                  className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
-                    isEven ? 'md:pl-10' : 'md:pr-10'
-                  }`}
-                >
+                <div className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${isEven ? 'md:pl-10' : 'md:pr-10'}`}>
                   {/* Icon Section (Optional) */}
                   {IconComponent && (
                     // <IconComponent className="text-primary" size={48} weight="duotone" />
@@ -91,10 +98,12 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     </div>)
                   )}
 
-                  <h3 className="text-30 font-semibold  sm:leading-tight md:text-3xl">{card.title}</h3>
-                  <p className="font-regular text-base sm:text-lg md:text-xl">
-                    {Array.isArray(card.description)
-                      ? card.description.map((line, index) => (
+                  <h3 className="text-30 font-semibold text-gray-100 dark:text-white-95 sm:leading-tight md:text-3xl">
+                    {card.title}
+                  </h3>
+                  <p className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">
+                    {Array.isArray(card.description) ? (
+                      card.description.map((line, index) => (
                           <span key={index}>
                             <span dangerouslySetInnerHTML={{ __html: line }} />
                             {index < card.description.length - 1 && (
@@ -105,7 +114,9 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                             )}
                           </span>
                         ))
-                      : <span dangerouslySetInnerHTML={{ __html: card.description }} />}
+                    ) : (
+                      <span dangerouslySetInnerHTML={{ __html: card.description }} />
+                    )}
                   </p>
                 </div>
               </div>

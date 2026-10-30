@@ -12,7 +12,7 @@ const CtaSection = ({ textContent }) => {
           </p>
         </div>
         <Link href="/pricing" legacyBehavior>
-          <div className="flex cursor-pointer rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary">
+          <div className="flex cursor-pointer rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-lg font-medium text-primary">
             {textContent.cta}
           </div>
         </Link>

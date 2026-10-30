@@ -42,20 +42,26 @@ export const WhyChooseInxtSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex flex-col items-center justify-center gap-16">
           <div className="flex flex-col items-center gap-6 text-center">
-            <h2 className="max-w-[726px] text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-            <p className="text-xl text-gray-80">{textContent.description}</p>
+            <h2 className="max-w-[726px] text-5xl font-semibold text-gray-100 dark:text-white-95">
+              {textContent.title}
+            </h2>
+            <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           </div>
         </div>
         <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
+              className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 sm:p-10 md:max-w-[488px]"
             >
               <card.icon className="mb-6 text-4xl text-green-1" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
-                <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
-                <p className="text-base text-cool-gray-80 sm:text-lg">{card.subtitle}</p>
+                <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
+                  {card.title}
+                </p>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
+                  {card.subtitle}
+                </p>
               </div>
             </div>
           ))}

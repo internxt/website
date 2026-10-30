@@ -14,7 +14,7 @@ const HeroSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center space-y-10 bg-red px-12 py-24 lg:flex-row lg:space-x-48 lg:space-y-0">
         <div className="flex flex-col items-center justify-center space-y-8 text-center lg:items-start  lg:text-left">
           <div className="flex flex-col">
-            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               <p className="pt-4 text-4xl font-bold xl:text-5xl ">
                 <span>{textContent.title.normalText}</span>
               </p>
@@ -23,9 +23,11 @@ const HeroSection = ({ textContent }) => {
               </p>
             </h1>
           </div>
-          <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-gray-5 p-2 xl:items-center">
+          <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-gray-5 dark:bg-gray-105 p-2 xl:items-center">
             <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
-            <p className="font-regular text-xl text-gray-80 ">{formattedHero}</p>
+            <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
+              {formattedHero}
+            </p>
           </div>
           <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
             <button
@@ -38,7 +40,7 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl  from-white to-gray-1   ">
+        <div className="flex flex-col rounded-3xl from-white to-gray-1 dark:from-gray-95 dark:to-gray-105">
           <Image
             loading="eager"
             src={getImage('/images/yearly/internxt_yearly_plans.webp')}

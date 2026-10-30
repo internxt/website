@@ -16,6 +16,7 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import HeroSection from '@/components/home-assistant/HeroSection';
 
 interface HomeAssistantProps {
+    darkMode?: boolean;
     lang: GetStaticPropsContext['locale'];
     metatagsDescriptions: MetatagsDescription[];
     navbarLang: NavigationBarText;
@@ -23,7 +24,7 @@ interface HomeAssistantProps {
     footerLang: FooterText;
 }
 
-const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
+const HomeAssistantPage = ({ darkMode = false, metatagsDescriptions, textContent, lang, footerLang, navbarLang }: HomeAssistantProps): JSX.Element => {
 
     const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
     const locale = lang as string;
@@ -72,9 +73,9 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
             <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
 
-            <HeroSection textContent={textContent.HeroSection} />
+            <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
 
-            <ReviewsSection textContent={textContent.ReviewSection} />
+            <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
             <PricingSectionWrapper 
                 textContent={textContent.TableSection}
@@ -82,7 +83,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
                 individuals: decimalDiscount,
                 lifetime: decimalDiscountForLifetime,
                 }}
-                backgroundGradientColor='linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
+                backgroundGradientColor="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
                 lifetimeCoupons={lifetimeCoupons}
                 lang={locale}
                 products={products}
@@ -92,32 +93,35 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
                 onlyUltimatePlan
                 startFromPlan='Individuals'
                 startIndividualPlansFromInterval={Interval.Year}
-                sectionDetails="bg-white lg:py-20"
+                sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
                 hideFreeCard
+                darkMode={darkMode}
             />
 
             <ThreeCardsIconsSection
                 textContent={textContent.ThreeCardsSection}
-                cardColor='bg-white'
+                cardColor="bg-white dark:bg-gray-95"
             />
 
-            <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+            <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
             <TrustedSection
                 textContent={textContent.TrustedBySection}
                 bottomBar={true}
-                bgColor='bg-neutral-17'
+                bgColor="bg-neutral-17 dark:bg-gray-105"
+                darkMode={darkMode}
             />
 
             <ThreeCardsSection
                 textContent={textContent.MadeInEuropeSection}
-                bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+                bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+                darkMode={darkMode}
             />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
                 lang={locale}
-                bgColor='bg-white'
+                bgColor="bg-white dark:bg-gray-95"
             />
 
         </Layout>

@@ -32,10 +32,7 @@ const LifetimeBanner = (): JSX.Element => {
       className={`${showBanner ? 'flex' : 'hidden'} 
          fixed top-0 left-0 right-0 bottom-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
-      <div
-        className={`absolute left-1/2 top-1/2 flex h-auto max-w-4xl -translate-x-1/2 -translate-y-1/2
-        flex-col overflow-hidden rounded-2xl bg-primary-dark text-neutral-900`}
-      >
+      <div className="absolute left-1/2 top-1/2 flex h-auto max-w-4xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-primary-dark text-neutral-900 dark:text-white-95">
         <button className="absolute right-0 z-50 m-5 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
         </button>
@@ -56,7 +53,7 @@ const LifetimeBanner = (): JSX.Element => {
             </div>
             <div className="flex flex-col items-center space-y-6 lg:items-start">
               <button
-                className="relative flex w-max flex-row items-center space-x-4 rounded-lg bg-white px-7 py-3 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-1 sm:text-lg"
+                className="relative flex w-max flex-row items-center space-x-4 rounded-lg bg-white dark:bg-gray-95 px-7 py-3 text-base font-medium text-primary transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-1 dark:focus-visible:bg-gray-105 dark:active:bg-gray-105 sm:text-lg"
                 onClick={() => {
                   onClose();
                   router.push('/lifetime');

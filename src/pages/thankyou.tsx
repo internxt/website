@@ -22,7 +22,13 @@ interface ThankyouProps {
   footerLang: FooterText;
 }
 
-const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }: ThankyouProps): JSX.Element => {
+const Thankyou = ({
+  lang,
+  metatagsDescriptions,
+  navbarLang,
+  langJson,
+  footerLang,
+}: ThankyouProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'thankyou');
   const locale = lang as string;
 
@@ -30,12 +36,18 @@ const Thankyou = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang} robots="noindex">
       <Navbar lang={locale} textContent={navbarLang} cta={['default']} isLinksHidden hideCTA />
 
-      <section className="flex min-h-screen flex-col items-center justify-center bg-white px-6 py-24 text-center">
+      <section className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-gray-95 px-6 py-24 text-center">
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-5xl font-semibold text-gray-100">{langJson.HeroSection.title}</h1>
-          <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.subtitle}</p>
-          <p className="text-lg text-gray-60">{langJson.HeroSection.description}</p>
-          <p className="text-lg text-gray-60">{langJson.HeroSection.emailNote}</p>
+          <h1 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
+            {langJson.HeroSection.title}
+          </h1>
+          <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">
+            {langJson.HeroSection.subtitle}
+          </p>
+          <p className="text-lg text-gray-60 dark:text-green-120">
+            {langJson.HeroSection.description}
+          </p>
+          <p className="text-lg text-gray-60 dark:text-green-120">{langJson.HeroSection.emailNote}</p>
           <p className="text-base font-medium text-primary">{langJson.HeroSection.cta}</p>
         </div>
       </section>

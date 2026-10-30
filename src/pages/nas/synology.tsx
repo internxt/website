@@ -20,6 +20,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
 interface NASPageProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -29,6 +30,7 @@ interface NASPageProps {
 }
 
 const SynologyNASPage = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -94,9 +96,9 @@ const SynologyNASPage = ({
         <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
         <HeroSection textContent={textContent.HeroSection} />
 
-        <WhatIsNASSection textContent={textContent.WhatIsNASSection} />
+        <WhatIsNASSection textContent={textContent.WhatIsNASSection} darkMode={darkMode} />
 
-        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} />
+        <SynologyQNAPSection textContent={textContent.InternxtNASIntegrations} darkMode={darkMode} />
 
         <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -110,8 +112,9 @@ const SynologyNASPage = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
+                sectionDetails="bg-neutral-17 dark:bg-gray-105 lg:py-20"
                 hideFreeCard
+                darkMode={darkMode}
           />
 
         <FloatingCtaSectionv2
@@ -119,17 +122,17 @@ const SynologyNASPage = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.ctaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl">
                 {textContent.ctaSection.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-          bgPadding="bg-neutral-17 px-10"
+          bgPadding="bg-neutral-17 dark:bg-gray-105 px-10"
         />
 
         <HorizontalScrollableSection
@@ -138,30 +141,30 @@ const SynologyNASPage = ({
           cardsHeight="330px"
         />
 
-        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
+        <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} darkMode={darkMode} />
 
-        <ThreeCardsSection textContent={textContent.howSetupSection} />
+        <ThreeCardsSection textContent={textContent.howSetupSection} darkMode={darkMode} />
 
         <FloatingCtaSectionv2
           textContent={textContent.ctaSectionV2}
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.ctaSectionV2.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {textContent.ctaSectionV2.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          bgGradientColor="bg-[linear-gradient(0deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(0deg,#1C1C1C_0%,#0D0D0D_100%)]"
           containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
           bgPadding="lg:pb-20"
         />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
@@ -174,6 +177,7 @@ const SynologyNASPage = ({
             { name: textContent.Breadcrumbs.nas, url: '/nas' },
             { name: textContent.Breadcrumbs.synology, url: '/nas/synology' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

@@ -37,9 +37,13 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
-      <h2 className="flex text-2xl lg:text-4xl font-bold leading-tight text-gray-100">{textContent.title}</h2>
-      <p className="w-full max-w-[950px] pr-5 lg:pr-0 lg:text-lg font-normal text-gray-55">{textContent.description}</p>
+    <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
+      <h2 className="flex text-2xl font-bold leading-tight lg:text-4xl text-gray-100 dark:text-white-95">
+        {textContent.title}
+      </h2>
+      <p className="w-full max-w-[950px] pr-5 font-normal lg:pr-0 lg:text-lg text-gray-55 dark:text-green-120">
+        {textContent.description}
+      </p>
 
       <div className="flex w-full flex-row gap-8">
         <div className="flex w-full flex-col gap-6 lg:w-[45%]">
@@ -70,23 +74,19 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
             <button
               key={title}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 bg-white text-left transition-all duration-300 ${
-                activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
-              }`}
+              className={`flex flex-col rounded-16 bg-white dark:bg-gray-95 text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
-                <h3 className="text-xl font-medium text-gray-100">{title}</h3>
+                <h3 className="text-xl font-medium text-gray-100 dark:text-white-95">{title}</h3>
               </span>
-              <div
-                className={`grid transition-all duration-300 ${
-                  activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
+              <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="flex flex-col overflow-hidden">
                   {textContent.accordionCards.descriptions[index].contents.map((paragraph) => (
-                    <p key={paragraph.slice(0,30)} className="text:sm lg:text-base font-normal leading-tight text-gray-55">{paragraph}</p>
+                    <p key={paragraph.slice(0, 30)} className="text:sm font-normal leading-tight lg:text-base text-gray-55 dark:text-green-120">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               </div>

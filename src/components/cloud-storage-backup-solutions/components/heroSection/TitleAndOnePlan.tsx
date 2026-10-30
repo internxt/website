@@ -15,7 +15,7 @@ const TitleAndOnePlan = ({ textContent, header }: TitleAndOnePlanProps): JSX.Ele
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               {textContent.title.textBeforeBlueText}
               <span className="text-primary"> {textContent.title.blueText} </span>
               {textContent.title.textAfterBlueText}

@@ -7,7 +7,9 @@ interface AccordionSectionProps {
   textContent: CloudPartnerText['AccordionSection'];
 }
 
-export default function AccordionSection({ textContent }: AccordionSectionProps): JSX.Element {
+export default function AccordionSection({
+  textContent,
+}: Readonly<AccordionSectionProps>): JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const cardTitles = textContent?.accordionSection.titles ?? [];
@@ -23,12 +25,14 @@ export default function AccordionSection({ textContent }: AccordionSectionProps)
   const currentImageAlt = openIndex !== null ? `${cardTitles[openIndex]}` : 'Default images';
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 bg-neutral-17 py-10 lg:h-min lg:gap-16 lg:py-20">
-      <div className={`absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`}></div>
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:gap-16 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
 
       <div className="flex h-min flex-col justify-center gap-6">
-        <p className="text-center text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
-        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 lg:text-xl">
+        <p className="text-center text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
+          {textContent.title}
+        </p>
+        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
           {textContent.description}
         </p>
       </div>
@@ -36,26 +40,24 @@ export default function AccordionSection({ textContent }: AccordionSectionProps)
       <div className="flex w-full flex-row lg:w-full lg:pl-10 xl:pl-32 3xl:pl-80">
         <div className="space-y-4">
           {cardTitles.map((title, index) => (
-            <div key={index} className="w-[544px] overflow-hidden rounded-2xl bg-white">
+            <div key={title} className="w-[544px] overflow-hidden rounded-2xl bg-white dark:bg-gray-95">
               <button
                 onClick={() => toggleAccordion(index)}
-                className={`flex w-full items-center px-8 text-left transition-all duration-700 ${
-                  openIndex === index ? 'pt-4' : 'h-[93px] py-4'
-                }`}
+                className={`flex w-full items-center px-8 text-left transition-all duration-700 ${openIndex === index ? 'pt-4' : 'h-[93px] py-4'}`}
               >
                 <span className="flex items-center justify-center gap-4 py-4 text-2xl text-primary">
                   {index + 1}
-                  <p className="text-lg font-medium text-gray-95 lg:text-xl">{title}</p>
+                  <p className="text-lg font-medium text-gray-95 dark:text-white-95 lg:text-xl">
+                    {title}
+                  </p>
                 </span>
               </button>
 
-              <div
-                className={`transition-all duration-700 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                } overflow-hidden`}
-              >
+              <div className={`transition-all duration-700 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
                 <div className="px-8 pb-8">
-                  <p className="text-base leading-tight text-gray-55 lg:text-base">{cardDescriptions[index]}</p>
+                  <p className="text-base leading-tight text-gray-55 dark:text-green-120 lg:text-base">
+                    {cardDescriptions[index]}
+                  </p>
                 </div>
               </div>
             </div>

@@ -427,6 +427,7 @@ export enum PromoCodeName {
   negocios = 'NEGOCIOS',
   lucas = 'LUCAS',
   youensina = 'YOUENSINA',
+  bfcmrec87 = 'BFCMREC87',
 }
 
 export interface PromoCodeProps {

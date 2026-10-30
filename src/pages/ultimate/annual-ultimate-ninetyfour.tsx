@@ -2,7 +2,7 @@ import { UltimateAnnualTemplate, UltimateAnnualTemplateProps } from "@/component
 import { GetStaticPropsContext } from "next";
 import { PromoCodeName } from "@/lib/types";
 
-const AnnualUltimateNinetyFour = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} couponCodeForLifetime={PromoCodeName.ultimate94}/>
+const AnnualUltimateNinetyFour = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} couponCodeForLifetime={PromoCodeName.ultimate94} darkMode={props.darkMode} />
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

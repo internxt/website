@@ -54,7 +54,13 @@ type PasswordState = {
   label: string;
 };
 
-export const SignUpForm = ({ textContent, lang, error, loading, onSubmitEmail }: SignUpFormProps): JSX.Element => {
+export const SignUpForm = ({
+  textContent,
+  lang,
+  error,
+  loading,
+  onSubmitEmail,
+}: SignUpFormProps): JSX.Element => {
   const [passwordState, setPasswordState] = useState<PasswordState | undefined>();
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
@@ -105,7 +111,7 @@ export const SignUpForm = ({ textContent, lang, error, loading, onSubmitEmail }:
   return (
     <form className="flex w-full flex-col gap-4" onSubmit={onSubmit}>
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="signUpFormEmail" className="text-sm font-medium text-gray-80">
+        <label htmlFor="signUpFormEmail" className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
           {textContent.fields.email.label}
         </label>
         <TextInput
@@ -120,7 +126,7 @@ export const SignUpForm = ({ textContent, lang, error, loading, onSubmitEmail }:
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="signUpFormPassword" className="text-sm font-medium text-gray-80">
+        <label htmlFor="signUpFormPassword" className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
           {textContent.fields.password.label}
         </label>
         <div className="relative flex w-full">
@@ -139,18 +145,22 @@ export const SignUpForm = ({ textContent, lang, error, loading, onSubmitEmail }:
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-0 top-0 flex h-11 items-center px-3 text-sm font-medium text-gray-60 hover:text-gray-80"
+            className="absolute right-0 top-0 flex h-11 items-center px-3 text-sm font-medium text-gray-60 hover:text-gray-80 dark:text-green-120 dark:hover:text-cool-gray-30"
           >
             {showPassword ? textContent.fields.password.hide : textContent.fields.password.show}
           </button>
         </div>
-        {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
+        {passwordState && (
+          <PasswordStrength strength={passwordState.tag} label={passwordState.label} />
+        )}
       </div>
 
       {textContent.info && (
-        <div className="flex flex-row items-start gap-2 rounded-lg bg-neutral-17 p-3">
+        <div className="flex flex-row items-start gap-2 rounded-lg bg-neutral-17 dark:bg-gray-105 p-3">
           <Info size={20} weight="fill" className="shrink-0 text-primary" />
-          <p className="text-sm font-normal leading-tight text-gray-60">{textContent.info}</p>
+          <p className="text-sm font-normal leading-tight text-gray-60 dark:text-green-120">
+            {textContent.info}
+          </p>
         </div>
       )}
 

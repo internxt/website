@@ -1,11 +1,13 @@
 import { CaretRight } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 
-const HeroSection2 = ({ textContent, lang, bannerText }) => {
+const HeroSection2 = ({ darkMode = false, textContent, lang, bannerText }) => {
   return (
     <section className="flex flex-col py-[88px] lg:py-16">
       <div className="flex flex-col items-center bg-gradient-to-b from-primary to-primary-dark px-5 py-20">
-        <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.header}</h1>
+        <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
+          {textContent.header}
+        </h1>
       </div>
       <div className="flex flex-col items-center justify-center space-y-16 px-10 py-20">
         <div className="flex flex-col space-y-9">
@@ -22,7 +24,7 @@ const HeroSection2 = ({ textContent, lang, bannerText }) => {
             <CaretRight size={14} weight="bold" className="text-primary" />
           </a>
         </div>
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
       </div>
     </section>
   );

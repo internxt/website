@@ -34,7 +34,9 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 />
               </div>
               <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+                <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
+                  {textContent.title}
+                </h1>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button

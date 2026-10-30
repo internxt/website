@@ -15,6 +15,7 @@ import Script from 'next/script';
 import { sm_breadcrumb_list, sm_faq } from '@/components/utils/schema-markup-generator';
 
 interface FreeCloudObjectStorageProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudObjectStorageText;
@@ -23,6 +24,7 @@ interface FreeCloudObjectStorageProps {
 }
 
 const FreeCloudObjectStorage = ({
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -49,65 +51,74 @@ const FreeCloudObjectStorage = ({
 
       <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
 
-      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
         url={'#storageSection'}
         customText={
           <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
               {textContent.CtaSection.title}
             </h2>
-            <h2 className="text-base font-normal leading-tight text-gray-55 lg:w-[673px] lg:text-center lg:text-xl">
+              <h2 className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[673px] lg:text-center lg:text-xl">
               {textContent.CtaSection.description}
             </h2>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="bg-neutral-17 px-10"
+        bgPadding="bg-neutral-17 dark:bg-gray-105 px-10"
       />
 
-      <HorizontalScrollableSection
-        textContent={textContent.WhyChooseInternxtSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        needsH2
-        needsH3
-        needsDivider={false}
-      />
-
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSectionV2}
-        url={'#storageSection'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSectionV2.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[663px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding="px-10"
-      />
-
-      {textContent.HowInternxtComparesSection && (
         <HorizontalScrollableSection
-          textContent={textContent.HowInternxtComparesSection}
-          bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          textContent={textContent.WhyChooseInternxtSection}
+          bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
           needsH2
           needsH3
           needsDivider={false}
         />
-      )}
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSectionV2}
+          url={'#storageSection'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
+                {textContent.CtaSectionV2.title}
+              </h2>
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[663px] lg:text-center lg:text-xl">
+                {textContent.CtaSectionV2.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+          bgPadding="px-10"
+        />
 
-      <Footer textContent={footerText} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Cloud object storage', url: '/cloud-object-storage' }, { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' }]} />
+        {textContent.HowInternxtComparesSection && (
+          <HorizontalScrollableSection
+            textContent={textContent.HowInternxtComparesSection}
+            bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+            needsH2
+            needsH3
+            needsDivider={false}
+          />
+        )}
+
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
+
+        <Footer
+          textContent={footerText}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Cloud object storage', url: '/cloud-object-storage' },
+            { name: 'Free cloud object storage', url: '/cloud-object-storage/free-cloud-object-storage' },
+          ]}
+          darkMode={darkMode}
+        />
     </Layout>
     </>
   );

@@ -13,13 +13,11 @@ const TryInternxtBanner = ({ textContent, url }) => {
 
   return (
     <section
-      className={`${
-        bannerVisible ? 'flex' : 'hidden'
-      }  fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
+      className={`${bannerVisible ? 'flex' : 'hidden'}  fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
-        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl text-neutral-900`}
+        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl text-neutral-900 dark:text-white-95`}
         style={{
           backgroundImage: `url(/images/virus-scanner/banner-bg.png)`,
           backgroundPosition: 'center',

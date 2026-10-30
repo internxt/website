@@ -17,7 +17,7 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
-const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, toolsContent, footerLang, bannerLang }) => {
+const ConverterTool = ({ darkMode = false, lang, metatagsDescriptions, navbarLang, langJson, toolsContent, footerLang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === CONVERTER_TOOL_METATAG_ID);
 
   return (
@@ -43,11 +43,12 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
           textContent={langJson.ExplanationSection}
           bannerText={bannerLang.SignUpByteConverterBanner}
           lang={lang}
+          darkMode={darkMode}
         />
 
         <CtaSection textContent={langJson.ctaSection1} />
 
-        <InfoSection textContent={langJson.infoSection} />
+        <InfoSection textContent={langJson.infoSection} darkMode={darkMode} />
 
         <CtaSection textContent={langJson.ctaSection2} />
 
@@ -57,9 +58,9 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
         <CtaSection textContent={langJson.ctaSection3} />
 
-        <FaqSection textContent={langJson.FaqSection} />
+        <FaqSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Byte converter', url: '/byte-converter' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

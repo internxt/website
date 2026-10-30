@@ -13,6 +13,7 @@ import Script from 'next/script';
 
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -37,6 +38,7 @@ const FileConverter = ({
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileConverterBanner}
         lang={lang}
+        darkMode={darkMode}
       />
 
       <CtaSection
@@ -53,9 +55,9 @@ const FileConverter = ({
 
       <CtaSection textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" />
 
-      <QASection textContent={textContent.QASection} />
+      <QASection textContent={textContent.QASection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File converter', url: '/file-converter' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File converter', url: '/file-converter' }]} darkMode={darkMode} />
     </Layout>
   </>);
 };

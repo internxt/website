@@ -7,16 +7,14 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
   const router = useRouter();
 
   return (
-    <section
-      className="relative flex flex-col items-center justify-center gap-8 bg-neutral-17 px-5 py-10 lg:gap-12 lg:px-0 lg:py-20"
-    >
-      <div className="absolute left-5 right-5 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
+    <section className="relative flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:gap-12 lg:px-0 lg:py-20">
+      <div className="absolute left-5 right-5 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
 
-      <h2 className="w-full max-w-[832px] px-4 text-center text-30 font-bold leading-tight text-gray-100 lg:px-0 lg:text-3xl">
+      <h2 className="w-full max-w-[832px] px-4 text-center text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:px-0 lg:text-3xl">
         {textContent.title}
       </h2>
 
-      <p className="w-full max-w-[832px] px-5 text-center text-sm font-normal leading-tight text-gray-55 lg:px-0 lg:text-lg">
+      <p className="w-full max-w-[832px] px-5 text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:px-0 lg:text-lg">
         {textContent.description}
       </p>
 
@@ -24,18 +22,16 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white p-10"
+            className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
           >
             <div className="flex flex-col gap-6">
-              <p className="text-30 font-semibold text-gray-100">
-                {card.title}
-              </p>
+              <p className="text-30 font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
 
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph.slice(0,30)}
-                    className="text-base font-normal leading-tight text-gray-55"
+                    className="text-base font-normal leading-tight text-gray-55 dark:text-green-120"
                   >
                     {paragraph}
                   </p>
@@ -75,18 +71,16 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className="flex w-full max-w-[340px] flex-col items-center gap-16 rounded-16 bg-white p-10"
+            className="flex w-full max-w-[340px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
           >
             <div className="flex flex-col gap-6">
-              <p className="text-xl font-semibold text-gray-100">
-                {card.title}
-              </p>
+              <p className="text-xl font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
 
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph.slice(0,30)}
-                    className="text-sm font-normal leading-tight text-gray-55"
+                    className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120"
                   >
                     {paragraph}
                   </p>

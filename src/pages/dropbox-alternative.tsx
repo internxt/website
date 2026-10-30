@@ -15,7 +15,14 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const DropboxComparison = ({
+  darkMode = false,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
   const {
     products,
@@ -72,9 +79,9 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Dropbox'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -83,6 +90,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           logo="/images/comparison/competitors/Dropbox_Letters.webp"
           sectionNeedsH2
           TableNameTag={'h3'}
+          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -96,19 +104,20 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]"
           needsH2
           needsH3
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]"
           needsH2
         />
 
@@ -117,20 +126,20 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
           url={'/pricing'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-32">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection.title}
               </p>
-              <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl">
                 {langJson.CtaSection.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-20"
         />
 
-        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <Footer
           textContent={footerLang}
@@ -140,6 +149,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Alternative to dropbox', url: '/dropbox-alternative' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

@@ -7,8 +7,8 @@ const BusinessCtaSection = ({
   customText,
   bgGradientContainerColor,
   bgGradientColor,
-  containerDetails,
-  bgColor,
+  containerDetails = '',
+  bgColor = 'dark:bg-gray-95',
 }: {
   textContent: any;
   url?: string;

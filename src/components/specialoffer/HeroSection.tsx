@@ -9,11 +9,13 @@ export const HeroSectionForSpecialOffer = ({ textContent }) => {
     <section className="overflow-hidden pt-5 lg:pt-10">
       <HeroSectionSafeArea>
         <div className="flex max-w-[550px] flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             <span className="text-primary">{textContent.title.blue}</span>
             {textContent.title.normal}
           </h1>
-          <h3 className="text-xl font-semibold text-gray-100 lg:text-2xl">{textContent.description}</h3>
+          <h3 className="text-xl font-semibold text-gray-100 dark:text-white-95 lg:text-2xl">
+            {textContent.description}
+          </h3>
           <Button
             text={textContent.cta}
             onClick={() => {

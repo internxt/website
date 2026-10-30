@@ -55,14 +55,14 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
   ];
 
   return (
-    <section className="relative flex w-full flex-col overflow-hidden pt-14">
+    <section className="relative flex w-full flex-col overflow-hidden pt-14 dark:bg-gray-95">
       <div className="flex flex-col items-center py-16 pb-20 lg:py-20">
         <div className="flex flex-col items-center justify-center space-y-10 px-6 text-center">
-          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             <span className="text-green-1">{textContent.title.greenText}</span>
             {textContent.title.normalText}
           </h1>
-          <h2 className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 sm:mb-10">
+          <h2 className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 dark:text-cool-gray-30 sm:mb-10">
             {textContent.description}
           </h2>
         </div>
@@ -76,7 +76,9 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                   className={`flex h-[300px] w-[300px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} border-4 border-white text-center ${goal.position} ${goal.zIndex}`}
                 >
                   <goal.icon size={60} className="mb-2 text-gray-100" />
-                  <p className="max-w-[200px] text-2xl font-medium text-gray-100">{goal.title}</p>
+                  <p className="max-w-[200px] text-2xl font-medium text-gray-100">
+                    {goal.title}
+                  </p>
                 </div>
               ),
           )}
@@ -90,7 +92,9 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                     className={`flex h-[300px] w-[300px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} border-4 border-white text-center ${goal.position} ${goal.zIndex}`}
                   >
                     <goal.icon size={60} className="mb-2 text-gray-100" />
-                    <p className="max-w-[200px] text-2xl font-medium text-gray-100">{goal.title}</p>
+                    <p className="max-w-[200px] text-2xl font-medium text-gray-100">
+                      {goal.title}
+                    </p>
                   </div>
                 ),
             )}
@@ -107,8 +111,10 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                     key={index}
                     className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} z-40 border-4 border-white text-center`}
                   >
-                    <goal.icon size={50} className="mb-2 text-gray-100" />
-                    <p className="max-w-[150px] text-xl font-medium text-gray-100">{goal.title}</p>
+                    <goal.icon size={50} className="mb-2 text-gray-100 dark:text-white-95" />
+                    <p className="max-w-[150px] text-xl font-medium text-gray-100 dark:text-white-95">
+                      {goal.title}
+                    </p>
                   </div>
                 ),
             )}
@@ -122,8 +128,10 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                     key={index}
                     className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} ml-[-20px] mr-[-20px]  mt-10 border-4 border-white text-center ${goal.zIndex}`}
                   >
-                    <goal.icon size={50} className="mb-2 text-gray-100" />
-                    <p className="max-w-[150px] text-xl font-medium text-gray-100">{goal.title}</p>
+                    <goal.icon size={50} className="mb-2 text-gray-100 dark:text-white-95" />
+                    <p className="max-w-[150px] text-xl font-medium text-gray-100 dark:text-white-95">
+                      {goal.title}
+                    </p>
                   </div>
                 ),
             )}
