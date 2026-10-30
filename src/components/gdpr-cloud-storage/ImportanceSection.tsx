@@ -5,12 +5,10 @@ import Link from 'next/link';
 
 const ImportanceSection = ({ textContent, ctaLink }) => {
   return (
-    <section className="overflow-hidden px-5">
+    <section className="overflow-hidden px-5 dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center space-y-16">
         <div>
-          <div
-            className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:flex-row md:justify-between md:space-x-8 md:pb-20 md:text-start`}
-          >
+          <div className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:flex-row md:justify-between md:space-x-8 md:pb-20 md:text-start`}>
             <RevealX className="flex w-full max-w-[90%] flex-col rounded-3xl pt-5 sm:max-w-[75%] md:w-auto md:pt-0">
               <Image
                 src={getImage('/images/GDPR_cloud_storage/internxt_GDPR.webp')}
@@ -23,9 +21,7 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
               />
             </RevealX>
 
-            <div
-              className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}
-            >
+            <div className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}>
               <h2 className="text-30 font-semibold leading-tight lg:text-3xl">{textContent.title}</h2>
               <p className="font-regular text-base leading-tight sm:text-lg md:text-xl">
                 {Array.isArray(textContent.description)

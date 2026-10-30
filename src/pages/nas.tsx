@@ -1,7 +1,7 @@
 import { GetStaticPropsContext } from 'next';
 import { NasTemplate, NasTemplateProps } from '@/components/templates/nasTemplate';
 
-const NASPage = (props: NasTemplateProps) => <NasTemplate {...props} />;
+const NASPage = (props: NasTemplateProps) => <NasTemplate {...props} darkMode={props.darkMode} />;
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

@@ -4,7 +4,7 @@ import {
 } from '@/components/templates/cloudStorageForDocumentsTemplate';
 import { GetStaticPropsContext } from 'next';
 
-const CloudStorageForDocumentsLP = (props: CloudStorageForDocumentsTemplateProps) => <CloudStorageForDocumentsTemplate {...props} />;
+const CloudStorageForDocumentsLP = (props: CloudStorageForDocumentsTemplateProps) => <CloudStorageForDocumentsTemplate {...props} darkMode={props.darkMode} />;
 
 export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;

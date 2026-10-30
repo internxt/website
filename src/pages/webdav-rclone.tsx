@@ -1,7 +1,7 @@
 import { WebdavRcloneTemplate, WebdavRcloneTemplateProps } from '@/components/templates/webdavRcloneTemplate';
 import { GetStaticPropsContext } from 'next';
 
-const WebDAVLP = (props: WebdavRcloneTemplateProps) => <WebdavRcloneTemplate {...props} />;
+const WebDAVLP = (props: WebdavRcloneTemplateProps) => <WebdavRcloneTemplate {...props} darkMode={props.darkMode} />;
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

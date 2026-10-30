@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const RenderDescription = ({ description, fontSize }: { description: string[]; fontSize?: string }): JSX.Element => {
+const RenderDescription = ({
+  description,
+  fontSize,
+}: {
+  description: string[];
+  fontSize?: string;
+}): JSX.Element => {
   useEffect(() => {
     const renderDescriptionComponent = document.querySelector('#render-description-section');
     const links = document.querySelectorAll('a');
@@ -20,7 +26,7 @@ const RenderDescription = ({ description, fontSize }: { description: string[]; f
       {description.map((item) => (
         <ReactMarkdown
           key={item}
-          className={`${fontSize ? fontSize : 'text-base font-normal leading-tight lg:text-lg'} text-gray-55`}
+          className={`${fontSize || 'text-base font-normal leading-tight lg:text-lg'} text-gray-55 dark:text-green-120`}
         >
           {item}
         </ReactMarkdown>

@@ -8,7 +8,9 @@ interface TestimonialsSectionForBusinessProps {
   textContent: any;
 }
 
-export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSectionForBusinessProps): JSX.Element => {
+export const TestimonialsSectionForBusiness = ({
+  textContent,
+}: TestimonialsSectionForBusinessProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 3;
   const totalItems = textContent.testimonials.length;
@@ -40,18 +42,15 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   const visibleTestimonialMobile = textContent.testimonials[currentIndex];
 
   return (
-    <section
-      className="relative overflow-hidden bg-neutral-17 px-5 py-20 lg:bg-transparent"
-      style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
-    >
+    <section className="relative overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:bg-transparent dark:lg:bg-transparent bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]">
       <div className="relative z-10">
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">
-          <h2 className="text-center text-3xl font-bold text-gray-100 lg:text-3xl">{textContent.title}</h2>
+          <h2 className="text-center text-3xl font-bold text-gray-100 dark:text-white-95 lg:text-3xl">{textContent.title}</h2>
 
           <div className="hidden w-full max-w-7xl lg:flex lg:items-center lg:justify-center xl:gap-8">
             <button
               onClick={scrollLeft}
-              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer"
+              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer dark:hover:bg-gray-105"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -73,7 +72,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
                         />
                         <FiveStars totalStars={5} />
                       </div>
-                      <p className="text-xl font-normal leading-tight text-gray-80">{testimonial.review}</p>
+                      <p className="text-xl font-normal leading-tight text-gray-80 dark:text-cool-gray-30">{testimonial.review}</p>
                     </div>
                     <div className="flex h-full items-end"></div>
                   </div>
@@ -83,7 +82,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
 
             <button
               onClick={scrollRight}
-              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer"
+              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer dark:hover:bg-gray-105"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -91,24 +90,24 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         </div>
 
         <div className="flex h-full w-full flex-col items-center justify-center gap-8 px-6 md:hidden">
-          <h2 className="text-start text-30 font-bold leading-tight text-gray-100">{textContent.title}</h2>
+          <h2 className="text-start text-30 font-bold leading-tight text-gray-100 dark:text-white-95">{textContent.title}</h2>
 
           <div className="flex h-min w-full flex-col justify-center gap-3">
             <Quotes className="text-primary" weight="fill" size={24} />
-            <p className="text-xs font-normal leading-tight text-gray-55">{visibleTestimonialMobile.review}</p>
-            <p className="text-xs font-bold leading-tight text-gray-55">{visibleTestimonialMobile.imageBrandName}</p>
+            <p className="text-xs font-normal leading-tight text-gray-55 dark:text-green-120">{visibleTestimonialMobile.review}</p>
+            <p className="text-xs font-bold leading-tight text-gray-55 dark:text-green-120">{visibleTestimonialMobile.imageBrandName}</p>
           </div>
 
           <div className="flex w-full flex-row justify-end gap-4">
             <button
               onClick={scrollLeftMobile}
-              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer"
+              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer dark:hover:bg-gray-105"
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRightMobile}
-              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer"
+              className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer dark:hover:bg-gray-105"
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

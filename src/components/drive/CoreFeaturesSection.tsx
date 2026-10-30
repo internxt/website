@@ -90,21 +90,13 @@ const CoreFeaturesSection = ({
 
   return (
     <section
-      className={`relative flex w-full flex-col items-start justify-center gap-6 ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
-      } px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`relative flex w-full flex-col items-start justify-center gap-6 ${darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95'} px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
     >
       {needsDivider && (
-        <div
-          className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-          } lg:left-32 lg:right-32`}
-        />
+        <div className={`absolute left-8 right-8 top-0 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:left-32 lg:right-32`} />
       )}
-      <h2 className={`flex text-4xl font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
-        {textContent.title}
-      </h2>
-      <p className={`text-lg font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>{textContent.description}</p>
+      <h2 className={`flex text-4xl font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>{textContent.title}</h2>
+      <p className={`text-lg font-normal ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'}`}>{textContent.description}</p>
 
       <div className="flex w-full flex-row gap-8">
         <div className="flex w-full flex-col gap-6 lg:w-1/2">
@@ -135,24 +127,16 @@ const CoreFeaturesSection = ({
             <button
               key={index}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 ${
-                darkMode ? 'bg-gray-105' : 'bg-white'
-              } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
+              className={`flex flex-col rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
               aria-expanded={activeIndex === index}
             >
               <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                 {index + 1}
-                <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{title}</h3>
+                <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>{title}</h3>
               </span>
-              <div
-                className={`grid transition-all duration-300 ${
-                  activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
+              <div className={`grid transition-all duration-300 ${activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="overflow-hidden">
-                  <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
-                    {textContent.accordionCards.descriptions[index]}
-                  </p>
+                  <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'}`}>{textContent.accordionCards.descriptions[index]}</p>
                 </div>
               </div>
             </button>
@@ -196,10 +180,8 @@ const CoreFeaturesSection = ({
               }}
             >
               <div className="flex flex-col gap-2 px-4 pt-8">
-                <p className={`text-xl font-medium ${darkMode ? 'text-primary' : 'text-gray-100'}`}>{title}</p>
-                <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
-                  {textContent.cards.descriptions[index]}
-                </p>
+                <p className={`text-xl font-medium ${darkMode ? 'text-primary' : 'text-gray-100 dark:text-primary'}`}>{title}</p>
+                <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'}`}>{textContent.cards.descriptions[index]}</p>
               </div>
             </div>
           ))}
@@ -211,9 +193,7 @@ const CoreFeaturesSection = ({
               <button
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -221,9 +201,7 @@ const CoreFeaturesSection = ({
               <button
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

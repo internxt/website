@@ -7,19 +7,19 @@ const HeroSection = ({ textContent }) => {
       <div className="lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center space-y-6 py-20 lg:flex-row lg:justify-between lg:space-y-0">
           <div className="flex max-w-[530px] flex-col items-center space-y-8 text-center lg:items-start lg:text-left">
-            <div className="flex w-max rounded-lg bg-gray-5 px-4 py-2">
-              <p className="text-xl font-medium text-black">
+            <div className="flex w-max rounded-lg bg-gray-5 dark:bg-gray-105 px-4 py-2">
+              <p className="text-xl font-medium text-black dark:text-white-95">
                 {textContent.inxtLabel}
                 <span className="text-primary"> x </span>
                 {textContent.educationLabel}
               </p>
             </div>
 
-            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               {textContent.title.line1} <span className="text-primary">{textContent.title.line2}</span>
             </h1>
 
-            <div className="text-xl font-normal text-gray-80">
+            <div className="text-xl font-normal text-gray-80 dark:text-cool-gray-30">
               <span className="font-semibold">{textContent.description.boldText}</span>
               {textContent.description.text}
             </div>

@@ -21,13 +21,11 @@ export const HeroSection = ({
   style,
   ImageComponent,
   imageProperties,
-  background,
+  background = 'dark:bg-gray-95',
 }: HeroSectionProps): JSX.Element => {
   return (
     <section className={`overflow-hidden  ${background}`} style={style}>
-      <div
-        className={`mt-20 flex h-min w-full flex-col items-center p-10 lg:h-min lg:flex-row lg:justify-between lg:gap-16 lg:pl-10 xl:pl-32 3xl:pl-80`}
-      >
+      <div className={`mt-20 flex h-min w-full flex-col items-center p-10 lg:h-min lg:flex-row lg:justify-between lg:gap-16 lg:pl-10 xl:pl-32 3xl:pl-80`}>
         <div className="flex w-[350px] flex-col lg:w-[656px] ">{TextComponent}</div>
         <div className="flex flex-shrink-0 flex-col items-center">
           {ImageComponent}

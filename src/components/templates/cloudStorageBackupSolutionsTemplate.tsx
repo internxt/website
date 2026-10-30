@@ -26,6 +26,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface CloudStorageBackupSolutionsTemplateProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: CloudStorageBackupSolutionsText;
   navbarLang: NavigationBarText;
@@ -39,6 +40,7 @@ export interface CloudStorageBackupSolutionsTemplateProps {
 }
 
 export const CloudStorageBackupSolutionsTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -131,13 +133,9 @@ export const CloudStorageBackupSolutionsTemplate = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.FaqSection.faq)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_faq(textContent.FaqSection.faq)}</Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list(BREADCRUMB_ITEMS)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb_list(BREADCRUMB_ITEMS)}</Script>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
@@ -186,13 +184,9 @@ export const CloudStorageBackupSolutionsTemplate = ({
           cards={cardsData}
         />
         {textContent.NewBlock1 && (
-          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
-              {textContent.NewBlock1.title}
-            </h2>
-            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
-              {textContent.NewBlock1.intro}
-            </p>
+          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 dark:bg-gray-95 lg:py-14">
+            <h2 className="text-center text-30 font-semibold text-gray-95 dark:text-white-95 lg:text-3xl">{textContent.NewBlock1.title}</h2>
+            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg">{textContent.NewBlock1.intro}</p>
           </div>
         )}
 
@@ -209,8 +203,9 @@ export const CloudStorageBackupSolutionsTemplate = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="5TB"
-            sectionDetails="bg-white lg:py-20"
+            sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
             hideFreeCard
+            darkMode={darkMode}
           />
         )}
 
@@ -223,13 +218,9 @@ export const CloudStorageBackupSolutionsTemplate = ({
         <FeaturesSection textContent={textContent.FeaturesSection} />
 
         {textContent.NewBlock2 && (
-          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 lg:py-14">
-            <h2 className="text-center text-30 font-semibold text-gray-95 lg:text-3xl">
-              {textContent.NewBlock2.title}
-            </h2>
-            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-lg">
-              {textContent.NewBlock2.intro}
-            </p>
+          <div className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 dark:bg-gray-95 lg:py-14">
+            <h2 className="text-center text-30 font-semibold text-gray-95 dark:text-white-95 lg:text-3xl">{textContent.NewBlock2.title}</h2>
+            <p className="w-full text-center text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg">{textContent.NewBlock2.intro}</p>
           </div>
         )}
 
@@ -241,11 +232,11 @@ export const CloudStorageBackupSolutionsTemplate = ({
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

@@ -26,8 +26,8 @@ const FeatureSection = ({ textContent }) => {
           className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
         >
           <ShieldStar size={64} className="text-primary" weight="light" />
-          <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
-          <p className="text-base text-gray-80 lg:text-xl">{textContent.description}</p>
+          <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">{textContent.title}</p>
+          <p className="text-base text-gray-80 dark:text-cool-gray-30 lg:text-xl">{textContent.description}</p>
           <button
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
             onClick={() => {

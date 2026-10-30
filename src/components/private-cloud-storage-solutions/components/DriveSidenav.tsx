@@ -29,7 +29,7 @@ export const DriveSidenav = () => (
     <div className="flex  cursor-default flex-col py-2 px-2">
       {driveItems.map((item) => (
         <div
-          className="flex w-screen max-w-[240px] flex-row items-center space-x-2 rounded-lg py-2 pr-3  pl-6 text-gray-60 first:bg-primary first:bg-opacity-10 first:text-primary"
+          className="flex w-screen max-w-[240px] flex-row items-center space-x-2 rounded-lg py-2 pl-6 pr-3 text-gray-60 dark:text-green-120 first:bg-primary first:bg-opacity-10 first:text-primary"
           key={item.item}
         >
           <item.icon size={24} weight={item.icon.displayName === 'FolderSimple' ? 'fill' : 'regular'} />

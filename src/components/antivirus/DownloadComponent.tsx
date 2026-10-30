@@ -4,7 +4,7 @@ import { ArrowCircleRight } from '@phosphor-icons/react';
 const DownloadComponent = ({ textContent, download }) => {
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9 pb-6">
-      <p className="text-center text-4xl font-semibold text-gray-100">{textContent.downloadTitle}</p>
+      <p className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95">{textContent.downloadTitle}</p>
 
       <div className="flex w-full flex-col items-center justify-center space-y-4 lg:flex-row lg:items-start lg:space-x-12">
         {/* Download for desktop */}

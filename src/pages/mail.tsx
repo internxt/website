@@ -1,7 +1,7 @@
 import { MailTemplate, MailTemplateProps } from '@/components/templates/mailTemplate';
 import { GetStaticPropsContext } from 'next';
 
-const MailLP = (props: MailTemplateProps) => <MailTemplate {...props} />;
+const MailLP = (props: MailTemplateProps) => <MailTemplate {...props} darkMode={props.darkMode} />;
 
 export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;

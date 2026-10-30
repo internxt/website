@@ -10,21 +10,19 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ textContent, download, needsDownloadSection }: HeroSectionProps) => (
-  <section className="flex w-full flex-col px-2">
+  <section className="flex w-full flex-col px-2 dark:bg-gray-95">
     <div className="flex flex-col items-center pt-32 lg:pt-40">
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
-        <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
-          <h2 className="text-xl font-medium text-gray-80">{textContent.eyeBrow}</h2>
+        <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 dark:bg-gray-105 px-4 py-2">
+          <h2 className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">{textContent.eyeBrow}</h2>
         </div>
       </div>
-      <h1 className="pt-4 text-center text-3xl font-semibold text-gray-100 lg:text-5xl">
+      <h1 className="pt-4 text-center text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
         <span className="text-primary">{textContent.title}</span> <br className="hidden sm:flex" />
         {textContent.blueText}
       </h1>
 
-      <p className="font-regular max-w-[800px] px-5 pt-7 text-center text-xl text-gray-80 sm:text-xl md:pb-5">
-        {textContent.description}
-      </p>
+      <p className="font-regular max-w-[800px] px-5 pt-7 text-center text-xl text-gray-80 dark:text-cool-gray-30 sm:text-xl md:pb-5">{textContent.description}</p>
 
       <div className="relative flex h-[65vh] items-center justify-center md:h-[450px]">
         <Image
@@ -66,7 +64,9 @@ const HeroSection = ({ textContent, download, needsDownloadSection }: HeroSectio
         </div>
       </div>
 
-      {!isMobile && <DownloadComponent textContent={textContent.DownloadLinks} download={download} />}
+      {!isMobile && (
+        <DownloadComponent textContent={textContent.DownloadLinks} download={download} />
+      )}
     </div>
   </section>
 );

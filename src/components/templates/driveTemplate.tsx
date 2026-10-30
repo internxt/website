@@ -30,6 +30,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface DriveTemplateProps {
+  darkMode?: boolean;
   textContent: DriveText;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -53,6 +54,7 @@ export interface DriveTemplateProps {
 }
 
 export const DriveTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   download,
   textContent,
@@ -112,9 +114,7 @@ export const DriveTemplate = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Secure cloud storage', 'drive')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('Secure cloud storage', 'drive')}</Script>
       <Layout
         title={metatags?.title ?? ''}
         description={metatags?.description ?? ''}
@@ -140,26 +140,28 @@ export const DriveTemplate = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="2TB"
-            sectionDetails="bg-white lg:py-20 xl:py-32"
+            sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
+            darkMode={darkMode}
           />
         )}
 
         <HorizontalScrollableSection
           textContent={textContent.EncryptedCloudStorageSection}
-          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
           needsH2
           needsH3
         />
 
         <FileParallaxSection />
 
-        <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+        <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
         <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
         <ThreeCardsSection
           textContent={textContent.MadeInEuropeSection}
-          bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+          darkMode={darkMode}
         />
 
         <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
@@ -169,37 +171,40 @@ export const DriveTemplate = ({
           url={'/pricing'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-                {textContent.CtaSection.title}
-              </h2>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.CtaSection.description}
-              </p>
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{textContent.CtaSection.title}</h2>
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">{textContent.CtaSection.description}</p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
         />
 
-        <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+        <DownloadComponent
+          textContent={textContent.DownloadSection}
+          lang={lang}
+          download={download}
+          darkMode={darkMode}
+        />
 
         <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} lang={lang} />
 
         <ReviewsSection
           textContent={textContent.ReviewSection}
-          bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+          darkMode={darkMode}
         />
 
         <FAQSection
           textContent={textContent.FaqSection}
           needsH3
-          bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]"
+          darkMode={darkMode}
         />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

@@ -1,4 +1,10 @@
-const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: string }) => {
+const CtaSection = ({
+  textContent,
+  maxWidth = '',
+}: {
+  textContent: any;
+  maxWidth?: string;
+}) => {
   return (
     <section
       style={{
@@ -12,7 +18,7 @@ const CtaSection = ({ textContent, maxWidth }: { textContent: any; maxWidth?: st
           <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10 dark:hover:bg-purple-100"
           onClick={() => {
             window.scrollTo({
               top: document.getElementById('discountCard')?.offsetTop,

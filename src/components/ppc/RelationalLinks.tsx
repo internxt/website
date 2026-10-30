@@ -55,9 +55,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   const updateScrollButtons = () => {
     if (scrollContainerRef.current === null) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-    
     const maxScrollLeft = scrollWidth - clientWidth;
-    
     setScrollState({
       canGoLeft: scrollLeft > 2,
       canGoRight: scrollLeft < maxScrollLeft - 2,
@@ -105,11 +103,9 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   if (cards.length === 0) return null;
 
   return (
-    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20">
+    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20 dark:bg-gray-95">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
-        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 lg:mb-14 lg:text-5xl">
-          {textContent.title}
-        </p>
+        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl">{textContent.title}</p>
       </div>
 
       <div className="flex w-full flex-col items-center gap-6 lg:gap-8">
@@ -131,7 +127,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
                 width: isMobile ? '300px' : '350px',
               }}
             >
-              <div className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 p-10 transition-colors hover:bg-neutral-20">
+              <div className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105">
                 <LinkTo linkToRedirect={card.link} text={card.cta} />
               </div>
             </div>
@@ -144,9 +140,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
               type="button"
               onClick={scrollLeft}
               disabled={!scrollState.canGoLeft}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !scrollState.canGoLeft ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!scrollState.canGoLeft ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'}`}
               aria-label="Anterior"
             >
               <CaretLeft className="text-primary" size={24} />
@@ -155,9 +149,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
               type="button"
               onClick={scrollRight}
               disabled={!scrollState.canGoRight}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                !scrollState.canGoRight ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!scrollState.canGoRight ? 'cursor-not-allowed opacity-30' : 'cursor-pointer'}`}
               aria-label="Siguiente"
             >
               <CaretRight className="text-primary" size={24} />

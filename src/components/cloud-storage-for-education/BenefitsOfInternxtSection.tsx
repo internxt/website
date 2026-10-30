@@ -6,8 +6,8 @@ import { getImage } from '@/lib/getImage';
 const CardText = ({ textContent }) => (
   <div className="flex max-w-[388px] flex-col space-y-6">
     <textContent.icon size={64} className="text-primary" />
-    <h3 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h3>
-    <p className="text-xl text-gray-80">{textContent.description}</p>
+    <h3 className="text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">{textContent.title}</h3>
+    <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
   </div>
 );
 
@@ -35,8 +35,8 @@ const BenefitsOfInternxtSection = ({ textContent }) => {
         {/* First Section */}
         <div className="flex flex-col items-center space-y-12">
           <div className="flex max-w-[774px] flex-col space-y-6 text-center">
-            <h2 className="max-w-[730px] text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
-            <p className="text-2xl font-semibold text-gray-80">{textContent.subtitle}</p>
+            <h2 className="max-w-[730px] text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">{textContent.title}</h2>
+            <p className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">{textContent.subtitle}</p>
             <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
           </div>
           <button
