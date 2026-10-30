@@ -142,7 +142,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ></iframe>
         </noscript>
 
-        <Component {...pageProps} darkMode={darkMode} />
+        <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
           {shouldShowBanner ? (
