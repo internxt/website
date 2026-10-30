@@ -31,7 +31,7 @@ export default function ThreeCardsWithImagesSection({
   cardColor,
   bottomSeparationBar = false,
 }: Readonly<ThreeCardsWithImagesProps>): JSX.Element {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -98,34 +98,31 @@ export default function ThreeCardsWithImagesSection({
   const maxIndex = getMaxIndex();
   const hasCta = Boolean(textContent.cards.cta && textContent.cards.links);
 
-  const sectionBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17';
+  const sectionBgClass = darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95';
   return (
     <section
-      className={`flex min-h-0 w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : sectionBgClass
-      } relative py-10 lg:gap-16 lg:py-20`}
-      style={{ background: bgColor || undefined }}
+      className={`flex min-h-0 w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgColor ?? sectionBgClass} relative py-10 lg:gap-16 lg:py-20`}
     >
       <hr
         className={`absolute left-8 right-8 top-0 border-t ${
-          darkMode ? 'border-gray-71' : 'border-neutral-35'
+          darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'
         } lg:left-32 lg:right-32`}
       />
       {bottomSeparationBar && (
         <hr
           className={`absolute bottom-0 left-8 right-8 border-t ${
-            darkMode ? 'border-gray-71' : 'border-neutral-35'
+            darkMode ? 'border-gray-71' : 'border-neutral-35 dark:border-gray-71'
           } lg:left-32 lg:right-32`}
         />
       )}
 
       <div className="flex min-h-0 w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
+        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95 dark:text-gray-1'} lg:text-3xl`}>
           {textContent.title}
         </p>
         {textContent.description && (
           <p
-            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:text-xl`}
           >
             {textContent.description}
           </p>
@@ -148,7 +145,7 @@ export default function ThreeCardsWithImagesSection({
               <article
                 key={`${title}-${index}`}
                 className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                  cardColor || (darkMode ? 'bg-gray-105' : '')
+                  cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')
                 }  lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col gap-4">
@@ -163,7 +160,7 @@ export default function ThreeCardsWithImagesSection({
 
                   <p
                     className={`flex items-center justify-start gap-4 text-lg font-medium ${
-                      darkMode ? 'text-white-95' : 'text-gray-100'
+                      darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                     }`}
                   >
                     {hasCta && <span className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</span>}
@@ -171,7 +168,7 @@ export default function ThreeCardsWithImagesSection({
                   </p>
                   <p
                     className={`text-sm font-normal leading-tight ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
+                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
                     } lg:text-base`}
                   >
                     {textContent.cards.descriptions[index]}
@@ -224,7 +221,7 @@ export default function ThreeCardsWithImagesSection({
           <article
             key={`${title}-${index}`}
             className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
-              cardColor || (darkMode ? 'bg-gray-105' : '')
+              cardColor || (darkMode ? 'bg-gray-105' : 'dark:bg-gray-105')
             } p-8`}
           >
             <div className="flex flex-col gap-6">
@@ -234,13 +231,13 @@ export default function ThreeCardsWithImagesSection({
 
               <p
                 className={`flex items-center justify-start gap-4 text-xl font-medium ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 }`}
               >
                 {hasCta && <span className="text-2xl font-medium text-primary">{index + 1}</span>}
                 {title}
               </p>
-              <p className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight`}>
+              <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight`}>
                 {textContent.cards.descriptions[index]}
               </p>
             </div>

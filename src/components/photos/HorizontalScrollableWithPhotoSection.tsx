@@ -5,15 +5,13 @@ import Image from 'next/image';
 import { PhotoText } from '@/assets/types/photos';
 
 interface HorizontalScrollableSectionWithPhotosProps {
-  darkMode?: boolean;
   textContent: PhotoText['DesignedSection'];
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
-  darkMode = false,
   textContent,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -89,13 +87,12 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-2 py-5 pt-14 lg:h-min lg:gap-14 lg:pt-20"
-      style={{ background: darkMode ? '#1C1C1C' : '#FFFFFF 100%' }}
+      className="flex h-min w-full flex-col items-center justify-center gap-2 py-5 pt-14 lg:h-min lg:gap-14 lg:pt-20 dark:bg-gray-95"
     >
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
         <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6 lg:ml-20 lg:pl-14">
           <h2
-            className={`text-[30px] font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-5xl`}
+            className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
           >
             {textContent.title}
           </h2>
@@ -128,16 +125,12 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               <div key={title} className="flex-shrink-0 items-center">
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
                   <h3
-                    className={`pb-6 text-[18px] font-medium ${
-                      darkMode ? 'text-white-95' : 'text-gray-95'
-                    } lg:text-[20px]`}
+                    className="pb-6 text-[18px] font-medium text-gray-95 dark:text-white-95 lg:text-[20px]"
                   >
                     {title}
                   </h3>
                   <p
-                    className={`flex-1 text-xs font-normal leading-tight lg:text-base ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    }`}
+                    className="flex-1 text-xs font-normal leading-tight lg:text-base text-gray-55 dark:text-green-120"
                   >
                     {cardDescriptions[index]}
                   </p>
@@ -169,9 +162,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === 0
                   ? 'cursor-not-allowed opacity-50'
                   : `cursor-pointer ${hoverClass}`
@@ -183,9 +174,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === maxIndex
                   ? 'cursor-not-allowed opacity-50'
                   : `cursor-pointer ${hoverClass}`

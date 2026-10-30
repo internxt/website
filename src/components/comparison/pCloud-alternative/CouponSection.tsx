@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getImage } from '@/lib/getImage';
 
 interface UseCouponSectionProps {
-  darkMode?: boolean;
   textContent: any;
   redirectUrl: string;
 }
@@ -18,7 +17,7 @@ const CodeComponent = ({ textContent }) => (
   </div>
 );
 
-export const CouponSection = ({ darkMode = false, textContent, redirectUrl }: UseCouponSectionProps) => {
+export const CouponSection = ({ textContent, redirectUrl }: UseCouponSectionProps) => {
   return (
     <section className="flex flex-col bg-primary-dark px-5 py-20">
       <div className="flex flex-col items-center gap-12 text-center">
@@ -28,11 +27,7 @@ export const CouponSection = ({ darkMode = false, textContent, redirectUrl }: Us
             href={redirectUrl}
             rel="noopener noreferrer"
             id="get-started-link"
-            className={`flex w-full items-center justify-center rounded-lg border border-transparent ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            } px-6 py-2 text-lg font-medium text-primary ${
-              darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
-            } focus:outline-none sm:inline-flex sm:w-max`}
+            className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white dark:bg-gray-95 px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 dark:hover:bg-purple-100 focus:outline-none sm:inline-flex sm:w-max"
           >
             {textContent.cta}
           </Link>

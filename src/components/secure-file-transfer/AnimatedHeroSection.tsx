@@ -2,13 +2,11 @@ import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 import Animation from '@/components/shared/Animation'
 
 interface AnimatedHeroSectionProps {
-  darkMode?: boolean;
   textComponent: JSX.Element;
   bgGradient?: string;
 }
 
 export default function AnimatedHero({
-  darkMode = false,
   textComponent,
 }: Readonly<AnimatedHeroSectionProps>): JSX.Element {
   const images: ImageConfig[] = [

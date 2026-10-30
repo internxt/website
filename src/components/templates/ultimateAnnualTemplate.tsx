@@ -51,7 +51,7 @@ export const UltimateAnnualTemplate = ({
         <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} darkMode={darkMode} />
 
         {ultimatePlan && (
-          <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`} id="priceCard">
+          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 dark:bg-gray-95" id="priceCard">
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
               storage={ultimatePlan.storage}
@@ -62,7 +62,6 @@ export const UltimateAnnualTemplate = ({
               planId={ultimatePlan.priceId}
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
-              darkMode={darkMode}
             />
           </div>
         )}
@@ -73,7 +72,7 @@ export const UltimateAnnualTemplate = ({
 
         <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
   );
 };

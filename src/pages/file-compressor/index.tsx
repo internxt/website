@@ -32,7 +32,7 @@ const FileConverter = ({
       </Script>
 <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
       <FeaturesSection
         textContent={textContent.FeaturesSection}
@@ -45,10 +45,9 @@ const FileConverter = ({
         textContent={textContent.CtaSection}
         url={'https://internxt.com/drive'}
         customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
-        darkMode={darkMode}
       />
 
-      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <QASection textContent={textContent.QASection} darkMode={darkMode} />
 

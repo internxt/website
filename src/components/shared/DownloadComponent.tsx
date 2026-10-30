@@ -88,12 +88,12 @@ const DownloadLink: React.FC<{
 );
 
 const SecondaryLink: React.FC<{ darkMode?: boolean; href: string; children: React.ReactNode }> = ({
-  darkMode = false,
+  
   href,
   children,
 }) => (
   <a
-    className={`font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} underline hover:no-underline`}
+    className="font-medium text-gray-80 dark:text-cool-gray-30 underline hover:no-underline"
     href={href}
     target="_blank"
     rel="noreferrer"
@@ -129,7 +129,7 @@ const SecondaryDownloads: React.FC<{
   const { first, second } = platforms;
 
   return (
-    <div className={`text-lg font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+    <div className="text-lg font-semibold text-gray-80 dark:text-cool-gray-30">
       {isChinese ? (
         <>
           {textContent.orDownloadFor.split('<>')[0]}
@@ -167,7 +167,7 @@ const DesktopSection: React.FC<{
 }> = ({ darkMode = false, OS, textContent, download, isChinese }) => (
   <div className="flex flex-1 flex-grow flex-row justify-end">
     <div className="flex flex-col items-center gap-6">
-      <p className={`text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+      <p className="text-3xl font-medium text-black dark:text-white-95 lg:text-30">
         {textContent.Desktop}
       </p>
       <DownloadLink href={download[OS]}>
@@ -185,9 +185,9 @@ const DesktopSection: React.FC<{
   </div>
 );
 
-const WebSection: React.FC<{ darkMode?: boolean; textContent: TextContent }> = ({ darkMode = false, textContent }) => (
+const WebSection: React.FC<{ darkMode?: boolean; textContent: TextContent }> = ({ textContent }) => (
   <div className="flex flex-col items-center justify-between">
-    <p className={`pb-6 text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+    <p className="pb-6 text-3xl font-medium text-black dark:text-white-95 lg:text-30">
       {textContent.Web}
     </p>
     <a
@@ -244,7 +244,7 @@ const MobileSection: React.FC<{
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <p className={`text-3xl font-medium ${darkMode ? 'text-white-95' : 'text-black'} lg:text-30`}>
+      <p className="text-3xl font-medium text-black dark:text-white-95 lg:text-30">
         {textContent.Mobile}
       </p>
 
@@ -254,7 +254,7 @@ const MobileSection: React.FC<{
             {formatTextWithPlaceholder(textContent.downloadOnThe, textContent.iPhone, isChinese)}
           </DownloadLink>
 
-          <div className={`text-lg font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <div className="text-lg font-semibold text-gray-80 dark:text-cool-gray-30">
             {isChinese ? (
               <>
                 {textContent.orGetOn.split('<>')[0]}{' '}
@@ -285,7 +285,7 @@ const MobileSection: React.FC<{
             <CaretRight size={16} weight="bold" />
           </a>
 
-          <div className={`text-base font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <div className="text-base font-semibold text-gray-80 dark:text-cool-gray-30">
             {isChinese ? (
               <>
                 {textContent.orDownloadOnThe.split('<>')[0]}{' '}
@@ -320,16 +320,12 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ darkMode = false,
 
   return (
     <section
-      className={`hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex ${
-        darkMode ? 'bg-[#1C1C1C]' : ''
-      }`}
+      className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex dark:bg-gray-95"
     >
       <div
-        className={`absolute ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]`}
+        className="absolute bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]"
       />
-      <p className={`text-center text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-4xl`}>
+      <p className="text-center text-2xl font-semibold text-gray-100 dark:text-white-95 lg:text-4xl">
         {textContent.downloadTitle}
       </p>
 

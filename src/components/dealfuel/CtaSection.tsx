@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const CtaSection = ({ darkMode = false, textContent }) => {
+const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-primary-dark">
       <div className="flex flex-col items-center justify-center py-12 pb-12 lg:px-20">
@@ -10,9 +10,7 @@ const CtaSection = ({ darkMode = false, textContent }) => {
         </div>
         <Link
           href={'/#payment'}
-          className={`flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg ${
-            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-          } text-center ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
+          className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white dark:bg-gray-95 text-center hover:bg-blue-10 dark:hover:bg-purple-100"
         >
           <p className="px-9 py-3 text-lg font-medium text-primary">{textContent.cta}</p>
         </Link>

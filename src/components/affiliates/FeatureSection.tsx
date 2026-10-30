@@ -1,7 +1,7 @@
 import { NumberOne, NumberThree, NumberTwo } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
 
-const FeatureSection = ({ darkMode = false, textContent }): JSX.Element => {
+const FeatureSection = ({ textContent }): JSX.Element => {
   const cards = [
     {
       icon: NumberOne,
@@ -22,12 +22,10 @@ const FeatureSection = ({ darkMode = false, textContent }): JSX.Element => {
   ];
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-20`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 py-20">
       <div className="flex flex-col items-center justify-center space-y-10 lg:space-y-20">
         <p
-          className={`text-center text-30 font-semibold ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } lg:text-3xl`}
+          className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl"
         >
           {textContent.title}
         </p>
@@ -35,13 +33,11 @@ const FeatureSection = ({ darkMode = false, textContent }): JSX.Element => {
           {cards.map((item) => (
             <div
               key={item.title}
-              className={`flex max-w-[350px] flex-col items-center space-y-6 rounded-2xl ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } p-10 text-center lg:items-start lg:text-left`}
+              className="flex max-w-[350px] flex-col items-center space-y-6 rounded-2xl bg-white dark:bg-gray-95 p-10 text-center lg:items-start lg:text-left"
             >
               <item.icon className="text-primary" size={32} />
-              <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{item.title}</p>
-              <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{item.title}</p>
+              <p className="text-lg leading-tight text-gray-80 dark:text-cool-gray-30">
                 {item.description}
               </p>
               {item.cta && (

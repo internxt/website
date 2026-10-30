@@ -22,7 +22,6 @@ import {
 import React from 'react';
 
 export interface PriceCardProps {
-  darkMode?: boolean;
   contentText: any;
   planType: string;
   storage: string;
@@ -40,7 +39,6 @@ export interface PriceCardProps {
 }
 
 export default function PriceCard({
-  darkMode = false,
   planType,
   storage,
   price,
@@ -54,8 +52,8 @@ export default function PriceCard({
   isCloudwards,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
-  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
-  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
+  const ringClass = 'ring-gray-10 dark:ring-gray-71';
+  const hoverClass = 'hover:bg-gray-1 active:bg-gray-5 dark:hover:bg-gray-105 dark:active:bg-gray-105';
   const priceBeforeDiscount = priceBefore ? Number(priceBefore).toFixed(2).replace('.00', '') : undefined;
   const iconsFeatures = [
     Database,
@@ -81,9 +79,7 @@ export default function PriceCard({
       } m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } p-6 pt-6`}
+        className="info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6"
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -104,14 +100,10 @@ export default function PriceCard({
           }`}
         >
           <div
-            className={`priceBreakdown flex flex-row
-              items-end space-x-px ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}
-            `}
+            className="priceBreakdown flex flex-row items-end space-x-px text-neutral-700 dark:text-cool-gray-30"
           >
             <p
-              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              }`}
+              className="flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95"
             >
               <span>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
@@ -156,9 +148,7 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`featureList flex h-[700px] flex-col border-t ${
-          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
-        } p-6 ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+        className="featureList flex h-[700px] flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 p-6 text-gray-80 dark:text-cool-gray-30"
       >
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (
@@ -175,7 +165,7 @@ export default function PriceCard({
                     className: 'text-primary',
                   },
                 )}
-                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>
+                <span className="text-gray-80 dark:text-cool-gray-30">
                   {feature}
                   {index > 9 ? (
                     <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">

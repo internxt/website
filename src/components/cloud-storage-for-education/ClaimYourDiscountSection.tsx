@@ -22,8 +22,8 @@ const MenuItems = {
   ],
 };
 
-const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner }) => {
-  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
+const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
+  const bgClass = 'bg-gray-10 dark:bg-gray-71';
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -62,24 +62,22 @@ const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner })
   };
 
   return (
-    <section id="discountCard" className={darkMode ? 'bg-gray-105' : 'bg-gray-1'}>
+    <section id="discountCard" className="bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center space-y-20 py-20 px-5">
         <div className="flex max-w-[774px] flex-col space-y-6 text-center">
-          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
-          <p className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
             {textContent.subtitle}
           </p>
-          <RenderDescription fontSize="text-xl" description={textContent.paragraph} darkMode={darkMode} />
+          <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
         </div>
-        <div className={`flex flex-row space-x-20 rounded-[32px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}>
+        <div className="flex flex-row space-x-20 rounded-[32px] bg-white dark:bg-gray-95">
           {/* Text Card */}
           <div className="flex flex-col justify-center space-y-6 py-[50px] px-16 lg:pl-[60px]">
             <p
-              className={`max-w-[450px] text-center text-5xl font-semibold ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              } lg:text-left`}
+              className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 dark:text-white-95 lg:text-left"
             >
               {cardTitle1} <span className="text-primary">{blueTextCardTitle}</span>
               {cardTitle2}
@@ -89,7 +87,7 @@ const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner })
             <div>
               <div className="flex flex-col space-y-6">
                 <div className="flex flex-col space-y-1">
-                  <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <p className="text-sm text-gray-80 dark:text-cool-gray-30">
                     {textContent.card.institutionName}
                   </p>
                   <TextInput
@@ -97,11 +95,10 @@ const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner })
                       setName(e.target.value);
                     }}
                     placeholder={textContent.card.nameLabel}
-                    darkMode={darkMode}
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <p className="text-sm text-gray-80 dark:text-cool-gray-30">
                     {textContent.card.institutionEmail}
                   </p>
                   <TextInput
@@ -109,15 +106,13 @@ const ClaimYourDiscountSection = ({ darkMode = false, textContent, openBanner })
                       setEmail(e.target.value);
                     }}
                     placeholder={textContent.card.emailLabel}
-                    darkMode={darkMode}
                   />
                 </div>
                 <CheckboxItem
-                  textColor={darkMode ? 'text-white-95' : 'text-gray-100'}
+                  textColor="text-gray-100 dark:text-white-95"
                   checked={legalCheckbox}
                   setCheckbox={setLegalCheckbox}
                   label={textContent.privacyCheckbox}
-                  darkMode={darkMode}
                 />
                 <button
                   onClick={(e) => {

@@ -8,12 +8,10 @@ import Image from 'next/image';
 import styles from '@/components/privacy/HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
-  darkMode = false,
   textContent,
   redirectTo,
   percentOff,
 }: {
-  darkMode?: boolean;
   textContent: any;
   redirectTo?: string;
   percentOff: string;
@@ -35,7 +33,7 @@ export const PriceBannerForCampaigns = ({
   }, []);
 
   return (
-    <section className={`pt-20 lg:mr-4 lg:pt-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="pt-20 lg:mr-4 lg:pt-24 dark:bg-gray-95">
       <div
         className={`${
           shouldShowBanner && delayedRender ? 'flex' : 'hidden'

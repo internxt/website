@@ -1,21 +1,19 @@
 import { Check } from '@phosphor-icons/react';
 
 const CheckboxSettings = ({
-  darkMode = false,
   id,
   checked,
   onClick,
   required,
   className = '',
 }: {
-  darkMode?: boolean;
   id: string;
   checked: boolean;
   onClick?: React.DOMAttributes<HTMLLabelElement>['onClick'];
   required?: boolean;
   className?: string;
 }) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-30';
+  const borderClass = 'border-gray-30 dark:border-gray-71';
   return (
     <label className={`relative h-5 w-5 rounded focus-within:outline-primary ${className}`} onClick={onClick}>
       <button

@@ -1,26 +1,22 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 
 interface PredictablePricingSectionProps {
-  darkMode?: boolean;
   textContent: CloudObjectStorageText['PredictablePricingSection'];
 }
 
 export const PredictablePricingSection = ({
-  darkMode = false,
   textContent,
 }: PredictablePricingSectionProps): JSX.Element => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-5 py-10 lg:py-20`}>
+    <section className="overflow-hidden bg-white dark:bg-gray-95 px-5 py-10 lg:py-20">
       <div className="flex flex-col items-center gap-12">
         <div className="flex max-w-[774px] flex-col gap-6 text-center">
           <p
-            className={`text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:whitespace-pre-line lg:text-3xl`}
+            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:whitespace-pre-line lg:text-3xl"
           >
             {textContent.title}
           </p>
-          <p className={`text-xl leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
+          <p className="text-xl leading-tight text-gray-55 dark:text-green-120">
             {textContent.description}
           </p>
         </div>
@@ -30,7 +26,7 @@ export const PredictablePricingSection = ({
               <p className="text-30 font-semibold leading-tight text-primary md:whitespace-nowrap lg:text-3xl">
                 {card.title}
               </p>
-              <p className={`text-xl font-medium leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+              <p className="text-xl font-medium leading-tight text-gray-95 dark:text-white-95">
                 {card.description}
               </p>
             </div>

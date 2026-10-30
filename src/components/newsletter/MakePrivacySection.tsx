@@ -1,18 +1,16 @@
 import { getImage } from '@/lib/getImage';
 
-const MakePrivacySection = ({ darkMode = false, textContent }) => {
+const MakePrivacySection = ({ textContent }) => {
   return (
     <section className="overflow-hidden ">
       <div
-        className={`flex w-full flex-col items-center justify-center space-y-12 ${
-          darkMode ? 'bg-gray-105' : 'bg-gray-1'
-        } px-5 py-20`}
+        className="flex w-full flex-col items-center justify-center space-y-12 bg-gray-1 dark:bg-gray-105 px-5 py-20"
       >
         <div className="flex flex-col items-center justify-center space-y-6 text-center">
-          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
-          <p className={`max-w-[774px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="max-w-[774px] text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.description}
           </p>
           <button className="flex w-full justify-center rounded-lg bg-primary px-5 py-3 font-medium text-white lg:w-max">

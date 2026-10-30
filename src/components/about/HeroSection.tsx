@@ -1,39 +1,28 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
+const HeroSection = ({ textContent }): JSX.Element => (
   <section
-    className="relative flex w-full flex-col overflow-hidden pt-10 lg:pt-20"
-    style={{
-      background: darkMode
-        ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
-        : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)',
-    }}
+    className="relative flex w-full flex-col overflow-hidden pt-10 lg:pt-20 bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]"
   >
     <div className="relative flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center space-y-12 px-6 pt-20">
         <div className="flex w-[345px] flex-col space-y-6 text-start lg:w-[976px] lg:text-center">
           <h1
-            className={`hidden w-full px-20 text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:block lg:text-5xl`}
+            className="hidden w-full px-20 text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:block lg:text-5xl"
             dangerouslySetInnerHTML={{
               __html: textContent.title.replace(/\*\*(.*?)\*\*/g, '<span class="text-primary">$1</span>'),
             }}
           />
           <h1
-            className={`block text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:hidden lg:text-5xl`}
+            className="block text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:hidden lg:text-5xl"
             dangerouslySetInnerHTML={{
               __html: textContent.title.replace(/\*\*(.*?)\*\*/g, '<span class="text-primary">$1</span>'),
             }}
           ></h1>
 
           <p
-            className={`w-full text-start text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
-            } lg:w-[976px] lg:text-center lg:text-xl`}
+            className="w-full text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[976px] lg:text-center lg:text-xl"
           >
             {textContent.description}
           </p>
@@ -41,9 +30,7 @@ const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
 
         <div className="hidden max-w-6xl grid-flow-row grid-cols-6 gap-6 lg:grid">
           <div
-            className={`col-span-6 h-60 select-none overflow-hidden rounded-3xl ${
-              darkMode ? 'bg-gray-105' : 'bg-red-old-10'
-            } sm:h-72 md:col-span-4 lg:h-80`}
+            className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 dark:bg-gray-105 sm:h-72 md:col-span-4 lg:h-80"
           >
             <Image
               loading="eager"
@@ -57,9 +44,7 @@ const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
             />
           </div>
           <div
-            className={`col-span-6 h-60 select-none overflow-hidden rounded-3xl ${
-              darkMode ? 'bg-gray-105' : 'bg-red-old-10'
-            } sm:h-72 md:col-span-2 lg:h-80`}
+            className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 dark:bg-gray-105 sm:h-72 md:col-span-2 lg:h-80"
           >
             <Image
               loading="eager"
@@ -73,9 +58,7 @@ const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
             />
           </div>
           <div
-            className={`col-span-6 h-60 select-none overflow-hidden rounded-3xl ${
-              darkMode ? 'bg-gray-105' : 'bg-red-old-10'
-            } sm:h-72 md:col-span-3 lg:h-80`}
+            className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 dark:bg-gray-105 sm:h-72 md:col-span-3 lg:h-80"
           >
             <Image
               loading="eager"
@@ -89,9 +72,7 @@ const HeroSection = ({ darkMode = false, textContent }): JSX.Element => (
             />
           </div>
           <div
-            className={`col-span-6 h-60 select-none overflow-hidden rounded-3xl ${
-              darkMode ? 'bg-gray-105' : 'bg-red-old-10'
-            } sm:h-72 md:col-span-3 lg:h-80`}
+            className="col-span-6 h-60 select-none overflow-hidden rounded-3xl bg-red-old-10 dark:bg-gray-105 sm:h-72 md:col-span-3 lg:h-80"
           >
             <Image
               loading="eager"

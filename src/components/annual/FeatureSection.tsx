@@ -2,12 +2,12 @@ import React from 'react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 
-const FeatureSection = ({ darkMode = false, textContent }) => {
+const FeatureSection = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center space-y-10 px-6 py-20 lg:flex-row lg:space-x-48 lg:space-y-0 ">
         <div
-          className={`flex flex-col rounded-3xl ${darkMode ? 'bg-gray-105 from-[#1C1C1C]' : 'bg-gray-1 from-white'}   `}
+          className="flex flex-col rounded-3xl bg-gray-1 from-white dark:bg-gray-105 dark:from-gray-95"
         >
           <Image
             loading="eager"
@@ -25,13 +25,13 @@ const FeatureSection = ({ darkMode = false, textContent }) => {
         </div>
         <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
           <div className="flex max-w-[500px] flex-col">
-            <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               <p className="pt-4 text-3xl font-semibold md:text-5xl">
                 <span>{textContent.title}</span>
               </p>
             </h1>
             <p className="pt-4 ">
-              <span className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} xl:text-xl`}>
+              <span className="font-regular text-xl text-gray-80 dark:text-cool-gray-30 xl:text-xl">
                 {textContent.description}
               </span>
             </p>

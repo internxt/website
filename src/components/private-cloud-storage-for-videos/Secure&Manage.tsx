@@ -1,29 +1,21 @@
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
-const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element => {
+const SecureAndManageSection = ({ textContent }): JSX.Element => {
   return (
     <section
-      className={`flex flex-col items-center justify-center gap-8 ${
-        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
-      } py-10 lg:gap-12 lg:py-20`}
+      className="flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:gap-12 lg:py-20"
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:left-32 lg:right-32 lg:top-0`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:top-0"
       ></div>
       <h2
-        className={`w-[323px] text-center text-30 font-bold leading-tight ${
-          darkMode ? 'text-white-95' : 'text-gray-100'
-        } lg:w-[832px] lg:text-3xl`}
+        className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:w-[832px] lg:text-3xl"
       >
         {textContent.title}
       </h2>
       <p
-        className={`w-[323px] text-center text-sm font-normal leading-tight ${
-          darkMode ? 'text-green-120' : 'text-gray-55'
-        } lg:w-[832px] lg:text-lg`}
+        className="w-[323px] text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg"
       >
         {textContent.description}
       </p>
@@ -31,17 +23,15 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className={`flex w-[544px] flex-col items-center gap-16 rounded-16  ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            } p-10`}
+            className="flex w-[544px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
           >
             <div className="flex flex-col gap-6">
-              <p className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} `}>{card.title}</p>
+              <p className="text-30 font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
+                    className="text-base font-normal leading-tight text-gray-55 dark:text-green-120"
                   >
                     {paragraph}
                   </p>
@@ -87,17 +77,15 @@ const SecureAndManageSection = ({ darkMode = false, textContent }): JSX.Element 
         {textContent.cards.map((card, index) => (
           <div
             key={card.title}
-            className={`flex w-[340px] flex-col items-center gap-16 rounded-16 ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            } p-10`}
+            className="flex w-[340px] flex-col items-center gap-16 rounded-16 bg-white dark:bg-gray-95 p-10"
           >
             <div className="flex flex-col gap-6">
-              <p className={`text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} `}>{card.title}</p>
+              <p className="text-xl font-semibold text-gray-100 dark:text-white-95">{card.title}</p>
               <div className="flex flex-col gap-6">
                 {card.description.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className={`text-xs font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}
+                    className="text-xs font-normal leading-tight text-gray-55 dark:text-green-120"
                   >
                     {paragraph}
                   </p>

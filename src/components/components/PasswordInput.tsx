@@ -3,12 +3,11 @@ import { useState } from 'react';
 import TextInput, { TextInputProps } from '@/components/components/TextInput';
 
 export default function PasswordInput(props: Readonly<TextInputProps>) {
-  const darkMode = props.darkMode ?? false;
-  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
+  const textClass = 'text-gray-100 dark:text-white-95';
   const [showPassword, setShowPassword] = useState<boolean>(false);
   return (
     <div className="relative flex w-full">
-      <TextInput {...props} type={showPassword ? 'text' : 'password'} isPasswordInput darkMode={darkMode} />
+      <TextInput {...props} type={showPassword ? 'text' : 'password'} isPasswordInput />
       <button
         onClick={(e) => {
           e.preventDefault();

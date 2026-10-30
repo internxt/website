@@ -3,7 +3,6 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
 interface MinimalFooterProps {
-  darkMode?: boolean;
   lang: string;
   footerLang: any;
   bgColor?: string;
@@ -12,25 +11,23 @@ interface MinimalFooterProps {
 }
 
 export const MinimalFooter = ({
-  darkMode = false,
   lang,
   footerLang,
-  bgColor = darkMode ? 'bg-[#1C1C1C]' : '',
-  textColor = darkMode ? 'text-white-95' : 'text-gray-100',
+  bgColor = 'dark:bg-gray-95',
+  textColor = 'text-gray-100 dark:text-white-95',
   logoColor,
 }: MinimalFooterProps) => {
   const year = moment().format('YYYY');
-  const color = logoColor ?? (darkMode ? 'white' : 'cool-gray-90');
+  const color = logoColor ?? 'cool-gray-90';
 
   return (
     <div
-      className={`flex w-full flex-col md:flex-row ${bgColor} items-center justify-center gap-4 py-16 ${
-        darkMode ? 'text-white-95' : 'text-gray-100'
-      }`}
+      className={`flex w-full flex-col md:flex-row ${bgColor} items-center justify-center gap-4 py-16 text-gray-100 dark:text-white-95`}
     >
       <Link href="/" locale={lang} className="flex flex-shrink-0">
         <img
           loading="lazy"
+          className={logoColor ? '' : 'dark:brightness-0 dark:invert'}
           src={getImage(`/logos/internxt/${color}.svg`)}
           alt="Internxt logo"
         />

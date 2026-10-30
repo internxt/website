@@ -32,7 +32,7 @@ interface TechReviewCardProps {
 }
 
 const TechReviewCard = ({
-  darkMode = false,
+  
   title,
   description,
   author,
@@ -48,9 +48,7 @@ const TechReviewCard = ({
 
   return (
     <div
-      className={`flex h-min w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      } p-6 lg:h-min lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8`}
+      className="flex h-min w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:h-min lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8"
     >
       <div className="flex w-full flex-col gap-4 lg:gap-6">
         <div className="flex flex-row items-center justify-center gap-4">
@@ -61,18 +59,18 @@ const TechReviewCard = ({
             width={width}
             className="object-contain"
           />
-          <h3 className={`text-lg font-medium leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+          <h3 className="text-lg font-medium leading-tight text-gray-95 dark:text-white-95 lg:text-xl">
             {title}
           </h3>
         </div>
-        <div className={`h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-35'}`} />
-        <i className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}>
+        <div className="h-[1px] w-full bg-neutral-35 dark:bg-gray-71" />
+        <i className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
           {description}
         </i>
       </div>
       <div className="flex w-full flex-col gap-4 lg:gap-6">
         <p
-          className={`text-sm font-semibold leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}
+          className="text-sm font-semibold leading-tight text-gray-55 dark:text-green-120 lg:text-base"
         >
           {author}
         </p>
@@ -97,12 +95,10 @@ const StarRating = ({ rating, maxStars = 5, size = 40 }: StarRatingProps): JSX.E
   );
 };
 
-const ReviewCard = ({ darkMode = false, review, author }: ReviewCardProps): JSX.Element => {
+const ReviewCard = ({ review, author }: ReviewCardProps): JSX.Element => {
   return (
     <div
-      className={`flex h-[270px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      } p-6 lg:h-[380px] lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8`}
+      className="flex h-[270px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:h-[380px] lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8"
     >
       <div className="flex flex-col gap-4 lg:gap-6">
         <Image
@@ -111,9 +107,9 @@ const ReviewCard = ({ darkMode = false, review, author }: ReviewCardProps): JSX.
           height={24}
           width={94}
           quality={100}
-          className={`flex-shrink-0 ${darkMode ? DARK_MODE_LOGO_FILTER : ''}`}
+          className={`flex-shrink-0 ${DARK_MODE_LOGO_FILTER}`}
         />
-        <i className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}>
+        <i className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
           {review}
         </i>
       </div>
@@ -127,7 +123,7 @@ const ReviewCard = ({ darkMode = false, review, author }: ReviewCardProps): JSX.
           className="flex-shrink-0"
         />
         <p
-          className={`text-sm font-semibold leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-base`}
+          className="text-sm font-semibold leading-tight text-gray-55 dark:text-green-120 lg:text-base"
         >
           {author}
         </p>
@@ -140,7 +136,7 @@ const HorizontalScrollableSection = ({
   darkMode = false,
   textContent,
 }: Readonly<HorizontalScrollableSectionProps>): JSX.Element => {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-10';
+  const hoverClass = 'hover:bg-neutral-10 dark:hover:bg-gray-105';
   const rating = 4;
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Users');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -237,38 +233,27 @@ const HorizontalScrollableSection = ({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-          : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)',
-      }}
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:left-32 lg:right-32`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
       />
 
       <div className="flex w-full flex-col items-center gap-8 px-6 lg:gap-16 lg:px-20">
         <h2
-          className={`text-center text-30 font-bold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-95'
-          } lg:text-start lg:text-3xl`}
+          className="text-center text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-start lg:text-3xl"
         >
           {textContent.title}
         </h2>
         <div className="flex w-full flex-col items-center gap-3 lg:gap-6">
           <p
-            className={`text-center text-base font-medium leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-start lg:text-xl`}
+            className="text-center text-base font-medium leading-tight text-gray-95 dark:text-white-95 lg:text-start lg:text-xl"
           >
             {textContent.description}
           </p>
           <div className="flex w-full flex-col items-center gap-1">
             <StarRating rating={rating} />
-            <p className={`text-sm font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
+            <p className="text-sm font-normal text-gray-55 dark:text-green-120">
               {textContent.underStars}
             </p>
           </div>
@@ -278,7 +263,6 @@ const HorizontalScrollableSection = ({
             textContent={textContent.reviewers.reviewers}
             activeSwitchPlan={activeSwitchPlan}
             onPlanTypeChange={handlePlanTypeChange}
-            darkMode={darkMode}
           />
         </div>
       </div>
@@ -332,9 +316,7 @@ const HorizontalScrollableSection = ({
               <button
                 onClick={scrollLeft}
                 disabled={currentIndex === 0}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } transition-opacity ${
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                   currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >
@@ -343,9 +325,7 @@ const HorizontalScrollableSection = ({
               <button
                 onClick={scrollRight}
                 disabled={currentIndex >= maxIndex}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } transition-opacity ${
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                   currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
                 }`}
               >

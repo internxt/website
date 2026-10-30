@@ -6,14 +6,14 @@ const isPending = (value: string | number | undefined) =>
   value === undefined || value === null || value === '' || String(value) === '0';
 
 export const ValueSkeleton = ({
-  darkMode = false,
+  
   className = 'h-4 w-12',
 }: {
   darkMode?: boolean;
   className?: string;
 }) => (
   <span
-    className={`inline-block animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'} align-middle ${className}`}
+    className={`inline-block animate-pulse rounded bg-gray-10 dark:bg-gray-71 align-middle ${className}`}
   />
 );
 

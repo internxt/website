@@ -41,7 +41,6 @@ const FileConverter = ({
         converterText={converterText}
         errorContent={errorContent}
         pathname={pathname}
-        darkMode={darkMode}
       />
 
       <FeaturesSection
@@ -51,7 +50,7 @@ const FileConverter = ({
         darkMode={darkMode}
       />
 
-      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} darkMode={darkMode} />
     </Layout>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 import { Percent } from '@phosphor-icons/react';
 
-const HeroSection = ({ darkMode = false, textContent }) => {
+const HeroSection = ({ textContent }) => {
   const wordsToBold = ['85%'];
   const formattedHero = textContent.header
     .split(/(85%)/g)
@@ -14,7 +14,7 @@ const HeroSection = ({ darkMode = false, textContent }) => {
       <div className="flex flex-col items-center justify-center space-y-10 bg-red px-12 py-24 lg:flex-row lg:space-x-48 lg:space-y-0">
         <div className="flex flex-col items-center justify-center space-y-8 text-center lg:items-start  lg:text-left">
           <div className="flex flex-col">
-            <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               <p className="pt-4 text-4xl font-bold xl:text-5xl ">
                 <span>{textContent.title.normalText}</span>
               </p>
@@ -24,12 +24,10 @@ const HeroSection = ({ darkMode = false, textContent }) => {
             </h1>
           </div>
           <div
-            className={`flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-5'
-            } p-2 xl:items-center`}
+            className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-gray-5 dark:bg-gray-105 p-2 xl:items-center"
           >
             <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
-            <p className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} `}>
+            <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
               {formattedHero}
             </p>
           </div>
@@ -45,9 +43,7 @@ const HeroSection = ({ darkMode = false, textContent }) => {
           </div>
         </div>
         <div
-          className={`flex flex-col rounded-3xl  ${
-            darkMode ? 'from-[#1C1C1C] to-gray-105' : 'from-white to-gray-1'
-          }   `}
+          className="flex flex-col rounded-3xl from-white to-gray-1 dark:from-gray-95 dark:to-gray-105"
         >
           <Image
             loading="eager"

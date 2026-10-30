@@ -3,43 +3,43 @@ import RenderDescription from '../shared/RenderDescription';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
-const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
+const WhatGoogleKnowsSection = ({ textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
-    <li key={index} className={`text-lg leading-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+    <li key={index} className="text-lg leading-normal text-gray-80 dark:text-cool-gray-30">
       {item}
     </li>
   ));
 
   const eightSectionList = textContent.section8.numberedList.map((item, index) => (
-    <li key={index} className={`text-lg leading-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
-      <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+    <li key={index} className="text-lg leading-normal text-gray-80 dark:text-cool-gray-30">
+      <p className="text-lg font-semibold text-gray-100 dark:text-white-95">
         {item.title}:{' '}
-        <span className={`font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{item.description}</span>
+        <span className="font-normal text-gray-80 dark:text-cool-gray-30">{item.description}</span>
       </p>
     </li>
   ));
 
   return (
-    <section className={`overflow-hidden py-20 px-5 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden py-20 px-5 dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center">
         <div className="flex max-w-2xl flex-col space-y-16">
           <div className="flex flex-col space-y-9">
             <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">
               <MagnifyingGlass size={48} className="text-primary" />
-              <p className={`text-5xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">
                 {textContent.title}
               </p>
             </div>
-            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+            <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           </div>
           {/* First section */}
           <div className="flex flex-col space-y-3 text-start">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section1.title}
             </p>
             <ul className="list-decimal space-y-3 pl-6">{numberedList}</ul>
           </div>
-          <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.section1.footer}</p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.section1.footer}</p>
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-privacy-settings.webp')}
@@ -50,17 +50,17 @@ const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Second section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section2.title}
             </p>
-            <RenderDescription description={textContent.section2.description} darkMode={darkMode} />
+            <RenderDescription description={textContent.section2.description} />
           </div>
           {/* Third section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section3.title}
             </p>
-            <RenderDescription description={textContent.section3.description} darkMode={darkMode} />
+            <RenderDescription description={textContent.section3.description} />
           </div>
         </div>
         <Image
@@ -77,17 +77,17 @@ const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Forth section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section4.title}
             </p>
-            <RenderDescription description={textContent.section4.description} darkMode={darkMode} />
+            <RenderDescription description={textContent.section4.description} />
           </div>
           {/* Firth section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section5.title}
             </p>
-            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-lg text-gray-80 dark:text-cool-gray-30">
               {textContent.section5.description}
             </p>
           </div>
@@ -100,10 +100,10 @@ const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
         />
         {/* Sixth section */}
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
             {textContent.section6.title}
           </p>
-          <RenderDescription description={textContent.section6.description} darkMode={darkMode} />
+          <RenderDescription description={textContent.section6.description} />
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-account-privacy-settings.webp')}
@@ -114,17 +114,17 @@ const WhatGoogleKnowsSection = ({ darkMode = false, textContent }) => {
         <div className="flex max-w-2xl flex-col space-y-16">
           {/* Seventh section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section7.title}
             </p>
-            <RenderDescription description={textContent.section7.description} darkMode={darkMode} />
+            <RenderDescription description={textContent.section7.description} />
           </div>
           {/* Eighth section */}
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.section8.title}
             </p>
-            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-lg text-gray-80 dark:text-cool-gray-30">
               {textContent.section8.description}
             </p>
           </div>

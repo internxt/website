@@ -2,15 +2,13 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
 
-const HowToChooseSection = ({ darkMode = false, textContent }) => (
+const HowToChooseSection = ({ textContent }) => (
   <section
-    className={`flex h-auto w-full flex-row items-center justify-center ${
-      darkMode ? 'bg-gray-105' : 'bg-neutral-17'
-    } py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+    className="flex h-auto w-full flex-row items-center justify-center bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80"
   >
     <div className="flex w-[320px] flex-col items-center justify-between gap-2 lg:h-max lg:w-full lg:gap-12">
       <div className=" w-[320px] lg:w-[832px]">
-        <h2 className={` text-start text-30 font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        <h2 className="text-start text-30 font-bold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h2>
       </div>
@@ -39,20 +37,18 @@ const HowToChooseSection = ({ darkMode = false, textContent }) => (
       </div>
       <div className="w-[320px] pt-8 lg:w-[832px] lg:pt-0">
         <p
-          className={`text-start text-sm font-normal leading-tight ${
-            darkMode ? 'text-green-120' : 'text-gray-55'
-          } lg:text-lg`}
+          className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
         >
           {textContent.description}
         </p>
       </div>
 
       <div className="flex h-min flex-row justify-between pt-8 lg:hidden">
-        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[333px]" darkMode={darkMode} />
+        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[333px]" />
       </div>
 
       <div className="h-max-[692px] hidden w-[832px] flex-row justify-between lg:flex">
-        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[440px]" darkMode={darkMode} />
+        <AccordionCards textContent={textContent.cardDescriptions} cardWidth="w-[440px]" />
         <div className="h-[500px]">
           <Image
             src={getImage('/images/cloud-storage-for-video-files/MobileImage_Search.png')}

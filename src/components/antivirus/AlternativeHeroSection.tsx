@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface AlternativeHeroSectionProps {
-  darkMode?: boolean;
   textContent: any;
   currentPrice?: string;
   currency?: string;
@@ -11,28 +10,17 @@ interface AlternativeHeroSectionProps {
 }
 
 const AlternativeHeroSection = ({
-  darkMode = false,
   textContent,
   currentPrice,
   currency,
   isAnnual = false,
 }: AlternativeHeroSectionProps) => (
   <section
-    className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80"
-    style={{
-      background: darkMode
-        ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
-        : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
-    }}
+    className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
   >
     <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:gap-[90px]">
       <div
-        className={`z-20 flex h-min w-full shrink-0 flex-col items-center justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:items-start lg:gap-8 lg:rounded-16 lg:p-8`}
-        style={{
-          background: darkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
-        }}
+        className={`z-20 flex h-min w-full shrink-0 flex-col items-center justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:items-start lg:gap-8 lg:rounded-16 lg:p-8 bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)] dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]`}
       >
         <div className="flex h-min w-min flex-col rounded-2 border border-primary px-1">
           <p className="flex whitespace-nowrap text-sm font-semibold text-primary lg:text-lg">
@@ -41,15 +29,13 @@ const AlternativeHeroSection = ({
         </div>
 
         <p
-          className={`text-30 font-semibold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } lg:text-left lg:text-5xl`}
+          className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-left lg:text-5xl"
         >
           {textContent.title} <br className="hidden sm:flex" />
           <span className="text-primary">{textContent.blueText}</span>
         </p>
 
-        <p className={`text-sm font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-left`}>
+        <p className="text-sm font-normal text-gray-55 dark:text-green-120 lg:text-left">
           {textContent.description}
         </p>
 

@@ -75,10 +75,7 @@ const SpecialOfferPage = ({
       {openDialog ? (
         <div className={`fixed bottom-0 left-0 right-0 top-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
           <div
-            className={`absolute left-1/2 top-1/2
-        z-20 flex w-max -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } p-7 ${darkMode ? 'text-white-95' : 'text-neutral-900'}`}
+            className="absolute left-1/2 top-1/2 z-20 flex w-max -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl bg-white dark:bg-gray-95 p-7 text-neutral-900 dark:text-white-95"
           >
             <X className={`absolute right-5 top-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
             <SignUp textContent={langJson.Auth} provider={provider} darkMode={darkMode} />
@@ -103,21 +100,19 @@ const SpecialOfferPage = ({
               ></p>
             </div>
 
-            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" darkMode={darkMode} />
+            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" />
           </>
         }
-        darkMode={darkMode}
       />
 
       <MostSecureSection
         textContent={langJson.MostSecureSection}
         onRedirectButtonClicked={onButtonClicked}
-        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={langJson.FeatureSection} withoutCta darkMode={darkMode} />
+      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} darkMode={darkMode} />
+      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
     </Layout>
   );
 };

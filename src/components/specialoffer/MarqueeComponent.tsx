@@ -3,12 +3,11 @@ import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 
 interface MarqueeComponentProps {
-  darkMode?: boolean;
   label?: string;
   bgColor?: string;
 }
 
-export const MarqueeComponent = ({ darkMode = false, label, bgColor = 'bg-color-1' }: MarqueeComponentProps) => {
+export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeComponentProps) => {
   return (
     <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
       <div className={'flex xl:hidden'}>
@@ -75,7 +74,7 @@ export const MarqueeComponent = ({ darkMode = false, label, bgColor = 'bg-color-
         <div className={`featured flex w-full flex-row justify-center overflow-x-auto ${bgColor} px-4 py-5`}>
           <div className="flex flex-row items-center space-x-20">
             {label ? (
-              <p className={`text-xl font-medium ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>{label}</p>
+              <p className="text-xl font-medium text-gray-60 dark:text-green-120">{label}</p>
             ) : undefined}
             <Image
               loading="lazy"

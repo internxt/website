@@ -26,21 +26,21 @@ const OpenSource = ({ darkMode = false, lang, metatagsDescriptions, langJson, na
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Open Source" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={langJson.HeroSection} />
 
-      <FileParallaxSection darkMode={darkMode} />
+      <FileParallaxSection />
 
-      <WhatIsOSS textContent={langJson.WhatIsOSS} darkMode={darkMode} />
+      <WhatIsOSS textContent={langJson.WhatIsOSS} />
 
-      <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} darkMode={darkMode} />
+      <WhatAreTheBenefits textContent={langJson.WhatAreTheBenefits} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} darkMode={darkMode} />
+      <CtaSection textContent={langJson.CtaSection1} url={CTA_SIGNUP_URL} />
 
-      <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} darkMode={darkMode} />
+      <LearningWithOSCommunity textContent={langJson.LearningWithOSCommunity} />
 
-      <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} darkMode={darkMode} />
+      <DifferencesBetweenOpenAndCloseSS textContent={langJson.DifferencesBetweenOpenAndCloseSS} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} darkMode={darkMode} />
+      <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
       <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} darkMode={darkMode} />
 

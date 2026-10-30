@@ -2,14 +2,12 @@ import { CheckCircle, House } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
 
 interface DownloadFileStateProps {
-  darkMode?: boolean;
   textContent: any;
   onConvertMoreFilesButtonPressed: () => void;
   onDownloadFile: () => void;
 }
 
 const DownloadFileState = ({
-  darkMode = false,
   textContent,
   onConvertMoreFilesButtonPressed,
   onDownloadFile,
@@ -21,27 +19,21 @@ const DownloadFileState = ({
         <CheckCircle weight="fill" size={19.5} className="hidden shrink-0 md:flex" />
         <p>{textContent.label}</p>
       </div>
-      <h3 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</h3>
-      <p className={`text-lg font-semibold ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>
+      <h3 className="text-3xl font-semibold text-gray-100 dark:text-white-95">{textContent.title}</h3>
+      <p className="text-lg font-semibold text-gray-60 dark:text-green-120">
         {textContent.description}
       </p>
       <div className="flex flex-col gap-2 md:flex-row">
         <button
           onClick={() => route.push('/file-compressor')}
-          className={`flex flex-row items-center justify-center space-x-2 rounded-lg ${
-            darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-          } px-5 py-2 font-medium shadow-sm ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-5'}`}
+          className="flex flex-row items-center justify-center space-x-2 rounded-lg border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2 font-medium shadow-sm hover:bg-gray-5 dark:hover:bg-gray-105"
         >
           <House size={24} />
           <p>{textContent.goHome}</p>
         </button>
         <button
           onClick={onConvertMoreFilesButtonPressed}
-          className={`rounded-lg border ${
-            darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-5 bg-white'
-          } px-5 py-2.5 font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} shadow-sm ${
-            darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-5'
-          }`}
+          className="rounded-lg border border-gray-5 bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2.5 font-medium text-gray-80 dark:text-cool-gray-30 shadow-sm hover:bg-gray-5 dark:hover:bg-gray-105"
         >
           {textContent.compressAnother || textContent.convertAnother}
         </button>

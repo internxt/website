@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-export const DevicesSection = ({ darkMode = false, textContent }) => {
+export const DevicesSection = ({ textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,
@@ -20,9 +20,7 @@ export const DevicesSection = ({ darkMode = false, textContent }) => {
         <div className="flex max-w-[840px] flex-col items-center gap-8 text-center">
           <h2 className="text-5xl font-semibold text-white">{textContent.title}</h2>
           <button
-            className={`flex rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-5 py-3 ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            }`}
+            className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-gray-100 dark:text-white-95"
             onClick={handleOnButtonClick}
           >
             <p className="text-xl font-medium">{textContent.cta}</p>

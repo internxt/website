@@ -59,7 +59,7 @@ export const Inbox = ({
 };
 
 //Web Inbox View
-const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
+const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
   const { messages, selectedMessage, onRefresh, onMessageSelected, openedMessages, textContent } = getProps;
   const [animation, setAnimation] = useState(false);
 
@@ -79,24 +79,18 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
   return (
     <div
       id="inbox"
-      className={`flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border ${
-        darkMode ? 'border-gray-71' : 'border-gray-10'
-      } shadow-subtle-hard lg:max-w-2xl`}
+      className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 dark:border-gray-71 shadow-subtle-hard lg:max-w-2xl"
     >
       <div className="flex flex-col">
         <div
-          className={`flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r ${
-            darkMode ? 'border-gray-71' : 'border-gray-10'
-          }`}
+          className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10 dark:border-gray-71"
         >
           <div
-            className={`flex w-full flex-row justify-between rounded-tl-xl border-b ${
-              darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-5'
-            } px-4 py-5`}
+            className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
           >
             <div className="flex flex-row items-center space-x-1">
-              <Tray size={24} className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`} />
-              <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <Tray size={24} className="text-gray-80 dark:text-cool-gray-30" />
+              <p className="text-base font-medium text-gray-100 dark:text-white-95">
                 {textContent.title}
               </p>
             </div>
@@ -104,9 +98,9 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
               variant="light"
               id="arrows-clockwise"
               delayShow={700}
-              className={`z-40 rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} drop-shadow-md`}
+              className="z-40 rounded-lg bg-white dark:bg-gray-95 drop-shadow-md"
             >
-              <p className={`break-word text-center ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="break-word text-center text-gray-80 dark:text-cool-gray-30">
                 {textContent.refreshInbox}
               </p>
             </Tooltip>
@@ -114,7 +108,7 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
               <ArrowsClockwise
                 size={24}
                 data-tooltip-id="arrows-clockwise"
-                className={`text-gray-50 outline-none ${darkMode ? 'hover:text-cool-gray-30' : 'hover:text-gray-80'} ${
+                className={`text-gray-50 outline-none hover:text-gray-80 dark:hover:text-cool-gray-30 ${
                   animation ? 'animate-spin-refresh' : ''
                 }`}
               />
@@ -138,9 +132,7 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
                     } `}
                   >
                     <div
-                      className={`flex w-full max-w-[224px] flex-col border-b ${
-                        darkMode ? 'border-gray-71' : 'border-gray-10'
-                      } py-4`}
+                      className="flex w-full max-w-[224px] flex-col border-b border-gray-10 dark:border-gray-71 py-4"
                     >
                       <p title={item.from} className="truncate text-xs font-medium text-gray-50">
                         {item.from}
@@ -153,7 +145,7 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
                       <div className="flex flex-row items-end justify-end space-x-2">
                         <p className="line-clamp-2 w-full text-xs">{item.body}</p>
                         <p
-                          className={`text-supporting-2 font-semibold ${darkMode ? 'text-green-120' : 'text-gray-60'}`}
+                          className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120"
                         >
                           {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                         </p>
@@ -182,7 +174,7 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
       >
         {selectedMessage ? (
           <div className="flex h-full w-screen">
-            <MessageSelected item={selectedMessage} textContent={textContent} darkMode={darkMode} />
+            <MessageSelected item={selectedMessage} textContent={textContent} />
           </div>
         ) : (
           <div className="flex w-screen items-center">
@@ -190,7 +182,6 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
               messagesLength={openedMessages}
               textContent={textContent}
               onRefreshButtonClicked={onRefresh}
-              darkMode={darkMode}
             />
           </div>
         )}
@@ -200,15 +191,13 @@ const InboxWeb = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps
 };
 
 //Mobile Inbox View
-const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
+const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) => {
   const { messages, selectedMessage, onMessageSelected, onRefresh, textContent } = getProps;
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
     <div
-      className={`flex h-[480px] w-full  flex-row space-y-2 overflow-hidden rounded-xl border ${
-        darkMode ? 'border-gray-71' : 'border-gray-10'
-      } shadow-subtle-hard`}
+      className="flex h-[480px] w-full flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 dark:border-gray-71 shadow-subtle-hard"
     >
       {messages?.length > 0 ? (
         //Render message selected
@@ -223,9 +212,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
           >
             <div className="flex w-full flex-col">
               <div
-                className={`flex w-full flex-row justify-between rounded-tl-xl border-b ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-5'
-                } px-4 py-5`}
+                className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
               >
                 <div className="flex flex-row items-center space-x-1">
                   <CaretLeft
@@ -239,7 +226,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
                 </div>
               </div>
               <div className="flex h-full w-full">
-                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} darkMode={darkMode} />}
+                {selectedMessage && <MessageSelected item={selectedMessage} textContent={textContent} />}
               </div>
             </div>
           </Transition>
@@ -254,9 +241,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
           >
             <div className="flex w-full flex-col">
               <div
-                className={`flex w-full flex-row justify-between rounded-tl-xl border-b ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-5'
-                } px-4 py-5`}
+                className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
               >
                 <div className="flex flex-row items-center space-x-1">
                   <Tray size={20} weight="bold" />
@@ -286,9 +271,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
                       <div
-                        className={`flex w-full flex-col border-b ${
-                          darkMode ? 'border-gray-71' : 'border-gray-10'
-                        } py-4`}
+                        className="flex w-full flex-col border-b border-gray-10 dark:border-gray-71 py-4"
                       >
                         <p title={item.from} className="text-xs font-medium text-gray-50">
                           {item.from}
@@ -300,9 +283,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
                         <div className="flex flex-row items-end justify-end space-x-2">
                           <p className="line-clamp-2 w-full text-xs">{item.body}</p>
                           <p
-                            className={`text-supporting-2 font-semibold ${
-                              darkMode ? 'text-green-120' : 'text-gray-60'
-                            }`}
+                            className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120"
                           >
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>
@@ -317,7 +298,7 @@ const InboxMobile = ({ darkMode = false, getProps }: { darkMode?: boolean; getPr
         </>)
       ) : (
         !selectedMessage && (
-          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} darkMode={darkMode} />
+          <NoMessageSelected messagesLength={0} textContent={textContent} onRefreshButtonClicked={onRefresh} />
         )
       )}
     </div>

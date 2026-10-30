@@ -24,14 +24,14 @@ const FeaturesSection = ({
   darkMode = false,
 }: FeatureSectionProps): JSX.Element => {
   return (
-    <section className={`${darkMode ? 'bg-[#1C1C1C] py-10 lg:py-20' : 'bg-white'} flex w-full flex-col`}>
+    <section className={`${darkMode ? 'bg-gray-95 py-10 lg:py-20' : 'bg-white dark:bg-gray-95 dark:py-10 dark:lg:py-20'} flex w-full flex-col`}>
       <div className="flex w-full flex-col items-center">
         <Parallax
           className="flex w-full flex-col items-center justify-center text-center"
           renderLayer={(percentage) => (
             <h2
               className={`flex flex-col items-center text-center text-30 font-semibold ${
-                darkMode ? 'text-white-95' : 'text-cool-gray-90'
+                darkMode ? 'text-white-95' : 'text-cool-gray-90 dark:text-white-95'
               } lg:my-10 lg:text-3xl`}
             >
               <Transition
@@ -94,7 +94,7 @@ const FeaturesSection = ({
 
             <div className="mt-10 flex flex-col px-10 lg:px-0">
               <h3
-                className={`${darkMode ? 'text-white-95' : 'text-gray-100'} mb-6 text-30 font-semibold
+                className={`${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} mb-6 text-30 font-semibold
               leading-tight lg:text-3xl`}
               >
                 {textContent.section2.title.line1} <br className="hidden sm:flex" />
@@ -103,7 +103,7 @@ const FeaturesSection = ({
               </h3>
 
               <p
-                className={`${darkMode ? 'text-green-120' : 'text-gray-80'} w-full max-w-[262px] text-lg leading-tight`}
+                className={`${darkMode ? 'text-green-120' : 'text-gray-80 dark:text-green-120'} w-full max-w-[262px] text-lg leading-tight`}
               >
                 {textContent.section2.subtitle.line1}
                 {textContent.section2.subtitle.line2}
@@ -124,7 +124,7 @@ const FeaturesSection = ({
               <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-28 lg:px-0">
                 <h3
                   className={`${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
+                    darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                   } mb-6 text-30 font-semibold leading-tight lg:text-3xl`}
                 >
                   {textContent.section3.title.line1} <br className="hidden sm:flex" />
@@ -133,7 +133,7 @@ const FeaturesSection = ({
                   {textContent.section3.title.line4}
                 </h3>
 
-                <p className={`text-lg leading-tight ${darkMode ? 'text-green-120' : 'text-gray-80'}`}>
+                <p className={`text-lg leading-tight ${darkMode ? 'text-green-120' : 'text-gray-80 dark:text-green-120'}`}>
                   {textContent.section3.subtitle.line1} <br className="hidden sm:flex" />
                   {textContent.section3.subtitle.line2} <br className="hidden sm:flex" />
                   {textContent.section3.subtitle.line3} <br className="hidden sm:flex" />
@@ -210,7 +210,7 @@ const FeaturesSection = ({
             <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
               <h3
                 className={`${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } mb-6 text-30 font-semibold leading-tight lg:text-3xl`}
               >
                 {textContent.section4.title.line1} <br className="hidden sm:flex" />
@@ -219,7 +219,7 @@ const FeaturesSection = ({
                 {textContent.section4.title.line4}
               </h3>
 
-              <p className={`${darkMode ? 'text-green-120' : 'text-gray-80'} text-lg leading-tight`}>
+              <p className={`${darkMode ? 'text-green-120' : 'text-gray-80 dark:text-green-120'} text-lg leading-tight`}>
                 {textContent.section4.subtitle.line1} <br className="hidden sm:flex" />
                 {textContent.section4.subtitle.line2} <br className="hidden sm:flex" />
                 {textContent.section4.subtitle.line3} <br className="hidden sm:flex" />
@@ -236,12 +236,12 @@ const FeaturesSection = ({
         {showLastSection && (
           <div
             className={`flex w-full flex-col items-center ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
+              darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'
             } px-10 py-10 lg:px-0 lg:py-20`}
           >
             <h3
               className={`mb-12 text-center text-4xl font-semibold ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
+                darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
               } lg:text-5xl`}
             >
               {textContent.section6.title.line1} <br className="hidden sm:flex" />

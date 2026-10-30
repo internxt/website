@@ -52,8 +52,9 @@ const ALLOWED_PATHS = [
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
-const VALENTINES_GRADIENT_DARK = 'linear-gradient(180deg, #1C1C1C 0%, #2A1420 100%)';
-const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)';
+const VALENTINES_GRADIENT_DARK = 'bg-[linear-gradient(180deg,#1C1C1C_0%,#2A1420_100%)]';
+const VALENTINES_GRADIENT_LIGHT =
+  'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF2F8_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#2A1420_100%)]';
 const ANNUAL_DISCOUNT_PLANS_PATHS = ['grabon', 'pcmag'];
 
 const COUPON_CODES = {
@@ -130,7 +131,7 @@ function CombinedSpecialOffer({
 
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
-      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
@@ -210,7 +211,7 @@ function CombinedSpecialOffer({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="5TB"
-        sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        sectionDetails={`${isDarkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
@@ -225,14 +226,14 @@ function CombinedSpecialOffer({
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p
               className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
+                isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'
               }`}
             >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
             <p
               className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
+                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px] dark:text-white dark:lg:w-[690px]'
               }`}
             >
               {parsePercentText(langJson.ctaSection.description)}
@@ -240,22 +241,17 @@ function CombinedSpecialOffer({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
+        bgGradientContainerColor={isDarkMode ? 'bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]' : 'bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]'}
         bgPadding={
           isValentinesMode
             ? 'bg-pink-0 pb-10  lg:py-10'
             : isDarkMode
-            ? 'pb-10  lg:pt-10 bg-[#1C1C1C]'
-            : 'pb-10  lg:py-10'
+            ? 'pb-10  lg:pt-10 bg-gray-95'
+            : 'pb-10 lg:py-10 dark:pb-10 dark:lg:pt-10 dark:bg-gray-95'
         }
         bgGradientColor={
-          isValentinesMode ? undefined : isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+          isValentinesMode || isDarkMode ? undefined : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none'
         }
-        darkMode={isDarkMode}
       />
 
       <HorizontalScrollableSection
@@ -278,14 +274,14 @@ function CombinedSpecialOffer({
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-40">
             <p
               className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
+                isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'
               }`}
             >
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
             <p
               className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full'
+                isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full dark:text-white dark:lg:w-full'
               }`}
             >
               {parsePercentText(langJson.ctaSection2.description)}
@@ -293,14 +289,9 @@ function CombinedSpecialOffer({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
-        bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
-        darkMode={isDarkMode}
+        bgGradientContainerColor={isDarkMode ? 'bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]' : 'bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]'}
+        bgPadding={isDarkMode ? 'lg:pb-10  bg-gray-95' : 'lg:pb-20 pb-10 dark:lg:pb-10 dark:bg-gray-95'}
+        bgGradientColor={isDarkMode ? '' : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none'}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />

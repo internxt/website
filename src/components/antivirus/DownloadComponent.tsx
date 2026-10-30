@@ -1,10 +1,10 @@
 import { isMobile } from 'react-device-detect';
 import { ArrowCircleRight } from '@phosphor-icons/react';
 
-const DownloadComponent = ({ darkMode = false, textContent, download }) => {
+const DownloadComponent = ({ textContent, download }) => {
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9 pb-6">
-      <p className={`text-center text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+      <p className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95">
         {textContent.downloadTitle}
       </p>
 

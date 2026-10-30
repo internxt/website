@@ -6,7 +6,6 @@ import { WarningCircle } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 interface LogInProps {
-  darkMode?: boolean;
   textContent: any;
   tfa?: boolean;
   error?: string;
@@ -54,7 +53,6 @@ export default function LogIn(props: Readonly<LogInProps>) {
           autoComplete="email"
           required
           disabled={props.loading}
-          darkMode={props.darkMode}
         />
 
         <PasswordInput
@@ -63,7 +61,6 @@ export default function LogIn(props: Readonly<LogInProps>) {
           autoComplete="password"
           required
           disabled={props.loading}
-          darkMode={props.darkMode}
         />
 
         {props.tfa && (
@@ -75,7 +72,6 @@ export default function LogIn(props: Readonly<LogInProps>) {
             patternHint={props.textContent.LogIn.fields.tfa.hint}
             required
             disabled={props.loading}
-            darkMode={props.darkMode}
           />
         )}
 

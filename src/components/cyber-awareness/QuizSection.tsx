@@ -2,13 +2,13 @@ import Image from "next/image";
 import RenderDescription from '@/components/shared/RenderDescription';
 import Link from 'next/link';
 
-const QuizSection = ({ darkMode = false, textContent }) => {
+const QuizSection = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
         <div className="flex max-w-[672px] flex-col space-y-3">
-          <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</p>
-          <RenderDescription description={textContent.description} darkMode={darkMode} />
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.title}</p>
+          <RenderDescription description={textContent.description} />
         </div>
 
         <Link href={'/cyber-security-quiz'} className="hidden cursor-pointer lg:flex">
@@ -28,7 +28,7 @@ const QuizSection = ({ darkMode = false, textContent }) => {
           <div className="flex max-w-[263px] flex-col space-y-6 text-center">
             <div className="flex flex-col space-y-2">
               <p className="text-2xl font-semibold">{textContent.mobileBanner.title}</p>
-              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-lg text-gray-80 dark:text-cool-gray-30">
                 {textContent.mobileBanner.description}
               </p>
             </div>

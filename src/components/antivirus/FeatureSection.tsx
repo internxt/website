@@ -5,13 +5,12 @@ import RevealX from '../components/RevealX';
 import Link from 'next/link';
 
 export interface FeatureSectionProps {
-  darkMode?: boolean;
   textContent: AntivirusText['FeatureSection'];
   isGetAntivirus?: boolean;
   showPlan?: boolean;
 }
 
-const FeatureSection = ({ darkMode = false, textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
+const FeatureSection = ({ textContent, isGetAntivirus, showPlan = false }: FeatureSectionProps) => {
   const cards = [
     {
       icon: '/images/antivirus/internxt_antivirus_1.webp',
@@ -39,24 +38,20 @@ const FeatureSection = ({ darkMode = false, textContent, isGetAntivirus, showPla
     .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
 
   return (
-    <section className={`overflow-hidden px-5 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden px-5 dark:bg-gray-95">
       <div
-        className={`flex flex-col items-center justify-center space-y-16 ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } py-20`}
+        className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-20"
       >
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
           <span
-            className={`space-y-4 text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-5xl`}
+            className="space-y-4 text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
           >
             {textContent.title}
             <br />
             <p className="text-primary"> {textContent.titleLine2}</p>
           </span>
 
-          <p className={`font-regular text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+          <p className="font-regular text-sm text-gray-80 dark:text-cool-gray-30 lg:text-xl">
             {formattedDescription}
           </p>
         </div>
@@ -109,16 +104,12 @@ const FeatureSection = ({ darkMode = false, textContent, isGetAntivirus, showPla
                     alt={`${card.title} image`}
                   />
                   <p
-                    className={` text-30 font-semibold ${
-                      darkMode ? 'text-white-95' : 'text-gray-100'
-                    } sm:text-5xl sm:leading-tight md:text-5xl`}
+                    className="text-30 font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight md:text-5xl"
                   >
                     {card.title}
                   </p>
                   <p
-                    className={`font-regular text-sm ${
-                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-                    } sm:text-lg md:text-xl`}
+                    className="font-regular text-sm text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl"
                   >
                     {card.description}
                   </p>

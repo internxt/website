@@ -8,7 +8,6 @@ import { Interval, stripeService } from '@/services/stripe.service';
 import { LifetimeMode } from './PaymentSection';
 
 interface PriceTableProps {
-  darkMode?: boolean;
   lang: string;
   discount?: number;
   couponCode?: PromoCodeName;
@@ -36,7 +35,6 @@ const DISC_LIFETIME_PRICES = {
 const LIFETIME_MODES_WITH_POPULAR_10TB = ['celebration', 'normal'];
 
 const PriceTable = ({
-  darkMode = false,
   lang,
   couponCode,
   discount,
@@ -131,10 +129,10 @@ const PriceTable = ({
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-10">
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
@@ -173,7 +171,6 @@ const PriceTable = ({
                       isStackCommerce={isStackCommerce}
                       index={index}
                       showOffer={false}
-                      darkMode={darkMode}
                     />
                   </div>
                 ))}
@@ -209,7 +206,6 @@ const PriceTable = ({
                       isStackCommerce={isStackCommerce}
                       index={index}
                       showOffer={true}
-                      darkMode={darkMode}
                     />
                   ))
                 : null}

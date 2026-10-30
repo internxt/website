@@ -2,7 +2,6 @@ import { FieldError, Path, UseFormRegister, ValidationRule } from 'react-hook-fo
 import type { IFormValues } from '../../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 
 interface InputProps {
-  darkMode?: boolean;
   label: Path<IFormValues>;
   type: 'text' | 'email' | 'number';
   disabled?: boolean;
@@ -23,7 +22,6 @@ interface InputProps {
 }
 
 export default function TextInput({
-  darkMode = false,
   label,
   type,
   disabled,
@@ -40,7 +38,7 @@ export default function TextInput({
   autoComplete,
   inputDataCy,
 }: Readonly<InputProps>): JSX.Element {
-  const defaultBorderClass = darkMode ? 'border-gray-71' : 'border-gray-40';
+  const defaultBorderClass = 'border-gray-40 dark:border-gray-71';
   const borderStyles = error
     ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
     : `${defaultBorderClass} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
@@ -63,11 +61,7 @@ export default function TextInput({
           maxLength,
           pattern,
         })}
-        className={`w-full rounded-md border p-3 text-base placeholder-gray-50 outline-none ${
-          darkMode ? 'bg-[#1C1C1C] text-white-95' : 'bg-white text-gray-100'
-        } ${borderStyles} ${
-          darkMode ? 'disabled:border-gray-71 disabled:text-gray-50' : 'disabled:border-gray-10 disabled:text-gray-40'
-        }`}
+        className={`w-full rounded-md border p-3 text-base placeholder-gray-50 outline-none bg-white text-gray-100 dark:bg-gray-95 dark:text-white-95 ${borderStyles} disabled:border-gray-10 disabled:text-gray-40 dark:disabled:border-gray-71 dark:disabled:text-gray-50`}
       />
     </div>
   );

@@ -22,7 +22,6 @@ import {
 import React from 'react';
 
 interface PriceCardsForAffiliatesPartnersProps {
-  darkMode?: boolean;
   storage: string;
   popular: boolean;
   currency: string;
@@ -34,7 +33,6 @@ interface PriceCardsForAffiliatesPartnersProps {
 }
 
 export const PriceCardsForAffiliatesPartners = ({
-  darkMode = false,
   storage,
   popular,
   currency,
@@ -44,8 +42,8 @@ export const PriceCardsForAffiliatesPartners = ({
   currencyValue,
   coupon,
 }: PriceCardsForAffiliatesPartnersProps) => {
-  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
-  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
+  const ringClass = 'ring-gray-10 dark:ring-gray-71';
+  const hoverClass = 'hover:bg-gray-1 active:bg-gray-5 dark:hover:bg-gray-105 dark:active:bg-gray-105';
   const contentText = require(`@/assets/lang/en/priceCard.json`);
 
   function onCheckoutButtonClicked() {
@@ -89,9 +87,7 @@ export const PriceCardsForAffiliatesPartners = ({
       } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
       <div
-        className={`flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } p-6 pt-6`}
+        className="flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6"
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           {popular ? (
@@ -108,14 +104,10 @@ export const PriceCardsForAffiliatesPartners = ({
           className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
         >
           <div
-            className={`flex
-              flex-row items-end gap-2 ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}
-            `}
+            className="flex flex-row items-end gap-2 text-neutral-700 dark:text-cool-gray-30"
           >
             <p
-              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              }`}
+              className="flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95"
             >
               <span className={`currency`}>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
@@ -147,9 +139,7 @@ export const PriceCardsForAffiliatesPartners = ({
       </div>
 
       <div
-        className={`featureList flex flex-col border-t ${
-          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
-        } pb-6 text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+        className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 text-sm text-gray-80 dark:text-cool-gray-30"
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature, index) => (
@@ -158,7 +148,7 @@ export const PriceCardsForAffiliatesPartners = ({
                 size: 24,
                 className: 'text-primary',
               })}
-              <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
+              <span className="text-gray-80 dark:text-cool-gray-30">{feature}</span>
               {index > 8 ? (
                 <span className="bg-orange/10 text-orange rounded-lg px-1">{contentText.commingSoon}</span>
               ) : null}

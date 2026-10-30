@@ -180,30 +180,24 @@ export const CloudStorageBackupSolutionsTemplate = ({
             </>
           }
           height="h-min"
-          darkMode={darkMode}
         />
 
         <FeatureSection
           title={textContent.FeatureSection.title}
           description={textContent.FeatureSection.description}
           cards={cardsData}
-          darkMode={darkMode}
         />
         {textContent.NewBlock1 && (
           <div
-            className={`flex w-full flex-col items-center justify-center gap-6 px-6 py-10 ${
-              darkMode ? 'bg-[#1C1C1C]' : ''
-            } lg:py-14`}
+            className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 dark:bg-gray-95 lg:py-14"
           >
             <h2
-              className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+              className="text-center text-30 font-semibold text-gray-95 dark:text-white-95 lg:text-3xl"
             >
               {textContent.NewBlock1.title}
             </h2>
             <p
-              className={`w-full text-center text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
-              } lg:w-[832px] lg:text-lg`}
+              className="w-full text-center text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg"
             >
               {textContent.NewBlock1.intro}
             </p>
@@ -223,7 +217,7 @@ export const CloudStorageBackupSolutionsTemplate = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="5TB"
-            sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+            sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
             hideFreeCard
             darkMode={darkMode}
           />
@@ -233,26 +227,21 @@ export const CloudStorageBackupSolutionsTemplate = ({
           textContent={textContent.CtaSection1}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
-          darkMode={darkMode}
         />
 
-        <FeaturesSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
+        <FeaturesSection textContent={textContent.FeaturesSection} />
 
         {textContent.NewBlock2 && (
           <div
-            className={`flex w-full flex-col items-center justify-center gap-6 px-6 py-10 ${
-              darkMode ? 'bg-[#1C1C1C]' : ''
-            } lg:py-14`}
+            className="flex w-full flex-col items-center justify-center gap-6 px-6 py-10 dark:bg-gray-95 lg:py-14"
           >
             <h2
-              className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}
+              className="text-center text-30 font-semibold text-gray-95 dark:text-white-95 lg:text-3xl"
             >
               {textContent.NewBlock2.title}
             </h2>
             <p
-              className={`w-full text-center text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
-              } lg:w-[832px] lg:text-lg`}
+              className="w-full text-center text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg"
             >
               {textContent.NewBlock2.intro}
             </p>
@@ -263,14 +252,13 @@ export const CloudStorageBackupSolutionsTemplate = ({
           textContent={textContent.CtaSection2}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
-          darkMode={darkMode}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} darkMode={darkMode} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
 
         <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+        <RelationalLinks textContent={relationalLinksText} />
 
         <Footer textContent={footerLang} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>

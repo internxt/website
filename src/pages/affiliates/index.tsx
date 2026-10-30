@@ -44,7 +44,7 @@ const InfinityIcon = () => (
   </svg>
 );
 
-const ImageAndTextRow = ({ darkMode = false, textContent, imageUrl, alt, direction = 'right' }) => {
+const ImageAndTextRow = ({ textContent, imageUrl, alt, direction = 'right' }) => {
   const containerObjDirection = direction === 'left' ? 'flex-row' : 'flex-row-reverse';
   return (
     <div className={`flex flex-col-reverse items-center justify-center gap-20 lg:${containerObjDirection}`}>
@@ -60,10 +60,10 @@ const ImageAndTextRow = ({ darkMode = false, textContent, imageUrl, alt, directi
         />
       </div>
       <div className="flex max-w-[388px] flex-col items-center gap-4 text-center lg:items-start lg:text-left">
-        <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+        <h2 className="text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </h2>
-        <RenderDescription description={textContent.description} darkMode={darkMode} />
+        <RenderDescription description={textContent.description} />
       </div>
     </div>
   );
@@ -153,17 +153,17 @@ const Affiliates = ({
       <HeroSection
         TextComponent={
           <div className="flex w-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
-            <div className={`flex w-max items-center rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-gray-5'} px-4 py-2`}>
-              <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <div className="flex w-max items-center rounded-lg bg-gray-5 dark:bg-gray-105 px-4 py-2">
+              <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">
                 {langJson.HeroSection.label}
               </p>
             </div>
             <div className="flex w-full max-w-[533px] flex-col space-y-8">
-              <h1 className={`text-6xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <h1 className="text-6xl font-semibold leading-tight text-gray-100 dark:text-white-95">
                 <span className="text-primary">{langJson.HeroSection.title.blueText}</span>
                 {langJson.HeroSection.title.normalText}
               </h1>
-              <p className={`text-xl leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-xl leading-tight text-gray-80 dark:text-cool-gray-30">
                 {langJson.HeroSection.description}
               </p>
 
@@ -181,9 +181,7 @@ const Affiliates = ({
                   href={IMPACT_LOGIN_USER}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className={`flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 ${
-                    darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
-                  }`}
+                  className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10 dark:hover:bg-purple-100"
                 >
                   <p className="text-lg font-medium text-primary">{langJson.HeroSection.logIn}</p>
                 </Link>
@@ -197,29 +195,24 @@ const Affiliates = ({
           width: 496,
           height: 520,
         }}
-        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
       <TextAndImageColumnSection
         TextComponent={
           <div className="flex max-w-[750px] flex-col space-y-6 text-center">
             <p
-              className={`text-30 font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              } lg:text-3xl`}
+              className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
             >
               {langJson.WhatIsInternxtSection.title}
             </p>
             <p
-              className={`text-xl font-medium leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              } lg:text-2xl`}
+              className="text-xl font-medium leading-tight text-gray-100 dark:text-white-95 lg:text-2xl"
             >
               {langJson.WhatIsInternxtSection.subtitle}
             </p>
-            <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+            <p className="text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl">
               {langJson.WhatIsInternxtSection.description}
             </p>
           </div>
@@ -230,39 +223,33 @@ const Affiliates = ({
           width: 1240,
           height: 685,
         }}
-        darkMode={darkMode}
       />
 
-      <WhyJoinSection textContent={langJson.WhyJoinSection} darkMode={darkMode} />
+      <WhyJoinSection textContent={langJson.WhyJoinSection} />
 
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
             <p
-              className={`text-30 font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              } lg:text-3xl`}
+              className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
             >
               {langJson.WhatWeDoSection.title}
             </p>
             <p
-              className={`max-w-[796px] text-lg leading-tight ${
-                darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-              } lg:text-xl`}
+              className="max-w-[796px] text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl"
             >
               {langJson.WhatWeDoSection.description}
             </p>
           </div>
         }
         cards={groupCards}
-        darkMode={darkMode}
       />
 
       <ComponentsInColumnSection
-        backgroundColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
+        backgroundColor="bg-gray-1 dark:bg-gray-105"
         FirstComponent={
           <p
-            className={`text-center text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}
+            className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl"
           >
             {langJson.CommissionStructureSection.title}
           </p>
@@ -288,14 +275,12 @@ const Affiliates = ({
                   <Button
                     text={langJson.CommissionStructureSection.cta}
                     onClick={() => (window.location.href = SIGNUP_DRIVE_WEB)}
-                    darkMode={darkMode}
                   />
                 </div>
               );
             })}
           </div>
         }
-        darkMode={darkMode}
       />
 
       <ComponentsInColumnSection
@@ -306,13 +291,11 @@ const Affiliates = ({
               textContent={langJson.DescribingPlansSection.drive}
               imageUrl={getImage('/images/affiliates/internxt-b2b-b2c-affiliates.webp')}
               alt={'Internxt B2C & B2B'}
-              darkMode={darkMode}
             />
             <ImageAndTextRow
               textContent={langJson.DescribingPlansSection.s3}
               imageUrl={getImage('/images/affiliates/internxt-s3-storage-affiliates.webp')}
               alt={'Internxt B2C & B2B'}
-              darkMode={darkMode}
             />
           </>
         }
@@ -323,22 +306,19 @@ const Affiliates = ({
                 <p className="whitespace-nowrap text-30 font-semibold leading-tight text-primary lg:text-3xl">
                   {feature.title}
                 </p>
-                <p className={`text-base font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+                <p className="text-base font-medium text-gray-80 dark:text-cool-gray-30 lg:text-xl">
                   {feature.description}
                 </p>
               </div>
             ))}
           </div>
         }
-        darkMode={darkMode}
       />
 
       <div
-        className={`flex flex-col items-center justify-center gap-12 ${
-          darkMode ? 'bg-gray-105' : 'bg-gray-1'
-        } px-5 py-20 text-center`}
+        className="flex flex-col items-center justify-center gap-12 bg-gray-1 dark:bg-gray-105 px-5 py-20 text-center"
       >
-        <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+        <h2 className="text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
           {langJson.Number1Section.title.line1}{' '}
           <span className="text-primary">{langJson.Number1Section.title.blue} </span>
           {langJson.Number1Section.title.line2}
@@ -357,7 +337,7 @@ const Affiliates = ({
         </div>
       </div>
 
-      <FileParallaxSection darkMode={darkMode} />
+      <FileParallaxSection />
 
       <FaqSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
@@ -366,7 +346,6 @@ const Affiliates = ({
         url={
           'https://app.impact.com/campaign-mediapartner-signup/Internxt.brand?type=dm&io=e2AXxeEh7q3EO8TzTRQ1yfzRimhVUUQ4VIYp7wvigF46G5y9GkCkRC94J2GfuR%2Fa'
         }
-        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />

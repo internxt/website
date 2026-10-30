@@ -3,20 +3,19 @@ import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 
 interface TitleAndOnePlanProps {
-  darkMode?: boolean;
   textContent: Record<string, any>;
   header?: JSX.Element;
   footer?: JSX.Element;
   lang: GetServerSidePropsContext['locale'];
 }
 
-const TitleAndOnePlan = ({ darkMode = false, textContent, header }: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ textContent, header }: TitleAndOnePlanProps): JSX.Element => {
   return (
     <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24 ">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               {textContent.title.textBeforeBlueText}
               <span className="text-primary"> {textContent.title.blueText} </span>
               {textContent.title.textAfterBlueText}

@@ -32,14 +32,14 @@ const HotLabel = ({
   darkMode?: boolean;
   isValentinesMode?: boolean;
 }) => {
-  const bgClass = darkMode ? 'bg-purple-100' : 'bg-neutral-37';
+  const bgClass = darkMode ? 'bg-purple-100' : 'bg-neutral-37 dark:bg-purple-100';
   if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
   }
 
   const labelColorClass = isValentinesMode
     ? 'flex gap-0.5 bg-pink-10 text-pink-80'
-    : `${bgClass} text-primary`;
+    : `${bgClass} text-primary dark:text-purple-8`;
 
   const darkModeLabelClass = darkMode
     ? 'bg-purple-100 text-purple-8'
@@ -83,7 +83,7 @@ const PricingHeader = ({
     } ${className}`}
     id="priceTable"
   >
-    <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+    <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
       {alternativeHeader ? textContent?.planTitles?.lifetimeHeader : textContent?.planTitles?.header}
     </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
@@ -110,7 +110,7 @@ const CouponCodeHeader = ({
     className={`flex w-auto max-w-full flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 px-4 py-2.5 text-center shadow-lg sm:p-3`}
   >
     <CheckCircle className="h-4 w-4 shrink-0 text-green-1 sm:h-5 sm:w-5" weight="fill" />
-    <p className={`text-xs font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} sm:text-sm lg:text-base`}>
+    <p className={`text-xs font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} sm:text-sm lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
     </p>
   </div>
@@ -155,7 +155,7 @@ export const ComparativePricingSection = ({
   alternativeHeader = false,
   onCheckoutButtonClicked,
   hideFeatures = false,
-  sectionDetails = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-8 sm:py-10 lg:py-20`,
+  sectionDetails = `${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} py-8 sm:py-10 lg:py-20`,
   backgroundGradientColor,
   SectionTag = 'h2',
 }: ComparativePricingSectionProps): JSX.Element => {
@@ -207,8 +207,8 @@ export const ComparativePricingSection = ({
 
         {loadingCards && (
           <div className="flex w-full flex-col items-center justify-center gap-6 py-8 sm:flex-row sm:flex-wrap sm:py-14">
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton />
+            <CardSkeleton />
           </div>
         )}
 
@@ -252,7 +252,7 @@ export const ComparativePricingSection = ({
           <a
             href="#comparisonTable"
             className={`flex flex-row items-center gap-2 rounded-md border border-primary px-4 py-3 text-sm font-medium text-primary transition-colors hover:border-primary-dark ${
-              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20'
+              darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'
             } hover:text-primary-dark sm:px-5 sm:py-4 sm:text-base`}
           >
             {textContent.ctaCompare}
@@ -271,7 +271,7 @@ export const ComparativePricingSection = ({
                   <feature.icon size={36} className="!h-7 !w-7 shrink-0 text-primary md:!h-[36px] md:!w-[36px] md:pb-0" />
                 <p
                   className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${
-                    darkMode ? 'text-white' : 'text-gray-80'
+                    darkMode ? 'text-white' : 'text-gray-80 dark:text-white'
                   }`}
                 >
                     {feature.text}

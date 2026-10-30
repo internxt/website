@@ -14,10 +14,8 @@ const certifications = [
   ];
 
 export const CertificationsSection = ({
-  darkMode = false,
   bgColor,
 }: {
-  darkMode?: boolean;
   bgColor?: string;
 }) => {
   const [currencyValue, setCurrencyValue] = useState('eur');
@@ -35,10 +33,10 @@ export const CertificationsSection = ({
 
   const visibleCertifications = certifications.filter((cert) => !(currencyValue === 'usd' && cert.src.includes('ENS.webp')));
 
-  const logoClass = darkMode ? DARK_MODE_LOGO_FILTER : '';
+  const logoClass = DARK_MODE_LOGO_FILTER;
 
   return (
-    <section className={`flex h-min w-full flex-col items-center justify-between gap-8 px-5 lg:pt-0 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 xl:px-32 3xl:px-80 ${bgColor ?? (darkMode ? 'bg-[#1C1C1C]' : '')}`}>
+    <section className={`flex h-min w-full flex-col items-center justify-between gap-8 px-5 lg:pt-0 lg:flex-row lg:gap-16 lg:px-10 lg:py-10 xl:px-32 3xl:px-80 ${bgColor ?? ('dark:bg-gray-95')}`}>
 
       <div className="relative w-full overflow-hidden lg:hidden">
         <style>{`

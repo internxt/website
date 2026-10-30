@@ -80,11 +80,11 @@ const ReferAFriendPage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <RewardSection textContent={textContent.RewardsSection} darkMode={darkMode} />
+      <RewardSection textContent={textContent.RewardsSection} />
 
-      <HowItWorksSection textContent={textContent.HowItWorks} darkMode={darkMode} />
+      <HowItWorksSection textContent={textContent.HowItWorks} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -96,11 +96,7 @@ const ReferAFriendPage = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        backgroundGradientColor={
-          darkMode
-            ? 'linear-gradient(360deg, #1C1C1C 0%, #0D0D0D 100%)'
-            : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
+        backgroundGradientColor="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]"
         darkMode={darkMode}
       />
 

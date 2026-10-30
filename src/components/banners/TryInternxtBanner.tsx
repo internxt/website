@@ -3,7 +3,7 @@ import { X } from '@phosphor-icons/react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 
-const TryInternxtBanner = ({ darkMode = false, textContent, url }) => {
+const TryInternxtBanner = ({ textContent, url }) => {
   const [bannerVisible, setBannerVisible] = useState(false);
   const onClose = () => {
     setBannerVisible(false);
@@ -19,9 +19,7 @@ const TryInternxtBanner = ({ darkMode = false, textContent, url }) => {
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
-        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl ${
-          darkMode ? 'text-white-95' : 'text-neutral-900'
-        }`}
+        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl text-neutral-900 dark:text-white-95`}
         style={{
           backgroundImage: `url(/images/virus-scanner/banner-bg.png)`,
           backgroundPosition: 'center',

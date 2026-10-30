@@ -14,7 +14,6 @@ interface TestimonialProps {
 }
 
 interface TestimonialsSectionProps {
-  darkMode?: boolean;
   textContent: any;
   bgColor?: string;
   textColor?: string;
@@ -37,14 +36,13 @@ const AvatarAndText = ({ testimonial, textColor }: TestimonialProps): JSX.Elemen
 );
 
 const TestimonialsSection = ({
-  darkMode = false,
   textContent,
   bgColor,
   textComponent,
   textColor,
 }: TestimonialsSectionProps): JSX.Element => {
-  const textClass = darkMode ? 'text-cool-gray-30' : 'text-gray-80';
-  const nameColor = textColor ?? (darkMode ? 'text-white-95' : 'text-gray-100');
+  const textClass = 'text-gray-80 dark:text-cool-gray-30';
+  const nameColor = textColor ?? ('text-gray-100 dark:text-white-95');
   const testimonials = [
     {
       review: textContent.cards[0].review,
@@ -62,15 +60,13 @@ const TestimonialsSection = ({
 
   return (
     <section
-      className={`overflow-hidden ${bgColor ?? (darkMode ? 'bg-[#1C1C1C]' : 'bg-white')} lg:py:20 px-5 py-10 lg:px-16`}
+      className={`overflow-hidden ${bgColor ?? ('bg-white dark:bg-gray-95')} lg:py:20 px-5 py-10 lg:px-16`}
     >
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
           <p
-            className={`text-center text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } sm:text-3xl`}
+            className="text-center text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 sm:text-3xl"
           >
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>

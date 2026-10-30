@@ -1,21 +1,19 @@
 import Link from 'next/link';
 
-export const EncryptedVPNSection = ({ darkMode = false, textContent, bannerText }) => {
+export const EncryptedVPNSection = ({ textContent, bannerText }) => {
   return (
     <section
-      className={`flex flex-col items-center justify-center space-y-12 overflow-hidden ${
-        darkMode ? 'bg-gray-105' : 'bg-gray-1'
-      } px-5 py-20`}
+      className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20"
     >
       <div className="flex w-full max-w-[800px] flex-col items-center justify-center space-y-12 text-center">
-        <h2 className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        <h2 className="text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h2>
         <div className="flex flex-col space-y-6">
-          <p className={`text-2xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="text-2xl font-medium text-gray-80 dark:text-cool-gray-30">
             {textContent.subtitle}
           </p>
-          <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         <Link
           className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"

@@ -1,18 +1,17 @@
 import Link from 'next/link';
 
 const DARK_CONTAINER_GRADIENT =
-  'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)';
+  'dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]';
 
 const FloatingCtaSectionv2 = ({
   textContent,
   url,
   target,
   customText,
-  bgGradientContainerColor,
-  bgGradientColor,
+  bgGradientContainerColor = '',
+  bgGradientColor = '',
   containerDetails = '',
   bgPadding = '',
-  darkMode = false,
 }: {
   textContent: any;
   url?: string;
@@ -22,20 +21,13 @@ const FloatingCtaSectionv2 = ({
   customText?: React.ReactNode;
   containerDetails?: string;
   bgPadding?: string;
-  darkMode?: boolean;
 }) => {
   return (
     <section
-      className={`flex h-min w-full items-center justify-center px-6 ${bgPadding} ${
-        darkMode && !bgGradientColor ? 'bg-[#1C1C1C]' : ''
-      } xl:px-32 3xl:px-80`}
-      style={{ background: bgGradientColor }}
+      className={`flex h-min w-full items-center justify-center px-6 ${bgPadding} ${bgGradientColor} xl:px-32 3xl:px-80`}
     >
       <div
-        className={`z-10 flex h-auto w-full flex-col items-center justify-center gap-6 rounded-20 py-6 text-center ${
-          darkMode ? 'text-white' : ''
-        } lg:w-full lg:py-10 ${containerDetails}`}
-        style={{ background: darkMode ? DARK_CONTAINER_GRADIENT : bgGradientContainerColor }}
+        className={`z-10 flex h-auto w-full flex-col items-center justify-center gap-6 rounded-20 py-6 text-center dark:text-white lg:w-full lg:py-10 ${bgGradientContainerColor} ${DARK_CONTAINER_GRADIENT} ${containerDetails}`}
       >
         {customText}
         {url && (

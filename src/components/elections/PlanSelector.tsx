@@ -1,23 +1,21 @@
 export type SwitchButtonOptions = 'Kamala' | 'Trump';
 
 interface PlanSwitchProps {
-  darkMode?: boolean;
   textContent: any;
   activeSwitchPlan?: SwitchButtonOptions;
   onPlanTypeChange?: (newPlan: SwitchButtonOptions) => void;
 }
 
 export const PlanSelector = ({
-  darkMode = false,
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => {
-  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50';
+  const textClass = 'text-cool-gray-50 dark:text-cool-gray-30';
   return (
     <div
       id="billingButtons"
-      className={`flex flex-row rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-cool-gray-10'} p-0.5`}
+      className="flex flex-row rounded-lg bg-cool-gray-10 dark:bg-gray-105 p-0.5"
     >
       <button
         type="button"

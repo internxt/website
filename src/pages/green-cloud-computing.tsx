@@ -57,20 +57,20 @@ const Sustainability = ({
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} />
 
-      <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={langJson.HeroSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
+      <FeatureSection textContent={langJson.FeatureSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} darkMode={darkMode} />
+      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
 
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-              <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} sm:text-5xl`}>
+              <h2 className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl">
                 {langJson.FeatureSection.title}
               </h2>
-              <p className={`font-regular ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-xl`}>
+              <p className="font-regular text-gray-80 dark:text-cool-gray-30 sm:text-xl">
                 {langJson.FeatureSection.description}
               </p>
             </div>
@@ -80,19 +80,17 @@ const Sustainability = ({
           <div className="flex flex-col items-center">
             <CardGroup
               cards={cardsForFeatureSection}
-              backgroundColorCard={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
+              backgroundColorCard="bg-gray-1 dark:bg-gray-105"
               iconColor="text-green"
-              darkMode={darkMode}
             />
           </div>
         }
-        backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-        darkMode={darkMode}
+        backgroundColor="bg-white dark:bg-gray-95"
       />
 
-      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} darkMode={darkMode} />
+      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} darkMode={darkMode} />
+      <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
     </Layout>

@@ -110,7 +110,7 @@ export const PricingSectionForMobile = ({
           {Array(1)
             .fill(0)
             .map((_, i) => (
-              <CardSkeleton key={i} darkMode={darkMode} />
+              <CardSkeleton key={i} />
             ))}
         </div>
       </Transition>
@@ -159,7 +159,7 @@ export const PricingSectionForMobile = ({
               <div>
                 <feature.icon size={24} className="shrink-0  text-primary " />
               </div>
-              <p className={`justify-end text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+              <p className={`justify-end text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
                 {feature.text}
               </p>
             </div>

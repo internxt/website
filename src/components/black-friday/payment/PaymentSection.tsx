@@ -5,7 +5,7 @@ import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/rea
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '@/components/prices/PriceCard';
 
-const PaymentSection = ({ darkMode = false, textContent }) => {
+const PaymentSection = ({ textContent }) => {
   const { products, currency, loadingCards } = usePricing();
 
   return (
@@ -23,10 +23,10 @@ const PaymentSection = ({ darkMode = false, textContent }) => {
             enterTo="scale-100 translate-y-0 opacity-100"
           >
             <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 ">
-              <CardSkeleton darkMode={darkMode} />
-              <CardSkeleton darkMode={darkMode} />
-              <CardSkeleton darkMode={darkMode} />
-              <CardSkeleton darkMode={darkMode} />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
+              <CardSkeleton />
             </div>
           </Transition>
         }
@@ -49,7 +49,6 @@ const PaymentSection = ({ darkMode = false, textContent }) => {
                   lang={'en'}
                   currency={currency}
                   priceBefore={product.price}
-                  darkMode={darkMode}
                 />
               ))}
           </div>

@@ -2,11 +2,10 @@ import { SustainabilityText } from '@/assets/types/sustainability';
 import { Database, GlobeHemisphereWest, Heart, Leaf, Sun } from '@phosphor-icons/react';
 
 export interface HeroSectionsProps {
-  darkMode?: boolean;
   textContent: SustainabilityText['HeroSection'];
 }
 
-const FeatureSection = ({ darkMode = false, textContent }: HeroSectionsProps) => {
+const FeatureSection = ({ textContent }: HeroSectionsProps) => {
   const goals = [
     {
       title: textContent.goals.element1,
@@ -56,17 +55,15 @@ const FeatureSection = ({ darkMode = false, textContent }: HeroSectionsProps) =>
   ];
 
   return (
-    <section className={`relative flex w-full flex-col overflow-hidden pt-14 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="relative flex w-full flex-col overflow-hidden pt-14 dark:bg-gray-95">
       <div className="flex flex-col items-center py-16 pb-20 lg:py-20">
         <div className="flex flex-col items-center justify-center space-y-10 px-6 text-center">
-          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             <span className="text-green-1">{textContent.title.greenText}</span>
             {textContent.title.normalText}
           </h1>
           <h2
-            className={`mb-8 w-full max-w-[850px] text-xl font-normal ${
-              darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-            } sm:mb-10`}
+            className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 dark:text-cool-gray-30 sm:mb-10"
           >
             {textContent.description}
           </h2>
@@ -116,8 +113,8 @@ const FeatureSection = ({ darkMode = false, textContent }: HeroSectionsProps) =>
                     key={index}
                     className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} z-40 border-4 border-white text-center`}
                   >
-                    <goal.icon size={50} className={`mb-2 ${darkMode ? 'text-white-95' : 'text-gray-100'}`} />
-                    <p className={`max-w-[150px] text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    <goal.icon size={50} className="mb-2 text-gray-100 dark:text-white-95" />
+                    <p className="max-w-[150px] text-xl font-medium text-gray-100 dark:text-white-95">
                       {goal.title}
                     </p>
                   </div>
@@ -133,8 +130,8 @@ const FeatureSection = ({ darkMode = false, textContent }: HeroSectionsProps) =>
                     key={index}
                     className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} ml-[-20px] mr-[-20px]  mt-10 border-4 border-white text-center ${goal.zIndex}`}
                   >
-                    <goal.icon size={50} className={`mb-2 ${darkMode ? 'text-white-95' : 'text-gray-100'}`} />
-                    <p className={`max-w-[150px] text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                    <goal.icon size={50} className="mb-2 text-gray-100 dark:text-white-95" />
+                    <p className="max-w-[150px] text-xl font-medium text-gray-100 dark:text-white-95">
                       {goal.title}
                     </p>
                   </div>

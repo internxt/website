@@ -2,13 +2,12 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import RevealX from '@/components/components/RevealX';
 
 const FeaturesSlider = ({
-  darkMode = false,
   textContent,
   cardInfo,
-  backgroundClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
+  backgroundClass = 'bg-white dark:bg-gray-95',
 }) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
-  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
+  const borderClass = 'border-gray-10 dark:border-gray-71';
+  const textClass = 'text-gray-100 dark:text-white-95';
   const [cardIndex, setCardIndex] = useState(0);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const isScrollingRef = useRef(false);
@@ -46,12 +45,12 @@ const FeaturesSlider = ({
     <section className={`overflow-hidden ${backgroundClass}`}>
       <section className="flex flex-col items-center justify-center space-y-12 px-5 py-20 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+          <h2 className="text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </h2>
 
           <div className="flex flex-col">
-            <p className={`text-lg leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-lg leading-tight text-gray-80 dark:text-cool-gray-30">
               {textContent.description}
             </p>
           </div>
@@ -81,9 +80,7 @@ const FeaturesSlider = ({
                 </h3>
               </button>
               <div
-                className={`h-8 border-r-4 ${
-                  darkMode ? 'border-gray-71' : 'border-gray-10'
-                } pr-8 transition-all duration-500`}
+                className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 transition-all duration-500"
               >
                 <div
                   className={`border-r-4 pr-8 transition-all duration-500 ${
@@ -100,13 +97,11 @@ const FeaturesSlider = ({
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6 opacity-100 transition-opacity duration-700">
                 <DescriptionIcon className="text-primary transition-all duration-500" size={64} />
-                <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardInfo[cardIndex].title}
                 </p>
                 <p
-                  className={`font-regular text-base leading-relaxed ${
-                    darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-                  } sm:text-lg md:text-xl`}
+                  className="font-regular text-base leading-relaxed text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl"
                 >
                   {Array.isArray(cardInfo[cardIndex].description)
                     ? cardInfo[cardIndex].description.map((line, index) => (
@@ -128,24 +123,22 @@ const FeaturesSlider = ({
         {cardInfo.map((info) => (
           <div
             key={info.title}
-            className={`flex flex-col items-start justify-start rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 transition-all duration-500 sm:p-10 md:max-w-[488px]`}
+            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 transition-all duration-500 sm:p-10 md:max-w-[488px]"
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col space-y-4">
-              <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{info.title}</p>
+              <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{info.title}</p>
               {Array.isArray(info.description) ? (
                 info.description.map((line) => (
                   <p
                     key={line}
-                    className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
+                    className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
                   >
                     {line}
                   </p>
                 ))
               ) : (
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {info.description}
                 </p>
               )}

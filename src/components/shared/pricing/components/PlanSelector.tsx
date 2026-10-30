@@ -22,9 +22,9 @@ export const PlanSelector = ({
   isIndividualsOffer,
   isLifetimeOffer,
 }: PlanSwitchProps): JSX.Element => {
-  const hoverClass = darkMode ? 'hover:bg-[#1C1C1C]/60' : 'hover:bg-white/60';
-  const trackClass = darkMode ? 'bg-gray-80' : 'bg-neutral-90/10';
-  const inactiveTextClass = darkMode ? 'text-white-95' : 'text-gray-105';
+  const hoverClass = darkMode ? 'hover:bg-gray-95/60' : 'hover:bg-white/60 dark:hover:bg-gray-95/60';
+  const trackClass = darkMode ? 'bg-gray-80' : 'bg-neutral-90/10 dark:bg-gray-80';
+  const inactiveTextClass = darkMode ? 'text-white-95' : 'text-gray-105 dark:text-white-95';
 
   return (
     <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg ${trackClass}`}>

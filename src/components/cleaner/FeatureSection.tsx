@@ -1,13 +1,11 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-const FeatureSection = ({ darkMode = false, textContent }) => (
+const FeatureSection = ({ textContent }) => (
   <section
-    className={`flex h-[440px] flex-col items-center justify-start  lg:h-[563px] lg:justify-center  lg:gap-16 ${
-      darkMode ? 'bg-[#1C1C1C]' : ''
-    }`}
+    className="flex h-[440px] flex-col items-center justify-start lg:h-[563px] lg:justify-center lg:gap-16 dark:bg-gray-95"
   >
-    <p className={`text-30 font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+    <p className="text-30 font-bold text-gray-100 dark:text-white-95 lg:text-5xl">
       {textContent.title}
     </p>
     <div className="relative flex h-[365px] w-full flex-col-reverse items-center lg:h-[321px] lg:w-[832px] lg:flex-row lg:items-start">
@@ -38,9 +36,7 @@ const FeatureSection = ({ darkMode = false, textContent }) => (
       />
 
       <p
-        className={`px-10 text-center text-base font-normal leading-tight ${
-          darkMode ? 'text-green-120' : 'text-gray-55'
-        } lg:px-0 lg:text-left lg:text-lg`}
+        className="px-10 text-center text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:px-0 lg:text-left lg:text-lg"
       >
         {textContent.description}
       </p>

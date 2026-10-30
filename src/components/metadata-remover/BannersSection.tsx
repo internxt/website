@@ -3,20 +3,18 @@ import Image from 'next/image';
 import { CaretRight } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 
-const BannersSection = ({ darkMode = false, textContent, lang }) => {
+const BannersSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
         <div className="flex text-center">
-          <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} md:text-4xl`}>
+          <p className="text-2xl font-semibold text-gray-100 dark:text-white-95 md:text-4xl">
             {textContent.title}
           </p>
         </div>
         <div className="flex flex-col space-y-9 md:flex-row md:space-x-9 md:space-y-0">
           <div
-            className={`flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-10 text-center`}
+            className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center"
           >
             <Image
               src={getImage('/images/temp-email/password-checker.svg')}
@@ -43,9 +41,7 @@ const BannersSection = ({ darkMode = false, textContent, lang }) => {
             </button>
           </div>
           <div
-            className={`flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-10 text-center`}
+            className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center"
           >
             <Image
               src={getImage('/images/temp-email/byte-converter.svg')}

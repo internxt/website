@@ -42,7 +42,6 @@ export interface SignUpFormText {
 }
 
 interface SignUpFormProps {
-  darkMode?: boolean;
   textContent: SignUpFormText;
   lang?: string;
   error?: string;
@@ -56,7 +55,6 @@ type PasswordState = {
 };
 
 export const SignUpForm = ({
-  darkMode = false,
   textContent,
   lang,
   error,
@@ -115,7 +113,7 @@ export const SignUpForm = ({
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor="signUpFormEmail"
-          className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+          className="text-sm font-medium text-gray-80 dark:text-cool-gray-30"
         >
           {textContent.fields.email.label}
         </label>
@@ -127,14 +125,13 @@ export const SignUpForm = ({
           placeholder={textContent.fields.email.placeholder}
           required
           disabled={loading}
-          darkMode={darkMode}
         />
       </div>
 
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor="signUpFormPassword"
-          className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+          className="text-sm font-medium text-gray-80 dark:text-cool-gray-30"
         >
           {textContent.fields.password.label}
         </label>
@@ -150,27 +147,24 @@ export const SignUpForm = ({
             required
             disabled={loading}
             onChange={checkPassword}
-            darkMode={darkMode}
           />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className={`absolute right-0 top-0 flex h-11 items-center px-3 text-sm font-medium ${
-              darkMode ? 'text-green-120 hover:text-cool-gray-30' : 'text-gray-60 hover:text-gray-80'
-            }`}
+            className="absolute right-0 top-0 flex h-11 items-center px-3 text-sm font-medium text-gray-60 hover:text-gray-80 dark:text-green-120 dark:hover:text-cool-gray-30"
           >
             {showPassword ? textContent.fields.password.hide : textContent.fields.password.show}
           </button>
         </div>
         {passwordState && (
-          <PasswordStrength strength={passwordState.tag} label={passwordState.label} darkMode={darkMode} />
+          <PasswordStrength strength={passwordState.tag} label={passwordState.label} />
         )}
       </div>
 
       {textContent.info && (
-        <div className={`flex flex-row items-start gap-2 rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} p-3`}>
+        <div className="flex flex-row items-start gap-2 rounded-lg bg-neutral-17 dark:bg-gray-105 p-3">
           <Info size={20} weight="fill" className="shrink-0 text-primary" />
-          <p className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-60'}`}>
+          <p className="text-sm font-normal leading-tight text-gray-60 dark:text-green-120">
             {textContent.info}
           </p>
         </div>

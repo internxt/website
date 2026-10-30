@@ -22,7 +22,6 @@ import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
 
 export interface PriceCardProps {
-  darkMode?: boolean;
   planType: string;
   storage: string;
   price: number;
@@ -58,7 +57,6 @@ const STORAGE_LEVELS = {
 };
 
 export default function PriceCard({
-  darkMode = false,
   planType,
   storage,
   price,
@@ -82,8 +80,8 @@ export default function PriceCard({
   isPcComponentes5tb = false,
   trialToken,
 }: Readonly<PriceCardProps>): JSX.Element {
-  const ringClass = darkMode ? 'ring-gray-71' : 'ring-gray-10';
-  const hoverClass = darkMode ? 'hover:bg-gray-105 active:bg-gray-105' : 'hover:bg-gray-1 active:bg-gray-5';
+  const ringClass = 'ring-gray-10 dark:ring-gray-71';
+  const hoverClass = 'hover:bg-gray-1 active:bg-gray-5 dark:hover:bg-gray-105 dark:active:bg-gray-105';
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -403,9 +401,7 @@ export default function PriceCard({
       } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } p-6 pt-6`}
+        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -431,13 +427,11 @@ export default function PriceCard({
         >
           <div
             className={`priceBreakdown flex flex-row
-              items-end space-x-px ${darkMode ? 'text-cool-gray-30' : 'text-neutral-700'}
+              items-end space-x-px text-neutral-700 dark:text-cool-gray-30
             `}
           >
             <p
-              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              }`}
+              className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95`}
             >
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
@@ -488,9 +482,7 @@ export default function PriceCard({
       </div>
 
       <div
-        className={`featureList flex flex-col border-t ${
-          darkMode ? 'border-gray-71 bg-gray-105' : 'border-neutral-20 bg-neutral-10'
-        } pb-6 text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+        className={`featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 text-sm text-gray-80 dark:text-cool-gray-30`}
       >
         {isOffer ? (
           <>
@@ -528,7 +520,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
+                <span className="text-gray-80 dark:text-cool-gray-30">{feature}</span>
               </div>
             ))
           ) : isPcComponentes ? (
@@ -541,7 +533,7 @@ export default function PriceCard({
                   draggable="false"
                   alt="check icon"
                 />
-                <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>{feature}</span>
+                <span className="text-gray-80 dark:text-cool-gray-30">{feature}</span>
               </div>
             ))
           ) : (
@@ -557,7 +549,7 @@ export default function PriceCard({
                       className: 'text-primary',
                     },
                   )}
-                  <span className={darkMode ? 'text-cool-gray-30' : 'text-gray-80'}>
+                  <span className="text-gray-80 dark:text-cool-gray-30">
                     {feature}
                     {index > 9 ? (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">

@@ -37,11 +37,11 @@ const LevantePage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <DigitalIndependenceSection textContent={textContent.DigitalIndependenceSection} darkMode={darkMode} />
+      <DigitalIndependenceSection textContent={textContent.DigitalIndependenceSection} />
 
-      <LeadingOrganizationsSection textContent={textContent.LeadingOrganizationsSection} darkMode={darkMode} />
+      <LeadingOrganizationsSection textContent={textContent.LeadingOrganizationsSection} />
 
        <FloatingCtaSectionv2
           textContent={textContent.ctaBanner}
@@ -65,18 +65,15 @@ const LevantePage = ({
               quality={100}
             />
             <p
-              className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
-              } lg:w-[633px] lg:text-center lg:text-xl`}
+              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
             >
               {textContent.ctaBanner.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20"
-        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />

@@ -65,25 +65,20 @@ export default function HorizontalScrollableSection({
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{
-        background: darkMode
-          ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
-          : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
-      }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min lg:gap-16 lg:py-20 ${darkMode ? 'bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]' : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]'}`}
     >
       <div className="flex h-min w-[345px] flex-col justify-start gap-8 lg:w-[850px] lg:flex-row">
         <div className="flex h-min flex-col justify-center gap-6 ">
           <p
             className={`text-30 font-bold leading-tight lg:whitespace-pre-line ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
+              darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
             } lg:text-3xl`}
           >
             {textContent.title}
           </p>
           <p
-            className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
+            className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight ${
+              darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
             } lg:whitespace-pre-line lg:text-xl`}
           >
             {textContent.description}
@@ -122,15 +117,15 @@ export default function HorizontalScrollableSection({
               <div key={index} className="flex-shrink-0">
                 <div
                   className={`flex h-full w-[345px] flex-col gap-4 rounded-16 ${
-                    darkMode ? 'bg-gray-105' : 'bg-white'
+                    darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'
                   } p-6 lg:w-[352px]`}
                 >
-                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>
                     {title}
                   </p>
                   <p
                     className={`${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
+                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
                     } flex-1 text-sm font-normal leading-tight  lg:text-base`}
                   >
                     {textContent.cards.description[index]}
@@ -146,11 +141,11 @@ export default function HorizontalScrollableSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
               } transition-opacity ${
                 currentIndex === 0
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -159,11 +154,11 @@ export default function HorizontalScrollableSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+                darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
               } transition-opacity ${
                 currentIndex === maxIndex
                   ? 'cursor-not-allowed opacity-50'
-                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

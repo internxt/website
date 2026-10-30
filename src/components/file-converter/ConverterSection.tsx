@@ -20,7 +20,6 @@ import { ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
 
 interface ConverterSectionProps {
-  darkMode?: boolean;
   textContent: any;
   converterText: any;
   errorContent: any;
@@ -40,7 +39,6 @@ const converters = [
 ];
 
 export const ConverterSection = ({
-  darkMode = false,
   textContent,
   converterText,
   errorContent,
@@ -170,7 +168,6 @@ export const ConverterSection = ({
           isDragging={isDragging}
           setIsDragging={setIsDragging}
           handleOpenFileExplorer={handleOpenFileExplorer}
-          darkMode={darkMode}
         />
       ),
       selectedFileState: files && (
@@ -179,7 +176,6 @@ export const ConverterSection = ({
           files={files}
           onFileConvert={handleConversion}
           onCancel={resetViewToInitialState}
-          darkMode={darkMode}
         />
       ),
       convertingState: (
@@ -198,7 +194,6 @@ export const ConverterSection = ({
           textContent={formattedConverterText.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
           onDownloadFile={handleConversion}
-          darkMode={darkMode}
         />
       ),
       errorState: (
@@ -207,7 +202,6 @@ export const ConverterSection = ({
           resetViewToInitialState={resetViewToInitialState}
           errorContent={formattedErrorText}
           textContent={formattedConverterText.dragNDropArea}
-          darkMode={darkMode}
         />
       ),
     };
@@ -216,7 +210,7 @@ export const ConverterSection = ({
   };
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} pb-20 pt-32`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 pb-20 pt-32">
       <input
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
@@ -229,13 +223,13 @@ export const ConverterSection = ({
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {formattedConverterText.title}
           </h1>
-          <h2 className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</h2>
+          <h2 className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
-            <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
               {textContent.secureUpload}
             </p>
           </div>

@@ -32,12 +32,11 @@ const ConverterTool = ({ darkMode = false, lang, metatagsDescriptions, navbarLan
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} />
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtbyte'}
-          darkMode={darkMode}
         />
 
         <ExplanationSection
@@ -47,17 +46,17 @@ const ConverterTool = ({ darkMode = false, lang, metatagsDescriptions, navbarLan
           darkMode={darkMode}
         />
 
-        <CtaSection textContent={langJson.ctaSection1} darkMode={darkMode} />
+        <CtaSection textContent={langJson.ctaSection1} />
 
         <InfoSection textContent={langJson.infoSection} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.ctaSection2} darkMode={darkMode} />
+        <CtaSection textContent={langJson.ctaSection2} />
 
-        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} darkMode={darkMode} />
+        <ConversionTableSection textContent={langJson.ConversionTableSection} lang={lang} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={langJson.ctaSection3} darkMode={darkMode} />
+        <CtaSection textContent={langJson.ctaSection3} />
 
         <FaqSection textContent={langJson.FaqSection} darkMode={darkMode} />
 

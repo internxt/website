@@ -1,12 +1,10 @@
 const VerticalBusinessSection = ({
-  darkMode = false,
   customText,
   bgGradientContainerColor,
   bgGradientColor,
   containerDetails = '',
-  bgColor = darkMode ? 'bg-[#1C1C1C]' : '',
+  bgColor = 'dark:bg-gray-95',
 }: {
-  darkMode?: boolean;
   textContent: any;
   url?: string;
   target?: string;

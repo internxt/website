@@ -26,7 +26,7 @@ export default function ThreeCardsSection({
   needsH2 = true,
   percentOff,
 }: Readonly<ThreeCardsProps>): JSX.Element {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -89,38 +89,35 @@ export default function ThreeCardsSection({
   const maxIndex = getMaxIndex();
   const hasCta = textContent.cards.cta;
   const SectionTitleTag = needsH2 ? 'h2' : 'p';
-  const sectionBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17';
+  const sectionBgClass = darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95';
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : sectionBgClass
-      } py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{ background: bgColor ? bgColor : '' }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgColor ?? sectionBgClass} py-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       {topSeparationBar && (
         <div
           className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
           } lg:bottom-0 lg:left-32 lg:right-32`}
         ></div>
       )}
       {bottomSeparationBar && (
         <div
           className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
           } lg:bottom-0 lg:left-32 lg:right-32`}
         />
       )}
 
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
         <SectionTitleTag
-          className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}
+          className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95 dark:text-gray-1'} lg:text-3xl`}
         >
           {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
         </SectionTitleTag>
         {textContent.description && (
           <p
-            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+            className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:text-xl`}
           >
             {parseDynamicText(textContent.description, { percentage: percentOff, discount: percentOff })}
           </p>
@@ -143,13 +140,13 @@ export default function ThreeCardsSection({
               <div
                 key={title}
                 className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                  cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
+                  cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17 dark:bg-gray-105')
                 } p-6 lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col">
                   <TitleTag
                     className={`flex items-center justify-start gap-4 text-lg font-medium ${
-                      darkMode ? 'text-white-95' : 'text-gray-100'
+                      darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                     }`}
                   >
                     {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
@@ -157,7 +154,7 @@ export default function ThreeCardsSection({
                   </TitleTag>
                   <p
                     className={`pt-[16px] text-sm font-normal leading-tight ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
+                      darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
                     } lg:pt-6 lg:text-base`}
                   >
                     {parseDynamicText(textContent.cards.descriptions[index], { percentage: percentOff, discount: percentOff })}
@@ -208,20 +205,20 @@ export default function ThreeCardsSection({
           <div
             key={title}
             className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
-              cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17')
+              cardColor || (darkMode ? 'bg-gray-105' : 'bg-neutral-17 dark:bg-gray-105')
             } p-8`}
           >
             <div className="flex flex-col">
               <p
                 className={`flex items-center justify-start gap-4 text-xl font-medium  ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 }`}
               >
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
                 {parseDynamicText(title, { percentage: percentOff, discount: percentOff })}
               </p>
               <p
-                className={`${darkMode ? 'text-green-120' : 'text-gray-55'} pt-6 text-base font-normal
+                className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} pt-6 text-base font-normal
                 leading-tight`}
               >
                 {parseDynamicText(textContent.cards.descriptions[index], { percentage: percentOff, discount: percentOff })}

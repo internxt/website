@@ -29,8 +29,8 @@ export default function FaqAccordion({
   index?: number;
   totalItems?: number;
 }): JSX.Element {
-  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
-  const textClass2 = darkMode ? 'text-green-120' : 'text-gray-60';
+  const textClass = 'text-gray-100 dark:text-white-95';
+  const textClass2 = 'text-gray-60 dark:text-green-120';
   const [active, setActive] = useState(false);
   const isDiscountPending = !percentageDiscount || percentageDiscount === '0';
 

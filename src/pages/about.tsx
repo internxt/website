@@ -18,13 +18,13 @@ const AboutUs = ({ darkMode = false, lang, textContent, footerLang, navbarLang, 
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <WhatWeDoSection textContent={textContent.WhatWeDoSection} darkMode={darkMode} />
+      <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
 
-      <HorizontalScrollableSection textContent={textContent.ScrollableSection} header={false} darkMode={darkMode} />
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} header={false} />
 
-      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
+      <FeatureSection textContent={textContent.FeatureSection} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} darkMode={darkMode} />
     </Layout>

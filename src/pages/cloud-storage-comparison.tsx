@@ -104,11 +104,11 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
-        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} darkMode={darkMode} />
+        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
 
         {/* <TableSection textContent={langJson.HeroSection} /> */}
 
-        <FeatureSection textContent={langJson.FeatureSection} darkMode={darkMode} />
+        <FeatureSection textContent={langJson.FeatureSection} />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -122,7 +122,7 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+          sectionDetails={`${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} lg:py-20`}
           hideFreeCard
           darkMode={darkMode}
         />
@@ -132,16 +132,15 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
           lang={lang}
           redirect="/privacy"
           cards={cardsData}
-          darkMode={darkMode}
         />
 
-        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} darkMode={darkMode} />
+        <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 
-        <TestimonialsSection textContent={langJson.TestimonialsSection} darkMode={darkMode} />
+        <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
         <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} darkMode={darkMode} />
+        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
         <Footer
           textContent={footerLang}

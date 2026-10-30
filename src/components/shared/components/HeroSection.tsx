@@ -3,7 +3,6 @@ import HeroSectionSafeArea from '../HeroSectionSafeArea';
 import Image from 'next/image';
 
 interface HeroSectionProps {
-  darkMode?: boolean;
   TextComponent: ReactNode;
   ImageComponent?: ReactNode;
   imageProperties?: {
@@ -18,12 +17,11 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({
-  darkMode = false,
   TextComponent,
   style,
   ImageComponent,
   imageProperties,
-  background = darkMode ? 'bg-[#1C1C1C]' : '',
+  background = 'dark:bg-gray-95',
 }: HeroSectionProps): JSX.Element => {
   return (
     <section className={`overflow-hidden  ${background}`} style={style}>

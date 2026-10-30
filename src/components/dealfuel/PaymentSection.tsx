@@ -1,7 +1,7 @@
 import React from 'react';
 import PriceTable from './PriceTable';
 
-const PaymentSection = ({ darkMode = false, lang, textContent, country }) => {
+const PaymentSection = ({ lang, textContent, country }) => {
   return (
     <section id="payment" className="overflow-hidden py-20">
       <div className="flex flex-col pt-10  lg:pt-0">
@@ -18,7 +18,7 @@ const PaymentSection = ({ darkMode = false, lang, textContent, country }) => {
           </div>
         </div>
 
-        <PriceTable lang={lang} country={country} textContent={textContent} darkMode={darkMode} />
+        <PriceTable lang={lang} country={country} textContent={textContent} />
       </div>
     </section>
   );

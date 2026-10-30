@@ -260,7 +260,7 @@ const logosMobile: Logo[] = [
   },
 ];
 
-export const CompanyLogosRecognitions = ({ darkMode = false }: { darkMode?: boolean }) => {
+export const CompanyLogosRecognitions = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos];
@@ -345,14 +345,10 @@ export const CompanyLogosRecognitions = ({ darkMode = false }: { darkMode?: bool
       </div>
 
       <div
-        className={`pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r ${
-          darkMode ? 'from-[#1C1C1C]' : 'from-white'
-        } to-transparent`}
+        className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white dark:from-gray-95 to-transparent"
       ></div>
       <div
-        className={`pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l ${
-          darkMode ? 'from-[#1C1C1C]' : 'from-white'
-        } to-transparent`}
+        className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white dark:from-gray-95 to-transparent"
       ></div>
     </div>
   );

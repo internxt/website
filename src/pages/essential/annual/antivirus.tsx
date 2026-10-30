@@ -160,7 +160,6 @@ const AntivirusPage = ({
           currentPrice={ultimatePlan?.price.toString()}
           currency={currency}
           isAnnual
-          darkMode={darkMode}
         />
 
         <InfoSection
@@ -170,9 +169,7 @@ const AntivirusPage = ({
                 <div key={item.title} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
                   <p
-                    className={`min-h-[80px] max-w-[229px] text-xl font-medium ${
-                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-                    }`}
+                    className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80 dark:text-cool-gray-30"
                   >
                     {item.description}
                   </p>
@@ -180,11 +177,10 @@ const AntivirusPage = ({
               ))}
             </div>
           }
-          darkMode={darkMode}
         />
 
         {ultimatePlan && (
-          <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-[#1C1C1C]' : ''}`} id="priceCard">
+          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 dark:bg-gray-95" id="priceCard">
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
               storage={ultimatePlan.storage}
@@ -196,12 +192,11 @@ const AntivirusPage = ({
               currencyValue={currencyValue}
               coupon={lifetimeCoupon}
               isAnnual
-              darkMode={darkMode}
             />
           </div>
         )}
 
-        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} showPlan darkMode={darkMode} />
+        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} showPlan />
 
         <InfoSection
           FirstComponent={
@@ -209,33 +204,31 @@ const AntivirusPage = ({
               {InfoSectionV2.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className={`pt-5 text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <p className="pt-5 text-xl font-medium text-gray-80 dark:text-cool-gray-30">
                     {item.title}
                   </p>
                 </div>
               ))}
             </div>
           }
-          darkMode={darkMode}
         />
 
         <CtaSection
           textContent={langJson.cta1}
           url={'#priceCard'}
           customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
-          darkMode={darkMode}
         />
 
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} darkMode={darkMode} />
+        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
 
         <ComponentsInColumnSection
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+                <h2 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
                   {langJson.ComponentsInColumn.description}
                 </p>
               </div>
@@ -245,24 +238,21 @@ const AntivirusPage = ({
             <div className="flex flex-col items-center">
               <CardGroup
                 cards={cardsForComponentsIncolumn}
-                backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-                darkMode={darkMode}
+                backgroundColorCard="bg-white dark:bg-gray-95"
               />
             </div>
           }
-          backgroundColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-          darkMode={darkMode}
+          backgroundColor="bg-white dark:bg-gray-95"
         />
         <CtaSection
           textContent={langJson.cta2}
           url={'#priceCard'}
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
-          darkMode={darkMode}
         />
 
         <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>
     </div>
   );

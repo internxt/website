@@ -38,28 +38,26 @@ const CloudPartner = ({
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
+      <FeatureSection textContent={textContent.FeatureSection} />
 
-      <AccordionSection textContent={textContent.AccordionSection} darkMode={darkMode} />
+      <AccordionSection textContent={textContent.AccordionSection} />
 
       <ThreeCardsIconsSection
         textContent={textContent.ThreeCardsSection}
-        cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+        cardColor="bg-white dark:bg-gray-95"
         bottomSeparationBar
         topSeparationBar
-        darkMode={darkMode}
       />
 
-      <TrustedObjectStorageSection textContent={textContent.TrustedSection} darkMode={darkMode} />
+      <TrustedObjectStorageSection textContent={textContent.TrustedSection} />
 
       <ContactSalesForm
         textContent={textContent.ContactSales}
         locale={locale}
         needsBottomDivider={false}
         isReseller={true}
-        darkMode={darkMode}
       />
 
       <Footer textContent={footerText} lang={lang} darkMode={darkMode} />

@@ -3,35 +3,31 @@ import { AppleLogo } from '../shared/icons/AppleIcon';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { getImage } from '@/lib/getImage';
 
-const DownloadOSPlatform = ({ darkMode = false, downloadText, installationText, logo }) => (
-  <div className={`flex w-full max-w-[350px] flex-col rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10`}>
+const DownloadOSPlatform = ({ downloadText, installationText, logo }) => (
+  <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-10">
     <div className="flex flex-col  gap-6">
       {logo}
-      <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{downloadText.platform}</p>
-      <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{downloadText.description}</p>
+      <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{downloadText.platform}</p>
+      <p className="text-lg text-gray-80 dark:text-cool-gray-30">{downloadText.description}</p>
       <div className="flex flex-col gap-2">
-        <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+        <p className="text-lg font-semibold text-gray-100 dark:text-white-95">
           {installationText.installation}
         </p>
-        <CommandTextInputCopy text={installationText.command} isCommandCard darkMode={darkMode} />
+        <CommandTextInputCopy text={installationText.command} isCommandCard />
       </div>
     </div>
   </div>
 );
 
-export const DownloadCLISection = ({ darkMode = false, textContent }) => {
+export const DownloadCLISection = ({ textContent }) => {
   return (
-    <section id="downloadCli" className={`overflow-hidden px-5 py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section id="downloadCli" className="overflow-hidden px-5 py-20 dark:bg-gray-95">
       <div
-        className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
+        className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
       ></div>
       <div className="flex flex-col items-center gap-12">
         <p
-          className={`text-center text-30 font-semibold ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } md:text-left lg:text-3xl`}
+          className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 md:text-left lg:text-3xl"
         >
           {textContent.title}
         </p>
@@ -40,13 +36,11 @@ export const DownloadCLISection = ({ darkMode = false, textContent }) => {
             downloadText={textContent.downloads[0]}
             installationText={textContent}
             logo={<Image src={getImage('/images/drive/Windows-logo.webp')} width={34} height={34} alt="Windows image" />}
-            darkMode={darkMode}
           />
           <DownloadOSPlatform
             downloadText={textContent.downloads[1]}
             installationText={textContent}
             logo={<AppleLogo width={28} height={34} />}
-            darkMode={darkMode}
           />
           <DownloadOSPlatform
             downloadText={textContent.downloads[2]}
@@ -60,7 +54,6 @@ export const DownloadCLISection = ({ darkMode = false, textContent }) => {
                 className="mt-0.5"
               />
             }
-            darkMode={darkMode}
           />
         </div>
       </div>

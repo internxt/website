@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-export const FeaturesSectionForOnePlan = ({ darkMode = false, textContent }) => {
+export const FeaturesSectionForOnePlan = ({ textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,
@@ -13,13 +13,13 @@ export const FeaturesSectionForOnePlan = ({ darkMode = false, textContent }) => 
     <section className="overflow-hidden border-t border-t-gray-5 px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center gap-8 text-center">
-          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
           {textContent.description.map((text, index) => (
             <p
               key={text}
-              className={`max-w-[775px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} ${
+              className={`max-w-[775px] text-xl text-gray-80 dark:text-cool-gray-30 ${
                 index === 0 ? 'font-bold' : ''
               }`}
             >

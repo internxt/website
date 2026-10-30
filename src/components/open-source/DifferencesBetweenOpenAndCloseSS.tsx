@@ -2,16 +2,16 @@ import { getImage } from '@/lib/getImage';
 import { Check, Lifebuoy, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 
-const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => {
+const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-20">
         {/* Title and description */}
         <div className="flex flex-col items-center space-y-6 text-center">
-          <h2 className={`max-w-[756px] text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="max-w-[756px] text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
-          <p className={`max-w-[850px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="max-w-[850px] text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.description}
           </p>
         </div>
@@ -23,7 +23,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => 
             <div className="flex h-full max-w-[387px] flex-1 flex-col">
               <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
                 <Lifebuoy size={32} className="text-primary" weight="bold" />
-                <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-lg font-semibold text-gray-100 dark:text-white-95">
                   {textContent.table.OpenSource.title}
                 </p>
               </div>
@@ -31,12 +31,10 @@ const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => 
                 {textContent.table.OpenSource.feat.map((item, index) => (
                   <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
                     <div
-                      className={`flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 ${
-                        darkMode ? 'bg-gray-105' : 'bg-gray-1'
-                      } pl-6`}
+                      className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6"
                     >
                       <div className="flex w-[275px] py-4 lg:max-w-[275px]">
-                        <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{item}</p>
+                        <p className="text-gray-80 dark:text-cool-gray-30">{item}</p>
                       </div>
                     </div>
                     <div className="flex h-full w-full flex-col md:w-max md:px-4">
@@ -57,7 +55,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => 
                   height={32}
                   alt="Closed Source"
                 />
-                <p className={`text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-lg font-semibold text-gray-100 dark:text-white-95">
                   {textContent.table.CloseSource.title}
                 </p>
               </div>
@@ -65,12 +63,10 @@ const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => 
                 {textContent.table.CloseSource.disadvantages.map((item, index) => (
                   <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
                     <div
-                      className={`flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 ${
-                        darkMode ? 'bg-gray-105' : 'bg-gray-1'
-                      } pl-6`}
+                      className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6"
                     >
                       <div className="flex w-[275px] py-4 lg:max-w-[275px]">
-                        <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{item}</p>
+                        <p className="text-gray-80 dark:text-cool-gray-30">{item}</p>
                       </div>
                     </div>
                     <div className="flex h-full w-full flex-col md:w-max md:px-4">
@@ -86,7 +82,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ darkMode = false, textContent }) => 
         </div>
 
         {/* Footer text */}
-        <p className={`max-w-[850px] text-center text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+        <p className="max-w-[850px] text-center text-xl text-gray-80 dark:text-cool-gray-30">
           {textContent.footer}
         </p>
       </div>

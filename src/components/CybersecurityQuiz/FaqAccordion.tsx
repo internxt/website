@@ -3,13 +3,11 @@ import { CheckCircle, PlusCircle, XCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 
 export default function FaqAccordion({
-  darkMode = false,
   question,
   answer,
   isQuestionBigger = false,
   isCorrectAnswer,
 }: Readonly<{
-  darkMode?: boolean;
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
@@ -39,7 +37,7 @@ export default function FaqAccordion({
           <XCircle size={32} className="text-red" />
         )}
         <span
-          className={`w-full text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} ${
+          className={`w-full text-lg font-medium text-gray-100 dark:text-white-95 ${
             isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'
           }`}
         >
@@ -47,18 +45,14 @@ export default function FaqAccordion({
         </span>
         <PlusCircle
           size={32}
-          className={`${active && 'rotate-45'} ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } duration-250 shrink-0 transition-transform ease-in-out`}
+          className={`${active && 'rotate-45'} text-gray-100 dark:text-white-95 duration-250 shrink-0 transition-transform ease-in-out`}
         />
       </button>
 
       <span
         className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
           active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg ${
-          darkMode ? 'text-green-120' : 'text-gray-60'
-        } transition-all ease-in-out`}
+        } duration-250 whitespace-wrap w-full pr-14 text-left text-lg text-gray-60 dark:text-green-120 transition-all ease-in-out`}
       >
         {answer.map((text) => {
           return <ReactMarkdown key={text}>{text}</ReactMarkdown>;

@@ -94,7 +94,7 @@ const DealsTemplate = ({
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return typeof text === 'string'
       ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
@@ -125,19 +125,15 @@ const DealsTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize || '2TB'}
-        sectionDetails={`lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
-        backgroundGradientColor={
-          darkMode
-            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
+        sectionDetails={`lg:py-20 ${darkMode ? 'bg-gray-95' : 'dark:bg-gray-95'}`}
+        backgroundGradientColor={darkMode ? 'bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]' : 'bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]'}
         darkMode={darkMode}
       />
 
       <MoreDealsSection
         textContent={textContent.MoreDealsSection}
         urls={config.moreDealsUrls}
-        bgColor={darkMode ? 'bg-gray-105' : undefined}
+        bgColor={darkMode ? 'bg-gray-105' : 'dark:bg-gray-105'}
         percentOff={percentOff}
         darkMode={darkMode}
       />
@@ -149,41 +145,31 @@ const DealsTemplate = ({
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p
               className={`text-2xl font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-95'
+                darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
               } lg:text-4xl`}
             >
               {parseDynamicText(textContent.CtaSection.title, { percentage: percentOff, discount: percentOff })}
             </p>
             <p
               className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
+                darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
               } lg:w-[633px] lg:text-center lg:text-xl`}
             >
               {parseDynamicText(textContent.CtaSection.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor={
-          darkMode
-            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-        }
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgGradientColor={darkMode ? 'bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]' : 'bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]'}
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="pb-8 lg:py-14"
-        darkMode={darkMode}
       />
 
       <HorizontalScrollableSection
         textContent={textContent.WhyChooseInternxtSection}
         percentOff={percentOff}
-        bgGradient={
-          darkMode
-            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
+        bgGradient={darkMode ? 'bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]' : 'bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]'}
         needsDivider={false}
-        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -193,29 +179,24 @@ const DealsTemplate = ({
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p
               className={`text-2xl font-semibold leading-tight ${
-                darkMode ? 'text-white-95' : 'text-gray-95'
+                darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'
               } lg:text-4xl`}
             >
               {parseDynamicText(textContent.CtaSectionV2.title, { percentage: percentOff, discount: percentOff })}
             </p>
             <p
               className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
+                darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
               } lg:w-[633px] lg:text-center lg:text-xl`}
             >
               {parseDynamicText(textContent.CtaSectionV2.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientColor={
-          darkMode
-            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-        }
+        bgGradientColor={darkMode ? 'bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]' : 'bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]'}
         bgPadding="pb-8 lg:py-14"
-        darkMode={darkMode}
       />
 
       <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} percentageDiscount={percentOff} />

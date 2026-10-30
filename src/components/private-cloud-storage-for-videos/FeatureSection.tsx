@@ -6,12 +6,11 @@ import VideoScroller from './VideoScroller';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface Props {
-  darkMode?: boolean;
   textContent: FeaturesSectionType;
 }
 
-const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element => {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+const FeatureSection = ({ textContent }: Props): JSX.Element => {
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const videoSources = [
     '/videos/cloud-storage-for-video-files/Nature_Water.mp4',
     '/videos/cloud-storage-for-video-files/Sunset_Yoga.mp4',
@@ -114,14 +113,10 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center gap-16 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : ''
-      }`}
+      className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden dark:bg-gray-95"
     >
       <div
-        className={`flex w-full flex-col items-center justify-center bg-gradient-to-t ${
-          darkMode ? 'from-[#1C1C1C]' : 'from-[#FFFFFF]'
-        } to-[#001D6C] pt-10`}
+        className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] dark:from-gray-95 to-[#001D6C] pt-10"
       >
         <p className="w-[323px] text-center text-sm font-normal leading-tight text-gray-25 lg:w-[832px] lg:text-lg">
           {textContent.intro}
@@ -135,14 +130,12 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
         />
       </div>
 
-      <h2 className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+      <h2 className="text-30 font-semibold text-gray-95 dark:text-white-95 lg:text-3xl">
         {textContent.title}
       </h2>
       {textContent.h2Intro && (
         <p
-          className={`w-[330px] text-left text-base font-normal leading-tight ${
-            darkMode ? 'text-green-120' : 'text-gray-55'
-          } lg:w-[832px] lg:text-center lg:text-lg`}
+          className="w-[330px] text-left text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-center lg:text-lg"
         >
           {textContent.h2Intro}
         </p>
@@ -158,16 +151,14 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
         >
           {featuresArray.map(([key, { title, description }]) => (
             <div key={key} className="h-full w-[330px] shrink-0 lg:w-[352px]">
-              <h3 className={`pb-6 text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-xl`}>
+              <h3 className="pb-6 text-lg font-medium text-gray-100 dark:text-white-95 lg:text-xl">
                 {title}
               </h3>
               <div className="space-y-4">
                 {description.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className={`text-base font-normal leading-tight ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    } lg:text-base`}
+                    className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
                   >
                     {paragraph}
                   </p>
@@ -182,9 +173,7 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
@@ -193,9 +182,7 @@ const FeatureSection = ({ darkMode = false, textContent }: Props): JSX.Element =
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >

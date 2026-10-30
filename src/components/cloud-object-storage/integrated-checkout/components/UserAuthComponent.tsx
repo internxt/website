@@ -4,7 +4,6 @@ import { InputsComponent } from './InputsComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 
 interface UserAuthComponentProps {
-  darkMode?: boolean;
   textContent: IntegratedCheckoutText['authComponent'];
   errors: FieldErrors<IFormValues>;
   authError: string;
@@ -12,7 +11,6 @@ interface UserAuthComponentProps {
 }
 
 export const UserAuthComponent = ({
-  darkMode = false,
   textContent,
   errors,
   authError,
@@ -20,20 +18,17 @@ export const UserAuthComponent = ({
 }: UserAuthComponentProps): JSX.Element => {
   return (
     <div className="flex flex-col space-y-8">
-      <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+      <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">
         1. {textContent.title.signUp}
       </p>
       <div
-        className={`flex flex-col space-y-4 rounded-2xl border ${
-          darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-        } p-5`}
+        className="flex flex-col space-y-4 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5"
       >
         <InputsComponent
           errors={errors}
           authError={authError}
           textContent={textContent}
           register={register}
-          darkMode={darkMode}
         />
       </div>
     </div>

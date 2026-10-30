@@ -24,40 +24,27 @@ export const HeroSection = ({
 
   return (
     <div
-      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 py-8 pt-28 lg:h-min lg:flex-row lg:justify-center lg:p-20 lg:px-10 lg:pt-40 xl:px-32 3xl:px-80"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      className="flex h-min w-full flex-col items-center justify-between gap-8 px-5 py-8 pt-28 lg:h-min lg:flex-row lg:justify-center lg:p-20 lg:px-10 lg:pt-40 xl:px-32 3xl:px-80 bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]"
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:left-32 lg:right-32`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
       ></div>
       <div className="hidden h-auto w-full justify-between lg:flex lg:h-min">
         <div className="flex h-full flex-col items-start justify-center gap-5 text-start lg:h-min lg:w-1/2 lg:text-start">
           <h1
-            className={`flex text-30 font-semibold 2xl:whitespace-pre-line ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-5xl`}
+            className="flex text-30 font-semibold 2xl:whitespace-pre-line text-gray-95 dark:text-white-95 lg:text-5xl"
           >
             <HighlightText text={parseText(textContent.title)} />
           </h1>
 
           <p
-            className={`text-start text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
-            } lg:text-xl 2xl:whitespace-pre-line`}
+            className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl 2xl:whitespace-pre-line"
           >
             {textContent.description}
           </p>
 
           <p
-            className={`items-center justify-center text-lg font-semibold ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-2xl`}
+            className="items-center justify-center text-lg font-semibold text-gray-95 dark:text-white-95 lg:text-2xl"
           >
             {parseDiscountText(textContent.getPrivacy)}
           </p>
@@ -84,17 +71,13 @@ export const HeroSection = ({
       <div className="flex lg:hidden">
         <div className="flex h-full flex-col items-start justify-center gap-5 text-start lg:h-min lg:w-1/2 lg:text-start">
           <p
-            className={`whitespace-pre-line text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-5xl`}
+            className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
           >
             <HighlightText text={parseText(textContent.title)} />
           </p>
 
           <p
-            className={` text-start text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
-            } lg:text-xl`}
+            className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
           >
             {textContent.description}
           </p>
@@ -108,9 +91,7 @@ export const HeroSection = ({
             quality={100}
           />
           <p
-            className={`items-center justify-center whitespace-pre-line text-lg font-semibold ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-2xl`}
+            className="items-center justify-center whitespace-pre-line text-lg font-semibold text-gray-95 dark:text-white-95 lg:text-2xl"
           >
             {parseDiscountText(textContent.getPrivacy)}
           </p>

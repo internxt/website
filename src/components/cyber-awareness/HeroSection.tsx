@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 import { getImage } from '@/lib/getImage';
 
-const HeroSection = ({ darkMode = false, textContent, bannerText }) => {
+const HeroSection = ({ textContent, bannerText }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -22,7 +22,6 @@ const HeroSection = ({ darkMode = false, textContent, bannerText }) => {
             textContent={bannerText}
             redirectTo={'/pricing'}
             percentOff="85"
-            darkMode={darkMode}
           />
         </div>
       </div>

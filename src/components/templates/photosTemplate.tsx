@@ -104,9 +104,9 @@ export const Photos = ({
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} lang={lang} robots={robots}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} url={ctaUrl} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} url={ctaUrl} />
 
-      <PhotoSection textContent={textContent.PhotoSection} darkMode={darkMode} />
+      <PhotoSection textContent={textContent.PhotoSection} />
 
       {!hidePriceTable && (
         <PricingSectionWrapper
@@ -115,40 +115,31 @@ export const Photos = ({
             individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
-          backgroundGradientColor={
-            darkMode
-              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-          }
+          backgroundGradientColor="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
           lifetimeCoupons={lifetimeCoupons}
           lang={lang}
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
           hideFreeCard
           darkMode={darkMode}
         />
       )}
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider darkMode={darkMode} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} needsDivider />
 
       <HorizontalScrollableSection
         textContent={textContent.PhotoFeatureSection}
-        bgGradient={
-          darkMode
-            ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-            : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-        }
-        darkMode={darkMode}
+        bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
       />
 
-      <HorizontalScrollableWithPhotoSection textContent={textContent.DesignedSection} darkMode={darkMode} />
+      <HorizontalScrollableWithPhotoSection textContent={textContent.DesignedSection} />
 
       <ThreeCardsSection
         textContent={textContent.MadeInEuropeSection}
-        bgColor={darkMode ? '#1C1C1C' : '#FFFFFF'}
+        bgColor="bg-white dark:bg-gray-95"
         darkMode={darkMode}
       />
 
@@ -157,17 +148,15 @@ export const Photos = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight lg:text-4xl">{textContent.CtaSectionV2.title}</h2>
-            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
               {textContent.CtaSectionV2.description}
             </p>
           </div>
         }
         url={ctaUrl}
-        bgGradientColor={darkMode ? '#1C1C1C' : '#FFFFFF 100%'}
-        bgGradientContainerColor="background: linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientColor="dark:bg-gray-95"
         containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:py-20 lg:pb-20 pb-10"
-        darkMode={darkMode}
       />
 
       <FAQSection
@@ -180,7 +169,7 @@ export const Photos = ({
         darkMode={darkMode}
       />
 
-      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+      <RelationalLinks textContent={relationalLinksText} />
 
       <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>

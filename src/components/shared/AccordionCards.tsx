@@ -2,12 +2,11 @@ import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-st
 import { useState } from 'react';
 
 interface AccordionCardsProps {
-  darkMode?: boolean;
   textContent: PrivateCloudStorageForVideoText['HowToChooseSection']['cardDescriptions'];
   cardWidth?: string;
 }
 
-export default function AccordionCards({ darkMode = false, textContent, cardWidth }: Readonly<AccordionCardsProps>) {
+export default function AccordionCards({ textContent, cardWidth }: Readonly<AccordionCardsProps>) {
   const cardTitles = textContent?.titles ?? [];
   const cardDescriptions = textContent?.descriptions ?? [];
   const [expandedCard, setExpandedCard] = useState(0);
@@ -22,9 +21,7 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
         {cardTitles.map((title, index) => (
           <div
             key={`${title}-${index}`}
-            className={`${cardWidth ? cardWidth : 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            } transition-all duration-300`}
+            className={`${cardWidth ? cardWidth : 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 bg-white dark:bg-gray-95 transition-all duration-300`}
           >
             <button
               onClick={() => handleCardClick(index)}
@@ -32,7 +29,7 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
             >
               <div className="flex w-full flex-row items-start gap-4">
                 <p className="text-base font-normal text-primary lg:text-xl">{index + 1}</p>
-                <h3 className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-xl`}>
+                <h3 className="text-base font-medium text-gray-100 dark:text-white-95 lg:text-xl">
                   {title}
                 </h3>
               </div>
@@ -43,11 +40,9 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
                 expandedCard === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
               } overflow-hidden`}
             >
-              <div className={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-6 pb-4`}>
+              <div className="bg-white dark:bg-gray-95 px-6 pb-4">
                 <p
-                  className={`whitespace-pre-line text-sm font-normal leading-tight ${
-                    darkMode ? 'text-green-120' : 'text-gray-55'
-                  } lg:text-lg`}
+                  className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
                 >
                   {cardDescriptions[index]}
                 </p>
@@ -60,9 +55,7 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
         {cardTitles.map((title, index) => (
           <div
             key={`${title}-${index}`}
-            className={`${cardWidth || 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            } transition-all duration-300`}
+            className={`${cardWidth || 'w-[323px] lg:w-[302px]'} mx-2 overflow-hidden rounded-16 bg-white dark:bg-gray-95 transition-all duration-300`}
           >
             <button
               onClick={() => handleCardClick(index)}
@@ -70,7 +63,7 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
             >
               <div className="flex w-full flex-row items-start gap-4">
                 <p className="text-base font-normal text-primary lg:text-xl">{index + 1}</p>
-                <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-xl`}>
+                <p className="text-base font-medium text-gray-100 dark:text-white-95 lg:text-xl">
                   {title}
                 </p>
               </div>
@@ -81,11 +74,9 @@ export default function AccordionCards({ darkMode = false, textContent, cardWidt
                 expandedCard === index ? 'h-[260px] opacity-100' : 'max-h-0 opacity-0'
               } overflow-hidden`}
             >
-              <div className={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-6 pb-4`}>
+              <div className="bg-white dark:bg-gray-95 px-6 pb-4">
                 <p
-                  className={`whitespace-pre-line text-sm font-normal leading-tight ${
-                    darkMode ? 'text-green-120' : 'text-gray-55'
-                  } lg:text-lg`}
+                  className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
                 >
                   {cardDescriptions[index]}
                 </p>

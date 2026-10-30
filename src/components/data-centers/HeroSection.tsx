@@ -4,7 +4,6 @@ import { Check } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 interface HeroSectionProps {
-  darkMode?: boolean;
   textContent: {
     title: string;
     description: string;
@@ -12,20 +11,13 @@ interface HeroSectionProps {
   };
 }
 
-export const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps) => {
+export const HeroSection = ({ textContent }: HeroSectionProps) => {
   return (
     <section
-      className="relative flex w-full flex-col items-center justify-center px-5 py-8 pt-28 lg:flex-row lg:gap-12 lg:p-20 lg:px-10  xl:px-32 3xl:px-80"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      className="relative flex w-full flex-col items-center justify-center px-5 py-8 pt-28 lg:flex-row lg:gap-12 lg:p-20 lg:px-10  xl:px-32 3xl:px-80 bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]"
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:left-32 lg:right-32`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
       />
 
       <div className="relative hidden w-full lg:flex">
@@ -49,16 +41,12 @@ export const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps)
         </div>
         <div className="relative z-10 flex flex-col gap-8 self-start p-4 lg:w-1/2 lg:py-20">
           <h1
-            className={`whitespace-pre-line text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            } lg:text-5xl`}
+            className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
           >
             <HighlightText text={textContent.title} />
           </h1>
           <p
-            className={`whitespace-pre-line text-lg font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
-            } lg:text-xl`}
+            className="whitespace-pre-line text-lg font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
           >
             {textContent.description}
           </p>
@@ -66,7 +54,7 @@ export const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps)
             {textContent.features.map((feat) => (
               <li key={feat} className="flex items-center gap-2">
                 <Check className="flex-shrink-0 text-green-1" weight="bold" size={24} />
-                <span className={`text-sm font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-lg`}>
+                <span className="text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg">
                   {feat}
                 </span>
               </li>
@@ -78,13 +66,11 @@ export const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps)
       <div className="flex flex-col gap-6 lg:hidden">
         <div className="flex flex-col gap-4">
           <h1
-            className={`whitespace-pre-line text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-95'
-            }`}
+            className="whitespace-pre-line text-30 font-semibold leading-tight text-gray-95 dark:text-white-95"
           >
             <HighlightText text={textContent.title} />
           </h1>
-          <p className={` text-lg font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>
+          <p className="text-lg font-normal leading-tight text-gray-55 dark:text-green-120">
             {textContent.description}
           </p>
         </div>

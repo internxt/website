@@ -17,17 +17,13 @@ const SignUpBanner = ({
 
   return (
     <section
-      className={`flex h-auto w-full flex-col overflow-hidden rounded-16 bg-gradient-to-br ${
-        darkMode ? 'from-purple-100 to-[#1C1C1C]' : 'from-blue-20 to-white'
-      } px-4 py-8 md:min-h-[400px] md:flex-row md:items-center md:px-0 md:py-10 lg:min-h-[330px] lg:max-w-[1000px] lg-xl:max-w-[1075px] 2xl:max-w-[1250px]`}
+      className="flex h-auto w-full flex-col overflow-hidden rounded-16 bg-gradient-to-br from-blue-20 to-white dark:from-purple-100 dark:to-gray-95 px-4 py-8 md:min-h-[400px] md:flex-row md:items-center md:px-0 md:py-10 lg:min-h-[330px] lg:max-w-[1000px] lg-xl:max-w-[1075px] 2xl:max-w-[1250px]"
     >
       <div className="flex w-full min-w-0 flex-col items-center justify-center md:w-full md:flex-row">
         <div className="flex w-full min-w-0 flex-col items-center justify-center space-y-6 md:ml-11 md:w-[600px] md:max-w-full md:shrink-0 md:items-start md:space-y-8 lg:w-[600px]">
           <div className="w-full text-center md:text-left">
             <p
-              className={`text-30 font-semibold leading-tight hyphens-auto break-words ${
-                darkMode ? 'text-white' : ''
-              } md:text-3xl`}
+              className="text-30 font-semibold leading-tight hyphens-auto break-words dark:text-white md:text-3xl"
             >
               {changeTextOrder ? (
                 <>

@@ -58,28 +58,27 @@ export default function ReviewSection({
     scrollContainerRef.current?.scrollBy({ left: 220, behavior: 'smooth' });
   };
 
-  const sectionBg = bgColor ?? (darkMode ? '#1C1C1C' : 'white');
-  const dividerColor = darkMode ? 'bg-gray-55' : 'bg-neutral-35';
+  const sectionBg = bgColor ?? (darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95');
+  const dividerColor = darkMode ? 'bg-gray-55' : 'bg-neutral-35 dark:bg-gray-55';
   const dividerPosition = reverseDivider ? 'lg:top-0' : 'lg:bottom-0';
   const buttonBase = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary transition-all ${
-    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+    darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
   }`;
 
   const getButtonClass = (disabled: boolean) => {
     if (disabled) return `${buttonBase} cursor-not-allowed opacity-30`;
-    const hover = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+    const hover = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105';
     return `${buttonBase} cursor-pointer ${hover}`;
   };
 
   const quoteClass = `text-sm font-medium italic leading-[1.2] ${
-    darkMode ? 'text-green-120' : 'text-gray-55'
+    darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
   } text-center whitespace-pre-line`;
-  const logoClass = darkMode ? 'brightness-0 invert opacity-60' : '';
+  const logoClass = darkMode ? 'brightness-0 invert opacity-60' : 'dark:brightness-0 dark:invert dark:opacity-60';
 
   return (
     <section
-      className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10 lg:py-16"
-      style={{ background: sectionBg }}
+      className={`relative flex w-full flex-col items-center justify-center overflow-hidden py-10 lg:py-16 ${sectionBg}`}
     >
       <div className={`absolute ${dividerColor} lg:left-32 lg:right-32 ${dividerPosition} lg:h-[1px]`} />
 

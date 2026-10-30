@@ -5,9 +5,9 @@ import { CheckCircle } from '@phosphor-icons/react/dist/ssr';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-const CtaSection = ({ darkMode = false, textContent, lang }) => {
+const CtaSection = ({ textContent, lang }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-white/10' : 'bg-highlight'} p-5 sm:p-10`}>
+    <section className="overflow-hidden bg-highlight dark:bg-white/10 p-5 sm:p-10">
       {/* Mobile Version */}
       <div
         className={`flex flex-col items-center justify-center space-y-5 lg:hidden ${styles.radialGradient} rounded-lg border-2 border-transparent p-5`}

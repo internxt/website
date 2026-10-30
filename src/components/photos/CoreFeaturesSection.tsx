@@ -4,13 +4,11 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
 interface CoreFeaturesSectionProps {
-  darkMode?: boolean;
   textContent: PhotoText['CoreFeatures'];
   needsDivider?: boolean;
 }
 
 const CoreFeaturesSection = ({
-  darkMode = false,
   textContent,
   needsDivider,
 }: CoreFeaturesSectionProps): JSX.Element => {
@@ -43,26 +41,20 @@ const CoreFeaturesSection = ({
   };
 
   return (
-    <section className={`relative w-full ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} py-10 lg:py-20`}>
+    <section className="relative w-full bg-neutral-17 dark:bg-gray-105 py-10 lg:py-20">
       {needsDivider && (
         <div
-          className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-          } lg:left-32 lg:right-32`}
+          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
         ></div>
       )}
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-5 lg:gap-10 lg:px-20">
         <h2
-          className={`max-w-[1000px] text-[30px] font-bold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } lg:pr-10 lg:text-5xl`}
+          className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 dark:text-white-95 lg:pr-10 lg:text-5xl"
         >
           {textContent.title}
         </h2>
         <p
-          className={`max-w-[900px] text-base font-normal leading-tight ${
-            darkMode ? 'text-green-120' : 'text-gray-55'
-          } lg:text-lg`}
+          className="max-w-[900px] text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
         >
           {textContent.description}
         </p>
@@ -82,14 +74,12 @@ const CoreFeaturesSection = ({
                 key={title}
                 type="button"
                 onClick={() => handleAccordionClick(index)}
-                className={`flex flex-col rounded-16 ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
+                className={`flex flex-col rounded-16 bg-white dark:bg-gray-95 text-left transition-all duration-300 ${activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'}`}
                 aria-expanded={activeIndex === index}
               >
                 <span className="flex flex-row items-center gap-4 text-2xl font-medium text-primary">
                   {index + 1}
-                  <h3 className={`text-lg font-medium lg:text-xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                  <h3 className="text-lg font-medium lg:text-xl text-gray-100 dark:text-white-95">
                     {title}
                   </h3>
                 </span>
@@ -99,9 +89,7 @@ const CoreFeaturesSection = ({
                   }`}
                 >
                   <div
-                    className={`flex flex-col overflow-hidden text-sm ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    } lg:text-base`}
+                    className="flex flex-col overflow-hidden text-sm text-gray-55 dark:text-green-120 lg:text-base"
                   >
                     {textContent.accordionCards.descriptions[index]}
                   </div>

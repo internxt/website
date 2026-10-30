@@ -27,7 +27,6 @@ const detectOS = (): OSType => {
 };
 
 interface HeroSectionProps {
-  darkMode?: boolean;
   textContent: any;
   download: Record<OSType, string>;
   ChecksTag?: keyof JSX.IntrinsicElements;
@@ -35,7 +34,6 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  darkMode = false,
   textContent,
   download,
   ChecksTag = 'p',
@@ -54,12 +52,7 @@ const HeroSection = ({
 
   return (
     <section
-      className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
-          : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
-      }}
+      className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
     >
       <div
         className={`${styles.cleanerTitleAndOnePlan} z-20 flex w-full shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:w-1/2`}
@@ -72,15 +65,11 @@ const HeroSection = ({
               </div>
               <HighlightText
                 text={textContent.title}
-                className={`text-30 font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
-                } lg:text-5xl`}
+                className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
                 TitleTag={'h1'}
               />
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
               >
                 {textContent.subtitle}
               </p>
@@ -91,9 +80,7 @@ const HeroSection = ({
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
                   <ChecksTag
-                    className={`mb-2 text-left text-sm font-normal ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    } xs-md:text-lg`}
+                    className="mb-2 text-left text-sm font-normal text-gray-55 dark:text-green-120 xs-md:text-lg"
                   >
                     {feat}
                   </ChecksTag>
@@ -112,11 +99,7 @@ const HeroSection = ({
 
             <a
               href={downloadUrl}
-              className={`hidden h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } px-6 py-4 text-base font-medium text-primary transition-colors ${
-                darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-1'
-              } lg:flex`}
+              className="hidden h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary bg-white dark:bg-gray-95 px-6 py-4 text-base font-medium text-primary transition-colors hover:bg-gray-1 dark:hover:bg-gray-105 lg:flex"
             >
               <ArrowCircleDown size={24} weight="bold" />
               <span>
@@ -137,11 +120,7 @@ const HeroSection = ({
 
       <a
         href={downloadUrl}
-        className={`flex h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } px-6 py-4 text-base font-medium text-primary transition-colors ${
-          darkMode ? 'hover:bg-gray-105' : 'hover:bg-gray-1'
-        } lg:hidden`}
+        className="flex h-[48px] w-min flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-sm-6 border border-primary bg-white dark:bg-gray-95 px-6 py-4 text-base font-medium text-primary transition-colors hover:bg-gray-1 dark:hover:bg-gray-105 lg:hidden"
       >
         <ArrowCircleDown size={24} weight="bold" />
         <span>

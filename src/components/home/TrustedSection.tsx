@@ -13,11 +13,14 @@ interface TrustedSectionProps {
 }
 
 const WORDS_PER_GROUP = 2;
-const LIT_COLOR_DARK = '#FFFFFF';
-const LIT_COLOR_LIGHT = '#0A0A0A';
-const UNLIT_COLOR = '#A0A0A0';
-const VALENTINES_GRADIENT_DARK = 'linear-gradient(360deg, #1C1C1C 0%, #2A1420 100%)';
-const VALENTINES_GRADIENT_LIGHT = 'linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)';
+const LIT_CLASS_DARK = 'text-white';
+const LIT_CLASS_LIGHT = 'text-[#0A0A0A] dark:text-white';
+const UNLIT_CLASS = 'text-[#A0A0A0]';
+const WORD_CLASS = 'transition-colors duration-[400ms]';
+const VALENTINES_GRADIENT_DARK = 'bg-[linear-gradient(360deg,#1C1C1C_0%,#2A1420_100%)]';
+const VALENTINES_GRADIENT_LIGHT =
+  'bg-[linear-gradient(360deg,#FFFFFF_0%,#FFF2F8_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#2A1420_100%)]';
+const LIGHT_GRADIENT = 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none dark:bg-gray-95';
 
 export default function TrustedSection({
   textContent,
@@ -41,7 +44,7 @@ export default function TrustedSection({
     const section = sectionRef.current;
     if (!section) return;
 
-    const litColor = darkMode ? LIT_COLOR_DARK : LIT_COLOR_LIGHT;
+    const litClass = darkMode ? LIT_CLASS_DARK : LIT_CLASS_LIGHT;
 
     const updateProgress = () => {
       const rect = section.getBoundingClientRect();
@@ -53,7 +56,7 @@ export default function TrustedSection({
 
       spanRefs.current.forEach((span, i) => {
         if (!span) return;
-        span.style.color = i < litCount ? litColor : UNLIT_COLOR;
+        span.className = `${WORD_CLASS} ${i < litCount ? litClass : UNLIT_CLASS}`;
       });
     };
 
@@ -62,29 +65,19 @@ export default function TrustedSection({
     return () => window.removeEventListener('scroll', updateProgress);
   }, [darkMode]);
   const valentinesGradient = darkMode ? VALENTINES_GRADIENT_DARK : VALENTINES_GRADIENT_LIGHT;
+  const sectionBgClass = isValentinesMode
+    ? valentinesGradient
+    : bgGradientColor ?? (bgColor ? '' : darkMode ? 'bg-gray-95' : image ? 'dark:bg-gray-95' : LIGHT_GRADIENT);
 
   return (
     <section
       ref={sectionRef}
-      className={`${
-        bgColor || ''
-      } flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-10 lg:pb-28 xl:px-32 3xl:px-80 ${
-        darkMode && !bgColor ? 'bg-[#1C1C1C]' : ''
-      }`}
-      style={
-        isValentinesMode
-          ? { background: valentinesGradient }
-          : bgGradientColor
-          ? { background: bgGradientColor }
-          : !darkMode && !image && !bgColor
-          ? { background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }
-          : undefined
-      }
+      className={`${bgColor || ''} flex h-full w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:px-10 lg:pb-28 xl:px-32 3xl:px-80 ${sectionBgClass}`}
     >
       {bottomBar && (
         <div
           className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
           } lg:bottom-0 lg:left-32 lg:right-32`}
         ></div>
       )}
@@ -95,10 +88,7 @@ export default function TrustedSection({
             ref={(el) => {
               spanRefs.current[i] = el;
             }}
-            style={{
-              color: UNLIT_COLOR,
-              transition: 'color 0.4s ease',
-            }}
+            className={`${WORD_CLASS} ${UNLIT_CLASS}`}
           >
             {i > 0 ? ' ' : ''}
             {group}

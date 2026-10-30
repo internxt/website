@@ -31,7 +31,7 @@ const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgC
   const urlsArray = [urls.card1, urls.card2];
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10'}`}></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -39,19 +39,19 @@ const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgC
   return (
     <section
       className={`flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:gap-16 lg:py-20 xl:px-32 3xl:px-80 ${
-        bgColor ?? (darkMode ? 'bg-[#1C1C1C]' : 'bg-[#F4F8FF]')
+        bgColor ?? (darkMode ? 'bg-gray-95' : 'bg-[#F4F8FF] dark:bg-gray-95')
       }`}
     >
       <div
         className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
         } lg:bottom-0 lg:left-32 lg:right-32`}
       ></div>
       <div className="flex flex-col items-center gap-6 px-6 text-center">
-        <h2 className={`text-30 font-bold lg:text-3xl ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+        <h2 className={`text-30 font-bold lg:text-3xl ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'}`}>
           {textContent.title}
         </h2>
-        <p className={`text-sm font-normal ${darkMode ? 'text-white-95' : 'text-gray-55'} lg:text-lg`}>
+        <p className={`text-sm font-normal ${darkMode ? 'text-white-95' : 'text-gray-55 dark:text-white-95'} lg:text-lg`}>
           {textContent.description}
         </p>
       </div>
@@ -60,13 +60,13 @@ const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff, bgC
           <div
             key={index}
             className={`${
-              darkMode ? 'bg-gray-105' : 'bg-white'
+              darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'
             } flex w-full flex-1 flex-col gap-4 rounded-xl p-6 lg:max-w-[50%] lg:gap-6 lg:rounded-16 lg:p-8`}
           >
-            <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+            <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'}`}>
               {parsePercentText(card.title)}
             </h3>
-            <p className={`flex-grow text-base font-normal ${darkMode ? 'text-white-95' : 'text-gray-55h'}`}>
+            <p className={`flex-grow text-base font-normal ${darkMode ? 'text-white-95' : 'text-gray-55h dark:text-white-95'}`}>
               {parsePercentText(card.description)}
             </p>
             <a

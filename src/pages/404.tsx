@@ -30,17 +30,17 @@ export default function Custom404({ darkMode = false }: Readonly<{ darkMode?: bo
   return (
     <>
       <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
-      <section className={`overflow-hidden px-5 py-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+      <section className="overflow-hidden px-5 py-32 dark:bg-gray-95">
         <div className="content flex flex-col items-center justify-center space-y-4 lg:pt-10">
-          <div className={`flex flex-col rounded-lg ${darkMode ? 'bg-gray-105' : 'bg-gray-5'} px-4 py-2`}>
-            <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>Error 404</p>
+          <div className="flex flex-col rounded-lg bg-gray-5 dark:bg-gray-105 px-4 py-2">
+            <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">Error 404</p>
           </div>
           <div className="flex flex-col items-center justify-center space-y-24">
             <div className="flex flex-col space-y-2 text-center">
-              <h1 className={`text-6xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <h1 className="text-6xl font-bold text-gray-100 dark:text-white-95">
                 Nothing to see here...
               </h1>
-              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                 The page you are looking for could not be found.
               </p>
             </div>
@@ -50,17 +50,15 @@ export default function Custom404({ darkMode = false }: Readonly<{ darkMode?: bo
                   tabIndex={0}
                   onKeyDown={() => {}}
                   role="button"
-                  className={`flex h-full cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg ${
-                    darkMode ? 'bg-gray-105' : 'bg-gray-1'
-                  } px-4 py-8 text-center`}
+                  className="flex h-full cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg bg-gray-1 dark:bg-gray-105 px-4 py-8 text-center"
                   key={index}
                   onClick={() => {
                     window.open(card.urlRedirect, '_self');
                   }}
                 >
                   <card.icon size={32} className="text-primary" />
-                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{card.title}</p>
-                  <p className={`w-full max-w-[200px] text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <p className="text-lg font-medium text-gray-100 dark:text-white-95">{card.title}</p>
+                  <p className="w-full max-w-[200px] text-base text-gray-80 dark:text-cool-gray-30">
                     {card.description}
                   </p>
                 </div>

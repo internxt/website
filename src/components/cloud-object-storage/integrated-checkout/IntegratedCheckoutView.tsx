@@ -99,16 +99,14 @@ export const IntegratedCheckoutView = ({
 
   return (
     <form
-      className={`flex h-full ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} lg:w-screen xl:px-16`}
+      className="flex h-full bg-gray-1 dark:bg-gray-105 lg:w-screen xl:px-16"
       onSubmit={handleSubmit((formData, event) => onCheckoutButtonClicked(event, stripeSDK, elements, formData))}
     >
       <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
         <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
-          <HeaderComponent textContent={textContent} lang="en" darkMode={darkMode} />
+          <HeaderComponent textContent={textContent} lang="en" />
           <p
-            className={`text-xl font-bold ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } md:text-center lg:text-left lg:text-3xl`}
+            className="text-xl font-bold text-gray-100 dark:text-white-95 md:text-center lg:text-left lg:text-3xl"
           >
             {textContent.title}
           </p>
@@ -119,16 +117,13 @@ export const IntegratedCheckoutView = ({
                 errors={errors}
                 authError={error?.auth as string}
                 register={register}
-                darkMode={darkMode}
               />
               <div className="flex flex-col space-y-8 pb-20">
-                <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">
                   2. {textContent.addressBillingTitle}
                 </p>
                 <div
-                  className={`flex flex-col rounded-2xl border ${
-                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-                  } p-5`}
+                  className="flex flex-col rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5"
                 >
                   <AddressElement
                     onChange={(e) => {
@@ -145,25 +140,21 @@ export const IntegratedCheckoutView = ({
                   />
                 </div>
                 <div
-                  className={`flex w-full flex-col items-start gap-3 rounded-2xl border ${
-                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-                  } p-5`}
+                  className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5"
                 >
                   <Menu>
                     <Menu.Button
                       onKeyDown={(e) => e.preventDefault()}
-                      className={`flex h-full w-full flex-row items-center justify-between rounded-lg text-base ${
-                        darkMode ? 'text-white-95' : 'text-gray-100'
-                      } transition-all duration-75 ease-in-out hover:underline`}
+                      className="flex h-full w-full flex-row items-center justify-between rounded-lg text-base text-gray-100 dark:text-white-95 transition-all duration-75 ease-in-out hover:underline"
                       onClick={() =>
                         setOptionalAddressBillingDetailsDialogClicked(!optionalAddressBillingDetailsDialogClicked)
                       }
                     >
                       {textContent.addressBilling.optionalData}
                       {optionalAddressBillingDetailsDialogClicked ? (
-                        <CaretUp size={24} className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`} />
+                        <CaretUp size={24} className="text-gray-60 dark:text-green-120" />
                       ) : (
-                        <CaretDown size={24} className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`} />
+                        <CaretDown size={24} className="text-gray-60 dark:text-green-120" />
                       )}
                     </Menu.Button>
                     <Transition
@@ -183,7 +174,7 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-100'}`}>
+                          <p className="text-sm text-gray-100 dark:text-cool-gray-30">
                             {textContent.addressBilling.companyName}
                           </p>
                           <TextInput
@@ -194,7 +185,6 @@ export const IntegratedCheckoutView = ({
                             register={register}
                             required={true}
                             error={errors.companyName}
-                            darkMode={darkMode}
                           />
                         </div>
                         <div
@@ -203,7 +193,7 @@ export const IntegratedCheckoutView = ({
                           onKeyDown={(e) => e.stopPropagation()}
                           className="flex w-full flex-col gap-1"
                         >
-                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-100'}`}>
+                          <p className="text-sm text-gray-100 dark:text-cool-gray-30">
                             {textContent.addressBilling.companyVatId}
                           </p>
                           <TextInput
@@ -214,7 +204,6 @@ export const IntegratedCheckoutView = ({
                             register={register}
                             required={true}
                             error={errors.vatId}
-                            darkMode={darkMode}
                           />
                         </div>
                       </Menu.Items>
@@ -222,7 +211,7 @@ export const IntegratedCheckoutView = ({
                   </Menu>
                 </div>
 
-                <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">
                   3. {textContent.paymentTitle}
                 </p>
                 <PaymentElement options={PAYMENT_ELEMENT_OPTIONS} />
@@ -234,7 +223,6 @@ export const IntegratedCheckoutView = ({
                   showSpinner={disabledButton}
                   text={disabledButton ? textContent.paying : textContent.pay}
                   disabled={!isValidPassword || disabledButton}
-                  darkMode={darkMode}
                 />
               </div>
             </div>
@@ -256,7 +244,6 @@ export const IntegratedCheckoutView = ({
                 text={disabledButton ? textContent.paying : textContent.pay}
                 showSpinner={disabledButton}
                 disabled={!isValidPassword || disabledButton}
-                darkMode={darkMode}
               />
             </div>
           </div>

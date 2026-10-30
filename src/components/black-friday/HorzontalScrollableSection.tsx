@@ -2,15 +2,13 @@ import { CaretLeft, CaretRight, CircleWavyCheck, Database, Eye, Key, Recycle } f
 import { useRef, useState, useEffect } from 'react';
 
 interface HorizontalScrollableProps {
-  darkMode?: boolean;
   textContent: any;
 }
 
 export default function HorizontalScrollableSection({
-  darkMode = false,
   textContent,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -122,7 +120,7 @@ export default function HorizontalScrollableSection({
     </div>
   );
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[#1C1C1C] pb-10 lg:h-min lg:gap-16 lg:py-20 ">
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-gray-95 pb-10 lg:h-min lg:gap-16 lg:py-20 ">
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[780px]">
         <p className="text-30 font-bold leading-tight text-white-95 lg:w-[680px] lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-green-120 lg:w-[680px] lg:text-xl">

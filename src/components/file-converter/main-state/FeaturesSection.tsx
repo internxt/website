@@ -37,35 +37,35 @@ export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lan
   ];
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden dark:bg-gray-95">
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
         <SignUpBanner textContent={bannerText} lang={'en'} darkMode={darkMode} />
         {/* Text sections */}
         <div className="flex max-w-[672px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.inxtFileConverter.title}
             </p>
-            <RenderDescription description={textContent.inxtFileConverter.description} darkMode={darkMode} />
+            <RenderDescription description={textContent.inxtFileConverter.description} />
           </div>
           <div className="flex flex-col space-y-3">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.howUseFileConverter.title}
             </p>
             <ul className="list-[square] space-y-1.5 pl-6 lg:max-w-2xl">
               {textContent.howUseFileConverter.steps.map((feature) => (
                 <li key={feature.step} className="text-lg text-primary">
                   {feature.step}
-                  <span className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}> {feature.description}</span>
+                  <span className="text-gray-80 dark:text-cool-gray-30"> {feature.description}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex flex-col">
-            <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
               {textContent.whyUseFileConverter.title}
             </p>
-            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-lg text-gray-80 dark:text-cool-gray-30">
               {textContent.whyUseFileConverter.description}
             </p>
           </div>
@@ -76,16 +76,14 @@ export const FeaturesSection = ({ darkMode = false, textContent, bannerText, lan
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl ${
-                darkMode ? 'bg-gray-105' : 'bg-gray-1'
-              } p-8 sm:p-10 md:max-w-[488px]`}
+              className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 sm:p-10 md:max-w-[488px]"
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[408px] flex-col">
-                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                   {card.title}
                 </p>
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} sm:text-lg`}>
+                <p className="text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {card.description}
                 </p>
               </div>

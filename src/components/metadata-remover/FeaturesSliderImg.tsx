@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
-const FeaturesSliderImg = ({ darkMode = false, textContent, cardInfo }) => {
+const FeaturesSliderImg = ({ textContent, cardInfo }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <p className="text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </p>
           <div className="flex flex-col space-y-6">
-            <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+            <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           </div>
         </div>
       </section>
@@ -18,9 +18,7 @@ const FeaturesSliderImg = ({ darkMode = false, textContent, cardInfo }) => {
         {cardInfo.map((info) => (
           <div
             key={info.title}
-            className={`flex h-full flex-col items-start justify-start rounded-2xl ${
-              darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-            }`}
+            className="flex h-full flex-col items-start justify-start rounded-2xl bg-white dark:bg-gray-95"
           >
             {info.image && (
               <div className="w-full overflow-hidden rounded-t-lg pb-10">
@@ -35,20 +33,20 @@ const FeaturesSliderImg = ({ darkMode = false, textContent, cardInfo }) => {
             )}
             <info.icon className="ml-10 text-4xl text-primary" size={32} />
             <div className="flex w-full flex-col p-8 sm:p-10">
-              <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                 {info.title}
               </p>
               {Array.isArray(info.description) ? (
                 info.description.map((line) => (
                   <p
                     key={line}
-                    className={`mb-4 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
+                    className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
                   >
                     {line}
                   </p>
                 ))
               ) : (
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {info.description}
                 </p>
               )}

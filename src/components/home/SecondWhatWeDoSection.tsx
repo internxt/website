@@ -1,19 +1,17 @@
 import ProductCard from '@/components/shared/ProductCard';
 import { getImage } from '@/lib/getImage';
 
-const SecondWhatWeDoSection = ({ darkMode = false, textContent, lang }) => {
+const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div
-        className={`z-10 flex flex-col items-center ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-20 ${
-          darkMode ? 'text-white-95' : 'text-gray-100'
-        }`}
+        className="z-10 flex flex-col items-center bg-white dark:bg-gray-95 py-20 text-gray-100 dark:text-white-95"
       >
         <div className="flex flex-col gap-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
 
-            <h3 className={`max-w-3xl text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <h3 className="max-w-3xl text-xl font-normal text-gray-80 dark:text-cool-gray-30">
               {textContent.description}
             </h3>
           </div>

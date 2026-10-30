@@ -114,10 +114,9 @@ export const SecureFileTransferTemplate = ({
             </Link>
           </div>
         }
-        darkMode={darkMode}
       />
 
-      <FeatureSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
+      <FeatureSection textContent={textContent.FeaturesSection} />
 
       {!hidePriceTable && (
         <PricingSectionWrapper
@@ -132,7 +131,7 @@ export const SecureFileTransferTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
           hideFreeCard
           darkMode={darkMode}
         />
@@ -143,44 +142,38 @@ export const SecureFileTransferTemplate = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSection.title}</h2>
-            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
               {textContent.CtaSection.description}
             </p>
           </div>
         }
         url={ctaUrl}
-        bgGradientColor={
-          darkMode
-            ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
-        darkMode={darkMode}
       />
 
-      <HowToChooseSection textContent={textContent.HowToChooseSection} darkMode={darkMode} />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} />
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} darkMode={darkMode} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
-      <HorizontalScrollableSection textContent={textContent.SecureFeaturesSection} darkMode={darkMode} />
+      <HorizontalScrollableSection textContent={textContent.SecureFeaturesSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSectionV2.title}</h2>
-            <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
               {textContent.CtaSectionV2.description}
             </p>
           </div>
         }
         url={ctaUrl}
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
-        darkMode={darkMode}
       />
 
       <FAQSection

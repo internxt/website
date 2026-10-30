@@ -1,15 +1,15 @@
 import { getImage } from '@/lib/getImage';
 
-const WhatIsOSS = ({ darkMode = false, textContent }) => {
+const WhatIsOSS = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center px-5 py-20 text-center">
         <div className="flex w-full max-w-[850px] flex-col items-center space-y-16">
           <div className="flex flex-col space-y-6">
-            <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
               {textContent.title}
             </h2>
-            <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+            <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           </div>
 
           <img
@@ -19,7 +19,7 @@ const WhatIsOSS = ({ darkMode = false, textContent }) => {
           />
           <div className="flex flex-col space-y-6">
             {textContent.section.map((description) => (
-              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`} key={description}>
+              <p className="text-xl text-gray-80 dark:text-cool-gray-30" key={description}>
                 {description}
               </p>
             ))}

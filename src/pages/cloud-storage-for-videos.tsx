@@ -124,10 +124,9 @@ const CloudStorageForVideos = ({
           }
           width="w-[580px] "
           bgGradient="bg-gradient-to-t from-[#001D6C] to-[#121923]"
-          darkMode={darkMode}
         />
 
-        <FeatureSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
+        <FeatureSection textContent={textContent.FeaturesSection} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -141,12 +140,7 @@ const CloudStorageForVideos = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails={`lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
-          backgroundGradientColor={
-            darkMode
-              ? 'linear-gradient(180deg, #0D0D0D 100%, #1C1C1C 100%, )'
-              : 'linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
-          }
+          sectionDetails="lg:py-20 dark:bg-gray-95"
           hideFreeCard
           darkMode={darkMode}
         />
@@ -156,45 +150,39 @@ const CloudStorageForVideos = ({
           customText={
             <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
               <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</h2>
-              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
                 {textContent.cta.subtitle}
               </p>
             </div>
         }
           url="#billingButtons"
-          bgGradientColor={
-            darkMode
-              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20 py-10"
-        darkMode={darkMode}
       />
 
-      <HowToChooseSection textContent={textContent.HowToChooseSection} darkMode={darkMode} />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} />
 
-      <SecureAndManageSection textContent={textContent.SecureAndManage} darkMode={darkMode} />
+      <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
-      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} darkMode={darkMode} />
+      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.cta}
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</h2>
-              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
                 {textContent.cta2.subtitle}
               </p>
           </div>
         }
         url="#billingButtons"
-        bgGradientColor={darkMode ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)' : undefined}
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientColor="dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
-        darkMode={darkMode}
       />
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />

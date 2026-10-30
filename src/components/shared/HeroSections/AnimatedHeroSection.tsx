@@ -3,7 +3,6 @@ import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 const Animation = dynamic(() => import('../Animation'));
 
 interface AnimatedHeroSectionProps {
-  darkMode?: boolean;
   textComponent: JSX.Element;
   height?: string;
   width?: string;
@@ -11,7 +10,6 @@ interface AnimatedHeroSectionProps {
 }
 
 export default function AnimatedHero({
-  darkMode = false,
   textComponent,
   height,
   width,

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Transition } from '@headlessui/react';
 
 interface SecondFeaturesSectionProps {
-  darkMode?: boolean;
   textContent: any;
   lang: string;
   bgColor?: string;
@@ -13,14 +12,13 @@ interface SecondFeaturesSectionProps {
 }
 
 const SecondFeaturesSection = ({
-  darkMode = false,
   textContent,
   lang,
   cards,
-  bgColor = darkMode ? 'bg-gray-105' : 'bg-gray-1',
-  mobileBg = darkMode ? 'bg-[#1C1C1C]' : 'bg-white',
+  bgColor = 'bg-gray-1 dark:bg-gray-105',
+  mobileBg = 'bg-white dark:bg-gray-95',
 }: SecondFeaturesSectionProps) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
+  const borderClass = 'border-gray-10 dark:border-gray-71';
   const [cardIndex, setCardIndex] = React.useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -66,13 +64,11 @@ const SecondFeaturesSection = ({
       <div className="flex w-full max-w-[1040px] flex-col items-center justify-center gap-6">
         <div className="flex flex-col gap-4 text-center">
           <h2
-            className={`text-3xl font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-5xl`}
+            className="text-3xl font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
           >
             {textContent.title}
           </h2>
-          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         {!cards && (
           <div className="flex flex-row items-center gap-1">
@@ -98,12 +94,12 @@ const SecondFeaturesSection = ({
               >
                 {cards ? <info.icon size={32} className="text-primary" /> : undefined}
                 <p
-                  className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}  hover:text-primary`}
+                  className="text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
                 >
                   {info.title}
                 </p>
               </button>
-              <div className={`h-8 border-r-4 ${darkMode ? 'border-gray-71' : 'border-gray-10'} pr-8 last:hidden`} />
+              <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 last:hidden" />
             </Fragment>
           ))}
         </div>
@@ -120,10 +116,10 @@ const SecondFeaturesSection = ({
           className="flex w-full max-w-[384px] flex-col justify-center space-y-6"
         >
           <DescriptionIcon className="text-primary" size={64} />
-          <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
             {cardsToRender[cardIndex].title}
           </p>
-          <p className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="text-xl font-normal text-gray-80 dark:text-cool-gray-30">
             {cardsToRender[cardIndex].description}
           </p>
         </Transition>
@@ -137,10 +133,10 @@ const SecondFeaturesSection = ({
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
-              <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                 {info.title}
               </p>
-              <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+              <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                 {info.description}
               </p>
             </div>

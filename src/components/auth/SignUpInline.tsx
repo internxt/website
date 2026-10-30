@@ -60,7 +60,6 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             autoComplete="email"
             required
             disabled={props.loading}
-            darkMode={darkMode}
           />
         </div>
 
@@ -79,7 +78,6 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             required
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
-            darkMode={darkMode}
           />
         </div>
       </div>
@@ -111,12 +109,12 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
             disabled={props.loading}
           />
         </div>
-        <span className={`w-full text-sm ${darkMode ? 'text-white' : 'text-gray-50'} sm:text-left`}>
+        <span className={`w-full text-sm ${darkMode ? 'text-white' : 'text-gray-50 dark:text-white'} sm:text-left`}>
           <span>{props.textContent.disclaimer.text}</span>{' '}
           <a
             href="/legal"
             className={`underline ${
-              darkMode ? 'hover:text-green-120 active:text-cool-gray-30' : 'hover:text-gray-60 active:text-gray-80'
+              darkMode ? 'hover:text-green-120 active:text-cool-gray-30' : 'hover:text-gray-60 active:text-gray-80 dark:hover:text-green-120 dark:active:text-cool-gray-30'
             }`}
           >
             {props.textContent.disclaimer.link}

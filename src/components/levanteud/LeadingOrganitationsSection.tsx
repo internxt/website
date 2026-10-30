@@ -5,12 +5,10 @@ import { CertificationsSection } from '../cloud-object-storage/certificationsSec
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface LeadingOrganizationsSectionProps {
-  darkMode?: boolean;
     textContent: any;
 }
 
 export default function LeadingOrganizationsSection({
-  darkMode = false,
   textContent,
 }: Readonly<LeadingOrganizationsSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -74,28 +72,19 @@ export default function LeadingOrganizationsSection({
 
   return (
     <section
-      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 gap-16`}
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #0D0D0D 59.26%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #F4F8FF 59.26%, #FFFFFF 100%)',
-      }}
+      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-10 lg:py-20 gap-16 bg-[linear-gradient(180deg,#F4F8FF_59.26%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_59.26%,#1C1C1C_100%)]`}
     >
       <div className="flex flex-col gap-6 px-6 text-start lg:px-0 lg:px-10 lg:text-center xl:px-32 3xl:px-80">
         <p className="text-start text-30 font-semibold leading-tight lg:whitespace-pre-line lg:text-center lg:text-5xl">
           {textContent.title}
         </p>
         <p
-          className={`font-regular text-start text-base lg:text-center ${
-            darkMode ? 'text-green-120' : 'text-gray-55'
-          } leading-tight lg:whitespace-pre-line`}
+          className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line"
         >
           {textContent.subtitle[0]}
         </p>
         <p
-          className={`font-regular text-start text-base lg:text-center ${
-            darkMode ? 'text-green-120' : 'text-gray-55'
-          } leading-tight lg:whitespace-pre-line`}
+          className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line"
         >
           {textContent.subtitle[1]}
         </p>
@@ -127,14 +116,10 @@ export default function LeadingOrganizationsSection({
             {textContent.cards.map((card, index) => (
               <div
                 key={index}
-                className={`flex flex-col gap-6 ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } w-full flex-shrink-0 rounded-xl p-6 lg:min-w-0 lg:flex-shrink lg:rounded-16 lg:p-8`}
+                className="flex flex-col gap-6 bg-white dark:bg-gray-95 w-full flex-shrink-0 rounded-xl p-6 lg:min-w-0 lg:flex-shrink lg:rounded-16 lg:p-8"
               >
                 <p
-                  className={`text-xl font-medium leading-tight lg:whitespace-pre-line ${
-                    darkMode ? 'text-white-95' : 'text-black'
-                  }`}
+                  className="text-xl font-medium leading-tight lg:whitespace-pre-line text-black dark:text-white-95"
                 >
                   {card.title}
                 </p>
@@ -142,9 +127,7 @@ export default function LeadingOrganizationsSection({
                   {card.description.map((description) => (
                     <p
                       key={description}
-                      className={`text-start text-base leading-tight lg:whitespace-pre-line ${
-                        darkMode ? 'text-green-120' : 'text-gray-55'
-                      }`}
+                      className="text-start text-base leading-tight lg:whitespace-pre-line text-gray-55 dark:text-green-120"
                     >
                       {description}
                     </p>
@@ -179,7 +162,7 @@ export default function LeadingOrganizationsSection({
           )}
         </div>
       </div>
-      <CertificationsSection darkMode={darkMode} />
+      <CertificationsSection />
     </section>
   );
 }

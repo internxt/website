@@ -50,10 +50,9 @@ const PasswordChecker = ({
             lang === 'en' ? bannerLang.tryOutInternxtPasswordCheckerBanner : bannerLang.tryOutInternxtGeneralBanner
           }
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
-          darkMode={darkMode}
         />
 
-        <HeroSection textContent={langJson.HeroSection} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} />
 
         <InfoSection
           textContent={langJson.InfoSection}
@@ -72,19 +71,17 @@ const PasswordChecker = ({
               {langJson.CtaSection.description}
             </p>
           }
-          darkMode={darkMode}
         />
 
         <FeaturesSection
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpPwdCheckerBanner}
           lang={lang}
-          darkMode={darkMode}
         />
 
-        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" darkMode={darkMode} />
+        <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
         <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 

@@ -170,7 +170,7 @@ export const PriceCard = ({
     <div className="flex flex-col gap-5">
       <div
         className={`flex h-full flex-col items-center justify-start rounded-16 lg:w-[367px] ${
-          popular ? (isValentinesMode ? 'bg-pink-30' : darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl') : ''
+          popular ? (isValentinesMode ? 'bg-pink-30' : darkMode ? 'bg-blue-55' : 'bg-neutral-250 shadow-xl dark:bg-blue-55 dark:shadow-none') : ''
         }`}
       >
         <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'} items-center justify-center`}>
@@ -180,19 +180,19 @@ export const PriceCard = ({
         </div>
 
         <div
-          className={`z-10 h-full w-full rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} ring-[1px] ${
+          className={`z-10 h-full w-full rounded-16 ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} ring-[1px] ${
             popular
               ? darkMode
                 ? 'ring-blue-55'
-                : 'ring-gray-10 lg:px-0'
+                : 'ring-gray-10 lg:px-0 dark:ring-blue-55'
               : darkMode
               ? 'ring-gray-71'
-              : 'ring-gray-10 lg:px-0'
+              : 'ring-gray-10 lg:px-0 dark:ring-gray-71'
           }`}
         >
           <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
             <div className="flex h-full w-full flex-col items-center justify-start gap-8 lg:gap-4">
-              <p className={`text-30 font-semibold lg:text-3xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
+              <p className={`text-30 font-semibold lg:text-3xl ${darkMode ? 'text-white' : 'text-gray-100 dark:text-white'}`}>
                 {planLabel}
               </p>
 
@@ -202,18 +202,18 @@ export const PriceCard = ({
                     <span className="flex h-full flex-row items-end ">
                       <p
                         className={`self-start pb-4 pr-1 text-base font-semibold lg:mb-[18px] ${
-                          darkMode ? 'text-white' : 'text-gray-100'
+                          darkMode ? 'text-white' : 'text-gray-100 dark:text-white'
                         }`}
                       >
                         {currency}
                       </p>
-                      <p className={`text-2xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
+                      <p className={`text-2xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100 dark:text-white'}`}>
                         {currentPrice}
                       </p>
                       {isAnnual && (
                         <span
                           className={`flex h-full items-end text-base font-semibold ${
-                            darkMode ? 'text-white' : 'text-gray-100'
+                            darkMode ? 'text-white' : 'text-gray-100 dark:text-white'
                           }`}
                         >
                           {contentText.perMonth}
@@ -224,20 +224,20 @@ export const PriceCard = ({
                     <span className="flex h-full flex-row items-end">
                       <p
                         className={`items-center self-start pr-1 pt-[6px] text-sm font-semibold lg:pt-3 ${
-                          darkMode ? 'text-gray-50' : 'text-gray-50'
+                          darkMode ? 'text-gray-50' : 'text-gray-50 dark:text-gray-50'
                         }`}
                       >
                         {currency}
                       </p>
                       <p
                         className={`text-xl font-normal line-through lg:pt-0 lg:text-xl ${
-                          darkMode ? 'text-gray-50' : 'text-gray-50'
+                          darkMode ? 'text-gray-50' : 'text-gray-50 dark:text-gray-50'
                         }`}
                       >
                         {originalPrice}
                       </p>
                       {isAnnual && (
-                        <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50'}`}>
+                        <span className={`text-sm font-normal ${darkMode ? 'text-gray-50' : 'text-gray-50 dark:text-gray-50'}`}>
                           {contentText.perMonth}
                         </span>
                       )}
@@ -249,17 +249,17 @@ export const PriceCard = ({
                   <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
                     <span className="flex h-full flex-row items-center gap-1 pr-2">
                       <p
-                        className={`text-base font-semibold lg:mb-[18px] ${darkMode ? 'text-white' : 'text-gray-100'}`}
+                        className={`text-base font-semibold lg:mb-[18px] ${darkMode ? 'text-white' : 'text-gray-100 dark:text-white'}`}
                       >
                         {currency}
                       </p>
-                      <p className={`text-3xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100'}`}>
+                      <p className={`text-3xl font-bold lg:text-4xl ${darkMode ? 'text-white' : 'text-gray-100 dark:text-white'}`}>
                         {currentPrice}
                       </p>
                       {isAnnual && (
                         <span
                           className={`flex h-full items-center pt-4 text-base font-semibold ${
-                            darkMode ? 'text-white' : 'text-gray-100'
+                            darkMode ? 'text-white' : 'text-gray-100 dark:text-white'
                           }`}
                         >
                           {contentText.perMonth}
@@ -277,12 +277,12 @@ export const PriceCard = ({
                   popular
                     ? darkMode
                       ? 'border-blue-55  bg-blue-55 text-white hover:bg-primary-dark'
-                      : 'bg-primary text-white hover:bg-primary-dark'
+                      : 'bg-primary text-white hover:bg-primary-dark dark:border-blue-55 dark:bg-blue-55 dark:text-white dark:hover:bg-primary-dark'
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-primary hover:bg-gray-90'
                     : darkMode
                     ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
-                    : 'border-primary bg-transparent text-primary hover:bg-gray-1'
+                    : 'border-primary bg-transparent text-primary hover:bg-gray-1 dark:border-blue-55 dark:bg-transparent dark:text-white dark:hover:bg-gray-90'
                 } flex h-[48px] w-[290px] items-center justify-center rounded-md border-[1.5px] text-base`}
               >
                 <p className={`text-base font-medium`}>{ctaText}</p>
@@ -301,7 +301,7 @@ export const PriceCard = ({
                         {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
                         <div className="flex flex-row items-center gap-2">
                           <p
-                            className={`text-base ${darkMode ? 'text-white' : 'text-gray-80'}`}
+                            className={`text-base ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}
                             dangerouslySetInnerHTML={{ __html: formattedName }}
                           />
                           {isComingSoon && (
@@ -313,7 +313,7 @@ export const PriceCard = ({
                           )}
                         </div>
                       </div>
-                      {index === 0 && <div className={`h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-25'}`} />}
+                      {index === 0 && <div className={`h-[1px] w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-25 dark:bg-gray-71'}`} />}
                     </React.Fragment>
                   );
                 })}

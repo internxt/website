@@ -104,23 +104,18 @@ const Drive = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="FreeCloudStorage" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} download={download} ChecksTag="h2" />
 
-      <DriveSection textContent={textContent.DriveSection} darkMode={darkMode} />
+      <DriveSection textContent={textContent.DriveSection} />
 
       <HorizontalScrollableSection
         textContent={textContent.EncryptedCloudStorageSection}
-          bgGradient={
-            darkMode
-              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-          }
+          bgGradient="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
         needsH2
         needsH3
-        darkMode={darkMode}
       />
 
-      <FileParallaxSection darkMode={darkMode} />
+      <FileParallaxSection />
 
       <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -134,26 +129,22 @@ const Drive = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-          sectionDetails={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} lg:py-20`}
+          sectionDetails="bg-neutral-17 dark:bg-gray-105 lg:py-20"
                 hideFreeCard
                 darkMode={darkMode}
         />
 
       <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 darkMode={darkMode} />
+      <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
       <ThreeCardsSection
         textContent={textContent.MadeInEuropeSection}
-          bgColor={
-            darkMode
-              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-        }
+          bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
         darkMode={darkMode}
       />
 
-      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" darkMode={darkMode} />
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
         <FloatingCtaSectionv2
           textContent={textContent.CtaSection}
@@ -161,38 +152,29 @@ const Drive = ({
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <h2
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
                 {textContent.CtaSection.title}
               </h2>
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[633px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
               >
                 {textContent.CtaSection.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
-          darkMode={darkMode}
         />
 
       <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} darkMode={darkMode} />
 
-      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} darkMode={darkMode} />
+      <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
       <ReviewsSection
         textContent={textContent.ReviewSection}
-          bgColor={
-            darkMode
-              ? 'linear-gradient(180deg, #1C1C1C 0%, #0D0D0D 100%)'
-              : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-          }
+          bgColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
           darkMode={darkMode}
       />
 

@@ -101,32 +101,22 @@ const MegaComparison = ({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
           hideFreeCard
           darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient={
-            darkMode
-              ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
-              : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)'
-          }
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]"
           needsH2
           needsH3
-          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient={
-            darkMode
-              ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
-              : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)'
-          }
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]"
           needsH2
-          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -134,22 +124,21 @@ const MegaComparison = ({
           url="#billingButtons"
           customText={
             <div className="flex flex-col gap-4 px-10 text-center lg:px-32">
-              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection.title}
               </p>
-              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
                 {langJson.CtaSection.description}
               </p>
             </div>
           }
-          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          darkMode={darkMode}
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         />
 
         <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
-        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} darkMode={darkMode} />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>
     </>
   );

@@ -126,7 +126,7 @@ export const AntivirusTemplate = ({
         ) : (
           <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
         )}
-        <HeroSection textContent={langJson.HeroSection} download={download} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} download={download} />
 
         <InfoSection
           FirstComponent={
@@ -135,9 +135,7 @@ export const AntivirusTemplate = ({
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
                   <p
-                    className={`min-h-[80px] max-w-[300px] text-lg font-medium ${
-                      darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-                    }`}
+                    className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80 dark:text-cool-gray-30"
                   >
                     {item.description}
                   </p>
@@ -145,10 +143,9 @@ export const AntivirusTemplate = ({
               ))}
             </div>
           }
-          darkMode={darkMode}
         />
 
-        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} darkMode={darkMode} />
+        <FeatureSection textContent={langJson.FeatureSection} isGetAntivirus={isGetAntivirus} />
 
         <InfoSection
           FirstComponent={
@@ -156,33 +153,31 @@ export const AntivirusTemplate = ({
               {InfoSectionV2.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className={`pt-5 text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                  <p className="pt-5 text-xl font-medium text-gray-80 dark:text-cool-gray-30">
                     {item.title}
                   </p>
                 </div>
               ))}
             </div>
           }
-          darkMode={darkMode}
         />
 
         <CtaSection
           textContent={langJson.cta1}
           url={'/pricing'}
           customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
-          darkMode={darkMode}
         />
 
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} darkMode={darkMode} />
+        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
 
         <ComponentsInColumnSection
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+                <h2 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className={`font-regular text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
                   {langJson.ComponentsInColumn.description}
                 </p>
               </div>
@@ -192,24 +187,21 @@ export const AntivirusTemplate = ({
             <div className="flex flex-col items-center">
               <CardGroup
                 cards={cardsForComponentsIncolumn}
-                backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-                darkMode={darkMode}
+                backgroundColorCard="bg-white dark:bg-gray-95"
               />
             </div>
           }
-          backgroundColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}
-          darkMode={darkMode}
+          backgroundColor="bg-gray-1 dark:bg-gray-105"
         />
         <CtaSection
           textContent={langJson.cta2}
           url={'/pricing'}
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
-          darkMode={darkMode}
         />
 
         <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+        <RelationalLinks textContent={relationalLinksText} />
 
         <Footer textContent={footerLang} lang={locale} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>

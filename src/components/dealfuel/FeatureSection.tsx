@@ -1,12 +1,12 @@
 import { ArrowsClockwise, EyeSlash, Gauge, ListChecks, LockKey, User } from '@phosphor-icons/react';
 import React from 'react';
 
-const FeatureSection = ({ darkMode = false, textContent }) => (
+const FeatureSection = ({ textContent }) => (
   <section>
     <div className="my-10 mb-32 flex flex-col items-center md:my-20">
       <div className="mb-16 flex flex-col items-center px-6 text-center font-semibold">
         <h2 className="text-4xl font-semibold">{textContent.title}</h2>
-        <p className={`max-w-[778px] pt-4 text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+        <p className="max-w-[778px] pt-4 text-xl font-normal text-gray-80 dark:text-cool-gray-30">
           {textContent.description}
         </p>
       </div>

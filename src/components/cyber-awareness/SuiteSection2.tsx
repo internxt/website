@@ -1,4 +1,4 @@
-const SuiteSection2 = ({ darkMode = false, textContent }) => {
+const SuiteSection2 = ({ textContent }) => {
   const suiteCards = [
     {
       img: '/images/cyber-awareness/SuiteSection/card-1.svg',
@@ -42,9 +42,7 @@ const SuiteSection2 = ({ darkMode = false, textContent }) => {
             <div className="flex justify-center sm:pt-8 md:justify-start">
               <a href="/images/cyber-awareness/Internxt-Checklist.pdf" download={true}>
                 <button
-                  className={`rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-6 py-2 text-primary ${
-                    darkMode ? 'hover:bg-gray-71' : 'hover:bg-gray-10'
-                  }`}
+                  className="rounded-lg bg-white dark:bg-gray-95 px-6 py-2 text-primary hover:bg-gray-10 dark:hover:bg-gray-71"
                 >
                   {textContent.panel.button}
                 </button>

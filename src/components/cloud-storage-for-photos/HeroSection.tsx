@@ -8,14 +8,12 @@ import { BannerForMobile } from './components/heroSection/BannerForMobile';
 import { CloudStorageForPhotosText, ImageConfig } from '@/assets/types/cloud-storage-for-photos';
 const Animation = dynamic(() => import('../shared/Animation'));
 interface HeroSectionForHomeProps {
-  darkMode?: boolean;
   textContent: CloudStorageForPhotosText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
 
 export default function HeroSection({
-  darkMode = false,
   textContent,
   lang,
   isHomePageV2,
@@ -88,7 +86,7 @@ export default function HeroSection({
   ];
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden dark:bg-gray-95">
       <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
         <div
           style={{ backgroundImage: BgImage }}
@@ -115,7 +113,7 @@ export default function HeroSection({
                 />
               </div>
             ) : (
-              <BannerForMobile darkMode={darkMode} />
+              <BannerForMobile />
             )}
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>

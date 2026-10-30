@@ -8,14 +8,12 @@ import usePricing from '@/hooks/usePricing';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 interface PriceTableProps {
-  darkMode?: boolean;
   textContent: Record<string, any>;
   couponName: PromoCodeName;
   bgColor?: string;
 }
 
 export const HorizontalPricingSection = ({
-  darkMode = false,
   textContent,
   couponName,
   bgColor,
@@ -62,13 +60,11 @@ export const HorizontalPricingSection = ({
       >
         <div className="space-y-6 pb-12 pt-12 lg:w-[774px]  lg:pb-8 lg:pt-24">
           <p className="text-2xl font-semibold text-primary lg:text-4xl">{textContent.mostPopular}</p>
-          <p className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </p>
           <p
-            className={`font-regular w-[290px] text-lg ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:w-full lg:text-xl`}
+            className="font-regular w-[290px] text-lg text-gray-100 dark:text-white-95 lg:w-full lg:text-xl"
           >
             {textContent.description}
           </p>
@@ -84,16 +80,15 @@ export const HorizontalPricingSection = ({
             planId={activeProduct?.priceId}
             currencyValue={currencyValue}
             coupon={coupon}
-            darkMode={darkMode}
           />
         ) : (
-          <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" darkMode={darkMode} />
+          <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" />
         )}
         <div className="flex flex-col items-center justify-center space-y-8 pb-24 pt-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">
               <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature.text}</p>
+              <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">{feature.text}</p>
             </div>
           ))}
         </div>

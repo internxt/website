@@ -4,7 +4,6 @@ import { CaretRight } from '@phosphor-icons/react';
 import { HomeText } from '@/assets/types/home';
 
 interface OfficialCloudProviderProps {
-  darkMode?: boolean;
   textContent: HomeText['OfficalCloudProvider'];
   lang?: string;
   partner?: 'valencia' | 'levante';
@@ -33,14 +32,13 @@ const PARTNER_CONFIG = {
 };
 
 export default function OfficialCloudProviderSection({
-  darkMode = false,
   textContent,
   lang = 'en',
   partner = 'valencia',
   bgColor,
   bgGradientColor,
 }: OfficialCloudProviderProps): JSX.Element {
-  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
+  const bgClass = 'bg-white dark:bg-gray-95';
   const config = PARTNER_CONFIG[partner];
   const blogUrl = config.blogUrl[lang as 'en' | 'es'] || config.blogUrl.en;
   const isDescriptionArray = Array.isArray(textContent.description);
@@ -53,9 +51,7 @@ export default function OfficialCloudProviderSection({
       style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
       ></div>
 
       <Image
@@ -68,7 +64,7 @@ export default function OfficialCloudProviderSection({
       />
 
       <div className="flex flex-1 flex-col justify-between gap-6 lg:h-auto lg:w-[842px] lg:flex-initial">
-        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+        <p className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
 
@@ -77,16 +73,14 @@ export default function OfficialCloudProviderSection({
             {(textContent.description as string[]).map((paragraph) => (
               <p
                 key={paragraph}
-                className={`text-sm font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:text-xl`}
+                className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
               >
                 {paragraph}
               </p>
             ))}
           </div>
         ) : (
-          <p className={`text-sm font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+          <p className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
             {textContent.description}
           </p>
         )}

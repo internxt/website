@@ -4,7 +4,7 @@ import RevealX from '@/components/components/RevealX';
 import { goToSignUpURL } from '@/lib/auth';
 import { getImage } from '@/lib/getImage';
 
-const FeatureSection = ({ darkMode = false, textContent }) => {
+const FeatureSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden py-20">
       <div className="flex flex-col items-center justify-center px-5 lg:flex-row lg:space-x-20">
@@ -27,13 +27,11 @@ const FeatureSection = ({ darkMode = false, textContent }) => {
         >
           <ShieldStar size={64} className="text-primary" weight="light" />
           <p
-            className={`text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-3xl`}
+            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
           >
             {textContent.title}
           </p>
-          <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+          <p className="text-base text-gray-80 dark:text-cool-gray-30 lg:text-xl">
             {textContent.description}
           </p>
           <button

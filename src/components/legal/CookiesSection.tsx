@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CookiesSection = ({ darkMode = false, textContent, lang }) => {
+const CookiesSection = ({ textContent, lang }) => {
   return (
     <>
       <div className="mb-6 flex flex-col" id={textContent.title32}>
@@ -63,34 +63,26 @@ const CookiesSection = ({ darkMode = false, textContent, lang }) => {
         <h5 className="mb-6 text-2xl">{textContent.cookies_subtitle4}</h5>
         <p className="mb-6">{textContent.cookies_data_part19}</p>
 
-        <table className={`mb-6 w-full border ${darkMode ? 'border-gray-71' : 'border-cool-gray-30'}`}>
+        <table className="mb-6 w-full border border-cool-gray-30 dark:border-gray-71">
           <thead>
             <tr className="bg-gray-100">
               <th
-                className={`border ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-cool-gray-30 bg-cool-gray-5'
-                } px-8 py-2`}
+                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
               >
                 {textContent.cookies_table_row1_column1}
               </th>
               <th
-                className={`border ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-cool-gray-30 bg-cool-gray-5'
-                } px-8 py-2`}
+                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
               >
                 {textContent.cookies_table_row1_column2}
               </th>
               <th
-                className={`border ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-cool-gray-30 bg-cool-gray-5'
-                } px-8 py-2`}
+                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
               >
                 {textContent.cookies_table_row1_column3}
               </th>
               <th
-                className={`border ${
-                  darkMode ? 'border-gray-71 bg-gray-105' : 'border-cool-gray-30 bg-cool-gray-5'
-                } px-8 py-2`}
+                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
               >
                 {textContent.cookies_table_row1_column4}
               </th>
@@ -98,100 +90,100 @@ const CookiesSection = ({ darkMode = false, textContent, lang }) => {
           </thead>
           <tbody>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row2_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row2_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row2_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row2_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row3_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row3_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row3_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row3_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row4_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row4_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row4_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row4_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row5_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row5_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row5_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row5_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row6_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row6_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row6_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row6_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row8_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row8_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row8_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row8_column4}
               </td>
             </tr>
             <tr>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row9_column1}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row9_column2}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row9_column3}
               </td>
-              <td className={`border ${darkMode ? 'border-gray-71' : 'border-cool-gray-20'} p-2 px-4`}>
+              <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">
                 {textContent.cookies_table_row9_column4}
               </td>
             </tr>

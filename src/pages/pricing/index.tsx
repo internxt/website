@@ -123,12 +123,8 @@ const Pricing = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           popularPlanBySize="2TB"
-          backgroundGradientColor={
-            darkMode
-              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-          }
-          sectionDetails={`py-10 lg:py-20 lg:pt-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
+          backgroundGradientColor="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
+          sectionDetails="py-10 lg:py-20 lg:pt-32 dark:bg-gray-95"
           overrideBillingFrequency={billingFrequency}
           overrideActiveSwitchPlan={activeSwitchPlan}
           overrideActiveStoragePlan={activeStoragePlan}
@@ -138,11 +134,11 @@ const Pricing = ({
           darkMode={darkMode}
         />
 
-        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 darkMode={darkMode} />
+        <HorizontalScrollableSection textContent={infoText} needsH2 needsH3 />
 
         <BestStorageSection textContent={textContent.BestStorageSection} darkMode={darkMode} />
 
-        <FileParallaxSection darkMode={darkMode} />
+        <FileParallaxSection />
 
         <ComparisonTableSection
           textContent={textContent.ComparisonTable}
@@ -151,12 +147,11 @@ const Pricing = ({
           billingFrequency={billingFrequency}
           decimalDiscount={decimalDiscount}
           currencyValue={currencyValue}
-          darkMode={darkMode}
         />
 
         <FAQSection textContent={faqSection} needsH3={false} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+        <RelationalLinks textContent={relationalLinksText} />
 
         <FloatingCtaSectionv2
           textContent={textContent.lastCtaSection}
@@ -164,25 +159,20 @@ const Pricing = ({
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <h2
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
                 {textContent.lastCtaSection.title}
               </h2>
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[633px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
               >
                 {textContent.lastCtaSection.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:pb-20 pb-20"
-          darkMode={darkMode}
         />
 
         <Footer

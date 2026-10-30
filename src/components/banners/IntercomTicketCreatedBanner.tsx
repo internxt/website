@@ -1,6 +1,6 @@
 import { X } from '@phosphor-icons/react';
 
-const IntercomTicketCreatedBanner = ({ darkMode = false, textContent, bannerVisible, onClose }) => {
+const IntercomTicketCreatedBanner = ({ textContent, bannerVisible, onClose }) => {
   return (
     <section
       className={`${
@@ -9,9 +9,7 @@ const IntercomTicketCreatedBanner = ({ darkMode = false, textContent, bannerVisi
     >
       <div
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
-        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl bg-primary ${
-          darkMode ? 'text-white-95' : 'text-neutral-900'
-        }`}
+        flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl bg-primary text-neutral-900 dark:text-white-95`}
       >
         <button className="absolute right-0 m-7 flex w-auto text-white" onClick={onClose}>
           <X size={32} />
@@ -25,13 +23,7 @@ const IntercomTicketCreatedBanner = ({ darkMode = false, textContent, bannerVisi
             <div className="flex flex-col items-center justify-center space-y-6">
               <p className="text-xl font-medium text-white">{textContent.description}</p>
               <button
-                className={`relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } px-5 py-3 text-base font-medium ${
-                  darkMode ? 'text-white-95' : 'text-black'
-                } transition duration-100 focus:outline-none ${
-                  darkMode ? 'active:bg-[#1C1C1C] active:text-white-95' : 'active:bg-white active:text-black'
-                } sm:text-lg lg:w-max`}
+                className="relative flex w-full cursor-pointer flex-col items-center justify-center rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-base font-medium text-black dark:text-white-95 transition duration-100 focus:outline-none active:bg-white active:text-black dark:active:bg-gray-95 dark:active:text-white-95 sm:text-lg lg:w-max"
                 onClick={onClose}
               >
                 {textContent.cta}

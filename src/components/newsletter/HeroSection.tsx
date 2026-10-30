@@ -3,8 +3,8 @@ import CheckboxItem from '@/components/shared/CheckboxItem';
 import axios from 'axios';
 import { notificationService } from '../Snackbar';
 
-const HeroSection = ({ darkMode = false, textContent }) => {
-  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
+const HeroSection = ({ textContent }) => {
+  const bgClass = 'bg-gray-20 dark:bg-gray-71';
   const [email, setEmail] = useState('');
   const [checkbox, setCheckbox] = useState(false);
 
@@ -30,10 +30,10 @@ const HeroSection = ({ darkMode = false, textContent }) => {
     <section className="overflow-hidden px-5 pt-14">
       <div className="flex flex-col items-center justify-center space-y-12 py-20">
         <div className="flex w-full flex-col items-center space-y-5 text-center">
-          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title.text} <span className="text-primary">{textContent.title.blueText}</span>
           </h1>
-          <p className={`max-w-[700px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="max-w-[700px] text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.description}
           </p>
         </div>
@@ -51,10 +51,7 @@ const HeroSection = ({ darkMode = false, textContent }) => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder={`${textContent.form.emailLabel}`}
-            className={`flex h-auto w-full appearance-none flex-row rounded-lg border ${
-              darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-cool-gray-20 bg-white'
-            } px-4 py-3 text-left text-lg outline-none
-            transition-all duration-150 focus:border-blue-50 focus:ring focus:ring-primary focus:ring-opacity-20 sm:py-2 sm:text-base`}
+            className="flex h-auto w-full appearance-none flex-row rounded-lg border border-cool-gray-20 bg-white dark:border-gray-71 dark:bg-gray-95 px-4 py-3 text-left text-lg outline-none transition-all duration-150 focus:border-blue-50 focus:ring focus:ring-primary focus:ring-opacity-20 sm:py-2 sm:text-base"
             required
           />
           <div className="flex flex-col space-y-6 pt-9">
@@ -62,7 +59,6 @@ const HeroSection = ({ darkMode = false, textContent }) => {
               checked={checkbox}
               setCheckbox={setCheckbox}
               label={textContent.form.checkboxText}
-              darkMode={darkMode}
             />
             <input
               name="signup"

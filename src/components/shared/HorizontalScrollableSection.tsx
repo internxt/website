@@ -1,10 +1,8 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
-import { DARK_MODE_ENABLED } from '@/theme.config';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 interface HorizontalScrollableProps {
-  darkMode?: boolean;
   textContent: any;
   bgGradient?: string;
   cardsWidth?: string;
@@ -16,7 +14,6 @@ interface HorizontalScrollableProps {
 }
 
 export default function HorizontalScrollableSection({
-  darkMode = false,
   textContent,
   bgGradient,
   cardsWidth = '400px',
@@ -26,7 +23,7 @@ export default function HorizontalScrollableSection({
   needsH3 = false,
   percentOff,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
-  const bgClass = darkMode ? 'bg-gray-105' : 'bg-neutral-17';
+  const bgClass = 'bg-neutral-17 dark:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -114,27 +111,20 @@ export default function HorizontalScrollableSection({
   const CardTag = needsH3 ? 'h3' : 'p';
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : bgClass
-      } py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{ background: bgGradient }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgGradient ?? bgClass} py-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         {needsDivider && (
           <div
-            className={`absolute left-8 right-8 top-0 h-[1px] ${
-              darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-            } lg:left-32 lg:right-32`}
+            className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
           ></div>
         )}
         <TitleTag
-          className={`text-30 font-bold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-95'
-          } lg:w-[780px] lg:text-3xl`}
+          className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-3xl"
         >
           {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
         </TitleTag>
-        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
           {parseDynamicText(textContent.description, { percentage: percentOff, discount: percentOff })}
         </p>
         {textContent.cta && (
@@ -171,21 +161,15 @@ export default function HorizontalScrollableSection({
               }}
             >
               <div
-                className={`flex h-full flex-col rounded-xl ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } p-6 lg:rounded-16 lg:p-8`}
+                className="flex h-full flex-col rounded-xl bg-white dark:bg-gray-95 p-6 lg:rounded-16 lg:p-8"
               >
                 <CardTag
-                  className={`pb-[16px] text-lg font-medium ${
-                    darkMode ? 'text-white-95' : 'text-gray-95'
-                  } lg:pb-6 lg:text-xl`}
+                  className="pb-[16px] text-lg font-medium text-gray-95 dark:text-white-95 lg:pb-6 lg:text-xl"
                 >
                   {parseDynamicText(title, { percentage: percentOff, discount: percentOff })}
                 </CardTag>
                 <p
-                  className={`flex-1 text-sm font-normal leading-tight ${
-                    darkMode ? 'text-green-120' : 'text-gray-55'
-                  } lg:text-base`}
+                  className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
                 >
                   {parseDynamicText(textContent.scrollableSection.descriptions[index], { percentage: percentOff, discount: percentOff })}
                 </p>

@@ -3,12 +3,11 @@ import { FiveStars } from '@/components/shared/StarsRate';
 import { useRouter } from 'next/router';
 
 interface TitleAndSurveyProps {
-  darkMode?: boolean;
   textContent: Record<string, any>;
   redirectUrl: string;
 }
 
-const TitleAndSurvey = ({ darkMode = false, textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
+const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
   const router = useRouter();
 
   const handleOnPlanButtonClicked = () => {
@@ -19,36 +18,34 @@ const TitleAndSurvey = ({ darkMode = false, textContent, redirectUrl }: TitleAnd
     <div className="z-10 flex flex-col gap-16">
       <div className="flex max-w-[544px] flex-col gap-6">
         <div className="flex flex-col gap-5">
-          <p className={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-gray-100 dark:text-white-95">
             {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
           </p>
 
           <div className="flex flex-col items-center gap-3 lg:flex-row">
             <FiveStars totalStars={5} />
-            <p className={`font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-70'}`}>
+            <p className="font-semibold text-gray-70 dark:text-cool-gray-30">
               {textContent.trustedBy}
             </p>
           </div>
         </div>
-        <h2 className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+        <h2 className="text-xl font-normal text-gray-80 dark:text-cool-gray-30">
           {textContent.description.normal1} <span className="font-semibold">{textContent.description.bold}</span>
           {textContent.description.normal2}
         </h2>
       </div>
       <div
-        className={`flex flex-col gap-5 rounded-xl border ${
-          darkMode ? 'border-gray-71 bg-gray-105' : 'border-gray-10 bg-gray-1'
-        } px-6 py-4`}
+        className="flex flex-col gap-5 rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 px-6 py-4"
       >
-        <p className={`text-xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+        <p className="text-xl font-semibold text-gray-80 dark:text-cool-gray-30">
           {textContent.howMuchYouNeed}
         </p>
         <div className="flex items-center justify-center gap-5 lg:flex-row lg:justify-start">
           <div className="hidden flex-row lg:flex">
-            <p className={`whitespace-nowrap font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="whitespace-nowrap font-semibold text-gray-80 dark:text-cool-gray-30">
               {textContent.upTo}
             </p>
-            <div className={`flex h-full border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
+            <div className="flex h-full border border-gray-10 dark:border-gray-71" />
           </div>
 
           <div className="flex flex-wrap gap-4 lg:flex-row">
@@ -58,7 +55,6 @@ const TitleAndSurvey = ({ darkMode = false, textContent, redirectUrl }: TitleAnd
                   className="!w-full lg:w-max"
                   text={label}
                   onClick={handleOnPlanButtonClicked}
-                  darkMode={darkMode}
                 />
               </div>
             ))}

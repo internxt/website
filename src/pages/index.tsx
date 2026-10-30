@@ -91,7 +91,6 @@ const HomePage = ({
         textContent={textContent.HeroSection}
         percentOff={percentOff}
         minimumPrice={minimumPrice}
-        darkMode={darkMode}
       />
 
       <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
@@ -108,30 +107,25 @@ const HomePage = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
         freePlanNeedsH2
         darkMode={darkMode}
       />
 
       <TrustedSection textContent={textContent.TrustedBySection} darkMode={darkMode} />
 
-      <AwardWinningSection textContent={textContent.AwardWinningSection} darkMode={darkMode} />
+      <AwardWinningSection textContent={textContent.AwardWinningSection} />
 
       <OfficialCloudProviderSection
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'}`}
-        darkMode={darkMode}
+        bgColor="bg-neutral-17 dark:bg-gray-95"
       />
 
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
-        bgGradient={
-          darkMode
-            ? 'linear-gradient(180deg, #1C1C1C 0%, #18181B 100%)'
-            : 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
+        bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#18181B_100%)]"
         darkMode={darkMode}
       />
 
@@ -139,11 +133,7 @@ const HomePage = ({
         textContent={textContent.EncryptedStorageSeoSection}
         needsH2
         needsH3
-        bgGradient={
-          darkMode
-            ? 'linear-gradient(360deg, #1C1C1C 0%, #18181B 100%)'
-            : 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)'
-        }
+        bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#18181B_100%)]"
         darkMode={darkMode}
       />
 

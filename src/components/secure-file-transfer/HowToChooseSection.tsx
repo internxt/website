@@ -4,11 +4,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
 interface HowToChooseSectionProps {
-  darkMode?: boolean;
   textContent: SecureFileTransferText['HowToChooseSection'];
 }
 
-const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectionProps): JSX.Element => {
+const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const handleAccordionClick = (index: number) => {
@@ -17,14 +16,10 @@ const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectio
 
   return (
     <section
-      className={`flex w-full flex-col items-start justify-center gap-6 ${
-        darkMode ? 'bg-gray-105' : 'bg-neutral-17'
-      } px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80"
     >
       <h2
-        className={`flex pb-4 text-[30px] font-bold leading-tight lg:text-[48px] ${
-          darkMode ? 'text-white-95' : 'text-gray-100'
-        }`}
+        className="flex pb-4 text-[30px] font-bold leading-tight lg:text-[48px] text-gray-100 dark:text-white-95"
       >
         {textContent.title}
       </h2>
@@ -58,9 +53,7 @@ const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectio
             <button
               key={title}
               onClick={() => handleAccordionClick(index)}
-              className={`flex flex-col rounded-16 ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } text-left transition-all duration-300 lg:w-[80%] ${
+              className={`flex flex-col rounded-16 bg-white dark:bg-gray-95 text-left transition-all duration-300 lg:w-[80%] ${
                 activeIndex === index ? 'gap-6 p-8' : 'gap-0 px-8 py-4'
               }`}
               aria-expanded={activeIndex === index}
@@ -68,7 +61,7 @@ const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectio
               <span className="flex flex-row items-center gap-4 text-[24px] font-medium text-primary">
                 {index + 1}
                 <h3
-                  className={`text-[18px] font-medium lg:text-[20px] ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+                  className="text-[18px] font-medium lg:text-[20px] text-gray-100 dark:text-white-95"
                 >
                   {title}
                 </h3>
@@ -80,9 +73,7 @@ const HowToChooseSection = ({ darkMode = false, textContent }: HowToChooseSectio
               >
                 <div className="overflow-hidden">
                   <p
-                    className={`text-[14px] font-normal leading-tight lg:text-[16px] ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    }`}
+                    className="text-[14px] font-normal leading-tight lg:text-[16px] text-gray-55 dark:text-green-120"
                   >
                     {textContent.accordionCards.descriptions[index]}
                   </p>

@@ -2,11 +2,9 @@ import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
 
 const CtaSection = ({
-  darkMode = false,
   textContent,
   freePlan,
 }: {
-  darkMode?: boolean;
   textContent: any;
   freePlan?: boolean;
 }) => {
@@ -18,9 +16,7 @@ const CtaSection = ({
           <p className="w-full max-w-[570px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className={`flex rounded-lg ${
-            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-          } px-5 py-3 text-lg font-medium text-primary ${darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'}`}
+          className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10 dark:hover:bg-purple-100"
           onClick={() => {
             freePlan
               ? goToSignUpURL()

@@ -2,7 +2,6 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
 const CtaSection = ({
-  darkMode = false,
   textContent,
   url,
   maxWidth,
@@ -11,7 +10,6 @@ const CtaSection = ({
   onClick,
   customDescription,
 }: {
-  darkMode?: boolean;
   textContent: any;
   url: string;
   maxWidth?: string;
@@ -20,8 +18,8 @@ const CtaSection = ({
   onClick?: () => void;
   customDescription?: React.ReactNode;
 }) => {
-  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
-  const hoverClass = darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10';
+  const bgClass = 'bg-white dark:bg-gray-95';
+  const hoverClass = 'hover:bg-blue-10 dark:hover:bg-purple-100';
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
   return (

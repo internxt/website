@@ -1,15 +1,13 @@
-const CtaSection = ({ darkMode = false, textContent }) => {
+const CtaSection = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center space-y-8 px-4 py-14 text-white">
         <div className="flex flex-col space-y-4 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className={`flex cursor-pointer rounded-lg ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-6 py-2 ${
-            darkMode ? 'hover:bg-purple-100' : 'hover:bg-blue-10'
-          }`}
+          className="flex cursor-pointer rounded-lg bg-white dark:bg-gray-95 px-6 py-2 hover:bg-blue-10 dark:hover:bg-purple-100"
           onClick={() => {
             window.open('https://internxt.com/drive', '_blank', 'noopener noreferrer');
           }}

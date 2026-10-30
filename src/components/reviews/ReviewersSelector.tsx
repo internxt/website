@@ -1,19 +1,17 @@
 export type SwitchButtonOptions = 'Users' | 'Tech';
 interface PlanSwitchProps {
-  darkMode?: boolean;
   textContent: Record<string, any>;
   activeSwitchPlan: SwitchButtonOptions;
   onPlanTypeChange: (activeSwitchPlan: string) => void;
 }
 
 export const ReviewersSelector = ({
-  darkMode = false,
   textContent,
   activeSwitchPlan,
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => {
-  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
-  const textClass = darkMode ? 'text-cool-gray-30' : 'text-gray-105';
+  const bgClass = 'bg-white dark:bg-gray-95';
+  const textClass = 'text-gray-105 dark:text-cool-gray-30';
   return (
     <div id="reviewersButtons" className={`flex h-[38px] w-full flex-row rounded-lg bg-neutral-90/10 lg:w-[423.67px]`}>
       <button

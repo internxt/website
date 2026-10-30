@@ -5,7 +5,6 @@ import { useState } from 'react';
 import type { IFormValues } from '@/components/cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 
 interface InputProps {
-  darkMode?: boolean;
   label: Path<IFormValues>;
   disabled?: boolean;
   register: UseFormRegister<IFormValues>;
@@ -26,7 +25,6 @@ interface InputProps {
 }
 
 const PasswordInput = ({
-  darkMode = false,
   label,
   disabled,
   register,
@@ -46,7 +44,7 @@ const PasswordInput = ({
 }: InputProps): JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const defaultBorderClass = darkMode ? 'border-gray-71' : 'border-gray-40';
+  const defaultBorderClass = 'border-gray-40 dark:border-gray-71';
   const borderStyles = error
     ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
     : `${defaultBorderClass} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
@@ -75,20 +73,14 @@ const PasswordInput = ({
         onBlur={() => {
           if (onBlur) onBlur();
         }}
-        className={`w-full rounded-md border p-3 pr-12 text-base placeholder-gray-50 outline-none ${
-          darkMode ? 'bg-[#1C1C1C] text-white-95' : 'bg-white text-gray-100'
-        } ${borderStyles} ${
-          darkMode ? 'disabled:border-gray-71 disabled:text-gray-50' : 'disabled:border-gray-10 disabled:text-gray-40'
-        }`}
+        className={`w-full rounded-md border p-3 pr-12 text-base placeholder-gray-50 outline-none bg-white text-gray-100 dark:bg-gray-95 dark:text-white-95 ${borderStyles} disabled:border-gray-10 disabled:text-gray-40 dark:disabled:border-gray-71 dark:disabled:text-gray-50`}
       />
       <button
         type="button"
         onClick={() => setShowPassword(!showPassword)}
         onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}
         tabIndex={0}
-        className={`absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center ${
-          darkMode ? 'text-white-95' : 'text-gray-100'
-        }`}
+        className="absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center text-gray-100 dark:text-white-95"
       >
         {showPassword ? <Eye className="h-6 w-6" /> : <EyeSlash className="h-6 w-6" />}
       </button>

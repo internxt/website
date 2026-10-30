@@ -100,28 +100,28 @@ export const TablesSection = ({
   return (
     <section
       className={`flex flex-col items-center justify-center gap-8 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+        darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'
       } py-8 lg:py-20`}
     >
       <div
         className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
         } lg:left-32 lg:right-32`}
       ></div>
       {bottomSeparationBar && (
         <div
           className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+            darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'
           } lg:bottom-0 lg:left-32 lg:right-32`}
         />
       )}
       <div className="flex flex-col items-center justify-center gap-6 text-center">
         <SectionTitleTag
-          className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}
+          className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}
         >
           {parseText(textContent.title)}
         </SectionTitleTag>
-        <p className={`w-[330px] text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:w-[832px] lg:text-xl`}>
+        <p className={`w-[330px] text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'} lg:w-[832px] lg:text-xl`}>
           {parseText(textContent.description)}
         </p>
 
@@ -131,7 +131,7 @@ export const TablesSection = ({
               {textContent.mainTable.title && (
                 <TableNameTag
                   className={`pb-6 pt-8 text-30 font-semibold ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
+                    darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                   } lg:text-3xl`}
                 >
                   {parseText(textContent.mainTable.title)}
@@ -140,7 +140,7 @@ export const TablesSection = ({
               {textContent.mainTable.description && (
                 <p
                   className={`w-[330px]  text-base ${
-                    darkMode ? 'text-cool-gray-30' : 'text-gray-80'
+                    darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'
                   } lg:w-[832px] lg:text-xl`}
                 >
                   {parseText(textContent.mainTable.description)}
@@ -151,14 +151,12 @@ export const TablesSection = ({
                   textContent={textContent.mainTable.inxtTable}
                   TableTitleTag={TableTitleTag}
                   replacements={replacements}
-                  darkMode={darkMode}
                 />
                 <CompetitorTable
                   textContent={textContent.mainTable.competitorTable}
                   logo={logo}
                   TableTitleTag={TableTitleTag}
                   replacements={replacements}
-                  darkMode={darkMode}
                 />
               </div>
             </div>
@@ -172,12 +170,12 @@ export const TablesSection = ({
             const isOpen = !!openSections[index];
             return (
               <div key={index} className="flex w-screen flex-col items-center gap-2 lg:pt-16">
-                <div className={`h-[1px] w-[360px] ${darkMode ? 'bg-gray-71' : 'bg-green-120'} lg:hidden`} />
+                <div className={`h-[1px] w-[360px] ${darkMode ? 'bg-gray-71' : 'bg-green-120 dark:bg-gray-71'} lg:hidden`} />
 
                 <button
                   onClick={() => toggleSection(index)}
                   className={`flex w-[330px] cursor-pointer items-center justify-between pt-5 text-left text-2xl font-semibold ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
+                    darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                   } transition-opacity hover:opacity-80 lg:hidden`}
                   aria-expanded={isOpen}
                   aria-controls={`section-content-${index}`}
@@ -193,7 +191,7 @@ export const TablesSection = ({
                 <div className="flex flex-col gap-6">
                   <h3
                     className={`hidden w-[330px] text-center text-3xl font-semibold ${
-                      darkMode ? 'text-white-95' : 'text-gray-100'
+                      darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                     } lg:block lg:w-full lg:pb-10`}
                   >
                     {parseText(section.title)}
@@ -202,7 +200,7 @@ export const TablesSection = ({
                   {section.data.description && (
                     <p
                       className={`text- hidden w-[330px] pb-5 text-center font-normal ${
-                        darkMode ? 'text-green-120' : 'text-gray-55'
+                        darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'
                       } lg:block lg:w-[832px] lg:text-xl`}
                     >
                       {parseText(section.data.description)}
@@ -220,14 +218,12 @@ export const TablesSection = ({
                       textContent={section.data.inxtTable}
                       TableTitleTag={TableTitleTag}
                       replacements={replacements}
-                      darkMode={darkMode}
                     />
                     <CompetitorTable
                       textContent={section.data.competitorTable}
                       logo={logo}
                       TableTitleTag={TableTitleTag}
                       replacements={replacements}
-                      darkMode={darkMode}
                     />
                   </div>
                 </div>

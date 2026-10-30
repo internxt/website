@@ -42,21 +42,21 @@ const Privacy = ({ darkMode = false, metatagsDescriptions, textContent, navbarLa
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+        <HeroSection textContent={textContent.HeroSection} />
 
-        <FileParallaxSection darkMode={darkMode} />
+        <FileParallaxSection />
 
-        <ManifestoSection textContent={textContent.ManifestoSection} darkMode={darkMode} />
+        <ManifestoSection textContent={textContent.ManifestoSection} />
 
-        <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-        <InxtAppsSection textContent={textContent.InxtAppsSection} lang={lang} darkMode={darkMode} />
+        <InxtAppsSection textContent={textContent.InxtAppsSection} lang={lang} />
 
-        <SecuritumSection textContent={textContent.SecuritumSection} darkMode={darkMode} />
+        <SecuritumSection textContent={textContent.SecuritumSection} />
 
-        <BetterTomorrowSection textContent={textContent.BetterTomorrowSection} lang={lang} darkMode={darkMode} />
+        <BetterTomorrowSection textContent={textContent.BetterTomorrowSection} lang={lang} />
 
-        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} darkMode={darkMode} />
+        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
 
         <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} darkMode={darkMode} />
       </Layout>

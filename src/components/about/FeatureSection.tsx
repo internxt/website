@@ -3,26 +3,17 @@ import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 import HorizontalScrollableSection from './HorizontalScrollableSection';
 
-const FeatureSection = ({ darkMode = false, textContent }) => {
+const FeatureSection = ({ textContent }) => {
   return (
     <section
-      className="overflow-hidden"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #0D0D0D 63.1%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)',
-      }}
+      className="overflow-hidden bg-[linear-gradient(180deg,#F4F8FF_63.1%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_63.1%,#1C1C1C_100%)]"
     >
-      <HorizontalScrollableSection textContent={textContent.ScrollableSection} darkMode={darkMode} />
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} />
       <section
-        className={`flex flex-col-reverse items-center justify-center gap-8 ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } py-10 lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+        className="flex flex-col-reverse items-center justify-center gap-8 bg-white dark:bg-gray-95 py-10 lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80"
       >
         <div
-          className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-          } lg:left-32 lg:right-32 `}
+          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
         />
         <RevealX direction="right" className="hidden lg:flex">
           <video
@@ -57,16 +48,12 @@ const FeatureSection = ({ darkMode = false, textContent }) => {
         </RevealX>
         <div className="flex w-[554px] flex-col items-center justify-center space-y-6 md:items-start">
           <p
-            className={`w-[345px] text-30 font-bold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:w-[480px] lg:text-5xl`}
+            className="w-[345px] text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:w-[480px] lg:text-5xl"
           >
             {textContent.BetterFutureSection.title}
           </p>
           <p
-            className={`w-[345px] text-base font-normal leading-tight ${
-              darkMode ? 'text-green-120' : 'text-gray-55'
-            } lg:w-[554px]`}
+            className="w-[345px] text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[554px]"
           >
             {textContent.BetterFutureSection.description}
           </p>

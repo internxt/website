@@ -7,7 +7,6 @@ import PasswordInput from '@/components/shared/PasswordInput';
 export const MAX_PASSWORD_LENGTH = 50;
 
 interface InputsComponentProps {
-  darkMode?: boolean;
   textContent: IntegratedCheckoutText['authComponent'];
   errors: FieldErrors<IFormValues>;
   authError?: string;
@@ -17,7 +16,6 @@ interface InputsComponentProps {
 export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
 export const InputsComponent = ({
-  darkMode = false,
   register,
   textContent,
   errors,
@@ -26,7 +24,7 @@ export const InputsComponent = ({
   return (
     <>
       <div className="flex w-full flex-col gap-1">
-        <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-100'}`}>
+        <p className="text-sm text-gray-100 dark:text-cool-gray-30">
           {textContent.signup.emailAddress}
         </p>
         <TextInput
@@ -37,12 +35,11 @@ export const InputsComponent = ({
           required={true}
           minLength={{ value: 1, message: textContent.emailMustNotBeEmpty }}
           error={errors.email}
-          darkMode={darkMode}
         />
       </div>
 
       <div className="flex w-full flex-col gap-1">
-        <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-100'}`}>{textContent.signup.password}</p>
+        <p className="text-sm text-gray-100 dark:text-cool-gray-30">{textContent.signup.password}</p>
         <label className="space-y-0.5">
           <PasswordInput
             placeholder={'Password'}
@@ -56,7 +53,6 @@ export const InputsComponent = ({
               message:
                 'Password must contain 6 letters or more, at least one digit, mix between uppercase and lowercase letters, one special character.',
             }}
-            darkMode={darkMode}
           />
         </label>
       </div>

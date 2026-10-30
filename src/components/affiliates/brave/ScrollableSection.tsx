@@ -3,8 +3,8 @@ import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
 
-const ScrollableSection = ({ darkMode = false, textContent }) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
+const ScrollableSection = ({ textContent }) => {
+  const borderClass = 'border-gray-10 dark:border-gray-71';
   const [cardIndex, setCardIndex] = useState(0);
 
   const cardElements = [
@@ -35,23 +35,17 @@ const ScrollableSection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden">
       <section
-        className={`flex flex-col items-center justify-center space-y-12 overflow-hidden ${
-          darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-        } px-5 py-10 lg:py-10`}
+        className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-white dark:bg-gray-95 px-5 py-10 lg:py-10"
       >
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-center space-y-0 text-center lg:pb-10">
           <p
-            className={`text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-3xl`}
+            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
           >
             {textContent.title}
           </p>
           <div className="flex flex-col space-y-6">
             <p
-              className={`w-[323px] pt-10 text-lg leading-tight ${
-                darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-              } lg:w-[980px]`}
+              className="w-[323px] pt-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:w-[980px]"
             >
               {textContent.description}
             </p>
@@ -71,14 +65,12 @@ const ScrollableSection = ({ darkMode = false, textContent }) => {
                 }}
               >
                 <p
-                  className={`text-left text-2xl font-medium ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
-                  } hover:text-primary`}
+                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
                 >
                   {info.title}
                 </p>
               </button>
-              <div className={`h-8 border-r-4 ${darkMode ? 'border-gray-71' : 'border-gray-10'} pr-8 last:hidden`} />
+              <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 last:hidden" />
             </Fragment>
           ))}
         </div>
@@ -87,11 +79,11 @@ const ScrollableSection = ({ darkMode = false, textContent }) => {
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
-                <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardElements[cardIndex].title}
                 </p>
                 <ReactMarkdown
-                  className={`markdown text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                  className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30"
                 >
                   {cardElements[cardIndex].description}
                 </ReactMarkdown>
@@ -104,16 +96,14 @@ const ScrollableSection = ({ darkMode = false, textContent }) => {
         {cardElements.map((info) => (
           <div
             key={info.title}
-            className={`flex flex-col items-start justify-start rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 sm:p-10 md:max-w-[488px]`}
+            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 sm:p-10 md:max-w-[488px]"
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
-              <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                 {info.title}
               </p>
-              <ReactMarkdown className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+              <ReactMarkdown className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                 {info.description}
               </ReactMarkdown>
             </div>

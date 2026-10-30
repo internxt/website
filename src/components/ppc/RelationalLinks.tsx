@@ -9,7 +9,6 @@ interface Card {
 }
 
 interface RelationalLinksProps {
-  darkMode?: boolean;
   textContent: {
     title: string;
     links: Card[];
@@ -25,7 +24,7 @@ const shuffleData = (data: Card[]): Card[] => {
   return shuffled;
 };
 
-const RelationalLinks = ({ darkMode = false, textContent }: RelationalLinksProps) => {
+const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   const [cards, setCards] = useState<Card[]>([]);
   const router = useRouter();
 
@@ -56,9 +55,7 @@ const RelationalLinks = ({ darkMode = false, textContent }: RelationalLinksProps
   const updateScrollButtons = () => {
     if (scrollContainerRef.current === null) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-    
     const maxScrollLeft = scrollWidth - clientWidth;
-    
     setScrollState({
       canGoLeft: scrollLeft > 2,
       canGoRight: scrollLeft < maxScrollLeft - 2,
@@ -106,12 +103,10 @@ const RelationalLinks = ({ darkMode = false, textContent }: RelationalLinksProps
   if (cards.length === 0) return null;
 
   return (
-    <section className={`flex w-full flex-col items-center justify-center overflow-hidden py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20 dark:bg-gray-95">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
         <p
-          className={`mb-8 text-center text-4xl font-semibold ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } lg:mb-14 lg:text-5xl`}
+          className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl"
         >
           {textContent.title}
         </p>
@@ -137,9 +132,7 @@ const RelationalLinks = ({ darkMode = false, textContent }: RelationalLinksProps
               }}
             >
               <div
-                className={`flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl ${
-                  darkMode ? 'bg-gray-105' : 'bg-gray-1'
-                } p-10 transition-colors ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20'}`}
+                className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105"
               >
                 <LinkTo linkToRedirect={card.link} text={card.cta} />
               </div>

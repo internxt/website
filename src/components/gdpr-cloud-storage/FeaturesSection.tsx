@@ -3,8 +3,8 @@ import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
 
-const FeaturesSection = ({ darkMode = false, textContent }) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-10';
+const FeaturesSection = ({ textContent }) => {
+  const borderClass = 'border-gray-10 dark:border-gray-71';
   const [cardIndex, setCardIndex] = useState(0);
 
   const cardInfo = [
@@ -33,18 +33,16 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className={`overflow-hidden py-10 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden py-10 dark:bg-gray-95">
       <section className="flex flex-col items-center justify-center  overflow-hidden px-5 ">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
           <h2
-            className={`text-30 font-semibold leading-tight ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } lg:text-3xl`}
+            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
           >
             {textContent.title}
           </h2>
           <div className="flex flex-col space-y-6">
-            <p className={`text-base leading-tight ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-lg`}>
+            <p className="text-base leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-lg">
               {textContent.description}
             </p>
           </div>
@@ -63,14 +61,12 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
                 }}
               >
                 <h3
-                  className={`text-left text-2xl font-medium ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
-                  } hover:text-primary`}
+                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
                 >
                   {info.title}
                 </h3>
               </button>
-              <div className={`h-8 border-r-4 ${darkMode ? 'border-gray-71' : 'border-gray-10'} pr-8 last:hidden`} />
+              <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 last:hidden" />
             </Fragment>
           ))}
         </div>
@@ -79,7 +75,7 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
-                <p className={`text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardInfo[cardIndex].title}
                 </p>
                 <p className="font-regular text-base sm:text-lg md:text-xl">
@@ -102,13 +98,11 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
         {cardInfo.map((info) => (
           <div
             key={info.title}
-            className={`flex flex-col items-start justify-start rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 sm:p-10 md:max-w-[488px]`}
+            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 sm:p-10 md:max-w-[488px]"
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
-              <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                 {info.title}
               </p>
               {/* Render the description as an array of paragraphs */}
@@ -116,13 +110,13 @@ const FeaturesSection = ({ darkMode = false, textContent }) => {
                 info.description.map((line) => (
                   <p
                     key={line}
-                    className={`mb-4 text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}
+                    className="mb-4 text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg"
                   >
                     {line}
                   </p>
                 ))
               ) : (
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {info.description}
                 </p>
               )}

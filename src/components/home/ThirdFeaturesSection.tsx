@@ -4,9 +4,9 @@ import React from 'react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
 
-const ThirdFeaturesSection = ({ darkMode = false, textContent }) => {
+const ThirdFeaturesSection = ({ textContent }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
         <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
@@ -28,13 +28,11 @@ const ThirdFeaturesSection = ({ darkMode = false, textContent }) => {
         >
           <Gift size={60} className="text-primary" />
           <p
-            className={`mb-6 text-4xl font-semibold ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            } sm:text-5xl sm:leading-tight`}
+            className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight"
           >
             {textContent.title}
           </p>
-          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           <div>
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"

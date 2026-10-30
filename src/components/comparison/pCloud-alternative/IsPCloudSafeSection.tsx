@@ -1,6 +1,6 @@
 import { Barcode, ChartPolar, Envelope, Keyhole } from '@phosphor-icons/react';
 
-export const IsPCloudSafeSection = ({ darkMode = false, textContent }) => {
+export const IsPCloudSafeSection = ({ textContent }) => {
   const cards = [
     {
       icon: Envelope,
@@ -25,28 +25,26 @@ export const IsPCloudSafeSection = ({ darkMode = false, textContent }) => {
   ];
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20">
       <div className="content flex flex-col items-center justify-center gap-16">
         <div className="flex max-w-3xl flex-col items-center justify-center gap-6 text-center">
-          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
-          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.description}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } p-8 sm:p-10 md:max-w-[488px]`}
+              className="flex flex-col items-start justify-start rounded-2xl bg-white dark:bg-gray-95 p-8 sm:p-10 md:max-w-[488px]"
             >
               <card.icon className="mb-6 text-4xl text-red" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
-                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                   {card.title}
                 </p>
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {card.subtitle}
                 </p>
               </div>

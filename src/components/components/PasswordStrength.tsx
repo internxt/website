@@ -1,12 +1,10 @@
 export interface PasswordStrengthProps {
-  darkMode?: boolean;
   label?: string;
   strength: 'error' | 'warning' | 'success';
 }
 
 export default function PasswordStrength(props: PasswordStrengthProps): JSX.Element {
-  const darkMode = props.darkMode ?? false;
-  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
+  const bgClass = 'bg-gray-10 dark:bg-gray-71';
   let activeBackground: string;
   let labelColor: string;
 

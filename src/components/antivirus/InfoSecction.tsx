@@ -1,13 +1,12 @@
 import { ReactNode } from 'react';
 
 export interface InfoSectionProps {
-  darkMode?: boolean;
   FirstComponent?: ReactNode;
 }
 
-export const InfoSection: React.FC<InfoSectionProps> = ({ darkMode = false, FirstComponent }) => {
+export const InfoSection: React.FC<InfoSectionProps> = ({ FirstComponent }) => {
   return (
-    <section className={`overflow-hidden  px-5 lg:py-20 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="overflow-hidden px-5 lg:py-20 dark:bg-gray-95">
       <div className="flex flex-col items-center gap-16">{FirstComponent}</div>
     </section>
   );

@@ -1,22 +1,19 @@
 interface SecureYourCompanyProps {
-  darkMode?: boolean;
   textContent: any;
 }
 
-export const SecureYourCompany = ({ darkMode = false, textContent }: SecureYourCompanyProps): JSX.Element => (
-  <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-5 py-10 lg:py-20`}>
+export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.Element => (
+  <section className="overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:py-20">
     <div
-      className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-        darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-      } lg:left-32 lg:right-32`}
+      className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
     ></div>
     <div className="flex flex-col items-center justify-center gap-12">
       <div className="flex w-[350px] flex-col gap-4 text-center lg:w-[800px] lg:gap-8">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl `}>
+        <h2 className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </h2>
         <h3
-          className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}
+          className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
         >
           {textContent.description}
         </h3>
@@ -26,7 +23,7 @@ export const SecureYourCompany = ({ darkMode = false, textContent }: SecureYourC
         {textContent.cards.map((card) => (
           <div className="flex w-[190px] flex-col gap-[15px] text-center lg:w-[230px]" key={card.title}>
             <p className="text-30 font-semibold text-blue-62 lg:text-3xl">{card.title}</p>
-            <p className={`text-base font-medium leading-6 ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-xl`}>
+            <p className="text-base font-medium leading-6 text-gray-100 dark:text-white-95 lg:text-xl">
               {card.description}
             </p>
           </div>
@@ -34,9 +31,7 @@ export const SecureYourCompany = ({ darkMode = false, textContent }: SecureYourC
       </div>
 
       <p
-        className={`w-[350px] text-center text-sm leading-tight ${
-          darkMode ? 'text-green-120' : 'text-gray-60'
-        } lg:w-full lg:text-base`}
+        className="w-[350px] text-center text-sm leading-tight text-gray-60 dark:text-green-120 lg:w-full lg:text-base"
       >
         {textContent.footerText}
       </p>

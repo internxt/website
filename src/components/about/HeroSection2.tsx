@@ -2,15 +2,13 @@ import React from 'react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
 
-const HeroSection2 = ({ darkMode = false, textContent, lang }) => (
+const HeroSection2 = ({ textContent, lang }) => (
   <section className="relative flex w-full flex-col overflow-hidden pt-20 md:pt-20">
     <div className="relative flex flex-col items-center py-20 lg:py-40">
       {/* Main title */}
       <div className="relative space-y-20 px-6 text-center md:space-y-28">
         <h1
-          className={`relative z-10 text-left text-5xl ${
-            darkMode ? 'text-white-95' : 'text-cool-gray-90'
-          } sm:text-center md:text-6xl lg:text-7xl`}
+          className="relative z-10 text-left text-5xl text-cool-gray-90 dark:text-white-95 sm:text-center md:text-6xl lg:text-7xl"
         >
           {textContent.title.line1} <br className="hidden lg:flex" />
           <span className={`${lang === 'fr' ? '' : 'text-primary'}`}>
@@ -47,7 +45,7 @@ const HeroSection2 = ({ darkMode = false, textContent, lang }) => (
             </div>
           </div>
 
-          <h3 className={`mb-10 text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} lg:mb-20`}>
+          <h3 className="mb-10 text-xl font-normal text-cool-gray-80 dark:text-cool-gray-30 lg:mb-20">
             {textContent.description.line1} <br className="hidden md:flex" />
             {textContent.description.line2}
           </h3>

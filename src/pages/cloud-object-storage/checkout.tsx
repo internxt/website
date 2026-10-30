@@ -14,7 +14,8 @@ import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
+import { isDarkModePage } from '@/theme.config';
 import { notificationService } from '@/components/Snackbar';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
@@ -73,9 +74,11 @@ const PRICE_ID = IS_PRODUCTION
   ? (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string)
   : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
-const IntegratedCheckout = ({ darkMode = false, textContent }: IntegratedCheckoutProps): JSX.Element => {
+const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Element => {
   const paymentService = new ObjStoragePaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
+  const pathname = usePathname();
+  const darkMode = isDarkModePage(pathname ?? '');
 
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();

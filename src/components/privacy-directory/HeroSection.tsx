@@ -6,7 +6,7 @@ const HeroSection = ({ darkMode = false, textContent, lang, bannerText }) => (
   <>
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
-        <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h1>
       </div>

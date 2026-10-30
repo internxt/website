@@ -5,15 +5,10 @@ import HeroSafeArea from '../HeroSafeArea';
 import Link from 'next/link';
 import { Check } from '@phosphor-icons/react';
 
-const HeroSection = ({ darkMode = false, textContent }) => (
+const HeroSection = ({ textContent }) => (
   <section
     className="h-[600 px]
-    flex w-full flex-row justify-center lg:h-[695px]"
-    style={{
-      background: darkMode
-        ? 'linear-gradient(360deg, #1C1C1C 0%, #082D66 85.17%)'
-        : 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)',
-    }}
+    flex w-full flex-row justify-center lg:h-[695px] bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
   >
     <HeroSafeArea>
       <div
@@ -26,9 +21,7 @@ const HeroSection = ({ darkMode = false, textContent }) => (
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
               <p
-                className={`text-30 font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
-                } lg:text-5xl`}
+                className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
               >
                 {textContent.title}
               </p>
@@ -39,9 +32,7 @@ const HeroSection = ({ darkMode = false, textContent }) => (
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
                   <p
-                    className={`mb-2 text-left text-sm font-normal ${
-                      darkMode ? 'text-white-95' : 'text-gray-95'
-                    } xs-md:text-lg `}
+                    className="mb-2 text-left text-sm font-normal text-gray-95 dark:text-white-95 xs-md:text-lg"
                   >
                     {feat}
                   </p>
@@ -49,7 +40,7 @@ const HeroSection = ({ darkMode = false, textContent }) => (
               ))}
             </div>
             <div className="h-[44px] w-full lg:h-min">
-              <p className={`text-base font-normal ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-95 dark:text-white-95 lg:text-xl">
                 {textContent.subTitle}
               </p>
             </div>

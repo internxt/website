@@ -2,25 +2,23 @@
 import React from 'react';
 import { getImage } from '@/lib/getImage';
 
-const ManifestoSection = ({ darkMode = false, textContent }) => (
-  <section className={`relative flex w-full flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`}>
+const ManifestoSection = ({ textContent }) => (
+  <section className="relative flex w-full flex-col bg-gray-1 dark:bg-gray-105">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
       <div className="px-6 text-center">
-        <h2 className={`mb-10 text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        <h2 className="mb-10 text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.section1.title.line1}
         </h2>
 
         <h3
-          className={`mb-10 w-full max-w-[850px] text-lg font-normal ${
-            darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-          } sm:text-xl`}
+          className="mb-10 w-full max-w-[850px] text-lg font-normal text-gray-80 dark:text-cool-gray-30 sm:text-xl"
         >
           {textContent.section1.subtitle.line1}
         </h3>
 
         <div className="flex flex-col items-center">
-          <p className={`mb-4 text-sm font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}  sm:text-base`}>
+          <p className="mb-4 text-sm font-semibold text-gray-80 dark:text-cool-gray-30 sm:text-base">
             {textContent.section1.signature.line1} <br /> {textContent.section1.signature.line2}
           </p>
           <img

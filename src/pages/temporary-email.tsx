@@ -38,12 +38,12 @@ const TempEmail = ({ darkMode = false, lang, metatags, textContent, footerLang, 
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner darkMode={darkMode} />}
-        <FeaturesBanner darkMode={darkMode} />
+        {dialogAction.dialogIsOpen(GlobalDialog.TempMailAction) && <ActionBanner />}
+        <FeaturesBanner />
 
-        <SignupSection textContent={textContent.SignupSection} darkMode={darkMode} />
+        <SignupSection textContent={textContent.SignupSection} />
 
         <QASection textContent={textContent.QASection} darkMode={darkMode} />
 

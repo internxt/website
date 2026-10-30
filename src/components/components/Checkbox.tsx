@@ -2,7 +2,6 @@ import { Check } from '@phosphor-icons/react';
 import { MouseEventHandler } from 'react';
 
 interface CheckboxProps {
-  darkMode?: boolean;
   id: string;
   checked: boolean;
   showCheckIcon?: boolean;
@@ -13,7 +12,6 @@ interface CheckboxProps {
 }
 
 function Checkbox({
-  darkMode = false,
   id,
   checked,
   showCheckIcon,
@@ -22,7 +20,7 @@ function Checkbox({
   className,
   rounded,
 }: Readonly<CheckboxProps>): JSX.Element {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-30';
+  const borderClass = 'border-gray-30 dark:border-gray-71';
   const uncheckedClass = `${borderClass} hover:border-gray-40`;
   return (
     <button className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
@@ -40,7 +38,7 @@ function Checkbox({
             {showCheckIcon ? (
               <Check size={16} weight="bold" />
             ) : (
-              <div className={`rounded-full ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-1`} />
+              <div className="rounded-full bg-white dark:bg-gray-95 p-1" />
             )}
           </div>
         )}

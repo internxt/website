@@ -83,7 +83,7 @@ const HomeAssistantPage = ({ darkMode = false, metatagsDescriptions, textContent
                 individuals: decimalDiscount,
                 lifetime: decimalDiscountForLifetime,
                 }}
-                backgroundGradientColor={darkMode ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)' : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'}
+                backgroundGradientColor="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
                 lifetimeCoupons={lifetimeCoupons}
                 lang={locale}
                 products={products}
@@ -93,15 +93,14 @@ const HomeAssistantPage = ({ darkMode = false, metatagsDescriptions, textContent
                 onlyUltimatePlan
                 startFromPlan='Individuals'
                 startIndividualPlansFromInterval={Interval.Year}
-                sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+                sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
                 hideFreeCard
                 darkMode={darkMode}
             />
 
             <ThreeCardsIconsSection
                 textContent={textContent.ThreeCardsSection}
-                cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-                darkMode={darkMode}
+                cardColor="bg-white dark:bg-gray-95"
             />
 
             <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
@@ -109,21 +108,20 @@ const HomeAssistantPage = ({ darkMode = false, metatagsDescriptions, textContent
             <TrustedSection
                 textContent={textContent.TrustedBySection}
                 bottomBar={true}
-                bgColor={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'}`}
+                bgColor="bg-neutral-17 dark:bg-gray-105"
                 darkMode={darkMode}
             />
 
             <ThreeCardsSection
                 textContent={textContent.MadeInEuropeSection}
-                bgColor={darkMode ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)' : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'}
+                bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
                 darkMode={darkMode}
             />
 
             <MinimalFooter
                 footerLang={footerLang.FooterSection}
                 lang={locale}
-                bgColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-                darkMode={darkMode}
+                bgColor="bg-white dark:bg-gray-95"
             />
 
         </Layout>

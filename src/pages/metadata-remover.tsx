@@ -108,12 +108,11 @@ const Scan = ({ darkMode = false, metatagsDescriptions, langJson, toolsContent, 
         {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Metadata Remover', url: '/metadata-remover' }])}
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={langJson.HeroSection} lang={lang} darkMode={darkMode} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
       <TryInternxtBanner
         textContent={bannerLang.tryOutInternxtGeneralBanner}
         url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
-        darkMode={darkMode}
       />
 
       <FeaturesSection
@@ -127,19 +126,17 @@ const Scan = ({ darkMode = false, metatagsDescriptions, langJson, toolsContent, 
         textContent={langJson.CtaSection1}
         url={'https://internxt.com/drive'}
         customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection1.description}</p>}
-        darkMode={darkMode}
       />
-      <FeaturesSlider textContent={langJson.FeaturesSlider} cardInfo={cardInfo} darkMode={darkMode} />
+      <FeaturesSlider textContent={langJson.FeaturesSlider} cardInfo={cardInfo} />
 
-      <FeaturesSliderImg textContent={langJson.FeaturesSliderImg} cardInfo={cardInfoImg} darkMode={darkMode} />
+      <FeaturesSliderImg textContent={langJson.FeaturesSliderImg} cardInfo={cardInfoImg} />
 
-      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <CtaSection
         textContent={langJson.CtaSection2}
         url={CTA_URL}
         customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection2.description}</p>}
-        darkMode={darkMode}
       />
 
       <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />

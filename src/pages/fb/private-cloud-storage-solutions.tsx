@@ -137,7 +137,6 @@ const PrivateCloudStorageSolutions = ({
             </>
           }
           height="h-min"
-          darkMode={darkMode}
         />
 
         <FeatureSection
@@ -147,7 +146,6 @@ const PrivateCloudStorageSolutions = ({
           ctaText={textContent.FeatureSection.cta}
           ctaLink={CTA_URL}
           cards={cardsData}
-          darkMode={darkMode}
         />
 
         <CtaSection
@@ -156,10 +154,9 @@ const PrivateCloudStorageSolutions = ({
           customDescription={
             <p className="w-full text-xl font-normal leading-tight">{textContent.CtaSection1.description}</p>
           }
-          darkMode={darkMode}
         />
 
-        <FeaturesSection textContent={textContent.FeaturesSection} darkMode={darkMode} />
+        <FeaturesSection textContent={textContent.FeaturesSection} />
 
         <CtaSection
           textContent={textContent.CtaSection2}
@@ -167,14 +164,13 @@ const PrivateCloudStorageSolutions = ({
           customDescription={
             <p className="w-full text-xl font-normal leading-tight">{textContent.CtaSection2.description}</p>
           }
-          darkMode={darkMode}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} darkMode={darkMode} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
         <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-        <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+        <RelationalLinks textContent={relationalLinksText} />
 
         <Footer
           textContent={footerLang}

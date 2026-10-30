@@ -1,7 +1,6 @@
 import Spinner from './Spinner';
 
 interface ButtonProps {
-  darkMode?: boolean;
   text: string;
   showSpinner?: boolean;
   className?: string;
@@ -14,7 +13,6 @@ interface ButtonProps {
 }
 
 const Button = ({
-  darkMode = false,
   text,
   className,
   type,
@@ -25,7 +23,7 @@ const Button = ({
   hoverColor,
   onClick,
 }: ButtonProps): JSX.Element => {
-  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-10';
+  const bgClass = 'bg-gray-10 dark:bg-gray-71';
   return (
     <button
       onClick={onClick}

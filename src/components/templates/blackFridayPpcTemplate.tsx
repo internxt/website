@@ -118,7 +118,7 @@ const BlackFridayPpcTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize ?? '5TB'}
-        sectionDetails="bg-[#1C1C1C] lg:py-20"
+        sectionDetails="bg-gray-95 lg:py-20"
         darkMode
         hideFreeCard
       />
@@ -143,15 +143,14 @@ const BlackFridayPpcTemplate = ({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="py-10 lg:py-20 bg-[#1C1C1C]"
-        darkMode={darkMode}
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgPadding="py-10 lg:py-20 bg-gray-95"
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
-        bgColor="bg-[#1C1C1C] text-white"
-        cardColor="bg-[#1C1C1C]"
+        bgColor="bg-gray-95 text-white"
+        cardColor="bg-gray-95"
         textColor="text-white"
         percentageDiscount={percentOff}
         needsH2
@@ -161,10 +160,9 @@ const BlackFridayPpcTemplate = ({
       <MinimalFooter
         footerLang={footerLang.FooterSection}
         lang={lang}
-        bgColor="bg-[#1C1C1C]"
+        bgColor="bg-gray-95"
         logoColor="white"
         textColor="text-gray-50"
-        darkMode={darkMode}
       />
     </Layout>
   );

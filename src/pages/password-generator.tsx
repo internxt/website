@@ -43,13 +43,13 @@ const PasswordGenerator = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-        <HeroSection textContent={langJson.HeroSection} lang={lang} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} darkMode={darkMode} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} bgColor={`${darkMode ? 'bg-gray-105' : 'bg-gray-1'}`} darkMode={darkMode} />
+        <ToolsSection textContent={toolsContent} lang={lang} bgColor="bg-gray-1 dark:bg-gray-105" />
 
-        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} darkMode={darkMode} />
+        <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
         <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 

@@ -10,7 +10,7 @@ interface PasswordProperties {
   symbols: boolean;
 }
 
-const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrackScore, regenerate }) => {
+const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate }) => {
   const [passwordProperties, setPasswordProperties] = useState<PasswordProperties>({
     length: '13',
     uppercase: true,
@@ -76,11 +76,11 @@ const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrack
     <>
       <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-3 lg:space-y-0">
         <div className="flex flex-row items-center space-x-3">
-          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">
             {textContent.length}
           </p>
-          <div className={`flex  rounded-lg border ${darkMode ? 'border-gray-71' : 'border-gray-10'} px-2 py-1`}>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <div className="flex rounded-lg border border-gray-10 dark:border-gray-71 px-2 py-1">
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {passwordProperties.length}
             </p>
           </div>
@@ -116,10 +116,9 @@ const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrack
                   });
                 }}
                 checked={passwordProperties.uppercase}
-                darkMode={darkMode}
               />
             </div>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {textContent.options.uppercase}
             </p>
           </div>
@@ -136,10 +135,9 @@ const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrack
                   });
                 }}
                 checked={passwordProperties.lowercase}
-                darkMode={darkMode}
               />
             </div>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {textContent.options.lowercase}
             </p>
           </div>
@@ -156,10 +154,9 @@ const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrack
                   });
                 }}
                 checked={passwordProperties.numbers}
-                darkMode={darkMode}
               />
             </div>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {textContent.options.numbers}
             </p>
           </div>
@@ -176,10 +173,9 @@ const PasswordSettings = ({ darkMode = false, textContent, setPassword, setCrack
                   });
                 }}
                 checked={passwordProperties.symbols}
-                darkMode={darkMode}
               />
             </div>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {textContent.options.symbols}
             </p>
           </div>

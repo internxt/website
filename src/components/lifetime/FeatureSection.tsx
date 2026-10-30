@@ -18,18 +18,16 @@ const InfinityIcon = () => (
 );
 
 const FeatureSection = ({
-  darkMode = false,
   textContent,
   withoutCta,
   backgroundColor,
 }: {
-  darkMode?: boolean;
   textContent: any;
   withoutCta?: boolean;
   backgroundColor?: string;
 }) => {
-  const bgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
-  const bgClass2 = darkMode ? 'bg-gray-105' : 'bg-gray-1';
+  const bgClass = 'bg-white dark:bg-gray-95';
+  const bgClass2 = 'bg-gray-1 dark:bg-gray-105';
   const router = useRouter();
   const Cards = [
     {
@@ -58,12 +56,10 @@ const FeatureSection = ({
     <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
         <div
-          className={`flex flex-col items-center justify-center space-y-6 text-center ${
-            darkMode ? 'text-white-95' : 'text-black'
-          }`}
+          className="flex flex-col items-center justify-center space-y-6 text-center text-black dark:text-white-95"
         >
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className={`max-w-5xl text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <p className="max-w-5xl text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.description}
           </p>
 
@@ -92,10 +88,10 @@ const FeatureSection = ({
             >
               <card.icon className=" text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
-                <p className={`mb-6 text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="mb-6 text-2xl font-medium text-gray-100 dark:text-white-95">
                   {card.title}
                 </p>
-                <p className={`text-base ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} sm:text-lg`}>
+                <p className="text-base text-cool-gray-80 dark:text-cool-gray-30 sm:text-lg">
                   {card.description}
                 </p>
               </div>

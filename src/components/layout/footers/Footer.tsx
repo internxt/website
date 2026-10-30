@@ -14,6 +14,8 @@ import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
 import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
+const SOCIAL_ICON_DARK_FILTER = 'dark:[filter:brightness(0)_invert(0.78)]';
+
 export default function Footer({
   textContent,
   lang,
@@ -71,15 +73,15 @@ export default function Footer({
   };
 
   const mobileResourcesHeaderClass = `${
-    darkMode ? 'text-gray-1' : 'text-gray-100'
+    darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
   } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
-  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60';
+  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120';
   const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
 
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
+      className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-gray-95 text-white' : 'dark:bg-gray-95 dark:text-white'}`}
     >
       {lang === 'es' && (
         <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
@@ -92,14 +94,13 @@ export default function Footer({
         </div>
       )}
       <div
-        className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56"
-        style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
+        className={`flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56 ${darkMode ? '' : 'bg-[linear-gradient(180deg,#FFFFFF_0%,#E5EFFF_100%)] dark:bg-none'}`}
       >
-        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10 dark:bg-cool-gray-90'} h-[1px] lg:mb-10`} />
         {breadcrumbItems && breadcrumbItems.length > 0 && (
           <Breadcrumb
             items={breadcrumbItems}
-            className={`flex w-full py-3 pb-10 text-xs  ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+            className={`flex w-full py-3 pb-10 text-xs  ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
           />
         )}
 
@@ -108,7 +109,7 @@ export default function Footer({
             <div className="flex flex-1 flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
-                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
                   {textContent.DownloadApp.description}
                 </p>
               </div>
@@ -161,7 +162,7 @@ export default function Footer({
             <div className="flex w-full flex-col gap-3 lg:w-1/3 2xl:w-1/3">
               <div className="flex flex-col gap-1">
                 <p className="text-lg font-medium">{textContent.NewsletterSection.title}</p>
-                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
                   {textContent.NewsletterSection.description}
                 </p>
               </div>
@@ -184,7 +185,7 @@ export default function Footer({
             ${
               darkMode
                 ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary'
-                : 'border-cool-gray-20 bg-white focus:border-blue-50'
+                : 'border-cool-gray-20 bg-white focus:border-blue-50 dark:border-cool-gray-70 dark:bg-cool-gray-90 dark:focus:border-primary'
             } focus:ring focus:ring-primary focus:ring-opacity-20`}
                   required
                 />
@@ -208,18 +209,18 @@ export default function Footer({
           )}
         </div>
 
-        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:my-10`} />
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10 dark:bg-cool-gray-90'} h-[1px] lg:my-10`} />
 
         <footer className="flex w-full items-center justify-center">
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
             <div className="flex w-full flex-row justify-between md:justify-between">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
                     {textContent.FooterSection.sections.products.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
@@ -254,7 +255,7 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.mail}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                          darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'
                         } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
@@ -265,7 +266,7 @@ export default function Footer({
                       {textContent.FooterSection.sections.products.photos}
                       <span
                         className={`ml-2  h-max items-center justify-center rounded-2 ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                          darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'
                         } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
                       >
                         {textContent.FooterSection.new}
@@ -290,15 +291,15 @@ export default function Footer({
 
               <div
                 className={`flex max-w-[14%] flex-1 flex-col items-center ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } lg:flex-none`}
               >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
                     {textContent.FooterSection.sections.company.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <Link href="/about" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.company.about}
@@ -346,15 +347,15 @@ export default function Footer({
 
               <div
                 className={`flex max-w-[14%] flex-1 flex-col items-center ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } lg:flex-none`}
               >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
                     {textContent.FooterSection.sections.join.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
@@ -397,15 +398,15 @@ export default function Footer({
 
               <div
                 className={`flex max-w-[34%] flex-1 flex-col items-center ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } lg:flex-none`}
               >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>
                     {textContent.FooterSection.sections.resources.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <a
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -661,15 +662,15 @@ export default function Footer({
               </div>
               <div
                 className={`flex max-w-[18%] flex-1 flex-col items-center ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } lg:flex-none`}
               >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
                     {textContent.FooterSection.sections.tools.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.byteConverter}
@@ -702,15 +703,15 @@ export default function Footer({
 
               <div
                 className={`flex max-w-[14%] flex-1 flex-col items-center ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
+                  darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'
                 } lg:flex-none`}
               >
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
                     {textContent.FooterSection.sections.features.title}
                   </p>
                   <div
-                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
                   >
                     <Link
                       href="/private-cloud-storage-solutions"
@@ -791,7 +792,7 @@ export default function Footer({
                   alt="Eturia logo"
                   width={60}
                   height={60}
-                  className={darkMode ? DARK_MODE_LOGO_FILTER : ''}
+                  className={DARK_MODE_LOGO_FILTER}
                   style={{
                     maxWidth: '100%',
                     height: 'auto',
@@ -803,7 +804,7 @@ export default function Footer({
                     alt="GDPR Internxt"
                     width={146}
                     height={48}
-                    className={darkMode ? DARK_MODE_LOGO_FILTER : ''}
+                    className={DARK_MODE_LOGO_FILTER}
                     style={{
                       maxWidth: '100%',
                       height: 'auto',
@@ -835,6 +836,7 @@ export default function Footer({
                     width={110}
                     height={12}
                     loading="lazy"
+                    className={darkMode ? '' : 'dark:brightness-0 dark:invert'}
                     src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                     style={{
@@ -843,7 +845,7 @@ export default function Footer({
                     }}
                   />
                 </Link>
-                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
@@ -882,6 +884,7 @@ export default function Footer({
                     width={16}
                     height={16}
                     loading="lazy"
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
@@ -900,6 +903,7 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
@@ -914,6 +918,7 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
@@ -930,7 +935,7 @@ export default function Footer({
           {/* Mobile version */}
           <div
             className={`${
-              darkMode ? 'bg-[#1C1C1C] text-white' : 'bg-gray-5 bg-opacity-50'
+              darkMode ? 'bg-gray-95 text-white' : 'bg-gray-5 bg-opacity-50 dark:bg-gray-95 dark:text-white dark:bg-opacity-100'
             } flex flex-col overflow-hidden lg:hidden`}
           >
             <Disclosure as="div" className="w-screen">
@@ -938,16 +943,16 @@ export default function Footer({
                 <>
                   <Disclosure.Button
                     className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                      darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -958,9 +963,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col px-6 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} ${
+                      className={`flex flex-col px-6 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} ${
                         !open ? 'hidden' : 'flex'
-                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'} space-y-8 p-4`}
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
@@ -1026,16 +1031,16 @@ export default function Footer({
                 <>
                   <Disclosure.Button
                     className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                      darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -1046,9 +1051,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${
                         !open ? 'hidden' : 'flex'
-                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
                         {textContent.FooterSection.sections.company.about}
@@ -1092,16 +1097,16 @@ export default function Footer({
                 <>
                   <Disclosure.Button
                     className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                      darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -1112,9 +1117,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${
                         !open ? 'hidden' : 'flex'
-                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
@@ -1162,11 +1167,11 @@ export default function Footer({
                   <Disclosure.Button className={mobileResourcesHeaderClass}>
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${open ? 'flex' : 'hidden'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'flex' : 'hidden'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -1177,7 +1182,7 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${
                         open ? 'flex' : 'hidden'
                       } ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
@@ -1697,16 +1702,16 @@ export default function Footer({
                 <>
                   <Disclosure.Button
                     className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                      darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -1717,9 +1722,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${
                         !open ? 'hidden' : 'flex'
-                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.byteConverter}
@@ -1759,16 +1764,16 @@ export default function Footer({
                 <>
                   <Disclosure.Button
                     className={`${
-                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                      darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'
                     } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
                   >
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
                     <CaretDown
-                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                     <CaretUp
-                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}
+                      className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}
                       weight="bold"
                     />
                   </Disclosure.Button>
@@ -1779,9 +1784,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-6 font-semibold ${
+                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${
                         !open ? 'hidden' : 'flex'
-                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'} space-y-8 p-4`}
+                      } ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
                     >
                       <Link href="/private-cloud-storage-solutions" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.privateCloud}
@@ -1819,7 +1824,7 @@ export default function Footer({
             <LanguageMobileBox darkMode={darkMode} />
 
             <div
-              className={`flex flex-col items-center space-y-4 py-10 ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+              className={`flex flex-col items-center space-y-4 py-10 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}
             >
               <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
@@ -1855,6 +1860,7 @@ export default function Footer({
                     width={16}
                     height={16}
                     loading="lazy"
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
@@ -1873,6 +1879,7 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
@@ -1887,6 +1894,7 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
+                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
@@ -1898,19 +1906,20 @@ export default function Footer({
                 </Link>
               </div>
 
-              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
                 {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
               </p>
 
               <Link
                 href="/"
                 locale={lang}
-                className={`flex flex-shrink-0 ${darkMode ? 'text-white-95' : 'text-gray-100'}`}
+                className={`flex flex-shrink-0 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}
               >
                 <Image
                   width={96}
                   height={10.5}
                   loading="lazy"
+                  className={darkMode ? '' : 'dark:brightness-0 dark:invert'}
                   src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                   style={{
@@ -1925,7 +1934,7 @@ export default function Footer({
         {lang === 'es' && (
           <p
             className={`text- max-w-[896px] pb-5 pt-10 text-center text-xs ${
-              darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+              darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'
             }`}
           >
             {textContent.FooterSection.financialProject}

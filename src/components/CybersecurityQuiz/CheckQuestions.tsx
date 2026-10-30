@@ -3,7 +3,7 @@ import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 
-const CheckQuestions = ({ darkMode = false, textContent, answers, correctAnswers }) => {
+const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   const isCorrectAnswer = correctAnswers.map((answer, index) => {
     return answers[index] === answer;
   });
@@ -46,19 +46,19 @@ const CheckQuestions = ({ darkMode = false, textContent, answers, correctAnswers
     <section className="overflow-hidden">
       <div className="flex  flex-col items-center justify-center px-5 pt-32 xl:pt-40">
         <div className="flex w-full max-w-[847px] flex-col space-y-6 text-center">
-          <p className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {getTitle()?.title}
           </p>
-          <ReactMarkdown className={`markdown text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <ReactMarkdown className="markdown text-xl text-gray-80 dark:text-cool-gray-30">
             {getTitle()?.subtitle}
           </ReactMarkdown>
           <p className="text-9xl font-bold text-primary">
             {correctAnswerLength}
             {textContent.totalQuestions}
           </p>
-          <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.shareTheResults}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.shareTheResults}</p>
           <div className="flex flex-row items-center justify-center space-x-6">
-            <p className={`text-xl font-bold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-xl font-bold text-gray-80 dark:text-cool-gray-30">
               {textContent.shareYourResults}
             </p>
             <div className="flex flex-row space-x-4">
@@ -97,7 +97,6 @@ const CheckQuestions = ({ darkMode = false, textContent, answers, correctAnswers
             <QuestionsSection
               textContent={textContent.QuestionsSection}
               isCorrectAnswer={isCorrectAnswer}
-              darkMode={darkMode}
             />
           </div>
         </div>

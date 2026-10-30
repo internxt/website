@@ -42,7 +42,7 @@ export const PriceTableForAlternativePricing = ({
   handleOnPlanButtonClicked,
 }: PriceTableForAlternativePricingProps): JSX.Element => {
   const bgClass = 'bg-white text-cool-gray-80';
-  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50';
+  const textClass = 'text-cool-gray-50 dark:text-cool-gray-30';
   const iconsFeatures = [ShieldCheck, HandCoins, ClockCounterClockwise];
   const priceText = require(`@/assets/lang/${lang}/pricing.json`);
 
@@ -52,29 +52,27 @@ export const PriceTableForAlternativePricing = ({
         <div className="flex flex-col items-center justify-center gap-10 pb-6">
           <div className="flex flex-col items-center gap-4 text-center">
             <p
-              className={`max-w-[900px] text-center text-4xl font-semibold ${
-                darkMode ? 'text-white-95' : 'text-gray-100'
-              } lg:text-6xl`}
+              className="max-w-[900px] text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-6xl"
             >
               {textContent.title.normal1} <span className="text-primary">{textContent.title.blue2}</span>
               {textContent.title.normal2}
             </p>
-            <p className={`max-w-[550px] text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="max-w-[550px] text-xl text-gray-80 dark:text-cool-gray-30">
               {textContent.description}
             </p>
           </div>
         </div>
 
-        <div className={`flex w-screen border ${darkMode ? 'border-gray-71' : 'border-gray-10'}`} />
+        <div className="flex w-screen border border-gray-10 dark:border-gray-71" />
 
         <div className="flex flex-col items-center gap-12 pt-10">
           <div className="flex flex-col items-center gap-6">
-            <p className={`text-center text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <p className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95">
               {textContent.howMuchStorage}
             </p>
             <div
               id="billingButtons"
-              className={`flex w-max flex-row rounded-lg ${darkMode ? 'bg-gray-80' : 'bg-cool-gray-10'} p-0.5`}
+              className="flex w-max flex-row rounded-lg bg-cool-gray-10 dark:bg-gray-80 p-0.5"
             >
               {availableStorage?.map((plan) => (
                 <button
@@ -113,10 +111,9 @@ export const PriceTableForAlternativePricing = ({
                       isOffer
                       coupon={coupons.subscription}
                       currencyValue={currencyValue}
-                      darkMode={darkMode}
                     />
                   ))
-                : SKELETON_KEYS.map((key) => <CardSkeleton key={key} darkMode={darkMode} />)}
+                : SKELETON_KEYS.map((key) => <CardSkeleton key={key} />)}
             </div>
             {showFreeCard ? (
               <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">
@@ -129,7 +126,7 @@ export const PriceTableForAlternativePricing = ({
           {iconsFeatures.map((Icon, index) => (
             <div key={textContent.features[index]} className="flex flex-row gap-6 md:items-center">
               <Icon size={40} className="text-primary" />
-              <p className={`pt-1 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} md:pt-0`}>
+              <p className="pt-1 text-xl font-medium text-gray-100 dark:text-white-95 md:pt-0">
                 {textContent.features[index]}
               </p>
             </div>

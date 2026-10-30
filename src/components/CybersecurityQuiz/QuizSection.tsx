@@ -30,7 +30,7 @@ interface AnswerQuestionsSectionProps {
 
 const View = (viewSelected: ViewProps | undefined) => {
   const darkMode = viewSelected?.darkMode ?? false;
-  const bgClass = darkMode ? 'bg-gray-71' : 'bg-gray-20';
+  const bgClass = 'bg-gray-20 dark:bg-gray-71';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
 
@@ -110,7 +110,6 @@ const View = (viewSelected: ViewProps | undefined) => {
                   showCheckIcon
                   checked={currentCheckbox === 'A'}
                   id="A"
-                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].A}</p>
               </button>
@@ -124,7 +123,6 @@ const View = (viewSelected: ViewProps | undefined) => {
                   showCheckIcon
                   rounded="rounded-md"
                   id="B"
-                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].B}</p>
               </button>
@@ -138,7 +136,6 @@ const View = (viewSelected: ViewProps | undefined) => {
                   checked={currentCheckbox === 'C'}
                   showCheckIcon
                   id="C"
-                  darkMode={darkMode}
                 />
                 <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].C}</p>
               </button>
@@ -153,7 +150,6 @@ const View = (viewSelected: ViewProps | undefined) => {
                     checked={currentCheckbox === 'D'}
                     showCheckIcon
                     id="C"
-                    darkMode={darkMode}
                   />
                   <p className="text-xl">{textContent.QuizSection.questions[currentQuestion].D}</p>
                 </button>
@@ -259,7 +255,6 @@ const View = (viewSelected: ViewProps | undefined) => {
           textContent={textContent.CheckQuestions}
           answers={savedAnswers}
           correctAnswers={textContent.QuizSection.correctAnswers}
-          darkMode={darkMode}
         />
         <Footer textContent={footerLang} lang="en" darkMode={darkMode} />
       </>

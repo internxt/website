@@ -100,7 +100,7 @@ const AnnualPage = ({
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         popularPlanBySize="2TB"
-        sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
         hideFreeCard
         darkMode={darkMode}
       />
@@ -117,7 +117,7 @@ const AnnualPage = ({
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} darkMode={darkMode} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
 };

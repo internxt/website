@@ -80,6 +80,7 @@ interface ComparisonPageProps {
     showThreeCards?: boolean;
     privacyBgGradient?: string;
     alternativeBgColor?: string;
+    alternativeBgColorLight?: string;
   };
   couponCodeName?: PromoCodeName;
   isS3Alternative?: boolean;
@@ -151,12 +152,9 @@ export const ComparisonPage = ({
 
   const {
     showThreeCards = false,
-    privacyBgGradient = darkMode
-      ? 'linear-gradient(180deg, #1C1C1C 0%, #3A1412 50%, #1C1C1C 100%)'
-      : 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)',
-    alternativeBgColor = darkMode
-      ? 'linear-gradient(180deg, #1C1C1C 0%, #0E2A16 50%, #1C1C1C 100%)'
-      : 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)',
+    privacyBgGradient = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]',
+    alternativeBgColor = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]',
+    alternativeBgColorLight = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)]',
   } = customSections;
 
   return (
@@ -174,7 +172,7 @@ export const ComparisonPage = ({
         <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} percentage={percentageDiscount} darkMode={darkMode} />
 
         {isS3Alternative && langJson.PriceCardSection ? (
-          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} darkMode={darkMode} />
+          <CloudObjectStoragePriceCardSection textContent={langJson.PriceCardSection} />
         ) : (
           <PricingSectionWrapper
             textContent={langJson.tableSection}
@@ -187,22 +185,18 @@ export const ComparisonPage = ({
             products={products}
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
-            sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 py-10`}
+            sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
             darkMode={darkMode}
           />
         )}
 
-        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} darkMode={darkMode} />
+        <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
 
         {showThreeCards && langJson.WhyNeedAlternativeSection && (
           <ThreeCardsSection
             textContent={langJson.WhyNeedAlternativeSection}
-            bgColor={
-              darkMode
-                ? 'linear-gradient(180deg, #0D0D0D 0%, #3A1412 50%, #1C1C1C 100%)'
-                : 'linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)'
-            }
-            cardColor={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
+            bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#3A1412_50%,#1C1C1C_100%)]"
+            cardColor="bg-white dark:bg-gray-95"
             bottomSeparationBar={true}
             darkMode={darkMode}
           />
@@ -212,8 +206,7 @@ export const ComparisonPage = ({
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColor}
-          darkMode={darkMode}
+          bgColor={alternativeBgColorLight}
         />
 
         <FloatingCtaSectionv2
@@ -221,18 +214,17 @@ export const ComparisonPage = ({
           url={'/pricing'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-0">
-              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
                 {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
-              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
                 {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
               </p>
             </div>
           }
-          containerDetails={`shadow-lg backdrop-blur-[55px] ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           bgPadding="px-20 py-10"
-          darkMode={darkMode}
         />
 
         <FAQSection textContent={langJson.FaqSection} percentageDiscount={percentageDiscount?.toString()} darkMode={darkMode} />

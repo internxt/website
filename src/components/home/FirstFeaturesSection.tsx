@@ -4,21 +4,19 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
-const FirstFeaturesSection = ({ darkMode = false, textContent, lang }) => {
+const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} py-20`}>
+    <section className="overflow-hidden bg-white dark:bg-gray-95 py-20">
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center gap-8">
           <div
-            className={`flex w-full max-w-3xl flex-col items-center gap-6 px-6 text-center font-semibold ${
-              darkMode ? 'text-white-95' : 'text-black'
-            }`}
+            className="flex w-full max-w-3xl flex-col items-center gap-6 px-6 text-center font-semibold text-black dark:text-white-95"
           >
             <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
-            <h3 className={`max-w-3xl text-xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <h3 className="max-w-3xl text-xl font-semibold text-gray-100 dark:text-white-95">
               {textContent.subtitle}
             </h3>
-            <p className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-xl font-normal text-gray-80 dark:text-cool-gray-30">
               {textContent.description}
             </p>
           </div>

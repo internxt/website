@@ -15,7 +15,7 @@ const Legal = ({ darkMode = false, lang, metatagsDescriptions, textContent, navb
       </Script>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <TermsAndConditionsOverview textContent={textContent} lang={lang} darkMode={darkMode} />
+      <TermsAndConditionsOverview textContent={textContent} lang={lang} />
 
       <Footer lang={lang} textContent={footerLang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Legal Terms and Conditions', url: '/legal' }]} darkMode={darkMode} />
     </Layout>

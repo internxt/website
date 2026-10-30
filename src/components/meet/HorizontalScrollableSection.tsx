@@ -5,15 +5,13 @@ import Image from 'next/image';
 import { MeetPageText } from '@/assets/meet';
 
 interface HorizontalScrollableSectionWithPhotosProps {
-  darkMode?: boolean;
   textContent: MeetPageText['desginedSection'];
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
-  darkMode = false,
   textContent,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
-  const hoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -89,28 +87,21 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)',
-      }}
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20 bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
     >
       <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
+        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
       ></div>
       <div className="flex h-min w-[350px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+        <h2 className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </h2>
         {textContent.subtitle && (
-          <p className={`text-lg font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-70'} lg:text-2xl`}>
+          <p className="text-lg font-medium text-gray-70 dark:text-cool-gray-30 lg:text-2xl">
             {textContent.subtitle}
           </p>
         )}
-        <p className={`text-base font-normal leading-tight ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
           {textContent.description}
         </p>
       </div>
@@ -153,11 +144,9 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   className="flex rounded-16 lg:hidden"
                 />
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
-                  <p className={`pb-6 text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>{title}</p>
+                  <p className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">{title}</p>
                   <p
-                    className={`flex-1 text-base font-normal leading-tight ${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    }`}
+                    className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
                   >
                     {cardDescriptions[index]}
                   </p>
@@ -171,9 +160,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >
@@ -182,9 +169,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-              } transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${
                 currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`
               }`}
             >

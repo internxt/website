@@ -27,13 +27,13 @@ export const PlanSelectorForMobile = ({
   hideBillingController,
   hideStorageSelector,
 }: PlanSwitchProps): JSX.Element => {
-  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50';
+  const textClass = darkMode ? 'text-cool-gray-30' : 'text-cool-gray-50 dark:text-cool-gray-30';
   return (
     <>
       {!hideBillingController && (
         <div
           className={`flex w-full flex-row items-center justify-center border-b-[1px] ${
-            darkMode ? 'border-gray-71' : 'border-gray-10'
+            darkMode ? 'border-gray-71' : 'border-gray-10 dark:border-gray-71'
           } py-2 text-base`}
         >
           <button
@@ -66,7 +66,7 @@ export const PlanSelectorForMobile = ({
         <div
           id="billingButtons"
           className={`flex w-[345px] flex-row justify-between rounded-lg ${
-            darkMode ? 'bg-gray-80' : 'bg-cool-gray-10'
+            darkMode ? 'bg-gray-80' : 'bg-cool-gray-10 dark:bg-gray-80'
           } p-0.5`}
         >
           <button

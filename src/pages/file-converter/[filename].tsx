@@ -40,14 +40,13 @@ const FileConverter = ({
         converterText={converterText}
         errorContent={errorContent}
         pathname={pathname}
-        darkMode={darkMode}
       />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} darkMode={darkMode} />
+      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} />
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" darkMode={darkMode} />
+      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
 
-      <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+      <ToolsSection textContent={toolsContent} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} darkMode={darkMode} />
     </Layout>

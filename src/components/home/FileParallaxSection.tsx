@@ -1,12 +1,10 @@
 import { getImage } from '@/lib/getImage';
 import Image from "next/image";
 
-export default function FileParallaxSection({ darkMode = false }: Readonly<{ darkMode?: boolean }>) {
+export default function FileParallaxSection() {
   return (
     <section
-      className={`pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden ${
-        darkMode ? 'bg-gradient-to-b from-[#001D6C] to-[#121923]' : 'bg-gray-5'
-      } md:h-[440px]`}
+      className="pointer-events-none relative flex h-96 select-none items-center justify-center overflow-hidden bg-gray-5 dark:bg-gradient-to-b dark:from-[#001D6C] dark:to-[#121923] md:h-[440px]"
     >
       <div
         className="flex shrink-0 transform-gpu items-center justify-center space-x-12 will-change-transform md:space-x-20"

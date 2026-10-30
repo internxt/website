@@ -5,7 +5,6 @@ import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 
 interface WhyChooseInternxtForBusinessProps {
-  darkMode?: boolean;
   textContent: any;
   withoutBanner?: boolean;
 }
@@ -18,7 +17,6 @@ const scrollToTop = () => {
 };
 
 export const WhyChooseInternxtForBusiness = ({
-  darkMode = false,
   textContent,
   withoutBanner,
 }: WhyChooseInternxtForBusinessProps): JSX.Element => {
@@ -50,7 +48,7 @@ export const WhyChooseInternxtForBusiness = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} px-5 py-20`}>
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-20">
         {/* Banner */}
         {withoutBanner ? undefined : (
@@ -75,9 +73,9 @@ export const WhyChooseInternxtForBusiness = ({
                 <p className="text-xl">{textContent.WhyChooseInternxt.banner.description}</p>
               </div>
               <div className="flex flex-col items-center gap-4 lg:flex-row ">
-                <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} darkMode={darkMode} />
+                <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} />
                 <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
-                <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} darkMode={darkMode} />
+                <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
               </div>
             </div>
             <div className="hidden items-center lg:flex">
@@ -92,10 +90,10 @@ export const WhyChooseInternxtForBusiness = ({
         )}
         {/* Title and description */}
         <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
-          <h2 className={`text-5xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.WhyChooseInternxt.title}
           </h2>
-          <h3 className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+          <h3 className="text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.WhyChooseInternxt.description}
           </h3>
         </div>
@@ -103,8 +101,7 @@ export const WhyChooseInternxtForBusiness = ({
         {/* Cards */}
         <CardGroup
           cards={cards}
-          backgroundColorCard={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}
-          darkMode={darkMode}
+          backgroundColorCard="bg-white dark:bg-gray-95"
         />
       </div>
     </section>

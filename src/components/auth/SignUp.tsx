@@ -100,7 +100,6 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           required
           id="email"
           disabled={props.loading}
-          darkMode={darkMode}
         />
 
         <div className="space-y-0.5">
@@ -117,9 +116,8 @@ export default function SignUp(props: Readonly<SignUpProps>) {
             required
             disabled={props.loading}
             onChange={(e) => checkPassword(e)}
-            darkMode={darkMode}
           />
-          {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} darkMode={darkMode} />}
+          {passwordState && <PasswordStrength strength={passwordState.tag} label={passwordState.label} />}
         </div>
 
         <TextInput
@@ -130,7 +128,6 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           id="redeemCode"
           required
           disabled={props.loading}
-          darkMode={darkMode}
         />
 
         {error && (
@@ -153,9 +150,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           <span>{props.textContent.SignUp.disclaimer.text}</span>{' '}
           <a
             href="/legal"
-            className={`${darkMode ? 'hover:text-green-120' : 'hover:text-gray-60'} hover:underline ${
-              darkMode ? 'active:text-cool-gray-30' : 'active:text-gray-80'
-            }`}
+            className="hover:text-gray-60 dark:hover:text-green-120 hover:underline active:text-gray-80 dark:active:text-cool-gray-30"
           >
             {props.textContent.SignUp.disclaimer.link}
           </a>

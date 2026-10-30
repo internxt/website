@@ -11,7 +11,7 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
   );
 
   return (
-    <section className={`relative ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} py-20 lg:pb-0 lg:pt-10`}>
+    <section className="relative bg-gray-1 dark:bg-gray-105 py-20 lg:pb-0 lg:pt-10">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center ">
           <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
@@ -40,9 +40,9 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
           <div className="flex flex-col items-center space-y-6">
-            <h3 className={`text-4xl font-semibold sm:text-5xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.whyToScan.title}</h3>
+            <h3 className="text-4xl font-semibold sm:text-5xl text-gray-100 dark:text-white-95">{textContent.whyToScan.title}</h3>
             <div className="flex flex-col">
-              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                 {textContent.whyToScan.description}
               </p>
             </div>
@@ -52,8 +52,8 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
             {/* Viruses hate privacy */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
-                <p className={` text-3xl font-semibold md:text-start ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.virusesHatePrivacy.title}</p>
-                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className="text-3xl font-semibold md:text-start text-gray-100 dark:text-white-95">{textContent.virusesHatePrivacy.title}</p>
+                <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                   {textContent.virusesHatePrivacy.description}
                 </p>
               </div>
@@ -85,8 +85,8 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
                   }} />
               </div>
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
-                <p className={` text-3xl font-semibold md:text-start ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.stopMalware.title}</p>
-                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className="text-3xl font-semibold md:text-start text-gray-100 dark:text-white-95">{textContent.stopMalware.title}</p>
+                <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                   {textContent.stopMalware.description}
                 </p>
               </div>
@@ -114,16 +114,16 @@ const FeaturesSection = ({ darkMode = false, textContent, bannerText, lang }) =>
 
             {/* Free online scanner */}
             <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
-              <p className={` text-4xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.freeOnlineScanner.title}</p>
-              <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">{textContent.freeOnlineScanner.title}</p>
+              <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                 {textContent.freeOnlineScanner.description}
               </p>
             </div>
             {/* Scan files card and info */}
             <div className="flex flex-col items-center md:flex-row md:space-x-16">
               <div className="flex flex-col justify-center space-y-5 pb-7 md:max-w-md md:pb-0 md:text-left">
-                <p className={` text-3xl font-semibold md:text-start ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.scanFiles.title}</p>
-                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                <p className="text-3xl font-semibold md:text-start text-gray-100 dark:text-white-95">{textContent.scanFiles.title}</p>
+                <p className="text-xl text-gray-80 dark:text-cool-gray-30">
                   {maliciousMalwareText}
                   {lang === 'en' && (
                     <button

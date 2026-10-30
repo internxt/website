@@ -8,12 +8,11 @@ import { removeMetadata as removeFileMetadata, SUPPORTED_TYPES } from '@/lib/met
 import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
-  darkMode?: boolean;
   textContent: MetadataRemoverText['HeroSection'];
   lang: string;
 }
 
-const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -192,7 +191,7 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
               </defs>
             </svg>
           </div>
-          <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>In progress</p>
+          <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">In progress</p>
         </div>
       );
     }
@@ -203,19 +202,15 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
           <div className="flex flex-col items-center space-y-4">
             <CheckCircle weight="fill" size={48} className="text-green-1" />
             <div className="flex flex-col space-y-2">
-              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.table.metadataRemoved}</p>
-              <p className={`text-lg ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+              <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">{textContent.table.metadataRemoved}</p>
+              <p className="text-lg text-cool-gray-60 dark:text-cool-gray-30">
                 {textContent.table.automaticDownload}
               </p>
             </div>
             <div className="flex flex-row items-center space-x-4">
               <button
                 type="button"
-                className={`flex h-12 flex-row items-center rounded-lg border ${
-                  darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-30 bg-white'
-                } px-6 text-lg font-medium ${
-                  darkMode ? 'text-white-95' : 'text-black'
-                } transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base`}
+                className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-6 text-lg font-medium text-black dark:text-white-95 transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                 onClick={handleCancel}
               >
                 {textContent.cancel}
@@ -237,7 +232,7 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
       return (
         <div className="flex h-full w-full flex-col items-center justify-center space-y-6 bg-opacity-3 px-5 py-5">
           <div className="flex flex-col items-center space-y-4">
-            <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>File uploaded successfully</p>
+            <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">File uploaded successfully</p>
             <button
               type="button"
               className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
@@ -255,7 +250,7 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
 
   return (
     <section
-      className={`relative flex flex-row items-center justify-center pb-20 pt-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
+      className="relative flex flex-row items-center justify-center pb-20 pt-32 dark:bg-gray-95"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -285,16 +280,14 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
         >
           <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between">
             <div className="flex w-full flex-col items-center space-y-5 text-center">
-              <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-cool-gray-100'} md:text-6xl`}>
+              <h1 className="text-3xl font-semibold text-cool-gray-100 dark:text-white-95 md:text-6xl">
                 {textContent.title}
               </h1>
-              <p className={`text-xl font-normal ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'} md:text-xl`}>
+              <p className="text-xl font-normal text-cool-gray-80 dark:text-cool-gray-30 md:text-xl">
                 {textContent.subtitle2}
               </p>
               <p
-                className={`md:text-regular flex items-center justify-center gap-2 text-sm font-normal ${
-                  darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
-                }`}
+                className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80 dark:text-cool-gray-30"
               >
                 <CheckCircle size={24} weight="fill" className="text-green-1" />
                 {textContent.secure}
@@ -316,13 +309,11 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                         )}
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
                           <p
-                            className={`max-w-xs truncate text-base font-medium ${
-                              darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
-                            }`}
+                            className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30"
                           >
                             {file?.name}
                           </p>
-                          <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                          <p className="text-sm text-cool-gray-60 dark:text-cool-gray-30">
                             {file?.type}
                           </p>
                         </div>
@@ -345,8 +336,8 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                           >
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center space-y-2">
-                                <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.error.title}</p>
-                                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                                <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
+                                <p className="text-xl text-cool-gray-60 dark:text-cool-gray-30">
                                   File type not supported
                                 </p>
                               </div>
@@ -375,8 +366,8 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                           >
                             <div className="flex flex-col items-center space-y-6">
                               <div className="flex flex-col items-center">
-                                <p className={`text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.maxFileSize.title}</p>
-                                <p className={`text-xl ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                                <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.maxFileSize.title}</p>
+                                <p className="text-xl text-cool-gray-60 dark:text-cool-gray-30">
                                   {textContent.maxFileSize.description}
                                 </p>
                               </div>
@@ -405,11 +396,9 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                           >
                             <div className="flex w-full flex-col items-center space-y-6">
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
-                                <p className={`px-4 text-center text-2xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.fileSelected}</p>
+                                <p className="px-4 text-center text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.fileSelected}</p>
                                 <p
-                                  className={`w-full truncate px-10 text-center text-lg font-semibold ${
-                                    darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
-                                  } lg:w-auto lg:max-w-md xl:max-w-xl`}
+                                  className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl"
                                 >
                                   {file?.name}
                                 </p>
@@ -417,11 +406,7 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                               <div className="flex flex-row items-center justify-center space-x-4">
                                 <button
                                   type="button"
-                                  className={`flex h-12 flex-row items-center rounded-lg border ${
-                                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-30 bg-white'
-                                  } px-6 text-lg font-medium ${
-                                    darkMode ? 'text-white-95' : 'text-black'
-                                  } transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base`}
+                                  className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white dark:border-gray-71 dark:bg-gray-95 px-6 text-lg font-medium text-black dark:text-white-95 transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                                   onClick={() => {
                                     handleCancelProcess();
                                   }}
@@ -463,7 +448,7 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                           maxWidth: "100%",
                           height: "auto"
                         }} />
-                      <p className={`pt-4 text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.dropHere}</p>
+                      <p className="pt-4 text-2xl font-semibold text-gray-100 dark:text-white-95">{textContent.dropHere}</p>
                     </div>
                   </>
                 ) : (
@@ -483,11 +468,11 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                         </div>
                         <div className="flex max-w-[255px] flex-col items-center space-y-4 text-center">
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
-                            <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+                            <p className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
                               {textContent.maxFileSize.description}
                             </p>
                           </div>
-                          <p className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.dropFile.line1}</p>
+                          <p className="text-30 font-semibold text-gray-100 dark:text-white-95">{textContent.dropFile.line1}</p>
                           <button
                             type="button"
                             className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 group-hover:bg-primary group-hover:text-white sm:h-10 sm:px-5 sm:text-base"
@@ -520,17 +505,13 @@ const HeroSection = ({ darkMode = false, textContent }: HeroSectionProps): JSX.E
                   enterTo="opacity-100 translate-y-0"
                 >
                   <div
-                    className={`relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl ${
-                      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                    } p-5 shadow-subtle-hard`}
+                    className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard"
                   >
-                    <p className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.error.title}</p>
+                    <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button
                       type="button"
-                      className={`-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg ${
-                        darkMode ? 'bg-purple-100' : 'bg-blue-10'
-                      } px-5 text-primary transition duration-150 ease-out active:scale-98`}
+                      className="-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 dark:bg-purple-100 px-5 text-primary transition duration-150 ease-out active:scale-98"
                       onClick={() => {
                         handleRestartProcess();
                       }}

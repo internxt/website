@@ -5,7 +5,7 @@ import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
 
-const HeroSection = ({ darkMode = false, textContent }) => {
+const HeroSection = ({ textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
@@ -67,16 +67,16 @@ const HeroSection = ({ darkMode = false, textContent }) => {
     }
   };
 
-  const inactiveStepColor = darkMode ? 'bg-gray-71' : 'bg-gray-10';
+  const inactiveStepColor = 'bg-gray-10 dark:bg-gray-71';
 
   return (
-    <section className={`flex flex-row items-center justify-center pb-8 pt-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section className="flex flex-row items-center justify-center pb-8 pt-32 dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center space-y-6 px-2">
         <div className="lg:max flex flex-col items-center space-y-5 px-4 text-center lg:max-w-2xl lg:px-0">
-          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </h1>
-          <h2 className={`text-lg font-normal ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} lg:text-xl`}>
+          <h2 className="text-lg font-normal text-gray-80 dark:text-cool-gray-30 lg:text-xl">
             <span className="font-semibold">{textContent.subtitle1}</span>
             <br />
             {textContent.subtitle2}
@@ -91,17 +91,11 @@ const HeroSection = ({ darkMode = false, textContent }) => {
                 type={inputTypePassword ? 'password' : 'text'}
                 placeholder={textContent.placeholder}
                 autoComplete="off"
-                className={`h-14 w-full appearance-none rounded-lg border-2 ${
-                  darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-                } pl-4 pr-14 text-2xl ${
-                  darkMode ? 'placeholder-gray-50' : 'placeholder-gray-30'
-                } shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10`}
+                className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 pl-4 pr-14 text-2xl placeholder-gray-30 dark:placeholder-gray-50 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
               />
               <label
                 onClick={() => toggleShowPassword()}
-                className={`absolute right-4 top-3 flex h-8 w-8 cursor-pointer flex-col items-center justify-center ${
-                  darkMode ? 'text-cool-gray-30' : 'text-gray-80'
-                }`}
+                className="absolute right-4 top-3 flex h-8 w-8 cursor-pointer flex-col items-center justify-center text-gray-80 dark:text-cool-gray-30"
               >
                 {inputTypePassword ? <EyeSlash size={28} /> : <Eye size={28} />}
               </label>
@@ -132,24 +126,20 @@ const HeroSection = ({ darkMode = false, textContent }) => {
 
         <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:max-w-2xl lg:flex-row lg:space-x-5 lg:space-y-0">
           <div
-            className={`relative flex h-40 w-full flex-col space-y-1 rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 lg:h-auto lg:w-64`}
+            className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
           >
             <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
-            <span className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
               {crackFeedback}
             </span>
           </div>
 
           <div
-            className={`relative flex h-40 w-full flex-col rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 lg:h-auto lg:w-64`}
+            className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
           >
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.pwned.title}</span>
-              <span className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
                 {pwned}
               </span>
             </div>
@@ -166,13 +156,11 @@ const HeroSection = ({ darkMode = false, textContent }) => {
           </div>
 
           <div
-            className={`flex h-40 w-full flex-col rounded-2xl ${
-              darkMode ? 'bg-gray-105' : 'bg-gray-1'
-            } p-8 lg:h-auto lg:w-64`}
+            className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
           >
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.crack.title}</span>
-              <span className={`text-2xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+              <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
                 {crackTime}
               </span>
             </div>

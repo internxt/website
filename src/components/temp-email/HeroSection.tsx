@@ -237,9 +237,7 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
 
   return (
     <section
-      className={`flex items-start justify-center overflow-hidden px-6 pb-20 pt-32 ${
-        darkMode ? 'bg-[#1C1C1C]' : ''
-      }`}
+      className="flex items-start justify-center overflow-hidden px-6 pb-20 pt-32 dark:bg-gray-95"
     >
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
@@ -260,10 +258,10 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
       </div>
       <div className="flex w-full flex-col items-center justify-center space-y-10  px-2 md:max-w-[720px] ">
         <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center lg:max-w-xl">
-          <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </h1>
-          <p className={`pt-5 text-xl ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.subtitle}</p>
+          <p className="pt-5 text-xl text-gray-80 dark:text-cool-gray-30">{textContent.subtitle}</p>
         </div>
 
         <EmailToolbar
@@ -273,7 +271,6 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
           onCopy={onCopyEmailButtonClicked}
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}
-          darkMode={darkMode}
         />
 
         <Inbox
@@ -286,14 +283,12 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
           darkMode={darkMode}
         />
         <div
-          className={`flex flex-row items-center space-x-1 pt-2 text-center text-sm ${
-            darkMode ? 'text-cool-gray-30' : 'text-gray-70'
-          }`}
+          className="flex flex-row items-center space-x-1 pt-2 text-center text-sm text-gray-70 dark:text-cool-gray-30"
         >
           <Info size={16} className="hidden md:flex" />
           <p>
             {textContent.expireEmail.normal}{' '}
-            <span className={`font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+            <span className="font-semibold text-gray-100 dark:text-white-95">
               {textContent.expireEmail.bold}
             </span>
             .

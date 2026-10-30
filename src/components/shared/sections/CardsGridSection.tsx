@@ -1,5 +1,4 @@
 interface CardsGridSectionProps {
-  darkMode?: boolean;
   textContent: {
     title: string;
     description?: string;
@@ -16,10 +15,9 @@ interface CardsGridSectionProps {
 }
 
 export const CardsGridSection = ({
-  darkMode = false,
   textContent,
-  bgColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
-  cardColor = `${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`,
+  bgColor = 'bg-white dark:bg-gray-95',
+  cardColor = 'bg-white dark:bg-gray-95',
   needsH2 = true,
   needsH3 = true,
   topSeparationBar = true,
@@ -31,24 +29,20 @@ export const CardsGridSection = ({
     <section className={`relative flex w-full flex-col items-center overflow-hidden ${bgColor} py-10 lg:py-20`}>
       {topSeparationBar && (
         <div
-          className={`absolute left-8 right-8 top-0 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-          } lg:left-32 lg:right-32`}
+          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
         />
       )}
 
       <div className="flex w-full max-w-[345px] flex-col gap-10 lg:max-w-[1000px] lg:gap-16">
         <div className="flex flex-col gap-6">
           <TitleTag
-            className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-5xl`}
+            className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
           >
             {textContent.title}
           </TitleTag>
           {textContent.description && (
             <p
-              className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
-              } lg:text-lg`}
+              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
             >
               {textContent.description}
             </p>
@@ -59,17 +53,13 @@ export const CardsGridSection = ({
           {textContent.cards.titles.map((title, index) => (
             <div
               key={title}
-              className={`flex flex-col gap-4 rounded-16 border ${
-                darkMode ? 'border-gray-71' : 'border-gray-10'
-              } ${cardColor} p-6 lg:p-8`}
+              className={`flex flex-col gap-4 rounded-16 border border-gray-10 dark:border-gray-71 ${cardColor} p-6 lg:p-8`}
             >
-              <CardTitleTag className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+              <CardTitleTag className="text-lg font-medium text-gray-95 dark:text-white-95 lg:text-xl">
                 {title}
               </CardTitleTag>
               <p
-                className={`text-sm font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:text-base`}
+                className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
               >
                 {textContent.cards.descriptions[index]}
               </p>

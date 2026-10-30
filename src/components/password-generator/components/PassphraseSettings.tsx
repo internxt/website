@@ -17,7 +17,7 @@ const space = {
   ru: 'Пробел',
 };
 
-const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCrackScore, regenerate }) => {
+const PassphraseSettings = ({ textContent, setPassword, setCrackScore, regenerate }) => {
   const [passphraseProperties, setPassphraseProperties] = useState<PassphraseProperties>({
     words: '5',
     separator: '-',
@@ -72,11 +72,11 @@ const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCra
     <div className="flex w-full flex-col space-y-8">
       <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-y-0 lg:space-x-3">
         <div className="flex flex-row items-center space-x-3">
-          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">
             {textContent.length}
           </p>
-          <div className={`flex  rounded-lg border ${darkMode ? 'border-gray-71' : 'border-gray-10'} px-2 py-1`}>
-            <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <div className="flex rounded-lg border border-gray-10 dark:border-gray-71 px-2 py-1">
+            <p className="text-base font-medium text-gray-100 dark:text-white-95">
               {passphraseProperties.words}
             </p>
           </div>
@@ -110,10 +110,9 @@ const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCra
                 });
               }}
               checked={passphraseProperties.capitalize}
-              darkMode={darkMode}
             />
           </div>
-          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">
             {textContent.options.capitalize}
           </p>
         </div>
@@ -128,17 +127,16 @@ const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCra
                 });
               }}
               checked={passphraseProperties.number}
-              darkMode={darkMode}
             />
           </div>
-          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">
             {textContent.options.numbers}
           </p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center lg:flex-row">
         <div className="flex w-full flex-col items-start space-y-3 md:flex-row md:justify-between md:space-y-0">
-          <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">
             {textContent.options.separator.title}
           </p>
           {textContent.options.separator.options.map((item) => (
@@ -153,10 +151,9 @@ const PassphraseSettings = ({ darkMode = false, textContent, setPassword, setCra
                     });
                   }}
                   checked={passphraseProperties.separator === item}
-                  darkMode={darkMode}
                 />
               </div>
-              <p className={`text-base font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+              <p className="text-base font-medium text-gray-100 dark:text-white-95">
                 {item === '\n' ? space[lang as string] : item}
               </p>
             </div>

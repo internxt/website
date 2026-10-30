@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
 
-export const FreeCardPromoBannerPPC = ({ darkMode = false }: { darkMode?: boolean }) => {
+export const FreeCardPromoBannerPPC = () => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -55,19 +55,11 @@ export const FreeCardPromoBannerPPC = ({ darkMode = false }: { darkMode?: boolea
     >
       <div className="flex w-full flex-col items-center justify-center">
         <div
-          className={`relative flex h-[457px] w-full flex-col overflow-hidden rounded-2xl
-        ${darkMode ? 'text-white-95' : 'text-neutral-900'} lg:w-3/4`}
-          style={{
-            background: darkMode
-              ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%)'
-              : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
-          }}
+          className="relative flex h-[457px] w-full flex-col overflow-hidden rounded-2xl text-neutral-900 dark:text-white-95 lg:w-3/4 bg-[linear-gradient(360deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#082D66_0%,#1C1C1C_100%)]"
         >
           <button
             type="button"
-            className={`absolute right-0 top-0 z-50 m-5 flex w-auto ${
-              darkMode ? 'text-white-95' : 'text-gray-100'
-            }`}
+            className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100 dark:text-white-95"
             onClick={onCloseBanner}
           >
             <X size={32} />
@@ -76,23 +68,19 @@ export const FreeCardPromoBannerPPC = ({ darkMode = false }: { darkMode?: boolea
             <div className="flex w-full max-w-[500px] flex-col items-center gap-12 text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-4 text-center lg:text-left">
                 <p
-                  className={`text-3xl font-bold leading-tight ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
-                  } md:text-5xl`}
+                  className="text-3xl font-bold leading-tight text-gray-100 dark:text-white-95 md:text-5xl"
                 >
                   {bannerText.FreeCardPromoBanner.title}
                 </p>
                 <p
-                  className={`text-xl font-semibold leading-tight ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
-                  } md:text-2xl`}
+                  className="text-xl font-semibold leading-tight text-gray-100 dark:text-white-95 md:text-2xl"
                 >
                   <span className="text-primary">{bannerText.FreeCardPromoBanner.subtitle.blue}</span>
                   {bannerText.FreeCardPromoBanner.subtitle.normal}
                 </p>
               </div>
               <div className="flex flex-col items-center gap-6 lg:flex-row">
-                <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} darkMode={darkMode} />
+                <Button type="button" text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
                 <button
                   type="button"
                   className="text-xl font-medium text-primary underline hover:no-underline"
@@ -103,7 +91,7 @@ export const FreeCardPromoBannerPPC = ({ darkMode = false }: { darkMode?: boolea
               </div>
               <div className="flex flex-row space-x-3 pt-2">
                 <CheckCircle size={24} className="text-primary" weight="bold" />
-                <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-lg`}>
+                <p className="font-medium text-gray-100 dark:text-white-95 lg:text-lg">
                   {bannerText.FreeCardPromoBanner.guarantee}
                 </p>
               </div>

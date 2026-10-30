@@ -4,7 +4,7 @@ import { X, CloudArrowUp, ShieldPlus, Sparkle, CellTower, VideoConference, Envel
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
-const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Element => {
+const FeaturesBanner = (): JSX.Element => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
@@ -47,9 +47,7 @@ const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Eleme
     { id: 'ai', icon: Brain, text: banner.products.ai },
   ];
 
-  const bgColor = darkMode
-    ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%)'
-    : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)';
+  const bgColor = 'bg-[linear-gradient(360deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#082D66_0%,#1C1C1C_100%)]';
 
   return (
     <div
@@ -57,17 +55,12 @@ const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Eleme
       fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
-        className={
-          'left-1/2 top-1/2 flex h-[450px] w-[1100px] rounded-3xl -translate-x-[50%] -translate-y-[50%] flex-row overflow-hidden justify-between absolute inset-0 bg-center bg-no-repeat bg-cover items-center'
-        }
-        style={{ background: bgColor }}
+        className={`left-1/2 top-1/2 flex h-[450px] w-[1100px] rounded-3xl -translate-x-[50%] -translate-y-[50%] flex-row overflow-hidden justify-between absolute inset-0 bg-center bg-no-repeat bg-cover items-center ${bgColor}`}
       >
         <button
           id="close-banner"
           aria-label="close-banner"
-          className={`absolute right-0 top-0 m-3 flex border-[0.1px] border-white ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } dark:text-gray-10 hover:bg-gray-1/10`}
+          className="absolute right-0 top-0 m-3 flex border-[0.1px] border-white text-gray-100 dark:text-white-95 dark:text-gray-10 hover:bg-gray-1/10"
           onClick={handleClose}
         >
           <X size={32} />
@@ -77,34 +70,26 @@ const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Eleme
           <div className="flex flex-col gap-5">
             <div className="flex gap-3 px-1">
               <p
-                className={`text-lg font-semibold text-primary ${
-                  darkMode ? 'bg-gray-71' : 'bg-gray-10'
-                } dark:bg-gray-90 rounded-sm px-1 py-0.5`}
+                className="text-lg font-semibold text-primary bg-gray-10 dark:bg-gray-71 dark:bg-gray-90 rounded-sm px-1 py-0.5"
               >
                 {banner.label.blueText}
               </p>
               <p
-                className={`text-lg font-semibold ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
-                } dark:text-gray-1 px-1 py-0.5`}
+                className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 px-1 py-0.5"
               >
                 {banner.label.text}
               </p>
             </div>
             <div className="flex flex-col gap-4">
               <p
-                className={`text-4xl font-semibold ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
-                } dark:text-gray-1 whitespace-nowrap`}
+                className="text-4xl font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 whitespace-nowrap"
               >
                 {banner.title}
               </p>
               <div className="flex gap-1 px-1">
                 <p className="text-lg font-semibold text-primary">{banner.subTitle.blueText}</p>
                 <p
-                  className={`text-lg font-semibold ${
-                    darkMode ? 'text-white-95' : 'text-gray-100'
-                  } dark:text-gray-1`}
+                  className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1"
                 >
                   {banner.subTitle.text}
                 </p>
@@ -130,9 +115,7 @@ const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Eleme
             <div className="flex flex-row items-center gap-2">
               <ShieldCheck size={24} weight="fill" className="text-primary" />
               <p
-                className={`whitespace-nowrap font-medium ${
-                  darkMode ? 'text-white-95' : 'text-gray-100'
-                } dark:text-gray-1 lg:text-base`}
+                className="whitespace-nowrap font-medium text-gray-100 dark:text-white-95 dark:text-gray-1 lg:text-base"
               >
                 {banner.guarantee}
               </p>
@@ -143,15 +126,11 @@ const FeaturesBanner = ({ darkMode = false }: { darkMode?: boolean }): JSX.Eleme
             {products.map((feature) => (
               <div
                 key={feature.id}
-                className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
-                  darkMode ? 'bg-white/10' : 'bg-white/50'
-                } px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
+                className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
               >
                 <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
                 <p
-                  className={`whitespace-nowrap text-sm font-medium leading-tight ${
-                    darkMode ? 'text-white' : 'text-gray-80'
-                  } dark:text-gray-20`}
+                  className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white dark:text-gray-20"
                 >
                   {feature.text}
                 </p>

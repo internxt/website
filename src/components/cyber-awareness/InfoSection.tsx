@@ -13,7 +13,7 @@ import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import Link from 'next/link';
 
-export const InfoCard = ({ darkMode = false, id, title, title1, img, link }) => {
+export const InfoCard = ({ id, title, title1, img, link }) => {
   const [isShareIcon, setIsShareIcon] = React.useState(null);
   return (
     <Link
@@ -26,10 +26,7 @@ export const InfoCard = ({ darkMode = false, id, title, title1, img, link }) => 
         if ((e.target as any).id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(null)}
-      className={`flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      } p-8 
-        `}
+      className="flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white dark:bg-gray-95 p-8"
     >
       <img key={id} src={img} alt={`${title}`} width={32} height={32} />
       <p className="flex flex-col text-left text-2xl font-medium">
@@ -55,7 +52,7 @@ export const InfoCard = ({ darkMode = false, id, title, title1, img, link }) => 
   );
 };
 
-const InfoSection = ({ darkMode = false, textContent }) => {
+const InfoSection = ({ textContent }) => {
   const router = useRouter();
   const lang = router.locale;
 
@@ -129,7 +126,7 @@ const InfoSection = ({ darkMode = false, textContent }) => {
           )}
           <RevealY className="grid w-full grid-cols-1 justify-items-center gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
             {infoCards.map(({ title1, title, id, img, link }) => (
-              <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} darkMode={darkMode} />
+              <InfoCard id={id} title={title} title1={title1} img={img} link={link} key={title} />
             ))}
           </RevealY>
         </div>

@@ -3,13 +3,11 @@ import moment from 'moment';
 import React from 'react';
 
 const FileItem = ({
-  darkMode = false,
   encrypted,
   className = '',
   title,
   ItemImg,
 }: {
-  darkMode?: boolean;
   title: string;
   className: string;
   ItemImg: any;
@@ -18,7 +16,7 @@ const FileItem = ({
   const fileYear = moment().year();
 
   return (
-    <div className={`${className} flex w-[375px] flex-row ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-4 py-3`}>
+    <div className={`${className} flex w-[375px] flex-row bg-white dark:bg-gray-95 px-4 py-3`}>
       <div className={`flex w-full flex-row items-center justify-between space-x-2`}>
         <div className="flex flex-row space-x-2">
           <ItemImg className={`h-10 w-10 ${encrypted && 'opacity-40'}`} />

@@ -125,20 +125,20 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails={`${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20 xl:py-32`}
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
           freePlanNeedsH2
           darkMode={darkMode}
         />
 
-        <WhatGoogleKnowsSection textContent={textContent.WhatGoogleKnowsSection} darkMode={darkMode} />
+        <WhatGoogleKnowsSection textContent={textContent.WhatGoogleKnowsSection} />
 
-        <CtaSection textContent={textContent.CtaSection1} url={URL_REDIRECT} darkMode={darkMode} />
+        <CtaSection textContent={textContent.CtaSection1} url={URL_REDIRECT} />
 
-        <ManageGoogleDataSection textContent={textContent.ManageGoogleDataSection} darkMode={darkMode} />
+        <ManageGoogleDataSection textContent={textContent.ManageGoogleDataSection} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} darkMode={darkMode} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={textContent.CtaSection2} url={URL_REDIRECT} darkMode={darkMode} />
+        <CtaSection textContent={textContent.CtaSection2} url={URL_REDIRECT} />
 
         <Footer textContent={footerText} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>

@@ -44,20 +44,15 @@ const CleanerPage = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="meet" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
       <HorizontalScrollableSection
         textContent={textContent.enjoyPrivacySection}
-          bgGradient={
-            darkMode
-              ? 'linear-gradient(360deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)'
-          }
+          bgGradient="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
         cardsHeight="245px"
         cardsWidth="352px"
         needsH2={true}
         needsH3={true}
-        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -66,30 +61,25 @@ const CleanerPage = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <p
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
               {textContent.ctaSection.title}
             </p>
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[633px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
               >
               {textContent.ctaSection.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-8`}
-        darkMode={darkMode}
+        bgPadding="bg-neutral-17 dark:bg-gray-105 px-8"
       />
 
-      <AccordionSection textContent={textContent.accordionSection} darkMode={darkMode} />
+      <AccordionSection textContent={textContent.accordionSection} />
 
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} darkMode={darkMode} />
+      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSectionV2}
@@ -97,30 +87,25 @@ const CleanerPage = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
               <p
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
               {textContent.ctaSectionV2.title}
             </p>
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[633px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
               >
               {textContent.ctaSectionV2.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding={`lg:pb-20 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} px-8`}
-        darkMode={darkMode}
+        bgPadding="lg:pb-20 bg-white dark:bg-gray-95 px-8"
       />
 
       <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+      <RelationalLinks textContent={relationalLinksText} />
 
         <Footer
           textContent={footerLang}

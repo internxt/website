@@ -2,17 +2,16 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 interface PhotoSectionProps {
-  darkMode?: boolean;
   textContent: {
     title: string;
     description: string[];
   };
 }
 
-const PhotoSection = ({ darkMode = false, textContent }: PhotoSectionProps): JSX.Element => {
+const PhotoSection = ({ textContent }: PhotoSectionProps): JSX.Element => {
   return (
-    <section className={`flex w-full flex-col items-center justify-center gap-4 px-5 lg:pb-10 lg:gap-14 lg:px-10 lg:py-20 lg:pt-15 xl:px-32 3xl:px-80 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
-      <h2 className={`text-3xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+    <section className="flex w-full flex-col items-center justify-center gap-4 px-5 lg:pb-10 lg:gap-14 lg:px-10 lg:py-20 lg:pt-15 xl:px-32 3xl:px-80 dark:bg-gray-95">
+      <h2 className="text-3xl font-bold text-gray-100 dark:text-white-95 lg:text-5xl">
         {textContent.title}
       </h2>
 
@@ -21,9 +20,7 @@ const PhotoSection = ({ darkMode = false, textContent }: PhotoSectionProps): JSX
           {textContent.description.map((desc) => (
             <p
               key={desc.slice(0, 20)}
-              className={`text-center text-sm font-normal leading-tight ${
-                darkMode ? 'text-green-120' : 'text-gray-55'
-              } lg:text-center lg:text-lg`}
+              className="text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-lg"
             >
               {desc}
             </p>
@@ -42,7 +39,7 @@ const PhotoSection = ({ darkMode = false, textContent }: PhotoSectionProps): JSX
         </div>
       </div>
       <div className="w-full max-w-[1700px] px-5 lg:px-8">
-          <div className={`h-px w-full ${darkMode ? 'bg-gray-71' : 'bg-neutral-35'}`} />
+          <div className="h-px w-full bg-neutral-35 dark:bg-gray-71" />
       </div>
     </section>
   );

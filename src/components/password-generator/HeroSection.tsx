@@ -4,8 +4,8 @@ import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 
-const CheckboxButton = ({ darkMode = false, checked, id }) => {
-  const borderClass = darkMode ? 'border-gray-71' : 'border-gray-30';
+const CheckboxButton = ({ checked, id }) => {
+  const borderClass = 'border-gray-30 dark:border-gray-71';
   return (
     <>
       <div
@@ -19,7 +19,7 @@ const CheckboxButton = ({ darkMode = false, checked, id }) => {
             className={`flex cursor-pointer flex-col items-center justify-center rounded-full
                       text-white`}
           >
-            <div className={`rounded-full ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-1`} />
+            <div className="rounded-full bg-white dark:bg-gray-95 p-1" />
           </div>
         )}
       </div>
@@ -34,9 +34,9 @@ const CheckboxButton = ({ darkMode = false, checked, id }) => {
   );
 };
 
-const HeroSection = ({ darkMode = false, textContent, lang }) => {
-  const borderClass2 = darkMode ? 'border-gray-71' : 'border-gray-10';
-  const textClass = darkMode ? 'text-white-95' : 'text-gray-100';
+const HeroSection = ({ textContent, lang }) => {
+  const borderClass2 = 'border-gray-10 dark:border-gray-71';
+  const textClass = 'text-gray-100 dark:text-white-95';
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
@@ -44,19 +44,19 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
   const passwordProperties = { length: 13 };
   const passphraseProperties = { words: 5 };
 
-  const inactiveStepColor = darkMode ? 'bg-gray-71' : 'bg-gray-10';
+  const inactiveStepColor = 'bg-gray-10 dark:bg-gray-71';
 
   return (
     <section
-      className={`flex items-start justify-center overflow-hidden px-10 pb-20 pt-32 ${darkMode ? 'bg-[#1C1C1C]' : ''}`}
+      className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32 dark:bg-gray-95"
     >
       <div className="flex w-full flex-col items-center justify-center space-y-10  ">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
-            <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+            <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
               {textContent.title}
             </h1>
-            <p className={`text-xl font-semibold ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
+            <p className="text-xl font-semibold text-gray-80 dark:text-cool-gray-30">
               {textContent.subtitle}
             </p>
           </div>
@@ -64,13 +64,9 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
             <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
               <div
                 id="input"
-                className={`flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary ${
-                  darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                } px-3 py-3 text-center ${
-                  darkMode ? 'placeholder-gray-50' : 'placeholder-gray-30'
-                } shadow-subtle outline-none ring-4 ring-primary ring-opacity-10`}
+                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white dark:bg-gray-95 px-3 py-3 text-center placeholder-gray-30 dark:placeholder-gray-50 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
               >
-                <p className={`flex-row text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="flex-row text-xl font-medium text-gray-100 dark:text-white-95">
                   {password}
                 </p>
               </div>
@@ -95,7 +91,7 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
               </div>
               <div className="flex flex-row items-center justify-start space-x-3 text-gray-50">
                 <Info size={16} weight="bold" className="pt-2" />
-                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{textContent.info}</p>
+                <p className="text-sm text-gray-80 dark:text-cool-gray-30">{textContent.info}</p>
               </div>
               <div className="flex w-full flex-col gap-2 md:flex-row">
                 <button
@@ -109,9 +105,7 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
                   <p className="font-medium text-white">{textContent.copy}</p>
                 </button>
                 <button
-                  className={`flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border ${
-                    darkMode ? 'border-gray-71 bg-[#1C1C1C]' : 'border-gray-10 bg-white'
-                  } py-2 ${darkMode ? 'text-white-95 hover:bg-gray-71' : 'text-gray-100 hover:bg-gray-10'}`}
+                  className="flex w-full cursor-pointer select-none flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 py-2 text-gray-100 hover:bg-gray-10 dark:text-white-95 dark:hover:bg-gray-71"
                   onClick={() => {
                     setRegenerate(!regenerate);
                   }}
@@ -130,7 +124,7 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
                   passwordType === 'password' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
-                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} darkMode={darkMode} />
+                <CheckboxButton checked={passwordType === 'password'} id={'uppercase'} />
                 <p className={`text-xl font-medium ${passwordType === 'password' ? textClass : 'text-gray-50'}`}>
                   {textContent.password.title}
                 </p>
@@ -141,7 +135,7 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
                   passwordType === 'passphrase' ? 'border-primary ring-4 ring-primary ring-opacity-10' : borderClass2
                 } p-5`}
               >
-                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} darkMode={darkMode} />
+                <CheckboxButton checked={passwordType === 'passphrase'} id={'lowercase'} />
 
                 <p className={`text-xl font-medium ${passwordType === 'passphrase' ? textClass : 'text-gray-50'}`}>
                   {textContent.passphrase.title}
@@ -154,7 +148,6 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
                 setPassword={setPassword}
                 setCrackScore={setCrackScore}
                 regenerate={regenerate}
-                darkMode={darkMode}
               />
             ) : (
               <PassphraseSettings
@@ -162,7 +155,6 @@ const HeroSection = ({ darkMode = false, textContent, lang }) => {
                 setPassword={setPassword}
                 setCrackScore={setCrackScore}
                 regenerate={regenerate}
-                darkMode={darkMode}
               />
             )}
           </div>

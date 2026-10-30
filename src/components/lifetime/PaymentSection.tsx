@@ -9,7 +9,6 @@ import { highlightKeywords } from '@/utils/highlightKeywords';
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
 interface PaymentSectionProps {
-  darkMode?: boolean;
   lang: string;
   textContent: any;
   discount?: number;
@@ -27,7 +26,6 @@ interface PaymentSectionProps {
 }
 
 const PaymentSection = ({
-  darkMode = false,
   lang,
   textContent,
   couponCode,
@@ -59,23 +57,23 @@ const PaymentSection = ({
       : textContent.description;
 
   return (
-    <section id="payment" className={`overflow-hidden ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'}`}>
+    <section id="payment" className="overflow-hidden bg-white dark:bg-gray-95">
       <div className="flex flex-col space-y-4 pt-10">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             {isElectionsPage ? (
               <div className="flex flex-col items-center gap-4">
-                <p className={`text-5xl font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-5xl font-bold leading-tight text-gray-100 dark:text-white-95">
                   {title.normalText}
                   <span className="text-5xl font-bold text-primary">
                     {formatText(title.blueText, { percent: percent ?? '80' })}
                   </span>
                 </p>
-                <p className={`font-regular text-xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="font-regular text-xl text-gray-100 dark:text-white-95">
                   <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description.normalText) }} />
                   <span className="text-primary">{description.blueText}</span>
                 </p>
-                <p className={`font-regular text-xl ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="font-regular text-xl text-gray-100 dark:text-white-95">
                   <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description.normalText2) }} />
                 </p>
               </div>
@@ -102,7 +100,6 @@ const PaymentSection = ({
               textContent={textContent}
               activeSwitchPlan={activeSwitchPlan}
               onPlanTypeChange={onPlanTypeChange}
-              darkMode={darkMode}
             />
           </div>
         )}
@@ -117,14 +114,13 @@ const PaymentSection = ({
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
           showOffer={showOffer}
-          darkMode={darkMode}
         />
 
         <div className="flex flex-col items-start justify-start space-y-8 pb-12 pl-10 text-center md:flex-row md:space-x-32 md:space-y-0 lg:justify-center">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
-              <p className={`text-xl font-medium ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>{feature.text}</p>
+              <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">{feature.text}</p>
             </div>
           ))}
         </div>

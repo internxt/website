@@ -5,7 +5,7 @@ const HeroSection2 = ({ darkMode = false, textContent, lang, bannerText }) => {
   return (
     <section className="flex flex-col py-[88px] lg:py-16">
       <div className="flex flex-col items-center bg-gradient-to-b from-primary to-primary-dark px-5 py-20">
-        <h1 className={`text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}>
+        <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.header}
         </h1>
       </div>

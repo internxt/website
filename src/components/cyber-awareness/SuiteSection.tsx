@@ -50,7 +50,7 @@ const Globe = () => {
   );
 };
 
-const SuiteSection = ({ darkMode = false, textContent }) => {
+const SuiteSection = ({ textContent }) => {
   const suiteCards = [
     {
       img: HardDrives,
@@ -90,7 +90,7 @@ const SuiteSection = ({ darkMode = false, textContent }) => {
           {suiteCards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col space-y-4 rounded-2xl ${darkMode ? 'bg-gray-105' : 'bg-gray-1'} p-10 `}
+              className="flex flex-col space-y-4 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10"
             >
               <card.img size={30} className="text-primary" />
               <p className="text-2xl font-medium">{card.title}</p>

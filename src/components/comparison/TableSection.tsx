@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { getImage } from '@/lib/getImage';
 
-const TableSection = ({ darkMode = false, textContent }) => {
+const TableSection = ({ textContent }) => {
   const competitors = [
     {
       name: 'Internxt',
@@ -483,29 +483,21 @@ const TableSection = ({ darkMode = false, textContent }) => {
   return (
     <section
       id="buy"
-      className={`relative flex w-full flex-col bg-gradient-to-b ${
-        darkMode ? 'from-[#1C1C1C] via-gray-105 to-[#1C1C1C]' : 'from-white via-neutral-10 to-white'
-      }`}
+      className="relative flex w-full flex-col bg-gradient-to-b from-white via-neutral-10 to-white dark:from-gray-95 dark:via-gray-105 dark:to-gray-95"
     >
       <div className="flex flex-col">
         {/* Table */}
         <div
-          className={`flex w-screen flex-col items-center justify-start overflow-x-auto ${
-            darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-          } py-10 xl:overflow-x-visible`}
+          className="flex w-screen flex-col items-center justify-start overflow-x-auto bg-white dark:bg-gray-95 py-10 xl:overflow-x-visible"
         >
           <div className="mx-auto flex flex-col items-center justify-center px-6">
             <table
-              className={`group relative mb-20 table-auto border-collapse bg-none text-center text-base ${
-                darkMode ? 'text-cool-gray-30' : 'text-cool-gray-80'
-              }`}
+              className="group relative mb-20 table-auto border-collapse bg-none text-center text-base text-cool-gray-80 dark:text-cool-gray-30"
             >
               {/* Competitors */}
-              <thead className={`top-16 z-20 h-44 ${darkMode ? 'text-white-95' : 'text-cool-gray-90'} xl:sticky`}>
+              <thead className="top-16 z-20 h-44 text-cool-gray-90 dark:text-white-95 xl:sticky">
                 <tr
-                  className={`relative z-10 ${
-                    darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-                  } bg-opacity-80 backdrop-blur-md backdrop-filter`}
+                  className="relative z-10 bg-white dark:bg-gray-95 bg-opacity-80 backdrop-blur-md backdrop-filter"
                 >
                   {/* Drag hint */}
                   <th className="pointer-events-none h-44 align-bottom">
@@ -526,9 +518,7 @@ const TableSection = ({ darkMode = false, textContent }) => {
                   <th className="relative p-16 text-lg font-medium">
                     {' '}
                     <div
-                      className={`absolute bottom-0 left-0 flex h-32 w-32 flex-col items-center justify-center space-y-1.5 rounded-t-2xl ${
-                        darkMode ? 'bg-purple-100' : 'bg-blue-10'
-                      }`}
+                      className="absolute bottom-0 left-0 flex h-32 w-32 flex-col items-center justify-center space-y-1.5 rounded-t-2xl bg-blue-10 dark:bg-purple-100"
                     >
                       <img
                         loading="lazy"
@@ -564,11 +554,9 @@ const TableSection = ({ darkMode = false, textContent }) => {
                 <Fragment key={section.name}>
                   {/* Section */}
                   <thead
-                    className={`top-60 z-10 h-14 text-left ${
-                      darkMode ? 'text-white-95' : 'text-cool-gray-90'
-                    } md:h-12 xl:sticky`}
+                    className="top-60 z-10 h-14 text-left text-cool-gray-90 dark:text-white-95 md:h-12 xl:sticky"
                   >
-                    <tr className={`h-14 ${darkMode ? 'bg-gray-105' : 'bg-cool-gray-10'} font-medium md:h-12`}>
+                    <tr className="h-14 bg-cool-gray-10 dark:bg-gray-105 font-medium md:h-12">
                       <td className="whitespace-nowrap rounded-l-lg px-6 text-lg">{section.name}</td>
                       {competitors.map((item) => (
                         <td key={item.name} />
@@ -577,14 +565,14 @@ const TableSection = ({ darkMode = false, textContent }) => {
                   </thead>
 
                   {/* Rows */}
-                  <tbody className={`divide-y ${darkMode ? 'divide-gray-71' : 'divide-cool-gray-10'}`}>
+                  <tbody className="divide-y divide-cool-gray-10 dark:divide-gray-71">
                     {section.rows.map((row, rowIndex) => (
                       <tr className="h-14 md:h-12" key={row.title}>
                         <td className="whitespace-nowrap px-6 text-left text-base">{row.title}</td>
                         <td
                           className={`${
                             rowIndex !== 0 &&
-                            `border-t ${darkMode ? 'border-purple-100' : 'border-blue-20'} border-opacity-50`
+                            `border-t border-blue-20 dark:border-purple-100 border-opacity-50`
                           } bg-primary bg-opacity-6`}
                         >
                           <div className="flex h-full flex-col items-center justify-center">
@@ -609,7 +597,7 @@ const TableSection = ({ darkMode = false, textContent }) => {
                                   <UilMinus className="h-8 w-8 text-cool-gray-20" />
                                 ))}
                               {typeof feature === 'string' && (
-                                <span className={`${darkMode ? 'text-green-120' : 'text-gray-60'}`}>{feature}</span>
+                                <span className="text-gray-60 dark:text-green-120">{feature}</span>
                               )}
                             </div>
                           </td>

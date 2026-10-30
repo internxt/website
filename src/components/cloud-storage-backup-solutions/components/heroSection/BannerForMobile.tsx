@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export const BannerForMobile = ({ darkMode = false }: { darkMode?: boolean }) => {
+export const BannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../../../assets/lang/${lang}/cloud-storage-backup-solutions.json`);
@@ -15,11 +15,11 @@ export const BannerForMobile = ({ darkMode = false }: { darkMode?: boolean }) =>
   return (
     <div className="flex flex-col items-center justify-center lg:hidden">
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className={`text-center text-5xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+        <p className="text-center text-5xl font-bold text-gray-100 dark:text-white-95">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
         <p className="pt-4 text-center text-xl">
-          <span className={`${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+          <span className="text-gray-100 dark:text-white-95">
             {textContent.HeroSection.TitleAndOnePlanV2.description}
           </span>
             </p>
@@ -29,7 +29,6 @@ export const BannerForMobile = ({ darkMode = false }: { darkMode?: boolean }) =>
         >
           {textContent.HeroSection.TitleAndOnePlanV2.cta}
         </button>
-        
         <Image
           src={getImage('/images/campaigns/spring/image_mobile.webp')}
           width={380}

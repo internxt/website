@@ -3,12 +3,10 @@ import { useRef, useState, useEffect } from 'react';
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
 
 interface HowItWorksSectionProps {
-  darkMode?: boolean;
   textContent: ReferAFriendText['HowItWorks'];
 }
 
 export default function HowItWorksSection({
-  darkMode = false,
   textContent,
 }: Readonly<HowItWorksSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -68,16 +66,11 @@ export default function HowItWorksSection({
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-6 overflow-hidden py-10 lg:gap-14 lg:px-20 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{
-        background: darkMode
-          ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
-          : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
-      }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-6 overflow-hidden py-10 lg:gap-14 lg:px-20 lg:py-20 xl:px-32 3xl:px-80 bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]`}
     >
       <div className="flex flex-col items-center gap-2 px-4">
-        <p className={`text-4xl font-bold ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>{textContent.title}</p>
-        <p className={`text-2xl font-medium ${darkMode ? 'text-green-120' : 'text-gray-55'}`}>{textContent.subtitle}</p>
+        <p className="text-4xl font-bold text-gray-100 dark:text-white-95">{textContent.title}</p>
+        <p className="text-2xl font-medium text-gray-55 dark:text-green-120">{textContent.subtitle}</p>
       </div>
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
@@ -91,21 +84,19 @@ export default function HowItWorksSection({
           {textContent.cards.map((card: any, index: number) => (
             <div
               key={index}
-              className={`flex flex-1 shrink-0 flex-col gap-6 rounded-16 ${darkMode ? 'bg-[#1C1C1C]' : 'bg-white'} p-8`}
+              className="flex flex-1 shrink-0 flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
               style={{
                 width: isMobile ? '293px' : 'auto',
               }}
             >
               <span className="flex flex-row items-center gap-2">
                 <p className="text-2xl font-medium text-primary">{index + 1}</p>
-                <p className={`text-center text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'}`}>
+                <p className="text-center text-xl font-medium text-gray-100 dark:text-white-95">
                   {card.title}
                 </p>
               </span>
               <p
-                className={`text-start text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                }`}
+                className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120"
               >
                 {card.description}
               </p>

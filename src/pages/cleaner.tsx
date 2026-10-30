@@ -45,12 +45,12 @@ const CleanerPage = ({
       </Script>
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <FeatureSection textContent={textContent.FeatureSection} darkMode={darkMode} />
+      <FeatureSection textContent={textContent.FeatureSection} />
 
       <div className="lg:py-18">
-        <HorizontalScrollableSection textContent={textContent.WhyUseSection} darkMode={darkMode} />
+        <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
       </div>
 
       <FloatingCtaSectionv2
@@ -58,60 +58,48 @@ const CleanerPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col gap-4 px-6 text-center">
-              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.CtaSection.title}
               </p>
               <p
-                className={`px-10 text-base font-normal ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:px-0 lg:text-xl`}
+                className="px-10 text-base font-normal text-gray-55 dark:text-green-120 lg:px-0 lg:text-xl"
               >
               {textContent.CtaSection.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor={
-            darkMode
-              ? 'linear-gradient(0deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)'
-          }
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          bgGradientColor="bg-[linear-gradient(0deg,#F9F9FC_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
-        darkMode={darkMode}
       />
 
-      <HowItWorksSection textContent={textContent.HowItWorksSection} darkMode={darkMode} />
+      <HowItWorksSection textContent={textContent.HowItWorksSection} />
 
-      <WhenToUseSection textContent={textContent.WhenToUseSection} darkMode={darkMode} />
+      <WhenToUseSection textContent={textContent.WhenToUseSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection2}
         url={'/pricing'}
         customText={
           <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-              <p className={`text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-4xl`}>
+              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.CtaSection2.title}
               </p>
-              <p className={`text-base font-normal ${darkMode ? 'text-green-120' : 'text-gray-55'} lg:text-xl`}>
+              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
                 {textContent.CtaSection2.description}
               </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor={
-            darkMode
-              ? 'linear-gradient(0deg, #082D66 0%, #1C1C1C 100%)'
-              : 'linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)'
-          }
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          bgGradientColor="bg-[linear-gradient(0deg,#E5EEFB_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#082D66_0%,#1C1C1C_100%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="py-10"
-        darkMode={darkMode}
       />
 
       <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-      <RelationalLinks textContent={relationalLinksText} darkMode={darkMode} />
+      <RelationalLinks textContent={relationalLinksText} />
 
         <Footer
           textContent={footerLang}

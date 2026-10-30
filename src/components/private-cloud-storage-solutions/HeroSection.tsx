@@ -9,14 +9,12 @@ import { BannerForMobile } from './components/heroSection/BannerForMobile';
 const Animation = dynamic(() => import('../shared/Animation'));
 
 interface HeroSectionForHomeProps {
-  darkMode?: boolean;
   textContent: any;
   lang: string;
   isHomePageV2?: boolean;
 }
 
 export default function HeroSection({
-  darkMode = false,
   textContent,
   lang,
   isHomePageV2,
@@ -123,9 +121,9 @@ export default function HeroSection({
                 />
               </div>
             ) : (
-              <BannerForMobile darkMode={darkMode} />
+              <BannerForMobile />
             )}
-            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} darkMode={darkMode} />
+            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
           <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">

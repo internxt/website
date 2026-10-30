@@ -45,11 +45,11 @@ const FreeCloudObjectStorage = ({
       </Script>
       <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
-      <HeroSection textContent={textContent.HeroSection} darkMode={darkMode} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} darkMode={darkMode} />
+      <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
-      <PredictablePricingSection textContent={textContent.PredictablePricingSection} darkMode={darkMode} />
+      <PredictablePricingSection textContent={textContent.PredictablePricingSection} />
 
       <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} darkMode={darkMode} />
 
@@ -59,38 +59,28 @@ const FreeCloudObjectStorage = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
               <h2
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
               {textContent.CtaSection.title}
             </h2>
               <h2
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[673px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[673px] lg:text-center lg:text-xl"
               >
               {textContent.CtaSection.description}
             </h2>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
-        bgPadding={`${darkMode ? 'bg-gray-105' : 'bg-neutral-17'} px-10`}
-        darkMode={darkMode}
+        bgPadding="bg-neutral-17 dark:bg-gray-105 px-10"
       />
 
         <HorizontalScrollableSection
           textContent={textContent.WhyChooseInternxtSection}
-          bgGradient={
-            darkMode
-              ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-              : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-          }
+          bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
           needsH2
           needsH3
           needsDivider={false}
-          darkMode={darkMode}
         />
 
         <FloatingCtaSectionv2
@@ -99,39 +89,29 @@ const FreeCloudObjectStorage = ({
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
               <h2
-                className={`text-2xl font-semibold leading-tight ${
-                  darkMode ? 'text-white-95' : 'text-gray-95'
-                } lg:text-4xl`}
+                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
               >
                 {textContent.CtaSectionV2.title}
               </h2>
               <p
-                className={`text-base font-normal leading-tight ${
-                  darkMode ? 'text-green-120' : 'text-gray-55'
-                } lg:w-[663px] lg:text-center lg:text-xl`}
+                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[663px] lg:text-center lg:text-xl"
               >
                 {textContent.CtaSectionV2.description}
               </p>
             </div>
           }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
           containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
           bgPadding="px-10"
-          darkMode={darkMode}
         />
 
         {textContent.HowInternxtComparesSection && (
           <HorizontalScrollableSection
             textContent={textContent.HowInternxtComparesSection}
-            bgGradient={
-              darkMode
-                ? 'linear-gradient(180deg, #0D0D0D 0%, #1C1C1C 100%)'
-                : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
-            }
+            bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
             needsH2
             needsH3
             needsDivider={false}
-            darkMode={darkMode}
           />
         )}
 

@@ -5,11 +5,11 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { Interval, TransformedProduct } from '@/services/stripe.service';
 
-export default function PriceTable({ darkMode = false, lang }: Readonly<{ darkMode?: boolean; lang: string }>) {
+export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
   const { products, currency, loadingCards } = usePricing();
 
   return (
-    <section id="priceTable" className={` ${darkMode ? 'bg-[#1C1C1C]' : ''}`}>
+    <section id="priceTable" className="dark:bg-gray-95">
       <div className="flex flex-col items-center">
         <Transition
           show={loadingCards}
@@ -18,10 +18,10 @@ export default function PriceTable({ darkMode = false, lang }: Readonly<{ darkMo
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="flex w-full flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
-            <CardSkeleton darkMode={darkMode} />
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
@@ -46,7 +46,6 @@ export default function PriceTable({ darkMode = false, lang }: Readonly<{ darkMo
                       cta={['checkout', product.priceId]}
                       lang={lang}
                       currency={currency}
-                      darkMode={darkMode}
                     />
                   );
                 })
