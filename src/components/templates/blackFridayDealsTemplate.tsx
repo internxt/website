@@ -7,6 +7,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { BlackFridayText } from '@/assets/types/blackFriday';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
@@ -106,10 +107,11 @@ const BlackFridayDealsTemplate = ({
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
-      <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
+      <TitleAndDescriptionSection textContent={textContent.DontMissSection} percentOff={percentOff} darkMode />
 
-      <div className="bg-[#1C1C1C] px-5 py-10">
-        <div className={`klaviyo-form-${formId} mx-auto max-w-[600px]`}></div>
+      <div className="relative bg-[#1C1C1C] px-5 py-10">
+        <div className={`klaviyo-form-${formId} klaviyo-form-title-size mx-auto max-w-[600px]`}></div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-gray-71 lg:left-32 lg:right-32"></div>
       </div>
 
       <PricingSectionWrapper
@@ -129,7 +131,7 @@ const BlackFridayDealsTemplate = ({
         hideFreeCard
       />
 
-      <ThreeCardsSection textContent={textContent.WhyChooseSection} darkMode />
+      <ThreeCardsSection textContent={textContent.WhyChooseSection} percentOff={percentOff} darkMode />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -137,10 +139,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {textContent.CtaSection.title}
+              {parseDynamicText(textContent.CtaSection.title, { percentage: percentOff, discount: percentOff })}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
+              {parseDynamicText(textContent.CtaSection.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
@@ -163,10 +165,10 @@ const BlackFridayDealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {textContent.CtaSectionV2.title}
+              {parseDynamicText(textContent.CtaSectionV2.title, { percentage: percentOff, discount: percentOff })}
             </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
+              {parseDynamicText(textContent.CtaSectionV2.description, { percentage: percentOff, discount: percentOff })}
             </p>
           </div>
         }
@@ -177,6 +179,7 @@ const BlackFridayDealsTemplate = ({
 
       <FAQSection
         textContent={textContent.FaqSection}
+        percentageDiscount={percentOff}
         bgColor="bg-[#1C1C1C] text-white"
         cardColor="bg-[#1C1C1C]"
         textColor="text-white"

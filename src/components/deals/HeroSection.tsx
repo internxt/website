@@ -97,7 +97,7 @@ export default function HeroSection({
           ))}
         </div>
 
-        <div className="flex w-full flex-col justify-center gap-4 lg:gap-6">
+        <div className="flex w-full flex-col justify-center gap-3 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
               className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${

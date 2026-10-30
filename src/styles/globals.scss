@@ -235,3 +235,17 @@ input[type='number'] {
     display: none;
   }
 }
+
+.klaviyo-form-title-size {
+  @media (max-width: 1023px) {
+    [style*='font-size: 3'],
+    [style*='font-size: 4'],
+    [style*='font-size: 5'],
+    [style*='font-size:3'],
+    [style*='font-size:4'],
+    [style*='font-size:5'] {
+      font-size: 1.875rem !important;
+      line-height: 1.25 !important;
+    }
+  }
+}

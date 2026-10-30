@@ -1,15 +1,19 @@
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
+
 interface TitleAndDescriptionSectionProps {
   textContent: any;
   darkMode?: boolean;
+  percentOff?: string;
 }
 
 export default function TitleAndDescriptionSection({
   textContent,
   darkMode,
+  percentOff,
 }: Readonly<TitleAndDescriptionSectionProps>): JSX.Element {
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+      className={`relative flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
         darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
       }  p-10 lg:h-min lg:gap-16 lg:p-20`}
     >
@@ -18,9 +22,9 @@ export default function TitleAndDescriptionSection({
           darkMode ? 'bg-gray-71' : 'bg-neutral-35'
         } lg:bottom-0 lg:left-32 lg:right-32`}
       ></div>
-      <div className="flex h-min w-[345px] flex-col items-center justify-center gap-8 text-center lg:w-full lg:gap-16">
+      <div className="flex h-min w-[345px] flex-col items-center justify-center gap-8 text-center lg:w-full lg:max-w-[1000px] lg:gap-16">
         <p className={`${darkMode ? 'text-gray-1' : 'text-gray-95'} text-30 font-bold leading-tight lg:text-3xl`}>
-          {textContent.title}
+          {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
         </p>
         <div className="flex w-[270px] flex-col items-center gap-6 text-center lg:w-[700px]">
           {textContent.description.map((description: string, index: number) => (
@@ -30,7 +34,7 @@ export default function TitleAndDescriptionSection({
                 darkMode ? 'text-green-110' : 'text-gray-55'
               } lg:text-xl`}
             >
-              {description}
+              {parseDynamicText(description, { percentage: percentOff, discount: percentOff })}
             </p>
           ))}
         </div>
