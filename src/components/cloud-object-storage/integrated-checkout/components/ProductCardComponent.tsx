@@ -8,8 +8,10 @@ import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import TextInput from '@/components/components/TextInput';
 import Button from '@/components/shared/Button';
+import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface ProductFeaturesComponentProps {
+  darkMode?: boolean;
   textContent: IntegratedCheckoutText['productCard'];
   selectedPlan: PlanData;
   onCouponInputChange: (promoCode: string) => void;
@@ -20,9 +22,12 @@ interface ProductFeaturesComponentProps {
   couponCodeName?: string;
 }
 
-const Separator = () => <div className="border border-gray-10" />;
+const Separator = ({  }: { darkMode?: boolean }) => (
+  <div className="border border-gray-10 dark:border-gray-71" />
+);
 
 export const ProductFeaturesComponent = ({
+  darkMode = false,
   textContent,
   selectedPlan,
   onCouponInputChange,
@@ -40,7 +45,7 @@ export const ProductFeaturesComponent = ({
   return (
     <div className="flex w-full flex-col space-y-4">
       <div className="flex w-full flex-row items-center justify-between space-x-4">
-        <p className="text-2xl font-semibold text-gray-100">{textContent.title}</p>
+        <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">{textContent.title}</p>
         <div className="flex flex-row space-x-2">
           <Image
             src={getImage('/icons/guarantee-dark.svg')}
@@ -48,27 +53,28 @@ export const ProductFeaturesComponent = ({
             height={48}
             alt="Guarantee Dark"
             draggable={false}
+            className={DARK_MODE_LOGO_FILTER}
           />
         </div>
       </div>
-      <div className="flex w-full rounded-2xl border border-gray-10 bg-white p-5">
+      <div className="flex w-full rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
         <div className="flex w-full flex-col space-y-5">
           <p>{textContent.selectedPlan}</p>
-          <p className="text-2xl font-bold text-gray-100">Object storage - {textContent.billed.month}</p>
-          <Separator />
+          <p className="text-2xl font-bold text-gray-100 dark:text-white-95">Object storage - {textContent.billed.month}</p>
+          <Separator darkMode={darkMode} />
           <div className="flex flex-col space-y-5">
-            <p className="font-medium text-gray-100">{textContent.planDetails.title}</p>
+            <p className="font-medium text-gray-100 dark:text-white-95">{textContent.planDetails.title}</p>
             <div className="flex flex-col space-y-4">
               {features.map((feature) => (
                 <div key={feature} className="flex flex-row items-center space-x-2">
                   <Check className="text-green-dark" size={16} weight="bold" />
-                  <p className="text-gray-100">{feature}</p>
+                  <p className="text-gray-100 dark:text-white-95">{feature}</p>
                 </div>
               ))}
             </div>
           </div>
-          <Separator />
-          <div className="flex flex-row items-center justify-between text-2xl font-semibold text-gray-100">
+          <Separator darkMode={darkMode} />
+          <div className="flex flex-row items-center justify-between text-2xl font-semibold text-gray-100 dark:text-white-95">
             <p>{textContent.total}</p>
             <p>
               {planAmount}
@@ -115,7 +121,7 @@ export const ProductFeaturesComponent = ({
                 >
                   <div className="w-full items-center outline-none">
                     <div className="flex w-full flex-col items-start space-y-1 pt-4">
-                      <p className="text-sm text-gray-80">{textContent.addCoupon.inputText}</p>
+                      <p className="text-sm text-gray-80 dark:text-cool-gray-30">{textContent.addCoupon.inputText}</p>
                       <div className="flex w-full flex-row space-x-3">
                         <TextInput
                           value={couponName}

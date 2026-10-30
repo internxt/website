@@ -13,7 +13,11 @@ interface PriceTableProps {
   bgColor?: string;
 }
 
-export const HorizontalPricingSection = ({ textContent, couponName, bgColor }: PriceTableProps): JSX.Element => {
+export const HorizontalPricingSection = ({
+  textContent,
+  couponName,
+  bgColor,
+}: PriceTableProps): JSX.Element => {
   const features = [
     {
       icon: Lifebuoy,
@@ -56,8 +60,8 @@ export const HorizontalPricingSection = ({ textContent, couponName, bgColor }: P
       >
         <div className="space-y-6 pb-12 pt-12 lg:w-[774px]  lg:pb-8 lg:pt-24">
           <p className="text-2xl font-semibold text-primary lg:text-4xl">{textContent.mostPopular}</p>
-          <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
-          <p className="font-regular w-[290px] text-lg text-gray-100 lg:w-full lg:text-xl">{textContent.description}</p>
+          <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">{textContent.title}</p>
+          <p className="font-regular w-[290px] text-lg text-gray-100 dark:text-white-95 lg:w-full lg:text-xl">{textContent.description}</p>
         </div>
         {activeProduct ? (
           <HorizontalPriceCard
@@ -78,7 +82,7 @@ export const HorizontalPricingSection = ({ textContent, couponName, bgColor }: P
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">
               <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className={`text-xl font-medium text-gray-80`}>{feature.text}</p>
+              <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">{feature.text}</p>
             </div>
           ))}
         </div>

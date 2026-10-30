@@ -30,7 +30,7 @@ export default function CustomPlanSelector({
   ctaText,
   onCheckoutClick,
   isLeftColumn = false,
-  customBackgroundClass = 'bg-neutral-16',
+  customBackgroundClass = 'bg-neutral-16 dark:bg-gray-105',
 }: CustomPlanSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,12 +62,8 @@ export default function CustomPlanSelector({
 
   return (
     <div className="z-10 flex flex-col pt-10">
-      <div
-        className={`border border-neutral-25 p-4 ${customBackgroundClass} ${
-          isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'
-        }`}
-      >
-        <div className="relative mb-4 border-b border-neutral-25 pb-1">
+      <div className={`border border-neutral-25 dark:border-gray-71 p-4 ${customBackgroundClass} ${isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'}`}>
+        <div className="relative mb-4 border-b border-neutral-25 dark:border-gray-71 pb-1">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex w-full items-center justify-between bg-transparent p-0 text-left focus:outline-none"
@@ -85,15 +81,13 @@ export default function CustomPlanSelector({
             <>
               <div className="fixed inset-0" onClick={() => setIsOpen(false)} />
 
-              <div className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white shadow-lg ">
+              <div className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white dark:bg-gray-95 shadow-lg">
                 <ul className=" py-2" role="listbox">
                   {plans.map((plan) => (
                     <li key={plan.id} role="option">
                       <button
                         onClick={() => handlePlanSelect(plan.id)}
-                        className={`${
-                          plan.id === selectedPlan ? 'bg-highlight/10' : ''
-                        } flex w-full items-center justify-between  px-4 py-2 text-left transition-colors duration-150 hover:bg-highlight/5 focus:bg-highlight/10 focus:outline-none`}
+                        className={`${plan.id === selectedPlan ? 'bg-highlight/10' : ''} flex w-full items-center justify-between  px-4 py-2 text-left transition-colors duration-150 hover:bg-highlight/5 focus:bg-highlight/10 focus:outline-none`}
                       >
                         <span
                           className={`'text-gray-100' text-base font-medium
@@ -101,7 +95,9 @@ export default function CustomPlanSelector({
                         >
                           {plan.name}
                         </span>
-                        {plan.id === selectedPlan && <Check size={16} className="text-gray-100" weight="bold" />}
+                        {plan.id === selectedPlan && (
+                          <Check size={16} className="text-gray-100 dark:text-white-95" weight="bold" />
+                        )}
                       </button>
                     </li>
                   ))}
@@ -113,11 +109,11 @@ export default function CustomPlanSelector({
 
         <div className="mb-4">
           <div className="flex items-baseline gap-1">
-            <span className="text-base font-bold text-gray-100">
+            <span className="text-base font-bold text-gray-100 dark:text-white-95">
               {currency}
               {getPlanPrice(selectedPlan)}
             </span>
-            <span className="whitespace-nowrap text-xs text-gray-100">{billingText}</span>
+            <span className="whitespace-nowrap text-xs text-gray-100 dark:text-white-95">{billingText}</span>
           </div>
         </div>
 

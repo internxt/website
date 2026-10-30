@@ -7,6 +7,7 @@ import { parseDynamicText } from '../utils/parse-dynamic-text';
 const PLACEHOLDER_REGEX = /\{\{\w+\}\}/;
 
 export default function FaqAccordion({
+  darkMode = false,
   question,
   answer,
   isQuestionBigger = false,
@@ -17,6 +18,7 @@ export default function FaqAccordion({
   index,
   totalItems,
 }: {
+  darkMode?: boolean;
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
@@ -27,6 +29,8 @@ export default function FaqAccordion({
   index?: number;
   totalItems?: number;
 }): JSX.Element {
+  const textClass = 'text-gray-100 dark:text-white-95';
+  const textClass2 = 'text-gray-60 dark:text-green-120';
   const [active, setActive] = useState(false);
   const isDiscountPending = !percentageDiscount || percentageDiscount === '0';
 
@@ -62,21 +66,15 @@ export default function FaqAccordion({
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
         <QuestionTag
-          className={`w-full text-lg font-medium ${textColor ? textColor : 'text-gray-100'} ${
-            isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'
-          }`}
+          className={`w-full text-lg font-medium ${textColor || textClass} ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
         >
           {question}
         </QuestionTag>
-        <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out`} />
+        <PlusCircle size={32} className={`${active && 'rotate-45'} ${textColor ?? textClass} duration-250 shrink-0 transition-transform ease-in-out`} />
       </button>
 
       <span
-        className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${
-          active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'
-        } duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${
-          textColor ? textColor : 'text-gray-60'
-        } transition-all ease-in-out`}
+        className={`markdown will-change-height flex h-auto flex-col space-y-3 overflow-hidden ${active ? 'max-h-double-screen pb-8 opacity-100' : 'max-h-0 opacity-50'} duration-250 whitespace-wrap w-full pr-14 text-left text-base lg:text-lg ${textColor || textClass2} transition-all ease-in-out`}
       >
         {(Array.isArray(answer) ? answer : [answer]).map((text) => {
           const hasPlaceholder = typeof text === 'string' && PLACEHOLDER_REGEX.test(text);
@@ -86,7 +84,7 @@ export default function FaqAccordion({
           // window the answer is rendered as plain text with a skeleton where the number
           // goes, instead of leaking "{{percentage}}" or a 0% discount into the HTML.
           if (hasPlaceholder && isDiscountPending) {
-            return <p key={text}>{parseDynamicText(text, { percentage: undefined, discount: undefined })}</p>;
+            return <p key={text}>{parseDynamicText(text, { percentage: undefined, discount: undefined }, darkMode)}</p>;
           }
 
           return (

@@ -38,18 +38,17 @@ export default function OfficialCloudProviderSection({
   bgColor,
   bgGradientColor,
 }: OfficialCloudProviderProps): JSX.Element {
+  const bgClass = 'bg-white dark:bg-gray-95';
   const config = PARTNER_CONFIG[partner];
   const blogUrl = config.blogUrl[lang as 'en' | 'es'] || config.blogUrl.en;
   const isDescriptionArray = Array.isArray(textContent.description);
 
   return (
     <section
-      className={`${
-        bgColor ? bgColor : 'bg-white'
-      } flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+      className={`${bgColor || bgClass} flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
       style={{ background: bgGradientColor ? bgGradientColor : '' }}
     >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
 
       <Image
         src={getImage(config.image)}
@@ -61,18 +60,16 @@ export default function OfficialCloudProviderSection({
       />
 
       <div className="flex flex-1 flex-col justify-between gap-6 lg:h-auto lg:w-[842px] lg:flex-initial">
-        <p className="text-30 font-bold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
+        <p className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">{textContent.title}</p>
 
         {isDescriptionArray ? (
           <div className="flex flex-col gap-4">
-            {(textContent.description as string[]).map((paragraph, index) => (
-              <p key={index} className="text-sm font-normal leading-tight text-gray-55 lg:text-xl">
-                {paragraph}
-              </p>
+            {(textContent.description as string[]).map((paragraph) => (
+              <p key={paragraph} className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">{paragraph}</p>
             ))}
           </div>
         ) : (
-          <p className="text-sm font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">{textContent.description}</p>
         )}
 
         <span
