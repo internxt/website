@@ -15,11 +15,9 @@ export const BannerForMobile = () => {
   return (
     <div className="flex flex-col items-center justify-center lg:hidden">
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className="text-center text-5xl font-bold text-gray-100">
-          {textContent.HeroSection.TitleAndOnePlanV2.title}
-        </p>
-        <p className="text-center pt-4 text-xl">
-              <span className="text-gray-100">{textContent.HeroSection.TitleAndOnePlanV2.description}</span>
+        <p className="text-center text-5xl font-bold text-gray-100 dark:text-white-95">{textContent.HeroSection.TitleAndOnePlanV2.title}</p>
+        <p className="pt-4 text-center text-xl">
+          <span className="text-gray-100 dark:text-white-95">{textContent.HeroSection.TitleAndOnePlanV2.description}</span>
             </p>
         <button
           onClick={handleOnClick}
@@ -27,7 +25,6 @@ export const BannerForMobile = () => {
         >
           {textContent.HeroSection.TitleAndOnePlanV2.cta}
         </button>
-        
         <Image
           src={getImage('/images/campaigns/spring/image_mobile.webp')}
           width={380}

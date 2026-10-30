@@ -21,8 +21,8 @@ import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
-
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageSolutionsText;
   navbarLang: NavigationBarText;
@@ -33,6 +33,7 @@ interface PrivacyProps {
 }
 
 const PrivateCloudStorageSolutions = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -121,13 +122,9 @@ const PrivateCloudStorageSolutions = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.FaqSection.faq)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_faq(textContent.FaqSection.faq)}</Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }])}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb_list([{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }])}</Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
@@ -159,9 +156,7 @@ const PrivateCloudStorageSolutions = ({
                 </div>
                 <div className="flex flex-row items-center justify-center space-x-3 pt-10  lg:justify-start">
                   <ShieldCheck size={24} color="#32C356" weight="fill" />
-                  <p className="whitespace-nowrap  text-lg text-white">
-                    {textContent.HeroSection.TitleAndOnePlan.guarantee}
-                  </p>
+                  <p className="whitespace-nowrap  text-lg text-white">{textContent.HeroSection.TitleAndOnePlan.guarantee}</p>
                 </div>
               </div>
             </>
@@ -190,8 +185,9 @@ const PrivateCloudStorageSolutions = ({
             loadingCards={loadingCards}
             onCheckoutButtonClicked={onCheckoutButtonClicked}
             popularPlanBySize="5TB"
-            sectionDetails="bg-white lg:py-20"
+            sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
             hideFreeCard
+            darkMode={darkMode}
           />
 
         <CtaSection
@@ -214,11 +210,11 @@ const PrivateCloudStorageSolutions = ({
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={product} />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }]} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

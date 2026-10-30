@@ -48,7 +48,7 @@ export const WhyChooseInternxtForBusiness = ({
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-20">
         {/* Banner */}
         {withoutBanner ? undefined : (
@@ -90,12 +90,12 @@ export const WhyChooseInternxtForBusiness = ({
         )}
         {/* Title and description */}
         <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">{textContent.WhyChooseInternxt.title}</h2>
+          <h3 className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.WhyChooseInternxt.description}</h3>
         </div>
 
         {/* Cards */}
-        <CardGroup cards={cards} backgroundColorCard="bg-white" />
+        <CardGroup cards={cards} backgroundColorCard="bg-white dark:bg-gray-95" />
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
   needsDivider = true,
 }: Readonly<HorizontalScrollableSectionWithPhotosProps>): JSX.Element {
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -87,14 +88,11 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   const maxIndex = getMaxIndex();
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20"
-      style={{ background: '#FFFFFF 100%' }}
-    >
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20 dark:bg-gray-95">
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
         <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6 lg:ml-20 lg:pl-14">
-          <h2 className="text-[30px] font-bold leading-tight text-gray-95 lg:text-5xl">{textContent.title}</h2>
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-[16px]">{textContent.description}</p>
+          <h2 className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl">{textContent.title}</h2>
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-[16px]">{textContent.description}</p>
         </div>
       </div>
 
@@ -140,8 +138,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   className="flex rounded-16 lg:hidden"
                 />
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
-                  <h3 className="pb-6 text-[18px] font-medium text-gray-95 lg:text-[20px]">{title}</h3>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
+                  <h3 className="pb-6 text-[18px] font-medium text-gray-95 dark:text-white-95 lg:text-[20px]">{title}</h3>
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">{cardDescriptions[index]}</p>
                 </div>
               </div>
             ))}
@@ -153,9 +151,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -163,9 +159,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               type="button"
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -174,7 +168,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       </div>
       {needsDivider && (
         <div className="w-full max-w-[1700px] px-5 lg:px-8">
-          <div className="h-px w-full bg-neutral-35" />
+          <div className="h-px w-full bg-neutral-35 dark:bg-gray-71" />
         </div>
       )}
     </section>

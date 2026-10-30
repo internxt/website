@@ -1,3 +1,4 @@
+import { DARK_MODE_ENABLED } from '@/theme.config';
 import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 interface TitleAndDescriptionSectionProps {
@@ -8,31 +9,21 @@ interface TitleAndDescriptionSectionProps {
 
 export default function TitleAndDescriptionSection({
   textContent,
-  darkMode,
+  darkMode = DARK_MODE_ENABLED,
   percentOff,
 }: Readonly<TitleAndDescriptionSectionProps>): JSX.Element {
   return (
     <section
-      className={`relative flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-      }  p-10 lg:h-min lg:gap-16 lg:p-20`}
+      className={`relative flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'}  p-10 lg:h-min lg:gap-16 lg:p-20`}
     >
-      <div
-        className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
-      ></div>
+      <div className={`absolute bottom-0 left-8 right-8 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:bottom-0 lg:left-32 lg:right-32`}></div>
       <div className="flex h-min w-[345px] flex-col items-center justify-center gap-8 text-center lg:w-full lg:max-w-[1000px] lg:gap-16">
-        <p className={`${darkMode ? 'text-gray-1' : 'text-gray-95'} text-30 font-bold leading-tight lg:text-3xl`}>
-          {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
-        </p>
+        <p className={`${darkMode ? 'text-gray-1' : 'text-gray-95 dark:text-gray-1'} text-30 font-bold leading-tight lg:text-3xl`}>{parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}</p>
         <div className="flex w-[270px] flex-col items-center gap-6 text-center lg:w-[700px]">
           {textContent.description.map((description: string, index: number) => (
             <p
               key={`description-${index}`}
-              className={`text-base font-normal leading-tight ${
-                darkMode ? 'text-green-110' : 'text-gray-55'
-              } lg:text-xl`}
+              className={`text-base font-normal leading-tight ${darkMode ? 'text-green-110' : 'text-gray-55 dark:text-green-110'} lg:text-xl`}
             >
               {parseDynamicText(description, { percentage: percentOff, discount: percentOff })}
             </p>
