@@ -45,9 +45,7 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
 
   return (
     <section className="overflow-hidden px-5 dark:bg-gray-95">
-      <div
-        className="flex flex-col items-center justify-center space-y-16 bg-gray-1 dark:bg-gray-105 py-20"
-      >
+      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 dark:bg-gray-105 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title}
@@ -87,9 +85,7 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
                   }`}
                 >
                   <card.icon size={48} className="text-green-dark md:size-[64px]" />
-                  <p
-                    className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-4xl sm:leading-tight md:text-5xl"
-                  >
+                  <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-4xl sm:leading-tight md:text-5xl">
                     {card.title}
                   </p>
                   <span className="flex items-start space-x-2 text-4xl font-semibold text-green-1 md:text-5xl">
@@ -99,9 +95,7 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
                     </p>
                   </span>
 
-                  <p
-                    className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl"
-                  >
+                  <p className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">
                     {card.description}
                   </p>
                 </div>

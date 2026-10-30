@@ -168,9 +168,7 @@ const AntivirusPage = ({
               {infoSectionData.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p
-                    className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80 dark:text-cool-gray-30"
-                  >
+                  <p className="min-h-[80px] max-w-[229px] text-xl font-medium text-gray-80 dark:text-cool-gray-30">
                     {item.description}
                   </p>
                 </div>

@@ -51,9 +51,7 @@ const WhyJoinSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 py-20">
       <div className="flex flex-col items-center justify-center space-y-20 px-5">
-        <p
-          className="text-center text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-        >
+        <p className="text-center text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
         <div className="flex flex-col items-center justify-center space-y-9">

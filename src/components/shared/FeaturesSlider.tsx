@@ -79,9 +79,7 @@ const FeaturesSlider = ({
                   {info.title}
                 </h3>
               </button>
-              <div
-                className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 transition-all duration-500"
-              >
+              <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 transition-all duration-500">
                 <div
                   className={`border-r-4 pr-8 transition-all duration-500 ${
                     index === cardIndex ? 'border-primary' : borderClass
@@ -100,9 +98,7 @@ const FeaturesSlider = ({
                 <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardInfo[cardIndex].title}
                 </p>
-                <p
-                  className="font-regular text-base leading-relaxed text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl"
-                >
+                <p className="font-regular text-base leading-relaxed text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">
                   {Array.isArray(cardInfo[cardIndex].description)
                     ? cardInfo[cardIndex].description.map((line, index) => (
                         <span key={index}>

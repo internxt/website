@@ -112,13 +112,9 @@ export default function HorizontalScrollableSection({
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         {needsDivider && (
-          <div
-            className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-          ></div>
+          <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
         )}
-        <TitleTag
-          className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-6xl"
-        >
+        <TitleTag className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-6xl">
           {textContent.title}
         </TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
@@ -148,17 +144,11 @@ export default function HorizontalScrollableSection({
                 height: cardsHeight,
               }}
             >
-              <div
-                className="flex h-full flex-col rounded-xl bg-white dark:bg-gray-95 p-6 lg:rounded-16 lg:p-8"
-              >
-                <CardTag
-                  className="pb-[16px] text-lg font-medium text-gray-95 dark:text-white-95 lg:pb-6 lg:text-xl"
-                >
+              <div className="flex h-full flex-col rounded-xl bg-white dark:bg-gray-95 p-6 lg:rounded-16 lg:p-8">
+                <CardTag className="pb-[16px] text-lg font-medium text-gray-95 dark:text-white-95 lg:pb-6 lg:text-xl">
                   {title}
                 </CardTag>
-                <p
-                  className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
-                >
+                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                   {textContent.scrollableSection.descriptions[index]}
                 </p>
               </div>

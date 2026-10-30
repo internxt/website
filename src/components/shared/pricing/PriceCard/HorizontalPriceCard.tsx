@@ -122,9 +122,7 @@ export const HorizontalPriceCard = ({
       id="billingButtons"
       className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 dark:ring-gray-71 lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]"
     >
-      <div
-        className="flex w-full flex-col items-center justify-center space-y-4 bg-white dark:bg-gray-95 p-6 pb-10 pt-10 lg:w-1/4 lg:border-r lg:border-neutral-20 dark:lg:border-gray-71 dark:lg:border-neutral-20"
-      >
+      <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white dark:bg-gray-95 p-6 pb-10 pt-10 lg:w-1/4 lg:border-r lg:border-neutral-20 dark:lg:border-gray-71 dark:lg:border-neutral-20">
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex rounded-full px-3 py-0.5">
             <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
@@ -135,9 +133,7 @@ export const HorizontalPriceCard = ({
 
         <div className={`flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}>
           <div className="flex flex-row items-end space-x-2 text-neutral-700 dark:text-cool-gray-30">
-            <p
-              className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100 dark:text-white-95"
-            >
+            <p className="flex flex-row items-end whitespace-nowrap font-medium text-gray-100 dark:text-white-95">
               <span className="text-4xl font-bold">{currentPrice}</span>
               <span>{currency}</span>
               <span className="text-sm">{billingPeriodLabel}</span>
@@ -159,9 +155,7 @@ export const HorizontalPriceCard = ({
           {contentText.cta}
         </button>
       </div>
-      <div
-        className="flex w-full flex-col justify-center border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 pt-6 text-sm lg:border-t-0 lg:py-10"
-      >
+      <div className="flex w-full flex-col justify-center border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 pt-6 text-sm lg:border-t-0 lg:py-10">
         <div
           className={`grid w-full grid-cols-1 gap-x-4 gap-y-4 px-6 text-start sm:grid-cols-2 lg:w-fit lg:grid-cols-3 lg:items-center lg:justify-center lg:gap-x-12 ${featuresRowGap}`}
         >

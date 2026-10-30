@@ -97,9 +97,7 @@ export default function HeroSection({
               className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p
-                className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white"
-              >
+              <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white">
                 {feature.text}
               </p>
             </div>
@@ -108,14 +106,10 @@ export default function HeroSection({
 
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p
-              className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:whitespace-nowrap lg:text-3xl"
-            >
+            <p className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:whitespace-nowrap lg:text-3xl">
               <HighlightText text={textContent.title} />
             </p>
-            <p
-              className="font-regular text-lg leading-tight text-gray-55 dark:text-green-120 w-3/4 lg:text-2xl"
-            >
+            <p className="font-regular text-lg leading-tight text-gray-55 dark:text-green-120 w-3/4 lg:text-2xl">
               {parsePercentText(textContent.subtitle)}
             </p>
           </div>
@@ -124,9 +118,7 @@ export default function HeroSection({
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p
-                  className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg"
-                >
+                <p className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg">
                   {feat}
                 </p>
               </div>
@@ -134,9 +126,7 @@ export default function HeroSection({
           </div>
         </div>
 
-        <div
-          className="flex h-[29px] flex-row items-center gap-1 text-xs font-normal text-gray-100 dark:text-white-95 lg:h-[43px] lg:items-end lg:text-base"
-        >
+        <div className="flex h-[29px] flex-row items-center gap-1 text-xs font-normal text-gray-100 dark:text-white-95 lg:h-[43px] lg:items-end lg:text-base">
           {textContent.startFrom.normal1}
           <span className="flex w-max flex-row gap-1 pb-[8px] text-2xl font-bold lg:pb-0 lg:text-4xl">
             <abbr className="text-xs lg:text-base">{currency}</abbr>

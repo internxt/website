@@ -62,9 +62,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
             <span className="text-green-1">{textContent.title.greenText}</span>
             {textContent.title.normalText}
           </h1>
-          <h2
-            className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 dark:text-cool-gray-30 sm:mb-10"
-          >
+          <h2 className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 dark:text-cool-gray-30 sm:mb-10">
             {textContent.description}
           </h2>
         </div>

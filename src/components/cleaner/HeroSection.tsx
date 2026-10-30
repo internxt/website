@@ -20,9 +20,7 @@ const HeroSection = ({ textContent }) => (
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
-              <p
-                className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-              >
+              <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
                 {textContent.title}
               </p>
             </div>
@@ -31,9 +29,7 @@ const HeroSection = ({ textContent }) => (
                 <div key={feat} className="flex h-[24px] flex-row gap-2 ">
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
-                  <p
-                    className="mb-2 text-left text-sm font-normal text-gray-95 dark:text-white-95 xs-md:text-lg"
-                  >
+                  <p className="mb-2 text-left text-sm font-normal text-gray-95 dark:text-white-95 xs-md:text-lg">
                     {feat}
                   </p>
                 </div>

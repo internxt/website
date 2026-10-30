@@ -42,9 +42,7 @@ const FeaturesSection = ({ textContent }) => {
     <section className="overflow-hidden dark:bg-gray-95">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <h2
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </h2>
           <div className="flex flex-col space-y-6">
@@ -66,9 +64,7 @@ const FeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <h3
-                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <h3 className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </h3>
               </button>
@@ -81,14 +77,10 @@ const FeaturesSection = ({ textContent }) => {
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
-                <p
-                  className="text-2xl leading-tight text-gray-100 dark:text-white-95 selection:font-semibold lg:text-4xl"
-                >
+                <p className="text-2xl leading-tight text-gray-100 dark:text-white-95 selection:font-semibold lg:text-4xl">
                   {cardInfo[cardIndex].title}
                 </p>
-                <ReactMarkdown
-                  className="markdown text-base font-normal leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl"
-                >
+                <ReactMarkdown className="markdown text-base font-normal leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl">
                   {cardInfo[cardIndex].description}
                 </ReactMarkdown>
               </div>

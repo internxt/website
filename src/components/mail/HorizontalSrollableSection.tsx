@@ -88,19 +88,13 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   const maxIndex = getMaxIndex();
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20 dark:bg-gray-95"
-    >
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 py-5 pt-14 lg:h-min lg:gap-16 lg:pt-20 dark:bg-gray-95">
       <div className="w-full max-w-[1200px] px-5 lg:px-8">
         <div className="flex h-min w-full max-w-[850px] flex-col justify-center gap-6 lg:ml-20 lg:pl-14">
-          <h2
-            className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
-          >
+          <h2 className="text-[30px] font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </h2>
-          <p
-            className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-[16px]"
-          >
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-[16px]">
             {textContent.description}
           </p>
         </div>
@@ -148,14 +142,10 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   className="flex rounded-16 lg:hidden"
                 />
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
-                  <h3
-                    className="pb-6 text-[18px] font-medium text-gray-95 dark:text-white-95 lg:text-[20px]"
-                  >
+                  <h3 className="pb-6 text-[18px] font-medium text-gray-95 dark:text-white-95 lg:text-[20px]">
                     {title}
                   </h3>
-                  <p
-                    className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>

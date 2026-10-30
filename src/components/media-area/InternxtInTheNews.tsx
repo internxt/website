@@ -123,9 +123,7 @@ const InternxtInTheNews = ({ textContent }) => {
           {data.map((card, index) => {
             return (
               <div key={index} className="flex w-screen justify-center px-6 shadow-subtle-hard md:w-auto">
-                <div
-                  className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-95 p-8"
-                >
+                <div className="flex snap-center flex-col overflow-hidden rounded-3xl bg-white dark:bg-gray-95 p-8">
                   <div className="flex w-auto max-w-[300px] flex-col">
                     <div className="flex w-[331px] flex-row">
                       <div className="flex flex-col pl-4">

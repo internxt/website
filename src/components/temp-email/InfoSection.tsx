@@ -40,9 +40,7 @@ export const InfoSection = ({ darkMode = false, textContent, bannerText, lang })
   };
 
   return (
-    <section
-      className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-16"
-    >
+    <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-16">
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
           <div className="flex  w-full flex-col items-center justify-center">
@@ -135,9 +133,7 @@ export const InfoSection = ({ darkMode = false, textContent, bannerText, lang })
                 {textContent.whenUseTempMail.title}
               </p>
               <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.whenUseTempMail.description}</p>
-              <ul
-                className="list-disc space-y-1 pl-5 text-lg text-gray-80 dark:text-cool-gray-30 lg:max-w-2xl"
-              >
+              <ul className="list-disc space-y-1 pl-5 text-lg text-gray-80 dark:text-cool-gray-30 lg:max-w-2xl">
                 {textContent.whenUseTempMail.bulletedList.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

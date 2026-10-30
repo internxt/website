@@ -42,9 +42,7 @@ export const TestimonialsSectionForBusiness = ({
   const visibleTestimonialMobile = textContent.testimonials[currentIndex];
 
   return (
-    <section
-      className="relative overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:bg-transparent dark:lg:bg-transparent bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
-    >
+    <section className="relative overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:bg-transparent dark:lg:bg-transparent bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]">
       <div className="relative z-10">
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">
           <h2 className="text-center text-3xl font-bold text-gray-100 dark:text-white-95 lg:text-3xl">
@@ -76,9 +74,7 @@ export const TestimonialsSectionForBusiness = ({
                         />
                         <FiveStars totalStars={5} />
                       </div>
-                      <p
-                        className="text-xl font-normal leading-tight text-gray-80 dark:text-cool-gray-30"
-                      >
+                      <p className="text-xl font-normal leading-tight text-gray-80 dark:text-cool-gray-30">
                         {testimonial.review}
                       </p>
                     </div>

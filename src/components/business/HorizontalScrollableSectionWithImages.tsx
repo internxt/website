@@ -128,12 +128,8 @@ export default function HorizontalScrollableSectionWithImages({
       className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} py-10 lg:py-20`}
       style={{ background: bgGardient }}
     >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      ></div>
-      <div
-        className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      ></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
+      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
 
       <div
         className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-center lg:gap-20`}
@@ -143,9 +139,7 @@ export default function HorizontalScrollableSectionWithImages({
             {textContent.title}
           </p>
 
-          <p
-            className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-          >
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
             {textContent.description}
           </p>
 
@@ -207,9 +201,7 @@ export default function HorizontalScrollableSectionWithImages({
                       </p>
                     </div>
 
-                    <p
-                      className="text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                    >
+                    <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                       {cardDescriptions[index]}
                     </p>
                   </div>

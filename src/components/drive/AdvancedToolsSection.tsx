@@ -72,9 +72,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
   }, [isMobile]);
 
   return (
-    <section
-      className="flex min-h-0 w-full flex-col gap-12 p-20 px-5 lg:px-10 xl:px-32 3xl:px-80 dark:bg-gray-95"
-    >
+    <section className="flex min-h-0 w-full flex-col gap-12 p-20 px-5 lg:px-10 xl:px-32 3xl:px-80 dark:bg-gray-95">
       <div className="flex w-full flex-col gap-12">
         <p className="text-4xl font-bold text-gray-95 dark:text-white-95">{textContent.title}</p>
         <p className="text-xl font-normal text-gray-55 dark:text-green-120">

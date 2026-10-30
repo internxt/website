@@ -64,9 +64,7 @@ const LevantePage = ({
               className="flex rounded-16 lg:hidden"
               quality={100}
             />
-            <p
-              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-            >
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.ctaBanner.description}
             </p>
           </div>

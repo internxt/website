@@ -25,22 +25,14 @@ export default function AccordionSection({
   const currentImageAlt = openIndex !== null ? `${cardTitles[openIndex]}` : 'Default images';
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:gap-16 lg:py-20"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-      ></div>
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:gap-16 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
 
       <div className="flex h-min flex-col justify-center gap-6">
-        <p
-          className="text-center text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl"
-        >
+        <p className="text-center text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
-        <p
-          className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
-        >
+        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
           {textContent.description}
         </p>
       </div>

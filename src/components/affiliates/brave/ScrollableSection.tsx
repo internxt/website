@@ -34,19 +34,13 @@ const ScrollableSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
-      <section
-        className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-white dark:bg-gray-95 px-5 py-10 lg:py-10"
-      >
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-white dark:bg-gray-95 px-5 py-10 lg:py-10">
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-center space-y-0 text-center lg:pb-10">
-          <p
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </p>
           <div className="flex flex-col space-y-6">
-            <p
-              className="w-[323px] pt-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:w-[980px]"
-            >
+            <p className="w-[323px] pt-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:w-[980px]">
               {textContent.description}
             </p>
           </div>
@@ -64,9 +58,7 @@ const ScrollableSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <p
-                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <p className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </p>
               </button>
@@ -82,9 +74,7 @@ const ScrollableSection = ({ textContent }) => {
                 <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardElements[cardIndex].title}
                 </p>
-                <ReactMarkdown
-                  className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30"
-                >
+                <ReactMarkdown className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30">
                   {cardElements[cardIndex].description}
                 </ReactMarkdown>
               </div>

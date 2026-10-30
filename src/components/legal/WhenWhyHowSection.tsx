@@ -191,19 +191,13 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <div className="relative -mx-6 flex flex-col overflow-hidden overflow-x-scroll px-6">
               <table className="relative table-auto bg-white dark:bg-gray-95">
                 <tr>
-                  <th
-                    className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-                  >
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column1}
                   </th>
-                  <th
-                    className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-                  >
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column2}
                   </th>
-                  <th
-                    className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-                  >
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                     {textContent.privacy_policy_table2_row1_column3}
                   </th>
                 </tr>

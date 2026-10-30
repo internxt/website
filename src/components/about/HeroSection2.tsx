@@ -7,9 +7,7 @@ const HeroSection2 = ({ textContent, lang }) => (
     <div className="relative flex flex-col items-center py-20 lg:py-40">
       {/* Main title */}
       <div className="relative space-y-20 px-6 text-center md:space-y-28">
-        <h1
-          className="relative z-10 text-left text-5xl text-cool-gray-90 dark:text-white-95 sm:text-center md:text-6xl lg:text-7xl"
-        >
+        <h1 className="relative z-10 text-left text-5xl text-cool-gray-90 dark:text-white-95 sm:text-center md:text-6xl lg:text-7xl">
           {textContent.title.line1} <br className="hidden lg:flex" />
           <span className={`${lang === 'fr' ? '' : 'text-primary'}`}>
             {lang === 'fr' ? textContent.title.line2.substring2 : textContent.title.line2.substring1}

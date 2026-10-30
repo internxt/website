@@ -33,9 +33,7 @@ function NASBox({
   cta,
 }: Readonly<NASBoxProps>) {
   return (
-    <div
-      className="flex w-full flex-col items-center justify-between gap-4 rounded-16 bg-white dark:bg-gray-95 p-6 lg:w-1/2 lg:gap-10 lg:p-10"
-    >
+    <div className="flex w-full flex-col items-center justify-between gap-4 rounded-16 bg-white dark:bg-gray-95 p-6 lg:w-1/2 lg:gap-10 lg:p-10">
       <div className="flex flex-col gap-4 lg:gap-6">
         <p className="text-30 font-semibold text-gray-95 dark:text-white-95">{title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120">
@@ -63,12 +61,8 @@ export default function SynologyQNAPSection({
   textContent,
 }: Readonly<SynologyQNAPSectionProps>): JSX.Element {
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 pb-10 lg:h-min lg:gap-16 lg:p-20 bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-      />
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 pb-10 lg:h-min lg:gap-16 lg:p-20 bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
 
       <div className="flex h-min flex-col justify-center gap-6 px-6 text-center lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">

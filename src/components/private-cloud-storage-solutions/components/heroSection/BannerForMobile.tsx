@@ -26,9 +26,7 @@ export const BannerForMobile = () => {
         </button>
         <div className="flex flex-row items-center space-x-3 pt-2 ">
           <CheckCircle size={24} className="text-green-1" weight="fill" />
-          <p
-            className="whitespace-nowrap font-medium text-gray-80 dark:text-cool-gray-30 lg:text-lg"
-          >
+          <p className="whitespace-nowrap font-medium text-gray-80 dark:text-cool-gray-30 lg:text-lg">
             {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
           </p>
         </div>

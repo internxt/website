@@ -68,14 +68,10 @@ const CloudObjectStorage = ({
           url={'#storageSection'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <h2
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.CtaSection.title}
               </h2>
-              <h2
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[673px] lg:text-center lg:text-xl"
-              >
+              <h2 className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[673px] lg:text-center lg:text-xl">
                 {textContent.CtaSection.description}
               </h2>
             </div>
@@ -98,14 +94,10 @@ const CloudObjectStorage = ({
           url={'#storageSection'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <h2
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.CtaSectionV2.title}
               </h2>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[663px] lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[663px] lg:text-center lg:text-xl">
                 {textContent.CtaSectionV2.description}
               </p>
             </div>

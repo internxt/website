@@ -23,9 +23,7 @@ const FeatureSectionV2 = ({ textContent }: FeatureSectionV2Props) => {
 
   return (
     <section className="overflow-hidden px-5 dark:bg-gray-95">
-      <div
-        className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-10 sm:py-20"
-      >
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-10 sm:py-20">
         <div className="flex w-full max-w-[90%] flex-col items-center justify-center space-y-6 text-center sm:max-w-[850px]">
           <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl">
             {textContent.title}
@@ -48,9 +46,7 @@ const FeatureSectionV2 = ({ textContent }: FeatureSectionV2Props) => {
                 className="ml-5 text-primary"
               />
 
-              <p
-                className="mt-1 items-center text-center text-xl font-medium text-gray-80 dark:text-cool-gray-30 sm:mt-2 sm:text-center sm:text-2xl"
-              >
+              <p className="mt-1 items-center text-center text-xl font-medium text-gray-80 dark:text-cool-gray-30 sm:mt-2 sm:text-center sm:text-2xl">
                 {card.description}
               </p>
             </div>

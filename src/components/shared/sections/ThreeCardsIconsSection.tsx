@@ -90,26 +90,18 @@ export default function ThreeCardsIconsSection({
       style={{ background: bgColor ? bgColor : '' }}
     >
       {topSeparationBar && (
-        <div
-          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-        ></div>
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
       {bottomSeparationBar && (
-        <div
-          className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-        />
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
       )}
 
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <SectionTitleTag
-          className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl"
-        >
+        <SectionTitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </SectionTitleTag>
         {textContent.description && (
-          <p
-            className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
-          >
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
             {textContent.description}
           </p>
         )}
@@ -138,14 +130,10 @@ export default function ThreeCardsIconsSection({
                 >
                   <div className="flex flex-col">
                     {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
-                    <TitleTag
-                      className="flex items-center justify-start gap-4 text-lg font-medium text-gray-100 dark:text-white-95"
-                    >
+                    <TitleTag className="flex items-center justify-start gap-4 text-lg font-medium text-gray-100 dark:text-white-95">
                       {title}
                     </TitleTag>
-                    <p
-                      className="pt-[16px] text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:pt-6 lg:text-base"
-                    >
+                    <p className="pt-[16px] text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:pt-6 lg:text-base">
                       {textContent.cards.descriptions[index]}
                     </p>
                   </div>
@@ -191,14 +179,10 @@ export default function ThreeCardsIconsSection({
             >
               <div className="flex flex-col">
                 {Icon && <Icon size={40} className="mb-4 shrink-0 text-primary" />}
-                <p
-                  className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100 dark:text-white-95"
-                >
+                <p className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100 dark:text-white-95">
                   {title}
                 </p>
-                <p
-                  className="pt-6 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                >
+                <p className="pt-6 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                   {textContent.cards.descriptions[index]}
                 </p>
               </div>

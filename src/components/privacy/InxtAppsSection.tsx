@@ -4,9 +4,7 @@ import { getImage } from '@/lib/getImage';
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden dark:bg-gray-95">
-      <div
-        className="z-10 flex flex-col items-center space-y-16 bg-gray-1 dark:bg-gray-105 px-5 pt-20 text-gray-100 dark:text-white-95"
-      >
+      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 dark:bg-gray-105 px-5 pt-20 text-gray-100 dark:text-white-95">
         <div className="px-6 text-center">
           <h2 className="mb-10 text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title.line1} <br className="hidden sm:flex" />

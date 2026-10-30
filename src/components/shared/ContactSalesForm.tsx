@@ -226,19 +226,13 @@ export const ContactSalesForm = ({
   return (
     <section className="overflow-hidden px-8 py-10 lg:px-0 lg:py-20 dark:bg-gray-95" id="contactSalesForm">
       {needsTopDivider && (
-        <div
-          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-        ></div>
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       )}
       {needsBottomDivider && (
-        <div
-          className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-        ></div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       )}
       <div className="flex flex-col items-center gap-6 text-center ">
-        <p
-          className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-        >
+        <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
         <p
@@ -251,9 +245,7 @@ export const ContactSalesForm = ({
 
       <div className="flex items-center justify-center py-8 ">
         <div className="flex w-[636px]">
-          <div
-            className="flex-1 rounded-32 bg-neutral-17 dark:bg-gray-105 p-10 text-gray-100 dark:text-white-95"
-          >
+          <div className="flex-1 rounded-32 bg-neutral-17 dark:bg-gray-105 p-10 text-gray-100 dark:text-white-95">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
@@ -302,9 +294,7 @@ export const ContactSalesForm = ({
                   <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
-                  <div
-                    className="flex overflow-hidden rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white"
-                  >
+                  <div className="flex overflow-hidden rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white">
                     <select
                       id="phonePrefix"
                       value={phonePrefix}
@@ -352,9 +342,7 @@ export const ContactSalesForm = ({
                   ))}
                 </select>
 
-                <CaretDown
-                  className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100 dark:text-white-95"
-                />
+                <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100 dark:text-white-95" />
               </div>
 
               <div>
@@ -384,9 +372,7 @@ export const ContactSalesForm = ({
               </div>
 
               {formStatus === 'success' && (
-                <div
-                  className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2"
-                >
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2">
                   <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
                   <p className="ml-2 text-sm text-gray-80 dark:text-cool-gray-30">
                     {textContent.form.successMessage}
@@ -395,9 +381,7 @@ export const ContactSalesForm = ({
               )}
 
               {formStatus === 'error' && (
-                <div
-                  className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2"
-                >
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2">
                   <WarningCircle height={24} width={24} weight="fill" className="text-red" />
                   <p className="ml-2 text-sm text-gray-80 dark:text-cool-gray-30">
                     {textContent.form.errorMessage}

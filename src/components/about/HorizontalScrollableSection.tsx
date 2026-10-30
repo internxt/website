@@ -103,9 +103,7 @@ export default function HorizontalScrollableSection({
         header ? `gap-8 lg:gap-16 ${headerBackground}` : ` gap-6 ${bgClass} lg:gap-12`
       } lg:py-20 `}
     >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-      ></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <p
         className={`whitespace-pre-line ${
           header ? 'text-start lg:text-center' : 'text-start lg:pl-20'
@@ -188,15 +186,11 @@ export default function HorizontalScrollableSection({
           >
             {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div
-                  className="flex h-full w-[345px] flex-col rounded-16 bg-white dark:bg-gray-95 p-6 lg:w-[450px] lg:p-8"
-                >
+                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white dark:bg-gray-95 p-6 lg:w-[450px] lg:p-8">
                   <p className="pb-4 text-xl font-medium text-gray-95 dark:text-white-95 lg:pb-6">
                     {title}
                   </p>
-                  <p
-                    className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120">
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

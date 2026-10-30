@@ -27,9 +27,7 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
           className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
         >
           <ShieldStar size={60} className="text-primary" />
-          <p
-            className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight"
-          >
+          <p className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight">
             {textContent.title}
           </p>
           <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>

@@ -250,17 +250,13 @@ export const ComparisonTable = ({
 
   return (
     <section className="overflow-hidden bg-white dark:bg-gray-95 px-4 py-12 lg:px-5 lg:py-20">
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      ></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center justify-center gap-8 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center lg:gap-6">
           <TitleTag className="text-2xl font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
             {parseText(textContent.title)}
           </TitleTag>
-          <p
-            className="max-w-[345px] text-sm leading-tight text-gray-80 dark:text-cool-gray-30 lg:max-w-[774px] lg:text-xl"
-          >
+          <p className="max-w-[345px] text-sm leading-tight text-gray-80 dark:text-cool-gray-30 lg:max-w-[774px] lg:text-xl">
             {parseText(textContent.description)}
           </p>
         </div>
@@ -275,9 +271,7 @@ export const ComparisonTable = ({
                   : 'none',
               }}
             >
-              <div
-                className="relative z-10 w-[140px] bg-white dark:bg-gray-95 sm:w-[170px] lg:w-[247px]"
-              >
+              <div className="relative z-10 w-[140px] bg-white dark:bg-gray-95 sm:w-[170px] lg:w-[247px]">
                 <div className="h-[48px] lg:h-[128px]"></div>
 
                 {tableRows.map((row, index) => (
@@ -287,9 +281,7 @@ export const ComparisonTable = ({
                       index === 0 ? 'rounded-tl-2xl' : ''
                     } ${index === tableRows.length - 1 ? 'rounded-bl-2xl' : ''}`}
                   >
-                    <p
-                      className="text-xs font-normal leading-tight text-gray-95 dark:text-white-95 lg:text-base"
-                    >
+                    <p className="text-xs font-normal leading-tight text-gray-95 dark:text-white-95 lg:text-base">
                       {parseText(row.title)}
                     </p>
                   </div>
@@ -301,9 +293,7 @@ export const ComparisonTable = ({
               <div className="w-[430px] lg:w-[830px]">
                 <div className="flex">
                   <div className="w-1/2">
-                    <div
-                      className="flex h-[48px] flex-col items-center justify-center rounded-tl-2xl border border-green-120 dark:border-gray-71 bg-neutral-17 dark:bg-gray-105 p-3 lg:h-[128px] lg:px-20 lg:py-12"
-                    >
+                    <div className="flex h-[48px] flex-col items-center justify-center rounded-tl-2xl border border-green-120 dark:border-gray-71 bg-neutral-17 dark:bg-gray-105 p-3 lg:h-[128px] lg:px-20 lg:py-12">
                       <Image
                         loading="lazy"
                         src={getImage(competitors[0].logo)}
@@ -317,9 +307,7 @@ export const ComparisonTable = ({
                     </div>
                   </div>
                   <div className="w-1/2">
-                    <div
-                      className="flex h-[48px] flex-col items-center justify-center rounded-tr-2xl border border-green-120 dark:border-gray-71 bg-white dark:bg-gray-95 p-3 lg:h-[128px] lg:px-20 lg:py-12"
-                    >
+                    <div className="flex h-[48px] flex-col items-center justify-center rounded-tr-2xl border border-green-120 dark:border-gray-71 bg-white dark:bg-gray-95 p-3 lg:h-[128px] lg:px-20 lg:py-12">
                       <Image
                         loading="lazy"
                         src={getImage(competitors[1].logo)}
@@ -340,9 +328,7 @@ export const ComparisonTable = ({
                       <div
                         className={`flex h-[50px] flex-col items-center justify-center border border-green-120 dark:border-gray-71 px-2 lg:h-[64px] lg:px-4 ${index % 2 === 0 ? bgClass3 : bgClass4}`}
                       >
-                        <span
-                          className="text-center text-xs font-semibold text-gray-100 dark:text-white-95 lg:text-base"
-                        >
+                        <span className="text-center text-xs font-semibold text-gray-100 dark:text-white-95 lg:text-base">
                           {parseText(row.internxtFeature)}
                         </span>
                       </div>
@@ -354,9 +340,7 @@ export const ComparisonTable = ({
                           index === tableRows.length - 1 ? 'rounded-br-2xl' : ''
                         }`}
                       >
-                        <span
-                          className="text-center text-xs font-normal text-gray-100 dark:text-white-95 lg:text-base"
-                        >
+                        <span className="text-center text-xs font-normal text-gray-100 dark:text-white-95 lg:text-base">
                           {parseText(row.competitorFeature)}
                         </span>
                       </div>

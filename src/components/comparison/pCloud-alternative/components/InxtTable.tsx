@@ -21,9 +21,7 @@ export const InxtTable = ({
 
   return (
     <div className="flex h-min w-[180.5px] flex-col rounded-l-16  lg:w-[570px]">
-      <div
-        className="flex h-[46.5px] w-full flex-col items-center justify-center gap-3 rounded-tl-16 bg-green-110 ring-green-120 dark:bg-green-1/10 dark:ring-gray-71 ring-[1px] lg:h-[112px]"
-      >
+      <div className="flex h-[46.5px] w-full flex-col items-center justify-center gap-3 rounded-tl-16 bg-green-110 ring-green-120 dark:bg-green-1/10 dark:ring-gray-71 ring-[1px] lg:h-[112px]">
         <Image
           width={180}
           height={32}
@@ -55,14 +53,10 @@ export const InxtTable = ({
                 isLast ? 'rounded-bl-16' : ''
               } flex flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
             >
-              <p
-                className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 dark:text-white-95 lg:w-[538px] lg:text-center lg:text-base"
-              >
+              <p className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 dark:text-white-95 lg:w-[538px] lg:text-center lg:text-base">
                 {parseText(item.title)}
               </p>
-              <p
-                className="w-[156.5px] text-start text-10 font-normal leading-tight text-gray-100 dark:text-white-95 lg:w-[538px] lg:text-center lg:text-sm"
-              >
+              <p className="w-[156.5px] text-start text-10 font-normal leading-tight text-gray-100 dark:text-white-95 lg:w-[538px] lg:text-center lg:text-sm">
                 {parseText(item.description)}
               </p>
             </div>

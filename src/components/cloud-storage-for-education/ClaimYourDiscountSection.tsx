@@ -76,9 +76,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
         <div className="flex flex-row space-x-20 rounded-[32px] bg-white dark:bg-gray-95">
           {/* Text Card */}
           <div className="flex flex-col justify-center space-y-6 py-[50px] px-16 lg:pl-[60px]">
-            <p
-              className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 dark:text-white-95 lg:text-left"
-            >
+            <p className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 dark:text-white-95 lg:text-left">
               {cardTitle1} <span className="text-primary">{blueTextCardTitle}</span>
               {cardTitle2}
             </p>

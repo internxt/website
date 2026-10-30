@@ -44,9 +44,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
   const osName = textContent.DownloadSection[OS] || 'your device';
 
   return (
-    <section
-      className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
-    >
+    <section className="flex w-full flex-col items-center px-5 py-20 pt-24 lg:flex-row lg:justify-between lg:px-10 lg:py-20 lg:pt-32 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
       <div
         className={`${styles.cleanerTitleAndOnePlan} z-20 flex w-full shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:w-1/2`}
       >
@@ -61,9 +59,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
                 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
                 TitleTag={'h1'}
               />
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
                 {textContent.subtitle}
               </p>
             </div>
@@ -72,9 +68,7 @@ const HeroSection = ({ textContent, download, ChecksTag = 'p' }: HeroSectionProp
                 <div key={feat} className="flex h-[24px] flex-row gap-2">
                   <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
                   <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
-                  <ChecksTag
-                    className="mb-2 text-left text-sm font-normal text-gray-55 dark:text-green-120 xs-md:text-lg"
-                  >
+                  <ChecksTag className="mb-2 text-left text-sm font-normal text-gray-55 dark:text-green-120 xs-md:text-lg">
                     {feat}
                   </ChecksTag>
                 </div>

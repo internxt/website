@@ -4,9 +4,7 @@ import { getImage } from '@/lib/getImage';
 const ProductsSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div
-        className="z-10 flex flex-col items-center bg-gray-1 dark:bg-gray-105 py-20 text-black dark:text-white-95"
-      >
+      <div className="z-10 flex flex-col items-center bg-gray-1 dark:bg-gray-105 py-20 text-black dark:text-white-95">
         <div className="space-y-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <h2 className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>

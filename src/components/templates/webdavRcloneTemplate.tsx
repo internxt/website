@@ -77,14 +77,10 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection.title}
               </p>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {langJson.CtaSection.description}
               </p>
             </div>
@@ -104,14 +100,10 @@ export const WebdavRcloneTemplate = ({
           url={ctaUrl}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center lg:px-0">
-              <p
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {langJson.CtaSection2.title}
               </p>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {langJson.CtaSection2.description}
               </p>
             </div>

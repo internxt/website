@@ -105,9 +105,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden py-20 dark:bg-gray-95">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
-        <p
-          className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl"
-        >
+        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl">
           {textContent.title}
         </p>
       </div>
@@ -131,9 +129,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
                 width: isMobile ? '300px' : '350px',
               }}
             >
-              <div
-                className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105"
-              >
+              <div className="flex h-full w-full flex-col justify-between whitespace-pre-wrap rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105">
                 <LinkTo linkToRedirect={card.link} text={card.cta} />
               </div>
             </div>

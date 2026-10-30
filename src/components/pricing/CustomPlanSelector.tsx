@@ -85,9 +85,7 @@ export default function CustomPlanSelector({
             <>
               <div className="fixed inset-0" onClick={() => setIsOpen(false)} />
 
-              <div
-                className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white dark:bg-gray-95 shadow-lg"
-              >
+              <div className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white dark:bg-gray-95 shadow-lg">
                 <ul className=" py-2" role="listbox">
                   {plans.map((plan) => (
                     <li key={plan.id} role="option">

@@ -112,12 +112,8 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
   const maxIndex = getMaxIndex();
 
   return (
-    <section
-      className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden dark:bg-gray-95"
-    >
-      <div
-        className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] dark:from-gray-95 to-[#001D6C] pt-10"
-      >
+    <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden dark:bg-gray-95">
+      <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] dark:from-gray-95 to-[#001D6C] pt-10">
         <p className="w-[323px] text-center text-sm font-normal leading-tight text-gray-25 lg:w-[832px] lg:text-lg">
           {textContent.intro}
         </p>
@@ -134,9 +130,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         {textContent.title}
       </h2>
       {textContent.h2Intro && (
-        <p
-          className="w-[330px] text-left text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-center lg:text-lg"
-        >
+        <p className="w-[330px] text-left text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-center lg:text-lg">
           {textContent.h2Intro}
         </p>
       )}

@@ -15,12 +15,8 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
   };
 
   return (
-    <section
-      className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80"
-    >
-      <h2
-        className="flex pb-4 text-[30px] font-bold leading-tight lg:text-[48px] text-gray-100 dark:text-white-95"
-      >
+    <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
+      <h2 className="flex pb-4 text-[30px] font-bold leading-tight lg:text-[48px] text-gray-100 dark:text-white-95">
         {textContent.title}
       </h2>
 
@@ -60,9 +56,7 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
             >
               <span className="flex flex-row items-center gap-4 text-[24px] font-medium text-primary">
                 {index + 1}
-                <h3
-                  className="text-[18px] font-medium lg:text-[20px] text-gray-100 dark:text-white-95"
-                >
+                <h3 className="text-[18px] font-medium lg:text-[20px] text-gray-100 dark:text-white-95">
                   {title}
                 </h3>
               </span>
@@ -72,9 +66,7 @@ const HowToChooseSection = ({ textContent }: HowToChooseSectionProps): JSX.Eleme
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p
-                    className="text-[14px] font-normal leading-tight lg:text-[16px] text-gray-55 dark:text-green-120"
-                  >
+                  <p className="text-[14px] font-normal leading-tight lg:text-[16px] text-gray-55 dark:text-green-120">
                     {textContent.accordionCards.descriptions[index]}
                   </p>
                 </div>

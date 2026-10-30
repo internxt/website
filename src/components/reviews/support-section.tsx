@@ -15,9 +15,7 @@ interface CardProps {
 
 const SupportCard = ({ title, description }: CardProps): JSX.Element => {
   return (
-    <div
-      className="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:gap-6 lg:rounded-16 lg:p-8"
-    >
+    <div className="flex flex-col gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:gap-6 lg:rounded-16 lg:p-8">
       <p className="text-lg font-medium text-gray-95 dark:text-white-95 lg:text-xl">{title}</p>
       <p className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
         {description}
@@ -30,12 +28,8 @@ const SupportSection = ({ darkMode = false, textContent }: Readonly<SupportSecti
   const cards = Object.values(textContent.cards);
 
   return (
-    <section
-      className="flex h-min w-full flex-col-reverse items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 px-6 py-10 lg:flex-row lg:gap-8 lg:p-20"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      />
+    <section className="flex h-min w-full flex-col-reverse items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 px-6 py-10 lg:flex-row lg:gap-8 lg:p-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
 
       <div className="flex justify-center lg:w-1/2">
         <Image
@@ -53,9 +47,7 @@ const SupportSection = ({ darkMode = false, textContent }: Readonly<SupportSecti
           <p className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </p>
-          <p
-            className="font-regular text-base leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-          >
+          <p className="font-regular text-base leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
             {textContent.description}
           </p>
         </div>

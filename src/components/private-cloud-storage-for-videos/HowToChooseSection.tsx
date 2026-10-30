@@ -3,9 +3,7 @@ import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
 
 const HowToChooseSection = ({ textContent }) => (
-  <section
-    className="flex h-auto w-full flex-row items-center justify-center bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80"
-  >
+  <section className="flex h-auto w-full flex-row items-center justify-center bg-neutral-17 dark:bg-gray-105 py-10 lg:h-min lg:px-10 lg:py-20 xl:px-32 3xl:px-80">
     <div className="flex w-[320px] flex-col items-center justify-between gap-2 lg:h-max lg:w-full lg:gap-12">
       <div className=" w-[320px] lg:w-[832px]">
         <h2 className="text-start text-30 font-bold text-gray-100 dark:text-white-95 lg:text-5xl">
@@ -36,9 +34,7 @@ const HowToChooseSection = ({ textContent }) => (
         />
       </div>
       <div className="w-[320px] pt-8 lg:w-[832px] lg:pt-0">
-        <p
-          className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-        >
+        <p className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
           {textContent.description}
         </p>
       </div>

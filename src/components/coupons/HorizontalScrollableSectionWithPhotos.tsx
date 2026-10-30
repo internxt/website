@@ -100,9 +100,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       className={`flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20 ${bgColor ?? SECTION_GRADIENT}`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <TitleTag
-          className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl"
-        >
+        <TitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
@@ -134,9 +132,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   <TitleCardTag className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">
                     {title}
                   </TitleCardTag>
-                  <p
-                    className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>

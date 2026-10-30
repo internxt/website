@@ -28,22 +28,16 @@ export const CardsGridSection = ({
   return (
     <section className={`relative flex w-full flex-col items-center overflow-hidden ${bgColor} py-10 lg:py-20`}>
       {topSeparationBar && (
-        <div
-          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-        />
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
       )}
 
       <div className="flex w-full max-w-[345px] flex-col gap-10 lg:max-w-[1000px] lg:gap-16">
         <div className="flex flex-col gap-6">
-          <TitleTag
-            className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl"
-          >
+          <TitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </TitleTag>
           {textContent.description && (
-            <p
-              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-            >
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
               {textContent.description}
             </p>
           )}
@@ -58,9 +52,7 @@ export const CardsGridSection = ({
               <CardTitleTag className="text-lg font-medium text-gray-95 dark:text-white-95 lg:text-xl">
                 {title}
               </CardTitleTag>
-              <p
-                className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
-              >
+              <p className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                 {textContent.cards.descriptions[index]}
               </p>
             </div>

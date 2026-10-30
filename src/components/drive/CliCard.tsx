@@ -7,9 +7,7 @@ import { getImage } from '@/lib/getImage';
 
 export const CliCard = ({ textContent }) => {
   return (
-    <section
-      className="flex flex-col rounded-3xl border border-gray-5 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 py-12"
-    >
+    <section className="flex flex-col rounded-3xl border border-gray-5 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 py-12">
       <div className="flex flex-col space-y-12">
         {/* First path */}
         <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between md:pl-12">
@@ -18,9 +16,7 @@ export const CliCard = ({ textContent }) => {
               <div className="text bg-orange/15 w-max rounded-lg px-2.5 py-1.5">
                 <p className="text-orange text-sm font-bold">{textContent.new}</p>
               </div>
-              <h2
-                className="max-w-[550px] text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-              >
+              <h2 className="max-w-[550px] text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
                 {textContent.title.bold} <br /> <span className="text-gray-40">{textContent.title.normal}</span>
               </h2>
               <p className="max-w-[384px] text-lg text-gray-100 dark:text-white-95">

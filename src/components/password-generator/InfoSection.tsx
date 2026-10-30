@@ -62,9 +62,7 @@ const InfoSection = ({
         <SignUpBanner textContent={bannerText} lang={lang as string} darkMode={darkMode} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
-        <div
-          className="gap flex flex-row flex-wrap items-center justify-center bg-gray-1 dark:bg-gray-105"
-        >
+        <div className="gap flex flex-row flex-wrap items-center justify-center bg-gray-1 dark:bg-gray-105">
           <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl px-10 pt-10">
             {cards1.map((item) => (
               <div className="1 100% flex flex-1" key={item.title}>
@@ -98,13 +96,9 @@ const InfoSection = ({
               </p>
             }
           />
-          <div
-            className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 px-5 py-20"
-          >
+          <div className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 px-5 py-20">
             {getSectionText(textContent.thirdSection)}
-            <div
-              className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 dark:text-cool-gray-30 md:px-0"
-            >
+            <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 dark:text-cool-gray-30 md:px-0">
               {getSectionText(textContent.fourthSection)}
               <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.bulletedList.title}</p>
               <ul className="list-disc pl-5 text-lg text-gray-80 dark:text-cool-gray-30">

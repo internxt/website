@@ -4,22 +4,14 @@ import Image from 'next/image';
 
 const SecureAndManageSection = ({ textContent }): JSX.Element => {
   return (
-    <section
-      className="relative flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:gap-12 lg:px-0 lg:py-20"
-    >
-      <div
-        className="absolute left-5 right-5 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      />
+    <section className="relative flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:gap-12 lg:px-0 lg:py-20">
+      <div className="absolute left-5 right-5 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
 
-      <h2
-        className="w-full max-w-[832px] px-4 text-center text-[30px] font-bold leading-tight text-gray-100 dark:text-white-95 lg:px-0 lg:text-[48px]"
-      >
+      <h2 className="w-full max-w-[832px] px-4 text-center text-[30px] font-bold leading-tight text-gray-100 dark:text-white-95 lg:px-0 lg:text-[48px]">
         {textContent.title}
       </h2>
 
-      <p
-        className="w-full max-w-[832px] px-5 text-center text-[14px] font-normal leading-tight text-gray-55 dark:text-green-120 lg:px-0 lg:text-lg"
-      >
+      <p className="w-full max-w-[832px] px-5 text-center text-[14px] font-normal leading-tight text-gray-55 dark:text-green-120 lg:px-0 lg:text-lg">
         {textContent.description}
       </p>
 

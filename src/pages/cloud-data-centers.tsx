@@ -58,14 +58,10 @@ const CloudDataCentersPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-            >
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
               {textContent.CtaSection.title}
             </p>
-            <p
-              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-            >
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSection.description}
             </p>
           </div>
@@ -84,14 +80,10 @@ const CloudDataCentersPage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-            >
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
               {textContent.CtaSection2.title}
             </p>
-            <p
-              className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-            >
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSection2.description}
             </p>
           </div>

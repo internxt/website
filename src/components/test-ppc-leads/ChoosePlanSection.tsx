@@ -17,9 +17,7 @@ interface ChoosePlanSectionProps {
 }
 
 const PriceSkeleton = ({  }: { darkMode?: boolean }) => (
-  <span
-    className="inline-block h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71 lg:h-5 lg:w-20"
-  />
+  <span className="inline-block h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71 lg:h-5 lg:w-20" />
 );
 
 const PlanFeatures = ({ features }: { darkMode?: boolean; features: string[] }) => (
@@ -50,9 +48,7 @@ const PlanHeader = ({
     <div className="flex flex-row items-center justify-between gap-2">
       <p className="text-base font-medium text-gray-100 dark:text-white-95">{card.label}</p>
       {card.badge && (
-        <span
-          className="flex items-center justify-center rounded-sm bg-neutral-37 dark:bg-purple-100 px-2 py-0.5 text-sm font-semibold text-primary"
-        >
+        <span className="flex items-center justify-center rounded-sm bg-neutral-37 dark:bg-purple-100 px-2 py-0.5 text-sm font-semibold text-primary">
           {card.badge}
         </span>
       )}
@@ -94,28 +90,20 @@ export const ChoosePlanSection = ({
       className={`relative flex w-full flex-col items-center overflow-hidden px-5 ${sectionDetails} dark:bg-gray-95`}
     >
       {topSeparationBar && (
-        <div
-          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-        />
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
       )}
       <div className="flex w-full max-w-[1000px] flex-col items-center gap-10 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center">
-          <h2
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-          >
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </h2>
-          <p
-            className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-          >
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
             {textContent.description}
           </p>
         </div>
 
         <div className="flex w-full flex-col items-stretch justify-center gap-6 md:flex-row">
-          <div
-            className="flex w-full flex-col justify-between gap-8 rounded-16 border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-6 md:max-w-[420px] lg:p-8"
-          >
+          <div className="flex w-full flex-col justify-between gap-8 rounded-16 border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-6 md:max-w-[420px] lg:p-8">
             <div className="flex flex-col gap-6">
               <PlanHeader card={textContent.freeCard} price={freePrice} darkMode={darkMode} />
               <PlanFeatures features={textContent.freeCard.features} darkMode={darkMode} />
@@ -128,9 +116,7 @@ export const ChoosePlanSection = ({
             </Link>
           </div>
 
-          <div
-            className="flex w-full flex-col justify-between gap-8 rounded-16 border-2 border-primary bg-white dark:bg-gray-95 p-6 md:max-w-[420px] lg:p-8"
-          >
+          <div className="flex w-full flex-col justify-between gap-8 rounded-16 border-2 border-primary bg-white dark:bg-gray-95 p-6 md:max-w-[420px] lg:p-8">
             <div className="flex flex-col gap-6">
               <PlanHeader
                 card={textContent.premiumCard}

@@ -82,17 +82,13 @@ export const BeforeCloseTabBanner = () => {
         </button>
         <div className="flex w-full flex-col space-x-10 md:flex-row">
           <div className="flex w-full flex-col  items-center justify-center space-y-3 py-14 text-center md:items-start md:justify-between md:text-start">
-            <p
-              className="w-full max-w-[310px] text-4xl font-bold leading-tight text-gray-100 dark:text-white-95"
-            >
+            <p className="w-full max-w-[310px] text-4xl font-bold leading-tight text-gray-100 dark:text-white-95">
               {textContent.BeforeCloseBanner.title.normal1}{' '}
               <span className="text-primary">{textContent.BeforeCloseBanner.title.blue}</span>
               {textContent.BeforeCloseBanner.title.normal2}
             </p>
 
-            <p
-              className="w-full max-w-[310px] text-2xl font-semibold leading-tight text-gray-100 dark:text-white-95"
-            >
+            <p className="w-full max-w-[310px] text-2xl font-semibold leading-tight text-gray-100 dark:text-white-95">
               {textContent.BeforeCloseBanner.subtitle}
             </p>
 
@@ -103,9 +99,7 @@ export const BeforeCloseTabBanner = () => {
               >
                 {textContent.BeforeCloseBanner.cta}
               </button>
-              <div
-                className="flex flex-row items-center space-x-3 pt-2 text-gray-100 dark:text-white-95"
-              >
+              <div className="flex flex-row items-center space-x-3 pt-2 text-gray-100 dark:text-white-95">
                 <CheckCircle size={24} className="text-primary" />
                 <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.BeforeCloseBanner.guarantee}</p>
               </div>

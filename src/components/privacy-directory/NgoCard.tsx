@@ -26,9 +26,7 @@ const NgoCard = ({ id, name, short, description }) => {
               {showTrigger.length <= 1 && percentage > 0 && setShowTrigger()}
 
               {/* Logo */}
-              <div
-                className="relative h-10 w-10 rounded-xl bg-gray-10 dark:bg-gray-71 sm:h-12 sm:w-12"
-              >
+              <div className="relative h-10 w-10 rounded-xl bg-gray-10 dark:bg-gray-71 sm:h-12 sm:w-12">
                 <img
                   src={`/logos/ngos/${id}.webp`}
                   draggable="false"

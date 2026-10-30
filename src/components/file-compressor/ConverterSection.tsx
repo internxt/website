@@ -231,9 +231,7 @@ export const ConverterSection = ({
               <CaretLeft className="text-primary" size={24} />
               <p className="pl-1 text-base font-medium text-primary">Back</p>
             </div>
-            <p
-              className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold text-gray-100 dark:text-white-95"
-            >
+            <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold text-gray-100 dark:text-white-95">
               {formattedConverterText.title}
             </p>
           </div>

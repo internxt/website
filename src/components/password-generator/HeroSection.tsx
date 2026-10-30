@@ -47,9 +47,7 @@ const HeroSection = ({ textContent, lang }) => {
   const inactiveStepColor = 'bg-gray-10 dark:bg-gray-71';
 
   return (
-    <section
-      className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32 dark:bg-gray-95"
-    >
+    <section className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32 dark:bg-gray-95">
       <div className="flex w-full flex-col items-center justify-center space-y-10  ">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">

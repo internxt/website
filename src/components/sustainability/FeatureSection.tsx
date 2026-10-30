@@ -25,9 +25,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
 
   return (
     <section className="overflow-hidden px-5 dark:bg-gray-95">
-      <div
-        className="flex flex-col items-center justify-center space-y-16 bg-gray-1 dark:bg-gray-105 py-10 sm:py-20"
-      >
+      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 dark:bg-gray-105 py-10 sm:py-20">
         <div className="flex w-full max-w-[90%] flex-col items-center justify-center space-y-6 text-center sm:max-w-[850px]">
           <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl">
             {textContent.title}

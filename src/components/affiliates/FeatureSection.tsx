@@ -24,9 +24,7 @@ const FeatureSection = ({ textContent }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 py-20">
       <div className="flex flex-col items-center justify-center space-y-10 lg:space-y-20">
-        <p
-          className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl"
-        >
+        <p className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </p>
         <RevealY className="flex w-full flex-row flex-wrap items-center justify-center gap-4 lg:gap-8">

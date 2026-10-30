@@ -86,12 +86,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   const maxIndex = getMaxIndex();
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20 bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-      ></div>
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20 bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex h-min w-[350px] flex-col justify-center gap-6 lg:w-[850px]">
         <h2 className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
@@ -145,9 +141,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                 />
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
                   <p className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">{title}</p>
-                  <p
-                    className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>

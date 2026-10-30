@@ -145,14 +145,10 @@ export const HowMuchYouNeedSection = ({
 
   return (
     <section className="hidden overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:flex">
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      ></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <p
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </p>
           <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
@@ -187,9 +183,7 @@ export const HowMuchYouNeedSection = ({
 
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} />
-                <div
-                  className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5"
-                >
+                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5">
                   <p className="font-medium text-gray-100 dark:text-white-95">
                     {storageAmountValue}TB
                   </p>
@@ -201,9 +195,7 @@ export const HowMuchYouNeedSection = ({
               </p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
-                <div
-                  className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5"
-                >
+                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5">
                   <p className="font-medium text-gray-100 dark:text-white-95">
                     {percentDownloadValue}%
                   </p>

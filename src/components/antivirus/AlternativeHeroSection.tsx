@@ -15,9 +15,7 @@ const AlternativeHeroSection = ({
   currency,
   isAnnual = false,
 }: AlternativeHeroSectionProps) => (
-  <section
-    className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
-  >
+  <section className="mt-20 flex h-min w-full flex-col items-center overflow-hidden px-6 py-10 lg:mt-16 lg:h-[705px] lg:flex-row lg:justify-between lg:px-10 xl:px-32 3xl:px-80 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
     <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:gap-[90px]">
       <div
         className={`z-20 flex h-min w-full shrink-0 flex-col items-center justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[566px] lg:items-start lg:gap-8 lg:rounded-16 lg:p-8 bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)] dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]`}
@@ -28,9 +26,7 @@ const AlternativeHeroSection = ({
           </p>
         </div>
 
-        <p
-          className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-left lg:text-5xl"
-        >
+        <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-left lg:text-5xl">
           {textContent.title} <br className="hidden sm:flex" />
           <span className="text-primary">{textContent.blueText}</span>
         </p>

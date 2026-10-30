@@ -7,9 +7,7 @@ const AchieveSecurityAndPrivacySection = ({ textContent }) => {
       <div className="flex flex-col items-center space-y-20 py-20 px-5">
         {/* First section */}
         <div className="flex max-w-[774px] flex-col items-center space-y-6 text-center">
-          <h2
-            className="max-w-[700px] text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95"
-          >
+          <h2 className="max-w-[700px] text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">
             {textContent.title}
           </h2>
           <p className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">

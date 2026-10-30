@@ -34,17 +34,13 @@ export const HowToUseCLISection = ({ textContent, isRclone = false }) => {
     <section className="overflow-hidden px-5 py-20 dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center gap-12">
         <div className="flex max-w-[850px] flex-col gap-6 text-center lg:gap-12">
-          <h2
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </h2>
           {isRclone ? (
             <>
               <div className="flex flex-col gap-3">
-                <p
-                  className="text-start text-lg font-normal leading-tight text-gray-55 dark:text-green-120"
-                >
+                <p className="text-start text-lg font-normal leading-tight text-gray-55 dark:text-green-120">
                   {textContent.description[0]}
                 </p>
                 <p className="text-start text-lg font-normal text-gray-55 dark:text-green-120">

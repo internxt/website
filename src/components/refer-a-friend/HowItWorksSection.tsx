@@ -95,9 +95,7 @@ export default function HowItWorksSection({
                   {card.title}
                 </p>
               </span>
-              <p
-                className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-              >
+              <p className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                 {card.description}
               </p>
             </div>

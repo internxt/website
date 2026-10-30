@@ -61,9 +61,7 @@ const CleanerPage = ({
               <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.CtaSection.title}
               </p>
-              <p
-                className="px-10 text-base font-normal text-gray-55 dark:text-green-120 lg:px-0 lg:text-xl"
-              >
+              <p className="px-10 text-base font-normal text-gray-55 dark:text-green-120 lg:px-0 lg:text-xl">
               {textContent.CtaSection.description}
             </p>
           </div>

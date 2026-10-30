@@ -37,9 +37,7 @@ export const ActionBanner = () => {
       className={`${dialogAction.dialogIsOpen(DIALOG_KEY) ? 'flex' : 'hidden'} 
          fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50`}
     >
-      <div
-        className="absolute left-1/2 top-1/2 flex h-auto w-full max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-95"
-      >
+      <div className="absolute left-1/2 top-1/2 flex h-auto w-full max-w-5xl -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-95">
         <button
           className="absolute right-0 z-50 m-5 flex w-auto rounded-md hover:bg-gray-5 dark:hover:bg-gray-105"
           onClick={() => dialogAction.closeDialog(DIALOG_KEY)}

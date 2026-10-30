@@ -125,18 +125,14 @@ const HeroSection = ({ textContent }) => {
         </div>
 
         <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:max-w-2xl lg:flex-row lg:space-x-5 lg:space-y-0">
-          <div
-            className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
-          >
+          <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64">
             <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
             <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
               {crackFeedback}
             </span>
           </div>
 
-          <div
-            className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
-          >
+          <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64">
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.pwned.title}</span>
               <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
@@ -155,9 +151,7 @@ const HeroSection = ({ textContent }) => {
             </div>
           </div>
 
-          <div
-            className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64"
-          >
+          <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-8 lg:h-auto lg:w-64">
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.crack.title}</span>
               <span className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">

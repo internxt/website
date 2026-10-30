@@ -63,9 +63,7 @@ export const HorizontalPricingSection = ({
           <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </p>
-          <p
-            className="font-regular w-[290px] text-lg text-gray-100 dark:text-white-95 lg:w-full lg:text-xl"
-          >
+          <p className="font-regular w-[290px] text-lg text-gray-100 dark:text-white-95 lg:w-full lg:text-xl">
             {textContent.description}
           </p>
         </div>

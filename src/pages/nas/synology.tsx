@@ -122,14 +122,10 @@ const SynologyNASPage = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-4 text-center">
-              <p
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.ctaSection.title}
               </p>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl">
                 {textContent.ctaSection.description}
               </p>
             </div>
@@ -154,14 +150,10 @@ const SynologyNASPage = ({
           url={'#billingButtons'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <p
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.ctaSectionV2.title}
               </p>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {textContent.ctaSectionV2.description}
               </p>
             </div>

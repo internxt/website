@@ -10,9 +10,7 @@ const ExplanationSection = ({ textContent, ctaText, ctaLink }) => {
           </h2>
           <div className="flex flex-col items-center space-y-6">
             {textContent.description && (
-              <p
-                className="font-regular text-xl text-gray-80 dark:text-cool-gray-30 lg:max-w-[800px]"
-              >
+              <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30 lg:max-w-[800px]">
                 {textContent.description}
               </p>
             )}

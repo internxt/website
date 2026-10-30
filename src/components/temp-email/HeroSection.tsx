@@ -236,9 +236,7 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
   };
 
   return (
-    <section
-      className="flex items-start justify-center overflow-hidden px-6 pb-20 pt-32 dark:bg-gray-95"
-    >
+    <section className="flex items-start justify-center overflow-hidden px-6 pb-20 pt-32 dark:bg-gray-95">
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
           src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
@@ -282,9 +280,7 @@ export const HeroSection = ({ darkMode = false, textContent }) => {
           onMessageSelected={onMessageSelected}
           darkMode={darkMode}
         />
-        <div
-          className="flex flex-row items-center space-x-1 pt-2 text-center text-sm text-gray-70 dark:text-cool-gray-30"
-        >
+        <div className="flex flex-row items-center space-x-1 pt-2 text-center text-sm text-gray-70 dark:text-cool-gray-30">
           <Info size={16} className="hidden md:flex" />
           <p>
             {textContent.expireEmail.normal}{' '}

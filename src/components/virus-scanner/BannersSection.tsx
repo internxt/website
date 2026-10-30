@@ -13,9 +13,7 @@ const BannersSection = ({ textContent, lang }) => {
           </p>
         </div>
         <div className="flex flex-col space-y-9 md:flex-row md:space-x-9 md:space-y-0">
-          <div
-            className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center"
-          >
+          <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center">
             <Image
               src={getImage('/images/temp-email/password-checker.svg')}
               quality={100}
@@ -40,9 +38,7 @@ const BannersSection = ({ textContent, lang }) => {
               <CaretRight size={14} weight={'bold'} />
             </button>
           </div>
-          <div
-            className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center"
-          >
+          <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10 text-center">
             <Image
               src={getImage('/images/temp-email/byte-converter.svg')}
               quality={100}

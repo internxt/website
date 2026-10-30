@@ -168,9 +168,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           <div className="relative w-full rounded-2xl border-4 border-primary/7 bg-primary/2 p-9 lg:flex lg:w-auto">
             <div className="flex flex-col items-center justify-center gap-y-4 lg:flex-row lg:gap-20 lg:gap-y-0">
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div
-                  className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 focus-within:border-primary focus-within:bg-white dark:focus-within:bg-gray-95"
-                >
+                <div className="flex flex-row justify-between rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 focus-within:border-primary focus-within:bg-white dark:focus-within:bg-gray-95">
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     alt="convert from"
@@ -194,9 +192,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
               </div>
 
               <div className="flex max-w-[400px] flex-col focus-within:rounded-xl focus-within:ring-4 focus-within:ring-primary focus-within:ring-opacity-6 md:w-screen">
-                <div
-                  className="flex flex-row rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 focus-within:border-primary focus-within:bg-white dark:focus-within:bg-gray-95"
-                >
+                <div className="flex flex-row rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 focus-within:border-primary focus-within:bg-white dark:focus-within:bg-gray-95">
                   <input
                     className="ml-2 w-full rounded-xl bg-transparent p-2 focus:outline-none"
                     alt="convert to"

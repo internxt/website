@@ -3,20 +3,12 @@ import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
 const SecureAndManageSection = ({ textContent }): JSX.Element => {
   return (
-    <section
-      className="flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:gap-12 lg:py-20"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:top-0"
-      ></div>
-      <h2
-        className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:w-[832px] lg:text-3xl"
-      >
+    <section className="flex flex-col items-center justify-center gap-8 bg-neutral-17 dark:bg-gray-105 py-10 lg:gap-12 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:top-0"></div>
+      <h2 className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:w-[832px] lg:text-3xl">
         {textContent.title}
       </h2>
-      <p
-        className="w-[323px] text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg"
-      >
+      <p className="w-[323px] text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[832px] lg:text-lg">
         {textContent.description}
       </p>
       <div className="hidden flex-row gap-8 lg:flex">

@@ -23,9 +23,7 @@ const HeroSection = ({ textContent }) => {
               </p>
             </h1>
           </div>
-          <div
-            className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-gray-5 dark:bg-gray-105 p-2 xl:items-center"
-          >
+          <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-gray-5 dark:bg-gray-105 p-2 xl:items-center">
             <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
             <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
               {formattedHero}
@@ -42,9 +40,7 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div
-          className="flex flex-col rounded-3xl from-white to-gray-1 dark:from-gray-95 dark:to-gray-105"
-        >
+        <div className="flex flex-col rounded-3xl from-white to-gray-1 dark:from-gray-95 dark:to-gray-105">
           <Image
             loading="eager"
             src={getImage('/images/yearly/internxt_yearly_plans.webp')}

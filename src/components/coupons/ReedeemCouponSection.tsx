@@ -60,21 +60,15 @@ export default function RedeemCouponsSection({
   };
 
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 dark:bg-gray-105 pb-10 lg:h-min lg:gap-16 lg:p-20"
-    >
-      <div
-        className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-      />
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 dark:bg-gray-105 pb-10 lg:h-min lg:gap-16 lg:p-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
 
       <div className="flex h-min w-full flex-col justify-center gap-8 p-6 lg:gap-12 lg:p-10">
         <div className="flex h-min w-full flex-col items-center justify-center gap-8 lg:gap-6">
           <p className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </p>
-          <p
-            className="font-regular text-base leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-          >
+          <p className="font-regular text-base leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
             {textContent.description}
           </p>
         </div>
@@ -85,15 +79,11 @@ export default function RedeemCouponsSection({
               key={card}
               className="flex h-[220px] w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
             >
-              <span
-                className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95"
-              >
+              <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95">
                 <p className="text-2xl text-primary ">{index + 1}</p>
                 {card}
               </span>
-              <p
-                className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-              >
+              <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                 {textContent.cards.descriptions[index]}
               </p>
             </div>
@@ -122,15 +112,11 @@ export default function RedeemCouponsSection({
                   key={index}
                   className="flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
                 >
-                  <span
-                    className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95"
-                  >
+                  <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95 dark:text-white-95">
                     <p className="text-2xl text-primary ">{index + 1}</p>
                     {card}
                   </span>
-                  <p
-                    className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {textContent.cards.descriptions[index]}
                   </p>
                 </div>

@@ -9,18 +9,12 @@ interface ImageAndCardsProps {
 export const ImageAndCards = ({ textContent, image }: ImageAndCardsProps) => {
   return (
     <section className="flex flex-col gap-8 px-6 pb-16 lg:gap-16 dark:bg-gray-95">
-      <div
-        className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"
-      />
+      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
       <div className="flex h-min flex-col justify-center gap-6 lg:text-center">
-        <h2
-          className="whitespace-pre-line text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-        >
+        <h2 className="whitespace-pre-line text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h2>
-        <p
-          className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-        >
+        <p className="whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
           {textContent.description}
         </p>
       </div>

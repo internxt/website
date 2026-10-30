@@ -30,9 +30,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
               <div className="flex h-full flex-col">
                 {textContent.table.OpenSource.feat.map((item, index) => (
                   <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
-                    <div
-                      className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6"
-                    >
+                    <div className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6">
                       <div className="flex w-[275px] py-4 lg:max-w-[275px]">
                         <p className="text-gray-80 dark:text-cool-gray-30">{item}</p>
                       </div>
@@ -62,9 +60,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
               <div className="flex h-full flex-col">
                 {textContent.table.CloseSource.disadvantages.map((item, index) => (
                   <div className="flex h-full w-full flex-row items-center bg-primary bg-opacity-3" key={index}>
-                    <div
-                      className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6"
-                    >
+                    <div className="flex h-full w-full flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 dark:bg-gray-105 pl-6">
                       <div className="flex w-[275px] py-4 lg:max-w-[275px]">
                         <p className="text-gray-80 dark:text-cool-gray-30">{item}</p>
                       </div>

@@ -6,9 +6,7 @@ import { Check } from '@phosphor-icons/react';
 import { HighlightText } from '../components/HighlightText';
 
 const HeroSection = ({ textContent, url = '#billingButtons' }) => (
-  <section
-    className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]"
-  >
+  <section className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40 bg-[linear-gradient(360deg,#FFFFFF_0%,#E5EFFF_85.17%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#082D66_85.17%)]">
     <div
       className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}
     >
@@ -26,9 +24,7 @@ const HeroSection = ({ textContent, url = '#billingButtons' }) => (
           <div key={feat} className="flex h-[24px] flex-row items-center justify-center gap-2">
             <Check className="hidden text-green-dark xs-md:block" size={24} />
             <Check className="block text-green-dark xs-md:hidden" size={20} />
-            <p
-              className="text-left text-sm font-medium text-gray-55 dark:text-green-120 xs-md:text-lg"
-            >
+            <p className="text-left text-sm font-medium text-gray-55 dark:text-green-120 xs-md:text-lg">
               {feat}
             </p>
           </div>

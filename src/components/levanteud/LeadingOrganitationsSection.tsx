@@ -78,14 +78,10 @@ export default function LeadingOrganizationsSection({
         <p className="text-start text-30 font-semibold leading-tight lg:whitespace-pre-line lg:text-center lg:text-5xl">
           {textContent.title}
         </p>
-        <p
-          className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line"
-        >
+        <p className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line">
           {textContent.subtitle[0]}
         </p>
-        <p
-          className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line"
-        >
+        <p className="font-regular text-start text-base lg:text-center text-gray-55 dark:text-green-120 leading-tight lg:whitespace-pre-line">
           {textContent.subtitle[1]}
         </p>
       </div>
@@ -118,9 +114,7 @@ export default function LeadingOrganizationsSection({
                 key={index}
                 className="flex flex-col gap-6 bg-white dark:bg-gray-95 w-full flex-shrink-0 rounded-xl p-6 lg:min-w-0 lg:flex-shrink lg:rounded-16 lg:p-8"
               >
-                <p
-                  className="text-xl font-medium leading-tight lg:whitespace-pre-line text-black dark:text-white-95"
-                >
+                <p className="text-xl font-medium leading-tight lg:whitespace-pre-line text-black dark:text-white-95">
                   {card.title}
                 </p>
                 <div className="flex flex-col gap-2">

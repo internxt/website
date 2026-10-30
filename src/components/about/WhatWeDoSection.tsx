@@ -5,13 +5,9 @@ import { CaretRight } from '@phosphor-icons/react';
 
 const WhatWeDoSection = ({ textContent }) => {
   return (
-    <section
-      className="w-full overflow-hidden bg-[linear-gradient(360deg,#F4F8FF_63.1%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_63.1%,#1C1C1C_100%)]"
-    >
+    <section className="w-full overflow-hidden bg-[linear-gradient(360deg,#F4F8FF_63.1%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_63.1%,#1C1C1C_100%)]">
       <div className="flex w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20">
-        <p
-          className="w-[345px] text-start text-30 font-bold text-gray-100 dark:text-white-95 lg:w-full lg:text-center lg:text-5xl"
-        >
+        <p className="w-[345px] text-start text-30 font-bold text-gray-100 dark:text-white-95 lg:w-full lg:text-center lg:text-5xl">
           {textContent.title}
         </p>
 
@@ -58,9 +54,7 @@ const WhatWeDoSection = ({ textContent }) => {
             />
           </RevealX>
           <div className="flex w-[345px] flex-col items-center justify-center space-y-5 text-center lg:w-[554px] lg:text-left">
-            <p
-              className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl lg:font-medium"
-            >
+            <p className="text-start text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl lg:font-medium">
               {textContent.section1.title}
             </p>
             <div className="flex flex-col space-y-5">
@@ -75,9 +69,7 @@ const WhatWeDoSection = ({ textContent }) => {
                 );
               })}
             </div>
-            <div
-              className="flex h-min w-full flex-col justify-center gap-4 rounded-16 bg-white dark:bg-gray-95 p-6 lg:gap-6 lg:p-8"
-            >
+            <div className="flex h-min w-full flex-col justify-center gap-4 rounded-16 bg-white dark:bg-gray-95 p-6 lg:gap-6 lg:p-8">
               <div className="hidden flex-row items-center justify-center gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
@@ -109,15 +101,11 @@ const WhatWeDoSection = ({ textContent }) => {
                     }}
                   />
                 </div>
-                <p
-                  className="text-start text-sm font-medium leading-tight text-gray-95 dark:text-white-95"
-                >
+                <p className="text-start text-sm font-medium leading-tight text-gray-95 dark:text-white-95">
                   {textContent.bitSection.title}
                 </p>
               </div>
-              <p
-                className="text-start text-xs font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base"
-              >
+              <p className="text-start text-xs font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
                 {textContent.bitSection.description}
               </p>
               <span

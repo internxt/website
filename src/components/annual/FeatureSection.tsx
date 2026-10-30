@@ -6,9 +6,7 @@ const FeatureSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center space-y-10 px-6 py-20 lg:flex-row lg:space-x-48 lg:space-y-0 ">
-        <div
-          className="flex flex-col rounded-3xl bg-gray-1 from-white dark:bg-gray-105 dark:from-gray-95"
-        >
+        <div className="flex flex-col rounded-3xl bg-gray-1 from-white dark:bg-gray-105 dark:from-gray-95">
           <Image
             loading="eager"
             src={getImage('/images/affiliates/internxt_secure_file_storage.webp')}

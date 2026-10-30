@@ -161,9 +161,7 @@ export const SlidersComparsion = ({ darkMode = false, textContent }): JSX.Elemen
                   valueLabelFormat={storageAmountValueLabelFormat}
                   color="orange"
                 />
-                <div
-                  className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5"
-                >
+                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5">
                   <p className="font-medium text-gray-100 dark:text-white-95">
                     {storageAmountValue}TB
                   </p>
@@ -181,9 +179,7 @@ export const SlidersComparsion = ({ darkMode = false, textContent }): JSX.Elemen
                   valueLabelFormat={percentDownloadValueLabelFormat}
                   color="orange"
                 />
-                <div
-                  className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5"
-                >
+                <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 dark:border-gray-71 px-4 py-2.5">
                   <p className="font-medium text-gray-100 dark:text-white-95">
                     {percentDownloadValue}%
                   </p>

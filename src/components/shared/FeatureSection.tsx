@@ -31,21 +31,15 @@ const FeatureSection = ({
 }: FeatureSectionProps) => {
   return (
     <section className="overflow-hidden px-5 dark:bg-gray-95">
-      <div
-        className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-10 md:py-20"
-      >
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white dark:bg-gray-95 py-10 md:py-20">
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
-            <h2
-              className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-            >
+            <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
               {title}
             </h2>
             <div className="flex flex-col space-y-6 lg:max-w-[950px]">
               {subtitle && (
-                <p
-                  className="text-lg font-medium leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-2xl"
-                >
+                <p className="text-lg font-medium leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-2xl">
                   {subtitle}
                 </p>
               )}
@@ -110,14 +104,10 @@ const FeatureSection = ({
                     </div>)
                   )}
 
-                  <h3
-                    className="text-30 font-semibold text-gray-100 dark:text-white-95 sm:leading-tight md:text-3xl"
-                  >
+                  <h3 className="text-30 font-semibold text-gray-100 dark:text-white-95 sm:leading-tight md:text-3xl">
                     {card.title}
                   </h3>
-                  <p
-                    className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl"
-                  >
+                  <p className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">
                     {Array.isArray(card.description) ? (
                       card.description.map((line, index) => (
                           <span key={index}>

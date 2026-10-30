@@ -66,24 +66,16 @@ const CookiesSection = ({ textContent, lang }) => {
         <table className="mb-6 w-full border border-cool-gray-30 dark:border-gray-71">
           <thead>
             <tr className="bg-gray-100">
-              <th
-                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-              >
+              <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                 {textContent.cookies_table_row1_column1}
               </th>
-              <th
-                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-              >
+              <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                 {textContent.cookies_table_row1_column2}
               </th>
-              <th
-                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-              >
+              <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                 {textContent.cookies_table_row1_column3}
               </th>
-              <th
-                className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2"
-              >
+              <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">
                 {textContent.cookies_table_row1_column4}
               </th>
             </tr>

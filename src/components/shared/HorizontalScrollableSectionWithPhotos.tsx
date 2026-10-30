@@ -138,9 +138,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
               <div className="flex h-full flex-col items-center justify-between">
                 <div className="flex h-min w-full flex-col px-6 pb-2 pt-6 lg:px-0 lg:pb-8">
                   <h3 className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">{title}</h3>
-                  <p
-                    className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>

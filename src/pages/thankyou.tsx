@@ -36,9 +36,7 @@ const Thankyou = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Thankyou" lang={lang} robots="noindex">
       <Navbar lang={locale} textContent={navbarLang} cta={['default']} isLinksHidden hideCTA />
 
-      <section
-        className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-gray-95 px-6 py-24 text-center"
-      >
+      <section className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-gray-95 px-6 py-24 text-center">
         <div className="flex flex-col items-center gap-6">
           <h1 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
             {langJson.HeroSection.title}

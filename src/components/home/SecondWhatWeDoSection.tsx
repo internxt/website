@@ -4,9 +4,7 @@ import { getImage } from '@/lib/getImage';
 const SecondWhatWeDoSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div
-        className="z-10 flex flex-col items-center bg-white dark:bg-gray-95 py-20 text-gray-100 dark:text-white-95"
-      >
+      <div className="z-10 flex flex-col items-center bg-white dark:bg-gray-95 py-20 text-gray-100 dark:text-white-95">
         <div className="flex flex-col gap-16 px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>

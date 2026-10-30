@@ -63,9 +63,7 @@ const SecondFeaturesSection = ({
     <section className={`flex flex-col items-center justify-center gap-20 overflow-hidden ${bgColor} px-5 py-24`}>
       <div className="flex w-full max-w-[1040px] flex-col items-center justify-center gap-6">
         <div className="flex flex-col gap-4 text-center">
-          <h2
-            className="text-3xl font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-          >
+          <h2 className="text-3xl font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             {textContent.title}
           </h2>
           <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
@@ -93,9 +91,7 @@ const SecondFeaturesSection = ({
                 }}
               >
                 {cards ? <info.icon size={32} className="text-primary" /> : undefined}
-                <p
-                  className="text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <p className="text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </p>
               </button>

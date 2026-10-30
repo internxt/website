@@ -38,9 +38,7 @@ export const RangeSliderHeroSection = ({
         <div className="flex w-full flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-10 pb-7 pt-10 lg:w-max">
           <div className="flex w-full max-w-[700px] flex-col gap-5 lg:w-screen">
             <div className="flex w-full flex-col items-end gap-10 lg:flex-row">
-              <div
-                className="flex w-full items-center justify-center rounded-lg border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 py-2.5 lg:w-screen lg:max-w-[85px]"
-              >
+              <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 py-2.5 lg:w-screen lg:max-w-[85px]">
                 <p className="font-medium text-gray-100 dark:text-white-95">{valueLabel}</p>
               </div>
               <RangeSlider

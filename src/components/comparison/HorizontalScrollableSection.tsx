@@ -103,18 +103,12 @@ export default function HorizontalScrollableSection({
     >
       {!hideDivider && (
         <>
-          <div
-            className="absolute left-8 right-8 top-0 flex h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:hidden"
-          ></div>
-          <div
-            className="absolute left-8 right-8 hidden h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:top-0 lg:flex"
-          ></div>
+          <div className="absolute left-8 right-8 top-0 flex h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:hidden"></div>
+          <div className="absolute left-8 right-8 hidden h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32 lg:top-0 lg:flex"></div>
         </>
       )}
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <TagTitle
-          className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl"
-        >
+        <TagTitle className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </TagTitle>
         <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
@@ -150,15 +144,11 @@ export default function HorizontalScrollableSection({
           >
             {cardTitles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div
-                  className="flex h-full w-[345px] flex-col rounded-16 bg-white dark:bg-gray-95 p-8 lg:w-[400px]"
-                >
+                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white dark:bg-gray-95 p-8 lg:w-[400px]">
                   <TagMiniTitle className="pb-6 text-xl font-medium text-gray-95 dark:text-white-95">
                     {title}
                   </TagMiniTitle>
-                  <p
-                    className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120"
-                  >
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55 dark:text-green-120">
                     {cardDescriptions[index]}
                   </p>
                 </div>

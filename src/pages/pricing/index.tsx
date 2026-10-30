@@ -158,14 +158,10 @@ const Pricing = ({
           url={'/pricing'}
           customText={
             <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <h2
-                className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl"
-              >
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
                 {textContent.lastCtaSection.title}
               </h2>
-              <p
-                className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl"
-              >
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
                 {textContent.lastCtaSection.description}
               </p>
             </div>

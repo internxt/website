@@ -19,9 +19,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
 
   return (
     <>
-      <div
-        className="sticky top-[200px] hidden max-h-[450px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 dark:border-gray-71 px-6 py-9 pr-20 lg:flex"
-      >
+      <div className="sticky top-[200px] hidden max-h-[450px] w-max flex-col space-y-6 overflow-y-scroll rounded-lg border border-gray-10 dark:border-gray-71 px-6 py-9 pr-20 lg:flex">
         <div className="flex flex-col space-y-6">
           {linkTitles().map((title) => (
             <p
@@ -38,9 +36,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
           ))}
         </div>
       </div>
-      <div
-        className="mb-10 flex flex-col rounded-lg border border-gray-10 dark:border-gray-71 drop-shadow lg:hidden"
-      >
+      <div className="mb-10 flex flex-col rounded-lg border border-gray-10 dark:border-gray-71 drop-shadow lg:hidden">
         <div className="flex flex-col">
           <Menu>
             <div className="mt-1 flex flex-col">
@@ -56,9 +52,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <MenuItems
-                  className="mt-1 flex w-full flex-col rounded-md bg-white dark:bg-gray-95 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-                >
+                <MenuItems className="mt-1 flex w-full flex-col rounded-md bg-white dark:bg-gray-95 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {linkTitles().map((title, personIdx) => (
                     <MenuItem
                       as={'div'}

@@ -134,9 +134,7 @@ export const AntivirusTemplate = ({
               {infoSectionData.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p
-                    className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80 dark:text-cool-gray-30"
-                  >
+                  <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80 dark:text-cool-gray-30">
                     {item.description}
                   </p>
                 </div>

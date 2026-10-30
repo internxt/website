@@ -55,9 +55,7 @@ const FeatureSection = ({
   return (
     <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
       <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
-        <div
-          className="flex flex-col items-center justify-center space-y-6 text-center text-black dark:text-white-95"
-        >
+        <div className="flex flex-col items-center justify-center space-y-6 text-center text-black dark:text-white-95">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="max-w-5xl text-xl text-gray-80 dark:text-cool-gray-30">
             {textContent.description}

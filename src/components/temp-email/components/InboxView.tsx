@@ -82,12 +82,8 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
       className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 dark:border-gray-71 shadow-subtle-hard lg:max-w-2xl"
     >
       <div className="flex flex-col">
-        <div
-          className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10 dark:border-gray-71"
-        >
-          <div
-            className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
-          >
+        <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10 dark:border-gray-71">
+          <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5">
             <div className="flex flex-row items-center space-x-1">
               <Tray size={24} className="text-gray-80 dark:text-cool-gray-30" />
               <p className="text-base font-medium text-gray-100 dark:text-white-95">
@@ -131,9 +127,7 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
                       item.id === selectedMessage?.id ? 'bg-primary bg-opacity-10' : null
                     } `}
                   >
-                    <div
-                      className="flex w-full max-w-[224px] flex-col border-b border-gray-10 dark:border-gray-71 py-4"
-                    >
+                    <div className="flex w-full max-w-[224px] flex-col border-b border-gray-10 dark:border-gray-71 py-4">
                       <p title={item.from} className="truncate text-xs font-medium text-gray-50">
                         {item.from}
                       </p>
@@ -144,9 +138,7 @@ const InboxWeb = ({ getProps }: { darkMode?: boolean; getProps: InboxProps }) =>
 
                       <div className="flex flex-row items-end justify-end space-x-2">
                         <p className="line-clamp-2 w-full text-xs">{item.body}</p>
-                        <p
-                          className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120"
-                        >
+                        <p className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120">
                           {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                         </p>
                       </div>
@@ -196,9 +188,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
   const [isMessageOpen, setIsMessageOpen] = useState(false);
 
   return (
-    <div
-      className="flex h-[480px] w-full flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 dark:border-gray-71 shadow-subtle-hard"
-    >
+    <div className="flex h-[480px] w-full flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 dark:border-gray-71 shadow-subtle-hard">
       {messages?.length > 0 ? (
         //Render message selected
         (<>
@@ -211,9 +201,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
             className={'flex w-full overflow-y-scroll'}
           >
             <div className="flex w-full flex-col">
-              <div
-                className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
-              >
+              <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5">
                 <div className="flex flex-row items-center space-x-1">
                   <CaretLeft
                     size={20}
@@ -240,9 +228,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
             className={'flex w-full overflow-y-scroll'}
           >
             <div className="flex w-full flex-col">
-              <div
-                className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5"
-              >
+              <div className="flex w-full flex-row justify-between rounded-tl-xl border-b border-gray-10 bg-gray-5 dark:border-gray-71 dark:bg-gray-105 px-4 py-5">
                 <div className="flex flex-row items-center space-x-1">
                   <Tray size={20} weight="bold" />
                   <p className="text-base font-medium">Inbox</p>
@@ -270,9 +256,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
                         !item.seen ? 'border-l-2 border-l-primary' : ''
                       } w-full flex-col px-4 text-start hover:bg-primary hover:bg-opacity-15  focus:bg-primary focus:bg-opacity-10`}
                     >
-                      <div
-                        className="flex w-full flex-col border-b border-gray-10 dark:border-gray-71 py-4"
-                      >
+                      <div className="flex w-full flex-col border-b border-gray-10 dark:border-gray-71 py-4">
                         <p title={item.from} className="text-xs font-medium text-gray-50">
                           {item.from}
                         </p>
@@ -282,9 +266,7 @@ const InboxMobile = ({ getProps }: { darkMode?: boolean; getProps: InboxProps })
                         </p>
                         <div className="flex flex-row items-end justify-end space-x-2">
                           <p className="line-clamp-2 w-full text-xs">{item.body}</p>
-                          <p
-                            className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120"
-                          >
+                          <p className="text-supporting-2 font-semibold text-gray-60 dark:text-green-120">
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>
                         </div>

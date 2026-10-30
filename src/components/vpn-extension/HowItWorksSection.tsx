@@ -22,9 +22,7 @@ export const HowItWorksSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20">
       <div className="flex flex-col items-center justify-center space-y-12">
-        <h2
-          className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl"
-        >
+        <h2 className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
           {textContent.title}
         </h2>
         <div className="flex max-w-[800px] flex-col space-y-6 text-center">

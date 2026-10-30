@@ -37,12 +37,8 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section
-      className="flex w-full flex-col gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:py-10 lg:pl-10 xl:pl-32 3xl:pl-80"
-    >
-      <h2
-        className="flex flex-col text-[30px] font-bold leading-tight lg:max-w-[1000px] lg:translate-x-40 lg:pl-20 lg:pr-10 lg:text-5xl text-gray-100 dark:text-white-95"
-      >
+    <section className="flex w-full flex-col gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:py-10 lg:pl-10 xl:pl-32 3xl:pl-80">
+      <h2 className="flex flex-col text-[30px] font-bold leading-tight lg:max-w-[1000px] lg:translate-x-40 lg:pl-20 lg:pr-10 lg:text-5xl text-gray-100 dark:text-white-95">
         {textContent.title}
       </h2>
       {textContent.descriptions.map((description: string) => (
@@ -82,9 +78,7 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
                   activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div
-                  className="flex flex-col overflow-hidden text-gray-55 dark:text-green-120 lg:text-base"
-                >
+                <div className="flex flex-col overflow-hidden text-gray-55 dark:text-green-120 lg:text-base">
                   {textContent.accordionCards.descriptions[index]}
                 </div>
               </div>

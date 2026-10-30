@@ -51,9 +51,7 @@ export const PriceTableForAlternativePricing = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center justify-center gap-10 pb-6">
           <div className="flex flex-col items-center gap-4 text-center">
-            <p
-              className="max-w-[900px] text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-6xl"
-            >
+            <p className="max-w-[900px] text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:text-6xl">
               {textContent.title.normal1} <span className="text-primary">{textContent.title.blue2}</span>
               {textContent.title.normal2}
             </p>

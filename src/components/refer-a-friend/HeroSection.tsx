@@ -38,14 +38,10 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
       <div className="flex h-min w-[345px] flex-col justify-center gap-8 lg:mt-28 lg:h-min lg:w-[540px] lg:justify-between">
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p
-              className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-            >
+            <p className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
               <HighlightText text={textContent.title} />
             </p>
-            <p
-              className="font-regular text-lg leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
-            >
+            <p className="font-regular text-lg leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
               {textContent.subtitle}
             </p>
           </div>
@@ -55,9 +51,7 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p
-                  className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg"
-                >
+                <p className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg">
                   {feat}
                 </p>
               </div>

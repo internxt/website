@@ -286,9 +286,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
               <p className="text-xl font-normal text-cool-gray-80 dark:text-cool-gray-30 md:text-xl">
                 {textContent.subtitle2}
               </p>
-              <p
-                className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80 dark:text-cool-gray-30"
-              >
+              <p className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80 dark:text-cool-gray-30">
                 <CheckCircle size={24} weight="fill" className="text-green-1" />
                 {textContent.secure}
               </p>
@@ -308,9 +306,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                           <div></div>
                         )}
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p
-                            className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30"
-                          >
+                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30">
                             {file?.name}
                           </p>
                           <p className="text-sm text-cool-gray-60 dark:text-cool-gray-30">
@@ -397,9 +393,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                             <div className="flex w-full flex-col items-center space-y-6">
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
                                 <p className="px-4 text-center text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.fileSelected}</p>
-                                <p
-                                  className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl"
-                                >
+                                <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl">
                                   {file?.name}
                                 </p>
                               </div>
@@ -504,9 +498,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <div
-                    className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard"
-                  >
+                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard">
                     <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button

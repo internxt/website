@@ -319,12 +319,8 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ darkMode = false,
   }, []);
 
   return (
-    <section
-      className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex dark:bg-gray-95"
-    >
-      <div
-        className="absolute bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]"
-      />
+    <section className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex dark:bg-gray-95">
+      <div className="absolute bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
       <p className="text-center text-2xl font-semibold text-gray-100 dark:text-white-95 lg:text-4xl">
         {textContent.downloadTitle}
       </p>

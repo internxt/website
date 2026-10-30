@@ -202,14 +202,10 @@ const Affiliates = ({
       <TextAndImageColumnSection
         TextComponent={
           <div className="flex max-w-[750px] flex-col space-y-6 text-center">
-            <p
-              className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-            >
+            <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
               {langJson.WhatIsInternxtSection.title}
             </p>
-            <p
-              className="text-xl font-medium leading-tight text-gray-100 dark:text-white-95 lg:text-2xl"
-            >
+            <p className="text-xl font-medium leading-tight text-gray-100 dark:text-white-95 lg:text-2xl">
               {langJson.WhatIsInternxtSection.subtitle}
             </p>
             <p className="text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl">
@@ -230,14 +226,10 @@ const Affiliates = ({
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p
-              className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-            >
+            <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
               {langJson.WhatWeDoSection.title}
             </p>
-            <p
-              className="max-w-[796px] text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl"
-            >
+            <p className="max-w-[796px] text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl">
               {langJson.WhatWeDoSection.description}
             </p>
           </div>
@@ -248,9 +240,7 @@ const Affiliates = ({
       <ComponentsInColumnSection
         backgroundColor="bg-gray-1 dark:bg-gray-105"
         FirstComponent={
-          <p
-            className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <p className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
             {langJson.CommissionStructureSection.title}
           </p>
         }
@@ -315,9 +305,7 @@ const Affiliates = ({
         }
       />
 
-      <div
-        className="flex flex-col items-center justify-center gap-12 bg-gray-1 dark:bg-gray-105 px-5 py-20 text-center"
-      >
+      <div className="flex flex-col items-center justify-center gap-12 bg-gray-1 dark:bg-gray-105 px-5 py-20 text-center">
         <h2 className="text-30 font-semibold text-gray-100 dark:text-white-95 lg:text-3xl">
           {langJson.Number1Section.title.line1}{' '}
           <span className="text-primary">{langJson.Number1Section.title.blue} </span>

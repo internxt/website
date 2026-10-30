@@ -67,9 +67,7 @@ const FeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <p
-                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <p className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </p>
               </button>
@@ -85,9 +83,7 @@ const FeaturesSection = ({ textContent }) => {
                 <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardInfo[cardIndex].title}
                 </p>
-                <ReactMarkdown
-                  className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30"
-                >
+                <ReactMarkdown className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30">
                   {cardInfo[cardIndex].description}
                 </ReactMarkdown>
               </div>

@@ -86,9 +86,7 @@ export const PriceCardsForAffiliatesPartners = ({
         popular ? 'border-primary/50 ring-[3px]' : `ring-1 ${ringClass}`
       } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
-      <div
-        className="flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6"
-      >
+      <div className="flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6">
         <div className="flex flex-col items-center justify-center space-y-4">
           {popular ? (
             <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
@@ -103,12 +101,8 @@ export const PriceCardsForAffiliatesPartners = ({
         <div
           className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
         >
-          <div
-            className="flex flex-row items-end gap-2 text-neutral-700 dark:text-cool-gray-30"
-          >
-            <p
-              className="flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95"
-            >
+          <div className="flex flex-row items-end gap-2 text-neutral-700 dark:text-cool-gray-30">
+            <p className="flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100 dark:text-white-95">
               <span className={`currency`}>{currency}</span>
               <span className="price text-4xl font-bold">{price}</span>
             </p>
@@ -138,9 +132,7 @@ export const PriceCardsForAffiliatesPartners = ({
         </button>
       </div>
 
-      <div
-        className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 text-sm text-gray-80 dark:text-cool-gray-30"
-      >
+      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 text-sm text-gray-80 dark:text-cool-gray-30">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature, index) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>

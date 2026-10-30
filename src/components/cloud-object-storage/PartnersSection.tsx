@@ -19,9 +19,7 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
   const company = textContent.companiesInformation[activeIndex];
 
   return (
-    <section
-      className="flex flex-col items-center justify-center gap-8 overflow-hidden px-5 py-10 lg:gap-16 lg:p-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
-    >
+    <section className="flex flex-col items-center justify-center gap-8 overflow-hidden px-5 py-10 lg:gap-16 lg:p-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]">
       <div className="flex flex-col items-center gap-6 px-10 text-center lg:gap-10 lg:px-40">
         <p className="text-30 font-bold text-gray-95 dark:text-white-95 lg:text-3xl">
           {textContent.title}
@@ -33,9 +31,7 @@ export const PartnersSection = ({ textContent }: PartnersSectionProps): JSX.Elem
 
       <PartnerSelector textContent={textContent} activePartner={activePartner} onPlanTypeChange={setActivePartner} />
 
-      <div
-        className="flex w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8 lg:flex-row"
-      >
+      <div className="flex w-full flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8 lg:flex-row">
         <div className="relative h-[288px] w-full overflow-hidden rounded-xl lg:w-[512px]">
           <Image
           key={company.image}

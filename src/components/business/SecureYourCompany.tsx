@@ -4,17 +4,13 @@ interface SecureYourCompanyProps {
 
 export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.Element => (
   <section className="overflow-hidden bg-neutral-17 dark:bg-gray-105 px-5 py-10 lg:py-20">
-    <div
-      className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-    ></div>
+    <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
     <div className="flex flex-col items-center justify-center gap-12">
       <div className="flex w-[350px] flex-col gap-4 text-center lg:w-[800px] lg:gap-8">
         <h2 className="text-30 font-bold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
           {textContent.title}
         </h2>
-        <h3
-          className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
-        >
+        <h3 className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">
           {textContent.description}
         </h3>
       </div>
@@ -30,9 +26,7 @@ export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.
         ))}
       </div>
 
-      <p
-        className="w-[350px] text-center text-sm leading-tight text-gray-60 dark:text-green-120 lg:w-full lg:text-base"
-      >
+      <p className="w-[350px] text-center text-sm leading-tight text-gray-60 dark:text-green-120 lg:w-full lg:text-base">
         {textContent.footerText}
       </p>
     </div>

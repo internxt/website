@@ -34,9 +34,7 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
     >
       <div className="flex w-full flex-col gap-8 lg:min-w-0 lg:max-w-[760px] lg:flex-1">
         <div className="flex flex-col gap-3">
-          <h1
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-          >
+          <h1 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             <HighlightText text={textContent.title} />
           </h1>
           <HighlightText
@@ -45,9 +43,7 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
           />
         </div>
 
-        <div
-          className="flex w-full flex-col rounded-16 border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-6 shadow-soft lg:max-w-[480px] lg:p-8"
-        >
+        <div className="flex w-full flex-col rounded-16 border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-6 shadow-soft lg:max-w-[480px] lg:p-8">
           <SignUpForm textContent={textContent.SignUp} lang={lang} onSubmitEmail={registerLead} />
         </div>
       </div>

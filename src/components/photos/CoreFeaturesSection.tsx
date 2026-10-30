@@ -43,19 +43,13 @@ const CoreFeaturesSection = ({
   return (
     <section className="relative w-full bg-neutral-17 dark:bg-gray-105 py-10 lg:py-20">
       {needsDivider && (
-        <div
-          className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"
-        ></div>
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
       )}
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-8 px-5 lg:gap-10 lg:px-20">
-        <h2
-          className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 dark:text-white-95 lg:pr-10 lg:text-5xl"
-        >
+        <h2 className="max-w-[1000px] text-[30px] font-bold leading-tight text-gray-100 dark:text-white-95 lg:pr-10 lg:text-5xl">
           {textContent.title}
         </h2>
-        <p
-          className="max-w-[900px] text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-        >
+        <p className="max-w-[900px] text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
           {textContent.description}
         </p>
         <div className="flex w-full flex-col justify-center gap-6 lg:max-w-[1500px] lg:flex-row lg:gap-16">
@@ -88,9 +82,7 @@ const CoreFeaturesSection = ({
                     activeIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                   }`}
                 >
-                  <div
-                    className="flex flex-col overflow-hidden text-sm text-gray-55 dark:text-green-120 lg:text-base"
-                  >
+                  <div className="flex flex-col overflow-hidden text-sm text-gray-55 dark:text-green-120 lg:text-base">
                     {textContent.accordionCards.descriptions[index]}
                   </div>
                 </div>

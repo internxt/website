@@ -16,9 +16,7 @@ const HeroSection = ({ textContent }) => (
           <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
             <p className="text-lg font-semibold text-primary">{textContent.label}</p>
           </div>
-          <h1
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl"
-          >
+          <h1 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             <HighlightText text={textContent.title} />
           </h1>
         </div>

@@ -50,9 +50,7 @@ export const WhenUseVPNSection = ({ textContent }) => {
           <div className="absolute"></div>
           {textContent.cards.map((card) => (
             <div className="flex justify-center lg:justify-start lg:even:justify-end" key={card}>
-              <div
-                className="flex w-full max-w-[300px] flex-col space-y-2 rounded-[10px] border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-10 text-start"
-              >
+              <div className="flex w-full max-w-[300px] flex-col space-y-2 rounded-[10px] border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-10 text-start">
                 <CheckSquare size={32} className="text-green-1" />
                 <p className="max-w-[260px] text-2xl font-medium text-gray-80 dark:text-cool-gray-30">
                   {card}

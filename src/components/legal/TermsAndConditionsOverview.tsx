@@ -30,9 +30,7 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
             setItemSelected={setItemSelected}
           />
           <div className="flex w-full flex-col space-y-8">
-            <div
-              className="flex flex-row items-center space-x-2 text-base text-gray-80 dark:text-cool-gray-30"
-            >
+            <div className="flex flex-row items-center space-x-2 text-base text-gray-80 dark:text-cool-gray-30">
               <CalendarBlank size={17} />
               <p>{textContent.lastUpdated}</p>
             </div>
@@ -54,9 +52,7 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
           <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
         </div> */}
         <div className="flex flex-col space-y-8 px-5 py-10">
-          <div
-            className="flex flex-row items-center space-x-2 text-base text-gray-80 dark:text-cool-gray-30"
-          >
+          <div className="flex flex-row items-center space-x-2 text-base text-gray-80 dark:text-cool-gray-30">
             <CalendarBlank size={17} />
             <p>{textContent.lastUpdated}</p>
           </div>

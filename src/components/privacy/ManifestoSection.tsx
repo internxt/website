@@ -11,9 +11,7 @@ const ManifestoSection = ({ textContent }) => (
           {textContent.section1.title.line1}
         </h2>
 
-        <h3
-          className="mb-10 w-full max-w-[850px] text-lg font-normal text-gray-80 dark:text-cool-gray-30 sm:text-xl"
-        >
+        <h3 className="mb-10 w-full max-w-[850px] text-lg font-normal text-gray-80 dark:text-cool-gray-30 sm:text-xl">
           {textContent.section1.subtitle.line1}
         </h3>
 

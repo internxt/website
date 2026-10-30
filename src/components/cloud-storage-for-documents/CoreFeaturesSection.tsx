@@ -37,17 +37,11 @@ const CoreFeaturesSection = ({ textContent }: CoreFeaturesSectionProps): JSX.Ele
   };
 
   return (
-    <section
-      className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80"
-    >
-      <h2
-        className="flex text-2xl font-bold leading-tight lg:text-4xl text-gray-100 dark:text-white-95"
-      >
+    <section className="flex w-full flex-col items-start justify-center gap-6 bg-neutral-17 dark:bg-gray-105 px-5 py-20 lg:py-20 lg:pl-10 xl:pl-32 3xl:pl-80">
+      <h2 className="flex text-2xl font-bold leading-tight lg:text-4xl text-gray-100 dark:text-white-95">
         {textContent.title}
       </h2>
-      <p
-        className="w-full max-w-[950px] pr-5 font-normal lg:pr-0 lg:text-lg text-gray-55 dark:text-green-120"
-      >
+      <p className="w-full max-w-[950px] pr-5 font-normal lg:pr-0 lg:text-lg text-gray-55 dark:text-green-120">
         {textContent.description}
       </p>
 

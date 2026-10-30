@@ -217,9 +217,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                           <div></div>
                         )}
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
-                          <p
-                            className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30"
-                          >
+                          <p className="max-w-xs truncate text-base font-medium text-cool-gray-80 dark:text-cool-gray-30">
                             {file?.name}
                           </p>
                           <p className="text-sm text-cool-gray-60 dark:text-cool-gray-30">
@@ -244,12 +242,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                               {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
                             </div>
                           ) : (
-                            <div
-                              className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80 dark:text-cool-gray-30"
-                            >
-                              <div
-                                className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20 dark:border-purple-100 bg-primary bg-opacity-6"
-                              >
+                            <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80 dark:text-cool-gray-30">
+                              <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20 dark:border-purple-100 bg-primary bg-opacity-6">
                                 <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
                                   <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
                                     <div className="flex flex-col space-y-2">
@@ -364,9 +358,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                             <div className="flex w-full flex-col items-center space-y-6">
                               <div className="flex w-full flex-shrink flex-col items-center overflow-hidden">
                                 <p className="px-4 text-center text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.fileSelected}</p>
-                                <p
-                                  className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl"
-                                >
+                                <p className="w-full truncate px-10 text-center text-lg font-semibold text-cool-gray-60 dark:text-cool-gray-30 lg:w-auto lg:max-w-md xl:max-w-xl">
                                   {file?.name}
                                 </p>
                               </div>
@@ -465,9 +457,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   enterFrom="opacity-0 translate-y-4"
                   enterTo="opacity-100 translate-y-0"
                 >
-                  <div
-                    className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard"
-                  >
+                  <div className="relative z-10 flex w-80 flex-col items-center justify-center space-y-4 rounded-xl bg-white dark:bg-gray-95 p-5 shadow-subtle-hard">
                     <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.error.title}</p>
                     <p className="w-full text-center text-sm text-cool-gray-40">{textContent.error.description}</p>
                     <button

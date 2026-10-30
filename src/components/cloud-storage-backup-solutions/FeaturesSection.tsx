@@ -46,9 +46,7 @@ const FeaturesSection = ({ textContent }) => {
     <section className="overflow-hidden dark:bg-gray-95">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <p
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </p>
           <div className="flex flex-col space-y-6">
@@ -70,9 +68,7 @@ const FeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <p
-                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <p className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </p>
               </button>
@@ -88,9 +84,7 @@ const FeaturesSection = ({ textContent }) => {
                 <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">
                   {cardInfo[cardIndex].title}
                 </p>
-                <ReactMarkdown
-                  className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30"
-                >
+                <ReactMarkdown className="markdown text-xl font-normal text-gray-80 dark:text-cool-gray-30">
                   {cardInfo[cardIndex].description}
                 </ReactMarkdown>
               </div>

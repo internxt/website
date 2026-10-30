@@ -28,9 +28,7 @@ export const SecureVPNSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden px-5 py-20 dark:bg-gray-95">
       <div className="flex flex-col items-center space-y-12">
-        <h2
-          className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95 md:text-left lg:text-5xl"
-        >
+        <h2 className="text-center text-4xl font-semibold text-gray-100 dark:text-white-95 md:text-left lg:text-5xl">
           {textContent.title}
         </h2>
         <div className="flex max-w-[800px] flex-col space-y-6 text-center">

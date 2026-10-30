@@ -29,9 +29,7 @@ export const WhatWeDoSectionForSpecialOffer = ({
           className={`flex max-w-5xl flex-col items-center overflow-hidden rounded-2xl ${bgColorCard} lg:w-screen lg:flex-row lg:justify-between lg:gap-0`}
         >
           <div className="flex h-full flex-col items-center justify-center gap-8 p-7 text-center lg:items-start lg:pl-14 lg:text-start">
-            <div
-              className="flex max-w-[500px] flex-col gap-6 text-lg text-black dark:text-white-95 lg:text-xl"
-            >
+            <div className="flex max-w-[500px] flex-col gap-6 text-lg text-black dark:text-white-95 lg:text-xl">
               {textContent.card.features.map((feature) => (
                 <div className="flex flex-row gap-2">
                   <CheckCircle className="mt-0.5 h-6 w-6 text-primary lg:mt-0 lg:h-8 lg:w-8" size={32} />

@@ -69,28 +69,20 @@ const FeaturesBanner = (): JSX.Element => {
         <div className="w-[509px] h-[358px] pl-14 justify-center gap-8 items-start flex flex-col">
           <div className="flex flex-col gap-5">
             <div className="flex gap-3 px-1">
-              <p
-                className="text-lg font-semibold text-primary bg-gray-10 dark:bg-gray-71 dark:bg-gray-90 rounded-sm px-1 py-0.5"
-              >
+              <p className="text-lg font-semibold text-primary bg-gray-10 dark:bg-gray-71 dark:bg-gray-90 rounded-sm px-1 py-0.5">
                 {banner.label.blueText}
               </p>
-              <p
-                className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 px-1 py-0.5"
-              >
+              <p className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 px-1 py-0.5">
                 {banner.label.text}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p
-                className="text-4xl font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 whitespace-nowrap"
-              >
+              <p className="text-4xl font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1 whitespace-nowrap">
                 {banner.title}
               </p>
               <div className="flex gap-1 px-1">
                 <p className="text-lg font-semibold text-primary">{banner.subTitle.blueText}</p>
-                <p
-                  className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1"
-                >
+                <p className="text-lg font-semibold text-gray-100 dark:text-white-95 dark:text-gray-1">
                   {banner.subTitle.text}
                 </p>
               </div>
@@ -114,9 +106,7 @@ const FeaturesBanner = (): JSX.Element => {
             </div>
             <div className="flex flex-row items-center gap-2">
               <ShieldCheck size={24} weight="fill" className="text-primary" />
-              <p
-                className="whitespace-nowrap font-medium text-gray-100 dark:text-white-95 dark:text-gray-1 lg:text-base"
-              >
+              <p className="whitespace-nowrap font-medium text-gray-100 dark:text-white-95 dark:text-gray-1 lg:text-base">
                 {banner.guarantee}
               </p>
             </div>
@@ -129,9 +119,7 @@ const FeaturesBanner = (): JSX.Element => {
                 className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
               >
                 <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-                <p
-                  className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white dark:text-gray-20"
-                >
+                <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white dark:text-gray-20">
                   {feature.text}
                 </p>
               </div>

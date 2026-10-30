@@ -36,9 +36,7 @@ const FeaturesSection = ({ textContent }) => {
     <section className="overflow-hidden py-10 dark:bg-gray-95">
       <section className="flex flex-col items-center justify-center  overflow-hidden px-5 ">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <h2
-            className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl"
-          >
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
             {textContent.title}
           </h2>
           <div className="flex flex-col space-y-6">
@@ -60,9 +58,7 @@ const FeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <h3
-                  className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary"
-                >
+                <h3 className="text-left text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">
                   {info.title}
                 </h3>
               </button>

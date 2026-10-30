@@ -105,9 +105,7 @@ export const IntegratedCheckoutView = ({
       <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
         <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
           <HeaderComponent textContent={textContent} lang="en" />
-          <p
-            className="text-xl font-bold text-gray-100 dark:text-white-95 md:text-center lg:text-left lg:text-3xl"
-          >
+          <p className="text-xl font-bold text-gray-100 dark:text-white-95 md:text-center lg:text-left lg:text-3xl">
             {textContent.title}
           </p>
           <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:justify-between">
@@ -122,9 +120,7 @@ export const IntegratedCheckoutView = ({
                 <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">
                   2. {textContent.addressBillingTitle}
                 </p>
-                <div
-                  className="flex flex-col rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5"
-                >
+                <div className="flex flex-col rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
                   <AddressElement
                     onChange={(e) => {
                       onUserNameChange(e.value.name);
@@ -139,9 +135,7 @@ export const IntegratedCheckoutView = ({
                     }}
                   />
                 </div>
-                <div
-                  className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5"
-                >
+                <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
                   <Menu>
                     <Menu.Button
                       onKeyDown={(e) => e.preventDefault()}

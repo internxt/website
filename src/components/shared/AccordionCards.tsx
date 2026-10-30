@@ -41,9 +41,7 @@ export default function AccordionCards({ textContent, cardWidth }: Readonly<Acco
               } overflow-hidden`}
             >
               <div className="bg-white dark:bg-gray-95 px-6 pb-4">
-                <p
-                  className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-                >
+                <p className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
                   {cardDescriptions[index]}
                 </p>
               </div>
@@ -75,9 +73,7 @@ export default function AccordionCards({ textContent, cardWidth }: Readonly<Acco
               } overflow-hidden`}
             >
               <div className="bg-white dark:bg-gray-95 px-6 pb-4">
-                <p
-                  className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg"
-                >
+                <p className="whitespace-pre-line text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-lg">
                   {cardDescriptions[index]}
                 </p>
               </div>
