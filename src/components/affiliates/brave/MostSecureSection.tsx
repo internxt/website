@@ -14,7 +14,7 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({
   textContent,
   onRedirectButtonClicked,
   showButton = 'true',
-  bgColor = 'bg-gray-1',
+  bgColor = 'bg-gray-1 dark:bg-gray-105',
 }) => {
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
@@ -36,8 +36,8 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({
 
       <div className="flex w-[323px] flex-col items-center justify-center space-y-8 text-center lg:w-[550px] lg:items-start lg:text-left">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h1>
-          <h2 className="font-regular text-lg leading-tight text-gray-80 lg:text-xl">{textContent.description}</h2>
+          <h1 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">{textContent.title}</h1>
+          <h2 className="font-regular text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:text-xl">{textContent.description}</h2>
         </div>
         {showButton ? (
           <button

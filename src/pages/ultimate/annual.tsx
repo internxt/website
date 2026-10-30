@@ -1,7 +1,7 @@
 import { UltimateAnnualTemplate, UltimateAnnualTemplateProps } from "@/components/templates/ultimateAnnualTemplate";
 import { GetStaticPropsContext } from "next";
 
-const AnnualUltimate = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} />
+const AnnualUltimate = (props: UltimateAnnualTemplateProps) => <UltimateAnnualTemplate {...props} darkMode={props.darkMode} />
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;

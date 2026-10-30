@@ -11,6 +11,7 @@ import FloatingCtaSectionv2 from "@/components/shared/FloatingCtaSectionV2";
 import { getImage } from "@/lib/getImage";
 
 interface LevanteProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   textContent: any;
   metatagsDescriptions: MetatagsDescription[];
@@ -18,8 +19,14 @@ interface LevanteProps {
   footerLang: FooterText;
 }
 
-
-const LevantePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: LevanteProps): JSX.Element => {
+const LevantePage = ({
+  darkMode = false,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: LevanteProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'levante-ud');
 
   const locale = lang as string;
@@ -40,35 +47,32 @@ const LevantePage = ({ metatagsDescriptions, textContent, lang, navbarLang, foot
           textContent={textContent.ctaBanner}
           url={'/pricing'}
           customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+            <Image
+              src={getImage('/images/Levante/InternxtLevanteOP.webp')}
+              alt="Internxt x Levante"
+              width={534}
+              height={320}
+              className="hidden rounded-16 lg:flex"
+              quality={100}
+            />
+            <Image
+              src={getImage('/images/Levante/InternxtLevanteOP.webp')}
+              alt="Internxt x Levante"
+              width={420}
+              height={252}
+              className="flex rounded-16 lg:hidden"
+              quality={100}
+            />
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">{textContent.ctaBanner.description}</p>
+          </div>
+        }
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:pb-20 pb-20"
+      />
 
-            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <Image
-                src={getImage('/images/Levante/InternxtLevanteOP.webp')}
-                alt="Internxt x Levante"
-                width={534}
-                height={320}
-                className='rounded-16 hidden lg:flex'
-                quality={100}
-            />
-             <Image
-                src={getImage('/images/Levante/InternxtLevanteOP.webp')}
-                alt="Internxt x Levante"
-                width={420}
-                height={252}
-                className='rounded-16 lg:hidden flex'
-                quality={100}
-            />
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.ctaBanner.description}
-              </p>
-            </div>
-          }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:pb-20 pb-20"
-        />
-      
-      <Footer textContent={footerLang} lang={locale} />
+      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
     </Layout>
   );
 };
