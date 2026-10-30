@@ -6,9 +6,7 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
       {lang !== 'es' ? (
         <>
           <div className="mb-16 mt-1 flex flex-col">
-            <h5 className=" mb-6 text-4xl" id={textContent.privacy_policy_process_personal_data_title}>
-              {textContent.privacy_policy_process_personal_data_title}
-            </h5>
+            <h5 className=" mb-6 text-4xl" id={textContent.privacy_policy_process_personal_data_title}>{textContent.privacy_policy_process_personal_data_title}</h5>
 
             <h5 className=" text-3.5xl mb-6">{textContent.privacy_policy_process_personal_data_subtitle1}</h5>
 
@@ -189,223 +187,119 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.privacy_policy_process_personal_data_part74}</p>
 
             <div className="relative -mx-6 flex flex-col overflow-hidden overflow-x-scroll px-6">
-              <table className="relative table-auto bg-white">
+              <table className="relative table-auto bg-white dark:bg-gray-95">
                 <tr>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
-                    {textContent.privacy_policy_table2_row1_column1}
-                  </th>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
-                    {textContent.privacy_policy_table2_row1_column2}
-                  </th>
-                  <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
-                    {textContent.privacy_policy_table2_row1_column3}
-                  </th>
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">{textContent.privacy_policy_table2_row1_column1}</th>
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">{textContent.privacy_policy_table2_row1_column2}</th>
+                  <th className="border border-cool-gray-30 bg-cool-gray-5 dark:border-gray-71 dark:bg-gray-105 px-8 py-2">{textContent.privacy_policy_table2_row1_column3}</th>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
-                    {textContent.privacy_policy_table2_row2_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row2_column2_1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row2_column3_1}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>{textContent.privacy_policy_table2_row2_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row2_column2_1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row2_column3_1}</td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row2_column2_2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row2_column3_2}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row2_column2_2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row2_column3_2}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={4}>
-                    {textContent.privacy_policy_table2_row3_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column2_1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column3_1}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={4}>{textContent.privacy_policy_table2_row3_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column2_1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column3_1}</td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column2_2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column3_2}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column2_2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column3_2}</td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column2_3}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column3_3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column2_3}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column3_3}</td>
                 </tr>
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column2_4}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row3_column3_4}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column2_4}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row3_column3_4}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row4_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row4_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row4_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row4_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row4_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row4_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
-                    {textContent.privacy_policy_table2_row5_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row5_column2_1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row5_column3_1}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>{textContent.privacy_policy_table2_row5_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row5_column2_1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row5_column3_1}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row5_column2_2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row5_column3_2}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row5_column2_2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row5_column3_2}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
-                    {textContent.privacy_policy_table2_row6_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row6_column2_1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row6_column3_1}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>{textContent.privacy_policy_table2_row6_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row6_column2_1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row6_column3_1}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row6_column2_2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row6_column3_2}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row6_column2_2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row6_column3_2}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row7_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row7_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row7_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row7_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row7_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row7_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row8_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row8_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row8_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row8_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row8_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row8_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row9_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row9_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row9_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row9_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row9_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row9_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row10_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row10_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row10_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row10_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row10_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row10_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row11_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row11_column2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row11_column3}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row11_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row11_column2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row11_column3}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4" rowSpan={2}>
-                    {textContent.privacy_policy_table2_row12_column1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row12_column2_1}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row12_column3_1}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4" rowSpan={2}>{textContent.privacy_policy_table2_row12_column1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row12_column2_1}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row12_column3_1}</td>
                 </tr>
 
                 <tr>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row12_column2_2}
-                  </td>
-                  <td className="border border-cool-gray-20 p-2 px-4">
-                    {textContent.privacy_policy_table2_row12_column3_2}
-                  </td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row12_column2_2}</td>
+                  <td className="border border-cool-gray-20 dark:border-gray-71 p-2 px-4">{textContent.privacy_policy_table2_row12_column3_2}</td>
                 </tr>
               </table>
             </div>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title28}>
-              {textContent.title28}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title28}>{textContent.title28}</h2>
 
             <p className="mb-6">{textContent.subtitle28}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title29}>
-              {textContent.title29}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title29}>{textContent.title29}</h2>
 
             <p className="mb-6">{textContent.subtitle29}</p>
 
@@ -416,16 +310,12 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.subtitle294}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title30}>
-              {textContent.title30}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title30}>{textContent.title30}</h2>
 
             <p className="mb-6">{textContent.subtitle30}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title31}>
-              {textContent.title31}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title31}>{textContent.title31}</h2>
 
             <p className="mb-6">{textContent.subtitle31}</p>
           </div>
@@ -433,103 +323,71 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
       ) : (
         <>
           <div className="mb-16 flex flex-col">
-            <p className="mb-3 text-2xl font-medium" id={textContent.title}>
-              {textContent.title}
-            </p>
+            <p className="mb-3 text-2xl font-medium" id={textContent.title}>{textContent.title}</p>
             <p className="mb-6">{textContent.subtitle}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title2}>
-              {textContent.title2}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title2}>{textContent.title2}</h2>
             <p className="mb-6">{textContent.subtitle2}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title3}>
-              {textContent.title3}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title3}>{textContent.title3}</h2>
             <p className="mb-6">{textContent.subtitle3}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title4}>
-              {textContent.title4}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title4}>{textContent.title4}</h2>
             <p className="mb-6">{textContent.subtitle4}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title5}>
-              {textContent.title5}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title5}>{textContent.title5}</h2>
             <p className="mb-6">{textContent.subtitle5}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title6}>
-              {textContent.title6}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title6}>{textContent.title6}</h2>
             <p className="mb-6">{textContent.subtitle6}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title7}>
-              {textContent.title7}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title7}>{textContent.title7}</h2>
             <p className="mb-6">{textContent.subtitle7}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title8}>
-              {textContent.title8}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title8}>{textContent.title8}</h2>
             <p className="mb-6">{textContent.subtitle8}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title9}>
-              {textContent.title9}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title9}>{textContent.title9}</h2>
             <p className="mb-6">{textContent.subtitle9}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title10}>
-              {textContent.title10}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title10}>{textContent.title10}</h2>
             <p className="mb-6">{textContent.subtitle10}</p>
             <p className="mb-6">{textContent.subtitle102}</p>
             <p className="mb-6">{textContent.subtitle103}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title11}>
-              {textContent.title11}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title11}>{textContent.title11}</h2>
             <p className="mb-6">{textContent.subtitle11}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title12}>
-              {textContent.title12}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title12}>{textContent.title12}</h2>
             <p className="mb-6">{textContent.subtitle12}</p>
             <p className="mb-6">{textContent.subtitle122}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title13}>
-              {textContent.title13}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title13}>{textContent.title13}</h2>
             <p className="mb-6">{textContent.subtitle13}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title14}>
-              {textContent.title14}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title14}>{textContent.title14}</h2>
             <p className="mb-6">{textContent.subtitle14}</p>
             <p className="mb-6">{textContent.subtitle142}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title15}>
-              {textContent.title15}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title15}>{textContent.title15}</h2>
             <p className="mb-6">{textContent.subtitle15}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title16}>
-              {textContent.title16}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title16}>{textContent.title16}</h2>
             <p className="mb-6">{textContent.subtitle16}</p>
             <p className="mb-6">{textContent.subtitle162}</p>
             <p className="mb-6">{textContent.subtitle163}</p>
@@ -539,54 +397,38 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.subtitle167}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title17}>
-              {textContent.title17}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title17}>{textContent.title17}</h2>
             <p className="mb-6">{textContent.subtitle17}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title18}>
-              {textContent.title18}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title18}>{textContent.title18}</h2>
             <p className="mb-6">{textContent.subtitle18}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title19}>
-              {textContent.title19}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title19}>{textContent.title19}</h2>
             <p className="mb-6">{textContent.subtitle19}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title20}>
-              {textContent.title20}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title20}>{textContent.title20}</h2>
             <p className="mb-6">{textContent.subtitle20}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title21}>
-              {textContent.title21}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title21}>{textContent.title21}</h2>
             <p className="mb-6">{textContent.subtitle21}</p>
             <p className="mb-6">{textContent.subtitle212}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title22}>
-              {textContent.title22}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title22}>{textContent.title22}</h2>
             <p className="mb-6">{textContent.subtitle22}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title23}>
-              {textContent.title23}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title23}>{textContent.title23}</h2>
             <p className="mb-6">{textContent.subtitle23}</p>
             <p className="mb-6">{textContent.subtitle232}</p>
             <p className="mb-6">{textContent.subtitle233}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title24}>
-              {textContent.title24}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title24}>{textContent.title24}</h2>
             <p className="mb-6">{textContent.subtitle24}</p>
             <p className="mb-6">{textContent.subtitle242}</p>
             <p className="mb-6">{textContent.subtitle243}</p>
@@ -595,15 +437,11 @@ const WhenWhyHowSection = ({ textContent, lang }) => {
             <p className="mb-6">{textContent.subtitle246}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title25}>
-              {textContent.title25}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title25}>{textContent.title25}</h2>
             <p className="mb-6">{textContent.subtitle25}</p>
           </div>
           <div className="mb-16 flex flex-col">
-            <h2 className="mb-3 text-2xl font-medium" id={textContent.title26}>
-              {textContent.title26}
-            </h2>
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title26}>{textContent.title26}</h2>
             <p className="mb-6">{textContent.subtitle26}</p>
           </div>
         </>

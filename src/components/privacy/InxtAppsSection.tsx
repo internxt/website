@@ -3,14 +3,14 @@ import { getImage } from '@/lib/getImage';
 
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
-    <section className="overflow-hidden">
-      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 pt-20 text-gray-100 ">
+    <section className="overflow-hidden dark:bg-gray-95">
+      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 dark:bg-gray-105 px-5 pt-20 text-gray-100 dark:text-white-95">
         <div className="px-6 text-center">
-          <h2 className="mb-10 text-5xl font-semibold">
+          <h2 className="mb-10 text-5xl font-semibold text-gray-100 dark:text-white-95">
             {textContent.title.line1} <br className="hidden sm:flex" />
             {textContent.title.line2}
           </h2>
-          <h3 className="w-full max-w-[774px] text-xl font-normal text-gray-80">{textContent.subtitle}</h3>
+          <h3 className="w-full max-w-[774px] text-xl font-normal text-gray-80 dark:text-cool-gray-30">{textContent.subtitle}</h3>
         </div>
 
         <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
