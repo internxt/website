@@ -151,8 +151,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             </>
           ) : undefined}
         </div>
-        <FreeCardPromoBanner darkMode={darkMode} />
-        <FreeCardPromoBannerPPC darkMode={darkMode} />
+        <FreeCardPromoBanner />
+        <FreeCardPromoBannerPPC />
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>
