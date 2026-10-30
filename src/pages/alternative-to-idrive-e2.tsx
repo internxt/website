@@ -9,6 +9,7 @@ const IdriveComparison = (props: any) => (
     segmentName="IDrive e2 Comparison"
     logo="/images/comparison/idrive-Letters.webp"
     isS3Alternative
+    darkMode={props.darkMode}
   />
 );
 

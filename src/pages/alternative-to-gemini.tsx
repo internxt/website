@@ -12,6 +12,7 @@ const GeminiComparison = (props) => (
     segmentName="Gemini Comparison"
     logo="/images/comparison/gemini-Letters.webp"
     couponCodeName={PromoCodeName.GEMINI85}
+    darkMode={props.darkMode}
   />
 );
 

@@ -10,17 +10,24 @@ interface MinimalFooterProps {
   textColor?: string;
 }
 
-export const MinimalFooter = ({ lang, footerLang, bgColor, textColor, logoColor }: MinimalFooterProps) => {
+export const MinimalFooter = ({
+  lang,
+  footerLang,
+  bgColor = 'dark:bg-gray-95',
+  textColor = 'text-gray-100 dark:text-white-95',
+  logoColor,
+}: MinimalFooterProps) => {
   const year = moment().format('YYYY');
-  const color = logoColor ? logoColor : 'cool-gray-90';
+  const color = logoColor ?? 'cool-gray-90';
 
   return (
     <div
-      className={`flex w-full flex-col md:flex-row ${bgColor} items-center justify-center gap-4 py-16 text-gray-100`}
+      className={`flex w-full flex-col md:flex-row ${bgColor} items-center justify-center gap-4 py-16 text-gray-100 dark:text-white-95`}
     >
       <Link href="/" locale={lang} className="flex flex-shrink-0">
         <img
           loading="lazy"
+          className={logoColor ? '' : 'dark:brightness-0 dark:invert'}
           src={getImage(`/logos/internxt/${color}.svg`)}
           alt="Internxt logo"
         />

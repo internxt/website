@@ -12,6 +12,7 @@ const aviraComparison = (props: any) => (
     segmentName="Avira Comparison"
     logo="/images/comparison/avira-Letters.webp"
     couponCodeName={PromoCodeName.AVIRA85}
+    darkMode={props.darkMode}
   />
 );
 

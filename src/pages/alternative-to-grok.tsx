@@ -12,6 +12,7 @@ const grokComparison = (props) => (
     segmentName="Grok Comparison"
     logo="/images/comparison/grok-Letters.webp"
     couponCodeName={PromoCodeName.GROK85}
+    darkMode={props.darkMode}
   />
 );
 

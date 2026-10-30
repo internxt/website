@@ -9,6 +9,7 @@ const GoogleCloudComparison = (props: any) => (
     segmentName="Google Cloud Comparison"
     logo="/images/comparison/googleCloud-Letters.webp"
     isS3Alternative
+    darkMode={props.darkMode}
   />
 );
 

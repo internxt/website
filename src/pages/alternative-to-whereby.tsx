@@ -12,6 +12,7 @@ const WherebyComparison = (props: any) => (
     segmentName="Whereby Comparison"
     logo="/images/comparison/Whereby_Letters.webp"
     couponCodeName={PromoCodeName.whereby}
+    darkMode={props.darkMode}
   />
 );
 

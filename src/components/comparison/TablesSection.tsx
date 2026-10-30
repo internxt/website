@@ -52,7 +52,7 @@ export const TablesSection = ({
   sectionNeedsH2 = false,
   TableTitleTag = 'p',
   TableNameTag = 'p',
-  darkMode,
+  darkMode = false,
   bottomSeparationBar = false,
 }: TablesSectionProps) => {
   const availableSections = [
@@ -94,37 +94,27 @@ export const TablesSection = ({
   };
 
   const replacements = { competitor, percentage, discount: percentage };
-  const parseText = (text?: string) => parseDynamicText(text, replacements);
+  const parseText = (text?: string) => parseDynamicText(text, replacements, darkMode);
   const SectionTitleTag = sectionNeedsH2 ? 'h2' : 'p';
 
   return (
-    <section className="flex flex-col items-center justify-center gap-8 overflow-hidden bg-white py-8 lg:py-20">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+    <section className={`flex flex-col items-center justify-center gap-8 overflow-hidden ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} py-8 lg:py-20`}>
+      <div className={`absolute left-8 right-8 top-0 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:left-32 lg:right-32`}></div>
       {bottomSeparationBar && (
-        <div
-          className={`absolute bottom-0 left-8 right-8 h-[1px] ${
-            darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-          } lg:bottom-0 lg:left-32 lg:right-32`}
-        />
+        <div className={`absolute bottom-0 left-8 right-8 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:bottom-0 lg:left-32 lg:right-32`} />
       )}
       <div className="flex flex-col items-center justify-center gap-6 text-center">
-        <SectionTitleTag className="text-30 font-semibold text-gray-100 lg:text-3xl">
-          {parseText(textContent.title)}
-        </SectionTitleTag>
-        <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{parseText(textContent.description)}</p>
+        <SectionTitleTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>{parseText(textContent.title)}</SectionTitleTag>
+        <p className={`w-[330px] text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'} lg:w-[832px] lg:text-xl`}>{parseText(textContent.description)}</p>
 
         {textContent.mainTable && (
           <>
             <div className="flex flex-col items-center justify-center">
               {textContent.mainTable.title && (
-                <TableNameTag className="pb-6 pt-8 text-30 font-semibold text-gray-100 lg:text-3xl">
-                  {parseText(textContent.mainTable.title)}
-                </TableNameTag>
+                <TableNameTag className={`pb-6 pt-8 text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>{parseText(textContent.mainTable.title)}</TableNameTag>
               )}
               {textContent.mainTable.description && (
-                <p className="w-[330px]  text-base text-gray-80 lg:w-[832px] lg:text-xl">
-                  {parseText(textContent.mainTable.description)}
-                </p>
+                <p className={`w-[330px]  text-base ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'} lg:w-[832px] lg:text-xl`}>{parseText(textContent.mainTable.description)}</p>
               )}
               <div className="flex h-full w-screen flex-row items-center justify-center pb-6 pt-6">
                 <InxtTable
@@ -150,11 +140,11 @@ export const TablesSection = ({
             const isOpen = !!openSections[index];
             return (
               <div key={index} className="flex w-screen flex-col items-center gap-2 lg:pt-16">
-                <div className="h-[1px] w-[360px] bg-green-120 lg:hidden" />
+                <div className={`h-[1px] w-[360px] ${darkMode ? 'bg-gray-71' : 'bg-green-120 dark:bg-gray-71'} lg:hidden`} />
 
                 <button
                   onClick={() => toggleSection(index)}
-                  className="flex w-[330px] cursor-pointer items-center justify-between pt-5 text-left text-2xl font-semibold text-gray-100 transition-opacity hover:opacity-80 lg:hidden"
+                  className={`flex w-[330px] cursor-pointer items-center justify-between pt-5 text-left text-2xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} transition-opacity hover:opacity-80 lg:hidden`}
                   aria-expanded={isOpen}
                   aria-controls={`section-content-${index}`}
                 >
@@ -167,21 +157,15 @@ export const TablesSection = ({
                 </button>
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="hidden w-[330px] text-center text-3xl font-semibold text-gray-100 lg:block lg:w-full lg:pb-10">
-                    {parseText(section.title)}
-                  </h3>
+                  <h3 className={`hidden w-[330px] text-center text-3xl font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:block lg:w-full lg:pb-10`}>{parseText(section.title)}</h3>
 
                   {section.data.description && (
-                    <p className="text- hidden w-[330px] pb-5 text-center font-normal text-gray-55 lg:block lg:w-[832px] lg:text-xl">
-                      {parseText(section.data.description)}
-                    </p>
+                    <p className={`text- hidden w-[330px] pb-5 text-center font-normal ${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} lg:block lg:w-[832px] lg:text-xl`}>{parseText(section.data.description)}</p>
                   )}
                 </div>
                 <div
                   id={`section-content-${index}`}
-                  className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${
-                    isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                  } lg:block lg:max-h-none lg:opacity-100`}
+                  className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'} lg:block lg:max-h-none lg:opacity-100`}
                 >
                   <div className="flex h-full w-screen flex-row justify-center sm:min-w-full">
                     <InxtTable

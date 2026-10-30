@@ -13,7 +13,12 @@ export interface MinimalNavbarProps {
   isAnnual?: boolean;
 }
 
-export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }: MinimalNavbarProps) => {
+export const MinimalNavbar = ({
+  isOffer,
+  textContent,
+  price,
+  isAnnual = false,
+}: MinimalNavbarProps) => {
   const [scrolled, setScrolled] = useState<boolean>(true);
   const [currencySymbol, setCurrencySymbol] = useState<string>('€');
 
@@ -39,9 +44,7 @@ export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }:
   return (
     <div
       id="navbar"
-      className={`fixed flex h-20 w-full items-center justify-center bg-white backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${
-        scrolled ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'
-      } z-50 border-b border-black`}
+      className={`fixed flex h-20 w-full items-center justify-center bg-white backdrop-blur-lg backdrop-saturate-150 backdrop-filter transition-all duration-100 lg:h-16 ${scrolled ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'} z-50 border-b border-black`}
     >
       <div className="relative flex w-full items-center justify-center">
         <Image
@@ -54,7 +57,7 @@ export const MinimalNavbar = ({ isOffer, textContent, price, isAnnual = false }:
         />
         {isOffer && (
           <div className="absolute right-0 hidden flex-row items-center gap-4 px-5 lg:flex lg:gap-8 lg:px-10 xl:px-32 3xl:px-80">
-            <p className="text-gray-800 text-sm font-medium">{priceLabel}</p>
+            <p className="text-sm font-medium text-gray-80">{priceLabel}</p>
             <button
               onClick={() => router.push('#priceCard')}
               id="choose-storage-button"

@@ -6,7 +6,7 @@ interface RevealProps {
   id?: string;
 }
 
-const RevealY = ({ children, className, id }: RevealProps) => {
+const RevealY = ({ children, className = '', id }: RevealProps) => {
   useEffect(() => {
     function reveal() {
       const reveals = document.querySelectorAll('.revealY');
@@ -32,9 +32,7 @@ const RevealY = ({ children, className, id }: RevealProps) => {
     };
   }, []);
   return (
-    <div id={id} className={`revealY ${className}`}>
-      {children}
-    </div>
+    <div id={id} className={`revealY ${className}`}>{children}</div>
   );
 };
 

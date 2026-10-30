@@ -12,6 +12,7 @@ const chatgptComparison = (props) => (
     segmentName="ChatGPT Comparison"
     logo="/images/comparison/ChatGPT-Letters.webp"
     couponCodeName={PromoCodeName.CHATGPT85}
+    darkMode={props.darkMode}
   />
 );
 

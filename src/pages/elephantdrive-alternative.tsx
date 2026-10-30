@@ -12,6 +12,7 @@ const ElephantdriveComparison = (props) => (
     segmentName="Elephantdrive Comparison"
     logo="/images/comparison/Elephantdrive_Letters.webp"
     couponCodeName={PromoCodeName.ELEPHANT}
+    darkMode={props.darkMode}
   />
 );
 
