@@ -13,6 +13,7 @@ import Script from 'next/script';
 
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -26,9 +27,7 @@ const FileConverter = ({
   return (
     <>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('File converter', 'file-converter')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('File converter', 'file-converter')}</Script>
 <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} />
@@ -37,15 +36,14 @@ const FileConverter = ({
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileConverterBanner}
         lang={lang}
+        darkMode={darkMode}
       />
 
       <CtaSection
         textContent={textContent.CtaSection}
         url={'https://internxt.com/drive'}
         customDescription={
-          <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-            {textContent.CtaSection.description}
-          </p>
+          <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">{textContent.CtaSection.description}</p>
         }
       />
 
@@ -53,9 +51,9 @@ const FileConverter = ({
 
       <CtaSection textContent={textContent.CtaSection2} url="https://drive.internxt.com/new" />
 
-      <QASection textContent={textContent.QASection} />
+      <QASection textContent={textContent.QASection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File converter', url: '/file-converter' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File converter', url: '/file-converter' }]} darkMode={darkMode} />
     </Layout>
   </>);
 };

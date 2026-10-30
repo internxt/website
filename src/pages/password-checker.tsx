@@ -15,6 +15,7 @@ import InfoSection from '@/components/password-generator/InfoSection';
 
 
 const PasswordChecker = ({
+  darkMode = false,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -27,13 +28,9 @@ const PasswordChecker = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(langJson.SchemaMarkupQuestions.faq)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_faq(langJson.SchemaMarkupQuestions.faq)}</Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Password security checker', 'password-checker')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('Password security checker', 'password-checker')}</Script>
 
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
@@ -58,6 +55,7 @@ const PasswordChecker = ({
           bannerText={bannerLang.SignUpPasswordGenerator}
           hideLast2Sections
           lang={lang}
+          darkMode={darkMode}
         />
 
         <CtaSection
@@ -65,9 +63,7 @@ const PasswordChecker = ({
           url={'https://internxt.com/drive'}
           maxWidth="max-w-lg"
           customDescription={
-            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {langJson.CtaSection.description}
-            </p>
+            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">{langJson.CtaSection.description}</p>
           }
         />
 
@@ -81,9 +77,9 @@ const PasswordChecker = ({
 
         <CtaSection textContent={langJson.CtaSection1} url="https://drive.internxt.com/new" maxWidth="max-w-[511px]" />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password security checker', url: '/password-checker' }]} darkMode={darkMode} />
       </Layout>
     </>
   );

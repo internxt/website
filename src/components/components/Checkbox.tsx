@@ -20,20 +20,18 @@ function Checkbox({
   className,
   rounded,
 }: Readonly<CheckboxProps>): JSX.Element {
+  const borderClass = 'border-gray-30 dark:border-gray-71';
+  const uncheckedClass = `${borderClass} hover:border-gray-40`;
   return (
     <button className={`relative h-5 w-5 focus-within:outline-primary ${className}`} onClick={onClick}>
-      <div
-        className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center ${
-          rounded ?? 'rounded-full'
-        } border p-1 text-white ${checked ? 'border-primary bg-primary' : 'border-gray-30 hover:border-gray-40'}`}
-      >
+      <div className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center ${rounded ?? 'rounded-full'} border p-1 text-white ${checked ? 'border-primary bg-primary' : uncheckedClass}`}>
         {checked && (
-          <div
-            className={`flex cursor-pointer flex-col items-center justify-center ${
-              rounded ?? 'rounded-full'
-            } text-white`}
-          >
-            {showCheckIcon ? <Check size={16} weight="bold" /> : <div className="rounded-full bg-white p-1" />}
+          <div className={`flex cursor-pointer flex-col items-center justify-center ${rounded ?? 'rounded-full'} text-white`}>
+            {showCheckIcon ? (
+              <Check size={16} weight="bold" />
+            ) : (
+              <div className="rounded-full bg-white dark:bg-gray-95 p-1" />
+            )}
           </div>
         )}
       </div>

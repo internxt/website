@@ -52,14 +52,12 @@ export const NoMessageSelected = ({
       </div>
       <div className="flex flex-col items-center space-y-8 px-5">
         <div className="flex flex-col items-center text-center">
-          <p className="text-base font-medium text-gray-100">
-            {messages ? withoutMessagesSentence : withMessagesSentence}
-          </p>
+          <p className="text-base font-medium text-gray-100 dark:text-white-95">{messages ? withoutMessagesSentence : withMessagesSentence}</p>
 
-          <p className="text-sm text-gray-50">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
+          <p className="text-sm text-gray-50 dark:text-cool-gray-30">{messages ? textContent.waitingEmail : textContent.selectMessage}</p>
         </div>
         <button
-          className="flex w-max flex-row space-x-2 rounded-lg border border-gray-10 px-5 py-2.5 shadow-sm"
+          className="flex w-max flex-row space-x-2 rounded-lg border border-gray-10 dark:border-gray-71 dark:text-white-95 px-5 py-2.5 shadow-sm"
           onClick={() => {
             onRefreshButtonClicked();
             setIsRefreshIconAnimated(true);
@@ -86,26 +84,20 @@ export const MessageSelected = ({
   return (
     <div className="flex w-full flex-col space-y-5 overflow-y-scroll p-10">
       <div className="flex w-full flex-col space-y-2">
-        <p title={item.subject} className="line-clamp-3 text-xl font-medium text-gray-100">
-          {item.subject ? item.subject : textContent.noSubject}
-        </p>
+        <p title={item.subject} className="line-clamp-3 text-xl font-medium text-gray-100 dark:text-white-95">{item.subject ? item.subject : textContent.noSubject}</p>
         <div className="flex flex-row space-x-2">
           <div className="flex flex-col items-center justify-center rounded-full bg-primary bg-opacity-10 px-4 py-2">
             <p className="truncate text-lg text-primary">{name}</p>
           </div>
           <div className="flex w-full flex-col pr-10">
-            <p title={item.from} className="truncate text-sm font-medium text-gray-80">
-              {item.from}
-            </p>
-            <p title={date} className="text-xs">
-              {date}
-            </p>
+            <p title={item.from} className="truncate text-sm font-medium text-gray-80 dark:text-cool-gray-30">{item.from}</p>
+            <p title={date} className="text-xs">{date}</p>
           </div>
         </div>
       </div>
-      <div className="flex w-full border border-gray-5" />
+      <div className="flex w-full border border-gray-5 dark:border-gray-71" />
       <div dangerouslySetInnerHTML={{ __html: item.html }} className="flex w-full flex-col" />
-      <div className="flex w-full border border-gray-5" />
+      <div className="flex w-full border border-gray-5 dark:border-gray-71" />
     </div>
   );
 };

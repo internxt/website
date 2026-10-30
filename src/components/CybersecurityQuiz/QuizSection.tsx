@@ -7,6 +7,7 @@ import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
 
 interface ViewProps {
+  darkMode?: boolean;
   view: CyberSecurityQuizViews | undefined;
   textContent: any;
   height: MutableRefObject<number>;
@@ -20,6 +21,7 @@ interface ViewProps {
 }
 
 interface AnswerQuestionsSectionProps {
+  darkMode?: boolean;
   textContent: any;
   view: CyberSecurityQuizViews | undefined;
   setIsQuizSection: (isQuizSection: boolean) => void;
@@ -27,6 +29,8 @@ interface AnswerQuestionsSectionProps {
 }
 
 const View = (viewSelected: ViewProps | undefined) => {
+  const darkMode = viewSelected?.darkMode ?? false;
+  const bgClass = 'bg-gray-20 dark:bg-gray-71';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
 
@@ -91,9 +95,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             id={`${currentQuestion + 1}`}
             className={`flex flex-col space-y-8 py-24 xl:items-start xl:space-y-5 xl:pb-40 xl:pt-44`}
           >
-            <p className=" text-2xl font-semibold ">
-              {textContent.QuizSection.question} {currentQuestion + 1}:
-            </p>
+            <p className=" text-2xl font-semibold ">{textContent.QuizSection.question} {currentQuestion + 1}:</p>
             <p className="text-4xl">{textContent.QuizSection.questions[currentQuestion].title}</p>
             <div className="flex flex-col space-y-8 xl:space-y-5">
               <button
@@ -155,9 +157,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             <button
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
-              className={`${
-                currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
-              } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
+              className={`${currentCheckbox === '' ? `cursor-not-allowed ${bgClass}` : 'cursor-pointer bg-primary'} flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}
             </button>
@@ -177,18 +177,12 @@ const View = (viewSelected: ViewProps | undefined) => {
         <div className="flex h-full w-full flex-row px-5 text-white lg:ml-8">
           <div className="mx-auto flex w-full items-center justify-center xl:max-w-screen-xl xl:justify-between 2xl:ml-44 2xl:max-w-full 2xl:justify-center 2xl:space-x-2">
             <div className="flex w-full max-w-[529px] flex-col space-y-5 pt-20 lg:pt-44 xl:pb-40">
-              <p className="text-center text-5xl font-semibold xl:text-left xl:text-6xl">
-                {textContent.QuizSection.quizCompleted.title}
-              </p>
-              <p className="text-center text-2xl font-semibold xl:text-left">
-                {textContent.QuizSection.quizCompleted.subtitle}
-              </p>
+              <p className="text-center text-5xl font-semibold xl:text-left xl:text-6xl">{textContent.QuizSection.quizCompleted.title}</p>
+              <p className="text-center text-2xl font-semibold xl:text-left">{textContent.QuizSection.quizCompleted.subtitle}</p>
               <p className="text-center text-lg xl:text-left">{textContent.QuizSection.quizCompleted.description}</p>
               <ul className="flex list-[square] flex-col space-y-1.5 pl-6">
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href="/cyber-awareness">
-                    {textContent.QuizSection.quizCompleted.cyberAwareness}
-                  </Link>
+                  <Link href="/cyber-awareness">{textContent.QuizSection.quizCompleted.cyberAwareness}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
                   <button
@@ -201,24 +195,16 @@ const View = (viewSelected: ViewProps | undefined) => {
                   </button>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/what-does-google-know-about-me'}>
-                    {textContent.QuizSection.quizCompleted.whatGoogleKnows}
-                  </Link>
+                  <Link href={'/what-does-google-know-about-me'}>{textContent.QuizSection.quizCompleted.whatGoogleKnows}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-generator'}>
-                    {textContent.QuizSection.quizCompleted.passwordGenerator}
-                  </Link>
+                  <Link href={'/password-generator'}>{textContent.QuizSection.quizCompleted.passwordGenerator}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/virus-scanner'}>
-                    {textContent.QuizSection.quizCompleted.freeVirusScanner}
-                  </Link>
+                  <Link href={'/virus-scanner'}>{textContent.QuizSection.quizCompleted.freeVirusScanner}</Link>
                 </li>
                 <li className="cursor-pointer text-lg font-bold hover:underline">
-                  <Link href={'/password-checker'}>
-                    {textContent.QuizSection.quizCompleted.passwordChecker}
-                  </Link>
+                  <Link href={'/password-checker'}>{textContent.QuizSection.quizCompleted.passwordChecker}</Link>
                 </li>
               </ul>
 
@@ -250,7 +236,7 @@ const View = (viewSelected: ViewProps | undefined) => {
           answers={savedAnswers}
           correctAnswers={textContent.QuizSection.correctAnswers}
         />
-        <Footer textContent={footerLang} lang="en" />
+        <Footer textContent={footerLang} lang="en" darkMode={darkMode} />
       </>
     ),
   };
@@ -260,7 +246,13 @@ const View = (viewSelected: ViewProps | undefined) => {
   return view[viewSelected.view];
 };
 
-const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewChange }: AnswerQuestionsSectionProps) => {
+const AnswerQuestionsSection = ({
+  darkMode = false,
+  textContent,
+  view,
+  setIsQuizSection,
+  onViewChange,
+}: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
@@ -301,6 +293,7 @@ const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewCha
       savedAnswers={savedAnswers}
       setIsQuizSection={setIsQuizSection}
       textContent={textContent}
+      darkMode={darkMode}
     />
   );
 };

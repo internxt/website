@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const KitCard = ({ textContent, image, downloadImagesLink }) => {
   return (
-    <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1">
+    <div className="flex flex-col items-center justify-between rounded-2xl bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col">
         <Image
           height={520}
@@ -19,9 +19,7 @@ export const KitCard = ({ textContent, image, downloadImagesLink }) => {
           <p className="text-3xl font-semibold lg:text-4xl">{textContent.title}</p>
           <p className="font-gray-80 max-w-[380px]  text-xl">{textContent.description}</p>
           <a href={downloadImagesLink} download={true} target="_blank" rel="noreferrer">
-            <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">
-              {textContent.cta}
-            </p>
+            <p className="flex w-max rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark">{textContent.cta}</p>
           </a>
         </div>
       </div>

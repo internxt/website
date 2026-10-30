@@ -102,21 +102,21 @@ const ConversionTableSection = ({ textContent, lang }) => {
   ];
 
   return (
-    <section className="bg-gray-1">
+    <section className="bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col space-y-16 py-16 lg:items-center lg:justify-center">
         <div className="flex w-full max-w-[840px] flex-col items-center justify-center space-y-4 px-5 text-center">
-          <p className="text-4xl font-semibold">{textContent.title}</p>
-          <p className="text-xl font-normal text-gray-100">{textContent.description}</p>
+          <p className="text-4xl font-semibold text-gray-100 dark:text-white-95">{textContent.title}</p>
+          <p className="text-xl font-normal text-gray-100 dark:text-white-95">{textContent.description}</p>
         </div>
         <div
           className="flex 
          items-start overflow-scroll px-5 lg:overflow-hidden"
         >
-          <div className="flex max-w-[750px] flex-col rounded-lg border-gray-10">
+          <div className="flex max-w-[750px] flex-col rounded-lg border-gray-10 dark:border-gray-71">
             {table.map((item) => (
               <div
                 key={item.unit}
-                className="flex flex-row text-base first:rounded-t-lg first:font-medium first:text-white last:rounded-b-lg odd:bg-primary odd:bg-opacity-6 even:bg-white first-of-type:bg-primary"
+                className="flex flex-row text-base text-gray-100 dark:text-white-95 first:rounded-t-lg first:font-medium first:text-white last:rounded-b-lg odd:bg-primary odd:bg-opacity-6 even:bg-white dark:even:bg-gray-95 first-of-type:bg-primary"
               >
                 <div className="flex w-full max-w-[105px]   flex-col">
                   <p className="py-2 pl-4 pr-6">{item.unit}</p>

@@ -44,11 +44,11 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
   ];
 
   return (
-    <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 py-20">
+    <section className="overflow-hidden px-5 dark:bg-gray-95">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 dark:bg-gray-105 py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <p className="text-5xl font-semibold text-gray-100 dark:text-white-95">{textContent.title}</p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         <div>
           {cards.map((card, index) => {
@@ -57,9 +57,7 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
-                  isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'} md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -77,19 +75,15 @@ const FeatureSectionV3 = ({ textContent }: FeatureSectionV3Props) => {
                   />
                 </RevealX>
 
-                <div
-                  className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
-                    isEven ? 'md:pl-10' : 'md:pr-10'
-                  }`}
-                >
+                <div className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${isEven ? 'md:pl-10' : 'md:pr-10'}`}>
                   <card.icon size={48} className="text-green-dark md:size-[64px]" />
-                  <p className="text-3xl font-semibold sm:text-4xl sm:leading-tight md:text-5xl">{card.title}</p>
+                  <p className="text-3xl font-semibold text-gray-100 dark:text-white-95 sm:text-4xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <span className="flex items-start space-x-2 text-4xl font-semibold text-green-1 md:text-5xl">
                     <p>{card.value}</p>
-                    <p className="text-xl font-semibold text-gray-100 md:text-2xl">{card.unit}</p>
+                    <p className="text-xl font-semibold text-gray-100 dark:text-white-95 md:text-2xl">{card.unit}</p>
                   </span>
 
-                  <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>
+                  <p className="font-regular text-base text-gray-80 dark:text-cool-gray-30 sm:text-lg md:text-xl">{card.description}</p>
                 </div>
               </div>
             );

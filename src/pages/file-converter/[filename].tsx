@@ -11,6 +11,7 @@ import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -47,7 +48,7 @@ const FileConverter = ({
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} darkMode={darkMode} />
     </Layout>
   );
 };

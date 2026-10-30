@@ -3,12 +3,12 @@ import FaqAccordion from './FaqAccordion';
 
 const QuestionsSection = ({ textContent, isCorrectAnswer }) => {
   return (
-    <section className="overflow-hidden bg-white">
+    <section className="overflow-hidden bg-white dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center space-y-10 px-10 py-20">
         <p className="text-center text-4xl font-semibold">{textContent.title}</p>
         <div className="flex w-full max-w-[850px] flex-col space-y-2">
           {textContent.faq.map((item, index) => (
-            <div className="rounded-lg border border-gray-20 px-5" key={item.question}>
+            <div className="rounded-lg border border-gray-20 dark:border-gray-71 px-5" key={item.question}>
               <FaqAccordion
                 key={item.question}
                 question={item.question}

@@ -26,8 +26,7 @@ export const InfoCard = ({ id, title, title1, img, link }) => {
         if ((e.target as any).id == id) setIsShareIcon(id);
       }}
       onMouseLeave={() => setIsShareIcon(null)}
-      className={`${'flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white p-8'} 
-        `}
+      className="flex h-60 w-full max-w-[300px] cursor-pointer flex-col space-y-5 rounded-2xl bg-white dark:bg-gray-95 p-8"
     >
       <img key={id} src={img} alt={`${title}`} width={32} height={32} />
       <p className="flex flex-col text-left text-2xl font-medium">

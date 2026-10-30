@@ -14,6 +14,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 
 
 const Scan = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   toolsContent,
@@ -26,13 +27,9 @@ const Scan = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(langJson.FaqSection.faq)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_faq(langJson.FaqSection.faq)}</Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Virus scanner online', 'virus-scanner')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('Virus scanner online', 'virus-scanner')}</Script>
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
@@ -47,15 +44,16 @@ const Scan = ({
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpVirusScannerBanner}
           lang={lang}
+          darkMode={darkMode}
         />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
         <CtaSection textContent={langJson.CtaSection} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} darkMode={darkMode} />
       </Layout>
     </>
   );
