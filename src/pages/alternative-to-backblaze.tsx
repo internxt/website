@@ -9,6 +9,7 @@ const BackblazeComparison = (props: any) => (
     segmentName="Backblaze Comparison"
     logo="/images/comparison/backblaze-Letters.webp"
     isS3Alternative
+    darkMode={props.darkMode}
   />
 );
 

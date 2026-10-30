@@ -12,6 +12,7 @@ const zoomComparison = (props) => (
     segmentName="zoom Comparison"
     logo="/images/comparison/zoom-Letters.webp"
     couponCodeName={PromoCodeName.ZOOM85}
+    darkMode={props.darkMode}
   />
 );
 

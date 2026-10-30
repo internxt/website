@@ -12,6 +12,7 @@ const avgComparison = (props: any) => (
     segmentName="Avg Comparison"
     logo="/images/comparison/avg-Letters.webp"
     couponCodeName={PromoCodeName.AVG85}
+    darkMode={props.darkMode}
   />
 );
 
