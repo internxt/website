@@ -37,12 +37,17 @@ const PasswordInput = ({
   required,
   onFocus,
   onBlur,
-  className,
+  className = '',
   autoFocus,
   autoComplete,
   inputDataCy,
 }: InputProps): JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const defaultBorderClass = 'border-gray-40 dark:border-gray-71';
+  const borderStyles = error
+    ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
+    : `${defaultBorderClass} focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]`;
 
   return (
     <div className={`relative z-20 flex-1 ${className}`}>
@@ -68,18 +73,14 @@ const PasswordInput = ({
         onBlur={() => {
           if (onBlur) onBlur();
         }}
-        className={`w-full rounded-md border bg-white p-3 pr-12 text-base text-gray-100 placeholder-gray-50 outline-none disabled:border-gray-10 disabled:text-gray-40 ${
-          error
-            ? 'border-red focus:shadow-[0_0_4px_rgb(255,13,0)]'
-            : 'border-gray-40 focus:border-primary focus:shadow-[0_0_4px_rgb(0,102,255)]'
-        }`}
+        className={`w-full rounded-md border p-3 pr-12 text-base placeholder-gray-50 outline-none bg-white text-gray-100 dark:bg-gray-95 dark:text-white-95 ${borderStyles} disabled:border-gray-10 disabled:text-gray-40 dark:disabled:border-gray-71 dark:disabled:text-gray-50`}
       />
       <button
         type="button"
         onClick={() => setShowPassword(!showPassword)}
         onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}
         tabIndex={0}
-        className="absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center text-gray-100"
+        className="absolute right-4 top-1/2 flex -translate-y-1/2 cursor-pointer items-center justify-center text-gray-100 dark:text-white-95"
       >
         {showPassword ? <Eye className="h-6 w-6" /> : <EyeSlash className="h-6 w-6" />}
       </button>

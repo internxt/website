@@ -18,8 +18,8 @@ export const UserAuthComponent = ({
 }: UserAuthComponentProps): JSX.Element => {
   return (
     <div className="flex flex-col space-y-8">
-      <p className="text-2xl font-semibold text-gray-100">1. {textContent.title.signUp}</p>
-      <div className="flex flex-col space-y-4 rounded-2xl border border-gray-10 bg-white p-5">
+      <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">1. {textContent.title.signUp}</p>
+      <div className="flex flex-col space-y-4 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
         <InputsComponent errors={errors} authError={authError} textContent={textContent} register={register} />
       </div>
     </div>

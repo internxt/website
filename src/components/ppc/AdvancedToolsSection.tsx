@@ -74,25 +74,23 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
   return (
     <section className="flex min-h-0 w-full flex-col gap-12 p-20 px-5 lg:px-10 xl:px-32 3xl:px-80">
       <div className="flex w-full flex-col gap-12">
-        <p className="text-4xl font-bold text-gray-95">{textContent.title}</p>
-        <p className="text-xl font-normal text-gray-55">{textContent.description}</p>
+        <p className="text-4xl font-bold text-gray-95 dark:text-white-95">{textContent.title}</p>
+        <p className="text-xl font-normal text-gray-55 dark:text-green-120">{textContent.description}</p>
       </div>
 
-      <div className="rounded-16 border-[1px] border-green-120 bg-gray-1 py-12">
+      <div className="rounded-16 border-[1px] border-green-120 bg-gray-1 dark:bg-gray-105 py-12">
         <div className="flex min-h-0 w-full flex-col gap-8 lg:flex-row lg:gap-0">
           <div className="mx-4 flex flex-col gap-8 lg:mx-12 lg:w-1/2">
             <div className="flex flex-col gap-4">
               <HighlightText
                 text={textContent.powerUsers.title}
-                className="whitespace-pre-line text-4xl font-bold text-gray-95"
+                className="whitespace-pre-line text-4xl font-bold text-gray-95 dark:text-white-95"
               />
-              <p className="whitespace-pre-line text-lg font-normal text-gray-55">
-                {textContent.powerUsers.description}
-              </p>
+              <p className="whitespace-pre-line text-lg font-normal text-gray-55 dark:text-green-120">{textContent.powerUsers.description}</p>
             </div>
 
             <div className="flex flex-col gap-2">
-              <p className="text-lg font-semibold text-gray-100">{textContent.powerUsers.install.title}</p>
+              <p className="text-lg font-semibold text-gray-100 dark:text-white-95">{textContent.powerUsers.install.title}</p>
               <CommandTextInputCopy text={textContent.powerUsers.install.command} />
             </div>
           </div>
@@ -109,10 +107,10 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
           </div>
         </div>
 
-        <div className="mx-4 h-[1px] bg-neutral-35 lg:mx-12" />
+        <div className="mx-4 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:mx-12" />
 
         <div className="flex flex-col gap-4 p-12 text-lg sm:flex-row sm:gap-8">
-          <p className="text-lg text-gray-55">{textContent.powerUsers.learnMore.title}</p>
+          <p className="text-lg text-gray-55 dark:text-green-120">{textContent.powerUsers.learnMore.title}</p>
 
           <Link
             href="https://github.com/internxt/cli/tree/main?tab=readme-ov-file#readme"
@@ -159,11 +157,11 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
             href="https://internxt.com/webdav"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
+            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 dark:bg-gray-105 p-6 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
-            <p className="text-xl font-medium text-gray-100">{textContent.webDAV.title}</p>
-            <p className="text-base font-normal text-gray-55">{textContent.webDAV.description}</p>
+            <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.webDAV.title}</p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120">{textContent.webDAV.description}</p>
             <span className="flex flex-row items-center text-base font-medium text-primary">
               {textContent.webDAV.cta}
               <CaretRight className="text-primary" height={24} width={24} />
@@ -174,13 +172,13 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
             href={`https://internxt.com/${lang}/webdav`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
+            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 dark:bg-gray-105 p-6 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
-              <p className="text-xl font-medium text-gray-100">{textContent.Rclone.title}</p>
+              <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.Rclone.title}</p>
             </div>
-            <p className="text-base font-normal text-gray-55">{textContent.Rclone.description}</p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120">{textContent.Rclone.description}</p>
             <span className="flex flex-row items-center text-base font-medium text-primary">
               {textContent.Rclone.cta}
               <CaretRight className="text-primary" height={24} width={24} />
@@ -191,13 +189,13 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
             href={`https://internxt.com/${lang}/nas`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 p-6 transition-colors hover:bg-neutral-20"
+            className="flex flex-col gap-8 rounded-16 border-[1px] border-green-120 bg-neutral-15 dark:bg-gray-105 p-6 transition-colors hover:bg-neutral-20 dark:hover:bg-gray-105"
             style={isMobile ? { width: '293px', flexShrink: 0 } : {}}
           >
             <div className="flex flex-row items-center gap-2">
-              <p className="text-xl font-medium text-gray-100">{textContent.NAS.title}</p>
+              <p className="text-xl font-medium text-gray-100 dark:text-white-95">{textContent.NAS.title}</p>
             </div>
-            <p className="text-base font-normal text-gray-55">{textContent.NAS.description}</p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120">{textContent.NAS.description}</p>
             <span className="flex flex-row items-center text-base font-medium text-primary">
               {textContent.NAS.cta}
               <CaretRight className="text-primary" height={24} width={24} />
@@ -212,9 +210,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
                 type="button"
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -223,9 +219,7 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
                 type="button"
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

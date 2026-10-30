@@ -15,11 +15,16 @@ interface InputsComponentProps {
 
 export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
-export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps): JSX.Element => {
+export const InputsComponent = ({
+  register,
+  textContent,
+  errors,
+  authError,
+}: InputsComponentProps): JSX.Element => {
   return (
     <>
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-100">{textContent.signup.emailAddress}</p>
+        <p className="text-sm text-gray-100 dark:text-cool-gray-30">{textContent.signup.emailAddress}</p>
         <TextInput
           placeholder={'Email'}
           label="email"
@@ -32,7 +37,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
       </div>
 
       <div className="flex w-full flex-col gap-1">
-        <p className="text-sm text-gray-100">{textContent.signup.password}</p>
+        <p className="text-sm text-gray-100 dark:text-cool-gray-30">{textContent.signup.password}</p>
         <label className="space-y-0.5">
           <PasswordInput
             placeholder={'Password'}
