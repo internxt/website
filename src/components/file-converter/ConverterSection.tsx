@@ -38,7 +38,12 @@ const converters = [
   { type: 'imageToText', paths: imageToTextConverter },
 ];
 
-export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
+export const ConverterSection = ({
+  textContent,
+  converterText,
+  errorContent,
+  pathname,
+}: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
   const [converterStates, setConverterStates] = useState<ConverterStates>('initialState');
   const [error, setError] = useState<Errors | null>(null);
@@ -205,7 +210,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   return (
-    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 pb-20 pt-32">
       <input
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
@@ -218,16 +223,18 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{formattedConverterText.title}</h1>
-          <h2 className="text-xl text-gray-80">{textContent.description}</h2>
+          <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
+            {formattedConverterText.title}
+          </h1>
+          <h2 className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
-            <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
+            <p className="text-sm font-medium text-gray-80 dark:text-cool-gray-30">
+              {textContent.secureUpload}
+            </p>
           </div>
         </div>
-        <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle}  py-12`}
-        >
+        <div className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle}  py-12`}>
           {/* Card */}
           <State state={converterStates} />
         </div>

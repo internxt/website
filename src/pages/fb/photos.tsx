@@ -7,6 +7,7 @@ const FbPhotos = (props: PhotosProps) => (
     {...props}
     couponCode={PromoCodeName.META85}
     couponCodeForLifetime={PromoCodeName.META85}
+    darkMode={props.darkMode}
   />
 );
 

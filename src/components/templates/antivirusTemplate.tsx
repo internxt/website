@@ -26,6 +26,7 @@ const BREADCRUMB_ITEMS = [
 ];
 
 export interface AntivirusTemplateProps {
+  darkMode?: boolean;
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -42,6 +43,7 @@ export interface AntivirusTemplateProps {
 }
 
 export const AntivirusTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   lang,
@@ -132,7 +134,9 @@ export const AntivirusTemplate = ({
               {infoSectionData.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
-                  <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80">{item.description}</p>
+                  <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80 dark:text-cool-gray-30">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -147,7 +151,9 @@ export const AntivirusTemplate = ({
               {InfoSectionV2.map((item) => (
                 <div key={item.title} className="flex flex-col items-center justify-center px-5 text-center">
                   <item.icon className="text-primary" size={64} />
-                  <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
+                  <p className="pt-5 text-xl font-medium text-gray-80 dark:text-cool-gray-30">
+                    {item.title}
+                  </p>
                 </div>
               ))}
             </div>
@@ -166,19 +172,21 @@ export const AntivirusTemplate = ({
           FirstComponent={
             <div className="flex w-full flex-col items-center gap-9 ">
               <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-                <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+                <h2 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">
                   {langJson.ComponentsInColumn.title}
                 </h2>
-                <p className="font-regular text-xl text-gray-80">{langJson.ComponentsInColumn.description}</p>
+                <p className="font-regular text-xl text-gray-80 dark:text-cool-gray-30">
+                  {langJson.ComponentsInColumn.description}
+                </p>
               </div>
             </div>
           }
           SecondComponent={
             <div className="flex flex-col items-center">
-              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white" />
+              <CardGroup cards={cardsForComponentsIncolumn} backgroundColorCard="bg-white dark:bg-gray-95" />
             </div>
           }
-          backgroundColor="bg-gray-1"
+          backgroundColor="bg-gray-1 dark:bg-gray-105"
         />
         <CtaSection
           textContent={langJson.cta2}
@@ -186,11 +194,11 @@ export const AntivirusTemplate = ({
           customDescription={<p className="w-full  text-xl font-normal">{langJson.cta2.subtitle}</p>}
         />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={locale} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerLang} lang={locale} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

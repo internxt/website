@@ -13,7 +13,6 @@ const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
 
 const DEFAULTS = {
-  sectionDetails: 'bg-white',
   hideBillingController: false,
   SectionTag: 'p' as React.ElementType,
 };
@@ -84,7 +83,7 @@ const HotLabel = ({ textContent, discountValue, darkMode, isValentinesMode }) =>
     return null;
   }
 
-let badgeClass = 'bg-neutral-37 text-primary';
+let badgeClass = `${darkMode ? 'bg-purple-100' : 'bg-neutral-37 dark:bg-purple-100'} text-primary`;
 
 if (isValentinesMode) {
   badgeClass = 'flex gap-0.5 bg-pink-10 text-pink-80';
@@ -108,18 +107,16 @@ const PricingHeader = ({
   discountValue,
   className = '',
   couponCodeName,
-  darkMode,
+  darkMode = false,
   SectionTag,
   isValentinesMode,
   alternativeHeader,
 }) => (
   <div
-    className={`flex flex-col items-center gap-4 text-center ${
-      isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'
-    } ${className}`}
+    className={`flex flex-col items-center gap-4 text-center ${isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'} ${className}`}
     id="priceTable"
   >
-    <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+    <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
       {alternativeHeader ? textContent.planTitles.lifetimeHeader : textContent.planTitles.header}
     </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
@@ -133,12 +130,10 @@ const PricingHeader = ({
   </div>
 );
 
-const CouponCodeHeader = ({ textContent, couponCode }) => (
-  <div
-    className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}
-  >
+const CouponCodeHeader = ({ darkMode = false, textContent, couponCode }) => (
+  <div className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}>
     <CheckCircle className="text-green-1" weight="fill" />
-    <p className="text-sm font-medium text-gray-95 lg:text-base">
+    <p className={`text-sm font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-base`}>
       {couponNameLabel(textContent.discountLabel, couponCode)}
     </p>
   </div>
@@ -151,7 +146,8 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   hidePlanSelectorComponent,
-  sectionDetails = DEFAULTS.sectionDetails,
+  darkMode = false,
+  sectionDetails = darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95',
   backgroundGradientColor,
   lifetimeCoupons,
   popularPlanBySize,
@@ -159,7 +155,6 @@ export const PricingSectionWrapper = ({
   isFamilyPage,
   hideFeatures,
   onCheckoutButtonClicked,
-  darkMode,
   isAnnual,
   showPromo,
   isAffiliate,
@@ -229,9 +224,8 @@ export const PricingSectionWrapper = ({
 
   return (
     <section
-      className={`overflow-hidden lg:px-5 ${sectionDetails}`}
+      className={`overflow-hidden lg:px-5 ${sectionDetails} ${backgroundGradientColor ?? ''}`}
       id="billingButtons"
-      style={{ background: backgroundGradientColor }}
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className=" flex h-min flex-col items-center justify-center gap-6">
@@ -244,7 +238,7 @@ export const PricingSectionWrapper = ({
             isValentinesMode={isValentinesMode}
             alternativeHeader={alternativeHeader}
           />
-          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
+          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} darkMode={darkMode} />}
         </div>
 
         <PricingSection
@@ -259,7 +253,7 @@ export const PricingSectionWrapper = ({
         {textContent.ctaCompare && (
           <a
             href="#comparisonTable"
-            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark hover:bg-neutral-20 hover:text-primary-dark`}
+            className={`flex flex-row items-center gap-2 rounded-md border border-primary px-5 py-4 text-base font-medium text-primary hover:border-primary-dark ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-neutral-20 dark:hover:bg-gray-105'} hover:text-primary-dark`}
           >
             {textContent.ctaCompare}
             <ArrowDown className="h-6 w-6 text-primary" />
@@ -278,7 +272,7 @@ export const PricingSectionWrapper = ({
             isValentinesMode={isValentinesMode}
             alternativeHeader={alternativeHeader}
           />
-          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
+          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} darkMode={darkMode} />}
         </div>
 
         <PricingSectionForMobile
@@ -294,7 +288,7 @@ export const PricingSectionWrapper = ({
         {textContent.ctaCompare && (
           <a
             href="#comparisonTable"
-            className={`text-base font-medium underline ${darkMode ? 'text-white' : 'text-gray-55'} hover:opacity-80`}
+            className={`text-base font-medium underline ${darkMode ? 'text-white' : 'text-gray-55 dark:text-white'} hover:opacity-80`}
           >
             {textContent.ctaCompare}
           </a>

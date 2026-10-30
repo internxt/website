@@ -8,7 +8,7 @@ import HorizontalScrollableSection from '@/components/about/HorizontalScrollable
 import Script from 'next/script';
 import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 
-const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
+const AboutUs = ({ darkMode = false, lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (
@@ -26,7 +26,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt - About us', url: '/about' }]} darkMode={darkMode} />
     </Layout>
   );
 };

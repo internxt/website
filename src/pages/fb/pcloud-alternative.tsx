@@ -13,7 +13,14 @@ import { HeroSection } from '@/components/comparison/HeroSection';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const PCloudComparison = ({
+  darkMode = false,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  navbarLang,
+  footerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
 
   const {
@@ -70,9 +77,9 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       >
         <MinimalNavbar textContent={navbarLang} lang={lang} />
 
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'pCloud'} darkMode={darkMode} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor="pCloud" percentage={percentageDiscount} needH2 darkMode={darkMode} />
 
         <PricingSectionWrapper
           textContent={langJson.tableSection}
@@ -85,8 +92,9 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white lg:py-20 py-10"
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
           hideFreeCard
+          darkMode={darkMode}
         />
 
         <TablesSection
@@ -95,16 +103,17 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           percentage={percentageDiscount}
           logo="/images/comparison/competitors/pCloud.webp"
           sectionNeedsH2
+          darkMode={darkMode}
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSection}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]"
         />
 
         <HorizontalScrollableSection
           textContent={langJson.HorizontalScrollableSectionV2}
-          bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]"
           needsH2
           needsH3
         />
@@ -115,16 +124,20 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           customText={
             <>
               <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-                <h2 className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</h2>
-                <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
+                <h2 className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
+                  {langJson.CtaSection2.title}
+                </h2>
+                <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
+                  {langJson.CtaSection2.description}
+                </p>
               </div>
             </>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         />
 
-        <FAQSection textContent={langJson.FaqSection} needsH3={false} />
+        <FAQSection textContent={langJson.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
       </Layout>

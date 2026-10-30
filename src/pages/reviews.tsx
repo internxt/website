@@ -19,6 +19,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
 interface CleanerProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -27,6 +28,7 @@ interface CleanerProps {
 }
 
 const CleanerPage = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -86,9 +88,9 @@ const CleanerPage = ({
 
       <HeroSection textContent={textContent.heroSection} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} />
+      <HorizontalScrollableSection textContent={textContent.ReviewFromIndustrySection} darkMode={darkMode} />
 
       <PricingSectionWrapper
                 textContent={textContent.tableSection}
@@ -102,32 +104,37 @@ const CleanerPage = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
+                sectionDetails="bg-neutral-17 dark:bg-gray-105 lg:py-20"
                 hideFreeCard
+                darkMode={darkMode}
         />
 
       <VideotSection textContent={textContent.videoSection} />
 
-      <SupportSection textContent={textContent.supportSection} />
+      <SupportSection textContent={textContent.supportSection} darkMode={darkMode} />
 
       <FloatingCtaSectionv2
         textContent={textContent.ctaSection}
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.ctaSection.title}</p>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.ctaSection.description}</p>
+            <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
+              {textContent.ctaSection.title}
+            </p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
+              {textContent.ctaSection.description}
+            </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgGradientColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="pb-20 lg:pb-0 p-8 lg:py-10"
       />
 
-      <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }]} />
+      <Footer textContent={footerLang} lang={locale} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Reviews', url: '/reviews' }]} darkMode={darkMode} />
     </Layout>
   );
 };

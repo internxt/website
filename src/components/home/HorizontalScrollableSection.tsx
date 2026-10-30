@@ -5,12 +5,14 @@ interface HorizontalScrollableProps {
   textContent: any;
   darkMode?: boolean;
   isValentinesMode?: boolean;
+  bgGradient?: string;
 }
 
 export default function HorizontalScrollableSection({
   textContent,
   darkMode = false,
   isValentinesMode = false,
+  bgGradient,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollState, setScrollState] = useState({
@@ -87,15 +89,13 @@ export default function HorizontalScrollableSection({
   };
 
   const getButtonClasses = (isDisabled: boolean) => {
-    const baseClasses = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
-      darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
-    } transition-all`;
+    const baseClasses = `flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} transition-all`;
 
     if (isDisabled) {
       return `${baseClasses} cursor-not-allowed opacity-30`;
     }
 
-    const hoverClasses = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+    const hoverClasses = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105';
     return `${baseClasses} cursor-pointer ${hoverClasses}`;
   };
 
@@ -115,17 +115,19 @@ export default function HorizontalScrollableSection({
     };
   }, [isMobile]);
 
+  const darkBgClass = darkMode ? 'bg-gray-95' : 'bg-neutral-17 dark:bg-gray-95';
+  const themeBgClass = isValentinesMode ? 'bg-pink-0' : darkBgClass;
+  const sectionBgClass = bgGradient ?? themeBgClass;
+
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        isValentinesMode ? 'bg-pink-0' : darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
-      } pb-10 lg:h-min lg:gap-16 lg:py-20`}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${sectionBgClass} pb-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-3xl`}>
           {textContent.title}
         </h2>
-        <p className={`${darkMode ? 'text-green-120' : 'text-gray-55'} text-base font-normal leading-tight lg:text-xl`}>
+        <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight lg:text-xl`}>
           {textContent.description}
         </p>
         {textContent.cta !== undefined && (
@@ -162,15 +164,11 @@ export default function HorizontalScrollableSection({
                   width: isMobile ? `${mobileCardWidth}px` : `${desktopCardWidth}px`,
                 }}
               >
-                <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white'} p-6`}>
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} p-6`}>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>
                     {title}
                   </h3>
-                  <p
-                    className={`${
-                      darkMode ? 'text-green-120' : 'text-gray-55'
-                    } flex-1 text-sm font-normal leading-tight lg:text-base`}
-                  >
+                  <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} flex-1 text-sm font-normal leading-tight lg:text-base`}>
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

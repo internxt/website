@@ -12,6 +12,7 @@ const cleanmymacComparison = (props: any) => (
     segmentName="CleanMyMac Comparison"
     logo="/images/comparison/clean-my-mac-Letters.webp"
     couponCodeName={PromoCodeName.CLEANMYMAC85}
+    darkMode={props.darkMode}
   />
 );
 

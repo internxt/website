@@ -33,6 +33,7 @@ export interface WhatDoesGoogleKnowAboutMeTemplateProps {
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
   robots?: string;
+  darkMode?: boolean;
 }
 
 export const WhatDoesGoogleKnowAboutMeTemplate = ({
@@ -46,6 +47,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
   couponCode = PromoCodeName.seolp,
   couponCodeForLifetime = PromoCodeName.seolp,
   robots,
+  darkMode = false,
 }: WhatDoesGoogleKnowAboutMeTemplateProps): JSX.Element => {
   const metatags = metatagsDescription.find((desc) => desc.id === 'what-google-knows');
   const lang = locale as string;
@@ -104,7 +106,12 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
       >
         <Navbar textContent={navbarText} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.GoogleLPBanner} lang={lang} />
+        <HeroSection
+          textContent={textContent.HeroSection}
+          bannerText={bannerText.GoogleLPBanner}
+          lang={lang}
+          darkMode={darkMode}
+        />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -118,8 +125,9 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="2TB"
-          sectionDetails="bg-white lg:py-20 xl:py-32"
+          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
           freePlanNeedsH2
+          darkMode={darkMode}
         />
 
         <WhatGoogleKnowsSection textContent={textContent.WhatGoogleKnowsSection} />
@@ -132,7 +140,7 @@ export const WhatDoesGoogleKnowAboutMeTemplate = ({
 
         <CtaSection textContent={textContent.CtaSection2} url={URL_REDIRECT} />
 
-        <Footer textContent={footerText} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} />
+        <Footer textContent={footerText} lang={lang} breadcrumbItems={BREADCRUMB_ITEMS} darkMode={darkMode} />
       </Layout>
     </>
   );

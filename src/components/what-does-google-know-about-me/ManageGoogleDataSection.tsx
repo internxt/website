@@ -5,22 +5,26 @@ import { getImage } from '@/lib/getImage';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
-    <li key={item} className="text-lg leading-normal text-gray-80">
+    <li key={item} className="text-lg leading-normal text-gray-80 dark:text-cool-gray-30">
       {item}
     </li>
   ));
   return (
-    <section className="overflow-hidden px-5 py-20">
+    <section className="overflow-hidden px-5 py-20 dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center">
         <div className="flex max-w-2xl flex-col space-y-16">
           <div className="flex flex-col items-center space-y-3 text-center lg:items-start lg:text-start">
             <Trash size={48} className="text-primary" />
-            <p className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</p>
+            <p className="text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">
+              {textContent.title}
+            </p>
           </div>
-          <p className="text-lg text-gray-80">{textContent.description}</p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           {/* Fisrt Section */}
           <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.section1.title}</p>
+            <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+              {textContent.section1.title}
+            </p>
             <RenderDescription description={textContent.section1.description} />
           </div>
         </div>
@@ -32,8 +36,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         {/* Second Section */}
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section2.title}</p>
-          <p className="text-lg text-gray-80">{textContent.section2.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section2.title}
+          </p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">
+            {textContent.section2.description}
+          </p>
         </div>
         <div className="flex max-w-2xl flex-col">
           <ul className="list-decimal space-y-3 pt-6 pl-6">{numberedList}</ul>
@@ -58,8 +66,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
           {/* Third Section */}
-          <p className="text-2xl font-medium text-gray-100">{textContent.section3.title}</p>
-          <p className="text-lg text-gray-80">{textContent.section3.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section3.title}
+          </p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">
+            {textContent.section3.description}
+          </p>
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-activity-controls.webp')}
@@ -69,17 +81,25 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         {/* Forth Section */}
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section4.title}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section4.title}
+          </p>
           <RenderDescription description={textContent.section4.description} />
         </div>
         {/* Fifth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section5.title}</p>
-          <p className="text-lg text-gray-80">{textContent.section5.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section5.title}
+          </p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">
+            {textContent.section5.description}
+          </p>
         </div>
         {/* Sixth Section */}
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section6.title}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section6.title}
+          </p>
           <RenderDescription description={textContent.section6.description} />
         </div>
         <img
@@ -101,7 +121,9 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         {/* Seventh Section */}
         <div className="flex max-w-2xl flex-col space-y-3 py-16">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section7.title}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section7.title}
+          </p>
           <RenderDescription description={textContent.section7.description} />
         </div>
         <img
@@ -112,8 +134,12 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         {/* Eighth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section8.title}</p>
-          <p className="text-lg text-gray-80">{textContent.section8.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section8.title}
+          </p>
+          <p className="text-lg text-gray-80 dark:text-cool-gray-30">
+            {textContent.section8.description}
+          </p>
         </div>
         <img
           src={getImage('/images/what-does-google-know-about-me/google-search-privacy-settings.webp')}
@@ -123,7 +149,9 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         {/* Ninth Section */}
         <div className="flex max-w-2xl flex-col space-y-3 pb-16">
-          <p className="text-2xl font-medium text-gray-100">{textContent.section9.title}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">
+            {textContent.section9.title}
+          </p>
           <RenderDescription description={textContent.section9.description} />
         </div>
         <img

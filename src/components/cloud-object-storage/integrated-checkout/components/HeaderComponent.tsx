@@ -12,9 +12,15 @@ export const HeaderComponent = ({ textContent, lang }: HeaderComponentProps): JS
   <div className="flex w-full flex-row justify-between">
     <div className="flex flex-row items-center justify-center space-x-2">
       <Link href="/" hrefLang={lang}>
-        <Image src={getImage(`/logos/internxt/cool-gray-90.svg`)} alt="Internxt logo" width={96} height={10} />
+        <Image
+          src={getImage('/logos/internxt/cool-gray-90.svg')}
+          className="dark:brightness-0 dark:invert"
+          alt="Internxt logo"
+          width={96}
+          height={10}
+        />
       </Link>
-      <p className="text-lg text-gray-70">{textContent.checkout}</p>
+      <p className="text-lg text-gray-70 dark:text-cool-gray-30">{textContent.checkout}</p>
     </div>
   </div>
 );

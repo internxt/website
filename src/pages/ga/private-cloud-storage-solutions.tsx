@@ -19,6 +19,7 @@ import { ShieldCheck } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageSolutionsText;
   navbarLang: NavigationBarText;
@@ -29,6 +30,7 @@ interface PrivacyProps {
 }
 
 const PrivateCloudStorageSolutions = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -166,7 +168,7 @@ const PrivateCloudStorageSolutions = ({
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
@@ -178,6 +180,7 @@ const PrivateCloudStorageSolutions = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

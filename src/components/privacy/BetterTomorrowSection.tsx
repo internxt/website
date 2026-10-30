@@ -6,7 +6,7 @@ import { getImage } from '@/lib/getImage';
 
 const BetterTomorrowSection = ({ textContent, lang }) => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden dark:bg-gray-95">
       <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">
         <div className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
@@ -27,8 +27,10 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
           className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start"
         >
           <ShieldStar size={60} className="text-primary" />
-          <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="text-xl">{textContent.description}</p>
+          <p className="mb-6 text-4xl font-semibold text-gray-100 dark:text-white-95 sm:text-5xl sm:leading-tight">
+            {textContent.title}
+          </p>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
 
           <Link
             href={'/'}

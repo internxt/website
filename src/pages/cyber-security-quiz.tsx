@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
 import { CyberSecurityQuizViews } from '@/lib/types';
 
-const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang }) => {
+const CyberSecurityQuiz = ({ darkMode = false, metatagsDescriptions, navbarLang, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
   const [isQuizSection, setIsQuizSection] = useState(true);
   const [view, setView] = useState<CyberSecurityQuizViews>();
@@ -31,6 +31,7 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang
         setIsQuizSection={setIsQuizSection}
         onViewChange={onViewChange}
         view={view}
+        darkMode={darkMode}
       />
     </Layout>
   );

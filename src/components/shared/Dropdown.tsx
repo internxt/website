@@ -5,7 +5,7 @@ import { CaretDown, CaretUp } from '@phosphor-icons/react';
 const Dropdown = ({
   buttonTitle,
   children,
-  className,
+  className = '',
 }: {
   buttonTitle: string;
   children: React.ReactNode;

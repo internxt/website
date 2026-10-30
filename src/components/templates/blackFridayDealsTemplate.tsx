@@ -29,6 +29,7 @@ interface BlackFridayDealConfig {
 }
 
 interface BlackFridayDealsTemplateProps {
+  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -38,6 +39,7 @@ interface BlackFridayDealsTemplateProps {
 }
 
 const BlackFridayDealsTemplate = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -109,7 +111,7 @@ const BlackFridayDealsTemplate = ({
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} percentOff={percentOff} darkMode />
 
-      <div className="relative bg-[#1C1C1C] px-5 py-10">
+      <div className="relative bg-gray-95 px-5 py-10">
         <div className={`klaviyo-form-${formId} klaviyo-form-title-size mx-auto max-w-[600px]`}></div>
         <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-gray-71 lg:left-32 lg:right-32"></div>
       </div>
@@ -126,7 +128,7 @@ const BlackFridayDealsTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize || '2TB'}
-        sectionDetails="bg-[#1C1C1C] lg:py-20"
+        sectionDetails="bg-gray-95 lg:py-20"
         darkMode
         hideFreeCard
       />
@@ -147,14 +149,15 @@ const BlackFridayDealsTemplate = ({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgPadding="lg:py-10 pb-10 bg-gray-95"
       />
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
 
       <MoreDealsSection
         textContent={textContent.MoreDealsSection}
+        darkMode
         urls={config.moreDealsUrls}
         percentOff={percentOff}
       />
@@ -173,16 +176,17 @@ const BlackFridayDealsTemplate = ({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgPadding="lg:py-10 pb-10 bg-gray-95"
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
         percentageDiscount={percentOff}
-        bgColor="bg-[#1C1C1C] text-white"
-        cardColor="bg-[#1C1C1C]"
+        bgColor="bg-gray-95 text-white"
+        cardColor="bg-gray-95"
         textColor="text-white"
+        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode />

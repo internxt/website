@@ -52,8 +52,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-20 mt-8 lg:mt-16 px-6 lg:px-20 lg:gap-16 gap-10`}
-      style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
+      className={`flex h-min flex-col w-full items-center justify-center overflow-hidden py-20 mt-8 lg:mt-16 px-6 lg:px-20 lg:gap-16 gap-10 bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]`}
     >
       <div className='flex flex-col lg:gap-6 gap-10'>
         <Image

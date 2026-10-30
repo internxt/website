@@ -8,6 +8,7 @@ interface Props {
   textContent: FeaturesSectionType;
 }
 const FeatureSection = ({ textContent }: Props): JSX.Element => {
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -105,9 +106,9 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden pb-4">
-        <div className="flex w-full flex-col items-center justify-center bg-gradient-to-t from-[#FFFFFF] to-[#001D6C] pt-2 md:pt-10 gap-8">
-        <p className="w-full max-w-[1120px] px-5 pb-1 lg:pb-4 text-center text-sm font-normal leading-tight text-white lg:w-[900px] lg:px-0 lg:text-2xl">
+    <section className="flex w-full flex-col items-center justify-center gap-16 overflow-hidden pb-4 dark:bg-gray-95">
+        <div className="flex w-full flex-col items-center justify-center gap-8 bg-gradient-to-t from-[#FFFFFF] dark:from-gray-95 to-[#001D6C] pt-2 md:pt-10">
+        <p className="w-full max-w-[1120px] px-5 pb-1 text-center text-sm font-normal leading-tight text-white lg:w-[900px] lg:px-0 lg:pb-4 lg:text-2xl">
           {textContent.intro}
         </p>
         <div className="w-full max-w-[1280px]">
@@ -132,14 +133,14 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         >
           {featuresArray.map(([key, { title, description }]) => (
             <div key={key} className="h-full w-full max-w-[330px] shrink-0 lg:w-[352px]">
-              <h3 className="pb-6 text-lg font-medium text-gray-100 lg:text-xl">
+              <h3 className="pb-6 text-lg font-medium text-gray-100 dark:text-white-95 lg:text-xl">
                 {title}
               </h3>
               <div className="space-y-4">
                 {description.map((paragraph, idx) => (
                   <p
                     key={`${key}-p-${idx}`}
-                    className="text-[14px] font-normal leading-tight text-gray-55 lg:text-[16px]"
+                    className="text-[14px] font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-[16px]"
                   >
                     {paragraph}
                   </p>
@@ -154,11 +155,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-opacity ${
-                currentIndex === 0
-                  ? 'cursor-not-allowed opacity-50'
-                  : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -166,11 +163,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-opacity ${
-                currentIndex === maxIndex
-                  ? 'cursor-not-allowed opacity-50'
-                  : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

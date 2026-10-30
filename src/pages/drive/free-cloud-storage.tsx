@@ -25,6 +25,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
 interface DriveProps {
+  darkMode?: boolean;
   textContent: DriveText;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -43,6 +44,7 @@ interface DriveProps {
 }
 
 const Drive = ({
+  darkMode = false,
   metatagsDescriptions,
   download,
   textContent,
@@ -108,7 +110,7 @@ const Drive = ({
 
       <HorizontalScrollableSection
         textContent={textContent.EncryptedCloudStorageSection}
-        bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgGradient="bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]"
         needsH2
         needsH3
       />
@@ -127,51 +129,63 @@ const Drive = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-neutral-17 lg:py-20"
+          sectionDetails="bg-neutral-17 dark:bg-gray-105 lg:py-20"
                 hideFreeCard
+                darkMode={darkMode}
         />
 
-      <CoreFeaturesSection textContent={textContent.CoreFeatures} />
+      <CoreFeaturesSection textContent={textContent.CoreFeatures} darkMode={darkMode} />
 
       <HorizontalScrollableSection textContent={textContent.AllInOnePrivacySection} needsH2 />
 
       <ThreeCardsSection
         textContent={textContent.MadeInEuropeSection}
-        bgColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+          bgColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+        darkMode={darkMode}
       />
 
       <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} lang={lang} partner="levante" />
 
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSection}
-        url={'#billingButtons'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSection.title}
-            </h2>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.description}
-            </p>
-          </div>
-        }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20"
-      />
+        <FloatingCtaSectionv2
+          textContent={textContent.CtaSection}
+          url={'#billingButtons'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <h2 className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
+                {textContent.CtaSection.title}
+              </h2>
+              <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.CtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:py-20"
+        />
 
-      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} />
+      <DownloadComponent textContent={textContent.DownloadSection} lang={lang} download={download} darkMode={darkMode} />
 
       <AdvancedToolsSection textContent={textContent.AdvancedToolsSection} />
 
       <ReviewsSection
         textContent={textContent.ReviewSection}
-        bgColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+          bgColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+          darkMode={darkMode}
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' }]} />
+        <Footer
+          textContent={footerLang}
+          lang={lang}
+          breadcrumbItems={[
+            { name: 'Encrypted Cloud Storage', url: '/' },
+            { name: 'Secure cloud storage', url: '/drive' },
+            { name: 'Free secure cloud storage', url: '/drive/free-cloud-storage' },
+          ]}
+          darkMode={darkMode}
+        />
     </Layout>
     </>
   );

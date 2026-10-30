@@ -6,7 +6,7 @@ interface RevealProps {
   id?: string;
 }
 
-const RevealY = ({ children, className, id }: RevealProps) => {
+const RevealY = ({ children, className = '', id }: RevealProps) => {
   useEffect(() => {
     function reveal() {
       const reveals = document.querySelectorAll('.revealY');

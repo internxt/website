@@ -7,6 +7,7 @@ import Checkbox from '../components/Checkbox';
 import { getImage } from '@/lib/getImage';
 
 interface ViewProps {
+  darkMode?: boolean;
   view: CyberSecurityQuizViews | undefined;
   textContent: any;
   height: MutableRefObject<number>;
@@ -20,6 +21,7 @@ interface ViewProps {
 }
 
 interface AnswerQuestionsSectionProps {
+  darkMode?: boolean;
   textContent: any;
   view: CyberSecurityQuizViews | undefined;
   setIsQuizSection: (isQuizSection: boolean) => void;
@@ -27,6 +29,8 @@ interface AnswerQuestionsSectionProps {
 }
 
 const View = (viewSelected: ViewProps | undefined) => {
+  const darkMode = viewSelected?.darkMode ?? false;
+  const bgClass = 'bg-gray-20 dark:bg-gray-71';
   const footerLang = require(`../../assets/lang/en/footer.json`);
   if (viewSelected?.view === undefined) return <></>;
 
@@ -155,9 +159,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             <button
               disabled={currentCheckbox === ''}
               onClick={handleNextQuestion}
-              className={`${
-                currentCheckbox === '' ? 'cursor-not-allowed bg-gray-20' : 'cursor-pointer bg-primary'
-              } flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
+              className={`${currentCheckbox === '' ? `cursor-not-allowed ${bgClass}` : 'cursor-pointer bg-primary'} flex w-full flex-col items-center justify-center rounded-lg px-5 py-3 md:w-max`}
             >
               {textContent.QuizSection.nextQuestion}
             </button>
@@ -250,7 +252,7 @@ const View = (viewSelected: ViewProps | undefined) => {
           answers={savedAnswers}
           correctAnswers={textContent.QuizSection.correctAnswers}
         />
-        <Footer textContent={footerLang} lang="en" />
+        <Footer textContent={footerLang} lang="en" darkMode={darkMode} />
       </>
     ),
   };
@@ -260,7 +262,13 @@ const View = (viewSelected: ViewProps | undefined) => {
   return view[viewSelected.view];
 };
 
-const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewChange }: AnswerQuestionsSectionProps) => {
+const AnswerQuestionsSection = ({
+  darkMode = false,
+  textContent,
+  view,
+  setIsQuizSection,
+  onViewChange,
+}: AnswerQuestionsSectionProps) => {
   const height = useRef(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentCheckbox, setCurrentCheckbox] = useState<string>('');
@@ -301,6 +309,7 @@ const AnswerQuestionsSection = ({ textContent, view, setIsQuizSection, onViewCha
       savedAnswers={savedAnswers}
       setIsQuizSection={setIsQuizSection}
       textContent={textContent}
+      darkMode={darkMode}
     />
   );
 };

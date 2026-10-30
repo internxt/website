@@ -13,25 +13,27 @@ interface WhatWeDoSectionForSpecialOfferProps {
 export const WhatWeDoSectionForSpecialOffer = ({
   textContent,
   handleOnButtonClick,
-  bgColor = 'bg-gray-1',
-  bgColorCard = 'bg-white',
+  bgColor = 'bg-gray-1 dark:bg-gray-105',
+  bgColorCard = 'bg-white dark:bg-gray-95',
 }: WhatWeDoSectionForSpecialOfferProps) => {
   return (
     <section className={`overflow-hidden ${bgColor} py-20 px-5`}>
       <div className="flex flex-col items-center gap-16">
         <div className="flex max-w-[940px] flex-col gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
+            {textContent.title}
+          </h2>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
-        <div
-          className={`flex max-w-5xl flex-col items-center overflow-hidden rounded-2xl ${bgColorCard} lg:w-screen lg:flex-row lg:justify-between lg:gap-0`}
-        >
+        <div className={`flex max-w-5xl flex-col items-center overflow-hidden rounded-2xl ${bgColorCard} lg:w-screen lg:flex-row lg:justify-between lg:gap-0`}>
           <div className="flex h-full flex-col items-center justify-center gap-8 p-7 text-center lg:items-start lg:pl-14 lg:text-start">
-            <div className="flex max-w-[500px] flex-col gap-6 text-lg text-black lg:text-xl">
+            <div className="flex max-w-[500px] flex-col gap-6 text-lg text-black dark:text-white-95 lg:text-xl">
               {textContent.card.features.map((feature) => (
                 <div className="flex flex-row gap-2">
                   <CheckCircle className="mt-0.5 h-6 w-6 text-primary lg:mt-0 lg:h-8 lg:w-8" size={32} />
-                  <p className="text-left font-semibold text-gray-80">{feature}</p>
+                  <p className="text-left font-semibold text-gray-80 dark:text-cool-gray-30">
+                    {feature}
+                  </p>
                 </div>
               ))}
             </div>

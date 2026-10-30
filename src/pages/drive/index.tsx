@@ -2,7 +2,7 @@ import { DriveTemplate, DriveTemplateProps } from '@/components/templates/driveT
 import { downloadDriveLinks } from '@/lib/get-download-url';
 import { GetStaticPropsContext } from 'next';
 
-const DriveLP = (props: DriveTemplateProps) => <DriveTemplate {...props} />;
+const DriveLP = (props: DriveTemplateProps) => <DriveTemplate {...props} darkMode={props.darkMode} />;
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const download = await downloadDriveLinks();

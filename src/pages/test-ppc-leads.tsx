@@ -17,6 +17,7 @@ import { TestPpcLeadsText } from '@/assets/types/test-ppc-leads';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
 interface TestPpcLeadsProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: TestPpcLeadsText;
@@ -25,6 +26,7 @@ interface TestPpcLeadsProps {
 }
 
 const TestPpcLeads = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -58,25 +60,27 @@ const TestPpcLeads = ({
 
       <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
-      <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} />
+      <TrustedSection textContent={textContent.TrustedSection} bottomBar={false} darkMode={darkMode} />
 
-      <CardsGridSection textContent={textContent.FeaturesSection} bgColor="bg-neutral-17" />
+      <CardsGridSection textContent={textContent.FeaturesSection} bgColor="bg-neutral-17 dark:bg-gray-105" />
 
       <ChoosePlanSection
         textContent={textContent.ChoosePlanSection}
         currency={currency}
         minimumPrice={minimumPrice}
         loadingCards={loadingCards}
-        sectionDetails="bg-neutral-17 py-10 lg:py-20"
+        sectionDetails="bg-neutral-17 dark:bg-gray-105 py-10 lg:py-20"
+        darkMode={darkMode}
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
         needsH2
         needsH3
-        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]"
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -92,12 +96,12 @@ const TestPpcLeads = ({
             </p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(279.29deg, #0c4499 3.25%, #041733 78.35%)"
+        bgGradientContainerColor="bg-[linear-gradient(279.29deg,#0c4499_3.25%,#041733_78.35%)]"
         containerDetails="px-6 lg:flex-row lg:justify-between lg:px-10 lg:text-left"
         bgPadding="py-10 lg:py-20"
       />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} bgColor="bg-white" />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} bgColor="bg-white dark:bg-gray-95" />
     </Layout>
   );
 };

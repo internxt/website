@@ -20,7 +20,7 @@ export const RangeSlider = ({
     <div className="flex w-full max-w-[840px] flex-col gap-2">
       <div className="inset-0 flex w-full items-center justify-between">
         {rangeItems.map((item) => (
-          <span key={item} className="font-medium text-gray-100">
+          <span key={item} className="font-medium text-gray-100 dark:text-white-95">
             {item}
           </span>
         ))}

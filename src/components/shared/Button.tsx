@@ -23,6 +23,7 @@ const Button = ({
   hoverColor,
   onClick,
 }: ButtonProps): JSX.Element => {
+  const bgClass = 'bg-gray-10 dark:bg-gray-71';
   return (
     <button
       onClick={onClick}
@@ -31,7 +32,7 @@ const Button = ({
       type={type}
       className={[
         'flex w-max justify-center rounded-md px-5 py-3 text-base font-medium',
-        disabled ? 'bg-gray-10' : `bg-primary ${hoverColor}`,
+        disabled ? bgClass : `bg-primary ${hoverColor}`,
         textColor || 'text-white',
         className || '',
       ].join(' ')}

@@ -19,6 +19,7 @@ import { HorizontalPriceCard } from '@/components/shared/pricing/PriceCard/Horiz
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
 interface CombinedSpecialOfferProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -29,13 +30,13 @@ interface CombinedSpecialOfferProps {
 }
 
 const getThemeClasses = (isDarkMode: boolean) => ({
-  title: isDarkMode ? 'text-white' : 'text-gray-95',
-  description: isDarkMode ? 'text-white' : 'text-gray-55',
+  title: isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white',
+  description: isDarkMode ? 'text-white' : 'text-gray-55 dark:text-white',
   bgGradientContainer: isDarkMode
-    ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-    : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
-  bgGradient: isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
-  sectionBg: isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white',
+    ? 'bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]'
+    : 'bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]',
+  bgGradient: isDarkMode ? undefined : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none',
+  sectionBg: isDarkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95',
 });
 
 const renderCtaContent = (
@@ -49,15 +50,14 @@ const renderCtaContent = (
     <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${themeClasses.title}`}>
       {parsePercentText(title)}
     </p>
-    <p
-      className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${themeClasses.description} ${descriptionWidth}`}
-    >
+    <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${themeClasses.description} ${descriptionWidth}`}>
       {parsePercentText(description)}
     </p>
   </div>
 );
 
 function CombinedSpecialOffer({
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -83,7 +83,7 @@ function CombinedSpecialOffer({
     isPrivacyTutor,
     requireAnnualDiscount,
     redirectToUrgentCheckout,
-  } = useOfferConfig(pathname);
+  } = useOfferConfig(pathname, darkMode);
 
   const {
     products,
@@ -115,7 +115,7 @@ function CombinedSpecialOffer({
   const openerSwitchPlan: SwitchButtonOptions = annualFirstPlans ? 'Individuals' : 'Lifetime';
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
@@ -189,7 +189,7 @@ function CombinedSpecialOffer({
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
       {onlyUltimatePlan ? (
-        <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24">
+        <div className={`flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 ${darkMode ? 'bg-gray-95' : 'dark:bg-gray-95'}`}>
           {ultimatePlan && (
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
@@ -251,7 +251,7 @@ function CombinedSpecialOffer({
           )}
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgGradientContainerColor={themeClasses.bgGradientContainer}
-          bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
+          bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-gray-95' : 'pb-10 lg:py-10 dark:pb-10 dark:lg:pt-10 dark:bg-gray-95'}
         />
       )}
 

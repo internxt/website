@@ -14,7 +14,8 @@ import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
+import { isDarkModePage } from '@/theme.config';
 import { notificationService } from '@/components/Snackbar';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
@@ -23,6 +24,7 @@ import { stripeService } from '@/services/stripe.service';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
+  darkMode?: boolean;
   locale: GetStaticPropsContext['locale'];
   textContent: IntegratedCheckoutText;
 }
@@ -40,16 +42,18 @@ let stripe;
 
 export const THEME_STYLES = {
   dark: {
-    backgroundColor: 'rgb(17 17 17)',
-    textColor: 'rgb(255 255 255)',
-    borderColor: 'rgb(58, 58, 59)',
-    borderInputColor: 'rgb(142, 142, 148)',
+    backgroundColor: 'rgb(28, 28, 28)',
+    textColor: 'rgb(250, 250, 250)',
+    borderColor: 'rgb(71, 71, 71)',
+    borderInputColor: 'rgb(71, 71, 71)',
+    placeholderColor: 'rgb(142, 142, 148)',
   },
   light: {
     backgroundColor: 'rgb(255 255 255)',
     textColor: 'rgb(17 17 17)',
     borderColor: 'rgb(229, 229, 235)',
     borderInputColor: 'rgb(174, 174, 179)',
+    placeholderColor: 'rgb(199, 199, 205)',
   },
 };
 
@@ -73,6 +77,8 @@ const PRICE_ID = IS_PRODUCTION
 const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Element => {
   const paymentService = new ObjStoragePaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
+  const pathname = usePathname();
+  const darkMode = isDarkModePage(pathname ?? '');
 
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();
@@ -85,14 +91,17 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
   const searchParams = useSearchParams();
   const couponCode = searchParams?.get('couponCode');
 
-  const { backgroundColor, borderColor, borderInputColor, textColor } = THEME_STYLES['light'];
+  const { backgroundColor, borderColor, borderInputColor, textColor, placeholderColor } =
+    THEME_STYLES[darkMode ? 'dark' : 'light'];
 
   useEffect(() => {
     paymentService
       .fetchPlanById(PRICE_ID, 'eur')
       .then((plan) => {
         setPlan(plan);
-        loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, plan);
+        loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, placeholderColor, plan).catch(
+          (err) => console.error('Stripe elements failed to load:', err),
+        );
       })
       .catch((err) => {
         console.error('Plan fetch failed, redirecting to storage page:', err);
@@ -111,6 +120,7 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
     backgroundColor: string,
     borderColor: string,
     borderInputColor: string,
+    placeholderColor: string,
     plan: PlanData,
   ) => {
     const stripeElementsOptions: StripeElementsOptions = {
@@ -119,6 +129,9 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
         variables: {
           spacingAccordionItem: '8px',
           colorPrimary: textColor,
+          colorText: textColor,
+          colorTextPlaceholder: placeholderColor,
+          colorBackground: backgroundColor,
         },
         theme: 'flat',
         rules: {
@@ -136,12 +149,14 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
             borderColor: borderColor,
             border: '1px solid',
             backgroundColor: backgroundColor,
+            color: textColor,
           },
           '.Input': {
             backgroundColor: backgroundColor,
-            borderRadius: '0.375rem',
+            borderRadius: '0.5rem',
             // borderColor: borderInputColor,
             border: `1px solid ${borderInputColor}`,
+            color: textColor,
           },
           '.Input:focus': {
             backgroundColor: backgroundColor,
@@ -298,6 +313,7 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
               onRemoveAppliedCouponCode={() => setCoupon(undefined)}
               showCouponCode={coupon !== undefined}
               couponCodeName={coupon?.name}
+              darkMode={darkMode}
             />
           </Elements>
         ) : (

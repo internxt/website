@@ -7,7 +7,7 @@ import { getImage } from '@/lib/getImage';
 
 export const CliCard = ({ textContent }) => {
   return (
-    <section className="flex flex-col rounded-3xl border border-gray-5 bg-gray-1 py-12">
+    <section className="flex flex-col rounded-3xl border border-gray-5 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 py-12">
       <div className="flex flex-col space-y-12">
         {/* First path */}
         <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between md:pl-12">
@@ -16,13 +16,17 @@ export const CliCard = ({ textContent }) => {
               <div className="text bg-orange/15 w-max rounded-lg px-2.5 py-1.5">
                 <p className="text-orange text-sm font-bold">{textContent.new}</p>
               </div>
-              <h2 className="max-w-[550px]  text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+              <h2 className="max-w-[550px] text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
                 {textContent.title.bold} <br /> <span className="text-gray-40">{textContent.title.normal}</span>
               </h2>
-              <p className="max-w-[384px] text-lg text-gray-100">{textContent.description}</p>
+              <p className="max-w-[384px] text-lg text-gray-100 dark:text-white-95">
+                {textContent.description}
+              </p>
             </div>
             <div className="flex flex-col space-y-2">
-              <p className="text-lg font-semibold text-gray-100">{textContent.installCli}</p>
+              <p className="text-lg font-semibold text-gray-100 dark:text-white-95">
+                {textContent.installCli}
+              </p>
               <CommandTextInputCopy text={textContent.command} />
             </div>
           </div>
@@ -45,7 +49,7 @@ export const CliCard = ({ textContent }) => {
               />
             </div>
             <div className="flex flex-row items-center space-x-3 px-5">
-              <p className="text-sm text-gray-60">{textContent.available}</p>
+              <p className="text-sm text-gray-60 dark:text-green-120">{textContent.available}</p>
               {/* Logos */}
               <img src={getImage('/images/drive/Windows-logo.svg')} width={16} height={16} alt="Windows image" />
               <img
@@ -59,19 +63,19 @@ export const CliCard = ({ textContent }) => {
             </div>
           </div>
         </div>
-        <div className="mx-5 flex border border-gray-10 md:mx-12" />
+        <div className="mx-5 flex border border-gray-10 dark:border-gray-71 md:mx-12" />
         <div className="flex flex-col items-center px-5 md:px-12">
           <div className="flex flex-row flex-wrap  gap-10">
             {textContent.feeds.map((item: { title: string; description: string }) => (
               <div key={item.title} className="flex flex-col space-y-1 md:max-w-[182px]">
-                <p className="text-lg font-semibold text-gray-100">{item.title}</p>
-                <p className="text-lg text-gray-100">{item.description}</p>
+                <p className="text-lg font-semibold text-gray-100 dark:text-white-95">{item.title}</p>
+                <p className="text-lg text-gray-100 dark:text-white-95">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
         <div className="mx-5 flex flex-col gap-3 md:mx-12 md:flex-row md:items-center md:gap-8">
-          <p className="text-lg text-gray-60">{textContent.learnMore}</p>
+          <p className="text-lg text-gray-60 dark:text-green-120">{textContent.learnMore}</p>
           <LinkTo text={textContent.readme} linkToRedirect={GH_README_LINK} />
           <LinkTo text={textContent.userGuide} linkToRedirect={USER_GUIDE_LINK} />
         </div>

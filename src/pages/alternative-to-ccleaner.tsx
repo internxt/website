@@ -12,6 +12,7 @@ const ccleanerComparison = (props: any) => (
     segmentName="Ccleaner Comparison"
     logo="/images/comparison/ccleaner-Letters.webp"
     couponCodeName={PromoCodeName.CCLEANER85}
+    darkMode={props.darkMode}
   />
 );
 

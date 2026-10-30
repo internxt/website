@@ -10,13 +10,15 @@ interface PhotoSectionProps {
 
 const PhotoSection = ({ textContent }: PhotoSectionProps): JSX.Element => {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-4 px-5 lg:pb-10 lg:gap-14 lg:px-10 lg:py-20 lg:pt-15 xl:px-32 3xl:px-80">
-      <h2 className="text-3xl font-bold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+    <section className="flex w-full flex-col items-center justify-center gap-4 px-5 lg:pb-10 lg:gap-14 lg:px-10 lg:py-20 lg:pt-15 xl:px-32 3xl:px-80 dark:bg-gray-95">
+      <h2 className="text-3xl font-bold text-gray-100 dark:text-white-95 lg:text-5xl">
+        {textContent.title}
+      </h2>
 
       <div className="flex flex-col items-center gap-8">
         <div className="flex w-full flex-col gap-4 lg:w-[63%]">
           {textContent.description.map((desc) => (
-            <p key={desc.slice(0,20)} className="text-sm text-center font-normal leading-tight text-gray-55 lg:text-lg lg:text-center">
+            <p key={desc.slice(0, 20)} className="text-center text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-lg">
               {desc}
             </p>
           ))}
@@ -34,7 +36,7 @@ const PhotoSection = ({ textContent }: PhotoSectionProps): JSX.Element => {
         </div>
       </div>
       <div className="w-full max-w-[1700px] px-5 lg:px-8">
-          <div className="h-px w-full bg-neutral-35" />
+          <div className="h-px w-full bg-neutral-35 dark:bg-gray-71" />
       </div>
     </section>
   );

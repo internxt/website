@@ -35,18 +35,22 @@ const WhatAreTheBenefits = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden dark:bg-gray-95">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
         <div className="flex flex-col items-center space-y-6 text-center">
-          <h2 className="max-w-[800px] text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+          <h2 className="max-w-[800px] text-5xl font-semibold text-gray-100 dark:text-white-95">
+            {textContent.title}
+          </h2>
+          <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {cards.map((card, index) => (
-            <div className="flex flex-col space-y-6 rounded-2xl bg-gray-1 p-10" key={index}>
+          {cards.map((card) => (
+            <div className="flex flex-col space-y-6 rounded-2xl bg-gray-1 dark:bg-gray-105 p-10" key={card.title}>
               <card.icon className="h-8 w-8 text-primary" />
-              <h3 className="text-2xl font-medium text-gray-100">{card.title}</h3>
-              <p className="max-w-[408px] text-lg  text-gray-80">{card.description}</p>
+              <h3 className="text-2xl font-medium text-gray-100 dark:text-white-95">{card.title}</h3>
+              <p className="max-w-[408px] text-lg text-gray-80 dark:text-cool-gray-30">
+                {card.description}
+              </p>
             </div>
           ))}
         </div>
