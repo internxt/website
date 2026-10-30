@@ -3,10 +3,12 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 interface SynologyQNAPSectionProps {
+  darkMode?: boolean;
   textContent: NASPageText['InternxtNASIntegrations'];
 }
 
 interface NASBoxProps {
+  darkMode?: boolean;
   title: string;
   description: string;
   image: string;
@@ -19,12 +21,22 @@ interface NASBoxProps {
 
 import { LinkTo } from '../drive/components/LinkTo';
 
-function NASBox({ title, description, image, alt, imageWidth, imageHeight, link, cta }: Readonly<NASBoxProps>) {
+function NASBox({
+  
+  title,
+  description,
+  image,
+  alt,
+  imageWidth,
+  imageHeight,
+  link,
+  cta,
+}: Readonly<NASBoxProps>) {
   return (
-    <div className="flex w-full flex-col items-center justify-between gap-4 rounded-16 bg-white p-6 lg:w-1/2 lg:gap-10  lg:p-10">
+    <div className="flex w-full flex-col items-center justify-between gap-4 rounded-16 bg-white dark:bg-gray-95 p-6 lg:w-1/2 lg:gap-10 lg:p-10">
       <div className="flex flex-col gap-4 lg:gap-6">
-        <p className="text-30 font-semibold text-gray-95">{title}</p>
-        <p className="text-base font-normal leading-tight text-gray-55">{description}</p>
+        <p className="text-30 font-semibold text-gray-95 dark:text-white-95">{title}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120">{description}</p>
       </div>
       <div className="flex flex-col items-center gap-6 w-full">
         <Image
@@ -42,17 +54,17 @@ function NASBox({ title, description, image, alt, imageWidth, imageHeight, link,
   );
 }
 
-export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQNAPSectionProps>): JSX.Element {
+export default function SynologyQNAPSection({
+  darkMode = false,
+  textContent,
+}: Readonly<SynologyQNAPSectionProps>): JSX.Element {
   return (
-    <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 pb-10 lg:h-min lg:gap-16 lg:p-20"
-      style={{ background: 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)' }}
-    >
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32" />
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 pb-10 lg:h-min lg:gap-16 lg:p-20 bg-[linear-gradient(360deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(360deg,#0D0D0D_0%,#1C1C1C_100%)]">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
 
       <div className="flex h-min flex-col justify-center gap-6 px-6 text-center lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">{textContent.title}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">{textContent.description}</p>
       </div>
 
       <div className="flex flex-col justify-center gap-4 px-6 lg:flex-row lg:gap-8">
@@ -65,6 +77,7 @@ export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQN
           imageHeight={228}
           link="/nas/synology"
           cta="synology nas cloud backup"
+          darkMode={darkMode}
         />
         <NASBox
           title={textContent.QNAPBox.title}
@@ -75,6 +88,7 @@ export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQN
           imageHeight={204}
           link="/nas/qnap"
           cta="qnap backup"
+          darkMode={darkMode}
         />
       </div>
     </section>

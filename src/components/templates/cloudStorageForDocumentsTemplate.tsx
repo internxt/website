@@ -19,6 +19,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
 export interface CloudStorageForDocumentsTemplateProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudStorageForDocumentsText;
@@ -31,6 +32,7 @@ export interface CloudStorageForDocumentsTemplateProps {
 }
 
 export const CloudStorageForDocumentsTemplate = ({
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -92,9 +94,7 @@ export const CloudStorageForDocumentsTemplate = ({
       <AnimatedHeroSection
         textComponent={
           <div className="flex flex-col items-center gap-8 px-6 lg:items-start">
-            <h1 className="w-[323px] text-30 font-semibold leading-tight text-white lg:w-full lg:text-5xl">
-              {textContent.HeroSection.title}
-            </h1>
+            <h1 className="w-[323px] text-30 font-semibold leading-tight text-white lg:w-full lg:text-5xl">{textContent.HeroSection.title}</h1>
             <div className="flex w-[326px] flex-col gap-2 lg:mx-0 lg:w-full">
               {textContent.HeroSection.features?.map((feat) => (
                 <div key={feat} className="flex flex-row gap-2">
@@ -104,9 +104,7 @@ export const CloudStorageForDocumentsTemplate = ({
                 </div>
               ))}
             </div>
-            <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
-              {textContent.HeroSection.subtitle}{' '}
-            </p>
+            <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">{textContent.HeroSection.subtitle}{' '}</p>
             <Link
               href={ctaUrl}
               className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
@@ -126,12 +124,12 @@ export const CloudStorageForDocumentsTemplate = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSection.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection.description}</p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">{textContent.CtaSection.description}</p>
           </div>
         }
         url={ctaUrl}
-        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
       />
@@ -151,8 +149,9 @@ export const CloudStorageForDocumentsTemplate = ({
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails="bg-neutral-17 lg:py-20"
+          sectionDetails="bg-neutral-17 dark:bg-gray-105 lg:py-20"
           hideFreeCard
+          darkMode={darkMode}
         />
       )}
 
@@ -160,7 +159,7 @@ export const CloudStorageForDocumentsTemplate = ({
 
       <HorizontalScrollableSection
         textContent={textContent.FeaturesInternxtSection}
-        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
         needsH2
         needsH3
         needsDivider={false}
@@ -171,11 +170,11 @@ export const CloudStorageForDocumentsTemplate = ({
         customText={
           <div className="flex w-[302px] flex-col items-center justify-center gap-4 text-center lg:w-full">
             <h2 className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.CtaSectionV2.title}</h2>
-            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSectionV2.description}</p>
+            <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">{textContent.CtaSectionV2.description}</p>
           </div>
         }
         url={ctaUrl}
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:py-20"
       />
@@ -188,9 +187,10 @@ export const CloudStorageForDocumentsTemplate = ({
         needsH3={false}
         needsSpecialH3
         needsH2
+        darkMode={darkMode}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

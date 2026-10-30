@@ -5,7 +5,7 @@ import {
 import { GetStaticPropsContext } from 'next';
 
 const CloudStorageBackupSolutionsLP = (props: CloudStorageBackupSolutionsTemplateProps) => (
-  <CloudStorageBackupSolutionsTemplate {...props} />
+  <CloudStorageBackupSolutionsTemplate {...props} darkMode={props.darkMode} />
 );
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {

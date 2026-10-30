@@ -4,13 +4,13 @@ import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { getImage } from '@/lib/getImage';
 
 const DownloadOSPlatform = ({ downloadText, installationText, logo }) => (
-  <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 p-10">
+  <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 dark:bg-gray-105 p-10">
     <div className="flex flex-col  gap-6">
       {logo}
-      <p className="text-2xl font-medium text-gray-100">{downloadText.platform}</p>
-      <p className="text-lg text-gray-80">{downloadText.description}</p>
+      <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{downloadText.platform}</p>
+      <p className="text-lg text-gray-80 dark:text-cool-gray-30">{downloadText.description}</p>
       <div className="flex flex-col gap-2">
-        <p className="text-lg font-semibold text-gray-100">{installationText.installation}</p>
+        <p className="text-lg font-semibold text-gray-100 dark:text-white-95">{installationText.installation}</p>
         <CommandTextInputCopy text={installationText.command} isCommandCard />
       </div>
     </div>
@@ -19,12 +19,10 @@ const DownloadOSPlatform = ({ downloadText, installationText, logo }) => (
 
 export const DownloadCLISection = ({ textContent }) => {
   return (
-    <section id="downloadCli" className="overflow-hidden px-5 py-20">
-      <div
-        className={`absolute bottom-0 left-8 right-8 h-[1px] ${'bg-neutral-35'} lg:bottom-0 lg:left-32 lg:right-32`}
-      ></div>
+    <section id="downloadCli" className="overflow-hidden px-5 py-20 dark:bg-gray-95">
+      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center gap-12">
-        <p className="text-center text-30 font-semibold text-gray-100 md:text-left lg:text-3xl">{textContent.title}</p>
+        <p className="text-center text-30 font-semibold text-gray-100 dark:text-white-95 md:text-left lg:text-3xl">{textContent.title}</p>
         <div className="flex w-full flex-row flex-wrap justify-center gap-5">
           <DownloadOSPlatform
             downloadText={textContent.downloads[0]}
