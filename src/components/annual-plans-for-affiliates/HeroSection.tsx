@@ -66,12 +66,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="flex flex-col space-y-4">
             {isStartPage ? <StartPageLabel /> : null}
             {isCloudWards ? <CloudWardsLabel /> : null}
-            <h1 className="text-4xl font-bold text-gray-100 xl:text-6xl">{textContent.title}</h1>
+            <h1 className="text-4xl font-bold text-gray-100 dark:text-white-95 xl:text-6xl">{textContent.title}</h1>
             <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.subtitle}</h2>
           </div>
           <div className="flex flex-row items-start  space-x-2.5 rounded-lg bg-primary/7 p-4 xl:items-center">
             <Percent className="h-8 w-8 text-primary xl:h-12 xl:w-12" />
-            {InfoTextComponent ?? <p className="text-md text-gray-80">{textContent.info}</p>}
+            {InfoTextComponent ?? (
+              <p className="text-md text-gray-80 dark:text-cool-gray-30">{textContent.info}</p>
+            )}
           </div>
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>

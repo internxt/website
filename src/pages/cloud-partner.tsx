@@ -12,6 +12,7 @@ import ThreeCardsIconsSection from '@/components/shared/sections/ThreeCardsIcons
 import AccordionSection from '@/components/cloud-partner/AccordionSection';
 
 interface CloudPartnerProps {
+  darkMode?: boolean;
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: CloudPartnerText;
@@ -21,6 +22,7 @@ interface CloudPartnerProps {
 }
 
 const CloudPartner = ({
+  darkMode = false,
   metatagsDescription,
   navbarText,
   textContent,
@@ -44,7 +46,7 @@ const CloudPartner = ({
 
       <ThreeCardsIconsSection
         textContent={textContent.ThreeCardsSection}
-        cardColor="bg-white"
+        cardColor="bg-white dark:bg-gray-95"
         bottomSeparationBar
         topSeparationBar
       />
@@ -58,7 +60,7 @@ const CloudPartner = ({
         isReseller={true}
       />
 
-      <Footer textContent={footerText} lang={lang} />
+      <Footer textContent={footerText} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 };

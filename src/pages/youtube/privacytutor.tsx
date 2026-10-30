@@ -16,6 +16,7 @@ import FeaturesSection from '@/components/drive/FeaturesSection';
 import { PromoCodeName } from '@/lib/types';
 
 interface PrivacyTutorProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -25,6 +26,7 @@ interface PrivacyTutorProps {
 }
 
 function PrivacyTutor({
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -79,7 +81,7 @@ function PrivacyTutor({
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className="h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -106,11 +108,12 @@ function PrivacyTutor({
         percentOff={percentOff}
         isPrivacyTutor
         image={'alohomora'}
+        darkMode={darkMode}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -124,9 +127,10 @@ function PrivacyTutor({
         loadingCards={false}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="5TB"
-        sectionDetails={`lg:py-20`}
+        sectionDetails="lg:py-20 dark:bg-gray-95"
         hideFreeCard
-        backgroundGradientColor='linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
+        backgroundGradientColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+        darkMode={darkMode}
       />
 
       <FeaturesSection
@@ -134,33 +138,30 @@ function PrivacyTutor({
         lang={lang}
         download={false}
         showLastSection={false}
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
           textContent={langJson.ctaSection}
           customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection.description)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{parsePercentText(langJson.ctaSection.title)}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl">{parsePercentText(langJson.ctaSection.description)}</p>
           </div>
         }
           url="#billingButtons"
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          bgGradientColor='linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)'
+          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgGradientColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
           containerDetails="shadow-lg backdrop-blur-[55px]"
           bgPadding="lg:py-20"
         />
 
       <HorizontalScrollableSection 
         textContent={langJson.NextGenSection}
-        bgGradient='linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)'
+        bgGradient="bg-[linear-gradient(180deg,#F4F8FF_80%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_80%,#1C1C1C_100%)]"
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 }

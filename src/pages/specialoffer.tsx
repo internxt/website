@@ -19,6 +19,7 @@ import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface SpecialOfferProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -27,6 +28,7 @@ interface SpecialOfferProps {
 }
 
 function SpecialOffer({
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -54,7 +56,7 @@ function SpecialOffer({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className="h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -105,9 +107,10 @@ function SpecialOffer({
         percentOff={percentOff}
         image={'internxt-private-cloud'}
         specialOffer
+        darkMode={darkMode}
       />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -121,8 +124,9 @@ function SpecialOffer({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20"
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
         hideFreeCard
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -130,44 +134,41 @@ function SpecialOffer({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection.description)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{parsePercentText(langJson.ctaSection.title)}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[698px] lg:text-center lg:text-xl">{parsePercentText(langJson.ctaSection.description)}</p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pY-20 pb-20"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor="bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]"
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} bgColor="bg-neutral-17" />
+      <TrustedSection
+        textContent={langJson.TrustedBySection}
+        bottomBar={false}
+        bgColor="bg-neutral-17 dark:bg-gray-105"
+        darkMode={darkMode}
+      />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection2.title)}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55  lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection2.description)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{parsePercentText(langJson.ctaSection2.title)}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-center lg:text-xl">{parsePercentText(langJson.ctaSection2.description)}</p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px] px-10"
         bgPadding="lg:pb-20 pb-10"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
       />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={lang} darkMode={darkMode} />
     </Layout>
   );
 }

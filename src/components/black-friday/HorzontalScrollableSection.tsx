@@ -5,7 +5,10 @@ interface HorizontalScrollableProps {
   textContent: any;
 }
 
-export default function HorizontalScrollableSection({ textContent }: Readonly<HorizontalScrollableProps>): JSX.Element {
+export default function HorizontalScrollableSection({
+  textContent,
+}: Readonly<HorizontalScrollableProps>): JSX.Element {
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -100,8 +103,8 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
   const FeatureItem = ({
     feature,
     iconSize,
-    containerWidth,
-    textSize,
+    containerWidth = '',
+    textSize = '',
   }: {
     feature: any;
     iconSize: number;
@@ -117,12 +120,10 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
     </div>
   );
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[#1C1C1C] pb-10 lg:h-min lg:gap-16 lg:py-20 ">
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-gray-95 pb-10 lg:h-min lg:gap-16 lg:py-20 ">
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[780px]">
         <p className="text-30 font-bold leading-tight text-white-95 lg:w-[680px] lg:text-3xl">{textContent.title}</p>
-        <p className="text-base font-normal leading-tight text-green-120 lg:w-[680px] lg:text-xl">
-          {textContent.description}
-        </p>
+        <p className="text-base font-normal leading-tight text-green-120 lg:w-[680px] lg:text-xl">{textContent.description}</p>
         <div className="hidden w-full max-w-4xl flex-row justify-between gap-4 px-4 lg:flex">
           {features.map((feature, index) => (
             <FeatureItem
@@ -183,9 +184,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
               <div key={index} className="flex-shrink-0">
                 <div className="flex h-full w-[345px] flex-col gap-4 rounded-16 bg-gray-105 p-6 lg:w-[400px]">
                   <p className="text-lg font-medium text-white-95 lg:text-xl">{title}</p>
-                  <p className="flex-1 text-sm font-normal leading-tight text-green-120 lg:text-base">
-                    {textContent.scrollableSection.descriptions[index]}
-                  </p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-green-120 lg:text-base">{textContent.scrollableSection.descriptions[index]}</p>
                 </div>
               </div>
             ))}
@@ -196,18 +195,14 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

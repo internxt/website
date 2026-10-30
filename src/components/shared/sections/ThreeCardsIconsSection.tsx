@@ -22,6 +22,8 @@ export default function ThreeCardsIconsSection({
   needsH2 = false,
   icons,
 }: Readonly<ThreeCardsIconsProps>): JSX.Element {
+  const bgClass = 'bg-neutral-17 dark:bg-gray-105';
+  const hoverClass = 'hover:bg-white-summer dark:hover:bg-gray-105';
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -82,24 +84,20 @@ export default function ThreeCardsIconsSection({
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgColor ? '' : 'bg-neutral-17'
-      } py-10 lg:h-min lg:gap-16 lg:py-20`}
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${bgColor ? '' : bgClass} py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgColor ? bgColor : '' }}
     >
       {topSeparationBar && (
-        <div className={`absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`}></div>
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32"></div>
       )}
       {bottomSeparationBar && (
-        <div className={`absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`} />
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32" />
       )}
 
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <SectionTitleTag className={`text-30 font-bold leading-tight text-gray-95 lg:text-3xl`}>
-          {textContent.title}
-        </SectionTitleTag>
+        <SectionTitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-3xl">{textContent.title}</SectionTitleTag>
         {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">{textContent.description}</p>
         )}
       </div>
 
@@ -120,18 +118,12 @@ export default function ThreeCardsIconsSection({
               return (
                 <div
                   key={title}
-                  className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
-                    cardColor || 'bg-neutral-17'
-                  } p-6 lg:rounded-16 lg:p-8`}
+                  className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${cardColor || ('bg-neutral-17 dark:bg-gray-105')} p-6 lg:rounded-16 lg:p-8`}
                 >
                   <div className="flex flex-col">
                     {Icon && <Icon size={24} className={`shrink-0 text-primary`} />}
-                    <TitleTag className={`flex items-center justify-start gap-4 text-lg font-medium text-gray-100`}>
-                      {title}
-                    </TitleTag>
-                    <p className={`pt-[16px] text-sm font-normal leading-tight text-gray-55 lg:pt-6 lg:text-base`}>
-                      {textContent.cards.descriptions[index]}
-                    </p>
+                    <TitleTag className="flex items-center justify-start gap-4 text-lg font-medium text-gray-100 dark:text-white-95">{title}</TitleTag>
+                    <p className="pt-[16px] text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:pt-6 lg:text-base">{textContent.cards.descriptions[index]}</p>
                   </div>
                 </div>
               );
@@ -144,18 +136,14 @@ export default function ThreeCardsIconsSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -169,14 +157,12 @@ export default function ThreeCardsIconsSection({
           return (
             <div
               key={title}
-              className={`flex w-full flex-col justify-between gap-6 rounded-16 ${cardColor || 'bg-neutral-17'} p-8`}
+              className={`flex w-full flex-col justify-between gap-6 rounded-16 ${cardColor || ('bg-neutral-17 dark:bg-gray-105')} p-8`}
             >
               <div className="flex flex-col">
                 {Icon && <Icon size={40} className="mb-4 shrink-0 text-primary" />}
-                <p className={`flex items-center justify-start gap-4 text-xl font-medium text-gray-100`}>{title}</p>
-                <p className={`pt-6 text-base font-normal leading-tight text-gray-55`}>
-                  {textContent.cards.descriptions[index]}
-                </p>
+                <p className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100 dark:text-white-95">{title}</p>
+                <p className="pt-6 text-base font-normal leading-tight text-gray-55 dark:text-green-120">{textContent.cards.descriptions[index]}</p>
               </div>
             </div>
           );

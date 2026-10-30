@@ -19,6 +19,7 @@ import { ShieldCheck } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 interface PrivacyProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivateCloudStorageSolutionsText;
   navbarLang: NavigationBarText;
@@ -29,6 +30,7 @@ interface PrivacyProps {
 }
 
 const PrivateCloudStorageSolutions = ({
+  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -84,9 +86,7 @@ const PrivateCloudStorageSolutions = ({
   ];
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(textContent.FaqSection.faq)}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_faq(textContent.FaqSection.faq)}</Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb_list([
@@ -127,9 +127,7 @@ const PrivateCloudStorageSolutions = ({
                 </div>
                 <div className="flex flex-row items-center justify-center space-x-3 pt-10  lg:justify-start">
                   <ShieldCheck size={24} color="#32C356" weight="fill" />
-                  <p className="whitespace-nowrap  text-lg text-white">
-                    {textContent.HeroSection.TitleAndOnePlan.guarantee}
-                  </p>
+                  <p className="whitespace-nowrap  text-lg text-white">{textContent.HeroSection.TitleAndOnePlan.guarantee}</p>
                 </div>
               </div>
             </>
@@ -166,7 +164,7 @@ const PrivateCloudStorageSolutions = ({
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
@@ -178,6 +176,7 @@ const PrivateCloudStorageSolutions = ({
             { name: 'Secure cloud storage', url: '/drive' },
             { name: 'Private cloud storage', url: '/private-cloud-storage-solutions' },
           ]}
+          darkMode={darkMode}
         />
       </Layout>
     </>

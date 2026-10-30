@@ -5,10 +5,10 @@ import Button from '../shared/Button';
 
 export const FeatureSectionForSpecialOffer = ({ textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 py-20 px-5">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 px-5 py-20">
       <div className="flex flex-col items-center gap-9">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h2>
+          <h2 className="text-5xl font-semibold leading-tight text-gray-100 dark:text-white-95">{textContent.title}</h2>
           <RenderDescription description={textContent.description} fontSize="text-xl" />
           <Button
             text={textContent.cta}

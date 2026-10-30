@@ -1,7 +1,7 @@
 import React from 'react';
 import FaqAccordion from '@/components/shared/FAQAccordion';
 
-const FaqSection = ({ textContent }) => {
+const FaqSection = ({ darkMode = false, textContent }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center bg-black text-white py-20 lg:px-44">
@@ -11,7 +11,7 @@ const FaqSection = ({ textContent }) => {
         <div className="flex w-full max-w-screen-sm flex-col space-y-2 pt-10">
           {textContent.faq.faq.map((item, index) => (
             <div className="rounded-lg border border-gray-90 px-5" key={index}>
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
+              <FaqAccordion key={item.question} question={item.question} answer={item.answer} darkMode={darkMode} />
             </div>
           ))}
         </div>
