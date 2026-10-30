@@ -50,6 +50,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     if (referralId) saveReferralToCookie(referralId);
   }, [router.asPath]);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+  }, [darkMode]);
+
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager
@@ -147,8 +151,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             </>
           ) : undefined}
         </div>
-        <FreeCardPromoBanner />
-        <FreeCardPromoBannerPPC />
+        <FreeCardPromoBanner darkMode={darkMode} />
+        <FreeCardPromoBannerPPC darkMode={darkMode} />
         <ShowSnackbar />
       </GlobalUIManager>
     </LiveChatLoaderProvider>

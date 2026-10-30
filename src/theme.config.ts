@@ -7,4 +7,4 @@ export const isDarkModePage = (
   excludedPaths: readonly string[] = DARK_MODE_EXCLUDED_PATHS,
 ): boolean => DARK_MODE_ENABLED && !excludedPaths.includes(pathname);
 
-export const DARK_MODE_LOGO_FILTER = '[filter:invert(1)_brightness(0.55)_invert(1)_saturate(3)]';
+export const DARK_MODE_LOGO_FILTER = 'dark:[filter:invert(1)_brightness(0.55)_invert(1)_saturate(3)]';
