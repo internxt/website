@@ -210,6 +210,7 @@ export const ALLOWED_PATHS = [
   'negocios',
   'lucas',
   'youensina',
+  'bfcmrec87',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -575,6 +576,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'negocios',
   'lucas',
   'youensina',
+  'bfcmrec87',
 ]);
 
 export const COUPON_CODES = {
@@ -785,6 +787,7 @@ export const COUPON_CODES = {
   negocios: PromoCodeName.negocios,
   lucas: PromoCodeName.lucas,
   youensina: PromoCodeName.youensina,
+  bfcmrec87: PromoCodeName.bfcmrec87,
 };
 
 interface OfferConfig {
