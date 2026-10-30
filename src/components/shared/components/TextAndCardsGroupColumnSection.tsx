@@ -14,7 +14,7 @@ export const TextAndCardsGroupColumnSection = ({
   TextComponent,
   cards,
   backgroundColorForCard,
-  background,
+  background = 'dark:bg-gray-95',
   textCardColor
 }: TextAndCardGroupColumnSectionProps) => {
   return (

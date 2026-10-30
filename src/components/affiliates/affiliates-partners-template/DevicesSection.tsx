@@ -11,7 +11,7 @@ export const DevicesSection = ({ textContent }) => {
 
   return (
     <section
-      className="overflow-hidden bg-cover bg-center bg-no-repeat py-20 px-5"
+      className="overflow-hidden bg-cover bg-center bg-no-repeat px-5 py-20"
       style={{
         backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
       }}
@@ -19,7 +19,7 @@ export const DevicesSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center gap-12">
         <div className="flex max-w-[840px] flex-col items-center gap-8 text-center">
           <h2 className="text-5xl font-semibold text-white">{textContent.title}</h2>
-          <button className="flex rounded-lg bg-white px-5 py-3 text-gray-100" onClick={handleOnButtonClick}>
+          <button className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-gray-100 dark:text-white-95" onClick={handleOnButtonClick}>
             <p className="text-xl font-medium">{textContent.cta}</p>
           </button>
         </div>

@@ -9,7 +9,7 @@ export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
   const { products, currency, loadingCards } = usePricing();
 
   return (
-    <section id="priceTable" className="">
+    <section id="priceTable" className="dark:bg-gray-95">
       <div className="flex flex-col items-center">
         <Transition
           show={loadingCards}

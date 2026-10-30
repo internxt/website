@@ -20,6 +20,7 @@ import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface CombinedSpecialOfferProps {
+  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
@@ -51,6 +52,9 @@ const ALLOWED_PATHS = [
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh', 'rclone'];
 const DARK_MODE_PATHS = ['baity'];
+const VALENTINES_GRADIENT_DARK = 'bg-[linear-gradient(180deg,#1C1C1C_0%,#2A1420_100%)]';
+const VALENTINES_GRADIENT_LIGHT =
+  'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFF2F8_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#2A1420_100%)]';
 const ANNUAL_DISCOUNT_PLANS_PATHS = ['grabon', 'pcmag'];
 
 const COUPON_CODES = {
@@ -73,6 +77,7 @@ const COUPON_CODES = {
 };
 
 function CombinedSpecialOffer({
+  darkMode = false,
   langJson,
   lang,
   metatagsDescriptions,
@@ -83,7 +88,8 @@ function CombinedSpecialOffer({
   const router = useRouter();
   const [isCelloAttributionExpired, setIsCelloAttributionExpired] = useState(true);
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
+  const isDarkMode = darkMode || (selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false);
+  const valentinesGradient = isDarkMode ? VALENTINES_GRADIENT_DARK : VALENTINES_GRADIENT_LIGHT;
   const isValentinesMode = selectedPathname === 'love';
   const isPcMag = selectedPathname === 'pcmag';
   const annualPlans = selectedPathname ? ANNUAL_DISCOUNT_PLANS_PATHS.includes(selectedPathname) : false;
@@ -125,7 +131,7 @@ function CombinedSpecialOffer({
 
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
@@ -205,12 +211,12 @@ function CombinedSpecialOffer({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="5TB"
-        sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        sectionDetails={`${isDarkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
         showPromo
-        backgroundGradientColor={isValentinesMode ? 'linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)' : undefined}
+        backgroundGradientColor={isValentinesMode ? valentinesGradient : undefined}
       />
 
       <FloatingCtaSectionv2
@@ -219,36 +225,28 @@ function CombinedSpecialOffer({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'}`}
             >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
             <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
-              }`}
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px] dark:text-white dark:lg:w-[690px]'}`}
             >
               {parsePercentText(langJson.ctaSection.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
+        bgGradientContainerColor={isDarkMode ? 'bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]' : 'bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]'}
         bgPadding={
           isValentinesMode
             ? 'bg-pink-0 pb-10  lg:py-10'
             : isDarkMode
-            ? 'pb-10  lg:pt-10 bg-[#1C1C1C]'
-            : 'pb-10  lg:py-10'
+            ? 'pb-10  lg:pt-10 bg-gray-95'
+            : 'pb-10 lg:py-10 dark:pb-10 dark:lg:pt-10 dark:bg-gray-95'
         }
         bgGradientColor={
-          isValentinesMode ? undefined : isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'
+          isValentinesMode || isDarkMode ? undefined : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none'
         }
       />
 
@@ -271,29 +269,21 @@ function CombinedSpecialOffer({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-40">
             <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-95 dark:text-white'}`}
             >
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
             <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full'
-              }`}
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${isDarkMode ? 'text-white lg:w-full' : 'text-gray-55 lg:w-full dark:text-white dark:lg:w-full'}`}
             >
               {parsePercentText(langJson.ctaSection2.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
-        bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgGradientContainerColor={isDarkMode ? 'bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]' : 'bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]'}
+        bgPadding={isDarkMode ? 'lg:pb-10  bg-gray-95' : 'lg:pb-20 pb-10 dark:lg:pb-10 dark:bg-gray-95'}
+        bgGradientColor={isDarkMode ? '' : 'bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-none'}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />

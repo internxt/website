@@ -30,21 +30,20 @@ export const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Elemen
   return (
     <section
       id="heroSection"
-      className="flex w-full flex-col items-center justify-center gap-8 overflow-hidden px-5 pb-10 pt-28 lg:mt-10 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-20 xl:px-32 3xl:px-80"
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      className="flex w-full flex-col items-center justify-center gap-8 overflow-hidden px-5 pb-10 pt-28 lg:mt-10 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:px-10 lg:py-20 xl:px-32 3xl:px-80 bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]"
     >
       <div className="flex w-full flex-col gap-8 lg:min-w-0 lg:max-w-[760px] lg:flex-1">
         <div className="flex flex-col gap-3">
-          <h1 className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+          <h1 className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-5xl">
             <HighlightText text={textContent.title} />
           </h1>
           <HighlightText
             text={textContent.subtitle}
-            className="text-base font-medium leading-tight text-gray-55 lg:text-xl"
+            className="text-base font-medium leading-tight text-gray-55 dark:text-green-120 lg:text-xl"
           />
         </div>
 
-        <div className="flex w-full flex-col rounded-16 border border-gray-10 bg-white p-6 shadow-soft lg:max-w-[480px] lg:p-8">
+        <div className="flex w-full flex-col rounded-16 border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-6 shadow-soft lg:max-w-[480px] lg:p-8">
           <SignUpForm textContent={textContent.SignUp} lang={lang} onSubmitEmail={registerLead} />
         </div>
       </div>

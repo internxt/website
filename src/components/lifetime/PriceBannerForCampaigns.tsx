@@ -33,14 +33,8 @@ export const PriceBannerForCampaigns = ({
   }, []);
 
   return (
-    <section className="pt-20 lg:mr-4 lg:pt-24">
-      <div
-        className={`${
-          shouldShowBanner && delayedRender ? 'flex' : 'hidden'
-        } flex-col overflow-hidden xs-md:mx-10 lg:rounded-32 xl:mx-32 3xl:mx-80 4xl:mx-96 ${
-          styles.horizontalLinearGardient
-        }`}
-      >
+    <section className="pt-20 lg:mr-4 lg:pt-24 dark:bg-gray-95">
+      <div className={`${shouldShowBanner && delayedRender ? 'flex' : 'hidden'} flex-col overflow-hidden xs-md:mx-10 lg:rounded-32 xl:mx-32 3xl:mx-80 4xl:mx-96 ${styles.horizontalLinearGardient}`}>
         <div
           className={`hidden h-[370px] w-full flex-row items-center px-8 lg:flex`}
           style={{
@@ -50,15 +44,11 @@ export const PriceBannerForCampaigns = ({
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <div
-            className={`${styles.titleAndOnePlanSection} flex h-[314px] w-[670px] shrink-0 flex-col items-center rounded-20 text-center backdrop-blur-[6px]`}
-          >
+          <div className={`${styles.titleAndOnePlanSection} flex h-[314px] w-[670px] shrink-0 flex-col items-center rounded-20 text-center backdrop-blur-[6px]`}>
             <div className="my-8 flex h-full flex-col justify-between">
               <div className="flex h-[80px] w-[630px] flex-col justify-between   text-start ">
                 <div className="flex flex-row gap-3 ">
-                  <p className="rounded-2 bg-gray-95/30 px-1 py-0.5 text-xl font-semibold text-primary">
-                    {parsePercentText(textContent.label)}
-                  </p>
+                  <p className="rounded-2 bg-gray-95/30 px-1 py-0.5 text-xl font-semibold text-primary">{parsePercentText(textContent.label)}</p>
                   <p className="text-2xl font-normal text-white">{textContent.title}</p>
                 </div>
                 <p className="text-4xl font-semibold text-white">{textContent.subtitle}</p>
@@ -128,9 +118,7 @@ export const PriceBannerForCampaigns = ({
           }}
           className="relative z-10 flex h-[660px] w-screen flex-col justify-between py-5 md:pb-[1000px] lg:hidden"
         >
-          <div
-            className={`mx-4 flex flex-col items-center gap-2 rounded-2xl ${styles.titleAndOnePlanSection} px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left`}
-          >
+          <div className={`mx-4 flex flex-col items-center gap-2 rounded-2xl ${styles.titleAndOnePlanSection} px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left`}>
             <div className="flex w-max items-center rounded-2 bg-gray-95/30 px-1 py-0.5">
               <p className="text-sm font-semibold text-primary">{parsePercentText(textContent.label)}</p>
             </div>

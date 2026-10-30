@@ -62,35 +62,21 @@ export default function HeroSection({
       return text;
     }
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className={`h-4 w-16 animate-pulse rounded ${darkMode ? 'bg-gray-71' : 'bg-gray-10 dark:bg-gray-71'}`}></div>;
     }
     return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
   };
 
   return (
     <section
-      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-24 lg:pl-10 xl:pl-32 3xl:pl-80`}
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-24 lg:pl-10 xl:pl-32 3xl:pl-80 ${darkMode ? 'bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]' : 'bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]'}`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[596px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1 ${
-                darkMode ? 'bg-white/10' : 'bg-white/50'
-              }`}
-            >
+            <div key={index} className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1 ${darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'}`}>
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p
-                className={`whitespace-nowrap text-sm font-medium leading-tight ${
-                  darkMode ? 'text-neutral-37' : 'text-gray-80'
-                }`}
-              >
+              <p className={`whitespace-nowrap text-sm font-medium leading-tight ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
                 {feature.text}
               </p>
             </div>
@@ -100,29 +86,21 @@ export default function HeroSection({
         <div className="flex w-full flex-col justify-center gap-3 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
-              className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${
-                darkMode ? 'text-gray-100' : 'text-gray-100'
-              }`}
+              className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'}`}
             >
-              <HighlightText text={textContent.title} className={darkMode ? 'text-white-95' : ''} />
+              <HighlightText text={textContent.title} className={darkMode ? 'text-white-95' : 'dark:text-white-95'} />
             </h1>
             <h2
-              className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${
-                darkMode ? 'text-gray-1' : 'text-gray-100'
-              }`}
+              className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}
             >
               {parsePercentText(textContent.subtitle)}
             </h2>
           </div>
           {textContent.description && (
             <span
-              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
-                darkMode ? 'text-gray-100' : 'text-gray-100'
-              }`}
+              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${darkMode ? 'text-gray-100' : 'text-gray-100 dark:text-gray-100'}`}
             >
-              <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
-                {parsePercentText(textContent.description)}
-              </p>
+              <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'}`}>{parsePercentText(textContent.description)}</p>
             </span>
           )}
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
@@ -130,9 +108,7 @@ export default function HeroSection({
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p
-                  className={`text-left text-sm font-semibold lg:text-lg ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}
-                >
+                <p className={`text-left text-sm font-semibold lg:text-lg ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>
                   {feat}
                 </p>
               </div>

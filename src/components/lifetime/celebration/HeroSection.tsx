@@ -34,7 +34,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 />
               </div>
               <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+                <h1 className="text-3xl font-semibold text-gray-100 dark:text-white-95 lg:text-5xl">{textContent.title}</h1>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button
@@ -43,9 +43,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 }}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
-                <p className="px-9 py-3 text-lg font-medium text-white">
-                  {hideTimer ? textContent.cta2 : textContent.cta1}
-                </p>
+                <p className="px-9 py-3 text-lg font-medium text-white">{hideTimer ? textContent.cta2 : textContent.cta1}</p>
               </button>
             </div>
             <div className="absolute -top-36 right-0 hidden h-screen lg:flex">

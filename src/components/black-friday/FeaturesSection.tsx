@@ -4,7 +4,7 @@ import React from 'react';
 const FeaturesSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-wrap items-end justify-center gap-8 bg-highlight px-6 py-12 md:px-10 md:py-16 lg:flex-row">
+      <div className="flex flex-wrap items-end justify-center gap-8 bg-highlight dark:bg-white/10 px-6 py-12 md:px-10 md:py-16 lg:flex-row">
         {textContent?.HeroSection?.features?.map((feature) => (
           <div
             key={feature.id} // Usar un identificador único

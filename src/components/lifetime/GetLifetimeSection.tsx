@@ -24,9 +24,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
         <div className="flex flex-col items-center py-16">
           <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-white">
             {lang === 'it' || lang === 'de' || lang === 'ru' ? (
-              <h2 className="max-w-[900px] text-5xl font-semibold leading-tight">
-                {firstTitle}!{secondTitle}
-              </h2>
+              <h2 className="max-w-[900px] text-5xl font-semibold leading-tight">{firstTitle}!{secondTitle}</h2>
             ) : lang === 'en' ? (
               <div className="max-w-[800px]">
                 <p className="text-4xl font-semibold leading-tight text-primary lg:text-5xl">{textContent.title}</p>
@@ -43,7 +41,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
             <p className="pb-4 pt-4 text-xl font-normal">{textContent.description}</p>
             <Link
               href={'#priceTable'}
-              className={`z-10 flex w-max justify-center rounded-lg bg-white px-4 py-3 text-xl font-medium text-gray-100 hover:bg-white/95`}
+              className="z-10 flex w-max justify-center rounded-lg bg-white dark:bg-gray-95 px-4 py-3 text-xl font-medium text-gray-100 dark:text-white-95 hover:bg-white/95"
             >
               {textContent.cta}
             </Link>

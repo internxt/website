@@ -15,6 +15,7 @@ import { stripeService, Interval } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface AnnualProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -22,7 +23,14 @@ interface AnnualProps {
   footerLang: FooterText;
 }
 
-const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLang }: AnnualProps): JSX.Element => {
+const AnnualPage = ({
+  darkMode = false,
+  metatagsDescriptions,
+  langJson,
+  lang,
+  footerLang,
+  navbarLang,
+}: AnnualProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const locale = lang as string;
 
@@ -71,7 +79,12 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
       <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        percentOff={percentOff}
+        showSubtitle={false}
+        darkMode={darkMode}
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -87,15 +100,22 @@ const AnnualPage = ({ metatagsDescriptions, langJson, lang, footerLang, navbarLa
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20"
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
         hideFreeCard
+        darkMode={darkMode}
       />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={lang}
+        download={false}
+        showLastSection={false}
+        darkMode={darkMode}
+      />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>

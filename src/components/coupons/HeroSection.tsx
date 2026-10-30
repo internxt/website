@@ -73,57 +73,51 @@ export default function HeroSection({
 
   const parsePriceText = (text: string) => {
     if (!minimumPrice || minimumPrice === '0') {
-      return <div className="bg-gray-200 h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16"></div>;
+      return <div className="h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16 bg-gray-10 dark:bg-gray-71"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
   };
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return <div className="h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
   return (
     <section
-      className={`flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 pt-28 lg:h-[705px] lg:justify-between lg:pl-10 lg:pt-36 xl:pl-32 3xl:pl-80`}
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      className={`flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 pt-28 lg:h-[705px] lg:justify-between lg:pl-10 lg:pt-36 xl:pl-32 3xl:pl-80 bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[460px] lg:w-[736px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between w-m">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
-            >
+            <div key={index} className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1">
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80">{feature.text}</p>
+              <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80 dark:text-white">{feature.text}</p>
             </div>
           ))}
         </div>
 
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:whitespace-nowrap lg:text-3xl">
+            <p className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:whitespace-nowrap lg:text-3xl">
               <HighlightText text={textContent.title} />
             </p>
-            <p className="font-regular text-lg leading-tight text-gray-55 w-3/4 lg:text-2xl">
-              {parsePercentText(textContent.subtitle)}
-            </p>
+            <p className="font-regular text-lg leading-tight text-gray-55 dark:text-green-120 w-3/4 lg:text-2xl">{parsePercentText(textContent.subtitle)}</p>
           </div>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
+                <p className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg">{feat}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex h-[29px] flex-row items-center gap-1 text-xs font-normal text-gray-100 lg:h-[43px] lg:items-end lg:text-base">
+        <div className="flex h-[29px] flex-row items-center gap-1 text-xs font-normal text-gray-100 dark:text-white-95 lg:h-[43px] lg:items-end lg:text-base">
           {textContent.startFrom.normal1}
           <span className="flex w-max flex-row gap-1 pb-[8px] text-2xl font-bold lg:pb-0 lg:text-4xl">
             <abbr className="text-xs lg:text-base">{currency}</abbr>
@@ -142,7 +136,7 @@ export default function HeroSection({
             </Link>
 
             <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 py-5 text-primary shadow-soft lg:w-[177px]">
-              <Countdown textFont="font-medium" textHeight="text-base text-gray-100" />
+              <Countdown textFont="font-medium" textHeight="text-base text-gray-100 dark:text-white-95" />
             </div>
           </div>
         </div>

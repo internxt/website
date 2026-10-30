@@ -1,7 +1,13 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
 
-const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
+const CtaSection = ({
+  textContent,
+  freePlan,
+}: {
+  textContent: any;
+  freePlan?: boolean;
+}) => {
   return (
     <section className="overflow-hidden bg-primary py-14">
       <div className="flex flex-col items-center justify-center space-y-8 px-5 text-center">
@@ -10,7 +16,7 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
           <p className="w-full max-w-[570px] text-xl font-normal">{textContent.description}</p>
         </div>
         <button
-          className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
+          className="flex rounded-lg bg-white dark:bg-gray-95 px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10 dark:hover:bg-purple-100"
           onClick={() => {
             freePlan
               ? goToSignUpURL()

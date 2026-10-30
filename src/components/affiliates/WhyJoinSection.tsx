@@ -4,14 +4,15 @@ import RevealY from '@/components/components/RevealY';
 function PaintedText({ text }): JSX.Element {
   if (!text) return <></>;
 
-  if (!text.includes('$299')) return <p className="text-lg font-medium text-gray-100 lg:text-2xl">{text}</p>;
+  if (!text.includes('$299'))
+    return <p className="text-lg font-medium text-gray-100 dark:text-white-95 lg:text-2xl">{text}</p>;
 
   const title = text.split('$299')[0];
   const title2 = text.split('$299')[1];
   const blueText = text.substr(text.indexOf('$299'), 4);
 
   return (
-    <p className="text-base font-medium leading-tight text-gray-100 lg:text-2xl">
+    <p className="text-base font-medium leading-tight text-gray-100 dark:text-white-95 lg:text-2xl">
       {title}
       <span className="text-primary">{blueText}</span>
       {title2}
@@ -48,15 +49,15 @@ const WhyJoinSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-20">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105 py-20">
       <div className="flex flex-col items-center justify-center space-y-20 px-5">
-        <p className="text-center text-30 font-semibold leading-tight lg:text-3xl">{textContent.title}</p>
+        <p className="text-center text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">{textContent.title}</p>
         <div className="flex flex-col items-center justify-center space-y-9">
           <RevealY className="flex h-full w-full max-w-[850px] flex-row flex-wrap items-center justify-center gap-8">
             {cards.map((item) => (
               <div
                 key={item.title}
-                className="flex h-[221px] max-w-[256px] flex-col items-center space-y-6 rounded-2xl bg-white p-8 text-center lg:items-start lg:text-left"
+                className="flex h-[221px] max-w-[256px] flex-col items-center space-y-6 rounded-2xl bg-white dark:bg-gray-95 p-8 text-center lg:items-start lg:text-left"
               >
                 <item.icon className="text-primary" size={32} />
                 <PaintedText text={item.title} />

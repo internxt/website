@@ -17,27 +17,16 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
-      style={{
-        background: darkMode
-          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
-          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
-      }}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60 ${darkMode ? 'bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]' : 'bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]'}`}
     >
       <div className="flex h-min w-[345px] flex-col justify-start gap-3 lg:gap-6 lg:w-[606px] lg:justify-between">
         <h1
-          className={`text-balance text-4xl font-semibold leading-tight ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } lg:max-w-[600px] lg:text-5xl`}
+          className={`text-balance text-4xl font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:max-w-[600px] lg:text-5xl`}
         >
           <HighlightText text={textContent.title} />
         </h1>
 
-        <p
-          className={`font-regular ${
-            darkMode ? 'text-white-95' : 'text-gray-100'
-          } text-lg leading-tight lg:text-xl`}
-          >
+        <p className={`font-regular ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} text-lg leading-tight lg:text-xl`}>
             {textContent.description}
         </p>
 
@@ -45,7 +34,7 @@ export default function HeroSection({
           {textContent.features.map((feat) => (
             <div key={feat} className="flex flex-row gap-2">
               <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
-              <p className="text-left text-lg font-semibold text-black ">{feat}</p>
+              <p className={`text-left text-lg font-semibold ${darkMode ? 'text-white-95' : 'text-black dark:text-white-95'} `}>{feat}</p>
             </div>
           ))}
         </div>
@@ -61,16 +50,12 @@ export default function HeroSection({
           </div>
           <div className="flex flex-row items-center space-x-3 justify-start">
             <ShieldCheck size={24} color="#0069FF" weight="fill" />
-            <p className="whitespace-nowrap  text-base lg:text-lg text-black">
-              {textContent.guarantee}
-            </p>
+            <p className={`whitespace-nowrap  text-base lg:text-lg ${darkMode ? 'text-white-95' : 'text-black dark:text-white-95'}`}>{textContent.guarantee}</p>
           </div>
         </div>
       </div>
 
-      <div
-        className={'h-[500px] w-[562px] hidden justify-center lg:flex'}
-      >
+      <div className={'h-[500px] w-[562px] hidden justify-center lg:flex'}>
         <Image
           src={getImage(`/images/influencers/internxt-private-cloud.webp`)}
           alt="Internxt Partners HeroSection Image"

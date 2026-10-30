@@ -18,6 +18,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface PartnerDiscountProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -26,6 +27,7 @@ interface PartnerDiscountProps {
 }
 
 const PartnerDiscount = ({
+  darkMode = false,
   metatagsDescriptions,
   langJson,
   navbarLang,
@@ -48,7 +50,7 @@ const PartnerDiscount = ({
   const percentOff = lifetimeCoupon?.percentOff === undefined ? '0' : String(lifetimeCoupon.percentOff);
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
+      return <span className="inline-block h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -88,9 +90,9 @@ const PartnerDiscount = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode={darkMode} />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -104,8 +106,9 @@ const PartnerDiscount = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20"
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
         hideFreeCard
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -113,26 +116,23 @@ const PartnerDiscount = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection.description)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{parsePercentText(langJson.ctaSection.title)}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[698px] lg:text-center lg:text-xl">{parsePercentText(langJson.ctaSection.description)}</p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pY-20 pb-20"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor="bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]"
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
 
       <TrustedSection
         textContent={langJson.TrustedBySection}
         bottomBar={false}
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientColor="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+        darkMode={darkMode}
       />
 
       <FloatingCtaSectionv2
@@ -140,15 +140,11 @@ const PartnerDiscount = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-20">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection2.title)}
-            </p>
-            <p className="text-base font-normal leading-tight text-gray-55 lg:w-full lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection2.description)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">{parsePercentText(langJson.ctaSection2.title)}</p>
+            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-full lg:text-center lg:text-xl">{parsePercentText(langJson.ctaSection2.description)}</p>
           </div>
         }
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-10"
       />

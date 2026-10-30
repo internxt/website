@@ -29,6 +29,7 @@ interface BlackFridayPpcConfig {
 }
 
 interface BlackFridayPpcTemplateProps {
+  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -38,6 +39,7 @@ interface BlackFridayPpcTemplateProps {
 }
 
 const BlackFridayPpcTemplate = ({
+  darkMode = false,
   lang,
   metatagsDescriptions,
   navbarLang,
@@ -116,7 +118,7 @@ const BlackFridayPpcTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize ?? '5TB'}
-        sectionDetails="bg-[#1C1C1C] lg:py-20"
+        sectionDetails="bg-gray-95 lg:py-20"
         darkMode
         hideFreeCard
       />
@@ -132,32 +134,29 @@ const BlackFridayPpcTemplate = ({
         url={CTA_ANCHOR}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {renderWithDiscount(textContent.CtaSection.title, discount)}
-            </h2>
-            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSection.guarantee}
-            </p>
+            <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">{renderWithDiscount(textContent.CtaSection.title, discount)}</h2>
+            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">{textContent.CtaSection.guarantee}</p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="py-10 lg:py-20 bg-[#1C1C1C]"
+        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgPadding="py-10 lg:py-20 bg-gray-95"
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
-        bgColor="bg-[#1C1C1C] text-white"
-        cardColor="bg-[#1C1C1C]"
+        bgColor="bg-gray-95 text-white"
+        cardColor="bg-gray-95"
         textColor="text-white"
         percentageDiscount={percentOff}
         needsH2
+        darkMode={darkMode}
       />
 
       <MinimalFooter
         footerLang={footerLang.FooterSection}
         lang={lang}
-        bgColor="bg-[#1C1C1C]"
+        bgColor="bg-gray-95"
         logoColor="white"
         textColor="text-gray-50"
       />

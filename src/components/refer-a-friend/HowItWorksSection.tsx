@@ -6,7 +6,9 @@ interface HowItWorksSectionProps {
   textContent: ReferAFriendText['HowItWorks'];
 }
 
-export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSectionProps>): JSX.Element {
+export default function HowItWorksSection({
+  textContent,
+}: Readonly<HowItWorksSectionProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -64,12 +66,11 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-6 overflow-hidden py-10 lg:gap-14 lg:px-20 lg:py-20 xl:px-32 3xl:px-80`}
-      style={{ background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      className={`flex h-min w-full flex-col items-center justify-center gap-6 overflow-hidden py-10 lg:gap-14 lg:px-20 lg:py-20 xl:px-32 3xl:px-80 bg-[linear-gradient(0deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#0D0D0D_0%,#1C1C1C_100%)]`}
     >
       <div className="flex flex-col items-center gap-2 px-4">
-        <p className="text-4xl font-bold text-gray-100">{textContent.title}</p>
-        <p className="text-2xl font-medium text-gray-55">{textContent.subtitle}</p>
+        <p className="text-4xl font-bold text-gray-100 dark:text-white-95">{textContent.title}</p>
+        <p className="text-2xl font-medium text-gray-55 dark:text-green-120">{textContent.subtitle}</p>
       </div>
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
@@ -83,16 +84,16 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
           {textContent.cards.map((card: any, index: number) => (
             <div
               key={index}
-              className="flex flex-1 shrink-0 flex-col gap-6 rounded-16 bg-white p-8"
+              className="flex flex-1 shrink-0 flex-col gap-6 rounded-16 bg-white dark:bg-gray-95 p-8"
               style={{
                 width: isMobile ? '293px' : 'auto',
               }}
             >
               <span className="flex flex-row items-center gap-2">
                 <p className="text-2xl font-medium text-primary">{index + 1}</p>
-                <p className="text-center text-xl font-medium text-gray-100">{card.title}</p>
+                <p className="text-center text-xl font-medium text-gray-100 dark:text-white-95">{card.title}</p>
               </span>
-              <p className="text-start text-base font-normal leading-tight text-gray-55">{card.description}</p>
+              <p className="text-start text-base font-normal leading-tight text-gray-55 dark:text-green-120">{card.description}</p>
             </div>
           ))}
         </div>
@@ -103,9 +104,7 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
               <button
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollLeft ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollLeft ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Anterior"
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -113,9 +112,7 @@ export default function HowItWorksSection({ textContent }: Readonly<HowItWorksSe
               <button
                 onClick={scrollRight}
                 disabled={!canScrollRight}
-                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${
-                  !canScrollRight ? 'cursor-not-allowed opacity-30' : ''
-                }`}
+                className={`flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all hover:bg-primary/10 ${!canScrollRight ? 'cursor-not-allowed opacity-30' : ''}`}
                 aria-label="Siguiente"
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />

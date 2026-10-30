@@ -63,15 +63,15 @@ export default function ComplianceAndCertificationsSection({
     }
   };
 
-  const textColorClass = darkMode ? 'text-white-95' : 'text-gray-95';
-  const descriptionColorClass = darkMode ? 'text-green-120' : 'text-gray-55';
-  const bgColorClass = darkMode ? 'bg-gray-105' : 'bg-white';
-  const buttonBgClass = darkMode ? 'bg-[#1C1C1C]' : 'bg-white';
-  const buttonHoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer';
+  const textColorClass = darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95';
+  const descriptionColorClass = darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120';
+  const bgColorClass = darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95';
+  const buttonBgClass = darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95';
+  const buttonHoverClass = darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer dark:hover:bg-gray-105';
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 lg:h-min lg:gap-16 lg:py-20">
-      <div className={`absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32`} />
+    <section className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${darkMode ? 'bg-gray-105' : 'bg-neutral-17 dark:bg-gray-105'} pb-10 lg:h-min lg:gap-16 lg:py-20`}>
+      <div className={`absolute bottom-0 left-8 right-8 h-[1px] ${darkMode ? 'bg-gray-71' : 'bg-neutral-35 dark:bg-gray-71'} lg:bottom-0 lg:left-32 lg:right-32`} />
 
       <ImageAndCards textContent={textContent} image="/images/datacenters-and-certifications/image.webp" />
 
@@ -108,9 +108,7 @@ export default function ComplianceAndCertificationsSection({
                     />
                     <h3 className={`text-lg font-medium ${textColorClass} lg:text-xl`}>{title}</h3>
                   </div>
-                  <p className={`${descriptionColorClass} flex-1 text-sm font-normal leading-tight lg:text-base`}>
-                    {textContent.cards.description[index]}
-                  </p>
+                  <p className={`${descriptionColorClass} flex-1 text-sm font-normal leading-tight lg:text-base`}>{textContent.cards.description[index]}</p>
                 </div>
               </div>
             ))}
@@ -123,9 +121,7 @@ export default function ComplianceAndCertificationsSection({
               onClick={scrollLeft}
               disabled={currentIndex === 0}
               aria-label="Scroll left"
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${buttonBgClass} transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${buttonHoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${buttonBgClass} transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${buttonHoverClass}`}`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
             </button>
@@ -133,9 +129,7 @@ export default function ComplianceAndCertificationsSection({
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
               aria-label="Scroll right"
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${buttonBgClass} transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${buttonHoverClass}`
-              }`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${buttonBgClass} transition-opacity ${currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${buttonHoverClass}`}`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
             </button>

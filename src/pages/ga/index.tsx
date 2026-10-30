@@ -18,6 +18,7 @@ import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 interface HomeProps {
+  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -25,7 +26,14 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({
+  darkMode = false,
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const {
@@ -86,7 +94,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -100,12 +108,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white lg:py-20 xl:py-32"
+        sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
         freePlanNeedsH2
         hideFreeCard
+        darkMode={darkMode}
       />
 
-      <TrustedSection textContent={textContent.TrustedBySection} />
+      <TrustedSection textContent={textContent.TrustedBySection} darkMode={darkMode} />
 
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
 
@@ -113,16 +122,21 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor="bg-neutral-17"
+        bgColor="bg-neutral-17 dark:bg-gray-100"
       />
 
-      <HorizontalScrollableSection textContent={textContent.NextGenSection} />
+      <HorizontalScrollableSection
+        textContent={textContent.NextGenSection}
+        bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#18181B_100%)]"
+        darkMode={darkMode}
+      />
 
       <FAQSection
         textContent={textContent.EncryptedStorageSeoSection}
         needsH2
         needsH3
-        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
+        bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#18181B_100%)]"
+        darkMode={darkMode}
       />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
