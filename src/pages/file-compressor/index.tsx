@@ -13,6 +13,7 @@ import Script from 'next/script';
 
 
 const FileConverter = ({
+  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -26,9 +27,7 @@ const FileConverter = ({
   return (
     <>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('File compressor', 'file-compressor')}
-      </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">{sm_breadcrumb('File compressor', 'file-compressor')}</Script>
 <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} />
@@ -37,6 +36,7 @@ const FileConverter = ({
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileCompressorBanner}
         lang={lang}
+        darkMode={darkMode}
       />
 
       <CtaSection
@@ -47,9 +47,9 @@ const FileConverter = ({
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <QASection textContent={textContent.QASection} />
+      <QASection textContent={textContent.QASection} darkMode={darkMode} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} darkMode={darkMode} />
     </Layout>
   </>);
 };

@@ -2,12 +2,12 @@ import { getImage } from '@/lib/getImage';
 
 const WhatIsOSS = ({ textContent }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-center px-5 py-20 text-center">
         <div className="flex w-full max-w-[850px] flex-col items-center space-y-16">
           <div className="flex flex-col space-y-6">
-            <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-            <p className="text-xl text-gray-80">{textContent.description}</p>
+            <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">{textContent.title}</h2>
+            <p className="text-xl text-gray-80 dark:text-cool-gray-30">{textContent.description}</p>
           </div>
 
           <img
@@ -16,10 +16,8 @@ const WhatIsOSS = ({ textContent }) => {
             alt="Internxt Open Source Software"
           />
           <div className="flex flex-col space-y-6">
-            {textContent.section.map((description, index) => (
-              <p className="text-xl text-gray-80" key={index}>
-                {description}
-              </p>
+            {textContent.section.map((description) => (
+              <p className="text-xl text-gray-80 dark:text-cool-gray-30" key={description}>{description}</p>
             ))}
           </div>
         </div>

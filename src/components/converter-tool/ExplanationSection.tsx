@@ -7,33 +7,31 @@ const language = {
   es: 'ES',
 };
 
-const ExplanationSection = ({ textContent, bannerText, lang }) => {
+const ExplanationSection = ({ darkMode = false, textContent, bannerText, lang }) => {
   const langUpperCase = language[lang] || 'EN';
 
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1 dark:bg-gray-105">
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 pt-14 lg:px-10">
-        <SignUpBanner textContent={bannerText} lang={lang} />
+        <SignUpBanner textContent={bannerText} lang={lang} darkMode={darkMode} />
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium">{textContent.convertTo.title}</p>
-          <p className="text-lg font-normal text-gray-80">{textContent.convertTo.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.convertTo.title}</p>
+          <p className="text-lg font-normal text-gray-80 dark:text-cool-gray-30">{textContent.convertTo.description}</p>
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium">{textContent.convertToAgain.title}</p>
-          <p className="text-lg font-normal text-gray-80">{textContent.convertToAgain.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.convertToAgain.title}</p>
+          <p className="text-lg font-normal text-gray-80 dark:text-cool-gray-30">{textContent.convertToAgain.description}</p>
         </div>
 
         <div className="flex w-full max-w-2xl flex-col">
-          <p className="pb-3 text-2xl font-medium">{textContent.whyUseConverter.title}</p>{' '}
+          <p className="pb-3 text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.whyUseConverter.title}</p>{' '}
           {textContent.whyUseConverter.description.map((feature) => (
-            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80" key={feature.adv}>
-              {feature.adv}
-            </p>
+            <p className="ml-5 list-item pb-1 text-lg font-normal text-gray-80 dark:text-cool-gray-30" key={feature.adv}>{feature.adv}</p>
           ))}
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-2xl font-medium">{textContent.MBMeaning.title}</p>
-          <p className="text-lg font-normal text-gray-80">{textContent.MBMeaning.description}</p>
+          <p className="text-2xl font-medium text-gray-100 dark:text-white-95">{textContent.MBMeaning.title}</p>
+          <p className="text-lg font-normal text-gray-80 dark:text-cool-gray-30">{textContent.MBMeaning.description}</p>
         </div>
         <div className="flex cursor-pointer">
           <Link href={'/virus-scanner'} className="flex max-w-4xl cursor-pointer flex-row">
