@@ -1,9 +1,9 @@
 import { GetStaticPropsContext } from 'next';
-import BlackFridayPpcTemplate from '@/components/templates/blackFridayPpcTemplate';
+import BlackFridayCampaignTemplate from '@/components/templates/blackFridayCampaignTemplate';
 import { PromoCodeName } from '@/lib/types';
 
 const BlackFridayPpcPage = (props) => {
-  return <BlackFridayPpcTemplate {...props} />;
+  return <BlackFridayCampaignTemplate {...props} />;
 };
 
 export function getStaticProps(ctx: GetStaticPropsContext) {
