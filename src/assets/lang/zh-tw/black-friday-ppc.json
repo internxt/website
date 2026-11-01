@@ -9,9 +9,10 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**黑色星期五**：私密雲端儲存 85% 折扣",
+    "title": "**黑色星期五**：私密雲端儲存 {{discount}}% 折扣",
+    "titleWithoutDiscount": "**黑色星期五**",
     "subtitle": "在您的裝置上加密。沒有人能讀取您的檔案，我們也不例外。",
-    "description": "立即獲得 85% 折扣！",
+    "description": "立即獲得 {{discount}}% 折扣！",
     "features": [
       "私人數位套件",
       "後量子加密",
