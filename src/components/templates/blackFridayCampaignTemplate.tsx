@@ -20,7 +20,7 @@ const PERCENT_PLACEHOLDER = /\{\{(?:percentage|discount)\}\}/g;
 const renderWithDiscount = (text: string, discount: string | null): string =>
   typeof text === 'string' ? text.replace(PERCENT_PLACEHOLDER, discount ?? '') : text;
 
-interface BlackFridayPpcConfig {
+interface BlackFridayCampaignConfig {
   heroImage: string;
   metatagsId: string;
   couponCode?: PromoCodeName;
@@ -28,23 +28,25 @@ interface BlackFridayPpcConfig {
   popularPlanSize?: string;
 }
 
-interface BlackFridayPpcTemplateProps {
+interface BlackFridayCampaignTemplateProps {
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: BlackFridayPpcText;
   footerLang: FooterText;
-  config: BlackFridayPpcConfig;
+  config: BlackFridayCampaignConfig;
+  hideLanguage?: boolean;
 }
 
-const BlackFridayPpcTemplate = ({
+const BlackFridayCampaignTemplate = ({
   lang,
   metatagsDescriptions,
   navbarLang,
   textContent,
   footerLang,
   config,
-}: BlackFridayPpcTemplateProps): JSX.Element => {
+  hideLanguage,
+}: BlackFridayCampaignTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === config.metatagsId);
 
   const {
@@ -100,7 +102,7 @@ const BlackFridayPpcTemplate = ({
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed hideLanguage={hideLanguage} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
@@ -165,4 +167,4 @@ const BlackFridayPpcTemplate = ({
   );
 };
 
-export default BlackFridayPpcTemplate;
+export default BlackFridayCampaignTemplate;

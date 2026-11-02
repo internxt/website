@@ -9,9 +9,10 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**Black Friday**: 85% off private cloud storage",
+    "title": "**Black Friday**: {{discount}}% off private cloud storage",
+    "titleWithoutDiscount": "**Black Friday**",
     "subtitle": "Encrypted on your device. Nobody reads your files. Not even us.",
-    "description": "Get 85% off now!",
+    "description": "Get {{discount}}% off now!",
     "features": [
       "Complete privacy suite",
       "Post-quantum encryption",

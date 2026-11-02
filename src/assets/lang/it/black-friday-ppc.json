@@ -9,9 +9,10 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**Black Friday**: 85% di sconto sul cloud storage privato",
+    "title": "**Black Friday**: {{discount}}% di sconto sul cloud storage privato",
+    "titleWithoutDiscount": "**Black Friday**",
     "subtitle": "Crittografati sul tuo dispositivo. Nessuno legge i tuoi file. Nemmeno noi.",
-    "description": "Ottieni il 85% di sconto ora!",
+    "description": "Ottieni il {{discount}}% di sconto ora!",
     "features": [
       "Suite digitale privata",
       "Crittografia post-quantistica",

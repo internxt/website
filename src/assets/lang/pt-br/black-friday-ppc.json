@@ -9,9 +9,10 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**Black Friday**: 85% de desconto no armazenamento em nuvem privado",
+    "title": "**Black Friday**: {{discount}}% de desconto no armazenamento em nuvem privado",
+    "titleWithoutDiscount": "**Black Friday**",
     "subtitle": "Criptografado no seu dispositivo. Ninguém lê seus arquivos. Nem mesmo nós.",
-    "description": "Garanta 85% de desconto agora!",
+    "description": "Garanta {{discount}}% de desconto agora!",
     "features": [
       "Suíte completa de privacidade",
       "Criptografia pós-quântica",
