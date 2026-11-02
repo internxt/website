@@ -148,7 +148,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
             </p>
           </div>
         }
-        bgGradientContainerColor="background: linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgGradientContainerColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
       />

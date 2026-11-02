@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
+import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 
 interface ThreeCardsProps {
   textContent: any;
@@ -10,6 +11,7 @@ interface ThreeCardsProps {
   topSeparationBar?: boolean;
   TitleTag?: React.ElementType;
   needsH2?: boolean;
+  percentOff?: string;
 }
 
 export default function ThreeCardsSection({
@@ -21,6 +23,7 @@ export default function ThreeCardsSection({
   topSeparationBar = true,
   TitleTag = 'p',
   needsH2 = true,
+  percentOff,
 }: Readonly<ThreeCardsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -110,10 +113,10 @@ export default function ThreeCardsSection({
         <SectionTitleTag
           className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}
         >
-          {textContent.title}
+          {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
         </SectionTitleTag>
         {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{parseDynamicText(textContent.description, { percentage: percentOff, discount: percentOff })}</p>
         )}
       </div>
 
@@ -143,14 +146,14 @@ export default function ThreeCardsSection({
                     }`}
                   >
                     {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
-                    {title}
+                    {parseDynamicText(title, { percentage: percentOff, discount: percentOff })}
                   </TitleTag>
                   <p
                     className={`pt-[16px] text-sm font-normal leading-tight ${
                       darkMode ? 'text-green-120' : 'text-gray-55'
                     } lg:pt-6 lg:text-base`}
                   >
-                    {textContent.cards.descriptions[index]}
+                    {parseDynamicText(textContent.cards.descriptions[index], { percentage: percentOff, discount: percentOff })}
                   </p>
                 </div>
                 {hasCta && (
@@ -208,13 +211,13 @@ export default function ThreeCardsSection({
                 }`}
               >
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
-                {title}
+                {parseDynamicText(title, { percentage: percentOff, discount: percentOff })}
               </p>
               <p
                 className={`${darkMode ? 'text-green-120' : 'text-gray-55'} pt-6 text-base font-normal
                 leading-tight`}
               >
-                {textContent.cards.descriptions[index]}
+                {parseDynamicText(textContent.cards.descriptions[index], { percentage: percentOff, discount: percentOff })}
               </p>
             </div>
             {hasCta && (

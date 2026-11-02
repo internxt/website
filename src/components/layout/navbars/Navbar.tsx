@@ -66,9 +66,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   return (
     <div
       id="navbar"
-      className={`${props.hide ? 'hidden' : ''} ${
-        props.isLinksHidden ? 'top-0' : 'top-18'
-      } top-18 fixed left-0 flex h-20 w-full items-center ${
+      className={`${props.hide ? 'hidden' : ''} fixed left-0 flex h-20 w-full items-center ${
         props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
       } transition-all duration-100 lg:h-16 ${
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
@@ -252,6 +250,21 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         }`}
                       >
                         {props.textContent.links.pricing}
+                      </Link>
+
+                      <Link
+                        href="/deals/black-friday-internxt"
+                        locale={props.lang}
+                        role="link"
+                        tabIndex={0}
+                        onClick={() => {
+                          setMenuState(false);
+                        }}
+                        className={`flex w-full translate-y-0 px-8 py-4 font-bold text-primary outline-none transition delay-100 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
+                        {props.textContent.links.blackFriday}
                       </Link>
 
                       <Disclosure

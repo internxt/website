@@ -46,6 +46,11 @@
     },
     "description": "Get {{discount}}% off",
     "descriptionNormal": "on all plans",
+    "campaigns": {
+      "campaign2": { "title": "**Early Black Friday** Internxt Deal", "description": "{{discount}}% OFF" },
+      "blackFriday": { "title": "**Black Friday** Internxt Deal", "description": "{{discount}}% OFF — BEST PRICE OF THE YEAR" },
+      "cyberWeek": { "title": "**Cyber Week** Internxt Deal", "description": "{{discount}}% OFF — LAST CHANCE TO GET THE BEST PRICE OF THE YEAR" }
+    },
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "giftDescription": {
       "line1": "Enter our Christmas raffle to win up to €1000!",

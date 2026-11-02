@@ -62,7 +62,9 @@ export default function HeroSection({
       return text;
     }
     if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+      return text === textContent.title
+        ? textContent.titleWithoutDiscount ?? text
+        : <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
     return text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff);
   };
@@ -97,14 +99,14 @@ export default function HeroSection({
           ))}
         </div>
 
-        <div className="flex w-full flex-col justify-center gap-4 lg:gap-6">
+        <div className="flex w-full flex-col justify-center gap-3 lg:gap-6">
           <div className="flex flex-col justify-center gap-4">
             <h1
               className={`w-full whitespace-pre-line text-30 font-semibold leading-tight lg:text-3xl ${
                 darkMode ? 'text-gray-100' : 'text-gray-100'
               }`}
             >
-              <HighlightText text={textContent.title} className={darkMode ? 'text-white-95' : ''} />
+              <HighlightText text={parsePercentText(textContent.title)} className={darkMode ? 'text-white-95' : ''} />
             </h1>
             <h2
               className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${
