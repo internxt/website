@@ -46,6 +46,11 @@
     },
     "description": "享受 {{discount}}% 折扣",
     "descriptionNormal": "适用于所有计划",
+    "campaigns": {
+      "campaign2": { "title": "**Early Black Friday** Internxt Deal", "description": "{{discount}}% OFF" },
+      "blackFriday": { "title": "**Black Friday** Internxt Deal", "description": "{{discount}}% OFF — BEST PRICE OF THE YEAR" },
+      "cyberWeek": { "title": "**Cyber Week** Internxt Deal", "description": "{{discount}}% OFF — LAST CHANCE TO GET THE BEST PRICE OF THE YEAR" }
+    },
     "giftDescription": {
       "line1": "赢取高达 1000 欧元的礼品卡，随处消费！",
       "line2": "在这个节日季加入 Internxt，参与我们的圣诞礼品卡抽奖活动"
