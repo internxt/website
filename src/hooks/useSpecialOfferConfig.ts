@@ -210,6 +210,7 @@ export const ALLOWED_PATHS = [
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -376,6 +377,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'thelinuxexp',
   'simon42',
   'ition',
+  'luca',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -575,6 +577,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
 ]);
 
 export const COUPON_CODES = {
@@ -785,6 +788,7 @@ export const COUPON_CODES = {
   negocios: PromoCodeName.negocios,
   lucas: PromoCodeName.lucas,
   youensina: PromoCodeName.youensina,
+  sc90: PromoCodeName.sc90,
 };
 
 interface OfferConfig {
