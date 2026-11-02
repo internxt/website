@@ -79,7 +79,9 @@ const PricingHeader = ({
     className={`flex flex-col items-center justify-center gap-3 text-center sm:gap-4 ${isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'} ${className}`}
     id="priceTable"
   >
-    <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>{alternativeHeader ? textContent?.planTitles?.lifetimeHeader : textContent?.planTitles?.header}</SectionTag>
+    <SectionTag className={`text-2xl font-semibold sm:text-30 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
+      {alternativeHeader ? textContent?.planTitles?.lifetimeHeader : textContent?.planTitles?.header}
+    </SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
       <HotLabel
         textContent={textContent}
@@ -254,7 +256,9 @@ export const ComparativePricingSection = ({
               {features.map((feature) => (
               <div key={feature.text} className="flex flex-row items-start justify-start gap-2.5 text-left md:max-w-[33%] md:flex-row md:items-start md:gap-3">
                   <feature.icon size={36} className="!h-7 !w-7 shrink-0 text-primary md:!h-[36px] md:!w-[36px] md:pb-0" />
-                <p className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>{feature.text}</p>
+                  <p className={`pt-[1px] text-base font-medium md:pt-[6px] md:text-xl ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
+                    {feature.text}
+                  </p>
                 </div>
               ))}
           </div>

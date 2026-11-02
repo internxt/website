@@ -62,7 +62,9 @@ export default function CustomPlanSelector({
 
   return (
     <div className="z-10 flex flex-col pt-10">
-      <div className={`border border-neutral-25 dark:border-gray-71 p-4 ${customBackgroundClass} ${isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'}`}>
+      <div
+        className={`border border-neutral-25 dark:border-gray-71 p-4 ${customBackgroundClass} ${isLeftColumn ? 'rounded-tl-16 border-r-0' : 'rounded-tr-16'}`}
+      >
         <div className="relative mb-4 border-b border-neutral-25 dark:border-gray-71 pb-1">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -81,7 +83,7 @@ export default function CustomPlanSelector({
             <>
               <div className="fixed inset-0" onClick={() => setIsOpen(false)} />
 
-              <div className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white dark:bg-gray-95 shadow-lg">
+              <div className="absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg bg-white dark:bg-gray-95 shadow-lg ">
                 <ul className=" py-2" role="listbox">
                   {plans.map((plan) => (
                     <li key={plan.id} role="option">

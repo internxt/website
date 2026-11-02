@@ -66,7 +66,7 @@ export default function FaqAccordion({
         className="my-5 flex cursor-pointer flex-row items-center justify-between space-x-6 text-left hover:text-primary"
       >
         <QuestionTag
-          className={`w-full text-lg font-medium ${textColor || textClass} ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}
+          className={`w-full text-lg font-medium ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'} ${textColor || textClass}`}
         >
           {question}
         </QuestionTag>

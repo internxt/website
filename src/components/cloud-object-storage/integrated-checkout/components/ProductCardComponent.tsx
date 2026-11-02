@@ -22,9 +22,7 @@ interface ProductFeaturesComponentProps {
   couponCodeName?: string;
 }
 
-const Separator = ({  }: { darkMode?: boolean }) => (
-  <div className="border border-gray-10 dark:border-gray-71" />
-);
+const Separator = () => <div className="border border-gray-10 dark:border-gray-71" />;
 
 export const ProductFeaturesComponent = ({
   darkMode = false,
@@ -57,11 +55,11 @@ export const ProductFeaturesComponent = ({
           />
         </div>
       </div>
-      <div className="flex w-full rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
+      <div className="flex w-full rounded-2xl border border-gray-10 bg-white dark:bg-gray-95 dark:border-gray-71 p-5">
         <div className="flex w-full flex-col space-y-5">
           <p>{textContent.selectedPlan}</p>
           <p className="text-2xl font-bold text-gray-100 dark:text-white-95">Object storage - {textContent.billed.month}</p>
-          <Separator darkMode={darkMode} />
+          <Separator />
           <div className="flex flex-col space-y-5">
             <p className="font-medium text-gray-100 dark:text-white-95">{textContent.planDetails.title}</p>
             <div className="flex flex-col space-y-4">
@@ -73,7 +71,7 @@ export const ProductFeaturesComponent = ({
               ))}
             </div>
           </div>
-          <Separator darkMode={darkMode} />
+          <Separator />
           <div className="flex flex-row items-center justify-between text-2xl font-semibold text-gray-100 dark:text-white-95">
             <p>{textContent.total}</p>
             <p>

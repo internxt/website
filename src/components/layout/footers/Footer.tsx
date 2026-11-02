@@ -73,7 +73,7 @@ export default function Footer({
   };
 
   const mobileResourcesHeaderClass = `${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
-  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120';
+  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:text-green-120 dark:bg-gray-71';
   const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
 
   return (
@@ -105,7 +105,9 @@ export default function Footer({
             <div className="flex flex-1 flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
-                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>{textContent.DownloadApp.description}</p>
+                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
+                  {textContent.DownloadApp.description}
+                </p>
               </div>
 
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
@@ -156,7 +158,9 @@ export default function Footer({
             <div className="flex w-full flex-col gap-3 lg:w-1/3 2xl:w-1/3">
               <div className="flex flex-col gap-1">
                 <p className="text-lg font-medium">{textContent.NewsletterSection.title}</p>
-                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>{textContent.NewsletterSection.description}</p>
+                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
+                  {textContent.NewsletterSection.description}
+                </p>
               </div>
 
               <form
@@ -174,7 +178,11 @@ export default function Footer({
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={textContent.NewsletterSection.input}
                   className={`flex-1 rounded-lg border px-4 py-2.5 text-base outline-none transition-all
-            ${darkMode ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary' : 'border-cool-gray-20 bg-white focus:border-blue-50 dark:border-cool-gray-70 dark:bg-cool-gray-90 dark:focus:border-primary'} focus:ring focus:ring-primary focus:ring-opacity-20`}
+            ${
+              darkMode
+                ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary'
+                : 'border-cool-gray-20 bg-white focus:border-blue-50 dark:focus:border-primary dark:bg-cool-gray-90 dark:border-cool-gray-70'
+            } focus:ring focus:ring-primary focus:ring-opacity-20`}
                   required
                 />
                 <button
@@ -202,9 +210,15 @@ export default function Footer({
             <div className="flex w-full flex-row justify-between md:justify-between">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>{textContent.FooterSection.sections.products.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <Link href="/drive" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.products.drive}</Link>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                    {textContent.FooterSection.sections.products.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
+                    <Link href="/drive" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.products.drive}
+                    </Link>
 
                     <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.products.antivirus}</Link>
 
@@ -225,14 +239,18 @@ export default function Footer({
 
                     <Link href="/mail" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.mail}
-                      <span className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}>
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
 
                     <Link href="/photos" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.photos}
-                      <span className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}>
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
@@ -248,9 +266,15 @@ export default function Footer({
 
               <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>{textContent.FooterSection.sections.company.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <Link href="/about" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.company.about}</Link>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                    {textContent.FooterSection.sections.company.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
+                    <Link href="/about" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.company.about}
+                    </Link>
 
                     <Link href="/privacy" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.company.privacy}</Link>
 
@@ -278,10 +302,18 @@ export default function Footer({
 
               <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>{textContent.FooterSection.sections.join.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">{textContent.FooterSection.sections.join.signup}</a>
-                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">{textContent.FooterSection.sections.join.login}</a>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                    {textContent.FooterSection.sections.join.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
+                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.signup}
+                    </a>
+                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.login}
+                    </a>
                     <Link
                       href={'https://help.internxt.com'}
                       target="_blank"
@@ -311,8 +343,12 @@ export default function Footer({
 
               <div className={`flex max-w-[34%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>{textContent.FooterSection.sections.resources.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>
+                    {textContent.FooterSection.sections.resources.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
                     <a
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                       target="_blank"
@@ -461,14 +497,30 @@ export default function Footer({
               </div>
               <div className={`flex max-w-[18%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>{textContent.FooterSection.sections.tools.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.tools.byteConverter}</Link>
-                    <Link href="/temporary-email" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.tools.temporaryEmail}</Link>
-                    <Link href="/password-checker" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.tools.passwordChecker}</Link>
-                    <Link href="/virus-scanner" locale={lang} passHref className="hover:text-primary">{textContent.FooterSection.sections.tools.fileVirusScan}</Link>
-                    <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.tools.passwordGenerator}</Link>
-                    <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.tools.fileConverter}</Link>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                    {textContent.FooterSection.sections.tools.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
+                    <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.byteConverter}
+                    </Link>
+                    <Link href="/temporary-email" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.temporaryEmail}
+                    </Link>
+                    <Link href="/password-checker" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.passwordChecker}
+                    </Link>
+                    <Link href="/virus-scanner" locale={lang} passHref className="hover:text-primary">
+                      {textContent.FooterSection.sections.tools.fileVirusScan}
+                    </Link>
+                    <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.passwordGenerator}
+                    </Link>
+                    <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.fileConverter}
+                    </Link>
 
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.tools.metadataRemover}</Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.tools.fileCompressor}</Link>
@@ -478,16 +530,64 @@ export default function Footer({
 
               <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>{textContent.FooterSection.sections.features.title}</p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <Link href="/private-cloud-storage-solutions" locale={lang} passHref className=" items-center hover:text-primary">{textContent.FooterSection.sections.features.privateCloud}</Link>
-                    <Link href="/cloud-storage-backup-solutions" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.cloudBakcup}</Link>
-                    <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.GDPRCloud}</Link>
-                    <Link href="/cloud-storage-for-videos" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.cloudVideo}</Link>
-                    <Link href="/cloud-storage-for-documents" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.cloudDocuments}</Link>
-                    <Link href="/lifetime" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.lifetime}</Link>
-                    <Link href="/drive/free-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">{textContent.FooterSection.sections.features.freeCloudStorage}</Link>
-                    <Link href="/secure-file-transfer" locale={lang} passHref className="items-center hover:text-primary">
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                    {textContent.FooterSection.sections.features.title}
+                  </p>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+                  >
+                    <Link
+                      href="/private-cloud-storage-solutions"
+                      locale={lang}
+                      passHref
+                      className=" items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.privateCloud}
+                    </Link>
+                    <Link
+                      href="/cloud-storage-backup-solutions"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudBakcup}
+                    </Link>
+                    <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.features.GDPRCloud}
+                    </Link>
+                    <Link
+                      href="/cloud-storage-for-videos"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudVideo}
+                    </Link>
+                    <Link
+                      href="/cloud-storage-for-documents"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudDocuments}
+                    </Link>
+                    <Link href="/lifetime" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.features.lifetime}
+                    </Link>
+                    <Link
+                      href="/drive/free-cloud-storage"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.freeCloudStorage}
+                    </Link>
+                    <Link
+                      href="/secure-file-transfer"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.fileTransfer}
                     </Link>
                   </div>
@@ -564,7 +664,9 @@ export default function Footer({
                     }}
                   />
                 </Link>
-                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>{textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}</p>
+                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
+                </p>
               </div>
 
               <div className="flex flex-row items-center gap-5">
@@ -646,11 +748,15 @@ export default function Footer({
           </div>
 
           {/* Mobile version */}
-          <div className={`${darkMode ? 'bg-gray-95 text-white' : 'bg-gray-5 bg-opacity-50 dark:bg-gray-95 dark:text-white dark:bg-opacity-100'} flex flex-col overflow-hidden lg:hidden`}>
+          <div
+            className={`${darkMode ? 'bg-gray-95 text-white' : 'bg-gray-5 bg-opacity-50 dark:bg-gray-95 dark:text-white dark:bg-opacity-100'} flex flex-col overflow-hidden lg:hidden`}
+          >
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
@@ -704,7 +810,9 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
@@ -745,7 +853,9 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
@@ -831,7 +941,9 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAlternativesOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAlternativesOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link href="/pcloud-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
                               {textContent.FooterSection.sections.resources.pCloudAlternative}
@@ -898,7 +1010,9 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isVideocallsOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isVideocallsOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link href="/alternative-to-google-meet" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
                               {textContent.FooterSection.sections.resources.googleMeet}
@@ -929,7 +1043,9 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAiAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAiAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link href="/alternative-to-gemini" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
                               {textContent.FooterSection.sections.resources.geminiAlternative}
@@ -963,7 +1079,9 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isS3AlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isS3AlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link href="/idrive-e2-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
                               {textContent.FooterSection.sections.resources.idrivee2Alternative}
@@ -1040,7 +1158,9 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isCleanerAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isCleanerAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
                             <Link href="/alternative-to-ccleaner" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
                               {textContent.FooterSection.sections.resources.ccleanerAlternative}
@@ -1069,7 +1189,9 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
@@ -1105,7 +1227,9 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
@@ -1217,7 +1341,9 @@ export default function Footer({
                 </Link>
               </div>
 
-              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>{textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}</p>
+              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
+              </p>
 
               <Link href="/" locale={lang} className={`flex flex-shrink-0 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
                 <Image

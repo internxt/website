@@ -82,7 +82,7 @@ export const HorizontalPricingSection = ({
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">
               <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className="text-xl font-medium text-gray-80 dark:text-cool-gray-30">{feature.text}</p>
+              <p className={`text-xl font-medium text-gray-80 dark:text-cool-gray-30`}>{feature.text}</p>
             </div>
           ))}
         </div>

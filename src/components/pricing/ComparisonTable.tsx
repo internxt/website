@@ -124,12 +124,12 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
-      baseStyles += 'bg-neutral-17 dark:bg-gray-105 outline outline-1 outline-neutral-25 dark:outline-gray-71';
+      baseStyles += ' bg-neutral-17 dark:bg-gray-105 outline outline-1 outline-neutral-25 dark:outline-gray-71';
       if (isLastCategory(categoryIndex)) {
         baseStyles += 'outline outline-1 outline-neutral-25 dark:outline-gray-71 rounded-br-16';
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += 'border-t-[1px] border-neutral-25 dark:border-gray-71';
+      baseStyles += ' border-t-[1px] border-neutral-25 dark:border-gray-71';
     }
 
     return baseStyles;
@@ -144,9 +144,9 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isRecommendedPlan(planIndex)) {
-      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 dark:ring-gray-71 dark:bg-gray-105 shadow-lg outline outline-1 outline-neutral-25 dark:outline-gray-71';
+      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 dark:bg-gray-105  dark:ring-gray-71 shadow-lg outline outline-1 outline-neutral-25 dark:outline-gray-71';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += 'rounded-b-16 outline outline-1 outline-neutral-25 dark:outline-gray-71';
+        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25 dark:outline-gray-71';
       }
     } else if (isSecondToLastColumn(planIndex)) {
       baseStyles += 'border-t-[1px] border-neutral-25 dark:border-gray-71';
@@ -174,10 +174,10 @@ export default function ComparisonTableSection({
     const planOrder = plan?.order ?? 0;
 
     if (planOrder === 0 || planOrder === 1) {
-      return `border-t-[1px] border-neutral-25 dark:border-gray-71`;
+      return 'border-t-[1px] border-neutral-25 dark:border-gray-71';
     }
 
-    return `border border-neutral-25 dark:border-gray-71`;
+    return 'border border-neutral-25 dark:border-gray-71';
   };
 
   const renderFeatureContent = (feature: Feature, categoryName: string, isAvailable: boolean, category?: Category) => {
@@ -196,7 +196,9 @@ export default function ComparisonTableSection({
             <Icon height={20} width={20} className={`${iconColor} flex shrink-0 lg:hidden`} weight={fillColor} />
           </>
         )}
-        <p className={`${categoryName === 'Storage' ? 'whitespace-nowrap' : ''} text-sm font-normal lg:text-base ${textColor}`}>
+        <p
+          className={`${categoryName === 'Storage' ? 'whitespace-nowrap' : ''} text-sm font-normal lg:text-base ${textColor}`}
+        >
           {feature.name}
         </p>
       </div>
@@ -402,16 +404,22 @@ export default function ComparisonTableSection({
           {textContent.categories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <div className="grid grid-cols-2">
-                <div className={`${getMobileBorderStyles(selectedPlanA)} p-3 ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}>
+                <div
+                  className={`${getMobileBorderStyles(selectedPlanA)} p-3 ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}
+                >
                   <p className="font-medium text-gray-95 dark:text-white-95">{category.name}</p>
                 </div>
-                <div className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === 0 ? '' : ''}`}>
+                <div
+                  className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === 0 ? '' : ''}`}
+                >
                   <p className="font-medium text-gray-95 dark:text-white-95">{category.name}</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2">
-                <div className={`${getMobileBorderStyles(selectedPlanA)} ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}>
+                <div
+                  className={`${getMobileBorderStyles(selectedPlanA)} ${getMobilePlanStyles(selectedPlanA)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''}`}
+                >
                   {isExclusiveCategory(category) ? (
                     <div className="min-h-[40px] items-center p-3">{renderMobileFeatureContent(selectedPlanA, category)}</div>
                   ) : (
@@ -423,7 +431,9 @@ export default function ComparisonTableSection({
                   )}
                 </div>
 
-                <div className={`${getMobileBorderStyles(selectedPlanB)} ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''}`}>
+                <div
+                  className={`${getMobileBorderStyles(selectedPlanB)} ${getMobilePlanStyles(selectedPlanB)} ${categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''}`}
+                >
                   {isExclusiveCategory(category) ? (
                     <div className="min-h-[40px] items-center p-3">{renderMobileFeatureContent(selectedPlanB, category)}</div>
                   ) : (

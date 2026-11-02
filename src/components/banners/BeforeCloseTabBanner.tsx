@@ -88,7 +88,9 @@ export const BeforeCloseTabBanner = () => {
               {textContent.BeforeCloseBanner.title.normal2}
             </p>
 
-            <p className="w-full max-w-[310px] text-2xl font-semibold leading-tight text-gray-100 dark:text-white-95">{textContent.BeforeCloseBanner.subtitle}</p>
+            <p className="w-full max-w-[310px] text-2xl font-semibold leading-tight text-gray-100 dark:text-white-95">
+              {textContent.BeforeCloseBanner.subtitle}
+            </p>
 
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button

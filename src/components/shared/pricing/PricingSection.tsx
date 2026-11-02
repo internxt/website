@@ -169,7 +169,9 @@ export const PricingSection = ({
             {features.map((feature) => (
               <div key={feature.text} className="flex flex-col items-start gap-3 md:max-w-[33%] md:flex-row">
                 <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
-                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>{feature.text}</p>
+                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
+                  {feature.text}
+                </p>
               </div>
             ))}
           </div>

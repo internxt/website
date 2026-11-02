@@ -86,7 +86,9 @@ const AdvancedToolsSection = ({ textContent, lang = 'en' }: AdvancedToolsProps):
                 text={textContent.powerUsers.title}
                 className="whitespace-pre-line text-4xl font-bold text-gray-95 dark:text-white-95"
               />
-              <p className="whitespace-pre-line text-lg font-normal text-gray-55 dark:text-green-120">{textContent.powerUsers.description}</p>
+              <p className="whitespace-pre-line text-lg font-normal text-gray-55 dark:text-green-120">
+                {textContent.powerUsers.description}
+              </p>
             </div>
 
             <div className="flex flex-col gap-2">
