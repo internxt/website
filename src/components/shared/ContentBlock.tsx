@@ -10,7 +10,7 @@ export const ContentBlockSection = ({ textContent }: ContentBlockSectionProps) =
     <section className="flex items-center justify-between gap-6 bg-neutral-17 px-5 py-10 lg:px-10 lg:py-20 xl:p-32 3xl:px-80">
       <div
         className="flex flex-col items-center justify-between gap-10 rounded-16 p-4 lg:p-0 lg:py-10 lg:pl-10"
-        style={{ background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%' }}
+        style={{ background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)' }}
       >
         <p className="flex items-center text-center text-30 font-bold leading-tight text-gray-100 lg:pr-10 lg:text-4xl">
           {textContent.title}

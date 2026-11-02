@@ -186,10 +186,12 @@ var config;
 function buildConfig() {
   lang = getSiteLang();
   t = translations[lang] || translations.en;
+  var isDarkTheme = typeof window !== 'undefined' && window.__INTERNXT_DARK_MODE__ === true;
+
   config = {
     primaryColor: '#0864fc',
-    darkColor: '#3b3e4a',
-    lightColor: '#ffffff',
+    darkColor: isDarkTheme ? '#fafafa' : '#3b3e4a',
+    lightColor: isDarkTheme ? '#1c1c1c' : '#ffffff',
     themeMode: 'light',
     showSettingsBtn: true,
     showCloseIcon: false,
