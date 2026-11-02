@@ -62,7 +62,7 @@ const SelectFeatureInfoSection = ({
                 }}
               >
                 {cards ? <info.icon size={32} className="text-primary" /> : undefined}
-                <p className="text-2xl font-medium text-gray-100  dark:text-white-95 hover:text-primary">{info.title}</p>
+                <p className="text-2xl font-medium text-gray-100 dark:text-white-95 hover:text-primary">{info.title}</p>
               </button>
               <div className="h-8 border-r-4 border-gray-10 dark:border-gray-71 pr-8 last:hidden" />
             </div>

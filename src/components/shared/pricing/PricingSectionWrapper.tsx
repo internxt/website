@@ -90,7 +90,7 @@ const HotLabel = ({ textContent, discountValue, darkMode, isValentinesMode }) =>
           ? 'flex gap-0.5 bg-pink-10 text-pink-80'
           : darkMode
           ? 'bg-purple-100 text-purple-8'
-          : 'bg-neutral-37 text-primary dark:text-purple-8 dark:bg-purple-100'
+          : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'
       } px-1 py-0.5 text-xl font-semibold `}
     >
       {isValentinesMode ? textContent.valentinesTitle : ''}
@@ -114,9 +114,7 @@ const PricingHeader = ({
     className={`flex flex-col items-center gap-4 text-center ${isValentinesMode ? 'lg:flex-col' : 'lg:flex-row'} ${className}`}
     id="priceTable"
   >
-    <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>
-      {alternativeHeader ? textContent.planTitles.lifetimeHeader : textContent.planTitles.header}
-    </SectionTag>
+    <SectionTag className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-3xl`}>{alternativeHeader ? textContent.planTitles.lifetimeHeader : textContent.planTitles.header}</SectionTag>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
       <HotLabel
         textContent={textContent}

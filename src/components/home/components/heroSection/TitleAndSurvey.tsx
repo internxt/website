@@ -32,7 +32,7 @@ const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.
           {textContent.description.normal2}
         </h2>
       </div>
-      <div className="flex flex-col gap-5 rounded-xl border border-gray-10 bg-gray-1 dark:bg-gray-105 dark:border-gray-71 px-6 py-4">
+      <div className="flex flex-col gap-5 rounded-xl border border-gray-10 bg-gray-1 dark:border-gray-71 dark:bg-gray-105 px-6 py-4">
         <p className="text-xl font-semibold text-gray-80 dark:text-cool-gray-30">{textContent.howMuchYouNeed}</p>
         <div className="flex items-center justify-center gap-5 lg:flex-row lg:justify-start">
           <div className="hidden flex-row lg:flex">

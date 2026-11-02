@@ -159,9 +159,7 @@ export const PricingSectionForMobile = ({
               <div>
                 <feature.icon size={24} className="shrink-0  text-primary " />
               </div>
-              <p className={`justify-end text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>
-                {feature.text}
-              </p>
+              <p className={`justify-end text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}>{feature.text}</p>
             </div>
           ))}
         </div>

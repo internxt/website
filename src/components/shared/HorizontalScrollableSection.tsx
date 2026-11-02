@@ -117,9 +117,7 @@ export default function HorizontalScrollableSection({
         {needsDivider && (
           <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
         )}
-        <TitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-3xl">
-          {parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}
-        </TitleTag>
+        <TitleTag className="text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:w-[780px] lg:text-3xl">{parseDynamicText(textContent.title, { percentage: percentOff, discount: percentOff })}</TitleTag>
         <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-xl">{parseDynamicText(textContent.description, { percentage: percentOff, discount: percentOff })}</p>
         {textContent.cta && (
           <span
@@ -156,9 +154,7 @@ export default function HorizontalScrollableSection({
             >
               <div className="flex h-full flex-col rounded-xl bg-white dark:bg-gray-95 p-6 lg:rounded-16 lg:p-8">
                 <CardTag className="pb-[16px] text-lg font-medium text-gray-95 dark:text-white-95 lg:pb-6 lg:text-xl">{parseDynamicText(title, { percentage: percentOff, discount: percentOff })}</CardTag>
-                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
-                  {parseDynamicText(textContent.scrollableSection.descriptions[index], { percentage: percentOff, discount: percentOff })}
-                </p>
+                <p className="flex-1 text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">{parseDynamicText(textContent.scrollableSection.descriptions[index], { percentage: percentOff, discount: percentOff })}</p>
               </div>
             </div>
           ))}

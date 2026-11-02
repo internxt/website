@@ -395,16 +395,10 @@ export default function PriceCard({
   const ringStyleClass = popular ? 'border-primary ring-[3px]' : `ring-1 ${ringClass}`;
 
   return (
-    <div
-      className={`${ringStyleClass} flex ${isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[400px] lg:h-[850px] '} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
-    >
-      <div
-        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6`}
-      >
+    <div className={`${ringStyleClass} flex ${isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[400px] lg:h-[850px] '} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}>
+      <div className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white dark:bg-gray-95 p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div
-            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${!popular ? 'invisible' : ''}`}
-          >
+          <div className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${!popular ? 'invisible' : ''}`}>
             <Fire size={28} className="text-white" />
             <p className="font-semibold text-white">{contentText.mostPopular}</p>
           </div>
@@ -429,12 +423,8 @@ export default function PriceCard({
               <span className="price text-4xl font-bold">{isFreePlan ? `${contentText.freePlan}` : isPcComponentes ? discountPCComponentes : formattedPrice}</span>
             </p>
           </div>
-          <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>
-            {contentText.perUser}
-          </span>
-          <p
-            className={`${priceBefore ? 'flex' : 'hidden'} flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
-          >
+          <span className={`perUser ${isIndividualPlan ? 'hidden' : ''} text-sm font-medium text-gray-50`}>{contentText.perUser}</span>
+          <p className={`${priceBefore ? 'flex' : 'hidden'} flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}>
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">
               {isPcComponentes
@@ -463,7 +453,7 @@ export default function PriceCard({
         </button>
       </div>
 
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:bg-gray-105 dark:border-gray-71 pb-6 text-sm text-gray-80 dark:text-cool-gray-30">
+      <div className={`featureList flex flex-col border-t border-neutral-20 bg-neutral-10 dark:border-gray-71 dark:bg-gray-105 pb-6 text-sm text-gray-80 dark:text-cool-gray-30`}>
         {isOffer ? (
           <>
             <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
@@ -473,10 +463,7 @@ export default function PriceCard({
                 {contentText.productFeatures.cheaperThan[billingFrequency as string].normal2}
               </p>
               {/* {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
-              <div
-                className={`${popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''} flex flex-row items-start space-x-2 first:whitespace-nowrap`}
-                key={feature}
-              >
+              <div className={`${popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''} flex flex-row items-start space-x-2 first:whitespace-nowrap`} key={feature}>
                 <Star size={16} weight="fill" className="text-yellow" />
                 <span className="text-white">{feature}</span>
               </div>
@@ -525,7 +512,7 @@ export default function PriceCard({
                       className: 'text-primary',
                     },
                   )}
-                  <span className={'text-gray-80 dark:text-cool-gray-30'}>
+                  <span className="text-gray-80 dark:text-cool-gray-30">
                     {feature}
                     {index > 9 ? (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">{contentText.commingSoon}</span>

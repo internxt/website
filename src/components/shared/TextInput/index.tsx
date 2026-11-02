@@ -61,7 +61,7 @@ export default function TextInput({
           maxLength,
           pattern,
         })}
-        className={`w-full rounded-md border bg-white p-3 text-base text-gray-100 ${borderStyles} dark:text-white-95 dark:bg-gray-95 placeholder-gray-50 outline-none disabled:border-gray-10 disabled:text-gray-40 dark:disabled:text-gray-50 dark:disabled:border-gray-71`}
+        className={`w-full rounded-md border p-3 text-base placeholder-gray-50 outline-none bg-white text-gray-100 dark:bg-gray-95 dark:text-white-95 ${borderStyles} disabled:border-gray-10 disabled:text-gray-40 dark:disabled:border-gray-71 dark:disabled:text-gray-50`}
       />
     </div>
   );

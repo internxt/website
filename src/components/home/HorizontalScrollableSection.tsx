@@ -124,12 +124,8 @@ export default function HorizontalScrollableSection({
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${sectionBgClass} pb-10 lg:h-min lg:gap-16 lg:py-20`}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-3xl`}>
-          {textContent.title}
-        </h2>
-        <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight lg:text-xl`}>
-          {textContent.description}
-        </p>
+        <h2 className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-3xl`}>{textContent.title}</h2>
+        <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} text-base font-normal leading-tight lg:text-xl`}>{textContent.description}</p>
         {textContent.cta !== undefined && (
           <span
             onClick={() => window.open('https://internxt.com/about/', '_blank', 'noopener,noreferrer')}
@@ -165,12 +161,8 @@ export default function HorizontalScrollableSection({
                 }}
               >
                 <div className={`flex h-full flex-col gap-4 rounded-16 ${darkMode ? 'bg-gray-105' : 'bg-white dark:bg-gray-105'} p-6`}>
-                  <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>
-                    {title}
-                  </h3>
-                  <p
-                    className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} flex-1 text-sm font-normal leading-tight lg:text-base`}
-                  >
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95 dark:text-white-95'} lg:text-xl`}>{title}</h3>
+                  <p className={`${darkMode ? 'text-green-120' : 'text-gray-55 dark:text-green-120'} flex-1 text-sm font-normal leading-tight lg:text-base`}>
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

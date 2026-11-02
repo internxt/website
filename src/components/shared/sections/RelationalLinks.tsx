@@ -105,9 +105,7 @@ const RelationalLinks = ({ textContent }: RelationalLinksProps) => {
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden py-5 lg:py-20 dark:bg-gray-95">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-0">
-        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl">
-          {textContent.title}
-        </p>
+        <p className="mb-8 text-center text-4xl font-semibold text-gray-100 dark:text-white-95 lg:mb-14 lg:text-5xl">{textContent.title}</p>
       </div>
 
       <div className="flex w-full flex-col items-center gap-6 lg:gap-8">

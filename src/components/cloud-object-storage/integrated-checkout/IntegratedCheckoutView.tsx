@@ -116,7 +116,7 @@ export const IntegratedCheckoutView = ({
               />
               <div className="flex flex-col space-y-8 pb-20">
                 <p className="text-2xl font-semibold text-gray-100 dark:text-white-95">2. {textContent.addressBillingTitle}</p>
-                <div className="flex flex-col rounded-2xl border border-gray-10 bg-white dark:bg-gray-95 dark:border-gray-71 p-5">
+                <div className="flex flex-col rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
                   <AddressElement
                     onChange={(e) => {
                       onUserNameChange(e.value.name);
@@ -131,13 +131,11 @@ export const IntegratedCheckoutView = ({
                     }}
                   />
                 </div>
-                <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white dark:bg-gray-95 dark:border-gray-71 p-5">
+                <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white dark:border-gray-71 dark:bg-gray-95 p-5">
                   <Menu>
                     <Menu.Button
                       onKeyDown={(e) => e.preventDefault()}
-                      className={
-                        'flex h-full w-full flex-row items-center justify-between rounded-lg text-base dark:text-white-95 text-gray-100 transition-all duration-75 ease-in-out hover:underline'
-                      }
+                      className="flex h-full w-full flex-row items-center justify-between rounded-lg text-base text-gray-100 dark:text-white-95 transition-all duration-75 ease-in-out hover:underline"
                       onClick={() =>
                         setOptionalAddressBillingDetailsDialogClicked(!optionalAddressBillingDetailsDialogClicked)
                       }

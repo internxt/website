@@ -171,7 +171,7 @@ const BottomBanner = () => {
               </p>
             </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white dark:bg-gray-95 px-5 py-2.5 text-lg font-medium text-gray-100 dark:text-white-95 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 dark:active:bg-gray-71 dark:focus-visible:bg-gray-105 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white dark:bg-gray-95 px-5 py-2.5 text-lg font-medium text-gray-100 dark:text-white-95 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 dark:focus-visible:bg-gray-105 dark:active:bg-gray-71 sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
                 handleClose();

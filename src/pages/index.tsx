@@ -122,6 +122,7 @@ const HomePage = ({
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
         bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#18181B_100%)]"
+        darkMode={darkMode}
       />
 
       <FAQSection
@@ -129,6 +130,7 @@ const HomePage = ({
         needsH2
         needsH3
         bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#18181B_100%)]"
+        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />

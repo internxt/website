@@ -75,14 +75,14 @@ export default function HeroSection({
 
   const parsePriceText = (text: string) => {
     if (!minimumPrice || minimumPrice === '0') {
-      return <span className="inline-block h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16 dark:bg-gray-71 bg-gray-10"></span>;
+      return <span className="inline-block h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16 bg-gray-10 dark:bg-gray-71"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
   };
 
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
-      return <span className="inline-block h-4 w-16 animate-pulse rounded dark:bg-gray-71 bg-gray-10"></span>;
+      return <span className="inline-block h-4 w-16 animate-pulse rounded bg-gray-10 dark:bg-gray-71"></span>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
@@ -111,10 +111,7 @@ export default function HeroSection({
       <div className="flex h-min w-[325px] flex-col justify-center gap-5 lg:h-[534px] lg:w-[536px] lg:justify-between">
         <div className="flex flex-wrap items-start justify-start gap-2 lg:w-[536px] lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
-            <div
-              key={index}
-              className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1"
-            >
+            <div key={index} className="flex h-5 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 dark:bg-white/10 px-2 py-1 shadow-sm lg:h-7 lg:px-2 lg:py-1">
               <feature.icon className="h-5 w-5 text-primary lg:h-5 lg:w-5" />
               <p className="whitespace-nowrap text-[12px] font-medium leading-tight text-gray-80 dark:text-white">{feature.text}</p>
             </div>
@@ -126,9 +123,7 @@ export default function HeroSection({
             <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
               <HighlightText text={textContent.title} />
             </h1>
-            <p className="font-regular text-lg leading-tight text-gray-100 dark:text-white-95  lg:whitespace-pre-line lg:text-2xl">
-              {textContent.subtitle.part1} {textContent.subtitle.part2}
-            </p>
+            <p className="font-regular text-lg leading-tight text-gray-100 dark:text-white-95 lg:whitespace-pre-line lg:text-2xl">{textContent.subtitle.part1} {textContent.subtitle.part2}</p>
           </div>
           <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-xl">
             <p className="bg-neutral-37 dark:bg-purple-100 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
@@ -140,7 +135,7 @@ export default function HeroSection({
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg ">{feat}</p>
+                <p className="text-left text-sm font-semibold text-gray-100 dark:text-white-95 lg:text-lg">{feat}</p>
               </div>
             ))}
           </div>
