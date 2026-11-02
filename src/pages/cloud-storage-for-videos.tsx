@@ -140,7 +140,7 @@ const CloudStorageForVideos = ({
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
                 sectionDetails="lg:py-20"
-                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 100%, #FFFFFF 100%, )'
+                backgroundGradientColor='linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)'
                 hideFreeCard
                 
             />

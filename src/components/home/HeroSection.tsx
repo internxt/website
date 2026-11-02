@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
+import { Campaign } from '@/lib/helpers/campaigns';
 import dynamic from 'next/dynamic';
 import {
   Aperture,
@@ -22,12 +23,14 @@ interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
   percentOff: string;
   minimumPrice: string;
+  campaign?: Campaign;
 }
 
 export default function HeroSection({
   textContent,
   percentOff,
   minimumPrice,
+  campaign,
 }: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -80,6 +83,8 @@ export default function HeroSection({
     return typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
   };
 
+  const campaignText = campaign ? textContent.campaigns?.[campaign] : undefined;
+
   const parsePercentText = (text: string) => {
     if (!percentOff || percentOff === '0') {
       return <span className="bg-gray-200 inline-block h-4 w-16 animate-pulse rounded"></span>;
@@ -127,14 +132,14 @@ export default function HeroSection({
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
             <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
-              <HighlightText text={textContent.title} />
+              <HighlightText text={campaignText?.title ?? textContent.title} />
             </h1>
             <p className="font-regular text-lg leading-tight text-gray-100 lg:whitespace-pre-line  lg:text-2xl">
               {textContent.subtitle.part1} {textContent.subtitle.part2}
             </p>
           </div>
           <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
-            <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(textContent.description)}</p>
+            <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(campaignText?.description ?? textContent.description)}</p>
 
             <p className="bg-transparent">{textContent.descriptionNormal}</p>
           </span>

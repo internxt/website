@@ -146,7 +146,7 @@ export const Photos = ({
         }
         url={ctaUrl}
         bgGradientColor="#FFFFFF 100%"
-        bgGradientContainerColor="background: linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0_4px_20px_0_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
         bgPadding="lg:py-20 lg:pb-20 pb-10"
       />
