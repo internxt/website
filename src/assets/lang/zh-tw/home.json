@@ -47,9 +47,9 @@
     "description": "享受 {{discount}}% 折扣",
     "descriptionNormal": "適用於所有方案",
     "campaigns": {
-      "campaign2": { "title": "**Early Black Friday** Internxt Deal", "description": "{{discount}}% OFF" },
-      "blackFriday": { "title": "**Black Friday** Internxt Deal", "description": "{{discount}}% OFF — BEST PRICE OF THE YEAR" },
-      "cyberWeek": { "title": "**Cyber Week** Internxt Deal", "description": "{{discount}}% OFF — LAST CHANCE TO GET THE BEST PRICE OF THE YEAR" }
+      "campaign2": { "title": "**搶先黑色星期五** Internxt 優惠", "description": "{{discount}}% 折扣" },
+      "blackFriday": { "title": "**黑色星期五** Internxt 優惠", "description": "{{discount}}% 折扣 — 全年最低價" },
+      "cyberWeek": { "title": "**網路週** Internxt 優惠", "description": "{{discount}}% 折扣 — 最後機會獲得全年最低價" }
     },
     "giftDescription": {
       "line1": "贏取高達 1000 歐元的禮品卡，隨處消費！",

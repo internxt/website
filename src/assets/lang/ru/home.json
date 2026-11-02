@@ -47,9 +47,9 @@
     "description": "Получите скидку {{discount}}% ",
     "descriptionNormal": "на все тарифы",
     "campaigns": {
-      "campaign2": { "title": "**Early Black Friday** Internxt Deal", "description": "{{discount}}% OFF" },
-      "blackFriday": { "title": "**Black Friday** Internxt Deal", "description": "{{discount}}% OFF — BEST PRICE OF THE YEAR" },
-      "cyberWeek": { "title": "**Cyber Week** Internxt Deal", "description": "{{discount}}% OFF — LAST CHANCE TO GET THE BEST PRICE OF THE YEAR" }
+      "campaign2": { "title": "Предложение **Early Black Friday** от Internxt", "description": "СКИДКА {{discount}}%" },
+      "blackFriday": { "title": "Предложение **Черной пятницы** от Internxt", "description": "СКИДКА {{discount}}% — ЛУЧШАЯ ЦЕНА ГОДА" },
+      "cyberWeek": { "title": "Предложение **Cyber Week** от Internxt", "description": "СКИДКА {{discount}}% — ПОСЛЕДНИЙ ШАНС ПОЛУЧИТЬ ЛУЧШУЮ ЦЕНУ ГОДА" }
     },
     "giftDescription": {
       "line1": "Выиграйте подарочную карту на 1000 €!",

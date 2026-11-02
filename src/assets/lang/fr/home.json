@@ -47,9 +47,9 @@
     "description": "Obtenez {{discount}} % de réduction ",
     "descriptionNormal": "sur tous les plans",
     "campaigns": {
-      "campaign2": { "title": "**Early Black Friday** Internxt Deal", "description": "{{discount}}% OFF" },
-      "blackFriday": { "title": "**Black Friday** Internxt Deal", "description": "{{discount}}% OFF — BEST PRICE OF THE YEAR" },
-      "cyberWeek": { "title": "**Cyber Week** Internxt Deal", "description": "{{discount}}% OFF — LAST CHANCE TO GET THE BEST PRICE OF THE YEAR" }
+      "campaign2": { "title": "Offre **Early Black Friday** Internxt", "description": "{{discount}} % DE RÉDUCTION" },
+      "blackFriday": { "title": "Offre **Black Friday** Internxt", "description": "{{discount}} % DE RÉDUCTION — MEILLEUR PRIX DE L'ANNÉE" },
+      "cyberWeek": { "title": "Offre **Cyber Week** Internxt", "description": "{{discount}} % DE RÉDUCTION — DERNIÈRE CHANCE D'OBTENIR LE MEILLEUR PRIX DE L'ANNÉE" }
     },
     "giftDescription": {
       "line1": "Gagnez une carte cadeau jusqu'à 1 000 € !",
