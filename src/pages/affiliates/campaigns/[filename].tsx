@@ -43,7 +43,7 @@ const AffiliatesBlackFridayPage = ({ pathname, ...props }: AffiliatesBlackFriday
   );
 };
 
-export async function getStaticPaths({ locales }) {
+export function getStaticPaths({ locales }) {
   return {
     paths: buildLocalizedPaths(locales, ALLOWED_PATHS),
     fallback: 'blocking',

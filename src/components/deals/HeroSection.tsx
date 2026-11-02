@@ -106,7 +106,7 @@ export default function HeroSection({
                 darkMode ? 'text-gray-100' : 'text-gray-100'
               }`}
             >
-              <HighlightText text={parsePercentText(textContent.title) as string} className={darkMode ? 'text-white-95' : ''} />
+              <HighlightText text={parsePercentText(textContent.title)} className={darkMode ? 'text-white-95' : ''} />
             </h1>
             <h2
               className={`font-regular flex whitespace-pre-line text-lg leading-tight lg:w-[600px] lg:text-2xl ${
