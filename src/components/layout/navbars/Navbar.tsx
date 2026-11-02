@@ -253,7 +253,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       </Link>
 
                       <Link
-                        href="/deals/black-friday-internxt"
+                        href="/black-friday"
                         locale={props.lang}
                         role="link"
                         tabIndex={0}
