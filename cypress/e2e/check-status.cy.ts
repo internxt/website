@@ -96,7 +96,7 @@ const nameFiles = [
   'cyber-security-quiz',
   'koofr-alternative',
   'levanteud',
-  'thankyou',
+  'notification',
 ];
 
 const langs = {

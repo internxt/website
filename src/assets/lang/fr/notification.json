@@ -1,0 +1,11 @@
+{
+  "HeroSection": {
+    "title": "Vous êtes sur la liste",
+    "subtitle": "Vous recevrez avant tout le monde notre réduction du Black Friday, la plus importante de l'année.",
+    "emailNote": "Dès que l'offre sera disponible, nous vous écrirons à cette même adresse e-mail. D'ici là, vous n'avez rien à faire.",
+    "cta": {
+      "text": "En attendant, ",
+      "link": "Découvrez comment nous protégeons vos fichiers"
+    }
+  }
+}
