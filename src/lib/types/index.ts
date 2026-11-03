@@ -463,6 +463,8 @@ export enum PromoCodeName {
   gpitcw90 = 'GPITCW90',
   gpes85 = 'GPES85',
   gpit85 = 'GPIT85',
+  bfcmrec87 = 'BFCMREC87',
+  bfcmrec90 = 'BFCMREC90',
 }
 
 export interface PromoCodeProps {

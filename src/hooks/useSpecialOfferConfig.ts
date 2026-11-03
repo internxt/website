@@ -213,6 +213,8 @@ export const ALLOWED_PATHS = [
   'sc90',
   'gpes85',
   'gpit85',
+  'bfcmrec87',
+  'bfcmrec90',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -584,6 +586,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'sc90',
   'gpes85',
   'gpit85',
+  'bfcmrec87',
+  'bfcmrec90',
 ]);
 
 export const COUPON_CODES = {
@@ -797,6 +801,8 @@ export const COUPON_CODES = {
   sc90: PromoCodeName.sc90,
   gpes85: PromoCodeName.gpes85,
   gpit85: PromoCodeName.gpit85,
+  bfcmrec87: PromoCodeName.bfcmrec87,
+  bfcmrec90: PromoCodeName.bfcmrec90,
 };
 
 interface OfferConfig {
