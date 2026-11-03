@@ -132,9 +132,9 @@ export const ItemsNavigation = ({
           lang={lang}
         />
         <NavigationLink
-          href="/deals/black-friday-internxt"
+          href="/black-friday"
           text={textContent.links.blackFriday}
-          isActive={router.pathname.startsWith('/deals/black-friday-internxt')}
+          isActive={router.pathname.startsWith('/black-friday')}
           isDarkMode={darkMode}
           isHighlighted
           lang={lang}
