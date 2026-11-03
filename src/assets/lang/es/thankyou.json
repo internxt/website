@@ -1,9 +1,11 @@
 {
   "HeroSection": {
-    "title": "Gracias",
-    "subtitle": "Te has añadido correctamente a la lista de almacenamiento en la nube seguro.",
-    "description": "Defendemos un almacenamiento en la nube privado, cifrado y de confianza.",
-    "emailNote": "Recibirás un correo en las próximas 48 horas con tu oferta especial exclusiva.",
-    "cta": "Únete a nosotros para proteger los datos del mundo juntos."
+    "title": "Ya estás en la lista",
+    "subtitle": "Recibirás antes que nadie nuestro descuento de Black Friday, el más alto del año.",
+    "emailNote": "Cuando abramos, te escribiremos a este mismo email. Hasta entonces, no tienes que hacer nada.",
+    "cta": {
+      "text": "Mientras tanto, ",
+      "link": "Descubre cómo protegemos tus archivos"
+    }
   }
 }

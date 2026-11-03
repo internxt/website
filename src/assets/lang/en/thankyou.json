@@ -1,9 +1,11 @@
 {
   "HeroSection": {
-    "title": "Thank you",
-    "subtitle": "You've successfully been added to the secure cloud storage list.",
-    "description": "We stand for private, encrypted, and trustworthy cloud storage.",
-    "emailNote": "An email will arrive within the next 48 hours with your exclusive special offer.",
-    "cta": "Join us in securing the world's data together."
+    "title": "You're on the list",
+    "subtitle": "You'll be the first to get our Black Friday discount, the biggest of the year.",
+    "emailNote": "When we go live, we'll write to this same email. Until then, you don't have to do anything.",
+    "cta": {
+      "text": "In the meantime, ",
+      "link": "Discover how we protect your files"
+    }
   }
 }
