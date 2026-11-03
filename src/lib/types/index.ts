@@ -463,6 +463,7 @@ export enum PromoCodeName {
   gpitcw90 = 'GPITCW90',
   gpes85 = 'GPES85',
   gpit85 = 'GPIT85',
+  julian = 'JULIAN',
 }
 
 export interface PromoCodeProps {
