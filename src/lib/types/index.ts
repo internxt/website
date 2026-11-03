@@ -454,6 +454,7 @@ export enum PromoCodeName {
   heisecm90 = 'HEISECM90',
   xatakacm90 = 'XATAKACM90',
   clubiccm90 = 'CLUBICCM90',
+  sc90 = 'SC90',
 }
 
 export interface PromoCodeProps {
