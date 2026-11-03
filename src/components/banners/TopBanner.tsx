@@ -24,7 +24,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
           <Link
-            href={'/deals/black-friday-internxt'}
+            href={'/black-friday'}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center"
           >
@@ -35,7 +35,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       </div>
 
       <Link
-        href={'/deals/black-friday-internxt'}
+        href={'/black-friday'}
         className={`group fixed left-0 top-0 z-50 flex h-[64px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className=" w-full  overflow-hidden px-3 text-center">
@@ -44,7 +44,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               <span>{textContent.title.normalText}</span>
             </p>
             <Link
-              href={'/deals/black-friday-internxt'}
+              href={'/black-friday'}
               id={'topBannerActionButton'}
               className="flex cursor-pointer flex-row items-center "
             >
